@@ -1,0 +1,1118 @@
+{
+  "id": "norteamericanas-04-brote-y-pedernal",
+  "serie": "norteamericanas",
+  "numero": "04",
+  "titulo": {
+    "es": "Brote y Pedernal",
+    "en": "Sapling and Flint"
+  },
+  "tituloGriego": "SAPLING AND FLINT",
+  "miniatura": {
+    "heroe": "brote",
+    "rival": "pedernal"
+  },
+  "siguiente": {
+    "es": "El escarabajo de agua y el gran zopilote",
+    "en": "The Water Beetle and the Great Buzzard"
+  },
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez nacieron dos gemelos: Brote, el tranquilo, y Pedernal, el filoso.",
+          "en": "Last time, two twins were born: calm Sapling, and sharp Flint."
+        },
+        {
+          "es": "Ahora ya eran grandes, y la tierra nueva todavía estaba vacía y en silencio.",
+          "en": "Now they were grown, and the new land was still empty and quiet."
+        },
+        {
+          "es": "Así que cada uno empezó a darle forma al mundo, a su manera.",
+          "en": "So each of them began to shape the world, in his own way."
+        }
+      ],
+      "actores": [
+        {
+          "id": "brote",
+          "como": "brote",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "pedernal",
+          "como": "pedernal",
+          "x": 1200,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 2.2,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 700,
+          "y": 450,
+          "dur": 0.6,
+          "intensidad": 0.4
+        },
+        {
+          "en": 2.3,
+          "tipo": "chispas",
+          "x": 1200,
+          "y": 500,
+          "dur": 0.6
+        }
+      ]
+    },
+    {
+      "id": "rios",
+      "fondo": "rio",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Brote hizo los ríos. En una versión, cada río tenía dos corrientes: una que subía y otra que bajaba.",
+          "en": "Sapling made the rivers. In one telling, each river had two currents: one flowing up, and one flowing down."
+        },
+        {
+          "es": "Así la gente podía viajar por el agua en las dos direcciones, sin esfuerzo.",
+          "en": "That way, people could ride the water in either direction, with no hard work."
+        },
+        {
+          "es": "Entonces llegó Pedernal y los cambió. Desde entonces, los ríos corren hacia un solo lado.",
+          "en": "Then Flint came along and changed them. Since then, rivers flow only one way."
+        },
+        {
+          "es": "En algunas versiones, también los llenó de rocas y rápidos.",
+          "en": "In some tellings, he also filled them with rocks and rapids."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1500,
+          "y": 760,
+          "s": 0.4,
+          "capa": "medio",
+          "en": 3,
+          "sube": 60
+        },
+        {
+          "tipo": "roca",
+          "x": 1700,
+          "y": 770,
+          "s": 0.3,
+          "capa": "medio",
+          "en": 3.2,
+          "sube": 60
+        }
+      ],
+      "actores": [
+        {
+          "id": "brote",
+          "como": "brote",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "senala",
+              "a": 1100
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.8,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "pedernal",
+          "como": "pedernal",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1350
+            },
+            {
+              "en": 2.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "lanza"
+            },
+            {
+              "en": 3.5,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.5,
+          "tipo": "temblor",
+          "dur": 0.4,
+          "intensidad": 0.4
+        },
+        {
+          "en": 3,
+          "tipo": "polvo",
+          "x": 1600,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "DOS CORRIENTES",
+            "en": "TWO CURRENTS"
+          },
+          "x": 1150,
+          "y": 300,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "peces",
+      "fondo": "lago",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Brote también hizo los peces: blandos y fáciles de comer, sin una sola espina.",
+          "en": "Sapling also made fish: soft and easy to eat, without a single bone."
+        },
+        {
+          "es": "A Pedernal no le gustó. Tomó un puñado de espinitas filosas y se las metió a los peces.",
+          "en": "Flint did not like that. He took a handful of sharp little bones and pushed them into the fish."
+        },
+        {
+          "es": "Por eso, dicen algunos narradores con una sonrisa, los peces tienen tantas espinas.",
+          "en": "That is why, some storytellers say with a smile, fish have so many tiny bones."
+        }
+      ],
+      "actores": [
+        {
+          "id": "brote",
+          "como": "brote",
+          "x": 520,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "pez1",
+          "como": "pez",
+          "x": 860,
+          "y": 640,
+          "escala": 1.3,
+          "rotulo": "",
+          "props": {
+            "color": "#5E8AA0"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.4,
+              "hace": "nada",
+              "a": 960,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "pez2",
+          "como": "pez",
+          "x": 1040,
+          "y": 560,
+          "escala": 1.1,
+          "rotulo": "",
+          "props": {
+            "color": "#C98A3A"
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.4,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "pedernal",
+          "como": "pedernal",
+          "x": 1380,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1260,
+              "dur": 0.4
+            },
+            {
+              "en": 1.4,
+              "hace": "lanza"
+            },
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 600,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "POR ESO LOS PECES TIENEN ESPINAS",
+            "en": "THAT'S WHY FISH HAVE SO MANY BONES"
+          },
+          "x": 960,
+          "y": 210,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cueva",
+      "fondo": "montanas",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Brote hizo los animales: el ciervo, el oso, el lobo y las aves del cielo.",
+          "en": "Sapling made the animals: the deer, the bear, the wolf, and the birds of the sky."
+        },
+        {
+          "es": "Pero Pedernal los llamó a todos dentro de una cueva grande, en una montaña, y la tapó con una roca.",
+          "en": "But Flint called them all into a big cave inside a mountain, and closed it with a rock."
+        },
+        {
+          "es": "Quería tenerlos solo para él, para no tener que salir a cazar.",
+          "en": "He wanted to keep them for himself, so he would never have to go out hunting."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cueva",
+          "x": 1250,
+          "s": 0.9
+        },
+        {
+          "tipo": "roca",
+          "x": 1250,
+          "s": 1.25,
+          "en": 1.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "ciervo",
+          "como": "ciervo",
+          "x": 500,
+          "props": {
+            "color": "#9A6A3A"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.1,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.4
+            },
+            {
+              "en": 1.5,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "oso",
+          "como": "oso",
+          "x": 760,
+          "props": {
+            "color": "#4A3428"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.4
+            },
+            {
+              "en": 1.6,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "lobo",
+          "como": "lobo",
+          "x": 300,
+          "props": {
+            "color": "#8A8478"
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.4
+            },
+            {
+              "en": 1.7,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "pedernal",
+          "como": "pedernal",
+          "x": 1650,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala",
+              "a": 1250
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.6,
+              "hace": "sale"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "temblor",
+          "dur": 0.4,
+          "intensidad": 0.5
+        }
+      ]
+    },
+    {
+      "id": "rescate",
+      "fondo": "montanas",
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Brote notó que el bosque estaba en silencio. Buscó y buscó, hasta que encontró la cueva.",
+          "en": "Sapling noticed the forest had gone silent. He searched and searched, until he found the cave."
+        },
+        {
+          "es": "Movió la roca, y los animales salieron corriendo de vuelta al mundo.",
+          "en": "He moved the rock, and the animals came running out, back into the world."
+        },
+        {
+          "es": "Si tú abrieras esa cueva, ¿qué animal querrías ver salir primero?",
+          "en": "If you had opened that cave, which animal would you want to see come out first?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cueva",
+          "x": 1250,
+          "s": 0.9
+        },
+        {
+          "tipo": "roca",
+          "x": 1250,
+          "s": 1.25,
+          "hasta": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "brote",
+          "como": "brote",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 980,
+              "dur": 0.8
+            },
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala",
+              "a": 1250
+            }
+          ]
+        },
+        {
+          "id": "ciervo",
+          "como": "ciervo",
+          "x": 1250,
+          "rotulo": "",
+          "props": {
+            "color": "#9A6A3A"
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "corre",
+              "a": 1800,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "oso",
+          "como": "oso",
+          "x": 1250,
+          "rotulo": "",
+          "props": {
+            "color": "#4A3428"
+          },
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.4,
+              "hace": "corre",
+              "a": 1600,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "lobo",
+          "como": "lobo",
+          "x": 1250,
+          "rotulo": "",
+          "props": {
+            "color": "#8A8478"
+          },
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.6,
+              "hace": "corre",
+              "a": 2000,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "cuervo",
+          "como": "cuervo_negro",
+          "x": 1250,
+          "y": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "vuela",
+              "a": [
+                1700,
+                250
+              ],
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.05,
+          "tipo": "polvo",
+          "x": 1250,
+          "dur": 0.6
+        },
+        {
+          "en": 1.1,
+          "tipo": "temblor",
+          "dur": 0.3,
+          "intensidad": 0.4
+        }
+      ]
+    },
+    {
+      "id": "gente",
+      "fondo": "rio",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al final, en muchas versiones, Brote moldeó a las personas con barro, y les dio vida.",
+          "en": "Last of all, in many tellings, Sapling shaped people out of clay, and gave them life."
+        },
+        {
+          "es": "Les mostró las plantas buenas para comer, y los animales del bosque.",
+          "en": "He showed them the good plants to eat, and the animals of the forest."
+        },
+        {
+          "es": "Pedernal miraba de lejos. Le daba envidia todo lo que hacía su hermano.",
+          "en": "Flint watched from far away. He was jealous of everything his brother made."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tres_hermanas",
+          "x": 1250,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "brote",
+          "como": "brote",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 0.9,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala",
+              "a": 1250
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "haudenosaunee",
+          "x": 820,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "mira",
+              "a": 1250
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "haudenosaunee_mujer",
+          "x": 990,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "pedernal",
+          "como": "pedernal",
+          "x": 1700,
+          "mira": "izq",
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1700
+            },
+            {
+              "en": 2.4,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pelea",
+      "fondo": "montanas",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por fin, los gemelos se enfrentaron para decidir quién mandaría sobre el mundo.",
+          "en": "At last, the twins faced each other, to decide who would rule the world."
+        },
+        {
+          "es": "Pelearon mucho tiempo, de un lado al otro de la tierra.",
+          "en": "They fought for a long time, from one end of the land to the other."
+        },
+        {
+          "es": "En una versión mohawk, Brote encontró en el bosque un asta de ciervo caída, y con ella ganó la pelea.",
+          "en": "In one Mohawk telling, Sapling found a deer antler lying in the forest, and with it he won the fight."
+        },
+        {
+          "es": "Pedernal quedó vencido. Pero no podía morir: era parte del mundo mismo.",
+          "en": "Flint was beaten. But he could not die. He was part of the world itself."
+        }
+      ],
+      "actores": [
+        {
+          "id": "brote",
+          "como": "brote",
+          "x": 720,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 760,
+              "dur": 0.3
+            },
+            {
+              "en": 2,
+              "hace": "toma",
+              "objeto": "asta"
+            },
+            {
+              "en": 2.1,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.6,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "pedernal",
+          "como": "pedernal",
+          "x": 1200,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.6,
+              "hace": "camina",
+              "a": 1160,
+              "dur": 0.3
+            },
+            {
+              "en": 2.8,
+              "hace": "cae"
+            },
+            {
+              "en": 3.3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.5,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 1,
+          "intensidad": 0.6
+        },
+        {
+          "en": 1.2,
+          "tipo": "polvo",
+          "x": 960,
+          "dur": 0.8
+        },
+        {
+          "en": 2.8,
+          "tipo": "destello"
+        }
+      ]
+    },
+    {
+      "id": "division",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En esa misma versión, Brote no destruyó a su hermano. Prefirió compartir el mundo con él.",
+          "en": "In that same telling, Sapling did not destroy his brother. He chose to share the world with him."
+        },
+        {
+          "es": "El día sería de Brote, y la noche sería de Pedernal.",
+          "en": "The day would belong to Sapling, and the night would belong to Flint."
+        },
+        {
+          "es": "En otras versiones, Pedernal fue enviado lejos, pero nunca dejó de causar problemas.",
+          "en": "In other tellings, Flint was sent far away, but he never quite stopped making trouble."
+        },
+        {
+          "es": "Por eso, dicen los narradores, el mundo tiene de los dos: cosas suaves y cosas duras, el día y la noche.",
+          "en": "So, the storytellers say, the world has some of both: gentle things and hard things, day and night."
+        }
+      ],
+      "actores": [
+        {
+          "id": "brote",
+          "como": "brote",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "pedernal",
+          "como": "pedernal",
+          "x": 1200,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "mira",
+              "a": 700
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            },
+            {
+              "en": 2,
+              "hace": "sale"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 700,
+          "y": 400,
+          "dur": 0.8,
+          "intensidad": 0.6
+        },
+        {
+          "en": 1.4,
+          "tipo": "estrellas",
+          "dur": 2.5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "aldea_casa_larga",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El mundo estaba listo. Tenía tierra, ríos, plantas, animales y gente.",
+          "en": "The world was ready. It had land, rivers, plants, animals and people."
+        },
+        {
+          "es": "¿Conoces otras historias de gemelos que le dieron forma al mundo? Cuéntanos en los comentarios.",
+          "en": "Do you know other stories about twins who shaped the world? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez viajamos al sur, con los cherokee, que cuentan que el mundo lo hizo un pequeño escarabajo de agua.",
+          "en": "Next time, we travel south to the Cherokee, who say the world began with a tiny water beetle."
+        },
+        {
+          "es": "Es El escarabajo de agua y el gran zopilote.",
+          "en": "It is The Water Beetle and the Great Buzzard."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hombre",
+          "como": "haudenosaunee",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 820,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "haudenosaunee_mujer",
+          "x": 1000,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": "maiz"
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "haudenosaunee",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "escarabajo",
+          "como": "escarabajo_agua",
+          "x": 1700,
+          "y": 790,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Por qué los peces tienen tantas espinas",
+        "en": "Why fish have so many bones"
+      },
+      "escena": "peces",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "El gemelo que encerró a todos los animales",
+        "en": "The twin who locked up all the animals"
+      },
+      "escena": "cueva",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "Los ríos antes corrían para los dos lados",
+        "en": "Rivers used to flow both ways"
+      },
+      "escena": "rios",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    }
+  ]
+}

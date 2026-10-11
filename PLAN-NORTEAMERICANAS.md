@@ -1,0 +1,77 @@
+# Mitología norteamericana — plan de videos
+
+Estilo "pintado": pintura sobre cuero (hide painting) y arte ledger de las Llanuras, con bandas geométricas de cuentas y bordado de púas de puercoespín (escalones, rombos, franjas). Figuras planas de muñeco con contorno oscuro, como todo el canal. Música: tambor de mano de cuero con pulso parejo, sonaja de calabaza, flauta de madera con aire y viento de bosque; generada por código (`scripts/musica-norteamericana.mjs`), sin imitar ningún canto ni canción ceremonial.
+Serie `norteamericanas`, ids `norteamericanas-NN-slug`. En pantalla: **"Native American Mythology"** (inglés) / **"Mitología Norteamericana"** (español).
+
+**Regla de oro:** nunca una cultura "india" genérica. Cada episodio dice de qué nación es la versión que cuenta, y la ropa, las casas y el paisaje son los de esa nación. Si una historia la cuentan varios pueblos, se dice ("los anishinaabe también la cuentan, a su manera").
+
+**Serie principal (temporadas):** T1 La creación del mundo (de la Mujer del Cielo a la luz y el fuego) → T2 Embaucadores y héroes (Coyote, Cuervo, Nanabozho, Iktomi, Glooskap, Conejo) → T3 Cielo y estrellas → T4 Guardianes y gigantes.
+Regla de todos los episodios: enganche con el anterior (la primera frase lo retoma, la última anuncia el siguiente). Los "por eso…" solo si salen de la fuente; acá se marcan como "posible".
+
+## Fuentes (reales y citables)
+- **Haudenosaunee:** J. N. B. Hewitt, *Iroquoian Cosmology* (BAE Annual Report 21, 1903; 2.ª parte, 43, 1928; versiones onondaga, seneca y mohawk dictadas por narradores haudenosaunee). Rick Hill (Tuscarora), artículos sobre la Mujer del Cielo en *Two Row Times* (Six Nations). John Mohawk, *Iroquois Creation Story* (2005). Haudenosaunee Confederacy (haudenosauneeconfederacy.com), sección de creación y Discurso de Acción de Gracias. Arthur C. Parker, *Seneca Myths and Folk Tales* (1923).
+- **Cherokee:** James Mooney, *Myths of the Cherokee* (BAE Annual Report 19, 1900): "How the World Was Made", "The First Fire", "Why the Possum's Tail Is Bare", "The Daughter of the Sun", etc. Contrastar con la Eastern Band of Cherokee Indians / Museum of the Cherokee People.
+- **Anishinaabe:** Edward Benton-Banai, *The Mishomis Book* (1979); Basil Johnston, *Ojibway Heritage* (1976) y *The Manitous* (1995).
+- **Costa noroeste:** John R. Swanton, *Tlingit Myths and Texts* (BAE Bulletin 39, 1909) y *Haida Texts and Myths* (1905); Bill Reid y Robert Bringhurst, *The Raven Steals the Light* (1984); Robert Bringhurst, *A Story as Sharp as a Knife* (1999, narradores haida Ghandl y Skaay).
+- **Meseta y Columbia:** Ella E. Clark, *Indian Legends of the Pacific Northwest* (1953); Nez Perce National Historical Park (NPS) y Nez Perce Tribe sobre el Corazón del Monstruo (Kamiah); Archie Phinney, *Nez Percé Texts* (1934, narrador nez perce).
+- **Antologías generales (para contrastar, no como única fuente):** Richard Erdoes y Alfonso Ortiz, *American Indian Myths and Legends* (1984); Joseph Bruchac (abenaki) y Michael Caduto, *Keepers of the Earth* (1988).
+
+## Respeto y fidelidad (culturas vivas)
+- Son tradiciones vivas de naciones que existen hoy. Tono serio y cálido; humor solo donde la historia lo tiene (Coyote, Cuervo, Conejo).
+- Siempre decir la nación y "en una versión… en otra…". Lo marcado [verificar] se confirma contra la fuente antes de escribir el guion.
+- **Estaciones:** muchas naciones cuentan estas historias solo en invierno (haudenosaunee, anishinaabe, lakota; los diné solo cuentan las de Coyote después de la primera helada). El ep. 1 lo menciona; conviene publicar la temporada en otoño-invierno y decirlo en la descripción.
+- **Vestimenta:** gustoweh haudenosaunee con las plumas de cada nación (mohawk 3 arriba; oneida 2 arriba y 1 abajo; onondaga 1 arriba y 1 abajo; cayuga 1 inclinada; seneca 1 arriba; tuscarora sin plumas); sombrero tejido de raíz y mantas de botones en la costa noroeste; pluma atrás o trenzas en Llanuras y Meseta. **El tocado de plumas (war bonnet) solo para jefes y guerreros honrados de las Llanuras** (lakota, cheyenne, crow, pies negros), nunca en mujeres ni en otras regiones. Piel morena natural, nunca roja. Nada de "indio" genérico, plumas en todos, tótems fuera de la costa noroeste, tipis en los Bosques del Este, ni pinturas de guerra decorativas.
+- **Emblemas:** los diseños de clan de la costa noroeste (crestas) tienen dueño; el motor usa óvalos genéricos, nunca copia una cresta concreta.
+- Sin contenido sexual; violencia sin morbo; muertes con sobriedad (la hija de la Mujer del Cielo, la Rata Almizclera).
+
+### Historias que NO se cuentan (o solo con consulta) y por qué
+- **Máscaras de la Sociedad de los Rostros Falsos (haudenosaunee):** el Gran Consejo pidió en 1995 que no se exhiban ni reproduzcan. No aparecen ni como decorado.
+- **Katsinam hopi y ceremonias de los pueblos (kivas):** la Nación Hopi pide no representarlas. Fuera.
+- **Creación diné (navajo), Yeibichai, pinturas de arena y Kinaaldá (Mujer Cambiante):** ceremoniales; muchos diné prefieren que no se cuenten fuera de su contexto ni fuera de estación. Fuera, salvo material publicado por la propia nación diné y con su contexto.
+- **"Skinwalkers" (yee naaldlooshii):** tabú diné; no se cuenta.
+- **Wendigo/Windigo:** muchas comunidades algonquinas piden no tratarlo como monstruo de terror ni nombrarlo a la ligera. Fuera.
+- **Danza del Sol, pipa sagrada y Mujer Búfalo Blanco (lakota):** sagrados; si algún día se toca a la Mujer Búfalo Blanco, solo con versión publicada por lakota (p. ej. Arvol Looking Horse) y sin mostrar la ceremonia. Por ahora fuera.
+- **Estrella de la Mañana pawnee (sacrificio):** fuera.
+- **Sasquatch:** solo si se cuenta la versión sts'ailes (Sasq'ets), que esa nación comparte públicamente.
+
+## T1 · La creación del mundo (12)
+1. **Sky Woman Falls** (haudenosaunee) — el Mundo del Cielo y el gran árbol cuyas flores dan la luz; la Mujer del Cielo y su esposo, el que cuida el árbol; el árbol arrancado (en una versión por un sueño del jefe, en otra por celos); ella cae por el hoyo agarrando raíces y semillas; los gansos la atajan; la Gran Tortuga la recibe. Fuentes: Hewitt 1903/1928; Rick Hill. ✅ guion escrito.
+2. **The World on the Turtle's Back** (haudenosaunee) — el Colimbo, la Nutria y el Castor fallan; la Rata Almizclera llega al fondo (en muchas versiones da su vida); la Mujer del Cielo extiende la tierra y baila en círculo; la tierra crece. Por eso (sí, de la fuente): "Isla Tortuga". ✅ guion escrito.
+3. **The Twins Are Born** (haudenosaunee) — la hija crece rápido; la visita el Viento del Oeste (seneca) o un joven que deja dos flechas, una con punta de pedernal (onondaga, Hewitt); los gemelos discuten en el vientre; Brote nace normal, Pedernal por el costado y la madre muere; Pedernal culpa a Brote y la abuela le cree; de la tumba: maíz, frijol, calabaza, tabaco, papas silvestres (versión de Rick Hill), y la fresa en otras. Las Tres Hermanas (seneca *Diohe'ko*, "ellas nos sostienen"). ✅ guion escrito.
+4. **Sapling and Flint** (haudenosaunee, versión mohawk para la pelea) — ríos de dos corrientes que Pedernal vuelve de una sola; peces sin espinas (posible "por eso": las espinas); Pedernal encierra a los animales en una cueva y Brote los libera; Brote modela a la gente con barro; la pelea con el asta de ciervo; el reparto: el día para Brote, la noche para Pedernal. [rápidos: están en la versión wendat, decir "en algunas versiones"]. ✅ guion escrito.
+5. **The Water Beetle and the Great Buzzard** (cherokee, Mooney "How the World Was Made") — todo era agua; los animales apretados en Gălûñ'lătï, sobre la bóveda de piedra; el escarabajo de agua Dâyuni'sï ("nieto del castor") trae barro; la tierra cuelga de cuatro cuerdas; el Gran Zopilote, cansado, golpea el barro blando con las alas: valles y montañas. Por eso (fuente): las montañas del país cherokee. También: siete noches despiertos → la lechuza y el puma ven de noche; cedro, pino, abeto, acebo y laurel siempre verdes.
+6. **The Water Spider Brings Fire** (cherokee, Mooney "The First Fire") — el rayo prende un sicomoro hueco en una isla; el Cuervo vuelve negro, el Tecolote con ojos rojos, los búhos con aros blancos, la culebra corredora y la culebra trepadora negras; la Araña de Agua teje un cuenco (tusti) y trae la brasa. Varios "por eso" de la fuente (elegir el del Cuervo para el cartel).
+7. **Grandmother Spider Steals the Sun** (cherokee según Erdoes & Ortiz; [verificar atribución: hay variantes choctaw y kiowa]) — el lado oscuro del mundo; la Zarigüeya se quema la cola, el Zopilote la cabeza; la Abuela Araña lleva el sol en una vasija de barro. Si la atribución no se sostiene, reemplazar por "The Daughter of the Sun" (Mooney).
+8. **Nanabozho and the Great Flood** (anishinaabe, Benton-Banai) — Waynaboozhoo sobre un tronco; el colimbo, el somormujo, el visón y la tortuga fallan; la Rata Almizclera (Wazhashk) trae tierra y muere; la Tortuga (Mishiikenh) ofrece el lomo. Decir que es otra nación que también llama a esta tierra Isla Tortuga.
+9. **Raven Steals the Light** (tlingit, Swanton 1909; versión haida en Reid & Bringhurst) — el viejo que guarda el sol, la luna y las estrellas en cajas; el Cuervo se vuelve aguja de cicuta, la hija la bebe, nace como bebé y llora por las cajas; suelta estrellas, luna y luz; sale por el agujero del humo. Por eso (fuente tlingit): el Cuervo era blanco y quedó negro de hollín.
+10. **Raven and the First People** (haida) — el Cuervo encuentra una almeja en la playa de Rose Spit (Naikoon) con gente diminuta adentro y la convence de salir. Fuente: Reid & Bringhurst; escultura *The Raven and the First Men* (Bill Reid, 1980) [verificar texto haida de referencia].
+11. **Coyote Places the Stars** (wasco, Clark 1953) — Coyote y los cinco hermanos lobo; la escalera de flechas al cielo; los osos; la Osa Mayor. [verificar título y detalles en Clark].
+12. **Coyote and the Monster of Kamiah** (nez perce / nimiipuu, NPS y Phinney) — el monstruo que se traga a los animales; Coyote adentro le corta el corazón; de las partes del cuerpo nacen los pueblos; con la sangre lavada en las manos, los nimiipuu. Por eso (fuente): el Corazón del Monstruo en Kamiah, Idaho. Gancho final: Coyote anda suelto (T2).
+
+## T2 · Embaucadores y héroes (12, esbozo)
+Coyote y el salmón (syilx/okanagan, Kettle Falls); Cuervo y la marea (tlingit); Iktomi y los patos (lakota, versiones de Zitkala-Ša, *Old Indian Legends*, 1901); Nanabozho y los patos que bailan con los ojos cerrados (anishinaabe); Conejo y la Nutria (cherokee, Mooney); Por qué la Zarigüeya tiene la cola pelada (cherokee, Mooney); Glooskap y la rana gigante que se tragó el agua (wabanaki: passamaquoddy/maliseet; Leland 1884, Rand 1894); Glooskap y Wuchowsen, el pájaro del viento (passamaquoddy); Wisakedjak y el diluvio (cree); Napi hace el mundo (pies negros, Grinnell 1892); Coyote y Lobo (shoshone); Cuervo y Gaviota (haida).
+
+## T3 · Cielo y estrellas (12, esbozo)
+Las siete hermanas y la Torre del Oso, Tsoai (kiowa, N. Scott Momaday, *The Way to Rainy Mountain*); la versión lakota de Mato Tipila; los bailarines que subieron al cielo — las Pléyades (onondaga/seneca); Donde corrió el perro: la Vía Láctea (cherokee, Mooney); La hija del Sol (cherokee); La mujer que se casó con una estrella (pies negros/cree); El Lucero y la Luna (cheyenne, sin elementos ceremoniales); el Gran Oso del cielo (mi'kmaq, cacería de otoño en el cielo); Thunderbird (Pájaro del Trueno) en las Llanuras.
+
+## T4 · Guardianes y gigantes (12, esbozo)
+Pájaro del Trueno y la Ballena (quileute / nuu-chah-nulth); Uktena, la gran serpiente con un cristal (cherokee, Mooney); Stone Coat, el gigante de piedra (seneca, Parker); el Gran Mosquito (haudenosaunee); Dzunukwa, la mujer salvaje del bosque (kwakwaka'wakw, versión compartida públicamente); Sasq'ets (sts'ailes); Agua-Pantera Mishipeshu (anishinaabe, solo lo que la nación comparte en público, sin detalles ceremoniales) [verificar]; Hiawatha y el Pacificador fundan la Liga (haudenosaunee; como historia, no como ceremonia).
+
+## Giros para Shorts
+- La Rata Almizclera, la más chica, llega al fondo del mar (2).
+- Gemelos que se pelearon antes de nacer (3).
+- Por qué los peces tienen espinas (4).
+- El Cuervo era blanco (9).
+- La Araña de Agua y su cuenco tejido (6).
+- El Zopilote cansado que hizo las montañas (5).
+
+## Estilo visual (tema "pintado")
+**Paleta:** cuero claro (#F6EBD2 / #E4C89A), ocre rojo (#B23A24), negro (#1C1612), azul de cuentas (#2F5D8A), amarillo ocre (#D9A23A), blanco (#FCF7EC). Piel morena natural (#8E5634 / #A2673F), ropa de cuero (#B98A55) con flecos.
+**Guardas:** banda de cuentas con escalones rojo y azul, franja de púas (rojo, amarillo, blanco), cadena de rombos; se deslizan con la cámara. Suelo con triángulos pintados.
+**Lo que ya tiene el motor (2026-10-10):**
+- Serie y piel: `serie: "norteamericanas"` activa el tema solo (colores, guardas, música, portada, miniatura, Short, vertical).
+- Fondos: `mundo_cielo`, `agua_primordial`, `bajo_agua`, `bosque`, `aldea_casa_larga`, `pradera`, `costa_noroeste`, `rio`, `montanas`, `lago`, `noche` (también `campo`, `cielo`, `mar`, `caos`, `monte`, `aldea`, `costa` se ven norteamericanos).
+- Elementos: `arbol_cielo` (props.luz), `agujero`, `isla_tortuga` (props.tierra 0–1, props.arboles), `casa_comunal`, `tipi`, `casa_tablones`, `totem`, `canoa`, `canoa_cedro`, `maiz`, `tres_hermanas`, `monticulo`, `arce`, `abedul`, `cedro`, `pino`, `caja` (props.luz), `fogata`.
+- Elenco: `mujer_cielo`, `jefe_cielo`, `gente_cielo`, `gente_cielo_mujer`, `hija_cielo`, `brote`, `pedernal`, `haudenosaunee(_mujer)`, `cherokee(_mujer)`, `anishinaabe(_mujer)`, `tlingit(_mujer)`, `haida(_mujer)`, `lakota(_mujer)`, `jefe_lakota`, `nimiipuu(_mujer)`, `anciano_nativo`, `anciana_nativa`, `nanabozho`; animales `gran_tortuga`, `tortuga`, `rata_almizclera`, `castor`, `nutria`, `colimbo`, `ganso_salvaje`, `cuervo_negro`, `zopilote`, `coyote`, `arana_agua` (props.cuenco), `abuela_arana`, `escarabajo_agua` (+ `ciervo`, `oso`, `lobo`, `pez` con props.color).
+- Props de personaje: tocado `gustoweh` (+ `nacion`), `plumaAtras`, `cintaTejida`, `sombreroCesteria`, `roach`, `tocadoPlumas`; `trenzas`, `ropaColor`; objetos `semillas`, `maiz`, `palo`, `tambor`, `asta`.
+**Falta para T1 5–12:** sicomoro con fuego en una isla (6), vasija de barro con el sol (7), tronco flotante (8), cajas de luz y agujero de humo en la casa de tablones (9), almeja gigante (10), escalera de flechas (11), monstruo de Kamiah (12); animales: zarigüeya, tecolote, culebras con color, visón, somormujo.

@@ -1,0 +1,1149 @@
+{
+  "id": "norteamericanas-02-el-lomo-de-la-tortuga",
+  "serie": "norteamericanas",
+  "numero": "02",
+  "titulo": {
+    "es": "El mundo sobre el lomo de la tortuga",
+    "en": "The World on the Turtle's Back"
+  },
+  "tituloGriego": "THE WORLD ON THE TURTLE'S BACK",
+  "miniatura": {
+    "heroe": "mujer_cielo"
+  },
+  "siguiente": {
+    "es": "Nacen los gemelos",
+    "en": "The Twins Are Born"
+  },
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, la Mujer del Cielo cayó del Mundo del Cielo, y la Gran Tortuga la recibió en su lomo.",
+          "en": "Last time, Sky Woman fell from the Sky World, and the Great Turtle caught her on his back."
+        },
+        {
+          "es": "Tenía semillas del cielo en las manos. Pero no había tierra donde plantarlas.",
+          "en": "She had seeds from the sky in her hands. But there was no earth to plant them in."
+        },
+        {
+          "es": "Los animales del agua llegaron nadando. Querían ayudarla.",
+          "en": "The animals of the water came swimming. They wanted to help her."
+        },
+        {
+          "es": "Alguien recordó algo: muy abajo, en el fondo del agua, había tierra.",
+          "en": "Then someone remembered: far below, at the very bottom of the water, there was earth."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla_tortuga",
+          "x": 960,
+          "s": 0.95
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 940,
+          "y": 605,
+          "props": {
+            "objeto": "semillas"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.6,
+              "hace": "entristece"
+            },
+            {
+              "en": 2.4,
+              "hace": "baja"
+            },
+            {
+              "en": 3.4,
+              "hace": "mira",
+              "a": 300
+            }
+          ],
+          "escala": 0.85
+        },
+        {
+          "id": "nutria",
+          "como": "nutria",
+          "x": 120,
+          "y": 812,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2,
+              "hace": "nada",
+              "a": 330,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "colimbo",
+          "como": "colimbo",
+          "x": 1700,
+          "y": 800,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "castor",
+          "como": "castor",
+          "x": 1950,
+          "y": 812,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.4,
+              "hace": "nada",
+              "a": 1880,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "rata",
+          "como": "rata_almizclera",
+          "x": 470,
+          "y": 812,
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "consejo",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "«Si uno de nosotros trae un poco», dijeron, «ella podrá hacer un lugar para vivir».",
+          "en": "\"If one of us brings some up,\" they said, \"she can make a place to live.\""
+        },
+        {
+          "es": "Pero el fondo era muy hondo y muy oscuro. Nadie había llegado nunca hasta allí.",
+          "en": "But the bottom was very deep and very dark. No one had ever reached it."
+        },
+        {
+          "es": "Uno por uno, los mejores nadadores se ofrecieron a intentarlo.",
+          "en": "One by one, the best swimmers offered to try."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla_tortuga",
+          "x": 1500,
+          "s": 0.8,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "colimbo",
+          "como": "colimbo",
+          "x": 420,
+          "y": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "salta"
+            },
+            {
+              "en": 2.2,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "nutria",
+          "como": "nutria",
+          "x": 680,
+          "y": 812,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 2.4,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "castor",
+          "como": "castor",
+          "x": 960,
+          "y": 812,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "rata",
+          "como": "rata_almizclera",
+          "x": 1200,
+          "y": 812,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 400
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 1480,
+          "y": 645,
+          "capa": "fondo",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.5
+        }
+      ]
+    },
+    {
+      "id": "colimbo",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Primero fue el Colimbo, el ave que bucea más hondo que cualquier otra.",
+          "en": "First went the Loon, a bird that can dive deeper than almost any other bird."
+        },
+        {
+          "es": "Se zambulló y estuvo abajo mucho, mucho tiempo.",
+          "en": "He dove under, and he stayed down for a long, long time."
+        },
+        {
+          "es": "Cuando volvió a salir, jadeaba. Y su pico estaba vacío.",
+          "en": "When he came back up, he was gasping for air. And his beak was empty."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla_tortuga",
+          "x": 1550,
+          "s": 0.8,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "colimbo",
+          "como": "colimbo",
+          "x": 860,
+          "y": 800,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "salta"
+            },
+            {
+              "en": 1,
+              "hace": "desaparece",
+              "con": "agua"
+            },
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.1,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "nutria",
+          "como": "nutria",
+          "x": 420,
+          "y": 812,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "mira",
+              "a": 860
+            },
+            {
+              "en": 2.6,
+              "hace": "mira",
+              "a": 300
+            }
+          ]
+        },
+        {
+          "id": "rata",
+          "como": "rata_almizclera",
+          "x": 1180,
+          "y": 812,
+          "mira": "izq",
+          "rotulo": ""
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "dur": 0.4,
+          "intensidad": 0.06
+        }
+      ]
+    },
+    {
+      "id": "nutria_castor",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Luego lo intentó la Nutria, rápida y fuerte. Bajó y bajó hasta que le ardió el pecho.",
+          "en": "Then the Otter tried. She was fast and strong, and she swam down until her chest burned."
+        },
+        {
+          "es": "Volvió sin nada.",
+          "en": "She came back with nothing."
+        },
+        {
+          "es": "Después fue el Castor, golpeando el agua con su cola plana al sumergirse.",
+          "en": "Next came the Beaver, slapping the water with his flat tail as he went under."
+        },
+        {
+          "es": "Él también volvió sin nada. El agua era demasiado honda.",
+          "en": "He came back with nothing, too. The water was simply too deep."
+        }
+      ],
+      "actores": [
+        {
+          "id": "nutria",
+          "como": "nutria",
+          "x": 620,
+          "y": 812,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "desaparece",
+              "con": "agua"
+            },
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "castor",
+          "como": "castor",
+          "x": 1300,
+          "y": 812,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "salta"
+            },
+            {
+              "en": 2.5,
+              "hace": "desaparece",
+              "con": "agua"
+            },
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3.2,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "colimbo",
+          "como": "colimbo",
+          "x": 300,
+          "y": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "mira",
+              "a": 1300
+            }
+          ]
+        },
+        {
+          "id": "rata",
+          "como": "rata_almizclera",
+          "x": 1650,
+          "y": 812,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "mira",
+              "a": 1300
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.4,
+          "tipo": "olas-suben",
+          "dur": 0.4,
+          "intensidad": 0.06
+        }
+      ]
+    },
+    {
+      "id": "rata",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces una vocecita dijo: «Yo lo intento». Era la Rata Almizclera.",
+          "en": "Then a small voice said, \"I will try.\" It was the Muskrat."
+        },
+        {
+          "es": "Algunos se rieron. «¿Tú? Eres tan pequeña», le dijeron.",
+          "en": "Some of the others laughed. \"You? You are so small,\" they said."
+        },
+        {
+          "es": "La Rata Almizclera no contestó. Respiró hondo y se zambulló.",
+          "en": "The Muskrat did not answer. She took a deep breath, and she dove."
+        }
+      ],
+      "actores": [
+        {
+          "id": "rata",
+          "como": "rata_almizclera",
+          "x": 960,
+          "y": 812,
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "salta"
+            },
+            {
+              "en": 2.2,
+              "hace": "salta"
+            },
+            {
+              "en": 2.6,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "castor",
+          "como": "castor",
+          "x": 640,
+          "y": 812,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "nutria",
+          "como": "nutria",
+          "x": 1300,
+          "y": 812,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "colimbo",
+          "como": "colimbo",
+          "x": 380,
+          "y": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fondo",
+      "fondo": "bajo_agua",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Bajó nadando, lejos de la luz, hacia el frío y la oscuridad.",
+          "en": "Down she swam, away from the light, into the cold and the dark."
+        },
+        {
+          "es": "Le ardía el pecho. No veía nada. Pero siguió bajando.",
+          "en": "Her chest burned. Her eyes could see nothing. Still she kept going."
+        },
+        {
+          "es": "Al fin, sus patitas tocaron el fondo. Agarró un poquito de barro.",
+          "en": "At last, her little paws touched the bottom. She grabbed a tiny bit of mud."
+        },
+        {
+          "es": "Y dio la vuelta hacia la luz, que estaba muy, muy arriba.",
+          "en": "Then she turned back toward the light, far, far above."
+        }
+      ],
+      "actores": [
+        {
+          "id": "rata",
+          "como": "rata_almizclera",
+          "x": 760,
+          "y": 200,
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                900,
+                520
+              ],
+              "dur": 1.6
+            },
+            {
+              "en": 1.6,
+              "hace": "vuela",
+              "a": [
+                1000,
+                790
+              ],
+              "dur": 0.9
+            },
+            {
+              "en": 2.5,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                1150,
+                150
+              ],
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.9
+        },
+        {
+          "en": 2.5,
+          "tipo": "polvo",
+          "x": 1000,
+          "dur": 0.6
+        }
+      ]
+    },
+    {
+      "id": "regreso",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Arriba, los animales esperaban. Entonces la Rata Almizclera salió a flote, muy quieta.",
+          "en": "Up on the water, the animals waited. Then the Muskrat floated up, very still."
+        },
+        {
+          "es": "En muchas versiones, dio su vida para llegar al fondo. En otras, sobrevivió, por muy poco.",
+          "en": "In many tellings, she gave her life to reach the bottom. In others, she lived, but only just."
+        },
+        {
+          "es": "Y en su patita, bien cerrada, había un poco de tierra.",
+          "en": "And in her little paw, closed tight, there was a bit of earth."
+        },
+        {
+          "es": "Si todos los demás hubieran fallado, ¿te habrías zambullido tú?",
+          "en": "After everyone else had failed, would you have dived?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla_tortuga",
+          "x": 1500,
+          "s": 0.85
+        }
+      ],
+      "actores": [
+        {
+          "id": "rata",
+          "como": "rata_almizclera",
+          "x": 820,
+          "y": 812,
+          "escala": 1.2,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.4,
+              "hace": "cae"
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "nutria",
+          "como": "nutria",
+          "x": 480,
+          "y": 812,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "colimbo",
+          "como": "colimbo",
+          "x": 260,
+          "y": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 1460,
+          "y": 624,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.2,
+              "hace": "baja"
+            },
+            {
+              "en": 2.3,
+              "hace": "senala",
+              "a": 820
+            }
+          ],
+          "escala": 0.85
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 820,
+          "y": 700,
+          "dur": 1,
+          "intensidad": 0.5
+        }
+      ]
+    },
+    {
+      "id": "tierra",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.04,
+          1
+        ]
+      },
+      "frases": [
+        {
+          "es": "La Mujer del Cielo tomó la tierra de su patita y la extendió sobre el caparazón de la Tortuga.",
+          "en": "Sky Woman took the earth from the little paw and spread it on the Turtle's shell."
+        },
+        {
+          "es": "Después empezó a caminar en círculo sobre el lomo de la Tortuga, cantando y bailando.",
+          "en": "Then she began to walk in a circle on the Turtle's back, singing and dancing."
+        },
+        {
+          "es": "Mientras bailaba, la tierra crecía. Se extendía cada vez más, sobre todo el caparazón.",
+          "en": "As she danced, the earth grew. It spread wider and wider, over the whole shell."
+        },
+        {
+          "es": "Plantó las semillas del Mundo del Cielo, y las primeras plantas brotaron de la tierra nueva.",
+          "en": "She planted the seeds from the Sky World, and the first plants came up from the new land."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla_tortuga",
+          "x": 960,
+          "s": 0.95,
+          "hasta": 0.4
+        },
+        {
+          "tipo": "isla_tortuga",
+          "x": 960,
+          "s": 0.95,
+          "en": 0.3,
+          "hasta": 1.6,
+          "props": {
+            "tierra": 0.15
+          }
+        },
+        {
+          "tipo": "isla_tortuga",
+          "x": 960,
+          "s": 0.95,
+          "en": 1.5,
+          "hasta": 2.6,
+          "props": {
+            "tierra": 0.55
+          }
+        },
+        {
+          "tipo": "isla_tortuga",
+          "x": 960,
+          "s": 0.95,
+          "en": 2.5,
+          "props": {
+            "tierra": 1,
+            "arboles": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 900,
+          "y": 605,
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.9,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 760,
+              "dur": 0.4
+            },
+            {
+              "en": 1.4,
+              "hace": "camina",
+              "a": 1060,
+              "dur": 0.5
+            },
+            {
+              "en": 1.8,
+              "hace": "salta"
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                940,
+                478
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 2.9,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.2,
+              "hace": "toma",
+              "objeto": "semillas"
+            },
+            {
+              "en": 3.3,
+              "hace": "ofrece"
+            }
+          ],
+          "escala": 0.7
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 560,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 960,
+          "y": 420,
+          "dur": 1,
+          "intensidad": 0.6
+        }
+      ]
+    },
+    {
+      "id": "isla",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.04
+        ]
+      },
+      "frases": [
+        {
+          "es": "La tierra siguió creciendo, con bosques, ríos y colinas, hasta ser la tierra que pisamos hoy.",
+          "en": "The land kept growing, with forests, rivers and hills, until it became the land we walk on today."
+        },
+        {
+          "es": "Por eso muchas naciones nativas, como los haudenosaunee y los anishinaabe, llaman a Norteamérica la Isla Tortuga.",
+          "en": "That is why many Native nations, like the Haudenosaunee and the Anishinaabe, call North America Turtle Island."
+        },
+        {
+          "es": "Y cada vez que se cuenta la historia, se recuerda a la pequeña Rata Almizclera.",
+          "en": "And every time the story is told, the little Muskrat is remembered."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla_tortuga",
+          "x": 960,
+          "s": 1.25,
+          "props": {
+            "tierra": 1,
+            "arboles": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 960,
+          "y": 380,
+          "escala": 0.7,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "rata",
+          "como": "rata_almizclera",
+          "x": 380,
+          "y": 812,
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "colimbo",
+          "como": "colimbo",
+          "x": 1620,
+          "y": 800,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "POR ESO SE LLAMA ISLA TORTUGA",
+            "en": "THAT'S WHY IT'S CALLED TURTLE ISLAND"
+          },
+          "x": 960,
+          "y": 210,
+          "hasta": 2,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La Mujer del Cielo ya tenía un hogar. Y pronto tuvo una hija.",
+          "en": "Sky Woman had a home now. And soon, she had a daughter."
+        },
+        {
+          "es": "¿Quién crees que fue el animal más valiente? Cuéntanos en los comentarios.",
+          "en": "Who do you think was the bravest animal? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, la hija de la Mujer del Cielo crece, y nacen dos gemelos muy distintos. Es Nacen los gemelos.",
+          "en": "Next time, Sky Woman's daughter grows up, and two very different twins are born. It is The Twins Are Born."
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "hija",
+          "como": "hija_cielo",
+          "x": 1080,
+          "mira": "izq",
+          "props": {
+            "cuerpo": "nino"
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "rata",
+          "como": "rata_almizclera",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El animal más pequeño hizo lo imposible",
+        "en": "The smallest animal did the impossible"
+      },
+      "escena": "fondo",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Por qué la llaman Isla Tortuga",
+        "en": "Why they call it Turtle Island"
+      },
+      "escena": "tierra",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Todos fallaron. Entonces habló la más pequeña",
+        "en": "Everyone failed. Then the smallest spoke up"
+      },
+      "escena": "rata",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 960
+    }
+  ]
+}

@@ -1,0 +1,1293 @@
+{
+  "id": "norteamericanas-01-la-mujer-del-cielo",
+  "serie": "norteamericanas",
+  "numero": "01",
+  "titulo": {
+    "es": "La mujer que cayó del cielo",
+    "en": "Sky Woman Falls"
+  },
+  "tituloGriego": "SKY WOMAN FALLS",
+  "miniatura": {
+    "heroe": "mujer_cielo",
+    "rival": "jefe_cielo"
+  },
+  "siguiente": {
+    "es": "El mundo sobre el lomo de la tortuga",
+    "en": "The World on the Turtle's Back"
+  },
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los haudenosaunee son el Pueblo de la Casa Larga: seis naciones en lo que hoy es Nueva York y Canadá.",
+          "en": "The Haudenosaunee are the People of the Longhouse: six nations in what is now New York State and Canada."
+        },
+        {
+          "es": "Su historia más antigua empieza muy arriba, en un mundo más allá del cielo.",
+          "en": "Their oldest story begins far above our heads, in a world beyond the sky."
+        },
+        {
+          "es": "Los narradores suelen contarla en invierno, cuando las noches son largas y el fuego calienta.",
+          "en": "Storytellers often share it in winter, when the nights are long and the fire is warm."
+        },
+        {
+          "es": "Cada narrador la cuenta un poco distinta. Esta es una de esas maneras.",
+          "en": "Every teller tells it a little differently. This is one of those ways."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_comunal",
+          "x": 1560,
+          "s": 0.9,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "fogata",
+          "x": 960,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "narrador",
+          "como": "anciano_nativo",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "nino1",
+          "como": "haudenosaunee",
+          "x": 1180,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "mira",
+              "a": 1000
+            },
+            {
+              "en": 1.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 700
+            }
+          ]
+        },
+        {
+          "id": "nina1",
+          "como": "haudenosaunee_mujer",
+          "x": 1340,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino"
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "madre",
+          "como": "haudenosaunee_mujer",
+          "x": 1520,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "estrellas",
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 720,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "HAUDENOSAUNEE",
+            "en": "HAUDENOSAUNEE"
+          },
+          "x": 1150,
+          "y": 250,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "mundo",
+      "fondo": "mundo_cielo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sobre el cielo había otro mundo. Allí vivía gente, muy parecida a la de aquí.",
+          "en": "Above the sky, there was another world. People lived there, much like people live here."
+        },
+        {
+          "es": "En el centro de ese Mundo del Cielo había un gran árbol.",
+          "en": "In the middle of that Sky World stood a great tree."
+        },
+        {
+          "es": "Sus flores daban luz a todos. Allí no había sol: la luz era el árbol mismo.",
+          "en": "Its flowers gave light to everyone. There was no sun up there. The tree itself was the light."
+        },
+        {
+          "es": "En muchas versiones, en el Mundo del Cielo nadie se enfermaba y nadie moría.",
+          "en": "In many tellings, no one in the Sky World was ever sick, and no one ever died."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "arbol_cielo",
+          "x": 1080,
+          "s": 0.95,
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "p1",
+          "como": "gente_cielo",
+          "x": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 520,
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "como": "gente_cielo_mujer",
+          "x": 1640,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "como": "gente_cielo",
+          "x": 1820,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1080,
+          "y": 320,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "EL MUNDO DEL CIELO",
+            "en": "THE SKY WORLD"
+          },
+          "x": 1720,
+          "y": 260,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "pareja",
+      "fondo": "mundo_cielo",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "En el Mundo del Cielo vivía una joven. Hoy la llamamos la Mujer del Cielo.",
+          "en": "A young woman lived in the Sky World. Today we call her Sky Woman."
+        },
+        {
+          "es": "Se casó con el hombre que cuidaba el gran árbol. En muchas versiones, él era un jefe.",
+          "en": "She married the man who looked after the great tree. In many tellings, he was a chief."
+        },
+        {
+          "es": "Pronto, la Mujer del Cielo iba a tener un bebé.",
+          "en": "Soon, Sky Woman was going to have a baby."
+        },
+        {
+          "es": "Pero algo estaba por cambiar el Mundo del Cielo para siempre.",
+          "en": "But something was about to change the Sky World forever."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "arbol_cielo",
+          "x": 320,
+          "s": 0.8,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "casa_comunal",
+          "x": 1650,
+          "s": 0.8,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 760,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.3,
+              "hace": "mira",
+              "a": 300
+            }
+          ]
+        },
+        {
+          "id": "jefe",
+          "como": "jefe_cielo",
+          "x": 1080,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1080
+            },
+            {
+              "en": 1.6,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.2,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "intensidad": 0.5
+        }
+      ]
+    },
+    {
+      "id": "arbol",
+      "fondo": "mundo_cielo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Aquí las versiones cambian. En una, el jefe soñó que había que arrancar el gran árbol.",
+          "en": "Here the tellings differ. In one, the chief had a dream: the great tree had to be pulled up."
+        },
+        {
+          "es": "En otras, su esposo se puso celoso y enojado, y el árbol fue arrancado de raíz.",
+          "en": "In others, her husband grew jealous and angry, and the tree was torn up by its roots."
+        },
+        {
+          "es": "Donde estaba el gran árbol, ahora había un hoyo en el suelo del Mundo del Cielo.",
+          "en": "Where the great tree had stood, there was now a hole in the floor of the Sky World."
+        },
+        {
+          "es": "Por el hoyo subía un viento frío, desde algún lugar muy abajo.",
+          "en": "A cold wind blew up through it, from somewhere far below."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "arbol_cielo",
+          "x": 1100,
+          "s": 0.85,
+          "hasta": 1.6
+        },
+        {
+          "tipo": "agujero",
+          "x": 1100,
+          "y": 800,
+          "s": 1,
+          "en": 1.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "jefe",
+          "como": "jefe_cielo",
+          "x": 640,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "reza"
+            },
+            {
+              "en": 0.9,
+              "hace": "baja"
+            },
+            {
+              "en": 1,
+              "hace": "toma",
+              "objeto": "palo"
+            },
+            {
+              "en": 1.1,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.5,
+              "hace": "suelta"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 1560,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "temblor",
+          "dur": 0.6,
+          "intensidad": 0.6
+        },
+        {
+          "en": 1.55,
+          "tipo": "polvo",
+          "x": 1100,
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "hoyo",
+      "fondo": "mundo_cielo",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "La Mujer del Cielo caminó hasta el borde del hoyo y miró hacia abajo.",
+          "en": "Sky Woman walked to the edge of the hole and looked down."
+        },
+        {
+          "es": "Muy abajo no vio tierra. Solo agua, oscura y brillante, hasta donde alcanzaba la vista.",
+          "en": "Far below, she saw no land at all. Only water, dark and shining, as far as she could see."
+        },
+        {
+          "es": "Entonces cayó. Algunos dicen que resbaló. Otros, que su esposo la empujó.",
+          "en": "Then she fell. Some say she slipped. Some say her husband pushed her."
+        },
+        {
+          "es": "Al caer, se agarró del borde. Sus manos se cerraron sobre raíces y semillas del Mundo del Cielo.",
+          "en": "As she fell, she grabbed at the edge. Her hands closed around roots and seeds from the Sky World."
+        },
+        {
+          "es": "¿Resbaló o la empujaron? ¿Qué crees que pasó ese día?",
+          "en": "Did she slip, or was she pushed? What do you think happened that day?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "agujero",
+          "x": 1150,
+          "y": 800,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "jefe",
+          "como": "jefe_cielo",
+          "x": 480,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.6,
+              "hace": "senala",
+              "a": 1150
+            },
+            {
+              "en": 4,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 720,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 930,
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.4,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.15,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.3,
+              "hace": "vuela",
+              "a": [
+                1150,
+                1150
+              ],
+              "dur": 0.5
+            },
+            {
+              "en": 2.8,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.3,
+          "tipo": "polvo",
+          "x": 1150,
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1150,
+          "y": 800,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 700,
+          "dur": 0.8,
+          "intensidad": 0.6
+        }
+      ]
+    },
+    {
+      "id": "caida",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cayó y cayó, fuera del Mundo del Cielo, entre nubes y viento.",
+          "en": "Down she fell, out of the Sky World, through the clouds and the wind."
+        },
+        {
+          "es": "Abajo no había tierra, ni árboles, ni rocas. Solo la gran agua.",
+          "en": "Below her, there was no earth, no trees, no rocks. Only the great water."
+        },
+        {
+          "es": "Pero el agua no estaba vacía. En ella nadaban animales y sobre ella volaban aves.",
+          "en": "But the water was not empty. Animals swam in it, and birds flew over it."
+        },
+        {
+          "es": "Y algunos miraron hacia arriba, y vieron a una mujer cayendo del cielo.",
+          "en": "And some of them looked up, and saw a woman falling from the sky."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "nube",
+          "x": 520,
+          "y": 300,
+          "s": 1,
+          "hasta": 1.5
+        },
+        {
+          "tipo": "nube",
+          "x": 1450,
+          "y": 230,
+          "s": 0.8,
+          "hasta": 1.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 900,
+          "y": 100,
+          "props": {
+            "objeto": "semillas"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                960,
+                470
+              ],
+              "dur": 3.6
+            }
+          ]
+        },
+        {
+          "id": "nutria",
+          "como": "nutria",
+          "x": 300,
+          "y": 810,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "nada",
+              "a": 520,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "colimbo",
+          "como": "colimbo",
+          "x": 1560,
+          "y": 800,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "ganso",
+          "como": "ganso_salvaje",
+          "x": 1900,
+          "y": 330,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "vuela",
+              "a": [
+                1500,
+                380
+              ],
+              "dur": 1.2
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1.2
+        }
+      ]
+    },
+    {
+      "id": "gansos",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Una bandada de gansos voló a su encuentro. En algunas versiones eran cisnes o garzas.",
+          "en": "A flock of geese flew up to meet her. In some tellings, they were swans or herons."
+        },
+        {
+          "es": "Volaron ala con ala, tan juntos que sus lomos formaron un colchón de plumas.",
+          "en": "They flew wing to wing, so close that their backs made a soft bed of feathers."
+        },
+        {
+          "es": "La Mujer del Cielo cayó sobre sus lomos, y la bajaron despacio hacia el agua.",
+          "en": "Sky Woman landed on their backs, and they carried her slowly down toward the water."
+        },
+        {
+          "es": "Pero los gansos no podían volar para siempre. ¿Dónde iba a pararse, si no había tierra?",
+          "en": "But the geese could not fly forever. Where could she stand, with no land anywhere?"
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 1000,
+          "y": 60,
+          "rotulo": "",
+          "props": {
+            "objeto": "semillas"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                1000,
+                330
+              ],
+              "dur": 1.8
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 2.1,
+              "hace": "vuela",
+              "a": [
+                1040,
+                440
+              ],
+              "dur": 1.8
+            },
+            {
+              "en": 3.2,
+              "hace": "mira",
+              "a": 600
+            }
+          ]
+        },
+        {
+          "id": "g1",
+          "como": "ganso_salvaje",
+          "x": 200,
+          "y": 560,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "vuela",
+              "a": [
+                900,
+                360
+              ],
+              "dur": 1.4
+            },
+            {
+              "en": 2.1,
+              "hace": "vuela",
+              "a": [
+                940,
+                470
+              ],
+              "dur": 1.8
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "como": "ganso_salvaje",
+          "x": 1900,
+          "y": 520,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "vuela",
+              "a": [
+                1080,
+                370
+              ],
+              "dur": 1.3
+            },
+            {
+              "en": 2.1,
+              "hace": "vuela",
+              "a": [
+                1120,
+                480
+              ],
+              "dur": 1.8
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "como": "ganso_salvaje",
+          "x": 300,
+          "y": 680,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "vuela",
+              "a": [
+                1000,
+                380
+              ],
+              "dur": 1.3
+            },
+            {
+              "en": 2.1,
+              "hace": "vuela",
+              "a": [
+                1040,
+                490
+              ],
+              "dur": 1.8
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "como": "ganso_salvaje",
+          "x": 1800,
+          "y": 680,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "vuela",
+              "a": [
+                1180,
+                360
+              ],
+              "dur": 1.2
+            },
+            {
+              "en": 2.1,
+              "hace": "vuela",
+              "a": [
+                1220,
+                470
+              ],
+              "dur": 1.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "luz",
+          "x": 1040,
+          "y": 360,
+          "dur": 0.6,
+          "intensidad": 0.5
+        }
+      ]
+    },
+    {
+      "id": "tortuga",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces el agua se abultó y algo enorme subió desde abajo. Era la Gran Tortuga.",
+          "en": "Then the water bulged, and something huge rose up from below. It was the Great Turtle."
+        },
+        {
+          "es": "«Pónganla sobre mi lomo», dijo la Tortuga. «Mi caparazón es ancho y fuerte».",
+          "en": "\"Put her on my back,\" said the Turtle. \"My shell is wide and strong.\""
+        },
+        {
+          "es": "Los gansos dejaron a la Mujer del Cielo, con cuidado, sobre el caparazón de la Tortuga.",
+          "en": "The geese set Sky Woman down gently on the Turtle's shell."
+        },
+        {
+          "es": "Estaba a salvo. En medio de un mar sin fin, tenía un pequeño lugar donde pararse.",
+          "en": "She was safe. In the middle of an endless sea, she had one small place to stand."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla_tortuga",
+          "x": 900,
+          "s": 0.95,
+          "en": 0.3,
+          "sube": 260,
+          "durSube": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 1460,
+          "y": 300,
+          "rotulo": "",
+          "props": {
+            "objeto": "semillas"
+          },
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "mira",
+              "a": 900
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                880,
+                605
+              ],
+              "dur": 0.9
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.3,
+              "hace": "arrodilla"
+            }
+          ],
+          "escala": 0.85
+        },
+        {
+          "id": "g1",
+          "como": "ganso_salvaje",
+          "x": 1420,
+          "y": 350,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                860,
+                600
+              ],
+              "dur": 0.9
+            },
+            {
+              "en": 2.9,
+              "hace": "vuela",
+              "a": [
+                -200,
+                220
+              ],
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "como": "ganso_salvaje",
+          "x": 1580,
+          "y": 360,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1020,
+                610
+              ],
+              "dur": 0.9
+            },
+            {
+              "en": 2.9,
+              "hace": "vuela",
+              "a": [
+                2200,
+                200
+              ],
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "olas-suben",
+          "dur": 0.6,
+          "intensidad": 0.15
+        },
+        {
+          "en": 0.3,
+          "tipo": "temblor",
+          "dur": 0.7,
+          "intensidad": 0.4
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 900,
+          "y": 560,
+          "dur": 0.8,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.6,
+          "texto": {
+            "es": "LA GRAN TORTUGA",
+            "en": "THE GREAT TURTLE"
+          },
+          "x": 900,
+          "y": 330,
+          "hasta": 1.8
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.04
+        ]
+      },
+      "frases": [
+        {
+          "es": "La Mujer del Cielo abrió las manos. Todavía tenía las semillas y raíces del Mundo del Cielo.",
+          "en": "Sky Woman opened her hands. She still held the seeds and roots from the Sky World."
+        },
+        {
+          "es": "Pero las semillas necesitan tierra para crecer, y solo había agua.",
+          "en": "But seeds need earth to grow, and there was only water."
+        },
+        {
+          "es": "Si cayeras del cielo, ¿qué cosa querrías tener en las manos? Cuéntanos en los comentarios.",
+          "en": "If you fell from the sky, what one thing would you want in your hands? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, los animales bucean hasta el fondo del mar. Es El mundo sobre el lomo de la tortuga.",
+          "en": "Next time, the animals dive to the bottom of the sea. It is The World on the Turtle's Back."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla_tortuga",
+          "x": 960,
+          "s": 0.95
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 940,
+          "y": 605,
+          "rotulo": "",
+          "props": {
+            "objeto": "semillas"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.2,
+              "hace": "entristece"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 1600
+            }
+          ],
+          "escala": 0.85
+        },
+        {
+          "id": "nutria",
+          "como": "nutria",
+          "x": 260,
+          "y": 810,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "nada",
+              "a": 420,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "castor",
+          "como": "castor",
+          "x": 1760,
+          "y": 810,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "rata",
+          "como": "rata_almizclera",
+          "x": 1960,
+          "y": 810,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 400,
+          "dur": 0.8,
+          "intensidad": 0.4
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La mujer que cayó del cielo",
+        "en": "The woman who fell from the sky"
+      },
+      "escena": "hoyo",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "La atrapó una bandada de gansos",
+        "en": "Caught by a flock of geese"
+      },
+      "escena": "gansos",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "La tortuga que sostuvo el mundo",
+        "en": "The turtle who held up the world"
+      },
+      "escena": "tortuga",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    }
+  ]
+}

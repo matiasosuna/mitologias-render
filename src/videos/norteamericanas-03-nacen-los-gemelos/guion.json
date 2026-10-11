@@ -1,0 +1,1025 @@
+{
+  "id": "norteamericanas-03-nacen-los-gemelos",
+  "serie": "norteamericanas",
+  "numero": "03",
+  "titulo": {
+    "es": "Nacen los gemelos",
+    "en": "The Twins Are Born"
+  },
+  "tituloGriego": "THE TWINS ARE BORN",
+  "miniatura": {
+    "heroe": "brote",
+    "rival": "pedernal"
+  },
+  "siguiente": {
+    "es": "Brote y Pedernal",
+    "en": "Sapling and Flint"
+  },
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, la Rata Almizclera trajo un poco de tierra, y la Mujer del Cielo la bailó hasta volverla un mundo.",
+          "en": "Last time, the Muskrat brought up a bit of earth, and Sky Woman danced it into a whole land."
+        },
+        {
+          "es": "Ahora la tierra tenía bosques, ríos y colinas. Y la Mujer del Cielo tenía una hija.",
+          "en": "Now the land had forests, rivers and hills. And Sky Woman had a daughter."
+        },
+        {
+          "es": "La niña creció muy rápido, como crecen las plantas en primavera.",
+          "en": "The girl grew up very fast, the way plants grow in spring."
+        },
+        {
+          "es": "Le encantaba recorrer la tierra nueva junto a su madre.",
+          "en": "She loved to walk the new land with her mother."
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 640,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 900
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "nina",
+          "como": "hija_cielo",
+          "x": 900,
+          "mira": "izq",
+          "props": {
+            "cuerpo": "nino"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "salta"
+            },
+            {
+              "en": 2.2,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "hija",
+          "como": "hija_cielo",
+          "x": 900,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1160,
+              "dur": 0.8
+            },
+            {
+              "en": 3.4,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visita",
+      "fondo": "lago",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, la hija caminaba sola cuando llegó un visitante.",
+          "en": "One day, the daughter was walking alone when a visitor came."
+        },
+        {
+          "es": "En una versión, era el Viento del Oeste, que sopló suave a su alrededor.",
+          "en": "In one telling, it was the West Wind, who blew softly all around her."
+        },
+        {
+          "es": "En otra, era un joven misterioso. Dejó dos flechas a su lado: una con punta de pedernal, y otra sin punta.",
+          "en": "In another, a mysterious young man came. He laid two arrows beside her: one tipped with sharp flint, and one without."
+        },
+        {
+          "es": "Poco después, ella supo que iba a tener gemelos.",
+          "en": "Soon after, she knew she was going to have twins."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hija",
+          "como": "hija_cielo",
+          "x": 760,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.1,
+              "hace": "mira",
+              "a": 1250
+            },
+            {
+              "en": 3,
+              "hace": "abraza"
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "visitante",
+          "como": "gente_cielo",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "capa": "#3A3A44",
+            "objeto": "arco"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.9,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 1.1,
+          "tipo": "polvo",
+          "x": 900,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "EL VIENTO DEL OESTE",
+            "en": "THE WEST WIND"
+          },
+          "x": 1300,
+          "y": 300,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "pelea",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los gemelos discutían incluso antes de nacer.",
+          "en": "Even before they were born, the twins argued."
+        },
+        {
+          "es": "Uno decía: «Voy a nacer por el camino de siempre, como todos».",
+          "en": "One said, \"I will be born the usual way, like everyone else.\""
+        },
+        {
+          "es": "El otro decía: «Veo luz por allá. ¡Yo voy a salir por ese lado!»",
+          "en": "The other said, \"I can see light over there. I will go out that way!\""
+        },
+        {
+          "es": "La hija de la Mujer del Cielo sentía la pelea, y tenía miedo.",
+          "en": "Sky Woman's daughter could feel them fighting, and she was afraid."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hija",
+          "como": "hija_cielo",
+          "x": 860,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "abraza"
+            },
+            {
+              "en": 0.5,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 2,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 1160,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.3,
+              "hace": "senala",
+              "a": 860
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 840,
+          "y": 600,
+          "dur": 0.7,
+          "intensidad": 0.4
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 880,
+          "y": 620,
+          "dur": 0.7
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "«POR EL CAMINO DE SIEMPRE»",
+            "en": "\"THE USUAL WAY\""
+          },
+          "x": 600,
+          "y": 300,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "«¡POR ALLÁ!»",
+            "en": "\"THAT WAY!\""
+          },
+          "x": 1300,
+          "y": 300,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "nacimiento",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El primer gemelo nació de la manera normal. Era tranquilo y bueno. Lo llamarían Brote.",
+          "en": "The first twin was born the normal way. He was calm and kind. He would be called Sapling."
+        },
+        {
+          "es": "El segundo no quiso esperar. Se abrió paso por el costado de su madre.",
+          "en": "The second twin would not wait. He pushed his way out through his mother's side."
+        },
+        {
+          "es": "Su cuerpo era duro y filoso, como la piedra. Lo llamarían Pedernal.",
+          "en": "His body was hard and sharp, like stone. He would be called Flint."
+        },
+        {
+          "es": "Y su madre, la hija de la Mujer del Cielo, no sobrevivió.",
+          "en": "And their mother, Sky Woman's daughter, did not survive."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 1300,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "hija",
+          "como": "hija_cielo",
+          "x": 760,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.3,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 3,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "brote",
+          "como": "brote",
+          "x": 980,
+          "props": {
+            "cuerpo": "nino",
+            "capa": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "pedernal",
+          "como": "pedernal",
+          "x": 520,
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 2.2,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 1560,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "intensidad": 0.6
+        }
+      ]
+    },
+    {
+      "id": "mentira",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "La Mujer del Cielo tenía el corazón roto. «¿Quién de ustedes hizo esto?», preguntó.",
+          "en": "Sky Woman's heart was broken. \"Which one of you did this?\" she asked."
+        },
+        {
+          "es": "Pedernal señaló a su hermano. «Fue él», dijo.",
+          "en": "Flint pointed at his brother. \"It was him,\" he said."
+        },
+        {
+          "es": "En muchas versiones, ella le creyó. Desde ese día quiso más a Pedernal, y fue fría con Brote.",
+          "en": "In many tellings, she believed him. From that day on, she loved Flint more, and she was cold to Sapling."
+        },
+        {
+          "es": "Si fueras la abuela, ¿a cuál de los gemelos le habrías creído?",
+          "en": "If you were the grandmother, which twin would you have believed?"
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 1220,
+          "mira": "izq",
+          "props": {
+            "pelo": "#DCD6CA"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entristece"
+            },
+            {
+              "en": 0.5,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 600
+            },
+            {
+              "en": 2.4,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "brote",
+          "como": "brote",
+          "x": 820,
+          "props": {
+            "cuerpo": "nino",
+            "capa": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.6,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "pedernal",
+          "como": "pedernal",
+          "x": 580,
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala",
+              "a": 820
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 2.6,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumba",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La Mujer del Cielo enterró a su hija en la tierra nueva.",
+          "en": "Sky Woman buried her daughter in the new earth."
+        },
+        {
+          "es": "Y de su tumba empezó a crecer algo maravilloso.",
+          "en": "And from her grave, something wonderful began to grow."
+        },
+        {
+          "es": "En una versión, del pecho brotó el maíz, y de las manos, la calabaza y los frijoles.",
+          "en": "In one telling, corn grew from her chest, and squash and beans grew from her hands."
+        },
+        {
+          "es": "De la cabeza nació el tabaco, y de los pies, las papas silvestres. Otras versiones suman la fresa.",
+          "en": "Tobacco grew from her head, and wild potatoes from her feet. Other tellings add the strawberry."
+        },
+        {
+          "es": "La hija de la Mujer del Cielo se había vuelto alimento para todos los que vendrían.",
+          "en": "Sky Woman's daughter had become food for everyone who would ever live."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "monticulo",
+          "x": 960,
+          "s": 1.2
+        },
+        {
+          "tipo": "maiz",
+          "x": 960,
+          "y": 760,
+          "s": 0.9,
+          "en": 2,
+          "sube": 120,
+          "durSube": 0.8
+        },
+        {
+          "tipo": "tres_hermanas",
+          "x": 780,
+          "s": 0.8,
+          "en": 2.4,
+          "sube": 80,
+          "durSube": 0.8
+        },
+        {
+          "tipo": "tres_hermanas",
+          "x": 1140,
+          "s": 0.8,
+          "en": 2.6,
+          "sube": 80,
+          "durSube": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 520,
+          "props": {
+            "pelo": "#DCD6CA"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.4,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.15,
+              "hace": "baja"
+            },
+            {
+              "en": 1.2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "brote",
+          "como": "brote",
+          "x": 1420,
+          "mira": "izq",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala",
+              "a": 960
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "luz",
+          "x": 960,
+          "y": 650,
+          "dur": 1,
+          "intensidad": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 700,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "MAÍZ, FRIJOL, CALABAZA",
+            "en": "CORN, BEANS, SQUASH"
+          },
+          "x": 960,
+          "y": 300,
+          "hasta": 3.5
+        }
+      ]
+    },
+    {
+      "id": "hermanas",
+      "fondo": "aldea_casa_larga",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hoy los haudenosaunee todavía llaman al maíz, el frijol y la calabaza las Tres Hermanas.",
+          "en": "Today, the Haudenosaunee still call corn, beans and squash the Three Sisters."
+        },
+        {
+          "es": "Se siembran juntas, en el mismo montículo, y se ayudan a crecer.",
+          "en": "They are planted together, in the same small hill, and they help each other grow."
+        },
+        {
+          "es": "El maíz sostiene al frijol, el frijol alimenta la tierra, y la calabaza la protege del sol.",
+          "en": "The corn holds up the beans, the beans feed the soil, and the squash shades the ground."
+        },
+        {
+          "es": "En seneca se las llama Diohe'ko: «ellas nos sostienen».",
+          "en": "In the Seneca language, they are called Diohe'ko: \"they sustain us.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tres_hermanas",
+          "x": 800,
+          "s": 1.1
+        },
+        {
+          "tipo": "tres_hermanas",
+          "x": 1250,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "agricultora",
+          "como": "haudenosaunee_mujer",
+          "x": 520,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 640,
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.6,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "nina",
+          "como": "haudenosaunee_mujer",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "objeto": "maiz"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "senala",
+              "a": 1250
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "anciano",
+          "como": "anciano_nativo",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "LAS TRES HERMANAS",
+            "en": "THE THREE SISTERS"
+          },
+          "x": 1020,
+          "y": 300,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La Mujer del Cielo crió a los dos niños. Crecieron rápido, y no se parecían en nada.",
+          "en": "Sky Woman raised the two boys. They grew fast, and they were nothing alike."
+        },
+        {
+          "es": "Brote hacía cosas suaves. Pedernal, cosas duras y filosas.",
+          "en": "Sapling made gentle things. Flint made hard and sharp ones."
+        },
+        {
+          "es": "¿Cuál de los gemelos crees que va a ganar al final? Cuéntanos en los comentarios.",
+          "en": "Which twin do you think will win in the end? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, los gemelos le dan forma al mundo, y su rivalidad se vuelve un desafío. Es Brote y Pedernal.",
+          "en": "Next time, the twins shape the world, and their rivalry becomes a contest. It is Sapling and Flint."
+        }
+      ],
+      "actores": [
+        {
+          "id": "brote_n",
+          "como": "brote",
+          "x": 760,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "pedernal_n",
+          "como": "pedernal",
+          "x": 1160,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "desaparece",
+              "con": "polvo"
+            }
+          ]
+        },
+        {
+          "id": "brote",
+          "como": "brote",
+          "x": 760,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "pedernal",
+          "como": "pedernal",
+          "x": 1160,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.2,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "abuela",
+          "como": "mujer_cielo",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "pelo": "#DCD6CA"
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 900
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "luz",
+          "x": 760,
+          "y": 500,
+          "dur": 0.5,
+          "intensidad": 0.4
+        },
+        {
+          "en": 1.5,
+          "tipo": "chispas",
+          "x": 1160,
+          "y": 520,
+          "dur": 0.6
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Gemelos que pelearon antes de nacer",
+        "en": "Twins who fought before they were born"
+      },
+      "escena": "pelea",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "La mentira de Pedernal",
+        "en": "Flint's lie"
+      },
+      "escena": "mentira",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "De dónde vienen las Tres Hermanas",
+        "en": "Where the Three Sisters came from"
+      },
+      "escena": "tumba",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 960
+    }
+  ]
+}
