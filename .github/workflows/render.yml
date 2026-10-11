@@ -33,10 +33,13 @@ jobs:
           case "${{ inputs.tipo }}" in
             vertical) node scripts/vertical-render.mjs ${{ matrix.id }} ;;
             short) node scripts/short-render.mjs ${{ matrix.id }} ;;
-            *) node scripts/motor-render.mjs ${{ matrix.id }} --imagen=en --audio=en ;;
+            *) node scripts/motor-render.mjs ${{ matrix.id }} --imagen=en --audio=en && node scripts/miniaturas.mjs ${{ matrix.id }} ;;
           esac
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.id }}-${{ inputs.tipo }}
-          path: out/${{ matrix.id }}/*.mp4
+          path: |
+            out/${{ matrix.id }}/*.mp4
+            out/${{ matrix.id }}/*.srt
+            out/${{ matrix.id }}/miniatura.jpg
           retention-days: 7
