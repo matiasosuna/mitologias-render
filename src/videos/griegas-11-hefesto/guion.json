@@ -1,0 +1,1611 @@
+{
+  "id": "griegas-11-hefesto",
+  "serie": "griegas",
+  "numero": "11",
+  "titulo": {
+    "es": "Hefesto, el dios rechazado",
+    "en": "Hephaestus, the Rejected God"
+  },
+  "tituloGriego": "ΗΦΑΙΣΤΟΣ",
+  "miniatura": {
+    "heroe": "hefesto",
+    "rival": "hera"
+  },
+  "siguiente": {
+    "es": "La red de Hefesto",
+    "en": "The Net of Hephaestus"
+  },
+  "escenas": [
+    {
+      "id": "fragua",
+      "fondo": "fragua",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada terminamos en una fragua llena de humo.",
+          "en": "Last time, we ended in a smoky forge."
+        },
+        {
+          "es": "Allí un dios golpeaba el metal. Era Hefesto, el herrero de los dioses.",
+          "en": "A god was hammering metal there. He was Hephaestus, the smith of the gods."
+        },
+        {
+          "es": "Él fue quien partió la cabeza de Zeus para que naciera Atenea.",
+          "en": "He is the one who split open the head of Zeus, so that Athena could be born."
+        },
+        {
+          "es": "Pero Hefesto era cojo y estaba cubierto de hollín. No se parecía a los otros dioses.",
+          "en": "But Hephaestus was lame, and covered in soot. He did not look like the other gods."
+        },
+        {
+          "es": "Y su propia madre, la diosa Hera, lo había echado del Olimpo. Hoy sabrás por qué.",
+          "en": "And his own mother, the goddess Hera, had thrown him out of Olympus. Today, you will hear why."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "humo",
+          "x": 1200,
+          "y": 620,
+          "dur": 2
+        },
+        {
+          "en": 0.8,
+          "tipo": "chispas",
+          "x": 1200,
+          "y": 640,
+          "dur": 1
+        },
+        {
+          "en": 1.3,
+          "tipo": "chispas",
+          "x": 1200,
+          "y": 640,
+          "dur": 1
+        },
+        {
+          "en": 2.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.2,
+          "tipo": "chispas",
+          "x": 1200,
+          "y": 640,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "humo",
+          "x": 1250,
+          "y": 600,
+          "dur": 1.5
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 300,
+          "y": 400,
+          "dur": 1.2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "EL HERRERO DE LOS DIOSES",
+            "en": "THE SMITH OF THE GODS"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "nacimiento",
+      "fondo": "olimpo",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Para entenderlo, volvamos al día en que nació.",
+          "en": "To understand, we go back to the day he was born."
+        },
+        {
+          "es": "El poeta Hesíodo cuenta que Hera lo tuvo sola, sin Zeus. Lo hizo por rabia, porque Zeus había creado a Atenea solo.",
+          "en": "The poet Hesiod says Hera had him alone, without Zeus. She did it out of anger, because Zeus had made Athena alone."
+        },
+        {
+          "es": "Hera quería un hijo perfecto, para demostrar que era tan fuerte como Zeus.",
+          "en": "Hera wanted a perfect child, to prove she was as strong as Zeus."
+        },
+        {
+          "es": "Pero el bebé era pequeño y débil, y sus piernas estaban torcidas.",
+          "en": "But the baby was small and weak, and his legs were twisted."
+        },
+        {
+          "es": "Hera miró a su hijo y sintió vergüenza. No quería que los otros dioses lo vieran.",
+          "en": "Hera looked at her son and felt ashamed. She did not want the other gods to see him."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hera",
+          "x": 600,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 650
+            },
+            {
+              "en": 1.4,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.8,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "hefesto",
+          "x": 1000,
+          "escala": 0.6,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "tiembla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 2.3,
+          "tipo": "luz",
+          "x": 650,
+          "y": 350,
+          "dur": 1
+        },
+        {
+          "en": 3.1,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 500,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "UN BEBÉ DÉBIL",
+            "en": "A WEAK BABY"
+          },
+          "x": 1000,
+          "y": 220,
+          "hasta": 4.5
+        }
+      ]
+    },
+    {
+      "id": "caida",
+      "fondo": "cielo",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Hera hizo algo terrible. Tomó a su hijo y lo arrojó desde el Olimpo.",
+          "en": "So Hera did something terrible. She picked up her son and threw him from Olympus."
+        },
+        {
+          "es": "Hefesto cayó durante mucho tiempo, entre las nubes.",
+          "en": "Hephaestus fell for a very long time, down through the clouds."
+        },
+        {
+          "es": "Las nubes pasaban a toda velocidad, y el mar se acercaba cada vez más.",
+          "en": "The clouds rushed past him, and the sea came closer and closer."
+        },
+        {
+          "es": "Hera lo vio desaparecer y no hizo nada.",
+          "en": "Hera watched him disappear, and she did nothing."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "nube",
+          "x": 300,
+          "s": 1.2,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "nube",
+          "x": 1300,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hera",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "hefesto",
+          "x": 450,
+          "escala": 0.85,
+          "y": 330,
+          "visible": true,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "vuela",
+              "a": [
+                800,
+                250
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1200,
+                380
+              ],
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1600,
+                600
+              ],
+              "dur": 1.2
+            },
+            {
+              "en": 2.9,
+              "hace": "cae"
+            },
+            {
+              "en": 3.3,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.2,
+          "tipo": "humo",
+          "x": 1000,
+          "y": 800,
+          "dur": 1.5
+        },
+        {
+          "en": 2.2,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA CAÍDA",
+            "en": "THE FALL"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "rescate",
+      "fondo": "mar",
+      "camara": {
+        "de": 0,
+        "a": 400
+      },
+      "frases": [
+        {
+          "es": "Cayó al mar. Dos diosas marinas lo vieron: Tetis y Eurínome.",
+          "en": "He crashed into the sea. Two sea goddesses saw him fall: Thetis and Eurynome."
+        },
+        {
+          "es": "Tetis era una ninfa, uno de esos espíritus amables que viven en el agua.",
+          "en": "Thetis was a nymph, one of those kind spirits who live in the water."
+        },
+        {
+          "es": "Lo sacaron de las olas y se lo llevaron a una cueva bajo el mar.",
+          "en": "They pulled him out of the waves and carried him to a cave under the sea."
+        },
+        {
+          "es": "Hera creyó que su hijo había muerto. En el Olimpo, nadie supo que seguía vivo.",
+          "en": "Hera thought her son was dead. On Olympus, nobody knew he was still alive."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "x": 1000,
+          "escala": 0.6,
+          "y": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "cae"
+            },
+            {
+              "en": 2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.2,
+              "hace": "camina",
+              "a": 1500
+            }
+          ]
+        },
+        {
+          "id": "tetis",
+          "x": 600,
+          "como": "ninfa",
+          "rotulo": "Thetis",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1100
+            }
+          ]
+        },
+        {
+          "id": "eurinome",
+          "x": 350,
+          "como": "ninfa",
+          "rotulo": "Eurynome",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 900
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "destello"
+        },
+        {
+          "en": 0.2,
+          "tipo": "olas-suben",
+          "dur": 1
+        },
+        {
+          "en": 0.4,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 700,
+          "dur": 1
+        },
+        {
+          "en": 2.5,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1.5
+        }
+      ]
+    },
+    {
+      "id": "cueva",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Vivió allí nueve años, en una cueva bajo el mar.",
+          "en": "He lived there for nine years, in a cave beneath the sea."
+        },
+        {
+          "es": "Las dos diosas lo cuidaron como a un hijo.",
+          "en": "The two goddesses cared for him like family."
+        },
+        {
+          "es": "Para darles las gracias, empezó a trabajar con el fuego y el metal.",
+          "en": "To thank them, he began to work with fire and metal."
+        },
+        {
+          "es": "Hizo broches, collares y anillos. Afuera, el mar rugía mientras él trabajaba.",
+          "en": "He made brooches, necklaces and rings. Outside, the sea roared while he worked."
+        },
+        {
+          "es": "Solo, en la oscuridad, se convirtió en el mejor artesano del mundo.",
+          "en": "Alone in the dark, he became the greatest craftsman in the world."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 1300,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "x": 1100,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.5,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "tetis",
+          "x": 500,
+          "como": "ninfa",
+          "rotulo": "Thetis",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.6,
+              "hace": "abraza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 650,
+          "dur": 1
+        },
+        {
+          "en": 2.6,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 650,
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 650,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 1.5
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 250,
+          "intensidad": 0.6,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "NUEVE AÑOS BAJO EL MAR",
+            "en": "NINE YEARS UNDER THE SEA"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "trono",
+      "fondo": "olimpo",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, Hefesto hizo un regalo para Hera: un hermoso trono de oro.",
+          "en": "One day, Hephaestus made a gift for Hera: a beautiful golden throne."
+        },
+        {
+          "es": "Lo envió al Olimpo, y los dioses quedaron maravillados. Nunca habían visto algo tan bello.",
+          "en": "He sent it to Olympus, and the gods gasped. They had never seen anything so lovely."
+        },
+        {
+          "es": "Hera se sentó en él, orgullosa y feliz.",
+          "en": "Hera sat on it, proud and happy."
+        },
+        {
+          "es": "Pero el trono era una trampa. Unas cadenas ocultas, demasiado finas para verse, la sujetaron.",
+          "en": "But the throne was a trap. Hidden chains, too fine to see, wrapped around her."
+        },
+        {
+          "es": "Hera quiso levantarse y no pudo. Todos los dioses intentaron liberarla, y todos fallaron.",
+          "en": "Hera tried to stand, and she could not. Every god tried to free her, and every god failed."
+        },
+        {
+          "es": "Hera estaba atrapada en su propio regalo. ¿Tú la habrías perdonado?",
+          "en": "Hera was stuck in her own gift. Would you have forgiven her?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1000,
+          "en": 0.2,
+          "props": {
+            "oro": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "hera",
+          "x": 650,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 980
+            },
+            {
+              "en": 2.3,
+              "hace": "sienta"
+            },
+            {
+              "en": 3.2,
+              "hace": "tiembla",
+              "dur": 1
+            },
+            {
+              "en": 4,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "hermes",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "ares",
+          "x": 250,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.2,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 380,
+          "dur": 1.5
+        },
+        {
+          "en": 2.9,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.1,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 2.5
+        },
+        {
+          "en": 5,
+          "tipo": "temblor",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "EL TRONO DE ORO",
+            "en": "THE GOLDEN THRONE"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 1.5
+        },
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "CADENAS INVISIBLES",
+            "en": "INVISIBLE CHAINS"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 4.5
+        }
+      ]
+    },
+    {
+      "id": "negativa",
+      "fondo": "fragua",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Los dioses le rogaron a Hefesto que volviera para liberarla.",
+          "en": "The gods begged Hephaestus to come back and set her free."
+        },
+        {
+          "es": "Pero Hefesto se negó.",
+          "en": "But Hephaestus refused."
+        },
+        {
+          "es": "En un relato antiguo, solo responde esto: «Yo no tengo madre».",
+          "en": "In one old tale, he answers only this: \"I have no mother.\""
+        },
+        {
+          "es": "Otro relato cuenta que Ares, el dios de la guerra, quiso asustarlo con fuego. Hefesto lo echó con sus propias antorchas.",
+          "en": "Another tale says Ares, the god of war, tried to scare him with fire. Hephaestus chased him away with his own torches."
+        },
+        {
+          "es": "Así que los dioses probaron de otra manera.",
+          "en": "So the gods tried a different way."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.6,
+              "hace": "senala"
+            },
+            {
+              "en": 2.5,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3.3,
+              "hace": "toma",
+              "objeto": "antorcha"
+            },
+            {
+              "en": 3.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "hermes",
+          "x": 400,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 700
+            },
+            {
+              "en": 0.6,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "ares",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2.9,
+              "hace": "entra",
+              "a": 800
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.6,
+              "hace": "camina",
+              "a": -200
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.8,
+          "tipo": "chispas",
+          "x": 1200,
+          "y": 640,
+          "dur": 1
+        },
+        {
+          "en": 1.6,
+          "tipo": "humo",
+          "x": 1250,
+          "y": 600,
+          "dur": 1.5
+        },
+        {
+          "en": 3.5,
+          "tipo": "fuego",
+          "x": 1000,
+          "y": 780,
+          "dur": 1
+        },
+        {
+          "en": 3.6,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "«YO NO TENGO MADRE»",
+            "en": "\"I HAVE NO MOTHER\""
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "dioniso",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 700
+      },
+      "frases": [
+        {
+          "es": "Ese dios fue Dioniso, el dios del vino y de las fiestas.",
+          "en": "That god was Dionysus, the god of wine and parties."
+        },
+        {
+          "es": "No lo amenazó. Se sentó con Hefesto y le sirvió copa tras copa de vino.",
+          "en": "He did not threaten Hephaestus. He sat with him and poured cup after cup of wine."
+        },
+        {
+          "es": "Pronto Hefesto estaba mareado y contento, y su enojo se fue disolviendo.",
+          "en": "Soon Hephaestus was dizzy and happy, and his anger melted away."
+        },
+        {
+          "es": "Dioniso lo subió a una mula y lo llevó al Olimpo, entre música y bailes.",
+          "en": "Dionysus helped him onto a mule and led him up to Olympus, with music and dancing."
+        },
+        {
+          "es": "A los griegos les encantaba esta escena. Los pintores la dibujaron una y otra vez en sus vasijas.",
+          "en": "The Greeks loved this scene. Painters drew it again and again on their vases."
+        }
+      ],
+      "actores": [
+        {
+          "id": "dioniso",
+          "x": 500,
+          "mira": "der",
+          "props": {
+            "objeto": "copa"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 600
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1250
+            }
+          ]
+        },
+        {
+          "id": "hefesto",
+          "x": 1000,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.5,
+              "hace": "toma",
+              "objeto": "copa"
+            },
+            {
+              "en": 2.3,
+              "hace": "tiembla",
+              "dur": 1
+            },
+            {
+              "en": 3.0,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.2,
+              "hace": "camina",
+              "a": 1600
+            }
+          ]
+        },
+        {
+          "id": "mula",
+          "x": 2300,
+          "como": "caballo",
+          "rotulo": "Mule",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 1950
+            }
+          ]
+        },
+        {
+          "id": "musa",
+          "x": 250,
+          "mira": "der",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "camina",
+              "a": 900
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 800,
+          "y": 400,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1200,
+          "y": 500,
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "EN LAS VASIJAS GRIEGAS",
+            "en": "ON GREEK VASES"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "libre",
+      "fondo": "olimpo",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Hefesto volvió al Olimpo y caminó hasta el trono de oro.",
+          "en": "Hephaestus came back to Olympus and walked up to the golden throne."
+        },
+        {
+          "es": "Lo tocó, y las cadenas ocultas se soltaron. Hera estaba libre.",
+          "en": "He touched it, and the hidden chains fell away. Hera was free."
+        },
+        {
+          "es": "Los dioses guardaron silencio. Hera tuvo que aceptar, por fin, a su hijo.",
+          "en": "The gods fell silent. At last, Hera had to accept her son."
+        },
+        {
+          "es": "Zeus le dio un lugar entre los doce grandes dioses del Olimpo.",
+          "en": "Zeus gave him a place among the twelve great gods of Olympus."
+        },
+        {
+          "es": "El niño rechazado ahora tenía un asiento en la mesa de los dioses.",
+          "en": "The rejected child now had a seat at the table of the gods."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1000,
+          "props": {
+            "oro": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "hera",
+          "x": 980,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.8,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.5,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "hefesto",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 700
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "x": 1600,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.4,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 650,
+          "dur": 1.5
+        },
+        {
+          "en": 3.3,
+          "tipo": "luz",
+          "x": 700,
+          "y": 380,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "LIBRE",
+            "en": "FREE"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "taller",
+      "fondo": "fragua",
+      "camara": {
+        "de": 0,
+        "a": 400
+      },
+      "frases": [
+        {
+          "es": "En su fragua, Hefesto construyó maravillas para los dioses.",
+          "en": "In his forge, Hephaestus built wonders for the gods."
+        },
+        {
+          "es": "Hizo sus palacios de bronce y forjó los rayos que lanza Zeus.",
+          "en": "He built their palaces of bronze, and he forged the lightning bolts that Zeus throws."
+        },
+        {
+          "es": "Hizo doncellas de oro que caminaban y lo ayudaban a trabajar.",
+          "en": "He made golden maidens who could walk and help him work."
+        },
+        {
+          "es": "Y más tarde forjó una armadura brillante para un héroe llamado Aquiles.",
+          "en": "And later he forged a shining suit of armor for a hero named Achilles."
+        },
+        {
+          "es": "El dios que nadie quería se volvió el dios que todos necesitaban.",
+          "en": "The god nobody wanted became the god everybody needed."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "x": 1100,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.5,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "doncella1",
+          "x": 600,
+          "como": "mujer",
+          "rotulo": "",
+          "mira": "der",
+          "props": {
+            "piel": "#C9A227"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "camina",
+              "a": 800
+            },
+            {
+              "en": 2.8,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "doncella2",
+          "x": 350,
+          "como": "mujer",
+          "rotulo": "",
+          "mira": "der",
+          "props": {
+            "piel": "#C9A227"
+          },
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "camina",
+              "a": 600
+            }
+          ]
+        },
+        {
+          "id": "aquiles",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.6,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "chispas",
+          "x": 1200,
+          "y": 640,
+          "dur": 1
+        },
+        {
+          "en": 0.6,
+          "tipo": "chispas",
+          "x": 1200,
+          "y": 640,
+          "dur": 1
+        },
+        {
+          "en": 1.3,
+          "tipo": "rayo",
+          "x": 1500
+        },
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 700,
+          "y": 400,
+          "dur": 1.5
+        },
+        {
+          "en": 3.3,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.3,
+          "tipo": "luz",
+          "x": 1700,
+          "y": 300,
+          "intensidad": 0.5,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "DONCELLAS DE ORO",
+            "en": "GOLDEN MAIDENS"
+          },
+          "x": 800,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Hefesto también recibió una esposa: Afrodita, la diosa del amor.",
+          "en": "Hephaestus also received a wife: Aphrodite, the goddess of love."
+        },
+        {
+          "es": "Era la diosa más hermosa de todas. Pero ella no lo amaba.",
+          "en": "She was the most beautiful goddess of all. But she did not love him."
+        },
+        {
+          "es": "Amaba a Ares, el dios de la guerra, el mismo que había querido asustarlo con fuego.",
+          "en": "She loved Ares, the god of war, the same one who had tried to scare him with fire."
+        },
+        {
+          "es": "Hefesto lo descubrió. Y sabía exactamente cómo atraparlos.",
+          "en": "Hephaestus found out. And he knew exactly how to catch them."
+        },
+        {
+          "es": "Cuéntame en los comentarios: ¿el trono de oro fue una venganza justa, o fue demasiado cruel?",
+          "en": "Tell me in the comments: was the golden throne fair revenge, or was it too cruel?"
+        },
+        {
+          "es": "En el próximo episodio, los atrapa con una red invisible: La red de Hefesto.",
+          "en": "Next time, he catches them in a net no one can see: The Net of Hephaestus."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "afrodita",
+          "x": 800,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.5,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "ares",
+          "x": 500,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 800,
+          "y": 380,
+          "dur": 1.2
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1400,
+          "y": 640,
+          "dur": 1.2
+        },
+        {
+          "en": 5,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 400,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 5,
+          "texto": {
+            "es": "LA RED DE HEFESTO",
+            "en": "THE NET OF HEPHAESTUS"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El trono que atrapó a una diosa",
+        "en": "The Golden Throne That Trapped a Goddess"
+      },
+      "escena": "trono",
+      "desde": 0,
+      "hasta": 5,
+      "foco": 1050
+    },
+    {
+      "gancho": {
+        "es": "Tirado del Olimpo por su propia madre",
+        "en": "Thrown From Olympus by His Own Mother"
+      },
+      "escena": "caida",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 600
+    },
+    {
+      "gancho": {
+        "es": "El dios que se emborrachó para volver",
+        "en": "The God Who Was Tricked With Wine"
+      },
+      "escena": "dioniso",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 800
+    }
+  ]
+}

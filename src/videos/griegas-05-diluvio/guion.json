@@ -1,0 +1,1691 @@
+{
+ "id": "griegas-05-diluvio",
+ "serie": "griegas",
+ "numero": "05",
+ "titulo": {
+  "es": "El diluvio de Deucalión",
+  "en": "The Flood of Deucalion"
+ },
+ "tituloGriego": "ΔΕΥΚΑΛΙΩΝ",
+ "escenas": [
+  {
+   "id": "hierro",
+   "fondo": "ciudad",
+   "camara": {
+    "de": 0,
+    "a": 600,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Tras las cinco edades, la humanidad llegó a la edad de hierro, y su maldad ya no tenía límites.",
+     "en": "After the five ages, humanity reached the Iron Age, and its wickedness knew no limits."
+    },
+    {
+     "es": "Mentían, robaban y peleaban entre hermanos; nadie respetaba a los huéspedes ni a los dioses.",
+     "en": "They lied, they stole, and brothers fought brothers; no one honored guests or the gods."
+    },
+    {
+     "es": "Desde el Olimpo, Zeus escuchaba los rumores y decidió comprobarlos con sus propios ojos.",
+     "en": "From Olympus, Zeus heard the rumors and decided to see the truth with his own eyes."
+    },
+    {
+     "es": "Se quitó su forma divina y bajó a la tierra disfrazado de viajero humilde.",
+     "en": "He cast off his divine form and walked the earth disguised as a humble traveler."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "casa",
+     "x": 300
+    },
+    {
+     "tipo": "casa",
+     "x": 1150,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "ladron",
+     "x": 700,
+     "como": "hombre",
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "golpea"
+      },
+      {
+       "en": 1.6,
+       "hace": "cae"
+      },
+      {
+       "en": 2.2,
+       "hace": "levantarse"
+      }
+     ]
+    },
+    {
+     "id": "guerrero",
+     "x": 900,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "golpea"
+      },
+      {
+       "en": 1.5,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "zeus",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.2,
+       "hace": "senala"
+      },
+      {
+       "en": 3,
+       "hace": "brilla",
+       "dur": 0.8
+      },
+      {
+       "en": 3.5,
+       "hace": "transforma",
+       "en_que": "anciano"
+      },
+      {
+       "en": 3.8,
+       "hace": "camina",
+       "a": 1000
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "dur": 1.5
+    },
+    {
+     "en": 1,
+     "tipo": "humo",
+     "x": 500,
+     "y": 500,
+     "dur": 2
+    },
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 1500,
+     "y": 400,
+     "dur": 0.8
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "LA EDAD DE HIERRO",
+      "en": "THE IRON AGE"
+     },
+     "x": 900,
+     "y": 200,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "licaon",
+   "fondo": "palacio",
+   "camara": {
+    "de": 0,
+    "a": 700
+   },
+   "frases": [
+    {
+     "es": "Al caer la noche llegó a Arcadia, al palacio del rey Licaón.",
+     "en": "At nightfall he reached Arcadia, to the palace of King Lycaon."
+    },
+    {
+     "es": "Zeus dio señales de que era un dios, y el pueblo empezó a rezarle.",
+     "en": "Zeus showed signs that he was a god, and the people began to pray to him."
+    },
+    {
+     "es": "Pero Licaón se burló y quiso ponerlo a prueba con un crimen terrible.",
+     "en": "But Lycaon mocked him and wished to test him with a terrible crime."
+    },
+    {
+     "es": "En el banquete le sirvió carne humana, para ver si el huésped se daba cuenta.",
+     "en": "At the banquet he served him human flesh, to see whether his guest would notice."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "columna",
+     "x": 200
+    },
+    {
+     "tipo": "altar",
+     "x": 1000
+    },
+    {
+     "tipo": "columna",
+     "x": 1700,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "viajero",
+     "x": 300,
+     "como": "zeus",
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "entra",
+       "a": 700
+      },
+      {
+       "en": 1,
+       "hace": "brilla",
+       "dur": 1
+      },
+      {
+       "en": 3.2,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "pueblo1",
+     "x": 1300,
+     "como": "hombre",
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1.2,
+       "hace": "reza"
+      }
+     ]
+    },
+    {
+     "id": "pueblo2",
+     "x": 1500,
+     "como": "mujer",
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1.4,
+       "hace": "arrodilla"
+      },
+      {
+       "en": 1.6,
+       "hace": "reza"
+      }
+     ]
+    },
+    {
+     "id": "licaon",
+     "x": 1750,
+     "como": "rey",
+     "mira": "izq",
+     "rotulo": "Lycaon",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "habla",
+       "dur": 1
+      },
+      {
+       "en": 2.6,
+       "hace": "senala"
+      },
+      {
+       "en": 3,
+       "hace": "ofrece"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "dur": 1
+    },
+    {
+     "en": 1,
+     "tipo": "luz",
+     "x": 700,
+     "y": 350,
+     "dur": 1.2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "EL BANQUETE DE LICAÓN",
+      "en": "THE BANQUET OF LYCAON"
+     },
+     "x": 800,
+     "y": 200,
+     "hasta": 1.8
+    }
+   ]
+  },
+  {
+   "id": "lobo",
+   "fondo": "noche",
+   "camara": {
+    "de": 0,
+    "a": 800
+   },
+   "frases": [
+    {
+     "es": "Zeus volcó la mesa, furioso, y un rayo cayó sobre el palacio.",
+     "en": "Zeus overturned the table in fury, and a thunderbolt struck the palace."
+    },
+    {
+     "es": "Licaón huyó al campo e intentó gritar, pero de su boca solo salieron aullidos.",
+     "en": "Lycaon fled into the fields and tried to scream, but only howls came from his mouth."
+    },
+    {
+     "es": "Su ropa se volvió pelo gris, sus brazos se volvieron patas.",
+     "en": "His clothes turned to gray fur, and his arms became paws."
+    },
+    {
+     "es": "El rey cruel se había convertido en lobo, con la misma mirada feroz de siempre.",
+     "en": "The cruel king had become a wolf, with the same fierce gaze as ever."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "columna",
+     "x": 300
+    },
+    {
+     "tipo": "luna",
+     "x": 1500,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 450,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.1,
+       "hace": "golpea"
+      },
+      {
+       "en": 0.6,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "licaon",
+     "x": 800,
+     "como": "rey",
+     "mira": "der",
+     "rotulo": "Lycaon",
+     "pasos": [
+      {
+       "en": 0.8,
+       "hace": "corre",
+       "a": 1600,
+       "dur": 1
+      },
+      {
+       "en": 1.6,
+       "hace": "habla",
+       "dur": 0.6
+      },
+      {
+       "en": 2.2,
+       "hace": "tiembla",
+       "dur": 0.6
+      },
+      {
+       "en": 2.6,
+       "hace": "transforma",
+       "en_que": "lobo"
+      },
+      {
+       "en": 3.4,
+       "hace": "gira"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "rayo",
+     "x": 400,
+     "y": 300
+    },
+    {
+     "en": 0,
+     "tipo": "temblor",
+     "dur": 1
+    },
+    {
+     "en": 2.6,
+     "tipo": "destello",
+     "x": 1600,
+     "y": 450,
+     "dur": 0.8
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 3.3,
+     "texto": {
+      "es": "EL REY LOBO",
+      "en": "THE WOLF KING"
+     },
+     "x": 1500,
+     "y": 250,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "decision",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 500,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "De regreso en el Olimpo, Zeus reunió a los dioses.",
+     "en": "Back on Olympus, Zeus gathered the gods."
+    },
+    {
+     "es": "Licaón no era el único: toda la humanidad se había corrompido, y debía desaparecer.",
+     "en": "Lycaon was not alone: all of humanity had become corrupt, and had to vanish."
+    },
+    {
+     "es": "Tomó su rayo para incendiar la tierra, pero se detuvo.",
+     "en": "He took up his thunderbolt to set the earth ablaze, but he stopped."
+    },
+    {
+     "es": "Un fuego tan grande podía alcanzar el cielo y quemar también la casa de los dioses.",
+     "en": "A fire so vast could reach the heavens and burn the home of the gods as well."
+    },
+    {
+     "es": "Entonces eligió otro castigo: el agua.",
+     "en": "So he chose another punishment: water."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 500
+    },
+    {
+     "tipo": "columna",
+     "x": 1500,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 500,
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "levanta"
+      },
+      {
+       "en": 1,
+       "hace": "habla",
+       "dur": 1
+      },
+      {
+       "en": 2,
+       "hace": "toma",
+       "objeto": "rayo"
+      },
+      {
+       "en": 2.6,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "calla"
+      },
+      {
+       "en": 4,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "poseidon",
+     "x": 1000,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "entra",
+       "a": 950
+      },
+      {
+       "en": 4,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "atenea",
+     "x": 1250,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "entra",
+       "a": 1200
+      },
+      {
+       "en": 3,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "apolo",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.7,
+       "hace": "entra",
+       "a": 1450
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2.4,
+     "tipo": "fuego",
+     "x": 1000,
+     "y": 550,
+     "dur": 1.5
+    },
+    {
+     "en": 3.3,
+     "tipo": "oscurecer",
+     "dur": 1
+    },
+    {
+     "en": 4,
+     "tipo": "niebla",
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "LA DECISIÓN DE ZEUS",
+      "en": "ZEUS DECIDES"
+     },
+     "x": 900,
+     "y": 200,
+     "hasta": 1.8
+    }
+   ]
+  },
+  {
+   "id": "diluvio",
+   "fondo": "mar",
+   "camara": {
+    "de": 0,
+    "a": 1000
+   },
+   "frases": [
+    {
+     "es": "Zeus encerró al viento del norte, que despeja las nubes, y soltó a Noto, el viento del sur, cargado de niebla.",
+     "en": "Zeus locked away the north wind, which clears the clouds, and loosed Notus, the fog-laden south wind."
+    },
+    {
+     "es": "Las nubes se juntaron, cayó un trueno, y empezó a llover sin parar.",
+     "en": "The clouds gathered, thunder cracked, and the rain began to fall without end."
+    },
+    {
+     "es": "Poseidón golpeó la tierra con su tridente: los ríos se desbordaron sobre campos, casas y templos.",
+     "en": "Poseidon struck the earth with his trident, and rivers burst over fields, houses and temples."
+    },
+    {
+     "es": "Pronto ya no hubo diferencia entre la tierra y el mar: todo era agua.",
+     "en": "Soon there was no difference between land and sea: everything was water."
+    },
+    {
+     "es": "Los peces nadaban entre las copas de los árboles, y los delfines chocaban contra los bosques.",
+     "en": "Fish swam among the treetops, and dolphins crashed against the forests."
+    },
+    {
+     "es": "Los lobos nadaban junto a las ovejas, y las aves, sin dónde posarse, caían al mar.",
+     "en": "Wolves swam beside sheep, and birds with nowhere to land fell into the sea."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "nube",
+     "x": 300,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "nube",
+     "x": 800,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "olivo",
+     "x": 1300
+    },
+    {
+     "tipo": "casa",
+     "x": 1700
+    },
+    {
+     "tipo": "templo",
+     "x": 2200,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 300,
+     "capa": "fondo",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "levanta"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "noto",
+     "x": 650,
+     "como": "anciano",
+     "props": {
+      "alas": true
+     },
+     "rotulo": "Notus",
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "entra",
+       "a": 700
+      },
+      {
+       "en": 1,
+       "hace": "habla",
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "poseidon",
+     "x": 1000,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.2,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "pez",
+     "x": 1300,
+     "y": 350,
+     "capa": "medio",
+     "pasos": [
+      {
+       "en": 4,
+       "hace": "aparece"
+      },
+      {
+       "en": 4.2,
+       "hace": "nada",
+       "a": 1700
+      }
+     ]
+    },
+    {
+     "id": "delfin",
+     "x": 1500,
+     "y": 450,
+     "pasos": [
+      {
+       "en": 4.4,
+       "hace": "aparece"
+      },
+      {
+       "en": 4.6,
+       "hace": "nada",
+       "a": 2000
+      }
+     ]
+    },
+    {
+     "id": "lobo",
+     "x": 1900,
+     "y": 560,
+     "pasos": [
+      {
+       "en": 5,
+       "hace": "aparece"
+      },
+      {
+       "en": 5.2,
+       "hace": "nada",
+       "a": 1600
+      }
+     ]
+    },
+    {
+     "id": "oveja",
+     "x": 2050,
+     "y": 560,
+     "pasos": [
+      {
+       "en": 5.1,
+       "hace": "aparece"
+      },
+      {
+       "en": 5.3,
+       "hace": "nada",
+       "a": 1750
+      }
+     ]
+    },
+    {
+     "id": "ave",
+     "x": 1700,
+     "como": "aguila",
+     "y": 250,
+     "pasos": [
+      {
+       "en": 5.3,
+       "hace": "aparece"
+      },
+      {
+       "en": 5.5,
+       "hace": "cae"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "niebla",
+     "dur": 2
+    },
+    {
+     "en": 1,
+     "tipo": "lluvia",
+     "dur": 5
+    },
+    {
+     "en": 1.2,
+     "tipo": "rayo",
+     "x": 700,
+     "y": 250
+    },
+    {
+     "en": 2.1,
+     "tipo": "temblor",
+     "dur": 1
+    },
+    {
+     "en": 3,
+     "tipo": "olas-suben",
+     "dur": 2.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "EL DILUVIO",
+      "en": "THE FLOOD"
+     },
+     "x": 1000,
+     "y": 200,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "arcon",
+   "fondo": "mar",
+   "camara": {
+    "de": 0,
+    "a": 700
+   },
+   "frases": [
+    {
+     "es": "Pero alguien lo había previsto: Prometeo, que todo lo sabía de antemano.",
+     "en": "But someone had foreseen it: Prometheus, who knew all things in advance."
+    },
+    {
+     "es": "Avisó a su hijo Deucalión y le dijo que construyera un gran arcón de madera.",
+     "en": "He warned his son Deucalion and told him to build a great wooden chest."
+    },
+    {
+     "es": "Deucalión subió con su esposa Pirra, hija de Epimeteo y de Pandora; los dos eran justos.",
+     "en": "Deucalion boarded with his wife Pyrrha, daughter of Epimetheus and Pandora; both were righteous."
+    },
+    {
+     "es": "Nueve días y nueve noches flotaron sobre el océano que cubría el mundo, sin ver una sola orilla.",
+     "en": "Nine days and nine nights they drifted on the ocean that covered the world, with no shore in sight."
+    },
+    {
+     "es": "Al décimo día, el arcón tocó tierra: la cima del monte Parnaso, lo único que asomaba.",
+     "en": "On the tenth day the chest touched ground: the peak of Mount Parnassus, the only land showing."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "barco",
+     "x": 850
+    },
+    {
+     "tipo": "monte",
+     "x": 2150,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "prometeo",
+     "x": 250,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "brilla",
+       "dur": 0.8
+      },
+      {
+       "en": 0.6,
+       "hace": "habla",
+       "dur": 0.8
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "deucalion",
+     "x": 550,
+     "como": "hombre",
+     "mira": "der",
+     "rotulo": "Deucalion",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "golpea"
+      },
+      {
+       "en": 1.5,
+       "hace": "golpea"
+      },
+      {
+       "en": 2,
+       "hace": "camina",
+       "a": 850
+      },
+      {
+       "en": 3.5,
+       "hace": "lamenta"
+      },
+      {
+       "en": 4.2,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "pirra",
+     "x": 450,
+     "como": "mujer",
+     "mira": "der",
+     "rotulo": "Pyrrha",
+     "pasos": [
+      {
+       "en": 2.3,
+       "hace": "camina",
+       "a": 800
+      },
+      {
+       "en": 3.6,
+       "hace": "reza"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "lluvia",
+     "dur": 3
+    },
+    {
+     "en": 1.2,
+     "tipo": "chispas",
+     "x": 550,
+     "y": 620,
+     "dur": 1
+    },
+    {
+     "en": 3,
+     "tipo": "niebla",
+     "dur": 2
+    },
+    {
+     "en": 4.2,
+     "tipo": "aclarar",
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 3,
+     "texto": {
+      "es": "NUEVE DÍAS",
+      "en": "NINE DAYS"
+     },
+     "x": 900,
+     "y": 200,
+     "hasta": 3.9
+    },
+    {
+     "en": 4.3,
+     "texto": {
+      "es": "MONTE PARNASO",
+      "en": "MOUNT PARNASSUS"
+     },
+     "x": 1900,
+     "y": 300
+    }
+   ]
+  },
+  {
+   "id": "parnaso",
+   "fondo": "monte",
+   "camara": {
+    "de": 0,
+    "a": 300
+   },
+   "frases": [
+    {
+     "es": "Zeus miró el mundo y vio que solo quedaban dos personas, las dos inocentes.",
+     "en": "Zeus looked upon the world and saw only two people left, both innocent."
+    },
+    {
+     "es": "Entonces apartó las nubes y mostró de nuevo el cielo a la tierra.",
+     "en": "Then he parted the clouds and showed the sky to the earth once more."
+    },
+    {
+     "es": "Poseidón dejó su tridente, y Tritón sopló su caracola para que las aguas se retiraran.",
+     "en": "Poseidon lowered his trident, and Triton blew his conch so the waters would retreat."
+    },
+    {
+     "es": "Los ríos volvieron a sus cauces, y las colinas y los árboles reaparecieron cubiertos de barro.",
+     "en": "The rivers returned to their beds, and hills and trees reappeared, covered in mud."
+    },
+    {
+     "es": "Pero el mundo estaba vacío y en silencio, y Deucalión y Pirra lloraron de soledad.",
+     "en": "But the world was empty and silent, and Deucalion and Pyrrha wept with loneliness."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 700
+    },
+    {
+     "tipo": "nube",
+     "x": 1400,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 1500,
+     "mira": "izq",
+     "capa": "fondo",
+     "pasos": [
+      {
+       "en": 0.1,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.3,
+       "hace": "senala"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "poseidon",
+     "x": 1100,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.3,
+       "hace": "baja"
+      }
+     ]
+    },
+    {
+     "id": "triton",
+     "x": 1400,
+     "como": "joven",
+     "mira": "izq",
+     "props": {
+      "tocado": null
+     },
+     "rotulo": "Triton",
+     "pasos": [
+      {
+       "en": 2.4,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.7,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "habla",
+       "dur": 0.7
+      }
+     ]
+    },
+    {
+     "id": "deucalion",
+     "x": 500,
+     "como": "hombre",
+     "mira": "der",
+     "rotulo": "Deucalion",
+     "pasos": [
+      {
+       "en": 3.8,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "pirra",
+     "x": 700,
+     "como": "mujer",
+     "mira": "der",
+     "rotulo": "Pyrrha",
+     "pasos": [
+      {
+       "en": 4,
+       "hace": "arrodilla"
+      },
+      {
+       "en": 4.3,
+       "hace": "lamenta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "niebla",
+     "dur": 1
+    },
+    {
+     "en": 1,
+     "tipo": "aclarar",
+     "dur": 2
+    },
+    {
+     "en": 2.5,
+     "tipo": "olas-bajan",
+     "dur": 2.5
+    },
+    {
+     "en": 3.5,
+     "tipo": "polvo",
+     "x": 900,
+     "y": 600,
+     "dur": 1.5
+    },
+    {
+     "en": 4,
+     "tipo": "oscurecer",
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "EL MONTE PARNASO",
+      "en": "MOUNT PARNASSUS"
+     },
+     "x": 900,
+     "y": 200,
+     "hasta": 1.8
+    }
+   ]
+  },
+  {
+   "id": "oraculo",
+   "fondo": "templo",
+   "camara": {
+    "de": 0,
+    "a": 400
+   },
+   "frases": [
+    {
+     "es": "Fueron al templo de Temis, la diosa de la justicia, y le pidieron ayuda.",
+     "en": "They went to the temple of Themis, goddess of justice, and begged for her help."
+    },
+    {
+     "es": "La diosa respondió: cúbranse la cabeza y arrojen detrás de ustedes los huesos de su gran madre.",
+     "en": "The goddess replied: cover your heads and throw the bones of your great mother behind you."
+    },
+    {
+     "es": "Pirra se asustó: nunca ofendería a su madre de esa manera.",
+     "en": "Pyrrha was horrified: she would never insult her mother that way."
+    },
+    {
+     "es": "Pero Deucalión entendió: la gran madre es la Tierra, y sus huesos son las piedras.",
+     "en": "But Deucalion understood: the great mother is Earth, and her bones are stones."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "altar",
+     "x": 1500
+    },
+    {
+     "tipo": "columna",
+     "x": 900,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "roca",
+     "x": 200
+    }
+   ],
+   "actores": [
+    {
+     "id": "deucalion",
+     "x": 300,
+     "como": "hombre",
+     "mira": "der",
+     "rotulo": "Deucalion",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "camina",
+       "a": 800
+      },
+      {
+       "en": 0.6,
+       "hace": "reza"
+      },
+      {
+       "en": 3,
+       "hace": "senala",
+       "a": 200
+      },
+      {
+       "en": 3.4,
+       "hace": "brilla",
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "pirra",
+     "x": 150,
+     "como": "mujer",
+     "mira": "der",
+     "rotulo": "Pyrrha",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "camina",
+       "a": 600
+      },
+      {
+       "en": 0.7,
+       "hace": "reza"
+      },
+      {
+       "en": 2,
+       "hace": "tiembla",
+       "dur": 0.8
+      },
+      {
+       "en": 2.6,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "temis",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.8,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "habla",
+       "dur": 1.5
+      },
+      {
+       "en": 1.5,
+       "hace": "senala"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.8,
+     "tipo": "luz",
+     "x": 1500,
+     "y": 350,
+     "dur": 1.5
+    },
+    {
+     "en": 3.2,
+     "tipo": "destello",
+     "x": 300,
+     "y": 400,
+     "dur": 0.7
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "EL ORÁCULO DE TEMIS",
+      "en": "THE ORACLE OF THEMIS"
+     },
+     "x": 900,
+     "y": 200,
+     "hasta": 1.8
+    }
+   ]
+  },
+  {
+   "id": "piedras",
+   "fondo": "monte",
+   "camara": {
+    "de": 0,
+    "a": 900
+   },
+   "frases": [
+    {
+     "es": "Bajaron del templo y lanzaron piedras por encima del hombro, sin mirar atrás.",
+     "en": "They came down from the temple and threw stones over their shoulders, without looking back."
+    },
+    {
+     "es": "Las piedras se ablandaron y tomaron forma, como estatuas que empiezan a esculpirse.",
+     "en": "The stones softened and took shape, like statues beginning to be carved."
+    },
+    {
+     "es": "Las que lanzó Deucalión se convirtieron en hombres; las de Pirra, en mujeres.",
+     "en": "Those Deucalion threw became men; those Pyrrha threw became women."
+    },
+    {
+     "es": "Por eso los humanos somos una raza dura, capaz de soportar el trabajo y el dolor.",
+     "en": "That is why humans are a hardy race, able to endure toil and pain."
+    },
+    {
+     "es": "Deucalión y Pirra tuvieron un hijo, Helén, y de su nombre los griegos se llamaron helenos.",
+     "en": "Deucalion and Pyrrha had a son, Hellen, and from his name the Greeks came to be called Hellenes."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 1000
+    },
+    {
+     "tipo": "roca",
+     "x": 1250
+    },
+    {
+     "tipo": "roca",
+     "x": 1500
+    }
+   ],
+   "actores": [
+    {
+     "id": "deucalion",
+     "x": 600,
+     "como": "hombre",
+     "mira": "der",
+     "rotulo": "Deucalion",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "camina",
+       "a": 700
+      },
+      {
+       "en": 0.3,
+       "hace": "lanza"
+      },
+      {
+       "en": 0.7,
+       "hace": "lanza"
+      }
+     ]
+    },
+    {
+     "id": "pirra",
+     "x": 450,
+     "como": "mujer",
+     "mira": "der",
+     "rotulo": "Pyrrha",
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "lanza"
+      },
+      {
+       "en": 0.6,
+       "hace": "lanza"
+      }
+     ]
+    },
+    {
+     "id": "hombre1",
+     "x": 1100,
+     "como": "guerrero",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1.2,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.4,
+       "hace": "brilla",
+       "dur": 0.8
+      },
+      {
+       "en": 2.1,
+       "hace": "camina",
+       "a": 1400
+      },
+      {
+       "en": 3.2,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "hombre2",
+     "x": 1250,
+     "como": "hombre",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1.4,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.3,
+       "hace": "camina",
+       "a": 1700
+      },
+      {
+       "en": 3.4,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "mujer1",
+     "x": 1450,
+     "como": "mujer",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1.6,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.5,
+       "hace": "camina",
+       "a": 1900
+      }
+     ]
+    },
+    {
+     "id": "helen",
+     "x": 800,
+     "como": "nino",
+     "mira": "der",
+     "rotulo": "Hellen",
+     "pasos": [
+      {
+       "en": 4,
+       "hace": "aparece"
+      },
+      {
+       "en": 4.3,
+       "hace": "brilla",
+       "dur": 0.8
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "polvo",
+     "x": 1250,
+     "y": 620,
+     "dur": 1.5
+    },
+    {
+     "en": 2,
+     "tipo": "destello",
+     "x": 1250,
+     "y": 500,
+     "dur": 0.8
+    },
+    {
+     "en": 4.2,
+     "tipo": "luz",
+     "x": 800,
+     "y": 450,
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "LAS PIEDRAS QUE CAMINAN",
+      "en": "THE STONES THAT WALK"
+     },
+     "x": 900,
+     "y": 200,
+     "hasta": 1.8
+    },
+    {
+     "en": 4.2,
+     "texto": {
+      "es": "HELÉN",
+      "en": "HELLEN"
+     },
+     "x": 1350,
+     "y": 300
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "cielo",
+   "camara": {
+    "de": 0,
+    "a": 500,
+    "zoom": [
+     1,
+     1.08
+    ]
+   },
+   "frases": [
+    {
+     "es": "Así renació la humanidad, nacida de la piedra de la Tierra.",
+     "en": "So humanity was born anew, formed from the stone of the Earth."
+    },
+    {
+     "es": "Pero Gea no perdonaba a los dioses por haber encerrado a sus hijos, los Titanes.",
+     "en": "But Gaia would not forgive the gods for imprisoning her children, the Titans."
+    },
+    {
+     "es": "Y preparaba un ejército de seres enormes para atacar el Olimpo.",
+     "en": "And she was raising an army of colossal beings to storm Olympus."
+    },
+    {
+     "es": "Esa es la próxima historia: la Gigantomaquia.",
+     "en": "That is the next story: the Gigantomachy."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "monte",
+     "x": 1900,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "humano1",
+     "x": 300,
+     "como": "hombre",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "camina",
+       "a": 450
+      },
+      {
+       "en": 0.5,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "humana",
+     "x": 500,
+     "como": "mujer",
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "camina",
+       "a": 620
+      },
+      {
+       "en": 0.6,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "gea",
+     "x": 1000,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.4,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "gigante1",
+     "x": 1500,
+     "como": "gigante",
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.5,
+       "hace": "crece"
+      }
+     ]
+    },
+    {
+     "id": "gigante2",
+     "x": 1750,
+     "como": "gigante",
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 2.5,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.8,
+       "hace": "crece"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "aclarar",
+     "dur": 1
+    },
+    {
+     "en": 1,
+     "tipo": "oscurecer",
+     "dur": 1.5
+    },
+    {
+     "en": 2.2,
+     "tipo": "temblor",
+     "dur": 1.5
+    },
+    {
+     "en": 3,
+     "tipo": "rayo",
+     "x": 1200,
+     "y": 250
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 3,
+     "texto": {
+      "es": "LA GIGANTOMAQUIA",
+      "en": "THE GIGANTOMACHY"
+     },
+     "x": 950,
+     "y": 250
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "El rey que se convirtió en lobo",
+    "en": "The King Who Turned Into a Wolf"
+   },
+   "escena": "lobo",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 700
+  },
+  {
+   "gancho": {
+    "es": "El día que el mundo entero se hundió",
+    "en": "The Day the Whole World Drowned"
+   },
+   "escena": "diluvio",
+   "desde": 2,
+   "hasta": 5,
+   "foco": 800
+  },
+  {
+   "gancho": {
+    "es": "Las piedras que se volvieron humanos",
+    "en": "The Stones That Became Humans"
+   },
+   "escena": "piedras",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  }
+ ]
+}

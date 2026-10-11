@@ -1,0 +1,1604 @@
+{
+  "id": "nordicas-03-yggdrasil",
+  "serie": "nordicas",
+  "numero": "03",
+  "titulo": {
+    "es": "Yggdrasil y los nueve mundos",
+    "en": "Yggdrasil and the Nine Worlds"
+  },
+  "tituloGriego": "YGGDRASIL",
+  "escenas": [
+    {
+      "id": "fresno",
+      "fondo": "yggdrasil",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ask y Embla, los primeros humanos, vivían en Midgard sin saber que su mundo descansaba sobre algo mucho más grande.",
+          "en": "Ask and Embla, the first humans, lived in Midgard without knowing that their world rested on something far greater."
+        },
+        {
+          "es": "Los dioses sí lo sabían: todos los mundos estaban unidos por un árbol inmenso llamado Yggdrasil.",
+          "en": "The gods knew it: all the worlds were joined together by one immense tree called Yggdrasil."
+        },
+        {
+          "es": "Era un fresno, el más grande y el mejor de todos los árboles.",
+          "en": "It was an ash tree, the greatest and the finest of all trees."
+        },
+        {
+          "es": "Sus ramas se extendían sobre cada mundo y subían más alto que el cielo.",
+          "en": "Its branches spread over every world and rose higher than the sky."
+        },
+        {
+          "es": "Y cada día, los dioses se reunían bajo ese árbol para decidir qué era justo.",
+          "en": "And every day, the gods gathered beneath that tree to decide what was just."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 120,
+          "s": 0.6,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ask",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "embla",
+          "x": 520,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "entra",
+              "a": 1450
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4.2,
+              "hace": "entra",
+              "a": 1700
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 960,
+          "y": 200,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "MIDGARD",
+            "en": "MIDGARD"
+          },
+          "x": 400,
+          "y": 240,
+          "hasta": 1
+        },
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "YGGDRASIL",
+            "en": "YGGDRASIL"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "raices",
+      "fondo": "yggdrasil",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1.04,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Yggdrasil se sostenía sobre tres raíces enormes, y cada una se hundía en un mundo distinto.",
+          "en": "Yggdrasil stood upon three enormous roots, and each one sank into a different world."
+        },
+        {
+          "es": "Una llegaba a Asgard, el hogar de los dioses, donde brota el pozo de Urd.",
+          "en": "One reached Asgard, the home of the gods, where the well of Urd springs."
+        },
+        {
+          "es": "Otra llegaba a Jotunheim, la tierra de los gigantes, donde está el pozo de Mimir, lleno de sabiduría.",
+          "en": "Another reached Jotunheim, the land of the giants, where Mimir's well lies, full of wisdom."
+        },
+        {
+          "es": "Y la tercera bajaba hasta Niflheim, el mundo del hielo, donde nace Hvergelmir, la fuente de los ríos helados.",
+          "en": "And the third went down to Niflheim, the world of ice, where Hvergelmir rises, the spring of the frozen rivers."
+        },
+        {
+          "es": "Así, el árbol unía las alturas, el centro y las profundidades del universo.",
+          "en": "And so the tree joined the heights, the middle and the depths of the universe."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piedra_runica",
+          "x": 250,
+          "s": 0.8,
+          "en": 1,
+          "props": {
+            "texto": "URD"
+          }
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1500,
+          "s": 0.8,
+          "en": 2,
+          "props": {
+            "texto": "MIMIR"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 560,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "mimir",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 250,
+          "y": 500,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "niebla",
+          "dur": 1.5
+        },
+        {
+          "en": 3,
+          "tipo": "nieve",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "ASGARD",
+            "en": "ASGARD"
+          },
+          "x": 300,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "JOTUNHEIM",
+            "en": "JOTUNHEIM"
+          },
+          "x": 1500,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "NIFLHEIM",
+            "en": "NIFLHEIM"
+          },
+          "x": 1100,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "nornas",
+      "fondo": "yggdrasil",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Junto al pozo de Urd vivían tres Nornas, tres mujeres que conocían el destino de todo lo que existe.",
+          "en": "Beside the well of Urd lived three Norns, three women who knew the fate of everything that exists."
+        },
+        {
+          "es": "Se llamaban Urd, Verdandi y Skuld: lo que fue, lo que es y lo que será.",
+          "en": "Their names were Urd, Verdandi and Skuld: what was, what is, and what shall be."
+        },
+        {
+          "es": "Cada día sacaban agua del pozo y la derramaban sobre las raíces, para que el fresno no se secara ni se pudriera.",
+          "en": "Each day they drew water from the well and poured it over the roots, so that the ash would neither wither nor rot."
+        },
+        {
+          "es": "Y mientras cuidaban el árbol, tallaban runas en la madera: con ellas decidían cuánto viviría cada ser.",
+          "en": "And while they tended the tree, they carved runes into the wood: with them they decided how long each being would live."
+        },
+        {
+          "es": "Ni los hombres ni los dioses podían cambiar lo que las Nornas habían tallado.",
+          "en": "Neither men nor gods could change what the Norns had carved."
+        },
+        {
+          "es": "En el pozo de Urd nadan dos cisnes, y de ellos descienden todos los cisnes. Por eso son blancos.",
+          "en": "Two swans swim in the well of Urd, and all swans descend from them. That is why swans are white."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piedra_runica",
+          "x": 1650,
+          "s": 0.8,
+          "en": 3,
+          "props": {
+            "texto": "URD"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "urd",
+          "como": "norna",
+          "x": 560,
+          "mira": "der",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 2.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "verdandi",
+          "como": "norna",
+          "x": 860,
+          "mira": "der",
+          "rotulo": "",
+          "props": {
+            "canas": false
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "baja"
+            },
+            {
+              "en": 2.7,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.2,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "skuld",
+          "como": "norna",
+          "x": 1160,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "canas": false,
+            "pelo": "#2B4660"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "baja"
+            },
+            {
+              "en": 2.9,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.4,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 860,
+          "y": 500,
+          "dur": 1
+        },
+        {
+          "en": 2.5,
+          "tipo": "chispas",
+          "x": 560,
+          "y": 700
+        },
+        {
+          "en": 3.3,
+          "tipo": "chispas",
+          "x": 1160,
+          "y": 600
+        },
+        {
+          "en": 4,
+          "tipo": "destello"
+        },
+        {
+          "en": 5,
+          "tipo": "luz",
+          "x": 860,
+          "y": 500,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "URD",
+            "en": "URD"
+          },
+          "x": 560,
+          "y": 250,
+          "hasta": 2.8
+        },
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "VERDANDI",
+            "en": "VERDANDI"
+          },
+          "x": 860,
+          "y": 250,
+          "hasta": 2.8
+        },
+        {
+          "en": 1.6,
+          "texto": {
+            "es": "SKULD",
+            "en": "SKULD"
+          },
+          "x": 1160,
+          "y": 250,
+          "hasta": 2.8
+        },
+        {
+          "en": 5,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO LOS CISNES SON BLANCOS",
+            "en": "THAT'S WHY SWANS ARE WHITE"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "copa",
+      "fondo": "yggdrasil",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En lo más alto del árbol vivía un águila enorme, que sabía muchas cosas.",
+          "en": "At the very top of the tree lived an enormous eagle, who knew many things."
+        },
+        {
+          "es": "Entre sus ojos estaba posado el halcón Vedrfolnir.",
+          "en": "Between its eyes perched the hawk Vedrfolnir."
+        },
+        {
+          "es": "Y por el tronco, de arriba abajo, corría sin parar la ardilla Ratatoskr.",
+          "en": "And up and down the trunk, without ever stopping, ran the squirrel Ratatoskr."
+        },
+        {
+          "es": "Llevaba palabras entre el águila y el dragón que roía las raíces, y todas eran insultos.",
+          "en": "She carried words between the eagle and the dragon gnawing at the roots, and every one of them was an insult."
+        },
+        {
+          "es": "La ardilla repetía cada burla palabra por palabra, para que nunca hicieran las paces.",
+          "en": "The squirrel repeated every taunt word for word, so that they would never make peace."
+        }
+      ],
+      "actores": [
+        {
+          "id": "aguila",
+          "x": 960,
+          "y": 250,
+          "escala": 1.8,
+          "mira": "izq",
+          "capa": "fondo",
+          "rotulo": "EAGLE",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "habla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "vedrfolnir",
+          "como": "aguila",
+          "x": 880,
+          "y": 160,
+          "escala": 0.5,
+          "mira": "izq",
+          "capa": "fondo",
+          "rotulo": "VEDRFOLNIR",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "nidhogg",
+          "x": 1500,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.6,
+              "hace": "habla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 900,
+          "y": 600
+        },
+        {
+          "en": 2.5,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 380
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 650
+        },
+        {
+          "en": 4,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 450
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "RATATOSKR",
+            "en": "RATATOSKR"
+          },
+          "x": 860,
+          "y": 620,
+          "hasta": 2.4
+        },
+        {
+          "en": 2.4,
+          "texto": {
+            "es": "RATATOSKR",
+            "en": "RATATOSKR"
+          },
+          "x": 900,
+          "y": 460,
+          "hasta": 2.8
+        },
+        {
+          "en": 2.8,
+          "texto": {
+            "es": "RATATOSKR",
+            "en": "RATATOSKR"
+          },
+          "x": 960,
+          "y": 300,
+          "hasta": 3.2
+        },
+        {
+          "en": 3.6,
+          "texto": {
+            "es": "NIDHOGG",
+            "en": "NIDHOGG"
+          },
+          "x": 1500,
+          "y": 620,
+          "hasta": 5
+        }
+      ]
+    },
+    {
+      "id": "plaga",
+      "fondo": "yggdrasil",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuatro ciervos corrían por las ramas, mordiendo los brotes nuevos: Dain, Dvalin, Duneyr y Durathror.",
+          "en": "Four stags ran along the branches, biting the new shoots: Dain, Dvalin, Duneyr and Durathror."
+        },
+        {
+          "es": "Y abajo, en la oscuridad de las raíces, el dragón Nidhogg roía la madera sin descanso.",
+          "en": "And below, in the darkness of the roots, the dragon Nidhogg gnawed at the wood without rest."
+        },
+        {
+          "es": "Los ciervos lo mordían por arriba, el dragón lo devoraba por abajo, y el árbol sufría más de lo que nadie sabía.",
+          "en": "The stags bit it from above, the dragon devoured it from below, and the tree suffered more than anyone knew."
+        },
+        {
+          "es": "Pero las Nornas lo regaban cada día, y Yggdrasil se mantenía siempre verde.",
+          "en": "But the Norns watered it every day, and Yggdrasil stayed forever green."
+        },
+        {
+          "es": "De sus hojas cae un rocío dulce como la miel. Por eso las abejas se alimentan de él.",
+          "en": "From its leaves falls a dew sweet as honey. That is why bees feed on it."
+        },
+        {
+          "es": "Mientras el árbol siguiera en pie, los nueve mundos seguirían en su lugar.",
+          "en": "As long as the tree stood, the nine worlds would stay in their places."
+        }
+      ],
+      "actores": [
+        {
+          "id": "dain",
+          "como": "ciervo",
+          "x": 200,
+          "mira": "der",
+          "capa": "fondo",
+          "rotulo": "DAIN",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 300,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "dvalin",
+          "como": "ciervo",
+          "x": 450,
+          "mira": "der",
+          "capa": "medio",
+          "rotulo": "DVALIN",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 550,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "duneyr",
+          "como": "ciervo",
+          "x": 700,
+          "mira": "der",
+          "capa": "fondo",
+          "rotulo": "DUNEYR",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.7,
+              "hace": "camina",
+              "a": 800,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "durathror",
+          "como": "ciervo",
+          "x": 950,
+          "mira": "der",
+          "capa": "medio",
+          "rotulo": "DURATHROR",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.9,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "nidhogg",
+          "x": 1450,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "habla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "norna",
+          "x": 1800,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "baja"
+            },
+            {
+              "en": 3.6,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 1.5,
+          "tipo": "polvo",
+          "x": 1400,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 3.4,
+          "tipo": "luz",
+          "x": 1700,
+          "y": 500,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO HAY ROCÍO DULCE PARA LAS ABEJAS",
+            "en": "THAT'S WHY BEES FEED ON SWEET DEW"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "arriba",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Y sobre Yggdrasil descansaban nueve mundos. Empecemos por los más altos.",
+          "en": "And upon Yggdrasil rested nine worlds. Let us begin with the highest."
+        },
+        {
+          "es": "Arriba estaba Asgard, la fortaleza de los dioses Aesir, donde vivían Odín, Thor y Frigg.",
+          "en": "At the top stood Asgard, the fortress of the Aesir gods, where Odin, Thor and Frigg lived."
+        },
+        {
+          "es": "Allí también estaba Vanaheim, el hogar de los dioses Vanir, entre ellos Njord, Freyr y Freyja.",
+          "en": "There too lay Vanaheim, the home of the Vanir gods, among them Njord, Freyr and Freyja."
+        },
+        {
+          "es": "Y Alfheim, el mundo de la luz, donde vivían los elfos luminosos; los dioses se lo regalaron a Freyr.",
+          "en": "And Alfheim, the world of light, where the light elves lived; the gods gave it to Freyr as a gift."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 420,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 660,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "frigg",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "njord",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "freyr",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "freyja",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 450,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "ASGARD",
+            "en": "ASGARD"
+          },
+          "x": 660,
+          "y": 200,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "VANAHEIM",
+            "en": "VANAHEIM"
+          },
+          "x": 1500,
+          "y": 200,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "ALFHEIM",
+            "en": "ALFHEIM"
+          },
+          "x": 1500,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "centro",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 700,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "En el centro del árbol estaba Midgard, el mundo de los humanos, rodeado por un mar inmenso.",
+          "en": "At the center of the tree lay Midgard, the world of humans, ringed by an immense sea."
+        },
+        {
+          "es": "Ask, Embla y todos los hombres vivían tras una muralla hecha con las cejas de Ymir.",
+          "en": "Ask, Embla and all of humankind lived behind a wall made from the eyebrows of Ymir."
+        },
+        {
+          "es": "Más allá del mar se extendía Jotunheim, la tierra salvaje de los gigantes.",
+          "en": "Beyond the sea stretched Jotunheim, the wild land of the giants."
+        },
+        {
+          "es": "Y bajo la tierra se abría Svartalfheim, también llamado Nidavellir, el reino de los enanos.",
+          "en": "And beneath the earth opened Svartalfheim, also called Nidavellir, the realm of the dwarves."
+        },
+        {
+          "es": "Allí, entre minas oscuras y fraguas encendidas, los enanos forjaban tesoros que nadie más sabía hacer.",
+          "en": "There, among dark mines and blazing forges, the dwarves crafted treasures that no one else could make."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 300,
+          "s": 0.9
+        },
+        {
+          "tipo": "rio",
+          "x": 1100,
+          "en": 0
+        },
+        {
+          "tipo": "cueva",
+          "x": 2150,
+          "s": 0.9
+        },
+        {
+          "tipo": "fogata",
+          "x": 1950,
+          "en": 3.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "ask",
+          "x": 480,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "embla",
+          "x": 680,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "jotun",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            }
+          ],
+          "escala": 0.8
+        },
+        {
+          "id": "enano1",
+          "como": "enano",
+          "x": 1850,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "enano2",
+          "como": "enano",
+          "x": 2400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.2,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4,
+          "tipo": "chispas",
+          "x": 2100,
+          "y": 700
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "MIDGARD",
+            "en": "MIDGARD"
+          },
+          "x": 400,
+          "y": 220,
+          "hasta": 1.8
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "JOTUNHEIM",
+            "en": "JOTUNHEIM"
+          },
+          "x": 1450,
+          "y": 220,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "SVARTALFHEIM",
+            "en": "SVARTALFHEIM"
+          },
+          "x": 2150,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "abajo",
+      "fondo": "hel",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Quedaban tres mundos más: el del hielo, el del fuego y el de los muertos.",
+          "en": "Three worlds remained: the world of ice, the world of fire, and the world of the dead."
+        },
+        {
+          "es": "Niflheim, el mundo de la niebla y el hielo, de donde nacieron los ríos que llenaron el abismo.",
+          "en": "Niflheim, the world of mist and ice, from which came the rivers that filled the gap."
+        },
+        {
+          "es": "Muspelheim, el mundo del fuego, donde el gigante Surtr guarda la entrada con su espada en llamas.",
+          "en": "Muspelheim, the world of fire, where the giant Surtr guards the entrance with his flaming sword."
+        },
+        {
+          "es": "Y Hel, el reino de los muertos, gobernado por una giganta con medio cuerpo vivo y medio cuerpo de muerta.",
+          "en": "And Hel, the realm of the dead, ruled by a giantess with one half of her body alive and the other half dead."
+        },
+        {
+          "es": "A Hel iban los que morían de enfermedad o de vejez, y de allí casi nadie volvía.",
+          "en": "To Hel went those who died of sickness or old age, and from there almost no one returned."
+        }
+      ],
+      "actores": [
+        {
+          "id": "g1",
+          "como": "gigante_hielo",
+          "x": 420,
+          "escala": 0.5,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "como": "gigante_hielo",
+          "x": 700,
+          "escala": 0.45,
+          "mira": "izq",
+          "props": {
+            "mujer": true
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "surtr",
+          "x": 850,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            }
+          ],
+          "escala": 0.55
+        },
+        {
+          "id": "hel",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "niebla",
+          "dur": 1.5
+        },
+        {
+          "en": 1,
+          "tipo": "nieve",
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "fuego",
+          "x": 1150,
+          "y": 650,
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 950,
+          "y": 600
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "NIFLHEIM",
+            "en": "NIFLHEIM"
+          },
+          "x": 300,
+          "y": 220,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "MUSPELHEIM",
+            "en": "MUSPELHEIM"
+          },
+          "x": 850,
+          "y": 220,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "HEL",
+            "en": "HEL"
+          },
+          "x": 1550,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "bifrost",
+      "fondo": "bifrost",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Para unir tantos mundos, los dioses construyeron un puente de colores: Bifrost, el arcoíris.",
+          "en": "To join so many worlds, the gods built a bridge of colors: Bifrost, the rainbow."
+        },
+        {
+          "es": "Conecta Midgard con Asgard, y una de sus franjas arde en llamas rojas para que los gigantes no puedan cruzarlo.",
+          "en": "It links Midgard to Asgard, and one of its bands burns with red flame so that the giants cannot cross it."
+        },
+        {
+          "es": "Ese rojo es fuego de verdad. Por eso el arcoíris tiene una franja roja.",
+          "en": "That red is real fire. That is why the rainbow has a red band."
+        },
+        {
+          "es": "En el extremo del puente vive Heimdall, el guardián de los dioses.",
+          "en": "At the end of the bridge lives Heimdall, the guardian of the gods."
+        },
+        {
+          "es": "Heimdall duerme menos que un pájaro, ve a cien leguas de día y de noche, y oye crecer la hierba.",
+          "en": "Heimdall sleeps less than a bird, sees a hundred leagues by day and by night, and can hear the grass grow."
+        },
+        {
+          "es": "Tiene un cuerno que hará sonar cuando llegue el fin del mundo.",
+          "en": "He has a horn that he will sound when the end of the world comes."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 250,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "camina",
+              "a": 800,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "heimdall",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            },
+            {
+              "en": 5,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 960,
+          "y": 300,
+          "dur": 1.5
+        },
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 700,
+          "y": 400
+        },
+        {
+          "en": 5,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "BIFROST",
+            "en": "BIFROST"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "HEIMDALL",
+            "en": "HEIMDALL"
+          },
+          "x": 1500,
+          "y": 200,
+          "hasta": 5
+        },
+        {
+          "en": 2,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO EL ARCOÍRIS TIENE UNA FRANJA ROJA",
+            "en": "THAT'S WHY THE RAINBOW HAS A RED BAND"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Nueve mundos, tres raíces, un árbol y un puente: así se sostenía todo el universo.",
+          "en": "Nine worlds, three roots, one tree and one bridge: this is how the whole universe held together."
+        },
+        {
+          "es": "Los dioses vivían seguros en Asgard, con Heimdall vigilando. Pero esa paz estaba a punto de romperse.",
+          "en": "The gods lived safe in Asgard, with Heimdall on watch. But that peace was about to break."
+        },
+        {
+          "es": "Un día llegó a Asgard una mujer llamada Gullveig, y lo que los Aesir le hicieron encendió la primera guerra del mundo.",
+          "en": "One day a woman named Gullveig came to Asgard, and what the Aesir did to her sparked the first war in the world."
+        },
+        {
+          "es": "Esa es la historia del próximo episodio: La guerra de los dioses.",
+          "en": "That is the story of the next episode: The War of the Gods."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.5,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 820,
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "heimdall",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "gullveig",
+          "como": "mujer",
+          "x": 1600,
+          "mira": "izq",
+          "rotulo": "GULLVEIG",
+          "props": {
+            "pelo": "#E9C46A"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1350
+            },
+            {
+              "en": 2.6,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 2.6,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "LA GUERRA DE LOS DIOSES",
+            "en": "THE WAR OF THE GODS"
+          },
+          "x": 960,
+          "y": 220
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Un árbol sostiene nueve mundos",
+        "en": "One tree holds up nine worlds"
+      },
+      "escena": "raices",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Tres mujeres tallan tu destino",
+        "en": "Three women carve your destiny into a tree"
+      },
+      "escena": "nornas",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 860
+    },
+    {
+      "gancho": {
+        "es": "El dragón que roe el árbol del mundo",
+        "en": "The dragon gnawing at the world tree"
+      },
+      "escena": "plaga",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    }
+  ],
+  "miniatura": {
+    "heroe": "heimdall",
+    "rival": "norna"
+  }
+}

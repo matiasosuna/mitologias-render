@@ -1,0 +1,342 @@
+{
+  "id": "short-nordicas-hel",
+  "formato": "short",
+  "serie": "nordicas",
+  "numero": "S",
+  "titulo": {
+    "es": "Su cara está mitad viva, mitad muerta",
+    "en": "Her face is half alive, half dead"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Su cara está mitad viva, mitad muerta",
+    "en": "Her face is half alive, half dead"
+  },
+  "cierre": {
+    "es": "Mándaselo a ese amigo que ama las historias de miedo",
+    "en": "Send this to the friend who loves creepy stories"
+  },
+  "episodio": "nordicas-08-hijos-loki",
+  "escenas": [
+    {
+      "id": "reina",
+      "fondo": "hel",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Una mitad de su cuerpo está viva. La otra mitad, oscura y muerta.",
+          "en": "One half of her body is alive. The other half is dark and dead."
+        },
+        {
+          "es": "Ella es Hel, hija de Loki, el dios tramposo.",
+          "en": "This is Hel, daughter of Loki, the trickster god."
+        },
+        {
+          "es": "Odín la arrojó a la oscuridad helada y la hizo reina de los muertos.",
+          "en": "Odin threw her down into the cold dark and made her queen of the dead."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hel",
+          "x": 900,
+          "escala": 1.25,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 2.5,
+              "hace": "brilla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 1170,
+          "mira": "izq",
+          "escala": 1.15,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.85,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 1170,
+          "mira": "izq",
+          "escala": 1.15,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.25,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "salon",
+      "fondo": "hel",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su salón se llama Aguanieve. Su plato se llama Hambre.",
+          "en": "Her hall is called Sleet-Cold. Her plate is called Hunger."
+        },
+        {
+          "es": "Su cuchillo se llama Hambruna. ¿Y su cama? Lecho de Enfermo.",
+          "en": "Her knife is called Famine. And her bed? Sick-Bed."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 960,
+          "s": 1.1
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.5,
+          "texto": {
+            "es": "HAMBRE",
+            "en": "HUNGER"
+          },
+          "x": 760,
+          "y": 420,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "HAMBRUNA",
+            "en": "FAMINE"
+          },
+          "x": 1160,
+          "y": 420,
+          "hasta": 1.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "hel",
+          "x": 960,
+          "escala": 1.25,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.6,
+              "hace": "baja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trato",
+      "fondo": "hel",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Los dioses mandaron a un jinete a rogarle: devuelve a Baldr, el dios más querido.",
+          "en": "The gods sent a rider to beg her: give back Baldr, the most loved god."
+        },
+        {
+          "es": "Hel dijo: si todo en el mundo llora por él, puede irse.",
+          "en": "Hel said: if everything in the world weeps for him, he can go."
+        }
+      ],
+      "actores": [
+        {
+          "id": "baldr",
+          "x": 780,
+          "escala": 1.15,
+          "props": {
+            "piel": "#B9C4CC"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "entristece"
+            },
+            {
+              "en": 0.5,
+              "hace": "reza"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "hel",
+          "x": 1150,
+          "mira": "izq",
+          "escala": 1.25,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "llanto",
+      "fondo": "bosque_nevado",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Todo lloró: la gente, los animales, las piedras, hasta los árboles.",
+          "en": "Everything wept: people, animals, stones, even trees."
+        },
+        {
+          "es": "Todo… menos una vieja giganta en una cueva. «Que Hel se lo quede».",
+          "en": "Everything… except one old giantess in a cave. 'Let Hel keep him.'"
+        },
+        {
+          "es": "Muchos dicen que esa giganta era Loki disfrazado. El propio padre de Hel.",
+          "en": "Many say that giantess was Loki in disguise. Hel's own father."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cueva",
+          "x": 1080,
+          "s": 0.9,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pino",
+          "x": 700,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "lluvia",
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer"
+        },
+        {
+          "en": 2.2,
+          "tipo": "destello",
+          "dur": 0.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "vikingo",
+          "x": 780,
+          "escala": 1.15,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "thokk",
+          "como": "norna",
+          "rotulo": "THÖKK",
+          "x": 1080,
+          "mira": "izq",
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.3,
+              "hace": "niega"
+            },
+            {
+              "en": 1.6,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 2.2,
+              "hace": "transforma",
+              "en_que": "loki"
+            },
+            {
+              "en": 2.5,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

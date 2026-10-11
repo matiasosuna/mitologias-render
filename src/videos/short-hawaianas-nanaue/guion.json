@@ -1,0 +1,400 @@
+{
+  "id": "short-hawaianas-nanaue",
+  "formato": "short",
+  "serie": "hawaianas",
+  "numero": "S",
+  "titulo": {
+    "es": "Una boca de tiburón escondida en la espalda",
+    "en": "A shark's mouth hidden on his back"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Una boca de tiburón escondida en la espalda",
+    "en": "A shark's mouth hidden on his back"
+  },
+  "cierre": {
+    "es": "Más hijos del océano: Nacidos del mar — Mitología hawaiana, ep. 2",
+    "en": "More children of the deep: Born in the Sea — Hawaiian Mythology Ep. 2"
+  },
+  "episodio": "hawaianas-02-nacidos-del-mar",
+  "escenas": [
+    {
+      "id": "padre",
+      "fondo": "playa",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Una mujer llamada Kalei se casó con un desconocido apuesto. En realidad era el rey de los tiburones.",
+          "en": "A woman named Kalei married a handsome stranger. He was really the king of sharks."
+        },
+        {
+          "es": "Le advirtió: «Nunca le des carne a nuestro hijo». Y desapareció en el mar.",
+          "en": "He warned her: 'Never feed our son meat.' Then he vanished into the sea."
+        },
+        {
+          "es": "Su bebé tenía un secreto: una boca de tiburón en la espalda.",
+          "en": "Their baby had a secret: a shark's mouth on his back."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.65,
+          "tipo": "olas-suben",
+          "dur": 0.5,
+          "intensidad": 0.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "kalei",
+          "como": "hawaiana",
+          "escala": 1.15,
+          "rotulo": "KALEI",
+          "x": 780,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.7,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.3,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "como": "hawaiano",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "KAMOHOALIʻI",
+          "props": {
+            "capa": "#4A5A66"
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "brilla"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            },
+            {
+              "en": 1.6,
+              "hace": "transforma",
+              "en_que": "pez"
+            }
+          ]
+        },
+        {
+          "id": "nanaue",
+          "como": "nino",
+          "escala": 1.1,
+          "rotulo": "NANAUE",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.4,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "carne",
+      "fondo": "aldea_hale",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su madre siempre la escondía bajo una capa.",
+          "en": "His mother always hid it under a cape."
+        },
+        {
+          "es": "Pero cuando creció, su abuelo le dio carne.",
+          "en": "But when he grew up, his grandfather fed him meat."
+        },
+        {
+          "es": "Desde entonces, siempre tenía hambre de más.",
+          "en": "From then on, he was always hungry for more."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1350,
+          "s": 0.9,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.95,
+          "tipo": "humo",
+          "x": 960,
+          "y": 560,
+          "dur": 0.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "kalei",
+          "como": "hawaiana",
+          "escala": 1.15,
+          "rotulo": "",
+          "x": 760,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "abraza"
+            },
+            {
+              "en": 1.6,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "nino",
+          "escala": 1.1,
+          "rotulo": "",
+          "props": {
+            "capa": "#8A5A3A"
+          },
+          "x": 960,
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "nanaue",
+          "como": "hawaiano",
+          "escala": 1.2,
+          "rotulo": "NANAUE",
+          "props": {
+            "capa": "#8A5A3A"
+          },
+          "x": 960,
+          "pasos": [
+            {
+              "en": 0.95,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.3,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "abuelo",
+          "como": "hawaiano",
+          "mira": "izq",
+          "escala": 1.1,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "viejo"
+          },
+          "x": 1200,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mar",
+      "fondo": "playa",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Nanaue les preguntaba a los que pasaban: «¿Van a nadar?»",
+          "en": "Nanaue would ask people on the path: 'Going for a swim?'"
+        },
+        {
+          "es": "Entonces se metía antes al mar… convertido en tiburón.",
+          "en": "Then he slipped into the sea first… as a shark."
+        },
+        {
+          "es": "Uno a uno, los nadadores desaparecían.",
+          "en": "One by one, swimmers disappeared."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "olas-suben",
+          "dur": 0.5,
+          "intensidad": 0.1
+        },
+        {
+          "en": 2.2,
+          "tipo": "niebla",
+          "dur": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "nanaue",
+          "como": "hawaiano",
+          "escala": 1.2,
+          "rotulo": "",
+          "props": {
+            "capa": "#8A5A3A"
+          },
+          "x": 820,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.3,
+              "hace": "transforma",
+              "en_que": "pez"
+            }
+          ]
+        },
+        {
+          "id": "nadadora",
+          "como": "hawaiana",
+          "mira": "izq",
+          "escala": 1.15,
+          "rotulo": "",
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "asiente"
+            },
+            {
+              "en": 2.2,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "capa",
+      "fondo": "aldea_hale",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Al final, unos hombres le arrancaron la capa. Todos vieron la boca.",
+          "en": "At last, men pulled off his cape. Everyone saw the mouth."
+        },
+        {
+          "es": "Nanaue corrió al mar y se zambulló, otra vez tiburón.",
+          "en": "Nanaue ran to the sea and dove in, a shark again."
+        },
+        {
+          "es": "Así que si un desconocido amable te pregunta si vas a nadar… quédate en casa.",
+          "en": "So if a friendly stranger asks if you're going swimming… stay home."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1350,
+          "s": 0.9,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "destello",
+          "x": 980,
+          "y": 500,
+          "dur": 0.3
+        },
+        {
+          "en": 1.4,
+          "tipo": "olas-suben",
+          "dur": 0.5,
+          "intensidad": 0.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "hombre",
+          "como": "hawaiano",
+          "escala": 1.15,
+          "rotulo": "",
+          "x": 760,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "nanaue",
+          "como": "hawaiano",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "NANAUE",
+          "x": 980,
+          "pasos": [
+            {
+              "en": 0.45,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 1150,
+              "dur": 0.3
+            },
+            {
+              "en": 1.35,
+              "hace": "transforma",
+              "en_que": "pez"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

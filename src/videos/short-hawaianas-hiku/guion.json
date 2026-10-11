@@ -1,0 +1,388 @@
+{
+  "id": "short-hawaianas-hiku",
+  "formato": "short",
+  "serie": "hawaianas",
+  "numero": "S",
+  "titulo": {
+    "es": "Se columpió hasta la tierra de los muertos",
+    "en": "He swung into the land of the dead"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Se columpió hasta la tierra de los muertos",
+    "en": "He swung into the land of the dead"
+  },
+  "cierre": {
+    "es": "Mándaselo a alguien que bajaría a la oscuridad por ti",
+    "en": "Send this to someone who'd swing into the dark for you"
+  },
+  "episodio": "hawaianas-01-canto-de-la-noche",
+  "escenas": [
+    {
+      "id": "salto",
+      "fondo": "playa_negra",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "En el antiguo Hawaiʻi, las almas de los muertos saltaban desde acantilados hacia la oscuridad.",
+          "en": "In old Hawaiʻi, the souls of the dead leaped from sea cliffs into the dark."
+        },
+        {
+          "es": "Abajo estaba Milu, la tierra de los muertos, gobernada por el jefe Milu.",
+          "en": "Below lay Milu, the land of the dead, ruled by the chief Milu."
+        },
+        {
+          "es": "Una noche, el alma de una joven, Kawelu, dio ese salto.",
+          "en": "One night, the soul of a young woman, Kawelu, made that leap."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 960,
+          "s": 1
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla"
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer"
+        }
+      ],
+      "actores": [
+        {
+          "id": "milu",
+          "como": "alii",
+          "rotulo": "MILU",
+          "x": 1150,
+          "mira": "izq",
+          "escala": 1.2,
+          "props": {
+            "piel": "#4A3A44",
+            "capa": "#1A1410",
+            "contorno": true
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            },
+            {
+              "en": 1.9,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "kawelu",
+          "como": "hawaiana",
+          "rotulo": "KAWELU",
+          "x": 860,
+          "escala": 1.15,
+          "props": {
+            "piel": "#AFC3CC",
+            "contorno": true
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.45,
+              "hace": "salta"
+            },
+            {
+              "en": 2.6,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plan",
+      "fondo": "aldea_hale",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Hiku la amaba. No iba a dejarla ir.",
+          "en": "Hiku loved her. He would not let her go."
+        },
+        {
+          "es": "Se frotó la piel con aceite rancio de nuez de kukui, para oler como un muerto.",
+          "en": "He rubbed his skin with rotten kukui nut oil, to smell like a dead man."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1300,
+          "s": 0.9,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "humo",
+          "x": 1080,
+          "y": 600,
+          "dur": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "kawelu",
+          "como": "hawaiana",
+          "rotulo": "",
+          "x": 780,
+          "escala": 1.1,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "hiku",
+          "como": "hawaiano",
+          "rotulo": "HIKU",
+          "x": 1080,
+          "mira": "izq",
+          "escala": 1.25,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 0.9,
+              "hace": "baja"
+            },
+            {
+              "en": 1.1,
+              "hace": "abraza"
+            },
+            {
+              "en": 1.8,
+              "hace": "baja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "milu",
+      "fondo": "po",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Luego bajó a la oscuridad colgado de una larga enredadera.",
+          "en": "Then he swung down into the dark on a long vine."
+        },
+        {
+          "es": "A los espíritus les encantó su columpio. El alma de Kawelu se subió, por diversión.",
+          "en": "The ghosts loved his swing. Kawelu's soul climbed on, just for fun."
+        },
+        {
+          "es": "Hiku la abrazó fuerte y sacudió la enredadera. Sus amigos los subieron.",
+          "en": "Hiku held her tight and shook the vine. His friends pulled them up."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiku",
+          "como": "hawaiano",
+          "rotulo": "HIKU",
+          "x": 880,
+          "y": 330,
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                880,
+                790
+              ],
+              "dur": 0.9
+            },
+            {
+              "en": 2,
+              "hace": "abraza"
+            },
+            {
+              "en": 2.4,
+              "hace": "vuela",
+              "a": [
+                880,
+                300
+              ],
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "kawelu",
+          "como": "hawaiana",
+          "rotulo": "KAWELU",
+          "x": 1180,
+          "mira": "izq",
+          "escala": 1.15,
+          "props": {
+            "piel": "#AFC3CC",
+            "contorno": true
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.3,
+              "hace": "camina",
+              "a": 1020,
+              "dur": 0.6
+            },
+            {
+              "en": 2.4,
+              "hace": "vuela",
+              "a": [
+                1020,
+                300
+              ],
+              "dur": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "regreso",
+      "fondo": "aldea_hale",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Atrapó su alma en una cáscara de coco y la llevó a casa.",
+          "en": "He trapped her soul in a coconut shell and carried it home."
+        },
+        {
+          "es": "Después la hizo entrar de nuevo en su cuerpo, por los pies.",
+          "en": "Then he pressed it back into her body, through her feet."
+        },
+        {
+          "es": "Y Kawelu abrió los ojos.",
+          "en": "And Kawelu opened her eyes."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "niu",
+          "x": 1300,
+          "s": 0.9,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 860,
+          "y": 560,
+          "dur": 0.8
+        },
+        {
+          "en": 1.2,
+          "tipo": "luz",
+          "x": 1060,
+          "y": 740,
+          "dur": 0.7
+        },
+        {
+          "en": 2,
+          "tipo": "aclarar"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiku",
+          "como": "hawaiano",
+          "rotulo": "HIKU",
+          "x": 800,
+          "escala": 1.25,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 800,
+              "dur": 0.5
+            },
+            {
+              "en": 0.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "kawelu",
+          "como": "hawaiana",
+          "rotulo": "KAWELU",
+          "x": 1100,
+          "mira": "izq",
+          "escala": 1.15,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

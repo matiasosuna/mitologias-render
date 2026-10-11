@@ -1,0 +1,1407 @@
+{
+  "id": "egipcias-13-naufrago",
+  "serie": "egipcias",
+  "numero": "13",
+  "titulo": {
+    "es": "El marinero náufrago",
+    "en": "The Shipwrecked Sailor"
+  },
+  "tituloGriego": "THE SHIPWRECKED SAILOR",
+  "miniatura": {
+    "heroe": "egipcio"
+  },
+  "siguiente": {
+    "es": "La historia de Sinuhé",
+    "en": "The Story of Sinuhe"
+  },
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, un mago le devolvió la cabeza a un ganso, y Khufu supo de tres reyes por venir.",
+          "en": "Last time, a magician reattached a goose's head, and Khufu heard about three kings to come."
+        },
+        {
+          "es": "Ahora dejamos el palacio y vamos al mar. Este cuento tiene casi cuatro mil años.",
+          "en": "Now we leave the palace and go to sea. This tale is almost four thousand years old."
+        },
+        {
+          "es": "Lo cuenta un papiro que hoy está en un museo de Rusia. Empieza en un barco que vuelve a Egipto.",
+          "en": "A papyrus in a museum in Russia tells it. It begins on a ship sailing home to Egypt."
+        },
+        {
+          "es": "A bordo va un noble. Su misión para el faraón ha fracasado, y teme presentarse ante el rey.",
+          "en": "On board is a nobleman. His mission for the pharaoh has failed, and he is afraid to face the king."
+        },
+        {
+          "es": "Su sirviente intenta animarlo. «¡Señor, alégrese! Ya estamos en casa. Déjeme contarle lo que me pasó.»",
+          "en": "His servant tries to cheer him up. \"My lord, be happy! We are home. Let me tell you what happened to me.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1000,
+          "s": 1.1
+        },
+        {
+          "tipo": "papiro",
+          "x": 300,
+          "s": 1.0,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "ganso",
+          "como": "aguila",
+          "x": 450,
+          "y": 735,
+          "escala": 0.8,
+          "props": {
+            "color": "#F4EFE2",
+            "aleteo": false
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "oficial",
+          "como": "egipcio",
+          "x": 1180,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "ropa": "larga"
+          },
+          "rotulo": "THE NOBLEMAN",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "sirviente",
+          "como": "egipcio",
+          "x": 820,
+          "y": 758,
+          "rotulo": "THE SERVANT",
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "HACE CASI 4000 AÑOS",
+            "en": "ALMOST 4,000 YEARS AGO"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "tormenta",
+      "fondo": "mar",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El sirviente empezó su relato. Hace mucho, navegó a las minas del rey en un barco enorme.",
+          "en": "The servant told his tale. Long ago, he sailed to the king's mines on a huge ship."
+        },
+        {
+          "es": "Llevaba ciento veinte marineros, los mejores de Egipto, con corazones más valientes que leones.",
+          "en": "It carried a hundred and twenty sailors, the best in Egypt, with hearts braver than lions."
+        },
+        {
+          "es": "Sabían leer el cielo y el mar. Sabían que venía una tormenta antes de ver la primera nube.",
+          "en": "They could read the sky and the sea. They knew a storm was coming before the first cloud."
+        },
+        {
+          "es": "Pero esta tormenta llegó rápido. El viento rugió, y las olas subieron el doble que un hombre.",
+          "en": "But this storm came fast. The wind roared, and the waves rose twice as high as a man."
+        },
+        {
+          "es": "El barco se partió. El marinero se agarró de una tabla y se aferró con todas sus fuerzas.",
+          "en": "The ship broke apart. The sailor grabbed a plank of wood and held on with all his strength."
+        },
+        {
+          "es": "Todos los demás se perdieron. Flotó tres días, sin nadie con quien hablar, salvo su propio corazón.",
+          "en": "All the others were lost. He drifted for three days, with no one to talk to but his own heart."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 800,
+          "s": 1.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "marinero",
+          "como": "egipcio",
+          "x": 1150,
+          "y": 758,
+          "rotulo": "THE SAILOR",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 4.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.5,
+              "hace": "vuela",
+              "a": [
+                1150,
+                620
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "m1",
+          "como": "egipcio",
+          "x": 520,
+          "y": 758,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "m2",
+          "como": "egipcio",
+          "x": 650,
+          "y": 758,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.1,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "m3",
+          "como": "egipcio",
+          "x": 780,
+          "y": 758,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.2,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "m4",
+          "como": "egipcio",
+          "x": 910,
+          "y": 758,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.3,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 3,
+          "intensidad": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "lluvia",
+          "dur": 3
+        },
+        {
+          "en": 3.2,
+          "tipo": "temblor",
+          "dur": 1.5,
+          "intensidad": 0.7
+        },
+        {
+          "en": 4,
+          "tipo": "destello",
+          "dur": 0.3
+        },
+        {
+          "en": 4.1,
+          "tipo": "olas-suben",
+          "dur": 1,
+          "intensidad": 0.45
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "120 MARINEROS",
+            "en": "120 SAILORS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "isla",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al fin una ola lo arrojó a una isla. Se quedó sobre la arena, demasiado cansado para moverse.",
+          "en": "At last a wave threw him onto an island. He lay on the sand, too tired to move."
+        },
+        {
+          "es": "Al despertar, vio que la isla estaba llena de comida: higos, uvas, verduras, peces gordos y aves.",
+          "en": "When he woke, he found the island full of food: figs, grapes, vegetables, fat fish and birds."
+        },
+        {
+          "es": "Comió hasta saciarse. Luego encendió un fuego y dio gracias a los dioses.",
+          "en": "He ate until he was full. Then he lit a fire and gave thanks to the gods."
+        },
+        {
+          "es": "De pronto oyó un sonido como un trueno. Los árboles se sacudieron y la tierra tembló.",
+          "en": "Suddenly he heard a sound like thunder. The trees shook, and the ground trembled."
+        },
+        {
+          "es": "Se cubrió la cara con las manos. Algo enorme venía entre los árboles.",
+          "en": "He covered his face with his hands. Something huge was coming through the trees."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 1000,
+          "s": 1.3
+        },
+        {
+          "tipo": "palmera",
+          "x": 1500,
+          "s": 1.5,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "loto",
+          "x": 1750,
+          "s": 1.2
+        },
+        {
+          "tipo": "palmera",
+          "x": 250,
+          "s": 1.4,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "marinero",
+          "como": "egipcio",
+          "x": 550,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.5
+            },
+            {
+              "en": 4,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "fogata",
+          "x": 1150,
+          "y": 790,
+          "dur": 2.2
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 1.8,
+          "intensidad": 0.8
+        }
+      ]
+    },
+    {
+      "id": "serpiente",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Era una serpiente gigante, de quince metros de largo, con el cuerpo cubierto de oro.",
+          "en": "It was a giant serpent, fifteen meters long, with a body covered in gold."
+        },
+        {
+          "es": "Su barba era más larga que un brazo. Sus cejas eran de lapislázuli, una piedra de un azul profundo.",
+          "en": "His beard was longer than a man's arm. His eyebrows were made of lapis lazuli, a deep blue stone."
+        },
+        {
+          "es": "Se irguió y abrió la boca. El marinero se tiró al suelo, temblando.",
+          "en": "He rose up and opened his mouth. The sailor threw himself on the ground, shaking."
+        },
+        {
+          "es": "«¿Quién te trajo aquí, pequeño?», dijo la serpiente. «Habla, o te convertiré en cenizas.»",
+          "en": "\"Who brought you here, little one?\" said the serpent. \"Speak, or I will turn you to ashes.\""
+        },
+        {
+          "es": "El marinero estaba demasiado asustado para responder. Así que la serpiente lo tomó con suavidad en la boca.",
+          "en": "The sailor was too frightened to answer. So the serpent gently picked him up in his mouth."
+        },
+        {
+          "es": "Lo llevó a su hogar y lo dejó en el suelo. El marinero no tenía ni un rasguño.",
+          "en": "He carried him home and set him down. The sailor did not have a single scratch."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 250,
+          "s": 1.4,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "palmera",
+          "x": 1700,
+          "s": 1.3,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "serpiente",
+          "como": "serpiente",
+          "x": 1000,
+          "escala": 1.1,
+          "mira": "izq",
+          "props": {
+            "largo": 800,
+            "grosor": 75,
+            "erguida": 1.8,
+            "color": "#D4A017",
+            "boca": false
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 4.2,
+              "hace": "camina",
+              "a": 650,
+              "dur": 0.5
+            },
+            {
+              "en": 5,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "marinero",
+          "como": "egipcio",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "cae"
+            },
+            {
+              "en": 4.5,
+              "hace": "desaparece"
+            },
+            {
+              "en": 5.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.4,
+              "hace": "levantarse"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "temblor",
+          "dur": 1.2,
+          "intensidad": 0.7
+        },
+        {
+          "en": 0.6,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 520,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "15 METROS",
+            "en": "15 METERS LONG"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1.2
+        }
+      ]
+    },
+    {
+      "id": "habla",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Si una serpiente gigante de oro te preguntara quién eres, ¿qué le dirías? Cuéntanos en los comentarios.",
+          "en": "If a giant golden serpent asked who you were, what would you say? Tell us in the comments."
+        },
+        {
+          "es": "Al fin el marinero encontró su voz. Le contó a la serpiente del barco, la tormenta y sus amigos perdidos.",
+          "en": "At last the sailor found his voice. He told the serpent about the ship, the storm and his lost friends."
+        },
+        {
+          "es": "«No temas, pequeño», dijo la serpiente. «Dios te dejó vivir y te trajo a esta isla.»",
+          "en": "\"Do not be afraid, little one,\" said the serpent. \"God let you live, and brought you to this island.\""
+        },
+        {
+          "es": "«Aquí no falta nada. En cuatro meses llegará un barco de Egipto, y volverás a casa.»",
+          "en": "\"Nothing is missing here. In four months a ship will come from Egypt, and you will go home.\""
+        },
+        {
+          "es": "«Ahora te hablaré de mí. Yo vivía aquí con mi familia: setenta y cinco serpientes.»",
+          "en": "\"Now I will tell you about myself. I once lived here with my family, seventy-five serpents.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 250,
+          "s": 1.4,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "palmera",
+          "x": 1800,
+          "s": 1.3,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "serpiente",
+          "como": "serpiente",
+          "x": 1400,
+          "escala": 1.1,
+          "mira": "izq",
+          "props": {
+            "largo": 700,
+            "grosor": 70,
+            "erguida": 1.0,
+            "color": "#D4A017"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 4,
+              "hace": "habla"
+            }
+          ]
+        },
+        {
+          "id": "marinero",
+          "como": "egipcio",
+          "x": 650,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.9,
+              "hace": "baja"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "4 MESES",
+            "en": "4 MONTHS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "75 SERPIENTES",
+            "en": "75 SERPENTS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 5
+        }
+      ]
+    },
+    {
+      "id": "estrella",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces la voz de la serpiente se llenó de tristeza. «Un día», dijo, «cayó una estrella del cielo.»",
+          "en": "Then the serpent's voice grew sad. \"One day,\" he said, \"a star fell from the sky.\""
+        },
+        {
+          "es": "«Cayó sobre mi familia, y el fuego los quemó a todos.»",
+          "en": "\"It fell on my family, and fire burned them all.\""
+        },
+        {
+          "es": "«Yo no estaba. Cuando volví y los encontré, casi muero de pena.»",
+          "en": "\"I was away. When I came back and found them, I almost died of sorrow.\""
+        },
+        {
+          "es": "«Pero tú, pequeño, eres fuerte. ¡Ten valor! Volverás a abrazar a tus hijos y a besar a tu esposa.»",
+          "en": "\"But you, little one, are strong. Be brave! You will hug your children again and kiss your wife.\""
+        },
+        {
+          "es": "«No hay nada mejor que volver a ver el hogar.» El marinero se inclinó hasta el suelo y le dio las gracias.",
+          "en": "\"There is nothing better than seeing home again.\" The sailor bowed to the ground and thanked him."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "serpiente",
+          "como": "serpiente",
+          "x": 1350,
+          "escala": 1.1,
+          "mira": "izq",
+          "props": {
+            "largo": 700,
+            "grosor": 70,
+            "erguida": 1.0,
+            "color": "#D4A017"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "habla"
+            }
+          ]
+        },
+        {
+          "id": "marinero",
+          "como": "egipcio",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4,
+              "hace": "arrodilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 0.5,
+          "tipo": "destello",
+          "dur": 0.4
+        },
+        {
+          "en": 0.6,
+          "tipo": "fuego",
+          "x": 1750,
+          "y": 770,
+          "dur": 2,
+          "intensidad": 1.4
+        },
+        {
+          "en": 1,
+          "tipo": "humo",
+          "x": 1750,
+          "y": 700,
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1.5,
+          "intensidad": 0.3
+        }
+      ]
+    },
+    {
+      "id": "promesa",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El marinero prometió: «Le diré al rey lo grande que eres. Te enviaré perfumes, incienso y aceites finos.»",
+          "en": "The sailor promised: \"I will tell the king how great you are. I will send you perfumes, incense and fine oils.\""
+        },
+        {
+          "es": "La serpiente se rio. «No eres rico en perfumes. Yo soy el señor de Punt, la tierra lejana donde crece el incienso.»",
+          "en": "The serpent laughed. \"You are not rich in perfume. I am the lord of Punt, the faraway land where incense grows.\""
+        },
+        {
+          "es": "«Y recuerda: cuando te vayas, nunca volverás a ver esta isla. Se convertirá en olas.»",
+          "en": "\"And remember,\" he said. \"When you leave, you will never see this island again. It will turn into waves.\""
+        },
+        {
+          "es": "El marinero esperó. Pasaron cuatro meses, tal como dijo la serpiente.",
+          "en": "The sailor waited. Four months passed, exactly as the serpent had said."
+        },
+        {
+          "es": "Una mañana vio un barco, muy lejos en el mar.",
+          "en": "One morning, he saw a ship far out on the sea."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "anfora",
+          "x": 300,
+          "s": 0.8,
+          "en": 0
+        },
+        {
+          "tipo": "anfora",
+          "x": 400,
+          "s": 0.7,
+          "en": 0
+        },
+        {
+          "tipo": "palmera",
+          "x": 1800,
+          "s": 1.3,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "barco",
+          "x": 1800,
+          "s": 0.5,
+          "en": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "serpiente",
+          "como": "serpiente",
+          "x": 1350,
+          "escala": 1.1,
+          "mira": "izq",
+          "props": {
+            "largo": 700,
+            "grosor": 70,
+            "erguida": 1.0,
+            "color": "#D4A017"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "marinero",
+          "como": "egipcio",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "sienta"
+            },
+            {
+              "en": 4,
+              "hace": "levantarse"
+            },
+            {
+              "en": 4.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1350,
+          "y": 450,
+          "dur": 1,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "PUNT: LA TIERRA DEL INCIENSO",
+            "en": "PUNT: THE LAND OF INCENSE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "4 MESES",
+            "en": "4 MONTHS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "regreso",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Trepó a un árbol alto para mirar. Los hombres del barco eran egipcios, ¡y los conocía!",
+          "en": "He climbed a tall tree to look. The men on board were Egyptians, and he knew them!"
+        },
+        {
+          "es": "La serpiente dijo: «Adiós, pequeño. Vuelve a casa, ve a tus hijos y habla bien de mí en tu ciudad.»",
+          "en": "The serpent said: \"Farewell, little one. Go home, see your children, and speak well of me in your city.\""
+        },
+        {
+          "es": "Luego le dio regalos al marinero: perfume, incienso, marfil, perros de caza, babuinos y una cola de jirafa.",
+          "en": "Then he gave the sailor gifts: perfume, incense, ivory, hunting dogs, baboons and a giraffe's tail."
+        },
+        {
+          "es": "El marinero lo cargó todo en el barco y se inclinó ante la serpiente por última vez.",
+          "en": "The sailor loaded it all on the ship, and bowed to the serpent one last time."
+        },
+        {
+          "es": "Mientras el barco se alejaba, miró atrás. La isla había desaparecido, y solo quedaban olas.",
+          "en": "As the ship sailed away, he looked back. The island was gone, and there were only waves."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 560,
+          "s": 1.8,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "barco",
+          "x": 1800,
+          "s": 0.6
+        },
+        {
+          "tipo": "anfora",
+          "x": 950,
+          "s": 0.7,
+          "en": 2
+        },
+        {
+          "tipo": "anfora",
+          "x": 1050,
+          "s": 0.6,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "marinero",
+          "como": "egipcio",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                560,
+                420
+              ],
+              "dur": 0.5
+            },
+            {
+              "en": 0.9,
+              "hace": "vuela",
+              "a": [
+                800,
+                790
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1700,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "como": "serpiente",
+          "x": 1350,
+          "escala": 1.1,
+          "mira": "izq",
+          "props": {
+            "largo": 700,
+            "grosor": 70,
+            "erguida": 1.0,
+            "color": "#D4A017"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 4,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "barquero1",
+          "como": "egipcio",
+          "x": 1700,
+          "y": 758,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "barquero2",
+          "como": "egipcio",
+          "x": 1850,
+          "y": 758,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 620,
+          "dur": 1
+        },
+        {
+          "en": 4.2,
+          "tipo": "olas-suben",
+          "dur": 0.8,
+          "intensidad": 0.12
+        }
+      ]
+    },
+    {
+      "id": "palacio",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En dos meses llegaron al palacio, tal como la serpiente había prometido.",
+          "en": "In two months they reached the palace, just as the serpent had promised."
+        },
+        {
+          "es": "El marinero entregó al rey los regalos de la isla. El rey le dio las gracias ante toda la corte.",
+          "en": "The sailor gave the king the gifts from the island. The king thanked him before the whole court."
+        },
+        {
+          "es": "Lo nombró asistente real y le dio sirvientes. El relato terminaba bien.",
+          "en": "He made the sailor a royal attendant, and gave him servants. The tale ended well."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1350,
+          "s": 1.1
+        },
+        {
+          "tipo": "anfora",
+          "x": 950,
+          "s": 0.7,
+          "en": 1
+        },
+        {
+          "tipo": "anfora",
+          "x": 1050,
+          "s": 0.6,
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "rey",
+          "como": "faraon",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "THE KING",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "marinero",
+          "como": "egipcio",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 700
+            },
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "corte1",
+          "como": "egipcio",
+          "x": 350,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "corte2",
+          "como": "egipcia",
+          "x": 500,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 500,
+          "dur": 1,
+          "intensidad": 0.5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "«Ya ve, señor», dijo el sirviente, «incluso tras la peor tormenta, un hombre puede volver a casa. ¡Ánimo!»",
+          "en": "\"So you see, my lord,\" said the servant, \"even after the worst storm, a man can come home. Be brave!\""
+        },
+        {
+          "es": "Pero el noble solo movió la cabeza. «No intentes animarme, amigo.»",
+          "en": "But the nobleman only shook his head. \"Do not try to cheer me up, my friend.\""
+        },
+        {
+          "es": "«¿Quién da agua a un ganso al amanecer, si lo van a matar por la mañana?»",
+          "en": "\"Who gives water to a goose at dawn, when it will be killed in the morning?\""
+        },
+        {
+          "es": "Quería decir que no sirve consolar a un hombre que será castigado. Y ahí termina el papiro.",
+          "en": "He meant: it is no use cheering up a man who will be punished. And there the papyrus ends."
+        },
+        {
+          "es": "¿Quién tenía razón, el marinero o el noble? Cuéntanos en los comentarios.",
+          "en": "Who was right, the sailor or the nobleman? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, otro viajero huye de Egipto y vive años entre extraños. Es La historia de Sinuhé.",
+          "en": "Next time, another traveler runs away from Egypt and lives for years among strangers. It is The Story of Sinuhe."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1000,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "sirviente",
+          "como": "egipcio",
+          "x": 820,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 0.5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "oficial",
+          "como": "egipcio",
+          "x": 1180,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "ropa": "larga"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "gira"
+            },
+            {
+              "en": 1.1,
+              "hace": "gira"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "ganso",
+          "como": "aguila",
+          "x": 1550,
+          "y": 735,
+          "escala": 0.8,
+          "props": {
+            "color": "#F4EFE2",
+            "aleteo": false
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "sinuhe",
+          "como": "egipcio",
+          "x": 1650,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.2,
+              "hace": "sale"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.3
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La serpiente de oro con cejas de piedra azul",
+        "en": "The golden serpent with eyebrows of blue stone"
+      },
+      "escena": "serpiente",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "La estrella que cayó sobre una familia de serpientes",
+        "en": "The star that fell on a family of serpents"
+      },
+      "escena": "estrella",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "Tres días a la deriva tras el naufragio",
+        "en": "Three days adrift after the shipwreck"
+      },
+      "escena": "tormenta",
+      "desde": 2,
+      "hasta": 5,
+      "foco": 800
+    }
+  ]
+}

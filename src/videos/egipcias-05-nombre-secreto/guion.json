@@ -1,0 +1,1075 @@
+{
+  "id": "egipcias-05-nombre-secreto",
+  "serie": "egipcias",
+  "numero": "05",
+  "titulo": {
+    "es": "El nombre secreto de Ra",
+    "en": "The Secret Name of Ra"
+  },
+  "tituloGriego": "THE SECRET NAME OF RA",
+  "miniatura": {
+    "heroe": "isis",
+    "rival": "ra"
+  },
+  "escenas": [
+    {
+      "id": "envejece",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ra ya vivía en lo alto, pero cada día recorría el mundo con su séquito de dioses, y cada año estaba más viejo.",
+          "en": "Ra now lived in the heights, but every day he still travelled the world with his retinue of gods, and every year he was older."
+        },
+        {
+          "es": "Tan viejo que la boca se le abría, y gotas de saliva le caían hasta la tierra.",
+          "en": "So old that his mouth hung open, and drops of spittle fell to the ground."
+        },
+        {
+          "es": "Isis lo vio. Era la más astuta de los dioses y conocía más hechizos que nadie.",
+          "en": "Isis saw it. She was the shrewdest of the gods, and she knew more spells than anyone."
+        },
+        {
+          "es": "Pero una cosa se le escapaba: Ra tenía un nombre secreto que nadie conocía, ni siquiera los otros dioses.",
+          "en": "But one thing escaped her: Ra had a secret name that nobody knew, not even the other gods."
+        },
+        {
+          "es": "Quien lo supiera tendría el poder de Ra. Y Isis, cansada de ser menos que él, quería ese poder.",
+          "en": "Whoever knew it would hold the power of Ra. And Isis, tired of being less than he was, wanted that power."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1.5
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 690,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "shu",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 480,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 1500,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 850,
+          "y": 760,
+          "dur": 1.2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "EL NOMBRE SECRETO",
+            "en": "THE SECRET NAME"
+          },
+          "x": 1100,
+          "y": 250,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "barro",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.02,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Isis esperó a que Ra pasara y recogió la saliva que había caído al suelo.",
+          "en": "Isis waited for Ra to pass by and gathered the spittle that had fallen to the ground."
+        },
+        {
+          "es": "La mezcló con tierra y la amasó entre sus manos, como un alfarero trabaja el barro.",
+          "en": "She mixed it with earth and kneaded it between her hands, the way a potter works clay."
+        },
+        {
+          "es": "Con esa masa moldeó una serpiente larga como una lanza, y con su magia le dio vida.",
+          "en": "Out of that paste she shaped a serpent as long as a spear, and with her magic she gave it life."
+        },
+        {
+          "es": "Luego la dejó sobre el camino por el que Ra pasaba cada día, y se escondió a esperar.",
+          "en": "Then she laid it on the path Ra took every day, and hid to wait."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1650,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.1,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "como": "serpiente",
+          "x": 1000,
+          "escala": 1.4,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 700,
+          "dur": 1
+        },
+        {
+          "en": 2.4,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 700,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "mordida",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Como todos los días, Ra salió a caminar con los dioses de su corte.",
+          "en": "As on every other day, Ra went out walking with the gods of his court."
+        },
+        {
+          "es": "La serpiente se alzó y le clavó los colmillos. Ra soltó un grito que llegó hasta el cielo.",
+          "en": "The serpent reared up and sank its fangs into him. Ra let out a cry that rose all the way to the sky."
+        },
+        {
+          "es": "Los dioses corrieron a su lado: «¿Qué pasa?». Pero Ra no podía hablar: le castañeaban los dientes y le temblaban los miembros.",
+          "en": "The gods rushed to him: \"What is it? What is it?\" But Ra could not speak. His jaws chattered and his limbs shook."
+        },
+        {
+          "es": "El veneno se extendía por su cuerpo como el Nilo cuando inunda la tierra.",
+          "en": "The poison spread through his body the way the Nile floods the land."
+        },
+        {
+          "es": "Cuando pudo hablar, dijo: «Vengan a mí, ustedes que nacieron de mi cuerpo. Algo me hirió, y mis ojos no pueden verlo».",
+          "en": "Finally he spoke: \"Come to me, you who were born from my body. Something has wounded me, and my eyes cannot see it.\""
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "x": 350,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 800,
+              "dur": 1
+            },
+            {
+              "en": 1.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "tiembla",
+              "dur": 1.5
+            },
+            {
+              "en": 3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "shu",
+          "x": 200,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 450,
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 600,
+              "dur": 0.6
+            },
+            {
+              "en": 2.6,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "x": 100,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 330,
+              "dur": 1
+            },
+            {
+              "en": 2.1,
+              "hace": "camina",
+              "a": 470,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "como": "serpiente",
+          "x": 1150,
+          "escala": 1.4,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 3,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.1,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1.2,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "isis_llega",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "«Nunca sentí un dolor así», gimió Ra. «Es más ardiente que el fuego, más que el agua».",
+          "en": "\"I have never felt pain like this,\" Ra groaned. \"It burns hotter than fire, hotter than water.\""
+        },
+        {
+          "es": "Llamó a todos los dioses, a los que conocían la magia. Todos acudieron, pero ninguno supo curarlo.",
+          "en": "He called all the gods, the ones who knew magic. They all came, but none of them could cure him."
+        },
+        {
+          "es": "Entonces llegó Isis, la de la palabra poderosa, cuyo aliento devuelve la vida.",
+          "en": "Then Isis arrived, she of the powerful word, whose breath gives life back."
+        },
+        {
+          "es": "«¿Qué ocurre, padre divino?», preguntó. «¿Te mordió una serpiente? ¿Una criatura tuya levantó la cabeza contra ti?».",
+          "en": "\"What is it, divine father?\" she asked. \"Has a serpent bitten you? Has one of your own creatures raised its head against you?\""
+        },
+        {
+          "es": "«Yo te curaré con mi magia, y volverás a ver los rayos del sol».",
+          "en": "\"I will cure you with my magic, and you will see the rays of the sun again.\""
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "tiembla",
+              "dur": 1
+            },
+            {
+              "en": 0.5,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "shu",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.4,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "x": 250,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.6,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 1900,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1350
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 1350,
+          "y": 420,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "nombres",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Isis dijo: «Dime tu nombre, padre divino, porque quien es llamado por su nombre, vive».",
+          "en": "Isis said: \"Tell me your name, divine father, for the one who is called by his name will live.\""
+        },
+        {
+          "es": "Ra respondió: «Soy el que hizo el cielo y la tierra, el que levantó las montañas y creó todo lo que vive en ellas».",
+          "en": "Ra answered: \"I am the one who made heaven and earth, who raised the mountains and made everything that lives on them.\""
+        },
+        {
+          "es": "«Abro los ojos y hay luz; los cierro y hay oscuridad. Por mi orden el Nilo crece».",
+          "en": "\"I open my eyes and there is light; I close them and there is darkness. At my command the Nile rises.\""
+        },
+        {
+          "es": "«Soy Khepri por la mañana, Ra al mediodía y Atum al atardecer».",
+          "en": "\"I am Khepri in the morning, Ra at noon, and Atum in the evening.\""
+        },
+        {
+          "es": "Pero el veneno no cedió, e Isis negó con la cabeza: «Ese no es tu nombre secreto. Dímelo, y el veneno saldrá».",
+          "en": "But the poison did not ease, and Isis shook her head: \"That is not your hidden name. Tell it to me, and the poison will leave.\""
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 4,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 650,
+          "y": 400,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 0.6,
+          "intensidad": 0.4
+        },
+        {
+          "en": 2.5,
+          "tipo": "aclarar",
+          "dur": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "CREADOR DEL CIELO Y LA TIERRA",
+            "en": "MAKER OF HEAVEN AND EARTH"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 2
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "KHEPRI · RA · ATUM",
+            "en": "KHEPRI · RA · ATUM"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "nombre_pasa",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.02,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "El veneno ardía más que el fuego, y Ra cedió: «Que Isis me busque por dentro, y que mi nombre pase de mi pecho al suyo».",
+          "en": "The poison burned hotter than fire, and Ra gave way: \"Let Isis search within me, and let my name pass from my breast into hers.\""
+        },
+        {
+          "es": "Se apartó de los demás dioses, y su asiento en la barca solar quedó vacío.",
+          "en": "He withdrew from the other gods, and his seat in the solar boat sat empty."
+        },
+        {
+          "es": "Ra juró por sus dos ojos, el sol y la luna, que Isis tendría su nombre, y ella solo se lo enseñaría a su hijo Horus.",
+          "en": "Ra swore by his two eyes, the sun and the moon, that Isis would have his name, and that she would teach it only to her son Horus."
+        },
+        {
+          "es": "Isis dijo: «Sal, veneno, sal de Ra. Soy yo quien lo hace; yo hago caer el veneno al suelo».",
+          "en": "Isis said: \"Flow out, poison, leave Ra. It is I who work; it is I who make the poison fall to the ground.\""
+        },
+        {
+          "es": "«¡Ra vivirá y el veneno morirá!».",
+          "en": "\"Ra shall live, and the poison shall die!\""
+        },
+        {
+          "es": "El veneno salió de su cuerpo. Ra se levantó, curado, e Isis ya llevaba en su pecho el nombre secreto del sol.",
+          "en": "The poison drained out of him. Ra rose, healed, and Isis now carried the secret name of the sun in her heart."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 1500,
+          "y": 620,
+          "s": 0.9,
+          "props": {
+            "disco": false
+          },
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 2.1,
+              "hace": "tiembla",
+              "dur": 0.8
+            },
+            {
+              "en": 5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 1100,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 2.5,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.1,
+              "hace": "levanta"
+            },
+            {
+              "en": 5,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 900,
+          "y": 560,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "humo",
+          "x": 700,
+          "y": 640,
+          "dur": 1.2
+        },
+        {
+          "en": 4,
+          "tipo": "destello"
+        },
+        {
+          "en": 5,
+          "tipo": "aclarar",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "JURA POR SUS DOS OJOS",
+            "en": "AN OATH ON HIS TWO EYES"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "nombres_poder",
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Para los egipcios, un nombre no era una simple etiqueta: era una parte del alma, tan real como el cuerpo o la sombra.",
+          "en": "For the Egyptians, a name was not a mere label. It was a part of the soul, as real as the body or the shadow."
+        },
+        {
+          "es": "Tallaban el nombre de los muertos en piedra para que vivieran siempre, y borraban el de sus enemigos.",
+          "en": "They carved the names of the dead in stone so they would live forever, and scratched out those of their enemies."
+        },
+        {
+          "es": "Isis guardó el nombre de Ra como el mayor de sus tesoros.",
+          "en": "Isis kept the name of Ra as the greatest of her treasures."
+        },
+        {
+          "es": "Con él, su magia ya no tenía límites: podía curar a los enfermos y hasta devolverle la vida a los muertos.",
+          "en": "With it her magic knew no limits: she could heal the sick and even bring the dead back to life."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tumba",
+          "x": 1450,
+          "s": 1.1,
+          "en": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "escriba",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.8,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "borrador",
+          "como": "egipcio",
+          "x": 1000,
+          "rotulo": "",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.8,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 1450,
+          "dur": 1
+        },
+        {
+          "en": 1.5,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 600,
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "REN: EL NOMBRE",
+            "en": "REN: THE NAME"
+          },
+          "x": 900,
+          "y": 240,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ra volvió a su barca, más débil y más viejo, y ya no tan temido como antes.",
+          "en": "Ra returned to his boat, weaker and older, and no longer as feared as before."
+        },
+        {
+          "es": "Isis, en cambio, se había convertido en la diosa más poderosa del mundo. Y iba a necesitar hasta la última gota de esa magia.",
+          "en": "Isis, on the other hand, had become the most powerful goddess in the world. And she was going to need every drop of that magic."
+        },
+        {
+          "es": "Porque en la tierra Osiris reinaba con justicia, y su hermano Set lo miraba con envidia.",
+          "en": "Because on the earth Osiris ruled with justice, and his brother Set watched him with envy."
+        },
+        {
+          "es": "Set preparaba un banquete, y un cofre. Esa es la historia del próximo episodio.",
+          "en": "Set was planning a banquet, and a chest. That is the story of the next episode."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 400,
+          "s": 1,
+          "props": {
+            "disco": false
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "x": 400,
+          "y": 650,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "osiris",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 3.5,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.6,
+          "tipo": "oscurecer",
+          "dur": 1.2,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "PRÓXIMO: LA MUERTE DE OSIRIS",
+            "en": "NEXT: THE MURDER OF OSIRIS"
+          },
+          "x": 960,
+          "y": 250
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La serpiente hecha con saliva de un dios",
+        "en": "The snake made from a god's spit"
+      },
+      "escena": "barro",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "El nombre que Ra escondía hasta de los dioses",
+        "en": "The name Ra hid even from the gods"
+      },
+      "escena": "nombres",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "Por qué los egipcios tallaban los nombres en piedra",
+        "en": "Why the Egyptians carved names in stone"
+      },
+      "escena": "nombres_poder",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 950
+    }
+  ]
+}

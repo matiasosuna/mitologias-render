@@ -1,0 +1,1404 @@
+{
+  "id": "egipcias-11-pesada-del-corazon",
+  "serie": "egipcias",
+  "numero": "11",
+  "titulo": {
+    "es": "La pesada del corazón",
+    "en": "The Weighing of the Heart"
+  },
+  "tituloGriego": "THE WEIGHING OF THE HEART",
+  "miniatura": {
+    "heroe": "anubis",
+    "rival": "ammit"
+  },
+  "escenas": [
+    {
+      "id": "momia",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un egipcio empezaba a prepararse para ese camino mucho antes de llegar a la sala. Empezaba por el cuerpo.",
+          "en": "An Egyptian began preparing for that road long before reaching the hall. It started with the body."
+        },
+        {
+          "es": "Al morir, lo llevaban a los embalsamadores. Su patrón era Anubis, el dios chacal que había hecho la primera momia: la de Osiris.",
+          "en": "When someone died, the body went to the embalmers. Their patron was Anubis, the jackal god who made the very first mummy: Osiris."
+        },
+        {
+          "es": "Durante setenta días el cuerpo se secaba con sal y se envolvía en lino, con amuletos entre las vendas.",
+          "en": "For seventy days the body was dried with salt and wrapped in linen, with amulets tucked between the bandages."
+        },
+        {
+          "es": "Sacaban el cerebro y los órganos, pero dejaban una sola cosa en su sitio: el corazón.",
+          "en": "They removed the brain and the organs, but left one thing in place: the heart."
+        },
+        {
+          "es": "Para los egipcios, el corazón era la mente: allí vivían los pensamientos, los recuerdos y la conciencia de cada persona.",
+          "en": "To the Egyptians, the heart was the mind: where a person's thoughts, memories and conscience lived."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sarcofago",
+          "x": 1560,
+          "s": 1,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "sacerdote_egipcio",
+          "rotulo": "",
+          "x": 360,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "momia",
+          "mira": "izq",
+          "rotulo": "",
+          "x": 1100,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 520,
+          "dur": 1.2,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "70 DÍAS",
+            "en": "70 DAYS"
+          },
+          "x": 1100,
+          "y": 300,
+          "hasta": 3
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "EL CORAZÓN",
+            "en": "THE HEART"
+          },
+          "x": 1100,
+          "y": 300
+        }
+      ]
+    },
+    {
+      "id": "libro",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Para el camino, la familia dejaba en la tumba un papiro con hechizos, lo que hoy llamamos el Libro de los Muertos.",
+          "en": "For the road, the family left a papyrus of spells in the tomb, what we now call the Book of the Dead."
+        },
+        {
+          "es": "Los egipcios lo llamaban de otra forma: el Libro para Salir al Día.",
+          "en": "The Egyptians called it something else: the Book of Coming Forth by Day."
+        },
+        {
+          "es": "Tenía casi doscientos hechizos: para cruzar el río, para no perder el nombre, la boca o el corazón.",
+          "en": "It held nearly two hundred spells: for crossing the river, and for not losing your name, your mouth, or your heart."
+        },
+        {
+          "es": "Y para pasar cada puerta, el difunto debía decir los nombres de sus guardianes, como había hecho Ra.",
+          "en": "And at each gate, the dead had to speak the names of its guardians, just as Ra had done."
+        },
+        {
+          "es": "Después de las puertas llegaba a una gran sala. Los egipcios la llamaban la Sala de las Dos Verdades.",
+          "en": "Beyond the gates lay a great hall. The Egyptians called it the Hall of the Two Truths."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilono",
+          "x": 1700,
+          "s": 0.9,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "escriba",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "difunto",
+          "como": "egipcio",
+          "rotulo": "",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1450,
+              "dur": 1.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 560,
+          "y": 520,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LIBRO PARA SALIR AL DÍA",
+            "en": "BOOK OF COMING FORTH BY DAY"
+          },
+          "x": 960,
+          "y": 270,
+          "hasta": 2.8
+        }
+      ]
+    },
+    {
+      "id": "sala",
+      "fondo": "sala_juicio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1
+        ]
+      },
+      "frases": [
+        {
+          "es": "La Sala de las Dos Verdades era enorme y silenciosa. Al fondo, en su trono, esperaba Osiris, rey de los muertos.",
+          "en": "The Hall of the Two Truths was vast and silent. At the far end, on his throne, waited Osiris, king of the dead."
+        },
+        {
+          "es": "Detrás de él estaban Isis y Neftis, las dos hermanas que lo habían buscado por todo Egipto.",
+          "en": "Behind him stood Isis and Nephthys, the two sisters who had searched all of Egypt for him."
+        },
+        {
+          "es": "A los lados, cuarenta y dos jueces, cada uno venido de una ciudad de Egipto.",
+          "en": "On either side sat forty-two judges, each one from a different city of Egypt."
+        },
+        {
+          "es": "Tenían nombres que daban miedo: Zancada-Ancha, Abrazafuego, Nariz, Rompehuesos.",
+          "en": "Their names were meant to frighten: Wide-of-Stride, Fire-Embracer, Nose, Bone-Breaker."
+        },
+        {
+          "es": "Anubis traía de la mano al recién llegado, y el difunto levantaba la vista hacia sus jueces.",
+          "en": "Anubis led the newcomer in by the hand, and the dead looked up at the judges."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1450,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "osiris",
+          "mira": "izq",
+          "x": 1450,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "mira": "izq",
+          "x": 1640,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "neftis",
+          "mira": "izq",
+          "x": 1840,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "j1",
+          "como": "egipcio",
+          "capa": "fondo",
+          "escala": 0.95,
+          "rotulo": "WIDE-OF-STRIDE",
+          "x": 640,
+          "pasos": [
+            {
+              "en": 2.8,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "j2",
+          "como": "egipcio",
+          "capa": "fondo",
+          "escala": 0.95,
+          "rotulo": "FIRE-EMBRACER",
+          "mira": "izq",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "j3",
+          "como": "egipcio",
+          "capa": "fondo",
+          "escala": 0.95,
+          "rotulo": "NOSE",
+          "mira": "izq",
+          "x": 1250,
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "difunto",
+          "como": "egipcio",
+          "rotulo": "",
+          "x": 380,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 520,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.25
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "42 JUECES",
+            "en": "42 JUDGES"
+          },
+          "x": 960,
+          "y": 270,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "confesion",
+      "fondo": "sala_juicio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Frente a cada juez, el difunto lo llamaba por su nombre y le decía algo que nunca había hecho.",
+          "en": "Before each judge, the dead person called him by name and declared something they had never done."
+        },
+        {
+          "es": "No he robado. No he matado. No he mentido. No he hecho llorar a nadie.",
+          "en": "I have not stolen. I have not killed. I have not lied. I have not made anyone weep."
+        },
+        {
+          "es": "No he ensuciado el agua. No he atrapado las aves de los dioses. No he falseado la medida del grano.",
+          "en": "I have not fouled the water. I have not trapped the birds of the gods. I have not falsified the measure of grain."
+        },
+        {
+          "es": "No he sido sordo a las palabras de verdad. No he dejado a nadie con hambre.",
+          "en": "I have not been deaf to words of truth. I have not left anyone hungry."
+        },
+        {
+          "es": "Eran cuarenta y dos declaraciones, dichas de memoria, una por cada juez.",
+          "en": "There were forty-two declarations, said from memory, one for each judge."
+        },
+        {
+          "es": "Pero ¿y si el difunto mentía? Nadie necesitaba acusarlo: su propio corazón lo contaría todo.",
+          "en": "But what if the dead person lied? No one needed to accuse them: their own heart would tell everything."
+        }
+      ],
+      "actores": [
+        {
+          "id": "difunto",
+          "como": "egipcio",
+          "rotulo": "",
+          "x": 470,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "baja"
+            },
+            {
+              "en": 5,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "j1",
+          "como": "egipcio",
+          "mira": "izq",
+          "rotulo": "",
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "j2",
+          "como": "egipcio",
+          "mira": "izq",
+          "rotulo": "",
+          "x": 1350,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "j3",
+          "como": "egipcio",
+          "mira": "izq",
+          "rotulo": "",
+          "x": 1550,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "baja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 5,
+          "tipo": "luz",
+          "x": 470,
+          "y": 560,
+          "dur": 1.5,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "NO HE ROBADO",
+            "en": "I HAVE NOT STOLEN"
+          },
+          "x": 800,
+          "y": 280,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "NO HE ENSUCIADO EL AGUA",
+            "en": "I HAVE NOT FOULED THE WATER"
+          },
+          "x": 800,
+          "y": 280,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "NO HE DEJADO A NADIE CON HAMBRE",
+            "en": "I HAVE NOT LEFT ANYONE HUNGRY"
+          },
+          "x": 800,
+          "y": 280,
+          "hasta": 4
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "42 DECLARACIONES",
+            "en": "42 DECLARATIONS"
+          },
+          "x": 960,
+          "y": 280,
+          "hasta": 5
+        }
+      ]
+    },
+    {
+      "id": "corazon",
+      "fondo": "sala_juicio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "El gran miedo del difunto tenía nombre: que su corazón hablara en su contra.",
+          "en": "The great fear of the dead had a name: that their own heart would speak against them."
+        },
+        {
+          "es": "Sobre el pecho de cada momia, los embalsamadores ponían un gran escarabajo de piedra. Debajo, grabado, iba el hechizo treinta B.",
+          "en": "On the chest of every mummy, the embalmers placed a large stone scarab. Carved beneath it was spell thirty-B."
+        },
+        {
+          "es": "Decía: Corazón mío, no te levantes contra mí como testigo. No me acuses ante el tribunal. No inclines la balanza contra mí.",
+          "en": "It said: My heart, do not rise up against me as a witness. Do not accuse me before the tribunal. Do not tip the scale against me."
+        },
+        {
+          "es": "El escarabajo era Jepri, el sol que renace al amanecer: el mismo que vimos salir de la serpiente.",
+          "en": "The scarab was Khepri, the sun reborn at dawn: the same one we saw rise out of the serpent."
+        },
+        {
+          "es": "Así, con el corazón en su sitio y el hechizo debajo, el difunto caminaba hacia el centro de la sala.",
+          "en": "So, with the heart in place and the spell beneath it, the dead person walked toward the center of the hall."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sarcofago",
+          "x": 1300,
+          "s": 1.1
+        },
+        {
+          "tipo": "sol",
+          "x": 1300,
+          "s": 0.28,
+          "y": 520,
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "sacerdote_egipcio",
+          "rotulo": "",
+          "x": 820,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "difunto",
+          "como": "egipcio",
+          "rotulo": "",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 700,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 520,
+          "dur": 1.5,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "ESCARABAJO DEL CORAZÓN",
+            "en": "HEART SCARAB"
+          },
+          "x": 1300,
+          "y": 300,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "pesada",
+      "fondo": "sala_juicio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En el centro de la sala había una gran balanza, y Anubis, el dios chacal, la vigilaba de cerca.",
+          "en": "In the center of the hall stood a great scale, and Anubis, the jackal god, watched over it closely."
+        },
+        {
+          "es": "En un plato pusieron el corazón del difunto. En el otro, una pluma blanca: la pluma de Maat.",
+          "en": "On one pan they set the heart of the dead. On the other, a white feather: the feather of Maat."
+        },
+        {
+          "es": "Maat era la verdad y el orden del mundo, el mismo orden que Ra defendía cada noche contra Apep.",
+          "en": "Maat was truth and the order of the world, the same order Ra defended every night against Apep."
+        },
+        {
+          "es": "Un corazón cargado de culpa pesaba más que la pluma. Uno liviano y honesto la igualaba.",
+          "en": "A heart heavy with guilt weighed more than the feather. A light, honest heart matched it."
+        },
+        {
+          "es": "Thoth, el dios escriba, anotaba el resultado, listo para anunciarlo ante todos.",
+          "en": "Thoth, the scribe god, wrote down the result, ready to announce it to everyone."
+        },
+        {
+          "es": "Y junto a la balanza esperaba Ammit, la Devoradora: cabeza de cocodrilo, melena de león y cuerpo de hipopótamo.",
+          "en": "And beside the scale waited Ammit, the Devourer: crocodile head, lion's mane and hippopotamus body."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "balanza",
+          "x": 960,
+          "s": 1.5
+        },
+        {
+          "tipo": "anfora",
+          "x": 690,
+          "s": 0.2,
+          "y": 452,
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "difunto",
+          "como": "egipcio",
+          "rotulo": "",
+          "x": 240,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "x": 480,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "mira": "izq",
+          "x": 1450,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "maat",
+          "mira": "izq",
+          "props": {
+            "objeto": "pluma"
+          },
+          "x": 1640,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "ammit",
+          "mira": "izq",
+          "props": {
+            "color": "#B8862E"
+          },
+          "x": 1830,
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.3,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 960,
+          "y": 470,
+          "intensidad": 1.2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "EL CORAZÓN",
+            "en": "THE HEART"
+          },
+          "x": 690,
+          "y": 330,
+          "hasta": 2.6
+        },
+        {
+          "en": 1.5,
+          "texto": {
+            "es": "LA PLUMA DE MAAT",
+            "en": "THE FEATHER OF MAAT"
+          },
+          "x": 1260,
+          "y": 330,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "veredicto",
+      "fondo": "sala_juicio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Si el corazón pesaba más que la pluma, Ammit lo devoraba de un solo bocado.",
+          "en": "If the heart weighed more than the feather, Ammit devoured it in a single bite."
+        },
+        {
+          "es": "Sin corazón, el difunto dejaba de existir. Los textos lo llaman la segunda muerte.",
+          "en": "Without its heart, the dead person ceased to exist. The texts call it the second death."
+        },
+        {
+          "es": "Pero si la balanza quedaba pareja, Thoth anunciaba el veredicto: justo de voz.",
+          "en": "But if the scale held level, Thoth announced the verdict: true of voice."
+        },
+        {
+          "es": "Entonces Horus, el dios halcón, tomaba al difunto de la mano y lo llevaba hasta el trono.",
+          "en": "Then Horus, the falcon god, took the dead person by the hand and led them to the throne."
+        },
+        {
+          "es": "Era el niño de los juncales, el que había vengado a su padre, presentando a los justos ante Osiris.",
+          "en": "The child of the marshes, who had avenged his father, now presented the righteous to Osiris."
+        },
+        {
+          "es": "Y Osiris, con su piel verde como el trigo que brota, los recibía en su reino.",
+          "en": "And Osiris, his skin green like sprouting wheat, welcomed them into his kingdom."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "balanza",
+          "x": 420,
+          "s": 1.2
+        },
+        {
+          "tipo": "trono",
+          "x": 1750,
+          "s": 1.1,
+          "capa": "fondo",
+          "en": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "ammit",
+          "mira": "izq",
+          "props": {
+            "color": "#B8862E"
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 1.8,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "difunto",
+          "como": "egipcio",
+          "rotulo": "",
+          "x": 860,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.5,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.6,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "mira": "izq",
+          "x": 1350,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.5,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "x": 1060,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.6,
+              "hace": "camina",
+              "a": 1330,
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "osiris",
+          "mira": "izq",
+          "x": 1750,
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.1,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "destello"
+        },
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 420,
+          "y": 480,
+          "intensidad": 1
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 860,
+          "y": 500,
+          "dur": 1.4,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA SEGUNDA MUERTE",
+            "en": "THE SECOND DEATH"
+          },
+          "x": 960,
+          "y": 270,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "JUSTO DE VOZ",
+            "en": "TRUE OF VOICE"
+          },
+          "x": 960,
+          "y": 270,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "campo",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "A los justos, Osiris les daba un título nuevo: desde ese día se los llamaba Osiris, seguido de su propio nombre.",
+          "en": "To the righteous, Osiris gave a new title: from that day on they were called Osiris, followed by their own name."
+        },
+        {
+          "es": "Y los mandaba al Campo de Juncos, un Egipto perfecto al otro lado de la muerte.",
+          "en": "And he sent them to the Field of Reeds, a perfect Egypt on the other side of death."
+        },
+        {
+          "es": "Allí el río nunca se secaba y el trigo crecía más alto que un hombre.",
+          "en": "There the river never ran dry, and the wheat grew taller than a man."
+        },
+        {
+          "es": "La tierra había que trabajarla, y para eso enterraban junto a cada muerto unas figuritas: los shabtis.",
+          "en": "The land still had to be worked, so small figurines were buried beside each dead person: the shabtis."
+        },
+        {
+          "es": "Si en el Campo de Juncos llamaban al difunto a trabajar, el shabti respondía en su lugar: ¡Aquí estoy!",
+          "en": "If the dead were called to work in the Field of Reeds, the shabti answered in their place: Here I am!"
+        },
+        {
+          "es": "Y los justos podían subir a la barca de Ra y viajar a su lado cada noche, para ver nacer el sol otra vez.",
+          "en": "And the righteous could board the boat of Ra and sail beside him each night, to watch the sun be born again."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "papiro",
+          "x": 200,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "papiro",
+          "x": 1000,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "loto",
+          "x": 1250,
+          "s": 1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "barca_solar",
+          "x": 1580,
+          "s": 0.8,
+          "en": 5,
+          "props": {
+            "disco": false
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "difunto",
+          "como": "egipcio",
+          "rotulo": "OSIRIS ANI",
+          "x": 480,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            },
+            {
+              "en": 5,
+              "hace": "camina",
+              "a": 1450,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "shabti",
+          "como": "egipcio",
+          "escala": 0.45,
+          "rotulo": "SHABTI",
+          "props": {
+            "piel": "#3C8FA0",
+            "tocado": "peluca"
+          },
+          "x": 760,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.2,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "y": 758,
+          "props": {
+            "cabezaAnimal": "carnero"
+          },
+          "x": 1580,
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.2,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "aclarar",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "CAMPO DE JUNCOS",
+            "en": "FIELD OF REEDS"
+          },
+          "x": 960,
+          "y": 270,
+          "hasta": 3
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "¡AQUÍ ESTOY!",
+            "en": "HERE I AM!"
+          },
+          "x": 760,
+          "y": 400,
+          "hasta": 5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "piramides",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así terminaba el viaje de los muertos de Egipto: con una pluma, una balanza y un corazón honesto.",
+          "en": "So ended the journey of the dead of Egypt: with a feather, a scale and an honest heart."
+        },
+        {
+          "es": "Empezamos en el agua oscura del Nun, con una colina y un dios solo. Terminamos en una sala, con un corazón y una pluma.",
+          "en": "We began in the dark water of the Nun, with a mound and a lonely god. We ended in a hall, with a heart and a feather."
+        },
+        {
+          "es": "En el camino hubo un cielo separado de la tierra, un Ojo furioso, un nombre robado, un rey asesinado y un niño que ganó el trono.",
+          "en": "Along the way came a sky pulled from the earth, a furious Eye, a stolen name, a murdered king, and a child who won the throne."
+        },
+        {
+          "es": "Pero Egipto aún tenía miles de años por delante, y con ellos llegaron historias nuevas, de reyes, magos y viajeros.",
+          "en": "But Egypt still had thousands of years ahead, and with them came new stories: not about gods, but about kings, magicians and travelers."
+        },
+        {
+          "es": "Empieza con Khufu, el faraón de la Gran Pirámide, y con un mago de ciento diez años que sabe volver a pegar la cabeza de un ganso.",
+          "en": "It begins with Khufu, the pharaoh of the Great Pyramid, and a magician of a hundred and ten who can put a goose's head back on."
+        },
+        {
+          "es": "Esa es la segunda temporada: Kings, Magicians and Travelers. Primera historia: Khufu y los magos.",
+          "en": "That is season two: Kings, Magicians and Travelers. First story: Khufu and the Magicians."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 400,
+          "s": 1.2,
+          "en": 1
+        },
+        {
+          "tipo": "balanza",
+          "x": 1500,
+          "s": 0.8,
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "difunto",
+          "como": "egipcio",
+          "rotulo": "",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "atum",
+          "x": 400,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.1,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "faraon",
+          "rotulo": "KHUFU",
+          "x": 720,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.1,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "mago",
+          "como": "anciano",
+          "mira": "izq",
+          "rotulo": "DJEDI",
+          "props": {
+            "tocado": null
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 4.3,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 960,
+          "y": 420,
+          "dur": 2,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 5,
+          "texto": {
+            "es": "TEMPORADA 2: REYES, MAGOS Y VIAJEROS",
+            "en": "SEASON 2: KINGS, MAGICIANS AND TRAVELERS"
+          },
+          "x": 960,
+          "y": 250
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La prueba que todo egipcio debía pasar",
+        "en": "The test every ancient Egyptian had to pass"
+      },
+      "escena": "pesada",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Las 42 cosas que todo egipcio juraba no haber hecho",
+        "en": "The 42 things every Egyptian swore never to have done"
+      },
+      "escena": "confesion",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 800
+    },
+    {
+      "gancho": {
+        "es": "El hechizo para que tu corazón no te traicionara",
+        "en": "The spell that stopped your heart from betraying you"
+      },
+      "escena": "corazon",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1050
+    }
+  ]
+}

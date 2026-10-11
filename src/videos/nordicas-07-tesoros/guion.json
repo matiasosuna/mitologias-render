@@ -1,0 +1,1390 @@
+{
+  "id": "nordicas-07-tesoros",
+  "serie": "nordicas",
+  "numero": "07",
+  "titulo": {
+    "es": "Los tesoros de los dioses",
+    "en": "The Treasures of the Gods"
+  },
+  "tituloGriego": "THE TREASURES OF THE GODS",
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Loki le cortó a Sif todo el cabello por una broma",
+        "en": "Loki cut off Sif's golden hair as a joke"
+      },
+      "escena": "pelo",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Loki se hizo mosca para arruinar una forja",
+        "en": "Loki turned into a fly to ruin the forge"
+      },
+      "escena": "forja",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1050
+    },
+    {
+      "gancho": {
+        "es": "Apostó su cabeza, perdió y se salvó con una trampa",
+        "en": "He bet his head, lost, and talked his way out"
+      },
+      "escena": "cabeza",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 1050
+    }
+  ],
+  "escenas": [
+    {
+      "id": "sleipnir",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Loki acababa de regalarle a Odín a Sleipnir, el extraño caballo de ocho patas, y los dioses estaban contentos.",
+          "en": "Loki had just given Odin his strange eight-legged horse, Sleipnir, and the gods were pleased."
+        },
+        {
+          "es": "Pero Loki nunca se quedaba mucho tiempo sin causar problemas, y esta vez empezó con una broma.",
+          "en": "But Loki never stayed out of trouble for long, and this time it began with a joke."
+        },
+        {
+          "es": "Sif, la esposa de Thor, era famosa por su cabello largo, que brillaba como un campo de trigo dorado.",
+          "en": "Sif, the wife of Thor, was famous for her long hair, which shone like a field of golden wheat."
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "sleipnir",
+          "x": 680,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 1050,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "sif",
+          "x": 1600,
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 350,
+          "dur": 1
+        },
+        {
+          "en": 2.2,
+          "tipo": "destello"
+        }
+      ]
+    },
+    {
+      "id": "pelo",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1.04,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Una noche, Sif dormía, y Loki entró en su cuarto sin hacer ruido.",
+          "en": "One night Sif lay asleep, and Loki crept into her room without a sound."
+        },
+        {
+          "es": "Solo por travesura, y sin ninguna razón, le cortó todo el cabello dorado hasta la raíz.",
+          "en": "Just for mischief, and for no reason at all, he cut off all her golden hair down to the roots."
+        },
+        {
+          "es": "Cuando Sif despertó y se vio la cabeza pelada, se cubrió y lloró.",
+          "en": "When Sif woke and found her head bare, she covered it and wept."
+        },
+        {
+          "es": "Thor volvió a casa, vio a su esposa, y supo enseguida quién lo había hecho.",
+          "en": "Thor came home, saw his wife, and knew at once who had done it."
+        }
+      ],
+      "actores": [
+        {
+          "id": "sif",
+          "x": 1350,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 1.7,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "sif2",
+          "como": "sif",
+          "x": 1350,
+          "rotulo": "",
+          "props": {
+            "tocado": "velo"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 900
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.3,
+              "hace": "camina",
+              "a": 1000
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 500
+            },
+            {
+              "en": 3.6,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 2
+        },
+        {
+          "en": 1.4,
+          "tipo": "destello"
+        }
+      ]
+    },
+    {
+      "id": "thor",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.05,
+          1.15
+        ]
+      },
+      "frases": [
+        {
+          "es": "Thor ardía de furia. Atrapó a Loki y lo sujetó con sus enormes manos.",
+          "en": "Thor burned with fury. He seized Loki and gripped him in his enormous hands."
+        },
+        {
+          "es": "Juró romperle todos los huesos del cuerpo.",
+          "en": "He swore to break every bone in his body."
+        },
+        {
+          "es": "Loki suplicó, y prometió traerle a Sif cabello de oro verdadero, que crecería como el suyo.",
+          "en": "Loki begged, and promised to bring Sif hair of true gold, which would grow like her own."
+        },
+        {
+          "es": "¿Cómo?, preguntó Thor. Los enanos de Svartalfheim, dijo Loki. Ellos pueden forjar cualquier cosa.",
+          "en": "How? asked Thor. The dwarves of Svartalfheim, said Loki. They can forge anything."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thor",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "corre",
+              "a": 900,
+              "dur": 0.5
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "tiembla",
+              "dur": 1.2
+            },
+            {
+              "en": 2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "temblor",
+          "dur": 0.7
+        },
+        {
+          "en": 1,
+          "tipo": "rayo",
+          "x": 700
+        }
+      ]
+    },
+    {
+      "id": "ivaldi",
+      "fondo": "fragua",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así Loki bajó a Svartalfheim, el mundo bajo la tierra, hasta la fragua de los hijos de Ivaldi.",
+          "en": "So Loki went down to Svartalfheim, the world beneath the earth, to the forge of the sons of Ivaldi."
+        },
+        {
+          "es": "Golpearon el oro hasta hacerlo hilos finos, y salió un cabello que crecería en la cabeza de Sif como si siempre fuera suyo.",
+          "en": "They hammered gold into fine threads, and made hair that would grow on Sif's head as if it had always been hers."
+        },
+        {
+          "es": "Luego forjaron Skidbladnir, un barco para Freyr que siempre tiene buen viento y se pliega como un pañuelo.",
+          "en": "Then they forged Skidbladnir, a ship for Freyr that always has a fair wind and folds up like a handkerchief."
+        },
+        {
+          "es": "Y forjaron Gungnir, la lanza de Odín, que nunca falla su blanco.",
+          "en": "And they forged Gungnir, Odin's spear, which never misses its mark."
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "x": 250,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 450
+            },
+            {
+              "en": 3,
+              "hace": "toma",
+              "objeto": "lanza"
+            },
+            {
+              "en": 3.1,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "iv1",
+          "como": "enano",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "iv2",
+          "como": "enano",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "iv3",
+          "como": "enano",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "drakkar",
+          "x": 1750,
+          "s": 0.5,
+          "en": 2
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fogata",
+          "x": 1020
+        },
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 1020,
+          "y": 560,
+          "dur": 1
+        },
+        {
+          "en": 1.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1020,
+          "y": 560,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "SVARTALFHEIM",
+            "en": "SVARTALFHEIM"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "CABELLO DE ORO",
+            "en": "HAIR OF GOLD"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "SKIDBLADNIR",
+            "en": "SKIDBLADNIR"
+          },
+          "x": 1550,
+          "y": 360,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "GUNGNIR",
+            "en": "GUNGNIR"
+          },
+          "x": 250,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "apuesta",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.05,
+          1.15
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Loki no se detuvo ahí. Fue a la casa de dos enanos hermanos: Brokkr y Eitri.",
+          "en": "But Loki did not stop there. He went to the home of two dwarf brothers: Brokkr and Eitri."
+        },
+        {
+          "es": "Les mostró los tesoros y apostó su cabeza a que no podían hacer nada mejor.",
+          "en": "He showed them the treasures and bet his head that they could not make anything better."
+        },
+        {
+          "es": "Eitri aceptó, puso una piel de cerdo en el fuego, y le ordenó a Brokkr: sopla el fuelle y no pares.",
+          "en": "Eitri accepted, laid a pig's skin in the fire, and told Brokkr: blow the bellows, and do not stop."
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "x": 250,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "brokkr",
+          "como": "enano",
+          "x": 1050,
+          "mira": "izq",
+          "rotulo": "BROKKR",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "tiembla",
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "eitri",
+          "como": "enano",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "EITRI",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 640,
+          "s": 0.9,
+          "en": 1
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "fuego",
+          "x": 1290,
+          "y": 700
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1290,
+          "y": 600,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA APUESTA: LA CABEZA DE LOKI",
+            "en": "THE BET: LOKI'S HEAD"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "forja",
+      "fondo": "fragua",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.05,
+          1.15
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Loki, que no quería perder, se convirtió en una mosca y se posó en la mano de Brokkr.",
+          "en": "Then Loki, who hated to lose, turned into a fly and settled on Brokkr's hand."
+        },
+        {
+          "es": "La primera picadura fue en la mano, pero Brokkr siguió soplando. Del fuego salió Gullinbursti, un jabalí de cerdas doradas.",
+          "en": "The first sting was on his hand, but Brokkr kept blowing. Out of the fire came Gullinbursti, a boar with golden bristles."
+        },
+        {
+          "es": "La segunda picadura fue en el cuello, más fuerte. Brokkr no se movió, y salió Draupnir, un anillo de oro.",
+          "en": "The second sting, on his neck, was harder. Brokkr did not move, and out came Draupnir, a ring of gold."
+        },
+        {
+          "es": "Cada nueve noches, de Draupnir gotean ocho anillos nuevos, todos del mismo peso.",
+          "en": "Every ninth night, eight new rings drip from Draupnir, each of the same weight."
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "x": 500,
+          "rotulo": "LOKI THE FLY",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 0.4
+            },
+            {
+              "en": 0.3,
+              "hace": "encoge",
+              "escala": 0.22,
+              "dur": 0.3
+            },
+            {
+              "en": 0.6,
+              "hace": "vuela",
+              "a": [
+                1170,
+                470
+              ],
+              "dur": 0.7
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1200,
+                430
+              ],
+              "dur": 0.3
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1190,
+                330
+              ],
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "brokkr",
+          "como": "enano",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "BROKKR",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "tiembla",
+              "dur": 3.5
+            }
+          ]
+        },
+        {
+          "id": "eitri",
+          "como": "enano",
+          "x": 1700,
+          "mira": "izq",
+          "rotulo": "EITRI",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.3,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "gullinbursti",
+          "como": "jabali",
+          "x": 800,
+          "rotulo": "GULLINBURSTI",
+          "props": {
+            "color": "#E9C46A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 1480,
+          "y": 700
+        },
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 1480,
+          "y": 560,
+          "dur": 1
+        },
+        {
+          "en": 1.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 900,
+          "y": 500,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.3,
+          "texto": {
+            "es": "DRAUPNIR",
+            "en": "DRAUPNIR"
+          },
+          "x": 960,
+          "y": 280,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "8 ANILLOS CADA 9 NOCHES",
+            "en": "8 RINGS EVERY 9 NIGHTS"
+          },
+          "x": 960,
+          "y": 280
+        }
+      ]
+    },
+    {
+      "id": "martillo",
+      "fondo": "fragua",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1.1,
+          1.2
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por fin Eitri puso hierro en el fuego. La mosca picó a Brokkr en el párpado, y por un momento no pudo ver.",
+          "en": "At last Eitri laid iron in the fire. The fly stung Brokkr on the eyelid, and for a moment he could not see."
+        },
+        {
+          "es": "Brokkr soltó el fuelle para espantar a la mosca, apenas un instante.",
+          "en": "Brokkr let go of the bellows to swat the fly, only for an instant."
+        },
+        {
+          "es": "Eitri sacó del fuego un martillo: Mjolnir. Era perfecto, salvo que el mango quedó un poco corto.",
+          "en": "Eitri drew a hammer from the fire: Mjolnir. It was perfect, except that the handle came out a little short."
+        },
+        {
+          "es": "Por eso el martillo de Thor tiene el mango corto: por ese instante sin aire.",
+          "en": "That is why Thor's hammer has a short handle: that one instant without wind."
+        },
+        {
+          "es": "Eitri le dio los tesoros a su hermano y le dijo: llévalos a Asgard y cobra la apuesta.",
+          "en": "Eitri handed the treasures to his brother and said: take them to Asgard, and collect the bet."
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "x": 1000,
+          "y": 420,
+          "escala": 0.22,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                1150,
+                400
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                800,
+                300
+              ],
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "brokkr",
+          "como": "enano",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "BROKKR",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "tiembla",
+              "dur": 0.7
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.6,
+              "hace": "baja"
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 1000
+            }
+          ]
+        },
+        {
+          "id": "eitri",
+          "como": "enano",
+          "x": 1700,
+          "mira": "izq",
+          "rotulo": "EITRI",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "toma",
+              "objeto": "mjolnir"
+            },
+            {
+              "en": 2.1,
+              "hace": "brilla",
+              "dur": 0.9
+            },
+            {
+              "en": 4,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 1480,
+          "y": 700
+        },
+        {
+          "en": 0.4,
+          "tipo": "chispas",
+          "x": 1480,
+          "y": 560,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "MJOLNIR",
+            "en": "MJOLNIR"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO EL MARTILLO DE THOR TIENE MANGO CORTO",
+            "en": "THAT'S WHY THOR'S HAMMER HAS A SHORT HANDLE"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "juicio",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En Asgard, los dioses se sentaron a juzgar: Odín, Thor y Freyr.",
+          "en": "In Asgard the gods sat down to judge: Odin, Thor and Freyr."
+        },
+        {
+          "es": "Loki entregó la lanza Gungnir a Odín, el cabello de oro a Thor para Sif, y el barco Skidbladnir a Freyr.",
+          "en": "Loki gave Odin the spear Gungnir, gave Thor the golden hair for Sif, and gave Freyr the ship Skidbladnir."
+        },
+        {
+          "es": "Brokkr dio a Odín el anillo Draupnir, a Freyr el jabalí Gullinbursti, y a Thor el martillo Mjolnir.",
+          "en": "Brokkr gave Odin the ring Draupnir, gave Freyr the boar Gullinbursti, and gave Thor the hammer Mjolnir."
+        },
+        {
+          "es": "Los dioses dijeron que Mjolnir era el mejor de todos los tesoros, la mejor defensa contra los gigantes.",
+          "en": "The gods declared that Mjolnir was the best of all the treasures, the best defense against the giants."
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "x": 200,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "brokkr",
+          "como": "enano",
+          "x": 520,
+          "rotulo": "BROKKR",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "gullinbursti",
+          "como": "jabali",
+          "x": 1060,
+          "mira": "izq",
+          "rotulo": "GULLINBURSTI",
+          "props": {
+            "color": "#E9C46A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "brilla",
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.1,
+              "hace": "brilla",
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "freyr",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 800,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.1,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LOS JUECES",
+            "en": "THE JUDGES"
+          },
+          "x": 1550,
+          "y": 220,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "GUNGNIR, CABELLO DE ORO, SKIDBLADNIR",
+            "en": "GUNGNIR, GOLDEN HAIR, SKIDBLADNIR"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "DRAUPNIR, GULLINBURSTI, MJOLNIR",
+            "en": "DRAUPNIR, GULLINBURSTI, MJOLNIR"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "MJOLNIR: EL MEJOR",
+            "en": "MJOLNIR: THE BEST"
+          },
+          "x": 960,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "cabeza",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.1,
+          1.2
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Loki había perdido la apuesta, y Brokkr dijo que quería su cabeza.",
+          "en": "But Loki had lost the bet, and Brokkr said he wanted his head."
+        },
+        {
+          "es": "Loki ofreció oro, pero Brokkr se negó. Loki huyó, y Thor lo atrapó y lo trajo de vuelta.",
+          "en": "Loki offered gold, but Brokkr refused. Loki fled, and Thor caught him and dragged him back."
+        },
+        {
+          "es": "Entonces Loki dijo: la cabeza es tuya, pero el cuello no. El cuello nunca fue parte de la apuesta.",
+          "en": "Then Loki said: the head is yours, but not the neck. The neck was never part of the bet."
+        },
+        {
+          "es": "Nadie podía tomar la cabeza sin tocar el cuello. Furioso, Brokkr tomó una lezna y le cosió la boca a Loki.",
+          "en": "No one could take the head without the neck. Furious, Brokkr took an awl and sewed Loki's mouth shut."
+        },
+        {
+          "es": "Loki rompió el hilo de un tirón. Por eso tiene cicatrices en los labios.",
+          "en": "Loki tore the thread free. That is why he has scars on his lips."
+        }
+      ],
+      "actores": [
+        {
+          "id": "brokkr",
+          "como": "enano",
+          "x": 800,
+          "rotulo": "BROKKR",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 1600,
+              "dur": 0.4
+            },
+            {
+              "en": 1.7,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.4
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 2.1,
+              "hace": "senala"
+            },
+            {
+              "en": 3.4,
+              "hace": "calla"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 1850,
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.3,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "LA CABEZA SÍ, EL CUELLO NO",
+            "en": "THE HEAD, BUT NOT THE NECK"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 3
+        },
+        {
+          "en": 4,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO LOKI TIENE CICATRICES EN LOS LABIOS",
+            "en": "THAT'S WHY LOKI HAS SCARS ON HIS LIPS"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "jotunheim",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Y así Thor consiguió su martillo, el arma que defendería Asgard de los gigantes para siempre.",
+          "en": "And so Thor got his hammer, the weapon that would defend Asgard from the giants forever."
+        },
+        {
+          "es": "Pero Loki guardaba un secreto. En el país de los gigantes tenía hijos de los que ningún dios sabía nada.",
+          "en": "But Loki was keeping a secret. In the land of the giants, he had children that no god knew anything about."
+        },
+        {
+          "es": "¿Qué serían esos hijos? Esa es la historia del próximo episodio: los hijos de Loki.",
+          "en": "What would those children become? That is the story of the next episode: Loki's Children."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thor",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 850,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "angrboda",
+          "x": 1750,
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "fenrir",
+          "x": 1300,
+          "mira": "izq",
+          "escala": 0.3,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "jormungandr",
+          "x": 1480,
+          "mira": "izq",
+          "escala": 0.22,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.8,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "hel",
+          "x": 1620,
+          "mira": "izq",
+          "escala": 0.45,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.2,
+          "tipo": "oscurecer"
+        },
+        {
+          "en": 0,
+          "tipo": "nieve"
+        }
+      ]
+    }
+  ],
+  "miniatura": {
+    "heroe": "thor",
+    "rival": "enano"
+  }
+}

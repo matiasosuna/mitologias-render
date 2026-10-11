@@ -1,0 +1,1667 @@
+{
+  "id": "nordicas-09-thor-gigantes",
+  "serie": "nordicas",
+  "numero": "09",
+  "titulo": {
+    "es": "Thor entre los gigantes",
+    "en": "Thor Among the Giants"
+  },
+  "tituloGriego": "THOR AMONG THE GIANTS",
+  "escenas": [
+    {
+      "id": "martillo",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Fenrir seguía aullando atado, y los dioses respiraban más tranquilos. Pero los gigantes no se habían ido.",
+          "en": "Fenrir still howled in his chains, and the gods breathed easier. But the giants had not gone away."
+        },
+        {
+          "es": "Solo Thor y su martillo Mjölnir estaban entre los gigantes y Asgard.",
+          "en": "Only Thor and his hammer Mjolnir stood between the giants and Asgard."
+        },
+        {
+          "es": "Una mañana Thor despertó, estiró la mano hacia su martillo y encontró solo el suelo vacío.",
+          "en": "One morning Thor woke, reached for his hammer, and found nothing but bare ground."
+        },
+        {
+          "es": "Mjölnir había desaparecido. Si los gigantes se enteraban, nada los detendría.",
+          "en": "Mjolnir was gone. If the giants found out, nothing would stop them."
+        }
+      ],
+      "actores": [
+        {
+          "id": "fenrir",
+          "x": 1650,
+          "mira": "izq",
+          "escala": 0.35,
+          "capa": "fondo",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 1,
+              "hace": "calla"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.9,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2,
+              "hace": "suelta"
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 1650,
+          "y": 400,
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "capa",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1.03,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Thor corrió a buscar a Loki, el más astuto de los dioses, y le contó todo.",
+          "en": "Thor ran to Loki, the cleverest of the gods, and told him everything."
+        },
+        {
+          "es": "Juntos le pidieron a Freyja que les prestara su capa de plumas de halcón.",
+          "en": "Together they asked Freyja to lend her cloak of falcon feathers."
+        },
+        {
+          "es": "Freyja la prestaría aunque fuera de oro. Loki se la puso y voló al norte, a Jötunheim.",
+          "en": "Freyja would lend it even if it were gold. Loki put it on and flew north, to Jotunheim."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thor",
+          "x": 300,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 800,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.5
+            },
+            {
+              "en": 2,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "freyja",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "loki2",
+          "como": "loki",
+          "x": 1050,
+          "rotulo": "",
+          "props": {
+            "alas": true
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.4,
+              "hace": "vuela",
+              "a": [
+                2300,
+                160
+              ],
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "destello"
+        }
+      ]
+    },
+    {
+      "id": "thrym",
+      "fondo": "jotunheim",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "En Jötunheim, el gigante Thrym trenzaba correas de oro para sus perros.",
+          "en": "In Jotunheim, the giant Thrym sat braiding golden leashes for his dogs."
+        },
+        {
+          "es": "Loki aterrizó ante él. Thrym sonrió: sé a qué vienes. Yo tengo el martillo de Thor.",
+          "en": "Loki landed before him. Thrym smiled: I know why you came. I have Thor's hammer."
+        },
+        {
+          "es": "Lo enterré ocho leguas bajo tierra. No lo verán jamás, a menos que Freyja sea mi esposa.",
+          "en": "I buried it eight leagues deep. You will not see it again, unless Freyja becomes my wife."
+        },
+        {
+          "es": "Loki voló de regreso a toda velocidad para llevar la exigencia a los dioses.",
+          "en": "Loki flew back at full speed to carry the demand to the gods."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1400,
+          "s": 1.3,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "thrym",
+          "como": "jotun",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "THRYM",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 100,
+          "y": 250,
+          "props": {
+            "alas": true
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                800,
+                790
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                -300,
+                200
+              ],
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "OCHO LEGUAS BAJO TIERRA",
+            "en": "EIGHT LEAGUES UNDERGROUND"
+          },
+          "x": 960,
+          "y": 260,
+          "hasta": 3
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 0.6,
+          "intensidad": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "polvo",
+          "x": 900,
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "id": "consejo",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "De vuelta en Asgard, Loki le dijo a Freyja: ponte el velo de novia, vamos a Jötunheim.",
+          "en": "Back in Asgard, Loki told Freyja: put on your bridal veil, we are going to Jotunheim."
+        },
+        {
+          "es": "Freyja se puso tan furiosa que los salones temblaron, y su gran collar, Brísingamen, estalló.",
+          "en": "Freyja was so furious that the halls shook, and her great necklace, Brisingamen, burst apart."
+        },
+        {
+          "es": "Jamás me casaré con un gigante, dijo, ni por todos los martillos del mundo.",
+          "en": "I will never marry a giant, she said, not for all the hammers in the world."
+        },
+        {
+          "es": "Entonces Heimdall, que ve el futuro, tuvo una idea increíble: vistamos a Thor de novia.",
+          "en": "Then Heimdall, who sees the future, had a wild idea: dress Thor as the bride."
+        },
+        {
+          "es": "Un velo, llaves y Brísingamen en el pecho. Thor protestó, pero Loki dijo: sin martillo, no hay Asgard.",
+          "en": "A veil, keys, and Brisingamen on his chest. Thor protested, but Loki said: no hammer, no Asgard."
+        },
+        {
+          "es": "Yo iré contigo como tu dama de compañía.",
+          "en": "I will go with you as your maid."
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 4.5,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 5,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "freyja",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "heimdall",
+          "x": 1050,
+          "mira": "izq",
+          "capa": "medio",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 700,
+          "visible": false,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "novia",
+          "como": "thor",
+          "x": 700,
+          "rotulo": "THOR",
+          "props": {
+            "tocado": "velo",
+            "ropa": "larga",
+            "objeto": null
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 4.6,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "dama",
+          "como": "loki",
+          "x": 300,
+          "rotulo": "LOKI",
+          "props": {
+            "mujer": true,
+            "tocado": "velo",
+            "ropa": "larga"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.1,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "BRÍSINGAMEN",
+            "en": "BRISINGAMEN"
+          },
+          "x": 1450,
+          "y": 330,
+          "hasta": 2
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "BRÍSINGAMEN",
+            "en": "BRISINGAMEN"
+          },
+          "x": 700,
+          "y": 230,
+          "hasta": 5
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 1.3,
+          "tipo": "chispas",
+          "x": 1450,
+          "y": 520
+        },
+        {
+          "en": 4,
+          "tipo": "destello"
+        }
+      ]
+    },
+    {
+      "id": "banquete",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1350,
+          "s": 1.1,
+          "capa": "medio"
+        }
+      ],
+      "frases": [
+        {
+          "es": "Thrym estaba feliz. Los gigantes prepararon un banquete y la novia, con el velo puesto, se sentó a su lado.",
+          "en": "Thrym was overjoyed. The giants prepared a feast, and the veiled bride sat beside him."
+        },
+        {
+          "es": "La novia se comió un buey entero y ocho salmones, y se bebió tres barriles de hidromiel.",
+          "en": "The bride ate a whole ox and eight salmon, and drank three barrels of mead."
+        },
+        {
+          "es": "Nunca vi comer así a una novia, dijo Thrym. Loki respondió: ocho noches sin comer, de tanta ansiedad.",
+          "en": "Never saw a bride eat so much, said Thrym. Loki answered: eight nights without food, so eager was she."
+        },
+        {
+          "es": "Thrym levantó el velo para besarla y saltó hacia atrás: ¿por qué los ojos de Freyja arden como fuego?",
+          "en": "Thrym lifted the veil to kiss her, and jumped back: why do Freyja's eyes burn like fire?"
+        },
+        {
+          "es": "Loki, rápido como siempre: ocho noches sin dormir, de tanta ansiedad.",
+          "en": "Loki, quick as ever: eight nights without sleep, so eager was she."
+        }
+      ],
+      "actores": [
+        {
+          "id": "g1",
+          "como": "gigante_hielo",
+          "x": 1750,
+          "mira": "izq",
+          "escala": 0.8,
+          "capa": "fondo",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "thrym",
+          "como": "jotun",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "THRYM",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1600,
+              "dur": 0.4
+            },
+            {
+              "en": 3.1,
+              "hace": "tiembla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "novia",
+          "como": "thor",
+          "x": 900,
+          "rotulo": "FALSE BRIDE",
+          "props": {
+            "tocado": "velo",
+            "ropa": "larga",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            },
+            {
+              "en": 1.7,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "dama",
+          "como": "loki",
+          "x": 500,
+          "rotulo": "LOKI",
+          "props": {
+            "mujer": true,
+            "tocado": "velo",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "UN BUEY · OCHO SALMONES",
+            "en": "ONE OX · EIGHT SALMON"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 450
+        }
+      ]
+    },
+    {
+      "id": "venganza",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1.05,
+          1.15
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por fin Thrym ordenó: traigan el martillo para bendecir a la novia.",
+          "en": "At last Thrym ordered: bring the hammer to bless the bride."
+        },
+        {
+          "es": "Cuando Thor sintió a Mjölnir en sus manos, su corazón rio de alegría.",
+          "en": "When Thor felt Mjolnir in his hands, his heart laughed."
+        },
+        {
+          "es": "Se arrancó el velo y golpeó primero a Thrym, y luego a todos los gigantes del banquete.",
+          "en": "He tore off the veil and struck Thrym first, then every giant at the feast."
+        },
+        {
+          "es": "Por eso el trueno retumba en el cielo cuando Thor blande su martillo.",
+          "en": "That is why thunder rolls across the sky whenever Thor swings his hammer."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thrym",
+          "como": "jotun",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.3,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "g1",
+          "como": "gigante_hielo",
+          "x": 1750,
+          "mira": "izq",
+          "escala": 0.7,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "como": "gigante_hielo",
+          "x": 1150,
+          "mira": "izq",
+          "escala": 0.7,
+          "capa": "fondo",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.8,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "novia",
+          "como": "thor",
+          "x": 800,
+          "rotulo": "",
+          "props": {
+            "tocado": "velo",
+            "ropa": "larga",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 800,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "dama",
+          "como": "loki",
+          "x": 450,
+          "rotulo": "",
+          "props": {
+            "mujer": true,
+            "tocado": "velo",
+            "ropa": "larga"
+          }
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "MJÖLNIR",
+            "en": "MJOLNIR"
+          },
+          "x": 800,
+          "y": 260,
+          "hasta": 2
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "POR ESO RETUMBA EL TRUENO",
+            "en": "THAT'S WHY THUNDER ROLLS"
+          },
+          "x": 960,
+          "y": 230,
+          "estilo": "porque"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 2,
+          "tipo": "rayo",
+          "x": 1300
+        },
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 1.2
+        },
+        {
+          "en": 2.4,
+          "tipo": "polvo",
+          "x": 1400,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "rayo",
+          "x": 800
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "guante",
+      "fondo": "bosque_nevado",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "cueva",
+          "x": 1250,
+          "s": 1.3,
+          "capa": "medio"
+        }
+      ],
+      "frases": [
+        {
+          "es": "Pero Thor no siempre ganaba. Un día partió a Jötunheim con Loki y el veloz Thjalfi.",
+          "en": "But Thor did not always win. One day he set out for Jotunheim with Loki and swift Thjalfi."
+        },
+        {
+          "es": "Al caer la noche encontraron en el bosque un refugio enorme, de entrada inmensa.",
+          "en": "At nightfall they found a huge shelter in the forest, with a vast entrance."
+        },
+        {
+          "es": "En la oscuridad la tierra tembló con un rugido, y se escondieron en una cámara lateral.",
+          "en": "In the dark the ground shook with a roar, and they hid in a small side chamber."
+        },
+        {
+          "es": "Al amanecer vieron a un gigante roncando: era Skrymir, y el refugio era su guante.",
+          "en": "At dawn they found a giant snoring: it was Skrymir, and the shelter was his glove."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thor",
+          "x": 100,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 450,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 0,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 680,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "thjalfi",
+          "como": "joven",
+          "x": -100,
+          "rotulo": "THJALFI",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "skrymir",
+          "como": "jotun",
+          "x": 1700,
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "SKRYMIR",
+          "props": {
+            "objeto": null
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.9,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "cae"
+            },
+            {
+              "en": 3.1,
+              "hace": "habla",
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "EL GUANTE DE SKRYMIR",
+            "en": "SKRYMIR'S GLOVE"
+          },
+          "x": 1250,
+          "y": 250
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve"
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1.8
+        },
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 0.9
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        }
+      ]
+    },
+    {
+      "id": "utgard",
+      "fondo": "jotunheim",
+      "camara": {
+        "de": 0,
+        "a": 800,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 2250,
+          "s": 1.6,
+          "capa": "medio",
+          "en": 2,
+          "props": {
+            "ancho": 1100,
+            "alto": 600
+          }
+        }
+      ],
+      "frases": [
+        {
+          "es": "Skrymir caminó con ellos. Thor lo golpeó dormido, pero el gigante solo preguntó si había caído una hoja.",
+          "en": "Skrymir walked with them. Thor struck him in his sleep, but he only asked if a leaf had fallen."
+        },
+        {
+          "es": "Skrymir les advirtió: en Útgarðr viven hombres mucho más grandes que yo. No presuman allí.",
+          "en": "Skrymir warned them: in Utgard live men far bigger than I. Do not boast there."
+        },
+        {
+          "es": "Pronto vieron una fortaleza tan alta que tuvieron que echar la cabeza atrás para ver su cima.",
+          "en": "Soon they saw a fortress so high they had to tip back their heads to see its top."
+        },
+        {
+          "es": "El rey, Útgarða-Loki, se rio: aquí solo se queda quien domina un arte. ¿Qué saben hacer?",
+          "en": "The king, Utgarda-Loki, laughed: here, only those who master some art may stay. What can you do?"
+        }
+      ],
+      "actores": [
+        {
+          "id": "skrymir",
+          "como": "jotun",
+          "x": 1050,
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.1,
+              "hace": "senala"
+            },
+            {
+              "en": 1.8,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1350,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 250,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "thjalfi",
+          "como": "joven",
+          "x": 50,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 950,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "utgarda",
+          "como": "gigante_hielo",
+          "x": 2250,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "UTGARDA-LOKI",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.9,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "habla",
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 2,
+          "tipo": "niebla",
+          "dur": 1.5
+        }
+      ]
+    },
+    {
+      "id": "pruebas",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Loki presumió que nadie comía más rápido, y se enfrentó a Logi ante una artesa de carne.",
+          "en": "Loki boasted that no one ate faster, and faced Logi across a trough of meat."
+        },
+        {
+          "es": "Loki se comió solo la carne. Logi devoró la carne, los huesos y hasta la artesa.",
+          "en": "Loki ate only the meat. Logi devoured the meat, the bones, and even the trough."
+        },
+        {
+          "es": "Luego Thjalfi corrió contra un muchacho llamado Hugi, y las tres veces ganó Hugi.",
+          "en": "Then Thjalfi raced a boy named Hugi, and all three times Hugi won."
+        },
+        {
+          "es": "A Thor le dieron un cuerno de beber. Bebió tres veces con todas sus fuerzas, y apenas bajó.",
+          "en": "Thor was handed a drinking horn. He drank three times with all his strength, and it barely sank."
+        },
+        {
+          "es": "Luego debía levantar al gato gris del rey, pero solo logró alzar una pata.",
+          "en": "Then he had to lift the king's grey cat, but he only raised one paw."
+        },
+        {
+          "es": "Por último luchó con una anciana, Elli. Cuanto más empujaba, más firme estaba ella, hasta que Thor se arrodilló.",
+          "en": "Last, he wrestled an old woman, Elli. The harder he pushed, the firmer she stood, until Thor knelt."
+        }
+      ],
+      "actores": [
+        {
+          "id": "utgarda",
+          "como": "gigante_hielo",
+          "x": 1900,
+          "mira": "izq",
+          "escala": 0.9,
+          "capa": "medio",
+          "rotulo": "UTGARDA-LOKI",
+          "pasos": [
+            {
+              "en": 5.2,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 350,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "logi",
+          "como": "joven",
+          "x": 900,
+          "mira": "izq",
+          "rotulo": "LOGI",
+          "props": {
+            "piel": "#C8553D",
+            "pelo": "#E9A23B",
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "thjalfi",
+          "como": "joven",
+          "x": 300,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "corre",
+              "a": 1050,
+              "dur": 0.9
+            },
+            {
+              "en": 3,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "hugi",
+          "como": "joven",
+          "x": 300,
+          "y": 790,
+          "escala": 0.9,
+          "rotulo": "HUGI",
+          "props": {
+            "pelo": "#CFE3F2",
+            "capa": "#7FA9C9"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "corre",
+              "a": 1500,
+              "dur": 0.45
+            },
+            {
+              "en": 3,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 1000,
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "toma",
+              "objeto": "cuerno"
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "suelta"
+            },
+            {
+              "en": 4.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 5,
+              "hace": "baja"
+            },
+            {
+              "en": 5.5,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "gato",
+          "como": "lobo",
+          "x": 1400,
+          "mira": "izq",
+          "escala": 0.5,
+          "rotulo": "GREY CAT",
+          "props": {
+            "color": "#8A8F96"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 5,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "elli",
+          "como": "norna",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "ELLI",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "fuego",
+          "x": 900,
+          "y": 700,
+          "dur": 1,
+          "intensidad": 0.6
+        },
+        {
+          "en": 2.3,
+          "tipo": "polvo",
+          "x": 700,
+          "dur": 0.7
+        },
+        {
+          "en": 5.5,
+          "tipo": "temblor",
+          "dur": 0.4
+        }
+      ]
+    },
+    {
+      "id": "revelacion",
+      "fondo": "jotunheim",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al irse, el rey confesó: nada de lo que vieron era real. Todo fue ilusión.",
+          "en": "As they left, the king confessed: nothing you saw was real. It was all illusion."
+        },
+        {
+          "es": "Logi era el fuego salvaje y Hugi era mi pensamiento. Nada come ni corre más rápido.",
+          "en": "Logi was wildfire, and Hugi was my thought. Nothing eats or runs faster."
+        },
+        {
+          "es": "El cuerno estaba unido al mar. Por eso el mar bajó, y por eso el mar tiene mareas.",
+          "en": "The horn was joined to the sea. That is why the ocean sank, and why the sea has tides."
+        },
+        {
+          "es": "El gato era Jörmungandr, la serpiente del mundo. Y Elli era la vejez: por eso hasta los más fuertes caen al final.",
+          "en": "The cat was Jormungandr, the world serpent. And Elli was old age: that is why even the strongest fall in the end."
+        },
+        {
+          "es": "Thor alzó su martillo, pero el rey y su fortaleza se esfumaron como niebla.",
+          "en": "Thor raised his hammer, but the king and his fortress vanished like mist."
+        },
+        {
+          "es": "Pero se acercaba un día más oscuro, con una pérdida que ningún martillo podría deshacer. Próximo episodio: La muerte de Baldr.",
+          "en": "But a darker day was coming, a loss no hammer could undo. Next episode: The Death of Baldr."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thor",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 3.9,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 5,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 200,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "thjalfi",
+          "como": "joven",
+          "x": 680,
+          "rotulo": "",
+          "pasos": []
+        },
+        {
+          "id": "utgarda",
+          "como": "gigante_hielo",
+          "x": 1450,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 4.3,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "jormungandr",
+          "x": 1050,
+          "mira": "izq",
+          "escala": 0.3,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.2,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LOGI: FUEGO · HUGI: PENSAMIENTO",
+            "en": "LOGI: FIRE · HUGI: THOUGHT"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "POR ESO EL MAR TIENE MAREAS",
+            "en": "THAT'S WHY THE SEA HAS TIDES"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 3,
+          "estilo": "porque"
+        },
+        {
+          "en": 3.4,
+          "texto": {
+            "es": "POR ESO HASTA LOS FUERTES ENVEJECEN",
+            "en": "THAT'S WHY EVEN THE STRONG GROW OLD"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 4.2,
+          "estilo": "porque"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "fuego",
+          "x": 1000,
+          "y": 700,
+          "dur": 1,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "olas-suben",
+          "dur": 0.5,
+          "intensidad": 0.3
+        },
+        {
+          "en": 2.6,
+          "tipo": "olas-bajan",
+          "dur": 0.4,
+          "intensidad": 0.3
+        },
+        {
+          "en": 4.3,
+          "tipo": "niebla",
+          "dur": 1.2
+        },
+        {
+          "en": 4.3,
+          "tipo": "destello"
+        },
+        {
+          "en": 5,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Thor se vistió de novia para recuperar su martillo",
+        "en": "Thor dressed as a bride to get his hammer back"
+      },
+      "escena": "banquete",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Thor intentó beberse el mar",
+        "en": "Thor tried to drink the sea"
+      },
+      "escena": "pruebas",
+      "desde": 2,
+      "hasta": 5,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "Por eso el mar tiene mareas",
+        "en": "This is why the sea has tides"
+      },
+      "escena": "revelacion",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 900
+    }
+  ],
+  "miniatura": {
+    "heroe": "thor",
+    "rival": "jotun"
+  }
+}

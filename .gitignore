@@ -1,0 +1,28 @@
+# secretos (nunca al repo)
+.env
+.env.*
+!.env.example
+.yt-token.json
+.dev.vars*
+!.dev.vars.example
+# pesados / generados
+node_modules/
+out/
+.wrangler/
+sitio/v/
+/voz/
+/imagenes/
+/canal/
+/test/
+.claude/
+COLA.json
+mapa-nordico.html
+# audios: solo lo que se renderiza en la nube (voz en inglés + música)
+public/audio/*/*
+!public/audio/*/en/
+public/musica/*
+!public/musica/*.wav
+public/portadas/
+.agents/
+.venv/
+pruebas/voz/salida/

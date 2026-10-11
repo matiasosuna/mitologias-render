@@ -1,0 +1,359 @@
+{
+  "id": "short-egipcias-cofre-set",
+  "formato": "short",
+  "serie": "egipcias",
+  "numero": "S",
+  "titulo": {
+    "es": "Quien quepa en el cofre, se lo queda",
+    "en": "Whoever fits the box can keep it"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Quien quepa en el cofre, se lo queda",
+    "en": "Whoever fits the box can keep it"
+  },
+  "cierre": {
+    "es": "Adónde lo llevó el río: La muerte de Osiris — Mitología egipcia, ep. 6",
+    "en": "Where the river took him: The Murder of Osiris — Egyptian Mythology Ep. 6"
+  },
+  "episodio": "egipcias-06-muerte-de-osiris",
+  "escenas": [
+    {
+      "id": "medida",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Set envidiaba a su hermano Osiris, el buen rey de Egipto.",
+          "en": "Set was jealous of his brother Osiris, the good king of Egypt."
+        },
+        {
+          "es": "En secreto, midió el cuerpo de Osiris, de la cabeza a los pies.",
+          "en": "In secret, he measured Osiris's body, from head to toe."
+        },
+        {
+          "es": "Luego mandó hacer un cofre hermoso, justo de esa medida.",
+          "en": "Then he had a beautiful chest made, exactly that size."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 980,
+          "s": 1,
+          "en": 2
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.1,
+          "tipo": "destello",
+          "x": 980,
+          "y": 560,
+          "dur": 0.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "osiris",
+          "escala": 1.2,
+          "x": 760,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1180,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.5,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fiesta",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "En una gran fiesta, Set mostró el cofre a todos.",
+          "en": "At a great party, Set showed the chest to everyone."
+        },
+        {
+          "es": "«Es tuyo», dijo, «si cabes adentro». Setenta y dos invitados estaban en el plan.",
+          "en": "'It's yours,' he said, 'if you fit inside.' Seventy-two guests were in on it."
+        },
+        {
+          "es": "Uno a uno, los invitados se acostaron. Muy cortos. Muy largos.",
+          "en": "One by one, the guests lay down. Too short. Too long."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 960,
+          "s": 1.1
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 960,
+          "y": 480,
+          "dur": 1,
+          "intensidad": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "set",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1190,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "g1",
+          "como": "egipcio",
+          "escala": 1.1,
+          "x": 740,
+          "pasos": [
+            {
+              "en": 1.7,
+              "hace": "asiente"
+            },
+            {
+              "en": 2.1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.5,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.7,
+              "hace": "niega"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tapa",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Entonces Osiris lo probó. Le quedaba perfecto.",
+          "en": "Then Osiris tried it. It fit him perfectly."
+        },
+        {
+          "es": "Los hombres de Set cerraron la tapa y la sellaron con plomo caliente.",
+          "en": "Set's men slammed the lid and sealed it with hot lead."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 960,
+          "s": 1.2
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello",
+          "x": 960,
+          "y": 520,
+          "dur": 0.3
+        },
+        {
+          "en": 1.1,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 560,
+          "dur": 0.5
+        },
+        {
+          "en": 1.5,
+          "tipo": "fuego",
+          "x": 960,
+          "y": 600,
+          "dur": 0.5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 1.6,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "osiris",
+          "escala": 1.2,
+          "x": 820,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 960,
+              "dur": 0.3
+            },
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.8,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "c1",
+          "como": "egipcio",
+          "escala": 1.1,
+          "visible": false,
+          "x": 740,
+          "pasos": [
+            {
+              "en": 0.95,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1190,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rio",
+      "fondo": "nilo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Arrojaron el cofre al Nilo. El río se lo llevó hasta el mar.",
+          "en": "They threw the chest into the Nile. The river carried it out to sea."
+        },
+        {
+          "es": "El premio era un ataúd. Y estaba hecho a su medida.",
+          "en": "The prize was a coffin. And it was made just for him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 1000,
+          "s": 0.8,
+          "hasta": 0.9
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 0.4,
+          "tipo": "olas-suben",
+          "dur": 0.5,
+          "intensidad": 0.1
+        },
+        {
+          "en": 1,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "c1",
+          "como": "egipcio",
+          "mira": "izq",
+          "escala": 1.1,
+          "x": 1190,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "escala": 1.2,
+          "x": 760,
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

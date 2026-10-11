@@ -1,0 +1,1327 @@
+{
+ "id": "griegas-10-atenea-poseidon",
+ "serie": "griegas",
+ "numero": "10",
+ "titulo": {
+  "es": "Atenea contra Poseidón",
+  "en": "Athena versus Poseidon"
+ },
+ "tituloGriego": "ΑΘΗΝΑΙ",
+ "escenas": [
+  {
+   "id": "nacimiento",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Atenea acababa de nacer de la cabeza de Zeus, ya armada, con un grito de guerra que hizo temblar el Olimpo.",
+     "en": "Athena had just sprung from the head of Zeus, fully armed, her war cry shaking all of Olympus."
+    },
+    {
+     "es": "Era la diosa de la sabiduría y de la estrategia, y quería algo propio: una ciudad que la honrara.",
+     "en": "She was goddess of wisdom and strategy, and she wanted something of her own: a city to honor her."
+    },
+    {
+     "es": "Pero su tío Poseidón, señor de los mares, también buscaba una ciudad donde ser el dios más venerado.",
+     "en": "But her uncle Poseidon, lord of the seas, was also looking for a city where he would be most revered."
+    },
+    {
+     "es": "Los dos pusieron los ojos en el mismo lugar.",
+     "en": "Both gods set their eyes on the very same place."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 1500
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "levanta"
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "atenea",
+     "x": 300,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "entra",
+       "a": 600
+      },
+      {
+       "en": 0.3,
+       "hace": "brilla",
+       "dur": 0.8
+      },
+      {
+       "en": 1.2,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "poseidon",
+     "x": 1100,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "entra",
+       "a": 1000
+      },
+      {
+       "en": 2.5,
+       "hace": "golpea"
+      },
+      {
+       "en": 3.2,
+       "hace": "senala"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "destello"
+    },
+    {
+     "en": 0.2,
+     "tipo": "temblor",
+     "dur": 1
+    },
+    {
+     "en": 3.2,
+     "tipo": "luz",
+     "x": 1000,
+     "y": 350,
+     "dur": 1
+    }
+   ]
+  },
+  {
+   "id": "cecrope",
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 400
+   },
+   "frases": [
+    {
+     "es": "En aquel tiempo, en la región del Ática, reinaba Cécrope, un rey nacido de la propia tierra.",
+     "en": "In those days, in the region of Attica, ruled Cecrops, a king born from the earth itself."
+    },
+    {
+     "es": "Según los antiguos, era mitad hombre y mitad serpiente: de la cintura para abajo, tenía cuerpo de serpiente.",
+     "en": "The ancients said he was half man, half serpent: below the waist, he had the body of a snake."
+    },
+    {
+     "es": "Su pueblo vivía en casas dispersas alrededor de una roca alta, y su ciudad todavía no tenía nombre.",
+     "en": "His people lived in scattered homes around a tall rock, and their city still had no name."
+    },
+    {
+     "es": "Cécrope sabía que una ciudad sin dios protector no duraría, y que dos dioses querían serlo.",
+     "en": "Cecrops knew a city without a patron god would not last, and two gods wanted to be that patron."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "monte",
+     "x": 1600,
+     "s": 1.4
+    },
+    {
+     "tipo": "casa",
+     "x": 500,
+     "s": 0.8
+    },
+    {
+     "tipo": "casa",
+     "x": 1250,
+     "s": 0.7
+    }
+   ],
+   "actores": [
+    {
+     "id": "cecrope",
+     "x": 500,
+     "como": "rey",
+     "rotulo": "Cecrops",
+     "props": {
+      "canas": true,
+      "tocado": "corona"
+     },
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "entra",
+       "a": 850
+      },
+      {
+       "en": 1.5,
+       "hace": "senala"
+      },
+      {
+       "en": 3,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "serpiente",
+     "x": 1050,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.1,
+       "hace": "brilla",
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "hombre",
+     "x": 1400,
+     "mira": "izq",
+     "capa": "medio",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      }
+     ]
+    },
+    {
+     "id": "mujer",
+     "x": 1550,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.3,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.3,
+       "hace": "reza"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3.3,
+     "tipo": "destello"
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2.2,
+     "texto": {
+      "es": "EL ÁTICA SIN NOMBRE",
+      "en": "NAMELESS ATTICA"
+     },
+     "x": 1100,
+     "y": 220,
+     "hasta": 3.5
+    }
+   ]
+  },
+  {
+   "id": "llegada",
+   "fondo": "monte",
+   "camara": {
+    "de": 0,
+    "a": 300
+   },
+   "frases": [
+    {
+     "es": "Poseidón llegó primero y Atenea lo siguió. Los dos subieron a la Acrópolis, la roca más alta de la ciudad.",
+     "en": "Poseidon arrived first, and Athena followed. Both climbed the Acropolis, the highest rock in the city."
+    },
+    {
+     "es": "Acordaron un trato: cada uno daría a los habitantes un regalo, y el mejor regalo ganaría la ciudad.",
+     "en": "They agreed on a deal: each would give the people a gift, and the better gift would win the city."
+    },
+    {
+     "es": "Cécrope sería el testigo, y los doce dioses del Olimpo, los jueces.",
+     "en": "Cecrops would be the witness, and the twelve gods of Olympus the judges."
+    },
+    {
+     "es": "Todo el pueblo se reunió al pie de la roca para ver el duelo.",
+     "en": "The whole town gathered at the foot of the rock to watch the contest."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 1500,
+     "s": 2
+    }
+   ],
+   "actores": [
+    {
+     "id": "poseidon",
+     "x": 100,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "entra",
+       "a": 650
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "atenea",
+     "x": 300,
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "entra",
+       "a": 950
+      },
+      {
+       "en": 1.2,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "cecrope",
+     "x": 1300,
+     "como": "rey",
+     "rotulo": "Cecrops",
+     "mira": "izq",
+     "props": {
+      "canas": true,
+      "tocado": "corona"
+     },
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.2,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "hombre",
+     "x": 1700,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "aparece"
+      }
+     ]
+    },
+    {
+     "id": "mujer",
+     "x": 1850,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3.2,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.6,
+       "hace": "levanta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "luz",
+     "x": 1300,
+     "y": 300,
+     "dur": 1
+    }
+   ]
+  },
+  {
+   "id": "tridente",
+   "fondo": "monte",
+   "camara": {
+    "de": 300,
+    "a": 700
+   },
+   "frases": [
+    {
+     "es": "Poseidón fue el primero. Alzó su tridente y golpeó con toda su fuerza la roca de la Acrópolis.",
+     "en": "Poseidon went first. He raised his trident and struck the rock of the Acropolis with all his strength."
+    },
+    {
+     "es": "La roca se partió con un estruendo, y de la grieta brotó un manantial.",
+     "en": "The rock split with a roar, and a spring burst from the crack."
+    },
+    {
+     "es": "La gente corrió a probar el agua, pero era salada, como el mar de su dios.",
+     "en": "The people ran to taste the water, but it was salty, like the sea of its god."
+    },
+    {
+     "es": "Era un don impresionante, pero inútil: no se podía beber ni regar los campos con ella.",
+     "en": "An impressive gift, but a useless one: it could neither be drunk nor used to water the fields."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 1100,
+     "s": 2.2
+    }
+   ],
+   "actores": [
+    {
+     "id": "poseidon",
+     "x": 700,
+     "pasos": [
+      {
+       "en": 0.1,
+       "hace": "levanta"
+      },
+      {
+       "en": 0.7,
+       "hace": "golpea"
+      },
+      {
+       "en": 3,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "hombre",
+     "x": 1600,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.2,
+       "hace": "camina",
+       "a": 1350
+      },
+      {
+       "en": 3,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "mujer",
+     "x": 1760,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.1,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.3,
+       "hace": "camina",
+       "a": 1500
+      },
+      {
+       "en": 3.2,
+       "hace": "lamenta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.7,
+     "tipo": "destello"
+    },
+    {
+     "en": 0.7,
+     "tipo": "temblor",
+     "dur": 1
+    },
+    {
+     "en": 0.8,
+     "tipo": "polvo",
+     "x": 1100,
+     "y": 650,
+     "dur": 1
+    },
+    {
+     "en": 1.1,
+     "tipo": "chispas",
+     "x": 1100,
+     "y": 620,
+     "dur": 2.5
+    },
+    {
+     "en": 1.2,
+     "tipo": "olas-suben",
+     "dur": 1.2
+    }
+   ]
+  },
+  {
+   "id": "olivo",
+   "fondo": "monte",
+   "camara": {
+    "de": 300,
+    "a": 600
+   },
+   "frases": [
+    {
+     "es": "Entonces fue el turno de Atenea. No usó la fuerza: se arrodilló y plantó una semilla en la tierra rocosa.",
+     "en": "Then it was Athena's turn. She used no force: she knelt and planted a seed in the rocky soil."
+    },
+    {
+     "es": "Al instante brotó un árbol: el primer olivo, de hojas plateadas y ramas cargadas de frutos.",
+     "en": "At once a tree sprang up: the first olive tree, with silver leaves and branches heavy with fruit."
+    },
+    {
+     "es": "Daba aceite para las lámparas, alimento para la mesa y madera para construir.",
+     "en": "It gave oil for lamps, food for the table and wood for building."
+    },
+    {
+     "es": "Era un regalo de paz y de vida cotidiana. Los atenienses lo miraron con asombro.",
+     "en": "It was a gift of peace and everyday life. The Athenians gazed at it in wonder."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 1000,
+     "s": 2.2
+    },
+    {
+     "tipo": "olivo",
+     "x": 1250,
+     "s": 1.3,
+     "en": 1.1
+    }
+   ],
+   "actores": [
+    {
+     "id": "atenea",
+     "x": 500,
+     "pasos": [
+      {
+       "en": 0.1,
+       "hace": "camina",
+       "a": 850
+      },
+      {
+       "en": 0.7,
+       "hace": "arrodilla"
+      },
+      {
+       "en": 1.1,
+       "hace": "levantarse"
+      },
+      {
+       "en": 1.2,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "hombre",
+     "x": 1650,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.6,
+       "hace": "aparece"
+      },
+      {
+       "en": 3,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "mujer",
+     "x": 1810,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.8,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.2,
+       "hace": "reza"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1.1,
+     "tipo": "luz",
+     "x": 1250,
+     "y": 450,
+     "dur": 1.2
+    },
+    {
+     "en": 1.2,
+     "tipo": "destello"
+    },
+    {
+     "en": 1.5,
+     "tipo": "chispas",
+     "x": 1250,
+     "y": 400,
+     "dur": 1.5
+    }
+   ]
+  },
+  {
+   "id": "voto",
+   "fondo": "ciudad",
+   "camara": {
+    "de": 0,
+    "a": 250
+   },
+   "frases": [
+    {
+     "es": "Ahora había que decidir. Algunos relatos dicen que juzgaron los dioses; otros, que Cécrope convocó a todos a votar.",
+     "en": "Now it had to be decided. Some tales say the gods judged; others say Cecrops called everyone to vote."
+    },
+    {
+     "es": "Según Varrón, citado por San Agustín, en aquellos días las mujeres también votaban.",
+     "en": "According to Varro, quoted by Saint Augustine, women could vote in those days too."
+    },
+    {
+     "es": "Los hombres votaron por Poseidón, y las mujeres, por Atenea.",
+     "en": "The men voted for Poseidon, and the women for Athena."
+    },
+    {
+     "es": "Había una mujer más que hombres, así que Atenea ganó por un solo voto.",
+     "en": "There was one more woman than men, so Athena won by a single vote."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "altar",
+     "x": 1000
+    }
+   ],
+   "actores": [
+    {
+     "id": "cecrope",
+     "x": 1000,
+     "como": "rey",
+     "rotulo": "Cecrops",
+     "mira": "izq",
+     "props": {
+      "canas": true,
+      "tocado": "corona"
+     },
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "levanta"
+      },
+      {
+       "en": 1.5,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "hombre1",
+     "x": 480,
+     "como": "hombre",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "hombre2",
+     "x": 650,
+     "como": "hombre",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 2.2,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "mujer1",
+     "x": 1350,
+     "como": "mujer",
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.5,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "mujer2",
+     "x": 1520,
+     "como": "mujer",
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.7,
+       "hace": "levanta"
+      },
+      {
+       "en": 3.5,
+       "hace": "brilla",
+       "dur": 1
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2.5,
+     "tipo": "luz",
+     "x": 1450,
+     "y": 350,
+     "dur": 1
+    },
+    {
+     "en": 3.3,
+     "tipo": "destello"
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2,
+     "texto": {
+      "es": "POSEIDÓN",
+      "en": "POSEIDON"
+     },
+     "x": 560,
+     "y": 260,
+     "hasta": 3
+    },
+    {
+     "en": 2.5,
+     "texto": {
+      "es": "ATENEA",
+      "en": "ATHENA"
+     },
+     "x": 1440,
+     "y": 260,
+     "hasta": 3
+    },
+    {
+     "en": 3.3,
+     "texto": {
+      "es": "UN SOLO VOTO",
+      "en": "BY ONE VOTE"
+     },
+     "x": 1000,
+     "y": 200
+    }
+   ]
+  },
+  {
+   "id": "nombre",
+   "fondo": "ciudad",
+   "camara": {
+    "de": 0,
+    "a": 300
+   },
+   "frases": [
+    {
+     "es": "Atenea había vencido. La ciudad recibió el nombre de la diosa, Atenas, y ella fue su protectora para siempre.",
+     "en": "Athena had won. The city took the goddess's name, Athens, and she became its protector forever."
+    },
+    {
+     "es": "Los atenienses levantaron altares en la Acrópolis y celebraron fiestas en su honor, las Panateneas.",
+     "en": "The Athenians raised altars on the Acropolis and held festivals in her honor, the Panathenaia."
+    },
+    {
+     "es": "Con el aceite de sus olivos, Atenas se hizo rica, y su sabiduría fue famosa en todo el mundo griego.",
+     "en": "With the oil of its olives, Athens grew rich, and its wisdom became famous across the Greek world."
+    },
+    {
+     "es": "Poseidón, derrotado, se retiró hacia la costa sin decir palabra.",
+     "en": "Poseidon, defeated, withdrew toward the coast without a word."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "altar",
+     "x": 300,
+     "props": {
+      "fuego": true
+     }
+    },
+    {
+     "tipo": "olivo",
+     "x": 1450
+    }
+   ],
+   "actores": [
+    {
+     "id": "mujer",
+     "x": 500,
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "reza"
+      }
+     ]
+    },
+    {
+     "id": "atenea",
+     "x": 900,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "levanta"
+      },
+      {
+       "en": 0.3,
+       "hace": "brilla",
+       "dur": 1
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "hombre",
+     "x": 1150,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1.2,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "poseidon",
+     "x": 1750,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.8,
+       "hace": "lamenta"
+      },
+      {
+       "en": 3.2,
+       "hace": "camina",
+       "a": 2300
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "aclarar"
+    },
+    {
+     "en": 0.4,
+     "tipo": "luz",
+     "x": 900,
+     "y": 380,
+     "dur": 1.5
+    },
+    {
+     "en": 1,
+     "tipo": "chispas",
+     "x": 300,
+     "y": 660,
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.4,
+     "texto": {
+      "es": "ATENAS",
+      "en": "ATHENS"
+     },
+     "x": 900,
+     "y": 200,
+     "hasta": 1.8
+    }
+   ]
+  },
+  {
+   "id": "furia",
+   "fondo": "costa",
+   "camara": {
+    "de": 0,
+    "a": 500
+   },
+   "frases": [
+    {
+     "es": "Poseidón no aceptó la derrota. Furioso, golpeó el mar con su tridente y las olas se alzaron.",
+     "en": "Poseidon would not accept defeat. Furious, he struck the sea with his trident and the waves rose."
+    },
+    {
+     "es": "Las aguas inundaron la llanura de Eleusis, cerca de Atenas, y cubrieron los campos y los pueblos.",
+     "en": "The waters flooded the Thriasian plain near Eleusis, covering fields and villages."
+    },
+    {
+     "es": "Los atenienses huyeron hacia las colinas mientras sus cosechas desaparecían bajo la corriente.",
+     "en": "The Athenians fled toward the hills as their harvests vanished beneath the flood."
+    },
+    {
+     "es": "Según Varrón, para calmarlo castigaron a las mujeres: perdieron el voto, y los hijos dejaron de llevar su nombre.",
+     "en": "According to Varro, to appease him the women were punished: they lost the vote, and children no longer bore their name."
+    },
+    {
+     "es": "Con el tiempo, la furia del dios se calmó, y las aguas volvieron al mar.",
+     "en": "In time the god's fury eased, and the waters drew back into the sea."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "casa",
+     "x": 550,
+     "s": 0.7
+    },
+    {
+     "tipo": "casa",
+     "x": 900,
+     "s": 0.7
+    }
+   ],
+   "actores": [
+    {
+     "id": "poseidon",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "levanta"
+      },
+      {
+       "en": 0.6,
+       "hace": "golpea"
+      },
+      {
+       "en": 4,
+       "hace": "baja"
+      }
+     ]
+    },
+    {
+     "id": "hombre",
+     "x": 700,
+     "capa": "medio",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "corre",
+       "a": 2300
+      },
+      {
+       "en": 2.6,
+       "hace": "sale"
+      }
+     ]
+    },
+    {
+     "id": "mujer",
+     "x": 1100,
+     "capa": "medio",
+     "pasos": [
+      {
+       "en": 2.2,
+       "hace": "corre",
+       "a": 2300
+      },
+      {
+       "en": 2.8,
+       "hace": "sale"
+      }
+     ]
+    },
+    {
+     "id": "mujer2",
+     "x": 250,
+     "como": "mujer",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "lamenta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.6,
+     "tipo": "rayo",
+     "x": 1500
+    },
+    {
+     "en": 0.7,
+     "tipo": "oscurecer",
+     "intensidad": 0.5,
+     "dur": 3.5
+    },
+    {
+     "en": 0.7,
+     "tipo": "olas-suben",
+     "dur": 3
+    },
+    {
+     "en": 1.5,
+     "tipo": "lluvia",
+     "dur": 3
+    },
+    {
+     "en": 4,
+     "tipo": "olas-bajan",
+     "dur": 1.5
+    },
+    {
+     "en": 4,
+     "tipo": "aclarar"
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1.3,
+     "texto": {
+      "es": "ELEUSIS",
+      "en": "ELEUSIS"
+     },
+     "x": 800,
+     "y": 220,
+     "hasta": 2.5
+    }
+   ]
+  },
+  {
+   "id": "erecteon",
+   "fondo": "ciudad",
+   "camara": {
+    "de": 0,
+    "a": 400
+   },
+   "frases": [
+    {
+     "es": "Los atenienses guardaron ambos dones en el Erecteón, un templo de la Acrópolis.",
+     "en": "The Athenians kept both gifts in the Erechtheion, a temple on the Acropolis."
+    },
+    {
+     "es": "Allí crecía el olivo sagrado de Atenea, y a su lado se mostraba el pozo salado que abrió Poseidón.",
+     "en": "There grew Athena's sacred olive tree, and beside it was shown the salt well that Poseidon had opened."
+    },
+    {
+     "es": "Heródoto cuenta que los persas incendiaron la Acrópolis, y que el olivo ardió con ella.",
+     "en": "Herodotus tells that the Persians burned the Acropolis, and the olive tree burned with it."
+    },
+    {
+     "es": "Pero al día siguiente brotó un retoño de un codo de largo: el árbol no había muerto.",
+     "en": "But the next day a shoot a cubit long had sprouted: the tree had not died."
+    },
+    {
+     "es": "Sobre aquella misma roca se levantó el Partenón, la gran casa de mármol de la diosa.",
+     "en": "On that very rock rose the Parthenon, the goddess's great house of marble."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "olivo",
+     "x": 600
+    },
+    {
+     "tipo": "roca",
+     "x": 1050,
+     "s": 0.6
+    },
+    {
+     "tipo": "templo",
+     "x": 1500,
+     "s": 1.3,
+     "en": 3.9
+    }
+   ],
+   "actores": [
+    {
+     "id": "sacerdotisa",
+     "x": 800,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "reza"
+      }
+     ]
+    },
+    {
+     "id": "guerrero",
+     "x": 1700,
+     "mira": "izq",
+     "rotulo": "Persian",
+     "pasos": [
+      {
+       "en": 1.9,
+       "hace": "entra",
+       "a": 1300
+      },
+      {
+       "en": 2.3,
+       "hace": "golpea"
+      },
+      {
+       "en": 2.8,
+       "hace": "sale"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2.2,
+     "tipo": "fuego",
+     "x": 600,
+     "y": 700,
+     "dur": 1.4
+    },
+    {
+     "en": 2.2,
+     "tipo": "humo",
+     "x": 600,
+     "y": 620,
+     "dur": 1.5
+    },
+    {
+     "en": 3,
+     "tipo": "luz",
+     "x": 600,
+     "y": 480,
+     "dur": 1.5
+    },
+    {
+     "en": 3.9,
+     "tipo": "destello"
+    },
+    {
+     "en": 3.9,
+     "tipo": "luz",
+     "x": 1500,
+     "y": 400,
+     "dur": 1.2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.2,
+     "texto": {
+      "es": "EL ERECTEÓN",
+      "en": "THE ERECHTHEION"
+     },
+     "x": 1000,
+     "y": 200,
+     "hasta": 2
+    },
+    {
+     "en": 3.9,
+     "texto": {
+      "es": "EL PARTENÓN",
+      "en": "THE PARTHENON"
+     },
+     "x": 1500,
+     "y": 190
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "fragua",
+   "camara": {
+    "de": 0,
+    "a": 300
+   },
+   "frases": [
+    {
+     "es": "Atenea había ganado su ciudad, y desde entonces Atenas fue suya. El Olimpo volvió a la calma.",
+     "en": "Athena had won her city, and from then on Athens was hers. Olympus fell calm again."
+    },
+    {
+     "es": "Pero el dios que partió la cabeza de Zeus para que ella naciera nunca tuvo un lugar fácil en el Olimpo.",
+     "en": "But the god who split Zeus's head so she could be born never found an easy place on Olympus."
+    },
+    {
+     "es": "Era el herrero de los dioses, cojo y cubierto de hollín, y su propia madre lo había rechazado.",
+     "en": "He was the smith of the gods, lame and covered in soot, and his own mother had rejected him."
+    },
+    {
+     "es": "Esa es la próxima historia: Hefesto, el dios rechazado.",
+     "en": "That is the next story: Hephaestus, the Rejected God."
+    }
+   ],
+   "elementos": [],
+   "actores": [
+    {
+     "id": "atenea",
+     "x": 500,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "levanta"
+      },
+      {
+       "en": 1,
+       "hace": "sale"
+      }
+     ]
+    },
+    {
+     "id": "hefesto",
+     "x": 1300,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.3,
+       "hace": "golpea"
+      },
+      {
+       "en": 1.7,
+       "hace": "golpea"
+      },
+      {
+       "en": 2.3,
+       "hace": "lamenta"
+      },
+      {
+       "en": 3,
+       "hace": "levanta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1.3,
+     "tipo": "chispas",
+     "x": 1200,
+     "y": 640,
+     "dur": 1
+    },
+    {
+     "en": 1.7,
+     "tipo": "chispas",
+     "x": 1200,
+     "y": 640,
+     "dur": 1
+    },
+    {
+     "en": 2,
+     "tipo": "humo",
+     "x": 1200,
+     "y": 600,
+     "dur": 1.5
+    },
+    {
+     "en": 3,
+     "tipo": "luz",
+     "x": 1300,
+     "y": 420,
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 3,
+     "texto": {
+      "es": "HEFESTO, EL DIOS RECHAZADO",
+      "en": "HEPHAESTUS, THE REJECTED GOD"
+     },
+     "x": 1000,
+     "y": 200
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "Atenea ganó por un solo voto",
+    "en": "Athena Won by a Single Vote"
+   },
+   "escena": "voto",
+   "desde": 1,
+   "hasta": 3,
+   "foco": 1000
+  },
+  {
+   "gancho": {
+    "es": "El don inútil de Poseidón",
+    "en": "Poseidon's Useless Gift"
+   },
+   "escena": "tridente",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 800
+  },
+  {
+   "gancho": {
+    "es": "El árbol que ganó una ciudad",
+    "en": "The Tree That Won a City"
+   },
+   "escena": "olivo",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 800
+  }
+ ]
+}

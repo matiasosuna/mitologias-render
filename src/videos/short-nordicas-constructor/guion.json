@@ -1,0 +1,492 @@
+{
+  "id": "short-nordicas-constructor",
+  "formato": "short",
+  "serie": "nordicas",
+  "numero": "S",
+  "titulo": {
+    "es": "Cómo Loki salvó Asgard… siendo un caballo",
+    "en": "How Loki saved Asgard… as a horse"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Cómo Loki salvó Asgard… siendo un caballo",
+    "en": "How Loki saved Asgard… as a horse"
+  },
+  "cierre": {
+    "es": "Todo el plan de Loki: La muralla de Asgard — Mitología nórdica, ep. 6",
+    "en": "Loki's whole scheme: The Wall of Asgard — Norse Mythology Ep. 6"
+  },
+  "episodio": "nordicas-06-muralla",
+  "escenas": [
+    {
+      "id": "trato",
+      "fondo": "asgard",
+      "foco": 960,
+      "sinAstros": true,
+      "frases": [
+        {
+          "es": "Un forastero se ofreció a construir una muralla alrededor del hogar de los dioses.",
+          "en": "A stranger offered to build a wall around the home of the gods."
+        },
+        {
+          "es": "Su precio: la diosa Freyja, y además el sol y la luna.",
+          "en": "His price: the goddess Freyja, plus the sun and the moon."
+        },
+        {
+          "es": "Los dioses aceptaron. Nunca terminaría en un solo invierno… o eso creían.",
+          "en": "The gods agreed. He'd never finish in one winter… they thought."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 880,
+          "y": 250,
+          "en": 1.3
+        },
+        {
+          "tipo": "luna",
+          "x": 1060,
+          "y": 250,
+          "en": 1.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "freyja",
+          "x": 760,
+          "escala": 1.15,
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 950,
+          "escala": 1.15,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "constructor",
+          "como": "hombre",
+          "rotulo": "BUILDER",
+          "x": 1160,
+          "mira": "izq",
+          "escala": 1.2,
+          "props": {
+            "capa": "#6B5B4A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1160,
+              "dur": 0.5
+            },
+            {
+              "en": 0.5,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 1.1,
+              "hace": "senala"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "obra",
+      "fondo": "asgard",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero Loki le dejó usar a su caballo, Svaðilfari, que arrastraba piedras enormes toda la noche.",
+          "en": "But Loki let him use his horse, Svaðilfari, who hauled huge stones all night."
+        },
+        {
+          "es": "Tres días antes del verano, la muralla estaba casi terminada.",
+          "en": "Three days before summer, the wall was almost done."
+        },
+        {
+          "es": "Los dioses, furiosos, se volvieron hacia Loki: «Fue tu idea. Arréglalo».",
+          "en": "The furious gods turned to Loki: 'Your idea. Fix it.'"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 960,
+          "capa": "fondo",
+          "hasta": 1,
+          "props": {
+            "ancho": 900,
+            "alto": 120
+          }
+        },
+        {
+          "tipo": "muralla",
+          "x": 960,
+          "capa": "fondo",
+          "en": 1,
+          "props": {
+            "ancho": 900,
+            "alto": 280
+          }
+        },
+        {
+          "tipo": "roca",
+          "x": 1250,
+          "s": 0.5,
+          "hasta": 1
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "polvo",
+          "x": 1100,
+          "dur": 0.8
+        },
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "x": 760,
+          "escala": 1.15,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.5,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "svadilfari",
+          "como": "caballo",
+          "rotulo": "SVAÐILFARI",
+          "x": 1220,
+          "mira": "izq",
+          "escala": 1.1,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1020,
+              "dur": 1.2
+            },
+            {
+              "en": 1.8,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 1150,
+          "mira": "izq",
+          "escala": 1.15,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.1,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yegua",
+      "fondo": "bosque_nevado",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Esa noche, una yegua hermosa salió corriendo del bosque.",
+          "en": "That night, a lovely mare came running out of the forest."
+        },
+        {
+          "es": "El semental se soltó y la persiguió toda la noche.",
+          "en": "The stallion broke free and chased her all night long."
+        },
+        {
+          "es": "Sin caballo, no hubo piedras. La muralla nunca se terminó.",
+          "en": "No horse, no stones. The wall was never finished."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 700,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pino",
+          "x": 1250,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer"
+        },
+        {
+          "en": 0.3,
+          "tipo": "destello",
+          "dur": 0.2
+        },
+        {
+          "en": 1.1,
+          "tipo": "polvo",
+          "x": 1100,
+          "dur": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "svadilfari",
+          "como": "caballo",
+          "rotulo": "SVAÐILFARI",
+          "x": 800,
+          "escala": 1.1,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 2100,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 1150,
+          "mira": "izq",
+          "escala": 1.1,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 0.3,
+              "hace": "transforma",
+              "en_que": "caballo"
+            },
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 2400,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "constructor",
+          "como": "hombre",
+          "rotulo": "BUILDER",
+          "x": 960,
+          "escala": 1.2,
+          "props": {
+            "capa": "#6B5B4A"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.4,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sleipnir",
+      "fondo": "asgard",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "El constructor estalló de furia: era un gigante. El martillo de Thor terminó con él.",
+          "en": "The builder raged like the giant he really was. Thor’s hammer ended it."
+        },
+        {
+          "es": "¿Y Loki? Meses después, dio a luz a un potro gris de ocho patas.",
+          "en": "And Loki? Months later, he gave birth to a gray foal with eight legs."
+        },
+        {
+          "es": "Sleipnir, el mejor caballo de todos. Desde entonces, Odín lo montó.",
+          "en": "Sleipnir, the best horse of all. Odin rode him ever after."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 960,
+          "capa": "fondo",
+          "props": {
+            "ancho": 1000,
+            "alto": 280
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "rayo",
+          "x": 1150
+        },
+        {
+          "en": 0.65,
+          "tipo": "temblor",
+          "dur": 0.3
+        },
+        {
+          "en": 1.3,
+          "tipo": "luz",
+          "x": 1080,
+          "y": 600,
+          "dur": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "constructor",
+          "como": "hombre",
+          "rotulo": "BUILDER",
+          "x": 1150,
+          "mira": "izq",
+          "escala": 1.2,
+          "props": {
+            "capa": "#6B5B4A"
+          },
+          "pasos": [
+            {
+              "en": 0.05,
+              "hace": "transforma",
+              "en_que": "jotun"
+            },
+            {
+              "en": 0.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.75,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 780,
+          "escala": 1.15,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.95,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 780,
+          "escala": 1.15,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "sleipnir",
+          "x": 1100,
+          "mira": "izq",
+          "escala": 0.6,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "crece",
+              "escala": 1.1,
+              "dur": 0.6
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

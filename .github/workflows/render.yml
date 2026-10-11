@@ -1,0 +1,42 @@
+# Render en la nube (GitHub Actions): versiones verticales de episodios, uno por máquina, en paralelo.
+# Se dispara con: gh workflow run render.yml -f ids='["hawaianas-01-...","hawaianas-02-..."]' -f tipo=vertical
+name: render-nube
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: 'Lista JSON de ids'
+        required: true
+      tipo:
+        description: 'vertical | horizontal | short'
+        default: vertical
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        id: ${{ fromJSON(inputs.ids) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: sudo apt-get update && sudo apt-get install -y libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2t64 fonts-noto-core ffmpeg
+      - run: npx remotion browser ensure
+      - name: render
+        run: |
+          case "${{ inputs.tipo }}" in
+            vertical) node scripts/vertical-render.mjs ${{ matrix.id }} ;;
+            short) node scripts/short-render.mjs ${{ matrix.id }} ;;
+            *) node scripts/motor-render.mjs ${{ matrix.id }} --imagen=en --audio=en ;;
+          esac
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.id }}-${{ inputs.tipo }}
+          path: out/${{ matrix.id }}/*.mp4
+          retention-days: 7

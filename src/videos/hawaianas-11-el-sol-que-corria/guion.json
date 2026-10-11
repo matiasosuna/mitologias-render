@@ -1,0 +1,1053 @@
+{
+  "id": "hawaianas-11-el-sol-que-corria",
+  "serie": "hawaianas",
+  "numero": "11",
+  "titulo": {
+    "es": "El sol que corría demasiado",
+    "en": "The Sun Who Ran Too Fast"
+  },
+  "tituloGriego": "THE SUN WHO RAN TOO FAST",
+  "miniatura": {
+    "heroe": "maui"
+  },
+  "siguiente": {
+    "es": "Māui roba el fuego",
+    "en": "Māui Steals the Fire"
+  },
+  "escenas": [
+    {
+      "id": "kapa",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Māui empujó el cielo hacia lo alto, y la gente pudo caminar de pie.",
+          "en": "Last time, Māui pushed the sky up high, so people could stand tall."
+        },
+        {
+          "es": "Pero su madre, Hina, todavía tenía un problema.",
+          "en": "But his mother, Hina, still had a problem."
+        },
+        {
+          "es": "Hina hacía kapa, una tela que se golpea hasta aplanar la corteza de un árbol.",
+          "en": "Hina made kapa. Kapa is a cloth, beaten flat from tree bark."
+        },
+        {
+          "es": "Cuando estaba lista, colgaba la tela mojada al sol para que se secara.",
+          "en": "When it was ready, she hung the wet cloth in the sun to dry."
+        },
+        {
+          "es": "Pero el sol cruzaba el cielo tan rápido que, al llegar la noche, la tela seguía mojada.",
+          "en": "But the sun ran across the sky so fast that the cloth was still wet at night."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1550,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hina",
+          "como": "hina",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.2,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "maui",
+          "como": "maui",
+          "x": 1150,
+          "mira": "izq",
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta",
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "baja"
+            },
+            {
+              "en": 4.3,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.2,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4.1,
+          "tipo": "oscurecer",
+          "dur": 1.4,
+          "intensidad": 0.7
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "KAPA: TELA DE CORTEZA",
+            "en": "KAPA: BARK CLOTH"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3.5
+        }
+      ]
+    },
+    {
+      "id": "cuerdas",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "«Los días son muy cortos», dijo Hina. «Mi kapa nunca se seca.»",
+          "en": "\"The days are too short,\" said Hina. \"My kapa never dries.\""
+        },
+        {
+          "es": "Māui era el menor de sus hijos: pequeño, ágil y lleno de trucos.",
+          "en": "Māui was the youngest of her sons: small, quick, and full of tricks."
+        },
+        {
+          "es": "«Madre, yo lo arreglo», dijo. «El sol tiene que aprender a caminar despacio.»",
+          "en": "\"Mother, I will fix this,\" he said. \"The sun must learn to walk slowly.\""
+        },
+        {
+          "es": "Trenzó cuerdas fuertes de fibra vegetal y ató un lazo al final de cada una.",
+          "en": "He twisted strong cords of plant fiber and tied a loop at the end of each one."
+        },
+        {
+          "es": "Luego se echó las cuerdas al hombro y salió hacia la gran montaña, Haleakalā.",
+          "en": "Then he put the ropes on his shoulder and set off for the great mountain, Haleakalā."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1750,
+          "s": 0.7,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hina",
+          "como": "hina",
+          "x": 650,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 1.5,
+              "hace": "neutral"
+            }
+          ]
+        },
+        {
+          "id": "maui",
+          "como": "maui",
+          "x": 1100,
+          "mira": "izq",
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "salta"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 1900,
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    },
+    {
+      "id": "montana",
+      "fondo": "haleakala",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Māui caminó toda la noche hasta la cima de Haleakalā, una montaña enorme.",
+          "en": "Māui walked all night to the top of Haleakalā, a huge mountain."
+        },
+        {
+          "es": "Su nombre significa «la casa del sol».",
+          "en": "Its name means \"House of the Sun.\""
+        },
+        {
+          "es": "Cada mañana, el sol salía del cráter para empezar su viaje por el cielo.",
+          "en": "Every morning, the sun climbed out of the crater to start its journey across the sky."
+        },
+        {
+          "es": "Māui encontró un escondite en el borde, y se quedó esperando el amanecer.",
+          "en": "Māui found a hiding place on the rim, and he waited for the dawn."
+        },
+        {
+          "es": "Las estrellas se apagaron. El cielo se puso gris, y luego rosado.",
+          "en": "The stars faded. The sky turned gray, then pink."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1300,
+          "s": 1.5,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "maui",
+          "x": 300,
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 700,
+              "dur": 1.2
+            },
+            {
+              "en": 1.4,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1230,
+              "dur": 0.8
+            },
+            {
+              "en": 3.9,
+              "hace": "arrodilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 3.9
+        },
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 4.3,
+          "intensidad": 1.0
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "HALEAKALĀ: LA CASA DEL SOL",
+            "en": "HALEAKALĀ: HOUSE OF THE SUN"
+          },
+          "x": 1000,
+          "y": 230,
+          "hasta": 2.4
+        }
+      ]
+    },
+    {
+      "id": "amanecer",
+      "fondo": "haleakala",
+      "camara": {
+        "de": 0,
+        "a": 40,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces salió el sol. Era enorme y brillante, con largos brazos de luz hacia todos lados.",
+          "en": "Then the sun rose. It was huge and bright, with long arms of light stretching in every direction."
+        },
+        {
+          "es": "En el relato antiguo, esos rayos son las piernas del sol. Con ellas zancadea por el cielo.",
+          "en": "In the old story, these rays are the sun's legs. It strides across the sky on them."
+        },
+        {
+          "es": "Māui esperó hasta que la primera pierna larga asomó sobre el borde.",
+          "en": "Māui waited until the first long leg reached over the rim."
+        },
+        {
+          "es": "Hizo girar la cuerda, y el lazo voló por el aire.",
+          "en": "He swung his rope, and the loop flew through the air."
+        },
+        {
+          "es": "El lazo se cerró de golpe alrededor de la pierna. ¡El sol estaba atrapado!",
+          "en": "The loop snapped tight around the leg. The sun was caught!"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 720,
+          "s": 1.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "maui",
+          "x": 560,
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.8,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "lanza"
+            },
+            {
+              "en": 4.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 450,
+          "dur": 1.6
+        },
+        {
+          "en": 4.1,
+          "tipo": "destello",
+          "dur": 0.3
+        },
+        {
+          "en": 4.1,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 480,
+          "dur": 1
+        },
+        {
+          "en": 4.2,
+          "tipo": "temblor",
+          "dur": 0.8,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LAS PIERNAS DEL SOL",
+            "en": "THE SUN'S LEGS"
+          },
+          "x": 700,
+          "y": 250,
+          "hasta": 2.3
+        }
+      ]
+    },
+    {
+      "id": "lazos",
+      "fondo": "haleakala",
+      "camara": {
+        "de": 0,
+        "a": 30,
+        "zoom": [
+          1.05,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "El sol se sacudió y tiró con fuerza. Pero Māui aguantó y lanzó otro lazo.",
+          "en": "The sun jerked and pulled. But Māui held on and threw another loop."
+        },
+        {
+          "es": "Y otro más. Y otro más. Una por una, atrapó las largas piernas del sol.",
+          "en": "And another. And another. One by one, he caught the long legs of the sun."
+        },
+        {
+          "es": "Pronto el sol no pudo moverse. Su luz temblaba y parpadeaba sobre la montaña.",
+          "en": "Soon the sun could not move. Its light shook and flickered over the mountain."
+        },
+        {
+          "es": "¡Māui lo había logrado! Había atrapado al mismísimo sol.",
+          "en": "Māui had done it. He had caught the sun itself."
+        },
+        {
+          "es": "¿Te habrías atrevido a atrapar el sol?",
+          "en": "Would you have dared to catch the sun?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 760,
+          "s": 1.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "maui",
+          "x": 600,
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lanza"
+            },
+            {
+              "en": 1,
+              "hace": "lanza"
+            },
+            {
+              "en": 1.6,
+              "hace": "lanza"
+            },
+            {
+              "en": 2.3,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "salta"
+            },
+            {
+              "en": 3.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "temblor",
+          "dur": 3,
+          "intensidad": 1
+        },
+        {
+          "en": 0.4,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 450,
+          "dur": 0.8
+        },
+        {
+          "en": 1.1,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 450,
+          "dur": 0.8
+        },
+        {
+          "en": 1.8,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 450,
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "destello",
+          "dur": 0.3
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 450,
+          "dur": 2.6
+        }
+      ]
+    },
+    {
+      "id": "ruego",
+      "fondo": "haleakala",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1.05,
+          1.15
+        ]
+      },
+      "frases": [
+        {
+          "es": "«¿Quién me ata? ¡Suéltame!», gritó el sol.",
+          "en": "\"Who ties me down? Let me go!\" cried the sun."
+        },
+        {
+          "es": "«Soy Māui», respondió. «Y no te soltaré hasta que me escuches.»",
+          "en": "\"I am Māui,\" he answered. \"And I will not let you go until you listen.\""
+        },
+        {
+          "es": "«Corres demasiado rápido. La tela de mi madre no se seca, y los días son muy cortos para todos.»",
+          "en": "\"You run too fast. My mother's cloth cannot dry, and the days are too short for everyone.\""
+        },
+        {
+          "es": "Levantó el brazo, como para romperle al sol las piernas, una por una.",
+          "en": "He raised his arm, as if to break the sun's legs, one by one."
+        },
+        {
+          "es": "«¡Basta! Dime qué quieres», rogó el sol.",
+          "en": "\"Stop! Tell me what you want,\" begged the sun."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1040,
+          "s": 1.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "maui",
+          "x": 900,
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "neutral"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 1.1,
+              "hace": "enoja"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "baja"
+            },
+            {
+              "en": 4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "temblor",
+          "dur": 1,
+          "intensidad": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 1.3,
+          "intensidad": 0.6
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 450,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "EL SOL",
+            "en": "THE SUN"
+          },
+          "x": 1250,
+          "y": 600,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "trato",
+      "fondo": "haleakala",
+      "camara": {
+        "de": 100,
+        "a": 0,
+        "zoom": [
+          1.08,
+          1
+        ]
+      },
+      "frases": [
+        {
+          "es": "«Camina despacio», dijo Māui. «Tómate tu tiempo en el cielo, para que la gente trabaje y la tela se seque.»",
+          "en": "\"Walk slowly,\" said Māui. \"Take your time across the sky, so people can work, and cloth can dry.\""
+        },
+        {
+          "es": "El sol lo pensó. Y entonces hizo una promesa.",
+          "en": "The sun thought it over. Then it made a promise."
+        },
+        {
+          "es": "«Una parte del año caminaré despacio», dijo. «Los días serán largos.»",
+          "en": "\"For part of the year, I will walk slowly,\" it said. \"The days will be long.\""
+        },
+        {
+          "es": "«Y en los meses fríos volveré a apurarme.»",
+          "en": "\"And in the cold months, I will hurry again.\""
+        },
+        {
+          "es": "Māui aceptó. Soltó las cuerdas una por una, y el sol quedó libre.",
+          "en": "Māui agreed. He loosened the ropes one by one, and the sun was free."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 560,
+          "s": 1.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "maui",
+          "x": 420,
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "calla"
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1250
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 1250
+            },
+            {
+              "en": 4,
+              "hace": "asiente"
+            },
+            {
+              "en": 4.2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 450,
+          "dur": 1.5
+        },
+        {
+          "en": 4.2,
+          "tipo": "aclarar"
+        }
+      ]
+    },
+    {
+      "id": "secar",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Y el sol cumplió su palabra. Subió despacio por el cielo, y el día se hizo largo.",
+          "en": "And the sun kept its word. It climbed the sky slowly, and the day grew long."
+        },
+        {
+          "es": "Hina extendió su kapa a la luz, y esta vez se secó antes del anochecer.",
+          "en": "Hina spread her kapa in the light, and this time it dried before dark."
+        },
+        {
+          "es": "Por eso en Hawaiʻi los días de verano son largos, y los de invierno, cortos.",
+          "en": "That is why summer days in Hawaiʻi are long, and winter days are short."
+        },
+        {
+          "es": "Māui volvió a casa, y Hina abrazó a su hijo menor, tan ingenioso.",
+          "en": "Māui came home, and Hina hugged her clever youngest son."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1600,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hina",
+          "como": "hina",
+          "x": 750,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "maui",
+          "como": "maui",
+          "x": 1900,
+          "mira": "izq",
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "entra",
+              "a": 1050,
+              "dur": 0.9
+            },
+            {
+              "en": 3.5,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "POR ESO LOS DÍAS DE VERANO SON LARGOS",
+            "en": "THAT'S WHY SUMMER DAYS ARE LONG"
+          },
+          "x": 960,
+          "y": 210,
+          "hasta": 3.3,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ahora la kapa estaba seca y los días eran largos. Pero al llegar la noche, la familia se quedaba a oscuras.",
+          "en": "Now the kapa was dry and the days were long. But when night came, the family sat in the dark."
+        },
+        {
+          "es": "No tenían fuego. Comían la comida fría y cruda, sin luz y sin calor.",
+          "en": "They had no fire. They ate their food cold and raw, with no light and no warmth."
+        },
+        {
+          "es": "En algún lugar, alguien conocía el secreto del fuego. Y Māui iba a descubrir quién.",
+          "en": "Somewhere, someone knew the secret of fire. And Māui was going to find out who."
+        },
+        {
+          "es": "Si pudieras hacer que un día durara el doble, ¿qué harías con él?",
+          "en": "If you could make one day last twice as long, what would you do with it?"
+        },
+        {
+          "es": "La próxima vez: Māui roba el fuego.",
+          "en": "Next time: Māui steals the fire."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "petroglifo",
+          "x": 1400,
+          "s": 0.8,
+          "props": {
+            "figura": "persona"
+          }
+        },
+        {
+          "tipo": "petroglifo",
+          "x": 1700,
+          "s": 0.7,
+          "props": {
+            "figura": "espiral"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "hina",
+          "como": "hina",
+          "x": 650,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 2.5,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "maui",
+          "como": "maui",
+          "x": 950,
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 2.8,
+          "intensidad": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "PRÓXIMO: MĀUI ROBA EL FUEGO",
+            "en": "NEXT: MĀUI STEALS THE FIRE"
+          },
+          "x": 1060,
+          "y": 230
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Atrapó al sol con una cuerda",
+        "en": "He caught the sun with a rope"
+      },
+      "escena": "lazos",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "El sol rogó por su libertad",
+        "en": "The sun begged to be free"
+      },
+      "escena": "ruego",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "Por qué los días de verano son largos",
+        "en": "Why summer days are long"
+      },
+      "escena": "secar",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 880
+    }
+  ]
+}

@@ -1,0 +1,1012 @@
+{
+ "id": "hawaianas-07-el-nino-estrella-y-el-taro",
+ "serie": "hawaianas",
+ "numero": "07",
+ "titulo": {
+  "es": "El niño estrella y el taro",
+  "en": "The Star Child and the Taro"
+ },
+ "tituloGriego": "THE STAR CHILD AND THE TARO",
+ "miniatura": {
+  "heroe": "hoohokukalani",
+  "rival": "haloa"
+ },
+ "siguiente": {
+  "es": "El agua de Kāne",
+  "en": "The Water of Kāne"
+ },
+ "escenas": [
+  {
+   "id": "marco",
+   "frases": [
+    {
+     "es": "La última vez, Papahānaumoku dio a luz las islas, y las islas se llenaron de verde.",
+     "en": "Last time, Papahānaumoku gave birth to the islands, and the islands turned green."
+    },
+    {
+     "es": "Ahora Wākea y Papa tienen una hija. Se llama Hoʻohōkūkalani, «la que hace estrellas en el cielo».",
+     "en": "Now Wākea and Papa have a daughter. Her name is Hoʻohōkūkalani, \"the one who makes stars in the sky.\""
+    },
+    {
+     "es": "Algunos dicen que su nombre la muestra como madre de jefes, porque las estrellas se asocian a los jefes.",
+     "en": "Some say her name marks her as the mother of chiefs, because stars are linked to chiefs."
+    },
+    {
+     "es": "Creció y se volvió una joven hermosa, y Wākea la quiso para sí.",
+     "en": "She grew into a beautiful young woman, and Wākea wanted her for himself."
+    }
+   ],
+   "fondo": "noche",
+   "camara": {
+    "de": 0,
+    "a": 250,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "actores": [
+    {
+     "id": "papa",
+     "como": "papa",
+     "x": 520,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.6,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "wakea",
+     "como": "wakea",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.6,
+       "hace": "senala"
+      },
+      {
+       "en": 3,
+       "hace": "mira",
+       "a": 1000
+      }
+     ]
+    },
+    {
+     "id": "hoohoku",
+     "como": "hoohokukalani",
+     "x": 1000,
+     "pasos": [
+      {
+       "en": 1.1,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 2,
+       "hace": "brilla"
+      }
+     ]
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "estrellas",
+     "x": 960,
+     "s": 1.0,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "luna",
+     "x": 300,
+     "s": 1.0
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "estrellas",
+     "dur": 4
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1.2,
+     "texto": {
+      "es": "LA QUE HACE ESTRELLAS",
+      "en": "THE ONE WHO MAKES STARS"
+     },
+     "x": 960,
+     "y": 230,
+     "hasta": 2.4
+    }
+   ]
+  },
+  {
+   "id": "kapu",
+   "frases": [
+    {
+     "es": "Wākea tenía un sacerdote sabio, Komoʻawa. Le propuso un plan: noches kapu, en que marido y mujer duermen separados.",
+     "en": "Wākea had a wise priest named Komoʻawa. He gave a plan: kapu nights, when husband and wife must sleep apart."
+    },
+    {
+     "es": "Wākea le dijo a Papa que los dioses lo mandaban, y Papa aceptó.",
+     "en": "Wākea told Papa that the gods commanded it, and Papa agreed."
+    },
+    {
+     "es": "Pero era un engaño. En secreto, Wākea tomó por esposa a su propia hija.",
+     "en": "But it was a trick. In secret, Wākea took his own daughter as his wife."
+    },
+    {
+     "es": "Los relatos antiguos no lo ocultan, y el Kumulipo también lo recuerda. No nos detendremos en eso: importa lo que vino después.",
+     "en": "The old accounts do not hide it, and the Kumulipo remembers it too. We will not dwell on it. What matters is what came next."
+    },
+    {
+     "es": "Papa descubrió la verdad. Ella y Wākea se separaron, y esa es otra historia para otro día.",
+     "en": "Papa learned the truth. She and Wākea parted ways, and that is a story for another day."
+    }
+   ],
+   "fondo": "aldea_hale",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "actores": [
+    {
+     "id": "komoawa",
+     "como": "kahuna",
+     "x": 1250,
+     "mira": "izq",
+     "rotulo": "KOMOʻAWA",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "humo"
+      },
+      {
+       "en": 0.3,
+       "hace": "habla",
+       "dur": 0.7
+      }
+     ]
+    },
+    {
+     "id": "wakea",
+     "como": "wakea",
+     "x": 850,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "habla",
+       "dur": 0.5
+      },
+      {
+       "en": 2,
+       "hace": "gira"
+      },
+      {
+       "en": 2.1,
+       "hace": "camina",
+       "a": 1650,
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "papa",
+     "como": "papa",
+     "x": 450,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.3,
+       "hace": "asiente"
+      },
+      {
+       "en": 3.8,
+       "hace": "lamenta"
+      },
+      {
+       "en": 4.3,
+       "hace": "sale"
+      }
+     ]
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "hale",
+     "x": 1500,
+     "s": 1.1
+    },
+    {
+     "tipo": "hale",
+     "x": 200,
+     "s": 0.9,
+     "capa": "fondo"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "oscurecer",
+     "dur": 2.5,
+     "intensidad": 0.4
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.1,
+     "texto": {
+      "es": "NOCHES KAPU",
+      "en": "KAPU NIGHTS"
+     },
+     "x": 960,
+     "y": 230,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "nacimiento",
+   "frases": [
+    {
+     "es": "Hoʻohōkūkalani dio a luz un niño. Llegó demasiado pronto, y no vivió.",
+     "en": "Hoʻohōkūkalani gave birth to a baby. He came too early, and he did not live."
+    },
+    {
+     "es": "Ella y Wākea no lo dejaron solo. Lo llevaron a la esquina este de su casa, por donde sale el sol.",
+     "en": "Wākea and Hoʻohōkūkalani did not leave him. They carried him to the eastern corner of their house, where the sun rises."
+    },
+    {
+     "es": "Allí lo enterraron, con mucho amor y en silencio.",
+     "en": "There they buried him, with great love and in silence."
+    },
+    {
+     "es": "Algunos cuentan que sus lágrimas regaron la tierra. Después vinieron los días largos de espera.",
+     "en": "Some tellers say her tears watered the ground. Then came the long days of waiting."
+    }
+   ],
+   "fondo": "aldea_hale",
+   "camara": {
+    "de": 0,
+    "a": 100,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "actores": [
+    {
+     "id": "hoohoku",
+     "como": "hoohokukalani",
+     "x": 800,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "arrodilla"
+      },
+      {
+       "en": 0.1,
+       "hace": "entristece"
+      },
+      {
+       "en": 1.1,
+       "hace": "levantarse"
+      },
+      {
+       "en": 1.3,
+       "hace": "camina",
+       "a": 1200,
+       "dur": 0.7
+      },
+      {
+       "en": 2,
+       "hace": "arrodilla"
+      },
+      {
+       "en": 2.5,
+       "hace": "reza"
+      }
+     ]
+    },
+    {
+     "id": "wakea",
+     "como": "wakea",
+     "x": 500,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "entristece"
+      },
+      {
+       "en": 1.3,
+       "hace": "camina",
+       "a": 1000,
+       "dur": 0.7
+      },
+      {
+       "en": 2.2,
+       "hace": "reza"
+      }
+     ]
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "hale",
+     "x": 1600,
+     "s": 1.1
+    },
+    {
+     "tipo": "hale",
+     "x": 150,
+     "s": 0.9,
+     "capa": "fondo"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "dur": 4,
+     "intensidad": 0.35
+    },
+    {
+     "en": 3,
+     "tipo": "lluvia",
+     "dur": 1,
+     "intensidad": 0.3
+    }
+   ]
+  },
+  {
+   "id": "brote",
+   "frases": [
+    {
+     "es": "Una mañana, un brote verde rompió la tierra, justo donde yacía el niño.",
+     "en": "One morning, a green shoot broke through the earth, right where the baby lay."
+    },
+    {
+     "es": "Creció con un tallo largo y fuerte, y una hoja ancha con forma de corazón. La hoja temblaba con la menor brisa.",
+     "en": "It grew a long, strong stalk, and one wide heart-shaped leaf. The leaf trembled in the lightest breeze."
+    },
+    {
+     "es": "Era el primer kalo, la planta del taro. Su nombre es Hāloanakalaukapalili: «tallo largo, hoja que tiembla».",
+     "en": "It was the first kalo, the taro plant. Its name is Hāloanakalaukapalili: \"long stalk, trembling leaf.\""
+    },
+    {
+     "es": "Algunos relatos le dan ese nombre al propio niño. El niño y la planta quedaron unidos.",
+     "en": "Some tellers give that name to the baby himself. The child and the plant are bound together."
+    },
+    {
+     "es": "Si una planta creciera donde enterraste a alguien que amabas, ¿cómo la cuidarías? Cuéntanos en los comentarios.",
+     "en": "If a plant grew where someone you loved was buried, how would you care for it? Tell us in the comments."
+    }
+   ],
+   "fondo": "aldea_hale",
+   "camara": {
+    "de": 0,
+    "a": 100,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "actores": [
+    {
+     "id": "hoohoku",
+     "como": "hoohokukalani",
+     "x": 700,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 3,
+       "hace": "alegra"
+      }
+     ]
+    },
+    {
+     "id": "wakea",
+     "como": "wakea",
+     "x": 420,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1.2,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.4,
+       "hace": "sorprende"
+      },
+      {
+       "en": 2.5,
+       "hace": "reza"
+      }
+     ]
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "hale",
+     "x": 1700,
+     "s": 1.1
+    },
+    {
+     "tipo": "hale",
+     "x": 150,
+     "s": 0.9,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "kalo",
+     "x": 1250,
+     "s": 1.5,
+     "en": 1
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "aclarar",
+     "dur": 1.5
+    },
+    {
+     "en": 1,
+     "tipo": "destello",
+     "x": 1250,
+     "y": 560
+    },
+    {
+     "en": 1,
+     "tipo": "luz",
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2.1,
+     "texto": {
+      "es": "HĀLOANAKALAUKAPALILI",
+      "en": "HĀLOANAKALAUKAPALILI"
+     },
+     "x": 960,
+     "y": 230,
+     "hasta": 3.9
+    }
+   ]
+  },
+  {
+   "id": "haloa",
+   "frases": [
+    {
+     "es": "Más tarde, Hoʻohōkūkalani tuvo otro hijo, un niño sano. Lo llamaron Hāloa, por el tallo largo de la planta.",
+     "en": "Later, Hoʻohōkūkalani had another child, a healthy boy. They named him Hāloa, after the long stalk of the plant."
+    },
+    {
+     "es": "Hāloa creció fuerte. Las genealogías lo nombran como el antepasado del pueblo hawaiano.",
+     "en": "Hāloa grew up strong. The genealogies name him as the ancestor of the Hawaiian people."
+    },
+    {
+     "es": "Así hubo dos hermanos de los mismos padres: la planta, que llegó primero, y el hombre, que llegó después.",
+     "en": "So there were two brothers with the same parents: the plant that came first, and the man who came after."
+    },
+    {
+     "es": "La enseñanza antigua es simple. El kalo es el hermano mayor. Las personas somos los menores.",
+     "en": "The old teaching is simple. Kalo is the elder brother. People are the younger."
+    }
+   ],
+   "fondo": "aldea_hale",
+   "camara": {
+    "de": 0,
+    "a": 100,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "actores": [
+    {
+     "id": "hoohoku",
+     "como": "hoohokukalani",
+     "x": 700,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "ofrece"
+      },
+      {
+       "en": 2,
+       "hace": "habla",
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "id": "wakea",
+     "como": "wakea",
+     "x": 400,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "asiente"
+      }
+     ]
+    },
+    {
+     "id": "haloa",
+     "como": "haloa",
+     "x": 1050,
+     "pasos": [
+      {
+       "en": 0.4,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 1.2,
+       "hace": "crece",
+       "escala": 1.3,
+       "dur": 1
+      },
+      {
+       "en": 2.6,
+       "hace": "senala",
+       "a": 1500
+      }
+     ]
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "hale",
+     "x": 1750,
+     "s": 1.1
+    },
+    {
+     "tipo": "hale",
+     "x": 150,
+     "s": 0.9,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "kalo",
+     "x": 1450,
+     "s": 1.4
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.4,
+     "tipo": "luz",
+     "dur": 1.5
+    }
+   ]
+  },
+  {
+   "id": "hermano",
+   "frases": [
+    {
+     "es": "Por eso el kalo se llama el hermano mayor del pueblo hawaiano.",
+     "en": "That is why kalo is called the elder brother of the Hawaiian people."
+    },
+    {
+     "es": "El hermano mayor alimenta a la familia. El menor debe plantarlo, regarlo y dar gracias.",
+     "en": "The elder brother feeds the family. The younger brother must plant him, water him, and give thanks."
+    },
+    {
+     "es": "El kalo se cultiva en lōʻi, terrazas de agua corriente. Se planta la parte alta del tallo, el huli, y nace otra planta.",
+     "en": "Farmers grow kalo in lōʻi, terraces filled with flowing water. They plant the top of the stalk, called huli, to start a new plant."
+    },
+    {
+     "es": "Alrededor de la planta madre brotan retoños llamados ʻohā. Se dice que ʻohana, «familia», viene de ʻohā.",
+     "en": "Around the parent plant, small shoots called ʻohā grow. The word ʻohana, \"family,\" is often traced to ʻohā."
+    }
+   ],
+   "fondo": "loi",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "actores": [
+    {
+     "id": "hawaiano",
+     "como": "hawaiano",
+     "x": 500,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "asiente"
+      },
+      {
+       "en": 2,
+       "hace": "baja",
+       "dur": 0.8
+      },
+      {
+       "en": 2.9,
+       "hace": "reza"
+      }
+     ]
+    },
+    {
+     "id": "hawaiana",
+     "como": "hawaiana",
+     "x": 900,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1.2,
+       "hace": "ofrece"
+      },
+      {
+       "en": 3,
+       "hace": "senala",
+       "a": 1350
+      }
+     ]
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "kalo",
+     "x": 1250,
+     "s": 1.1
+    },
+    {
+     "tipo": "kalo",
+     "x": 1500,
+     "s": 1.0
+    },
+    {
+     "tipo": "kalo",
+     "x": 1750,
+     "s": 1.2
+    },
+    {
+     "tipo": "niu",
+     "x": 2100,
+     "s": 1.1
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "aclarar",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "POR ESO EL KALO ES EL HERMANO MAYOR",
+      "en": "THAT'S WHY KALO IS THE ELDER BROTHER"
+     },
+     "x": 960,
+     "y": 230,
+     "hasta": 1.9,
+     "estilo": "porque"
+    }
+   ]
+  },
+  {
+   "id": "poi",
+   "frases": [
+    {
+     "es": "La raíz del kalo se machaca para hacer poi, una pasta suave que era el alimento principal de la mesa hawaiana.",
+     "en": "The root of the kalo is pounded into poi, a smooth paste that was the main food of the Hawaiian table."
+    },
+    {
+     "es": "En muchas familias hawaianas, cuando el cuenco de poi está abierto, se habla con suavidad y no se discute.",
+     "en": "In many Hawaiian families, when the poi bowl is open, people speak gently and do not quarrel."
+    },
+    {
+     "es": "Hāloa está presente en la comida, y nadie debe pelear delante de un hermano mayor.",
+     "en": "Hāloa is there at the meal, and no one should argue in front of an elder brother."
+    },
+    {
+     "es": "Esta historia no es solo antigua. Hoy, muchas personas en Hawaiʻi todavía cultivan kalo y honran a Hāloa.",
+     "en": "This story is not only old. Today, many people in Hawaiʻi still grow kalo and still honor Hāloa."
+    }
+   ],
+   "fondo": "aldea_hale",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "actores": [
+    {
+     "id": "mama",
+     "como": "hawaiana",
+     "x": 650,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "ofrece"
+      },
+      {
+       "en": 2,
+       "hace": "reza"
+      }
+     ]
+    },
+    {
+     "id": "papa2",
+     "como": "hawaiano",
+     "x": 1250,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "habla",
+       "dur": 0.8
+      },
+      {
+       "en": 1.9,
+       "hace": "calla"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    },
+    {
+     "id": "chico",
+     "como": "nino",
+     "x": 1500,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1.5,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "hale",
+     "x": 1750,
+     "s": 1.1
+    },
+    {
+     "tipo": "hale",
+     "x": 150,
+     "s": 0.9,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "ipu",
+     "x": 950,
+     "s": 0.6
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "luz",
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "POI",
+      "en": "POI"
+     },
+     "x": 960,
+     "y": 230,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "es": "¿Qué comida de tu mesa se trata como familia? Cuéntanos en los comentarios.",
+     "en": "Which food on your table is treated like family? Tell us in the comments."
+    },
+    {
+     "es": "Las islas están verdes y la gente tiene comida. Pero el kalo crece mejor con agua, y el agua dulce es difícil de hallar.",
+     "en": "The islands are green, and the people have food. But kalo grows best in water, and fresh water is hard to find."
+    },
+    {
+     "es": "La próxima vez, dos grandes dioses recorren la tierra juntos, y uno de ellos tiene sed. Es El agua de Kāne.",
+     "en": "Next time, two great gods walk the land together, and one of them is thirsty. It is The Water of Kāne."
+    }
+   ],
+   "fondo": "playa_negra",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "actores": [
+    {
+     "id": "hawaiana",
+     "como": "hawaiana",
+     "x": 800,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla",
+       "dur": 1
+      },
+      {
+       "en": 1.2,
+       "hace": "senala",
+       "a": 1400
+      }
+     ]
+    },
+    {
+     "id": "hawaiano",
+     "como": "hawaiano",
+     "x": 1100,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "asiente"
+      }
+     ]
+    },
+    {
+     "id": "kane",
+     "como": "kane",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.1,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 2.5,
+       "hace": "camina",
+       "a": 1300,
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "kanaloa",
+     "como": "kanaloa",
+     "x": 1750,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.3,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 2.6,
+       "hace": "lamenta"
+      }
+     ]
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "petroglifo",
+     "x": 300,
+     "s": 1.2,
+     "props": {
+      "figura": "canoa"
+     }
+    },
+    {
+     "tipo": "kalo",
+     "x": 1000,
+     "s": 0.9
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "aclarar",
+     "dur": 1.5
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "La planta que brotó de la tumba de un niño estrella",
+    "en": "The first taro grew from a star child's grave"
+   },
+   "escena": "brote",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1000
+  },
+  {
+   "gancho": {
+    "es": "Por qué el kalo es el hermano mayor",
+    "en": "Why taro is the elder brother of the people"
+   },
+   "escena": "hermano",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 800
+  },
+  {
+   "gancho": {
+    "es": "La regla del cuenco de poi",
+    "en": "The quiet rule of the poi bowl"
+   },
+   "escena": "poi",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 950
+  }
+ ]
+}

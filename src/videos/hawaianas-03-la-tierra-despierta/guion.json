@@ -1,0 +1,1653 @@
+{
+  "id": "hawaianas-03-la-tierra-despierta",
+  "serie": "hawaianas",
+  "numero": "03",
+  "titulo": {
+    "es": "La tierra despierta",
+    "en": "The Land Wakes Up"
+  },
+  "tituloGriego": "THE LAND WAKES UP",
+  "miniatura": {
+    "heroe": "hawaiana",
+    "rival": "kane"
+  },
+  "siguiente": {
+    "es": "Hechos de tierra roja",
+    "en": "Made from Red Earth"
+  },
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Un cielo tan lleno de aves que el sol desapareció",
+        "en": "A sky so full of birds that the sun vanished"
+      },
+      "escena": "sol",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "La palabra para «calma» es también un nombre de mujer",
+        "en": "The word for calm is also a woman's name"
+      },
+      "escena": "amanecer",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "El mar que se arrastró hasta la tierra",
+        "en": "The sea that crept onto the land"
+      },
+      "escena": "rastreras",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1200
+    }
+  ],
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "po",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada, la noche llenó el mar de vida: coral, conchas y peces.",
+          "en": "Last time, the night filled the sea with life: coral, shells and fish."
+        },
+        {
+          "es": "Todo esto viene del Kumulipo, un antiguo canto hawaiano sobre cómo empezó el mundo.",
+          "en": "All of this comes from the Kumulipo, an old Hawaiian chant about how the world began."
+        },
+        {
+          "es": "Se cantaba por un jefe recién nacido. Y cada parte de la noche termina igual: «Todavía es de noche».",
+          "en": "It was sung for a newborn chief. And each part of the night ends the same way: \"Still it is night.\""
+        },
+        {
+          "es": "Ahora el canto vuelve a la tierra y al cielo. La noche está por dar a luz otra vez.",
+          "en": "Now the chant turns to the land and the sky. The night is about to give birth again."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "petroglifo",
+          "x": 1250,
+          "s": 1.0,
+          "en": 1,
+          "props": {
+            "figura": "persona"
+          }
+        },
+        {
+          "tipo": "petroglifo",
+          "x": 1750,
+          "s": 0.9,
+          "en": 2,
+          "props": {
+            "figura": "espiral"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "cantor",
+          "como": "kahuna",
+          "x": 850,
+          "rotulo": "THE CHANTER",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 2.5
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 1,
+          "intensidad": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "TODAVÍA ES DE NOCHE",
+            "en": "STILL IT IS NIGHT"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "alas",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Primero, la noche dio a luz cosas pequeñas. Nació una oruga, y su hijo salió como una polilla, y echó a volar.",
+          "en": "First, the night gave birth to small things. A caterpillar was born, and its child came out as a moth, and flew."
+        },
+        {
+          "es": "Nació una hormiga, y su hijo fue una libélula. Nació una larva, y su hijo fue un saltamontes.",
+          "en": "An ant was born, and its child was a dragonfly. A grub was born, and its child was a grasshopper."
+        },
+        {
+          "es": "Luego llegaron las aves. Nació la gallineta de agua, y su hijo fue el ʻapapane rojo, un pajarito del bosque.",
+          "en": "Then came the birds. A mudhen was born, and its child was the red ʻapapane, a small bird of the forest."
+        },
+        {
+          "es": "Nació el mamo, un ave que bebe néctar, y su hijo fue el ʻōʻō, un ave negra con plumas amarillas.",
+          "en": "The mamo was born, a bird that sips flower nectar, and its child was the ʻōʻō, a black bird with yellow feathers."
+        },
+        {
+          "es": "Un día, esas plumas amarillas se tejerían en las capas de los jefes.",
+          "en": "One day, those yellow feathers would be woven into the capes of chiefs."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lehua",
+          "x": 450,
+          "s": 1.0
+        },
+        {
+          "tipo": "lehua",
+          "x": 1350,
+          "s": 1.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "gallineta",
+          "como": "alae",
+          "x": 700,
+          "escala": 1.2,
+          "rotulo": "MUDHEN",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "apapane",
+          "como": "aguila",
+          "x": 760,
+          "y": 600,
+          "escala": 0.8,
+          "props": {
+            "color": "#B2331F"
+          },
+          "rotulo": "ʻAPAPANE",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.7,
+              "hace": "vuela",
+              "a": [
+                1450,
+                340
+              ],
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "mamo",
+          "como": "aguila",
+          "x": 900,
+          "y": 620,
+          "escala": 0.8,
+          "props": {
+            "color": "#D9A81C"
+          },
+          "rotulo": "MAMO",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "oo",
+          "como": "aguila",
+          "x": 1150,
+          "y": 620,
+          "escala": 0.8,
+          "props": {
+            "color": "#1A1410"
+          },
+          "rotulo": "ʻŌʻŌ",
+          "pasos": [
+            {
+              "en": 3.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.7,
+              "hace": "vuela",
+              "a": [
+                1750,
+                360
+              ],
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "jefe",
+          "como": "alii",
+          "x": 1850,
+          "mira": "izq",
+          "rotulo": "A CHIEF",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 600,
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 560,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "ORUGA, LUEGO POLILLA",
+            "en": "CATERPILLAR, THEN MOTH"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "HORMIGA, LUEGO LIBÉLULA",
+            "en": "ANT, THEN DRAGONFLY"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "orilla",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Llegaron más y más aves. Volaban en bandadas y se posaban en la orilla, en largas filas.",
+          "en": "More and more birds came. They flew in flocks and landed on the shore in long rows."
+        },
+        {
+          "es": "Cubrieron la playa. El canto llama a ese lugar «la isla escondida de Kāne».",
+          "en": "They covered the beach. The chant calls this place \"the hidden island of Kāne.\""
+        },
+        {
+          "es": "Cada ave del mar tiene una compañera en tierra. El noio, una golondrina de mar, es guardado por el pueo, el búho.",
+          "en": "Each sea bird has a partner on land. The noio, a tern of the sea, is guarded by the pueo, the owl."
+        },
+        {
+          "es": "Otra ave del mar, el hehe, tiene de guardiana a la nēnē, el ganso de tierra. El mar y la tierra van juntos.",
+          "en": "Another sea bird, the hehe, is guarded by the nēnē, the goose of the land. Sea and land belong together."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "niu",
+          "x": 300,
+          "s": 1.0,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "niu",
+          "x": 2000,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ave1",
+          "como": "aguila",
+          "x": 30,
+          "y": 330,
+          "escala": 0.42,
+          "props": {
+            "color": "#1A1410"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "vuela",
+              "a": [
+                700,
+                420
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                700,
+                705
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "ave2",
+          "como": "aguila",
+          "x": 120,
+          "y": 330,
+          "escala": 0.42,
+          "props": {
+            "color": "#EDE6D6"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.15,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.35,
+              "hace": "vuela",
+              "a": [
+                870,
+                460
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                870,
+                705
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "ave3",
+          "como": "aguila",
+          "x": 210,
+          "y": 330,
+          "escala": 0.42,
+          "props": {
+            "color": "#5A4636"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "vuela",
+              "a": [
+                1040,
+                420
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1040,
+                705
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "ave4",
+          "como": "aguila",
+          "x": 300,
+          "y": 330,
+          "escala": 0.42,
+          "props": {
+            "color": "#2B3A4A"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.44999999999999996,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.6499999999999999,
+              "hace": "vuela",
+              "a": [
+                1210,
+                460
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1210,
+                705
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "noio",
+          "como": "aguila",
+          "x": 1200,
+          "y": 690,
+          "escala": 0.45,
+          "props": {
+            "color": "#EDE6D6"
+          },
+          "rotulo": "NOIO TERN",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "pueo",
+          "como": "buho",
+          "x": 1520,
+          "y": 690,
+          "escala": 0.9,
+          "props": {
+            "color": "#8A6A3A"
+          },
+          "rotulo": "PUEO, THE OWL",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "nene",
+          "como": "ganso",
+          "x": 1830,
+          "mira": "izq",
+          "rotulo": "NĒNĒ GOOSE",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA ISLA ESCONDIDA DE KĀNE",
+            "en": "KĀNE'S HIDDEN ISLAND"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "sol",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El canto dice que las aves volaban en tal multitud que tapaban el sol.",
+          "en": "The chant says the birds flew in such a crowd that they shut out the sun."
+        },
+        {
+          "es": "El cielo entero era alas. Y en el suelo, la tierra estaba cubierta de pichones.",
+          "en": "The whole sky was wings. And on the ground, the earth was covered with fledglings."
+        },
+        {
+          "es": "¿Puedes imaginar un cielo tan lleno de aves que el sol desaparezca?",
+          "en": "Can you imagine a sky so full of birds that the sun disappears?"
+        },
+        {
+          "es": "Aun así, el canto repite sus palabras: «Todavía es de noche».",
+          "en": "Even then, the chant repeats its words: \"Still it is night.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 1000,
+          "s": 1.5,
+          "y": 290
+        }
+      ],
+      "actores": [
+        {
+          "id": "b1",
+          "como": "aguila",
+          "x": 30,
+          "y": 420,
+          "escala": 0.5,
+          "props": {
+            "color": "#1A1410"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "vuela",
+              "a": [
+                930,
+                260
+              ],
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "como": "aguila",
+          "x": 130,
+          "y": 480,
+          "escala": 0.6,
+          "props": {
+            "color": "#1A1410"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "vuela",
+              "a": [
+                1150,
+                315
+              ],
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "b3",
+          "como": "aguila",
+          "x": 230,
+          "y": 540,
+          "escala": 0.7,
+          "props": {
+            "color": "#1A1410"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "vuela",
+              "a": [
+                1370,
+                370
+              ],
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "b4",
+          "como": "aguila",
+          "x": 330,
+          "y": 600,
+          "escala": 0.5,
+          "props": {
+            "color": "#1A1410"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "vuela",
+              "a": [
+                1230,
+                425
+              ],
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "b5",
+          "como": "aguila",
+          "x": 430,
+          "y": 420,
+          "escala": 0.6,
+          "props": {
+            "color": "#1A1410"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "vuela",
+              "a": [
+                1450,
+                260
+              ],
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "b6",
+          "como": "aguila",
+          "x": 530,
+          "y": 480,
+          "escala": 0.7,
+          "props": {
+            "color": "#1A1410"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "vuela",
+              "a": [
+                1670,
+                315
+              ],
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "b7",
+          "como": "aguila",
+          "x": 630,
+          "y": 540,
+          "escala": 0.5,
+          "props": {
+            "color": "#1A1410"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "vuela",
+              "a": [
+                1530,
+                370
+              ],
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "b8",
+          "como": "aguila",
+          "x": 730,
+          "y": 600,
+          "escala": 0.6,
+          "props": {
+            "color": "#1A1410"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "vuela",
+              "a": [
+                1750,
+                425
+              ],
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "b9",
+          "como": "aguila",
+          "x": 830,
+          "y": 420,
+          "escala": 0.7,
+          "props": {
+            "color": "#1A1410"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "vuela",
+              "a": [
+                1970,
+                260
+              ],
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "b10",
+          "como": "aguila",
+          "x": 930,
+          "y": 480,
+          "escala": 0.5,
+          "props": {
+            "color": "#1A1410"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "vuela",
+              "a": [
+                1830,
+                315
+              ],
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "cria1",
+          "como": "aguila",
+          "x": 400,
+          "y": 730,
+          "escala": 0.3,
+          "props": {
+            "color": "#5A4636"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "cria2",
+          "como": "aguila",
+          "x": 560,
+          "y": 730,
+          "escala": 0.3,
+          "props": {
+            "color": "#5A4636"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "sinAstros": true,
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "oscurecer",
+          "dur": 3,
+          "intensidad": 0.75
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "TODAVÍA ES DE NOCHE",
+            "en": "STILL IT IS NIGHT"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "rastreras",
+      "fondo": "playa",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Luego, el canto cambia. «El mar se arrastra hacia la tierra. Se arrastra hacia atrás, se arrastra hacia adelante.»",
+          "en": "Then the chant changes. \"The sea creeps up to the land. It creeps backward, it creeps forward.\""
+        },
+        {
+          "es": "Y del mar salen los que se arrastran. Ponen sus huevos en la arena, y sus crías ruedan y juegan.",
+          "en": "And from the sea come the crawlers. They lay eggs in the sand, and their young roll and play."
+        },
+        {
+          "es": "La noche da a luz tortugas de lomo áspero y tortugas de color rojo oscuro. También geckos de piel lisa.",
+          "en": "The night gives birth to rough-backed turtles and dark red turtles. It also gives birth to sleek geckos."
+        },
+        {
+          "es": "La tortuga marina, la honu, también tiene compañera en tierra: el maile, una enredadera de aroma dulce.",
+          "en": "The sea turtle, called honu, has a partner on land too: the maile, a vine with a sweet smell."
+        },
+        {
+          "es": "Avanzan despacio, pesadas, tambaleándose. El canto llama a ese lugar la tierra de los que se arrastran.",
+          "en": "They move slowly, heavy and swaying. The chant calls this place the land of the crawlers."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 400,
+          "s": 0.8,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 1900,
+          "s": 1.0
+        }
+      ],
+      "actores": [
+        {
+          "id": "gecko1",
+          "como": "moo",
+          "x": 1500,
+          "escala": 1.6,
+          "rotulo": "GECKO",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.6,
+              "hace": "camina",
+              "a": 1650,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "gecko2",
+          "como": "moo",
+          "x": 1850,
+          "escala": 1.6,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.8,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "honu1",
+          "como": "honu",
+          "x": 700,
+          "escala": 1.5,
+          "rotulo": "HONU",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 820,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "honu2",
+          "como": "honu",
+          "x": 1050,
+          "escala": 1.2,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 1170,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "honu3",
+          "como": "honu",
+          "x": 1350,
+          "escala": 1.2,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "camina",
+              "a": 1470,
+              "dur": 1.5
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "HONU: LA TORTUGA MARINA",
+            "en": "HONU, THE SEA TURTLE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "MAILE: LA ENREDADERA DE TIERRA",
+            "en": "MAILE, THE LAND VINE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "excavador",
+      "fondo": "loi",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En la quinta parte, el canto se interna en la tierra. El Excavador de la Noche cava el suelo y lo amontona.",
+          "en": "In the fifth part, the chant moves inland. The Night-digger digs the soil and heaps it up."
+        },
+        {
+          "es": "Nace el hijo cerdo. Vive tierra adentro, en el monte, y trabaja los campos de taro de Loʻiloa, un labrador antiguo.",
+          "en": "Then the pig child is born. He lives inland, in the bush, and works the taro fields of an ancient farmer called Loʻiloa."
+        },
+        {
+          "es": "Algunos dicen que este hijo cerdo es Kamapuaʻa, un héroe mitad hombre, mitad cerdo. Sus propios cuentos vienen después.",
+          "en": "Some say this pig child is Kamapuaʻa, a hero who is part man, part pig. His own stories come later."
+        },
+        {
+          "es": "El canto dice que la tierra creció diez veces. El taro, una raíz con almidón, sería el alimento principal de las islas.",
+          "en": "The chant says the land grew tenfold. Taro, a starchy root, would become the main food of the islands."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kalo",
+          "x": 1500,
+          "s": 1.0,
+          "en": 2
+        },
+        {
+          "tipo": "kalo",
+          "x": 1750,
+          "s": 0.9,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "excavador",
+          "como": "puaa",
+          "x": 500,
+          "rotulo": "THE NIGHT-DIGGER",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 800,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "hijocerdo",
+          "como": "puaa",
+          "x": 1100,
+          "escala": 0.8,
+          "rotulo": "THE PIG CHILD",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "polvo",
+          "x": 650,
+          "y": 740,
+          "dur": 1.5
+        }
+      ]
+    },
+    {
+      "id": "ratas",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Luego vienen las ratas, que mordisquean los cultivos nuevos. El canto casi bromea: una rata en la montaña, una rata junto al mar.",
+          "en": "Then come the rats, nibbling at the new crops. The chant almost jokes: a rat in the uplands, a rat by the sea."
+        },
+        {
+          "es": "Los padres viven en agujeros, y las crías se amontonan juntas. Hasta en la oscuridad, el canto tiene humor.",
+          "en": "The parents live in holes, and the little ones huddle together. Even in the dark, the chant has humor."
+        },
+        {
+          "es": "En los tiempos antiguos, las ratas que bajaban a la costa avisaban que la comida se acababa en las montañas.",
+          "en": "In old days, rats running to the shore told people that food was running out in the hills."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kalo",
+          "x": 900,
+          "s": 0.9
+        },
+        {
+          "tipo": "kalo",
+          "x": 1200,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "rata1",
+          "como": "rata",
+          "x": 1050,
+          "escala": 1.3,
+          "rotulo": "RAT",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "rata2",
+          "como": "rata",
+          "x": 1130,
+          "escala": 1.3,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "rata3",
+          "como": "rata",
+          "x": 1700,
+          "escala": 1.3,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "agricultor",
+          "como": "hawaiano",
+          "x": 400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "perro",
+      "fondo": "volcan",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La séptima parte es muy distinta. Está llena de miedo. «El miedo cae sobre mí en la cima de la montaña.»",
+          "en": "The seventh part is very different. It is full of fear. \"Fear falls upon me on the mountain top.\""
+        },
+        {
+          "es": "Miedo de la noche que se va y miedo de la noche que viene. De ese miedo nace un niño perro.",
+          "en": "Fear of the night leaving, and fear of the night approaching. And from that fear, a dog child is born."
+        },
+        {
+          "es": "Un perro rojo oscuro, un perro rayado, un perro sin pelo. El canto lo mira con respeto y asombro.",
+          "en": "A dark red dog, a brindled dog, a hairless dog. The chant looks at him with awe."
+        },
+        {
+          "es": "Algunos cuentos dicen que un perro así pertenecía a la familia de Pele, la diosa del volcán.",
+          "en": "Some stories say a dog like this belonged to the family of Pele, the goddess of the volcano."
+        },
+        {
+          "es": "Y entonces, del barro oscuro brotan raíces nuevas y un verdor nuevo. La noche casi termina.",
+          "en": "Then fresh roots push out of the dark mud, and new green growth spreads. The night is nearly over."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "perro",
+          "como": "ilio",
+          "x": 1050,
+          "escala": 1.1,
+          "props": {
+            "color": "#7A2A1A"
+          },
+          "rotulo": "THE DOG CHILD",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "temeroso",
+          "como": "hawaiano",
+          "x": 450,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.5,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.4
+        },
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 1,
+          "intensidad": 0.4
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "amanecer",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por fin empieza la octava parte, y todo cambia. El canto dice: «Tranquilo era el tiempo».",
+          "en": "At last the eighth part begins, and everything changes. The chant says: \"Tranquil was the time.\""
+        },
+        {
+          "es": "Esa calma se llama laʻilaʻi. Es un silencio antes del nacimiento de los dioses y de la gente.",
+          "en": "That calm is called laʻilaʻi. It is a hush before the birth of gods and people."
+        },
+        {
+          "es": "En esa calma nacen cuatro. Laʻilaʻi, una mujer, que lleva el nombre de la calma. Y Kiʻi, un hombre. Su nombre significa «imagen».",
+          "en": "In that calm, four are born. Laʻilaʻi, a woman, named for the calm. And Kiʻi, a man. His name means \"image.\""
+        },
+        {
+          "es": "Después Kāne, un gran dios. Y Kanaloa, el dios de las aguas profundas, que nace como un pulpo.",
+          "en": "Then Kāne, a great god. And Kanaloa, god of the deep sea, born as an octopus."
+        },
+        {
+          "es": "Y el canto dice una línea corta: «Era de día».",
+          "en": "Then the chant says one short line: \"It was day.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "niu",
+          "x": 150,
+          "s": 1.0,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "lailai",
+          "como": "hawaiana",
+          "x": 560,
+          "rotulo": "LAʻILAʻI",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "kii",
+          "como": "hawaiano",
+          "x": 860,
+          "rotulo": "KIʻI",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "kane",
+          "como": "kane",
+          "x": 1160,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "kanaloa",
+          "como": "kanaloa",
+          "x": 1460,
+          "pasos": [
+            {
+              "en": 3.5,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "olas-bajan",
+          "dur": 1,
+          "intensidad": 0.2
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar",
+          "dur": 1.5
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LAʻILAʻI = CALMA",
+            "en": "LAʻILAʻI = CALM"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "ERA DE DÍA",
+            "en": "IT WAS DAY"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Laʻilaʻi será madre de mucha gente. El canto dice: «El hombre se extendió, el hombre ya estaba aquí».",
+          "en": "Laʻilaʻi will become the mother of many people. The chant says: \"Man spread abroad, man was here now.\""
+        },
+        {
+          "es": "En el Kumulipo, todo nace de algo anterior, uno detrás de otro. Nadie moldea nada con las manos.",
+          "en": "In the Kumulipo, everything is born from something before it. Nobody shapes anything by hand."
+        },
+        {
+          "es": "Pero otras tradiciones hawaianas lo cuentan distinto. En ellas, tres dioses moldean al primer hombre con tierra.",
+          "en": "But other Hawaiian traditions tell it differently. In them, three gods shape the first man out of earth."
+        },
+        {
+          "es": "¿Qué piensas tú? ¿Los primeros humanos nacieron de la noche, o fueron moldeados con las manos?",
+          "en": "What do you think? Were the first people born from the night, or shaped by hand?"
+        },
+        {
+          "es": "La próxima vez: hechos de tierra roja.",
+          "en": "Next time: Made from Red Earth. Three gods, a hillside of red clay, and a first breath."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "petroglifo",
+          "x": 1750,
+          "s": 1.0,
+          "en": 4,
+          "props": {
+            "figura": "persona"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "lailai",
+          "como": "hawaiana",
+          "x": 700,
+          "rotulo": "LAʻILAʻI",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "nino",
+          "x": 480,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "nina",
+          "como": "nina",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "kane",
+          "como": "kane",
+          "x": 1250,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "ku",
+          "como": "ku",
+          "x": 1450,
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "lono",
+          "como": "lono",
+          "x": 1650,
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "SIGUE: HECHOS DE TIERRA ROJA",
+            "en": "NEXT: MADE FROM RED EARTH"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 5
+        }
+      ]
+    }
+  ]
+}

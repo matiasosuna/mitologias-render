@@ -1,0 +1,1517 @@
+{
+  "id": "nordicas-13-mundo-renace",
+  "serie": "nordicas",
+  "numero": "13",
+  "titulo": {
+    "es": "El mundo renace",
+    "en": "The World Reborn"
+  },
+  "tituloGriego": "THE WORLD REBORN",
+  "escenas": [
+    {
+      "id": "hundido",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "El fuego de Surtr se había apagado, y el mundo entero yacía bajo el mar oscuro.",
+          "en": "Surtr's fire had gone out, and the whole world lay beneath the dark sea."
+        },
+        {
+          "es": "Durante mucho tiempo no hubo nada más que silencio y agua negra, allí donde antes estaba Midgard.",
+          "en": "For a long time there was nothing but silence and black water, where Midgard had once stood."
+        },
+        {
+          "es": "Entonces, poco a poco, algo empezó a subir entre las olas: una colina verde, brillante de agua.",
+          "en": "Then, little by little, something began to rise from the waves: a green hill, shining wet."
+        },
+        {
+          "es": "La tierra volvía a salir del mar, por segunda vez.",
+          "en": "The earth was rising from the sea once more, for the second time."
+        }
+      ],
+      "actores": [
+        {
+          "id": "huginn",
+          "como": "cuervo",
+          "x": 200,
+          "y": 300,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.8,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1300,
+                250
+              ],
+              "dur": 2
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "monte",
+          "x": 1000,
+          "s": 1.2,
+          "capa": "medio",
+          "en": 2
+        },
+        {
+          "tipo": "pino",
+          "x": 1500,
+          "s": 0.8,
+          "capa": "fondo",
+          "en": 3.2
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 2
+        },
+        {
+          "en": 0.5,
+          "tipo": "olas-suben",
+          "dur": 1.5
+        },
+        {
+          "en": 1.2,
+          "tipo": "niebla",
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "olas-bajan",
+          "dur": 2
+        },
+        {
+          "en": 2.6,
+          "tipo": "aclarar",
+          "dur": 1.5
+        },
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 500,
+          "dur": 1.2
+        }
+      ]
+    },
+    {
+      "id": "verde",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "La tierra estaba verde otra vez, fresca y limpia, como si el mundo se hiciera por primera vez.",
+          "en": "The earth was green again, fresh and clean, as if the world were being made for the first time."
+        },
+        {
+          "es": "Caían cascadas desde las colinas nuevas, y los campos que nadie había sembrado empezaban a dar su grano.",
+          "en": "Waterfalls fell from the new hills, and fields that no one had sown began to bear their grain."
+        },
+        {
+          "es": "Sobre las cascadas volaba un águila, y cazaba peces en el agua que corría.",
+          "en": "Above the falls an eagle soared, hunting fish in the rushing water."
+        },
+        {
+          "es": "El mundo, lavado por el mar, estaba listo para ser vivido de nuevo.",
+          "en": "The world, washed clean by the sea, was ready to be lived in again."
+        }
+      ],
+      "actores": [
+        {
+          "id": "aguila",
+          "como": "aguila",
+          "x": 200,
+          "y": 220,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.9,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1000,
+                230
+              ],
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                1050,
+                560
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 3.5,
+              "hace": "vuela",
+              "a": [
+                1700,
+                200
+              ],
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "pez",
+          "como": "pez",
+          "x": 1050,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "monte",
+          "x": 1500,
+          "s": 1.3,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "rio",
+          "x": 1050,
+          "s": 1,
+          "capa": "medio",
+          "en": 1
+        },
+        {
+          "tipo": "pino",
+          "x": 500,
+          "s": 1,
+          "capa": "medio",
+          "en": 1.2
+        },
+        {
+          "tipo": "pino",
+          "x": 750,
+          "s": 0.8,
+          "capa": "fondo",
+          "en": 1.4
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 900,
+          "y": 450,
+          "dur": 1.5
+        },
+        {
+          "en": 1.4,
+          "tipo": "chispas",
+          "x": 400,
+          "y": 700
+        },
+        {
+          "en": 1.7,
+          "tipo": "chispas",
+          "x": 700,
+          "y": 700
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "CAMPOS SIN SEMBRAR",
+            "en": "UNSOWN FIELDS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "hijos",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero no todos habían muerto: Víðarr, el dios silencioso, y Váli, hijo de Odín, vivían sin un rasguño.",
+          "en": "But not everyone had perished: Vidar, the silent god, and Vali, son of Odin, had lived through it unscathed."
+        },
+        {
+          "es": "Ni el mar ni el fuego de Surtr los habían tocado; Víðarr había matado al lobo que devoró a su padre.",
+          "en": "Neither sea nor Surtr's fire had touched them; Vidar had slain the wolf that devoured his father."
+        },
+        {
+          "es": "También habían sobrevivido los hijos de Thor: Móði, cuyo nombre es coraje, y Magni, cuyo nombre es fuerza.",
+          "en": "Thor's sons had survived too: Modi, whose name means courage, and Magni, whose name means might."
+        },
+        {
+          "es": "Su padre había caído en la última batalla, pero les dejó lo más valioso: su martillo, Mjölnir.",
+          "en": "Their father had fallen in the last battle, but he left them what mattered most: his hammer, Mjolnir."
+        },
+        {
+          "es": "Los cuatro quedaron juntos sobre la tierra verde, y por primera vez en siglos no había ningún enemigo a la vista.",
+          "en": "The four stood together on the green earth, and for the first time in ages there was no enemy in sight."
+        }
+      ],
+      "actores": [
+        {
+          "id": "vidarr",
+          "como": "hombre",
+          "x": 450,
+          "rotulo": "VIDAR",
+          "props": {
+            "pelo": "#8A6A3A",
+            "barba": false,
+            "capa": "#3E6B4A",
+            "tocado": null
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "vali",
+          "como": "joven",
+          "x": 750,
+          "rotulo": "VALI",
+          "props": {
+            "pelo": "#C9A75A",
+            "capa": "#6B8FB5"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.9,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "modi",
+          "como": "joven",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "MODI",
+          "props": {
+            "pelo": "#B5651D",
+            "capa": "#9C3B2E"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.6,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "magni",
+          "como": "joven",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "MAGNI",
+          "props": {
+            "pelo": "#B5651D",
+            "capa": "#9C3B2E"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "toma",
+              "objeto": "mjolnir"
+            },
+            {
+              "en": 3.7,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piedra_runica",
+          "x": 1000,
+          "s": 0.9,
+          "capa": "medio",
+          "props": {
+            "texto": "THOR"
+          },
+          "en": 3
+        },
+        {
+          "tipo": "pino",
+          "x": 1800,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 600,
+          "y": 500,
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 4,
+          "tipo": "chispas",
+          "x": 1500,
+          "y": 500
+        }
+      ]
+    },
+    {
+      "id": "regreso",
+      "fondo": "hel",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Y entonces ocurrió algo que nadie esperaba: Baldr, el dios luminoso al que todo el mundo lloró, salió del reino de Hel.",
+          "en": "And then something nobody expected happened: Baldr, the radiant god the whole world had mourned, walked out of Hel's realm."
+        },
+        {
+          "es": "Junto a él venía Höðr, el dios ciego que había lanzado el muérdago.",
+          "en": "Beside him came Hodr, the blind god who had thrown the mistletoe."
+        },
+        {
+          "es": "Ya no había reproches entre ellos: todos los males de antes estaban curados.",
+          "en": "There was no blame left between them: every old wrong had been healed."
+        },
+        {
+          "es": "Juntos, como hermanos, subieron hacia la luz.",
+          "en": "Together, like brothers, they climbed toward the light."
+        }
+      ],
+      "actores": [
+        {
+          "id": "baldr",
+          "x": 1550,
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.6,
+              "hace": "camina",
+              "a": 750,
+              "dur": 1.6
+            }
+          ]
+        },
+        {
+          "id": "hodr",
+          "x": 1750,
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "abraza"
+            },
+            {
+              "en": 2.8,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 1.6
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "puerta",
+          "x": 1750,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "rio",
+          "x": 700,
+          "s": 1,
+          "capa": "medio"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 4
+        },
+        {
+          "en": 0.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.5,
+          "tipo": "aclarar",
+          "dur": 1.5
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 600,
+          "y": 450,
+          "dur": 1.2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "TODOS LOS MALES SANADOS",
+            "en": "ALL ILLS HEALED"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "idavoll",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1.04,
+          1.14
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dioses renacidos se reunieron en Iðavöllr, la pradera verde donde antes se alzaba Asgard.",
+          "en": "The reborn gods gathered on Idavoll, the green meadow where Asgard had once stood."
+        },
+        {
+          "es": "Se sentaron en el pasto y hablaron del pasado: del Fimbulvetr, de la Serpiente de Midgard, del lobo y de las runas de Odín.",
+          "en": "They sat in the grass and spoke of the old days: of Fimbulwinter, of the Midgard Serpent, of the wolf and of Odin's runes."
+        },
+        {
+          "es": "Y mientras conversaban, uno vio un brillo entre las hojas de pasto.",
+          "en": "And as they talked, one of them noticed a glint among the blades of grass."
+        },
+        {
+          "es": "Eran las fichas de oro con que los dioses habían jugado al principio, cuando el mundo era joven.",
+          "en": "They were the golden game pieces the gods had played with in the beginning, when the world was young."
+        },
+        {
+          "es": "Habían atravesado el mar y el fuego intactas, esperando a que los dioses volvieran a jugar.",
+          "en": "They had come through the sea and the fire unharmed, waiting for the gods to return and play again."
+        }
+      ],
+      "actores": [
+        {
+          "id": "baldr",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 1.2
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "hodr",
+          "x": 750,
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "vidarr",
+          "como": "hombre",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "VIDAR",
+          "props": {
+            "pelo": "#8A6A3A",
+            "barba": false,
+            "capa": "#3E6B4A",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 1.7,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "magni",
+          "como": "joven",
+          "x": 1700,
+          "mira": "izq",
+          "rotulo": "MAGNI",
+          "props": {
+            "pelo": "#B5651D",
+            "capa": "#9C3B2E",
+            "objeto": "mjolnir"
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1050,
+          "s": 0.7,
+          "capa": "medio"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 2.1,
+          "tipo": "chispas",
+          "x": 1150,
+          "y": 700
+        },
+        {
+          "en": 2.3,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 720
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 700,
+          "dur": 1.5
+        },
+        {
+          "en": 3.1,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "IÐAVÖLLR",
+            "en": "IDAVOLL"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "FICHAS DE ORO",
+            "en": "GOLDEN GAME PIECES"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "rocio",
+      "fondo": "yggdrasil",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero el mundo necesitaba personas. Cuando el fuego de Surtr lo arrasó todo, dos humanos se escondían en el bosque de Hoddmímir.",
+          "en": "But the world needed people too. When Surtr's fire swept over everything, two humans were hiding in Hoddmimir's wood."
+        },
+        {
+          "es": "Se dice que ese bosque era Yggdrasil mismo, y que sus raíces los protegieron mientras el mundo ardía.",
+          "en": "Some say that wood was Yggdrasil itself, and its roots kept them safe while the world burned."
+        },
+        {
+          "es": "Se llamaban Líf y Lífþrasir: la Vida y el que se aferra a la vida.",
+          "en": "Their names were Lif and Lifthrasir: Life, and the one who clings to life."
+        },
+        {
+          "es": "No tenían más alimento que el rocío de la mañana, y el rocío bastó para mantenerlos vivos.",
+          "en": "They had no food but the dew of the morning, and the dew was enough to keep them alive."
+        },
+        {
+          "es": "Por eso el rocío de la mañana era sagrado para los nórdicos: alimentó a quienes cruzaron el fin del mundo.",
+          "en": "That is why the morning dew was sacred to the Norse: it fed those who crossed the end of the world."
+        }
+      ],
+      "actores": [
+        {
+          "id": "lif",
+          "como": "ask",
+          "x": 900,
+          "rotulo": "LIF",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.7,
+              "hace": "tiembla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "lifthrasir",
+          "como": "embla",
+          "x": 1150,
+          "mira": "izq",
+          "rotulo": "LIFTHRASIR",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.9,
+              "hace": "tiembla",
+              "dur": 1
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yggdrasil",
+          "x": 1500,
+          "s": 1.2,
+          "capa": "medio"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 200,
+          "y": 790,
+          "dur": 1.5
+        },
+        {
+          "en": 0.3,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 1.2,
+          "tipo": "humo",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar",
+          "dur": 1.5
+        },
+        {
+          "en": 3.1,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 450
+        },
+        {
+          "en": 3.4,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 500,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "BOSQUE DE HODDMÍMIR",
+            "en": "HODDMIMIR'S WOOD"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "ROCÍO DE LA MAÑANA",
+            "en": "MORNING DEW"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "POR ESO EL ROCÍO ES SAGRADO",
+            "en": "THAT'S WHY MORNING DEW IS SACRED"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 5,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "pueblan",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuando el fuego se apagó, Líf y Lífþrasir salieron a la mañana, los primeros habitantes del mundo nuevo.",
+          "en": "When the fire had died, Lif and Lifthrasir stepped out into the morning, the first people of the new world."
+        },
+        {
+          "es": "Encontraron campos verdes, ríos limpios y un cielo sin una sola cicatriz.",
+          "en": "They found green fields, clean rivers and a sky without a single scar."
+        },
+        {
+          "es": "Tuvieron hijos, y sus hijos tuvieron hijos, y cada año eran más.",
+          "en": "They had children, and their children had children, and every year there were more of them."
+        },
+        {
+          "es": "Pronto la tierra entera volvió a llenarse de gente, con casas, campos y fogatas en cada valle.",
+          "en": "Soon the whole earth was full of people again, with houses, fields and hearth fires in every valley."
+        }
+      ],
+      "actores": [
+        {
+          "id": "lif",
+          "como": "ask",
+          "x": 300,
+          "rotulo": "LIF",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 700,
+              "dur": 1
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "lifthrasir",
+          "como": "embla",
+          "x": 100,
+          "rotulo": "LIFTHRASIR",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 950,
+              "dur": 1
+            },
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "nino",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "crece",
+              "escala": 1.1
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mujer",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "hombre",
+          "x": 1850,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.8,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 1100,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "casa_larga",
+          "x": 1500,
+          "s": 0.9,
+          "capa": "fondo",
+          "en": 3
+        },
+        {
+          "tipo": "casa_larga",
+          "x": 2000,
+          "s": 0.8,
+          "capa": "fondo",
+          "en": 3.4
+        },
+        {
+          "tipo": "fogata",
+          "x": 1200,
+          "s": 0.8,
+          "en": 3.7
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 900,
+          "y": 450,
+          "dur": 1.5
+        },
+        {
+          "en": 3.6,
+          "tipo": "chispas",
+          "x": 1200,
+          "y": 650
+        }
+      ]
+    },
+    {
+      "id": "sol",
+      "fondo": "aurora",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "En el cielo también había nueva luz. El lobo se había tragado al sol, pero antes ella había tenido una hija.",
+          "en": "There was new light in the sky, too. The wolf had swallowed the sun, but before that, she had borne a daughter."
+        },
+        {
+          "es": "Esa hija era tan hermosa como su madre, y brillaba aún más.",
+          "en": "That daughter was as beautiful as her mother, and shone even brighter."
+        },
+        {
+          "es": "Se elevó sobre la tierra verde y empezó a recorrer el mismo camino del cielo que había recorrido su madre.",
+          "en": "She rose over the green earth and began to ride the same road across the sky her mother had ridden."
+        },
+        {
+          "es": "Por eso el sol sigue saliendo cada mañana: la hija de Sól tomó el camino que dejó su madre.",
+          "en": "That is why the sun still rises every morning: Sol's daughter took up the road her mother left."
+        }
+      ],
+      "actores": [
+        {
+          "id": "sol",
+          "como": "mujer",
+          "x": 500,
+          "rotulo": "SOL",
+          "props": {
+            "pelo": "#E9C46A",
+            "capa": "#E9C46A",
+            "tocado": "corona"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.7,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "hija",
+          "como": "mujer",
+          "x": 700,
+          "rotulo": "SOL'S DAUGHTER",
+          "props": {
+            "pelo": "#F4D58D",
+            "capa": "#F4D58D",
+            "tocado": "diadema"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 2.2
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 700,
+          "y": 250,
+          "s": 1.2,
+          "capa": "fondo",
+          "en": 2
+        },
+        {
+          "tipo": "monte_nevado",
+          "x": 1500,
+          "s": 0.8,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 1.5
+        },
+        {
+          "en": 0.7,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.8,
+          "tipo": "aclarar",
+          "dur": 1.5
+        },
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 800,
+          "y": 300,
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "POR ESO EL SOL SIGUE SALIENDO",
+            "en": "THAT'S WHY THE SUN STILL RISES"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "profecia",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vidente, al final de su profecía, vio un salón más hermoso que el sol: Gimlé.",
+          "en": "The seeress, at the end of her prophecy, saw a hall fairer than the sun: Gimle."
+        },
+        {
+          "es": "Su techo era de oro, y brillaba más que cualquier cosa de este mundo.",
+          "en": "Its roof was gold, and it shone brighter than anything in this world."
+        },
+        {
+          "es": "Allí, dijo ella, vivirían los justos, y serían felices por siempre.",
+          "en": "There, she said, the righteous would dwell, and be happy forever."
+        },
+        {
+          "es": "Pero entonces, desde las montañas oscuras, se alzó otra vez Nidhogg, volando sobre la llanura con muertos en sus alas.",
+          "en": "But then, from the dark mountains, Nidhogg rose once more, flying over the plain with the dead upon his wings."
+        },
+        {
+          "es": "La vidente se hundió en la tierra, y su canto terminó.",
+          "en": "The seeress sank into the earth, and her song was over."
+        }
+      ],
+      "actores": [
+        {
+          "id": "vidente",
+          "como": "mujer",
+          "x": 500,
+          "rotulo": "THE SEERESS",
+          "props": {
+            "pelo": "#BFBFBF",
+            "capa": "#5B4A7A",
+            "tocado": "velo"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 1.5,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.5,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 4,
+              "hace": "cae"
+            },
+            {
+              "en": 4.6,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "nidhogg",
+          "como": "nidhogg",
+          "x": 150,
+          "y": 260,
+          "rotulo": "NIDHOGG",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "vuela",
+              "a": [
+                1500,
+                280
+              ],
+              "dur": 1.8
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 1500,
+          "s": 1.5,
+          "capa": "medio",
+          "en": 0.4
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 350,
+          "dur": 2
+        },
+        {
+          "en": 1.2,
+          "tipo": "chispas",
+          "x": 1500,
+          "y": 330
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 2
+        },
+        {
+          "en": 3.2,
+          "tipo": "niebla",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "GIMLÉ",
+            "en": "GIMLE"
+          },
+          "x": 1500,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "yggdrasil",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1.04,
+          1.14
+        ]
+      },
+      "frases": [
+        {
+          "es": "Del fuego y del hielo nació un gigante, y del cuerpo del gigante se hizo el mundo.",
+          "en": "From fire and ice a giant was born, and from the giant's body the world was made."
+        },
+        {
+          "es": "Un fresno inmenso sostuvo los nueve mundos, y los dioses pelearon, hicieron la paz y forjaron tesoros.",
+          "en": "A great ash tree held the nine worlds together, and the gods fought, made peace and forged treasures."
+        },
+        {
+          "es": "Odín dio un ojo por sabiduría, los hijos de Loki crecieron en la sombra, Baldr murió y el mundo ardió.",
+          "en": "Odin gave an eye for wisdom, Loki's children grew in the shadows, Baldr died, and the world burned."
+        },
+        {
+          "es": "Pero la historia no acaba en cenizas: la tierra sube del mar, cae el rocío y la hija del sol sigue su camino.",
+          "en": "But the story does not end in ashes: the land rises from the sea, the dew falls, and the sun's daughter keeps her road."
+        },
+        {
+          "es": "Por eso los nórdicos creían que todo final es un comienzo: hasta el fin del mundo fue el principio de otro.",
+          "en": "That is why the Norse believed every ending is a beginning: even the end of the world was the start of another."
+        },
+        {
+          "es": "Así termina la era de los dioses. Pero en Midgard empieza la era de los héroes: la temporada dos, Héroes del Norte.",
+          "en": "And so the age of the gods ends. But in Midgard the age of heroes begins: season two, Heroes of the North."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.4,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "baldr",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 1150,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yggdrasil",
+          "x": 1500,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve"
+        },
+        {
+          "en": 2.8,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 3.4,
+          "tipo": "aclarar",
+          "dur": 1.5
+        },
+        {
+          "en": 3.5,
+          "tipo": "luz",
+          "x": 900,
+          "y": 450,
+          "dur": 1.5
+        },
+        {
+          "en": 5.1,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LA SAGA",
+            "en": "THE SAGA"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "POR ESO TODO FINAL ES UN COMIENZO",
+            "en": "THAT'S WHY EVERY END IS A BEGINNING"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 5,
+          "estilo": "porque"
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "TEMPORADA 2: HÉROES DEL NORTE",
+            "en": "SEASON 2: HEROES OF THE NORTH"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El mundo volvió a salir del mar",
+        "en": "The world rose from the sea a second time"
+      },
+      "escena": "hundido",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Los dioses hallaron las fichas de oro del principio",
+        "en": "The gods found the golden pieces from the very beginning"
+      },
+      "escena": "idavoll",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "Dos humanos sobrevivieron al fin del mundo bebiendo rocío",
+        "en": "Two humans survived the end of the world on dew"
+      },
+      "escena": "rocio",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1000
+    }
+  ],
+  "miniatura": {
+    "heroe": "baldr",
+    "rival": "hodr"
+  }
+}

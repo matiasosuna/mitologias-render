@@ -1,0 +1,1168 @@
+{
+  "id": "egipcias-03-cinco-hijos",
+  "serie": "egipcias",
+  "numero": "03",
+  "titulo": {
+    "es": "Los cinco hijos de Nut",
+    "en": "The Five Children of Nut"
+  },
+  "tituloGriego": "THE FIVE CHILDREN OF NUT",
+  "miniatura": {
+    "heroe": "osiris",
+    "rival": "set"
+  },
+  "escenas": [
+    {
+      "id": "cinco-dias",
+      "fondo": "cielo_nut",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Llegó el final del año, y después del último día vinieron los cinco días de Thoth.",
+          "en": "The year came to its end, and after the last day came the five days of Thoth."
+        },
+        {
+          "es": "Eran días fuera del tiempo, y los egipcios los vivían con respeto y un poco de miedo.",
+          "en": "They were days outside of time, and the Egyptians lived them with respect and a little fear."
+        },
+        {
+          "es": "Arriba, en el cielo, Nut sintió que por fin había llegado su momento.",
+          "en": "Up in the sky, Nut felt that her moment had finally come."
+        },
+        {
+          "es": "Y en cada uno de esos cinco días, nació uno de sus hijos.",
+          "en": "And on each of those five days, one of her children was born."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 900,
+          "y": 420,
+          "dur": 1.5,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "I",
+            "en": "I"
+          },
+          "x": 660,
+          "y": 300,
+          "hasta": 4
+        },
+        {
+          "en": 0.9,
+          "texto": {
+            "es": "II",
+            "en": "II"
+          },
+          "x": 860,
+          "y": 300,
+          "hasta": 4
+        },
+        {
+          "en": 1.5,
+          "texto": {
+            "es": "III",
+            "en": "III"
+          },
+          "x": 1060,
+          "y": 300,
+          "hasta": 4
+        },
+        {
+          "en": 2.1,
+          "texto": {
+            "es": "IV",
+            "en": "IV"
+          },
+          "x": 1260,
+          "y": 300,
+          "hasta": 4
+        },
+        {
+          "en": 2.7,
+          "texto": {
+            "es": "V",
+            "en": "V"
+          },
+          "x": 1460,
+          "y": 300,
+          "hasta": 4
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "nut_arco",
+          "x": 960,
+          "capa": "fondo"
+        }
+      ]
+    },
+    {
+      "id": "osiris",
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "El primer día nació Osiris, y una luz distinta cayó sobre la tierra.",
+          "en": "On the first day Osiris was born, and a different light fell over the earth."
+        },
+        {
+          "es": "En Tebas, un sacerdote que sacaba agua para el templo oyó una voz que salía del santuario.",
+          "en": "In Thebes, a priest who was drawing water for the temple heard a voice coming from the shrine."
+        },
+        {
+          "es": "La voz le ordenó gritárselo a todos: «El señor de toda la tierra ha nacido».",
+          "en": "The voice told him to shout it to everyone: 'The lord of all the earth has been born.'"
+        },
+        {
+          "es": "Osiris tenía la piel verde, como las plantas que brotan, y lo llamaron el Bienhechor.",
+          "en": "Osiris had green skin, like plants sprouting from the ground, and they called him the Beneficent One."
+        }
+      ],
+      "actores": [
+        {
+          "id": "osiris",
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "brilla",
+              "dur": 1.2
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "destello"
+        },
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 450,
+          "dur": 2,
+          "intensidad": 0.7
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 850,
+          "y": 380,
+          "dur": 1,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "TEBAS",
+            "en": "THEBES"
+          },
+          "x": 500,
+          "y": 260,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "horus-viejo",
+      "fondo": "piramides",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "El segundo día nació Horus el Viejo, con cabeza de halcón, y alzó el vuelo hacia el cielo.",
+          "en": "On the second day Horus the Elder was born, falcon-headed, and he took flight into the sky."
+        },
+        {
+          "es": "Los egipcios decían que su ojo derecho era el sol, y su ojo izquierdo, la luna.",
+          "en": "The Egyptians said his right eye was the sun, and his left eye was the moon."
+        },
+        {
+          "es": "Era el halcón que cruza el cielo de un horizonte al otro, y desde arriba lo ve todo.",
+          "en": "He was the falcon who crosses the sky from one horizon to the other, seeing everything from above."
+        },
+        {
+          "es": "Lo llamaban el Viejo para no confundirlo con otro Horus, hijo de Osiris, que nacería mucho después.",
+          "en": "They called him the Elder so no one would mix him up with another Horus, a son of Osiris, who would be born much later."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "luna",
+          "x": 1500,
+          "y": 260,
+          "s": 1.3,
+          "en": 1.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "horus",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "halcon",
+          "como": "halcon",
+          "x": 400,
+          "y": 360,
+          "escala": 1.6,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1750,
+                300
+              ],
+              "dur": 2
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "OJO DERECHO: EL SOL",
+            "en": "RIGHT EYE: THE SUN"
+          },
+          "x": 1250,
+          "y": 300,
+          "hasta": 2.2
+        },
+        {
+          "en": 1.7,
+          "texto": {
+            "es": "OJO IZQUIERDO: LA LUNA",
+            "en": "LEFT EYE: THE MOON"
+          },
+          "x": 1500,
+          "y": 400,
+          "hasta": 2.6
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "HORUS EL VIEJO",
+            "en": "HORUS THE ELDER"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "set",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "El tercer día, Set no esperó su turno.",
+          "en": "On the third day, Set did not wait his turn."
+        },
+        {
+          "es": "Se abrió paso por su cuenta, rompiendo el costado de su madre para salir antes de tiempo.",
+          "en": "He forced his own way out, tearing through his mother's side to be born before his time."
+        },
+        {
+          "es": "Tenía la piel clara y el pelo rojo como el desierto, y la fuerza de una tormenta.",
+          "en": "He had pale skin, hair as red as the desert, and the strength of a storm."
+        },
+        {
+          "es": "Los egipcios lo veneraban y le tenían miedo: era el señor del desierto, del trueno y de las tormentas de arena.",
+          "en": "The Egyptians worshipped him and feared him: he was lord of the desert, of thunder and of sandstorms."
+        },
+        {
+          "es": "Era tan fuerte que, más adelante, el mismo Ra lo pondría en la proa de su barca para defenderla en la noche.",
+          "en": "He was so strong that later Ra himself would place him at the prow of his boat to defend it through the night."
+        },
+        {
+          "es": "Los egipcios creían que esos cinco días eran peligrosos, y el tercero, el de Set, el peor de todos.",
+          "en": "The Egyptians believed those five days were dangerous, and the third, Set's day, the worst of all."
+        }
+      ],
+      "actores": [
+        {
+          "id": "set",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 6,
+          "intensidad": 0.5
+        },
+        {
+          "en": 0.9,
+          "tipo": "destello"
+        },
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "rayo",
+          "x": 1000,
+          "dur": 0.6
+        },
+        {
+          "en": 3.2,
+          "tipo": "polvo",
+          "x": 1000,
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "EL DESIERTO",
+            "en": "THE DESERT"
+          },
+          "x": 1000,
+          "y": 260,
+          "hasta": 4.5
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "TERCER DÍA",
+            "en": "THIRD DAY"
+          },
+          "x": 960,
+          "y": 260,
+          "hasta": 6
+        }
+      ]
+    },
+    {
+      "id": "isis-neftis",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "El cuarto día nació Isis, en los pantanos de la orilla, entre los juncos.",
+          "en": "On the fourth day Isis was born, in the marshes by the river, among the reeds."
+        },
+        {
+          "es": "Su nombre, Aset, se escribía con el dibujo de un trono, y ese trono es la corona que lleva en la cabeza.",
+          "en": "Her name, Aset, was written with the picture of a throne, and that throne is the crown she wears on her head."
+        },
+        {
+          "es": "Isis era la más lista de todos: conocía palabras de poder que podían curar, o mandar sobre los dioses.",
+          "en": "Isis was the cleverest of them all: she knew words of power that could heal, or command the gods."
+        },
+        {
+          "es": "El quinto día nació Neftis, cuyo nombre significa «la señora de la casa».",
+          "en": "On the fifth day Nephthys was born, whose name means 'the lady of the house'."
+        },
+        {
+          "es": "Isis y Neftis se parecían tanto que los egipcios las pintaban casi iguales, una a cada lado de un muerto.",
+          "en": "Isis and Nephthys looked so alike that the Egyptians painted them almost identical, one on each side of the dead."
+        },
+        {
+          "es": "Y las dos tendrían que estar juntas en los días más oscuros que se acercaban.",
+          "en": "And the two of them would have to stand together in the darkest days that were coming."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "loto",
+          "x": 1450,
+          "s": 1,
+          "en": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ],
+          "props": {
+            "alas": true
+          }
+        },
+        {
+          "id": "neftis",
+          "x": 1050,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ],
+          "props": {
+            "alas": true
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1.5
+        },
+        {
+          "en": 2.2,
+          "tipo": "chispas",
+          "x": 700,
+          "y": 400,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "ASET = TRONO",
+            "en": "ASET = THRONE"
+          },
+          "x": 700,
+          "y": 240,
+          "hasta": 2.6
+        },
+        {
+          "en": 3.3,
+          "texto": {
+            "es": "LA SEÑORA DE LA CASA",
+            "en": "LADY OF THE HOUSE"
+          },
+          "x": 1050,
+          "y": 240,
+          "hasta": 4.4
+        }
+      ]
+    },
+    {
+      "id": "familia",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Osiris e Isis se casaron: eran hermanos, y se querían desde antes de nacer.",
+          "en": "Osiris and Isis married: they were brother and sister, and had loved each other since before they were born."
+        },
+        {
+          "es": "Set se casó con su hermana Neftis.",
+          "en": "Set married his sister Nephthys."
+        },
+        {
+          "es": "Mientras tanto, Geb, el dios de la tierra, ya estaba viejo y cansado.",
+          "en": "Meanwhile, Geb, the god of the earth, had grown old and tired."
+        },
+        {
+          "es": "Antes que él habían reinado Ra y Shu, y ahora le tocaba a él elegir quién seguiría.",
+          "en": "Before him Ra and Shu had ruled, and now it was his turn to choose who would come next."
+        },
+        {
+          "es": "Geb miró a sus nietos y le entregó la corona a Osiris, el mayor de todos.",
+          "en": "Geb looked at his grandchildren and gave the crown to Osiris, the eldest of them all."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1050,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "osiris",
+          "x": 1050,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "abraza"
+            },
+            {
+              "en": 4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4.7,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "x": 1560,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "neftis",
+          "x": 1700,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "geb",
+          "x": 520,
+          "props": {
+            "canas": true
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            },
+            {
+              "en": 4,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "chispas",
+          "x": 1150,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 4.2,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 380,
+          "dur": 1.5,
+          "intensidad": 0.7
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cosecha",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "En aquel tiempo, la gente de Egipto vivía como los animales: sin leyes, sin templos y sin cultivos.",
+          "en": "In those days the people of Egypt lived like wild animals: with no laws, no temples and no crops."
+        },
+        {
+          "es": "Osiris les enseñó a sembrar el trigo y la cebada, que Isis había encontrado creciendo salvajes entre las hierbas.",
+          "en": "Osiris taught them to sow wheat and barley, which Isis had found growing wild among the grasses."
+        },
+        {
+          "es": "Isis les enseñó a molerlos para hacer pan, y a hilar y tejer el lino.",
+          "en": "Isis showed them how to grind the grain into bread, and how to spin and weave flax."
+        },
+        {
+          "es": "Osiris les dio leyes, y les enseñó a honrar a los dioses y a levantar templos.",
+          "en": "Osiris gave them laws, and taught them to honor the gods and to raise temples."
+        },
+        {
+          "es": "Después recorrió el mundo entero, y conquistó a los pueblos sin armas: con música y con palabras.",
+          "en": "Then he travelled the whole world, winning over its peoples without weapons: with music and with words."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "papiro",
+          "x": 300,
+          "s": 0.9,
+          "en": 1
+        },
+        {
+          "tipo": "palmera",
+          "x": 1500,
+          "s": 1,
+          "en": 3
+        },
+        {
+          "tipo": "pilono",
+          "x": 2000,
+          "s": 1,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "h1",
+          "como": "egipcio",
+          "x": 350,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "h2",
+          "como": "egipcia",
+          "x": 520,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "osiris",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 1800,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 1150,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "luz",
+          "x": 900,
+          "y": 450,
+          "dur": 1.5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 500,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.4,
+          "texto": {
+            "es": "TRIGO Y CEBADA",
+            "en": "WHEAT AND BARLEY"
+          },
+          "x": 1000,
+          "y": 240,
+          "hasta": 2.6
+        },
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "PAN Y LINO",
+            "en": "BREAD AND LINEN"
+          },
+          "x": 1000,
+          "y": 240,
+          "hasta": 3.2
+        }
+      ]
+    },
+    {
+      "id": "set-mira",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero había alguien a quien ese reino no le gustaba: Set.",
+          "en": "But there was someone who did not like that kingdom: Set."
+        },
+        {
+          "es": "Veía cómo todos querían y respetaban a su hermano, y quería ese trono para él.",
+          "en": "He watched everyone love and respect his brother, and he wanted that throne for himself."
+        },
+        {
+          "es": "Con Isis vigilando el reino, Set no podía hacer nada. Por ahora.",
+          "en": "With Isis watching over the kingdom, Set could do nothing. For now."
+        }
+      ],
+      "actores": [
+        {
+          "id": "set",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "calla"
+            }
+          ]
+        },
+        {
+          "id": "osiris",
+          "x": 600,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 3,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "piramides",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Osiris reinaba, y Egipto prosperaba. Pero Osiris no había sido el primer rey de Egipto.",
+          "en": "Osiris was king, and Egypt prospered. But Osiris had not been the first king of Egypt."
+        },
+        {
+          "es": "El primero, mucho antes, había sido Ra, el sol, que gobernó sobre los dioses y los hombres.",
+          "en": "The first, long before, had been Ra, the sun, who ruled over gods and men."
+        },
+        {
+          "es": "¿Por qué dejó la tierra para irse al cielo? Esa es la historia del próximo episodio: el Ojo de Ra.",
+          "en": "Why did he leave the earth for the sky? That is the story of the next episode: the Eye of Ra."
+        }
+      ],
+      "actores": [
+        {
+          "id": "osiris",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.1,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 1.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "ojo",
+          "como": "ojo_ra",
+          "x": 1700,
+          "y": 330,
+          "escala": 1.1,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 400,
+          "dur": 1.5,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "PRÓXIMO: EL OJO DE RA",
+            "en": "NEXT: THE EYE OF RA"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El dios que rompió a su madre para nacer",
+        "en": "The god who tore his way out of his mother"
+      },
+      "escena": "set",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "La voz que anunció al rey antes de nacer",
+        "en": "The voice that announced a king at his birth"
+      },
+      "escena": "osiris",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Cómo los dioses le enseñaron a Egipto a hacer pan",
+        "en": "How the gods taught Egypt to make bread"
+      },
+      "escena": "cosecha",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 800
+    }
+  ]
+}

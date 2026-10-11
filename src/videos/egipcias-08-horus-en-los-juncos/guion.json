@@ -1,0 +1,1578 @@
+{
+  "id": "egipcias-08-horus-en-los-juncos",
+  "serie": "egipcias",
+  "numero": "08",
+  "titulo": {
+    "es": "Horus en los juncos",
+    "en": "Horus in the Marshes"
+  },
+  "tituloGriego": "HORUS IN THE MARSHES",
+  "miniatura": {
+    "heroe": "horus",
+    "rival": "set"
+  },
+  "escenas": [
+    {
+      "id": "juncal",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Anubis había envuelto el cuerpo de Osiris, y Osiris ya reinaba sobre el mundo de los muertos.",
+          "en": "Anubis had wrapped the body of Osiris, and Osiris now ruled the land of the dead."
+        },
+        {
+          "es": "Pero en los pantanos del delta había nacido un niño: Horus, el heredero del rey asesinado.",
+          "en": "But in the marshes of the Delta a boy had been born: Horus, the heir of the murdered king."
+        },
+        {
+          "es": "Y mientras Set siguiera en el trono de Egipto, ese niño no estaría a salvo ni un solo día.",
+          "en": "And as long as Set sat on the throne of Egypt, that child would not be safe for a single day."
+        },
+        {
+          "es": "Isis sabía que debía esconderlo. Y también sabía que Set ya la estaba vigilando.",
+          "en": "Isis knew she had to hide him. And she also knew that Set was already watching her."
+        }
+      ],
+      "actores": [
+        {
+          "id": "osiris",
+          "x": 300,
+          "capa": "fondo",
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 1.6,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "x": 1030,
+          "como": "horus_nino",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1500
+            },
+            {
+              "en": 2.6,
+              "hace": "senala"
+            },
+            {
+              "en": 3.5,
+              "hace": "sale"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 450,
+          "dur": 1.2,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1.5,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "HORUS",
+            "en": "HORUS"
+          },
+          "x": 1030,
+          "y": 380,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "telar",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "telar",
+          "x": 380,
+          "s": 1.1
+        },
+        {
+          "tipo": "puerta",
+          "x": 1600,
+          "s": 1
+        }
+      ],
+      "frases": [
+        {
+          "es": "Set mantenía a Isis encerrada en una casa de tejedoras, con guardias vigilando la puerta.",
+          "en": "Set kept Isis shut inside a house of weavers, with guards watching the door."
+        },
+        {
+          "es": "Isis no podía salir. Cada noche miraba a su hijo dormido y se preguntaba cómo escaparían.",
+          "en": "Isis could not leave. Every night she looked at her sleeping son and wondered how they could escape."
+        },
+        {
+          "es": "Hasta que una noche, en la oscuridad, apareció Thoth, el dios de la sabiduría.",
+          "en": "Until one night, in the dark, Thoth appeared, the god of wisdom."
+        },
+        {
+          "es": "«Isis, levántate», le dijo. «Huye esta misma noche con tu hijo, y escóndelo bien.»",
+          "en": "\"Isis, rise,\" he told her. \"Flee tonight with your son, and hide him well.\""
+        },
+        {
+          "es": "Isis envolvió a Horus en su manto y salió hacia la noche, sin hacer ruido.",
+          "en": "Isis wrapped Horus in her cloak and slipped out into the night without a sound."
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "x": 1030,
+          "como": "horus_nino",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 1630,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 4,
+          "intensidad": 0.7
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1350,
+          "y": 430,
+          "dur": 1.5,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LA CASA DE LAS TEJEDORAS",
+            "en": "THE HOUSE OF WEAVERS"
+          },
+          "x": 960,
+          "y": 250,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "escorpiones",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 900,
+        "zoom": [
+          1,
+          1.04
+        ]
+      },
+      "frases": [
+        {
+          "es": "Isis no iba sola. Siete escorpiones, enviados por la diosa Serqet, caminaban con ella para protegerla.",
+          "en": "Isis did not travel alone. Seven scorpions, sent by the goddess Serqet, walked with her to protect her."
+        },
+        {
+          "es": "Dos la seguían, dos iban a sus lados y tres abrían el camino: Tefen y Befen, Mestet y Mestetef, Petet, Thetet y Matet.",
+          "en": "Two followed, two walked at her sides, and three led the way: Tefen and Befen, Mestet and Mestetef, Petet, Thetet and Matet."
+        },
+        {
+          "es": "Isis les dio una orden: «No hablen con nadie. No saluden a nadie. Que nadie sepa quiénes somos.»",
+          "en": "Isis gave them an order: \"Speak to no one. Greet no one. Let nobody know who we are.\""
+        },
+        {
+          "es": "Y así, bajo la luna, caminaron toda la noche por los senderos del delta.",
+          "en": "And so, beneath the moon, they walked all night along the paths of the Delta."
+        }
+      ],
+      "actores": [
+        {
+          "id": "serqet",
+          "x": 380,
+          "como": "serket",
+          "capa": "fondo",
+          "escala": 0.9,
+          "rotulo": "SERQET",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 0.6,
+              "hace": "senala"
+            },
+            {
+              "en": 1.4,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 2.5
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "x": 690,
+          "como": "horus_nino",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 1630,
+              "dur": 2.5
+            }
+          ]
+        },
+        {
+          "id": "tefen",
+          "x": 300,
+          "como": "escorpion",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 1240,
+              "dur": 2.5
+            }
+          ]
+        },
+        {
+          "id": "befen",
+          "x": 400,
+          "como": "escorpion",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 1340,
+              "dur": 2.5
+            }
+          ]
+        },
+        {
+          "id": "mestet",
+          "x": 520,
+          "como": "escorpion",
+          "escala": 0.9,
+          "rotulo": "",
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 1470,
+              "dur": 2.5
+            }
+          ]
+        },
+        {
+          "id": "mestetef",
+          "x": 640,
+          "como": "escorpion",
+          "escala": 0.9,
+          "rotulo": "",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 1590,
+              "dur": 2.5
+            }
+          ]
+        },
+        {
+          "id": "petet",
+          "x": 780,
+          "como": "escorpion",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 1740,
+              "dur": 2.5
+            }
+          ]
+        },
+        {
+          "id": "thetet",
+          "x": 880,
+          "como": "escorpion",
+          "escala": 0.9,
+          "rotulo": "",
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 1840,
+              "dur": 2.5
+            }
+          ]
+        },
+        {
+          "id": "matet",
+          "x": 980,
+          "como": "escorpion",
+          "escala": 0.9,
+          "rotulo": "",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 1940,
+              "dur": 2.5
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "SIETE ESCORPIONES",
+            "en": "SEVEN SCORPIONS"
+          },
+          "x": 960,
+          "y": 250,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "puertas",
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 480,
+          "s": 1.4
+        },
+        {
+          "tipo": "casa",
+          "x": 1500,
+          "s": 0.8
+        }
+      ],
+      "frases": [
+        {
+          "es": "Al amanecer llegaron a un pueblo del delta. Cansada y hambrienta, Isis llamó a la puerta de una casa grande.",
+          "en": "At dawn they reached a village in the Delta. Tired and hungry, Isis knocked at the door of a large house."
+        },
+        {
+          "es": "Pero la dueña, una mujer rica, vio a los escorpiones, se asustó y le cerró la puerta.",
+          "en": "But the owner, a rich woman, saw the scorpions, took fright, and shut the door."
+        },
+        {
+          "es": "Isis siguió su camino hasta una choza humilde, donde vivía una pobre mujer de los pantanos. Ella sí le abrió.",
+          "en": "Isis went on to a humble hut where a poor woman of the marshes lived. She opened her door."
+        },
+        {
+          "es": "Los escorpiones se enfurecieron. Juntaron su veneno en el aguijón de Tefen, y Tefen se deslizó bajo la puerta de la casa rica.",
+          "en": "The scorpions were furious. They gathered all their venom into the sting of Tefen, and Tefen slid beneath the rich woman's door."
+        },
+        {
+          "es": "Allí picó al hijo de la dueña, y el niño cayó enfermo.",
+          "en": "There he stung the rich woman's son, and the boy fell ill."
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 800
+            },
+            {
+              "en": 0.7,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.6,
+              "hace": "baja"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "x": 1810,
+          "como": "horus_nino",
+          "escala": 0.9,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 910
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1360,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "rica",
+          "x": 600,
+          "como": "reina_egipcia",
+          "rotulo": "",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.9,
+              "hace": "baja"
+            },
+            {
+              "en": 4,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "pobre",
+          "x": 1600,
+          "como": "egipcia",
+          "rotulo": "",
+          "mira": "izq",
+          "escala": 0.95,
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "tefen",
+          "x": 1150,
+          "como": "escorpion",
+          "escala": 0.9,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 700,
+              "dur": 1
+            },
+            {
+              "en": 3.9,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "x": 420,
+          "como": "nino",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.3,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.8,
+          "tipo": "destello",
+          "dur": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA CASA RICA",
+            "en": "THE RICH HOUSE"
+          },
+          "x": 480,
+          "y": 280,
+          "hasta": 2
+        },
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "LA CHOZA",
+            "en": "THE HUT"
+          },
+          "x": 1500,
+          "y": 330,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "curacion",
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 1100,
+          "s": 1.3
+        }
+      ],
+      "frases": [
+        {
+          "es": "La mujer rica corrió por las calles pidiendo ayuda, pero nadie sabía curar aquel veneno.",
+          "en": "The rich woman ran through the streets begging for help, but no one knew how to cure that venom."
+        },
+        {
+          "es": "Isis oyó los gritos y sintió compasión. Fue hasta la casa, puso las manos sobre el niño y habló.",
+          "en": "Isis heard the cries and felt pity. She went to the house, laid her hands on the boy, and spoke."
+        },
+        {
+          "es": "«Veneno de Tefen, sal y cae a la tierra. Yo soy Isis, la señora de la magia, y mis palabras siempre se cumplen.»",
+          "en": "\"Poison of Tefen, come out and fall to the ground. I am Isis, mistress of magic, and my words always come true.\""
+        },
+        {
+          "es": "El niño respiró hondo y abrió los ojos. El veneno había salido de su cuerpo.",
+          "en": "The boy drew a deep breath and opened his eyes. The poison had left his body."
+        },
+        {
+          "es": "Avergonzada, la mujer rica compartió sus riquezas con la pobre mujer que había recibido a Isis.",
+          "en": "Ashamed, the rich woman shared her wealth with the poor woman who had welcomed Isis."
+        }
+      ],
+      "actores": [
+        {
+          "id": "rica",
+          "x": 300,
+          "como": "reina_egipcia",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 0.8,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.6
+            },
+            {
+              "en": 1.5,
+              "hace": "lamenta"
+            },
+            {
+              "en": 4,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "x": 1300,
+          "como": "nino",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1130
+            },
+            {
+              "en": 1.8,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "pobre",
+          "x": 1850,
+          "como": "egipcia",
+          "rotulo": "",
+          "mira": "izq",
+          "escala": 0.95,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "entra",
+              "a": 1500
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1300,
+          "y": 600,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 500,
+          "dur": 1,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "chemmis",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 1250,
+          "s": 0.9
+        },
+        {
+          "tipo": "loto",
+          "x": 450,
+          "s": 1
+        },
+        {
+          "tipo": "papiro",
+          "x": 1750,
+          "s": 1.2
+        }
+      ],
+      "frases": [
+        {
+          "es": "Por fin Isis llegó a Chemmis, una isla escondida entre los papiros. Era tan secreta que decían que flotaba sobre el agua.",
+          "en": "At last Isis reached Chemmis, an island hidden among the papyrus. It was so secret that people said it floated on the water."
+        },
+        {
+          "es": "Allí nadie sabía quién era. Para todos, Isis era una madre más, con un niño pequeño en brazos.",
+          "en": "There, nobody knew who she was. To everyone, Isis was just another mother with a small child in her arms."
+        },
+        {
+          "es": "Levantó una cabaña de cañas y los siete escorpiones vigilaron cada orilla de la isla.",
+          "en": "She raised a hut of reeds, and the seven scorpions kept watch along every shore of the island."
+        },
+        {
+          "es": "Pasaron los días. Horus aprendió a reír y a gatear, y a mirar los halcones que volaban sobre el río.",
+          "en": "Days passed. Horus learned to laugh and crawl, and to watch the falcons that flew over the river."
+        },
+        {
+          "es": "Pero para alimentarlo, Isis tenía que salir a buscar pan, y dejarlo solo.",
+          "en": "But to feed him, Isis had to go out to find bread, and leave him alone."
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 820
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 200,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "x": 830,
+          "como": "horus_nino",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 950
+            },
+            {
+              "en": 3,
+              "hace": "crece",
+              "escala": 0.55
+            }
+          ]
+        },
+        {
+          "id": "s1",
+          "x": 1500,
+          "como": "escorpion",
+          "escala": 0.9,
+          "rotulo": "",
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "s2",
+          "x": 380,
+          "como": "escorpion",
+          "escala": 0.9,
+          "rotulo": "",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "halcon",
+          "x": 1500,
+          "como": "halcon",
+          "y": 280,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "vuela",
+              "a": [
+                300,
+                250
+              ],
+              "dur": 1.6
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 0.5,
+          "texto": {
+            "es": "CHEMMIS",
+            "en": "CHEMMIS"
+          },
+          "x": 960,
+          "y": 250,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "picadura",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1.05,
+          1.12
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 1200,
+          "s": 0.9
+        }
+      ],
+      "frases": [
+        {
+          "es": "Una tarde volvió con las manos llenas y encontró a Horus tendido en el suelo.",
+          "en": "One evening she came back with her hands full and found Horus lying on the ground."
+        },
+        {
+          "es": "Estaba pálido, inmóvil, con espuma en los labios. Un escorpión lo había picado.",
+          "en": "He was pale and motionless, with foam on his lips. A scorpion had stung him."
+        },
+        {
+          "es": "Isis gritó tan fuerte que su grito llegó hasta el cielo. La gente de los pantanos corrió a ayudar, pero nadie sabía qué hacer.",
+          "en": "Isis cried out so loudly that her voice reached the sky. The marsh people ran to help, but nobody knew what to do."
+        },
+        {
+          "es": "Llegaron su hermana Neftis y Serqet, la diosa de los escorpiones. Pero el veneno era fuerte y Horus se enfriaba en brazos de Isis.",
+          "en": "Her sister Nephthys came, and Serqet, the scorpion goddess. But the poison was strong, and Horus grew colder in his mother's arms."
+        },
+        {
+          "es": "Entonces Isis levantó la cara al cielo y llamó al único que podía detener al sol: Ra.",
+          "en": "Then Isis lifted her face to the sky and called on the only one who could stop the sun: Ra."
+        }
+      ],
+      "actores": [
+        {
+          "id": "horus",
+          "x": 900,
+          "como": "horus_nino",
+          "escala": 1.0,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 4,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 760
+            },
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 4,
+              "hace": "levantarse"
+            },
+            {
+              "en": 4.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "neftis",
+          "x": 250,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 450
+            },
+            {
+              "en": 3.7,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "serqet",
+          "x": 130,
+          "como": "serket",
+          "rotulo": "SERQET",
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "entra",
+              "a": 300
+            }
+          ]
+        },
+        {
+          "id": "vecina",
+          "x": 1650,
+          "como": "egipcia",
+          "rotulo": "",
+          "mira": "izq",
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1250
+            },
+            {
+              "en": 2.7,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 5,
+          "intensidad": 0.4
+        },
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 4.2,
+          "tipo": "luz",
+          "x": 900,
+          "y": 150,
+          "dur": 0.8,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "barca",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 960,
+          "y": 330,
+          "s": 0.55
+        }
+      ],
+      "frases": [
+        {
+          "es": "El grito llegó hasta la barca de Ra, que cruzaba el cielo, y la barca se detuvo. Por primera vez, el sol dejó de avanzar.",
+          "en": "The cry reached the boat of Ra as it crossed the sky, and the boat stopped. For the first time, the sun stopped moving."
+        },
+        {
+          "es": "La oscuridad cayó sobre el mundo, y Thoth bajó desde la barca hasta los pantanos.",
+          "en": "Darkness fell over the world, and Thoth came down from the boat to the marshes."
+        },
+        {
+          "es": "«No temas, Isis», dijo. «Vengo del cielo con el aliento de vida. La barca de Ra no se moverá hasta que tu hijo se cure.»",
+          "en": "\"Fear not, Isis,\" he said. \"I come from the sky with the breath of life. The boat of Ra will not move until your son is healed.\""
+        },
+        {
+          "es": "Y le ordenó al veneno: «Sal y cae al suelo. Horus vive, y tú no tienes poder sobre él.»",
+          "en": "And he commanded the poison: \"Come out and fall to the ground. Horus lives, and you have no power over him.\""
+        },
+        {
+          "es": "Horus abrió los ojos, tomó aire y lloró fuerte, como lloran los niños que están vivos.",
+          "en": "Horus opened his eyes, drew breath, and cried loudly, the way living children do."
+        },
+        {
+          "es": "Entonces la barca de Ra volvió a navegar, y la luz regresó al mundo.",
+          "en": "Then the boat of Ra sailed on, and light returned to the world."
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 4,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "x": 730,
+          "como": "horus_nino",
+          "escala": 1.0,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 4,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.3,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.1,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 4.5,
+          "intensidad": 1.1
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 500,
+          "dur": 1.2,
+          "intensidad": 0.7
+        },
+        {
+          "en": 5,
+          "tipo": "aclarar",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.5,
+          "texto": {
+            "es": "LA BARCA SE DETIENE",
+            "en": "THE BOAT STOPS"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "cura",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "tumba",
+          "x": 1450,
+          "s": 1.1
+        }
+      ],
+      "frases": [
+        {
+          "es": "Los egipcios contaban esta historia por una razón muy práctica: la usaban como remedio.",
+          "en": "The Egyptians told this story for a very practical reason: they used it as a remedy."
+        },
+        {
+          "es": "Cuando alguien sufría una picadura, el sacerdote recitaba las palabras de Isis y de Thoth, como si Horus se curara otra vez.",
+          "en": "When someone was stung, a priest recited the words of Isis and Thoth, as if Horus were being healed all over again."
+        },
+        {
+          "es": "En algunas estelas se vertía agua sobre el texto, y el enfermo la bebía para que el poder de las palabras entrara en su cuerpo.",
+          "en": "On some stelae, water was even poured over the text, and the patient drank it so the power of the words could enter the body."
+        },
+        {
+          "es": "Mientras tanto, en los juncos, Horus crecía fuerte y valiente, y aprendía de su madre todo lo que ella sabía de magia.",
+          "en": "Meanwhile, in the reeds, Horus grew strong and brave, learning from his mother everything she knew about magic."
+        }
+      ],
+      "actores": [
+        {
+          "id": "sacerdote",
+          "x": 700,
+          "como": "sacerdote_egipcio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.1,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "enfermo",
+          "x": 1150,
+          "como": "egipcio",
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.5,
+              "hace": "levantarse"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1450,
+          "y": 500,
+          "dur": 1
+        },
+        {
+          "en": 2.5,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 450,
+          "dur": 1,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "POR ESO ESTA HISTORIA ERA UN REMEDIO",
+            "en": "THAT'S WHY THIS STORY WAS A CURE"
+          },
+          "x": 960,
+          "y": 210,
+          "estilo": "porque",
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pasaron los años. El niño frágil de los juncos se convirtió en un joven con la mirada de un halcón.",
+          "en": "Years passed. The fragile child of the reeds became a young man with the gaze of a falcon."
+        },
+        {
+          "es": "Un día, Horus dejó el pantano y miró hacia el sur, hacia el trono de su padre.",
+          "en": "One day, Horus left the marsh and looked south, toward his father's throne."
+        },
+        {
+          "es": "Entre él y la corona estaban Set, el dios más fuerte de Egipto, y un tribunal de dioses que tendría que decidir.",
+          "en": "Between him and the crown stood Set, the strongest god in Egypt, and a court of gods who would have to decide."
+        },
+        {
+          "es": "Así empezó el juicio más largo de la historia de los dioses. Esa es la historia del próximo episodio.",
+          "en": "So began the longest trial in the history of the gods. That is the story of the next episode."
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "x": 780,
+          "como": "horus_nino",
+          "escala": 1.0,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "crece",
+              "escala": 1,
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1200,
+              "dur": 1
+            },
+            {
+              "en": 1.9,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1650
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "PRÓXIMO: LAS CONTIENDAS DE HORUS Y SET",
+            "en": "NEXT: THE CONTENDINGS OF HORUS AND SET"
+          },
+          "x": 960,
+          "y": 250
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La noche en que el sol se detuvo por un bebé",
+        "en": "The night the sun stopped for a baby"
+      },
+      "escena": "barca",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 850
+    },
+    {
+      "gancho": {
+        "es": "Los siete escorpiones que protegían a una diosa",
+        "en": "The seven scorpions who guarded a goddess"
+      },
+      "escena": "escorpiones",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "La puerta que se cerró ante una diosa",
+        "en": "The door that was shut on a goddess"
+      },
+      "escena": "puertas",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 900
+    }
+  ]
+}

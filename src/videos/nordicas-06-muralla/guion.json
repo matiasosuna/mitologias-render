@@ -1,0 +1,1482 @@
+{
+  "id": "nordicas-06-muralla",
+  "serie": "nordicas",
+  "numero": "06",
+  "titulo": {
+    "es": "La muralla de Asgard",
+    "en": "The Wall of Asgard"
+  },
+  "tituloGriego": "THE WALL OF ASGARD",
+  "escenas": [
+    {
+      "id": "enganche",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Odín había visto el futuro, y lo que vio lo llenó de miedo.",
+          "en": "Odin had seen the future, and what he saw filled him with fear."
+        },
+        {
+          "es": "Pero un dios no puede vivir asustado, y Asgard tenía un problema más urgente.",
+          "en": "But a god cannot live in fear, and Asgard had a more urgent problem."
+        },
+        {
+          "es": "Desde la guerra con los Vanir, la muralla de los dioses seguía en ruinas.",
+          "en": "Ever since the war with the Vanir, the wall of the gods had lain in ruins."
+        },
+        {
+          "es": "Y Thor, su mejor defensor, estaba lejos, en el este, luchando contra los trolls.",
+          "en": "And Thor, their best defender, was far away in the east, fighting trolls."
+        },
+        {
+          "es": "Cualquier gigante podía entrar en Asgard. Y los gigantes no habían olvidado lo que Odín le hizo a Ymir.",
+          "en": "Any giant could walk into Asgard. And the giants had not forgotten what Odin did to Ymir."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta",
+              "dur": 1
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 1000,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "gira"
+            },
+            {
+              "en": 3.1,
+              "hace": "camina",
+              "a": 1700,
+              "dur": 0.9
+            },
+            {
+              "en": 3.9,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "gigante",
+          "como": "jotun",
+          "x": 1900,
+          "mira": "izq",
+          "capa": "fondo",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.2,
+              "hace": "camina",
+              "a": 1650,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 1050,
+          "capa": "fondo",
+          "props": {
+            "ancho": 420,
+            "alto": 110
+          }
+        },
+        {
+          "tipo": "roca",
+          "x": 1300,
+          "s": 0.6,
+          "capa": "medio"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "polvo",
+          "x": 1200,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "forastero",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día llegó a las puertas un forastero, con un enorme semental a su lado.",
+          "en": "One day a stranger arrived at the gates, with an enormous stallion at his side."
+        },
+        {
+          "es": "Dijo que era constructor, y que podía levantar una muralla que ningún gigante lograría cruzar.",
+          "en": "He said he was a builder, and that he could raise a wall no giant could ever cross."
+        },
+        {
+          "es": "Su oferta: terminarla en tres inviernos, ni uno más.",
+          "en": "His offer: to finish it in three winters, not one more."
+        },
+        {
+          "es": "Y a cambio pidió tres cosas: a Freyja por esposa, el Sol y la Luna.",
+          "en": "And in return he asked for three things: Freyja as his bride, the Sun and the Moon."
+        },
+        {
+          "es": "Los dioses se miraron en silencio. El precio era imposible de pagar.",
+          "en": "The gods looked at one another in silence. The price was impossible to pay."
+        }
+      ],
+      "actores": [
+        {
+          "id": "constructor",
+          "como": "hombre",
+          "x": 2200,
+          "mira": "izq",
+          "rotulo": "STRANGER",
+          "props": {
+            "capa": "#6B5B4A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1500,
+              "dur": 0.9
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "svadilfari",
+          "como": "caballo",
+          "x": 2450,
+          "mira": "izq",
+          "rotulo": "SVAÐILFARI",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1800,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "calla"
+            }
+          ]
+        },
+        {
+          "id": "freyja",
+          "x": 850,
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 1150,
+          "y": 330,
+          "s": 0.5,
+          "en": 3
+        },
+        {
+          "tipo": "luna",
+          "x": 1350,
+          "y": 330,
+          "s": 0.5,
+          "en": 3.3
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "destello",
+          "x": 1250
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "TRES INVIERNOS",
+            "en": "THREE WINTERS"
+          },
+          "x": 960,
+          "y": 240,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "FREYJA, EL SOL Y LA LUNA",
+            "en": "FREYJA, THE SUN AND THE MOON"
+          },
+          "x": 960,
+          "y": 240
+        }
+      ]
+    },
+    {
+      "id": "consejo",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dioses se reunieron en el salón para decidir qué hacer.",
+          "en": "The gods gathered in the hall to decide what to do."
+        },
+        {
+          "es": "Casi todos querían rechazar el trato, hasta que Loki se puso de pie.",
+          "en": "Almost all of them wanted to refuse the deal, until Loki rose to his feet."
+        },
+        {
+          "es": "Propuso aceptar, pero con una condición: la muralla debía estar lista en un solo invierno.",
+          "en": "He proposed to accept, but on one condition: the wall must be finished in a single winter."
+        },
+        {
+          "es": "Sin ayuda de nadie. Solo el constructor y su caballo, Svaðilfari.",
+          "en": "With no help from anyone. Only the builder and his horse, Svaðilfari."
+        },
+        {
+          "es": "Y si el primer día del verano faltaba una sola piedra, no cobraría nada.",
+          "en": "And if a single stone was missing on the first day of summer, he would be paid nothing."
+        },
+        {
+          "es": "Los dioses juraron el trato con grandes juramentos, seguros de que era imposible cumplirlo.",
+          "en": "The gods swore to the bargain with solemn oaths, sure that no one could ever fulfill it."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "tyr",
+          "x": 750,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "freyja",
+          "x": 1050,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 2.5
+            },
+            {
+              "en": 5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "constructor",
+          "como": "hombre",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "STRANGER",
+          "props": {
+            "capa": "#6B5B4A"
+          },
+          "pasos": [
+            {
+              "en": 3.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 5,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 450,
+          "s": 0.8,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "trono",
+          "x": 1000,
+          "s": 0.8,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "chispas",
+          "x": 1350,
+          "y": 560
+        },
+        {
+          "en": 5,
+          "tipo": "luz",
+          "dur": 1
+        },
+        {
+          "en": 5.2,
+          "tipo": "destello",
+          "x": 1100
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "UN SOLO INVIERNO",
+            "en": "ONE WINTER ONLY"
+          },
+          "x": 960,
+          "y": 240,
+          "hasta": 4
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "JURAMENTOS",
+            "en": "SOLEMN OATHS"
+          },
+          "x": 960,
+          "y": 240
+        }
+      ]
+    },
+    {
+      "id": "obra",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1.02,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "El primer día del invierno, el constructor empezó a trabajar.",
+          "en": "On the first day of winter, the builder began to work."
+        },
+        {
+          "es": "De noche, Svaðilfari arrastraba piedras enormes. De día, su amo las colocaba una sobre otra.",
+          "en": "By night, Svaðilfari hauled enormous stones. By day, his master set them one upon another."
+        },
+        {
+          "es": "Los dioses miraban asombrados: el caballo hacía el doble de trabajo que el constructor.",
+          "en": "The gods watched in amazement: the horse did twice as much work as the builder."
+        },
+        {
+          "es": "Pasaban los meses, y la muralla crecía: alta, firme, imposible de escalar.",
+          "en": "The months went by, and the wall kept growing: tall, solid, impossible to climb."
+        },
+        {
+          "es": "Ningún gigante, ni de la montaña ni del hielo, podría cruzarla.",
+          "en": "No giant, of mountain or of frost, would ever be able to cross it."
+        }
+      ],
+      "actores": [
+        {
+          "id": "svadilfari",
+          "como": "caballo",
+          "x": 200,
+          "rotulo": "SVAÐILFARI",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 800,
+              "dur": 1.5
+            },
+            {
+              "en": 2.8,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "constructor",
+          "como": "hombre",
+          "x": 900,
+          "rotulo": "BUILDER",
+          "props": {
+            "capa": "#6B5B4A"
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 1950,
+          "mira": "izq",
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 1100,
+          "capa": "fondo",
+          "props": {
+            "ancho": 900,
+            "alto": 120
+          },
+          "en": 1
+        },
+        {
+          "tipo": "muralla",
+          "x": 1100,
+          "capa": "fondo",
+          "props": {
+            "ancho": 900,
+            "alto": 200
+          },
+          "en": 2.5
+        },
+        {
+          "tipo": "muralla",
+          "x": 1100,
+          "capa": "fondo",
+          "props": {
+            "ancho": 900,
+            "alto": 300
+          },
+          "en": 3.5
+        },
+        {
+          "tipo": "roca",
+          "x": 650,
+          "s": 1.1,
+          "capa": "medio"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve",
+          "dur": 4
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 1.8,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 2.5,
+          "tipo": "polvo",
+          "x": 1300,
+          "dur": 1
+        },
+        {
+          "en": 3.5,
+          "tipo": "temblor",
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "id": "plazo",
+      "fondo": "asgard",
+      "camara": {
+        "de": 100,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Faltaban tres días para el verano, y la muralla estaba casi terminada.",
+          "en": "Three days remained before summer, and the wall was almost finished."
+        },
+        {
+          "es": "A la fortaleza solo le faltaba la puerta.",
+          "en": "Only the gateway was still missing."
+        },
+        {
+          "es": "Entonces los dioses comprendieron lo que habían hecho: iban a perder a Freyja, el Sol y la Luna.",
+          "en": "Then the gods understood what they had done: they were about to lose Freyja, the Sun and the Moon."
+        },
+        {
+          "es": "Se reunieron furiosos, buscando un culpable. Y todos miraron a Loki.",
+          "en": "They gathered in fury, looking for someone to blame. And every eye turned to Loki."
+        },
+        {
+          "es": "Lo amenazaron con una muerte terrible si no encontraba la forma de que el constructor no cobrara.",
+          "en": "They threatened him with a terrible death unless he found a way to stop the builder from being paid."
+        },
+        {
+          "es": "Loki, aterrado, juró que lo arreglaría, costara lo que costara.",
+          "en": "Loki, terrified, swore that he would fix it, whatever it took."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "freyja",
+          "x": 750,
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "tyr",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "tiembla",
+              "dur": 1.2
+            },
+            {
+              "en": 5,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "constructor",
+          "como": "hombre",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "BUILDER",
+          "props": {
+            "capa": "#6B5B4A"
+          },
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 1250,
+          "capa": "fondo",
+          "props": {
+            "ancho": 420,
+            "alto": 300
+          }
+        },
+        {
+          "tipo": "muralla",
+          "x": 1750,
+          "capa": "fondo",
+          "props": {
+            "ancho": 600,
+            "alto": 300
+          }
+        },
+        {
+          "tipo": "sol",
+          "x": 300,
+          "y": 280,
+          "s": 0.4,
+          "en": 2
+        },
+        {
+          "tipo": "luna",
+          "x": 520,
+          "y": 280,
+          "s": 0.4,
+          "en": 2
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 2
+        },
+        {
+          "en": 4,
+          "tipo": "rayo",
+          "x": 1300
+        },
+        {
+          "en": 4.1,
+          "tipo": "temblor",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "TRES DÍAS PARA EL VERANO",
+            "en": "THREE DAYS BEFORE SUMMER"
+          },
+          "x": 960,
+          "y": 240,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "yegua",
+      "fondo": "bosque_nevado",
+      "camara": {
+        "de": 0,
+        "a": 700,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Esa noche, el constructor fue al bosque con Svaðilfari a buscar más piedras.",
+          "en": "That night, the builder went into the forest with Svaðilfari to fetch more stones."
+        },
+        {
+          "es": "De pronto, de entre los árboles salió una yegua, relinchando.",
+          "en": "Suddenly, out of the trees came a mare, neighing."
+        },
+        {
+          "es": "Svaðilfari la vio, rompió sus arneses y salió corriendo tras ella.",
+          "en": "Svaðilfari saw her, broke his harness and galloped after her."
+        },
+        {
+          "es": "El constructor corrió detrás, gritando, y toda la noche los dos caballos se perdieron en el bosque.",
+          "en": "The builder ran after them, shouting, and all night long the two horses vanished into the forest."
+        },
+        {
+          "es": "Esa yegua era Loki, que había cambiado de forma para salvar a los dioses.",
+          "en": "That mare was Loki, who had changed his shape to save the gods."
+        }
+      ],
+      "actores": [
+        {
+          "id": "constructor",
+          "como": "hombre",
+          "x": 300,
+          "rotulo": "BUILDER",
+          "props": {
+            "capa": "#6B5B4A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 600,
+              "dur": 1
+            },
+            {
+              "en": 2.8,
+              "hace": "corre",
+              "a": 1900,
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "svadilfari",
+          "como": "caballo",
+          "x": 750,
+          "rotulo": "SVAÐILFARI",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1
+            },
+            {
+              "en": 2.1,
+              "hace": "corre",
+              "a": 2300,
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 1600,
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "transforma",
+              "en_que": "caballo"
+            },
+            {
+              "en": 2.4,
+              "hace": "corre",
+              "a": 2700,
+              "dur": 1.2
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 1150,
+          "s": 1.2,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pino",
+          "x": 1500,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pino",
+          "x": 2100,
+          "s": 1.2,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve",
+          "dur": 4
+        },
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.5
+        },
+        {
+          "en": 1.3,
+          "tipo": "destello",
+          "x": 1600
+        },
+        {
+          "en": 2.1,
+          "tipo": "polvo",
+          "x": 1000,
+          "dur": 1.5
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "LOKI, LA YEGUA",
+            "en": "LOKI, THE MARE"
+          },
+          "x": 960,
+          "y": 240
+        }
+      ]
+    },
+    {
+      "id": "gigante",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sin su caballo, el constructor no pudo terminar a tiempo, y comprendió que había perdido.",
+          "en": "Without his horse, the builder could not finish in time, and he understood that he had lost."
+        },
+        {
+          "es": "Entonces se enfureció y dejó de fingir: era un gigante de la montaña.",
+          "en": "Then he flew into a rage and stopped pretending: he was a mountain giant."
+        },
+        {
+          "es": "Los dioses lo vieron y lo supieron. Nunca había sido un simple constructor.",
+          "en": "The gods saw him and knew. He had never been a simple builder."
+        },
+        {
+          "es": "Rompieron sus juramentos y llamaron a Thor, que acababa de volver del este.",
+          "en": "They broke their oaths and called for Thor, who had just come back from the east."
+        },
+        {
+          "es": "Thor alzó a Mjölnir y, de un solo golpe, lo envió a la oscuridad de Niflhel.",
+          "en": "Thor raised Mjölnir and with a single blow sent him down into the darkness of Niflhel."
+        },
+        {
+          "es": "Así se salvaron Freyja, el Sol y la Luna. Pero los dioses habían roto sus palabras, y eso tendría un precio.",
+          "en": "So Freyja, the Sun and the Moon were saved. But the gods had broken their word, and that would have a price."
+        }
+      ],
+      "actores": [
+        {
+          "id": "constructor",
+          "como": "hombre",
+          "x": 1100,
+          "rotulo": "",
+          "props": {
+            "capa": "#6B5B4A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1,
+              "hace": "transforma",
+              "en_que": "jotun"
+            },
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 4.4,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "freyja",
+          "x": 200,
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 2300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "entra",
+              "a": 1700,
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "corre",
+              "a": 1450,
+              "dur": 0.3
+            },
+            {
+              "en": 4.2,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 1250,
+          "capa": "fondo",
+          "props": {
+            "ancho": 900,
+            "alto": 300
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello",
+          "x": 1100
+        },
+        {
+          "en": 1.2,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 3.2,
+          "tipo": "rayo",
+          "x": 1800
+        },
+        {
+          "en": 4.3,
+          "tipo": "destello",
+          "x": 1300
+        },
+        {
+          "en": 4.3,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 4.4,
+          "tipo": "polvo",
+          "x": 1250,
+          "dur": 1.2
+        },
+        {
+          "en": 5,
+          "tipo": "aclarar",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "GIGANTE DE LA MONTAÑA",
+            "en": "MOUNTAIN GIANT"
+          },
+          "x": 1500,
+          "y": 240,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "sleipnir",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pasaron los meses, y Loki seguía sin aparecer.",
+          "en": "Months went by, and Loki was nowhere to be seen."
+        },
+        {
+          "es": "Hasta que un día volvió a Asgard, porque Loki había dado a luz a un potro.",
+          "en": "Until one day he returned to Asgard, because Loki had given birth to a foal."
+        },
+        {
+          "es": "Un potro gris, con ocho patas: Sleipnir, hijo de Loki y de Svaðilfari.",
+          "en": "A gray foal with eight legs: Sleipnir, the child of Loki and Svaðilfari."
+        },
+        {
+          "es": "Por eso el caballo de Odín tiene ocho patas: es hijo de Loki.",
+          "en": "That is why Odin's horse has eight legs: he is Loki's child."
+        },
+        {
+          "es": "Sería el mejor caballo entre los dioses y los hombres.",
+          "en": "He would be the best horse among gods and men."
+        },
+        {
+          "es": "Loki se lo regaló a Odín, que lo montó desde entonces por los nueve mundos.",
+          "en": "Loki gave him to Odin, who rode him from then on through all the nine worlds."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 1100,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "senala"
+            },
+            {
+              "en": 5,
+              "hace": "toma",
+              "objeto": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 100,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 500,
+              "dur": 0.8
+            },
+            {
+              "en": 5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "sleipnir",
+          "x": 350,
+          "escala": 0.7,
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 800,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "destello",
+          "x": 400
+        },
+        {
+          "en": 4.5,
+          "tipo": "luz",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "SLEIPNIR",
+            "en": "SLEIPNIR"
+          },
+          "x": 600,
+          "y": 240,
+          "hasta": 5
+        },
+        {
+          "en": 3,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO EL CABALLO DE ODÍN TIENE 8 PATAS",
+            "en": "THAT'S WHY ODIN'S HORSE HAS EIGHT LEGS"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Asgard conservó su muralla, y los dioses conservaron a Freyja, el Sol y la Luna.",
+          "en": "Asgard kept its wall, and the gods kept Freyja, the Sun and the Moon."
+        },
+        {
+          "es": "Loki los había salvado, pero a un costo que nadie había previsto.",
+          "en": "Loki had saved them, but at a cost no one had foreseen."
+        },
+        {
+          "es": "Porque con Loki, cada solución traía un problema nuevo.",
+          "en": "Because with Loki, every solution brought a new problem."
+        },
+        {
+          "es": "Y su próxima travesura le costaría a Sif su cabellera dorada.",
+          "en": "And his next prank would cost Sif her golden hair."
+        },
+        {
+          "es": "Esa es la historia del próximo episodio: los tesoros de los dioses.",
+          "en": "That is the story of the next episode: the Treasures of the Gods."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "sleipnir",
+          "x": 1000,
+          "escala": 0.7,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 850,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "gira"
+            }
+          ]
+        },
+        {
+          "id": "sif",
+          "x": 1520,
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "enano",
+          "x": 1780,
+          "mira": "izq",
+          "capa": "fondo",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.2,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 100,
+          "capa": "fondo",
+          "props": {
+            "ancho": 1000,
+            "alto": 300
+          }
+        },
+        {
+          "tipo": "cofre",
+          "x": 1930,
+          "s": 0.7,
+          "en": 4
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "chispas",
+          "x": 1930,
+          "y": 640
+        },
+        {
+          "en": 4.5,
+          "tipo": "luz",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "LOS TESOROS DE LOS DIOSES",
+            "en": "THE TREASURES OF THE GODS"
+          },
+          "x": 960,
+          "y": 240
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El trato que casi cuesta el Sol y la Luna",
+        "en": "The deal that nearly cost the gods the Sun and Moon"
+      },
+      "escena": "consejo",
+      "desde": 1,
+      "hasta": 5,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "El dios que se convirtió en yegua",
+        "en": "The god who turned into a mare"
+      },
+      "escena": "yegua",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1350
+    },
+    {
+      "gancho": {
+        "es": "El caballo de ocho patas",
+        "en": "The eight-legged horse"
+      },
+      "escena": "sleipnir",
+      "desde": 1,
+      "hasta": 5,
+      "foco": 700
+    }
+  ],
+  "miniatura": {
+    "heroe": "loki",
+    "rival": "jotun"
+  }
+}

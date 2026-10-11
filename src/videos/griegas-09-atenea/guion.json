@@ -1,0 +1,1486 @@
+{
+ "id": "griegas-09-atenea",
+ "serie": "griegas",
+ "numero": "09",
+ "titulo": {
+  "es": "El nacimiento de Atenea",
+  "en": "The Birth of Athena"
+ },
+ "tituloGriego": "ΑΘΗΝΑ",
+ "escenas": [
+  {
+   "id": "metis",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 400,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Doce tronos brillan en el Olimpo. Pero antes de que todos estuvieran ocupados, ocurrió algo increíble.",
+     "en": "Twelve thrones shine on Olympus. But before they were all filled, something astonishing happened."
+    },
+    {
+     "es": "Zeus acababa de vencer a los titanes, y para reinar necesitaba algo más que fuerza: necesitaba inteligencia.",
+     "en": "Zeus had just defeated the Titans, and to rule he needed more than strength: he needed wisdom."
+    },
+    {
+     "es": "La encontró en Metis, una titánide hija de Océano, la más sabia entre los dioses y los humanos.",
+     "en": "He found it in Metis, a Titaness and daughter of Oceanus, wisest among gods and mortals."
+    },
+    {
+     "es": "Fue ella quien le dio a Cronos la pócima que lo obligó a devolver a los hermanos que se había tragado.",
+     "en": "It was she who gave Cronus the potion that made him cough up the siblings he had swallowed."
+    },
+    {
+     "es": "Zeus la admiraba tanto que la eligió como su primera esposa.",
+     "en": "Zeus admired her so much that he made her his first wife."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 250,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "trono",
+     "x": 450,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "trono",
+     "x": 650,
+     "capa": "fondo",
+     "en": 0.5
+    },
+    {
+     "tipo": "trono",
+     "x": 850,
+     "capa": "fondo",
+     "en": 0.8
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 1000,
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 4,
+       "hace": "camina",
+       "a": 1250
+      },
+      {
+       "en": 4.5,
+       "hace": "abraza"
+      }
+     ]
+    },
+    {
+     "id": "metis",
+     "x": 1650,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "entra",
+       "a": 1500
+      },
+      {
+       "en": 2.4,
+       "hace": "brilla",
+       "dur": 0.6
+      },
+      {
+       "en": 3,
+       "hace": "ofrece"
+      },
+      {
+       "en": 4,
+       "hace": "camina",
+       "a": 1400
+      }
+     ]
+    },
+    {
+     "id": "cronos",
+     "x": 2000,
+     "mira": "izq",
+     "capa": "medio",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.6,
+       "hace": "lamenta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "luz",
+     "x": 1000,
+     "y": 330,
+     "dur": 1
+    },
+    {
+     "en": 3.2,
+     "tipo": "humo",
+     "x": 1950,
+     "y": 600
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "DOCE TRONOS",
+      "en": "TWELVE THRONES"
+     },
+     "x": 600,
+     "y": 230,
+     "hasta": 1.8
+    }
+   ]
+  },
+  {
+   "id": "profecia",
+   "fondo": "cielo",
+   "camara": {
+    "de": 0,
+    "a": 300
+   },
+   "frases": [
+    {
+     "es": "Pronto Metis esperó un hijo. Entonces hablaron Gea, la Tierra, y Urano, el Cielo estrellado.",
+     "en": "Soon Metis was expecting a child. Then Gaia, the Earth, and Uranus, the starry Sky, spoke."
+    },
+    {
+     "es": "De Metis nacerá primero una hija, igual a su padre en fuerza y en sabiduría, le dijeron.",
+     "en": "First Metis will bear a daughter, equal to her father in strength and wisdom, they told him."
+    },
+    {
+     "es": "Y después nacerá un hijo de corazón invencible, que será rey de los dioses y de los hombres.",
+     "en": "And then she will bear a son with an unbeatable heart, who will be king of gods and men."
+    },
+    {
+     "es": "Zeus sintió frío. Su abuelo Urano había caído ante su hijo, y su padre Cronos, ante él mismo.",
+     "en": "Zeus felt a chill. His grandfather Uranus fell to his son, and his father Cronus fell to Zeus himself."
+    },
+    {
+     "es": "No iba a permitir que la historia se repitiera.",
+     "en": "He would not let history repeat itself."
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 350,
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "lamenta"
+      },
+      {
+       "en": 3.3,
+       "hace": "tiembla",
+       "dur": 0.6
+      },
+      {
+       "en": 4,
+       "hace": "levanta"
+      },
+      {
+       "en": 4.2,
+       "hace": "habla",
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "metis",
+     "x": 750,
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "brilla",
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "gea",
+     "x": 1300,
+     "mira": "izq",
+     "capa": "medio",
+     "pasos": [
+      {
+       "en": 0.6,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.8,
+       "hace": "habla",
+       "dur": 0.8
+      },
+      {
+       "en": 1.3,
+       "hace": "habla",
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "urano",
+     "x": 1750,
+     "mira": "izq",
+     "capa": "medio",
+     "pasos": [
+      {
+       "en": 0.7,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      },
+      {
+       "en": 2.2,
+       "hace": "habla",
+       "dur": 0.7
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "estrellas"
+    },
+    {
+     "en": 1,
+     "tipo": "luz",
+     "x": 750,
+     "y": 400,
+     "dur": 1
+    },
+    {
+     "en": 2,
+     "tipo": "oscurecer",
+     "intensidad": 0.4,
+     "dur": 1
+    },
+    {
+     "en": 3,
+     "tipo": "nieve",
+     "intensidad": 0.5,
+     "dur": 1
+    },
+    {
+     "en": 4.1,
+     "tipo": "rayo",
+     "x": 400
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1,
+     "texto": {
+      "es": "UNA HIJA",
+      "en": "A DAUGHTER"
+     },
+     "x": 1000,
+     "y": 250,
+     "hasta": 2
+    },
+    {
+     "en": 2,
+     "texto": {
+      "es": "UN HIJO",
+      "en": "A SON"
+     },
+     "x": 1000,
+     "y": 250,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "engano",
+   "fondo": "palacio",
+   "camara": {
+    "de": 0,
+    "a": 400
+   },
+   "frases": [
+    {
+     "es": "Zeus se acercó a Metis con palabras dulces, como quien propone un juego.",
+     "en": "Zeus approached Metis with honeyed words, like someone suggesting a game."
+    },
+    {
+     "es": "Metis sabía cambiar de forma: podía ser leona, llama de fuego o agua que corre.",
+     "en": "Metis could change her shape: she could be a lioness, a flame, or running water."
+    },
+    {
+     "es": "¿Y puedes volverte algo tan pequeño como una gota?, le preguntó Zeus con una sonrisa.",
+     "en": "Can you become something as small as a drop? Zeus asked her with a smile."
+    },
+    {
+     "es": "Metis, confiada, se hizo diminuta. Y en ese instante, Zeus abrió la boca y se la tragó.",
+     "en": "Trusting him, Metis shrank. And in that instant, Zeus opened his mouth and swallowed her."
+    },
+    {
+     "es": "Así hizo lo mismo que su padre Cronos: guardar dentro de sí al peligro.",
+     "en": "So he did just what his father Cronus had done: he locked the danger inside himself."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "columna",
+     "x": 300,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "columna",
+     "x": 1700,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 300,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "camina",
+       "a": 750
+      },
+      {
+       "en": 0.6,
+       "hace": "habla",
+       "dur": 0.5
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      },
+      {
+       "en": 2.2,
+       "hace": "habla",
+       "dur": 0.5
+      },
+      {
+       "en": 3.3,
+       "hace": "habla",
+       "dur": 0.5
+      },
+      {
+       "en": 4,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "metis",
+     "x": 1200,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "transforma",
+       "en_que": "leon"
+      },
+      {
+       "en": 1.8,
+       "hace": "transforma",
+       "en_que": "metis"
+      },
+      {
+       "en": 3,
+       "hace": "encoge",
+       "escala": 0.3
+      },
+      {
+       "en": 3.7,
+       "hace": "desaparece"
+      }
+     ]
+    },
+    {
+     "id": "cronos",
+     "x": 1750,
+     "mira": "izq",
+     "capa": "fondo",
+     "pasos": [
+      {
+       "en": 4,
+       "hace": "aparece"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1.1,
+     "tipo": "destello",
+     "x": 1200,
+     "y": 450
+    },
+    {
+     "en": 1.4,
+     "tipo": "fuego",
+     "x": 1200,
+     "y": 620,
+     "dur": 0.4
+    },
+    {
+     "en": 1.6,
+     "tipo": "lluvia",
+     "intensidad": 0.5,
+     "dur": 0.4
+    },
+    {
+     "en": 3.7,
+     "tipo": "destello",
+     "x": 800,
+     "y": 450
+    },
+    {
+     "en": 4,
+     "tipo": "oscurecer",
+     "intensidad": 0.5,
+     "dur": 1
+    }
+   ]
+  },
+  {
+   "id": "dentro",
+   "fondo": "cueva",
+   "camara": {
+    "de": 0,
+    "a": 200
+   },
+   "frases": [
+    {
+     "es": "Pero Metis no desapareció. Siguió viva dentro de Zeus, y la sabiduría pasó a ser parte de él.",
+     "en": "But Metis did not vanish. She lived on inside Zeus, and wisdom became part of him."
+    },
+    {
+     "es": "Desde entonces, cuentan, ella le aconseja en silencio qué es bueno y qué es malo.",
+     "en": "From then on, they say, she silently advises him on what is good and what is bad."
+    },
+    {
+     "es": "Y allí dentro, en la oscuridad, Metis seguía esperando a su hija.",
+     "en": "And in there, in the dark, Metis kept waiting for her daughter."
+    },
+    {
+     "es": "Mientras el bebé crecía, la madre le forjaba un casco y le tejía una túnica para el día de nacer.",
+     "en": "While the baby grew, the mother forged her a helmet and wove her a robe for the day she would be born."
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 350,
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "senala"
+      },
+      {
+       "en": 1.2,
+       "hace": "calla"
+      }
+     ]
+    },
+    {
+     "id": "metis",
+     "x": 1000,
+     "mira": "der",
+     "props": {
+      "objeto": "martillo"
+     },
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.2,
+       "hace": "brilla",
+       "dur": 0.8
+      },
+      {
+       "en": 3,
+       "hace": "golpea"
+      },
+      {
+       "en": 3.4,
+       "hace": "golpea"
+      },
+      {
+       "en": 3.8,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "atenea",
+     "x": 1550,
+     "escala": 0.45,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.3,
+       "hace": "brilla",
+       "dur": 0.8
+      }
+     ]
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "telar",
+     "x": 1300,
+     "s": 0.8,
+     "en": 3
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "luz",
+     "x": 420,
+     "y": 400,
+     "dur": 1
+    },
+    {
+     "en": 3,
+     "tipo": "chispas",
+     "x": 1100,
+     "y": 620,
+     "dur": 1.2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1,
+     "texto": {
+      "es": "SUSURRO",
+      "en": "WHISPER"
+     },
+     "x": 450,
+     "y": 250,
+     "hasta": 2.2
+    }
+   ]
+  },
+  {
+   "id": "dolor",
+   "fondo": "costa",
+   "camara": {
+    "de": 0,
+    "a": 500
+   },
+   "frases": [
+    {
+     "es": "Pasaron los meses. Un día, Zeus caminaba junto al lago Tritón, entre juncos y aguas quietas.",
+     "en": "Months passed. One day Zeus was walking beside Lake Triton, among reeds and still waters."
+    },
+    {
+     "es": "De pronto, un dolor terrible le partió la cabeza, como si mil martillos golpearan por dentro.",
+     "en": "Suddenly a terrible pain split his head, as if a thousand hammers were pounding inside."
+    },
+    {
+     "es": "El rey de los dioses cayó de rodillas y gritó tan fuerte que el cielo entero retumbó.",
+     "en": "The king of the gods fell to his knees and cried out so loudly that the whole sky shook."
+    },
+    {
+     "es": "Ningún remedio servía. Los dioses llegaron corriendo, sin saber qué hacer.",
+     "en": "No remedy worked. The gods came running, not knowing what to do."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "rio",
+     "x": 350,
+     "s": 1.2,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "palmera",
+     "x": 1500,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 500,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "camina",
+       "a": 900
+      },
+      {
+       "en": 1,
+       "hace": "tiembla",
+       "dur": 0.8
+      },
+      {
+       "en": 2,
+       "hace": "arrodilla"
+      },
+      {
+       "en": 2.2,
+       "hace": "habla",
+       "dur": 0.7
+      },
+      {
+       "en": 3.3,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "hera",
+     "x": 2200,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "corre",
+       "a": 1350,
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "apolo",
+     "x": 2050,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3.2,
+       "hace": "corre",
+       "a": 1650,
+       "dur": 0.8
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1.1,
+     "tipo": "destello",
+     "x": 900,
+     "y": 450
+    },
+    {
+     "en": 1.2,
+     "tipo": "temblor",
+     "dur": 0.8
+    },
+    {
+     "en": 2.3,
+     "tipo": "temblor",
+     "dur": 1
+    },
+    {
+     "en": 2.4,
+     "tipo": "rayo",
+     "x": 1000
+    },
+    {
+     "en": 2.2,
+     "tipo": "oscurecer",
+     "intensidad": 0.5,
+     "dur": 1
+    }
+   ]
+  },
+  {
+   "id": "hacha",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 300
+   },
+   "frases": [
+    {
+     "es": "Entonces Zeus llamó a Hefesto, el dios herrero, que llegó cojeando con su hacha de doble filo.",
+     "en": "Then Zeus called Hephaestus, the smith god, who came limping in with his double-bladed axe."
+    },
+    {
+     "es": "Algunos dicen que fue Prometeo, el titán astuto. Pero todos cuentan lo mismo: Zeus dio la orden.",
+     "en": "Some say it was Prometheus, the cunning Titan. But all agree on one thing: Zeus gave the order."
+    },
+    {
+     "es": "¡Golpea!, rugió el rey del cielo. Y el herrero levantó el hacha con las dos manos.",
+     "en": "Strike!, roared the king of the sky. And the smith raised the axe with both hands."
+    },
+    {
+     "es": "Un solo golpe, limpio y certero, abrió la cabeza de Zeus como se abre una fruta madura.",
+     "en": "One single blow, clean and sure, opened Zeus's head the way a ripe fruit splits open."
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 600,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "arrodilla"
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      },
+      {
+       "en": 2.2,
+       "hace": "habla",
+       "dur": 0.5
+      },
+      {
+       "en": 3.5,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "hefesto",
+     "x": 1900,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "entra",
+       "a": 1100,
+       "dur": 0.9
+      },
+      {
+       "en": 2.4,
+       "hace": "levanta"
+      },
+      {
+       "en": 3.1,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "prometeo",
+     "x": 1750,
+     "mira": "izq",
+     "capa": "medio",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.3,
+       "hace": "levanta"
+      },
+      {
+       "en": 1.8,
+       "hace": "desaparece"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "luz",
+     "x": 1700,
+     "y": 420,
+     "dur": 0.8
+    },
+    {
+     "en": 2.2,
+     "tipo": "rayo",
+     "x": 500
+    },
+    {
+     "en": 3.2,
+     "tipo": "destello",
+     "x": 620,
+     "y": 420,
+     "dur": 0.6
+    },
+    {
+     "en": 3.2,
+     "tipo": "chispas",
+     "x": 620,
+     "y": 420,
+     "dur": 0.6
+    }
+   ]
+  },
+  {
+   "id": "nacimiento",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 300
+   },
+   "frases": [
+    {
+     "es": "Y de la cabeza de su padre saltó una diosa adulta, vestida con armadura de oro.",
+     "en": "And from her father's head leapt a full-grown goddess, dressed in golden armor."
+    },
+    {
+     "es": "Llevaba casco brillante en la cabeza y una lanza afilada en la mano.",
+     "en": "She wore a shining helmet on her head and held a sharp spear in her hand."
+    },
+    {
+     "es": "Al tocar el suelo, lanzó un grito de guerra que resonó por todo el universo.",
+     "en": "As she touched the ground, she let out a war cry that echoed across the universe."
+    },
+    {
+     "es": "Los dioses retrocedieron asombrados. Nadie había visto nunca un nacimiento así.",
+     "en": "The gods stepped back in awe. No one had ever seen a birth like it."
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 450,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "arrodilla"
+      },
+      {
+       "en": 3,
+       "hace": "levantarse"
+      },
+      {
+       "en": 3.5,
+       "hace": "habla",
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "atenea",
+     "x": 850,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.2,
+       "hace": "brilla",
+       "dur": 0.8
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 2,
+       "hace": "habla",
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "id": "hera",
+     "x": 1300,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "camina",
+       "a": 1500
+      }
+     ]
+    },
+    {
+     "id": "ares",
+     "x": 1700,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "camina",
+       "a": 1900
+      }
+     ]
+    },
+    {
+     "id": "hermes",
+     "x": 1550,
+     "mira": "izq",
+     "capa": "medio",
+     "pasos": [
+      {
+       "en": 3.2,
+       "hace": "camina",
+       "a": 1750
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "destello",
+     "x": 850,
+     "y": 450
+    },
+    {
+     "en": 0.1,
+     "tipo": "luz",
+     "x": 850,
+     "y": 400,
+     "dur": 1
+    },
+    {
+     "en": 2,
+     "tipo": "temblor",
+     "dur": 1
+    },
+    {
+     "en": 2.1,
+     "tipo": "polvo",
+     "x": 850,
+     "y": 700
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2.2,
+     "texto": {
+      "es": "ΑΛΑΛΑ!",
+      "en": "ALALA!"
+     },
+     "x": 900,
+     "y": 230,
+     "hasta": 3.3
+    }
+   ]
+  },
+  {
+   "id": "temblor",
+   "fondo": "mar",
+   "camara": {
+    "de": 0,
+    "a": 600
+   },
+   "frases": [
+    {
+     "es": "El gran Olimpo tembló bajo el poder de la diosa de ojos grises, y la tierra gritó a su alrededor.",
+     "en": "Great Olympus shook beneath the power of the grey-eyed goddess, and the earth cried out around her."
+    },
+    {
+     "es": "El mar se agitó con olas oscuras, y la espuma saltó de golpe hacia el cielo.",
+     "en": "The sea heaved with dark waves, and the foam leapt suddenly toward the sky."
+    },
+    {
+     "es": "Helios, el Sol, detuvo sus caballos veloces en mitad del cielo, y se quedó mirándola.",
+     "en": "Helios, the Sun, halted his swift horses in mid-sky and stood gazing at her."
+    },
+    {
+     "es": "Esperó hasta que Atenea se quitó la armadura de los hombros. Y Zeus, ya sin dolor, se rió de alegría.",
+     "en": "He waited until Athena took the armor from her shoulders. And Zeus, free of pain, laughed with joy."
+    },
+    {
+     "es": "Cuentan que ese día, sobre la isla de Rodas, Zeus hizo llover oro desde las nubes.",
+     "en": "They say that day, over the island of Rhodes, Zeus made gold rain down from the clouds."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "nube",
+     "x": 1300,
+     "y": 280,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "nube",
+     "x": 1900,
+     "y": 240,
+     "capa": "fondo",
+     "en": 3.5
+    }
+   ],
+   "actores": [
+    {
+     "id": "atenea",
+     "x": 550,
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "baja"
+      }
+     ]
+    },
+    {
+     "id": "helios",
+     "x": 1200,
+     "y": 380,
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "vuela",
+       "a": [
+        1750,
+        380
+       ],
+       "dur": 1
+      },
+      {
+       "en": 3,
+       "hace": "calla"
+      }
+     ]
+    },
+    {
+     "id": "zeus",
+     "x": 1000,
+     "capa": "medio",
+     "pasos": [
+      {
+       "en": 3.6,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.7,
+       "hace": "habla",
+       "dur": 0.5
+      },
+      {
+       "en": 4,
+       "hace": "levanta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "temblor",
+     "dur": 1
+    },
+    {
+     "en": 1,
+     "tipo": "olas-suben",
+     "dur": 1
+    },
+    {
+     "en": 1.4,
+     "tipo": "destello",
+     "x": 1000,
+     "y": 500,
+     "dur": 0.4
+    },
+    {
+     "en": 3,
+     "tipo": "luz",
+     "x": 1750,
+     "y": 380,
+     "dur": 1
+    },
+    {
+     "en": 4,
+     "tipo": "chispas",
+     "x": 1700,
+     "y": 700,
+     "dur": 1
+    },
+    {
+     "en": 4,
+     "tipo": "luz",
+     "x": 1700,
+     "y": 300,
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 4,
+     "texto": {
+      "es": "RODAS",
+      "en": "RHODES"
+     },
+     "x": 1500,
+     "y": 230
+    }
+   ]
+  },
+  {
+   "id": "diosa",
+   "fondo": "templo",
+   "camara": {
+    "de": 0,
+    "a": 700
+   },
+   "frases": [
+    {
+     "es": "Atenea tenía la fuerza de su padre y la mente de su madre. Por eso es la diosa de la sabiduría.",
+     "en": "Athena had her father's strength and her mother's mind. That is why she is the goddess of wisdom."
+    },
+    {
+     "es": "No ama la guerra salvaje como Ares: ella gana con estrategia, pensando cada paso antes de darlo.",
+     "en": "She does not love savage war like Ares: she wins with strategy, thinking every step through first."
+    },
+    {
+     "es": "Enseñó a los humanos a tejer, a hacer vasijas, a construir barcos y a domar caballos.",
+     "en": "She taught humans to weave, to make pots, to build ships and to tame horses."
+    },
+    {
+     "es": "Su ave es el búho, que ve en la oscuridad. Su árbol, el olivo. Y en su pecho lleva la égida.",
+     "en": "Her bird is the owl, which sees in the dark. Her tree, the olive. And on her chest she wears the aegis."
+    },
+    {
+     "es": "Fue la hija favorita de Zeus. Y el hijo de la profecía, el que iba a destronarlo, nunca llegó a nacer.",
+     "en": "She was Zeus's favorite daughter. And the son of the prophecy, who would have dethroned him, was never born."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "telar",
+     "x": 1150,
+     "s": 0.8,
+     "en": 2
+    },
+    {
+     "tipo": "anfora",
+     "x": 1400,
+     "s": 0.6,
+     "en": 2.3
+    },
+    {
+     "tipo": "barco",
+     "x": 1800,
+     "s": 0.6,
+     "en": 2.6
+    },
+    {
+     "tipo": "olivo",
+     "x": 2300,
+     "en": 3.3
+    }
+   ],
+   "actores": [
+    {
+     "id": "atenea",
+     "x": 350,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "brilla",
+       "dur": 0.8
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "camina",
+       "a": 1000
+      },
+      {
+       "en": 3,
+       "hace": "camina",
+       "a": 1900
+      },
+      {
+       "en": 3.7,
+       "hace": "brilla",
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "ares",
+     "x": 750,
+     "mira": "izq",
+     "capa": "medio",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.2,
+       "hace": "golpea"
+      },
+      {
+       "en": 1.5,
+       "hace": "golpea"
+      },
+      {
+       "en": 1.9,
+       "hace": "desaparece"
+      }
+     ]
+    },
+    {
+     "id": "caballo",
+     "x": 1550,
+     "mira": "izq",
+     "capa": "medio",
+     "pasos": [
+      {
+       "en": 2.8,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.2,
+       "hace": "sale"
+      }
+     ]
+    },
+    {
+     "id": "buho",
+     "x": 2050,
+     "y": 420,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "aparece"
+      }
+     ]
+    },
+    {
+     "id": "zeus",
+     "x": 1500,
+     "capa": "medio",
+     "pasos": [
+      {
+       "en": 4,
+       "hace": "aparece"
+      },
+      {
+       "en": 4.2,
+       "hace": "abraza"
+      }
+     ]
+    },
+    {
+     "id": "nino",
+     "x": 2250,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 4.4,
+       "hace": "aparece"
+      },
+      {
+       "en": 4.9,
+       "hace": "desaparece"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.2,
+     "tipo": "luz",
+     "x": 400,
+     "y": 400,
+     "dur": 1
+    },
+    {
+     "en": 3.7,
+     "tipo": "destello",
+     "x": 1900,
+     "y": 450,
+     "dur": 0.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 4,
+     "texto": {
+      "es": "HIJA FAVORITA",
+      "en": "FAVORITE DAUGHTER"
+     },
+     "x": 1700,
+     "y": 230
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "costa",
+   "camara": {
+    "de": 0,
+    "a": 500
+   },
+   "frases": [
+    {
+     "es": "Con el tiempo, Atenea bajó a la tierra a buscar una ciudad que fuera suya.",
+     "en": "In time, Athena came down to earth to find a city of her own."
+    },
+    {
+     "es": "Eligió una colina rocosa junto al mar, donde los humanos empezaban a levantar sus casas.",
+     "en": "She chose a rocky hill beside the sea, where humans were beginning to build their houses."
+    },
+    {
+     "es": "Pero no era la única que la quería. El señor del mar ya había clavado allí su tridente.",
+     "en": "But she was not the only one who wanted it. The lord of the sea had already planted his trident there."
+    },
+    {
+     "es": "Esa es la próxima historia: Atenea contra Poseidón.",
+     "en": "That is the next story: Athena versus Poseidon."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 1250,
+     "s": 1.2,
+     "en": 1
+    },
+    {
+     "tipo": "casa",
+     "x": 1500,
+     "s": 0.5,
+     "en": 1.4
+    },
+    {
+     "tipo": "casa",
+     "x": 1650,
+     "s": 0.5,
+     "en": 1.7
+    }
+   ],
+   "actores": [
+    {
+     "id": "atenea",
+     "x": 400,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "camina",
+       "a": 1000,
+       "dur": 1.2
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 3,
+       "hace": "gira"
+      }
+     ]
+    },
+    {
+     "id": "poseidon",
+     "x": 2100,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.4,
+       "hace": "golpea"
+      },
+      {
+       "en": 3,
+       "hace": "habla",
+       "dur": 0.6
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "aclarar",
+     "dur": 1
+    },
+    {
+     "en": 2.4,
+     "tipo": "olas-suben",
+     "dur": 1
+    },
+    {
+     "en": 2.4,
+     "tipo": "destello",
+     "x": 2000,
+     "y": 500,
+     "dur": 0.4
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 3,
+     "texto": {
+      "es": "ATENEA CONTRA POSEIDÓN",
+      "en": "ATHENA VERSUS POSEIDON"
+     },
+     "x": 1300,
+     "y": 230
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "Zeus se tragó a la diosa más sabia",
+    "en": "The Goddess Zeus Swallowed Whole"
+   },
+   "escena": "engano",
+   "desde": 1,
+   "hasta": 4,
+   "foco": 900
+  },
+  {
+   "gancho": {
+    "es": "El hachazo que dio a luz a una diosa",
+    "en": "The Axe Blow That Gave Birth to a Goddess"
+   },
+   "escena": "hacha",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1000
+  },
+  {
+   "gancho": {
+    "es": "Nació armada, gritando a la guerra",
+    "en": "Born in Armor, Roaring for War"
+   },
+   "escena": "nacimiento",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 850
+  }
+ ]
+}

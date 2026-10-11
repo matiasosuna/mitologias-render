@@ -1,0 +1,1712 @@
+{
+  "id": "nordicas-02-mundo",
+  "serie": "nordicas",
+  "numero": "02",
+  "titulo": {
+    "es": "El mundo hecho de un gigante",
+    "en": "The World Made from a Giant"
+  },
+  "tituloGriego": "THE WORLD MADE FROM A GIANT",
+  "escenas": [
+    {
+      "id": "cuerpo",
+      "fondo": "ginnungagap",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Con el cuerpo de Ymir frente a ellos, Odín, Vili y Ve se prepararon para construir un mundo.",
+          "en": "With Ymir's body in front of them, Odin, Vili and Ve prepared to build a world."
+        },
+        {
+          "es": "No tenían piedra, ni madera, ni barro. Todo lo que existía era el gigante, el hielo y el fuego.",
+          "en": "They had no stone, no wood, no clay. All that existed was the giant, the ice and the fire."
+        },
+        {
+          "es": "Así que levantaron el cuerpo entre los tres, y cada parte se convirtió en algo nuevo.",
+          "en": "So the three of them lifted the body, and every part of it became something new."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "vili",
+          "x": 380,
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "ve",
+          "x": 160,
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "ymir",
+          "x": 1350,
+          "mira": "izq",
+          "visible": true,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae",
+              "dur": 0.2
+            },
+            {
+              "en": 2.6,
+              "hace": "brilla",
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 2
+        },
+        {
+          "en": 2.6,
+          "tipo": "destello"
+        }
+      ]
+    },
+    {
+      "id": "tierra",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "De la carne de Ymir hicieron la tierra.",
+          "en": "From Ymir's flesh they made the earth."
+        },
+        {
+          "es": "De su sangre, el mar y todos los lagos.",
+          "en": "From his blood, the sea and all the lakes."
+        },
+        {
+          "es": "De su pelo, los árboles y los bosques.",
+          "en": "From his hair, the trees and the forests."
+        },
+        {
+          "es": "De sus huesos levantaron las montañas.",
+          "en": "From his bones they raised the mountains."
+        },
+        {
+          "es": "Y de sus dientes y sus huesos rotos hicieron las piedras y las rocas.",
+          "en": "And from his teeth and his broken bones they made the stones and the rocks."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ymir",
+          "x": 1100,
+          "mira": "izq",
+          "visible": true,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae",
+              "dur": 0.1
+            },
+            {
+              "en": 0.5,
+              "hace": "desaparece",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "vili",
+          "x": 100,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "ve",
+          "x": 550,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 1000,
+          "s": 0.9,
+          "capa": "medio",
+          "en": 2
+        },
+        {
+          "tipo": "pino",
+          "x": 1200,
+          "s": 1.1,
+          "en": 2.2
+        },
+        {
+          "tipo": "pino",
+          "x": 1450,
+          "s": 0.8,
+          "capa": "medio",
+          "en": 2.4
+        },
+        {
+          "tipo": "monte_nevado",
+          "x": 1700,
+          "s": 1.2,
+          "capa": "fondo",
+          "en": 3
+        },
+        {
+          "tipo": "monte_nevado",
+          "x": 2200,
+          "s": 1.4,
+          "capa": "fondo",
+          "en": 3.3
+        },
+        {
+          "tipo": "roca",
+          "x": 800,
+          "s": 0.8,
+          "en": 4
+        },
+        {
+          "tipo": "roca",
+          "x": 1600,
+          "s": 1,
+          "en": 4.3
+        },
+        {
+          "tipo": "roca",
+          "x": 1850,
+          "s": 0.7,
+          "capa": "medio",
+          "en": 4.5
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "polvo",
+          "x": 1000,
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "dur": 1,
+          "intensidad": 0.4
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "polvo",
+          "x": 1500,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "TIERRA: SU CARNE",
+            "en": "EARTH: HIS FLESH"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "MARES: SU SANGRE",
+            "en": "SEAS: HIS BLOOD"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "ÁRBOLES: SU PELO",
+            "en": "TREES: HIS HAIR"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "MONTAÑAS: SUS HUESOS",
+            "en": "MOUNTAINS: HIS BONES"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "PIEDRAS: SUS DIENTES",
+            "en": "STONES: HIS TEETH"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "cielo",
+      "fondo": "cielo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Del cráneo de Ymir hicieron el cielo, y lo alzaron como una cúpula enorme sobre la tierra.",
+          "en": "From Ymir's skull they made the sky, and raised it like an enormous dome over the earth."
+        },
+        {
+          "es": "Sus sesos los soltaron en el aire, y se volvieron las nubes.",
+          "en": "His brains they scattered into the air, and they became the clouds."
+        },
+        {
+          "es": "Pero el cielo era pesado, y alguien tenía que sostenerlo.",
+          "en": "But the sky was heavy, and someone had to hold it up."
+        },
+        {
+          "es": "Así que los dioses pusieron un enano en cada esquina del mundo.",
+          "en": "So the gods set a dwarf at each corner of the world."
+        },
+        {
+          "es": "Se llaman Nordri, Sudri, Austri y Vestri: Norte, Sur, Este y Oeste.",
+          "en": "Their names are Nordri, Sudri, Austri and Vestri: North, South, East and West."
+        },
+        {
+          "es": "Por eso existen el norte, el sur, el este y el oeste.",
+          "en": "That is why we have north, south, east and west."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 960,
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "vestri",
+          "como": "enano",
+          "x": 250,
+          "rotulo": "VESTRI: WEST",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "nordri",
+          "como": "enano",
+          "x": 750,
+          "capa": "fondo",
+          "rotulo": "NORDRI: NORTH",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.7,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "sudri",
+          "como": "enano",
+          "x": 1200,
+          "rotulo": "SUDRI: SOUTH",
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.9,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "austri",
+          "como": "enano",
+          "x": 1700,
+          "rotulo": "AUSTRI: EAST",
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.1,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "nube",
+          "x": 400,
+          "y": 300,
+          "s": 1,
+          "en": 1
+        },
+        {
+          "tipo": "nube",
+          "x": 1000,
+          "y": 250,
+          "s": 1.3,
+          "en": 1.2
+        },
+        {
+          "tipo": "nube",
+          "x": 1550,
+          "y": 320,
+          "s": 0.9,
+          "en": 1.4
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "CIELO: SU CRÁNEO",
+            "en": "SKY: HIS SKULL"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "NUBES: SUS SESOS",
+            "en": "CLOUDS: HIS BRAINS"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2
+        },
+        {
+          "en": 5,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO EXISTEN NORTE, SUR, ESTE Y OESTE",
+            "en": "THAT'S WHY WE HAVE NORTH, SOUTH, EAST, WEST"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "estrellas",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Aun así, el cielo estaba oscuro. Pero las chispas de Muspelheim seguían volando por el abismo.",
+          "en": "Even so, the sky was dark. But the sparks of Muspelheim were still flying through the gap."
+        },
+        {
+          "es": "Los hermanos tomaron las chispas y las brasas que brillaban, una por una.",
+          "en": "The brothers took the glowing sparks and embers, one by one."
+        },
+        {
+          "es": "Y las pusieron en el cielo, arriba y abajo, para dar luz al cielo y a la tierra.",
+          "en": "And they set them in the sky, above and below, to give light to the heavens and the earth."
+        },
+        {
+          "es": "Así nacieron las estrellas. A cada una le dieron su lugar y su camino.",
+          "en": "That is how the stars were born. Each one was given its place and its path."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "toma",
+              "objeto": "antorcha"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "vili",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "ve",
+          "x": 200,
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "chispas",
+          "x": 1700,
+          "y": 650,
+          "dur": 1.5
+        },
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 900,
+          "y": 600,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "estrellas",
+          "dur": 2
+        },
+        {
+          "en": 3,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "MUSPELHEIM",
+            "en": "MUSPELHEIM"
+          },
+          "x": 1650,
+          "y": 220,
+          "hasta": 1
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "ESTRELLAS: CHISPAS DE MUSPELHEIM",
+            "en": "STARS: SPARKS OF MUSPELHEIM"
+          },
+          "x": 960,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "midgard",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "A los gigantes les dieron las tierras de la costa lejana, a orillas del mar profundo.",
+          "en": "The giants were given the far shores of the land, beside the deep sea."
+        },
+        {
+          "es": "Pero los gigantes eran enemigos de los dioses, y el centro del mundo debía quedar a salvo.",
+          "en": "But the giants were enemies of the gods, and the middle of the world had to be kept safe."
+        },
+        {
+          "es": "Entonces los dioses levantaron un muro alrededor, hecho con las cejas de Ymir.",
+          "en": "So the gods raised a wall all around it, made from Ymir's eyebrows."
+        },
+        {
+          "es": "Ese lugar protegido se llamó Midgard, y fue hecho para los hombres.",
+          "en": "That sheltered place was called Midgard, and it was made for people."
+        }
+      ],
+      "actores": [
+        {
+          "id": "g1",
+          "como": "jotun",
+          "x": 250,
+          "mira": "der",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.6,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "como": "gigante_hielo",
+          "x": 520,
+          "escala": 0.8,
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 1050,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "ve",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 780,
+          "props": {
+            "ancho": 160,
+            "alto": 300
+          },
+          "capa": "medio",
+          "en": 2
+        },
+        {
+          "tipo": "casa_larga",
+          "x": 1550,
+          "s": 0.8,
+          "en": 3
+        },
+        {
+          "tipo": "casa_larga",
+          "x": 1750,
+          "s": 0.7,
+          "capa": "medio",
+          "en": 3.2
+        },
+        {
+          "tipo": "pino",
+          "x": 1400,
+          "s": 0.8,
+          "capa": "medio",
+          "en": 3.4
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 2.3,
+          "tipo": "polvo",
+          "x": 860,
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "JOTUNHEIM",
+            "en": "JOTUNHEIM"
+          },
+          "x": 380,
+          "y": 220,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "MURO: LAS CEJAS DE YMIR",
+            "en": "WALL: YMIR'S EYEBROWS"
+          },
+          "x": 860,
+          "y": 220,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "MIDGARD",
+            "en": "MIDGARD"
+          },
+          "x": 1500,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "enanos",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mientras tanto, en la carne de Ymir, que ahora era la tierra, algo se movía.",
+          "en": "Meanwhile, in Ymir's flesh, which was now the earth, something was stirring."
+        },
+        {
+          "es": "Eran gusanos, como los que nacen en un cuerpo sin vida.",
+          "en": "They were maggots, like those that breed in a lifeless body."
+        },
+        {
+          "es": "Los dioses los miraron, y les dieron forma de hombres y una mente inteligente.",
+          "en": "The gods looked at them, and gave them the shape of men and a clever mind."
+        },
+        {
+          "es": "Son los enanos. Viven bajo la tierra y entre las rocas, lejos del sol.",
+          "en": "These are the dwarves. They live under the earth and among the rocks, far from the sun."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.6,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "d1",
+          "como": "enano",
+          "x": 800,
+          "escala": 0.1,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "crece",
+              "escala": 1.2
+            }
+          ]
+        },
+        {
+          "id": "d2",
+          "como": "enano",
+          "x": 1050,
+          "escala": 0.1,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "crece",
+              "escala": 1.2
+            }
+          ]
+        },
+        {
+          "id": "d3",
+          "como": "enano",
+          "x": 1300,
+          "escala": 0.1,
+          "rotulo": "",
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "crece",
+              "escala": 1.2
+            }
+          ]
+        },
+        {
+          "id": "d4",
+          "como": "enano",
+          "x": 1550,
+          "escala": 0.1,
+          "rotulo": "",
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.6,
+              "hace": "crece",
+              "escala": 1.2
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 700,
+          "s": 0.9,
+          "capa": "medio"
+        },
+        {
+          "tipo": "roca",
+          "x": 1650,
+          "s": 1.1
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 1000,
+          "dur": 1
+        },
+        {
+          "en": 2.5,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "ENANOS",
+            "en": "DWARVES"
+          },
+          "x": 1100,
+          "y": 240
+        }
+      ]
+    },
+    {
+      "id": "noche-dia",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Había una giganta llamada Nótt, la Noche, oscura como toda su familia.",
+          "en": "There was a giantess named Nott, the Night, dark like all her family."
+        },
+        {
+          "es": "Odín le dio un caballo negro, Hrímfaxi, y un carro para recorrer el cielo.",
+          "en": "Odin gave her a black horse, Hrimfaxi, and a chariot to cross the sky."
+        },
+        {
+          "es": "De la espuma de su freno cae el rocío. Por eso los valles amanecen mojados.",
+          "en": "From the foam of his bit falls the dew. That is why the valleys wake up wet."
+        },
+        {
+          "es": "Después Odín dio a su hijo, Dagr, el Día, un caballo blanco, Skinfaxi, cuya crin ilumina el mundo.",
+          "en": "Then Odin gave her son, Dagr, the Day, a bright horse, Skinfaxi, whose mane lights up the world."
+        },
+        {
+          "es": "Así, uno detrás del otro, Noche y Día recorren el cielo y dan la vuelta al mundo entero.",
+          "en": "And so, one after the other, Night and Day ride across the sky and circle the whole world."
+        }
+      ],
+      "actores": [
+        {
+          "id": "nott",
+          "como": "mujer",
+          "x": 300,
+          "rotulo": "NOTT",
+          "props": {
+            "pelo": "#0E1A27",
+            "capa": "#0E1A27",
+            "tocado": "velo"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 3.4
+            }
+          ]
+        },
+        {
+          "id": "hrimfaxi",
+          "como": "caballo",
+          "x": 560,
+          "rotulo": "HRIMFAXI",
+          "props": {
+            "color": "#1B2A3A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 1260,
+              "dur": 3.4
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 100,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.6,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "dagr",
+          "como": "hombre",
+          "x": 1150,
+          "mira": "izq",
+          "rotulo": "DAGR",
+          "props": {
+            "pelo": "#E9C46A",
+            "barba": false,
+            "capa": "#EADFB5",
+            "tocado": null
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "skinfaxi",
+          "como": "caballo",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "SKINFAXI",
+          "props": {
+            "color": "#EADFB5"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "camina",
+              "a": 1750,
+              "dur": 1.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar",
+          "dur": 1.5
+        },
+        {
+          "en": 3.5,
+          "tipo": "luz",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "NÓTT: LA NOCHE",
+            "en": "NOTT: NIGHT"
+          },
+          "x": 400,
+          "y": 220,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO HAY ROCÍO CADA MAÑANA",
+            "en": "THAT'S WHY THERE IS DEW EVERY MORNING"
+          },
+          "x": 960,
+          "y": 210
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "DAGR: EL DÍA",
+            "en": "DAGR: DAY"
+          },
+          "x": 1500,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "sol-luna",
+      "fondo": "cielo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un hombre llamado Mundilfari tenía dos hijos tan hermosos que los llamó Sól, el Sol, y Máni, la Luna.",
+          "en": "A man named Mundilfari had two children so beautiful that he named them Sol, the Sun, and Mani, the Moon."
+        },
+        {
+          "es": "Los dioses se ofendieron por tanto orgullo, y los pusieron en el cielo a guiar los carros del Sol y de la Luna.",
+          "en": "The gods took offense at such pride, and set the two children in the sky to drive the chariots of the Sun and the Moon."
+        },
+        {
+          "es": "Delante del Sol hay un escudo, Svalinn. Sin él, las montañas y los mares se incendiarían.",
+          "en": "In front of the Sun stands a shield, Svalinn. Without it, the mountains and the seas would burst into flames."
+        },
+        {
+          "es": "Pero dos lobos los persiguen: Skoll corre tras el Sol, y Hati tras la Luna.",
+          "en": "But two wolves chase them: Skoll runs after the Sun, and Hati after the Moon."
+        },
+        {
+          "es": "Por eso el Sol cruza el cielo tan veloz: huye del lobo.",
+          "en": "That is why the Sun races across the sky: she is fleeing the wolf."
+        },
+        {
+          "es": "Un día los lobos los alcanzarán, pero ese día todavía no llegó. Por ahora, siguen corriendo.",
+          "en": "One day the wolves will catch them, but that day has not come yet. For now, the chase goes on."
+        }
+      ],
+      "actores": [
+        {
+          "id": "sol",
+          "como": "mujer",
+          "x": 300,
+          "rotulo": "SOL",
+          "props": {
+            "pelo": "#E9C46A",
+            "capa": "#E9C46A",
+            "tocado": "corona"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "corre",
+              "a": 650,
+              "dur": 1.8
+            }
+          ]
+        },
+        {
+          "id": "mani",
+          "como": "hombre",
+          "x": 1300,
+          "rotulo": "MANI",
+          "props": {
+            "capa": "#BFD4E6",
+            "barba": false,
+            "tocado": null
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "corre",
+              "a": 1650,
+              "dur": 1.8
+            }
+          ]
+        },
+        {
+          "id": "skoll",
+          "como": "lobo_gigante",
+          "x": 0,
+          "rotulo": "SKOLL",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "corre",
+              "a": 450,
+              "dur": 1.8
+            }
+          ]
+        },
+        {
+          "id": "hati",
+          "como": "lobo_gigante",
+          "x": 950,
+          "rotulo": "HATI",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "corre",
+              "a": 1300,
+              "dur": 1.8
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 500,
+          "y": 250,
+          "s": 1.2,
+          "capa": "fondo",
+          "en": 1
+        },
+        {
+          "tipo": "luna",
+          "x": 1500,
+          "y": 250,
+          "s": 1.2,
+          "capa": "fondo",
+          "en": 1
+        },
+        {
+          "tipo": "monte_nevado",
+          "x": 960,
+          "s": 0.8,
+          "capa": "fondo",
+          "en": 2
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello"
+        },
+        {
+          "en": 2,
+          "tipo": "fuego",
+          "x": 520,
+          "y": 300,
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "polvo",
+          "x": 200,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "SVALINN: EL ESCUDO DEL SOL",
+            "en": "SVALINN: SHIELD OF THE SUN"
+          },
+          "x": 500,
+          "y": 200,
+          "hasta": 3
+        },
+        {
+          "en": 4,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO EL SOL CORRE TAN RÁPIDO",
+            "en": "THAT'S WHY THE SUN RACES SO FAST"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "ask-embla",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, Odín, Vili y Ve caminaban por la playa, y encontraron dos troncos arrastrados por el mar.",
+          "en": "One day, Odin, Vili and Ve were walking along the shore, and found two logs washed up by the sea."
+        },
+        {
+          "es": "Eran dos troncos sin aliento, sin mente, sin sangre ni color. Pero los dioses les dieron forma de hombre y de mujer.",
+          "en": "They were two logs with no breath, no mind, no blood and no color. But the gods shaped them into a man and a woman."
+        },
+        {
+          "es": "Odín les dio el aliento: la vida.",
+          "en": "Odin gave them breath: life."
+        },
+        {
+          "es": "Vili les dio la mente, y Ve les dio la sangre y el color de la vida.",
+          "en": "Vili gave them mind, and Ve gave them blood and the color of life."
+        },
+        {
+          "es": "Un poema antiguo, la Völuspá, nombra a los otros dos dioses Hœnir y Lodur. Pero el regalo es el mismo.",
+          "en": "An old poem, the Voluspa, names the other two gods Hoenir and Lodur. But the gift is the same."
+        },
+        {
+          "es": "Así nacieron Ask y Embla, el primer hombre y la primera mujer.",
+          "en": "That is how Ask and Embla were born, the first man and the first woman."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 750,
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "vili",
+          "x": 200,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 500,
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "ve",
+          "x": 0,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 250,
+              "dur": 1
+            },
+            {
+              "en": 3.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "ask",
+          "x": 1250,
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.6,
+              "hace": "cae",
+              "dur": 0.2
+            },
+            {
+              "en": 2.2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 5,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "embla",
+          "x": 1500,
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.8,
+              "hace": "cae",
+              "dur": 0.2
+            },
+            {
+              "en": 2.4,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 5.2,
+              "hace": "levantarse"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "olas-suben",
+          "dur": 1,
+          "intensidad": 0.3
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1400,
+          "y": 650,
+          "dur": 1.5
+        },
+        {
+          "en": 5,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "ODÍN: ALIENTO",
+            "en": "ODIN: BREATH"
+          },
+          "x": 1400,
+          "y": 220,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "VILI: MENTE · VE: SANGRE Y COLOR",
+            "en": "VILI: MIND · VE: BLOOD AND COLOR"
+          },
+          "x": 1400,
+          "y": 220,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "yggdrasil",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Y así, del cuerpo de un gigante, los dioses hicieron la tierra, el mar, el cielo y a los primeros hombres.",
+          "en": "And so, from the body of a giant, the gods made the earth, the sea, the sky and the first people."
+        },
+        {
+          "es": "Pero el mundo todavía necesitaba algo que lo sostuviera por completo.",
+          "en": "But the world still needed something to hold it all together."
+        },
+        {
+          "es": "Y ese algo ya estaba ahí: un árbol tan grande que sus ramas cubren los cielos y sus raíces llegan a nueve mundos.",
+          "en": "And it was already there: a tree so vast that its branches cover the heavens and its roots reach nine worlds."
+        },
+        {
+          "es": "Es Yggdrasil, el fresno del mundo. Y esa es la historia del próximo episodio: Yggdrasil y los nueve mundos.",
+          "en": "It is Yggdrasil, the world ash. And that is the story of the next episode: Yggdrasil and the Nine Worlds."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "ask",
+          "x": 200,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "embla",
+          "x": 380,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "huginn",
+          "x": 900,
+          "y": 300,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "vuela",
+              "a": [
+                1500,
+                250
+              ],
+              "dur": 1.6
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yggdrasil",
+          "x": 1400,
+          "s": 1,
+          "capa": "fondo",
+          "en": 2
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "YGGDRASIL",
+            "en": "YGGDRASIL"
+          },
+          "x": 1400,
+          "y": 200
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El mundo se hizo con el cuerpo de un gigante",
+        "en": "The world was made from a giant's body"
+      },
+      "escena": "tierra",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1400
+    },
+    {
+      "gancho": {
+        "es": "Las estrellas son chispas del reino del fuego",
+        "en": "The stars are sparks from the realm of fire"
+      },
+      "escena": "estrellas",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 800
+    },
+    {
+      "gancho": {
+        "es": "Dos lobos persiguen al Sol y a la Luna",
+        "en": "Two wolves chase the Sun and the Moon"
+      },
+      "escena": "sol-luna",
+      "desde": 3,
+      "hasta": 5,
+      "foco": 800
+    }
+  ],
+  "miniatura": {
+    "heroe": "odin",
+    "rival": "embla"
+  }
+}

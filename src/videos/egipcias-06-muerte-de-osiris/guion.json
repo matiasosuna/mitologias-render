@@ -1,0 +1,1262 @@
+{
+  "id": "egipcias-06-muerte-de-osiris",
+  "serie": "egipcias",
+  "numero": "06",
+  "titulo": {
+    "es": "La muerte de Osiris",
+    "en": "The Murder of Osiris"
+  },
+  "tituloGriego": "THE MURDER OF OSIRIS",
+  "miniatura": {
+    "heroe": "osiris",
+    "rival": "set"
+  },
+  "escenas": [
+    {
+      "id": "nombre",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Isis ahora conocía el nombre secreto de Ra, la palabra más poderosa que existía.",
+          "en": "Isis now knew the secret name of Ra, the most powerful word in all the world."
+        },
+        {
+          "es": "Con él, era la hechicera más grande entre todos los dioses.",
+          "en": "With it, she was the greatest magician among all the gods."
+        },
+        {
+          "es": "Pero hay males que ningún nombre puede curar. Uno de ellos es la envidia.",
+          "en": "But some sicknesses no name can cure. One of them is envy."
+        },
+        {
+          "es": "Y en el corazón de un dios, esa envidia llevaba años creciendo.",
+          "en": "And in the heart of one god, envy had been growing for years."
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "x": 1900,
+          "mira": "izq",
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 1600
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1.5,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.5,
+          "texto": {
+            "es": "EL NOMBRE SECRETO",
+            "en": "THE SECRET NAME"
+          },
+          "x": 960,
+          "y": 250,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "rey",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Su esposo Osiris era el rey de Egipto, y su pueblo lo amaba como a nadie.",
+          "en": "Her husband Osiris was king of Egypt, and his people loved him like no one else."
+        },
+        {
+          "es": "Antes de él, los hombres vivían como bestias. Osiris les enseñó a sembrar trigo y cebada, y a vivir con leyes.",
+          "en": "Before him, men lived like beasts. Osiris taught them to sow wheat and barley, and to live by laws."
+        },
+        {
+          "es": "Cuando Egipto estuvo en orden, partió a recorrer el mundo para enseñar lo mismo a otros pueblos.",
+          "en": "When Egypt was in order, he set out across the world to teach other peoples the same."
+        },
+        {
+          "es": "No llevaba ejércitos. Conquistaba a la gente con música y con palabras.",
+          "en": "He took no army with him. He won people over with music and with words."
+        },
+        {
+          "es": "Mientras tanto, Isis gobernaba Egipto con tanto cuidado que ningún enemigo encontraba una grieta.",
+          "en": "Meanwhile Isis ruled Egypt so carefully that no enemy could find a crack to slip through."
+        }
+      ],
+      "actores": [
+        {
+          "id": "osiris",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 2
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 1000,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "cultivador",
+          "x": 300,
+          "como": "egipcio",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.6,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "cultivadora",
+          "x": 480,
+          "como": "egipcia",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.8,
+              "hace": "baja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 400,
+          "y": 400,
+          "dur": 1.5,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "TRIGO Y CEBADA",
+            "en": "WHEAT AND BARLEY"
+          },
+          "x": 400,
+          "y": 300,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "set",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Osiris tenía un hermano: Set, el señor del desierto y de las tormentas.",
+          "en": "Osiris had a brother: Set, lord of the desert and the storms."
+        },
+        {
+          "es": "Set veía cómo todos querían a Osiris, y por dentro se le agriaba el corazón.",
+          "en": "Set watched everyone love Osiris, and inside him his heart turned sour."
+        },
+        {
+          "es": "Quería el trono de su hermano. Y cuando Osiris volvió de su viaje, empezó a reunir aliados en secreto.",
+          "en": "He wanted his brother’s throne. And when Osiris came home from his travels, Set began gathering allies in secret."
+        },
+        {
+          "es": "Setenta y dos hombres se unieron a su conjura, y también una reina del sur llamada Aso.",
+          "en": "Seventy-two men joined his plot, and so did a queen from the south named Aso."
+        }
+      ],
+      "actores": [
+        {
+          "id": "set",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "c1",
+          "x": 1150,
+          "como": "egipcio",
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "c2",
+          "x": 1330,
+          "como": "egipcio",
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2.8,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "x": 1510,
+          "como": "egipcio",
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "aso",
+          "x": 1720,
+          "como": "reina_egipcia",
+          "mira": "izq",
+          "rotulo": "ASO",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1.5,
+          "intensidad": 0.4
+        },
+        {
+          "en": 0.2,
+          "tipo": "polvo",
+          "x": 900,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "72 CONJURADOS",
+            "en": "72 CONSPIRATORS"
+          },
+          "x": 1300,
+          "y": 280,
+          "hasta": 3.9
+        }
+      ]
+    },
+    {
+      "id": "medida",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.05,
+          1.15
+        ]
+      },
+      "frases": [
+        {
+          "es": "En secreto, Set tomó la medida exacta del cuerpo de Osiris, de la cabeza a los pies.",
+          "en": "In secret, Set took the exact measure of Osiris’s body, from head to foot."
+        },
+        {
+          "es": "Con esa medida mandó construir un cofre hermoso, tallado y pintado con todo el arte de los artesanos.",
+          "en": "From that measure he had a chest made, beautiful, carved and painted with all the skill of the craftsmen."
+        },
+        {
+          "es": "Un cofre así no parecía una trampa. Parecía un regalo.",
+          "en": "A chest like that did not look like a trap. It looked like a gift."
+        },
+        {
+          "es": "Y Set guardó su secreto hasta la noche de un gran banquete.",
+          "en": "And Set kept his secret until the night of a great banquet."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 1350,
+          "s": 1.2,
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "set",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "osiris",
+          "x": 1750,
+          "mira": "izq",
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "calla"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "artesano",
+          "x": 1000,
+          "como": "egipcio",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "destello",
+          "x": 1350,
+          "y": 500,
+          "dur": 0.6
+        }
+      ]
+    },
+    {
+      "id": "banquete",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Esa noche hubo un gran banquete en el palacio, y entre los invitados estaban los setenta y dos conjurados.",
+          "en": "That night there was a great banquet at the palace, and among the guests were the seventy-two conspirators."
+        },
+        {
+          "es": "De pronto, Set hizo entrar el cofre, y todos se quedaron mirándolo con asombro.",
+          "en": "Suddenly Set had the chest carried in, and every guest stared at it in wonder."
+        },
+        {
+          "es": "«Será para quien quepa dentro», dijo Set, como si fuera un juego.",
+          "en": "“It will belong to whoever fits inside,” said Set, as if it were a game."
+        },
+        {
+          "es": "Uno por uno, los invitados se acostaron en el cofre. A ninguno le quedaba bien.",
+          "en": "One by one the guests lay down in the chest. It fit none of them."
+        },
+        {
+          "es": "Hasta que llegó el turno de Osiris, que no sospechaba nada, y se acostó dentro.",
+          "en": "Until it was Osiris’s turn. He suspected nothing, and lay down inside."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 1250,
+          "s": 1.3,
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "osiris",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "g1",
+          "x": 1500,
+          "como": "egipcio",
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.5,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "x": 1680,
+          "como": "egipcia",
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "x": 1850,
+          "como": "egipcio",
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.6,
+              "hace": "arrodilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 450,
+          "dur": 1.2,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "EL COFRE",
+            "en": "THE CHEST"
+          },
+          "x": 1250,
+          "y": 260,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "tapa",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.1,
+          1.2
+        ]
+      },
+      "frases": [
+        {
+          "es": "Le quedaba perfecto, como si el cofre se hubiera hecho para él. Y así era.",
+          "en": "It fit him perfectly, as if the chest had been made for him. And it had."
+        },
+        {
+          "es": "En ese instante, los conjurados corrieron y cerraron la tapa de un golpe.",
+          "en": "In that instant the conspirators rushed forward and slammed the lid shut."
+        },
+        {
+          "es": "La clavaron con clavos y la sellaron con plomo fundido, para que nunca más pudiera abrirse.",
+          "en": "They nailed it down and sealed it with molten lead, so it could never be opened again."
+        },
+        {
+          "es": "La fiesta, que había empezado con risas, terminó en silencio.",
+          "en": "The feast that had begun with laughter ended in silence."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 960,
+          "s": 1.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "osiris",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "c1",
+          "x": 450,
+          "como": "egipcio",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 760,
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.5,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "c2",
+          "x": 1500,
+          "como": "egipcio",
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "corre",
+              "a": 1180,
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "x": 1750,
+          "mira": "izq",
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "x": 250,
+          "como": "egipcia",
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello",
+          "x": 960,
+          "y": 500,
+          "dur": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 520,
+          "dur": 0.8
+        },
+        {
+          "en": 2.6,
+          "tipo": "fuego",
+          "x": 960,
+          "y": 560,
+          "dur": 0.8,
+          "intensidad": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.5
+        }
+      ]
+    },
+    {
+      "id": "rio",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Esa misma noche, los conjurados cargaron el cofre hasta la orilla del Nilo.",
+          "en": "That same night the conspirators carried the chest down to the banks of the Nile."
+        },
+        {
+          "es": "Según cuenta Plutarco, era el día diecisiete del mes de Athyr, y Osiris llevaba veintiocho años reinando.",
+          "en": "Plutarch tells us it was the seventeenth day of the month of Athyr, and Osiris had reigned twenty-eight years."
+        },
+        {
+          "es": "Lo arrojaron al agua, y la corriente lo arrastró hasta las bocas del río y lo empujó hacia el mar.",
+          "en": "They threw it into the water, and the current dragged it to the mouths of the river and out to sea."
+        },
+        {
+          "es": "Así terminó el reinado de Osiris sobre la tierra de los vivos.",
+          "en": "So ended the reign of Osiris over the land of the living."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 1000,
+          "s": 0.8,
+          "capa": "fondo",
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "c1",
+          "x": 450,
+          "como": "egipcio",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 700,
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "lanza"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "c2",
+          "x": 280,
+          "como": "egipcio",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 540,
+              "dur": 1
+            },
+            {
+              "en": 2.1,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "x": 120,
+          "como": "egipcio",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 380,
+              "dur": 1
+            },
+            {
+              "en": 2.2,
+              "hace": "baja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "17 DE ATHYR",
+            "en": "17TH OF ATHYR"
+          },
+          "x": 1100,
+          "y": 260,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "luto",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuando Isis se enteró, se cortó un mechón de pelo allí mismo y se puso ropas de luto.",
+          "en": "When Isis heard, she cut off a lock of her hair on the spot and put on mourning clothes."
+        },
+        {
+          "es": "Según Plutarco, la ciudad donde estaba, Coptos, recibió un nombre que significa duelo.",
+          "en": "According to Plutarch, the city where she stood, Coptos, took a name that means mourning."
+        },
+        {
+          "es": "Isis recorrió todo el país, preguntando por el cofre a cualquiera que se cruzara en su camino.",
+          "en": "She wandered the whole country, asking everyone she met about the chest."
+        },
+        {
+          "es": "Por fin, unos niños que jugaban junto al río le contaron que lo habían visto pasar, rumbo al mar.",
+          "en": "At last some children playing by the river told her they had seen it float by, bound for the sea."
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "n1",
+          "x": 1400,
+          "como": "nino",
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2.8,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "x": 1560,
+          "como": "nina",
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.5,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "COPTOS",
+            "en": "COPTOS"
+          },
+          "x": 900,
+          "y": 280,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "biblos",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mientras tanto, el mar había llevado el cofre muy lejos, hasta la costa de Biblos, en Fenicia.",
+          "en": "Meanwhile the sea had carried the chest far away, to the coast of Byblos, in Phoenicia."
+        },
+        {
+          "es": "Las olas lo dejaron suavemente junto a unas ramas de tamarisco, en la orilla.",
+          "en": "The waves set it down gently beside the branches of a tamarisk, on the shore."
+        },
+        {
+          "es": "Y el tamarisco creció y creció, hasta envolver el cofre por completo dentro de su tronco.",
+          "en": "And the tamarisk grew and grew, until it enclosed the chest completely inside its trunk."
+        },
+        {
+          "es": "Era un árbol tan hermoso que el rey de Biblos lo mandó cortar, sin saber lo que escondía.",
+          "en": "It was such a beautiful tree that the king of Byblos had it cut down, never knowing what it hid."
+        },
+        {
+          "es": "Con su tronco hizo una columna para su palacio. Y allí, de pie en tierra extranjera, quedó el cuerpo de Osiris.",
+          "en": "He made a pillar of its trunk for his palace. And there, standing in a foreign land, lay the body of Osiris."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 1000,
+          "s": 0.7,
+          "en": 1
+        },
+        {
+          "tipo": "palmera",
+          "x": 1000,
+          "s": 1.7,
+          "en": 2
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 1550,
+          "s": 1.3,
+          "en": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "rey_biblos",
+          "x": 1300,
+          "como": "faraon",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "baja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 450,
+          "dur": 1.2,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "BIBLOS",
+            "en": "BYBLOS"
+          },
+          "x": 700,
+          "y": 270,
+          "hasta": 1.9
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Isis siguió el rastro del cofre hasta la orilla del mar, decidida a no volver sin su esposo.",
+          "en": "Isis followed the chest’s trail to the edge of the sea, determined not to return without her husband."
+        },
+        {
+          "es": "Pero Set todavía no había terminado con su hermano. Lo peor estaba por venir.",
+          "en": "But Set was not finished with his brother. The worst was yet to come."
+        },
+        {
+          "es": "Esa es la historia del próximo episodio: Isis y los catorce pedazos.",
+          "en": "That is the story of the next episode: Isis and the Fourteen Pieces."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1300,
+          "s": 1,
+          "en": 0
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "x": 1750,
+          "mira": "izq",
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "PRÓXIMO: ISIS Y LOS CATORCE PEDAZOS",
+            "en": "NEXT: ISIS AND THE FOURTEEN PIECES"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El juego de un banquete que era una trampa",
+        "en": "The banquet game that was a trap"
+      },
+      "escena": "banquete",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "Sellado con plomo fundido",
+        "en": "Sealed with molten lead"
+      },
+      "escena": "tapa",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "El árbol que se tragó el ataúd de un rey",
+        "en": "The tree that swallowed a king’s coffin"
+      },
+      "escena": "biblos",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1100
+    }
+  ]
+}

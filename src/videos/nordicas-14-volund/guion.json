@@ -1,0 +1,1800 @@
+{
+  "id": "nordicas-14-volund",
+  "serie": "nordicas",
+  "numero": "14",
+  "titulo": {
+    "es": "Völund el herrero",
+    "en": "Volund the Smith"
+  },
+  "tituloGriego": "VOLUND THE SMITH",
+  "escenas": [
+    {
+      "id": "heroes",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "El mundo había salido del mar, verde y nuevo. La era de los dioses había terminado.",
+          "en": "The world had risen from the sea, green and new. The age of the gods was over."
+        },
+        {
+          "es": "Ahora empezaba una nueva era: la era de los héroes. Eran hombres y mujeres, no dioses.",
+          "en": "Now a new age began: the age of heroes. These were men and women, not gods."
+        },
+        {
+          "es": "No tenían rayos ni martillos mágicos. Tenían espadas, valor y un destino del que no podían escapar.",
+          "en": "They had no lightning and no magic hammers. They had swords, courage, and a fate they could not escape."
+        },
+        {
+          "es": "Esta temporada cuenta sus historias. Y la primera es la de un herrero.",
+          "en": "This season tells their stories. And the first story is about a smith."
+        },
+        {
+          "es": "Se llamaba Völund, y podía darle forma a cualquier cosa con el metal.",
+          "en": "His name was Volund, and he could shape anything from metal."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 150,
+          "s": 1.0,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pino",
+          "x": 1750,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 1280,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "vikingo",
+          "como": "vikingo",
+          "x": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 450,
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mujer",
+          "x": 750,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "tocado": "velo",
+            "ropa": "larga"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "entra",
+              "a": 750,
+              "dur": 1
+            },
+            {
+              "en": 1.5,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "volund",
+          "como": "hombre",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "VOLUND",
+          "props": {
+            "barba": true,
+            "objeto": "martillo",
+            "ropa": "corta",
+            "pelo": "#B5452A",
+            "capa": "#7A4A2A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.4,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.4,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 900,
+          "y": 420,
+          "dur": 1.5
+        },
+        {
+          "en": 3.4,
+          "tipo": "chispas",
+          "x": 1400,
+          "y": 600
+        },
+        {
+          "en": 4,
+          "tipo": "chispas",
+          "x": 1400,
+          "y": 600
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA ERA DE LOS HÉROES",
+            "en": "THE AGE OF HEROES"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 3
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "VÖLUND, EL HERRERO",
+            "en": "VOLUND THE SMITH"
+          },
+          "x": 960,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "valle",
+      "fondo": "bosque_nevado",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Völund vivía en un valle frío llamado los Valles del Lobo, junto a un lago oscuro.",
+          "en": "Volund lived in a cold valley called the Wolf Dales, beside a dark lake."
+        },
+        {
+          "es": "Era hijo de un rey. Dicen que era un príncipe de los elfos, el pueblo mágico del bosque.",
+          "en": "He was the son of a king. Some say he was a prince of the elves, the magical folk of the woods."
+        },
+        {
+          "es": "Tenía dos hermanos, Egil y Slagfid. Los tres cazaban juntos en el bosque.",
+          "en": "He had two brothers, Egil and Slagfid. The three of them hunted in the forest together."
+        },
+        {
+          "es": "Völund era el mejor de los tres. Nadie en el mundo trabajaba el metal como él.",
+          "en": "Volund was the best of them. No one in the world could work metal like him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 1500,
+          "s": 1.0,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "rio",
+          "x": 1300,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "lobo",
+          "como": "lobo",
+          "x": 1750,
+          "escala": 0.8,
+          "mira": "izq",
+          "capa": "fondo",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "volund",
+          "como": "hombre",
+          "x": 100,
+          "rotulo": "VOLUND",
+          "props": {
+            "barba": true,
+            "objeto": "martillo",
+            "ropa": "corta",
+            "pelo": "#B5452A",
+            "capa": "#7A4A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 600,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "egil",
+          "como": "joven",
+          "x": -150,
+          "rotulo": "EGIL",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "slagfid",
+          "como": "hombre",
+          "x": -400,
+          "rotulo": "SLAGFID",
+          "props": {
+            "barba": false,
+            "objeto": "lanza"
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "camina",
+              "a": 1200,
+              "dur": 1.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LOS VALLES DEL LOBO",
+            "en": "THE WOLF DALES"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 1.5
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "EL MEJOR HERRERO",
+            "en": "THE BEST SMITH"
+          },
+          "x": 600,
+          "y": 300,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "cisnes",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día los hermanos encontraron a tres mujeres junto al lago, hilando.",
+          "en": "One day the brothers found three women by the lake, spinning thread."
+        },
+        {
+          "es": "A su lado había tres capas de plumas de cisne. Eran valquirias, doncellas guerreras que volaban como cisnes.",
+          "en": "Beside them lay three coats of swan feathers. They were valkyries, warrior maidens who could fly as swans."
+        },
+        {
+          "es": "Los hermanos se casaron con ellas. Durante siete inviernos, las parejas vivieron felices en el valle.",
+          "en": "The brothers took them as wives. For seven winters, the couples lived happily in the valley."
+        },
+        {
+          "es": "Pero en el octavo invierno las mujeres se inquietaron. En el noveno se pusieron las plumas y se fueron volando.",
+          "en": "But in the eighth winter, the women grew restless. In the ninth, they put on their feathers and flew away."
+        },
+        {
+          "es": "Egil y Slagfid salieron a buscarlas. Völund se quedó solo, esperando que su esposa volviera.",
+          "en": "Egil and Slagfid went to search for them. Volund stayed behind, alone, waiting for his wife to return."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 100,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "m1",
+          "como": "mujer",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "tocado": "velo",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.4,
+              "hace": "transforma",
+              "dur": 0.5,
+              "en_que": "valquiria"
+            },
+            {
+              "en": 3.5,
+              "hace": "vuela",
+              "a": [
+                2600,
+                450
+              ],
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "m2",
+          "como": "mujer",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "tocado": "velo",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.4,
+              "hace": "transforma",
+              "dur": 0.5,
+              "en_que": "valquiria"
+            },
+            {
+              "en": 3.6,
+              "hace": "vuela",
+              "a": [
+                2700,
+                400
+              ],
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "m3",
+          "como": "mujer",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "tocado": "velo",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.4,
+              "hace": "transforma",
+              "dur": 0.5,
+              "en_que": "valquiria"
+            },
+            {
+              "en": 3.7,
+              "hace": "vuela",
+              "a": [
+                2800,
+                500
+              ],
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "slagfid",
+          "como": "hombre",
+          "x": -300,
+          "rotulo": "SLAGFID",
+          "props": {
+            "barba": false,
+            "objeto": "lanza"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 0.9
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": -300,
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "egil",
+          "como": "joven",
+          "x": -550,
+          "rotulo": "EGIL",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1350,
+              "dur": 0.9
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": -300,
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "volund",
+          "como": "hombre",
+          "x": -800,
+          "rotulo": "VOLUND",
+          "props": {
+            "barba": true,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#B5452A",
+            "capa": "#7A4A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1600,
+              "dur": 1
+            },
+            {
+              "en": 3.9,
+              "hace": "lamenta"
+            },
+            {
+              "en": 4,
+              "hace": "gira"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.6,
+          "tipo": "chispas",
+          "x": 1700,
+          "y": 400
+        },
+        {
+          "en": 3.7,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.4,
+          "texto": {
+            "es": "VALQUIRIAS",
+            "en": "VALKYRIES"
+          },
+          "x": 1500,
+          "y": 300,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "anillos",
+      "fondo": "fragua",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Para pasar el tiempo, Völund fue a su fragua y forjó anillos de oro rojo.",
+          "en": "To pass the time, Volund went to his forge and made rings of red gold."
+        },
+        {
+          "es": "Hizo setecientos, y los ató todos en un cordel.",
+          "en": "He made seven hundred of them, and he tied them all together on a cord."
+        },
+        {
+          "es": "Cada anillo era un regalo para su esposa. Esperaba que volviera y se los pusiera.",
+          "en": "Each ring was a gift for his wife. He hoped she would come back and wear them."
+        },
+        {
+          "es": "Pero corrió la voz de que el gran herrero estaba solo en el valle, con un tesoro de oro.",
+          "en": "But word spread that the great smith was alone in the valley, with a hoard of gold."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 300,
+          "capa": "medio"
+        },
+        {
+          "tipo": "cofre",
+          "x": 1250,
+          "s": 1.1,
+          "capa": "medio",
+          "en": 1.5
+        },
+        {
+          "tipo": "cofre",
+          "x": 1500,
+          "s": 0.9,
+          "capa": "medio",
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "volund",
+          "como": "hombre",
+          "x": 700,
+          "rotulo": "",
+          "props": {
+            "barba": true,
+            "objeto": "martillo",
+            "ropa": "corta",
+            "pelo": "#B5452A",
+            "capa": "#7A4A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "chispas",
+          "x": 550,
+          "y": 620
+        },
+        {
+          "en": 0.8,
+          "tipo": "chispas",
+          "x": 550,
+          "y": 620
+        },
+        {
+          "en": 1.3,
+          "tipo": "chispas",
+          "x": 550,
+          "y": 620
+        },
+        {
+          "en": 1.9,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 500,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "700 ANILLOS",
+            "en": "700 RINGS"
+          },
+          "x": 960,
+          "y": 260,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "captura",
+      "fondo": "bosque_nevado",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Muy lejos vivía un rey llamado Nidud. Era codicioso, y se enteró del oro de Völund.",
+          "en": "Far away lived a king named Nidud. He was greedy, and he heard about Volund's gold."
+        },
+        {
+          "es": "Una noche, sus hombres entraron en secreto al valle. Robaron un anillo del cordel y se escondieron.",
+          "en": "One night, his men crept into the valley. They stole a ring from the cord and hid in the dark."
+        },
+        {
+          "es": "Völund volvió cansado. Se acostó junto al fuego y se quedó profundamente dormido.",
+          "en": "Volund came home tired. He lay down by the fire and fell fast asleep."
+        },
+        {
+          "es": "Entonces los hombres saltaron y lo ataron. Al despertar, tenía las manos y los pies atados.",
+          "en": "Then the men leaped out and tied him up. When he woke, his hands and feet were bound."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 450,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "nidud",
+          "como": "rey",
+          "x": 1650,
+          "mira": "izq",
+          "capa": "fondo",
+          "rotulo": "NIDUD",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.4,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "s1",
+          "como": "vikingo",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 800,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "s2",
+          "como": "vikingo",
+          "x": 1700,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "camina",
+              "a": 950,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "volund",
+          "como": "hombre",
+          "x": 100,
+          "rotulo": "VOLUND",
+          "props": {
+            "barba": true,
+            "objeto": "martillo",
+            "ropa": "corta",
+            "pelo": "#B5452A",
+            "capa": "#7A4A2A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 600,
+              "dur": 0.7
+            },
+            {
+              "en": 2.7,
+              "hace": "sienta"
+            },
+            {
+              "en": 2.9,
+              "hace": "cae"
+            },
+            {
+              "en": 3.6,
+              "hace": "tiembla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 3,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "EL REY NIDUD",
+            "en": "KING NIDUD"
+          },
+          "x": 1500,
+          "y": 300,
+          "hasta": 1.4
+        },
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "ATADO",
+            "en": "BOUND"
+          },
+          "x": 600,
+          "y": 300,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "corte",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En el salón del rey, la reina miró a Völund a los ojos. Brillan como los de una serpiente, dijo.",
+          "en": "In the king's hall, the queen looked into Volund's eyes. They shine like a snake's, she said."
+        },
+        {
+          "es": "Nidud se quedó con la espada de Völund. El anillo robado se lo dio a su hija, Bodvild.",
+          "en": "Nidud took Volund's sword for himself. He gave the stolen ring to his daughter, Bodvild."
+        },
+        {
+          "es": "Luego la reina dio una orden cruel: córtenle los tendones de las piernas, para que nunca pueda huir.",
+          "en": "Then the queen gave a cruel order: cut the tendons in his legs, so he can never run away."
+        },
+        {
+          "es": "Así se hizo. Völund nunca más pudo correr. Lo dejaron en una isla solitaria, con sus herramientas.",
+          "en": "So it was done. Volund could never run again. They left him on a lonely island, with his tools."
+        },
+        {
+          "es": "Piénsalo. Un rey te quita la libertad, el oro y la espada. ¿Qué harías tú? Cuéntamelo en los comentarios.",
+          "en": "Think about it. A king takes your freedom, your gold, and your sword. What would you do? Tell me in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1650,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "volund",
+          "como": "hombre",
+          "x": 450,
+          "rotulo": "VOLUND",
+          "props": {
+            "barba": true,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#B5452A",
+            "capa": "#7A4A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "tiembla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "cae"
+            },
+            {
+              "en": 4.2,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "guardia",
+          "como": "vikingo",
+          "x": 250,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": []
+        },
+        {
+          "id": "reina",
+          "como": "reina",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "THE QUEEN",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 0.5,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "nidud",
+          "como": "rey",
+          "x": 1650,
+          "mira": "izq",
+          "rotulo": "NIDUD",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.3,
+              "hace": "toma",
+              "objeto": "espada"
+            },
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "bodvild",
+          "como": "mujer",
+          "x": 1000,
+          "mira": "izq",
+          "rotulo": "BODVILD",
+          "props": {
+            "tocado": "diadema",
+            "ropa": "larga"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.8,
+              "hace": "brilla",
+              "dur": 0.7
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 3.1,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "¿QUÉ HARÍAS TÚ?",
+            "en": "WHAT WOULD YOU DO?"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "isla",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En la isla, el rey Nidud obligó a Völund a forjar tesoros para él, día tras día.",
+          "en": "On the island, King Nidud made Volund forge treasures for him, day after day."
+        },
+        {
+          "es": "Völund no decía nada. Golpeaba el metal y solo pensaba en vengarse.",
+          "en": "Volund said nothing. He hammered the metal, and he thought only of revenge."
+        },
+        {
+          "es": "Un día, los dos hijos pequeños de Nidud llegaron a la isla. Querían ver los tesoros.",
+          "en": "One day, Nidud's two young sons came to the island. They wanted to see the treasures."
+        },
+        {
+          "es": "Vuelvan mañana, les dijo Völund, y les mostraré algo maravilloso. Vengan solos.",
+          "en": "Come back tomorrow, Volund told them, and I will show you something wonderful. Come alone."
+        },
+        {
+          "es": "Al día siguiente, los niños se asomaron a un cofre lleno de oro. Völund los mató y escondió sus cuerpos bajo la fragua.",
+          "en": "The next day, the boys leaned over a chest full of gold. Volund killed them, and hid their bodies under his forge."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 250,
+          "capa": "medio"
+        },
+        {
+          "tipo": "drakkar",
+          "x": 1750,
+          "s": 0.6,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "cofre",
+          "x": 900,
+          "s": 1.1,
+          "capa": "medio",
+          "en": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "volund",
+          "como": "hombre",
+          "x": 600,
+          "rotulo": "VOLUND",
+          "props": {
+            "barba": true,
+            "objeto": "martillo",
+            "ropa": "corta",
+            "pelo": "#B5452A",
+            "capa": "#7A4A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.4,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "h1",
+          "como": "nino",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1300,
+              "dur": 0.8
+            },
+            {
+              "en": 3.1,
+              "hace": "calla"
+            },
+            {
+              "en": 3.4,
+              "hace": "sale"
+            },
+            {
+              "en": 4,
+              "hace": "entra",
+              "a": 1050,
+              "dur": 0.5
+            },
+            {
+              "en": 4.6,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "h2",
+          "como": "nino",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "entra",
+              "a": 1500,
+              "dur": 0.8
+            },
+            {
+              "en": 3.5,
+              "hace": "sale"
+            },
+            {
+              "en": 4,
+              "hace": "entra",
+              "a": 1200,
+              "dur": 0.5
+            },
+            {
+              "en": 4.7,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "chispas",
+          "x": 450,
+          "y": 620
+        },
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 450,
+          "y": 620
+        },
+        {
+          "en": 4.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 4.5,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "UNA ISLA SOLITARIA",
+            "en": "A LONELY ISLAND"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1.5
+        },
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "VENGANZA",
+            "en": "REVENGE"
+          },
+          "x": 600,
+          "y": 300,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "copas",
+      "fondo": "fragua",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Con los cráneos de los niños, Völund hizo copas y las engarzó en plata. Se las envió al rey como regalo.",
+          "en": "Volund made cups from the boys' skulls, and set them in silver. He sent them to the king as a gift."
+        },
+        {
+          "es": "Nidud recibió las copas con orgullo. No tenía idea de qué eran.",
+          "en": "Nidud took the cups proudly. He had no idea what they were."
+        },
+        {
+          "es": "Poco después, la princesa Bodvild llegó a la isla. Su anillo estaba roto, y temía a su padre.",
+          "en": "Soon after, the princess Bodvild came to the island. Her ring was broken, and she was afraid of her father."
+        },
+        {
+          "es": "Völund arregló el anillo, pero también le hizo un gran daño. Con el tiempo ella tendría un hijo suyo.",
+          "en": "Volund mended the ring, but he also did her a great wrong. In time she would bear his son."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 250,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "volund",
+          "como": "hombre",
+          "x": 500,
+          "rotulo": "",
+          "props": {
+            "barba": true,
+            "objeto": "martillo",
+            "ropa": "corta",
+            "pelo": "#B5452A",
+            "capa": "#7A4A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.8,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.4,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "nidud",
+          "como": "rey",
+          "x": 1650,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "toma",
+              "objeto": "copa"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "bodvild",
+          "como": "mujer",
+          "x": 2200,
+          "mira": "izq",
+          "rotulo": "BODVILD",
+          "props": {
+            "tocado": "diadema",
+            "ropa": "larga"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "entra",
+              "a": 1050,
+              "dur": 0.9
+            },
+            {
+              "en": 2.8,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3.5,
+              "hace": "baja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "chispas",
+          "x": 450,
+          "y": 620
+        },
+        {
+          "en": 0.8,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.3,
+          "tipo": "chispas",
+          "x": 600,
+          "y": 600
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.6,
+          "texto": {
+            "es": "COPAS DE PLATA",
+            "en": "SILVER CUPS"
+          },
+          "x": 1500,
+          "y": 260,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "vuelo",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ahora Völund estaba listo. Riendo, se elevó en el aire y voló sobre el mar.",
+          "en": "Now Volund was ready. Laughing, he rose into the air and flew over the sea."
+        },
+        {
+          "es": "Voló sobre el salón del rey y gritó desde arriba lo que había hecho.",
+          "en": "He flew over the king's hall and shouted down what he had done."
+        },
+        {
+          "es": "Tus hijos están muertos, Nidud. Sus cráneos son las copas de tu mesa. Y tu hija tendrá un hijo mío.",
+          "en": "Your sons are dead, Nidud. Their skulls are the cups on your table. And your daughter will bear my child."
+        },
+        {
+          "es": "Nidud gritó de rabia. Pero nadie podía alcanzar a Völund. Se alejó volando, libre al fin.",
+          "en": "Nidud screamed with rage. But no one could reach Volund. He flew away, free at last."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 1700,
+          "s": 1.2,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "volund",
+          "como": "hombre",
+          "x": 500,
+          "y": 790,
+          "rotulo": "VOLUND",
+          "props": {
+            "barba": true,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#B5452A",
+            "capa": "#7A4A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 0.3,
+              "hace": "vuela",
+              "a": [
+                800,
+                560
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "vuela",
+              "a": [
+                1450,
+                520
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                2700,
+                450
+              ],
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "nidud",
+          "como": "rey",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "NIDUD",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "tiembla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "bodvild",
+          "como": "mujer",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "tocado": "diadema",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 2.1,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "LA VENGANZA DE VÖLUND",
+            "en": "VOLUND'S REVENGE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3.5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "fragua",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.04,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así se vengó el mayor herrero del norte.",
+          "en": "That is how the greatest smith of the north got his revenge."
+        },
+        {
+          "es": "En los poemas antiguos, una espada perfecta o una armadura fuerte se llamaba obra de Völund.",
+          "en": "In old poems, a perfect sword or a strong armor was called Volund's work."
+        },
+        {
+          "es": "Los héroes llevarían acero como el suyo a la batalla. Y los héroes son el tema de esta temporada.",
+          "en": "Heroes would carry steel like his into battle. And heroes are what this season is all about."
+        },
+        {
+          "es": "Dime: ¿la venganza de Völund fue justicia, o se pasó de la raya? Cuéntamelo en los comentarios.",
+          "en": "So tell me: was Volund's revenge justice, or did he go too far? Tell me in the comments."
+        },
+        {
+          "es": "En el próximo episodio: un enano, un anillo y un tesoro maldito. El oro maldito de Andvari.",
+          "en": "Next time: a dwarf, a ring, and a treasure with a curse on it. Andvari's Cursed Gold."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 250,
+          "capa": "medio"
+        },
+        {
+          "tipo": "cofre",
+          "x": 1250,
+          "s": 1,
+          "capa": "medio",
+          "en": 4
+        },
+        {
+          "tipo": "cofre",
+          "x": 1450,
+          "s": 0.8,
+          "capa": "medio",
+          "en": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "volund",
+          "como": "hombre",
+          "x": 600,
+          "rotulo": "",
+          "props": {
+            "barba": true,
+            "objeto": "martillo",
+            "ropa": "corta",
+            "pelo": "#B5452A",
+            "capa": "#7A4A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "andvari",
+          "como": "enano",
+          "x": 1600,
+          "mira": "izq",
+          "rotulo": "ANDVARI",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.2,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "chispas",
+          "x": 450,
+          "y": 620
+        },
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 450,
+          "y": 620
+        },
+        {
+          "en": 4,
+          "tipo": "destello"
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 500,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "OBRA DE VÖLUND",
+            "en": "VOLUND'S WORK"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2.5
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "¿JUSTICIA O DEMASIADO?",
+            "en": "JUSTICE, OR TOO FAR?"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "PRÓXIMO: EL ORO MALDITO DE ANDVARI",
+            "en": "NEXT: ANDVARI'S CURSED GOLD"
+          },
+          "x": 960,
+          "y": 290
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Un rey dejó cojo al mejor herrero del norte",
+        "en": "A king crippled the greatest smith in the north"
+      },
+      "escena": "corte",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 850
+    },
+    {
+      "gancho": {
+        "es": "El herrero encadenado que planeó su venganza",
+        "en": "The chained smith who planned his revenge"
+      },
+      "escena": "isla",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 800
+    },
+    {
+      "gancho": {
+        "es": "El herrero que escapó volando y riendo",
+        "en": "The smith who flew away laughing"
+      },
+      "escena": "vuelo",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    }
+  ],
+  "miniatura": {
+    "heroe": {
+      "barba": true,
+      "objeto": "martillo",
+      "ropa": "corta",
+      "pelo": "#B5452A",
+      "capa": "#7A4A2A"
+    },
+    "rival": "rey"
+  }
+}

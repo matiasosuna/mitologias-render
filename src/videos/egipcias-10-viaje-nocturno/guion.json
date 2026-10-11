@@ -1,0 +1,1610 @@
+{
+  "id": "egipcias-10-viaje-nocturno",
+  "serie": "egipcias",
+  "numero": "10",
+  "titulo": {
+    "es": "El viaje nocturno de Ra",
+    "en": "The Night Journey of Ra"
+  },
+  "tituloGriego": "THE NIGHT JOURNEY OF RA",
+  "miniatura": {
+    "heroe": "ra",
+    "rival": "apofis"
+  },
+  "escenas": [
+    {
+      "id": "trono",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Horus había ganado el trono de Egipto. Tras ochenta años de juicio, los dioses lo coronaron rey.",
+          "en": "Horus had won the throne of Egypt. After eighty years of judgment, the gods crowned him king."
+        },
+        {
+          "es": "Isis lloró de alegría, y Osiris, el rey asesinado, por fin estaba vengado.",
+          "en": "Isis wept with joy, and Osiris, the murdered king, was finally avenged."
+        },
+        {
+          "es": "Pero había un rey que no podía descansar ni un solo día: Ra, el dios del sol.",
+          "en": "But there was one king who could never rest, not for a single day: Ra, the sun god."
+        },
+        {
+          "es": "Cada mañana cruzaba el cielo en su barca, y cada tarde se hundía en el oeste.",
+          "en": "Every morning he crossed the sky in his boat, and every evening he sank into the west."
+        },
+        {
+          "es": "Y lo que le pasaba después, en la oscuridad, era el mayor secreto de Egipto.",
+          "en": "And what happened to him afterward, in the dark, was the greatest secret in Egypt."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1200,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "horus",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1130,
+              "dur": 1
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 400,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "mira": "izq",
+          "x": 1700,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1130,
+          "y": 420,
+          "dur": 1.5,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "ocaso",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los egipcios veían morir al sol todas las tardes, hundiéndose detrás de las montañas del oeste.",
+          "en": "The Egyptians watched the sun die every evening, sinking behind the mountains of the west."
+        },
+        {
+          "es": "Allí, en la orilla oeste del Nilo, construían sus tumbas. Y decían que ahí se abría la puerta de otro mundo: el Duat.",
+          "en": "On the west bank of the Nile they built their tombs. And they said a door opened there into another world: the Duat."
+        },
+        {
+          "es": "Al caer la tarde, Ra era un dios viejo y cansado, con toda su luz gastada en el cielo.",
+          "en": "By dusk, Ra was an old, tired god, with all his light spent on the sky."
+        },
+        {
+          "es": "Entonces bajaba de su barca del día y subía a la barca de la noche.",
+          "en": "Then he stepped down from his day boat and climbed aboard the night boat."
+        },
+        {
+          "es": "Esa barca iba a navegar por un río que corre bajo la tierra, a través de doce horas de oscuridad.",
+          "en": "That boat would sail a river that runs beneath the earth, through twelve hours of darkness."
+        },
+        {
+          "es": "Un libro de tumbas, el Amduat, cuenta ese viaje hora por hora.",
+          "en": "A book of tomb walls and papyri, the Amduat, tells that journey hour by hour."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 1300,
+          "s": 1,
+          "en": 0
+        }
+      ],
+      "actores": [
+        {
+          "id": "egipcio",
+          "escala": 0.9,
+          "capa": "fondo",
+          "x": 760,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "egipcia",
+          "escala": 0.9,
+          "capa": "fondo",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "y": 758,
+          "x": 420,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1240,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 4,
+          "intensidad": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "OESTE",
+            "en": "WEST"
+          },
+          "x": 1450,
+          "y": 300,
+          "hasta": 1.8
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "EL DUAT",
+            "en": "THE DUAT"
+          },
+          "x": 1000,
+          "y": 270,
+          "hasta": 3
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "EL AMDUAT",
+            "en": "THE AMDUAT"
+          },
+          "x": 960,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "id": "tripulacion",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "De noche, Ra tomaba la forma de un carnero: el sol viejo, a punto de entrar en el mundo de los muertos.",
+          "en": "At night, Ra took the shape of a ram: the old sun, about to enter the world of the dead."
+        },
+        {
+          "es": "A su lado viajaban Thoth, el escriba de los dioses, y Maat, la verdad y el orden del mundo.",
+          "en": "Beside him traveled Thoth, the scribe of the gods, and Maat, truth and the order of the world."
+        },
+        {
+          "es": "Iban también Sia y Hu: la Percepción, que ve lo que hay que hacer, y la Palabra, que lo manda.",
+          "en": "Sia and Hu came too: Perception, who sees what must be done, and Command, who makes it so."
+        },
+        {
+          "es": "En la proa, con su lanza, viajaba Set. Después del juicio, Ra se lo había llevado a su propia barca.",
+          "en": "At the prow, spear in hand, stood Set. After the trial, Ra had taken him into his own boat."
+        },
+        {
+          "es": "Nadie era más fuerte que Set, y en el Duat iba a hacer falta toda su fuerza.",
+          "en": "No god was stronger than Set, and in the Duat all that strength would be needed."
+        },
+        {
+          "es": "Porque en la oscuridad, algo gigantesco los esperaba despierto.",
+          "en": "Because in the darkness, something enormous lay awake, waiting for them."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 960,
+          "s": 1.5,
+          "props": {
+            "disco": false
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "y": 758,
+          "x": 640,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "y": 758,
+          "props": {
+            "cabezaAnimal": "carnero"
+          },
+          "x": 850,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "maat",
+          "y": 758,
+          "mira": "izq",
+          "x": 1060,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "y": 758,
+          "props": {
+            "objeto": "lanza"
+          },
+          "x": 1270,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 5,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "sia",
+          "como": "egipcio",
+          "capa": "medio",
+          "escala": 0.9,
+          "rotulo": "SIA",
+          "y": 758,
+          "x": 430,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "hu",
+          "como": "egipcio",
+          "capa": "medio",
+          "escala": 0.9,
+          "mira": "izq",
+          "rotulo": "HU",
+          "y": 758,
+          "x": 1490,
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "puertas",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En la primera hora llegaron a la puerta del Duat, donde doce babuinos cantaron al ver entrar al sol.",
+          "en": "In the first hour they reached the gate of the Duat, where twelve baboons sang as the sun came in."
+        },
+        {
+          "es": "Según otro libro, el Libro de las Puertas, cada puerta tenía una serpiente guardiana que no dejaba pasar a cualquiera.",
+          "en": "Another book, the Book of Gates, says every gate had a serpent guardian who did not let just anyone through."
+        },
+        {
+          "es": "Ra decía el nombre de cada puerta, y las hojas se abrían. Él sabía bien cuánto poder tiene un nombre.",
+          "en": "Ra spoke the name of each gate, and the doors swung open. He knew very well how much power a name holds."
+        },
+        {
+          "es": "En la segunda hora, la barca entraba en Wernes, una tierra fértil a orillas del agua.",
+          "en": "In the second hour, the boat entered Wernes, a fertile land along the water."
+        },
+        {
+          "es": "Allí vivían los muertos, y Ra les hablaba y les señalaba sus campos de cultivo.",
+          "en": "The dead lived there, and Ra spoke to them and showed them their fields."
+        },
+        {
+          "es": "Salían a la orilla para verlo pasar, porque la luz de Ra era la única que alumbraba aquel mundo.",
+          "en": "They came to the bank to watch him pass, because the light of Ra was the only light in that world."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 600,
+          "s": 0.95,
+          "props": {
+            "disco": false
+          }
+        },
+        {
+          "tipo": "pilono",
+          "x": 1750,
+          "s": 0.9,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "y": 758,
+          "x": 440,
+          "pasos": []
+        },
+        {
+          "id": "ra",
+          "y": 758,
+          "props": {
+            "cabezaAnimal": "carnero"
+          },
+          "x": 640,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "guardian",
+          "como": "serpiente",
+          "props": {
+            "erguida": 0.9,
+            "largo": 300,
+            "grosor": 40
+          },
+          "rotulo": "",
+          "x": 1500,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.6,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "m1",
+          "como": "momia",
+          "rotulo": "",
+          "x": 1050,
+          "pasos": [
+            {
+              "en": 4.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "m2",
+          "como": "momia",
+          "rotulo": "",
+          "mira": "izq",
+          "x": 1250,
+          "pasos": [
+            {
+              "en": 4.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.1,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "m3",
+          "como": "momia",
+          "rotulo": "",
+          "mira": "izq",
+          "x": 1450,
+          "pasos": [
+            {
+              "en": 4.7,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 1750,
+          "y": 480,
+          "dur": 1.5,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "WERNES",
+            "en": "WERNES"
+          },
+          "x": 1300,
+          "y": 300,
+          "hasta": 5
+        }
+      ]
+    },
+    {
+      "id": "arena",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "En la cuarta hora, el río se acababa. Delante solo había arena: un camino secreto llamado Rosetau.",
+          "en": "In the fourth hour, the river ran out. Ahead lay only sand: a secret road called Rosetau."
+        },
+        {
+          "es": "La barca se convertía en una barca-serpiente, y los dioses tiraban de ella por la arena en la oscuridad.",
+          "en": "The boat became a serpent-boat, and gods hauled it across the sand in the dark."
+        },
+        {
+          "es": "En la quinta hora pasaban junto a la caverna de Sokar, el dios halcón de los muertos. Nadie podía mirar dentro.",
+          "en": "In the fifth hour they passed the cavern of Sokar, the falcon god of the dead. No one could look inside."
+        },
+        {
+          "es": "Ra no entraba. Desde la barca llamaba a los que vivían en la cueva, y todos le respondían desde la oscuridad.",
+          "en": "Ra did not go in. From the boat he called to those who lived in the cave, and they all answered from the dark."
+        },
+        {
+          "es": "Pero ni siquiera Ra veía el camino. Solo podía seguir adelante, hacia el centro de la noche.",
+          "en": "But even Ra could not see the road. He could only go on, toward the middle of the night."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 520,
+          "s": 0.9,
+          "props": {
+            "disco": false
+          }
+        },
+        {
+          "tipo": "cueva",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo",
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "y": 758,
+          "x": 380,
+          "pasos": []
+        },
+        {
+          "id": "ra",
+          "y": 758,
+          "props": {
+            "cabezaAnimal": "carnero"
+          },
+          "x": 600,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "t1",
+          "como": "egipcio",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "t2",
+          "como": "egipcio",
+          "x": 1050,
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "t3",
+          "como": "egipcio",
+          "x": 1200,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 1400,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "sokar",
+          "como": "ra",
+          "capa": "fondo",
+          "mira": "izq",
+          "rotulo": "SOKAR",
+          "props": {
+            "tocado": null,
+            "objeto": null,
+            "ropa": "larga"
+          },
+          "x": 1650,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.9
+        },
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 1000,
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "ROSETAU",
+            "en": "ROSETAU"
+          },
+          "x": 960,
+          "y": 260,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "medianoche",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "En la sexta hora, la mitad de la noche, la barca llegó al punto más profundo del Duat.",
+          "en": "In the sixth hour, the middle of the night, the boat reached the deepest point of the Duat."
+        },
+        {
+          "es": "Allí yacía un cuerpo envuelto en lino: Osiris, el rey asesinado, que ahora gobernaba a los muertos.",
+          "en": "There lay a body wrapped in linen: Osiris, the murdered king, who now ruled the dead."
+        },
+        {
+          "es": "Ra, el sol vivo, se acercó al rey muerto, y por un instante los dos fueron uno solo.",
+          "en": "Ra, the living sun, drew near the dead king, and for a moment the two became one."
+        },
+        {
+          "es": "Los textos lo dicen así: Ra descansa en Osiris, y Osiris descansa en Ra.",
+          "en": "The texts put it this way: Ra rests in Osiris, and Osiris rests in Ra."
+        },
+        {
+          "es": "Y todo el Duat despertaba. Los muertos se incorporaban en sus tumbas, y la luz de Ra caía sobre ellos.",
+          "en": "And the whole Duat woke. The dead sat up in their tombs, and the light of Ra fell upon them."
+        },
+        {
+          "es": "Pero la barca seguía su camino, y al irse la luz, volvían a dormir. Lloraban, porque el sol no se podía quedar.",
+          "en": "But the boat moved on, and as the light left, they lay back down. They wept, because the sun could not stay."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 380,
+          "s": 0.9,
+          "props": {
+            "disco": false
+          }
+        },
+        {
+          "tipo": "sarcofago",
+          "x": 1500,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "y": 758,
+          "props": {
+            "cabezaAnimal": "carnero"
+          },
+          "x": 440,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1040,
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "osiris",
+          "mira": "izq",
+          "x": 1250,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.1,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "m1",
+          "como": "momia",
+          "rotulo": "",
+          "capa": "fondo",
+          "x": 780,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "m2",
+          "como": "momia",
+          "rotulo": "",
+          "mira": "izq",
+          "capa": "fondo",
+          "x": 1650,
+          "pasos": [
+            {
+              "en": 4.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.6,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "m3",
+          "como": "momia",
+          "rotulo": "",
+          "mira": "izq",
+          "x": 1800,
+          "pasos": [
+            {
+              "en": 4.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 5,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 420,
+          "dur": 3,
+          "intensidad": 0.7
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "MEDIANOCHE",
+            "en": "MIDNIGHT"
+          },
+          "x": 960,
+          "y": 260,
+          "hasta": 1.8
+        }
+      ]
+    },
+    {
+      "id": "apofis",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En la séptima hora, Apep se alzó de las aguas y se bebió el río, y la barca quedó varada en un banco de arena.",
+          "en": "In the seventh hour, Apep rose from the waters and drank the river, and the boat was stranded on a sandbank."
+        },
+        {
+          "es": "Apep era la oscuridad hecha serpiente: el enemigo de Ra, que quería deshacer el mundo y devolverlo al Nun.",
+          "en": "Apep was darkness made serpent: the enemy of Ra, who wanted to undo the world and return it to the Nun."
+        },
+        {
+          "es": "Entonces Isis lo ató con sus palabras de poder, y una serpiente guardiana, Mehen, se enroscó alrededor de Ra para protegerlo.",
+          "en": "Then Isis bound him with her words of power, and a guardian serpent, Mehen, coiled around Ra to shield him."
+        },
+        {
+          "es": "Y Set, de pie en la proa, levantó su lanza y la clavó en Apep con toda su fuerza.",
+          "en": "And Set, standing at the prow, raised his spear and drove it into Apep with all his strength."
+        },
+        {
+          "es": "Apep se retorció, y la barca quedó libre. Pero Apep nunca moría del todo: volvía la noche siguiente.",
+          "en": "Apep thrashed, and the boat broke free. But Apep never died for good: he came back the next night."
+        },
+        {
+          "es": "En los templos, los sacerdotes hacían un muñeco de cera con su nombre, lo escupían, lo pisaban y lo quemaban, para ayudar a Ra.",
+          "en": "In the temples, priests made a wax figure with his name, spat on it, trampled it and burned it, to help Ra."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 620,
+          "s": 1,
+          "props": {
+            "disco": false
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "y": 758,
+          "x": 440,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "y": 758,
+          "props": {
+            "cabezaAnimal": "carnero"
+          },
+          "x": 620,
+          "pasos": []
+        },
+        {
+          "id": "set",
+          "y": 758,
+          "props": {
+            "objeto": "lanza"
+          },
+          "x": 810,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.5,
+              "hace": "lanza",
+              "objeto": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "mehen",
+          "como": "serpiente",
+          "capa": "fondo",
+          "props": {
+            "largo": 260,
+            "grosor": 34
+          },
+          "rotulo": "MEHEN",
+          "y": 758,
+          "x": 720,
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "apofis",
+          "mira": "izq",
+          "escala": 1.15,
+          "props": {
+            "erguida": 0.55,
+            "largo": 650
+          },
+          "x": 1350,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 3.3,
+              "hace": "tiembla",
+              "dur": 1
+            },
+            {
+              "en": 4.2,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "temblor",
+          "dur": 1,
+          "intensidad": 0.6
+        },
+        {
+          "en": 3.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.5,
+          "tipo": "chispas",
+          "x": 1350,
+          "y": 520,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "horas",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Las horas siguientes fueron más claras. En la octava, Ra les daba lino a los muertos para que se vistieran.",
+          "en": "The following hours grew lighter. In the eighth, Ra gave the dead linen to dress themselves."
+        },
+        {
+          "es": "En la décima, los dioses ayudaban a los que se habían ahogado y los sacaban del agua.",
+          "en": "In the tenth, the gods helped those who had drowned and pulled them from the water."
+        },
+        {
+          "es": "En la undécima, serpientes de fuego quemaban a los enemigos de Ra, hasta que no quedaba nada de ellos.",
+          "en": "In the eleventh, fire-spitting serpents burned the enemies of Ra, until nothing was left of them."
+        },
+        {
+          "es": "Para ellos no había renacimiento: lo que ardía en esas fosas desaparecía para siempre.",
+          "en": "For them there was no rebirth: what burned in those pits vanished forever."
+        },
+        {
+          "es": "Con cada hora, la oscuridad se hacía más delgada. Pero todavía faltaba la hora más extraña de todas.",
+          "en": "With every hour, the darkness grew thinner. But one hour remained, the strangest of all."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 480,
+          "s": 0.9,
+          "props": {
+            "disco": false
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "y": 758,
+          "x": 340,
+          "pasos": []
+        },
+        {
+          "id": "ra",
+          "y": 758,
+          "props": {
+            "cabezaAnimal": "carnero"
+          },
+          "x": 580,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "m1",
+          "como": "momia",
+          "rotulo": "",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.8,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "m2",
+          "como": "momia",
+          "rotulo": "",
+          "x": 1160,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "f1",
+          "como": "serpiente",
+          "props": {
+            "erguida": 1,
+            "largo": 260,
+            "grosor": 34
+          },
+          "rotulo": "",
+          "x": 1560,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "f2",
+          "como": "serpiente",
+          "props": {
+            "erguida": 1,
+            "largo": 260,
+            "grosor": 34
+          },
+          "rotulo": "",
+          "x": 1760,
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "fuego",
+          "x": 1500,
+          "y": 780,
+          "dur": 2,
+          "intensidad": 0.7
+        },
+        {
+          "en": 2.2,
+          "tipo": "fuego",
+          "x": 1850,
+          "y": 780,
+          "dur": 2,
+          "intensidad": 0.7
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LA OCTAVA HORA",
+            "en": "THE EIGHTH HOUR"
+          },
+          "x": 1100,
+          "y": 280,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "renacer",
+      "fondo": "nun",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En la duodécima hora, la tripulación llegó ante una serpiente gigantesca llamada Vida-de-los-Dioses.",
+          "en": "In the twelfth hour, the crew came before a gigantic serpent named Life-of-the-Gods."
+        },
+        {
+          "es": "Ra y los suyos entraron por la cola y recorrieron todo su cuerpo, como si volvieran a nacer.",
+          "en": "Ra and his crew entered through its tail and traveled the whole length of its body, as if being born again."
+        },
+        {
+          "es": "Salieron por la boca convertidos en Jepri, el escarabajo: el sol recién nacido, joven otra vez.",
+          "en": "They came out of its mouth as Khepri, the scarab: the newborn sun, young again."
+        },
+        {
+          "es": "Entonces Nun, las mismas aguas oscuras del primer día del mundo, levantó la barca con sus brazos.",
+          "en": "Then Nun, the same dark waters of the first day of the world, lifted the boat in his arms."
+        },
+        {
+          "es": "Al otro lado esperaba Shu, el aire, para recibirla en el horizonte y llevarla hacia el cielo.",
+          "en": "On the other side waited Shu, the air, to receive it at the horizon and carry it up into the sky."
+        },
+        {
+          "es": "Así el sol atravesaba la muerte cada noche, y cada mañana volvía a salir.",
+          "en": "So the sun passed through death every night, and every morning it rose again."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 1000,
+          "s": 0.8,
+          "y": 380,
+          "props": {
+            "disco": false
+          },
+          "en": 3
+        },
+        {
+          "tipo": "sol",
+          "x": 960,
+          "s": 1.3,
+          "y": 330,
+          "en": 5
+        }
+      ],
+      "actores": [
+        {
+          "id": "serp",
+          "como": "serpiente",
+          "capa": "fondo",
+          "props": {
+            "largo": 1500,
+            "grosor": 120,
+            "erguida": 0.3,
+            "color": "#B8862E"
+          },
+          "rotulo": "LIFE-OF-THE-GODS",
+          "x": 1050,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "props": {
+            "cabezaAnimal": "carnero"
+          },
+          "x": 150,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "entra",
+              "a": 330,
+              "dur": 1
+            },
+            {
+              "en": 1.3,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "x": 40,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "entra",
+              "a": 190,
+              "dur": 1
+            },
+            {
+              "en": 1.3,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "khepri",
+          "como": "nino",
+          "escala": 1.4,
+          "rotulo": "KHEPRI",
+          "props": {
+            "tocado": "disco"
+          },
+          "x": 1500,
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "nun",
+          "como": "egipcio",
+          "rotulo": "NUN",
+          "props": {
+            "gigante": true,
+            "piel": "#2E6E8C",
+            "barbaPostiza": true,
+            "ropa": "larga"
+          },
+          "x": 900,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "shu",
+          "mira": "izq",
+          "x": 1850,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "entra",
+              "a": 1650,
+              "dur": 0.6
+            },
+            {
+              "en": 4.8,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.5
+        },
+        {
+          "en": 4.8,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 5,
+          "tipo": "luz",
+          "x": 960,
+          "y": 330,
+          "dur": 1.5,
+          "intensidad": 0.9
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 5,
+          "texto": {
+            "es": "POR ESO EL SOL VUELVE A SALIR",
+            "en": "THAT'S WHY THE SUN RISES AGAIN"
+          },
+          "x": 960,
+          "y": 210,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En Egipto, la gente despertaba con la primera luz, sabiendo que Ra había vencido una noche más.",
+          "en": "In Egypt, people woke with the first light, knowing Ra had won one more night."
+        },
+        {
+          "es": "Ra tenía su barca, su tripulación y su lanza. Pero los muertos de la tierra no tenían nada de eso.",
+          "en": "Ra had his boat, his crew and his spear. But the dead of the earth had none of that."
+        },
+        {
+          "es": "Ellos recorrían ese mismo mundo a pie, y al final de su camino los esperaba una sala, una balanza y un monstruo.",
+          "en": "They crossed that same world on foot, and at the end of the road a hall waited for them, with a scale and a monster."
+        },
+        {
+          "es": "Esa es la historia del próximo episodio: el pesaje del corazón.",
+          "en": "That is the story of the next episode: the weighing of the heart."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "balanza",
+          "x": 1560,
+          "s": 0.8,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "egipcio",
+          "x": 420,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "egipcia",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "momia",
+          "rotulo": "",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1100,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "mira": "izq",
+          "x": 1300,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 300,
+          "dur": 2,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "PRÓXIMO: EL PESAJE DEL CORAZÓN",
+            "en": "NEXT: THE WEIGHING OF THE HEART"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El dios del sol y la serpiente que bebía el río",
+        "en": "The sun god and the serpent that drank the river"
+      },
+      "escena": "apofis",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1050
+    },
+    {
+      "gancho": {
+        "es": "Cómo el sol renacía dentro de una serpiente",
+        "en": "How the sun was reborn inside a serpent"
+      },
+      "escena": "renacer",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Cuando Ra se abrazó al rey muerto",
+        "en": "When the sun god embraced the dead king"
+      },
+      "escena": "medianoche",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1100
+    }
+  ]
+}

@@ -1,0 +1,1507 @@
+{
+  "id": "nordicas-04-guerra-dioses",
+  "serie": "nordicas",
+  "numero": "04",
+  "titulo": {
+    "es": "La guerra de los dioses",
+    "en": "The War of the Gods"
+  },
+  "tituloGriego": "THE WAR OF THE GODS",
+  "escenas": [
+    {
+      "id": "puente",
+      "fondo": "bifrost",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Heimdall seguía de guardia en Bifröst, el puente que une Asgard con los demás mundos.",
+          "en": "Heimdall still stood guard on Bifröst, the bridge that joins Asgard to the other worlds."
+        },
+        {
+          "es": "Desde allí se veía el hogar de los dioses, muy alto, en el cielo.",
+          "en": "From there you could see the home of the gods, high up in the sky."
+        },
+        {
+          "es": "Pero los dioses de Asgard no eran los únicos del mundo.",
+          "en": "But the gods of Asgard were not the only gods in the world."
+        },
+        {
+          "es": "Había dos familias de dioses, y durante mucho tiempo vivieron separadas.",
+          "en": "There were two families of gods, and for a long time they lived apart."
+        },
+        {
+          "es": "Hasta que un día, la paz entre ellas se rompió.",
+          "en": "Until one day, the peace between them was broken."
+        }
+      ],
+      "actores": [
+        {
+          "id": "heimdall",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "tiembla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 1600,
+          "s": 0.7,
+          "capa": "fondo",
+          "en": 1
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "temblor",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "BIFRÖST",
+            "en": "BIFRÖST"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 1
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "ÆSIR",
+            "en": "ÆSIR"
+          },
+          "x": 480,
+          "y": 220,
+          "hasta": 4
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "VANIR",
+            "en": "VANIR"
+          },
+          "x": 1440,
+          "y": 220,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "esir",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los Æsir vivían en Asgard, la fortaleza de los dioses, protegida por una gran muralla.",
+          "en": "The Æsir lived in Asgard, the fortress of the gods, guarded by a great wall."
+        },
+        {
+          "es": "Allí reinaba Odín, padre de los dioses, junto a su esposa Frigg.",
+          "en": "There ruled Odin, father of the gods, alongside his wife Frigg."
+        },
+        {
+          "es": "Thor, el dios del trueno, defendía a dioses y a humanos con su martillo.",
+          "en": "Thor, the god of thunder, defended gods and humans with his hammer."
+        },
+        {
+          "es": "Y Tyr era el más valiente de todos: nunca retrocedía ante el peligro.",
+          "en": "And Tyr was the bravest of them all: he never backed away from danger."
+        },
+        {
+          "es": "Eran los dioses de la guerra, de la sabiduría y de la justicia.",
+          "en": "They were the gods of war, of wisdom, and of justice."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "frigg",
+          "x": 850,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "tyr",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 960,
+          "capa": "fondo",
+          "props": {
+            "ancho": 1800
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.3,
+          "tipo": "rayo",
+          "x": 1150
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "ASGARD",
+            "en": "ASGARD"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "vanir",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los Vanir vivían en Vanaheim, y eran dioses de la tierra fértil, de las cosechas y de la magia.",
+          "en": "The Vanir lived in Vanaheim, and they were gods of fertile land, of harvests, and of magic."
+        },
+        {
+          "es": "Njord dominaba el viento y el mar, y los marineros lo invocaban antes de zarpar.",
+          "en": "Njord ruled the wind and the sea, and sailors called on him before setting out."
+        },
+        {
+          "es": "Su hijo Freyr traía la lluvia y el sol que hacen crecer los campos.",
+          "en": "His son Freyr brought the rain and the sunshine that make the fields grow."
+        },
+        {
+          "es": "Y su hija Freyja conocía el seiðr, una magia antigua que ve lo que está por venir.",
+          "en": "And his daughter Freyja knew seiðr, an ancient magic that sees what is yet to come."
+        },
+        {
+          "es": "Los Æsir tenían la espada y el martillo. Los Vanir, la magia y la tierra.",
+          "en": "The Æsir had the sword and the hammer. The Vanir had magic and the land."
+        }
+      ],
+      "actores": [
+        {
+          "id": "njord",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "freyr",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "freyja",
+          "x": 1360,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 250,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pino",
+          "x": 1750,
+          "s": 1.2,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "dur": 1,
+          "intensidad": 0.3
+        },
+        {
+          "en": 2,
+          "tipo": "lluvia",
+          "x": 960,
+          "dur": 0.8
+        },
+        {
+          "en": 3.3,
+          "tipo": "chispas",
+          "x": 1360,
+          "y": 500
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "VANAHEIM",
+            "en": "VANAHEIM"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "gullveig",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día llegó a Asgard una mujer llamada Gullveig, y nadie sabía de dónde venía.",
+          "en": "One day a woman named Gullveig arrived in Asgard, and no one knew where she came from."
+        },
+        {
+          "es": "Los Æsir la atravesaron con lanzas, en el salón del mismo Odín.",
+          "en": "The Æsir pierced her with spears, in the hall of Odin himself."
+        },
+        {
+          "es": "Después la quemaron en el fuego. Tres veces la quemaron.",
+          "en": "Then they burned her in the fire. Three times they burned her."
+        },
+        {
+          "es": "Y tres veces volvió a vivir. Desde entonces la llamaron Heiðr, la hechicera.",
+          "en": "And three times she lived again. From then on she was called Heiðr, the sorceress."
+        },
+        {
+          "es": "Para los Vanir, aquello no fue un juego: fue una ofensa que había que responder.",
+          "en": "To the Vanir, this was no game: it was an insult that demanded an answer."
+        }
+      ],
+      "actores": [
+        {
+          "id": "gullveig",
+          "como": "mujer",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "GULLVEIG",
+          "props": {
+            "tocado": "velo",
+            "capa": "#E9C46A",
+            "pelo": "#E9C46A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1000,
+              "dur": 0.9
+            },
+            {
+              "en": 1.3,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.1,
+              "hace": "cae"
+            },
+            {
+              "en": 2.4,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.65,
+              "hace": "cae"
+            },
+            {
+              "en": 2.9,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.1,
+              "hace": "brilla",
+              "dur": 0.9
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "v1",
+          "como": "vikingo",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "v2",
+          "como": "vikingo",
+          "x": 520,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello",
+          "x": 1000
+        },
+        {
+          "en": 2,
+          "tipo": "fuego",
+          "x": 1000,
+          "dur": 1.2
+        },
+        {
+          "en": 2.4,
+          "tipo": "destello",
+          "x": 1000
+        },
+        {
+          "en": 2.9,
+          "tipo": "destello",
+          "x": 1000
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "HEIÐR",
+            "en": "HEIÐR"
+          },
+          "x": 1000,
+          "y": 220,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "primera-guerra",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1.04,
+          1.15
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los Vanir marcharon contra Asgard con un gran ejército.",
+          "en": "The Vanir marched on Asgard with a great army."
+        },
+        {
+          "es": "Odín tomó su lanza y la arrojó por encima de los enemigos.",
+          "en": "Odin took his spear and hurled it over the heads of the enemy."
+        },
+        {
+          "es": "Así empezó el primer combate de la historia: la primera guerra del mundo.",
+          "en": "And so began the first battle in history: the first war in the world."
+        },
+        {
+          "es": "Las lanzas cruzaron el campo, y el cielo se llenó de gritos.",
+          "en": "Spears flew across the field, and the sky filled with cries."
+        },
+        {
+          "es": "Y dioses que nunca habían luchado empezaron a arrasar las tierras unos de otros.",
+          "en": "And gods who had never fought began to ravage each other's lands."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "a1",
+          "como": "vikingo",
+          "x": 300,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "a2",
+          "como": "vikingo",
+          "x": 800,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2.8,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "n1",
+          "como": "vikingo",
+          "x": 1900,
+          "mira": "izq",
+          "capa": "medio",
+          "props": {
+            "capa": "#3E6B4E"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1450,
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "como": "vikingo",
+          "x": 2150,
+          "mira": "izq",
+          "capa": "medio",
+          "props": {
+            "capa": "#3E6B4E"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1700,
+              "dur": 1
+            },
+            {
+              "en": 3.2,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "como": "vikingo",
+          "x": 2400,
+          "mira": "izq",
+          "capa": "fondo",
+          "props": {
+            "capa": "#3E6B4E"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1950,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "destello",
+          "x": 1200
+        },
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "polvo",
+          "x": 1200,
+          "dur": 1.2
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "LA PRIMERA GUERRA",
+            "en": "THE FIRST WAR"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "muralla",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al principio, la muralla de Asgard resistía.",
+          "en": "At first, the wall of Asgard held."
+        },
+        {
+          "es": "Pero los Vanir sabían usar la magia en batalla, y la muralla de los Æsir se rompió.",
+          "en": "But the Vanir knew how to use magic in battle, and the wall of the Æsir was broken."
+        },
+        {
+          "es": "Los Vanir avanzaron por el campo, y los Æsir tuvieron que retroceder.",
+          "en": "The Vanir advanced across the field, and the Æsir had to fall back."
+        },
+        {
+          "es": "Otras veces ganaban los Æsir, y eran los Vanir los que perdían sus tierras.",
+          "en": "At other times the Æsir won, and it was the Vanir who lost their lands."
+        },
+        {
+          "es": "Así pasó mucho tiempo: unas veces vencía uno, otras veces el otro, y ninguno lograba imponerse.",
+          "en": "So it went for a long time: first one side won, then the other, and neither could prevail."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thor",
+          "x": 400,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.5,
+              "hace": "corre",
+              "a": 800,
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "freyr",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "freyja",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.9
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 800,
+          "capa": "medio",
+          "props": {
+            "ancho": 1400
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "rayo",
+          "x": 800
+        },
+        {
+          "en": 1.1,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 1.4,
+          "tipo": "polvo",
+          "x": 800,
+          "dur": 1.5
+        },
+        {
+          "en": 3,
+          "tipo": "destello",
+          "x": 1000
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "paz",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al final, los dos bandos se sentaron a hablar.",
+          "en": "In the end, the two sides sat down to talk."
+        },
+        {
+          "es": "Cansados de destruirse, decidieron hacer las paces.",
+          "en": "Tired of destroying one another, they decided to make peace."
+        },
+        {
+          "es": "Para sellar el acuerdo, los dioses se acercaron a una gran vasija.",
+          "en": "To seal the agreement, the gods gathered around a great vessel."
+        },
+        {
+          "es": "Y cada uno escupió en ella, como señal de que la paz era verdadera.",
+          "en": "And each one spat into it, as a sign that the peace was true."
+        },
+        {
+          "es": "De esa mezcla nacería Kvasir, y de su sangre, la poesía. Por eso la poesía nació de la paz.",
+          "en": "From that mixture Kvasir would be born, and from his blood, poetry. That is why poetry was born from peace."
+        }
+      ],
+      "actores": [
+        {
+          "id": "tyr",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 740,
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "njord",
+          "x": 1560,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1180,
+              "dur": 0.8
+            },
+            {
+              "en": 3.3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "freyja",
+          "x": 1760,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "anfora",
+          "x": 960,
+          "s": 0.9
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 600
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "destello",
+          "x": 960
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "KVASIR",
+            "en": "KVASIR"
+          },
+          "x": 960,
+          "y": 220
+        },
+        {
+          "en": 4,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO LA POESÍA NACIÓ DE LA PAZ",
+            "en": "THAT'S WHY POETRY WAS BORN FROM PEACE"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "rehenes",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Para que la paz durara, cada bando entregó rehenes: a los mejores de su gente.",
+          "en": "To make the peace last, each side handed over hostages: the best of their people."
+        },
+        {
+          "es": "Los Vanir enviaron a Njord, a su hijo Freyr y a su hija Freyja, que se fueron a vivir a Asgard.",
+          "en": "The Vanir sent Njord, his son Freyr and his daughter Freyja, who went to live in Asgard."
+        },
+        {
+          "es": "Los Æsir enviaron a Hœnir, un dios alto y de buena presencia, y a Mímir, el más sabio de todos.",
+          "en": "The Æsir sent Hœnir, a tall and handsome god, and Mímir, the wisest of them all."
+        },
+        {
+          "es": "Njord, Freyr y Freyja fueron recibidos con honores, y Freyja enseñó a los Æsir su antigua magia.",
+          "en": "Njord, Freyr and Freyja were received with honor, and Freyja taught the Æsir her ancient magic."
+        },
+        {
+          "es": "Parecía que la guerra había terminado para siempre.",
+          "en": "It seemed that the war was over for good."
+        }
+      ],
+      "actores": [
+        {
+          "id": "njord",
+          "x": 150,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "freyr",
+          "x": 350,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "freyja",
+          "x": 550,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1450,
+              "dur": 1
+            },
+            {
+              "en": 3.2,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "hoenir",
+          "como": "hombre",
+          "x": 1700,
+          "mira": "izq",
+          "rotulo": "HOENIR",
+          "escala": 1.12,
+          "props": {
+            "barba": false,
+            "ropa": "larga",
+            "tocado": "cinta",
+            "pelo": "#E9C46A"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 450,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "mimir",
+          "x": 1880,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 250,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.2,
+          "tipo": "chispas",
+          "x": 1450,
+          "y": 500
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "VANAHEIM",
+            "en": "VANAHEIM"
+          },
+          "x": 350,
+          "y": 220,
+          "hasta": 2
+        },
+        {
+          "en": 0,
+          "texto": {
+            "es": "ASGARD",
+            "en": "ASGARD"
+          },
+          "x": 1550,
+          "y": 220,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "engano",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1.02,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "En Vanaheim, los Vanir hicieron jefe a Hœnir, porque era alto y parecía un gran líder.",
+          "en": "In Vanaheim, the Vanir made Hœnir their chief, because he was tall and looked like a great leader."
+        },
+        {
+          "es": "Pero cada vez que debía decidir algo, Hœnir miraba a Mímir y esperaba su consejo.",
+          "en": "But every time he had to decide something, Hœnir looked to Mímir and waited for his advice."
+        },
+        {
+          "es": "Y cuando Mímir no estaba a su lado, Hœnir respondía: que decidan otros.",
+          "en": "And when Mímir was not at his side, Hœnir would answer: let others decide."
+        },
+        {
+          "es": "Entonces los Vanir se sintieron engañados: los Æsir les habían dado un jefe que no pensaba por sí mismo.",
+          "en": "Then the Vanir felt cheated: the Æsir had given them a chief who could not think for himself."
+        },
+        {
+          "es": "Furiosos, tomaron a Mímir y le cortaron la cabeza.",
+          "en": "Furious, they seized Mímir and cut off his head."
+        },
+        {
+          "es": "Y le enviaron la cabeza a Odín, como respuesta.",
+          "en": "And they sent the head to Odin, as their answer."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hoenir",
+          "como": "hombre",
+          "x": 800,
+          "rotulo": "HOENIR",
+          "escala": 1.12,
+          "props": {
+            "barba": false,
+            "ropa": "larga",
+            "tocado": "cinta",
+            "pelo": "#E9C46A"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "mimir",
+          "x": 1100,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 4.6,
+              "hace": "cae"
+            },
+            {
+              "en": 5.4,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "c1",
+          "como": "vikingo",
+          "x": 1450,
+          "mira": "izq",
+          "props": {
+            "capa": "#3E6B4E"
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "corre",
+              "a": 1250,
+              "dur": 0.5
+            },
+            {
+              "en": 4.4,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "c2",
+          "como": "vikingo",
+          "x": 1700,
+          "mira": "izq",
+          "props": {
+            "capa": "#3E6B4E"
+          },
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "senala"
+            },
+            {
+              "en": 4.2,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 4.4,
+          "tipo": "destello",
+          "x": 1100
+        },
+        {
+          "en": 4.6,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 5,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "VANAHEIM",
+            "en": "VANAHEIM"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuando Odín recibió la cabeza de Mímir, no dejó que se pudriera.",
+          "en": "When Odin received the head of Mímir, he did not let it rot."
+        },
+        {
+          "es": "La conservó con hierbas y pronunció sobre ella palabras mágicas.",
+          "en": "He preserved it with herbs and spoke magic words over it."
+        },
+        {
+          "es": "Así, la cabeza recobró el habla y empezó a susurrarle secretos que nadie más conocía.",
+          "en": "And so the head found its voice again and began to whisper secrets that no one else knew."
+        },
+        {
+          "es": "Desde entonces, Odín la consultaba cada vez que necesitaba saber algo.",
+          "en": "From then on, Odin consulted it whenever he needed to know something."
+        },
+        {
+          "es": "Por eso Odín, el más sabio de los dioses, le habla a una cabeza cortada.",
+          "en": "That is why Odin, wisest of the gods, speaks to a severed head."
+        },
+        {
+          "es": "Pero Odín quería más sabiduría de la que cabe en una cabeza, y estaba dispuesto a pagar cualquier precio.",
+          "en": "But Odin wanted more wisdom than one head could hold, and he was ready to pay any price."
+        },
+        {
+          "es": "Esa es la historia del próximo episodio: el precio de la sabiduría de Odín.",
+          "en": "That is the story of the next episode: Odin's Price for Wisdom."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 5.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "huginn",
+          "x": 200,
+          "y": 320,
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.2,
+              "hace": "vuela",
+              "a": [
+                560,
+                240
+              ],
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "muninn",
+          "x": 150,
+          "y": 380,
+          "pasos": [
+            {
+              "en": 5.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.5,
+              "hace": "vuela",
+              "a": [
+                900,
+                260
+              ],
+              "dur": 1.2
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 1150,
+          "s": 0.7
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 1150,
+          "y": 640
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "destello",
+          "x": 1150
+        },
+        {
+          "en": 6,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA CABEZA DE MÍMIR",
+            "en": "MÍMIR'S HEAD"
+          },
+          "x": 1150,
+          "y": 420,
+          "hasta": 4
+        },
+        {
+          "en": 6,
+          "texto": {
+            "es": "EL PRECIO DE LA SABIDURÍA",
+            "en": "ODIN'S PRICE FOR WISDOM"
+          },
+          "x": 960,
+          "y": 220
+        },
+        {
+          "en": 4,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO ODÍN LE HABLA A UNA CABEZA CORTADA",
+            "en": "THAT'S WHY ODIN TALKS TO A SEVERED HEAD"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La bruja que los dioses no pudieron matar",
+        "en": "The witch the gods could not kill"
+      },
+      "escena": "gullveig",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1050
+    },
+    {
+      "gancho": {
+        "es": "Así empezó la primera guerra del mundo",
+        "en": "How the first war in the world began"
+      },
+      "escena": "primera-guerra",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 800
+    },
+    {
+      "gancho": {
+        "es": "La cabeza que seguía hablando",
+        "en": "The severed head that kept on talking"
+      },
+      "escena": "cierre",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 950
+    }
+  ],
+  "miniatura": {
+    "heroe": "odin",
+    "rival": "freyja"
+  }
+}

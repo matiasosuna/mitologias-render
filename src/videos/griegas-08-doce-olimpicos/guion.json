@@ -1,0 +1,1760 @@
+{
+ "id": "griegas-08-doce-olimpicos",
+ "serie": "griegas",
+ "numero": "08",
+ "titulo": {
+  "es": "Los doce olímpicos",
+  "en": "The Twelve Olympians"
+ },
+ "tituloGriego": "ΔΩΔΕΚΑΘΕΟΝ",
+ "escenas": [
+  {
+   "id": "olimpo",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 500,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Tifón yacía aplastado bajo el Etna, y el reinado de Zeus quedó firme para siempre.",
+     "en": "Typhon lay crushed beneath Etna, and the reign of Zeus stood firm forever."
+    },
+    {
+     "es": "Los dioses volvieron a la cima del monte Olimpo, más alta que las nubes y que el vuelo de las águilas.",
+     "en": "The gods returned to the summit of Mount Olympus, higher than the clouds and the flight of eagles."
+    },
+    {
+     "es": "Allí Hefesto, el dios herrero, les construyó palacios de bronce y oro que brillaban como el sol.",
+     "en": "There Hephaestus, the smith god, built them palaces of bronze and gold that shone like the sun."
+    },
+    {
+     "es": "Las puertas eran de nubes, y las cuidaban las Horas, las diosas de las estaciones.",
+     "en": "The gates were made of clouds, guarded by the Horae, the goddesses of the seasons."
+    },
+    {
+     "es": "En el gran salón esperaban doce tronos. Estos son los dioses que se sentaron en ellos.",
+     "en": "In the great hall twelve thrones were waiting. These are the gods who sat upon them."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "monte",
+     "x": 1500,
+     "s": 1.4
+    },
+    {
+     "tipo": "nube",
+     "x": 300,
+     "s": 1.2
+    },
+    {
+     "tipo": "templo",
+     "x": 800,
+     "en": 2
+    },
+    {
+     "tipo": "puerta",
+     "x": 1300,
+     "en": 3
+    },
+    {
+     "tipo": "trono",
+     "x": 1050,
+     "en": 4
+    },
+    {
+     "tipo": "trono",
+     "x": 1250,
+     "en": 4
+    },
+    {
+     "tipo": "trono",
+     "x": 1450,
+     "en": 4
+    },
+    {
+     "tipo": "trono",
+     "x": 1650,
+     "en": 4
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 350,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "levanta"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "hera",
+     "x": 160,
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "entra",
+       "a": 250
+      }
+     ]
+    },
+    {
+     "id": "hefesto",
+     "x": 800,
+     "mira": "izq",
+     "props": {
+      "objeto": "martillo"
+     },
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "golpea"
+      },
+      {
+       "en": 2.4,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "hora1",
+     "x": 1150,
+     "como": "ninfa",
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.5,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "hora2",
+     "x": 1350,
+     "como": "ninfa",
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 3.2,
+       "hace": "aparece"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "temblor",
+     "dur": 1
+    },
+    {
+     "en": 0,
+     "tipo": "humo",
+     "x": 1600,
+     "y": 640,
+     "dur": 1
+    },
+    {
+     "en": 2,
+     "tipo": "chispas",
+     "x": 800,
+     "y": 650,
+     "dur": 1
+    },
+    {
+     "en": 2.5,
+     "tipo": "destello"
+    },
+    {
+     "en": 4,
+     "tipo": "luz",
+     "x": 1350,
+     "y": 450,
+     "dur": 1.2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.2,
+     "texto": {
+      "es": "ETNA",
+      "en": "ETNA"
+     },
+     "x": 1600,
+     "y": 300,
+     "hasta": 1
+    },
+    {
+     "en": 4.2,
+     "texto": {
+      "es": "LOS DOCE TRONOS",
+      "en": "THE TWELVE THRONES"
+     },
+     "x": 1350,
+     "y": 230
+    }
+   ]
+  },
+  {
+   "id": "reyes",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "En el trono más alto se sienta Zeus, el rey de los dioses y señor del cielo.",
+     "en": "On the highest throne sits Zeus, king of the gods and lord of the sky."
+    },
+    {
+     "es": "Suyos son el trueno, la lluvia y el rayo, y a su lado vuela siempre el águila, el ave más poderosa.",
+     "en": "The thunder, the rain and the lightning are his, and beside him always flies the eagle, the mightiest of birds."
+    },
+    {
+     "es": "Junto a él reina Hera, su esposa, la reina del Olimpo y protectora del matrimonio.",
+     "en": "Beside him reigns Hera, his wife, queen of Olympus and protector of marriage."
+    },
+    {
+     "es": "Su animal es el pavo real, que lleva en las plumas cien ojos que nunca se cierran.",
+     "en": "Her animal is the peacock, which wears a hundred eyes on its feathers that never close."
+    },
+    {
+     "es": "Hera es orgullosa y celosa, y pocas cosas en el Olimpo escapan a su mirada.",
+     "en": "Hera is proud and jealous, and few things on Olympus escape her gaze."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 600,
+     "s": 1.3
+    },
+    {
+     "tipo": "trono",
+     "x": 1000,
+     "s": 1.2
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 600,
+     "props": {
+      "objeto": "rayo"
+     },
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "levanta"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 1.1,
+       "hace": "habla",
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "aguila",
+     "x": 760,
+     "y": 340,
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.1,
+       "hace": "vuela",
+       "a": [
+        800,
+        300
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hera",
+     "x": 1050,
+     "mira": "izq",
+     "props": {
+      "objeto": "cetro",
+      "tocado": "corona"
+     },
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "levanta"
+      },
+      {
+       "en": 4,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "pavo",
+     "x": 1350,
+     "como": "aguila",
+     "mira": "izq",
+     "rotulo": "PEACOCK",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.4,
+       "hace": "brilla",
+       "dur": 1
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "rayo",
+     "x": 450
+    },
+    {
+     "en": 1,
+     "tipo": "lluvia",
+     "dur": 1
+    },
+    {
+     "en": 3.2,
+     "tipo": "destello",
+     "x": 1350,
+     "y": 500
+    },
+    {
+     "en": 4,
+     "tipo": "luz",
+     "x": 1050,
+     "y": 400
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.2,
+     "texto": {
+      "es": "ZEUS · EL CIELO",
+      "en": "ZEUS · THE SKY"
+     },
+     "x": 640,
+     "y": 220,
+     "hasta": 1.8
+    },
+    {
+     "en": 2.2,
+     "texto": {
+      "es": "HERA · EL MATRIMONIO",
+      "en": "HERA · MARRIAGE"
+     },
+     "x": 1100,
+     "y": 220,
+     "hasta": 3.8
+    }
+   ]
+  },
+  {
+   "id": "hermanos",
+   "fondo": "mar",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Poseidón, el hermano de Zeus, gobierna el mar y todo lo que vive en sus aguas.",
+     "en": "Poseidon, the brother of Zeus, rules the sea and everything that lives in its waters."
+    },
+    {
+     "es": "Con su tridente agita las olas y hace temblar la tierra. Por eso lo llaman el que sacude la tierra.",
+     "en": "With his trident he stirs the waves and shakes the earth. That is why he is called the Earth-Shaker."
+    },
+    {
+     "es": "Él creó el caballo, y los delfines lo acompañan cuando cruza el mar en su carro.",
+     "en": "He created the horse, and dolphins accompany him when he crosses the sea in his chariot."
+    },
+    {
+     "es": "Deméter, su hermana, es la diosa de la cosecha y de la tierra que da alimento.",
+     "en": "Demeter, his sister, is the goddess of the harvest and of the earth that gives food."
+    },
+    {
+     "es": "Lleva espigas de trigo en las manos, y cuando ella está triste, nada crece en los campos.",
+     "en": "She carries ears of wheat in her hands, and when she is sad, nothing grows in the fields."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 250,
+     "s": 0.8
+    },
+    {
+     "tipo": "palmera",
+     "x": 1500,
+     "en": 3
+    },
+    {
+     "tipo": "palmera",
+     "x": 1700,
+     "en": 3
+    }
+   ],
+   "actores": [
+    {
+     "id": "poseidon",
+     "x": 400,
+     "props": {
+      "objeto": "tridente"
+     },
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "levanta"
+      },
+      {
+       "en": 1,
+       "hace": "golpea"
+      },
+      {
+       "en": 1.5,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "delfin",
+     "x": 780,
+     "y": 620,
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.3,
+       "hace": "nada",
+       "a": 1100
+      }
+     ]
+    },
+    {
+     "id": "caballo",
+     "x": 620,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.4,
+       "hace": "habla",
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "demeter",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "entra",
+       "a": 1350
+      },
+      {
+       "en": 3.6,
+       "hace": "ofrece"
+      },
+      {
+       "en": 4,
+       "hace": "lamenta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "olas-suben",
+     "dur": 1
+    },
+    {
+     "en": 1.5,
+     "tipo": "temblor",
+     "dur": 1
+    },
+    {
+     "en": 2,
+     "tipo": "olas-bajan"
+    },
+    {
+     "en": 4,
+     "tipo": "oscurecer",
+     "intensidad": 0.4
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "POSEIDÓN · EL MAR",
+      "en": "POSEIDON · THE SEA"
+     },
+     "x": 420,
+     "y": 220,
+     "hasta": 1.8
+    },
+    {
+     "en": 3.2,
+     "texto": {
+      "es": "DEMÉTER · LA COSECHA",
+      "en": "DEMETER · THE HARVEST"
+     },
+     "x": 1400,
+     "y": 220,
+     "hasta": 4.5
+    }
+   ]
+  },
+  {
+   "id": "atenea",
+   "fondo": "templo",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Atenea es la diosa de la sabiduría, de los oficios y de la guerra pensada con inteligencia.",
+     "en": "Athena is the goddess of wisdom, of crafts, and of war fought with intelligence."
+    },
+    {
+     "es": "Lleva casco, lanza y la égida, un escudo con la cabeza de la Gorgona que paraliza de miedo.",
+     "en": "She wears a helmet, a spear and the aegis, a shield bearing the Gorgon's head that freezes with fear."
+    },
+    {
+     "es": "Su ave es el búho, que ve en la oscuridad lo que los demás no pueden ver.",
+     "en": "Her bird is the owl, which sees in the dark what others cannot."
+    },
+    {
+     "es": "A los humanos les regaló el olivo, y les enseñó a tejer, a construir y a pensar antes de actuar.",
+     "en": "To humans she gave the olive tree, and taught them to weave, to build and to think before acting."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "columna",
+     "x": 300
+    },
+    {
+     "tipo": "telar",
+     "x": 1250,
+     "en": 3
+    },
+    {
+     "tipo": "olivo",
+     "x": 1550,
+     "en": 3
+    }
+   ],
+   "actores": [
+    {
+     "id": "atenea",
+     "x": 650,
+     "props": {
+      "objeto": "lanza",
+      "escudo": true,
+      "tocado": "casco"
+     },
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "levanta"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 1.1,
+       "hace": "brilla",
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "buho",
+     "x": 1000,
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.3,
+       "hace": "brilla",
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "mujer",
+     "x": 1350,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 3.2,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.5,
+       "hace": "levanta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "destello"
+    },
+    {
+     "en": 2,
+     "tipo": "oscurecer",
+     "intensidad": 0.5,
+     "dur": 1
+    },
+    {
+     "en": 2.3,
+     "tipo": "luz",
+     "x": 1000,
+     "y": 430,
+     "dur": 0.8
+    },
+    {
+     "en": 3,
+     "tipo": "aclarar"
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.2,
+     "texto": {
+      "es": "ATENEA · LA SABIDURÍA",
+      "en": "ATHENA · WISDOM"
+     },
+     "x": 700,
+     "y": 220,
+     "hasta": 1.8
+    },
+    {
+     "en": 1.5,
+     "texto": {
+      "es": "LA ÉGIDA",
+      "en": "THE AEGIS"
+     },
+     "x": 800,
+     "y": 330,
+     "hasta": 2.4
+    }
+   ]
+  },
+  {
+   "id": "gemelos",
+   "fondo": "bosque",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Apolo y Artemisa son hermanos gemelos, hijos de Zeus y de Leto.",
+     "en": "Apollo and Artemis are twin siblings, children of Zeus and Leto."
+    },
+    {
+     "es": "Apolo es el dios de la luz, de la música, de la poesía y de la profecía.",
+     "en": "Apollo is the god of light, music, poetry and prophecy."
+    },
+    {
+     "es": "Toca la lira como nadie, y lleva en la frente una corona de laurel, su árbol sagrado.",
+     "en": "He plays the lyre like no one else, and wears a laurel wreath on his brow, his sacred tree."
+    },
+    {
+     "es": "Artemisa es la diosa de la caza, de los bosques y de la luna.",
+     "en": "Artemis is the goddess of the hunt, of the forests and of the moon."
+    },
+    {
+     "es": "Corre libre por los montes con su arco de plata, y el ciervo es su animal favorito.",
+     "en": "She runs free through the mountains with her silver bow, and the deer is her favorite animal."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "sol",
+     "x": 450,
+     "en": 1
+    },
+    {
+     "tipo": "luna",
+     "x": 1450,
+     "en": 3
+    },
+    {
+     "tipo": "cipres",
+     "x": 1700
+    }
+   ],
+   "actores": [
+    {
+     "id": "apolo",
+     "x": 450,
+     "props": {
+      "objeto": "lira",
+      "tocado": "laurel"
+     },
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "levanta"
+      },
+      {
+       "en": 1,
+       "hace": "brilla",
+       "dur": 1
+      },
+      {
+       "en": 2,
+       "hace": "habla",
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "id": "artemisa",
+     "x": 900,
+     "mira": "izq",
+     "props": {
+      "objeto": "arco"
+     },
+     "pasos": [
+      {
+       "en": 0.4,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "levanta"
+      },
+      {
+       "en": 4,
+       "hace": "corre",
+       "a": 1450
+      }
+     ]
+    },
+    {
+     "id": "ciervo",
+     "x": 1650,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 4,
+       "hace": "aparece"
+      },
+      {
+       "en": 4.4,
+       "hace": "corre",
+       "a": 2100
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "luz",
+     "x": 450,
+     "y": 420,
+     "dur": 1.2
+    },
+    {
+     "en": 2,
+     "tipo": "chispas",
+     "x": 520,
+     "y": 560,
+     "dur": 1
+    },
+    {
+     "en": 3,
+     "tipo": "estrellas",
+     "dur": 1
+    },
+    {
+     "en": 3,
+     "tipo": "oscurecer",
+     "intensidad": 0.4,
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1,
+     "texto": {
+      "es": "APOLO · LA LUZ",
+      "en": "APOLLO · LIGHT"
+     },
+     "x": 450,
+     "y": 220,
+     "hasta": 2.5
+    },
+    {
+     "en": 3.2,
+     "texto": {
+      "es": "ARTEMISA · LA CAZA",
+      "en": "ARTEMIS · THE HUNT"
+     },
+     "x": 950,
+     "y": 220,
+     "hasta": 4.5
+    }
+   ]
+  },
+  {
+   "id": "amor_guerra",
+   "fondo": "batalla",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Ares es el dios de la guerra, pero no de la estrategia: él ama el choque de las armas y el grito de batalla.",
+     "en": "Ares is the god of war, but not of strategy: he loves the clash of weapons and the battle cry."
+    },
+    {
+     "es": "Avanza con su lanza y su casco, y lo siguen los perros, sus animales, que corren hacia el combate.",
+     "en": "He advances with spear and helmet, followed by dogs, his animals, which race toward the fight."
+    },
+    {
+     "es": "Afrodita es la diosa del amor y de la belleza, nacida de la espuma del mar.",
+     "en": "Aphrodite is the goddess of love and beauty, born from the foam of the sea."
+    },
+    {
+     "es": "Llegó a la orilla sobre una gran concha, y donde pisaba, brotaban flores.",
+     "en": "She came ashore on a great shell, and where she stepped, flowers bloomed."
+    },
+    {
+     "es": "Las palomas vuelan a su alrededor, y ni dioses ni humanos pueden resistirse a su encanto.",
+     "en": "Doves fly around her, and neither gods nor humans can resist her charm."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "muralla",
+     "x": 200,
+     "s": 0.9
+    },
+    {
+     "tipo": "palmera",
+     "x": 1600,
+     "en": 3
+    }
+   ],
+   "actores": [
+    {
+     "id": "ares",
+     "x": 350,
+     "props": {
+      "objeto": "lanza",
+      "tocado": "casco"
+     },
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "levanta"
+      },
+      {
+       "en": 1,
+       "hace": "camina",
+       "a": 600
+      },
+      {
+       "en": 1.4,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "perro1",
+     "x": 200,
+     "como": "perro",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.2,
+       "hace": "corre",
+       "a": 780
+      }
+     ]
+    },
+    {
+     "id": "perro2",
+     "x": 120,
+     "como": "perro",
+     "pasos": [
+      {
+       "en": 1.2,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.4,
+       "hace": "corre",
+       "a": 900
+      }
+     ]
+    },
+    {
+     "id": "afrodita",
+     "x": 1300,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.6,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.7,
+       "hace": "brilla",
+       "dur": 1
+      },
+      {
+       "en": 3,
+       "hace": "camina",
+       "a": 1250
+      },
+      {
+       "en": 4,
+       "hace": "abraza"
+      }
+     ]
+    },
+    {
+     "id": "paloma",
+     "x": 1550,
+     "como": "aguila",
+     "y": 380,
+     "mira": "izq",
+     "rotulo": "DOVE",
+     "pasos": [
+      {
+       "en": 4,
+       "hace": "aparece"
+      },
+      {
+       "en": 4.1,
+       "hace": "vuela",
+       "a": [
+        1250,
+        300
+       ]
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.3,
+     "tipo": "chispas",
+     "x": 400,
+     "y": 620,
+     "dur": 1
+    },
+    {
+     "en": 1,
+     "tipo": "polvo",
+     "dur": 1
+    },
+    {
+     "en": 2.5,
+     "tipo": "olas-suben",
+     "dur": 1
+    },
+    {
+     "en": 3,
+     "tipo": "aclarar"
+    },
+    {
+     "en": 3.2,
+     "tipo": "luz",
+     "x": 1300,
+     "y": 450,
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.2,
+     "texto": {
+      "es": "ARES · LA GUERRA",
+      "en": "ARES · WAR"
+     },
+     "x": 450,
+     "y": 220,
+     "hasta": 1.8
+    },
+    {
+     "en": 2.7,
+     "texto": {
+      "es": "AFRODITA · EL AMOR",
+      "en": "APHRODITE · LOVE"
+     },
+     "x": 1300,
+     "y": 220,
+     "hasta": 4.5
+    }
+   ]
+  },
+  {
+   "id": "fuego_camino",
+   "fondo": "fragua",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Hefesto es el dios del fuego y de la fragua, el gran artesano del Olimpo.",
+     "en": "Hephaestus is the god of fire and the forge, the great craftsman of Olympus."
+    },
+    {
+     "es": "Cojea al caminar, pero con su martillo y su yunque crea maravillas que ningún otro dios puede hacer.",
+     "en": "He limps as he walks, but with his hammer and anvil he makes wonders no other god can."
+    },
+    {
+     "es": "Hermes es el mensajero de los dioses, el más rápido y el más astuto de todos.",
+     "en": "Hermes is the messenger of the gods, the fastest and the craftiest of them all."
+    },
+    {
+     "es": "Con sus sandalias aladas vuela entre el cielo y la tierra, y lleva el caduceo, un bastón con dos serpientes.",
+     "en": "On winged sandals he flies between sky and earth, carrying the caduceus, a staff with two serpents."
+    },
+    {
+     "es": "Protege a los viajeros, a los comerciantes… y también a los ladrones.",
+     "en": "He protects travelers, merchants... and thieves as well."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "fogata",
+     "x": 250
+    },
+    {
+     "tipo": "altar",
+     "x": 650,
+     "props": {
+      "fuego": true
+     }
+    }
+   ],
+   "actores": [
+    {
+     "id": "hefesto",
+     "x": 450,
+     "props": {
+      "objeto": "martillo"
+     },
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "golpea"
+      },
+      {
+       "en": 0.8,
+       "hace": "golpea"
+      },
+      {
+       "en": 1.2,
+       "hace": "golpea"
+      },
+      {
+       "en": 1.6,
+       "hace": "golpea"
+      },
+      {
+       "en": 2,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "hermes",
+     "x": 1100,
+     "props": {
+      "objeto": "caduceo",
+      "tocado": "petaso"
+     },
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.2,
+       "hace": "entra",
+       "a": 1000
+      },
+      {
+       "en": 3,
+       "hace": "vuela",
+       "a": [
+        1500,
+        260
+       ]
+      },
+      {
+       "en": 4,
+       "hace": "camina",
+       "a": 1400
+      }
+     ]
+    },
+    {
+     "id": "viajero",
+     "x": 1700,
+     "como": "hombre",
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 4,
+       "hace": "entra",
+       "a": 1650
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.3,
+     "tipo": "chispas",
+     "x": 520,
+     "y": 640,
+     "dur": 1.5
+    },
+    {
+     "en": 1.3,
+     "tipo": "fuego",
+     "x": 650,
+     "y": 700,
+     "dur": 1
+    },
+    {
+     "en": 3,
+     "tipo": "destello"
+    },
+    {
+     "en": 3.1,
+     "tipo": "humo",
+     "x": 1000,
+     "y": 650,
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.2,
+     "texto": {
+      "es": "HEFESTO · EL FUEGO",
+      "en": "HEPHAESTUS · FIRE"
+     },
+     "x": 450,
+     "y": 220,
+     "hasta": 1.8
+    },
+    {
+     "en": 2.4,
+     "texto": {
+      "es": "HERMES · EL MENSAJERO",
+      "en": "HERMES · THE MESSENGER"
+     },
+     "x": 1100,
+     "y": 220,
+     "hasta": 4.5
+    }
+   ]
+  },
+  {
+   "id": "hogar_vino",
+   "fondo": "palacio",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Hestia, la hermana mayor de Zeus, es la diosa del hogar y del fuego que arde en el centro de cada casa.",
+     "en": "Hestia, the eldest sister of Zeus, is the goddess of the hearth and the fire at the center of every home."
+    },
+    {
+     "es": "Es la más tranquila de los dioses: nunca pelea, nunca viaja, y cuida la llama sagrada del Olimpo.",
+     "en": "She is the gentlest of the gods: she never fights, never travels, and tends the sacred flame of Olympus."
+    },
+    {
+     "es": "Cuando llegó Dioniso, el dios del vino, Hestia le cedió su trono para que no hubiera discordia.",
+     "en": "When Dionysus, god of wine, arrived, Hestia gave him her throne so there would be no discord."
+    },
+    {
+     "es": "Dioniso llegó con una corona de hojas de vid y su tirso, un bastón coronado con una piña.",
+     "en": "Dionysus came with a crown of vine leaves and his thyrsus, a staff topped with a pine cone."
+    },
+    {
+     "es": "Así quedaron los doce: Hestia junto al fuego, y Dioniso en el trono, con su copa siempre llena.",
+     "en": "So the twelve were set: Hestia beside the fire, and Dionysus on the throne, his cup always full."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "fogata",
+     "x": 600
+    },
+    {
+     "tipo": "trono",
+     "x": 1250,
+     "s": 1.1
+    }
+   ],
+   "actores": [
+    {
+     "id": "hestia",
+     "x": 450,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "levanta"
+      },
+      {
+       "en": 1,
+       "hace": "ofrece"
+      },
+      {
+       "en": 2.5,
+       "hace": "levantarse"
+      },
+      {
+       "en": 3,
+       "hace": "camina",
+       "a": 560
+      },
+      {
+       "en": 4,
+       "hace": "reza"
+      }
+     ]
+    },
+    {
+     "id": "dioniso",
+     "x": 1700,
+     "mira": "izq",
+     "props": {
+      "objeto": "tirso",
+      "tocado": "laurel"
+     },
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "entra",
+       "a": 1450
+      },
+      {
+       "en": 3,
+       "hace": "levanta"
+      },
+      {
+       "en": 4,
+       "hace": "camina",
+       "a": 1250
+      },
+      {
+       "en": 4.4,
+       "hace": "levanta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "fogata",
+     "x": 600,
+     "dur": 1.5
+    },
+    {
+     "en": 1,
+     "tipo": "luz",
+     "x": 600,
+     "y": 560,
+     "dur": 1.2
+    },
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 1450,
+     "y": 450
+    },
+    {
+     "en": 4.2,
+     "tipo": "luz",
+     "x": 1250,
+     "y": 450,
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.2,
+     "texto": {
+      "es": "HESTIA · EL HOGAR",
+      "en": "HESTIA · THE HEARTH"
+     },
+     "x": 600,
+     "y": 220,
+     "hasta": 1.8
+    },
+    {
+     "en": 3.2,
+     "texto": {
+      "es": "DIONISO · EL VINO",
+      "en": "DIONYSUS · WINE"
+     },
+     "x": 1400,
+     "y": 220,
+     "hasta": 4.8
+    }
+   ]
+  },
+  {
+   "id": "banquete",
+   "fondo": "palacio",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Cada día, los dioses se reúnen en el palacio de Zeus para su gran banquete.",
+     "en": "Every day the gods gather in the palace of Zeus for their great feast."
+    },
+    {
+     "es": "No comen pan ni beben vino de los mortales: su comida es la ambrosía, y su bebida, el néctar.",
+     "en": "They eat no bread and drink no wine of mortals: their food is ambrosia, and their drink, nectar."
+    },
+    {
+     "es": "Por eso nunca envejecen, y en sus venas no corre sangre, sino icor, un líquido dorado.",
+     "en": "That is why they never age, and no blood runs in their veins, but ichor, a golden liquid."
+    },
+    {
+     "es": "La joven Hebe y el príncipe Ganimedes llenan las copas, mientras Apolo toca la lira.",
+     "en": "Young Hebe and the prince Ganymede fill the cups, while Apollo plays the lyre."
+    },
+    {
+     "es": "Las Musas cantan, y desde la cima, los dioses miran lo que pasa en el mundo de abajo.",
+     "en": "The Muses sing, and from the summit the gods watch what happens in the world below."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "altar",
+     "x": 900,
+     "s": 1.3
+    },
+    {
+     "tipo": "columna",
+     "x": 250
+    },
+    {
+     "tipo": "nube",
+     "x": 1500,
+     "en": 4
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 450,
+     "props": {
+      "objeto": "copa"
+     },
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "levanta"
+      },
+      {
+       "en": 1,
+       "hace": "habla",
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "hera",
+     "x": 650,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "hebe",
+     "x": 1150,
+     "como": "mujer",
+     "mira": "izq",
+     "rotulo": "HEBE",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "entra",
+       "a": 1100
+      },
+      {
+       "en": 3.3,
+       "hace": "ofrece"
+      }
+     ]
+    },
+    {
+     "id": "apolo",
+     "x": 1350,
+     "mira": "izq",
+     "props": {
+      "objeto": "lira",
+      "tocado": "laurel"
+     },
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "habla",
+       "dur": 1.5
+      }
+     ]
+    },
+    {
+     "id": "musa",
+     "x": 1550,
+     "como": "musa",
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 4,
+       "hace": "aparece"
+      },
+      {
+       "en": 4.2,
+       "hace": "habla",
+       "dur": 1
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "luz",
+     "x": 900,
+     "y": 500,
+     "dur": 1.2
+    },
+    {
+     "en": 2,
+     "tipo": "chispas",
+     "x": 900,
+     "y": 560,
+     "dur": 1.2
+    },
+    {
+     "en": 2,
+     "tipo": "destello"
+    },
+    {
+     "en": 4,
+     "tipo": "estrellas",
+     "dur": 1.2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1.2,
+     "texto": {
+      "es": "AMBROSÍA Y NÉCTAR",
+      "en": "AMBROSIA AND NECTAR"
+     },
+     "x": 900,
+     "y": 220,
+     "hasta": 2.8
+    },
+    {
+     "en": 2.3,
+     "texto": {
+      "es": "ICOR",
+      "en": "ICHOR"
+     },
+     "x": 900,
+     "y": 330,
+     "hasta": 3.5
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Pero en ese banquete falta un hermano: Hades, el rey de los muertos.",
+     "en": "But one brother is missing from that feast: Hades, king of the dead."
+    },
+    {
+     "es": "Hades no tiene trono en el Olimpo. Vive bajo la tierra, en el inframundo, con su perro Cerbero.",
+     "en": "Hades has no throne on Olympus. He lives beneath the earth, in the underworld, with his dog Cerberus."
+    },
+    {
+     "es": "Lleva un casco que lo vuelve invisible, y muy pocas veces sube a la luz del sol.",
+     "en": "He wears a helmet that makes him invisible, and he rarely rises into the light of the sun."
+    },
+    {
+     "es": "Y de todos los olímpicos, una tuvo el nacimiento más extraño: salió armada de la cabeza de su padre.",
+     "en": "And of all the Olympians, one had the strangest birth: she sprang fully armed from her father's head."
+    },
+    {
+     "es": "Esa es la próxima historia: El nacimiento de Atenea.",
+     "en": "That is the next story: The Birth of Athena."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 450,
+     "s": 1.2
+    }
+   ],
+   "actores": [
+    {
+     "id": "hades",
+     "x": 450,
+     "props": {
+      "objeto": "cetro"
+     },
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "levanta"
+      },
+      {
+       "en": 2.2,
+       "hace": "desaparece"
+      },
+      {
+       "en": 2.6,
+       "hace": "aparece"
+      }
+     ]
+    },
+    {
+     "id": "cerbero",
+     "x": 900,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1.2,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.5,
+       "hace": "habla",
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "atenea",
+     "x": 1500,
+     "mira": "izq",
+     "props": {
+      "objeto": "lanza",
+      "escudo": true,
+      "tocado": "casco"
+     },
+     "pasos": [
+      {
+       "en": 3.5,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.6,
+       "hace": "brilla",
+       "dur": 1
+      },
+      {
+       "en": 4,
+       "hace": "levanta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.5,
+     "tipo": "niebla"
+    },
+    {
+     "en": 0.5,
+     "tipo": "oscurecer",
+     "intensidad": 0.5
+    },
+    {
+     "en": 3.3,
+     "tipo": "rayo",
+     "x": 1450
+    },
+    {
+     "en": 3.5,
+     "tipo": "destello"
+    },
+    {
+     "en": 3.6,
+     "tipo": "luz",
+     "x": 1500,
+     "y": 400,
+     "dur": 1.2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "HADES · EL INFRAMUNDO",
+      "en": "HADES · THE UNDERWORLD"
+     },
+     "x": 450,
+     "y": 220,
+     "hasta": 2
+    },
+    {
+     "en": 3.8,
+     "texto": {
+      "es": "EL NACIMIENTO DE ATENEA",
+      "en": "THE BIRTH OF ATHENA"
+     },
+     "x": 1450,
+     "y": 230
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "El dios que sacude la tierra",
+    "en": "The God Who Shakes the Earth"
+   },
+   "escena": "hermanos",
+   "desde": 0,
+   "hasta": 2,
+   "foco": 800
+  },
+  {
+   "gancho": {
+    "es": "La diosa que cedió su trono",
+    "en": "The Goddess Who Gave Up Her Throne"
+   },
+   "escena": "hogar_vino",
+   "desde": 1,
+   "hasta": 4,
+   "foco": 1000
+  },
+  {
+   "gancho": {
+    "es": "Lo que corre por las venas de un dios",
+    "en": "What Runs in the Veins of a God"
+   },
+   "escena": "banquete",
+   "desde": 1,
+   "hasta": 3,
+   "foco": 900
+  }
+ ]
+}

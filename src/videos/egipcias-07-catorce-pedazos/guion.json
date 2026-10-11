@@ -1,0 +1,1146 @@
+{
+  "id": "egipcias-07-catorce-pedazos",
+  "serie": "egipcias",
+  "numero": "07",
+  "titulo": {
+    "es": "Isis y los catorce pedazos",
+    "en": "Isis and the Fourteen Pieces"
+  },
+  "tituloGriego": "ISIS AND THE FOURTEEN PIECES",
+  "miniatura": {
+    "heroe": "isis",
+    "rival": "set"
+  },
+  "escenas": [
+    {
+      "id": "biblos",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Isis cruzó el mar hasta Biblos y se sentó junto a una fuente, sin hablar con nadie, llorando en silencio.",
+          "en": "Isis crossed the sea to Byblos and sat down beside a spring, speaking to no one, weeping in silence."
+        },
+        {
+          "es": "Solo habló con las sirvientas de la reina. Les trenzó el cabello y les sopló encima un perfume divino.",
+          "en": "She spoke only to the queen’s handmaids. She braided their hair and breathed a divine perfume into it."
+        },
+        {
+          "es": "Cuando las sirvientas volvieron al palacio, la reina sintió ese aroma y mandó llamar a la extranjera.",
+          "en": "When the maids returned to the palace, the queen caught the fragrance and sent for the stranger."
+        },
+        {
+          "es": "Así, sin que nadie supiera quién era, Isis entró al palacio como nodriza del hijo pequeño del rey.",
+          "en": "And so, unknown to everyone, Isis entered the palace as nurse to the king’s infant son."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 300,
+          "s": 1,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "sirvienta1",
+          "x": 1250,
+          "como": "egipcia",
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.4,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1750,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "sirvienta2",
+          "x": 1430,
+          "como": "egipcia",
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "camina",
+              "a": 1880,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "reina",
+          "x": 1700,
+          "como": "reina_egipcia",
+          "mira": "izq",
+          "rotulo": "ASTARTE",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 420,
+          "dur": 1.2,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "BIBLOS",
+            "en": "BYBLOS"
+          },
+          "x": 700,
+          "y": 270,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "nodriza",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Isis crió al niño dándole su dedo para chupar, y cada noche hacía algo extraño.",
+          "en": "Isis raised the boy by letting him suckle her finger, and every night she did something strange."
+        },
+        {
+          "es": "Echaba al fuego todo lo que había de mortal en el niño, para volverlo inmortal.",
+          "en": "She cast into the fire everything mortal in the boy, to make him immortal."
+        },
+        {
+          "es": "Y mientras tanto, convertida en golondrina, volaba alrededor de la columna lamentando su suerte.",
+          "en": "And meanwhile, turned into a swallow, she circled the pillar, bewailing her fate."
+        },
+        {
+          "es": "Una noche la reina la vio, soltó un grito y rompió el hechizo.",
+          "en": "One night the queen saw her, cried out, and broke the spell."
+        },
+        {
+          "es": "Entonces Isis mostró quién era y pidió lo único que quería: la columna que sostenía el techo del palacio.",
+          "en": "Then Isis revealed who she was, and asked for the only thing she wanted: the pillar that held up the palace roof."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "columna_papiro",
+          "x": 1500,
+          "s": 1.3
+        },
+        {
+          "tipo": "fogata",
+          "x": 950,
+          "s": 1,
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.2,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "principe",
+          "x": 850,
+          "como": "nino",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            },
+            {
+              "en": 1.6,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "golondrina",
+          "x": 1100,
+          "como": "halcon",
+          "y": 330,
+          "escala": 0.6,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "vuela",
+              "a": [
+                1500,
+                300
+              ],
+              "dur": 0.5
+            },
+            {
+              "en": 2.6,
+              "hace": "vuela",
+              "a": [
+                1250,
+                380
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 3,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "reina",
+          "x": 1800,
+          "como": "reina_egipcia",
+          "mira": "izq",
+          "rotulo": "ASTARTE",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "fuego",
+          "x": 950,
+          "y": 560,
+          "dur": 1,
+          "intensidad": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "destello",
+          "dur": 0.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "columna",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.05,
+          1.15
+        ]
+      },
+      "frases": [
+        {
+          "es": "Isis abrió el tronco con cuidado y sacó el cofre. La madera sobrante la envolvió en lino fino y la ungió con mirra.",
+          "en": "Isis opened the trunk with care and drew out the chest. The leftover wood she wrapped in fine linen and anointed with myrrh."
+        },
+        {
+          "es": "Se dice que, todavía hoy, esa columna se venera en Biblos, en un templo de Isis.",
+          "en": "It is said that, even now, that wooden pillar is worshipped in Byblos, in a temple of Isis."
+        },
+        {
+          "es": "Isis abrazó el cofre y lloró sobre él.",
+          "en": "She threw her arms around the chest and wept over it."
+        },
+        {
+          "es": "Luego lo subió a un barco y volvió a Egipto con su esposo.",
+          "en": "Then she put it aboard a ship and sailed home to Egypt with her husband."
+        },
+        {
+          "es": "En los pantanos del delta, lejos de todo camino, lo escondió entre los papiros más espesos, segura de que nadie lo buscaría allí.",
+          "en": "In the marshes of the delta, far from any road, she hid it among the thickest papyrus, sure that no one would look for it there."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "columna_papiro",
+          "x": 1350,
+          "s": 1.3,
+          "en": 0
+        },
+        {
+          "tipo": "cofre",
+          "x": 1000,
+          "s": 1.2,
+          "en": 0
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "abraza"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 450,
+          "dur": 1.2,
+          "intensidad": 0.5
+        },
+        {
+          "en": 4,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "caza",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Set cazaba de noche, y esa noche brillaba la luna llena.",
+          "en": "But Set hunted by night, and that night the moon was full."
+        },
+        {
+          "es": "Entre los juncos descubrió el cofre, y lo abrió.",
+          "en": "Among the reeds he found the chest, and he opened it."
+        },
+        {
+          "es": "Al reconocer el cuerpo de su hermano, la rabia lo cegó.",
+          "en": "When he recognized his brother’s body, rage blinded him."
+        },
+        {
+          "es": "Lo despedazó en catorce partes y las dispersó por todo Egipto, para que nadie pudiera volver a juntarlas.",
+          "en": "He tore it into fourteen pieces and scattered them across all of Egypt, so that no one could ever put them back together."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "luna",
+          "x": 1500,
+          "s": 1.6
+        },
+        {
+          "tipo": "papiro",
+          "x": 1250,
+          "s": 1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "cofre",
+          "x": 1100,
+          "s": 1.1,
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "set",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 800,
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "sabueso",
+          "x": 250,
+          "como": "perro",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 620,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "rayo",
+          "x": 1000,
+          "dur": 0.4
+        },
+        {
+          "en": 3,
+          "tipo": "destello",
+          "x": 1100,
+          "y": 500,
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "14 PEDAZOS",
+            "en": "14 PIECES"
+          },
+          "x": 1100,
+          "y": 260,
+          "hasta": 3.9
+        }
+      ]
+    },
+    {
+      "id": "busqueda",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 700,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuando Isis supo lo que había hecho Set, no se detuvo a llorar. Se puso en marcha.",
+          "en": "When Isis learned what Set had done, she did not stop to weep. She set out."
+        },
+        {
+          "es": "Navegó por los pantanos en una barca de papiro, buscando a su esposo pedazo por pedazo.",
+          "en": "She sailed through the marshes in a papyrus boat, searching for her husband piece by piece."
+        },
+        {
+          "es": "Dicen que los cocodrilos todavía respetan a quien viaja en una barca de papiro, por miedo a Isis o por favor suyo.",
+          "en": "They say crocodiles still spare anyone who travels in a papyrus boat, either out of fear of Isis or by her favor."
+        },
+        {
+          "es": "Allí donde hallaba un pedazo, lo enterraba. Por eso muchas ciudades de Egipto decían guardar la tumba de Osiris.",
+          "en": "Wherever she found a piece, she buried it. That is why many cities in Egypt claimed to hold the tomb of Osiris."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 700,
+          "s": 1.1
+        },
+        {
+          "tipo": "tumba",
+          "x": 1900,
+          "s": 0.8,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 720,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "cocodrilo",
+          "x": 1500,
+          "como": "cocodrilo",
+          "capa": "fondo",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.6,
+              "hace": "calla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "hermanas",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Isis no buscaba sola. Su hermana Neftis, la propia esposa de Set, lo dejó atrás para unirse a ella.",
+          "en": "Isis did not search alone. Her sister Nephthys, Set’s own wife, left him behind to join her."
+        },
+        {
+          "es": "Juntas lloraban a Osiris, y los egipcios se las imaginaban como dos milanos gritando sobre el cuerpo del muerto.",
+          "en": "Together they wept for Osiris, and the Egyptians pictured them as two kites crying out over the body of the dead."
+        },
+        {
+          "es": "Recuperaron todos los pedazos menos uno, que un pez del Nilo se había tragado. Isis lo reemplazó con una copia.",
+          "en": "They recovered every piece but one, which a fish of the Nile had swallowed. Isis made a likeness to replace it."
+        },
+        {
+          "es": "Cuando por fin tuvieron el cuerpo, llegó alguien más: Anubis, el dios con cabeza de chacal, hijo de Osiris y de Neftis.",
+          "en": "When at last they had the body, someone else arrived: Anubis, the jackal-headed god, son of Osiris and Nephthys."
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "neftis",
+          "x": 880,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "milano1",
+          "x": 700,
+          "como": "halcon",
+          "y": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "vuela",
+              "a": [
+                900,
+                260
+              ],
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "milano2",
+          "x": 850,
+          "como": "halcon",
+          "y": 340,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.6,
+              "hace": "vuela",
+              "a": [
+                1150,
+                300
+              ],
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "x": 1950,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 1500
+            },
+            {
+              "en": 3.6,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.5,
+          "texto": {
+            "es": "LAS DOS PLAÑIDERAS",
+            "en": "THE TWO MOURNERS"
+          },
+          "x": 800,
+          "y": 220,
+          "hasta": 2.8
+        }
+      ]
+    },
+    {
+      "id": "momia",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.05,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Anubis conocía los secretos de la muerte. Lavó el cuerpo de Osiris y lo ungió con aceites y resinas.",
+          "en": "Anubis knew the secrets of death. He washed the body of Osiris and anointed it with oils and resins."
+        },
+        {
+          "es": "Unió los catorce pedazos, los envolvió en tiras de lino y ató cada venda con una oración.",
+          "en": "He joined the fourteen pieces, wrapped them in strips of linen, and bound each bandage with a prayer."
+        },
+        {
+          "es": "Así, Osiris se convirtió en la primera momia.",
+          "en": "And so Osiris became the first mummy."
+        },
+        {
+          "es": "Desde entonces, los egipcios prepararon a sus muertos como Anubis preparó a Osiris, para que ellos también pudieran renacer.",
+          "en": "From then on the Egyptians prepared their dead the way Anubis had prepared Osiris, so that they too might be reborn."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "altar",
+          "x": 1050,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "anubis",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.5,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "osiris",
+          "x": 1050,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.8,
+              "hace": "transforma",
+              "en_que": "momia"
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "neftis",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "destello",
+          "x": 1050,
+          "y": 500,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "POR ESO LOS EGIPCIOS MOMIFICABAN A SUS MUERTOS",
+            "en": "THAT’S WHY THE EGYPTIANS MUMMIFIED THEIR DEAD"
+          },
+          "x": 960,
+          "y": 210,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "vida",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.05,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Isis y Neftis se pusieron a cada lado del cuerpo, y con sus alas le echaron aire al rostro de Osiris.",
+          "en": "Isis and Nephthys stood on either side of the body, and with their wings they fanned air onto the face of Osiris."
+        },
+        {
+          "es": "Y con sus palabras de poder, Isis hizo que respirara una vez más.",
+          "en": "And with her words of power, Isis made him breathe once more."
+        },
+        {
+          "es": "Fue un solo instante, el último que Osiris pasó entre los vivos. Pero bastó: Isis esperaba un hijo.",
+          "en": "It lasted a single moment, the last Osiris would spend among the living. But it was enough: Isis was going to have a son."
+        },
+        {
+          "es": "Después de eso, Osiris ya no podía quedarse en la tierra. Descendió al mundo de los muertos, y allí fue su rey.",
+          "en": "After that, Osiris could no longer stay on earth. He went down into the land of the dead, and there he became its king."
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 650,
+          "props": {
+            "alas": true
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "osiris",
+          "x": 960,
+          "como": "momia",
+          "rotulo": "OSIRIS",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "neftis",
+          "x": 1270,
+          "mira": "izq",
+          "props": {
+            "alas": true
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "luz",
+          "x": 960,
+          "y": 450,
+          "dur": 1.5,
+          "intensidad": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Isis sabía que Set la buscaría en cuanto naciera el niño, así que se escondió en los pantanos del delta.",
+          "en": "Isis knew Set would hunt for her the moment the child was born, so she hid in the marshes of the delta."
+        },
+        {
+          "es": "Allí, entre los juncos, rodeada de agua y de papiros, dio a luz a Horus.",
+          "en": "There among the reeds, surrounded by water and papyrus, she gave birth to Horus."
+        },
+        {
+          "es": "Pero Set no iba a rendirse. Esa es la historia del próximo episodio: Horus en los pantanos.",
+          "en": "But Set was not going to give up. That is the story of the next episode: Horus in the Marshes."
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 800
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "horus_nino",
+          "x": 1150,
+          "como": "nino",
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "HORUS",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "x": 1650,
+          "mira": "izq",
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "PRÓXIMO: HORUS EN LOS PANTANOS",
+            "en": "NEXT: HORUS IN THE MARSHES"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Cómo se hizo la primera momia",
+        "en": "How the first mummy was made"
+      },
+      "escena": "momia",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "El dios que despedazó a su hermano en catorce partes",
+        "en": "The god who tore his brother into fourteen pieces"
+      },
+      "escena": "caza",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "La diosa que se hizo golondrina para salvar a su esposo",
+        "en": "The goddess who became a swallow to save her husband"
+      },
+      "escena": "nodriza",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 800
+    }
+  ]
+}

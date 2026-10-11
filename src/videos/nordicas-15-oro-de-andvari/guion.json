@@ -1,0 +1,1735 @@
+{
+  "id": "nordicas-15-oro-de-andvari",
+  "serie": "nordicas",
+  "numero": "15",
+  "titulo": {
+    "es": "El oro maldito de Andvari",
+    "en": "Andvari's Cursed Gold"
+  },
+  "tituloGriego": "ANDVARI'S CURSED GOLD",
+  "escenas": [
+    {
+      "id": "anillo",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada, un rey codicioso le robó un anillo a un gran herrero. Le costó a sus dos hijos.",
+          "en": "Last time, a greedy king stole one ring from a great smith. It cost him both of his sons."
+        },
+        {
+          "es": "En el norte, el oro era poder. Pero algunos tesoros traían una maldición.",
+          "en": "In the north, gold was power. But some gold carried a curse."
+        },
+        {
+          "es": "Esta es la historia del tesoro más maldito de todos: un montón de oro y un anillo pequeño.",
+          "en": "This is the story of the most cursed treasure of all: a hoard of gold, and one small ring."
+        },
+        {
+          "es": "Empieza con una piedra, una nutria y un terrible error.",
+          "en": "It begins with a stone, an otter, and a terrible mistake."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 1150,
+          "s": 1.1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "cofre",
+          "x": 1350,
+          "s": 0.9,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "nidud",
+          "como": "rey",
+          "x": 600,
+          "rotulo": "NIDUD",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "andvari",
+          "como": "enano",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.7,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 480,
+          "dur": 2
+        },
+        {
+          "en": 2.3,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 560
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.5,
+          "texto": {
+            "es": "EL ORO MALDITO",
+            "en": "THE CURSED GOLD"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "rio",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, tres dioses recorrían el mundo: Odín, Loki y Hœnir.",
+          "en": "One day, three gods went walking through the world: Odin, Loki, and Hoenir."
+        },
+        {
+          "es": "Odín era el jefe de los dioses. Loki era el embaucador. Hœnir era un dios calmado y callado.",
+          "en": "Odin was the chief of the gods. Loki was the trickster. Hoenir was a calm, quiet god."
+        },
+        {
+          "es": "Llegaron a un río con una cascada, y tenían hambre.",
+          "en": "They came to a river and a waterfall, and they were hungry."
+        },
+        {
+          "es": "En la orilla había una nutria comiendo un salmón con los ojos cerrados.",
+          "en": "On the bank sat an otter, eating a salmon with its eyes closed."
+        },
+        {
+          "es": "Loki lanzó una piedra y la mató. Estaba orgulloso: ¡un solo tiro, y dos comidas!",
+          "en": "Loki threw a stone and killed it. He was proud: one throw, and two meals!"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 1750,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "rio",
+          "x": 1500,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "nutria",
+          "como": "perro",
+          "x": 1550,
+          "escala": 0.45,
+          "mira": "izq",
+          "rotulo": "OTTER",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.6,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "salmon",
+          "como": "pez",
+          "x": 1700,
+          "escala": 0.5,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "como": "odin",
+          "x": -300,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 350,
+              "dur": 1.2
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "como": "loki",
+          "x": -550,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 650,
+              "dur": 1.2
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4.2,
+              "hace": "lanza"
+            },
+            {
+              "en": 4.7,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "hoenir",
+          "como": "joven",
+          "x": -800,
+          "rotulo": "HOENIR",
+          "props": {
+            "objeto": null,
+            "pelo": "#9C7A4E",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 950,
+              "dur": 1.2
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4.6,
+          "tipo": "destello"
+        },
+        {
+          "en": 4.6,
+          "tipo": "polvo",
+          "x": 1500,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "ODÍN · LOKI · HŒNIR",
+            "en": "ODIN · LOKI · HOENIR"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "hreidmar",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Esa noche, los dioses pidieron refugio en una granja. Era de un hombre llamado Hreidmar.",
+          "en": "That night, the gods asked for shelter at a farm. It belonged to a man named Hreidmar."
+        },
+        {
+          "es": "Hreidmar era un poderoso hechicero. Los dioses le mostraron orgullosos la piel de la nutria.",
+          "en": "Hreidmar was a powerful wizard. The gods proudly showed him the otter's skin."
+        },
+        {
+          "es": "Hreidmar gritó horrorizado. No era un animal salvaje. Era su hijo Ótr, que nadaba en el río convertido en nutria.",
+          "en": "Hreidmar cried out in horror. That was no wild animal. It was his son Otr, who swam in the river as an otter."
+        },
+        {
+          "es": "Llamó a sus otros hijos, Fáfnir y Regin. Entre todos atraparon a los dioses y los ataron.",
+          "en": "He called his other sons, Fafnir and Regin. Together, they seized the gods and tied them up."
+        },
+        {
+          "es": "Mataron a mi hijo, dijo Hreidmar. Ahora pagarán, o morirán.",
+          "en": "You killed my son, said Hreidmar. Now you will pay, or you will die."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 1650,
+          "s": 1.2,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "como": "odin",
+          "x": -100,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 250,
+              "dur": 1
+            },
+            {
+              "en": 3.5,
+              "hace": "tiembla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "como": "loki",
+          "x": -350,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 500,
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.5,
+              "hace": "tiembla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "hoenir",
+          "como": "joven",
+          "x": -600,
+          "rotulo": "",
+          "props": {
+            "objeto": null,
+            "pelo": "#9C7A4E",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 750,
+              "dur": 1
+            },
+            {
+              "en": 3.5,
+              "hace": "tiembla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "piel",
+          "como": "perro",
+          "x": 1000,
+          "escala": 0.45,
+          "rotulo": "OTR",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "hreidmar",
+          "como": "anciano",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "HREIDMAR",
+          "props": {
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "fafnir",
+          "como": "guerrero",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "FAFNIR",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "regin",
+          "como": "enano",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "REGIN",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.8,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 2.2,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 3.3,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA PIEL DE LA NUTRIA",
+            "en": "THE OTTER'S SKIN"
+          },
+          "x": 1000,
+          "y": 300,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "rescate",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dioses pidieron piedad. Hreidmar fijó su precio: llenar la piel de nutria de oro, y cubrirla de oro.",
+          "en": "The gods begged for mercy. Hreidmar named his price: fill the otter's skin with gold, and cover it with gold."
+        },
+        {
+          "es": "Párenla de pie, dijo, y cúbranla tan bien que no se vea ni un pelo.",
+          "en": "Stand it up, he said, and cover it so well that not one hair can be seen."
+        },
+        {
+          "es": "Odín y Hœnir se quedaron como prisioneros. Loki fue enviado a buscar el oro.",
+          "en": "Odin and Hoenir stayed behind as prisoners. Loki was sent to find the gold."
+        },
+        {
+          "es": "Pero ¿dónde se encuentra tanto oro? Loki conocía un lugar: el tesoro de un enano, escondido bajo una cascada.",
+          "en": "But where do you find so much gold? Loki knew one place: a dwarf's treasure, hidden under a waterfall."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 1250,
+          "s": 0.9,
+          "capa": "medio",
+          "en": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "hreidmar",
+          "como": "anciano",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "piel",
+          "como": "perro",
+          "x": 1050,
+          "escala": 0.45,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "como": "odin",
+          "x": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "reza"
+            },
+            {
+              "en": 2.2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "hoenir",
+          "como": "joven",
+          "x": 550,
+          "rotulo": "",
+          "props": {
+            "objeto": null,
+            "pelo": "#9C7A4E",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "reza"
+            },
+            {
+              "en": 2.2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "como": "loki",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": -400,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.7,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 500,
+          "dur": 1.5
+        },
+        {
+          "en": 3.2,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "EL PRECIO: ORO",
+            "en": "THE PRICE: GOLD"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "ran",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Primero, Loki fue al mar y buscó a Rán, la diosa que atrapa en su red a los marineros que se ahogan.",
+          "en": "First, Loki went to the sea and found Ran, the goddess who catches drowning sailors in her net."
+        },
+        {
+          "es": "Le pidió prestada su red, y ella se la prestó.",
+          "en": "He asked to borrow her net, and she lent it to him."
+        },
+        {
+          "es": "Loki llevó la red mágica hasta una cascada, donde el agua caía en una poza profunda y oscura.",
+          "en": "Loki carried the magic net to a waterfall, where the water fell into a deep, dark pool."
+        },
+        {
+          "es": "En esa poza vivía un enano llamado Andvari. Tenía la forma de un lucio, un pez grande, y nadaba allí todo el día.",
+          "en": "In that pool lived a dwarf named Andvari. He had taken the shape of a pike, a big fish, and swam there all day."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1900,
+          "s": 1.2,
+          "capa": "medio"
+        },
+        {
+          "tipo": "pino",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ran",
+          "como": "mujer",
+          "x": 950,
+          "mira": "izq",
+          "rotulo": "RAN",
+          "props": {
+            "piel": "#4E6E8A",
+            "pelo": "#2B4660",
+            "tocado": "velo",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.3,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "como": "loki",
+          "x": -100,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 550,
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "lucio",
+          "como": "pez",
+          "x": 1850,
+          "y": 760,
+          "escala": 0.9,
+          "mira": "izq",
+          "rotulo": "PIKE",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "nada",
+              "a": 1750,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "niebla",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "RÁN, DIOSA DEL MAR",
+            "en": "RAN, GODDESS OF THE SEA"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1.5
+        },
+        {
+          "en": 2.3,
+          "texto": {
+            "es": "LA CASCADA DE ANDVARI",
+            "en": "ANDVARI'S WATERFALL"
+          },
+          "x": 1700,
+          "y": 260,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "captura",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Loki lanzó la red a la poza. El lucio se retorció y luchó, pero la red mágica lo sujetó con fuerza.",
+          "en": "Loki threw the net into the pool. The pike twisted and fought, but the magic net held him tight."
+        },
+        {
+          "es": "Loki lo arrastró hasta las rocas. El pez se convirtió en un enano pequeño y furioso. Era Andvari.",
+          "en": "Loki dragged him onto the rocks. The fish changed into a small, angry dwarf. This was Andvari."
+        },
+        {
+          "es": "Tu vida o tu oro, dijo Loki. Lo quiero todo.",
+          "en": "Your life, or your gold, said Loki. I want all of it."
+        },
+        {
+          "es": "Andvari tuvo miedo. Condujo a Loki a una cueva tras la cascada y sacó montones de oro brillante.",
+          "en": "Andvari was afraid. He led Loki into a cave behind the waterfall, and carried out heaps of shining gold."
+        },
+        {
+          "es": "Pero un anillo pequeño, Andvari lo escondió en su puño. Era Andvaranaut, un anillo que podía crear más oro.",
+          "en": "But one small ring, Andvari hid in his fist. It was Andvaranaut, a ring that could make more gold."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cueva",
+          "x": 1650,
+          "s": 1.2,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "cofre",
+          "x": 1000,
+          "s": 1.1,
+          "capa": "medio",
+          "en": 3.4
+        },
+        {
+          "tipo": "cofre",
+          "x": 1200,
+          "s": 0.9,
+          "capa": "medio",
+          "en": 3.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "como": "loki",
+          "x": 400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lanza"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.8,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "lucio",
+          "como": "pez",
+          "x": 1300,
+          "y": 740,
+          "escala": 0.9,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "tiembla",
+              "dur": 0.9
+            },
+            {
+              "en": 1.4,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "andvari",
+          "como": "enano",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "ANDVARI",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3.2,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 0.6
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.4,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 500,
+          "dur": 1.5
+        },
+        {
+          "en": 3.5,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 560
+        },
+        {
+          "en": 4.1,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "ANDVARANAUT",
+            "en": "ANDVARANAUT"
+          },
+          "x": 1300,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "maldicion",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.0,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Loki vio el anillo y extendió la mano. Andvari rogó: déjame este. Con él puedo recuperar mi oro.",
+          "en": "Loki saw the ring and held out his hand. Andvari begged: Let me keep this one. With it, I can get my gold back."
+        },
+        {
+          "es": "Loki se negó. Le arrancó el anillo de la mano a Andvari.",
+          "en": "Loki refused. He pulled the ring from Andvari's hand."
+        },
+        {
+          "es": "Andvari gritó de rabia. Puso una maldición sobre el anillo y sobre todo el oro.",
+          "en": "Andvari cried out in rage. He put a curse on the ring and on all the gold."
+        },
+        {
+          "es": "Este oro traerá la muerte a quien lo posea, dijo. Destruirá a dos hermanos y arruinará a príncipes.",
+          "en": "This gold will bring death to whoever owns it, he said. It will destroy two brothers, and bring ruin to princes."
+        },
+        {
+          "es": "Loki solo se rio. Bien, dijo. Me encargaré de que el dueño escuche tu maldición.",
+          "en": "Loki only laughed. Good, he said. I will make sure the owner hears your curse."
+        },
+        {
+          "es": "Dime: si supieras de la maldición, ¿igual te llevarías ese oro? Cuéntamelo en los comentarios.",
+          "en": "Tell me: if you knew about the curse, would you take that gold anyway? Tell me in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 350,
+          "s": 1.1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "cofre",
+          "x": 1650,
+          "s": 1.2,
+          "capa": "medio"
+        },
+        {
+          "tipo": "cofre",
+          "x": 1850,
+          "s": 0.9,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "como": "loki",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.1,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "andvari",
+          "como": "enano",
+          "x": 1250,
+          "escala": 1.3,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.3,
+              "hace": "habla",
+              "dur": 1.5
+            },
+            {
+              "en": 3.1,
+              "hace": "tiembla",
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.2,
+          "tipo": "oscurecer",
+          "dur": 2
+        },
+        {
+          "en": 2.2,
+          "tipo": "temblor",
+          "dur": 1.5,
+          "intensidad": 0.7
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 500
+        },
+        {
+          "en": 4.5,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "LA MALDICIÓN",
+            "en": "THE CURSE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "¿LO TOMARÍAS?",
+            "en": "WOULD YOU TAKE IT?"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "pago",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Loki volvió de prisa con el oro. Odín vio el anillo y lo quiso para sí.",
+          "en": "Loki hurried back with the gold. Odin saw the ring and wanted it for himself."
+        },
+        {
+          "es": "Rellenaron la piel de nutria con oro, la pusieron de pie y amontonaron más oro a su alrededor.",
+          "en": "They stuffed the otter's skin with gold, stood it up, and heaped more gold all around it."
+        },
+        {
+          "es": "Hreidmar la rodeó despacio. Todavía veo un bigote, dijo. Cúbranlo, o el trato se cancela.",
+          "en": "Hreidmar walked around it slowly. I can still see one whisker, he said. Cover it, or the deal is off."
+        },
+        {
+          "es": "Odín no tenía más oro. Así que se quitó el anillo y lo puso sobre el bigote.",
+          "en": "Odin had no more gold. So he took off the ring, and laid it over the whisker."
+        },
+        {
+          "es": "Por fin la nutria quedó cubierta. Los dioses eran libres.",
+          "en": "At last the otter was covered. The gods were free."
+        },
+        {
+          "es": "Por eso los antiguos poetas llamaban al oro el rescate de la nutria.",
+          "en": "That is why the old poets called gold the otter's ransom."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 1150,
+          "s": 0.9,
+          "capa": "medio",
+          "en": 1.5
+        },
+        {
+          "tipo": "cofre",
+          "x": 1000,
+          "s": 1,
+          "capa": "medio",
+          "en": 1.8
+        },
+        {
+          "tipo": "cofre",
+          "x": 900,
+          "s": 0.8,
+          "capa": "medio",
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "como": "odin",
+          "x": 250,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "como": "loki",
+          "x": -250,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 550,
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "piel",
+          "como": "perro",
+          "x": 1050,
+          "escala": 0.45,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "hreidmar",
+          "como": "anciano",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1300,
+              "dur": 0.6
+            },
+            {
+              "en": 2.7,
+              "hace": "senala"
+            },
+            {
+              "en": 4.5,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 500,
+          "dur": 1.5
+        },
+        {
+          "en": 1.6,
+          "tipo": "chispas",
+          "x": 1050,
+          "y": 580
+        },
+        {
+          "en": 4,
+          "tipo": "destello"
+        },
+        {
+          "en": 4.5,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 5,
+          "texto": {
+            "es": "EL ORO SE LLAMÓ: EL RESCATE DE LA NUTRIA",
+            "en": "GOLD WAS CALLED THE OTTER'S RANSOM"
+          },
+          "x": 960,
+          "y": 230,
+          "estilo": "porque"
+        },
+        {
+          "en": 2.7,
+          "texto": {
+            "es": "UN BIGOTE",
+            "en": "ONE WHISKER"
+          },
+          "x": 1050,
+          "y": 300,
+          "hasta": 3.7
+        }
+      ]
+    },
+    {
+      "id": "hermanos",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuando los dioses se iban, Loki se volvió y advirtió a Hreidmar: este oro traerá la muerte a quien lo posea.",
+          "en": "As the gods left, Loki turned and warned Hreidmar: this gold will bring death to whoever owns it."
+        },
+        {
+          "es": "A Hreidmar no le importó. Pero sus hijos, Fáfnir y Regin, querían una parte. Era el pago por su hermano.",
+          "en": "Hreidmar did not care. But his sons, Fafnir and Regin, wanted a share. It was payment for their brother."
+        },
+        {
+          "es": "Hreidmar dijo que no. Lo quería todo para él.",
+          "en": "Hreidmar said no. He wanted all of it for himself."
+        },
+        {
+          "es": "Una noche, mientras su padre dormía, Fáfnir tomó una espada y lo mató.",
+          "en": "One night, while his father slept, Fafnir took a sword and killed him."
+        },
+        {
+          "es": "Fáfnir se quedó con todo el oro. Regin pidió su parte. Fáfnir respondió: vete, o te mato a ti también.",
+          "en": "Fafnir kept all the gold. Regin begged for his share. Fafnir answered: leave, or I will kill you too."
+        },
+        {
+          "es": "Regin huyó. Y el oro, y la maldición, eran ahora solo de Fáfnir.",
+          "en": "Regin ran away. And the gold, and the curse, now belonged to Fafnir alone."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 1750,
+          "s": 1.2,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "cofre",
+          "x": 750,
+          "s": 1,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "como": "odin",
+          "x": 150,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "como": "loki",
+          "x": 350,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "hreidmar",
+          "como": "anciano",
+          "x": 1000,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.5,
+              "hace": "sienta"
+            },
+            {
+              "en": 3.8,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "fafnir",
+          "como": "guerrero",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.6
+            },
+            {
+              "en": 3.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "regin",
+          "como": "enano",
+          "x": 1800,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4.6,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 5,
+              "hace": "camina",
+              "a": 2500,
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.8,
+          "tipo": "oscurecer",
+          "dur": 2.5
+        },
+        {
+          "en": 3.7,
+          "tipo": "destello"
+        },
+        {
+          "en": 5.3,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.4,
+          "texto": {
+            "es": "HREIDMAR MUERE",
+            "en": "HREIDMAR DIES"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4.5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.02,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Fáfnir llevó el oro a un páramo solitario y se puso un casco mágico que llenaba a todos de terror.",
+          "en": "Fafnir carried the gold to a lonely heath, and put on a magic helmet that filled everyone with terror."
+        },
+        {
+          "es": "La codicia lo deformó. Poco a poco se convirtió en un dragón, para guardar su tesoro para siempre.",
+          "en": "Greed twisted him. Slowly, he turned into a dragon, to guard his treasure forever."
+        },
+        {
+          "es": "Regin, sin nada, fue a la corte de un rey y se hizo herrero. Y allí esperó.",
+          "en": "Regin, with nothing, went to a king's court and became a smith. And there, he waited."
+        },
+        {
+          "es": "¿Quién tiene más culpa? ¿Loki, que tomó el anillo, Odín, que lo guardó, o Fáfnir, que mató por él? Dímelo en los comentarios.",
+          "en": "Who is most to blame? Loki, who took the ring, Odin, who kept it, or Fafnir, who killed for it? Tell me in the comments."
+        },
+        {
+          "es": "El dragón duerme sobre su oro, y la maldición duerme con él. Pero un día llegará un joven héroe.",
+          "en": "The dragon sleeps on his gold, and the curse sleeps with him. But one day, a young hero will come."
+        },
+        {
+          "es": "En el próximo episodio: Sigurd y el dragón Fáfnir.",
+          "en": "Next time: Sigurd and the Dragon Fafnir."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 450,
+          "s": 1.1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "cofre",
+          "x": 1100,
+          "s": 0.9,
+          "capa": "medio"
+        },
+        {
+          "tipo": "monte_nevado",
+          "x": 1700,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "fafnir",
+          "como": "guerrero",
+          "x": 1000,
+          "escala": 0.9,
+          "rotulo": "FAFNIR",
+          "props": {
+            "tocado": "yelmo"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.3,
+              "hace": "transforma",
+              "dur": 0.8,
+              "en_que": "dragon"
+            }
+          ]
+        },
+        {
+          "id": "regin",
+          "como": "enano",
+          "x": 1650,
+          "mira": "izq",
+          "rotulo": "REGIN",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 2500,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": "espada",
+            "barba": false,
+            "pelo": "#E9C46A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 4.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.8,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 5.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "niebla",
+          "dur": 2
+        },
+        {
+          "en": 1.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.4,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 1.8,
+          "tipo": "humo",
+          "x": 800,
+          "y": 600,
+          "dur": 1.5
+        },
+        {
+          "en": 4.6,
+          "tipo": "luz",
+          "x": 1600,
+          "y": 450,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "EL YELMO DEL TERROR",
+            "en": "THE HELM OF TERROR"
+          },
+          "x": 800,
+          "y": 260,
+          "hasta": 1.2
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "¿QUIÉN TIENE MÁS CULPA?",
+            "en": "WHO IS MOST TO BLAME?"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "PRÓXIMO: SIGURD Y EL DRAGÓN FÁFNIR",
+            "en": "NEXT: SIGURD AND THE DRAGON FAFNIR"
+          },
+          "x": 960,
+          "y": 290
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El enano que maldijo su propio oro",
+        "en": "The dwarf who cursed his own gold"
+      },
+      "escena": "maldicion",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "Los dioses mataron a una nutria... y les costó una fortuna",
+        "en": "The gods killed an otter... and it cost them a fortune"
+      },
+      "escena": "pago",
+      "desde": 0,
+      "hasta": 5,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Así nació el dragón Fáfnir",
+        "en": "How the dragon Fafnir was born"
+      },
+      "escena": "hermanos",
+      "desde": 2,
+      "hasta": 5,
+      "foco": 1300
+    }
+  ],
+  "miniatura": {
+    "heroe": "enano",
+    "rival": "loki"
+  }
+}

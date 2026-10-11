@@ -1,0 +1,866 @@
+{
+ "id": "hawaianas-08-el-agua-de-kane",
+ "serie": "hawaianas",
+ "numero": "08",
+ "titulo": {
+  "es": "El agua de Kāne",
+  "en": "The Water of Kāne"
+ },
+ "tituloGriego": "THE WATER OF KĀNE",
+ "miniatura": {
+  "heroe": "kane",
+  "rival": "kanaloa"
+ },
+ "siguiente": {
+  "es": "Māui y el gran anzuelo",
+  "en": "Māui and the Great Hook"
+ },
+ "escenas": [
+  {
+   "id": "marco",
+   "frases": [
+    {
+     "es": "La última vez, una planta brotó de la tierra, y un niño llamado Hāloa fue el antepasado del pueblo hawaiano.",
+     "en": "Last time, a plant grew from the earth, and a boy named Hāloa became the ancestor of the Hawaiian people."
+    },
+    {
+     "es": "Ahora la gente tiene kalo, y el kalo crece mejor donde corre el agua. Pero el agua dulce no siempre era fácil de hallar.",
+     "en": "Now the people have kalo, and kalo grows best where water flows. But fresh water was not always easy to find."
+    },
+    {
+     "es": "Dos grandes dioses recorrían las islas juntos. Se llaman Kāne y Kanaloa.",
+     "en": "Two great gods walked the islands together. Their names are Kāne and Kanaloa."
+    },
+    {
+     "es": "Kāne es el dios de la vida, la luz del sol y el agua dulce. Kanaloa es el dios del mar profundo y del calamar.",
+     "en": "Kāne is the god of life, sunlight, and fresh water. Kanaloa is the god of the deep sea, and of the squid."
+    },
+    {
+     "es": "Los constructores de canoas rezan a Kāne para construirlas, y a Kanaloa para navegarlas.",
+     "en": "Canoe builders pray to Kāne to build their canoes, and to Kanaloa to sail them."
+    }
+   ],
+   "fondo": "valle",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "actores": [
+    {
+     "id": "haloa",
+     "como": "haloa",
+     "x": 420,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "alegra"
+      },
+      {
+       "en": 1.5,
+       "hace": "salta"
+      }
+     ]
+    },
+    {
+     "id": "kane",
+     "como": "kane",
+     "x": 1000,
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 3,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "kanaloa",
+     "como": "kanaloa",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.4,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 3.6,
+       "hace": "brilla"
+      }
+     ]
+    },
+    {
+     "id": "constructor",
+     "como": "hawaiano",
+     "x": 1750,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 4,
+       "hace": "aparece"
+      },
+      {
+       "en": 4.2,
+       "hace": "reza"
+      }
+     ]
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "kalo",
+     "x": 250,
+     "s": 1.2
+    },
+    {
+     "tipo": "kalo",
+     "x": 700,
+     "s": 1.0
+    },
+    {
+     "tipo": "niu",
+     "x": 1850,
+     "s": 1.2,
+     "capa": "fondo"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "luz",
+     "dur": 1.5
+    }
+   ]
+  },
+  {
+   "id": "camino",
+   "frases": [
+    {
+     "es": "Viajaban juntos de isla en isla, y las historias dicen que dejaron manantiales y estanques de peces a su paso.",
+     "en": "They traveled together from island to island, and the old stories say they left springs and fishponds behind them."
+    },
+    {
+     "es": "En los relatos, Kanaloa es el que se pregunta y desea. Kāne es el que actúa.",
+     "en": "In the stories, Kanaloa is the one who wonders and wants. Kāne is the one who acts."
+    },
+    {
+     "es": "Un día subieron a las montañas empinadas detrás de Keanae, en la isla de Maui.",
+     "en": "One day they climbed the steep mountains behind Keanae, on the island of Maui."
+    },
+    {
+     "es": "Estaban cansados y con sed. Y en esas alturas secas no había agua por ningún lado.",
+     "en": "They were tired and thirsty. And in those high, dry cliffs, there was no water anywhere."
+    }
+   ],
+   "fondo": "haleakala",
+   "camara": {
+    "de": 0,
+    "a": 500,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "actores": [
+    {
+     "id": "kane",
+     "como": "kane",
+     "x": 500,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "camina",
+       "a": 900,
+       "dur": 2
+      },
+      {
+       "en": 2,
+       "hace": "camina",
+       "a": 1500,
+       "dur": 1
+      },
+      {
+       "en": 3.2,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "kanaloa",
+     "como": "kanaloa",
+     "x": 250,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "camina",
+       "a": 650,
+       "dur": 2
+      },
+      {
+       "en": 2,
+       "hace": "camina",
+       "a": 1250,
+       "dur": 1
+      },
+      {
+       "en": 3.2,
+       "hace": "entristece"
+      }
+     ]
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 1600,
+     "s": 1.0,
+     "capa": "medio"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "aclarar",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2,
+     "texto": {
+      "es": "KEANAE · MAUI",
+      "en": "KEANAE · MAUI"
+     },
+     "x": 960,
+     "y": 230,
+     "hasta": 3.9
+    }
+   ]
+  },
+  {
+   "id": "keanae",
+   "frases": [
+    {
+     "es": "¿Puede haber un manantial tan alto en la montaña? Los dos dioses lo hablaron entre sí.",
+     "en": "Can there be a spring so high in the mountains? The two gods talked it over."
+    },
+    {
+     "es": "«¡Que se vea!», dijo Kanaloa.",
+     "en": "\"Let it be seen!\" said Kanaloa."
+    },
+    {
+     "es": "Kāne levantó su bastón de madera de kauila, dura y pesada, y lo clavó en la roca.",
+     "en": "Kāne raised his staff of kauila wood, hard and heavy, and drove it into the rock."
+    },
+    {
+     "es": "El agua salió a chorros de la piedra y bajó corriendo por la montaña.",
+     "en": "Water burst out of the rock and ran down the mountain."
+    },
+    {
+     "es": "Cerca de Keanae se muestran dos agujeros. Cuentan que Kāne dijo: «Este es para ti, y aquel para mí».",
+     "en": "Near Keanae, two holes are still shown. They say Kāne said: \"This one is for you, and that one is for me.\""
+    },
+    {
+     "es": "Por eso esa agua todavía se llama «el agua de Kāne y Kanaloa».",
+     "en": "That is why this water is still called \"the water of Kāne and Kanaloa.\""
+    }
+   ],
+   "fondo": "bosque",
+   "camara": {
+    "de": 0,
+    "a": 100,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "actores": [
+    {
+     "id": "kane",
+     "como": "kane",
+     "x": 1000,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1.5,
+       "hace": "levanta"
+      },
+      {
+       "en": 2.1,
+       "hace": "golpea"
+      },
+      {
+       "en": 4,
+       "hace": "senala",
+       "a": 1300
+      }
+     ]
+    },
+    {
+     "id": "kanaloa",
+     "como": "kanaloa",
+     "x": 650,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla",
+       "dur": 0.8
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 3.2,
+       "hace": "alegra"
+      },
+      {
+       "en": 4.5,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 1250,
+     "s": 1.4
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2.2,
+     "tipo": "temblor",
+     "dur": 0.6
+    },
+    {
+     "en": 2.3,
+     "tipo": "luz",
+     "x": 1250,
+     "y": 560,
+     "dur": 1.5
+    },
+    {
+     "en": 3,
+     "tipo": "lluvia",
+     "dur": 2.5,
+     "intensidad": 0.35
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "KEANAE · MAUI",
+      "en": "KEANAE · MAUI"
+     },
+     "x": 960,
+     "y": 230,
+     "hasta": 1.5
+    },
+    {
+     "en": 5,
+     "texto": {
+      "es": "POR ESO ESA AGUA LLEVA SUS NOMBRES",
+      "en": "THAT'S WHY THIS WATER BEARS THEIR NAMES"
+     },
+     "x": 960,
+     "y": 230,
+     "hasta": 5.9,
+     "estilo": "porque"
+    }
+   ]
+  },
+  {
+   "id": "oahu",
+   "frases": [
+    {
+     "es": "¿Alguna vez bebiste de un manantial de montaña? ¿A qué sabía? Cuéntanos en los comentarios.",
+     "en": "Have you ever drunk from a mountain spring? What did it taste like? Tell us in the comments."
+    },
+    {
+     "es": "En Oʻahu, otro relato dice que los dioses hallaron buen ʻawa en Kalihi. El ʻawa es una raíz, la bebida de los dioses.",
+     "en": "On Oʻahu, another telling says the gods found fine ʻawa at Kalihi. ʻAwa is a root, the drink of the gods."
+    },
+    {
+     "es": "Prepararon el ʻawa, pero no había agua dulce. Kanaloa preguntó: «¿Dónde hay agua para el ʻawa?».",
+     "en": "They prepared the ʻawa, but there was no fresh water. Kanaloa asked: \"Where is the water for the ʻawa?\""
+    },
+    {
+     "es": "«Aquí hay agua», dijo Kāne. Golpeó la lava con su bastón, y el agua saltó del agujero.",
+     "en": "\"There is water here,\" said Kāne. He struck the lava with his staff, and water leaped from the hole."
+    },
+    {
+     "es": "Bebieron y durmieron. Luego siguieron a Mānoa, donde Kāne golpeó un risco y se formó una poza clara entre las piedras.",
+     "en": "They drank and slept. Then they walked on to Mānoa, where Kāne struck a cliff and a clear pool formed among the stones."
+    },
+    {
+     "es": "Esa poza todavía se llama Ka Wai a ke Akua, «el agua de los dioses».",
+     "en": "That pool is still called Ka Wai a ke Akua, \"the water of the gods.\""
+    }
+   ],
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "actores": [
+    {
+     "id": "kane",
+     "como": "kane",
+     "x": 700,
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.8,
+       "hace": "levanta"
+      },
+      {
+       "en": 3.2,
+       "hace": "golpea"
+      },
+      {
+       "en": 4,
+       "hace": "camina",
+       "a": 1200,
+       "dur": 0.8
+      },
+      {
+       "en": 4.9,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "kanaloa",
+     "como": "kanaloa",
+     "x": 350,
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.2,
+       "hace": "habla",
+       "dur": 0.6
+      },
+      {
+       "en": 3.5,
+       "hace": "alegra"
+      },
+      {
+       "en": 4,
+       "hace": "camina",
+       "a": 900,
+       "dur": 0.8
+      }
+     ]
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 900,
+     "s": 1.2
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1.5,
+     "tipo": "oscurecer",
+     "dur": 1,
+     "intensidad": 0.2
+    },
+    {
+     "en": 3.3,
+     "tipo": "luz",
+     "x": 900,
+     "y": 600,
+     "dur": 1.2
+    },
+    {
+     "en": 3.4,
+     "tipo": "lluvia",
+     "dur": 1,
+     "intensidad": 0.3
+    },
+    {
+     "en": 4.9,
+     "tipo": "luz",
+     "x": 1500,
+     "y": 500,
+     "dur": 1.2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1,
+     "texto": {
+      "es": "KALIHI · OʻAHU",
+      "en": "KALIHI · OʻAHU"
+     },
+     "x": 960,
+     "y": 230,
+     "hasta": 2.9
+    },
+    {
+     "en": 4,
+     "texto": {
+      "es": "MĀNOA · OʻAHU",
+      "en": "MĀNOA · OʻAHU"
+     },
+     "x": 960,
+     "y": 230,
+     "hasta": 5.9
+    }
+   ]
+  },
+  {
+   "id": "vida",
+   "frases": [
+    {
+     "es": "Los hawaianos también hablan de Ka Wai Ola a Kāne, el Agua Viva de Kāne.",
+     "en": "Hawaiians also speak of Ka Wai Ola a Kāne, the Living Water of Kāne."
+    },
+    {
+     "es": "Es un agua de vida que cura y trae de vuelta al espíritu. En los relatos queda lejos, más allá del mar o en las nubes.",
+     "en": "It is a water of life that heals and brings the spirit back. In the stories it lies far away, beyond the sea or in the clouds."
+    },
+    {
+     "es": "Muchos pueblos del Pacífico cuentan de un agua así. En Hawaiʻi pertenece a Kāne.",
+     "en": "Many peoples of the Pacific tell of a water like this. In Hawaiʻi it belongs to Kāne."
+    },
+    {
+     "es": "La palabra hawaiana para riqueza, waiwai, es la palabra «agua», dicha dos veces.",
+     "en": "The Hawaiian word for wealth, waiwai, is the word for water, said twice."
+    }
+   ],
+   "fondo": "cielo",
+   "camara": {
+    "de": 0,
+    "a": 100,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "actores": [
+    {
+     "id": "kane",
+     "como": "kane",
+     "x": 900,
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.5,
+       "hace": "levanta"
+      },
+      {
+       "en": 2,
+       "hace": "brilla"
+      }
+     ]
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "nube",
+     "x": 400,
+     "s": 1.2,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "nube",
+     "x": 1500,
+     "s": 1.4,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "nube",
+     "x": 1100,
+     "s": 0.9
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "luz",
+     "dur": 2
+    },
+    {
+     "en": 0,
+     "tipo": "niebla",
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "KA WAI OLA A KĀNE",
+      "en": "KA WAI OLA A KĀNE"
+     },
+     "x": 960,
+     "y": 230,
+     "hasta": 1.9
+    },
+    {
+     "en": 3,
+     "texto": {
+      "es": "WAI · WAIWAI",
+      "en": "WAI · WAIWAI"
+     },
+     "x": 960,
+     "y": 230,
+     "hasta": 3.9
+    }
+   ]
+  },
+  {
+   "id": "hoy",
+   "frases": [
+    {
+     "es": "Estos manantiales son lugares reales en el mapa de las islas, y conservan los nombres que les dieron los relatos antiguos.",
+     "en": "These springs are real places on the map of the islands, and they keep the names the old stories gave them."
+    },
+    {
+     "es": "En el pensamiento hawaiano, el agua es un regalo de Kāne y se trata con respeto.",
+     "en": "In Hawaiian thought, water is a gift of Kāne, and it is treated with respect."
+    },
+    {
+     "es": "Los agricultores de los lōʻi dependen de arroyos y manantiales para que el kalo, el hermano mayor, pueda crecer.",
+     "en": "Farmers in the lōʻi depend on streams and springs so that the kalo, the elder brother, can grow."
+    }
+   ],
+   "fondo": "loi",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "actores": [
+    {
+     "id": "agricultor",
+     "como": "hawaiano",
+     "x": 700,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "reza"
+      },
+      {
+       "en": 2,
+       "hace": "baja"
+      }
+     ]
+    },
+    {
+     "id": "agricultora",
+     "como": "hawaiana",
+     "x": 1150,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "senala",
+       "a": 1500
+      },
+      {
+       "en": 2,
+       "hace": "ofrece"
+      }
+     ]
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "kalo",
+     "x": 1400,
+     "s": 1.1
+    },
+    {
+     "tipo": "kalo",
+     "x": 1700,
+     "s": 1.0
+    },
+    {
+     "tipo": "kalo",
+     "x": 2000,
+     "s": 1.2
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "aclarar",
+     "dur": 1
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "es": "En estos relatos, Kanaloa hace la pregunta y Kāne responde con su bastón.",
+     "en": "In these tales, Kanaloa asks the question, and Kāne answers with his staff."
+    },
+    {
+     "es": "¿Cuál eres tú, el que se pregunta o el que actúa? Cuéntanos en los comentarios.",
+     "en": "Which one are you, the one who wonders or the one who acts? Tell us in the comments."
+    },
+    {
+     "es": "El mundo ya tiene gente, comida y agua dulce. Pero un niño pequeño de Maui cree que todavía falta algo.",
+     "en": "The world now has people, food, and fresh water. But a small boy on Maui thinks something is still missing."
+    },
+    {
+     "es": "La próxima vez, él toma un anzuelo mágico. Es Māui y el gran anzuelo.",
+     "en": "Next time, he picks up a magic fishhook. It is Māui and the Great Hook."
+    }
+   ],
+   "fondo": "playa",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "actores": [
+    {
+     "id": "kane",
+     "como": "kane",
+     "x": 1000,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla",
+       "dur": 0.8
+      },
+      {
+       "en": 0.9,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "kanaloa",
+     "como": "kanaloa",
+     "x": 650,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "asiente"
+      },
+      {
+       "en": 1,
+       "hace": "habla",
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "maui",
+     "como": "maui",
+     "x": 1650,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.4,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 3,
+       "hace": "levanta"
+      }
+     ]
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "petroglifo",
+     "x": 250,
+     "s": 1.2,
+     "props": {
+      "figura": "canoa"
+     }
+    },
+    {
+     "tipo": "waa",
+     "x": 1500,
+     "s": 1.0,
+     "capa": "fondo"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2.3,
+     "tipo": "aclarar",
+     "dur": 1.5
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "El dios que golpeó una roca y creó un manantial",
+    "en": "The god who struck a rock and made a spring"
+   },
+   "escena": "keanae",
+   "desde": 0,
+   "hasta": 4,
+   "foco": 1000
+  },
+  {
+   "gancho": {
+    "es": "Dos dioses con sed y una poza en la lava",
+    "en": "Two thirsty gods and a spring in the lava"
+   },
+   "escena": "oahu",
+   "desde": 1,
+   "hasta": 4,
+   "foco": 800
+  },
+  {
+   "gancho": {
+    "es": "El Agua Viva de Kāne",
+    "en": "The Living Water of Kāne"
+   },
+   "escena": "vida",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  }
+ ]
+}

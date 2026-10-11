@@ -1,0 +1,1558 @@
+{
+  "id": "egipcias-04-ojo-de-ra",
+  "serie": "egipcias",
+  "numero": "04",
+  "titulo": {
+    "es": "El Ojo de Ra",
+    "en": "The Eye of Ra"
+  },
+  "tituloGriego": "THE EYE OF RA",
+  "miniatura": {
+    "heroe": "sekhmet",
+    "rival": "ra"
+  },
+  "escenas": [
+    {
+      "id": "osiris",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Osiris reinaba en Egipto y enseñaba a su pueblo a sembrar el trigo, a hacer pan y a vivir en paz.",
+          "en": "Osiris ruled in Egypt, teaching his people to sow wheat, bake bread, and live in peace."
+        },
+        {
+          "es": "Pero los egipcios contaban que los humanos estuvieron a punto de no llegar a probar ese pan.",
+          "en": "But the Egyptians told that humans came very close to never tasting that bread."
+        },
+        {
+          "es": "Mucho antes, cuando Ra todavía gobernaba la tierra como rey, la humanidad casi desapareció.",
+          "en": "Long before, when Ra himself still ruled the earth as king, humankind almost vanished."
+        },
+        {
+          "es": "Esa historia quedó grabada en las paredes de las tumbas de los faraones: el Libro de la Vaca Celeste.",
+          "en": "That story was carved on the walls of the pharaohs' tombs: the Book of the Heavenly Cow."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 250,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "sol",
+          "x": 1600,
+          "y": 250,
+          "s": 1.2,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "osiris",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "campesino",
+          "como": "egipcio",
+          "x": 1150,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "toma",
+              "objeto": "cana"
+            }
+          ]
+        },
+        {
+          "id": "campesina",
+          "como": "egipcia",
+          "x": 1350,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1.2,
+          "intensidad": 0.4
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 960,
+          "y": 300,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "EL LIBRO DE LA VACA CELESTE",
+            "en": "THE BOOK OF THE HEAVENLY COW"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "viejo",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En aquellos días Ra ya era viejo. Sus huesos eran de plata, su carne era de oro y su cabello, de lapislázuli puro.",
+          "en": "By then Ra had grown old. His bones were silver, his flesh was gold, and his hair was pure lapis lazuli."
+        },
+        {
+          "es": "Los humanos, que habían nacido de su Ojo, empezaron a murmurar a sus espaldas.",
+          "en": "The humans, born from his Eye, began to whisper behind his back."
+        },
+        {
+          "es": "Decían que Su Majestad estaba viejo y ya no podía gobernar, y tramaron levantarse contra él.",
+          "en": "They said His Majesty was old and could no longer rule, and they plotted to rise against him."
+        },
+        {
+          "es": "Pero un dios que lo ve todo no tarda en enterarse.",
+          "en": "But a god who sees everything is not slow to find out."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 500,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 1.5
+            },
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "c1",
+          "como": "egipcio",
+          "x": 1350,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "c2",
+          "como": "egipcia",
+          "x": 1550,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "como": "egipcio",
+          "x": 1750,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "chispas",
+          "x": 700,
+          "y": 520,
+          "dur": 1.2
+        },
+        {
+          "en": 3,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "HUESOS DE PLATA",
+            "en": "SILVER BONES"
+          },
+          "x": 330,
+          "y": 220,
+          "hasta": 1.6
+        },
+        {
+          "en": 0.5,
+          "texto": {
+            "es": "CARNE DE ORO",
+            "en": "FLESH OF GOLD"
+          },
+          "x": 330,
+          "y": 300,
+          "hasta": 1.8
+        },
+        {
+          "en": 0.8,
+          "texto": {
+            "es": "CABELLO DE LAPISLÁZULI",
+            "en": "HAIR OF LAPIS LAZULI"
+          },
+          "x": 330,
+          "y": 380,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "consejo",
+      "fondo": "nun",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ra reunió en secreto a los dioses más antiguos: Shu y Tefnut, Geb y Nut, y al Nun, el océano del que había salido.",
+          "en": "Ra secretly gathered the oldest gods: Shu and Tefnut, Geb and Nut, and Nun, the ocean he had come from."
+        },
+        {
+          "es": "No quiso que los humanos se enteraran, para que no cundiera el miedo.",
+          "en": "He did not want the humans to know, so that fear would not spread."
+        },
+        {
+          "es": "Preguntó qué hacer con ellos, y juró que no los castigaría hasta oír el consejo de todos.",
+          "en": "He asked what should be done about them, and swore he would not strike until he had heard their advice."
+        },
+        {
+          "es": "El Nun, el más viejo de todos, respondió: «Hijo mío, manda a tu Ojo. Que caiga sobre los que conspiran».",
+          "en": "Nun, the oldest of them all, answered: \"My son, send out your Eye. Let it fall upon those who plot.\""
+        },
+        {
+          "es": "Mientras tanto, los conspiradores, asustados por sus propias palabras, ya habían huido al desierto.",
+          "en": "Meanwhile the plotters, frightened by their own words, had already fled into the desert."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "x": 380,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "shu",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "tefnut",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "geb",
+          "x": 1150,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "nut",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "huye",
+          "como": "egipcio",
+          "x": 1800,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.2,
+              "hace": "corre",
+              "a": 2300,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla"
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "EL NUN",
+            "en": "NUN"
+          },
+          "x": 960,
+          "y": 240,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "ojo_baja",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces el Ojo de Ra descendió a la tierra con la forma de la diosa Hathor.",
+          "en": "Then the Eye of Ra descended to earth in the form of the goddess Hathor."
+        },
+        {
+          "es": "Persiguió a los rebeldes por las montañas del desierto, y ninguno escapó de ella.",
+          "en": "She hunted the rebels across the mountains of the desert, and none could escape her."
+        },
+        {
+          "es": "Cuando volvió, Ra le dio la bienvenida. Hathor dijo: «He vencido a los hombres, y fue dulce para mi corazón».",
+          "en": "When she returned, Ra welcomed her. Hathor said: \"I have overpowered the humans, and it was sweet to my heart.\""
+        },
+        {
+          "es": "Pero la diosa ya no era la misma. En su furia se había convertido en Sekhmet, la Poderosa, la leona.",
+          "en": "But the goddess was no longer the same. In her fury she had become Sekhmet, the Powerful One, the lioness."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ojo",
+          "como": "ojo_ra",
+          "x": 250,
+          "y": 220,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "vuela",
+              "a": [
+                900,
+                560
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 0.95,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "hathor",
+          "x": 900,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.95,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.2,
+              "hace": "corre",
+              "a": 1500,
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "transforma",
+              "en_que": "sekhmet"
+            }
+          ]
+        },
+        {
+          "id": "r1",
+          "como": "egipcio",
+          "x": 1500,
+          "mira": "der",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 2100,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "r2",
+          "como": "egipcia",
+          "x": 1700,
+          "mira": "der",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "corre",
+              "a": 2200,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.9,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.3,
+          "tipo": "polvo",
+          "x": 1300,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "fuego",
+          "x": 900,
+          "y": 500,
+          "dur": 0.9,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "SEKHMET: LA PODEROSA",
+            "en": "SEKHMET: THE POWERFUL ONE"
+          },
+          "x": 960,
+          "y": 250
+        }
+      ]
+    },
+    {
+      "id": "furia",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1.02,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Y Sekhmet no se detuvo. Noche tras noche recorrió el país, y la tierra quedó teñida de rojo.",
+          "en": "And Sekhmet did not stop. Night after night she walked the land, and the earth was stained red."
+        },
+        {
+          "es": "Ra la observaba desde lejos, y su corazón se llenó de arrepentimiento.",
+          "en": "Ra watched from afar, and his heart filled with regret."
+        },
+        {
+          "es": "«Basta», dijo. «Quiero salvar a los pocos que quedan».",
+          "en": "\"Enough,\" he said. \"I want to save those who are left.\""
+        },
+        {
+          "es": "Pero Sekhmet ya no escuchaba. Su rabia le había hecho olvidar quién era, y quería terminar lo que había empezado.",
+          "en": "But Sekhmet no longer listened. Her rage had made her forget who she was, and she wanted to finish what she had started."
+        }
+      ],
+      "actores": [
+        {
+          "id": "sekhmet",
+          "x": 1100,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 2
+            },
+            {
+              "en": 2.5,
+              "hace": "camina",
+              "a": 1800,
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "v1",
+          "como": "egipcio",
+          "x": 1700,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.8,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 0.8,
+          "intensidad": 0.7
+        },
+        {
+          "en": 0.5,
+          "tipo": "humo",
+          "x": 1400,
+          "y": 760,
+          "dur": 2
+        },
+        {
+          "en": 3,
+          "tipo": "fuego",
+          "x": 1500,
+          "y": 620,
+          "dur": 1,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "ocre",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ra llamó a sus mensajeros más veloces, los que corren como el viento.",
+          "en": "Ra summoned his fastest messengers, the ones who run like the wind."
+        },
+        {
+          "es": "«Vayan a Elefantina, en el extremo sur, y tráiganme ocre rojo, tanto como puedan cargar».",
+          "en": "\"Go to Elephantine, far to the south, and bring me red ochre, as much as you can carry.\""
+        },
+        {
+          "es": "En Heliópolis, el sumo sacerdote molió el ocre mientras las sirvientas trituraban cebada para hacer cerveza.",
+          "en": "In Heliopolis the high priest ground the ochre while the servant women crushed barley to brew beer."
+        },
+        {
+          "es": "Mezclaron el ocre con la cerveza hasta que quedó roja como la sangre humana.",
+          "en": "They mixed the ochre into the beer until it was red as human blood."
+        },
+        {
+          "es": "Fueron siete mil jarras.",
+          "en": "Seven thousand jars of it."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "mensajero",
+          "como": "egipcio",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "corre",
+              "a": 2200,
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "mensajero2",
+          "como": "egipcio",
+          "x": 650,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "corre",
+              "a": 2300,
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "sumo",
+          "como": "sacerdote_egipcio",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "sirvienta",
+          "como": "egipcia",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.2,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "anfora",
+          "x": 1750,
+          "s": 1,
+          "en": 3.3
+        },
+        {
+          "tipo": "anfora",
+          "x": 1860,
+          "s": 1,
+          "en": 3.6
+        },
+        {
+          "tipo": "anfora",
+          "x": 900,
+          "s": 0.9,
+          "capa": "fondo",
+          "en": 4
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "polvo",
+          "x": 700,
+          "dur": 1
+        },
+        {
+          "en": 2.3,
+          "tipo": "polvo",
+          "x": 1300,
+          "dur": 1.5
+        },
+        {
+          "en": 3.3,
+          "tipo": "sangre",
+          "x": 1300,
+          "y": 600,
+          "dur": 1.2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.5,
+          "texto": {
+            "es": "OCRE ROJO",
+            "en": "RED OCHRE"
+          },
+          "x": 700,
+          "y": 260,
+          "hasta": 2.8
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "7000 JARRAS",
+            "en": "7,000 JARS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "campo_rojo",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Esa noche llevaron la cerveza roja hasta el lugar donde Sekhmet pensaba atacar al amanecer.",
+          "en": "That night they carried the red beer to the place where Sekhmet planned to strike at dawn."
+        },
+        {
+          "es": "La derramaron sobre los campos hasta que la tierra quedó inundada a tres palmos de altura.",
+          "en": "They poured it over the fields until the land lay flooded three hands deep."
+        },
+        {
+          "es": "Al amanecer llegó la diosa y vio los campos cubiertos de rojo. En el líquido se reflejó su propio rostro, hermoso.",
+          "en": "At dawn the goddess arrived and saw the fields covered in red. In the liquid she saw her own face, beautiful, reflected."
+        },
+        {
+          "es": "Se agachó y bebió, y le gustó tanto que bebió hasta emborracharse.",
+          "en": "She bent down and drank, and she liked it so much that she drank until she was drunk."
+        },
+        {
+          "es": "Se tambaleó, olvidó su furia y ya no reconoció a ningún humano. Ra la recibió: «Bienvenida, dulce señora».",
+          "en": "She staggered, forgot her fury, and could no longer recognize a single human. Ra welcomed her: \"Welcome, gentle one.\""
+        },
+        {
+          "es": "Por eso, en la fiesta de Hathor, los egipcios bebían cerveza en cantidad, en recuerdo de aquel día.",
+          "en": "And so, at the festival of Hathor, the Egyptians drank beer in great quantity, in memory of that day."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "anfora",
+          "x": 300,
+          "s": 1
+        },
+        {
+          "tipo": "anfora",
+          "x": 430,
+          "s": 1
+        },
+        {
+          "tipo": "anfora",
+          "x": 560,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "sumo",
+          "como": "sacerdote_egipcio",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "sirvienta",
+          "como": "egipcia",
+          "x": 1000,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "sekhmet",
+          "x": 1900,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1500
+            },
+            {
+              "en": 3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4,
+              "hace": "tiembla",
+              "dur": 1
+            },
+            {
+              "en": 4.5,
+              "hace": "calla"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.2,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "dur": 1.2,
+          "intensidad": 0.12,
+          "color": "rojo"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 5,
+          "texto": {
+            "es": "POR ESO LA FIESTA DE HATHOR TIENE CERVEZA",
+            "en": "THAT'S WHY HATHOR'S FEAST HAS BEER"
+          },
+          "x": 960,
+          "y": 210,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "vaca",
+      "fondo": "cielo_nut",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ra estaba agotado. «Estoy cansado de estar entre ellos», dijo. «No voy a quedarme en la tierra».",
+          "en": "Ra was worn out. \"I am weary of being among them,\" he said. \"I will not stay on the earth any longer.\""
+        },
+        {
+          "es": "Entonces Nut tomó la forma de una enorme vaca celeste, y Ra subió a su lomo.",
+          "en": "So Nut took the shape of an enormous heavenly cow, and Ra climbed onto her back."
+        },
+        {
+          "es": "Los humanos, arrepentidos, salieron a pedirle que no se fuera y se ofrecieron a luchar contra sus enemigos.",
+          "en": "The humans, now ashamed, came out begging him to stay and offering to fight his enemies."
+        },
+        {
+          "es": "Pero Ra ya subía. La vaca se levantó, y la tierra quedó abajo, cada vez más lejos.",
+          "en": "But Ra was already rising. The cow stood up, and the earth fell away below, farther and farther."
+        },
+        {
+          "es": "A Nut le dio vértigo y empezó a temblar. Entonces Shu se metió bajo su vientre y la sostuvo.",
+          "en": "Nut grew dizzy at that height and began to tremble. So Shu slipped under her belly and held her up."
+        },
+        {
+          "es": "Ocho dioses más sujetaron sus patas, y el vientre de la vaca se llenó de estrellas.",
+          "en": "Eight more gods held her legs steady, and the cow's belly filled with stars."
+        }
+      ],
+      "actores": [
+        {
+          "id": "nut",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "transforma",
+              "en_que": "vaca_celeste"
+            },
+            {
+              "en": 4,
+              "hace": "tiembla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "x": 700,
+          "escala": 0.75,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.5,
+              "hace": "vuela",
+              "a": [
+                1130,
+                640
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 2.4,
+              "hace": "baja"
+            },
+            {
+              "en": 2.5,
+              "hace": "sienta"
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                1130,
+                600
+              ],
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "h1",
+          "como": "egipcio",
+          "x": 350,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "h2",
+          "como": "egipcia",
+          "x": 520,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "shu",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "entra",
+              "a": 1250
+            },
+            {
+              "en": 4.8,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.5,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 5,
+          "tipo": "estrellas"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 5,
+          "texto": {
+            "es": "MEHET-WERET, LA VACA CELESTE",
+            "en": "MEHET-WERET, THE HEAVENLY COW"
+          },
+          "x": 960,
+          "y": 250
+        }
+      ]
+    },
+    {
+      "id": "juncos",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ra dijo: «Que haya un campo donde crezcan todas las plantas». Así nació el Campo de Juncos.",
+          "en": "Ra said: \"Let there be a field where all plants grow.\" And so the Field of Reeds came into being."
+        },
+        {
+          "es": "Allí vivirían en paz las almas de los muertos, sembrando y cosechando entre los juncos.",
+          "en": "There the souls of the dead would live in peace, sowing and reaping among the reeds."
+        },
+        {
+          "es": "Ra también quiso dejar a alguien en su lugar para velar en la oscuridad. Eligió a Thoth, el dios escriba.",
+          "en": "Ra also wanted someone to stand in his place and watch through the dark. He chose Thoth, the scribe god."
+        },
+        {
+          "es": "Y le encargó a Geb que vigilara a las serpientes de la tierra.",
+          "en": "And he charged Geb with watching over the snakes of the earth."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "papiro",
+          "x": 1500,
+          "s": 1.2,
+          "en": 0.3
+        },
+        {
+          "tipo": "papiro",
+          "x": 1750,
+          "s": 1,
+          "en": 0.5
+        },
+        {
+          "tipo": "loto",
+          "x": 1200,
+          "s": 1,
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "x": 400,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            },
+            {
+              "en": 2.5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "x": 850,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "geb",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.4,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "alma",
+          "como": "bennu",
+          "x": 1500,
+          "y": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "vuela",
+              "a": [
+                1650,
+                340
+              ],
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 1600,
+          "y": 450,
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "EL CAMPO DE JUNCOS",
+            "en": "THE FIELD OF REEDS"
+          },
+          "x": 1500,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "cielo_nut",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así Ra dejó el trono de la tierra y empezó a reinar desde el cielo, sobre el lomo de Nut.",
+          "en": "That is how Ra left his throne on earth and began to rule from the sky, on the back of Nut."
+        },
+        {
+          "es": "Desde esa altura seguía siendo el rey de los dioses, pero también seguía envejeciendo.",
+          "en": "From that height he was still king of the gods, but he was still growing old."
+        },
+        {
+          "es": "Y abajo, en la tierra, una diosa lo observaba con atención: Isis, más astuta que todos los demás.",
+          "en": "And down on the earth, one goddess was watching him closely: Isis, shrewder than all the others."
+        },
+        {
+          "es": "Isis quería algo que Ra guardaba mejor que su corona: su verdadero nombre. Esa es la historia del próximo episodio.",
+          "en": "Isis wanted something Ra guarded better than his crown: his true name. That is the story of the next episode."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "nube",
+          "x": 1600,
+          "y": 650,
+          "s": 1.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "x": 1600,
+          "y": 660,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.2,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 1.5,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 500,
+          "y": 380,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "PRÓXIMO: EL NOMBRE SECRETO DE RA",
+            "en": "NEXT: THE SECRET NAME OF RA"
+          },
+          "x": 960,
+          "y": 250
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La cerveza que salvó a la humanidad",
+        "en": "The beer that saved humanity"
+      },
+      "escena": "campo_rojo",
+      "desde": 0,
+      "hasta": 5,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "El día que Ra se fue al cielo",
+        "en": "The day Ra left the earth"
+      },
+      "escena": "vaca",
+      "desde": 0,
+      "hasta": 5,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Cuando el Ojo de Ra se volvió una leona",
+        "en": "When the Eye of Ra became a lioness"
+      },
+      "escena": "ojo_baja",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    }
+  ]
+}

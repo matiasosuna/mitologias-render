@@ -1,0 +1,1362 @@
+{
+ "id": "griegas-03-pandora",
+ "serie": "griegas",
+ "numero": "03",
+ "titulo": {
+  "es": "Pandora y la caja",
+  "en": "Pandora and the Box"
+ },
+ "tituloGriego": "ΠΑΝΔΩΡΑ",
+ "shorts": [
+  {
+   "gancho": {
+    "es": "La mujer que Zeus fabricó como castigo",
+    "en": "The woman Zeus made as a punishment"
+   },
+   "escena": "hefesto",
+   "desde": 1,
+   "hasta": 4,
+   "foco": 1150
+  },
+  {
+   "gancho": {
+    "es": "Lo que escapó del ánfora prohibida",
+    "en": "What escaped the forbidden jar"
+   },
+   "escena": "males",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1000
+  },
+  {
+   "gancho": {
+    "es": "Lo único que quedó dentro del ánfora",
+    "en": "The one thing left inside the jar"
+   },
+   "escena": "elpis",
+   "desde": 1,
+   "hasta": 4,
+   "foco": 800
+  }
+ ],
+ "escenas": [
+  {
+   "id": "furia",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 500,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Prometeo les había regalado el fuego a los humanos, y ahora lo pagaba encadenado a una roca del Cáucaso.",
+     "en": "Prometheus had given fire to humans, and now he paid for it, chained to a rock in the Caucasus."
+    },
+    {
+     "es": "Pero a Zeus no le bastaba con castigarlo solo a él.",
+     "en": "But Zeus was not satisfied with punishing him alone."
+    },
+    {
+     "es": "Desde el Olimpo veía brillar las hogueras de los hombres, y la rabia lo consumía.",
+     "en": "From Olympus he watched the bonfires of men glow below, and rage consumed him."
+    },
+    {
+     "es": "Entonces sonrió: «Les daré un mal a cambio del fuego, un mal que todos amarán y abrazarán con alegría».",
+     "en": "Then he smiled: \"I will give them an evil in return for fire, one they will all love and embrace with joy.\""
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 420
+    },
+    {
+     "tipo": "roca",
+     "x": 1500,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "fogata",
+     "x": 1150
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 420,
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "golpea"
+      },
+      {
+       "en": 3,
+       "hace": "habla",
+       "dur": 1.2
+      }
+     ]
+    },
+    {
+     "id": "prometeo",
+     "x": 1500,
+     "mira": "izq",
+     "capa": "fondo",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.3,
+       "hace": "lamenta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "chispas",
+     "x": 1500,
+     "y": 520,
+     "dur": 1
+    },
+    {
+     "en": 2,
+     "tipo": "rayo",
+     "dur": 0.6
+    },
+    {
+     "en": 2.2,
+     "tipo": "oscurecer",
+     "dur": 1
+    },
+    {
+     "en": 3.1,
+     "tipo": "aclarar",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "EL CÁUCASO",
+      "en": "THE CAUCASUS"
+     },
+     "x": 1500,
+     "y": 640,
+     "hasta": 1.8
+    }
+   ]
+  },
+  {
+   "id": "hefesto",
+   "fondo": "fragua",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.08
+    ]
+   },
+   "frases": [
+    {
+     "es": "Zeus llamó a Hefesto, el dios herrero, y le dio una orden extraña.",
+     "en": "Zeus summoned Hephaestus, the smith god, and gave him a strange command."
+    },
+    {
+     "es": "«Mezcla tierra con agua y modela un cuerpo con voz humana y fuerza de vida».",
+     "en": "\"Mix earth with water, and shape a body with a human voice and the strength of life.\""
+    },
+    {
+     "es": "En su fragua, Hefesto trabajó el barro con sus manos enormes.",
+     "en": "In his forge, Hephaestus worked the clay with his enormous hands."
+    },
+    {
+     "es": "Le dio el rostro de una joven diosa, tan bella que daba miedo mirarla.",
+     "en": "He gave her the face of a young goddess, so beautiful it was frightening to look at her."
+    },
+    {
+     "es": "Así nació la primera mujer, hecha de tierra, como un regalo y como una trampa.",
+     "en": "So the first woman was born, made of earth, both a gift and a trap."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "altar",
+     "x": 1000
+    },
+    {
+     "tipo": "fogata",
+     "x": 1500,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 300,
+     "capa": "fondo",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.4,
+       "hace": "senala"
+      },
+      {
+       "en": 1,
+       "hace": "habla",
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "id": "hefesto",
+     "x": 1250,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "entra",
+       "a": 1300
+      },
+      {
+       "en": 2,
+       "hace": "golpea"
+      },
+      {
+       "en": 2.5,
+       "hace": "golpea"
+      },
+      {
+       "en": 3,
+       "hace": "levanta"
+      },
+      {
+       "en": 4,
+       "hace": "ofrece"
+      }
+     ]
+    },
+    {
+     "id": "pandora",
+     "x": 1000,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 3.2,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.6,
+       "hace": "brilla",
+       "dur": 0.8
+      },
+      {
+       "en": 4.3,
+       "hace": "levantarse"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "fuego",
+     "x": 1500,
+     "y": 640,
+     "dur": 2
+    },
+    {
+     "en": 2,
+     "tipo": "chispas",
+     "x": 1000,
+     "y": 600,
+     "dur": 2
+    },
+    {
+     "en": 3.2,
+     "tipo": "luz",
+     "x": 1000,
+     "y": 350,
+     "dur": 1.2
+    }
+   ]
+  },
+  {
+   "id": "dones",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 700
+   },
+   "frases": [
+    {
+     "es": "Después, cada dios del Olimpo le entregó un don.",
+     "en": "Then every god of Olympus gave her a gift."
+    },
+    {
+     "es": "Atenea le enseñó el arte de tejer y la vistió con un manto plateado.",
+     "en": "Athena taught her the art of weaving and dressed her in a silver mantle."
+    },
+    {
+     "es": "Afrodita derramó sobre su cabeza la gracia, el encanto y el deseo.",
+     "en": "Aphrodite poured grace, charm, and desire over her head."
+    },
+    {
+     "es": "Las Gracias le pusieron collares de oro, y las Horas la coronaron con flores de primavera.",
+     "en": "The Graces hung golden necklaces on her, and the Hours crowned her with spring flowers."
+    },
+    {
+     "es": "Y Hermes, el mensajero, le dio la palabra astuta, las mentiras dulces y una curiosidad sin fondo.",
+     "en": "And Hermes, the messenger, gave her cunning speech, sweet lies, and a bottomless curiosity."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "columna",
+     "x": 350,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "columna",
+     "x": 2000,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "pandora",
+     "x": 1000,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.5,
+       "hace": "brilla",
+       "dur": 0.8
+      },
+      {
+       "en": 2.5,
+       "hace": "brilla",
+       "dur": 0.8
+      },
+      {
+       "en": 3.5,
+       "hace": "levanta"
+      },
+      {
+       "en": 4.5,
+       "hace": "tiembla",
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "atenea",
+     "x": 500,
+     "capa": "medio",
+     "pasos": [
+      {
+       "en": 0.6,
+       "hace": "entra",
+       "a": 650
+      },
+      {
+       "en": 1.2,
+       "hace": "ofrece"
+      }
+     ]
+    },
+    {
+     "id": "afrodita",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1.8,
+       "hace": "entra",
+       "a": 1400
+      },
+      {
+       "en": 2.2,
+       "hace": "ofrece"
+      }
+     ]
+    },
+    {
+     "id": "hermes",
+     "x": 2000,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3.8,
+       "hace": "entra",
+       "a": 1750
+      },
+      {
+       "en": 4.2,
+       "hace": "habla",
+       "dur": 1
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1.2,
+     "tipo": "luz",
+     "x": 700,
+     "y": 350,
+     "dur": 1
+    },
+    {
+     "en": 2.2,
+     "tipo": "destello",
+     "x": 1400,
+     "y": 350,
+     "dur": 0.8
+    },
+    {
+     "en": 3,
+     "tipo": "chispas",
+     "x": 1000,
+     "y": 400,
+     "dur": 1.5
+    }
+   ]
+  },
+  {
+   "id": "nombre",
+   "fondo": "cielo",
+   "camara": {
+    "de": 0,
+    "a": 300
+   },
+   "frases": [
+    {
+     "es": "Hermes también le dio un nombre: Pandora.",
+     "en": "Hermes also gave her a name: Pandora."
+    },
+    {
+     "es": "En griego, «pan» significa todo, y «doron» significa regalo.",
+     "en": "In Greek, \"pan\" means all, and \"doron\" means gift."
+    },
+    {
+     "es": "Pandora: la que recibió los dones de todos los dioses.",
+     "en": "Pandora: she who received the gifts of all the gods."
+    },
+    {
+     "es": "O, quizás, la que fue regalada por todos ellos a los hombres.",
+     "en": "Or, perhaps, she who was given by all of them to men."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "nube",
+     "x": 400,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "nube",
+     "x": 1700,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "hermes",
+     "x": 600,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla",
+       "dur": 1
+      },
+      {
+       "en": 0.5,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "pandora",
+     "x": 1100,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.3,
+       "hace": "brilla",
+       "dur": 1
+      },
+      {
+       "en": 3,
+       "hace": "ofrece"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.4,
+     "tipo": "destello",
+     "x": 1100,
+     "y": 300,
+     "dur": 0.8
+    },
+    {
+     "en": 2.3,
+     "tipo": "estrellas",
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "PANDORA",
+      "en": "PANDORA"
+     },
+     "x": 1100,
+     "y": 340,
+     "hasta": 1.8
+    },
+    {
+     "en": 1,
+     "texto": {
+      "es": "PAN = TODO · DORON = REGALO",
+      "en": "PAN = ALL · DORON = GIFT"
+     },
+     "x": 1000,
+     "y": 190,
+     "hasta": 2.9
+    },
+    {
+     "en": 3,
+     "texto": {
+      "es": "¿REGALADA POR TODOS?",
+      "en": "GIVEN BY ALL?"
+     },
+     "x": 1100,
+     "y": 340
+    }
+   ]
+  },
+  {
+   "id": "epimeteo",
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 700
+   },
+   "frases": [
+    {
+     "es": "Prometeo tenía un hermano, Epimeteo, cuyo nombre significa «el que piensa después».",
+     "en": "Prometheus had a brother, Epimetheus, whose name means \"the one who thinks after.\""
+    },
+    {
+     "es": "Prometeo le había advertido: «Nunca aceptes un regalo de Zeus. Devuélvelo».",
+     "en": "Prometheus had warned him: \"Never accept a gift from Zeus. Send it back.\""
+    },
+    {
+     "es": "Pero cuando Hermes llegó a su puerta con Pandora, Epimeteo quedó deslumbrado.",
+     "en": "But when Hermes arrived at his door with Pandora, Epimetheus was dazzled."
+    },
+    {
+     "es": "Olvidó la advertencia de su hermano y la recibió en su casa.",
+     "en": "He forgot his brother's warning and welcomed her into his home."
+    },
+    {
+     "es": "Solo entendió su error cuando el mal ya estaba hecho.",
+     "en": "He understood his mistake only when the harm was already done."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "casa",
+     "x": 1700
+    }
+   ],
+   "actores": [
+    {
+     "id": "epimeteo",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla",
+       "dur": 0.8
+      },
+      {
+       "en": 2.2,
+       "hace": "levanta"
+      },
+      {
+       "en": 3.2,
+       "hace": "abraza"
+      },
+      {
+       "en": 4.2,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "prometeo",
+     "x": 300,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.2,
+       "hace": "senala"
+      },
+      {
+       "en": 1.5,
+       "hace": "habla",
+       "dur": 1
+      },
+      {
+       "en": 2,
+       "hace": "sale"
+      }
+     ]
+    },
+    {
+     "id": "hermes",
+     "x": 300,
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "entra",
+       "a": 900
+      },
+      {
+       "en": 2.8,
+       "hace": "ofrece"
+      }
+     ]
+    },
+    {
+     "id": "pandora",
+     "x": 200,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 2.1,
+       "hace": "entra",
+       "a": 1100
+      },
+      {
+       "en": 3.5,
+       "hace": "camina",
+       "a": 1650
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2.3,
+     "tipo": "destello",
+     "x": 1300,
+     "y": 350,
+     "dur": 0.8
+    },
+    {
+     "en": 4.2,
+     "tipo": "oscurecer",
+     "dur": 1.3
+    }
+   ]
+  },
+  {
+   "id": "pithos",
+   "fondo": "palacio",
+   "camara": {
+    "de": 0,
+    "a": 400,
+    "zoom": [
+     1,
+     1.07
+    ]
+   },
+   "frases": [
+    {
+     "es": "En la casa había una gran vasija de barro, un pithos, con la tapa bien cerrada.",
+     "en": "In the house stood a great clay jar, a pithos, with its lid tightly shut."
+    },
+    {
+     "es": "Nadie debía abrirla jamás.",
+     "en": "No one was ever to open it."
+    },
+    {
+     "es": "Mucho después, en el siglo dieciséis, el sabio Erasmo la tradujo como «caja», y así quedó para siempre.",
+     "en": "Much later, in the sixteenth century, the scholar Erasmus translated it as \"box,\" and so it stayed forever."
+    },
+    {
+     "es": "Pero en Hesíodo es una vasija alta como una persona, de las que guardaban grano y aceite.",
+     "en": "But in Hesiod it is a jar as tall as a person, the kind used to store grain and oil."
+    },
+    {
+     "es": "Y Pandora, con la curiosidad que le había dado Hermes, la miraba cada día.",
+     "en": "And Pandora, with the curiosity Hermes had given her, gazed at it every day."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "pithos",
+     "x": 1100,
+     "s": 1.6
+    },
+    {
+     "tipo": "columna",
+     "x": 300,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "columna",
+     "x": 1900,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "pandora",
+     "x": 450,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "entra",
+       "a": 700
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 1.3,
+       "hace": "calla"
+      },
+      {
+       "en": 3.5,
+       "hace": "camina",
+       "a": 900
+      },
+      {
+       "en": 4,
+       "hace": "senala"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.2,
+     "tipo": "luz",
+     "x": 1100,
+     "y": 400,
+     "dur": 1.5
+    },
+    {
+     "en": 2,
+     "tipo": "polvo",
+     "x": 1100,
+     "y": 700,
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "EL PITHOS",
+      "en": "THE PITHOS"
+     },
+     "x": 1100,
+     "y": 200,
+     "hasta": 1.9
+    },
+    {
+     "en": 2.1,
+     "texto": {
+      "es": "«CAJA» · ERASMO, SIGLO XVI",
+      "en": "\"BOX\" · ERASMUS, 16TH CENTURY"
+     },
+     "x": 1100,
+     "y": 200,
+     "hasta": 3.3
+    },
+    {
+     "en": 3.1,
+     "texto": {
+      "es": "VASIJA ALTA COMO UNA PERSONA",
+      "en": "A JAR AS TALL AS A PERSON"
+     },
+     "x": 1100,
+     "y": 200,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "males",
+   "fondo": "noche",
+   "camara": {
+    "de": 0,
+    "a": 500
+   },
+   "frases": [
+    {
+     "es": "Un día no pudo resistir más, y levantó la tapa.",
+     "en": "One day she could resist no longer, and lifted the lid."
+    },
+    {
+     "es": "De adentro salieron, como sombras, todos los males que hasta entonces no conocía el mundo.",
+     "en": "Out poured, like shadows, every evil the world had never known."
+    },
+    {
+     "es": "La enfermedad, la vejez, el trabajo agotador, la envidia, el hambre y la guerra.",
+     "en": "Sickness, old age, backbreaking labor, envy, hunger, and war."
+    },
+    {
+     "es": "Volaron por la tierra y por el mar, en silencio, porque Zeus les había quitado la voz.",
+     "en": "They flew over land and sea in silence, because Zeus had taken away their voice."
+    },
+    {
+     "es": "Por eso llegan sin avisar, de día y de noche, y nadie los oye venir.",
+     "en": "That is why they arrive unannounced, by day and by night, and no one hears them coming."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "pithos",
+     "x": 1100,
+     "s": 1.6
+    },
+    {
+     "tipo": "luna",
+     "x": 1600,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "pandora",
+     "x": 450,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "entra",
+       "a": 850
+      },
+      {
+       "en": 0.4,
+       "hace": "levanta"
+      },
+      {
+       "en": 1.2,
+       "hace": "cae"
+      },
+      {
+       "en": 4,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "sombra1",
+     "x": 1100,
+     "como": "furia",
+     "y": 420,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1.1,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.8,
+       "hace": "vuela",
+       "a": [
+        1700,
+        260
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sombra2",
+     "x": 1150,
+     "como": "arpia",
+     "y": 500,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1.5,
+       "hace": "aparece"
+      },
+      {
+       "en": 3,
+       "hace": "vuela",
+       "a": [
+        2200,
+        200
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sombra3",
+     "x": 1050,
+     "como": "dragon",
+     "y": 450,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.2,
+       "hace": "vuela",
+       "a": [
+        1400,
+        150
+       ]
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.5,
+     "tipo": "destello",
+     "x": 1100,
+     "y": 500,
+     "dur": 0.6
+    },
+    {
+     "en": 1,
+     "tipo": "oscurecer",
+     "dur": 1.5
+    },
+    {
+     "en": 1.2,
+     "tipo": "humo",
+     "x": 1100,
+     "y": 450,
+     "dur": 3
+    },
+    {
+     "en": 3,
+     "tipo": "niebla",
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2,
+     "texto": {
+      "es": "ENFERMEDAD",
+      "en": "SICKNESS"
+     },
+     "x": 950,
+     "y": 700,
+     "hasta": 2.5
+    },
+    {
+     "en": 2.3,
+     "texto": {
+      "es": "VEJEZ",
+      "en": "OLD AGE"
+     },
+     "x": 1250,
+     "y": 640,
+     "hasta": 2.8
+    },
+    {
+     "en": 2.6,
+     "texto": {
+      "es": "HAMBRE",
+      "en": "HUNGER"
+     },
+     "x": 1050,
+     "y": 580,
+     "hasta": 3
+    },
+    {
+     "en": 2.9,
+     "texto": {
+      "es": "GUERRA",
+      "en": "WAR"
+     },
+     "x": 1450,
+     "y": 520,
+     "hasta": 3.5
+    }
+   ]
+  },
+  {
+   "id": "elpis",
+   "fondo": "palacio",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.08
+    ]
+   },
+   "frases": [
+    {
+     "es": "Asustada, Pandora cerró la tapa con todas sus fuerzas.",
+     "en": "Terrified, Pandora slammed the lid shut with all her strength."
+    },
+    {
+     "es": "Y adentro, en el fondo de la vasija, quedó una sola cosa, que no alcanzó a salir.",
+     "en": "And inside, at the bottom of the jar, one thing remained, unable to escape."
+    },
+    {
+     "es": "Elpis, la esperanza.",
+     "en": "Elpis: hope."
+    },
+    {
+     "es": "Desde entonces, los males andan sueltos por el mundo, pero los hombres conservan la esperanza.",
+     "en": "Ever since, evils roam the world freely, yet humans keep hope."
+    },
+    {
+     "es": "Algunos dicen que es el último consuelo; otros, que es el mal más engañoso de todos.",
+     "en": "Some say it is our last comfort; others, that it is the most deceptive evil of all."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "pithos",
+     "x": 1000,
+     "s": 1.6
+    }
+   ],
+   "actores": [
+    {
+     "id": "pandora",
+     "x": 600,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "golpea"
+      },
+      {
+       "en": 0.5,
+       "hace": "tiembla",
+       "dur": 0.8
+      },
+      {
+       "en": 3.5,
+       "hace": "reza"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "temblor",
+     "dur": 0.6
+    },
+    {
+     "en": 1.3,
+     "tipo": "luz",
+     "x": 1000,
+     "y": 520,
+     "dur": 1.5
+    },
+    {
+     "en": 2,
+     "tipo": "destello",
+     "x": 1000,
+     "y": 520,
+     "dur": 1
+    },
+    {
+     "en": 2.2,
+     "tipo": "estrellas",
+     "dur": 2.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2,
+     "texto": {
+      "es": "ΕΛΠΙΣ · ESPERANZA",
+      "en": "ΕΛΠΙΣ · HOPE"
+     },
+     "x": 1000,
+     "y": 230,
+     "hasta": 3.2
+    },
+    {
+     "en": 4,
+     "texto": {
+      "es": "¿CONSUELO O ENGAÑO?",
+      "en": "COMFORT OR DECEPTION?"
+     },
+     "x": 1000,
+     "y": 230
+    }
+   ]
+  },
+  {
+   "id": "mundo",
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 600
+   },
+   "frases": [
+    {
+     "es": "Antes de Pandora, los hombres vivían sin dolor, sin fatiga y sin enfermedades.",
+     "en": "Before Pandora, men lived without pain, without toil, and without disease."
+    },
+    {
+     "es": "Ahora tendrían que trabajar la tierra para comer, envejecer y morir.",
+     "en": "Now they would have to till the earth to eat, to grow old, and to die."
+    },
+    {
+     "es": "Así cobró Zeus el precio del fuego: por cada bien que trajo Prometeo, Pandora trajo un mal.",
+     "en": "So Zeus collected the price of fire: for every good Prometheus brought, Pandora brought an evil."
+    },
+    {
+     "es": "Y como dice Hesíodo, no hay manera de escapar a la voluntad de Zeus.",
+     "en": "And as Hesiod says, there is no way to escape the will of Zeus."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "fogata",
+     "x": 600
+    },
+    {
+     "tipo": "olivo",
+     "x": 1900,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "hombre",
+     "x": 450,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.3,
+       "hace": "levanta"
+      },
+      {
+       "en": 1,
+       "hace": "camina",
+       "a": 1000
+      },
+      {
+       "en": 1.5,
+       "hace": "baja"
+      }
+     ]
+    },
+    {
+     "id": "anciano",
+     "x": 1300,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1.6,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "zeus",
+     "x": 2000,
+     "mira": "izq",
+     "capa": "fondo",
+     "pasos": [
+      {
+       "en": 2.5,
+       "hace": "aparece"
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      },
+      {
+       "en": 3.3,
+       "hace": "habla",
+       "dur": 1
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "aclarar",
+     "dur": 1.2
+    },
+    {
+     "en": 1.5,
+     "tipo": "oscurecer",
+     "dur": 1
+    },
+    {
+     "en": 2.8,
+     "tipo": "rayo",
+     "dur": 0.6
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2.2,
+     "texto": {
+      "es": "FUEGO ⇄ MALES",
+      "en": "FIRE ⇄ EVILS"
+     },
+     "x": 900,
+     "y": 230,
+     "hasta": 3.5
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 500
+   },
+   "frases": [
+    {
+     "es": "Con los males sueltos por el mundo, la humanidad ya no volvería a ser la misma.",
+     "en": "With evils loose in the world, humanity would never be the same again."
+    },
+    {
+     "es": "Generación tras generación, los hombres se alejaron cada vez más de los dioses.",
+     "en": "Generation after generation, men drifted further and further from the gods."
+    },
+    {
+     "es": "Esa es la próxima historia: las cinco edades del hombre.",
+     "en": "That is the next story: the five ages of man."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 420
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 420,
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "habla",
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "id": "hombre",
+     "x": 1300,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "camina",
+       "a": 2000,
+       "dur": 1.5
+      }
+     ]
+    },
+    {
+     "id": "hera",
+     "x": 750,
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.3,
+       "hace": "senala"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "niebla",
+     "dur": 2
+    },
+    {
+     "en": 2,
+     "tipo": "estrellas",
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2.1,
+     "texto": {
+      "es": "LAS CINCO EDADES DEL HOMBRE",
+      "en": "THE FIVE AGES OF MAN"
+     },
+     "x": 1000,
+     "y": 240
+    }
+   ]
+  }
+ ]
+}

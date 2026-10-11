@@ -1,0 +1,1931 @@
+{
+ "id": "griegas-07-tifon",
+ "serie": "griegas",
+ "numero": "07",
+ "titulo": {
+  "es": "Tifón, el último monstruo",
+  "en": "Typhon, the Last Monster"
+ },
+ "tituloGriego": "ΤΥΦΩΝ",
+ "shorts": [
+  {
+   "gancho": {
+    "es": "El monstruo que cortó los tendones de Zeus",
+    "en": "The Monster Who Cut Zeus's Sinews"
+   },
+   "escena": "tendones",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  },
+  {
+   "gancho": {
+    "es": "Los dioses huyeron convertidos en animales",
+    "en": "The Gods Who Fled as Animals"
+   },
+   "escena": "huida",
+   "desde": 1,
+   "hasta": 3,
+   "foco": 1100
+  },
+  {
+   "gancho": {
+    "es": "El volcán que esconde a un monstruo",
+    "en": "The Volcano That Hides a Monster"
+   },
+   "escena": "etna",
+   "desde": 2,
+   "hasta": 4,
+   "foco": 1300
+  }
+ ],
+ "escenas": [
+  {
+   "id": "nacimiento",
+   "fondo": "cueva",
+   "camara": {
+    "de": 0,
+    "a": 400,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Los Gigantes habían caído en Flegra, pero Gea, la madre Tierra, no aceptó la derrota.",
+     "en": "The Giants had fallen at Phlegra, but Gaia, Mother Earth, would not accept defeat."
+    },
+    {
+     "es": "Bajó a lo más hondo del mundo y se unió al Tártaro, el abismo oscuro que hay debajo de todo.",
+     "en": "She sank to the deepest place in the world and joined Tartarus, the dark abyss beneath everything."
+    },
+    {
+     "es": "De esa unión nació su último hijo, en una cueva de Cilicia, lejos de la mirada de los dioses.",
+     "en": "From that union her last son was born, in a cave in Cilicia, far from the eyes of the gods."
+    },
+    {
+     "es": "Lo llamaron Tifón. Y nunca existió un ser más grande ni más terrible.",
+     "en": "They named him Typhon. And there had never been a being so huge or so terrible."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "cueva",
+     "x": 1450
+    }
+   ],
+   "actores": [
+    {
+     "id": "gea",
+     "x": 500,
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "lamenta"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 1.4,
+       "hace": "habla",
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "tifon",
+     "x": 1500,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 2.3,
+       "hace": "aparece"
+      },
+      {
+       "en": 3,
+       "hace": "crece",
+       "escala": 1.5
+      },
+      {
+       "en": 3.5,
+       "hace": "habla",
+       "dur": 0.5
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.2,
+     "tipo": "niebla",
+     "dur": 1.5
+    },
+    {
+     "en": 1,
+     "tipo": "oscurecer",
+     "dur": 1.5
+    },
+    {
+     "en": 2.2,
+     "tipo": "temblor",
+     "dur": 1.5
+    },
+    {
+     "en": 2.4,
+     "tipo": "destello",
+     "x": 1450,
+     "y": 400
+    },
+    {
+     "en": 3.2,
+     "tipo": "fuego",
+     "x": 1450,
+     "y": 600,
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1,
+     "texto": {
+      "es": "EL TÁRTARO",
+      "en": "TARTARUS"
+     },
+     "x": 700,
+     "y": 230,
+     "hasta": 2
+    },
+    {
+     "en": 2.3,
+     "texto": {
+      "es": "CILICIA",
+      "en": "CILICIA"
+     },
+     "x": 1450,
+     "y": 200,
+     "hasta": 3.2
+    },
+    {
+     "en": 3.2,
+     "texto": {
+      "es": "TIFÓN",
+      "en": "TYPHON"
+     },
+     "x": 1450,
+     "y": 170
+    }
+   ]
+  },
+  {
+   "id": "monstruo",
+   "fondo": "noche",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.08
+    ]
+   },
+   "frases": [
+    {
+     "es": "Tifón era más alto que todas las montañas, y su cabeza rozaba las estrellas.",
+     "en": "Typhon stood taller than every mountain, and his head brushed the stars."
+    },
+    {
+     "es": "Con los brazos abiertos, una mano tocaba el oriente y la otra el occidente.",
+     "en": "With his arms spread wide, one hand touched the east and the other the west."
+    },
+    {
+     "es": "De sus hombros brotaban cien cabezas de serpiente, con lenguas negras que no paraban de moverse.",
+     "en": "A hundred serpent heads sprouted from his shoulders, black tongues flickering without rest."
+    },
+    {
+     "es": "Debajo de la cintura, su cuerpo se volvía un remolino de serpientes enormes.",
+     "en": "Below the waist, his body became a whirlpool of enormous snakes."
+    },
+    {
+     "es": "Tenía alas en la espalda, y de sus ojos salía fuego.",
+     "en": "He had wings on his back, and fire poured from his eyes."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "monte",
+     "x": 350,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "monte",
+     "x": 1600,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "monte",
+     "x": 1050,
+     "s": 1.3
+    }
+   ],
+   "actores": [
+    {
+     "id": "tifon",
+     "x": 1000,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.3,
+       "hace": "crece",
+       "escala": 2.4
+      },
+      {
+       "en": 1.2,
+       "hace": "levanta"
+      },
+      {
+       "en": 2.2,
+       "hace": "tiembla",
+       "dur": 1
+      },
+      {
+       "en": 3.3,
+       "hace": "gira"
+      },
+      {
+       "en": 4,
+       "hace": "brilla",
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "hombre",
+     "x": 400,
+     "escala": 0.8,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "entra",
+       "a": 550
+      },
+      {
+       "en": 1.3,
+       "hace": "tiembla",
+       "dur": 1
+      },
+      {
+       "en": 3.5,
+       "hace": "sale",
+       "a": -100
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.2,
+     "tipo": "estrellas"
+    },
+    {
+     "en": 0.4,
+     "tipo": "temblor",
+     "dur": 1.2
+    },
+    {
+     "en": 2.2,
+     "tipo": "humo",
+     "x": 1000,
+     "y": 300,
+     "dur": 1.5
+    },
+    {
+     "en": 4,
+     "tipo": "fuego",
+     "x": 950,
+     "y": 250,
+     "dur": 1
+    },
+    {
+     "en": 4.2,
+     "tipo": "destello",
+     "x": 1000,
+     "y": 260
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.5,
+     "texto": {
+      "es": "MÁS ALTO QUE LAS MONTAÑAS",
+      "en": "TALLER THAN MOUNTAINS"
+     },
+     "x": 1000,
+     "y": 200,
+     "hasta": 1.9
+    },
+    {
+     "en": 2.1,
+     "texto": {
+      "es": "CIEN CABEZAS",
+      "en": "A HUNDRED HEADS"
+     },
+     "x": 1000,
+     "y": 200,
+     "hasta": 3.2
+    }
+   ]
+  },
+  {
+   "id": "voces",
+   "fondo": "monte",
+   "camara": {
+    "de": 0,
+    "a": 600,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Lo más aterrador eran sus voces.",
+     "en": "His voices were the most terrifying thing of all."
+    },
+    {
+     "es": "Cada cabeza hablaba distinto: a veces mugía como un toro, a veces rugía como un león.",
+     "en": "Each head spoke differently: sometimes it bellowed like a bull, sometimes it roared like a lion."
+    },
+    {
+     "es": "Otras ladraba como una jauría de perros, o silbaba tan fuerte que las montañas devolvían el eco.",
+     "en": "Others barked like a pack of dogs, or hissed so loud the mountains echoed it back."
+    },
+    {
+     "es": "Y de pronto, entre todo ese ruido, hablaba con la voz de los dioses.",
+     "en": "And suddenly, amid all that noise, he spoke with the voice of the gods."
+    },
+    {
+     "es": "Así avanzó hacia el Olimpo, arrojando rocas encendidas contra el cielo y escupiendo llamas.",
+     "en": "So he marched on Olympus, hurling blazing rocks at the sky and spitting flames."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 900
+    },
+    {
+     "tipo": "templo",
+     "x": 1900,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "tifon",
+     "x": 600,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.2,
+       "hace": "crece",
+       "escala": 1.8
+      },
+      {
+       "en": 0.8,
+       "hace": "habla",
+       "dur": 0.6
+      },
+      {
+       "en": 1.5,
+       "hace": "gira"
+      },
+      {
+       "en": 2.2,
+       "hace": "tiembla",
+       "dur": 1
+      },
+      {
+       "en": 3.2,
+       "hace": "habla",
+       "dur": 0.8
+      },
+      {
+       "en": 4,
+       "hace": "camina",
+       "a": 1000
+      },
+      {
+       "en": 4.2,
+       "hace": "lanza",
+       "objeto": "roca"
+      }
+     ]
+    },
+    {
+     "id": "toro",
+     "x": 1100,
+     "mira": "izq",
+     "escala": 0.8,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.2,
+       "hace": "habla",
+       "dur": 0.5
+      },
+      {
+       "en": 1.8,
+       "hace": "desaparece"
+      }
+     ]
+    },
+    {
+     "id": "leon",
+     "x": 1450,
+     "mira": "izq",
+     "escala": 0.8,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1.4,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.5,
+       "hace": "habla",
+       "dur": 0.5
+      },
+      {
+       "en": 1.9,
+       "hace": "desaparece"
+      }
+     ]
+    },
+    {
+     "id": "perro",
+     "x": 1250,
+     "mira": "izq",
+     "escala": 0.7,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 2.1,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.2,
+       "hace": "habla",
+       "dur": 0.5
+      },
+      {
+       "en": 2.8,
+       "hace": "desaparece"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.3,
+     "tipo": "temblor",
+     "dur": 1.2
+    },
+    {
+     "en": 1.5,
+     "tipo": "chispas",
+     "x": 1100,
+     "y": 400
+    },
+    {
+     "en": 2.5,
+     "tipo": "polvo",
+     "x": 1000,
+     "y": 650,
+     "dur": 1
+    },
+    {
+     "en": 3.5,
+     "tipo": "oscurecer",
+     "dur": 1
+    },
+    {
+     "en": 4.2,
+     "tipo": "fuego",
+     "x": 1500,
+     "y": 350,
+     "dur": 1.2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1,
+     "texto": {
+      "es": "MUGE",
+      "en": "BELLOWS"
+     },
+     "x": 1100,
+     "y": 300,
+     "hasta": 1.9
+    },
+    {
+     "en": 1.5,
+     "texto": {
+      "es": "RUGE",
+      "en": "ROARS"
+     },
+     "x": 1450,
+     "y": 330,
+     "hasta": 2
+    },
+    {
+     "en": 2.1,
+     "texto": {
+      "es": "LADRA",
+      "en": "BARKS"
+     },
+     "x": 1250,
+     "y": 330,
+     "hasta": 2.9
+    }
+   ]
+  },
+  {
+   "id": "huida",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 800,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Cuando los dioses lo vieron venir, el miedo fue más fuerte que su orgullo.",
+     "en": "When the gods saw him coming, fear proved stronger than their pride."
+    },
+    {
+     "es": "Huyeron todos hacia Egipto, y para esconderse tomaron forma de animales.",
+     "en": "They all fled to Egypt, and to hide they took the shapes of animals."
+    },
+    {
+     "es": "Según cuentan los poetas, Apolo se volvió un cuervo, Hera una vaca blanca y Hermes un ibis.",
+     "en": "The poets say Apollo became a crow, Hera a white cow, and Hermes an ibis."
+    },
+    {
+     "es": "Ártemis se convirtió en gata, Dioniso en cabra, y Afrodita se escondió bajo el agua como un pez.",
+     "en": "Artemis became a cat, Dionysus a goat, and Aphrodite hid beneath the water as a fish."
+    },
+    {
+     "es": "Solo uno se quedó para enfrentar al monstruo: Zeus.",
+     "en": "Only one stayed to face the monster: Zeus."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 250
+    },
+    {
+     "tipo": "templo",
+     "x": 1500,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 300,
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "tiembla",
+       "dur": 0.8
+      },
+      {
+       "en": 4,
+       "hace": "levanta"
+      },
+      {
+       "en": 4.3,
+       "hace": "toma",
+       "objeto": "rayo"
+      }
+     ]
+    },
+    {
+     "id": "apolo",
+     "x": 700,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "corre",
+       "a": 1500
+      },
+      {
+       "en": 2,
+       "hace": "transforma",
+       "en_que": "buho"
+      }
+     ]
+    },
+    {
+     "id": "hera",
+     "x": 850,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0.6,
+       "hace": "corre",
+       "a": 1650
+      },
+      {
+       "en": 2.4,
+       "hace": "transforma",
+       "en_que": "buey"
+      }
+     ]
+    },
+    {
+     "id": "hermes",
+     "x": 1000,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0.7,
+       "hace": "corre",
+       "a": 1800
+      },
+      {
+       "en": 2.7,
+       "hace": "transforma",
+       "en_que": "aguila"
+      }
+     ]
+    },
+    {
+     "id": "artemisa",
+     "x": 1100,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0.8,
+       "hace": "corre",
+       "a": 1900
+      },
+      {
+       "en": 3,
+       "hace": "transforma",
+       "en_que": "perro"
+      }
+     ]
+    },
+    {
+     "id": "dioniso",
+     "x": 1250,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0.9,
+       "hace": "corre",
+       "a": 2050
+      },
+      {
+       "en": 3.3,
+       "hace": "transforma",
+       "en_que": "cabra"
+      }
+     ]
+    },
+    {
+     "id": "afrodita",
+     "x": 1400,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "corre",
+       "a": 2200
+      },
+      {
+       "en": 3.6,
+       "hace": "transforma",
+       "en_que": "pez"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.1,
+     "tipo": "temblor",
+     "dur": 1
+    },
+    {
+     "en": 2,
+     "tipo": "destello",
+     "x": 1500,
+     "y": 400
+    },
+    {
+     "en": 2.4,
+     "tipo": "destello",
+     "x": 1650,
+     "y": 400
+    },
+    {
+     "en": 2.7,
+     "tipo": "destello",
+     "x": 1800,
+     "y": 400
+    },
+    {
+     "en": 3.6,
+     "tipo": "olas-suben",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1.2,
+     "texto": {
+      "es": "HACIA EGIPTO",
+      "en": "TO EGYPT"
+     },
+     "x": 1500,
+     "y": 200,
+     "hasta": 3
+    },
+    {
+     "en": 4,
+     "texto": {
+      "es": "SOLO ZEUS",
+      "en": "ONLY ZEUS"
+     },
+     "x": 300,
+     "y": 200
+    }
+   ]
+  },
+  {
+   "id": "combate",
+   "fondo": "batalla",
+   "camara": {
+    "de": 0,
+    "a": 500,
+    "zoom": [
+     1,
+     1.07
+    ]
+   },
+   "frases": [
+    {
+     "es": "Zeus atacó primero desde lejos, lanzando rayo tras rayo sobre las cien cabezas.",
+     "en": "Zeus struck first from afar, hurling bolt after bolt at the hundred heads."
+    },
+    {
+     "es": "Después se acercó con su hoz de diamante, la misma arma que Cronos usó contra Urano.",
+     "en": "Then he closed in with his adamant sickle, the same weapon Cronus once used against Uranus."
+    },
+    {
+     "es": "Lo hirió una y otra vez, y lo persiguió hasta el monte Casio, en Siria.",
+     "en": "He wounded him again and again, and chased him to Mount Casius, in Syria."
+    },
+    {
+     "es": "Tifón estaba herido, pero todavía no estaba vencido.",
+     "en": "Typhon was wounded, but he was not yet beaten."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "monte",
+     "x": 1700,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 350,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "lanza",
+       "objeto": "rayo"
+      },
+      {
+       "en": 0.6,
+       "hace": "lanza",
+       "objeto": "rayo"
+      },
+      {
+       "en": 1,
+       "hace": "toma",
+       "objeto": "hoz"
+      },
+      {
+       "en": 1.2,
+       "hace": "corre",
+       "a": 900
+      },
+      {
+       "en": 1.7,
+       "hace": "golpea"
+      },
+      {
+       "en": 2.2,
+       "hace": "golpea"
+      },
+      {
+       "en": 2.6,
+       "hace": "corre",
+       "a": 1200
+      }
+     ]
+    },
+    {
+     "id": "tifon",
+     "x": 1500,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.3,
+       "hace": "crece",
+       "escala": 1.6
+      },
+      {
+       "en": 0.5,
+       "hace": "tiembla",
+       "dur": 0.8
+      },
+      {
+       "en": 1.8,
+       "hace": "cae"
+      },
+      {
+       "en": 2.4,
+       "hace": "camina",
+       "a": 1650
+      },
+      {
+       "en": 3.2,
+       "hace": "levantarse"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.1,
+     "tipo": "rayo",
+     "x": 1500,
+     "y": 300
+    },
+    {
+     "en": 0.5,
+     "tipo": "rayo",
+     "x": 1450,
+     "y": 300
+    },
+    {
+     "en": 0.8,
+     "tipo": "rayo",
+     "x": 1550,
+     "y": 300
+    },
+    {
+     "en": 1.7,
+     "tipo": "destello",
+     "x": 1400,
+     "y": 450
+    },
+    {
+     "en": 2.2,
+     "tipo": "destello",
+     "x": 1450,
+     "y": 450
+    },
+    {
+     "en": 2.6,
+     "tipo": "polvo",
+     "x": 1500,
+     "y": 650,
+     "dur": 1
+    },
+    {
+     "en": 3.2,
+     "tipo": "humo",
+     "x": 1500,
+     "y": 350,
+     "dur": 0.8
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2.3,
+     "texto": {
+      "es": "MONTE CASIO, SIRIA",
+      "en": "MOUNT CASIUS, SYRIA"
+     },
+     "x": 1700,
+     "y": 200,
+     "hasta": 3.5
+    }
+   ]
+  },
+  {
+   "id": "tendones",
+   "fondo": "cueva",
+   "camara": {
+    "de": 0,
+    "a": 500,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "De repente, el monstruo enroscó sus serpientes alrededor de Zeus y lo atrapó.",
+     "en": "Suddenly the monster coiled his serpents around Zeus and caught him."
+    },
+    {
+     "es": "Le arrancó la hoz de las manos, y con ella le cortó los tendones de los brazos y de las piernas.",
+     "en": "He tore the sickle from his hands and used it to cut the sinews from his arms and legs."
+    },
+    {
+     "es": "El rey de los dioses quedó tirado en el suelo, sin poder moverse.",
+     "en": "The king of the gods lay on the ground, unable to move."
+    },
+    {
+     "es": "Tifón se lo llevó a la cueva Coricia, y escondió los tendones envueltos en una piel de oso.",
+     "en": "Typhon carried him to the Corycian cave and hid the sinews wrapped in a bearskin."
+    },
+    {
+     "es": "Para cuidarlos dejó a Delfine, una dragona mitad mujer y mitad serpiente.",
+     "en": "To guard them he left Delphyne, a dragoness, half woman and half serpent."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "cueva",
+     "x": 1500
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 600,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "lamenta"
+      },
+      {
+       "en": 0.8,
+       "hace": "tiembla",
+       "dur": 0.8
+      },
+      {
+       "en": 1.5,
+       "hace": "cae"
+      },
+      {
+       "en": 3,
+       "hace": "desaparece"
+      }
+     ]
+    },
+    {
+     "id": "tifon",
+     "x": 1100,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.3,
+       "hace": "crece",
+       "escala": 1.4
+      },
+      {
+       "en": 0.8,
+       "hace": "abraza"
+      },
+      {
+       "en": 1.4,
+       "hace": "golpea"
+      },
+      {
+       "en": 3,
+       "hace": "camina",
+       "a": 1450
+      }
+     ]
+    },
+    {
+     "id": "dragon",
+     "x": 1700,
+     "mira": "izq",
+     "rotulo": "Delphyne",
+     "pasos": [
+      {
+       "en": 3.9,
+       "hace": "aparece"
+      },
+      {
+       "en": 4.3,
+       "hace": "brilla",
+       "dur": 0.6
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.2,
+     "tipo": "temblor",
+     "dur": 1
+    },
+    {
+     "en": 1.5,
+     "tipo": "destello",
+     "x": 600,
+     "y": 450
+    },
+    {
+     "en": 2.2,
+     "tipo": "oscurecer",
+     "dur": 1.2
+    },
+    {
+     "en": 3.8,
+     "tipo": "humo",
+     "x": 1600,
+     "y": 500,
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 3.1,
+     "texto": {
+      "es": "CUEVA CORICIA",
+      "en": "CORYCIAN CAVE"
+     },
+     "x": 1500,
+     "y": 200,
+     "hasta": 4.3
+    }
+   ]
+  },
+  {
+   "id": "rescate",
+   "fondo": "cueva",
+   "camara": {
+    "de": 0,
+    "a": 400,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Pero Zeus no estaba del todo solo.",
+     "en": "But Zeus was not entirely alone."
+    },
+    {
+     "es": "Hermes, el dios más astuto, y Egipán, un ser con patas de cabra, se acercaron a la cueva en silencio.",
+     "en": "Hermes, the cleverest god, and Aegipan, a creature with goat legs, crept toward the cave in silence."
+    },
+    {
+     "es": "Mientras Delfine vigilaba, ellos robaron los tendones sin que nadie lo notara.",
+     "en": "While Delphyne kept watch, they stole the sinews without anyone noticing."
+    },
+    {
+     "es": "Se los devolvieron a Zeus, y el rey de los dioses recuperó toda su fuerza.",
+     "en": "They gave them back to Zeus, and the king of the gods regained all his strength."
+    },
+    {
+     "es": "Subió a un carro tirado por caballos alados y salió a buscar a Tifón.",
+     "en": "He climbed into a chariot pulled by winged horses and set out to find Typhon."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "cueva",
+     "x": 900,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 300,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "cae"
+      },
+      {
+       "en": 2.8,
+       "hace": "levantarse"
+      },
+      {
+       "en": 3.2,
+       "hace": "brilla",
+       "dur": 0.8
+      },
+      {
+       "en": 4,
+       "hace": "levanta"
+      },
+      {
+       "en": 4.3,
+       "hace": "sale",
+       "a": 1100
+      }
+     ]
+    },
+    {
+     "id": "hermes",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "entra",
+       "a": 1000
+      },
+      {
+       "en": 2,
+       "hace": "camina",
+       "a": 700
+      },
+      {
+       "en": 3,
+       "hace": "camina",
+       "a": 500
+      }
+     ]
+    },
+    {
+     "id": "hombre",
+     "x": 1700,
+     "mira": "izq",
+     "rotulo": "Aegipan",
+     "props": {
+      "ropa": "corta",
+      "piel": "#8b6b4a"
+     },
+     "pasos": [
+      {
+       "en": 1.1,
+       "hace": "entra",
+       "a": 1200
+      },
+      {
+       "en": 2.1,
+       "hace": "camina",
+       "a": 850
+      },
+      {
+       "en": 3,
+       "hace": "camina",
+       "a": 600
+      }
+     ]
+    },
+    {
+     "id": "dragon",
+     "x": 1000,
+     "escala": 0.8,
+     "rotulo": "Delphyne",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "calla"
+      },
+      {
+       "en": 2.4,
+       "hace": "gira"
+      },
+      {
+       "en": 2.7,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "pegaso",
+     "x": 800,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 4,
+       "hace": "aparece"
+      },
+      {
+       "en": 4.3,
+       "hace": "sale",
+       "a": 1500
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.2,
+     "tipo": "niebla",
+     "dur": 1.5
+    },
+    {
+     "en": 2.8,
+     "tipo": "luz",
+     "x": 300,
+     "y": 400,
+     "dur": 1
+    },
+    {
+     "en": 3.2,
+     "tipo": "destello",
+     "x": 300,
+     "y": 450
+    },
+    {
+     "en": 4.2,
+     "tipo": "rayo",
+     "x": 900,
+     "y": 250
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2.9,
+     "texto": {
+      "es": "LOS TENDONES",
+      "en": "THE SINEWS"
+     },
+     "x": 500,
+     "y": 200,
+     "hasta": 3.9
+    }
+   ]
+  },
+  {
+   "id": "frutos",
+   "fondo": "monte",
+   "camara": {
+    "de": 0,
+    "a": 500,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Zeus lo persiguió con sus rayos hasta el monte Nisa.",
+     "en": "Zeus chased him with his thunderbolts to Mount Nysa."
+    },
+    {
+     "es": "Allí lo esperaban las Moiras, las tres diosas que hilan el destino de todos los seres.",
+     "en": "There the Fates were waiting, the three goddesses who spin the destiny of every living thing."
+    },
+    {
+     "es": "Le ofrecieron unos frutos y le prometieron que con ellos se volvería invencible.",
+     "en": "They offered him some fruits and promised that they would make him invincible."
+    },
+    {
+     "es": "Tifón los comió con hambre, pero eran los frutos efímeros, los que solo duran un día.",
+     "en": "Typhon ate them hungrily, but they were the ephemeral fruits, the kind that last only a day."
+    },
+    {
+     "es": "En lugar de darle fuerza, lo dejaron débil.",
+     "en": "Instead of giving him strength, they left him weak."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "monte",
+     "x": 1900,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "olivo",
+     "x": 1050
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 300,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "lanza",
+       "objeto": "rayo"
+      },
+      {
+       "en": 0.6,
+       "hace": "lanza",
+       "objeto": "rayo"
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "tifon",
+     "x": 1500,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.2,
+       "hace": "crece",
+       "escala": 1.5
+      },
+      {
+       "en": 0.3,
+       "hace": "camina",
+       "a": 1450
+      },
+      {
+       "en": 2.3,
+       "hace": "tiembla",
+       "dur": 0.5
+      },
+      {
+       "en": 3.2,
+       "hace": "toma",
+       "objeto": "copa"
+      },
+      {
+       "en": 4,
+       "hace": "encoge",
+       "escala": 1.0
+      },
+      {
+       "en": 4.2,
+       "hace": "cae"
+      }
+     ]
+    },
+    {
+     "id": "moira1",
+     "x": 1000,
+     "mira": "der",
+     "rotulo": "Moira",
+     "props": {
+      "capa": "#5a4a7a"
+     },
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "entra",
+       "a": 1050
+      },
+      {
+       "en": 2,
+       "hace": "ofrece"
+      }
+     ],
+     "como": "mujer"
+    },
+    {
+     "id": "moira2",
+     "x": 1100,
+     "mira": "der",
+     "rotulo": "",
+     "props": {
+      "capa": "#7a4a5a"
+     },
+     "pasos": [
+      {
+       "en": 1.2,
+       "hace": "entra",
+       "a": 1150
+      },
+      {
+       "en": 2.1,
+       "hace": "ofrece"
+      }
+     ],
+     "como": "mujer"
+    },
+    {
+     "id": "moira3",
+     "x": 1200,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1.4,
+       "hace": "entra",
+       "a": 1250
+      },
+      {
+       "en": 2.2,
+       "hace": "ofrece"
+      }
+     ],
+     "como": "anciana"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.1,
+     "tipo": "rayo",
+     "x": 1400,
+     "y": 300
+    },
+    {
+     "en": 0.6,
+     "tipo": "rayo",
+     "x": 1500,
+     "y": 300
+    },
+    {
+     "en": 1.1,
+     "tipo": "luz",
+     "x": 1100,
+     "y": 350,
+     "dur": 1
+    },
+    {
+     "en": 3.4,
+     "tipo": "chispas",
+     "x": 1450,
+     "y": 450
+    },
+    {
+     "en": 4,
+     "tipo": "oscurecer",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1.1,
+     "texto": {
+      "es": "LAS MOIRAS",
+      "en": "THE FATES"
+     },
+     "x": 1100,
+     "y": 230,
+     "hasta": 2.9
+    },
+    {
+     "en": 3.3,
+     "texto": {
+      "es": "FRUTOS EFÍMEROS",
+      "en": "FRUITS OF A DAY"
+     },
+     "x": 1450,
+     "y": 200,
+     "hasta": 4.5
+    }
+   ]
+  },
+  {
+   "id": "etna",
+   "fondo": "mar",
+   "camara": {
+    "de": 0,
+    "a": 600,
+    "zoom": [
+     1,
+     1.08
+    ]
+   },
+   "frases": [
+    {
+     "es": "En Tracia, Tifón arrancó montañas enteras para arrojárselas a Zeus.",
+     "en": "In Thrace, Typhon tore up whole mountains to hurl at Zeus."
+    },
+    {
+     "es": "Pero los rayos las devolvían contra él, y su sangre bañó las laderas del monte Hemo.",
+     "en": "But the thunderbolts sent them back at him, and his blood stained the slopes of Mount Haemus."
+    },
+    {
+     "es": "Huyó por el mar hasta Sicilia, y allí Zeus le arrojó encima el monte Etna.",
+     "en": "He fled across the sea to Sicily, and there Zeus hurled Mount Etna down upon him."
+    },
+    {
+     "es": "Tifón quedó aplastado bajo la montaña para siempre.",
+     "en": "Typhon lay crushed beneath the mountain forever."
+    },
+    {
+     "es": "Por eso el Etna todavía humea: el fuego de los rayos sigue ardiendo, y el monstruo, debajo, se revuelve.",
+     "en": "That is why Etna still smokes: the fire of the bolts burns on, and the monster stirs beneath."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "monte",
+     "x": 1500,
+     "s": 1.4
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "x": 350,
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "lanza",
+       "objeto": "rayo"
+      },
+      {
+       "en": 0.8,
+       "hace": "lanza",
+       "objeto": "rayo"
+      },
+      {
+       "en": 2.2,
+       "hace": "levanta"
+      },
+      {
+       "en": 2.7,
+       "hace": "lanza",
+       "objeto": "roca"
+      }
+     ]
+    },
+    {
+     "id": "tifon",
+     "x": 1000,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.2,
+       "hace": "crece",
+       "escala": 1.6
+      },
+      {
+       "en": 0.4,
+       "hace": "lanza",
+       "objeto": "roca"
+      },
+      {
+       "en": 1,
+       "hace": "tiembla",
+       "dur": 0.8
+      },
+      {
+       "en": 1.8,
+       "hace": "camina",
+       "a": 1300
+      },
+      {
+       "en": 3,
+       "hace": "cae"
+      },
+      {
+       "en": 3.6,
+       "hace": "desaparece"
+      },
+      {
+       "en": 4.2,
+       "hace": "tiembla",
+       "dur": 0.8
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.2,
+     "tipo": "rayo",
+     "x": 900,
+     "y": 300
+    },
+    {
+     "en": 0.9,
+     "tipo": "rayo",
+     "x": 950,
+     "y": 300
+    },
+    {
+     "en": 1.3,
+     "tipo": "sangre",
+     "x": 1000,
+     "y": 500
+    },
+    {
+     "en": 1.8,
+     "tipo": "olas-suben",
+     "dur": 1
+    },
+    {
+     "en": 2.8,
+     "tipo": "temblor",
+     "dur": 1.5
+    },
+    {
+     "en": 3,
+     "tipo": "polvo",
+     "x": 1500,
+     "y": 650,
+     "dur": 1.2
+    },
+    {
+     "en": 3.5,
+     "tipo": "destello",
+     "x": 1500,
+     "y": 400
+    },
+    {
+     "en": 4,
+     "tipo": "humo",
+     "x": 1500,
+     "y": 300,
+     "dur": 1.5
+    },
+    {
+     "en": 4.2,
+     "tipo": "fuego",
+     "x": 1500,
+     "y": 330,
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "TRACIA",
+      "en": "THRACE"
+     },
+     "x": 900,
+     "y": 200,
+     "hasta": 1.7
+    },
+    {
+     "en": 2,
+     "texto": {
+      "es": "SICILIA",
+      "en": "SICILY"
+     },
+     "x": 1300,
+     "y": 200,
+     "hasta": 3.2
+    },
+    {
+     "en": 3.3,
+     "texto": {
+      "es": "EL ETNA",
+      "en": "MOUNT ETNA"
+     },
+     "x": 1500,
+     "y": 170
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 700,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Pero Tifón dejó algo en el mundo: sus hijos con Equidna, la mujer serpiente.",
+     "en": "But Typhon left something behind: his children with Echidna, the serpent woman."
+    },
+    {
+     "es": "Cerbero, el perro de tres cabezas; la Hidra de Lerna; la Quimera, que escupía fuego; y Ortro, el perro de dos cabezas.",
+     "en": "Cerberus, the three-headed hound; the Lernaean Hydra; the fire-breathing Chimera; and Orthrus, the two-headed dog."
+    },
+    {
+     "es": "Un día, los héroes tendrán que enfrentarlos.",
+     "en": "One day, heroes would have to face them."
+    },
+    {
+     "es": "Nadie volvió a desafiar a Zeus, y los dioses regresaron al Olimpo para ocupar sus tronos.",
+     "en": "No one ever challenged Zeus again, and the gods returned to Olympus to take their thrones."
+    },
+    {
+     "es": "Esa es la próxima historia: Los doce olímpicos.",
+     "en": "That is the next story: The Twelve Olympians."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 1500
+    },
+    {
+     "tipo": "trono",
+     "x": 1750
+    }
+   ],
+   "actores": [
+    {
+     "id": "cerbero",
+     "x": 300,
+     "escala": 0.8,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0.8,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.1,
+       "hace": "habla",
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "hidra",
+     "x": 600,
+     "escala": 0.8,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1.2,
+       "hace": "aparece"
+      }
+     ]
+    },
+    {
+     "id": "quimera",
+     "x": 950,
+     "escala": 0.8,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1.6,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.7,
+       "hace": "habla",
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "serpiente",
+     "x": 150,
+     "rotulo": "Echidna",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.3,
+       "hace": "habla",
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "heracles",
+     "x": 1300,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 2.2,
+       "hace": "entra",
+       "a": 1250
+      },
+      {
+       "en": 2.6,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "zeus",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.4,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "hera",
+     "x": 1750,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3.3,
+       "hace": "aparece"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.2,
+     "tipo": "niebla",
+     "dur": 1.5
+    },
+    {
+     "en": 1.6,
+     "tipo": "fuego",
+     "x": 950,
+     "y": 500,
+     "dur": 0.8
+    },
+    {
+     "en": 3.1,
+     "tipo": "aclarar",
+     "dur": 1.5
+    },
+    {
+     "en": 3.5,
+     "tipo": "luz",
+     "x": 1600,
+     "y": 350,
+     "dur": 1
+    },
+    {
+     "en": 4,
+     "tipo": "destello",
+     "x": 1600,
+     "y": 300
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1,
+     "texto": {
+      "es": "LOS HIJOS DE TIFÓN",
+      "en": "TYPHON'S CHILDREN"
+     },
+     "x": 600,
+     "y": 230,
+     "hasta": 2.9
+    },
+    {
+     "en": 4,
+     "texto": {
+      "es": "LOS DOCE OLÍMPICOS",
+      "en": "THE TWELVE OLYMPIANS"
+     },
+     "x": 1500,
+     "y": 200
+    }
+   ]
+  }
+ ]
+}

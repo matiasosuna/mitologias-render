@@ -1,0 +1,401 @@
+{
+  "id": "short-griegas-trono-trampa",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "Le mandó a su madre un trono trampa",
+    "en": "He sent his mother a trap throne"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Le mandó a su madre un trono trampa",
+    "en": "He sent his mother a trap throne"
+  },
+  "cierre": {
+    "es": "Muéstraselo a alguien que nunca olvida un rencor",
+    "en": "Show this to someone who never forgets a grudge"
+  },
+  "episodio": "griegas-11-hefesto",
+  "escenas": [
+    {
+      "id": "caida",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "El bebé Hefesto nació con un pie débil y torcido.",
+          "en": "Baby Hephaestus was born with a weak, twisted foot."
+        },
+        {
+          "es": "Su madre, Hera, sintió vergüenza. Lo arrojó desde el monte Olimpo.",
+          "en": "His mother, Hera, was ashamed. She threw him off Mount Olympus."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "destello",
+          "x": 1060,
+          "y": 500,
+          "dur": 0.3
+        },
+        {
+          "en": 1.7,
+          "tipo": "polvo",
+          "x": 1100
+        }
+      ],
+      "actores": [
+        {
+          "id": "hera",
+          "escala": 1.2,
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.3,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "bebe",
+          "como": "hefesto",
+          "mira": "izq",
+          "escala": 1.1,
+          "rotulo": "ΗΦΑΙΣΤΟΣ",
+          "props": {
+            "cuerpo": "nino",
+            "objeto": null,
+            "tocado": null,
+            "barba": false
+          },
+          "x": 1060,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.45,
+              "hace": "cae"
+            },
+            {
+              "en": 1.75,
+              "hace": "desaparece",
+              "con": "polvo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "regalo",
+      "fondo": "fragua",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Creció lejos y se volvió el mejor herrero de todos.",
+          "en": "He grew up far away and became the greatest smith of all."
+        },
+        {
+          "es": "Nunca olvidó lo que ella le hizo.",
+          "en": "He never forgot what she did."
+        },
+        {
+          "es": "Un día, llegó un regalo para Hera: un hermoso trono de oro.",
+          "en": "One day, a gift arrived for Hera: a beautiful golden throne."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1100,
+          "s": 1,
+          "en": 2,
+          "props": {
+            "oro": true
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 1150,
+          "y": 700,
+          "dur": 1.5,
+          "intensidad": 0.6
+        },
+        {
+          "en": 0.3,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 620,
+          "dur": 0.5
+        },
+        {
+          "en": 0.8,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 620,
+          "dur": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 480,
+          "dur": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "escala": 1.25,
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.25,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.75,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            },
+            {
+              "en": 2.6,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Hera se sentó. Unas cadenas invisibles la atraparon. No podía levantarse.",
+          "en": "Hera sat down. Invisible chains wrapped around her. She couldn't get up."
+        },
+        {
+          "es": "Todos los dioses intentaron liberarla. Todos fallaron.",
+          "en": "Every god tried to free her. Every god failed."
+        },
+        {
+          "es": "Hefesto solo respondió: «Yo no tengo madre».",
+          "en": "Hephaestus answered only: 'I have no mother.'"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 960,
+          "s": 1.1,
+          "props": {
+            "oro": true
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "destello",
+          "x": 960,
+          "y": 520,
+          "dur": 0.3
+        },
+        {
+          "en": 0.45,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 600,
+          "dur": 0.6
+        },
+        {
+          "en": 1.3,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 600,
+          "dur": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "hera",
+          "escala": 1.15,
+          "x": 960,
+          "pasos": [
+            {
+              "en": 0.15,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.7,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.6,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "mira": "izq",
+          "escala": 1.1,
+          "x": 1200,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 1.4,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "hefesto",
+          "escala": 1.15,
+          "x": 740,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.3,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.5,
+              "hace": "niega"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vino",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Al final, Dioniso, el dios del vino, lo emborrachó de alegría.",
+          "en": "Finally Dionysus, god of wine, got him happily drunk."
+        },
+        {
+          "es": "Lo llevó a casa en una mula, y Hefesto liberó a Hera.",
+          "en": "He brought him home on a mule, and Hephaestus set Hera free."
+        },
+        {
+          "es": "El hijo que ella tiró era el único que podía salvarla.",
+          "en": "The son she threw away was the only one who could save her."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "luz",
+          "x": 960,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 1.6,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 500,
+          "dur": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "dioniso",
+          "escala": 1.2,
+          "props": {
+            "objeto": "copa"
+          },
+          "x": 750,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 0.7,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "hefesto",
+          "mira": "izq",
+          "escala": 1.15,
+          "x": 975,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.8,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 2.3,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "mula",
+          "como": "caballo",
+          "mira": "izq",
+          "rotulo": "MULE",
+          "escala": 0.9,
+          "x": 1500,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1200
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

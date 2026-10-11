@@ -1,0 +1,1784 @@
+{
+  "id": "egipcias-99-anubis-y-la-duat",
+  "serie": "egipcias",
+  "numero": "99",
+  "titulo": {
+    "es": "Anubis y el Duat",
+    "en": "Anubis and the Duat"
+  },
+  "tituloGriego": "ANUBIS AND THE DUAT",
+  "especial": {
+    "nombre": {
+      "es": "Señores de los muertos",
+      "en": "Lords of the Dead"
+    }
+  },
+  "miniatura": {
+    "heroe": "anubis",
+    "rival": "momia"
+  },
+  "siguiente": {
+    "es": "Milu, señor del inframundo",
+    "en": "Milu, Lord of the Underworld"
+  },
+  "escenas": [
+    {
+      "id": "chacales",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "En esta noche especial, visitamos a los señores de los muertos. Esta vez vamos a Egipto.",
+          "en": "On this special night, we visit the lords of the dead. Tonight, we go to Egypt."
+        },
+        {
+          "es": "Al borde del desierto, donde están las tumbas antiguas, los chacales aúllan en la oscuridad.",
+          "en": "At the edge of the desert, where the old tombs stand, jackals cry in the dark."
+        },
+        {
+          "es": "Los egipcios los oían cada noche, cerca de las tumbas de sus familias.",
+          "en": "The Egyptians heard them every night, close to the graves of their families."
+        },
+        {
+          "es": "Y los muertos tenían un guardián con cabeza de chacal. Se llamaba Anubis.",
+          "en": "And the dead had a guardian with the head of a jackal. His name was Anubis."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tumba",
+          "x": 420,
+          "s": 0.9,
+          "capa": "medio"
+        },
+        {
+          "tipo": "piramide",
+          "x": 1750,
+          "s": 0.8,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "luna",
+          "x": 1450,
+          "y": 180
+        }
+      ],
+      "actores": [
+        {
+          "id": "egipcia",
+          "x": 250,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 650
+            },
+            {
+              "en": 2.4,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "chacal1",
+          "como": "lobo",
+          "rotulo": "",
+          "x": 650,
+          "escala": 0.6,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1.3,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "x": 1100,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "chacal2",
+          "como": "lobo",
+          "rotulo": "",
+          "x": 1550,
+          "escala": 0.55,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1.6,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 1.5
+        },
+        {
+          "en": 0.2,
+          "tipo": "estrellas",
+          "dur": 3
+        },
+        {
+          "en": 1,
+          "tipo": "niebla",
+          "dur": 2
+        },
+        {
+          "en": 3,
+          "tipo": "humo",
+          "x": 1100,
+          "y": 600,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "SEÑORES DE LOS MUERTOS",
+            "en": "LORDS OF THE DEAD"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "negro",
+      "fondo": "piramides",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los chacales escarbaban alrededor de las tumbas buscando comida. La gente les tenía miedo.",
+          "en": "Jackals dug around the graves, looking for food. People were afraid of them."
+        },
+        {
+          "es": "Muchos expertos creen que así empezó todo. Un dios chacal cuidaría las tumbas, en vez de escarbarlas.",
+          "en": "Many experts think that is how it began. A jackal god would guard the graves, instead of digging them up."
+        },
+        {
+          "es": "A Anubis lo pintaban de negro. Pero para los egipcios, el negro no era el color del mal.",
+          "en": "Anubis was painted black. But for the Egyptians, black was not the color of evil."
+        },
+        {
+          "es": "El negro era el color del barro fértil del Nilo, donde nace la vida nueva. Significaba renacer.",
+          "en": "Black was the color of the rich mud of the Nile, where new life grows. It meant rebirth."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tumba",
+          "x": 900,
+          "s": 0.9
+        },
+        {
+          "tipo": "piramide",
+          "x": 1750,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "papiro",
+          "x": 250,
+          "s": 1,
+          "en": 3
+        },
+        {
+          "tipo": "loto",
+          "x": 1550,
+          "s": 1,
+          "en": 3.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "egipcio",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.8,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "chacal",
+          "como": "lobo",
+          "rotulo": "",
+          "x": 600,
+          "escala": 0.6,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 760,
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "desaparece",
+              "con": "polvo"
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.6,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "polvo",
+          "x": 800,
+          "y": 760
+        },
+        {
+          "en": 1.2,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 450,
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 1550,
+          "y": 650,
+          "intensidad": 0.4,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "EL NEGRO ES RENACER",
+            "en": "BLACK MEANS REBIRTH"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "nacimiento",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Su historia empieza en la familia de Osiris, el rey bueno al que mató su hermano Set.",
+          "en": "His story begins in the family of Osiris, the good king who was murdered by his brother Set."
+        },
+        {
+          "es": "El escritor griego Plutarco dice que Anubis era hijo de Osiris y de Neftis, la esposa de Set.",
+          "en": "The Greek writer Plutarch says Anubis was a son of Osiris and Nephthys, Set's wife."
+        },
+        {
+          "es": "Neftis le tenía miedo a Set. Así que dejó al bebé solo, lejos de todos.",
+          "en": "Nephthys was afraid of Set. So she left the baby alone, far away."
+        },
+        {
+          "es": "Isis, la esposa de Osiris, lo buscó con ayuda de unos perros, y lo encontró.",
+          "en": "Isis, the wife of Osiris, searched for him with the help of dogs, and found him."
+        },
+        {
+          "es": "Lo crió como a un hijo. Y Anubis se volvió su guardián, fiel como un perro.",
+          "en": "She raised him as her own. And Anubis became her guard, as loyal as a dog."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "papiro",
+          "x": 150,
+          "s": 1.1
+        },
+        {
+          "tipo": "papiro",
+          "x": 1850,
+          "s": 1
+        },
+        {
+          "tipo": "loto",
+          "x": 1000,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "osiris",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.6,
+              "hace": "cae"
+            },
+            {
+              "en": 1,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "neftis",
+          "x": 750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "entristece"
+            },
+            {
+              "en": 2.3,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.6,
+              "hace": "camina",
+              "a": 950,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "x": 400,
+          "escala": 0.5,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.3,
+              "hace": "crece",
+              "escala": 0.8
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.2,
+              "hace": "camina",
+              "a": 650,
+              "dur": 1
+            },
+            {
+              "en": 4,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "perro",
+          "x": 1500,
+          "escala": 0.6,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "corre",
+              "a": 220,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "destello"
+        },
+        {
+          "en": 0.7,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        },
+        {
+          "en": 2.3,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 550,
+          "y": 450,
+          "intensidad": 0.5,
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "momia",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuando Osiris fue asesinado y cortado en pedazos, Anubis ayudó a unir su cuerpo otra vez.",
+          "en": "When Osiris was killed and cut to pieces, Anubis helped put his body back together."
+        },
+        {
+          "es": "Lo lavó, lo secó y lo envolvió en tiras de lino. Osiris fue la primera momia.",
+          "en": "He washed it, dried it, and wrapped it in strips of linen. Osiris became the first mummy."
+        },
+        {
+          "es": "Desde entonces, todos los egipcios querían ser preparados igual, para poder vivir otra vez.",
+          "en": "From then on, every Egyptian wanted to be prepared the same way, so they could live again."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sarcofago",
+          "x": 1450,
+          "s": 1
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 150,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 1850,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "neftis",
+          "x": 350,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 600,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "x": 1000,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "osiris",
+          "como": "momia",
+          "rotulo": "OSIRIS",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.2,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        },
+        {
+          "en": 1.3,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 450,
+          "intensidad": 0.6,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "LA PRIMERA MOMIA",
+            "en": "THE FIRST MUMMY"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2.3
+        }
+      ]
+    },
+    {
+      "id": "embalsamadores",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los embalsamadores de verdad trabajaban setenta días. Secaban el cuerpo con una sal especial llamada natrón.",
+          "en": "Real embalmers worked for seventy days. They dried the body with a special salt called natron."
+        },
+        {
+          "es": "Su jefe usaba una máscara con cara de chacal. Hacía el papel de Anubis.",
+          "en": "Their leader wore a mask with the face of a jackal. He was playing the part of Anubis."
+        },
+        {
+          "es": "Una de esas máscaras de barro todavía existe, en un museo de Alemania.",
+          "en": "One of those clay masks still exists today, in a museum in Germany."
+        },
+        {
+          "es": "Imagina entrar a esa sala de noche, con las lámparas encendidas…",
+          "en": "Imagine walking into that room at night, with the lamps burning…"
+        },
+        {
+          "es": "…y ver a un hombre con cabeza de chacal, inclinado sobre un cuerpo.",
+          "en": "…and seeing a man with a jackal's head, bent over a body."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sarcofago",
+          "x": 1450,
+          "s": 1
+        },
+        {
+          "tipo": "anfora",
+          "x": 1750,
+          "s": 0.7
+        },
+        {
+          "tipo": "altar",
+          "x": 700,
+          "s": 0.7,
+          "en": 3,
+          "props": {
+            "fuego": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "ayudante",
+          "como": "sacerdote_egipcio",
+          "rotulo": "",
+          "x": 900,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 0.6,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "enmascarado",
+          "como": "sacerdote_egipcio",
+          "rotulo": "",
+          "x": 1200,
+          "mira": "der",
+          "props": {
+            "cabezaAnimal": "chacal"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "baja"
+            },
+            {
+              "en": 4.5,
+              "hace": "mira",
+              "a": 300
+            }
+          ]
+        },
+        {
+          "id": "visitante",
+          "como": "egipcio",
+          "rotulo": "",
+          "x": 150,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 350,
+              "dur": 0.6
+            },
+            {
+              "en": 4.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.7,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.2,
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "humo",
+          "x": 1200,
+          "y": 580,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "fogata",
+          "x": 700,
+          "y": 700,
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "SETENTA DÍAS",
+            "en": "SEVENTY DAYS"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "boca",
+      "fondo": "piramides",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El último día, la familia llevaba la momia a su tumba, en el oeste, donde se pone el sol.",
+          "en": "On the last day, the family carried the mummy to its tomb, in the west, where the sun goes down."
+        },
+        {
+          "es": "En las pinturas antiguas, Anubis sostiene la momia desde atrás.",
+          "en": "In old paintings, Anubis holds the mummy up from behind."
+        },
+        {
+          "es": "Un sacerdote le tocaba la boca con una herramienta especial. Se llamaba la Apertura de la Boca.",
+          "en": "A priest touched its mouth with a special tool. This was called the Opening of the Mouth."
+        },
+        {
+          "es": "Ahora el muerto podía hablar, comer y respirar otra vez en el otro mundo.",
+          "en": "Now the dead could speak, eat and breathe again in the next world."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tumba",
+          "x": 1650,
+          "s": 1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "piramide",
+          "x": 1900,
+          "s": 0.9,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "egipcia",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "momia",
+          "x": 1200,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1200,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "x": 1380,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio",
+          "rotulo": "",
+          "x": 800,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.5
+            },
+            {
+              "en": 2.5,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.2,
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1380,
+          "y": 450,
+          "intensidad": 0.5,
+          "dur": 0.8
+        },
+        {
+          "en": 2.5,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 430,
+          "intensidad": 0.6,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "LA APERTURA DE LA BOCA",
+            "en": "THE OPENING OF THE MOUTH"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3.4
+        }
+      ]
+    },
+    {
+      "id": "duat",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces empezaba el viaje. Anubis tomaba al muerto de la mano y lo llevaba al Duat, el mundo de abajo.",
+          "en": "Then the journey began. Anubis took the dead by the hand, and led them into the Duat, the world below."
+        },
+        {
+          "es": "El Duat no era un lugar alegre. Tenía lagos de fuego, cuevas oscuras y ríos llenos de cocodrilos.",
+          "en": "The Duat was not a happy place. It had lakes of fire, dark caves, and rivers full of crocodiles."
+        },
+        {
+          "es": "Para el camino, el muerto llevaba un rollo de hechizos. Hoy lo llamamos el Libro de los Muertos.",
+          "en": "For the road, the dead carried a scroll of magic spells. We call it the Book of the Dead."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cueva",
+          "x": 1500,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "rio",
+          "x": 1800,
+          "capa": "medio",
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "anubis",
+          "x": 350,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 2
+            }
+          ]
+        },
+        {
+          "id": "difunto",
+          "como": "egipcio",
+          "rotulo": "",
+          "x": 150,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 950,
+              "dur": 2
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "cocodrilo",
+          "x": 1850,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.4,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 2
+        },
+        {
+          "en": 1,
+          "tipo": "fuego",
+          "x": 1350,
+          "y": 780,
+          "dur": 1.2
+        },
+        {
+          "en": 2.4,
+          "tipo": "luz",
+          "x": 950,
+          "y": 470,
+          "intensidad": 0.5,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "EL LIBRO DE LOS MUERTOS",
+            "en": "THE BOOK OF THE DEAD"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "peligros",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Había hechizos contra los cocodrilos. «¡Atrás, cocodrilo!», dice uno de ellos.",
+          "en": "There were spells against crocodiles. “Get back, crocodile!” one of them says."
+        },
+        {
+          "es": "Había hechizos contra las serpientes que muerden en la oscuridad.",
+          "en": "There were spells against snakes that bite in the dark."
+        },
+        {
+          "es": "Y hasta había un hechizo para no caminar de cabeza, comiendo tierra en vez de pan.",
+          "en": "There was even a spell so you would not walk upside down, eating dirt instead of bread."
+        },
+        {
+          "es": "¿Qué te daría más miedo: los cocodrilos, las serpientes, o caminar de cabeza para siempre?",
+          "en": "Which would scare you most: the crocodiles, the snakes, or walking upside down forever?"
+        }
+      ],
+      "actores": [
+        {
+          "id": "anubis",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "difunto",
+          "como": "egipcio",
+          "rotulo": "",
+          "x": 850,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.6,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "cocodrilo",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 0.8,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "x": 1450,
+          "mira": "izq",
+          "props": {
+            "erguida": 0.9,
+            "largo": 300,
+            "grosor": 40
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.9,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 0.7,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "¡ATRÁS, COCODRILO!",
+            "en": "GET BACK, CROCODILE!"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "NO CAMINAR DE CABEZA",
+            "en": "DO NOT WALK UPSIDE DOWN"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "puertas",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después venían las puertas. Cada una tenía un portero, un vigilante y un heraldo que anunciaba quién llegaba.",
+          "en": "Then came the gates. Each one had a keeper, a guard, and a herald who called out who was coming."
+        },
+        {
+          "es": "Sus nombres eran raros y aterradores, como Cara del Revés y Voz Áspera.",
+          "en": "Their names were strange and frightening, like Upside-Down Face and Harsh Voice."
+        },
+        {
+          "es": "El muerto tenía que decir cada nombre sin equivocarse. Si lo hacía, la puerta se abría.",
+          "en": "The dead had to say every name correctly. If they did, the gate opened."
+        },
+        {
+          "es": "Y Anubis caminaba a su lado todo el camino, como un buen perro guardián.",
+          "en": "And Anubis walked beside them the whole way, like a good guard dog."
+        },
+        {
+          "es": "Al final esperaba la sala donde se pesan los corazones. Anubis revisaba la balanza, para que fuera justa.",
+          "en": "At the end waited the hall where hearts are weighed. Anubis checked the scale himself, so it would be fair."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilono",
+          "x": 1400,
+          "s": 1.1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "balanza",
+          "x": 2050,
+          "s": 1,
+          "en": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "portero",
+          "como": "egipcio",
+          "rotulo": "",
+          "x": 1250,
+          "mira": "izq",
+          "props": {
+            "cabezaAnimal": "cocodrilo",
+            "objeto": "was"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.5,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "vigilante",
+          "como": "egipcio",
+          "rotulo": "",
+          "x": 1550,
+          "mira": "izq",
+          "props": {
+            "cabezaAnimal": "leona",
+            "objeto": "was"
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.4,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "difunto",
+          "como": "egipcio",
+          "rotulo": "",
+          "x": 650,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.8,
+              "hace": "camina",
+              "a": 1350,
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "x": 400,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1700,
+              "dur": 1.4
+            },
+            {
+              "en": 4.4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 2.6,
+          "tipo": "luz",
+          "x": 1400,
+          "y": 450,
+          "intensidad": 0.6,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 2050,
+          "y": 450,
+          "intensidad": 0.5,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "CARA DEL REVÉS",
+            "en": "UPSIDE-DOWN FACE"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "tutankamon",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Anubis no solo guiaba a los muertos. También cuidaba sus tumbas.",
+          "en": "Anubis did not only guide the dead. He also guarded their tombs."
+        },
+        {
+          "es": "En 1922, unos exploradores abrieron la tumba de un rey joven, Tutankamón.",
+          "en": "In 1922, explorers opened the tomb of a young king, Tutankhamun."
+        },
+        {
+          "es": "En la puerta de una de las salas, encontraron un chacal negro, echado sobre un cofre dorado.",
+          "en": "At the door of one room, they found a black jackal, lying on top of a golden chest."
+        },
+        {
+          "es": "Era Anubis, todavía de guardia, después de más de tres mil años.",
+          "en": "It was Anubis, still keeping watch, after more than three thousand years."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sarcofago",
+          "x": 1300,
+          "s": 1
+        },
+        {
+          "tipo": "anfora",
+          "x": 1650,
+          "s": 0.7
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 1900,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "guardian",
+          "como": "lobo",
+          "rotulo": "ANUBIS",
+          "x": 1300,
+          "y": 640,
+          "escala": 0.6,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "explorador1",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 300,
+          "mira": "der",
+          "props": {
+            "objeto": "antorcha",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 550,
+              "dur": 0.8
+            },
+            {
+              "en": 2.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.6,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "explorador2",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 100,
+          "mira": "der",
+          "props": {
+            "tocado": null,
+            "barba": false
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "entra",
+              "a": 800,
+              "dur": 0.8
+            },
+            {
+              "en": 2.5,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 1.5
+        },
+        {
+          "en": 1.2,
+          "tipo": "fogata",
+          "x": 560,
+          "y": 520,
+          "dur": 2
+        },
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 560,
+          "intensidad": 0.6,
+          "dur": 1.2
+        },
+        {
+          "en": 3,
+          "tipo": "polvo",
+          "x": 1300,
+          "y": 760
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "1922",
+            "en": "1922"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Anubis nunca fue el que mata. Era el que te toma de la mano en la oscuridad.",
+          "en": "Anubis was never the one who kills. He was the one who takes your hand in the dark."
+        },
+        {
+          "es": "En muchas tumbas, las familias escribían el mismo deseo: que Anubis les diera un buen entierro en el oeste.",
+          "en": "On many tombs, families wrote the same wish: may Anubis give a good burial in the west."
+        },
+        {
+          "es": "Cuéntame en los comentarios: ¿confiarías en un chacal para que te guíe en la oscuridad?",
+          "en": "Tell me in the comments: would you trust a jackal to guide you through the dark?"
+        },
+        {
+          "es": "Nuestro especial termina en Hawái. Ahora conocemos a Milu, el señor de los muertos, y a un hombre que lo engañó.",
+          "en": "Our special ends in Hawaiʻi. Next, we meet Milu, the ruler of the dead, and a man who tricked him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tumba",
+          "x": 300,
+          "s": 0.9,
+          "capa": "medio"
+        },
+        {
+          "tipo": "piramide",
+          "x": 1750,
+          "s": 0.9,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "luna",
+          "x": 1300,
+          "y": 180
+        }
+      ],
+      "actores": [
+        {
+          "id": "difunto",
+          "como": "egipcio",
+          "rotulo": "",
+          "x": 700,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 1050
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "x": 1050,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "chacal",
+          "como": "lobo",
+          "rotulo": "",
+          "x": 1550,
+          "escala": 0.55,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.3,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "estrellas",
+          "dur": 2
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 420,
+          "intensidad": 0.5,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "MILU, SEÑOR DEL INFRAMUNDO",
+            "en": "MILU, LORD OF THE UNDERWORLD"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Por qué Anubis tiene cabeza de chacal",
+        "en": "Why Anubis Has a Jackal's Head"
+      },
+      "escena": "negro",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Los sacerdotes con máscara de chacal",
+        "en": "The Priests Who Wore Jackal Masks"
+      },
+      "escena": "embalsamadores",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Hechizos para el mundo de los muertos",
+        "en": "Spells for the Land of the Dead"
+      },
+      "escena": "peligros",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 950
+    }
+  ]
+}

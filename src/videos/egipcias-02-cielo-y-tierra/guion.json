@@ -1,0 +1,1151 @@
+{
+  "id": "egipcias-02-cielo-y-tierra",
+  "serie": "egipcias",
+  "numero": "02",
+  "titulo": {
+    "es": "El cielo y la tierra",
+    "en": "Sky and Earth"
+  },
+  "tituloGriego": "SKY AND EARTH",
+  "miniatura": {
+    "heroe": "nut",
+    "rival": "geb"
+  },
+  "escenas": [
+    {
+      "id": "abrazo",
+      "fondo": "cielo_nut",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Geb y Nut, la tierra y el cielo, seguían abrazados sin soltarse.",
+          "en": "Geb and Nut, the earth and the sky, were still locked in their embrace."
+        },
+        {
+          "es": "Estaban tan apretados que entre los dos no cabía ni un soplo de aire ni un rayo de luz.",
+          "en": "They were pressed so close that there was no room between them for a breath of air or a ray of light."
+        },
+        {
+          "es": "Sin un hueco entre ellos, el mundo no tenía dónde existir: ni días, ni plantas, ni viento.",
+          "en": "With no gap between them, the world had nowhere to exist: no days, no plants, no wind."
+        },
+        {
+          "es": "Y su padre, Shu, el aire, no tenía ni dónde estar.",
+          "en": "And their father, Shu, the god of air, had nowhere to stand."
+        }
+      ],
+      "actores": [
+        {
+          "id": "nut",
+          "x": 810,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "geb",
+          "x": 1110,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "shu",
+          "x": 400,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 400
+            },
+            {
+              "en": 3.6,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "CIELO",
+            "en": "SKY"
+          },
+          "x": 810,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 0.6,
+          "texto": {
+            "es": "TIERRA",
+            "en": "EARTH"
+          },
+          "x": 1110,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "shu",
+      "fondo": "cielo_nut",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Shu se metió entre los dos, a la fuerza.",
+          "en": "So Shu squeezed himself between them, by force."
+        },
+        {
+          "es": "Plantó los pies sobre Geb, se agachó bajo Nut y empujó hacia arriba con todas sus fuerzas.",
+          "en": "He planted his feet on Geb, crouched under Nut, and pushed upward with all his strength."
+        },
+        {
+          "es": "Nut se elevó, y su cuerpo se curvó como un arco sobre el mundo, con las manos y los pies tocando el horizonte.",
+          "en": "Nut rose, her body curving like an arch over the world, her hands and feet touching the horizon."
+        },
+        {
+          "es": "Geb se quedó abajo, tendido sobre la espalda, mirándola subir.",
+          "en": "Geb stayed below, stretched out on his back, watching her rise."
+        },
+        {
+          "es": "Y entre los dos quedó, por primera vez, un espacio abierto: el aire y la luz, el lugar donde hoy vivimos.",
+          "en": "And between them, for the first time, there was open space: air and light, the place where we live today."
+        },
+        {
+          "es": "Los Heh, dioses de la eternidad, lo ayudan a sostener el cielo, y Shu sigue ahí, con los brazos en alto.",
+          "en": "The Heh, gods of eternity, help him hold up the sky, and Shu is still there, arms raised."
+        }
+      ],
+      "actores": [
+        {
+          "id": "nut",
+          "x": 810,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "abraza"
+            },
+            {
+              "en": 2,
+              "hace": "gira"
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                810,
+                330
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 2.5,
+              "hace": "cae"
+            },
+            {
+              "en": 2.5,
+              "hace": "crece",
+              "escala": 1.5,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "geb",
+          "x": 1110,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "abraza"
+            },
+            {
+              "en": 3,
+              "hace": "gira"
+            },
+            {
+              "en": 3,
+              "hace": "cae"
+            },
+            {
+              "en": 3,
+              "hace": "crece",
+              "escala": 1.5,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "shu",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "heh1",
+          "como": "egipcio",
+          "x": 330,
+          "escala": 0.75,
+          "rotulo": "HEH",
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "heh2",
+          "como": "egipcio",
+          "x": 1600,
+          "escala": 0.75,
+          "mira": "izq",
+          "rotulo": "HEH",
+          "pasos": [
+            {
+              "en": 5.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 0.4,
+          "tipo": "polvo",
+          "x": 960,
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 1.5
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 4.1,
+          "tipo": "luz",
+          "x": 960,
+          "y": 450,
+          "dur": 1.5,
+          "intensidad": 0.7
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "tierra",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1.05,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por primera vez hubo día. La luz bajó hasta Geb, y su cuerpo verde se llenó de vida.",
+          "en": "For the first time there was daylight. It reached Geb, and his green body filled with life."
+        },
+        {
+          "es": "Sobre su espalda crecieron las palmeras, los juncos y las flores de loto.",
+          "en": "Palm trees, reeds and lotus flowers grew on his back."
+        },
+        {
+          "es": "Cuando Geb se ríe, decían los egipcios, la tierra tiembla.",
+          "en": "When Geb laughs, the Egyptians said, the earth trembles."
+        },
+        {
+          "es": "Y como la tierra era suya, los faraones llamaban a su trono el trono de Geb.",
+          "en": "And because the earth was his, the pharaohs called their throne the throne of Geb."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 650,
+          "s": 0.9,
+          "en": 1
+        },
+        {
+          "tipo": "papiro",
+          "x": 950,
+          "s": 0.9,
+          "en": 1.2
+        },
+        {
+          "tipo": "loto",
+          "x": 1150,
+          "s": 1,
+          "en": 1.4
+        },
+        {
+          "tipo": "palmera",
+          "x": 1300,
+          "s": 1.0,
+          "en": 1.6
+        },
+        {
+          "tipo": "trono",
+          "x": 1750,
+          "s": 1,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "geb",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae",
+              "dur": 0.2
+            },
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "tiembla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "faraon",
+          "x": 2100,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 1850
+            },
+            {
+              "en": 3.6,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "polvo",
+          "x": 900,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "tarde",
+      "fondo": "campo",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El cuerpo de Nut estaba cubierto de estrellas, y los egipcios la dibujaban como una mujer azul estirada sobre el mundo.",
+          "en": "Nut's body was covered in stars, and the Egyptians drew her as a blue woman stretched across the world."
+        },
+        {
+          "es": "Cada tarde, cuando el sol llegaba al borde de la tierra, Nut abría la boca y se lo tragaba.",
+          "en": "Every evening, when the sun reached the edge of the earth, Nut opened her mouth and swallowed it."
+        },
+        {
+          "es": "Durante toda la noche el sol viajaba por dentro de su cuerpo, y sobre el mundo caía la oscuridad.",
+          "en": "All night the sun travelled through her body, and darkness fell over the world."
+        },
+        {
+          "es": "Y mientras el sol dormía dentro de ella, las estrellas se encendían sobre su vientre.",
+          "en": "And while the sun slept inside her, the stars lit up across her belly."
+        }
+      ],
+      "actores": [
+        {
+          "id": "nut",
+          "x": 650,
+          "y": 400,
+          "escala": 1.5,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "gira"
+            },
+            {
+              "en": 0,
+              "hace": "cae",
+              "dur": 0.1
+            },
+            {
+              "en": 1.5,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "x": 250,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.8
+            },
+            {
+              "en": 1.8,
+              "hace": "vuela",
+              "a": [
+                1250,
+                430
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 2.2,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.9
+        },
+        {
+          "en": 3,
+          "tipo": "estrellas"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "OESTE",
+            "en": "WEST"
+          },
+          "x": 1450,
+          "y": 300,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "amanecer",
+      "fondo": "cielo_nut",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al final de la noche, el sol llegaba a las piernas de Nut, y ella lo daba a luz de nuevo.",
+          "en": "At the end of the night, the sun reached Nut's legs, and she gave birth to it all over again."
+        },
+        {
+          "es": "Así, decían los egipcios, se turnan la noche y el día: Nut traga el sol y lo vuelve a parir.",
+          "en": "That is how night and day take turns, the Egyptians said: Nut swallows the sun and bears it again."
+        },
+        {
+          "es": "Las estrellas también se las tragaba cuando llegaba la luz, y las volvía a parir al caer la noche.",
+          "en": "She swallowed the stars too when daylight came, and bore them again when night fell."
+        },
+        {
+          "es": "Siglos después la pintaron en la tapa de sus ataúdes, para que el muerto descansara bajo ella y renaciera como el sol.",
+          "en": "Centuries later, the Egyptians painted her on their coffin lids, so the dead could rest beneath her and be reborn like the sun."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sarcofago",
+          "x": 1400,
+          "s": 1,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "nut",
+          "x": 650,
+          "y": 400,
+          "escala": 1.5,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "gira"
+            },
+            {
+              "en": 0,
+              "hace": "cae",
+              "dur": 0.1
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "x": 600,
+          "y": 520,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 0.6,
+              "hace": "vuela",
+              "a": [
+                420,
+                790
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio",
+          "x": 1050,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 520,
+          "y": 480,
+          "dur": 2,
+          "intensidad": 0.8
+        },
+        {
+          "en": 0.5,
+          "tipo": "aclarar",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.6,
+          "texto": {
+            "es": "AMANECER",
+            "en": "DAWN"
+          },
+          "x": 420,
+          "y": 280,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "maldicion",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Nut ya llevaba hijos de Geb en el vientre.",
+          "en": "But Nut was already carrying Geb's children."
+        },
+        {
+          "es": "Cuando Ra, el rey de los dioses, lo supo, se enfureció.",
+          "en": "When Ra, king of the gods, found out, he was furious."
+        },
+        {
+          "es": "Y lanzó una maldición: Nut no daría a luz en ningún mes del año, ni en ningún año.",
+          "en": "And he laid a curse on her: Nut would not give birth in any month of the year, or in any year."
+        },
+        {
+          "es": "En esa época el año tenía doce meses de treinta días, trescientos sesenta en total, y ninguno le servía a Nut.",
+          "en": "In those days the year had twelve months of thirty days, three hundred and sixty in all, and not one was open to Nut."
+        },
+        {
+          "es": "La palabra de un dios no se puede deshacer. Nut esperó en el cielo, sin poder dar a luz.",
+          "en": "A god's word cannot be unsaid. Nut waited in the sky, unable to give birth."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "x": 640,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "nut",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.5,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 3,
+          "intensidad": 0.6
+        },
+        {
+          "en": 2.1,
+          "tipo": "rayo",
+          "x": 1300,
+          "dur": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "12 × 30 = 360",
+            "en": "12 × 30 = 360"
+          },
+          "x": 960,
+          "y": 240,
+          "hasta": 4.8
+        }
+      ]
+    },
+    {
+      "id": "senet",
+      "fondo": "noche",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Thoth, el dios de la sabiduría y de los números, tuvo pena de ella, y se le ocurrió un plan.",
+          "en": "But Thoth, the god of wisdom and numbers, pitied her, and he came up with a plan."
+        },
+        {
+          "es": "Una noche se sentó a jugar al senet, el juego de tablero de los egipcios, contra la luna misma.",
+          "en": "One night he sat down to play senet, the Egyptians' board game, against the moon itself."
+        },
+        {
+          "es": "Apostaron luz: cada partida que Thoth ganaba, le quitaba a la luna un poco de su brillo.",
+          "en": "They played for light: every game Thoth won took a little of the moon's glow."
+        },
+        {
+          "es": "Thoth ganó una partida, y otra, y otra, y la luna fue quedando cada vez más pálida.",
+          "en": "Thoth won one game, then another, then another, and the moon grew paler and paler."
+        },
+        {
+          "es": "Hasta que él juntó toda la luz que necesitaba.",
+          "en": "Until he had gathered all the light he needed."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "luna",
+          "x": 1500,
+          "y": 300,
+          "s": 2.2
+        },
+        {
+          "tipo": "altar",
+          "x": 1050,
+          "s": 0.8,
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 3,
+          "intensidad": 0.7
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 760,
+          "y": 520,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "SENET",
+            "en": "SENET"
+          },
+          "x": 1050,
+          "y": 330,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "cinco-dias",
+      "fondo": "cielo_nut",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Con esa luz, Thoth hizo cinco días nuevos.",
+          "en": "From that light, Thoth made five new days."
+        },
+        {
+          "es": "No pertenecían a ningún mes ni a ningún año, así que la maldición de Ra no podía tocarlos.",
+          "en": "They belonged to no month and no year, so Ra's curse could not touch them."
+        },
+        {
+          "es": "Los puso al final del año, y los egipcios los llamaron «los que están sobre el año».",
+          "en": "He set them at the end of the year, and the Egyptians called them 'those upon the year'."
+        },
+        {
+          "es": "Así, a los trescientos sesenta días se les sumaron cinco más: trescientos sesenta y cinco.",
+          "en": "So five more days were added to the three hundred and sixty: three hundred and sixty-five."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "escriba",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 0.2,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "I",
+            "en": "I"
+          },
+          "x": 560,
+          "y": 300,
+          "hasta": 3
+        },
+        {
+          "en": 0.5,
+          "texto": {
+            "es": "II",
+            "en": "II"
+          },
+          "x": 760,
+          "y": 300,
+          "hasta": 3
+        },
+        {
+          "en": 0.7,
+          "texto": {
+            "es": "III",
+            "en": "III"
+          },
+          "x": 960,
+          "y": 300,
+          "hasta": 3
+        },
+        {
+          "en": 0.9,
+          "texto": {
+            "es": "IV",
+            "en": "IV"
+          },
+          "x": 1160,
+          "y": 300,
+          "hasta": 3
+        },
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "V",
+            "en": "V"
+          },
+          "x": 1360,
+          "y": 300,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO EL AÑO TIENE 365 DÍAS",
+            "en": "THAT'S WHY THE YEAR HAS 365 DAYS"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "cielo_nut",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Y en esos cinco días, Nut por fin pudo dar a luz.",
+          "en": "And during those five days, Nut was finally able to give birth."
+        },
+        {
+          "es": "Cinco días fuera del tiempo, y un hijo nacido en cada uno.",
+          "en": "Five days outside of time, and a child born on each one."
+        },
+        {
+          "es": "Cinco hijos que iban a cambiar el destino del mundo. Esa es la historia del próximo episodio.",
+          "en": "Five children who would change the fate of the world. That is the story of the next episode."
+        }
+      ],
+      "actores": [
+        {
+          "id": "nut",
+          "x": 1100,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 450,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "PRÓXIMO: LOS CINCO HIJOS DE NUT",
+            "en": "NEXT: THE FIVE CHILDREN OF NUT"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El dios que le ganó cinco días a la luna",
+        "en": "The god who won five days from the moon"
+      },
+      "escena": "senet",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "La diosa que se traga el sol cada noche",
+        "en": "The goddess who swallows the sun every night"
+      },
+      "escena": "tarde",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Por qué el año tiene 365 días",
+        "en": "Why the year has 365 days"
+      },
+      "escena": "cinco-dias",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    }
+  ]
+}

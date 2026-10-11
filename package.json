@@ -1,0 +1,36 @@
+{
+  "name": "mitologias",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "narrar": "node scripts/narrar.mjs",
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@remotion/bundler": "^4.0.533",
+    "@remotion/cli": "^4.0.533",
+    "@remotion/google-fonts": "^4.0.533",
+    "@remotion/motion-blur": "^4.0.533",
+    "@remotion/noise": "^4.0.533",
+    "@remotion/paths": "^4.0.533",
+    "@remotion/renderer": "^4.0.533",
+    "perfect-freehand": "^1.2.3",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.533"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.148.0"
+  },
+  "type": "module"
+}

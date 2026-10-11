@@ -1,0 +1,905 @@
+{
+  "id": "egipcias-01-primer-monticulo",
+  "serie": "egipcias",
+  "numero": "01",
+  "titulo": {
+    "es": "La primera colina",
+    "en": "The First Mound"
+  },
+  "tituloGriego": "THE FIRST MOUND",
+  "miniatura": {
+    "heroe": "atum",
+    "rival": "tefnut"
+  },
+  "escenas": [
+    {
+      "id": "nun",
+      "fondo": "nun",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Antes de las pirámides, antes de los faraones, antes incluso del Nilo, solo había agua.",
+          "en": "Before the pyramids, before the pharaohs, before even the Nile, there was only water."
+        },
+        {
+          "es": "Un océano oscuro, quieto y sin fin, que los egipcios llamaban Nun.",
+          "en": "A dark, still, endless ocean that the Egyptians called Nun."
+        },
+        {
+          "es": "No había cielo ni tierra. No había luz. No había nada vivo.",
+          "en": "There was no sky and no earth. There was no light. There was nothing alive."
+        },
+        {
+          "es": "Y sin embargo, en el fondo de esas aguas, algo estaba esperando.",
+          "en": "And yet, deep in those waters, something was waiting."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla"
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1.5,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "NUN",
+            "en": "NUN"
+          },
+          "x": 960,
+          "y": 260,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "colina",
+      "fondo": "nun",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.05,
+          1.15
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, del agua surgió una pequeña colina de tierra.",
+          "en": "One day, a small mound of earth rose out of the water."
+        },
+        {
+          "es": "Los egipcios la llamaban benben: la primera tierra firme del mundo.",
+          "en": "The Egyptians called it the benben: the first dry land in the world."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 960,
+          "s": 1.6,
+          "en": 0.2
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "polvo",
+          "x": 960,
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "aclarar",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "BENBEN",
+            "en": "BENBEN"
+          },
+          "x": 960,
+          "y": 520,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "atum",
+      "fondo": "nun",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.1,
+          1.2
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sobre esa colina apareció un dios que se creó a sí mismo: Atum, el que está completo.",
+          "en": "On that mound appeared a god who created himself: Atum, the complete one."
+        },
+        {
+          "es": "Atum era el primero. Antes de él no había padre ni madre.",
+          "en": "Atum was the first. Before him there was no father and no mother."
+        },
+        {
+          "es": "Pero estaba solo, en medio de un océano infinito.",
+          "en": "But he was alone, in the middle of an endless ocean."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 960,
+          "s": 1.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "atum",
+          "x": 960,
+          "y": 660,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "destello"
+        }
+      ]
+    },
+    {
+      "id": "hijos",
+      "fondo": "nun",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.05,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Atum decidió crear compañía.",
+          "en": "So Atum decided to create company."
+        },
+        {
+          "es": "Soltó su aliento, y de ese aliento nació Shu, el dios del aire.",
+          "en": "He breathed out, and from that breath came Shu, the god of air."
+        },
+        {
+          "es": "Y escupió, y de esa humedad nació Tefnut, la diosa con cabeza de leona.",
+          "en": "And he spat, and from that moisture came Tefnut, the lion-headed goddess."
+        },
+        {
+          "es": "Ellos fueron la primera pareja de dioses: el aire y la humedad.",
+          "en": "They were the first pair of gods: air and moisture."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 960,
+          "s": 1.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "atum",
+          "x": 960,
+          "y": 660,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "shu",
+          "x": 620,
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "tefnut",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 2.3,
+          "tipo": "lluvia",
+          "dur": 0.7
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.5,
+          "texto": {
+            "es": "AIRE",
+            "en": "AIR"
+          },
+          "x": 620,
+          "y": 330,
+          "hasta": 3.5
+        },
+        {
+          "en": 2.5,
+          "texto": {
+            "es": "HUMEDAD",
+            "en": "MOISTURE"
+          },
+          "x": 1300,
+          "y": 330,
+          "hasta": 3.5
+        }
+      ]
+    },
+    {
+      "id": "perdidos",
+      "fondo": "nun",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Shu y Tefnut se alejaron a explorar las aguas oscuras.",
+          "en": "But Shu and Tefnut wandered off to explore the dark waters."
+        },
+        {
+          "es": "Se fueron tan lejos que se perdieron en el Nun.",
+          "en": "They went so far that they got lost in the Nun."
+        },
+        {
+          "es": "Atum, desesperado, se arrancó un ojo y lo mandó a buscarlos.",
+          "en": "Atum, desperate, sent out his own Eye to find them."
+        },
+        {
+          "es": "Ese ojo tenía vida propia. Los egipcios lo llamaban el Ojo de Ra.",
+          "en": "That Eye had a life of its own. The Egyptians called it the Eye of Ra."
+        }
+      ],
+      "actores": [
+        {
+          "id": "shu",
+          "x": 1100,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1700,
+              "dur": 1.6
+            },
+            {
+              "en": 1.6,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "tefnut",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 1650,
+              "dur": 1.6
+            },
+            {
+              "en": 1.7,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "atum",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "ojo",
+          "como": "ojo_ra",
+          "x": 560,
+          "y": 330,
+          "escala": 1.2,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "vuela",
+              "a": [
+                1750,
+                300
+              ],
+              "dur": 1.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "niebla"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "EL OJO DE RA",
+            "en": "THE EYE OF RA"
+          },
+          "x": 1200,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "lagrimas",
+      "fondo": "nun",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.05,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después de mucho tiempo, el Ojo volvió trayendo a Shu y a Tefnut.",
+          "en": "After a long time, the Eye came back, bringing Shu and Tefnut with it."
+        },
+        {
+          "es": "Atum lloró de alegría al verlos.",
+          "en": "Atum wept with joy when he saw them."
+        },
+        {
+          "es": "Y donde cayeron sus lágrimas, nacieron los primeros seres humanos.",
+          "en": "And where his tears fell, the first human beings were born."
+        },
+        {
+          "es": "Por eso, en egipcio, la palabra lágrimas, remyt, suena casi igual que la palabra personas, remetj.",
+          "en": "That is why, in Egyptian, the word for tears, remyt, sounds almost the same as the word for people, remetj."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 960,
+          "s": 1.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "atum",
+          "x": 960,
+          "y": 660,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "shu",
+          "x": 1800,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1350
+            }
+          ]
+        },
+        {
+          "id": "tefnut",
+          "x": 1900,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "entra",
+              "a": 1550
+            }
+          ]
+        },
+        {
+          "id": "h1",
+          "como": "egipcio",
+          "x": 600,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "h2",
+          "como": "egipcia",
+          "x": 420,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "ojo",
+          "como": "ojo_ra",
+          "x": 1900,
+          "y": 280,
+          "escala": 1.0,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                1250,
+                260
+              ],
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "lluvia",
+          "dur": 0.8,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cobra",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero el Ojo se enfureció: mientras buscaba, Atum se había hecho un ojo nuevo.",
+          "en": "But the Eye was furious: while it was away, Atum had grown a new one."
+        },
+        {
+          "es": "Para calmarlo, Atum lo puso en el lugar más alto de todos: en su frente, con forma de cobra.",
+          "en": "To calm it, Atum gave it the highest place of all: on his forehead, in the shape of a cobra."
+        },
+        {
+          "es": "Desde ahí escupiría fuego contra cualquier enemigo.",
+          "en": "From there it would spit fire at any enemy."
+        },
+        {
+          "es": "Por eso los faraones llevaban siempre una cobra dorada en la corona: el Ojo de Ra los protegía.",
+          "en": "That is why the pharaohs always wore a golden cobra on their crown: the Eye of Ra protected them."
+        }
+      ],
+      "actores": [
+        {
+          "id": "atum",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "faraon",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "brilla",
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "ojo",
+          "como": "ojo_ra",
+          "x": 1000,
+          "y": 360,
+          "escala": 1.0,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                740,
+                430
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "encoge",
+              "escala": 0.15
+            },
+            {
+              "en": 1.8,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "fuego",
+          "x": 820,
+          "y": 520,
+          "dur": 0.8,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "UREO",
+            "en": "URAEUS"
+          },
+          "x": 700,
+          "y": 300,
+          "hasta": 2.5
+        },
+        {
+          "en": 3,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO LOS FARAONES LLEVAN UNA COBRA",
+            "en": "THAT'S WHY PHARAOHS WEAR A COBRA"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "sol",
+      "fondo": "piramides",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Atum también era el sol. Al amanecer lo llamaban Ra, y su luz tocaba primero la cima de la colina.",
+          "en": "Atum was also the sun. At dawn they called him Ra, and his light touched the top of the mound first."
+        },
+        {
+          "es": "Mucho después, las pirámides y los obeliscos se coronaron con una punta dorada: una copia de aquella primera colina, lo primero que toca el sol cada mañana.",
+          "en": "Much later, pyramids and obelisks were crowned with a golden tip: a copy of that first mound, the first thing the sun touches every morning."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "obelisco",
+          "x": 1350,
+          "s": 0.8,
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.1,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 1.1,
+          "tipo": "luz",
+          "x": 1350,
+          "y": 360,
+          "dur": 1.5,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "cielo_nut",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Shu y Tefnut tuvieron dos hijos: Geb, la tierra, y Nut, el cielo.",
+          "en": "Shu and Tefnut had two children: Geb, the earth, and Nut, the sky."
+        },
+        {
+          "es": "Y Geb y Nut se abrazaban tan fuerte que entre ellos no cabía nada. Ni el aire. Ni la luz.",
+          "en": "And Geb and Nut held each other so tightly that nothing fit between them. Not air. Not light."
+        },
+        {
+          "es": "Alguien iba a tener que separarlos. Esa es la historia del próximo episodio.",
+          "en": "Someone would have to pull them apart. That is the story of the next episode."
+        }
+      ],
+      "actores": [
+        {
+          "id": "geb",
+          "x": 820,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "nut",
+          "x": 1080,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "shu",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1500
+            },
+            {
+              "en": 2.5,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "PRÓXIMO: EL CIELO Y LA TIERRA",
+            "en": "NEXT: SKY AND EARTH"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Por qué los egipcios decían que somos lágrimas",
+        "en": "Why the Egyptians said humans are tears"
+      },
+      "escena": "lagrimas",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Por qué los faraones llevaban una cobra",
+        "en": "Why pharaohs wore a cobra on their crown"
+      },
+      "escena": "cobra",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "El dios que se creó a sí mismo",
+        "en": "The god who created himself"
+      },
+      "escena": "atum",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 960
+    }
+  ]
+}

@@ -1,0 +1,1551 @@
+{
+  "id": "nordicas-12-ragnarok",
+  "serie": "nordicas",
+  "numero": "12",
+  "titulo": {
+    "es": "Ragnarök",
+    "en": "Ragnarök"
+  },
+  "tituloGriego": "RAGNAROK",
+  "escenas": [
+    {
+      "id": "fimbulvetr",
+      "fondo": "nieve",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Loki seguía atado en su cueva, esperando el fin del mundo. Y el fin empezó con un invierno.",
+          "en": "Loki remained bound in his cave, waiting for the end of the world. And the end began with a winter."
+        },
+        {
+          "es": "Se llama Fimbulvetr, el invierno terrible: tres inviernos seguidos, sin verano entre ellos.",
+          "en": "It is called Fimbulvetr, the mighty winter: three winters in a row, with no summer between them."
+        },
+        {
+          "es": "La nieve cae desde todos los rincones, el viento muerde y el sol casi no da calor.",
+          "en": "Snow falls from every corner, the wind bites, and the sun gives almost no warmth."
+        },
+        {
+          "es": "Entonces los hombres pierden la paz: los hermanos se matan entre sí y los parientes rompen sus lazos.",
+          "en": "Then people lose their peace: brothers kill one another, and kinsmen break their bonds."
+        },
+        {
+          "es": "La Völuspá lo dice así: se acabó el respeto, el mundo entra en la edad de los lobos.",
+          "en": "The Voluspa puts it this way: respect is gone, and the world enters an age of wolves."
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "x": 250,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 0.5,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ],
+          "props": {
+            "contorno": true
+          }
+        },
+        {
+          "id": "hermano1",
+          "x": 900,
+          "como": "vikingo",
+          "rotulo": "",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "hermano2",
+          "x": 1100,
+          "como": "vikingo",
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "x": 1650,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cueva",
+          "x": 250,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pino",
+          "x": 1400,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "sol",
+          "x": 1500,
+          "y": 230,
+          "s": 0.9,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 1,
+          "tipo": "nieve",
+          "dur": 4
+        },
+        {
+          "en": 3.2,
+          "tipo": "destello",
+          "x": 1000,
+          "y": 600
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "FIMBULVETR",
+            "en": "FIMBULVETR"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2.5
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "HERMANOS CONTRA HERMANOS",
+            "en": "BROTHER AGAINST BROTHER"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ],
+      "sinAstros": true
+    },
+    {
+      "id": "lobos",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En el cielo, dos lobos persiguen al Sol y a la Luna desde el principio de los tiempos.",
+          "en": "In the sky, two wolves have chased the Sun and the Moon since the beginning of time."
+        },
+        {
+          "es": "Se llaman Sköll y Hati, y en el fin por fin los alcanzan.",
+          "en": "Their names are Skoll and Hati, and at the end they finally catch them."
+        },
+        {
+          "es": "Sköll se traga el Sol. Hati se traga la Luna.",
+          "en": "Skoll swallows the Sun. Hati swallows the Moon."
+        },
+        {
+          "es": "Las estrellas se desprenden y caen del cielo, y el mundo queda en una oscuridad total.",
+          "en": "The stars break loose and fall from the sky, and the world is left in total darkness."
+        }
+      ],
+      "actores": [
+        {
+          "id": "skoll",
+          "x": 300,
+          "como": "lobo_gigante",
+          "rotulo": "SKOLL",
+          "escala": 0.8,
+          "y": 350,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 800,
+              "dur": 0.9
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "hati",
+          "x": 1500,
+          "como": "lobo_gigante",
+          "rotulo": "HATI",
+          "escala": 0.8,
+          "y": 350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 0.9
+            },
+            {
+              "en": 2.3,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 1000,
+          "y": 260,
+          "s": 1.2,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "luna",
+          "x": 1500,
+          "y": 260,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "estrellas",
+          "x": 960,
+          "y": 180,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "estrellas",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 2
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 700,
+          "y": 250
+        },
+        {
+          "en": 3.3,
+          "tipo": "chispas",
+          "x": 1300,
+          "y": 300
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "SIN SOL, SIN LUNA",
+            "en": "NO SUN, NO MOON"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ],
+      "sinAstros": true
+    },
+    {
+      "id": "cadenas",
+      "fondo": "jotunheim",
+      "camara": {
+        "de": 0,
+        "a": 600,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces la tierra empieza a temblar, y los árboles y las montañas se sacuden.",
+          "en": "Then the earth begins to shake, and trees and mountains rock back and forth."
+        },
+        {
+          "es": "Todas las cadenas y las ataduras se rompen, una tras otra.",
+          "en": "Every chain and every fetter snaps, one after another."
+        },
+        {
+          "es": "Fenrir, el lobo que los dioses habían atado, se libera con las fauces abiertas: su mandíbula superior toca el cielo.",
+          "en": "Fenrir, the wolf the gods had bound, breaks free with his jaws wide open: his upper jaw touches the sky."
+        },
+        {
+          "es": "Y Loki también se libera de su cueva, y viene a unirse con los enemigos de los dioses.",
+          "en": "And Loki too is freed from his cave, and he comes to join the enemies of the gods."
+        }
+      ],
+      "actores": [
+        {
+          "id": "fenrir",
+          "x": 1000,
+          "mira": "izq",
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "crece",
+              "escala": 1.2,
+              "dur": 0.7
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 1650,
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "camina",
+              "a": 1450,
+              "dur": 0.7
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 400,
+          "s": 0.9,
+          "capa": "medio"
+        },
+        {
+          "tipo": "pino",
+          "x": 1300,
+          "s": 0.9,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "temblor",
+          "dur": 4
+        },
+        {
+          "en": 1,
+          "tipo": "destello",
+          "x": 1000,
+          "y": 600
+        },
+        {
+          "en": 1.5,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 650
+        },
+        {
+          "en": 2,
+          "tipo": "rayo",
+          "x": 1000
+        },
+        {
+          "en": 3,
+          "tipo": "destello",
+          "x": 1650,
+          "y": 500
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LAS CADENAS SE ROMPEN",
+            "en": "THE CHAINS BREAK"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2.5,
+          "texto": {
+            "es": "FENRIR",
+            "en": "FENRIR"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "mar-naglfar",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 800,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Del mar se levanta Jörmungandr, la serpiente que rodea el mundo, retorciéndose de furia.",
+          "en": "From the sea rises Jormungandr, the serpent that circles the world, writhing with rage."
+        },
+        {
+          "es": "Al moverse empuja las olas hacia la tierra, y el mar se desborda e inunda todo.",
+          "en": "As he moves he pushes the waves toward the land, and the sea overflows and floods everything."
+        },
+        {
+          "es": "Su aliento está lleno de veneno, y lo esparce por el aire y por el agua.",
+          "en": "His breath is full of venom, and he spreads it through the air and over the water."
+        },
+        {
+          "es": "Y sobre esas aguas navega Naglfar, el barco hecho con las uñas de los muertos.",
+          "en": "And over those waters sails Naglfar, the ship made from the fingernails of the dead."
+        },
+        {
+          "es": "Lo guía el gigante Hrymr, y trae a los gigantes de hielo y escarcha hacia el campo de batalla.",
+          "en": "The giant Hrym steers it, bringing the frost giants toward the field of battle."
+        }
+      ],
+      "actores": [
+        {
+          "id": "jormungandr",
+          "x": 600,
+          "escala": 0.6,
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "crece",
+              "escala": 1.2,
+              "dur": 1.5
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "hrymr",
+          "x": 1550,
+          "como": "gigante_hielo",
+          "rotulo": "HRYM",
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "gigante1",
+          "x": 1750,
+          "como": "gigante_hielo",
+          "rotulo": "",
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "drakkar",
+          "x": 1500,
+          "s": 1.3,
+          "en": 3,
+          "props": {
+            "vela": true
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "olas-suben",
+          "dur": 3
+        },
+        {
+          "en": 1.5,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "niebla",
+          "dur": 1.5
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "JÖRMUNGANDR",
+            "en": "JORMUNGANDR"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1.5
+        },
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "NAGLFAR · EL BARCO DE LAS UÑAS",
+            "en": "NAGLFAR · THE SHIP OF NAILS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 5
+        }
+      ]
+    },
+    {
+      "id": "surtr",
+      "fondo": "bifrost",
+      "camara": {
+        "de": 0,
+        "a": 600,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Del sur, desde Muspelheim, llega Surtr con los hijos del fuego, y una espada más brillante que el sol.",
+          "en": "From the south, from Muspelheim, comes Surtr with the sons of fire, wielding a sword brighter than the sun."
+        },
+        {
+          "es": "Cabalgan sobre Bifröst, el puente del arcoíris, y el puente se rompe bajo su peso.",
+          "en": "They ride across Bifrost, the rainbow bridge, and the bridge breaks beneath them."
+        },
+        {
+          "es": "Heimdall, el guardián de los dioses, ve cómo llegan y levanta el cuerno Gjallarhorn.",
+          "en": "Heimdall, the watchman of the gods, sees them coming and raises the horn Gjallarhorn."
+        },
+        {
+          "es": "Su sonido recorre los nueve mundos y despierta a todos los dioses.",
+          "en": "Its sound travels through all nine worlds and wakes every god."
+        },
+        {
+          "es": "Comienza la batalla final.",
+          "en": "The final battle begins."
+        }
+      ],
+      "actores": [
+        {
+          "id": "surtr",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 800,
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "heimdall",
+          "x": 1650,
+          "mira": "izq",
+          "props": {
+            "objeto": "cuerno"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "levanta",
+              "objeto": "cuerno"
+            },
+            {
+              "en": 2.5,
+              "hace": "habla",
+              "dur": 1.5
+            }
+          ]
+        }
+      ],
+      "elementos": [],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 500,
+          "y": 800,
+          "dur": 1.5
+        },
+        {
+          "en": 0.5,
+          "tipo": "fuego",
+          "x": 800,
+          "y": 800,
+          "dur": 1.5
+        },
+        {
+          "en": 1.5,
+          "tipo": "destello",
+          "x": 1000,
+          "y": 500
+        },
+        {
+          "en": 1.5,
+          "tipo": "temblor",
+          "dur": 1.5
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1650,
+          "y": 450,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "SURTR",
+            "en": "SURTR"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1.5
+        },
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "GJALLARHORN",
+            "en": "GJALLARHORN"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "valhalla",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al oír el cuerno, Odín cabalga hasta el pozo de Mímir y le pide consejo una vez más.",
+          "en": "At the sound of the horn, Odin rides to Mimir's well and asks him for counsel one last time."
+        },
+        {
+          "es": "Los dioses se arman, y con ellos se arman los einherjar, los guerreros caídos que viven en el Valhalla.",
+          "en": "The gods arm themselves, and with them the einherjar, the fallen warriors who live in Valhalla."
+        },
+        {
+          "es": "Por eso Odín los había juntado allí durante siglos: elegía a los mejores muertos de cada batalla para tenerlos este día.",
+          "en": "That is why Odin had gathered them there for ages: he chose the best of the slain from every battle for this day."
+        },
+        {
+          "es": "Cabalga al frente con su yelmo de oro, su lanza y su capa, y se dirige hacia el campo de Vígríðr.",
+          "en": "He rides at the head with his golden helm, his spear and his cloak, toward the field of Vigrid."
+        },
+        {
+          "es": "Es un campo tan ancho que mide cien leguas por cada lado.",
+          "en": "It is a field so wide that it measures a hundred leagues on every side."
+        }
+      ],
+      "actores": [
+        {
+          "id": "mimir",
+          "x": 300,
+          "mira": "der",
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 700,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "guerrero1",
+          "x": 1000,
+          "como": "guerrero",
+          "rotulo": "",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "guerrero2",
+          "x": 1200,
+          "como": "vikingo",
+          "rotulo": "",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "guerrero3",
+          "x": 1400,
+          "como": "guerrero",
+          "rotulo": "",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 1100,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello",
+          "x": 1200,
+          "y": 600
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 700,
+          "y": 450,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LOS EINHERJAR",
+            "en": "THE EINHERJAR"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "POR ESO ODÍN JUNTABA GUERREROS EN VALHALLA",
+            "en": "THAT'S WHY ODIN GATHERED WARRIORS IN VALHALLA"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "odin-fenrir",
+      "fondo": "batalla",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En el campo, Odín avanza contra Fenrir, el lobo, y los dos se encuentran de frente.",
+          "en": "On the field, Odin advances against Fenrir the wolf, and the two meet head-on."
+        },
+        {
+          "es": "Pero el lobo abre sus fauces enormes y se traga a Odín entero, el padre de todos los dioses.",
+          "en": "But the wolf opens his enormous jaws and swallows Odin whole, the father of all the gods."
+        },
+        {
+          "es": "Entonces avanza Víðarr, el hijo silencioso de Odín, que esperaba este momento.",
+          "en": "Then Vidar steps forward, Odin's silent son, who had been waiting for this moment."
+        },
+        {
+          "es": "Con un pie en la mandíbula inferior del lobo, agarra la superior con la mano y le desgarra la boca. Así venga a su padre.",
+          "en": "With one foot on the wolf's lower jaw, he grips the upper with his hand and tears his mouth apart. So he avenges his father."
+        },
+        {
+          "es": "Por eso a Víðarr lo llaman el dios del zapato grueso, hecho con los recortes de cuero de todos los zapatos del mundo.",
+          "en": "That is why Vidar is called the god of the thick shoe, made from the leather scraps cut from every shoe in the world."
+        },
+        {
+          "es": "Se dice que quien quiera ayudar a los dioses debe tirar esos recortes, para que el zapato de Víðarr sea fuerte.",
+          "en": "They say that anyone who wishes to help the gods should throw away those scraps, so that Vidar's shoe will be strong."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 500,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.8
+            },
+            {
+              "en": 1.4,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "fenrir",
+          "x": 1500,
+          "mira": "izq",
+          "escala": 1.1,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 3.5,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "vidar",
+          "x": 300,
+          "como": "guerrero",
+          "rotulo": "VIDAR",
+          "mira": "der",
+          "visible": false,
+          "props": {
+            "tocado": "yelmo"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.9
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.6,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "elementos": [],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "destello",
+          "x": 1400,
+          "y": 500
+        },
+        {
+          "en": 3,
+          "tipo": "destello",
+          "x": 1400,
+          "y": 550
+        },
+        {
+          "en": 3.2,
+          "tipo": "chispas",
+          "x": 1350,
+          "y": 500
+        },
+        {
+          "en": 0,
+          "tipo": "humo",
+          "dur": 4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.5,
+          "texto": {
+            "es": "ODÍN CAE",
+            "en": "ODIN FALLS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2.2
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "POR ESO VÍÐARR LLEVA EL ZAPATO GRUESO",
+            "en": "THAT'S WHY VIDAR WEARS THE THICK SHOE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 6,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "thor-freyr",
+      "fondo": "batalla",
+      "camara": {
+        "de": 0,
+        "a": 600,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Thor se enfrenta a Jörmungandr, su viejo enemigo, y con el Mjölnir lo golpea hasta matarlo.",
+          "en": "Thor faces Jormungandr, his old enemy, and with Mjolnir he strikes him until he is dead."
+        },
+        {
+          "es": "Pero el veneno de la serpiente le cae encima. Thor da nueve pasos hacia atrás...",
+          "en": "But the serpent's venom pours over him. Thor takes nine steps back..."
+        },
+        {
+          "es": "...y cae muerto. El dios del trueno, el protector de los hombres, ya no se levanta.",
+          "en": "...and falls dead. The god of thunder, the protector of mankind, rises no more."
+        },
+        {
+          "es": "Freyr combate contra Surtr, pero hace tiempo que entregó su espada por amor a Gerðr, y pelea solo con un asta de ciervo.",
+          "en": "Freyr fights Surtr, but long ago he gave away his sword for love of Gerd, and he fights with only a stag's antler."
+        },
+        {
+          "es": "Sin su espada, Freyr no tiene cómo vencer, y cae ante el fuego de Surtr.",
+          "en": "Without his sword, Freyr has no way to win, and he falls before the fire of Surtr."
+        }
+      ],
+      "actores": [
+        {
+          "id": "jormungandr",
+          "x": 1450,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 600,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 360,
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "freyr",
+          "x": 1000,
+          "mira": "der",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "surtr",
+          "x": 1700,
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "elementos": [],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "rayo",
+          "x": 1450
+        },
+        {
+          "en": 0.8,
+          "tipo": "destello",
+          "x": 1450,
+          "y": 500
+        },
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "fuego",
+          "x": 1700,
+          "y": 800,
+          "dur": 1.5
+        },
+        {
+          "en": 4,
+          "tipo": "destello",
+          "x": 1000,
+          "y": 500
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "NUEVE PASOS",
+            "en": "NINE STEPS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2.5
+        },
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "FREYR SIN ESPADA",
+            "en": "FREYR, WITHOUT HIS SWORD"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 5
+        }
+      ]
+    },
+    {
+      "id": "ultimos",
+      "fondo": "batalla",
+      "camara": {
+        "de": 0,
+        "a": 700,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Tyr, el dios de una sola mano, pelea con Garm, el perro que guarda las puertas de Hel.",
+          "en": "Tyr, the one-handed god, fights Garm, the hound that guards the gates of Hel."
+        },
+        {
+          "es": "Los dos se matan el uno al otro, y ninguno queda en pie.",
+          "en": "They kill one another, and neither is left standing."
+        },
+        {
+          "es": "Más allá, Loki y Heimdall se enfrentan, enemigos desde hace tiempo, y también se dan muerte mutuamente.",
+          "en": "Further on, Loki and Heimdall face one another, old enemies, and they too put each other to death."
+        },
+        {
+          "es": "Entonces Surtr lanza fuego sobre toda la tierra, y los nueve mundos se encienden.",
+          "en": "Then Surtr hurls fire across the whole earth, and the nine worlds catch flame."
+        },
+        {
+          "es": "Las llamas llegan hasta el cielo, y el mundo entero se hunde en el mar.",
+          "en": "The flames reach the sky, and the whole world sinks into the sea."
+        }
+      ],
+      "actores": [
+        {
+          "id": "tyr",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "garm",
+          "x": 650,
+          "como": "perro",
+          "rotulo": "GARM",
+          "mira": "izq",
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.2,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 1250,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.6,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "heimdall",
+          "x": 1600,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.7,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "surtr",
+          "x": 1900,
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "elementos": [],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello",
+          "x": 500,
+          "y": 500
+        },
+        {
+          "en": 2.5,
+          "tipo": "destello",
+          "x": 1450,
+          "y": 500
+        },
+        {
+          "en": 3,
+          "tipo": "fuego",
+          "x": 1000,
+          "y": 800,
+          "dur": 1.2
+        },
+        {
+          "en": 3.3,
+          "tipo": "fuego",
+          "x": 1800,
+          "y": 800,
+          "dur": 1.2
+        },
+        {
+          "en": 3.5,
+          "tipo": "temblor",
+          "dur": 1.5
+        },
+        {
+          "en": 4,
+          "tipo": "olas-suben",
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "TYR Y GARM",
+            "en": "TYR AND GARM"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1.5
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "LOKI Y HEIMDALL",
+            "en": "LOKI AND HEIMDALL"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 3.4,
+          "texto": {
+            "es": "SURTR INCENDIA EL MUNDO",
+            "en": "SURTR BURNS THE WORLD"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "aurora",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1.05,
+          1.15
+        ]
+      },
+      "frases": [
+        {
+          "es": "Y así termina el mundo de los dioses: en fuego, en agua y en silencio.",
+          "en": "And so the world of the gods ends: in fire, in water, and in silence."
+        },
+        {
+          "es": "Pero la Völuspá no termina ahí. La vidente dice que, después de las llamas, la tierra vuelve a levantarse del mar.",
+          "en": "But the Voluspa does not end there. The seeress says that after the flames, the earth rises again from the sea."
+        },
+        {
+          "es": "Verde y hermosa, con las aguas cayendo de las colinas, y un águila que pesca en las cascadas.",
+          "en": "Green and beautiful, with waters falling from the hills, and an eagle fishing in the cascades."
+        },
+        {
+          "es": "Algunos dioses habrán sobrevivido, y Baldr podrá volver. Esa es la historia del próximo episodio: The World Reborn.",
+          "en": "Some gods will have survived, and Baldr will return. That is the story of the next episode: The World Reborn."
+        }
+      ],
+      "actores": [
+        {
+          "id": "vidar",
+          "como": "guerrero",
+          "x": 700,
+          "rotulo": "VIDAR",
+          "mira": "der",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "baldr",
+          "x": 1250,
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 500,
+          "s": 1,
+          "capa": "fondo",
+          "en": 2
+        },
+        {
+          "tipo": "pino",
+          "x": 900,
+          "s": 1.2,
+          "capa": "fondo",
+          "en": 2
+        },
+        {
+          "tipo": "monte_nevado",
+          "x": 1500,
+          "s": 1,
+          "capa": "fondo",
+          "en": 2
+        },
+        {
+          "tipo": "rio",
+          "x": 1200,
+          "en": 2.5
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "aclarar",
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 960,
+          "y": 450,
+          "dur": 2
+        },
+        {
+          "en": 3,
+          "tipo": "estrellas",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "THE WORLD REBORN",
+            "en": "THE WORLD REBORN"
+          },
+          "x": 960,
+          "y": 330
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El lobo que se tragó a Odín",
+        "en": "The wolf that swallowed Odin"
+      },
+      "escena": "odin-fenrir",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "Thor mató a la serpiente... y dio nueve pasos",
+        "en": "Thor slew the serpent... and took nine steps"
+      },
+      "escena": "thor-freyr",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 750
+    },
+    {
+      "gancho": {
+        "es": "Naglfar, el barco hecho con uñas de muertos",
+        "en": "Naglfar, the ship made of the nails of the dead"
+      },
+      "escena": "mar-naglfar",
+      "desde": 2,
+      "hasta": 4,
+      "foco": 1250
+    }
+  ],
+  "miniatura": {
+    "heroe": "thor",
+    "rival": "surtr"
+  }
+}

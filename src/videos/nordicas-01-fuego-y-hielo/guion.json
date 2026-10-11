@@ -1,0 +1,817 @@
+{
+  "id": "nordicas-01-fuego-y-hielo",
+  "serie": "nordicas",
+  "numero": "01",
+  "titulo": {
+    "es": "Fuego y hielo",
+    "en": "Fire and Ice"
+  },
+  "tituloGriego": "FIRE AND ICE",
+  "escenas": [
+    {
+      "id": "vacio",
+      "fondo": "ginnungagap",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Antes de todo, no había tierra, ni cielo, ni mar.",
+          "en": "Before everything, there was no earth, no sky, and no sea."
+        },
+        {
+          "es": "Solo había un abismo enorme y vacío: Ginnungagap.",
+          "en": "There was only a vast and empty gap: Ginnungagap."
+        },
+        {
+          "es": "Al norte estaba Niflheim, un mundo de hielo, niebla y oscuridad.",
+          "en": "To the north lay Niflheim, a world of ice, mist and darkness."
+        },
+        {
+          "es": "Al sur ardía Muspelheim, un mundo de fuego tan brillante que nadie podía mirarlo.",
+          "en": "To the south burned Muspelheim, a world of fire so bright that no one could look at it."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "nieve",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1700,
+          "y": 700
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "GINNUNGAGAP",
+            "en": "GINNUNGAGAP"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "NIFLHEIM",
+            "en": "NIFLHEIM"
+          },
+          "x": 300,
+          "y": 220,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "MUSPELHEIM",
+            "en": "MUSPELHEIM"
+          },
+          "x": 1650,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "encuentro",
+      "fondo": "ginnungagap",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.05,
+          1.2
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los ríos helados de Niflheim corrían hacia el abismo.",
+          "en": "The frozen rivers of Niflheim flowed into the gap."
+        },
+        {
+          "es": "Y las chispas de Muspelheim volaban hacia ellos.",
+          "en": "And the sparks of Muspelheim flew toward them."
+        },
+        {
+          "es": "Donde el fuego tocó el hielo, el hielo empezó a gotear.",
+          "en": "Where the fire touched the ice, the ice began to drip."
+        },
+        {
+          "es": "Y de esas gotas nació la primera criatura viva: un gigante enorme llamado Ymir.",
+          "en": "And from those drops the first living creature was born: an enormous giant named Ymir."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ymir",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 2
+        },
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 650
+        },
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 960,
+          "y": 700,
+          "dur": 1.5
+        },
+        {
+          "en": 3,
+          "tipo": "destello"
+        }
+      ]
+    },
+    {
+      "id": "ymir",
+      "fondo": "nieve",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.04
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ymir era el padre de todos los gigantes de hielo.",
+          "en": "Ymir was the father of all the frost giants."
+        },
+        {
+          "es": "Mientras dormía, de su sudor nacieron más gigantes, un hombre y una mujer debajo de su brazo.",
+          "en": "While he slept, more giants were born from his sweat, a man and a woman under his arm."
+        },
+        {
+          "es": "Así el mundo empezó a llenarse de gigantes, salvajes y crueles.",
+          "en": "And so the world began to fill with giants, wild and cruel."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ymir",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "g1",
+          "como": "gigante_hielo",
+          "x": 1200,
+          "escala": 0.6,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "como": "gigante_hielo",
+          "x": 1400,
+          "escala": 0.55,
+          "mira": "izq",
+          "props": {
+            "mujer": true
+          },
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "como": "jotun",
+          "x": 1750,
+          "escala": 0.8,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1650
+            },
+            {
+              "en": 2.5,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve"
+        }
+      ]
+    },
+    {
+      "id": "vaca",
+      "fondo": "nieve",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Del hielo que se derretía también salió una vaca gigantesca: Audhumla.",
+          "en": "From the melting ice there also came a gigantic cow: Audhumla."
+        },
+        {
+          "es": "De sus ubres corrían cuatro ríos de leche, y con ellos se alimentaba Ymir.",
+          "en": "Four rivers of milk flowed from her udders, and Ymir fed on them."
+        },
+        {
+          "es": "Audhumla, en cambio, lamía los bloques de hielo salado.",
+          "en": "Audhumla, in turn, licked the blocks of salty ice."
+        }
+      ],
+      "actores": [
+        {
+          "id": "audhumla",
+          "x": 1100,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "ymir",
+          "x": 420,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 760,
+          "s": 0.9,
+          "capa": "medio"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve"
+        }
+      ]
+    },
+    {
+      "id": "buri",
+      "fondo": "nieve",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.05,
+          1.15
+        ]
+      },
+      "frases": [
+        {
+          "es": "El primer día, lamiendo el hielo, apareció el cabello de un hombre.",
+          "en": "On the first day, as she licked the ice, the hair of a man appeared."
+        },
+        {
+          "es": "El segundo día, su cabeza.",
+          "en": "On the second day, his head."
+        },
+        {
+          "es": "Y el tercer día, el hombre entero salió del hielo: era Buri, el primero de los dioses.",
+          "en": "And on the third day, the whole man stepped out of the ice: it was Buri, the first of the gods."
+        },
+        {
+          "es": "Buri tuvo un hijo, Bor, que se casó con una giganta. Y ellos tuvieron tres hijos: Odín, Vili y Ve.",
+          "en": "Buri had a son, Bor, who married a giantess. And they had three sons: Odin, Vili and Ve."
+        },
+        {
+          "es": "Su madre era Bestla, hija de un gigante. Por eso los dioses llevan sangre de gigante.",
+          "en": "Their mother was Bestla, a giant's daughter. That is why the gods carry giant blood."
+        }
+      ],
+      "actores": [
+        {
+          "id": "audhumla",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "buri",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 600
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 1050,
+          "pasos": [
+            {
+              "en": 3.5,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "vili",
+          "x": 1250,
+          "pasos": [
+            {
+              "en": 3.6,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "ve",
+          "x": 1450,
+          "pasos": [
+            {
+              "en": 3.7,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 900,
+          "s": 1.1
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO LOS DIOSES LLEVAN SANGRE DE GIGANTE",
+            "en": "THAT'S WHY THE GODS HAVE GIANT BLOOD"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "hermanos",
+      "fondo": "jotunheim",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los tres hermanos crecieron mirando cómo los gigantes llenaban el mundo de violencia.",
+          "en": "The three brothers grew up watching the giants fill the world with violence."
+        },
+        {
+          "es": "Y Ymir era el más grande y el más peligroso de todos.",
+          "en": "And Ymir was the biggest and the most dangerous of them all."
+        },
+        {
+          "es": "Entonces Odín tomó una decisión que cambiaría todo.",
+          "en": "Then Odin made a decision that would change everything."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 640,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "vili",
+          "x": 400
+        },
+        {
+          "id": "ve",
+          "x": 160
+        },
+        {
+          "id": "ymir",
+          "x": 1500,
+          "mira": "izq",
+          "escala": 0.95,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve"
+        }
+      ]
+    },
+    {
+      "id": "batalla",
+      "fondo": "jotunheim",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1.05,
+          1.18
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los tres hermanos atacaron juntos al gigante.",
+          "en": "The three brothers attacked the giant together."
+        },
+        {
+          "es": "La pelea sacudió el abismo entero.",
+          "en": "The fight shook the whole gap."
+        },
+        {
+          "es": "Y al final, Ymir cayó.",
+          "en": "And in the end, Ymir fell."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "corre",
+              "a": 1150
+            },
+            {
+              "en": 1,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "vili",
+          "x": 350,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "corre",
+              "a": 900
+            },
+            {
+              "en": 1.2,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "ve",
+          "x": 100,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "corre",
+              "a": 650
+            },
+            {
+              "en": 1.4,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "ymir",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 1.5,
+          "tipo": "polvo",
+          "x": 1400,
+          "dur": 1
+        },
+        {
+          "en": 2.2,
+          "tipo": "destello"
+        }
+      ]
+    },
+    {
+      "id": "sangre",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "De las heridas de Ymir brotó tanta sangre que se formó un mar inmenso.",
+          "en": "So much blood poured from Ymir's wounds that it formed an immense sea."
+        },
+        {
+          "es": "La inundación ahogó a casi todos los gigantes de hielo.",
+          "en": "The flood drowned almost all the frost giants."
+        },
+        {
+          "es": "Solo se salvaron dos: Bergelmir y su esposa, que escaparon en un tronco hueco.",
+          "en": "Only two survived: Bergelmir and his wife, who escaped in a hollow log."
+        },
+        {
+          "es": "De ellos descienden todos los gigantes que vinieron después. Y nunca olvidaron lo que Odín le hizo a Ymir.",
+          "en": "All the giants who came later descend from them. And they never forgot what Odin did to Ymir."
+        },
+        {
+          "es": "Por eso los gigantes odian a los dioses hasta hoy.",
+          "en": "That is why the giants hate the gods to this day."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "drakkar",
+          "x": 1200,
+          "s": 0.6,
+          "en": 2,
+          "props": {
+            "vela": false
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "olas-suben",
+          "dur": 1.5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "BERGELMIR",
+            "en": "BERGELMIR"
+          },
+          "x": 1200,
+          "y": 400,
+          "hasta": 3
+        },
+        {
+          "en": 4,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO LOS GIGANTES ODIAN A LOS DIOSES",
+            "en": "THAT'S WHY GIANTS HATE THE GODS"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "planes",
+      "fondo": "yggdrasil",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ahora el abismo estaba en silencio. Y los tres hermanos tenían un cuerpo gigantesco frente a ellos.",
+          "en": "Now the gap was silent. And the three brothers had a gigantic body in front of them."
+        },
+        {
+          "es": "Odín miró a sus hermanos y les dijo: con esto, vamos a construir un mundo.",
+          "en": "Odin looked at his brothers and told them: with this, we are going to build a world."
+        },
+        {
+          "es": "Pero esa es la historia del próximo episodio.",
+          "en": "But that is the story of the next episode."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 760,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "vili",
+          "x": 1160,
+          "mira": "izq"
+        },
+        {
+          "id": "ve",
+          "x": 1340,
+          "mira": "izq"
+        },
+        {
+          "id": "huginn",
+          "x": 300,
+          "y": 300,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.6,
+              "hace": "vuela",
+              "a": [
+                700,
+                220
+              ],
+              "dur": 1.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve"
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El mundo nació del fuego y el hielo",
+        "en": "The world was born from fire and ice"
+      },
+      "escena": "encuentro",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Una vaca creó al primer dios",
+        "en": "A cow licked the first god out of the ice"
+      },
+      "escena": "buri",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Odín mató al primer gigante",
+        "en": "Odin killed the first giant"
+      },
+      "escena": "batalla",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 1100
+    }
+  ],
+  "miniatura": {
+    "heroe": "odin",
+    "rival": "ymir"
+  }
+}

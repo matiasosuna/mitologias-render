@@ -1,0 +1,1940 @@
+{
+  "id": "griegas-98-odisea-2",
+  "serie": "griegas",
+  "numero": "98",
+  "titulo": {
+    "es": "Nadie y el Cíclope",
+    "en": "Nobody and the Cyclops"
+  },
+  "tituloGriego": "ΟΥΤΙΣ",
+  "especial": {
+    "nombre": {
+      "es": "La Odisea",
+      "en": "The Odyssey"
+    },
+    "parte": 2
+  },
+  "miniatura": {
+    "heroe": "odiseo",
+    "rival": "ciclope"
+  },
+  "siguiente": {
+    "es": "La bolsa de los vientos",
+    "en": "The Bag of Winds"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Odiseo y doce de sus hombres quedaron atrapados en la cueva de un gigante.",
+          "en": "Last time, Odysseus and twelve of his men were trapped in a giant's cave."
+        },
+        {
+          "es": "El Cíclope Polifemo, hijo de Poseidón, había cerrado la entrada con una piedra enorme.",
+          "en": "The Cyclops Polyphemus, a son of Poseidon, had closed the door with a huge stone."
+        },
+        {
+          "es": "Odiseo le había pedido que respetara a los dioses. Pero el gigante solo se rió.",
+          "en": "Odysseus had asked him to respect the gods. But the giant only laughed."
+        },
+        {
+          "es": "Entonces agarró a dos de los hombres, y se los comió de cena.",
+          "en": "Then he grabbed two of the men, and ate them for his supper."
+        },
+        {
+          "es": "Después se tomó un balde de leche, y se durmió entre sus ovejas.",
+          "en": "After that, he drank a bucket of milk, and fell asleep among his sheep."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1850,
+          "s": 1.6
+        },
+        {
+          "tipo": "fogata",
+          "x": 1000
+        }
+      ],
+      "actores": [
+        {
+          "id": "marinero2",
+          "como": "joven",
+          "rotulo": "",
+          "x": 200,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 1850
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.3,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "marinero1",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 750,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "polifemo",
+          "como": "ciclope",
+          "rotulo": "POLYPHEMUS",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.4,
+              "hace": "baja"
+            },
+            {
+              "en": 2.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.5,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "oveja",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": []
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 3.1,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.2,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 1
+        },
+        {
+          "en": 4.5,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LA ODISEA · SEGUNDA PARTE",
+            "en": "THE ODYSSEY · PART TWO"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "espada",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Odiseo sacó su espada. Podía matar al gigante ahí mismo, mientras dormía.",
+          "en": "Odysseus drew his sword. He could kill the giant right there, while he slept."
+        },
+        {
+          "es": "Pero entonces se detuvo. ¿Quién movería la piedra de la entrada?",
+          "en": "But then he stopped. Who would move the stone from the door?"
+        },
+        {
+          "es": "Ni todos juntos podrían empujarla. Si el gigante moría, ellos también morirían, atrapados adentro.",
+          "en": "Not even all of them together could push it. If the giant died, they would die too, trapped inside."
+        },
+        {
+          "es": "Así que esperaron la mañana en la oscuridad, sin hacer ruido.",
+          "en": "So they waited in the dark for the morning, without making a sound."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1900,
+          "s": 1.6
+        },
+        {
+          "tipo": "fogata",
+          "x": 800
+        }
+      ],
+      "actores": [
+        {
+          "id": "marinero",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "x": 650,
+          "mira": "der",
+          "props": {
+            "objeto": "espada"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            },
+            {
+              "en": 1.3,
+              "hace": "mira",
+              "a": 1900
+            },
+            {
+              "en": 2.5,
+              "hace": "niega"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 550,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "polifemo",
+          "como": "ciclope",
+          "rotulo": "",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 1.3,
+          "tipo": "luz",
+          "x": 1900,
+          "y": 550,
+          "intensidad": 0.3,
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "intensidad": 0.6,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.4,
+          "texto": {
+            "es": "¿QUIÉN MOVERÍA LA PIEDRA?",
+            "en": "WHO WOULD MOVE THE STONE?"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "estaca",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por la mañana, el gigante se comió a otros dos hombres. Después sacó a sus ovejas, y volvió a cerrar la entrada.",
+          "en": "In the morning, the giant ate two more men. Then he drove his sheep out, and closed the door again."
+        },
+        {
+          "es": "Odiseo recorrió la cueva con la mirada. Encontró un garrote gigante de olivo, largo como el mástil de un barco.",
+          "en": "Odysseus looked around the cave. He found a giant club of olive wood, as long as a ship's mast."
+        },
+        {
+          "es": "Con sus hombres cortó un trozo, y lo alisaron. Él le sacó punta a un extremo.",
+          "en": "He and his men cut off a piece, and made it smooth. He sharpened one end into a point."
+        },
+        {
+          "es": "Después endureció la punta en el fuego, y escondió la estaca bajo la tierra.",
+          "en": "Then he hardened the point in the fire, and hid the stake under the dirt."
+        },
+        {
+          "es": "Echaron suertes para elegir a cuatro valientes que lo ayudaran.",
+          "en": "They drew lots to choose four brave men to help him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1900,
+          "s": 1.6
+        },
+        {
+          "tipo": "fogata",
+          "x": 950
+        }
+      ],
+      "actores": [
+        {
+          "id": "polifemo",
+          "como": "ciclope",
+          "rotulo": "",
+          "x": 1500,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.6,
+              "hace": "sale",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "marinero2",
+          "como": "joven",
+          "rotulo": "",
+          "x": 350,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "x": 650,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 1.4,
+              "hace": "toma",
+              "objeto": "lanza"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 800,
+              "dur": 0.4
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.8,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "marinero1",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 1200,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "destello"
+        },
+        {
+          "en": 0.6,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 800,
+          "y": 640,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "fuego",
+          "x": 950,
+          "y": 720,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "UNA ESTACA DE OLIVO",
+            "en": "AN OLIVE-WOOD STAKE"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "vino",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al anochecer el gigante volvió, y se llevó a otros dos hombres.",
+          "en": "At evening, the giant came back, and he took two more men."
+        },
+        {
+          "es": "Entonces Odiseo dio un paso al frente con un cuenco del vino oscuro de Marón. «Toma, Cíclope. Bebe esto.»",
+          "en": "Then Odysseus stepped forward with a bowl of Maron's dark wine. “Here, Cyclops. Drink this.”"
+        },
+        {
+          "es": "El gigante lo bebió, y le encantó. «¡Dame más!», dijo. «Y dime cómo te llamas.»",
+          "en": "The giant drank it, and loved it. “Give me more!” he said. “And tell me your name.”"
+        },
+        {
+          "es": "Se tomó un segundo cuenco, y luego un tercero. Su único ojo empezó a cerrarse.",
+          "en": "He drank a second bowl, and then a third. His one eye began to close."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1900,
+          "s": 1.6
+        },
+        {
+          "tipo": "fogata",
+          "x": 700
+        },
+        {
+          "tipo": "anfora",
+          "x": 450,
+          "s": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "marinero",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 250,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "x": 850,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "toma",
+              "objeto": "copa"
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.5
+            },
+            {
+              "en": 1.6,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "polifemo",
+          "como": "ciclope",
+          "rotulo": "",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1450,
+              "dur": 0.6
+            },
+            {
+              "en": 0.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 2,
+              "hace": "toma",
+              "objeto": "copa"
+            },
+            {
+              "en": 2.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.6,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "tiembla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "destello"
+        },
+        {
+          "en": 0.7,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        },
+        {
+          "en": 1.6,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 560,
+          "intensidad": 0.5,
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "EL VINO DE MARÓN",
+            "en": "MARON'S WINE"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "nadie",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1.02,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "«Me preguntas mi nombre», dijo Odiseo. «Me llamo Nadie. Todos me llaman Nadie.»",
+          "en": "“You ask my name,” said Odysseus. “My name is Nobody. Everyone calls me Nobody.”"
+        },
+        {
+          "es": "El gigante sonrió. «Entonces este es mi regalo para ti, Nadie: te comeré el último.»",
+          "en": "The giant smiled. “Then here is my gift for you, Nobody. I will eat you last.”"
+        },
+        {
+          "es": "Entonces cayó de espaldas, y se quedó roncando en el suelo de la cueva.",
+          "en": "Then he fell back, and lay snoring on the floor of the cave."
+        },
+        {
+          "es": "El truco de Odiseo todavía no había terminado. Ese nombre los iba a salvar.",
+          "en": "But Odysseus's trick was not finished yet. That name was going to save them."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 650
+        }
+      ],
+      "actores": [
+        {
+          "id": "marinero",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "x": 900,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "polifemo",
+          "como": "ciclope",
+          "rotulo": "",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 2,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 2.3,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "luz",
+          "x": 900,
+          "y": 480,
+          "intensidad": 0.4,
+          "dur": 0.8
+        },
+        {
+          "en": 2.4,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 2.4,
+          "tipo": "polvo",
+          "x": 1500,
+          "y": 770
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 900,
+          "y": 450,
+          "intensidad": 0.5,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "«NADIE»",
+            "en": "“NOBODY”"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1.8
+        }
+      ]
+    },
+    {
+      "id": "ojo",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Odiseo metió la estaca en el fuego, hasta que la punta brilló al rojo.",
+          "en": "Odysseus pushed the stake into the fire, until the point glowed red."
+        },
+        {
+          "es": "Sus cuatro hombres la levantaron con él. Corrieron hacia el gigante, y se la clavaron en el ojo.",
+          "en": "His four men lifted it with him. They ran at the giant, and drove it into his eye."
+        },
+        {
+          "es": "Odiseo la hizo girar como un taladro. El ojo chirrió como hierro caliente metido en agua.",
+          "en": "Odysseus twisted it like a drill. The eye hissed like hot iron dropped in water."
+        },
+        {
+          "es": "El gigante despertó con un grito terrible, y toda la cueva tembló.",
+          "en": "The giant woke with a terrible scream, and the whole cave shook."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 850
+        }
+      ],
+      "actores": [
+        {
+          "id": "marinero2",
+          "como": "joven",
+          "rotulo": "",
+          "x": 350,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.05,
+              "hace": "corre",
+              "a": 950,
+              "dur": 0.4
+            },
+            {
+              "en": 3.05,
+              "hace": "corre",
+              "a": 150,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "marinero1",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 550,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 1100,
+              "dur": 0.4
+            },
+            {
+              "en": 3,
+              "hace": "corre",
+              "a": 300,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "x": 750,
+          "mira": "der",
+          "props": {
+            "objeto": "lanza"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "baja"
+            },
+            {
+              "en": 0.8,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.1,
+              "hace": "corre",
+              "a": 1250,
+              "dur": 0.4
+            },
+            {
+              "en": 1.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "corre",
+              "a": 500,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "polifemo",
+          "como": "ciclope",
+          "rotulo": "",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.3,
+              "hace": "tiembla",
+              "dur": 1
+            },
+            {
+              "en": 3.6,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 850,
+          "y": 700,
+          "dur": 1
+        },
+        {
+          "en": 0.5,
+          "tipo": "chispas",
+          "x": 850,
+          "y": 640,
+          "dur": 1
+        },
+        {
+          "en": 1.6,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.2,
+          "tipo": "humo",
+          "x": 1450,
+          "y": 600,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "destello"
+        }
+      ]
+    },
+    {
+      "id": "vecinos",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los otros Cíclopes llegaron corriendo. «Polifemo, ¿por qué gritas? ¿Alguien te está haciendo daño?»",
+          "en": "The other Cyclopes came running. “Polyphemus, why are you shouting? Is someone hurting you?”"
+        },
+        {
+          "es": "«¡Nadie me hace daño!», gritó. «¡Nadie me está matando con un truco!»",
+          "en": "“Nobody is hurting me!” he cried. “Nobody is killing me with a trick!”"
+        },
+        {
+          "es": "«Bueno, si nadie te hace daño», dijeron, «estarás enfermo. Rézale a tu padre, Poseidón.»",
+          "en": "“Well, if nobody is hurting you,” they said, “you must be sick. Pray to your father, Poseidon.”"
+        },
+        {
+          "es": "Y se volvieron a dormir. Dentro de la cueva, Odiseo se rió para sus adentros.",
+          "en": "And they went back to bed. Inside the cave, Odysseus laughed to himself."
+        },
+        {
+          "es": "¿Qué nombre habrías elegido tú para engañar al Cíclope? Cuéntamelo en los comentarios.",
+          "en": "What name would you have chosen to fool the Cyclops? Tell me in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cueva",
+          "x": 1450,
+          "s": 1.3
+        },
+        {
+          "tipo": "luna",
+          "x": 600,
+          "y": 180
+        }
+      ],
+      "actores": [
+        {
+          "id": "ciclope3",
+          "como": "ciclope",
+          "rotulo": "",
+          "x": 300,
+          "escala": 0.8,
+          "capa": "medio",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "entra",
+              "a": 550,
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "sale",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "ciclope2",
+          "como": "ciclope",
+          "rotulo": "",
+          "x": 500,
+          "escala": 0.85,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 800,
+              "dur": 0.6
+            },
+            {
+              "en": 0.7,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 2,
+              "hace": "niega"
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            },
+            {
+              "en": 3.1,
+              "hace": "sale",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "polifemo",
+          "como": "ciclope",
+          "rotulo": "",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.4,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "x": 1750,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 3.5,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 3
+        },
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1750,
+          "y": 450,
+          "intensidad": 0.4,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "«¡NADIE ME HACE DAÑO!»",
+            "en": "“NOBODY IS HURTING ME!”"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "ovejas",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por la mañana, el gigante ciego se sentó en la entrada con los brazos abiertos, tocando todo lo que pasaba.",
+          "en": "In the morning, the blind giant sat at the door with his arms out, feeling everything that passed."
+        },
+        {
+          "es": "Pero Odiseo tenía un plan. Ató los carneros de a tres, con un hombre debajo del de en medio.",
+          "en": "But Odysseus had a plan. He tied the rams together in threes, with a man under the middle one."
+        },
+        {
+          "es": "Para él eligió el carnero más grande, y se agarró fuerte de la lana de su panza.",
+          "en": "For himself, he took the biggest ram, and held on tight to the wool of its belly."
+        },
+        {
+          "es": "Una por una, las ovejas salieron al sol. El gigante les tocaba el lomo, pero nunca palpó por debajo.",
+          "en": "One by one, the sheep walked out into the sun. The giant touched their backs, but never felt underneath."
+        }
+      ],
+      "actores": [
+        {
+          "id": "marinero",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 150,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "asiente"
+            },
+            {
+              "en": 2,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "x": 350,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 850,
+              "dur": 0.6
+            },
+            {
+              "en": 2.6,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "carnero",
+          "como": "oveja",
+          "rotulo": "",
+          "x": 900,
+          "escala": 1.4,
+          "mira": "der",
+          "pasos": []
+        },
+        {
+          "id": "oveja1",
+          "como": "oveja",
+          "rotulo": "",
+          "x": 650,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 2200,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "polifemo",
+          "como": "ciclope",
+          "rotulo": "",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.3,
+              "hace": "baja"
+            },
+            {
+              "en": 3.6,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 1900,
+          "y": 500,
+          "intensidad": 0.5,
+          "dur": 1.5
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1900,
+          "y": 500,
+          "intensidad": 0.6,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "DEBAJO DE LAS OVEJAS",
+            "en": "UNDER THE SHEEP"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "carnero",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1.02,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "El gran carnero salió el último. El gigante lo detuvo, y le acarició la cabeza.",
+          "en": "The big ram came out last. The giant stopped it, and stroked its head."
+        },
+        {
+          "es": "«Mi querido carnero, ¿por qué sales el último hoy? ¿Estás triste por el ojo de tu amo?»",
+          "en": "“My dear ram, why are you last today? Are you sad for your master's eye?”"
+        },
+        {
+          "es": "«Si pudieras hablar, me dirías dónde se esconde Nadie.»",
+          "en": "“If only you could speak, you would tell me where Nobody is hiding.”"
+        },
+        {
+          "es": "Entonces dejó ir al carnero. Y debajo, bien agarrado, iba Odiseo.",
+          "en": "Then he let the ram go. And under it, holding on tight, was Odysseus."
+        }
+      ],
+      "actores": [
+        {
+          "id": "carnero",
+          "como": "oveja",
+          "rotulo": "",
+          "x": 650,
+          "escala": 1.4,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 2300,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "polifemo",
+          "como": "ciclope",
+          "rotulo": "",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.5,
+              "hace": "baja"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.6,
+              "hace": "entristece"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "x": 1850,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 3.6,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.2,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        },
+        {
+          "en": 3.3,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3.4,
+          "tipo": "luz",
+          "x": 1850,
+          "y": 500,
+          "intensidad": 0.5,
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "huida",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Afuera, Odiseo desató a sus hombres, y llevaron las ovejas hasta el barco.",
+          "en": "Outside, Odysseus untied his men, and they drove the sheep down to the ship."
+        },
+        {
+          "es": "Remaron rápido. Pero Odiseo no pudo quedarse callado. «¡Cíclope!», gritó.",
+          "en": "They rowed away fast. But Odysseus could not keep quiet. “Cyclops!” he shouted."
+        },
+        {
+          "es": "Polifemo arrancó la punta de una colina y la lanzó. La ola casi devolvió el barco a la orilla.",
+          "en": "Polyphemus tore off the top of a hill and threw it. The wave almost pushed the ship back to shore."
+        },
+        {
+          "es": "Sus hombres le rogaron que se callara. Pero Odiseo volvió a gritar.",
+          "en": "His men begged him to stop. But Odysseus shouted again."
+        },
+        {
+          "es": "«Si alguien te pregunta quién te quitó el ojo, dile: ¡fue Odiseo, rey de Ítaca!»",
+          "en": "“If anyone asks who took your eye, tell them: it was Odysseus, king of Ithaca!”"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1450,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "polifemo",
+          "como": "ciclope",
+          "rotulo": "",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 2,
+              "hace": "lanza"
+            },
+            {
+              "en": 4.5,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "oveja",
+          "x": 800,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.8
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "x": 1400,
+          "y": 700,
+          "escala": 0.7,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.4,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            },
+            {
+              "en": 4.3,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "marinero",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 1580,
+          "y": 700,
+          "escala": 0.7,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 3,
+              "hace": "niega"
+            },
+            {
+              "en": 3.3,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "polvo",
+          "x": 1250,
+          "y": 700
+        },
+        {
+          "en": 2.3,
+          "tipo": "olas-suben",
+          "dur": 0.8
+        },
+        {
+          "en": 2.3,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1400,
+          "y": 450,
+          "intensidad": 0.5,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4.2,
+          "texto": {
+            "es": "«¡FUE ODISEO!»",
+            "en": "“IT WAS ODYSSEUS!”"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "maldicion",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Polifemo levantó las manos hacia el mar, y le rezó a su padre, Poseidón.",
+          "en": "Polyphemus lifted his hands to the sea, and prayed to his father, Poseidon."
+        },
+        {
+          "es": "«Padre, que Odiseo nunca llegue a casa. O si debe llegar, que llegue tarde, solo, en un barco ajeno.»",
+          "en": "“Father, let Odysseus never get home. Or if he must, let him arrive late, alone, on a stranger's ship.”"
+        },
+        {
+          "es": "«Y que encuentre problemas esperándolo en su propia casa.»",
+          "en": "“And let him find trouble waiting in his own house.”"
+        },
+        {
+          "es": "Después lanzó otra roca, todavía más grande. Muy por debajo de las olas, Poseidón escuchó a su hijo.",
+          "en": "Then he threw another rock, even bigger. Far below the waves, Poseidon heard his son."
+        },
+        {
+          "es": "Y desde ese día, el dios del mar fue enemigo de Odiseo.",
+          "en": "And from that day on, the god of the sea was the enemy of Odysseus."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1750,
+          "s": 0.6,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "polifemo",
+          "como": "ciclope",
+          "rotulo": "",
+          "x": 550,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.6,
+              "hace": "reza"
+            },
+            {
+              "en": 3,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "poseidon",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3.7,
+              "hace": "enoja"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "niebla",
+          "dur": 1.5
+        },
+        {
+          "en": 3.1,
+          "tipo": "olas-suben",
+          "dur": 0.8
+        },
+        {
+          "en": 3.4,
+          "tipo": "luz",
+          "x": 1400,
+          "y": 450,
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "rayo",
+          "x": 1700
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA MALDICIÓN",
+            "en": "THE CURSE"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "mar",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Odiseo había escapado de la cueva, y había salvado a seis de sus doce hombres.",
+          "en": "Odysseus had escaped from the cave, and he had saved six of his twelve men."
+        },
+        {
+          "es": "Pero ahora tenía un enemigo poderoso, el dios del mar. Y su casa estaba al otro lado de ese mar.",
+          "en": "But now he had a powerful enemy, the god of the sea. And his home was on the other side of that sea."
+        },
+        {
+          "es": "Cuéntame en los comentarios: ¿Odiseo hizo bien en gritar su nombre, o fue su peor error?",
+          "en": "Tell me in the comments: was Odysseus right to shout his name, or was it his biggest mistake?"
+        },
+        {
+          "es": "La Odisea sigue. Ahora, el rey de los vientos le da a Odiseo una bolsa que nunca debe abrir.",
+          "en": "The Odyssey goes on. Next, the king of the winds gives Odysseus a bag that he must never open."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 950,
+          "s": 1
+        },
+        {
+          "tipo": "nube",
+          "x": 400,
+          "y": 200,
+          "s": 1,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "odiseo",
+          "x": 900,
+          "y": 700,
+          "escala": 0.7,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.4,
+              "hace": "mira",
+              "a": 1600
+            }
+          ]
+        },
+        {
+          "id": "marinero",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 1050,
+          "y": 700,
+          "escala": 0.7,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "poseidon",
+          "x": 1650,
+          "capa": "fondo",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.6,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 400,
+          "y": 250,
+          "intensidad": 0.5,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "LA BOLSA DE LOS VIENTOS",
+            "en": "THE BAG OF WINDS"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El héroe que se llamó Nadie",
+        "en": "The Hero Who Called Himself Nobody"
+      },
+      "escena": "vecinos",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "La huida bajo las ovejas",
+        "en": "Escaping Under the Sheep"
+      },
+      "escena": "ovejas",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "La maldición de Poseidón",
+        "en": "The Curse of Poseidon"
+      },
+      "escena": "maldicion",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 950
+    }
+  ]
+}

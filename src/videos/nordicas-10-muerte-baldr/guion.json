@@ -1,0 +1,1492 @@
+{
+  "id": "nordicas-10-muerte-baldr",
+  "serie": "nordicas",
+  "numero": "10",
+  "titulo": {
+    "es": "La muerte de Baldr",
+    "en": "The Death of Baldr"
+  },
+  "tituloGriego": "THE DEATH OF BALDR",
+  "escenas": [
+    {
+      "id": "suenos",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Thor había sido engañado por las ilusiones de Útgarða-Loki, pero la mayor desgracia de los dioses no vendría de los gigantes.",
+          "en": "Thor had been fooled by the illusions of Utgarda-Loki, but the gods' greatest sorrow would not come from the giants."
+        },
+        {
+          "es": "Vendría de Baldr, el más luminoso y el más amado de todos los dioses.",
+          "en": "It would come through Baldr, the most radiant and the most beloved of all the gods."
+        },
+        {
+          "es": "Pero Baldr empezó a tener pesadillas terribles: noche tras noche, soñaba con su propia muerte.",
+          "en": "But Baldr began to have terrible nightmares: night after night, he dreamed of his own death."
+        },
+        {
+          "es": "Los dioses se reunieron, asustados. Había que saber la verdad.",
+          "en": "The gods gathered, frightened. They had to know the truth."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thor",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "baldr",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "tiembla",
+              "dur": 0.9
+            },
+            {
+              "en": 2.5,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "frigg",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 800,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "vidente",
+      "fondo": "hel",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Odín montó a Sleipnir, su caballo de ocho patas, y cabalgó hacia abajo, hasta el reino de Hel.",
+          "en": "Odin mounted Sleipnir, his eight-legged horse, and rode down, all the way to the realm of Hel."
+        },
+        {
+          "es": "Allí, en una tumba, yacía una vidente muerta. Odín la despertó con un hechizo y le hizo una pregunta.",
+          "en": "There, in a grave, lay a dead seeress. Odin woke her with a spell and asked her a question."
+        },
+        {
+          "es": "Ella dijo: en la casa de Hel ya están preparados el hidromiel y los bancos de oro. Es el banquete de Baldr.",
+          "en": "She said: in the house of Hel, the mead and the golden benches are already prepared. It is the feast for Baldr."
+        },
+        {
+          "es": "Y será su propio hermano, Hodr, el ciego, quien lo mate.",
+          "en": "And it will be his own brother, Hodr, the blind god, who kills him."
+        }
+      ],
+      "actores": [
+        {
+          "id": "sleipnir",
+          "x": -200,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": -380,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 480,
+              "dur": 0.9
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 950,
+              "dur": 0.4
+            },
+            {
+              "en": 1.6,
+              "hace": "habla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "videnta",
+          "como": "anciana",
+          "x": 1300,
+          "rotulo": "SEERESS",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.1,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "hel",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tumba",
+          "x": 1300,
+          "s": 1.1
+        },
+        {
+          "tipo": "trono",
+          "x": 1750,
+          "s": 0.9,
+          "capa": "medio",
+          "en": 2
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 4
+        },
+        {
+          "en": 1,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "HODR",
+            "en": "HODR"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "juramento",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 700,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Frigg, la madre de Baldr, no quiso esperar a que el destino se cumpliera.",
+          "en": "Frigg, Baldr's mother, refused to wait for fate to come true."
+        },
+        {
+          "es": "Recorrió el mundo y le pidió a cada cosa un juramento: que no dañaría a Baldr.",
+          "en": "She traveled the world and asked every single thing for an oath: that it would never harm Baldr."
+        },
+        {
+          "es": "Juraron el fuego y el agua, el hierro y los metales, las piedras, los árboles, las enfermedades, las bestias y los venenos.",
+          "en": "Fire swore, and water, iron and all the metals, stones, trees, diseases, beasts and poisons."
+        },
+        {
+          "es": "Solo se olvidó del muérdago, una planta tan joven que no le pareció necesario pedírselo.",
+          "en": "Only one thing was left out: the mistletoe, a plant so young that she did not think to ask it."
+        },
+        {
+          "es": "Por eso se dice que el muérdago es la planta que nunca juró.",
+          "en": "That is why they say the mistletoe is the plant that never swore."
+        },
+        {
+          "es": "Desde entonces, los dioses jugaban a arrojarle de todo a Baldr, y nada podía herirlo. Se reían, y lo veían como un honor.",
+          "en": "From then on, the gods played at throwing everything at Baldr, and nothing could hurt him. They laughed, and saw it as an honor."
+        }
+      ],
+      "actores": [
+        {
+          "id": "frigg",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 650,
+              "dur": 0.9
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "baldr",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4.9,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.1,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 1100,
+          "pasos": [
+            {
+              "en": 4.9,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.3,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "tyr",
+          "x": 1900,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4.9,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.6,
+              "hace": "lanza"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1000,
+          "s": 0.9,
+          "capa": "medio"
+        },
+        {
+          "tipo": "pino",
+          "x": 1300,
+          "s": 0.9,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "fuego",
+          "x": 760,
+          "y": 790,
+          "dur": 0.9
+        },
+        {
+          "en": 2.3,
+          "tipo": "lluvia",
+          "dur": 0.7
+        },
+        {
+          "en": 5.3,
+          "tipo": "chispas",
+          "x": 1450,
+          "y": 600
+        },
+        {
+          "en": 5.6,
+          "tipo": "chispas",
+          "x": 1550,
+          "y": 550
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "FUEGO · AGUA · HIERRO",
+            "en": "FIRE · WATER · IRON"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "MUÉRDAGO",
+            "en": "MISTLETOE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "POR ESO EL MUÉRDAGO NUNCA JURÓ",
+            "en": "THAT'S WHY THE MISTLETOE NEVER SWORE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 5,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "anciana",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Loki, lleno de envidia, se disfrazó de anciana y fue a la casa de Frigg.",
+          "en": "But Loki, full of envy, disguised himself as an old woman and went to Frigg's house."
+        },
+        {
+          "es": "Con voz dulce, le preguntó qué hacían los dioses en la asamblea.",
+          "en": "In a sweet voice, she asked what the gods were doing at the assembly."
+        },
+        {
+          "es": "Frigg le contó el juego, y la falsa anciana preguntó: ¿de verdad todas las cosas juraron?",
+          "en": "Frigg told her about the game, and the false old woman asked: did every single thing really swear?"
+        },
+        {
+          "es": "Todas, dijo Frigg, menos un brote de muérdago al oeste del Valhalla: me pareció demasiado joven.",
+          "en": "All of them, said Frigg, except a little mistletoe sprout west of Valhalla: it seemed too young."
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "x": -150,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 450,
+              "dur": 0.5
+            },
+            {
+              "en": 0.5,
+              "hace": "transforma",
+              "en_que": "anciana"
+            },
+            {
+              "en": 0.8,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.5
+            },
+            {
+              "en": 1.4,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.6,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 3.7,
+              "hace": "transforma",
+              "en_que": "loki"
+            },
+            {
+              "en": 3.9,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "frigg",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "habla",
+              "dur": 1.1
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 1500,
+          "s": 1.2,
+          "capa": "medio"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve"
+        },
+        {
+          "en": 3.8,
+          "tipo": "destello"
+        }
+      ]
+    },
+    {
+      "id": "dardo",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1.04,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Loki fue al oeste, arrancó el muérdago y le dio forma de dardo.",
+          "en": "Loki went west, tore up the mistletoe, and shaped it into a dart."
+        },
+        {
+          "es": "En la asamblea estaba Hodr, el dios ciego, apartado del círculo porque no podía ver el blanco.",
+          "en": "At the assembly stood Hodr, the blind god, apart from the circle because he could not see the target."
+        },
+        {
+          "es": "Loki le dijo: tira tú también. Yo te guío la mano. Y le puso el dardo en ella.",
+          "en": "Loki told him: throw too. I will guide your hand. And he placed the dart in it."
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "x": 350,
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "toma",
+              "objeto": "lanza"
+            },
+            {
+              "en": 0.7,
+              "hace": "brilla",
+              "dur": 0.3
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 850,
+              "dur": 0.5
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.6,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "hodr",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.7,
+              "hace": "toma",
+              "objeto": "lanza"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 700,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pino",
+          "x": 1250,
+          "s": 1.1,
+          "capa": "medio"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 3
+        },
+        {
+          "en": 0.7,
+          "tipo": "chispas",
+          "x": 350,
+          "y": 650
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "MUÉRDAGO",
+            "en": "MISTLETOE"
+          },
+          "x": 600,
+          "y": 230,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "muerte",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hodr tomó el dardo y, guiado por Loki, lo arrojó con todas sus fuerzas.",
+          "en": "Hodr took the dart and, guided by Loki, hurled it with all his strength."
+        },
+        {
+          "es": "El dardo alcanzó a Baldr, y el más amado de los dioses cayó muerto.",
+          "en": "The dart struck Baldr, and the most beloved of the gods fell dead."
+        },
+        {
+          "es": "Los dioses quedaron mudos. Miraron a Loki, pero ese lugar era sagrado y no podían vengarse allí.",
+          "en": "The gods fell silent. They looked at Loki, but the place was sacred and they could not take revenge there."
+        },
+        {
+          "es": "Entonces estalló el llanto. Nunca habían sufrido una desgracia así.",
+          "en": "Then the weeping broke out. They had never suffered a misfortune like it."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hodr",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "toma",
+              "objeto": "lanza"
+            },
+            {
+              "en": 0.5,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 800,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "corre",
+              "a": -300,
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "baldr",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "tiembla",
+              "dur": 0.2
+            },
+            {
+              "en": 1,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 1600,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "frigg",
+          "x": 1850,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.8,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 600
+        },
+        {
+          "en": 1,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.3,
+          "tipo": "oscurecer",
+          "dur": 3
+        }
+      ]
+    },
+    {
+      "id": "funeral",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 600,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dioses llevaron a Baldr hasta Hringhorni, su gran barco, pero ni todos juntos lograban echarlo al mar.",
+          "en": "The gods carried Baldr to Hringhorni, his great ship, but not even all of them together could push it into the sea."
+        },
+        {
+          "es": "Llamaron a la giganta Hyrrokkin, que llegó montada en un lobo, y de un solo empujón lanzó el barco al agua.",
+          "en": "They called the giantess Hyrrokkin, who arrived riding a wolf, and with a single shove she sent the ship into the water."
+        },
+        {
+          "es": "Nanna, la esposa de Baldr, murió de pena, y la pusieron a su lado en la pira.",
+          "en": "Nanna, Baldr's wife, died of grief, and they laid her beside him on the pyre."
+        },
+        {
+          "es": "Odín dejó sobre la pira su anillo Draupnir, y se inclinó para susurrarle algo al oído a su hijo.",
+          "en": "Odin placed his ring Draupnir on the pyre, and leaned down to whisper something in his son's ear."
+        },
+        {
+          "es": "Nadie ha sabido nunca qué le dijo. Y el barco, ardiendo, se alejó mar adentro.",
+          "en": "No one has ever known what he said. And the ship, burning, drifted out to sea."
+        }
+      ],
+      "actores": [
+        {
+          "id": "baldr",
+          "x": 1100,
+          "y": 640,
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "frigg",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 640,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 950,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.5,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "hyrrokkin",
+          "como": "gigante_hielo",
+          "x": 1500,
+          "mira": "izq",
+          "escala": 0.9,
+          "props": {
+            "mujer": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.6,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "lobo",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "nanna",
+          "como": "mujer",
+          "x": 900,
+          "rotulo": "NANNA",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "drakkar",
+          "x": 1100,
+          "s": 1.1,
+          "props": {
+            "vela": false
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.6,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 1.6,
+          "tipo": "polvo",
+          "x": 1300
+        },
+        {
+          "en": 3.6,
+          "tipo": "fuego",
+          "x": 1100,
+          "y": 660,
+          "intensidad": 1.4
+        },
+        {
+          "en": 3.7,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 560
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "HRINGHORNI",
+            "en": "HRINGHORNI"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "hermod",
+      "fondo": "hel",
+      "camara": {
+        "de": 0,
+        "a": 700,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Frigg preguntó quién iría a Hel a buscar a Baldr. Se ofreció Hermod, un hijo de Odín.",
+          "en": "Frigg asked who would ride to Hel to bring Baldr back. Hermod, a son of Odin, volunteered."
+        },
+        {
+          "es": "Odín le prestó a Sleipnir, y Hermod cabalgó nueve noches por valles tan oscuros que no veía nada.",
+          "en": "Odin lent him Sleipnir, and Hermod rode nine nights through valleys so dark he could see nothing."
+        },
+        {
+          "es": "Cruzó el puente dorado sobre el río Gjöll y saltó la verja de Hel.",
+          "en": "He crossed the golden bridge over the river Gjoll and leapt over the gate of Hel."
+        },
+        {
+          "es": "Allí encontró a Baldr y le suplicó a Hel que lo dejara volver.",
+          "en": "There he found Baldr and begged Hel to let him return."
+        },
+        {
+          "es": "Hel respondió: si todo en el mundo llora por él, Baldr volverá. Pero si una sola cosa se niega, se quedará conmigo.",
+          "en": "Hel replied: if everything in the world weeps for him, Baldr will return. But if even one thing refuses, he stays with me."
+        }
+      ],
+      "actores": [
+        {
+          "id": "frigg",
+          "x": 150,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 420,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "hermodr",
+          "como": "vikingo",
+          "x": 750,
+          "rotulo": "HERMÓÐR",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.3
+            },
+            {
+              "en": 1.3,
+              "hace": "camina",
+              "a": 1180,
+              "dur": 0.7
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1480,
+              "dur": 1
+            },
+            {
+              "en": 3.1,
+              "hace": "camina",
+              "a": 1850,
+              "dur": 0.5
+            },
+            {
+              "en": 3.7,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "sleipnir",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "camina",
+              "a": 1350,
+              "dur": 0.7
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1650,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "baldr",
+          "x": 2100,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "hel",
+          "x": 2400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "rio",
+          "x": 1250,
+          "s": 1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "puerta",
+          "x": 1700,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 5
+        },
+        {
+          "en": 1.2,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "NUEVE NOCHES",
+            "en": "NINE NIGHTS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "llanto",
+      "fondo": "jotunheim",
+      "camara": {
+        "de": 0,
+        "a": 700,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dioses enviaron mensajeros por todo el mundo, pidiendo que todo llorara por Baldr.",
+          "en": "The gods sent messengers across the whole world, asking everything to weep for Baldr."
+        },
+        {
+          "es": "Lloraron las personas, los animales, las piedras, los árboles y los metales. Por eso las cosas lloran al salir del frío.",
+          "en": "People wept, and animals, stones, trees and metals. That is why things weep when they come out of the frost."
+        },
+        {
+          "es": "Pero en una cueva, una giganta llamada Thokk se negó: que Hel guarde lo que tiene.",
+          "en": "But in a cave, a giantess named Thokk refused: let Hel keep what she has."
+        },
+        {
+          "es": "Nadie la reconoció, pero dicen que era Loki, disfrazado otra vez. Y Baldr se quedó en Hel.",
+          "en": "No one recognized her, but they say it was Loki, in disguise once again. And Baldr stayed in Hel."
+        }
+      ],
+      "actores": [
+        {
+          "id": "mensajero",
+          "como": "vikingo",
+          "x": 100,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 800,
+              "dur": 0.9
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "ciervo",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "thokk",
+          "como": "jotun",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "mujer": true,
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1.8,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 3,
+              "hace": "transforma",
+              "en_que": "loki"
+            },
+            {
+              "en": 3.4,
+              "hace": "habla",
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1100,
+          "s": 0.8,
+          "capa": "medio"
+        },
+        {
+          "tipo": "pino",
+          "x": 1450,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "cueva",
+          "x": 1850,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "lluvia",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.5,
+          "texto": {
+            "es": "POR ESO LAS COSAS LLORAN AL SALIR DEL FRÍO",
+            "en": "THAT'S WHY THINGS WEEP IN THE THAW"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2,
+          "estilo": "porque"
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "THOKK",
+            "en": "THOKK"
+          },
+          "x": 1500,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1.05,
+          1.15
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así Baldr quedó en el reino de Hel, y los dioses supieron que nada volvería a ser igual.",
+          "en": "So Baldr remained in the realm of Hel, and the gods knew that nothing would ever be the same."
+        },
+        {
+          "es": "Por eso se dice que la muerte de Baldr fue el principio del fin: desde ella, el destino de los dioses ya no tenía vuelta atrás.",
+          "en": "That is why they say Baldr's death was the beginning of the end: from it, the fate of the gods could no longer be turned back."
+        },
+        {
+          "es": "Ya no había dudas: Loki había ido demasiado lejos, y esta vez los dioses no lo perdonarían.",
+          "en": "There was no doubt left: Loki had gone too far, and this time the gods would not forgive him."
+        },
+        {
+          "es": "¿Qué castigo recibiría? Esa es la historia del próximo episodio: Loki encadenado.",
+          "en": "What punishment awaited him? That is the story of the next episode: Loki Bound."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "frigg",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 2.7,
+              "hace": "corre",
+              "a": 2500,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "huginn",
+          "x": 300,
+          "y": 300,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.6,
+              "hace": "vuela",
+              "a": [
+                800,
+                220
+              ],
+              "dur": 1.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 3
+        },
+        {
+          "en": 3,
+          "tipo": "rayo",
+          "x": 1700
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "POR ESO ES EL PRINCIPIO DEL FIN",
+            "en": "THAT'S WHY IT BEGAN THE END"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2,
+          "estilo": "porque"
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "LOKI ENCADENADO",
+            "en": "LOKI BOUND"
+          },
+          "x": 960,
+          "y": 330
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Odín despertó a una muerta para saber el futuro",
+        "en": "Odin woke the dead to learn his son's fate"
+      },
+      "escena": "vidente",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "Todo juró no dañar a Baldr... menos una planta",
+        "en": "Everything swore not to harm Baldr, except one plant"
+      },
+      "escena": "juramento",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Un dardo de muérdago mató al dios más amado",
+        "en": "A mistletoe dart killed the most beloved god"
+      },
+      "escena": "muerte",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 900
+    }
+  ],
+  "miniatura": {
+    "heroe": "baldr",
+    "rival": "frigg"
+  }
+}

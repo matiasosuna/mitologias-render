@@ -1,0 +1,985 @@
+{
+ "id": "hawaianas-05-la-calabaza-de-wakea",
+ "serie": "hawaianas",
+ "numero": "05",
+ "titulo": {
+  "es": "La calabaza de Wākea",
+  "en": "The Calabash of Wākea"
+ },
+ "tituloGriego": "THE CALABASH OF WĀKEA",
+ "miniatura": {
+  "heroe": "wakea",
+  "rival": "papa"
+ },
+ "siguiente": {
+  "es": "La madre de las islas",
+  "en": "The Mother of the Islands"
+ },
+ "escenas": [
+  {
+   "id": "gancho",
+   "fondo": "po",
+   "camara": {
+    "de": 0,
+    "a": 60,
+    "zoom": [
+     1,
+     1.08
+    ]
+   },
+   "frases": [
+    {
+     "es": "La última vez, tres dioses, Kāne, Kū y Lono, moldearon al primer hombre con tierra roja.",
+     "en": "Last time, three gods named Kāne, Kū and Lono shaped the first man from red earth."
+    },
+    {
+     "es": "Le soplaron aliento por la nariz y el hombre cobró vida.",
+     "en": "They breathed into his nose, and he came alive."
+    },
+    {
+     "es": "Pero un hombre necesita un lugar donde pararse y un cielo sobre su cabeza.",
+     "en": "But a man needs a place to stand, and a sky above his head."
+    },
+    {
+     "es": "Los hawaianos cuentan muchas historias sobre cómo empezó el mundo.",
+     "en": "Hawaiians tell many stories about how the world began."
+    },
+    {
+     "es": "Esta la escribió Samuel Kamakau, un historiador hawaiano, en un diario de 1869.",
+     "en": "This one was written down by Samuel Kamakau, a Hawaiian historian, in a newspaper in 1869."
+    }
+   ],
+   "actores": [
+    {
+     "id": "kane",
+     "x": 520,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.8,
+       "hace": "habla"
+      }
+     ]
+    },
+    {
+     "id": "ku",
+     "x": 740,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "aparece",
+       "con": "luz"
+      }
+     ]
+    },
+    {
+     "id": "lono",
+     "x": 960,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.4,
+       "hace": "aparece",
+       "con": "luz"
+      }
+     ]
+    },
+    {
+     "id": "hawaiano",
+     "x": 1330,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0.6,
+       "hace": "aparece",
+       "con": "polvo"
+      },
+      {
+       "en": 1,
+       "hace": "brilla",
+       "dur": 1
+      },
+      {
+       "en": 2,
+       "hace": "levanta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "destello",
+     "x": 1330,
+     "y": 520,
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 4,
+     "texto": {
+      "es": "SAMUEL KAMAKAU · 1869",
+      "en": "SAMUEL KAMAKAU · 1869"
+     },
+     "x": 1330,
+     "y": 250
+    }
+   ]
+  },
+  {
+   "id": "padres",
+   "fondo": "po",
+   "camara": {
+    "de": 0,
+    "a": 0,
+    "zoom": [
+     1,
+     1.08
+    ]
+   },
+   "frases": [
+    {
+     "es": "Al comienzo de esta historia hay dos grandes padres.",
+     "en": "At the start of this story, there were two great parents."
+    },
+    {
+     "es": "Uno es Wākea, el Padre Cielo. La otra es Papa, la Madre Tierra.",
+     "en": "One was Wākea, the Sky Father. The other was Papa, the Earth Mother."
+    },
+    {
+     "es": "Papa significa una base ancha y plana, como el suelo de roca del fondo del mar.",
+     "en": "Her name, Papa, means a wide, flat foundation, like the rock floor of the sea."
+    },
+    {
+     "es": "Pero todavía no había cielo sobre ellos. No había sol, ni luna, ni estrellas.",
+     "en": "But there was no sky above them yet. There was no sun, no moon and no stars."
+    }
+   ],
+   "actores": [
+    {
+     "id": "wakea",
+     "x": 650,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 1,
+       "hace": "habla"
+      }
+     ]
+    },
+    {
+     "id": "papa",
+     "x": 1270,
+     "mira": "izq",
+     "rotulo": "PAPA",
+     "pasos": [
+      {
+       "en": 0.6,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "oscurecer",
+     "dur": 1.5,
+     "intensidad": 0.4
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1.2,
+     "texto": {
+      "es": "PADRE CIELO",
+      "en": "SKY FATHER"
+     },
+     "x": 650,
+     "y": 250,
+     "hasta": 3
+    },
+    {
+     "en": 1.6,
+     "texto": {
+      "es": "MADRE TIERRA",
+      "en": "EARTH MOTHER"
+     },
+     "x": 1270,
+     "y": 250,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "calabaza",
+   "fondo": "po",
+   "camara": {
+    "de": 0,
+    "a": 0,
+    "zoom": [
+     1,
+     1.08
+    ]
+   },
+   "frases": [
+    {
+     "es": "Entonces Papa dio a luz algo extraño.",
+     "en": "Then Papa gave birth to something strange."
+    },
+    {
+     "es": "No era un hijo. Era una calabaza, un enorme fruto hueco con su tapa.",
+     "en": "It was not a child. It was a calabash, a giant gourd with a lid."
+    },
+    {
+     "es": "En hawaiano se llama ipu. En el viejo Hawaiʻi servía de cuenco, de jarra de agua y hasta de tambor.",
+     "en": "In Hawaiian it is called an ipu. In old Hawaiʻi, gourds were bowls, water jars, and even drums."
+    },
+    {
+     "es": "Wākea tomó la calabaza entre sus manos.",
+     "en": "Wākea took the calabash in his hands."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "ipu",
+     "x": 960,
+     "s": 1.4,
+     "en": 1
+    }
+   ],
+   "actores": [
+    {
+     "id": "papa",
+     "x": 620,
+     "mira": "der",
+     "rotulo": "PAPA",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "ofrece"
+      }
+     ]
+    },
+    {
+     "id": "wakea",
+     "x": 1340,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.2,
+       "hace": "sorprende"
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "destello",
+     "x": 960,
+     "y": 520,
+     "dur": 1
+    },
+    {
+     "en": 1,
+     "tipo": "chispas",
+     "x": 960,
+     "y": 480,
+     "dur": 1.5
+    }
+   ]
+  },
+  {
+   "id": "cielo",
+   "fondo": "po",
+   "camara": {
+    "de": 0,
+    "a": 0,
+    "zoom": [
+     1,
+     1.1
+    ]
+   },
+   "frases": [
+    {
+     "es": "Primero, Wākea levantó la tapa de la calabaza.",
+     "en": "First, Wākea lifted the lid of the calabash."
+    },
+    {
+     "es": "La lanzó muy alto, en la oscuridad. Se extendió sobre ellos y se convirtió en el cielo.",
+     "en": "He threw it high into the dark. It spread out wide above them, and it became the sky."
+    },
+    {
+     "es": "Después sacó el centro redondo de la calabaza.",
+     "en": "Next, he took out the round core of the gourd."
+    },
+    {
+     "es": "También lo lanzó hacia arriba y empezó a arder. Se convirtió en el sol.",
+     "en": "He threw it up too, and it began to blaze. It became the sun."
+    },
+    {
+     "es": "La luz cubrió el mundo por primera vez.",
+     "en": "Light spread across the world for the very first time."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "ipu",
+     "x": 960,
+     "s": 1.3
+    },
+    {
+     "tipo": "sol",
+     "x": 960,
+     "y": 230,
+     "s": 1.4,
+     "en": 3
+    }
+   ],
+   "actores": [
+    {
+     "id": "wakea",
+     "x": 760,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "levanta"
+      },
+      {
+       "en": 1,
+       "hace": "lanza"
+      },
+      {
+       "en": 2,
+       "hace": "toma"
+      },
+      {
+       "en": 3,
+       "hace": "lanza"
+      }
+     ]
+    },
+    {
+     "id": "papa",
+     "x": 1240,
+     "mira": "izq",
+     "rotulo": "PAPA",
+     "pasos": [
+      {
+       "en": 1.2,
+       "hace": "mira"
+      },
+      {
+       "en": 3,
+       "hace": "alegra"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1.2,
+     "tipo": "aclarar",
+     "dur": 1.5,
+     "intensidad": 0.35
+    },
+    {
+     "en": 3,
+     "tipo": "luz",
+     "x": 960,
+     "y": 240,
+     "dur": 2
+    },
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 960,
+     "y": 240,
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1.4,
+     "texto": {
+      "es": "CIELO",
+      "en": "SKY"
+     },
+     "x": 960,
+     "y": 180,
+     "hasta": 3
+    },
+    {
+     "en": 3.2,
+     "texto": {
+      "es": "SOL",
+      "en": "SUN"
+     },
+     "x": 960,
+     "y": 350,
+     "hasta": 5
+    }
+   ]
+  },
+  {
+   "id": "estrellas",
+   "fondo": "noche",
+   "sinAstros": true,
+   "camara": {
+    "de": 0,
+    "a": 0,
+    "zoom": [
+     1,
+     1.08
+    ]
+   },
+   "frases": [
+    {
+     "es": "Al volar el centro, sus semillas se esparcieron en todas direcciones.",
+     "en": "As the core flew up, its seeds scattered in every direction."
+    },
+    {
+     "es": "Cada semilla se volvió una estrella. El cielo oscuro se llenó de lucecitas.",
+     "en": "Each seed became a star. The dark sky was filled with tiny lights."
+    },
+    {
+     "es": "Imagínalo: cada estrella que ves es una semilla de una calabaza gigante.",
+     "en": "Imagine it: every star you see is a seed from one giant calabash."
+    },
+    {
+     "es": "¿Cambia eso la forma en que miras el cielo de noche? Cuéntanos en los comentarios.",
+     "en": "Does that change how you see the night sky? Tell us in the comments."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "estrellas",
+     "x": 960,
+     "en": 0.4
+    }
+   ],
+   "actores": [
+    {
+     "id": "wakea",
+     "x": 840,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "lanza"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2.5,
+       "hace": "asiente"
+      }
+     ]
+    },
+    {
+     "id": "papa",
+     "x": 1280,
+     "mira": "izq",
+     "rotulo": "PAPA",
+     "pasos": [
+      {
+       "en": 1.5,
+       "hace": "mira"
+      },
+      {
+       "en": 2,
+       "hace": "alegra"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "chispas",
+     "x": 900,
+     "y": 300,
+     "dur": 1.6
+    },
+    {
+     "en": 0.4,
+     "tipo": "estrellas"
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1.4,
+     "texto": {
+      "es": "ESTRELLAS",
+      "en": "STARS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "luna-lluvia",
+   "fondo": "noche",
+   "sinAstros": true,
+   "camara": {
+    "de": 0,
+    "a": 0,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Luego Wākea encontró el corazón blanco y suave de la calabaza. Lo envió arriba y se volvió la luna.",
+     "en": "Next, Wākea found the soft white heart of the gourd. He sent it up, and it became the moon."
+    },
+    {
+     "es": "Después raspó el forro blanco del interior y lo lanzó al cielo. Así nacieron las nubes.",
+     "en": "Then he scraped the white lining from the inside of the shell and threw it into the sky. These became clouds."
+    },
+    {
+     "es": "Por último, vertió el jugo de la calabaza sobre las nubes.",
+     "en": "Last, he poured the juice of the gourd over the clouds."
+    },
+    {
+     "es": "Las nubes se abrieron y el jugo cayó como lluvia.",
+     "en": "The clouds opened, and the juice fell down as rain."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "estrellas",
+     "x": 960
+    },
+    {
+     "tipo": "luna",
+     "x": 700,
+     "y": 240,
+     "s": 1.3,
+     "en": 0.6
+    },
+    {
+     "tipo": "nube",
+     "x": 1050,
+     "y": 290,
+     "s": 1.3,
+     "en": 1.6
+    },
+    {
+     "tipo": "nube",
+     "x": 1400,
+     "y": 260,
+     "s": 1.1,
+     "en": 1.8
+    }
+   ],
+   "actores": [
+    {
+     "id": "wakea",
+     "x": 620,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "toma"
+      },
+      {
+       "en": 0.5,
+       "hace": "lanza"
+      },
+      {
+       "en": 1.2,
+       "hace": "lanza"
+      },
+      {
+       "en": 2,
+       "hace": "baja"
+      }
+     ]
+    },
+    {
+     "id": "papa",
+     "x": 1240,
+     "mira": "izq",
+     "rotulo": "PAPA",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "alegra"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.6,
+     "tipo": "luz",
+     "x": 700,
+     "y": 240,
+     "dur": 1.5
+    },
+    {
+     "en": 3,
+     "tipo": "lluvia",
+     "dur": 1.8,
+     "intensidad": 0.8
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.8,
+     "texto": {
+      "es": "LUNA",
+      "en": "MOON"
+     },
+     "x": 700,
+     "y": 170,
+     "hasta": 2
+    },
+    {
+     "en": 3,
+     "texto": {
+      "es": "LLUVIA",
+      "en": "RAIN"
+     },
+     "x": 1200,
+     "y": 200,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "tierra-mar",
+   "fondo": "costa",
+   "camara": {
+    "de": 0,
+    "a": 120,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Ahora en las manos de Wākea solo quedaba la cáscara vacía.",
+     "en": "Now only the empty shell was left in Wākea's hands."
+    },
+    {
+     "es": "La cáscara misma se convirtió en la tierra y el mar.",
+     "en": "The shell itself became the land and the sea."
+    },
+    {
+     "es": "Así, el cielo, el sol, la luna y las estrellas salieron de una sola calabaza. También la lluvia, la tierra y el mar.",
+     "en": "So the sky, the sun, the moon and the stars came from one calabash. So did the rain, the land and the sea."
+    }
+   ],
+   "actores": [
+    {
+     "id": "wakea",
+     "x": 740,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 1.6,
+       "hace": "brilla",
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "id": "papa",
+     "x": 1230,
+     "mira": "izq",
+     "rotulo": "PAPA",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "alegra"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1.2,
+     "tipo": "destello",
+     "x": 740,
+     "y": 520,
+     "dur": 1
+    }
+   ]
+  },
+  {
+   "id": "kamakau",
+   "fondo": "aldea",
+   "camara": {
+    "de": 0,
+    "a": 120,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Samuel Kamakau contó esta historia, pero también hizo una advertencia.",
+     "en": "Samuel Kamakau told this story, but he also gave a warning."
+    },
+    {
+     "es": "Dijo que son palabras poéticas, como una adivinanza, y que no deben leerse al pie de la letra.",
+     "en": "He said these are poetic words, like a riddle, and should not be read literally."
+    },
+    {
+     "es": "Creía que la historia habla de los antepasados, grandes jefes de hace mucho tiempo.",
+     "en": "He believed the story speaks about the ancestors, great chiefs of long ago."
+    },
+    {
+     "es": "Después, sus nombres se dieron a las islas donde se asentaron sus hijos.",
+     "en": "Their names were later given to the islands where their children settled."
+    },
+    {
+     "es": "En los cantos antiguos, el cielo y la tierra no son simples cosas. Son familia.",
+     "en": "In the old chants, the sky and the land are not just things. They are family."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "hale",
+     "x": 1650,
+     "s": 1
+    },
+    {
+     "tipo": "petroglifo",
+     "x": 420,
+     "s": 0.6,
+     "props": {
+      "figura": "persona"
+     },
+     "en": 2
+    },
+    {
+     "tipo": "petroglifo",
+     "x": 1400,
+     "s": 0.55,
+     "props": {
+      "figura": "espiral"
+     },
+     "en": 3.5
+    }
+   ],
+   "actores": [
+    {
+     "id": "hawaiano",
+     "x": 900,
+     "mira": "der",
+     "rotulo": "KAMAKAU",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.5,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "niega"
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "hawaiana",
+     "x": 1180,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "aparece"
+      },
+      {
+       "en": 4,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1,
+     "texto": {
+      "es": "«NO AL PIE DE LA LETRA»",
+      "en": "“NOT LITERAL”"
+     },
+     "x": 900,
+     "y": 200,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "oceano",
+   "camara": {
+    "de": 0,
+    "a": 0,
+    "zoom": [
+     1,
+     1.08
+    ]
+   },
+   "frases": [
+    {
+     "es": "Así, el cielo y el mar estaban listos, y también Wākea y Papa.",
+     "en": "So the sky and the sea were ready, and so were Wākea and Papa."
+    },
+    {
+     "es": "Pero el mar seguía vacío. Todavía no había ni una isla.",
+     "en": "But the sea was still empty. There was not one island in it."
+    },
+    {
+     "es": "¿Qué parte de la calabaza te gusta más: el sol, las estrellas o la lluvia? Cuéntanos en los comentarios.",
+     "en": "Which part of the calabash is your favorite: the sun, the stars or the rain? Tell us in the comments."
+    },
+    {
+     "es": "La próxima vez, Papa da a luz las islas. Es La madre de las islas.",
+     "en": "Next time, Papa gives birth to the islands. It is The Mother of the Islands."
+    }
+   ],
+   "actores": [
+    {
+     "id": "wakea",
+     "x": 760,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "papa",
+     "x": 1200,
+     "mira": "izq",
+     "rotulo": "PAPA",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.5,
+       "hace": "lamenta"
+      },
+      {
+       "en": 3,
+       "hace": "alegra"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 3,
+     "texto": {
+      "es": "PRÓXIMO: LA MADRE DE LAS ISLAS",
+      "en": "NEXT: THE MOTHER OF THE ISLANDS"
+     },
+     "x": 960,
+     "y": 250
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "La calabaza gigante que se volvió cielo",
+    "en": "The giant gourd that became the sky"
+   },
+   "escena": "cielo",
+   "desde": 0,
+   "hasta": 4,
+   "foco": 960
+  },
+  {
+   "gancho": {
+    "es": "Cada estrella es una semilla",
+    "en": "Every star is a seed"
+   },
+   "escena": "estrellas",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 960
+  },
+  {
+   "gancho": {
+    "es": "Cómo nacieron la luna y la lluvia",
+    "en": "How the moon and the rain began"
+   },
+   "escena": "luna-lluvia",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  }
+ ]
+}

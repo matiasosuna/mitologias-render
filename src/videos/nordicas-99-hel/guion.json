@@ -1,0 +1,1710 @@
+{
+  "id": "nordicas-99-hel",
+  "serie": "nordicas",
+  "numero": "99",
+  "titulo": {
+    "es": "Hel, reina de los muertos",
+    "en": "Hel, Queen of the Dead"
+  },
+  "tituloGriego": "QUEEN HEL",
+  "especial": {
+    "nombre": {
+      "es": "Señores de los muertos",
+      "en": "Lords of the Dead"
+    }
+  },
+  "miniatura": {
+    "heroe": "hel",
+    "rival": "sleipnir"
+  },
+  "siguiente": {
+    "es": "Anubis y el Duat",
+    "en": "Anubis and the Duat"
+  },
+  "escenas": [
+    {
+      "id": "norte",
+      "fondo": "aurora",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "En esta noche especial, visitamos a los señores de los muertos. Esta vez viajamos lejos, al norte.",
+          "en": "On this special night, we visit the lords of the dead. Tonight, we travel far to the north."
+        },
+        {
+          "es": "Los vikingos hablaban de un mundo frío y oscuro, allá abajo, bajo las raíces del gran árbol de los mundos.",
+          "en": "The Vikings told of a cold, dark world, deep below the roots of the great tree of the worlds."
+        },
+        {
+          "es": "Ese mundo lo gobernaba una diosa. Se llamaba Hel, y su reino tenía el mismo nombre.",
+          "en": "That world was ruled by a goddess. Her name was Hel, and her kingdom had the same name."
+        },
+        {
+          "es": "Nuestra guía más antigua es un libro de Islandia: la Edda en prosa.",
+          "en": "Our oldest guide to her is a book from Iceland: the Prose Edda."
+        },
+        {
+          "es": "Y cuenta que su historia empieza con el dios tramposo, Loki.",
+          "en": "And it says her story begins with the trickster god, Loki."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 200,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pino",
+          "x": 1800,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "yggdrasil",
+          "x": 960,
+          "s": 0.8,
+          "capa": "fondo",
+          "en": 1
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1500,
+          "s": 0.8,
+          "capa": "medio",
+          "en": 3,
+          "props": {
+            "texto": "EDDA"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "hel",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 550,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 4.4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1.5
+        },
+        {
+          "en": 0.3,
+          "tipo": "nieve",
+          "dur": 3
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 960,
+          "y": 420,
+          "intensidad": 0.4,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "niebla",
+          "x": 1250,
+          "dur": 1.5
+        },
+        {
+          "en": 4,
+          "tipo": "humo",
+          "x": 550,
+          "y": 600,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "SEÑORES DE LOS MUERTOS",
+            "en": "LORDS OF THE DEAD"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "hijos",
+      "fondo": "jotunheim",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Loki tenía una familia secreta con una giganta llamada Angrboda, lejos, en la tierra de los gigantes.",
+          "en": "Loki had a secret family with a giantess named Angrboda, far away in the land of the giants."
+        },
+        {
+          "es": "Tuvieron tres hijos. El primero fue un lobo, Fenrir. El segundo, una serpiente gigante.",
+          "en": "They had three children. The first was a wolf, Fenrir. The second was a giant serpent."
+        },
+        {
+          "es": "La tercera fue una niña. Y no se parecía a nadie.",
+          "en": "The third was a girl. And she was not like anyone else."
+        },
+        {
+          "es": "La mitad de ella parecía una mujer viva. La otra mitad era azul oscuro, como un cuerpo muerto hace mucho.",
+          "en": "Half of her looked like a living woman. The other half was dark blue, like a body long dead."
+        },
+        {
+          "es": "Los dioses oyeron un aviso de las guardianas del destino: estos tres hijos traerían grandes males.",
+          "en": "The gods heard a warning from the keepers of fate: these three children would bring great harm."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 150,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 1900,
+          "s": 0.9,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 4.4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "angrboda",
+          "x": 550,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "fenrir",
+          "x": 900,
+          "escala": 0.55,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.5,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "jormungandr",
+          "x": 1250,
+          "escala": 0.35,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "hel",
+          "x": 1650,
+          "escala": 0.7,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.5,
+              "hace": "mira",
+              "a": 900
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve",
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "niebla",
+          "x": 1650,
+          "dur": 1
+        },
+        {
+          "en": 3.1,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "temblor",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "MEDIO VIVA, MEDIO MUERTA",
+            "en": "HALF ALIVE, HALF DEAD"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "destierro",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Odín, el jefe de los dioses, mandó que le trajeran a los tres niños.",
+          "en": "So Odin, the chief of the gods, had the three children brought to him."
+        },
+        {
+          "es": "A la serpiente la arrojó al mar. Al lobo lo dejó en Asgard, donde podía vigilarlo.",
+          "en": "He threw the serpent into the sea. The wolf he kept in Asgard, where he could watch it."
+        },
+        {
+          "es": "Y a la niña, Hel, la arrojó a Niflheim, el mundo de la niebla y el hielo.",
+          "en": "And the girl, Hel, he threw down into Niflheim, the world of mist and ice."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "lanza"
+            },
+            {
+              "en": 2,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "jormungandr",
+          "x": 550,
+          "escala": 0.35,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "fenrir",
+          "x": 250,
+          "escala": 0.55,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "mira",
+              "a": 1350
+            }
+          ]
+        },
+        {
+          "id": "hel",
+          "x": 900,
+          "escala": 0.7,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "cae"
+            },
+            {
+              "en": 2.5,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "olas-suben",
+          "dur": 0.6
+        },
+        {
+          "en": 2.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.4,
+          "tipo": "niebla",
+          "x": 900,
+          "dur": 1
+        },
+        {
+          "en": 2.5,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "NIFLHEIM",
+            "en": "NIFLHEIM"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "reina",
+      "fondo": "hel",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Odín también le dio poder. En ese mundo frío, Hel sería la reina de los muertos.",
+          "en": "But Odin also gave her power. In that cold world, Hel would be the queen of the dead."
+        },
+        {
+          "es": "No de los guerreros muertos en batalla. Esos iban al Valhalla, el salón dorado de Odín.",
+          "en": "Not of the warriors who died in battle. Those went to Valhalla, Odin's golden hall."
+        },
+        {
+          "es": "Hel recibía a todos los demás: los que morían de enfermedad o de vejez.",
+          "en": "Hel received everyone else: those who died of sickness, or of old age."
+        },
+        {
+          "es": "Y creció alta, sombría y feroz. Cualquiera la reconocía por su cara de dos colores.",
+          "en": "She grew up tall, grim and fierce. Anyone could tell who she was, by her face of two colors."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hel",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 0.4,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "valquiria",
+          "x": 1750,
+          "capa": "fondo",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.8,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "muerto1",
+          "como": "vikingo",
+          "rotulo": "",
+          "x": 200,
+          "mira": "der",
+          "props": {
+            "canas": true,
+            "objeto": null,
+            "escudo": false,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 750,
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "muerto2",
+          "como": "vikingo",
+          "rotulo": "",
+          "x": 0,
+          "mira": "der",
+          "props": {
+            "ropa": "larga",
+            "objeto": null,
+            "escudo": false,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "camina",
+              "a": 550,
+              "dur": 1.2
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 2
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1750,
+          "y": 400,
+          "intensidad": 0.5,
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "LA REINA DE LOS MUERTOS",
+            "en": "THE QUEEN OF THE DEAD"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "salon",
+      "fondo": "hel",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Su salón era enorme, con muros altísimos y grandes portones.",
+          "en": "Her hall was huge, with very high walls and great gates."
+        },
+        {
+          "es": "Todo allí tenía un nombre aterrador. Su plato se llamaba Hambre. Su cuchillo, Hambruna.",
+          "en": "Everything in it had a frightening name. Her plate was called Hunger. Her knife was called Famine."
+        },
+        {
+          "es": "Sus dos sirvientes eran tan lentos que casi no parecían moverse.",
+          "en": "Her two servants were so slow that they barely seemed to move."
+        },
+        {
+          "es": "El umbral de la puerta se llamaba Caída al Peligro. Y su cama se llamaba Lecho de Enfermo.",
+          "en": "The doorstep was called Falling to Danger. And her bed was called Sickbed."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 1600,
+          "s": 1.2,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "puerta",
+          "x": 300,
+          "s": 1.1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "trono",
+          "x": 1200
+        }
+      ],
+      "actores": [
+        {
+          "id": "hel",
+          "x": 1200,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "sirviente1",
+          "como": "vikingo",
+          "rotulo": "",
+          "x": 750,
+          "mira": "der",
+          "props": {
+            "canas": true,
+            "objeto": null,
+            "escudo": false,
+            "tocado": null,
+            "cuerpo": "viejo"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 820,
+              "dur": 2
+            }
+          ]
+        },
+        {
+          "id": "sirviente2",
+          "como": "norna",
+          "rotulo": "",
+          "x": 520,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "camina",
+              "a": 590,
+              "dur": 2
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1.5
+        },
+        {
+          "en": 1.3,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 560,
+          "intensidad": 0.4,
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "HAMBRE · HAMBRUNA",
+            "en": "HUNGER · FAMINE"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "LECHO DE ENFERMO",
+            "en": "SICKBED"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "baldr",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, Hel recibió a un invitado muy especial.",
+          "en": "One day, Hel received a very special guest."
+        },
+        {
+          "es": "Baldr, el más luminoso y querido de los dioses, murió por un dardo de muérdago.",
+          "en": "Baldr, the brightest and most loved of the gods, was killed by a dart of mistletoe."
+        },
+        {
+          "es": "Baldr no murió en batalla. Así que, como todos los demás, bajó al reino de Hel.",
+          "en": "Baldr did not die in battle. So, like everyone else, he went down to Hel."
+        },
+        {
+          "es": "Su madre, Frigg, preguntó: ¿quién cabalgará hasta Hel para pedirle que devuelva a Baldr?",
+          "en": "His mother, Frigg, asked: who will ride to Hel, and ask her to send Baldr home?"
+        },
+        {
+          "es": "Hermod, un hijo valiente de Odín, dio un paso al frente. ¿Tú habrías ido en su lugar?",
+          "en": "Hermod, a brave son of Odin, stepped forward. Would you have gone in his place?"
+        },
+        {
+          "es": "Odín le prestó su propio caballo: Sleipnir, el caballo gris de ocho patas.",
+          "en": "Odin lent him his own horse: Sleipnir, the gray horse with eight legs."
+        }
+      ],
+      "actores": [
+        {
+          "id": "baldr",
+          "x": 700,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "cae"
+            },
+            {
+              "en": 2.2,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "frigg",
+          "x": 1000,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "entristece"
+            },
+            {
+              "en": 1.8,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "hermodr",
+          "como": "vikingo",
+          "rotulo": "HERMOD",
+          "x": 250,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "entra",
+              "a": 420,
+              "dur": 0.5
+            },
+            {
+              "en": 4.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "mira",
+              "a": 700
+            },
+            {
+              "en": 5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "sleipnir",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.5,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1.5
+        },
+        {
+          "en": 2.2,
+          "tipo": "niebla",
+          "x": 700,
+          "dur": 1
+        },
+        {
+          "en": 5,
+          "tipo": "luz",
+          "x": 1700,
+          "y": 500,
+          "intensidad": 0.5,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "UN DARDO DE MUÉRDAGO",
+            "en": "A DART OF MISTLETOE"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "puente",
+      "fondo": "hel",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hermod cabalgó nueve noches por valles tan oscuros que no veía nada.",
+          "en": "Hermod rode for nine nights, through valleys so dark that he could see nothing."
+        },
+        {
+          "es": "Por fin oyó un río frío y ruidoso. Se llamaba Gjoll, y lo cruzaba un puente con techo de oro.",
+          "en": "At last he heard a loud, cold river. It was called Gjoll, and over it was a bridge with a golden roof."
+        },
+        {
+          "es": "Una doncella cuidaba el puente. Se llamaba Modgud, y lo detuvo.",
+          "en": "A maiden guarded the bridge. Her name was Modgud, and she stopped him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "rio",
+          "x": 1300,
+          "capa": "medio",
+          "en": 1
+        },
+        {
+          "tipo": "roca",
+          "x": 400,
+          "s": 0.9,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "sleipnir",
+          "x": 150,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 800,
+              "dur": 1.4
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "hermodr",
+          "como": "vikingo",
+          "rotulo": "HERMOD",
+          "x": 0,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 620,
+              "dur": 1.4
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 950,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "modgud",
+          "como": "mujer",
+          "rotulo": "MODGUD",
+          "x": 1600,
+          "mira": "izq",
+          "props": {
+            "tocado": "velo",
+            "ropa": "larga",
+            "piel": "#9FB3C4"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 1.2
+        },
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 2
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1400,
+          "y": 480,
+          "intensidad": 0.6,
+          "dur": 1.2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "NUEVE NOCHES",
+            "en": "NINE NIGHTS"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1
+        },
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "EL RÍO GJOLL",
+            "en": "THE RIVER GJOLL"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2.2
+        }
+      ]
+    },
+    {
+      "id": "modgud",
+      "fondo": "hel",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1.02,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "«Ayer cruzaron este puente cinco ejércitos de muertos», dijo. «Pero tiembla igual bajo ti solo.»",
+          "en": "“Yesterday, five armies of dead men crossed this bridge,” she said. “But it shakes just as much under you alone.”"
+        },
+        {
+          "es": "«Y no tienes el color de los muertos. ¿Por qué cabalgas por el camino de Hel?»",
+          "en": "“And you do not have the color of the dead. Why do you ride on the road to Hel?”"
+        },
+        {
+          "es": "Hermod le habló de Baldr. «Pasó por aquí», dijo ella. «El camino de Hel baja, hacia el norte.»",
+          "en": "Hermod told her about Baldr. “He crossed here,” she said. “The road to Hel goes down, and north.”"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "rio",
+          "x": 900,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "sleipnir",
+          "x": 350,
+          "mira": "der",
+          "pasos": []
+        },
+        {
+          "id": "hermodr",
+          "como": "vikingo",
+          "rotulo": "",
+          "x": 650,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.6,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "modgud",
+          "como": "mujer",
+          "rotulo": "",
+          "x": 1150,
+          "mira": "izq",
+          "props": {
+            "tocado": "velo",
+            "ropa": "larga",
+            "piel": "#9FB3C4"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 0.8,
+              "hace": "senala"
+            },
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 650
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1.5
+        },
+        {
+          "en": 0.6,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 2.3,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.4,
+          "texto": {
+            "es": "ABAJO Y AL NORTE",
+            "en": "DOWN AND NORTH"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "puerta",
+      "fondo": "hel",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por fin Hermod llegó a la puerta de Hel. Estaba bien cerrada.",
+          "en": "At last, Hermod came to the gate of Hel. It was shut tight."
+        },
+        {
+          "es": "Algunos poemas dicen que un gran perro cuidaba ese camino, con sangre en el pecho.",
+          "en": "Some poems say a great hound guarded that road, with blood on its chest."
+        },
+        {
+          "es": "Hermod bajó, apretó la montura, volvió a subir y espoleó a su caballo.",
+          "en": "Hermod got off, tightened the saddle, climbed back on, and spurred his horse."
+        },
+        {
+          "es": "Sleipnir saltó tan alto que pasó por encima de la puerta sin tocarla.",
+          "en": "Sleipnir jumped so high that he flew over the gate, and never touched it."
+        },
+        {
+          "es": "Dentro del salón, Hermod vio a su hermano Baldr, sentado en el lugar de honor.",
+          "en": "Inside the hall, Hermod saw his brother Baldr, sitting in the seat of honor."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "puerta",
+          "x": 1250,
+          "s": 1.3
+        },
+        {
+          "tipo": "trono",
+          "x": 2050,
+          "en": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "perro",
+          "como": "lobo_gigante",
+          "rotulo": "",
+          "x": 750,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "sleipnir",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "salta"
+            },
+            {
+              "en": 3.1,
+              "hace": "corre",
+              "a": 1650,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "hermodr",
+          "como": "vikingo",
+          "rotulo": "HERMOD",
+          "x": 250,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "salta"
+            },
+            {
+              "en": 3.1,
+              "hace": "corre",
+              "a": 1500,
+              "dur": 0.6
+            },
+            {
+              "en": 4.3,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "baldr",
+          "x": 2050,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.1,
+              "hace": "sienta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 2
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "polvo",
+          "x": 1250,
+          "y": 760
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 2050,
+          "y": 500,
+          "intensidad": 0.6,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "LA PUERTA DE HEL",
+            "en": "THE GATE OF HEL"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "trato",
+      "fondo": "hel",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por la mañana, Hermod le rogó a Hel que dejara volver a Baldr. Todos lloraban por él, le dijo.",
+          "en": "In the morning, Hermod begged Hel to let Baldr ride home. Everyone was weeping for him, he said."
+        },
+        {
+          "es": "Hel respondió: «Entonces veremos si de verdad todos aman a Baldr».",
+          "en": "Hel answered: “Then we will see if Baldr is truly loved by all.”"
+        },
+        {
+          "es": "«Si todas las cosas del mundo lloran por él, vivas y muertas, volverá.»",
+          "en": "“If everything in the world weeps for him, living and dead, he will go back.”"
+        },
+        {
+          "es": "«Pero si una sola cosa se niega a llorar, se queda aquí, conmigo.»",
+          "en": "“But if even one thing refuses to weep, he stays here, with me.”"
+        },
+        {
+          "es": "Baldr acompañó a Hermod hasta la puerta. Le dio el anillo de oro Draupnir, para llevárselo a Odín.",
+          "en": "Baldr walked Hermod to the door. He gave him the gold ring Draupnir, to take back to Odin."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1400
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermodr",
+          "como": "vikingo",
+          "rotulo": "HERMOD",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.5,
+              "hace": "levantarse"
+            },
+            {
+              "en": 4.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "baldr",
+          "x": 800,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "lamenta"
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 650,
+              "dur": 0.4
+            },
+            {
+              "en": 4.4,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "hel",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1.5
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 4.4,
+          "tipo": "luz",
+          "x": 560,
+          "y": 520,
+          "intensidad": 0.6,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "TODO DEBE LLORAR",
+            "en": "EVERYTHING MUST WEEP"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "jotunheim",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dioses le pidieron al mundo entero que llorara por Baldr. Y lloraron la gente, las piedras, los árboles y los metales.",
+          "en": "The gods asked the whole world to weep for Baldr. And people, stones, trees and metals all wept."
+        },
+        {
+          "es": "Pero en una cueva había una vieja giganta llamada Thokk. «Que Hel se quede con lo que tiene», dijo.",
+          "en": "But in a cave sat an old giantess named Thokk. “Let Hel keep what she has,” she said."
+        },
+        {
+          "es": "Así que Hel se quedó con Baldr. Los viejos poemas dicen que solo volverá después del fin del mundo.",
+          "en": "So Hel kept Baldr. The old poems say he will come back only after the end of the world."
+        },
+        {
+          "es": "Cuéntame en los comentarios: ¿el trato de Hel fue justo, o era imposible desde el principio?",
+          "en": "Tell me in the comments: was Hel's deal fair, or was it impossible from the start?"
+        },
+        {
+          "es": "Nuestro especial sigue. Ahora vamos a Egipto, a conocer al dios chacal que cuida a los muertos: Anubis.",
+          "en": "Our special goes on. Next, we travel to Egypt, to meet the jackal god who guards the dead: Anubis."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cueva",
+          "x": 1450,
+          "s": 1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "pino",
+          "x": 200,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 900,
+          "s": 0.7,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "mensajero",
+          "como": "vikingo",
+          "rotulo": "",
+          "x": 500,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "thokk",
+          "como": "jotun",
+          "rotulo": "THOKK",
+          "x": 1450,
+          "mira": "izq",
+          "props": {
+            "mujer": true,
+            "objeto": null,
+            "canas": true
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.4,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "hel",
+          "x": 950,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.8,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "lluvia",
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "humo",
+          "x": 1450,
+          "y": 620,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 960,
+          "y": 420,
+          "intensidad": 0.5,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "ANUBIS Y EL DUAT",
+            "en": "ANUBIS AND THE DUAT"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La diosa medio viva y medio muerta",
+        "en": "The Goddess Who Was Half Dead"
+      },
+      "escena": "hijos",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1300
+    },
+    {
+      "gancho": {
+        "es": "El caballo que saltó la puerta de Hel",
+        "en": "The Horse That Jumped the Gate of Hel"
+      },
+      "escena": "puerta",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "El trato imposible de Hel",
+        "en": "Hel's Impossible Deal"
+      },
+      "escena": "trato",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 900
+    }
+  ]
+}

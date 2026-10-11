@@ -1,0 +1,1436 @@
+{
+  "id": "nordicas-08-hijos-loki",
+  "serie": "nordicas",
+  "numero": "08",
+  "titulo": {
+    "es": "Los hijos de Loki",
+    "en": "Loki's Children"
+  },
+  "tituloGriego": "LOKI'S CHILDREN",
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Los dioses arrojaron una serpiente al mar, y creció hasta rodear el mundo",
+        "en": "The gods threw a serpent into the sea, and it grew until it circled the world"
+      },
+      "escena": "jormungandr",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 1200
+    },
+    {
+      "gancho": {
+        "es": "Para atar al lobo usaron seis cosas que ya no existen",
+        "en": "To bind the wolf they used six things that no longer exist"
+      },
+      "escena": "enanos",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Puso la mano en la boca del lobo y la perdió",
+        "en": "He put his hand in the wolf's mouth, and lost it"
+      },
+      "escena": "lyngvi",
+      "desde": 3,
+      "hasta": 5,
+      "foco": 1000
+    }
+  ],
+  "escenas": [
+    {
+      "id": "secreto",
+      "fondo": "jotunheim",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al final del episodio anterior, Loki guardaba un secreto. Lejos de Asgard, en Jotunheim, tenía otra familia.",
+          "en": "At the end of the last episode, Loki was keeping a secret. Far from Asgard, in Jotunheim, he had another family."
+        },
+        {
+          "es": "Allí vivía la giganta Angrboda, y con ella Loki tuvo tres hijos.",
+          "en": "There lived the giantess Angrboda, and with her Loki had three children."
+        },
+        {
+          "es": "El primero era un lobo, Fenrir. El segundo, una serpiente, Jormungandr.",
+          "en": "The first was a wolf, Fenrir. The second was a serpent, Jormungandr."
+        },
+        {
+          "es": "Y la tercera era una niña llamada Hel, mitad viva y mitad muerta.",
+          "en": "And the third was a girl named Hel, half alive and half dead."
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "x": 250,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 450
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "angrboda",
+          "x": 1650,
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "fenrir",
+          "x": 850,
+          "escala": 0.35,
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "jormungandr",
+          "x": 1150,
+          "mira": "izq",
+          "escala": 0.25,
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.7,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "hel",
+          "x": 1400,
+          "mira": "izq",
+          "escala": 0.45,
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 1000,
+          "s": 0.8,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve"
+        },
+        {
+          "en": 1,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "JOTUNHEIM",
+            "en": "JOTUNHEIM"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "profecia",
+      "fondo": "yggdrasil",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.04,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero los dioses conocían las profecías de las Nornas, las que guardan el destino, y las Nornas los habían advertido.",
+          "en": "But the gods knew the prophecies of the Norns, the keepers of fate, and the Norns had warned them."
+        },
+        {
+          "es": "Esta familia, decían, traería grandes desgracias: malvada por parte de su madre, y peor por parte de su padre.",
+          "en": "This family, they said, would bring great misfortune: wicked on the mother's side, and worse on the father's."
+        },
+        {
+          "es": "Entonces Odín, el Padre de Todos, ordenó a los dioses que fueran a buscar a los tres niños y los trajeran ante él.",
+          "en": "So Odin, the Allfather, ordered the gods to go and find the three children and bring them before him."
+        }
+      ],
+      "actores": [
+        {
+          "id": "norna1",
+          "como": "norna",
+          "x": 350,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "norna2",
+          "como": "norna",
+          "x": 650,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "norna3",
+          "como": "norna",
+          "x": 950,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "x": 1650,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yggdrasil",
+          "x": 1150,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 650,
+          "y": 350,
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LAS NORNAS ADVIERTEN",
+            "en": "THE NORNS WARN"
+          },
+          "x": 650,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "ORDEN DE ODÍN",
+            "en": "ODIN'S ORDER"
+          },
+          "x": 1500,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "jormungandr",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 350,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "A Jormungandr, la serpiente, Odín la arrojó al mar profundo que rodea todas las tierras.",
+          "en": "Jormungandr, the serpent, Odin hurled into the deep sea that surrounds all the lands."
+        },
+        {
+          "es": "Pero en el agua no murió: creció, y creció, hasta llenar el océano entero.",
+          "en": "But in the water it did not die. It grew, and grew, until it filled the whole ocean."
+        },
+        {
+          "es": "Y por eso hoy Jormungandr rodea Midgard, el mundo de los hombres, y se muerde la cola.",
+          "en": "And that is why Jormungandr now circles Midgard, the world of men, and bites its own tail."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 350,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "jormungandr",
+          "x": 1250,
+          "mira": "izq",
+          "escala": 0.3,
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "crece",
+              "escala": 0.8,
+              "dur": 1.5
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.3,
+          "tipo": "temblor",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "POR ESO LA SERPIENTE RODEA EL MUNDO",
+            "en": "THAT'S WHY THE SERPENT CIRCLES THE WORLD"
+          },
+          "x": 960,
+          "y": 210,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "hel",
+      "fondo": "hel",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.04,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "A Hel la arrojó a Niflheim, el mundo de niebla y hielo, y le dio poder sobre nueve mundos.",
+          "en": "Hel he cast into Niflheim, the world of mist and ice, and gave her power over nine worlds."
+        },
+        {
+          "es": "Allí gobierna a los muertos que no mueren en batalla: los que mueren de enfermedad o de vejez.",
+          "en": "There she rules the dead who do not die in battle: those who die of sickness or old age."
+        },
+        {
+          "es": "Tiene grandes salas, y su rostro es la mitad de una persona viva y la otra mitad, de un muerto.",
+          "en": "She has great halls, and her face is half that of the living and half that of the dead."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 0.8,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "hel",
+          "x": 1250,
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "muerto1",
+          "como": "vikingo",
+          "x": 250,
+          "rotulo": "",
+          "props": {
+            "canas": true,
+            "objeto": null,
+            "escudo": false
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 800,
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "muerto2",
+          "como": "vikingo",
+          "x": 450,
+          "rotulo": "",
+          "props": {
+            "ropa": "larga",
+            "objeto": null,
+            "escudo": false
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.4,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 1.2
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla"
+        },
+        {
+          "en": 0.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 330,
+          "dur": 1.2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "NIFLHEIM",
+            "en": "NIFLHEIM"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "LOS MUERTOS DE ENFERMEDAD Y VEJEZ",
+            "en": "THE DEAD OF SICKNESS AND OLD AGE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "MITAD VIVA, MITAD MUERTA",
+            "en": "HALF ALIVE, HALF DEAD"
+          },
+          "x": 1250,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "fenrir",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1.04,
+          1.14
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al lobo Fenrir lo criaron los dioses en Asgard, y nadie se atrevía a acercarse a su boca.",
+          "en": "The wolf Fenrir was raised by the gods in Asgard, and no one dared to come near his jaws."
+        },
+        {
+          "es": "Solo Tyr, el más valiente de los dioses, se animaba a ir y darle de comer.",
+          "en": "Only Tyr, the bravest of the gods, had the courage to go and feed him."
+        },
+        {
+          "es": "Pero cada día el lobo crecía, y las profecías decían que sería la perdición de los dioses.",
+          "en": "But every day the wolf grew, and the prophecies said he would be the doom of the gods."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 250,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "tyr",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "entra",
+              "a": 950
+            },
+            {
+              "en": 1.3,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "fenrir",
+          "x": 1450,
+          "mira": "izq",
+          "escala": 0.55,
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "crece",
+              "escala": 1,
+              "dur": 1.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "temblor",
+          "dur": 1.2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "SOLO TYR SE ATREVE",
+            "en": "ONLY TYR DARES"
+          },
+          "x": 700,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "cadenas",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1.04,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dioses forjaron una cadena muy fuerte, Loeding, y se la llevaron al lobo para probar su fuerza.",
+          "en": "The gods forged a very strong chain, Loeding, and brought it to the wolf to test his strength."
+        },
+        {
+          "es": "Fenrir se estiró una sola vez, y la cadena se rompió.",
+          "en": "Fenrir stretched just once, and the chain broke."
+        },
+        {
+          "es": "Hicieron otra el doble de fuerte, Dromi. El lobo se sacudió contra el suelo, y también se rompió.",
+          "en": "They made another, twice as strong: Dromi. The wolf shook himself against the ground, and it broke too."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 250,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "tyr",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "fenrir",
+          "x": 1450,
+          "mira": "izq",
+          "escala": 1,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "crece",
+              "escala": 1.15,
+              "dur": 0.5
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.3,
+              "hace": "tiembla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.3,
+          "tipo": "chispas",
+          "x": 1450,
+          "y": 560,
+          "dur": 0.8
+        },
+        {
+          "en": 2.6,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 2.7,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "CADENA: LOEDING",
+            "en": "CHAIN: LOEDING"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "CADENA: DROMI",
+            "en": "CHAIN: DROMI"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "enanos",
+      "fondo": "fragua",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Odín envió un mensajero a Svartalfheim, el mundo de los enanos, para que forjaran una cinta imposible de romper.",
+          "en": "Then Odin sent a messenger to Svartalfheim, the world of the dwarves, to have them forge a ribbon that could not be broken."
+        },
+        {
+          "es": "La hicieron con seis cosas: el ruido de los pasos de un gato y la barba de una mujer.",
+          "en": "They made it from six things: the sound of a cat's footsteps and the beard of a woman."
+        },
+        {
+          "es": "Las raíces de una montaña, los tendones de un oso, el aliento de un pez y la saliva de un pájaro.",
+          "en": "The roots of a mountain, the sinews of a bear, the breath of a fish, and the spittle of a bird."
+        },
+        {
+          "es": "Y por eso esas cosas ya no existen: el gato no suena al caminar, las mujeres no tienen barba, y las montañas no tienen raíces.",
+          "en": "That is why those things no longer exist: cats walk silently, women have no beards, and mountains have no roots."
+        },
+        {
+          "es": "Así nació Gleipnir, suave y delgada como una cinta de seda, pero más fuerte que cualquier cadena de hierro.",
+          "en": "So Gleipnir was born, soft and slender as a silk ribbon, yet stronger than any chain of iron."
+        }
+      ],
+      "actores": [
+        {
+          "id": "mensajero",
+          "como": "vikingo",
+          "x": 200,
+          "rotulo": "MESSENGER",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 450
+            },
+            {
+              "en": 0.8,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "toma",
+              "objeto": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "en1",
+          "como": "enano",
+          "x": 850,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "en2",
+          "como": "enano",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "en3",
+          "como": "enano",
+          "x": 1600,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.1,
+              "hace": "brilla",
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1050,
+          "s": 0.7,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fogata",
+          "x": 1050
+        },
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 1050,
+          "y": 560,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 1050,
+          "y": 500,
+          "dur": 1.5
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1050,
+          "y": 560,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "SVARTALFHEIM",
+            "en": "SVARTALFHEIM"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "PASOS DE GATO + BARBA DE MUJER",
+            "en": "CAT'S FOOTSTEPS + WOMAN'S BEARD"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "RAÍCES DE MONTAÑA, TENDONES DE OSO, ALIENTO DE PEZ, SALIVA DE PÁJARO",
+            "en": "MOUNTAIN ROOTS, BEAR SINEWS, FISH BREATH, BIRD SPITTLE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "POR ESO LOS GATOS CAMINAN SIN RUIDO",
+            "en": "THAT'S WHY CATS WALK SILENTLY"
+          },
+          "x": 960,
+          "y": 210,
+          "estilo": "porque"
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "GLEIPNIR",
+            "en": "GLEIPNIR"
+          },
+          "x": 1600,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "lyngvi",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1.05,
+          1.14
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dioses llevaron a Fenrir a una isla llamada Lyngvi, y le mostraron la cinta delgada.",
+          "en": "The gods led Fenrir to an island called Lyngvi, and showed him the slender ribbon."
+        },
+        {
+          "es": "El lobo desconfió. Era muy fina para ser tan fuerte, y dijo que no se dejaría atar si había un engaño.",
+          "en": "The wolf was wary. It was too thin to be so strong, and he said he would not be bound if there was any trickery."
+        },
+        {
+          "es": "Pero para no parecer cobarde, pidió que uno de los dioses pusiera la mano en su boca, como garantía.",
+          "en": "But so as not to seem a coward, he asked that one of the gods lay a hand in his mouth as a pledge."
+        },
+        {
+          "es": "Los dioses se miraron, y ninguno se movió. Entonces Tyr puso su mano derecha entre los dientes del lobo.",
+          "en": "The gods looked at one another, and no one moved. Then Tyr put his right hand between the wolf's teeth."
+        },
+        {
+          "es": "Fenrir luchó, pero cuanto más tiraba, más se apretaba la cinta. Todos los dioses rieron, menos Tyr.",
+          "en": "Fenrir fought, but the harder he pulled, the tighter the ribbon grew. All the gods laughed, except Tyr."
+        },
+        {
+          "es": "Y por eso Tyr es el dios manco: pagó con su mano la palabra que los dioses le habían dado al lobo.",
+          "en": "And that is why Tyr is the one-handed god: he paid with his hand for the word the gods had given the wolf."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 200,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.2,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "tyr",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1180,
+              "dur": 0.8
+            },
+            {
+              "en": 3.8,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.6,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "fenrir",
+          "x": 1450,
+          "mira": "izq",
+          "escala": 1.1,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 4,
+              "hace": "tiembla",
+              "dur": 1.8
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1000,
+          "s": 0.6,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.9,
+          "tipo": "destello"
+        },
+        {
+          "en": 4,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 5,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LA ISLA LYNGVI",
+            "en": "THE ISLAND OF LYNGVI"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "UNA MANO COMO GARANTÍA",
+            "en": "A HAND AS A PLEDGE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "TYR SE ANIMA",
+            "en": "TYR STEPS FORWARD"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "TYR PIERDE LA MANO",
+            "en": "TYR LOSES HIS HAND"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 5
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "POR ESO TYR ES EL DIOS MANCO",
+            "en": "THAT'S WHY TYR HAS ONE HAND"
+          },
+          "x": 960,
+          "y": 210,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "aullido",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 100,
+        "a": 0,
+        "zoom": [
+          1.05,
+          1.15
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dioses ataron la cinta a una enorme roca y la hundieron en lo más profundo de la tierra.",
+          "en": "The gods fastened the ribbon to an enormous rock and sank it deep into the earth."
+        },
+        {
+          "es": "Fenrir abrió las fauces para morder, y le clavaron una espada entre las mandíbulas, con la punta hacia arriba.",
+          "en": "Fenrir opened his jaws to bite, and they thrust a sword between them, its point pointing up."
+        },
+        {
+          "es": "Allí aullará hasta Ragnarök, el fin del mundo. Y por eso de su boca corre un río de baba: el Ván.",
+          "en": "There he will howl until Ragnarök, the end of the world. And that is why a river of spittle runs from his mouth: the Ván."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 250,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "toma",
+              "objeto": "espada"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "tyr",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "fenrir",
+          "x": 1250,
+          "mira": "izq",
+          "escala": 1.1,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1.5
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1650,
+          "s": 1.1,
+          "capa": "medio"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 1.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 2,
+          "tipo": "lluvia"
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA ESPADA EN LAS FAUCES",
+            "en": "THE SWORD IN HIS JAWS"
+          },
+          "x": 1250,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "POR ESO EXISTE EL RÍO VÁN",
+            "en": "THAT'S WHY THE RIVER VÁN EXISTS"
+          },
+          "x": 960,
+          "y": 210,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "aurora",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así quedaron los hijos de Loki: la serpiente en el mar, Hel entre los muertos, y el lobo atado en su isla.",
+          "en": "So Loki's children were set apart: the serpent in the sea, Hel among the dead, and the wolf bound on his island."
+        },
+        {
+          "es": "Pero ninguno desapareció. Los tres esperan, y cada uno tiene su lugar en el final del mundo.",
+          "en": "But none of them vanished. All three wait, and each has a place in the end of the world."
+        },
+        {
+          "es": "Mientras tanto, Thor emprende su viaje al país de los gigantes. Esa es la historia del próximo episodio: Thor entre los gigantes.",
+          "en": "Meanwhile, Thor sets out for the land of the giants. That is the story of the next episode: Thor Among the Giants."
+        }
+      ],
+      "actores": [
+        {
+          "id": "jormungandr",
+          "x": 350,
+          "escala": 0.28,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "hel",
+          "x": 650,
+          "escala": 0.5,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "fenrir",
+          "x": 1000,
+          "mira": "izq",
+          "escala": 0.4,
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 1400,
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.3,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "jotun",
+          "x": 1750,
+          "mira": "izq",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 2,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.8,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ]
+    }
+  ],
+  "miniatura": {
+    "heroe": "tyr",
+    "rival": "angrboda"
+  }
+}

@@ -1,0 +1,1062 @@
+{
+  "id": "hawaianas-02-nacidos-del-mar",
+  "serie": "hawaianas",
+  "numero": "02",
+  "titulo": {
+    "es": "Nacidos del mar",
+    "en": "Born in the Sea"
+  },
+  "tituloGriego": "BORN IN THE SEA",
+  "miniatura": {
+    "heroe": "pescador"
+  },
+  "siguiente": {
+    "es": "La tierra despierta",
+    "en": "The Land Wakes Up"
+  },
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "fondo_marino",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, el canto empezó en la oscuridad. La noche tuvo dos hijos, y lo primero vivo fue un pólipo de coral.",
+          "en": "Last time, the song began in the dark. The night had two children, and the first living thing was a coral polyp."
+        },
+        {
+          "es": "Ahora el coral crece, y el canto sigue nombrando criaturas nuevas.",
+          "en": "Now the coral is growing, and the chant keeps naming new creatures."
+        },
+        {
+          "es": "Lo dice una y otra vez: este nació, y después nació su hijo.",
+          "en": "Again and again it says: this one was born, and then its child came forth."
+        },
+        {
+          "es": "Sigamos el canto hacia el fondo del agua.",
+          "en": "Let us follow the song down into the water."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "kumulipo",
+          "como": "hawaiano",
+          "x": 560,
+          "capa": "fondo",
+          "props": {
+            "piel": "#3B2A22",
+            "contorno": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "mira",
+              "a": 1200
+            }
+          ]
+        },
+        {
+          "id": "poele",
+          "como": "hawaiana",
+          "x": 740,
+          "capa": "fondo",
+          "props": {
+            "piel": "#3B2A22",
+            "contorno": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "mira",
+              "a": 1200
+            }
+          ]
+        },
+        {
+          "id": "p1",
+          "como": "pez",
+          "x": 300,
+          "y": 420,
+          "escala": 0.6,
+          "props": {
+            "color": "#E8793A"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "nada",
+              "a": 2000,
+              "dur": 3.5
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "«NACIÓ… Y NACIÓ SU HIJO»",
+            "en": "\"BORN… AND HIS CHILD CAME FORTH\""
+          },
+          "x": 1273,
+          "y": 240,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "cavadores",
+      "fondo": "fondo_marino",
+      "camara": {
+        "de": 300,
+        "a": 1300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después del coral, el canto nombra a una larva que cava. Escarba la tierra y la amontona.",
+          "en": "After the coral, the chant names a digging grub. It digs the ground and heaps the earth up in piles."
+        },
+        {
+          "es": "Su hijo es la lombriz. Las lombrices convierten el suelo en tierra fértil: el canto ya piensa en la tierra firme.",
+          "en": "Its child is the earthworm. Worms turn the ground into soil, so the song is already thinking about land."
+        },
+        {
+          "es": "Luego viene la estrella de mar, y su hijo junto a ella.",
+          "en": "Then comes the starfish, and its child beside it."
+        },
+        {
+          "es": "Luego el pepino de mar, un animal blando, con forma de salchicha, que descansa en la arena. Y su hijo.",
+          "en": "Then the sea cucumber, a soft, sausage-shaped animal that lies on the sand. And its child."
+        },
+        {
+          "es": "Cada uno nace con uno pequeño al lado. El mar ya es una familia.",
+          "en": "Each one is born with a little one beside it. The sea is already a family."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "larva",
+          "como": "serpiente",
+          "x": 1250,
+          "props": {
+            "largo": 150,
+            "grosor": 22,
+            "erguida": 0,
+            "color": "#C98A78"
+          },
+          "rotulo": "DIGGING GRUB",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "polvo"
+            }
+          ]
+        },
+        {
+          "id": "lombriz",
+          "como": "serpiente",
+          "x": 1650,
+          "props": {
+            "largo": 110,
+            "grosor": 14,
+            "erguida": 0,
+            "color": "#B56E5E"
+          },
+          "rotulo": "EARTHWORM",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "polvo"
+            }
+          ]
+        },
+        {
+          "id": "p1",
+          "como": "pez",
+          "x": 400,
+          "y": 380,
+          "escala": 0.5,
+          "props": {
+            "color": "#2C6E8A"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "nada",
+              "a": 2200,
+              "dur": 5
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "ESTRELLA DE MAR",
+            "en": "STARFISH"
+          },
+          "x": 1760,
+          "y": 690,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "PEPINO DE MAR",
+            "en": "SEA CUCUMBER"
+          },
+          "x": 1960,
+          "y": 690,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "conchas",
+      "fondo": "fondo_marino",
+      "camara": {
+        "de": 800,
+        "a": 1800,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Luego llegan los erizos de mar, redondos y cubiertos de púas. El canto cuenta toda una tribu.",
+          "en": "Then come the sea urchins, round and covered in spikes. The chant counts a whole tribe of them."
+        },
+        {
+          "es": "Algunos tienen púas cortas, otros largas, otros finas, y otros son lisos.",
+          "en": "Some have short spikes, some long, some thin, and some are smooth."
+        },
+        {
+          "es": "Siguen los moluscos: la ostra, el mejillón, la lapa, la cauri y el caracol de trompeta.",
+          "en": "Shellfish follow: the oyster, the mussel, the limpet, the cowry and the conch."
+        },
+        {
+          "es": "Una concha madre tiene a su lado una concha hija. Hasta las conchas son familias.",
+          "en": "A mother shell has a little child shell beside it. Even the shells are families."
+        },
+        {
+          "es": "Los hawaianos todavía soplan el caracol, llamado pū, como una trompeta.",
+          "en": "Hawaiians still blow the conch shell, called the pū, like a trumpet."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "p1",
+          "como": "pez",
+          "x": 900,
+          "y": 440,
+          "escala": 0.55,
+          "props": {
+            "color": "#E8B81C"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "nada",
+              "a": 2600,
+              "dur": 5
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "como": "pez",
+          "x": 2600,
+          "y": 330,
+          "escala": 0.45,
+          "props": {
+            "color": "#B2331F"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "nada",
+              "a": 900,
+              "dur": 5
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "ERIZOS DE MAR",
+            "en": "SEA URCHINS"
+          },
+          "x": 1860,
+          "y": 690,
+          "hasta": 1.3
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "OSTRA · MEJILLÓN · LAPA · CAURI",
+            "en": "OYSTER · MUSSEL · LIMPET · COWRY"
+          },
+          "x": 2260,
+          "y": 690,
+          "hasta": 3.4
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "PŪ · CARACOL DE TROMPETA",
+            "en": "PŪ · CONCH TRUMPET"
+          },
+          "x": 2660,
+          "y": 690
+        }
+      ]
+    },
+    {
+      "id": "limu",
+      "fondo": "fondo_marino",
+      "camara": {
+        "de": 1200,
+        "a": 2000,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después vienen las algas, que los hawaianos llaman limu.",
+          "en": "Next come the seaweeds, which Hawaiians call limu."
+        },
+        {
+          "es": "Y aquí el canto hace algo ingenioso. Cada criatura del mar tiene una gemela en tierra: una planta con casi el mismo nombre.",
+          "en": "And here the chant does something clever. Every sea creature gets a twin on land, a plant with almost the same name."
+        },
+        {
+          "es": "Un alga llamada manauea está emparejada con una planta de taro de la tierra que se llama igual.",
+          "en": "One seaweed, the manauea, is paired with a taro plant on land that has the same name."
+        },
+        {
+          "es": "El alga kala está emparejada con la ʻakala, una planta de la tierra.",
+          "en": "The kala seaweed is paired with the ʻakala, a plant of the land."
+        },
+        {
+          "es": "Las plantas de tierra se llaman guardianas. Cuidan a sus primas del mar.",
+          "en": "The land plants are called guardians. They watch over their cousins in the sea."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "p1",
+          "como": "pez",
+          "x": 1400,
+          "y": 450,
+          "escala": 0.5,
+          "props": {
+            "color": "#5FB8B4"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "nada",
+              "a": 3000,
+              "dur": 5
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "como": "pez",
+          "x": 3000,
+          "y": 560,
+          "escala": 0.5,
+          "props": {
+            "color": "#E8793A"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "nada",
+              "a": 1400,
+              "dur": 5
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LIMU · ALGAS",
+            "en": "LIMU · SEAWEED"
+          },
+          "x": 2240,
+          "y": 240,
+          "hasta": 1
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "MANAUEA (MAR) ↔ MANAUEA (TIERRA)",
+            "en": "MANAUEA (SEA) ↔ MANAUEA (LAND)"
+          },
+          "x": 2560,
+          "y": 240,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "KALA (MAR) ↔ ʻAKALA (TIERRA)",
+            "en": "KALA (SEA) ↔ ʻAKALA (LAND)"
+          },
+          "x": 2720,
+          "y": 240,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "gemelos",
+      "fondo": "loi",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Muchos hawaianos lo leen como una lección: el mar y la tierra son una sola familia, y cada uno cuida del otro.",
+          "en": "Many Hawaiians read this as a lesson: sea and land are one family, and each looks after the other."
+        },
+        {
+          "es": "Nada en el canto está solo. Cada criatura tiene una pareja, una prima, una guardiana.",
+          "en": "Nothing in the chant stands alone. Every creature has a partner, a cousin, a guardian."
+        },
+        {
+          "es": "Piensa en una planta que crece cerca de tu casa, y en una criatura del mar que te guste.",
+          "en": "Think of a plant that grows near your home, and a sea creature you love."
+        },
+        {
+          "es": "¿Qué pareja formarías? Cuéntamelo en los comentarios.",
+          "en": "Which pair would you make? Tell me in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kalo",
+          "x": 1500,
+          "s": 1,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "pescador",
+          "como": "pescador",
+          "x": 520,
+          "mira": "der",
+          "rotulo": "THE SEA",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala",
+              "dur": 1
+            },
+            {
+              "en": 1.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "agricultora",
+          "como": "hawaiana",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "THE LAND",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "senala",
+              "dur": 1
+            },
+            {
+              "en": 1.8,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 2.5,
+          "texto": {
+            "es": "¿QUÉ PAREJA FORMARÍAS?",
+            "en": "WHICH PAIR WOULD YOU MAKE?"
+          },
+          "x": 1073,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "peces",
+      "fondo": "fondo_marino",
+      "camara": {
+        "de": 200,
+        "a": 1000,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces empieza la segunda era. Ahora el mar se llena de peces.",
+          "en": "Then the second age begins. Now the sea fills with fish."
+        },
+        {
+          "es": "Una marsopa salta, un tiburón pasa deslizándose y las anguilas se cuelan entre el coral.",
+          "en": "A porpoise leaps, a shark glides by, and eels slide through the coral."
+        },
+        {
+          "es": "El canto nombra decenas de especies: el pulpo, la raya, el mújol y muchas más.",
+          "en": "The chant names dozens of kinds: the octopus, the stingray, the mullet, and many more."
+        },
+        {
+          "es": "Y otra vez cada pez tiene su gemela en tierra. Un pez llamado ʻaʻawa va con la planta ʻawa.",
+          "en": "And again each fish has a twin on land. A fish named ʻaʻawa goes with the ʻawa plant."
+        },
+        {
+          "es": "El pulpo va con un arbusto de tierra que comparte parte de su nombre.",
+          "en": "The octopus goes with a land shrub that shares part of its name."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "marsopa",
+          "como": "delfin",
+          "x": 600,
+          "y": 330,
+          "escala": 0.8,
+          "props": {
+            "color": "#3E6670"
+          },
+          "rotulo": "PORPOISE",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "nada",
+              "a": 1500,
+              "dur": 2
+            },
+            {
+              "en": 1.2,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "tiburon",
+          "como": "pez",
+          "x": 1700,
+          "y": 520,
+          "escala": 2.2,
+          "mira": "izq",
+          "props": {
+            "color": "#4A5A66"
+          },
+          "rotulo": "SHARK",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "nada",
+              "a": 700,
+              "dur": 2.5
+            }
+          ]
+        },
+        {
+          "id": "anguila",
+          "como": "serpiente",
+          "x": 1100,
+          "props": {
+            "largo": 240,
+            "grosor": 24,
+            "erguida": 0,
+            "color": "#6B5A3A"
+          },
+          "rotulo": "EEL",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "p1",
+          "como": "pez",
+          "x": 300,
+          "y": 450,
+          "escala": 0.5,
+          "props": {
+            "color": "#E8B81C"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "nada",
+              "a": 1900,
+              "dur": 5
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "como": "pez",
+          "x": 1900,
+          "y": 600,
+          "escala": 0.5,
+          "props": {
+            "color": "#B2331F"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "nada",
+              "a": 300,
+              "dur": 5
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "PULPO · RAYA · MÚJOL",
+            "en": "OCTOPUS · STINGRAY · MULLET"
+          },
+          "x": 1560,
+          "y": 240,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "ʻAʻAWA (PEZ) ↔ ʻAWA (PLANTA)",
+            "en": "ʻAʻAWA (FISH) ↔ ʻAWA (PLANT)"
+          },
+          "x": 1720,
+          "y": 240,
+          "hasta": 4
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "HEʻE (PULPO) ↔ WALAHEʻE (ARBUSTO)",
+            "en": "HEʻE (OCTOPUS) ↔ WALAHEʻE (SHRUB)"
+          },
+          "x": 1880,
+          "y": 240
+        }
+      ]
+    },
+    {
+      "id": "bebe",
+      "fondo": "fondo_marino",
+      "camara": {
+        "de": 900,
+        "a": 1500,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Algunos estudiosos oyen algo más en estos versos. Las criaturas del mar también son un bebé que crece.",
+          "en": "Some scholars hear something more in these lines. The sea creatures are also a baby, growing."
+        },
+        {
+          "es": "El canto describe a un niño que patalea, forcejea y se retuerce, como un pez con las aletas abiertas.",
+          "en": "The song describes a child who kicks, wrestles and wriggles, like a fish with its fins spread wide."
+        },
+        {
+          "es": "Según la costumbre antigua, elogiar a un bebé en voz alta podía traerle mala suerte.",
+          "en": "In the old Hawaiian custom, praising a baby out loud could bring bad luck."
+        },
+        {
+          "es": "Así que a un bebé se lo elogiaba con el nombre de un pez.",
+          "en": "So people praised a baby with the name of a fish instead."
+        },
+        {
+          "es": "Un solo canto puede hablar del mar y de un niño a la vez.",
+          "en": "One song can be about the sea and about a child at the same time."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "bebe",
+          "como": "nino",
+          "x": 1750,
+          "escala": 1.1,
+          "rotulo": "THE CHIEF'S CHILD",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.3,
+              "hace": "salta"
+            },
+            {
+              "en": 1.8,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "p1",
+          "como": "pez",
+          "x": 1000,
+          "y": 400,
+          "escala": 0.7,
+          "props": {
+            "color": "#2C6E8A"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "nada",
+              "a": 2800,
+              "dur": 5
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "A LOS BEBÉS SE LOS ELOGIABA CON NOMBRES DE PECES",
+            "en": "BABIES WERE PRAISED WITH FISH NAMES"
+          },
+          "x": 2280,
+          "y": 210,
+          "hasta": 4.6
+        }
+      ]
+    },
+    {
+      "id": "profundo",
+      "fondo": "fondo_marino",
+      "camara": {
+        "de": 1000,
+        "a": 1700,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "La segunda era termina con una imagen del mar profundo. Pasan cardúmenes, y los cangrejos y las conchas se mueven por el fondo.",
+          "en": "The second age ends with a picture of the deep sea. Schools of fish pass by, and crabs and shells move along the bottom."
+        },
+        {
+          "es": "Se alzan crestas de coral, demasiadas para contarlas. Las criaturas pequeñas buscan lugares oscuros donde esconderse.",
+          "en": "Coral ridges rise on the sea floor, too many to count. The little creatures look for dark places to hide."
+        },
+        {
+          "es": "La tierra, dice el canto, queda cubierta por la noche. Y termina con estas palabras: todavía es de noche.",
+          "en": "The land, says the chant, is covered by night. And it ends with these words: still it is night."
+        },
+        {
+          "es": "Pero el mar está lleno de vida, y la vida nunca se queda en un solo lugar.",
+          "en": "But the sea is full of life, and life never stays in one place."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "p1",
+          "como": "pez",
+          "x": 1100,
+          "y": 400,
+          "escala": 0.5,
+          "props": {
+            "color": "#5FB8B4"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "nada",
+              "a": 2900,
+              "dur": 4
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "como": "pez",
+          "x": 2900,
+          "y": 480,
+          "escala": 0.5,
+          "props": {
+            "color": "#E8793A"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "nada",
+              "a": 1100,
+              "dur": 4
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "como": "pez",
+          "x": 1150,
+          "y": 560,
+          "escala": 0.5,
+          "props": {
+            "color": "#E8B81C"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "nada",
+              "a": 2800,
+              "dur": 4
+            }
+          ]
+        },
+        {
+          "id": "p4",
+          "como": "pez",
+          "x": 2800,
+          "y": 340,
+          "escala": 0.5,
+          "props": {
+            "color": "#B2331F"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "nada",
+              "a": 1100,
+              "dur": 4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "oscurecer",
+          "dur": 2.5,
+          "intensidad": 1.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.4,
+          "texto": {
+            "es": "TODAVÍA ES DE NOCHE",
+            "en": "STILL IT IS NIGHT"
+          },
+          "x": 2468,
+          "y": 240,
+          "hasta": 3.4
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.02,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así que el mar está lleno: coral, lombrices, estrellas, conchas, algas y peces. Y cada uno tiene una pareja en tierra.",
+          "en": "So the sea is full: coral, worms, starfish, shells, seaweed and fish. And each one has a partner on land."
+        },
+        {
+          "es": "¿Qué criatura del mar te sorprendió más? Cuéntamelo en los comentarios.",
+          "en": "Which creature of the sea surprised you the most? Tell me in the comments."
+        },
+        {
+          "es": "Ahora el canto deja el agua. Se abren las primeras alas, y las criaturas trepan hacia la orilla.",
+          "en": "Now the song leaves the water. The first wings open, and creatures crawl ashore."
+        },
+        {
+          "es": "En el próximo episodio: La tierra despierta.",
+          "en": "Next time: The Land Wakes Up."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "petroglifo",
+          "x": 520,
+          "s": 1.1,
+          "capa": "medio",
+          "props": {
+            "figura": "persona"
+          }
+        },
+        {
+          "tipo": "petroglifo",
+          "x": 1000,
+          "s": 1.1,
+          "capa": "medio",
+          "props": {
+            "figura": "espiral"
+          }
+        },
+        {
+          "tipo": "petroglifo",
+          "x": 1500,
+          "s": 1.1,
+          "capa": "medio",
+          "props": {
+            "figura": "canoa"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "cantor",
+          "como": "kahuna",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 4
+            },
+            {
+              "en": 2.2,
+              "hace": "senala",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "¿QUÉ CRIATURA TE SORPRENDIÓ MÁS?",
+            "en": "WHICH CREATURE SURPRISED YOU MOST?"
+          },
+          "x": 1035,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "PRÓXIMO: LA TIERRA DESPIERTA",
+            "en": "NEXT: THE LAND WAKES UP"
+          },
+          "x": 1135,
+          "y": 290
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Cada criatura del mar tiene una gemela en tierra",
+        "en": "Every sea creature has a twin on land"
+      },
+      "escena": "limu",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Por qué a los bebés se los elogiaba con nombres de peces",
+        "en": "Why babies were praised with fish names"
+      },
+      "escena": "bebe",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "La primera criatura en cavar la tierra",
+        "en": "The first creature to dig the earth"
+      },
+      "escena": "cavadores",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1000
+    }
+  ]
+}

@@ -1,0 +1,1475 @@
+{
+  "id": "egipcias-09-horus-contra-set",
+  "serie": "egipcias",
+  "numero": "09",
+  "titulo": {
+    "es": "Las contiendas de Horus y Set",
+    "en": "The Contendings of Horus and Set"
+  },
+  "tituloGriego": "HORUS AND SET",
+  "miniatura": {
+    "heroe": "horus",
+    "rival": "set"
+  },
+  "escenas": [
+    {
+      "id": "tribunal",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 960,
+          "s": 1.2,
+          "capa": "fondo"
+        }
+      ],
+      "frases": [
+        {
+          "es": "Horus había crecido, y se presentó ante el tribunal de los dioses para reclamar el trono de su padre.",
+          "en": "Horus had grown up, and he stood before the court of the gods to claim his father's throne."
+        },
+        {
+          "es": "Pero ese trono lo ocupaba Set, y no pensaba entregarlo sin pelear.",
+          "en": "But Set sat on that throne, and he had no plans to give it up without a fight."
+        },
+        {
+          "es": "El tribunal lo formaban los nueve grandes dioses, y lo presidía el propio Ra.",
+          "en": "The court was made up of the nine great gods, and Ra himself presided over it."
+        },
+        {
+          "es": "Horus habló primero: «Soy el hijo de Osiris. El trono es mío por derecho.»",
+          "en": "Horus spoke first: \"I am the son of Osiris. The throne is mine by right.\""
+        },
+        {
+          "es": "Set respondió: «Yo soy el más fuerte. Cada noche defiendo la barca de Ra contra la serpiente. Quien hace eso debe reinar.»",
+          "en": "Set answered: \"I am the strongest. Every night I defend the boat of Ra against the serpent. Whoever does that should rule.\""
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "x": 960,
+          "capa": "fondo",
+          "escala": 1,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "x": 720,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "x": 330,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 420
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 3.1,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1500
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 4.1,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 400,
+          "dur": 1,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "EL TRIBUNAL DE LOS NUEVE DIOSES",
+            "en": "THE COURT OF THE NINE GODS"
+          },
+          "x": 960,
+          "y": 240,
+          "hasta": 3.5
+        }
+      ]
+    },
+    {
+      "id": "neit",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Thoth y Shu decían que el trono pasa de padre a hijo. Pero Ra prefería a Set, el fuerte, y los dioses empezaron a gritar.",
+          "en": "Thoth and Shu said the throne passes from father to son. But Ra leaned toward Set, the strong one, and the gods began to shout."
+        },
+        {
+          "es": "Entonces Thoth propuso pedir consejo a Neit, la más antigua de las diosas, y le escribió una carta.",
+          "en": "So Thoth suggested asking Neith, the oldest of the goddesses, for advice, and he wrote her a letter."
+        },
+        {
+          "es": "Neit respondió: «Entreguen el cargo de Osiris a su hijo Horus, o haré que el cielo se desplome.»",
+          "en": "Neith replied: \"Give Osiris's office to his son Horus, or I will make the sky come crashing down.\""
+        },
+        {
+          "es": "Y agregó algo más: que a Set le dieran el doble de sus bienes, para consolarlo.",
+          "en": "And she added one more thing: that Set be given double his possessions, to console him."
+        },
+        {
+          "es": "Todos aplaudieron. Todos, menos Ra, que dijo que Horus era demasiado joven y débil para reinar.",
+          "en": "Everyone cheered. Everyone except Ra, who said Horus was too young and too weak to rule."
+        },
+        {
+          "es": "Los dioses se indignaron, y Ra, ofendido, se tumbó en su tienda. Solo Hathor, su hija, logró hacerlo reír otra vez.",
+          "en": "The gods were outraged, and Ra, offended, lay down in his tent. Only Hathor, his daughter, could make him laugh again."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "x": 520,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "shu",
+          "x": 760,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "neit",
+          "x": 1050,
+          "como": "neit",
+          "rotulo": "NEITH",
+          "capa": "fondo",
+          "escala": 1,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.5,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4.8,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "hathor",
+          "x": 1900,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "entra",
+              "a": 1250
+            },
+            {
+              "en": 5.5,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 380,
+          "dur": 1.2,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "isis_cuento",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1050,
+          "s": 0.5
+        }
+      ],
+      "frases": [
+        {
+          "es": "Set puso una condición: no hablaría con Isis presente, porque ella siempre lo vencía con sus trucos.",
+          "en": "Set set a condition: he would not argue with Isis present, because her tricks always beat him."
+        },
+        {
+          "es": "Así que el tribunal se mudó a una isla, y al barquero le ordenaron no cruzar a nadie que se pareciera a Isis.",
+          "en": "So the court moved to an island, and the ferryman was ordered not to carry anyone who looked like Isis."
+        },
+        {
+          "es": "Pero Isis se disfrazó de anciana, le dio al barquero un anillo de oro, y el barquero la cruzó.",
+          "en": "But Isis disguised herself as an old woman, gave the ferryman a gold ring, and he took her across."
+        },
+        {
+          "es": "Del otro lado se convirtió en una joven hermosa y se paró en el camino de Set, con lágrimas en los ojos.",
+          "en": "On the far shore she turned into a beautiful young woman and stood on Set's path, with tears in her eyes."
+        },
+        {
+          "es": "«Mi esposo murió», le dijo, «y dejó un hijo que cuida su ganado. Ahora un forastero quiere echarlo y quedarse con todo.»",
+          "en": "\"My husband died,\" she told him, \"and left a son who tends his cattle. Now a stranger wants to drive him out and take everything.\""
+        },
+        {
+          "es": "Set se indignó: «¿Cómo se le va a dar el ganado a un extraño, mientras el hijo del dueño está vivo?»",
+          "en": "Set was outraged: \"How can the cattle be given to a stranger while the owner's son is alive?\""
+        }
+      ],
+      "actores": [
+        {
+          "id": "set",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1600
+            },
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 3.6,
+              "hace": "camina",
+              "a": 1450,
+              "dur": 0.6
+            },
+            {
+              "en": 5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "nemty",
+          "x": 1050,
+          "como": "egipcio",
+          "rotulo": "NEMTY",
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 300,
+          "como": "anciana",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.8,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 1
+            },
+            {
+              "en": 3.2,
+              "hace": "transforma",
+              "en_que": "egipcia"
+            },
+            {
+              "en": 4,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.2,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 560,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA ISLA",
+            "en": "THE ISLAND"
+          },
+          "x": 960,
+          "y": 240,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "milano",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.05,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Isis se transformó en un milano, voló hasta la rama de un árbol y le gritó: «¡Tú mismo lo has dicho!»",
+          "en": "Then Isis turned into a kite, flew up to the branch of a tree, and cried out: \"You have said it yourself!\""
+        },
+        {
+          "es": "Set se quedó helado: se había condenado con sus propias palabras. Y los dioses lo oyeron.",
+          "en": "Set froze: he had condemned himself with his own words. And the gods had heard him."
+        },
+        {
+          "es": "Pero Set, furioso, juró que no aceptaría esa decisión, y exigió nuevas pruebas.",
+          "en": "But Set, furious, swore he would not accept that decision, and demanded new trials."
+        }
+      ],
+      "actores": [
+        {
+          "id": "set",
+          "x": 900,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "joven",
+          "x": 1200,
+          "como": "egipcia",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "milano",
+          "x": 1300,
+          "como": "halcon",
+          "y": 420,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.4,
+              "hace": "vuela",
+              "a": [
+                1400,
+                250
+              ],
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "x": 1500,
+          "mira": "izq",
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "x": 1700,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "destello",
+          "dur": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "SET SE HA JUZGADO A SÍ MISMO",
+            "en": "SET HAS JUDGED HIMSELF"
+          },
+          "x": 960,
+          "y": 250,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "hipopotamos",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Set propuso un reto: los dos se convertirían en hipopótamos y se hundirían en el río. Ganaría el que aguantara más bajo el agua.",
+          "en": "Set proposed a challenge: both would turn into hippopotamuses and sink into the river. Whoever stayed under the longest would win."
+        },
+        {
+          "es": "Los dos se hundieron, y Isis, en la orilla, no soportaba la espera.",
+          "en": "Both went under, and Isis, on the bank, could not bear the waiting."
+        },
+        {
+          "es": "Entonces hizo un arpón de cobre, lo ató a una cuerda y lo lanzó al agua. Pero se clavó en su propio hijo.",
+          "en": "So she made a copper harpoon, tied it to a rope and hurled it into the water. But it struck her own son."
+        },
+        {
+          "es": "Isis lo soltó al instante y volvió a lanzar. Esta vez dio en Set, que gritó: «¡Hermana, soy tu hermano! ¿Qué te hice?»",
+          "en": "She released it at once and threw again. This time it hit Set, who cried: \"Sister, I am your brother! What have I done to you?\""
+        },
+        {
+          "es": "Isis sintió compasión y lo soltó. Horus, furioso, salió del agua rugiendo de rabia.",
+          "en": "Isis felt pity and let him go. Horus, furious, burst out of the water roaring with rage."
+        }
+      ],
+      "actores": [
+        {
+          "id": "horus",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.7,
+              "hace": "transforma",
+              "en_que": "hipopotamo"
+            },
+            {
+              "en": 3.9,
+              "hace": "transforma",
+              "en_que": "horus"
+            },
+            {
+              "en": 4.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "x": 900,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.7,
+              "hace": "transforma",
+              "en_que": "hipopotamo"
+            },
+            {
+              "en": 3.3,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.9,
+              "hace": "transforma",
+              "en_que": "set"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "toma",
+              "objeto": "lanza"
+            },
+            {
+              "en": 2.3,
+              "hace": "lanza"
+            },
+            {
+              "en": 3,
+              "hace": "toma",
+              "objeto": "lanza"
+            },
+            {
+              "en": 3.2,
+              "hace": "lanza"
+            },
+            {
+              "en": 4,
+              "hace": "baja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.8,
+          "tipo": "chispas",
+          "x": 700,
+          "y": 700,
+          "dur": 0.6
+        },
+        {
+          "en": 2.4,
+          "tipo": "chispas",
+          "x": 800,
+          "y": 700,
+          "dur": 0.6
+        },
+        {
+          "en": 3.3,
+          "tipo": "chispas",
+          "x": 950,
+          "y": 700,
+          "dur": 0.6
+        },
+        {
+          "en": 0.8,
+          "tipo": "olas-suben",
+          "dur": 1,
+          "intensidad": 0.1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "EL ARPÓN DE ISIS",
+            "en": "ISIS' HARPOON"
+          },
+          "x": 960,
+          "y": 250,
+          "hasta": 3.5
+        }
+      ]
+    },
+    {
+      "id": "ojos",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "loto",
+          "x": 1500,
+          "s": 1.3,
+          "en": 1.5
+        },
+        {
+          "tipo": "loto",
+          "x": 1640,
+          "s": 1.1,
+          "en": 1.6
+        },
+        {
+          "tipo": "luna",
+          "x": 1300,
+          "y": 260,
+          "s": 1.2,
+          "en": 5
+        }
+      ],
+      "frases": [
+        {
+          "es": "Horus, furioso, se lanzó contra Set, y los dos pelearon en el desierto, lejos de los demás dioses.",
+          "en": "Horus, furious, threw himself at Set, and the two fought in the desert, far from the other gods."
+        },
+        {
+          "es": "En la pelea, Set le arrancó los ojos y los enterró en la montaña, y allí brotaron dos flores de loto.",
+          "en": "In the fight, Set tore out his eyes and buried them in the mountain, and two lotus flowers bloomed there."
+        },
+        {
+          "es": "Ciego, Horus lloraba solo entre las rocas, hasta que lo encontró Hathor.",
+          "en": "Blind, Horus wept alone among the rocks, until Hathor found him."
+        },
+        {
+          "es": "Hathor atrapó una gacela, la ordeñó y vertió la leche tibia en los ojos de Horus: «Ábrelos», le dijo.",
+          "en": "Hathor caught a gazelle, milked it, and poured the warm milk into the eyes of Horus: \"Open them,\" she said."
+        },
+        {
+          "es": "Horus abrió los ojos y volvió a ver. A ese ojo herido y curado los egipcios lo llamaron udyat: «el ojo sano».",
+          "en": "Horus opened his eyes and could see again. The Egyptians called that wounded, healed eye the udjat: \"the sound eye.\""
+        },
+        {
+          "es": "Lo pintaban en amuletos y en las proas de los barcos. Y algunos textos decían que la luna es ese ojo: se apaga cada mes y sana.",
+          "en": "They painted it on amulets and on the prows of boats. And some texts said the moon is that eye: it dims each month, and heals."
+        }
+      ],
+      "actores": [
+        {
+          "id": "horus",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.6
+            },
+            {
+              "en": 0.7,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "cae"
+            },
+            {
+              "en": 2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 4,
+              "hace": "levantarse"
+            },
+            {
+              "en": 4.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.8,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.9,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "hathor",
+          "x": 1800,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "entra",
+              "a": 1300
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "gacela",
+          "x": 1750,
+          "como": "cierva",
+          "rotulo": "",
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.5,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "udyat",
+          "x": 1100,
+          "como": "ojo_ra",
+          "y": 300,
+          "escala": 1.1,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.1,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.8,
+          "tipo": "polvo",
+          "x": 900,
+          "dur": 0.6
+        },
+        {
+          "en": 1,
+          "tipo": "destello",
+          "dur": 0.3
+        },
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 500,
+          "dur": 1,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "POR ESO EL OJO DE HORUS PROTEGE",
+            "en": "THAT'S WHY THE EYE OF HORUS PROTECTS"
+          },
+          "x": 960,
+          "y": 210,
+          "estilo": "porque",
+          "hasta": 5.5
+        }
+      ]
+    },
+    {
+      "id": "barcos",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 520,
+          "s": 1.3,
+          "en": 1
+        },
+        {
+          "tipo": "barco",
+          "x": 1350,
+          "s": 0.6,
+          "en": 2
+        }
+      ],
+      "frases": [
+        {
+          "es": "Pero Set no se rindió, y propuso una carrera de barcos de piedra.",
+          "en": "But Set would not give up, and he proposed a race of stone boats."
+        },
+        {
+          "es": "Set arrancó la cima de una montaña y la talló hasta darle forma de barco.",
+          "en": "Set tore the peak off a mountain and carved it into the shape of a boat."
+        },
+        {
+          "es": "Horus, más astuto, construyó el suyo de pino, lo cubrió de yeso y lo pintó para que pareciera piedra.",
+          "en": "Horus, shrewder, built his of pine, coated it in plaster, and painted it to look like stone."
+        },
+        {
+          "es": "Los dos botaron sus barcos. El de Set, de verdadera piedra, se hundió como una roca.",
+          "en": "Both boats were launched. Set's, made of real stone, sank like a rock."
+        },
+        {
+          "es": "Furioso, Set se convirtió en hipopótamo y destrozó el barco de Horus. Y el juicio siguió, año tras año.",
+          "en": "Furious, Set turned into a hippopotamus and smashed Horus's boat. And the trial dragged on, year after year."
+        }
+      ],
+      "actores": [
+        {
+          "id": "set",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.9,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            },
+            {
+              "en": 4,
+              "hace": "transforma",
+              "en_que": "hipopotamo"
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "x": 1650,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "toma",
+              "objeto": "martillo"
+            },
+            {
+              "en": 2.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "x": 1000,
+          "capa": "medio",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 520,
+          "dur": 0.8
+        },
+        {
+          "en": 3.4,
+          "tipo": "chispas",
+          "x": 520,
+          "y": 700,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LA CARRERA DE BARCOS DE PIEDRA",
+            "en": "THE RACE OF STONE BOATS"
+          },
+          "x": 960,
+          "y": 240,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "osiris",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pasaron los años, y los dioses seguían discutiendo. Al final, el juicio ya duraba ochenta años.",
+          "en": "The years passed, and the gods kept arguing. In the end, the trial had lasted eighty years."
+        },
+        {
+          "es": "Entonces los dioses escribieron una carta a Osiris, que reinaba en el mundo de los muertos.",
+          "en": "So the gods wrote a letter to Osiris, who ruled the land of the dead."
+        },
+        {
+          "es": "Osiris respondió: «¿Por qué se le niega a mi hijo lo que es suyo? Yo hice crecer el trigo y la cebada que alimentan a los dioses.»",
+          "en": "Osiris answered: \"Why is my son denied what is his? I made the wheat and barley that feed the gods.\""
+        },
+        {
+          "es": "«Y recuerden: en mi reino hay mensajeros que no temen a ningún dios, y traen el corazón de quien obra mal.»",
+          "en": "\"And remember: in my kingdom there are messengers who fear no god, and they bring back the heart of anyone who does wrong.\""
+        },
+        {
+          "es": "Los dioses callaron. Nadie quería encontrarse un día con esos mensajeros con la conciencia sucia.",
+          "en": "The gods fell silent. Nobody wanted to meet those messengers one day with a guilty conscience."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "toma",
+              "objeto": "cana"
+            },
+            {
+              "en": 1.2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4,
+              "hace": "calla"
+            }
+          ]
+        },
+        {
+          "id": "osiris",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.6,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.1,
+              "hace": "habla",
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "x": 1850,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "x": 800,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 5,
+          "intensidad": 0.3
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 400,
+          "dur": 1.5,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "80 AÑOS",
+            "en": "80 YEARS"
+          },
+          "x": 960,
+          "y": 240,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "veredicto",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 960,
+          "s": 1.2,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "barca_solar",
+          "x": 1650,
+          "y": 420,
+          "s": 0.5,
+          "en": 2
+        }
+      ],
+      "frases": [
+        {
+          "es": "Entonces Ra dio por fin su veredicto: «Pongan la corona blanca sobre la cabeza de Horus, hijo de Isis.»",
+          "en": "Then Ra finally gave his verdict: \"Place the white crown on the head of Horus, son of Isis.\""
+        },
+        {
+          "es": "Horus fue coronado rey de Egipto. Isis, desbordando de alegría, pidió al viento del norte que llevara la noticia a Osiris.",
+          "en": "Horus was crowned king of Egypt. Isis, overflowing with joy, asked the north wind to carry the news to Osiris."
+        },
+        {
+          "es": "¿Y Set? Ra no lo destruyó: se lo llevó a su barca, para que su fuerza sirviera al sol.",
+          "en": "And Set? Ra did not destroy him: he took him into his boat, so that his strength would serve the sun."
+        },
+        {
+          "es": "Allí Set truena en el cielo y espanta a los enemigos de Ra.",
+          "en": "There Set thunders across the sky and frightens the enemies of Ra."
+        },
+        {
+          "es": "Horus quedó como rey de los vivos, y Osiris como rey de los muertos. Y el mundo recuperó su equilibrio.",
+          "en": "Horus remained king of the living, and Osiris king of the dead. And the world found its balance again."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "x": 960,
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "x": 520,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.1,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "x": 300,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "x": 1300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1650,
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 520,
+          "y": 300,
+          "dur": 1.5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "rayo",
+          "x": 1650,
+          "y": 600,
+          "dur": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 650,
+          "s": 0.9
+        }
+      ],
+      "frases": [
+        {
+          "es": "Pero la barca de Ra, con Set a bordo, tiene un viaje que nadie hace sin miedo.",
+          "en": "But the boat of Ra, with Set on board, makes a journey that no one makes without fear."
+        },
+        {
+          "es": "Cada noche el sol se hunde en el Duat, el mundo de abajo, y debe cruzarlo durante doce horas de oscuridad.",
+          "en": "Every night the sun sinks into the Duat, the world below, and must cross it through twelve hours of darkness."
+        },
+        {
+          "es": "Allí lo espera una serpiente gigante que quiere devorarlo: Apep.",
+          "en": "Waiting there is a giant serpent that wants to swallow it: Apep."
+        },
+        {
+          "es": "Esa es la historia del próximo episodio: el viaje nocturno de Ra.",
+          "en": "That is the story of the next episode: the night journey of Ra."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "x": 600,
+          "y": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "x": 780,
+          "y": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "apep",
+          "x": 1450,
+          "como": "apofis",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 4,
+          "intensidad": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "PRÓXIMO: EL VIAJE NOCTURNO DE RA",
+            "en": "NEXT: THE NIGHT JOURNEY OF RA"
+          },
+          "x": 960,
+          "y": 250
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La diosa que engañó a un dios con un cuento",
+        "en": "The goddess who tricked a god with a story"
+      },
+      "escena": "isis_cuento",
+      "desde": 2,
+      "hasta": 5,
+      "foco": 1150
+    },
+    {
+      "gancho": {
+        "es": "El dios al que le arrancaron los ojos",
+        "en": "The god whose eyes were torn out"
+      },
+      "escena": "ojos",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1250
+    },
+    {
+      "gancho": {
+        "es": "Cuando dos dioses se volvieron hipopótamos",
+        "en": "When two gods turned into hippos"
+      },
+      "escena": "hipopotamos",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 700
+    }
+  ]
+}

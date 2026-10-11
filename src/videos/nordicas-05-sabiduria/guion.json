@@ -1,0 +1,1887 @@
+{
+  "id": "nordicas-05-sabiduria",
+  "serie": "nordicas",
+  "numero": "05",
+  "titulo": {
+    "es": "El precio de la sabiduría",
+    "en": "Odin's Price for Wisdom"
+  },
+  "tituloGriego": "ODIN'S PRICE FOR WISDOM",
+  "escenas": [
+    {
+      "id": "cabeza",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Odín seguía consultando la cabeza de Mímir, que le susurraba secretos que nadie más conocía.",
+          "en": "Odin kept consulting the head of Mímir, which whispered secrets that no one else knew."
+        },
+        {
+          "es": "Pero él no quería saber solo lo que ya había pasado: quería ver el futuro.",
+          "en": "But he did not want to know only what had already happened: he wanted to see the future."
+        },
+        {
+          "es": "Entonces la cabeza le habló de un pozo, escondido bajo una raíz del gran árbol, en la tierra de los gigantes.",
+          "en": "Then the head spoke of a well, hidden beneath a root of the great tree, in the land of the giants."
+        },
+        {
+          "es": "Quien bebiera de ese pozo vería más lejos que nadie. Odín tomó su lanza y partió hacia allí.",
+          "en": "Whoever drank from that well would see farther than anyone. Odin took up his spear and set out."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 650,
+          "props": {
+            "tuerto": false
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1850,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 1700,
+          "s": 0.7,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "cofre",
+          "x": 1150,
+          "s": 0.7
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "chispas",
+          "x": 1150,
+          "y": 640
+        },
+        {
+          "en": 1,
+          "tipo": "niebla",
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 450,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LA CABEZA DE MÍMIR",
+            "en": "MÍMIR'S HEAD"
+          },
+          "x": 1150,
+          "y": 420,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "EL FUTURO",
+            "en": "THE FUTURE"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "pozo",
+      "fondo": "jotunheim",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Bajo la raíz de Yggdrasil que se hunde en Jötunheim, la tierra de los gigantes, brota el pozo de Mímir.",
+          "en": "Beneath the root of Yggdrasil that sinks into Jötunheim, land of the giants, lies the well of Mímir."
+        },
+        {
+          "es": "En ese pozo se esconden el saber y la inteligencia de todos los mundos.",
+          "en": "In that well lie hidden the knowledge and the wisdom of all the worlds."
+        },
+        {
+          "es": "Mímir bebe de sus aguas cada mañana, y por eso es el más sabio de todos.",
+          "en": "Mímir drinks from its waters every morning, and that is why he is the wisest of all."
+        },
+        {
+          "es": "Odín llegó al pozo y pidió un trago, pero no se lo dieron hasta que dejó en prenda uno de sus ojos.",
+          "en": "Odin came to the well and asked for a drink, but it was not given until he left one of his eyes as a pledge."
+        },
+        {
+          "es": "Odín no dudó: se arrancó el ojo y lo dejó caer en el fondo del pozo, donde quedó brillando.",
+          "en": "Odin did not hesitate: he tore out his eye and let it fall into the depths of the well, where it stayed shining."
+        },
+        {
+          "es": "Entonces bebió, y el saber de todos los mundos se abrió ante su único ojo.",
+          "en": "Then he drank, and the knowledge of all the worlds opened before his one remaining eye."
+        },
+        {
+          "es": "Por eso Odín tiene un solo ojo: lo pagó por su sabiduría.",
+          "en": "That is why Odin has only one eye: he paid it for his wisdom."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yggdrasil",
+          "x": 330,
+          "s": 0.6,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "cueva",
+          "x": 1050,
+          "s": 0.45
+        },
+        {
+          "tipo": "cofre",
+          "x": 1650,
+          "s": 0.55,
+          "capa": "medio",
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": -150,
+          "props": {
+            "tuerto": false
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 760,
+              "dur": 2.5
+            },
+            {
+              "en": 3.1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4.25,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "odin_t",
+          "como": "odin",
+          "x": 760,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4.25,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.9,
+              "hace": "baja"
+            },
+            {
+              "en": 5,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 5.3,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 4.2,
+          "tipo": "destello",
+          "x": 760
+        },
+        {
+          "en": 4.5,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 600,
+          "dur": 1.5
+        },
+        {
+          "en": 5,
+          "tipo": "chispas",
+          "x": 1050,
+          "y": 700
+        },
+        {
+          "en": 5.5,
+          "tipo": "aclarar",
+          "dur": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "EL POZO DE MÍMIR",
+            "en": "MÍMIR'S WELL"
+          },
+          "x": 1050,
+          "y": 250,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "MÍMIR",
+            "en": "MÍMIR"
+          },
+          "x": 1650,
+          "y": 480,
+          "hasta": 3
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "UN OJO",
+            "en": "AN EYE"
+          },
+          "x": 1050,
+          "y": 250,
+          "hasta": 5
+        },
+        {
+          "en": 6,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO ODÍN ES TUERTO",
+            "en": "THAT'S WHY ODIN HAS ONE EYE"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "arbol",
+      "fondo": "yggdrasil",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero un ojo no bastaba. Odín quería conocer también las runas, un saber secreto que ningún otro dios tenía.",
+          "en": "But one eye was not enough. Odin also wanted the runes, a secret knowledge that no other god possessed."
+        },
+        {
+          "es": "Subió a Yggdrasil, el árbol azotado por el viento, y se hirió con su propia lanza.",
+          "en": "He climbed Yggdrasil, the wind-lashed tree, and wounded himself with his own spear."
+        },
+        {
+          "es": "Se colgó de sus ramas: ofrecido a Odín, él mismo a sí mismo.",
+          "en": "He hung from its branches: given to Odin, himself to himself."
+        },
+        {
+          "es": "Nueve noches colgó allí, sin que nadie le diera pan ni agua.",
+          "en": "Nine nights he hung there, and no one gave him bread or water."
+        },
+        {
+          "es": "Soportó el viento, el hambre y la sed, mientras el árbol crujía bajo el cielo helado.",
+          "en": "He bore the wind, the hunger and the thirst, while the tree creaked beneath the frozen sky."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "lanza"
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1010,
+                540
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "tiembla",
+              "dur": 2
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.8,
+          "tipo": "destello",
+          "x": 960
+        },
+        {
+          "en": 2,
+          "tipo": "nieve",
+          "dur": 3
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 4.2,
+          "tipo": "temblor",
+          "dur": 0.6,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LAS RUNAS",
+            "en": "THE RUNES"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 1
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "NUEVE NOCHES",
+            "en": "NINE NIGHTS"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 4.5
+        }
+      ]
+    },
+    {
+      "id": "runas",
+      "fondo": "ginnungagap",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al terminar la novena noche, Odín miró hacia abajo, al fondo del abismo.",
+          "en": "When the ninth night ended, Odin looked down, into the depths of the abyss."
+        },
+        {
+          "es": "Allí vio las runas. Las tomó con un grito, y cayó del árbol.",
+          "en": "There he saw the runes. He seized them with a scream, and fell from the tree."
+        },
+        {
+          "es": "Las runas se podían grabar, leer y pronunciar, y guardaban un poder inmenso.",
+          "en": "The runes could be carved, read and spoken, and they held immense power."
+        },
+        {
+          "es": "Desde ese día, Odín creció en sabiduría: cada palabra lo llevaba a otra palabra, y cada obra, a otra obra.",
+          "en": "From that day, Odin grew in wisdom: one word led him to another word, and one deed to another deed."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piedra_runica",
+          "x": 500,
+          "s": 0.75,
+          "en": 1.5,
+          "props": {
+            "texto": "ODIN"
+          }
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1420,
+          "s": 0.75,
+          "en": 2.2,
+          "props": {
+            "texto": "RUNES"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 960,
+          "y": 430,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "tiembla",
+              "dur": 1
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.5,
+              "hace": "vuela",
+              "a": [
+                960,
+                790
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 1.9,
+              "hace": "cae"
+            },
+            {
+              "en": 2.4,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "destello",
+          "x": 960
+        },
+        {
+          "en": 1.5,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 960,
+          "y": 500,
+          "dur": 1.5
+        },
+        {
+          "en": 2.4,
+          "tipo": "chispas",
+          "x": 500,
+          "y": 560
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1420,
+          "y": 560
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "RUNAS",
+            "en": "RUNES"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "kvasir",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mientras tanto, caminaba por el mundo Kvasir, el ser nacido de la saliva de la paz entre los dioses.",
+          "en": "Meanwhile, Kvasir walked the world, the being born from the spit of the peace between the gods."
+        },
+        {
+          "es": "Era tan sabio que podía responder cualquier pregunta, y enseñaba a los hombres lo que sabía.",
+          "en": "He was so wise that he could answer any question, and he taught people what he knew."
+        },
+        {
+          "es": "Un día, dos enanos, Fjalar y Galar, lo invitaron a hablar a solas, y lo mataron.",
+          "en": "One day two dwarves, Fjalar and Galar, invited him to talk in private, and killed him."
+        },
+        {
+          "es": "Dejaron correr su sangre en dos vasijas y una caldera, y la mezclaron con miel.",
+          "en": "They let his blood run into two vats and a kettle, and mixed it with honey."
+        },
+        {
+          "es": "Así nació un hidromiel mágico: quien lo bebía se volvía poeta y sabio.",
+          "en": "Thus a magic mead was born: whoever drank it became a poet and a sage."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "anfora",
+          "x": 700,
+          "s": 0.8,
+          "en": 3
+        },
+        {
+          "tipo": "anfora",
+          "x": 840,
+          "s": 0.8,
+          "en": 3.2
+        },
+        {
+          "tipo": "anfora",
+          "x": 980,
+          "s": 0.8,
+          "en": 3.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "kvasir",
+          "como": "hombre",
+          "x": 700,
+          "rotulo": "KVASIR",
+          "props": {
+            "ropa": "larga",
+            "barba": false,
+            "tocado": "cinta",
+            "pelo": "#E9C46A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 1.4
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.6
+            },
+            {
+              "en": 2.7,
+              "hace": "cae"
+            },
+            {
+              "en": 3.3,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "oyente1",
+          "como": "hombre",
+          "x": 330,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "oyente2",
+          "como": "mujer",
+          "x": 510,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "fjalar",
+          "como": "enano",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "FJALAR",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.55,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "galar",
+          "como": "enano",
+          "x": 1620,
+          "mira": "izq",
+          "rotulo": "GALAR",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.65,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.6,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 2.7,
+          "tipo": "destello",
+          "x": 1050
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 840,
+          "y": 520,
+          "dur": 1.2
+        },
+        {
+          "en": 4,
+          "tipo": "chispas",
+          "x": 840,
+          "y": 600
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "EL HIDROMIEL DE LA POESÍA",
+            "en": "THE MEAD OF POETRY"
+          },
+          "x": 960,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "suttung",
+      "fondo": "jotunheim",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los enanos dijeron a los dioses que Kvasir se había ahogado en su propia sabiduría.",
+          "en": "The dwarves told the gods that Kvasir had choked on his own wisdom."
+        },
+        {
+          "es": "Más tarde, los enanos mataron a un gigante, y su hijo Suttung los dejó sobre una roca que el mar cubre con la marea.",
+          "en": "Later the dwarves killed a giant, and his son Suttung left them on a rock that the sea covers at high tide."
+        },
+        {
+          "es": "Para salvar sus vidas, le entregaron el hidromiel, y Suttung se lo quedó.",
+          "en": "To save their lives they handed over the mead, and Suttung kept it for himself."
+        },
+        {
+          "es": "Lo escondió dentro de una montaña, y puso a su hija Gunnlöd a cuidarlo.",
+          "en": "He hid it inside a mountain, and set his daughter Gunnlöd to guard it."
+        },
+        {
+          "es": "Nadie podía entrar allí. Pero Odín había decidido que ese hidromiel sería suyo.",
+          "en": "No one could enter there. But Odin had decided that the mead would be his."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 450,
+          "s": 1.3,
+          "en": 1
+        },
+        {
+          "tipo": "monte_nevado",
+          "x": 1700,
+          "s": 1.3,
+          "capa": "medio",
+          "en": 3
+        },
+        {
+          "tipo": "cueva",
+          "x": 1700,
+          "s": 0.45,
+          "capa": "medio",
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "fjalar",
+          "como": "enano",
+          "x": 350,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.3,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.1,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "galar",
+          "como": "enano",
+          "x": 560,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.4,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "odinA",
+          "como": "odin",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "suttung",
+          "como": "jotun",
+          "x": 2150,
+          "mira": "izq",
+          "rotulo": "SUTTUNG",
+          "props": {
+            "pelo": "#B5452A",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.9
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1450,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "gunnlod",
+          "como": "mujer",
+          "x": 1850,
+          "mira": "izq",
+          "rotulo": "GUNNLÖD",
+          "props": {
+            "tocado": "velo",
+            "capa": "#7A5C9E"
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "odinB",
+          "como": "odin",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.3,
+              "hace": "senala"
+            },
+            {
+              "en": 4.5,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "olas-suben",
+          "dur": 1,
+          "intensidad": 0.3
+        },
+        {
+          "en": 2.2,
+          "tipo": "olas-bajan",
+          "dur": 0.8,
+          "intensidad": 0.3
+        },
+        {
+          "en": 3.4,
+          "tipo": "chispas",
+          "x": 1700,
+          "y": 640
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "LA MONTAÑA",
+            "en": "THE MOUNTAIN"
+          },
+          "x": 1500,
+          "y": 220,
+          "hasta": 4.5
+        }
+      ]
+    },
+    {
+      "id": "bolverk",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Odín viajó a Jötunheim disfrazado de jornalero, y dijo llamarse Bölverk.",
+          "en": "Odin traveled to Jötunheim disguised as a laborer, and said his name was Bölverk."
+        },
+        {
+          "es": "Llegó a la granja de Baugi, hermano de Suttung, donde nueve siervos segaban el heno.",
+          "en": "He came to the farm of Baugi, Suttung's brother, where nine servants were mowing hay."
+        },
+        {
+          "es": "Odín afiló sus hoces con una piedra, y los siervos se pelearon por ella hasta matarse entre sí.",
+          "en": "Odin sharpened their scythes with a stone, and the servants fought over it until they killed each other."
+        },
+        {
+          "es": "Baugi se quedó sin siervos, y Bölverk le ofreció hacer el trabajo de nueve a cambio de un trago de hidromiel.",
+          "en": "Baugi was left without servants, and Bölverk offered to do the work of nine in exchange for one drink of the mead."
+        },
+        {
+          "es": "Odín trabajó todo el verano, pero Suttung se negó a darle ni una gota.",
+          "en": "Odin worked all summer, but Suttung refused to give him even a drop."
+        },
+        {
+          "es": "Entonces taladraron la montaña, y Bölverk se hizo serpiente y se deslizó por el agujero.",
+          "en": "So they bored into the mountain, and Bölverk became a serpent and slithered through the hole."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "monte_nevado",
+          "x": 1800,
+          "s": 1.2,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "cueva",
+          "x": 1900,
+          "s": 0.4,
+          "en": 5
+        }
+      ],
+      "actores": [
+        {
+          "id": "s1",
+          "como": "hombre",
+          "x": 250,
+          "rotulo": "",
+          "capa": "medio",
+          "props": {
+            "ropa": "corta",
+            "objeto": "hoz"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.8,
+              "hace": "cae"
+            },
+            {
+              "en": 3.4,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "s2",
+          "como": "hombre",
+          "x": 400,
+          "rotulo": "",
+          "capa": "medio",
+          "props": {
+            "ropa": "corta",
+            "objeto": "hoz"
+          },
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.55,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.9,
+              "hace": "cae"
+            },
+            {
+              "en": 3.4,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "s3",
+          "como": "hombre",
+          "x": 550,
+          "rotulo": "",
+          "capa": "medio",
+          "props": {
+            "ropa": "corta",
+            "objeto": "hoz"
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.7,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.7,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "cae"
+            },
+            {
+              "en": 3.4,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "s4",
+          "como": "hombre",
+          "x": 700,
+          "rotulo": "",
+          "capa": "medio",
+          "props": {
+            "ropa": "corta",
+            "objeto": "hoz"
+          },
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.9,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.1,
+              "hace": "cae"
+            },
+            {
+              "en": 3.4,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "bolverk",
+          "como": "odin",
+          "x": -200,
+          "rotulo": "BÖLVERK",
+          "props": {
+            "capa": "#5B6770"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 1.3
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 5,
+              "hace": "transforma",
+              "en_que": "serpiente"
+            },
+            {
+              "en": 5.3,
+              "hace": "camina",
+              "a": 1850,
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "baugi",
+          "como": "jotun",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "BAUGI",
+          "props": {
+            "pelo": "#8A5A2B",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 5,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.6,
+          "tipo": "destello",
+          "x": 500
+        },
+        {
+          "en": 2.7,
+          "tipo": "polvo",
+          "x": 500,
+          "dur": 1
+        },
+        {
+          "en": 5,
+          "tipo": "polvo",
+          "x": 1900,
+          "dur": 0.8
+        },
+        {
+          "en": 5.2,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "JÖTUNHEIM",
+            "en": "JÖTUNHEIM"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "gunnlod",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.02,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Dentro de la montaña, Odín recuperó su forma y encontró a Gunnlöd, que guardaba el hidromiel.",
+          "en": "Inside the mountain, Odin took his own shape again and found Gunnlöd, who guarded the mead."
+        },
+        {
+          "es": "Se quedó con ella tres noches, y se ganó su confianza.",
+          "en": "He stayed with her three nights, and won her trust."
+        },
+        {
+          "es": "Ella le permitió beber tres tragos, uno por cada noche.",
+          "en": "She allowed him three drinks, one for each night."
+        },
+        {
+          "es": "Y con cada trago, Odín vació una de las vasijas, hasta no dejar ni una gota.",
+          "en": "And with each drink Odin emptied one of the vessels, until not a drop was left."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "anfora",
+          "x": 1050,
+          "s": 0.7
+        },
+        {
+          "tipo": "anfora",
+          "x": 1190,
+          "s": 0.7
+        },
+        {
+          "tipo": "anfora",
+          "x": 1330,
+          "s": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "como": "serpiente",
+          "x": -150,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 650,
+              "dur": 0.7
+            },
+            {
+              "en": 0.8,
+              "hace": "transforma",
+              "en_que": "odin"
+            },
+            {
+              "en": 1.1,
+              "hace": "camina",
+              "a": 880,
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.7,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.8,
+              "hace": "brilla",
+              "dur": 0.2
+            }
+          ]
+        },
+        {
+          "id": "gunnlod",
+          "como": "mujer",
+          "x": 1650,
+          "mira": "izq",
+          "rotulo": "GUNNLÖD",
+          "props": {
+            "tocado": "velo",
+            "capa": "#7A5C9E"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1050,
+          "y": 640
+        },
+        {
+          "en": 3.3,
+          "tipo": "chispas",
+          "x": 1190,
+          "y": 640
+        },
+        {
+          "en": 3.6,
+          "tipo": "chispas",
+          "x": 1330,
+          "y": 640
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1190,
+          "y": 500,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "TRES NOCHES",
+            "en": "THREE NIGHTS"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "aguila",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 450,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Con el hidromiel en la boca, Odín se convirtió en águila y escapó volando por el cielo.",
+          "en": "With the mead in his mouth, Odin turned into an eagle and escaped, flying across the sky."
+        },
+        {
+          "es": "Suttung también tomó forma de águila y salió tras él, muy cerca.",
+          "en": "Suttung also took the shape of an eagle and went after him, close behind."
+        },
+        {
+          "es": "En Asgard, los dioses vieron venir a las dos águilas y dejaron vasijas preparadas en el patio.",
+          "en": "In Asgard the gods saw the two eagles coming and set out vessels in the courtyard."
+        },
+        {
+          "es": "Odín llegó volando y escupió el hidromiel en ellas, justo antes de que Suttung lo alcanzara.",
+          "en": "Odin flew in and spat the mead into them, just before Suttung could catch him."
+        },
+        {
+          "es": "En la prisa cayeron unas gotas, y cualquiera pudo tomarlas. Por eso existen los malos poetas.",
+          "en": "In the rush a few drops fell, and anyone could take them. That is why bad poets exist."
+        },
+        {
+          "es": "Así, el hidromiel de la poesía quedó para los dioses, y para los humanos que saben componer versos.",
+          "en": "And so the mead of poetry passed to the gods, and to the humans who can compose verses."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "nube",
+          "x": 500,
+          "s": 0.8,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "nube",
+          "x": 1400,
+          "s": 0.7,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "anfora",
+          "x": 1750,
+          "s": 0.6,
+          "en": 2
+        },
+        {
+          "tipo": "anfora",
+          "x": 1870,
+          "s": 0.6,
+          "en": 2.2
+        },
+        {
+          "tipo": "anfora",
+          "x": 1990,
+          "s": 0.6,
+          "en": 2.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 100,
+          "y": 330,
+          "escala": 1.3,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "transforma",
+              "en_que": "aguila"
+            },
+            {
+              "en": 0.5,
+              "hace": "vuela",
+              "a": [
+                1100,
+                260
+              ],
+              "dur": 1.5
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1750,
+                300
+              ],
+              "dur": 1.1
+            },
+            {
+              "en": 3.1,
+              "hace": "vuela",
+              "a": [
+                2250,
+                770
+              ],
+              "dur": 0.5
+            },
+            {
+              "en": 3.7,
+              "hace": "transforma",
+              "en_que": "odin"
+            },
+            {
+              "en": 3.9,
+              "hace": "habla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "suttung",
+          "como": "jotun",
+          "x": 100,
+          "y": 330,
+          "escala": 1.3,
+          "rotulo": "SUTTUNG",
+          "props": {
+            "pelo": "#B5452A",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "transforma",
+              "en_que": "aguila"
+            },
+            {
+              "en": 1.5,
+              "hace": "vuela",
+              "a": [
+                1000,
+                300
+              ],
+              "dur": 1.5
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                1750,
+                340
+              ],
+              "dur": 0.9
+            },
+            {
+              "en": 3.9,
+              "hace": "vuela",
+              "a": [
+                2500,
+                150
+              ],
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 1550,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "frigg",
+          "x": 1800,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.8,
+          "tipo": "chispas",
+          "x": 1870,
+          "y": 640
+        },
+        {
+          "en": 5,
+          "tipo": "luz",
+          "x": 1870,
+          "y": 500,
+          "dur": 1
+        },
+        {
+          "en": 5,
+          "tipo": "aclarar",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 5,
+          "texto": {
+            "es": "LA POESÍA",
+            "en": "POETRY"
+          },
+          "x": 1500,
+          "y": 220
+        },
+        {
+          "en": 4,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO EXISTEN LOS MALOS POETAS",
+            "en": "THAT'S WHY BAD POETS EXIST"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "aurora",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Odín había entregado un ojo, colgado nueve noches de un árbol y robado el hidromiel de la poesía.",
+          "en": "Odin had given up an eye, hung nine nights from a tree, and stolen the mead of poetry."
+        },
+        {
+          "es": "Ahora sabía más que cualquier otro dios.",
+          "en": "Now he knew more than any other god."
+        },
+        {
+          "es": "Pero lo que había visto del futuro le dio miedo.",
+          "en": "But what he had seen of the future frightened him."
+        },
+        {
+          "es": "Vio una última batalla, en la que los dioses caían, y en la que él mismo no sobrevivía.",
+          "en": "He saw a final battle in which the gods fell, and in which he himself did not survive."
+        },
+        {
+          "es": "Para defender Asgard hacía falta una muralla, y un extraño constructor se ofreció a levantarla.",
+          "en": "To defend Asgard a wall was needed, and a strange builder offered to raise it."
+        },
+        {
+          "es": "Esa es la historia del próximo episodio: la muralla de Asgard.",
+          "en": "That is the story of the next episode: The Wall of Asgard."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 1250,
+          "capa": "medio",
+          "en": 4,
+          "props": {
+            "ancho": 1300
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 2,
+              "hace": "tiembla",
+              "dur": 2
+            }
+          ]
+        },
+        {
+          "id": "huginn",
+          "x": 150,
+          "y": 330,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "vuela",
+              "a": [
+                470,
+                250
+              ],
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "muninn",
+          "x": 100,
+          "y": 390,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "vuela",
+              "a": [
+                820,
+                270
+              ],
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "fenrir",
+          "x": 1650,
+          "mira": "izq",
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.4,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "estrellas",
+          "dur": 4
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 450,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 5,
+          "texto": {
+            "es": "LA MURALLA DE ASGARD",
+            "en": "THE WALL OF ASGARD"
+          },
+          "x": 960,
+          "y": 220
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El dios que dio un ojo por beber de un pozo",
+        "en": "The god who gave an eye for one drink"
+      },
+      "escena": "pozo",
+      "desde": 3,
+      "hasta": 5,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Nueve noches colgado de un árbol",
+        "en": "Nine nights hanging from a tree"
+      },
+      "escena": "arbol",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "La persecución de las dos águilas",
+        "en": "The chase of the two eagles"
+      },
+      "escena": "aguila",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 1100
+    }
+  ],
+  "miniatura": {
+    "heroe": "odin",
+    "rival": "mimir"
+  }
+}

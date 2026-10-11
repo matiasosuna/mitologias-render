@@ -1,0 +1,1599 @@
+{
+  "id": "nordicas-11-loki-atado",
+  "serie": "nordicas",
+  "numero": "11",
+  "titulo": {
+    "es": "Loki atado",
+    "en": "Loki Bound"
+  },
+  "tituloGriego": "LOKI BOUND",
+  "escenas": [
+    {
+      "id": "banquete",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Loki había ido demasiado lejos, pero los dioses todavía no lo habían castigado. Antes llegó el banquete de Aegir.",
+          "en": "Loki had gone too far, but the gods had not yet punished him. First came the feast of Aegir."
+        },
+        {
+          "es": "Aegir, el gigante del mar, invitó a los dioses a su salón, donde la cerveza se servía sola.",
+          "en": "Aegir, the giant of the sea, invited the gods to his hall, where the ale poured itself."
+        },
+        {
+          "es": "Los criados Fimafeng y Eldir atendían a todos, y los dioses elogiaban a Fimafeng por su destreza.",
+          "en": "The servants Fimafeng and Eldir waited on everyone, and the gods praised Fimafeng for his skill."
+        },
+        {
+          "es": "Loki, que también estaba allí, no soportó oír alabar a un criado, y mató a Fimafeng.",
+          "en": "Loki, who was there too, could not bear to hear a servant praised, and he killed Fimafeng."
+        },
+        {
+          "es": "Los dioses sacudieron sus escudos y lo echaron del salón, hacia el bosque.",
+          "en": "The gods shook their shields and drove him out of the hall, toward the forest."
+        },
+        {
+          "es": "Pero Loki volvió. Eldir le advirtió que nadie hablaba bien de él, y Loki respondió: entraré igual, y les agriaré la cerveza.",
+          "en": "But Loki came back. Eldir warned him that no one spoke well of him, and Loki answered: I'll go in anyway, and sour their ale."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "aegir",
+          "como": "jotun",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "AEGIR",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "fimafeng",
+          "como": "vikingo",
+          "x": 950,
+          "mira": "der",
+          "rotulo": "FIMAFENG",
+          "props": {
+            "tocado": null,
+            "objeto": "cuerno",
+            "escudo": false
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.5,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 1850,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.8,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.1,
+              "hace": "corre",
+              "a": 2700,
+              "dur": 0.8
+            },
+            {
+              "en": 4.95,
+              "hace": "gira"
+            },
+            {
+              "en": 5.05,
+              "hace": "entra",
+              "a": 1850
+            }
+          ]
+        },
+        {
+          "id": "eldir",
+          "como": "hombre",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "ELDIR",
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "altar",
+          "x": 1150,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.1,
+          "tipo": "destello",
+          "x": 1000
+        },
+        {
+          "en": 4,
+          "tipo": "temblor",
+          "dur": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "EL BANQUETE DE AEGIR",
+            "en": "AEGIR'S FEAST"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "insultos-uno",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.04,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Loki entró y todos callaron. Pidió una silla, y Odín, que había jurado hermandad de sangre con él, se la concedió.",
+          "en": "Loki walked in and everyone fell silent. He asked for a seat, and Odin, who had once sworn blood-brotherhood with him, allowed it."
+        },
+        {
+          "es": "Entonces acusó a los dioses, uno por uno. A Odín le reprochó que daba la victoria a los cobardes.",
+          "en": "Then he began to accuse the gods, one by one. He told Odin that he gave victory to cowards."
+        },
+        {
+          "es": "Frigg le dijo que, si Baldr estuviera allí, Loki no saldría vivo del salón.",
+          "en": "Frigg told him that if Baldr were there, Loki would not leave the hall alive."
+        },
+        {
+          "es": "Y Loki respondió, sin vergüenza, que él era la razón por la que Baldr jamás volvería a entrar a ese salón.",
+          "en": "And Loki answered, shamelessly, that he was the reason Baldr would never walk into that hall again."
+        },
+        {
+          "es": "A Freyja le dijo que había tenido demasiados amantes. Ella solo contestó que Loki estaba loco por hablar así.",
+          "en": "He told Freyja she had taken too many lovers. She only replied that Loki was mad to speak that way."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 350,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.2,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "frigg",
+          "x": 680,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 1050,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1050
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 3.95,
+              "hace": "gira"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "freyja",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.9,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.1,
+          "tipo": "oscurecer",
+          "dur": 0.8,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LOKASENNA",
+            "en": "LOKASENNA"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "insultos-dos",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "A Tyr le recordó su mano perdida. Tyr contestó que Loki había perdido a su hijo Fenrir, atado hasta el fin del mundo.",
+          "en": "He reminded Tyr of his lost hand. Tyr replied that Loki had lost his own son Fenrir, bound until the end of the world."
+        },
+        {
+          "es": "A Njord le recordó que había llegado a Asgard como rehén de los vanir.",
+          "en": "He told Njord that he had come to Asgard as a hostage of the Vanir."
+        },
+        {
+          "es": "A Heimdall le dijo que su destino era vigilar siempre, con la espalda mojada, sin descansar jamás.",
+          "en": "He told Heimdall that his fate was to keep watch forever, with a wet back, never resting."
+        },
+        {
+          "es": "Sif le ofreció una copa de hidromiel para calmarlo. Él la bebió, pero no dejó de burlarse.",
+          "en": "Sif offered him a cup of mead to calm him. He drank it, but he did not stop mocking them."
+        },
+        {
+          "es": "Entonces Skadi le advirtió que un día los dioses lo atarían con las entrañas de su propio hijo.",
+          "en": "Then Skadi warned him that one day the gods would bind him with the entrails of his own son."
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "x": 1000,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 2.95,
+              "hace": "gira"
+            },
+            {
+              "en": 3.3,
+              "hace": "habla",
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "tyr",
+          "x": 420,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "njord",
+          "x": 420,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "heimdall",
+          "x": 420,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "sif",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "skadi",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4.2,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.7
+        }
+      ]
+    },
+    {
+      "id": "thor",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1.05,
+          1.15
+        ]
+      },
+      "frases": [
+        {
+          "es": "De pronto la puerta se abrió con un estruendo: era Thor, que volvía de su viaje a las tierras del este.",
+          "en": "Suddenly the door burst open: it was Thor, returning from his journey to the lands of the east."
+        },
+        {
+          "es": "Calla, ser inmundo, tronó Thor, o mi martillo Mjölnir te cerrará la boca para siempre.",
+          "en": "Be silent, foul creature, Thor thundered, or my hammer Mjolnir will shut your mouth forever."
+        },
+        {
+          "es": "Loki sabía que Thor nunca hablaba en vano. Antes de irse, maldijo al anfitrión: que el fuego devorara todo lo que Aegir tenía.",
+          "en": "Loki knew Thor never spoke in vain. Before leaving, he cursed his host: may fire devour everything Aegir owned in his hall."
+        },
+        {
+          "es": "Y Loki huyó hacia las montañas, con los dioses pisándole los talones.",
+          "en": "And Loki fled toward the mountains, with the gods on his heels."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 260,
+          "mira": "der",
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 950,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 0.5,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "corre",
+              "a": -500,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1550,
+              "dur": 0.7
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.4,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "rayo",
+          "x": 1750
+        },
+        {
+          "en": 0,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 1.4,
+          "tipo": "destello",
+          "x": 1500
+        },
+        {
+          "en": 2.4,
+          "tipo": "fuego",
+          "x": 650,
+          "dur": 1.2
+        },
+        {
+          "en": 3,
+          "tipo": "humo",
+          "x": 650,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "MJÖLNIR",
+            "en": "MJOLNIR"
+          },
+          "x": 1500,
+          "y": 260,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "casa",
+      "fondo": "bosque_nevado",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Loki huyó a las montañas y se construyó una casa con cuatro puertas, una a cada lado, para ver venir a cualquiera.",
+          "en": "Loki fled to the mountains and built himself a house with four doors, one on each side, to see anyone coming."
+        },
+        {
+          "es": "De día se convertía en salmón y se escondía en el agua de la cascada de Franangr.",
+          "en": "By day he turned into a salmon and hid in the water of the waterfall of Franangr."
+        },
+        {
+          "es": "De noche, junto al fuego, pensaba qué trampa usarían los dioses para atraparlo en el agua.",
+          "en": "By night, beside the fire, he wondered what trap the gods would use to catch him in the water."
+        },
+        {
+          "es": "Entonces tomó hilo de lino y anudó las mallas una a una. Así nació la primera red de pescar.",
+          "en": "So he took linen thread and knotted the meshes one by one. That is how the first fishing net was made."
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "x": 500,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 850,
+              "dur": 0.8
+            },
+            {
+              "en": 0.9,
+              "hace": "senala"
+            },
+            {
+              "en": 1.1,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 0.5
+            },
+            {
+              "en": 1.7,
+              "hace": "transforma",
+              "en_que": "pez"
+            },
+            {
+              "en": 2.2,
+              "hace": "transforma",
+              "en_que": "loki"
+            },
+            {
+              "en": 2.4,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.4
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "monte_nevado",
+          "x": 450,
+          "s": 1.3,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "casa_larga",
+          "x": 1000,
+          "s": 0.9,
+          "capa": "medio"
+        },
+        {
+          "tipo": "pino",
+          "x": 250,
+          "s": 1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "rio",
+          "x": 1750,
+          "s": 1,
+          "capa": "medio"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve"
+        },
+        {
+          "en": 1.2,
+          "tipo": "lluvia",
+          "x": 1750,
+          "dur": 0.8,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "fogata",
+          "x": 1300,
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "CUATRO PUERTAS",
+            "en": "FOUR DOORS"
+          },
+          "x": 1000,
+          "y": 250,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "FRANANGR",
+            "en": "FRANANGR"
+          },
+          "x": 1750,
+          "y": 300,
+          "hasta": 2
+        },
+        {
+          "en": 3,
+          "estilo": "porque",
+          "texto": {
+            "es": "ASÍ NACIÓ LA PRIMERA RED DE PESCAR",
+            "en": "THAT'S HOW THE FIRST FISHING NET WAS MADE"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "red",
+      "fondo": "bosque_nevado",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1.04,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Odín, sentado en su trono Hlidskjalf, vio dónde se escondía, y los dioses salieron a buscarlo.",
+          "en": "But Odin, seated on his throne Hlidskjalf, saw where he was hiding, and the gods set out to find him."
+        },
+        {
+          "es": "Loki los vio llegar. Echó la red al fuego y de un salto se metió al río, convertido en salmón.",
+          "en": "Loki saw them coming. He threw the net into the fire and leapt into the river, turned into a salmon."
+        },
+        {
+          "es": "Los dioses entraron a la casa vacía. Kvasir, el más sabio de todos, vio en las cenizas la marca de las mallas quemadas.",
+          "en": "The gods entered the empty house. Kvasir, the wisest of them all, saw in the ashes the mark of the burned meshes."
+        },
+        {
+          "es": "Comprendió que era una red de pescar, y tejieron otra igual con hilo de lino. Con ella fueron hacia el río.",
+          "en": "He understood it was a fishing net, and they knotted another just like it from linen thread. With it, they went to the river."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 200,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "senala"
+            },
+            {
+              "en": 0.5,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 480,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "camina",
+              "a": 750,
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "kvasir",
+          "como": "hombre",
+          "x": 1000,
+          "mira": "der",
+          "rotulo": "KVASIR",
+          "props": {
+            "canas": true,
+            "barba": true
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "lanza"
+            },
+            {
+              "en": 1.5,
+              "hace": "transforma",
+              "en_que": "pez"
+            },
+            {
+              "en": 1.8,
+              "hace": "nada",
+              "a": 2250,
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 1150,
+          "s": 0.9,
+          "capa": "medio"
+        },
+        {
+          "tipo": "rio",
+          "x": 2200,
+          "s": 1,
+          "capa": "medio"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve"
+        },
+        {
+          "en": 1.2,
+          "tipo": "fuego",
+          "x": 1250,
+          "dur": 1.2
+        },
+        {
+          "en": 1.9,
+          "tipo": "humo",
+          "x": 1250,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "KVASIR",
+            "en": "KVASIR"
+          },
+          "x": 1000,
+          "y": 250,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "captura",
+      "fondo": "bosque_nevado",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Arrastraron la red por el río, y dos veces Loki se les escapó.",
+          "en": "They dragged the net through the river, and twice Loki slipped away."
+        },
+        {
+          "es": "La tercera vez, Loki saltó por encima de la red hacia la cascada. Thor, que vadeaba el río, lo agarró al vuelo.",
+          "en": "The third time, Loki leapt over the net toward the waterfall. Thor, wading through the river, caught him in mid-air."
+        },
+        {
+          "es": "El salmón resbaló entre sus dedos, y Thor solo pudo sujetarlo con fuerza por la cola.",
+          "en": "The salmon slid between his fingers, and Thor could only grip it hard by the tail."
+        },
+        {
+          "es": "Por eso, hasta hoy, el salmón tiene la cola tan delgada.",
+          "en": "That is why, to this day, the salmon has such a narrow tail."
+        },
+        {
+          "es": "Loki recobró su forma de dios, y ya no tuvo adónde huir.",
+          "en": "Loki took his own shape again, and there was nowhere left to run."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 250,
+          "mira": "der",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 450,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "kvasir",
+          "como": "hombre",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "KVASIR",
+          "props": {
+            "canas": true,
+            "barba": true
+          },
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1550,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 750,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.8
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "como": "pez",
+          "x": 1350,
+          "rotulo": "LOKI",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "nada",
+              "a": 1450,
+              "dur": 0.5
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1250,
+                520
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 1.5,
+              "hace": "vuela",
+              "a": [
+                1100,
+                700
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 4,
+              "hace": "transforma",
+              "en_que": "loki"
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "rio",
+          "x": 1200,
+          "s": 1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "roca",
+          "x": 1650,
+          "s": 0.8,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "lluvia",
+          "x": 1250,
+          "dur": 1.5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 1.6,
+          "tipo": "destello",
+          "x": 1100
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO EL SALMÓN TIENE LA COLA FINA",
+            "en": "THAT'S WHY THE SALMON HAS A THIN TAIL"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "castigo",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dioses lo llevaron a una cueva y levantaron tres losas de piedra, cada una con un agujero.",
+          "en": "The gods took him to a cave and raised three flat stones, each with a hole in it."
+        },
+        {
+          "es": "Convirtieron a Vali, hijo de Loki, en lobo, y Vali atacó a su hermano Narfi, que murió.",
+          "en": "They turned Vali, a son of Loki, into a wolf, and he attacked his brother Narfi, who died."
+        },
+        {
+          "es": "Con las entrañas de Narfi ataron a Loki sobre las tres piedras: bajo los hombros, la cintura y las rodillas.",
+          "en": "With Narfi's entrails the gods bound Loki across the three stones: under his shoulders, his waist and his knees."
+        },
+        {
+          "es": "En cuanto lo ataron, las tiras se volvieron hierro, y nadie pudo romperlas jamás.",
+          "en": "The moment he was bound, the cords turned to iron, and no one could ever break them."
+        },
+        {
+          "es": "Entonces Skadi colgó una serpiente venenosa sobre su cara, para que el veneno le cayera gota a gota.",
+          "en": "Then Skadi hung a venomous snake above his face, so that its venom would fall drop by drop."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thor",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 450,
+              "dur": 0.6
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "loki",
+          "x": 1000,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1000,
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.6,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "narfi",
+          "como": "joven",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "NARFI",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.8,
+              "hace": "cae"
+            },
+            {
+              "en": 2.6,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "vali",
+          "como": "joven",
+          "x": 1850,
+          "mira": "izq",
+          "rotulo": "VALI",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "transforma",
+              "en_que": "lobo"
+            },
+            {
+              "en": 1.4,
+              "hace": "corre",
+              "a": 1550,
+              "dur": 0.4
+            },
+            {
+              "en": 2.6,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "skadi",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "x": 1050,
+          "y": 330,
+          "escala": 0.5,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 4.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.4,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 850,
+          "s": 0.6,
+          "capa": "medio",
+          "en": 0
+        },
+        {
+          "tipo": "roca",
+          "x": 1030,
+          "s": 0.6,
+          "capa": "medio",
+          "en": 0
+        },
+        {
+          "tipo": "roca",
+          "x": 1200,
+          "s": 0.6,
+          "capa": "medio",
+          "en": 0
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 5,
+          "intensidad": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "destello",
+          "x": 1050
+        },
+        {
+          "en": 3.1,
+          "tipo": "chispas",
+          "x": 1050,
+          "y": 700
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "VALI Y NARFI",
+            "en": "VALI AND NARFI"
+          },
+          "x": 1600,
+          "y": 250,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "sigyn",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1.05,
+          1.14
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Loki no estaba solo. Su esposa, Sigyn, se quedó con un cuenco para recoger el veneno antes de que le tocara la cara.",
+          "en": "But Loki was not alone. His wife, Sigyn, stayed at his side with a bowl, to catch the venom before it touched his face."
+        },
+        {
+          "es": "Mientras el cuenco recibe las gotas, Loki descansa. Pero cuando se llena, Sigyn tiene que ir a vaciarlo.",
+          "en": "While the bowl catches the drops, Loki can rest. But when it is full, Sigyn must go and empty it."
+        },
+        {
+          "es": "En ese momento el veneno cae sobre el rostro de Loki, que se retuerce de dolor con tanta fuerza que toda la tierra tiembla.",
+          "en": "In that moment the venom falls on Loki's face, and he writhes in pain so hard that the whole earth shakes."
+        },
+        {
+          "es": "Por eso tiembla la tierra: Loki se sacude bajo la serpiente. Eso es lo que los hombres llaman terremotos.",
+          "en": "That is why the earth trembles: Loki is shaking beneath the serpent. That is what people call earthquakes."
+        },
+        {
+          "es": "Y Sigyn, fiel a su lado, regresa enseguida con el cuenco.",
+          "en": "And Sigyn, faithful at his side, hurries back with the bowl."
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "x": 1000,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 2.3,
+              "hace": "tiembla",
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "sigyn",
+          "como": "mujer",
+          "x": 750,
+          "mira": "der",
+          "rotulo": "SIGYN",
+          "props": {
+            "tocado": "velo",
+            "objeto": "copa",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.4,
+              "hace": "camina",
+              "a": 450,
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "camina",
+              "a": 750,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "x": 1000,
+          "y": 330,
+          "escala": 0.5,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 850,
+          "s": 0.6,
+          "capa": "medio"
+        },
+        {
+          "tipo": "roca",
+          "x": 1030,
+          "s": 0.6,
+          "capa": "medio"
+        },
+        {
+          "tipo": "roca",
+          "x": 1200,
+          "s": 0.6,
+          "capa": "medio"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2.3,
+          "tipo": "temblor",
+          "dur": 2
+        },
+        {
+          "en": 2.3,
+          "tipo": "polvo",
+          "x": 1000,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "estilo": "porque",
+          "texto": {
+            "es": "POR ESO TIEMBLA LA TIERRA",
+            "en": "THAT'S WHY THE EARTH TREMBLES"
+          },
+          "x": 960,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1.05,
+          1.15
+        ]
+      },
+      "frases": [
+        {
+          "es": "Allí quedará Loki, atado en la oscuridad, mientras el veneno cae y la tierra se estremece, hasta el día del Ragnarök.",
+          "en": "There Loki will lie, bound in the dark, while the venom drips and the earth shudders, until the day of Ragnarok."
+        },
+        {
+          "es": "Los dioses habían castigado al culpable, pero el destino que él ayudó a poner en marcha ya no podía detenerse.",
+          "en": "The gods had punished the guilty one, but the fate he helped set in motion could not be stopped."
+        },
+        {
+          "es": "Cuando ese día llegue, las ataduras se romperán, y los hijos monstruosos de Loki estarán a su lado.",
+          "en": "When that day comes, his bonds will break, and his monstrous children will stand beside him."
+        },
+        {
+          "es": "Esa es la historia del próximo episodio: Ragnarök, el fin del mundo.",
+          "en": "That is the story of the next episode: Ragnarok, the end of the world."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "x": 500,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "x": 850,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "heimdall",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "fenrir",
+          "x": 1650,
+          "mira": "izq",
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 4,
+          "intensidad": 0.8
+        },
+        {
+          "en": 2.5,
+          "tipo": "rayo",
+          "x": 1500
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "RAGNARÖK",
+            "en": "RAGNAROK"
+          },
+          "x": 960,
+          "y": 300
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Insultó a todos los dioses en su propio banquete",
+        "en": "He insulted every god at their own feast"
+      },
+      "escena": "insultos-uno",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Por qué el salmón tiene la cola tan fina",
+        "en": "Why the salmon has such a thin tail"
+      },
+      "escena": "captura",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 1050
+    },
+    {
+      "gancho": {
+        "es": "Atado bajo una serpiente: así nacen los terremotos",
+        "en": "Chained under a serpent: how earthquakes began"
+      },
+      "escena": "sigyn",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 850
+    }
+  ],
+  "miniatura": {
+    "heroe": "loki",
+    "rival": "thor"
+  }
+}

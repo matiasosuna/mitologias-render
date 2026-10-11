@@ -1,0 +1,2012 @@
+{
+  "id": "griegas-97-odisea-1",
+  "serie": "griegas",
+  "numero": "97",
+  "titulo": {
+    "es": "El largo camino a casa",
+    "en": "The Long Way Home"
+  },
+  "tituloGriego": "ΟΔΥΣΣΕΙΑ",
+  "especial": {
+    "nombre": {
+      "es": "La Odisea",
+      "en": "The Odyssey"
+    },
+    "parte": 1
+  },
+  "miniatura": {
+    "heroe": "odiseo",
+    "rival": "ciclope"
+  },
+  "siguiente": {
+    "es": "Nadie y el Cíclope",
+    "en": "Nobody and the Cyclops"
+  },
+  "escenas": [
+    {
+      "id": "troya",
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Diez años de guerra habían terminado. La gran ciudad de Troya por fin había caído.",
+          "en": "Ten years of war were over. The great city of Troy had fallen at last."
+        },
+        {
+          "es": "Los griegos ganaron con un truco: un enorme caballo de madera, lleno de soldados escondidos.",
+          "en": "The Greeks won with a trick: a giant wooden horse, full of hidden soldiers."
+        },
+        {
+          "es": "El autor de ese truco fue Odiseo, rey de Ítaca, una pequeña isla rocosa. Muchos lo llaman Ulises.",
+          "en": "The man behind that trick was Odysseus, king of Ithaca, a small rocky island."
+        },
+        {
+          "es": "No era el más fuerte de los griegos. Pero sí el más astuto.",
+          "en": "He was not the strongest of the Greeks. But he was the cleverest."
+        },
+        {
+          "es": "Ahora solo quería una cosa: volver a casa, con su esposa, Penélope, y su hijo pequeño.",
+          "en": "Now he wanted only one thing: to go home to his wife, Penelope, and his young son."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 960,
+          "capa": "fondo",
+          "props": {
+            "ancho": 1700,
+            "alto": 260
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "penelope",
+          "x": 250,
+          "capa": "fondo",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "x": 700,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.3,
+              "hace": "mira",
+              "a": 250
+            }
+          ]
+        },
+        {
+          "id": "soldado",
+          "como": "guerrero",
+          "rotulo": "",
+          "x": 1050,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "caballo",
+          "como": "caballo",
+          "rotulo": "",
+          "x": 1500,
+          "escala": 1.5,
+          "mira": "izq",
+          "props": {
+            "color": "#8A5A2B"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "polvo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 500,
+          "y": 620,
+          "dur": 1.5
+        },
+        {
+          "en": 0,
+          "tipo": "humo",
+          "x": 1300,
+          "y": 500,
+          "dur": 2
+        },
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 1500,
+          "y": 760
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 700,
+          "y": 450,
+          "intensidad": 0.5,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LA CAÍDA DE TROYA",
+            "en": "THE FALL OF TROY"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "EL MÁS ASTUTO",
+            "en": "THE CLEVEREST"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "zarpa",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Odiseo reunió a sus hombres. Tenían doce barcos, llenos de soldados cansados.",
+          "en": "Odysseus gathered his men. They had twelve ships, full of tired soldiers."
+        },
+        {
+          "es": "Ítaca no estaba tan lejos. Pero este viaje le llevaría diez años.",
+          "en": "Ithaca was not so far away. But this journey would take him ten years."
+        },
+        {
+          "es": "El poeta Homero lo contó hace casi tres mil años, en un largo poema: la Odisea.",
+          "en": "The poet Homer told it almost three thousand years ago, in a long poem: the Odyssey."
+        },
+        {
+          "es": "Y en el poema, el mismo Odiseo cuenta esta parte de la historia, años después.",
+          "en": "And in that poem, Odysseus tells this part of the story himself, years later."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1350,
+          "s": 0.9
+        },
+        {
+          "tipo": "barco",
+          "x": 1750,
+          "s": 0.7,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "homero",
+          "como": "anciano",
+          "rotulo": "HOMER",
+          "x": 250,
+          "mira": "der",
+          "props": {
+            "ojosCerrados": true,
+            "objeto": "lira"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "x": 550,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "marinero1",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 800,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "marinero2",
+          "como": "joven",
+          "rotulo": "",
+          "x": 650,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "camina",
+              "a": 950,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 420,
+          "intensidad": 0.4,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 250,
+          "y": 450,
+          "intensidad": 0.5,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "DIEZ AÑOS",
+            "en": "TEN YEARS"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2
+        },
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "LA ODISEA",
+            "en": "THE ODYSSEY"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3.5
+        }
+      ]
+    },
+    {
+      "id": "ismaro",
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El viento los llevó primero a Ismaro, la ciudad de un pueblo llamado los cicones.",
+          "en": "The wind first carried them to Ismarus, the city of a people called the Cicones."
+        },
+        {
+          "es": "Los griegos atacaron la ciudad, y se llevaron su oro, su vino y sus animales.",
+          "en": "The Greeks attacked the city, and took its gold, its wine and its animals."
+        },
+        {
+          "es": "Pero perdonaron a un hombre: Marón, un sacerdote del dios Apolo.",
+          "en": "But they spared one man: Maron, a priest of the god Apollo."
+        },
+        {
+          "es": "Para agradecerles, Marón le dio a Odiseo regalos, y doce jarras de un vino oscuro, dulce y muy fuerte. Recuerda ese vino.",
+          "en": "To thank them, Maron gave Odysseus gifts, and twelve jars of dark, sweet, very strong wine. Remember that wine."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 1750,
+          "s": 0.9,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "anfora",
+          "x": 1000,
+          "s": 0.7,
+          "en": 3
+        },
+        {
+          "tipo": "anfora",
+          "x": 1120,
+          "s": 0.7,
+          "en": 3.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "odiseo",
+          "x": 550,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "senala"
+            },
+            {
+              "en": 3.4,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "soldado",
+          "como": "guerrero",
+          "rotulo": "",
+          "x": 850,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.6,
+              "hace": "camina",
+              "a": 300,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "cicon",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.3,
+              "hace": "corre",
+              "a": 2200,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "maron",
+          "como": "anciano",
+          "rotulo": "MARON",
+          "x": 1450,
+          "mira": "izq",
+          "props": {
+            "tocado": "laurel"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1350,
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "humo",
+          "x": 1600,
+          "y": 500,
+          "dur": 1.5
+        },
+        {
+          "en": 1,
+          "tipo": "fuego",
+          "x": 1750,
+          "y": 650,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1060,
+          "y": 620,
+          "intensidad": 0.5,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.4,
+          "texto": {
+            "es": "EL VINO DE MARÓN",
+            "en": "MARON'S WINE"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "cicones",
+      "fondo": "batalla",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Odiseo les dijo a sus hombres: «¡Rápido, a los barcos!». Pero no le hicieron caso.",
+          "en": "Odysseus told his men: “Quick, back to the ships!” But they did not listen."
+        },
+        {
+          "es": "Se quedaron toda la noche en la playa, comiendo y bebiendo.",
+          "en": "They stayed on the beach all night, eating and drinking."
+        },
+        {
+          "es": "Al amanecer volvieron los cicones con sus vecinos, tantos como las hojas en primavera.",
+          "en": "At dawn, the Cicones came back with their neighbors, as many as the leaves in spring."
+        },
+        {
+          "es": "Los griegos pelearon todo el día. Cuando por fin escaparon, habían muerto seis hombres de cada barco.",
+          "en": "The Greeks fought all day. When they finally escaped, six men from each ship were dead."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 950,
+          "en": 1,
+          "hasta": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "odiseo",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 0.6,
+              "hace": "enoja"
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "marinero1",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 780,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "niega"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.3,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "marinero2",
+          "como": "joven",
+          "rotulo": "",
+          "x": 1100,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.4,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "cicon1",
+          "como": "guerrero",
+          "rotulo": "",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1500,
+              "dur": 0.6
+            },
+            {
+              "en": 2.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.2,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "cicon2",
+          "como": "guerrero",
+          "rotulo": "",
+          "x": 1950,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "entra",
+              "a": 1750,
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "lanza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 2.6,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "polvo",
+          "x": 1300,
+          "y": 760
+        },
+        {
+          "en": 3.2,
+          "tipo": "humo",
+          "x": 1200,
+          "y": 550,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.3,
+          "texto": {
+            "es": "SEIS HOMBRES POR BARCO",
+            "en": "SIX MEN FROM EACH SHIP"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "tormenta",
+      "fondo": "mar",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Zeus, el rey de los dioses, envió una tormenta terrible desde el norte.",
+          "en": "Then Zeus, king of the gods, sent a terrible storm from the north."
+        },
+        {
+          "es": "El viento les rompió las velas en pedazos. Durante dos días y dos noches descansaron en una playa, agotados.",
+          "en": "The wind tore their sails to pieces. For two days and two nights, they rested on a beach, exhausted."
+        },
+        {
+          "es": "Intentaron rodear la punta de Grecia, rumbo a casa. Pero el viento y las olas los alejaron.",
+          "en": "They tried to sail around the tip of Greece, toward home. But the wind and the waves pushed them away."
+        },
+        {
+          "es": "Durante nueve días, la tormenta los arrastró por el mar abierto, lejos de toda tierra conocida.",
+          "en": "For nine days, the storm carried them across the open sea, far from any land they knew."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "nube",
+          "x": 400,
+          "y": 200,
+          "s": 1.2
+        },
+        {
+          "tipo": "nube",
+          "x": 1500,
+          "y": 230,
+          "s": 1
+        },
+        {
+          "tipo": "barco",
+          "x": 950,
+          "s": 1,
+          "hasta": 1
+        },
+        {
+          "tipo": "barco",
+          "x": 950,
+          "s": 1,
+          "en": 1,
+          "props": {
+            "vela": false
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "x": 1650,
+          "capa": "fondo",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.4,
+              "hace": "lanza"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "x": 880,
+          "y": 700,
+          "escala": 0.7,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "marinero",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 1050,
+          "y": 700,
+          "escala": 0.7,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.4,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 0.4,
+          "tipo": "rayo",
+          "x": 1300
+        },
+        {
+          "en": 0.5,
+          "tipo": "lluvia",
+          "dur": 3
+        },
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 2.5,
+          "tipo": "rayo",
+          "x": 500
+        },
+        {
+          "en": 3,
+          "tipo": "olas-bajan",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "NUEVE DÍAS",
+            "en": "NINE DAYS"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "lotofagos",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al décimo día, llegaron a la tierra de los lotófagos, los comedores de loto.",
+          "en": "On the tenth day, they reached the land of the Lotus-Eaters."
+        },
+        {
+          "es": "Odiseo mandó a tres hombres a averiguar quién vivía allí.",
+          "en": "Odysseus sent three men to find out who lived there."
+        },
+        {
+          "es": "La gente era amable. Les dieron a los hombres su comida: el dulce fruto del loto.",
+          "en": "The people there were friendly. They gave the men their food: the sweet fruit of the lotus."
+        },
+        {
+          "es": "Pero quien comía el loto lo olvidaba todo. Olvidaba su casa, y solo quería quedarse a comer más.",
+          "en": "But whoever ate the lotus forgot everything. They forgot their homes, and wanted only to stay and eat more."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 180,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "loto",
+          "x": 700,
+          "s": 1
+        },
+        {
+          "tipo": "loto",
+          "x": 1450,
+          "s": 1
+        },
+        {
+          "tipo": "loto",
+          "x": 1750,
+          "s": 0.9
+        },
+        {
+          "tipo": "barco",
+          "x": 300,
+          "s": 0.6,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "marinero1",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 400,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 850,
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "marinero2",
+          "como": "joven",
+          "rotulo": "",
+          "x": 250,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.8
+            },
+            {
+              "en": 2.6,
+              "hace": "toma",
+              "objeto": "copa"
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "lotofago",
+          "como": "joven",
+          "rotulo": "",
+          "x": 1350,
+          "mira": "izq",
+          "props": {
+            "tocado": "laurel",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "lotofaga",
+          "como": "mujer",
+          "rotulo": "",
+          "x": 1600,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 600,
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "niebla",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LOS LOTÓFAGOS",
+            "en": "THE LOTUS-EATERS"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "EL FRUTO DEL OLVIDO",
+            "en": "THE FRUIT OF FORGETTING"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "rescate",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los tres hombres no volvieron. Así que Odiseo fue a buscarlos.",
+          "en": "The three men did not come back. So Odysseus went to look for them."
+        },
+        {
+          "es": "Los encontró sentados, felices, entre las flores. Ni siquiera querían volver a casa.",
+          "en": "He found them sitting happily among the flowers. They did not even want to go home."
+        },
+        {
+          "es": "Entonces los arrastró a los barcos, llorando, y los ató bajo los bancos.",
+          "en": "So he dragged them back to the ships, crying, and tied them under the benches."
+        },
+        {
+          "es": "«¡Todos a bordo, ya!», gritó. «¡Antes de que alguien más coma loto!»",
+          "en": "“Everyone on board, now!” he shouted. “Before anyone else eats the lotus!”"
+        },
+        {
+          "es": "Y tú, si una fruta pudiera hacerte olvidar todas tus preocupaciones, ¿la comerías?",
+          "en": "If a fruit could make you forget all your worries, would you eat it?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "loto",
+          "x": 900,
+          "s": 1
+        },
+        {
+          "tipo": "loto",
+          "x": 1250,
+          "s": 1
+        },
+        {
+          "tipo": "barco",
+          "x": 1750,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "odiseo",
+          "x": 250,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 700,
+              "dur": 1
+            },
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1400,
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "marinero1",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 1000,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.2,
+              "hace": "camina",
+              "a": 1550,
+              "dur": 0.8
+            },
+            {
+              "en": 2.6,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "marinero2",
+          "como": "joven",
+          "rotulo": "",
+          "x": 1180,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.5,
+              "hace": "niega"
+            },
+            {
+              "en": 2.1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.3,
+              "hace": "camina",
+              "a": 1650,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 650,
+          "intensidad": 0.4,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.3
+        },
+        {
+          "en": 4,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "ciclopes",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Siguieron navegando, tristes y cansados, hasta llegar a la tierra de los Cíclopes.",
+          "en": "They sailed on, sad and tired, until they reached the land of the Cyclopes."
+        },
+        {
+          "es": "Los Cíclopes eran gigantes con un solo ojo redondo en medio de la frente.",
+          "en": "The Cyclopes were giants with one round eye in the middle of their foreheads."
+        },
+        {
+          "es": "No tenían leyes ni asambleas. Cada uno vivía en una cueva con su familia, y hacía lo que quería.",
+          "en": "They had no laws and no meetings. Each one lived in a cave with his family, and did as he pleased."
+        },
+        {
+          "es": "Cerca había una isla pequeña y salvaje, llena de cabras. Una noche oscura, sin luna, los barcos llegaron allí.",
+          "en": "Nearby was a small wild island, full of goats. On a dark night with no moon, the ships landed there."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cueva",
+          "x": 1550,
+          "s": 1.2,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "barco",
+          "x": 450,
+          "s": 0.7,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "ciclope1",
+          "como": "ciclope",
+          "x": 1250,
+          "escala": 0.8,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 2.2,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "ciclope2",
+          "como": "ciclope",
+          "rotulo": "",
+          "x": 1800,
+          "escala": 0.7,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 2.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "cabra1",
+          "como": "cabra",
+          "x": 700,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "cabra2",
+          "como": "cabra",
+          "x": 900,
+          "escala": 0.8,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 2.2,
+          "tipo": "polvo",
+          "x": 1250,
+          "y": 760
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "intensidad": 0.6,
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LOS CÍCLOPES",
+            "en": "THE CYCLOPES"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "cueva",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por la mañana, vieron humo en la tierra de los gigantes, y oyeron sus ovejas y cabras.",
+          "en": "In the morning, they saw smoke rising on the giants' land, and heard their sheep and goats."
+        },
+        {
+          "es": "Odiseo dejó a la mayoría de sus hombres en la islita.",
+          "en": "Odysseus left most of his men on the little island."
+        },
+        {
+          "es": "Con doce de sus mejores hombres, cruzó para ver qué clase de gente vivía allí.",
+          "en": "With twelve of his best men, he crossed over to see what kind of people lived there."
+        },
+        {
+          "es": "Llevó una sola cosa: un odre de piel de cabra lleno del vino fuerte de Marón.",
+          "en": "He brought one thing with him: a goatskin bag full of Maron's strong wine."
+        },
+        {
+          "es": "Cerca del mar, encontraron una cueva enorme, rodeada por un muro alto de piedras.",
+          "en": "Near the sea, they found a huge cave, with a high wall of stones around it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1150,
+          "s": 0.9,
+          "capa": "medio"
+        },
+        {
+          "tipo": "cueva",
+          "x": 1700,
+          "s": 1.3,
+          "en": 4
+        },
+        {
+          "tipo": "roca",
+          "x": 1450,
+          "s": 1,
+          "en": 4
+        },
+        {
+          "tipo": "roca",
+          "x": 1950,
+          "s": 1,
+          "en": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "odiseo",
+          "x": 350,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 950,
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.3,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "marinero1",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 150,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "asiente"
+            },
+            {
+              "en": 2.1,
+              "hace": "camina",
+              "a": 750,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "marinero2",
+          "como": "joven",
+          "rotulo": "",
+          "x": 0,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "camina",
+              "a": 580,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "humo",
+          "x": 1600,
+          "y": 400,
+          "dur": 2
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 950,
+          "y": 520,
+          "intensidad": 0.4,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "intensidad": 0.2,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "DOCE HOMBRES",
+            "en": "TWELVE MEN"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "dentro",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El dueño no estaba. Adentro había canastas llenas de queso, y corrales llenos de corderos y cabritos.",
+          "en": "The owner was not home. Inside were baskets full of cheese, and pens full of lambs and young goats."
+        },
+        {
+          "es": "«¡Llevémonos el queso y los corderos, y huyamos!», dijeron los hombres.",
+          "en": "“Let's take the cheese and the lambs, and run!” said the men."
+        },
+        {
+          "es": "Pero Odiseo quería conocer al dueño. Tal vez les daría regalos, como hacían los buenos anfitriones.",
+          "en": "But Odysseus wanted to meet the owner. Maybe he would give them gifts, as good hosts did."
+        },
+        {
+          "es": "Más tarde diría que fue un error terrible.",
+          "en": "Later, he would say it was a terrible mistake."
+        },
+        {
+          "es": "Así que encendieron un fuego, comieron un poco de queso, y esperaron.",
+          "en": "So they lit a fire, ate some of the cheese, and waited."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "anfora",
+          "x": 1000,
+          "s": 0.7
+        },
+        {
+          "tipo": "anfora",
+          "x": 1100,
+          "s": 0.6
+        },
+        {
+          "tipo": "fogata",
+          "x": 800,
+          "en": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "marinero1",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 350,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 1.4,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 4.3,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "x": 600,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "niega"
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "oveja",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": []
+        },
+        {
+          "id": "cabra",
+          "x": 1700,
+          "escala": 0.7,
+          "mira": "izq",
+          "pasos": []
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.2,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 800,
+          "y": 620,
+          "intensidad": 0.5,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "UN ERROR TERRIBLE",
+            "en": "A TERRIBLE MISTAKE"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "gigante",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al atardecer, el suelo tembló. El gigante volvió a casa, cargando un montón enorme de leña.",
+          "en": "At sunset, the ground shook. The giant came home, carrying a huge load of firewood."
+        },
+        {
+          "es": "La tiró al suelo con un estruendo. Los hombres corrieron a esconderse en los rincones oscuros.",
+          "en": "He threw it down with a crash. The men ran to hide in the dark corners."
+        },
+        {
+          "es": "Metió sus ovejas. Después levantó una piedra enorme, y cerró la entrada de la cueva.",
+          "en": "He drove his sheep inside. Then he lifted a huge stone, and closed the door of the cave."
+        },
+        {
+          "es": "Esa piedra era tan grande que ni veintidós carros la habrían podido mover.",
+          "en": "That stone was so big that twenty-two wagons could not have moved it."
+        },
+        {
+          "es": "Encendió el fuego, y su único ojo los vio. «¡Forasteros! ¿Quiénes son ustedes?»",
+          "en": "He lit a fire, and his one eye saw them. “Strangers! Who are you?”"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1850,
+          "s": 1.6,
+          "en": 2.7
+        },
+        {
+          "tipo": "fogata",
+          "x": 1000,
+          "en": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "polifemo",
+          "como": "ciclope",
+          "rotulo": "",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1450,
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.8,
+              "hace": "baja"
+            },
+            {
+              "en": 4.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "x": 650,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "corre",
+              "a": 350,
+              "dur": 0.5
+            },
+            {
+              "en": 4.4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "marinero",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 850,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "corre",
+              "a": 150,
+              "dur": 0.5
+            },
+            {
+              "en": 4.5,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "oveja",
+          "x": 2000,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 1300,
+          "y": 760
+        },
+        {
+          "en": 2.8,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 2.8,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 620,
+          "intensidad": 0.6,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "NI VEINTIDÓS CARROS",
+            "en": "NOT EVEN 22 WAGONS"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1.02,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "«Somos griegos, volvemos de Troya», dijo Odiseo. «Respeta a los dioses. Zeus protege a los huéspedes.»",
+          "en": "“We are Greeks, on our way home from Troy,” said Odysseus. “Respect the gods. Zeus protects all guests.”"
+        },
+        {
+          "es": "El gigante se rió. «A los Cíclopes no nos importa Zeus.»",
+          "en": "The giant laughed. “We Cyclopes do not care about Zeus.”"
+        },
+        {
+          "es": "Se llamaba Polifemo, y era hijo de Poseidón, el dios del mar.",
+          "en": "His name was Polyphemus, and he was a son of the sea god, Poseidon."
+        },
+        {
+          "es": "Entonces estiró sus manos enormes hacia los hombres.",
+          "en": "Then he stretched out his huge hands toward the men."
+        },
+        {
+          "es": "¿Cómo escaparías tú de esta cueva? Cuéntame tu plan en los comentarios.",
+          "en": "How would you escape from this cave? Tell me your plan in the comments."
+        },
+        {
+          "es": "Descubre lo que hizo Odiseo en la segunda parte: Nadie y el Cíclope.",
+          "en": "Find out what Odysseus did in part two: Nobody and the Cyclops."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 950
+        }
+      ],
+      "actores": [
+        {
+          "id": "marinero",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "x": 600,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 0.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.3,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "polifemo",
+          "como": "ciclope",
+          "rotulo": "",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.5,
+              "hace": "niega"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.2,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1400,
+          "y": 350,
+          "intensidad": 0.4,
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 5,
+          "tipo": "oscurecer",
+          "intensidad": 0.7,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "POLIFEMO",
+            "en": "POLYPHEMUS"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "NADIE Y EL CÍCLOPE",
+            "en": "NOBODY AND THE CYCLOPS"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La fruta que te hace olvidar tu casa",
+        "en": "The Fruit That Makes You Forget Home"
+      },
+      "escena": "lotofagos",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Atrapados en la cueva del Cíclope",
+        "en": "Trapped in the Cyclops' Cave"
+      },
+      "escena": "gigante",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "La tormenta que alejó a Odiseo de casa",
+        "en": "The Storm That Blew Odysseus Off Course"
+      },
+      "escena": "tormenta",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 950
+    }
+  ]
+}
