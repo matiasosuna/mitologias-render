@@ -8,7 +8,7 @@ on:
         description: 'Lista JSON de ids'
         required: true
       tipo:
-        description: 'vertical | horizontal | short'
+        description: 'vertical | horizontal | short | partes'
         default: vertical
 jobs:
   render:
@@ -33,6 +33,7 @@ jobs:
           case "${{ inputs.tipo }}" in
             vertical) node scripts/vertical-render.mjs ${{ matrix.id }} ;;
             short) node scripts/short-render.mjs ${{ matrix.id }} ;;
+            partes) node scripts/vertical-partes.mjs ${{ matrix.id }} ;;
             *) node scripts/motor-render.mjs ${{ matrix.id }} --imagen=en --audio=en && node scripts/miniaturas.mjs ${{ matrix.id }} ;;
           esac
       - uses: actions/upload-artifact@v4
@@ -42,4 +43,5 @@ jobs:
             out/${{ matrix.id }}/*.mp4
             out/${{ matrix.id }}/*.srt
             out/${{ matrix.id }}/miniatura.jpg
+            out/${{ matrix.id }}/partes.json
           retention-days: 7

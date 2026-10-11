@@ -4,7 +4,7 @@ import { Composition, registerRoot } from 'remotion';
 import { VideoMotor } from './VideoMotor';
 import { VideoShort, tramoShort } from './Short';
 import { ShortNativo } from './ShortNativo';
-import { VideoVertical, CIERRE_VERTICAL } from './VideoVertical';
+import { VideoVertical, CIERRE_VERTICAL, ParteVertical, CARTEL_PARTE } from './VideoVertical';
 import { VIDEOS } from './indice';
 import { DemoCalidad } from './DemoCalidad';
 import { DemoPersonajes2 } from './DemoPersonajes2';
@@ -23,6 +23,10 @@ registerRoot(() => (
     ))}
     {VIDEOS.filter(({ guion }) => (guion as GuionVisual).formato !== 'short').map(({ guion, timeline }) => (
       <Composition key={`${(guion as GuionVisual).id}-vertical`} id={`${(guion as GuionVisual).id}-vertical`} component={VideoVertical as unknown as React.FC<Record<string, unknown>>} durationInFrames={(timeline as Timeline).total - (timeline as Timeline).outroFrames + CIERRE_VERTICAL * (timeline as Timeline).fps} fps={(timeline as Timeline).fps} width={1080} height={1920} defaultProps={{ guion, timeline }} />
+    ))}
+    {VIDEOS.filter(({ guion }) => (guion as GuionVisual).formato !== 'short').map(({ guion, timeline }) => (
+      <Composition key={`${(guion as GuionVisual).id}-parte`} id={`${(guion as GuionVisual).id}-parte`} component={ParteVertical as unknown as React.FC<Record<string, unknown>>} durationInFrames={1} fps={(timeline as Timeline).fps} width={1080} height={1920} defaultProps={{ guion, timeline, desde: 0, hasta: 1, n: 1, de: 1 }}
+        calculateMetadata={({ props }) => { const p = props as { desde: number; hasta: number; n: number; de: number }; return { durationInFrames: p.hasta - p.desde + (p.n < p.de ? Math.round(CARTEL_PARTE * (timeline as Timeline).fps) : 0) }; }} />
     ))}
     {VIDEOS.filter(({ guion }) => (guion as GuionVisual).formato !== 'short').map(({ guion, timeline }) => (
       <Composition

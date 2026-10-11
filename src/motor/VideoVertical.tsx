@@ -2,7 +2,7 @@
 // pero con una cámara que encuadra en vertical a quien habla o actúa (paneos y zoom suaves), subtítulos grandes,
 // la portada vertical al principio y un cierre corto. No gasta créditos: reusa el audio y el timeline.
 import React from 'react';
-import { AbsoluteFill, Audio, Img, Sequence, staticFile, useCurrentFrame, interpolate } from 'remotion';
+import { AbsoluteFill, Audio, Freeze, Img, Sequence, staticFile, useCurrentFrame, interpolate } from 'remotion';
 import { C, TITULO, TEXTO, ap, cl, SUELO, TEMA, aplicarTema, CalidadHD, ModoVertical, VERT_ARRIBA, FranjaKapa, FranjaCuentas, Bloques, Entrelazado, FrisoPalmetas } from '../comun/vasija';
 import { EscenaMotor, encuadreVertical } from './Escena';
 import type { GuionVisual, Timeline, Escena, EscenaTL } from './tipos';
@@ -80,5 +80,37 @@ export const VideoVertical: React.FC<{ guion: GuionVisual; timeline: Timeline; p
         </AbsoluteFill>
       </ModoVertical.Provider>
     </CalidadHD.Provider>
+  );
+};
+
+// Episodio vertical en PARTES de menos de 3 min (Instagram casi no recomienda Reels más largos a quien no te sigue).
+// Muestra el tramo [desde, hasta) del vertical completo, con "PART n OF de" arriba; si no es la última parte,
+// termina con 2,5 s de cartel "PART n+1 · IN THE NEXT REEL" sobre el último cuadro congelado.
+export const CARTEL_PARTE = 2.5;
+export const ParteVertical: React.FC<{ guion: GuionVisual; timeline: Timeline; portada?: string; desde: number; hasta: number; n: number; de: number }> = ({ guion, timeline, portada, desde, hasta, n, de }) => {
+  const f = useCurrentFrame();
+  const largo = hasta - desde;
+  aplicarTema(guion.serie);
+  return (
+    <AbsoluteFill style={{ background: '#0a0705' }}>
+      <Sequence from={-desde} durationInFrames={hasta}>
+        <VideoVertical guion={guion} timeline={timeline} portada={portada} />
+      </Sequence>
+      {f >= largo && (
+        <Freeze frame={hasta - 1}>
+          <VideoVertical guion={guion} timeline={timeline} portada={portada} />
+        </Freeze>
+      )}
+      {de > 1 && <div style={{ position: 'absolute', top: 178, left: 0, right: 0, textAlign: 'center', fontFamily: TITULO }}>
+        <span style={{ display: 'inline-block', padding: '8px 26px', borderRadius: 40, background: 'rgba(10,7,5,.65)', color: '#FFF4E0', fontSize: 30, fontWeight: 700, letterSpacing: 6 }}>PART {n} OF {de}</span>
+      </div>}
+      {n < de && f >= largo && (
+        <AbsoluteFill style={{ background: 'rgba(10,7,5,.78)', justifyContent: 'center', alignItems: 'center', textAlign: 'center', fontFamily: TITULO, color: '#FFF4E0', opacity: interpolate(f, [largo, largo + 8], [0, 1], cl) }}>
+          <div style={{ fontSize: 44, letterSpacing: 10, opacity: 0.85 }}>TO BE CONTINUED</div>
+          <div style={{ marginTop: 28, fontSize: 92, fontWeight: 700, letterSpacing: 4 }}>PART {n + 1}</div>
+          <div style={{ marginTop: 22, fontSize: 40, letterSpacing: 6 }}>IN THE NEXT REEL ▶</div>
+        </AbsoluteFill>
+      )}
+    </AbsoluteFill>
   );
 };
