@@ -39,7 +39,7 @@ if (faltan.length) {
   const comp = await selectComposition({ serveUrl, id, inputProps: { guion: g, timeline: tl, idioma: null, imagen: IMAGEN } });
   for (const t of faltan) {
     const t0 = Date.now();
-    await renderMedia({ serveUrl, composition: comp, codec: 'h264', outputLocation: t.archivo, frameRange: [t.desde, t.hasta], muted: true, crf: 20, timeoutInMilliseconds: 180000, concurrency: Math.max(2, os.cpus().length - 2), inputProps: { guion: g, timeline: tl, idioma: null, imagen: IMAGEN } });
+    await renderMedia({ serveUrl, composition: comp, codec: 'h264', outputLocation: t.archivo, frameRange: [t.desde, t.hasta], muted: true, crf: 20, timeoutInMilliseconds: 180000, concurrency: Number(process.env.RENDER_CONCURRENCY) || Math.max(2, os.cpus().length - 2), inputProps: { guion: g, timeline: tl, idioma: null, imagen: IMAGEN } });
     console.log(`  ${t.nombre}: ${((Date.now() - t0) / 1000).toFixed(0)} s`);
   }
 }
