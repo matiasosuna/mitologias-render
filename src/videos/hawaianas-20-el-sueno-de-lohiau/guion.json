@@ -1,0 +1,1251 @@
+{
+  "id": "hawaianas-20-el-sueno-de-lohiau",
+  "serie": "hawaianas",
+  "numero": "20",
+  "titulo": {
+    "es": "El sueño de Lohiʻau",
+    "en": "The Dream of Lohiʻau"
+  },
+  "tituloGriego": "THE DREAM OF LOHIʻAU",
+  "miniatura": {
+    "heroe": "pele",
+    "rival": {
+      "objeto": "tambor",
+      "capa": "#E8B81C",
+      "barba": false
+    }
+  },
+  "siguiente": {
+    "es": "Hiʻiaka sale al camino",
+    "en": "Hiʻiaka Takes the Road"
+  },
+  "escenas": [
+    {
+      "id": "gancho",
+      "fondo": "playa",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, la nieve de Poliʻahu le ganó al fuego de Pele en Mauna Kea.",
+          "en": "Last time, Poliʻahu's snow beat Pele's fire on Mauna Kea."
+        },
+        {
+          "es": "Pele volvió a Puna. Esa tarde, mientras Hiʻiaka bailaba con Hōpoe, le dio mucho sueño.",
+          "en": "Pele went back to Puna. That afternoon, while Hiʻiaka danced with Hōpoe, she grew very sleepy."
+        },
+        {
+          "es": "«Me voy a dormir», les dijo a sus hermanas. «No me despierten.»",
+          "en": "\"I am going to sleep,\" she told her sisters. \"Do not wake me.\""
+        },
+        {
+          "es": "«Si alguien me despierta, será su muerte. Si tienen que hacerlo, que lo haga mi hermanita, Hiʻiaka.»",
+          "en": "\"Whoever wakes me will die. If you must wake me, let it be my little sister, Hiʻiaka.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "niu",
+          "x": 1850,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 600,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.4,
+              "hace": "senala",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "hermana",
+          "como": "hawaiana",
+          "x": 950,
+          "mira": "izq",
+          "props": {
+            "capa": "#7A1E10"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "asiente"
+            },
+            {
+              "en": 3.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 1450,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.3,
+              "hace": "gira"
+            },
+            {
+              "en": 3.5,
+              "hace": "mira",
+              "a": 600
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    },
+    {
+      "id": "cueva",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pele se acostó en una cueva, sobre una losa lisa de lava, envuelta en su manto de kapa.",
+          "en": "Pele lay down in a cave, on a smooth slab of lava, wrapped in her kapa robe."
+        },
+        {
+          "es": "Emerson dice que esa cueva, en una colina de Puna, todavía existe.",
+          "en": "Emerson says that cave, in a hill in Puna, is still there today."
+        },
+        {
+          "es": "Westervelt cuenta que, al dormir, Pele perdía su forma de mujer joven, y parecía una anciana.",
+          "en": "Westervelt tells that when Pele slept, she lost her young woman's shape, and looked like an old woman."
+        },
+        {
+          "es": "Hiʻiaka se quedó a su lado, abanicándola con un kāhili, un abanico de plumas.",
+          "en": "Hiʻiaka stayed beside her, fanning her with a kāhili, a feather standard."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kahili",
+          "x": 1400,
+          "s": 0.7,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 800,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.6,
+              "hace": "cae"
+            },
+            {
+              "en": 2,
+              "hace": "transforma",
+              "en_que": "anciana"
+            }
+          ]
+        },
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 1250,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.4,
+              "hace": "baja"
+            },
+            {
+              "en": 3.7,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.4
+        }
+      ]
+    },
+    {
+      "id": "tambores",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mientras dormía, Pele oyó a lo lejos tambores de hula.",
+          "en": "As she slept, Pele heard hula drums, far away."
+        },
+        {
+          "es": "Su espíritu se levantó de su cuerpo y siguió el sonido.",
+          "en": "Her spirit rose out of her body and followed the sound."
+        },
+        {
+          "es": "Primero parecía venir del mar. Después, de Hilo. Después, de los acantilados de Hāmākua.",
+          "en": "At first it seemed to come from the sea. Then from Hilo. Then from the cliffs of Hāmākua."
+        },
+        {
+          "es": "Cada vez que llegaba, la música ya estaba más lejos.",
+          "en": "Each time she arrived, the music was already farther away."
+        },
+        {
+          "es": "«Si vienes de Kahiki, mi tierra lejana, te seguiré hasta allá», dijo Pele.",
+          "en": "\"If you come from Kahiki, my far-off homeland, I will follow you there,\" said Pele."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "petroglifo",
+          "x": 1500,
+          "s": 0.7,
+          "props": {
+            "figura": "persona"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 500,
+          "y": 560,
+          "props": {
+            "objeto": null,
+            "contorno": true
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 3
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1100,
+                500
+              ],
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                1700,
+                520
+              ],
+              "dur": 1
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.7
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 1900,
+          "y": 500,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 2100,
+          "y": 450,
+          "dur": 1.2
+        }
+      ]
+    },
+    {
+      "id": "viaje",
+      "fondo": "oceano",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Su espíritu cruzó el canal hasta Maui, y oyó la música en la colina de Kaʻuiki, en Hāna.",
+          "en": "Her spirit crossed the channel to Maui, and heard the music at Kaʻuiki hill, in Hāna."
+        },
+        {
+          "es": "Pero la música ya se había ido al oeste. La siguió hasta Molokaʻi, y después hasta Oʻahu.",
+          "en": "But the music had already moved west. She followed it to Molokaʻi, and then to Oʻahu."
+        },
+        {
+          "es": "Llegó al cabo de Kaʻena, la punta de Oʻahu que señala hacia Kauaʻi.",
+          "en": "She reached Kaʻena Point, the tip of Oʻahu that points toward Kauaʻi."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla",
+          "x": 900,
+          "s": 0.6,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "isla",
+          "x": 1500,
+          "s": 0.5,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "isla",
+          "x": 2100,
+          "s": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 400,
+          "y": 520,
+          "props": {
+            "objeto": null,
+            "contorno": true
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                1000,
+                480
+              ],
+              "dur": 1.2
+            },
+            {
+              "en": 1.2,
+              "hace": "vuela",
+              "a": [
+                1600,
+                520
+              ],
+              "dur": 1.3
+            },
+            {
+              "en": 2.5,
+              "hace": "vuela",
+              "a": [
+                2000,
+                560
+              ],
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        }
+      ]
+    },
+    {
+      "id": "kaena",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Allí vivía un viejo llamado Pōhakuokauaʻi, la roca que Māui había arrancado del mar hace mucho.",
+          "en": "There lived an old one named Pōhakuokauaʻi, the rock Māui had pulled from the sea long ago."
+        },
+        {
+          "es": "«¡Así que eres tú el que me engaña con esa música!», gritó Pele. «¡Te voy a matar!»",
+          "en": "\"So it is you, fooling me with this music!\" shouted Pele. \"I will kill you!\""
+        },
+        {
+          "es": "«¡No soy yo!», dijo el viejo. «Escucha: viene de allá, del mar.»",
+          "en": "\"It is not me!\" said the old man. \"Listen: it comes from out there, from the sea.\""
+        },
+        {
+          "es": "Y era cierto. Los que tocaban eran dos espíritus chiquitos: uno vivía en una flauta de nariz, y el otro, en un silbato.",
+          "en": "And it was true. The players were two tiny spirits: one lived in a nose flute, the other in a whistle."
+        },
+        {
+          "es": "Querían llevar a Pele hasta un lugar donde se bailaba hula.",
+          "en": "They wanted to lead Pele to a place where a hula was being danced."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1250,
+          "s": 1.1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "petroglifo",
+          "x": 1700,
+          "s": 0.5,
+          "props": {
+            "figura": "espiral"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "viejo",
+          "como": "kahuna",
+          "x": 1250,
+          "mira": "izq",
+          "props": {
+            "capa": "#6B6B6B"
+          },
+          "rotulo": "PŌHAKUOKAUAʻI",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 1.5,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 2,
+              "hace": "niega"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 650,
+          "props": {
+            "objeto": null,
+            "contorno": true
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.1,
+              "hace": "senala"
+            },
+            {
+              "en": 1.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.5,
+              "hace": "mira",
+              "a": 1900
+            },
+            {
+              "en": 3,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1800,
+          "y": 600,
+          "dur": 1.5
+        }
+      ]
+    },
+    {
+      "id": "haena",
+      "fondo": "aldea_hale",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pele se tiró al agua y nadó, siguiendo la música, hasta Hāʻena, en la punta norte de Kauaʻi.",
+          "en": "Pele plunged into the water and swam, following the music, to Hāʻena, at the northern tip of Kauaʻi."
+        },
+        {
+          "es": "Allí había una gran casa de hula, llena de gente de toda la isla.",
+          "en": "There stood a great hula house, full of people from all over the island."
+        },
+        {
+          "es": "En el centro, tocando el tambor, estaba el jefe de Kauaʻi: Lohiʻau.",
+          "en": "In the middle, playing the drum, sat the chief of Kauaʻi: Lohiʻau."
+        },
+        {
+          "es": "Era joven, apuesto, y el mejor bailarín y tamborilero de la isla.",
+          "en": "He was young and handsome, the finest dancer and drummer on the island."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1300,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "niu",
+          "x": 2000,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "lohiau",
+          "como": "hawaiano",
+          "x": 1150,
+          "mira": "izq",
+          "props": {
+            "objeto": "tambor",
+            "capa": "#E8B81C",
+            "barba": false,
+            "tocado": null
+          },
+          "rotulo": "LOHIʻAU",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.4,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "bailarina",
+          "como": "hawaiana",
+          "x": 1500,
+          "mira": "izq",
+          "props": {
+            "capa": "#C2185B"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "gira"
+            },
+            {
+              "en": 2.5,
+              "hace": "gira"
+            }
+          ]
+        },
+        {
+          "id": "pueblo",
+          "como": "hawaiano",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 400,
+          "capa": "medio",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 550,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    },
+    {
+      "id": "entrada",
+      "fondo": "aldea_hale",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pele entró con la forma de una mujer hermosísima, perfumada de maile, lehua y hala.",
+          "en": "Pele came in as a woman of great beauty, fragrant with maile, lehua and hala."
+        },
+        {
+          "es": "La gente se apartó para dejarla pasar. Todos se quedaron callados.",
+          "en": "The crowd parted to let her through. Everyone fell silent."
+        },
+        {
+          "es": "Hasta el tambor de Lohiʻau se detuvo.",
+          "en": "Even Lohiʻau's drum went still."
+        },
+        {
+          "es": "«¿De dónde vienes?», le preguntó él. «Del este, de Puna, la tierra donde sale el sol», dijo ella.",
+          "en": "\"Where do you come from?\" he asked. \"From the east, from Puna, the land of the sunrise,\" she said."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1300,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 600,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1.5
+            },
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 3.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "pueblo",
+          "como": "hawaiano",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.3,
+              "hace": "camina",
+              "a": 1400,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "lohiau",
+          "como": "hawaiano",
+          "x": 1650,
+          "mira": "izq",
+          "props": {
+            "objeto": "tambor",
+            "capa": "#E8B81C",
+            "barba": false,
+            "tocado": null
+          },
+          "rotulo": "LOHIʻAU",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 3.6,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    },
+    {
+      "id": "tres_dias",
+      "fondo": "aldea_hale",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Lohiʻau se enamoró en el acto. Pele se quedó con él tres días.",
+          "en": "Lohiʻau fell in love at once. Pele stayed with him for three days."
+        },
+        {
+          "es": "Al tercer día, le dijo: «Tengo que volver a Puna. Voy a preparar una casa para los dos, y mandaré a buscarte».",
+          "en": "On the third day she said: \"I must go back to Puna. I will make a home for us, and send for you.\""
+        },
+        {
+          "es": "«Si viene un hombre, no vayas. Si viene una mujer, ve con ella.»",
+          "en": "\"If a man comes, do not go. If a woman comes, go with her.\""
+        },
+        {
+          "es": "Mientras tanto, en Puna, Hiʻiaka cantaba el canto que llama a un espíritu de vuelta a su cuerpo.",
+          "en": "Meanwhile, in Puna, Hiʻiaka was singing the chant that calls a spirit back to its body."
+        },
+        {
+          "es": "Pele lo oyó desde Kauaʻi. Lloró, y desapareció como la niebla.",
+          "en": "Pele heard it from Kauaʻi. She wept, and vanished like mist."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1450,
+          "s": 0.8,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "lohiau",
+          "como": "hawaiano",
+          "x": 1150,
+          "mira": "izq",
+          "props": {
+            "objeto": "tambor",
+            "capa": "#E8B81C",
+            "barba": false,
+            "tocado": null
+          },
+          "rotulo": "LOHIʻAU",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.5,
+              "hace": "entristece"
+            },
+            {
+              "en": 4.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.4,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 750,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "entristece"
+            },
+            {
+              "en": 4.3,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 1750,
+          "mira": "izq",
+          "capa": "medio",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.9,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4.3,
+          "tipo": "niebla",
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "id": "despierta",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En la cueva de Puna, el cuerpo de Pele se movió.",
+          "en": "In the cave in Puna, Pele's body stirred."
+        },
+        {
+          "es": "Volvió a ser joven, abrió los ojos y se levantó.",
+          "en": "She became young again, opened her eyes, and rose."
+        },
+        {
+          "es": "Su espíritu había vuelto. Pero su corazón se había quedado en Kauaʻi.",
+          "en": "Her spirit had come home. But her heart had stayed on Kauaʻi."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "anciana",
+          "x": 800,
+          "rotulo": "PELE",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1,
+              "hace": "transforma",
+              "en_que": "pele"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 1250,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.3,
+              "hace": "mira",
+              "a": 800
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 800,
+          "y": 600,
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "muerte",
+      "fondo": "valle_cascada",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En Kauaʻi, Lohiʻau esperó. Y esperó.",
+          "en": "On Kauaʻi, Lohiʻau waited. And waited."
+        },
+        {
+          "es": "No comía. No dormía. Ya no tocaba el tambor.",
+          "en": "He did not eat. He did not sleep. He no longer played his drum."
+        },
+        {
+          "es": "La tristeza fue tan grande que Lohiʻau murió.",
+          "en": "His sorrow was so great that Lohiʻau died."
+        },
+        {
+          "es": "Su gente puso su cuerpo en una cueva, en lo alto de un acantilado.",
+          "en": "His people laid his body in a cave, high up on a cliff."
+        },
+        {
+          "es": "¿Fue justo que Pele lo dejara así, con solo una promesa?",
+          "en": "Was it fair of Pele to leave him like that, with nothing but a promise?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1600,
+          "s": 1.3,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "lohiau",
+          "como": "hawaiano",
+          "x": 900,
+          "props": {
+            "objeto": "tambor",
+            "capa": "#E8B81C",
+            "barba": false,
+            "tocado": null
+          },
+          "rotulo": "LOHIʻAU",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "cae"
+            },
+            {
+              "en": 2.4,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "hermana",
+          "como": "hawaiana",
+          "x": 1350,
+          "mira": "izq",
+          "props": {
+            "capa": "#E8B81C"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 2.5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "lluvia",
+          "dur": 1.5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "crater",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pele no sabía nada de eso. Solo sabía que quería a Lohiʻau a su lado.",
+          "en": "Pele knew nothing of this. She only knew she wanted Lohiʻau beside her."
+        },
+        {
+          "es": "Pero no podía volver ella misma. Alguien tenía que ir a buscarlo, al otro extremo de las islas.",
+          "en": "But she could not go herself. Someone had to fetch him, from the far end of the islands."
+        },
+        {
+          "es": "Si fueras una de sus hermanas, ¿te animarías a hacer ese viaje para Pele?",
+          "en": "If you were one of her sisters, would you dare make that journey for Pele?"
+        },
+        {
+          "es": "La próxima vez, una sola hermana dice que sí. Es «Hiʻiaka sale al camino».",
+          "en": "Next time, only one sister says yes. It is Hiʻiaka Takes the Road."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lago_lava",
+          "x": 1600,
+          "s": 0.8,
+          "props": {
+            "ancho": 500
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 700,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entristece"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 1300
+            }
+          ]
+        },
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 1300,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.3,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La diosa que se enamoró en sueños",
+        "en": "The goddess who fell in love in a dream"
+      },
+      "escena": "entrada",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "El viejo que no tocaba la música",
+        "en": "The old man who wasn't playing the music"
+      },
+      "escena": "kaena",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 950
+    }
+  ]
+}

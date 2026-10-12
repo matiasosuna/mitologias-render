@@ -1,0 +1,1085 @@
+{
+  "id": "hawaianas-16-nace-hiiaka",
+  "serie": "hawaianas",
+  "numero": "16",
+  "titulo": {
+    "es": "Nace Hiʻiaka",
+    "en": "Hiʻiaka Hatches"
+  },
+  "tituloGriego": "HIʻIAKA HATCHES",
+  "miniatura": {
+    "heroe": "hiiaka",
+    "rival": "pele"
+  },
+  "siguiente": {
+    "es": "El niño cerdo",
+    "en": "The Hog Child"
+  },
+  "escenas": [
+    {
+      "id": "gancho",
+      "fondo": "crater",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Pele perdió su cuerpo en Maui, pero su espíritu encontró un hogar en Kīlauea.",
+          "en": "Last time, Pele lost her body on Maui, but her spirit found a home at Kīlauea."
+        },
+        {
+          "es": "Ahí, en el borde del cráter, la familia se quedó a vivir.",
+          "en": "There, at the edge of the crater, the family made their home."
+        },
+        {
+          "es": "Los hermanos y las hermanas cuidaban el fuego nuevo, de día y de noche.",
+          "en": "Brothers and sisters tended the new fire, day and night."
+        },
+        {
+          "es": "Y el huevo que Pele había cuidado durante todo el viaje seguía tibio.",
+          "en": "And the egg that Pele had cared for through the whole journey was still warm."
+        },
+        {
+          "es": "Pele lo guardaba siempre contra su pecho, cerca del corazón.",
+          "en": "Pele always kept it close to her chest, near her heart."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lago_lava",
+          "x": 1500,
+          "s": 0.9,
+          "props": {
+            "ancho": 600
+          }
+        },
+        {
+          "tipo": "hale",
+          "x": 250,
+          "s": 0.7,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 800,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 2,
+              "hace": "abraza",
+              "dur": 2
+            },
+            {
+              "en": 2.2,
+              "hace": "brilla",
+              "dur": 1.8
+            }
+          ]
+        },
+        {
+          "id": "kamoho",
+          "como": "alii",
+          "x": 350,
+          "props": {
+            "objeto": "hoe",
+            "capa": "#4A5560",
+            "barba": true
+          },
+          "rotulo": "KAMOHOALIʻI",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 820,
+          "y": 580,
+          "dur": 1.8
+        }
+      ]
+    },
+    {
+      "id": "nace",
+      "fondo": "crater",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, el huevo se movió. Después se rompió.",
+          "en": "One day, the egg moved. Then it cracked."
+        },
+        {
+          "es": "Y de adentro salió una niña.",
+          "en": "And out came a little girl."
+        },
+        {
+          "es": "Pele la llamó Hiʻiakaikapoliopele: Hiʻiaka en el seno de Pele.",
+          "en": "Pele named her Hiʻiakaikapoliopele: Hiʻiaka in the bosom of Pele."
+        },
+        {
+          "es": "Porque había crecido así, abrazada por su hermana mayor.",
+          "en": "Because that is how she had grown, held in her big sister's arms."
+        },
+        {
+          "es": "Pele tenía muchas hermanas. Pero esta, la más chica, iba a ser su preferida.",
+          "en": "Pele had many sisters. But this one, the youngest, would be her favorite."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lago_lava",
+          "x": 1600,
+          "s": 0.8,
+          "props": {
+            "ancho": 520
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 700,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 1.2
+            },
+            {
+              "en": 0.2,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "abraza",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 1000,
+          "mira": "izq",
+          "escala": 0.9,
+          "props": {
+            "cuerpo": "nino",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "salta"
+            },
+            {
+              "en": 4,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.8,
+          "tipo": "destello",
+          "dur": 0.2
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 950,
+          "y": 600,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "HIʻIAKA EN EL SENO DE PELE",
+            "en": "HIʻIAKA IN THE BOSOM OF PELE"
+          },
+          "x": 1000,
+          "y": 210,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "otra",
+      "fondo": "aldea_hale",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hay otra versión de su nacimiento, la que recogió Emerson.",
+          "en": "There is another telling of her birth, the one Emerson recorded."
+        },
+        {
+          "es": "Estas historias se cantaban de memoria, y cada familia de cantores las recordaba un poco distinto.",
+          "en": "These stories were chanted from memory, and each family of chanters remembered them a little differently."
+        },
+        {
+          "es": "En ella, Hiʻiaka nació de su madre Haumea, de una forma extraña: por la coronilla de la cabeza.",
+          "en": "In it, Hiʻiaka was born from her mother Haumea in a strange way: from the top of her head."
+        },
+        {
+          "es": "Y viajó en la canoa desde Kahiki ya como una niña.",
+          "en": "And she traveled in the canoe from Kahiki already as a girl."
+        },
+        {
+          "es": "En las dos versiones, es la más joven de la familia. Y la más querida.",
+          "en": "In both tellings, she is the youngest in the family. And the most loved."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waa",
+          "x": 1900,
+          "s": 0.7,
+          "props": {
+            "quieta": true
+          }
+        },
+        {
+          "tipo": "petroglifo",
+          "x": 300,
+          "s": 0.6,
+          "props": {
+            "figura": "persona"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "haumea",
+          "como": "haumea",
+          "x": 650,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 1.5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 1000,
+          "mira": "izq",
+          "escala": 0.9,
+          "props": {
+            "cuerpo": "nino",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1400,
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1650,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "abraza",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    },
+    {
+      "id": "lehua",
+      "fondo": "bosque_lehua",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hiʻiaka creció en Puna, la tierra de lava y bosques del este de la isla.",
+          "en": "Hiʻiaka grew up in Puna, the land of lava and forests on the east side of the island."
+        },
+        {
+          "es": "Su lugar favorito eran los bosques de ʻōhiʻa lehua, árboles con flores rojas como plumas.",
+          "en": "Her favorite place was the forests of ʻōhiʻa lehua, trees with red flowers like feathers."
+        },
+        {
+          "es": "Uno de esos bosques era suyo. Lo cuidaba como un jardín.",
+          "en": "One of those forests was her own. She cared for it like a garden."
+        },
+        {
+          "es": "Juntaba las flores rojas y hacía con ellas guirnaldas, los lei.",
+          "en": "She gathered the red flowers and wove them into garlands, called lei."
+        },
+        {
+          "es": "Los pájaros del bosque venían a tomar el néctar de las flores.",
+          "en": "Forest birds came to drink the sweet nectar of the flowers."
+        },
+        {
+          "es": "Para Hiʻiaka, ese bosque era el lugar más lindo del mundo.",
+          "en": "For Hiʻiaka, that forest was the loveliest place in the world."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lehua",
+          "x": 400,
+          "s": 1
+        },
+        {
+          "tipo": "lehua",
+          "x": 1400,
+          "s": 1.1
+        },
+        {
+          "tipo": "lehua",
+          "x": 1900,
+          "s": 0.9
+        },
+        {
+          "tipo": "lehua",
+          "x": 2150,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 700,
+          "escala": 0.95,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 1.5
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "toma"
+            },
+            {
+              "en": 3.3,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    },
+    {
+      "id": "hopoe",
+      "fondo": "playa",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cerca del mar, en Keaʻau, vivía su mejor amiga: Hōpoe.",
+          "en": "Near the sea, at Keaʻau, lived her best friend: Hōpoe."
+        },
+        {
+          "es": "Hōpoe era una mujer de Puna, y bailaba con una gracia que nadie tenía.",
+          "en": "Hōpoe was a woman of Puna, and she danced with a grace no one else had."
+        },
+        {
+          "es": "Le enseñó a Hiʻiaka las danzas más antiguas, y a hacer los lei más hermosos.",
+          "en": "She taught Hiʻiaka the oldest dances, and how to make the most beautiful lei."
+        },
+        {
+          "es": "Juntas nadaban entre las olas y buscaban peces en las cuevas de coral.",
+          "en": "Together they swam in the waves and looked for fish in the coral caves."
+        },
+        {
+          "es": "Y se prometieron cuidarse la una a la otra.",
+          "en": "And they promised to take care of each other."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "niu",
+          "x": 300,
+          "s": 1
+        },
+        {
+          "tipo": "niu",
+          "x": 1700,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "hopoe",
+          "como": "hawaiana",
+          "x": 1150,
+          "mira": "izq",
+          "props": {
+            "capa": "#C2185B"
+          },
+          "rotulo": "HŌPOE",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.3,
+              "hace": "gira"
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4,
+              "hace": "abraza",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 750,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.5,
+              "hace": "gira"
+            },
+            {
+              "en": 3,
+              "hace": "salta"
+            },
+            {
+              "en": 4,
+              "hace": "abraza",
+              "dur": 1
+            },
+            {
+              "en": 4.2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "olas-suben",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "playa",
+      "fondo": "playa",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, Pele y sus hermanas bajaron a la costa a buscar erizos y algas.",
+          "en": "One day, Pele and her sisters went down to the coast to gather sea urchins and seaweed."
+        },
+        {
+          "es": "Allí vieron a Hōpoe bailando con otra amiga, Haʻena, junto al mar.",
+          "en": "There they saw Hōpoe dancing with another friend, Haʻena, beside the sea."
+        },
+        {
+          "es": "Las dos se movían como el viento sobre el agua.",
+          "en": "The two of them moved like the wind over the water."
+        },
+        {
+          "es": "A Pele le encantó. «¿No tienen ustedes un baile para contestarles?», preguntó a sus hermanas.",
+          "en": "Pele loved it. \"Don't you have a dance to answer them with?\" she asked her sisters."
+        },
+        {
+          "es": "Todas bajaron la cabeza. «No sabemos bailar», dijeron.",
+          "en": "They all lowered their heads. \"We have no dance,\" they said."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "niu",
+          "x": 2100,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 600,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 600
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "hermana",
+          "como": "hawaiana",
+          "x": 300,
+          "props": {
+            "capa": "#7A1E10"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 300
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "hopoe",
+          "como": "hawaiana",
+          "x": 1450,
+          "mira": "izq",
+          "props": {
+            "capa": "#C2185B"
+          },
+          "rotulo": "HŌPOE",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.4,
+              "hace": "gira"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "haena",
+          "como": "hawaiana",
+          "x": 1750,
+          "mira": "izq",
+          "props": {
+            "capa": "#E8B81C"
+          },
+          "rotulo": "HAʻENA",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "gira"
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    },
+    {
+      "id": "hula",
+      "fondo": "playa",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces llegó la más chica, Hiʻiaka, cargada de guirnaldas de lehua.",
+          "en": "Then the youngest, Hiʻiaka, arrived, loaded with lehua garlands."
+        },
+        {
+          "es": "Primero le puso un lei a cada hermana, empezando por Pele.",
+          "en": "First she placed a lei on each sister, starting with Pele."
+        },
+        {
+          "es": "Después cantó y bailó: «Puna baila con el viento; se mecen los bosques de hala de Keaʻau».",
+          "en": "Then she sang and danced: \"Puna is dancing in the breeze; the hala groves of Keaʻau are swaying.\""
+        },
+        {
+          "es": "Pele estaba feliz. «¿Eso es todo?», preguntó. «Tengo más», dijo la niña, y siguió bailando.",
+          "en": "Pele was delighted. \"Is that all?\" she asked. \"I have more,\" said the girl, and danced on."
+        },
+        {
+          "es": "Emerson dice que es la mención de una hula más antigua que nos ha llegado.",
+          "en": "Emerson says it is the oldest mention of a hula that has come down to us."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lehua",
+          "x": 2000,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 1100,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1100
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.4,
+              "hace": "gira"
+            },
+            {
+              "en": 3,
+              "hace": "salta"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.8,
+              "hace": "gira"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 600,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.1,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "hermana",
+          "como": "hawaiana",
+          "x": 300,
+          "props": {
+            "capa": "#7A1E10"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hopoe",
+          "como": "hawaiana",
+          "x": 1650,
+          "mira": "izq",
+          "props": {
+            "capa": "#C2185B"
+          },
+          "rotulo": "HŌPOE",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 4.1,
+          "texto": {
+            "es": "LA PRIMERA HULA",
+            "en": "THE FIRST HULA"
+          },
+          "x": 1100,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "paz",
+      "fondo": "bosque_lehua",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después del baile, Hiʻiaka se fue a quedar con Hōpoe, junto al mar.",
+          "en": "After the dance, Hiʻiaka went to stay with Hōpoe, by the sea."
+        },
+        {
+          "es": "Hōpoe era su maestra de canto, de poesía y de danza.",
+          "en": "Hōpoe was her teacher of song, of poetry and of dance."
+        },
+        {
+          "es": "¿Tienes una amiga o un amigo que te enseñó algo que todavía amas?",
+          "en": "Do you have a friend who taught you something you still love?"
+        },
+        {
+          "es": "Por un tiempo, en Puna hubo paz: el fuego arriba, las flores rojas abajo, y el mar cantando.",
+          "en": "For a while, there was peace in Puna: fire above, red flowers below, and the sea singing."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lehua",
+          "x": 300,
+          "s": 1
+        },
+        {
+          "tipo": "lehua",
+          "x": 1800,
+          "s": 1
+        },
+        {
+          "tipo": "fuente_lava",
+          "x": 2050,
+          "s": 0.4,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 800,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "hopoe",
+          "como": "hawaiana",
+          "x": 1350,
+          "mira": "izq",
+          "props": {
+            "capa": "#C2185B"
+          },
+          "rotulo": "HŌPOE",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "gira"
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "cielo_navegante",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero esa paz no iba a durar.",
+          "en": "But that peace would not last."
+        },
+        {
+          "es": "Lejos, en la isla de Oʻahu, había nacido otro niño muy distinto.",
+          "en": "Far away, on the island of Oʻahu, a very different child had been born."
+        },
+        {
+          "es": "Dicen que nació con forma de cerdo. Y algún día iba a desafiar a la mismísima Pele.",
+          "en": "They say he was born in the shape of a pig. And one day, he would challenge Pele herself."
+        },
+        {
+          "es": "¿Crees que Pele va a cuidar siempre la felicidad de su hermanita?",
+          "en": "Do you think Pele will always protect her little sister's happiness?"
+        },
+        {
+          "es": "La próxima vez: «El niño cerdo».",
+          "en": "Next time: The Hog Child."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "petroglifo",
+          "x": 950,
+          "s": 0.7,
+          "props": {
+            "figura": "espiral"
+          }
+        },
+        {
+          "tipo": "isla",
+          "x": 1550,
+          "s": 0.6,
+          "capa": "fondo",
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 600,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.4,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "cerdo",
+          "como": "puaa",
+          "x": 1350,
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "KAMAPUAʻA",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.4,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La diosa que nació de un huevo",
+        "en": "The goddess who hatched from an egg"
+      },
+      "escena": "nace",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 850
+    },
+    {
+      "gancho": {
+        "es": "La primera hula de la historia",
+        "en": "The first hula ever told"
+      },
+      "escena": "hula",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 900
+    }
+  ]
+}

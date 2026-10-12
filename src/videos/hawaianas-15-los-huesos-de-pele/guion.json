@@ -1,0 +1,1297 @@
+{
+  "id": "hawaianas-15-los-huesos-de-pele",
+  "serie": "hawaianas",
+  "numero": "15",
+  "titulo": {
+    "es": "Los huesos de Pele",
+    "en": "The Bones of Pele"
+  },
+  "tituloGriego": "THE BONES OF PELE",
+  "miniatura": {
+    "heroe": "pele",
+    "rival": "namaka"
+  },
+  "siguiente": {
+    "es": "Nace Hiʻiaka",
+    "en": "Hiʻiaka Hatches"
+  },
+  "escenas": [
+    {
+      "id": "gancho",
+      "fondo": "haleakala",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Pele cavó en todas las islas, y en Haleakalā por fin encontró un fuego fuerte.",
+          "en": "Last time, Pele dug on every island, and at Haleakalā she finally found a strong fire."
+        },
+        {
+          "es": "Pero el humo subió hasta el cielo. Y su hermana Nāmaka, la diosa del mar, lo vio.",
+          "en": "But the smoke rose into the sky. And her sister Nāmaka, the goddess of the sea, saw it."
+        },
+        {
+          "es": "Nāmaka había seguido a Pele desde Kahiki, como una cazadora del mar.",
+          "en": "Nāmaka had followed Pele all the way from Kahiki, like a hunter of the sea."
+        },
+        {
+          "es": "Ahora venía a terminar la pelea.",
+          "en": "Now she was coming to finish the fight."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fuente_lava",
+          "x": 1050,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 700,
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "mira",
+              "a": 1700
+            },
+            {
+              "en": 3,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "namaka",
+          "como": "namaka",
+          "x": 1650,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.6,
+              "hace": "enoja"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1350,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 1050,
+          "y": 790,
+          "intensidad": 0.6,
+          "dur": 1.5
+        },
+        {
+          "en": 1,
+          "tipo": "humo",
+          "x": 1050,
+          "y": 600,
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "olas-suben",
+          "dur": 1.5
+        }
+      ]
+    },
+    {
+      "id": "banco",
+      "fondo": "oceano",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En el camino, Nāmaka pasó por un banco de arena donde Pele había dejado a su hermano Kānemilohai.",
+          "en": "On the way, Nāmaka passed a sandbank where Pele had left her brother Kānemilohai."
+        },
+        {
+          "es": "«¿Adónde vas tan rápido?», le preguntó él.",
+          "en": "\"Where are you going so fast?\" he asked."
+        },
+        {
+          "es": "«A destruir a mi enemiga. A destruir a Pele», contestó ella.",
+          "en": "\"To destroy my enemy. To destroy Pele,\" she answered."
+        },
+        {
+          "es": "«Vuelve a Kahiki», le dijo Kānemilohai, «o la destruida vas a ser tú.»",
+          "en": "\"Go back to Kahiki,\" said Kānemilohai, \"or you will be the one destroyed.\""
+        },
+        {
+          "es": "Nāmaka no lo escuchó. Siguió nadando hacia Maui, con el dragón Haui a su lado.",
+          "en": "Nāmaka did not listen. She swam on toward Maui, with the dragon Haui at her side."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla",
+          "x": 600,
+          "s": 0.5,
+          "props": {
+            "verde": false
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "kanemilohai",
+          "como": "hawaiano",
+          "x": 600,
+          "y": 700,
+          "props": {
+            "capa": "#E8B81C"
+          },
+          "rotulo": "KĀNEMILOHAI",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "namaka",
+          "como": "namaka",
+          "x": 1150,
+          "mira": "izq",
+          "y": 760,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1150
+            },
+            {
+              "en": 2,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "niega"
+            },
+            {
+              "en": 4.3,
+              "hace": "corre",
+              "a": 2100,
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "haui",
+          "como": "monstruo_marino",
+          "x": 1500,
+          "y": 800,
+          "rotulo": "HAUI",
+          "pasos": [
+            {
+              "en": 4.2,
+              "hace": "nada",
+              "a": 2300,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4,
+          "tipo": "olas-suben",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "desafio",
+      "fondo": "haleakala",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pele vio venir al mar. Y no quiso esconderse más.",
+          "en": "Pele saw the sea coming. And she did not want to hide anymore."
+        },
+        {
+          "es": "Kamohoaliʻi, su hermano tiburón, no quería dejarla ir sola.",
+          "en": "Kamohoaliʻi, her shark brother, did not want to let her go alone."
+        },
+        {
+          "es": "Pero al final aceptó, de mala gana.",
+          "en": "But in the end, he agreed, unwillingly."
+        },
+        {
+          "es": "Pele bajó de la montaña, sola, para pelear con su hermana.",
+          "en": "Pele went down the mountain, alone, to fight her sister."
+        },
+        {
+          "es": "Desde Kahiki había huido. Esta vez no iba a huir más.",
+          "en": "She had run all the way from Kahiki. This time, she would not run."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fuente_lava",
+          "x": 350,
+          "s": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 800,
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "mira",
+              "a": 1700
+            },
+            {
+              "en": 0.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.5,
+              "hace": "asiente"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1700,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "kamoho",
+          "como": "alii",
+          "x": 1250,
+          "mira": "izq",
+          "props": {
+            "objeto": "hoe",
+            "capa": "#4A5560",
+            "barba": true
+          },
+          "rotulo": "KAMOHOALIʻI",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "niega"
+            },
+            {
+              "en": 1.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.5,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    },
+    {
+      "id": "batalla",
+      "fondo": "playa_negra",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La pelea fue terrible. El fuego contra el mar.",
+          "en": "The battle was terrible. Fire against sea."
+        },
+        {
+          "es": "Pele lanzaba lava, y el agua hervía y se volvía vapor.",
+          "en": "Pele threw lava, and the water boiled into steam."
+        },
+        {
+          "es": "Nāmaka lanzaba olas enormes, y la lava se volvía piedra negra.",
+          "en": "Nāmaka threw huge waves, and the lava turned to black stone."
+        },
+        {
+          "es": "El dragón Haui ayudaba a Nāmaka. Y poco a poco, el mar empezó a ganar.",
+          "en": "The dragon Haui helped Nāmaka. And little by little, the sea began to win."
+        },
+        {
+          "es": "Al final, Nāmaka destrozó el cuerpo de Pele.",
+          "en": "In the end, Nāmaka tore Pele's body apart."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 800,
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "lanza"
+            },
+            {
+              "en": 2.2,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.3,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 4,
+              "hace": "cae"
+            },
+            {
+              "en": 4.4,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "namaka",
+          "como": "namaka",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "enoja"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "haui",
+          "como": "monstruo_marino",
+          "x": 1800,
+          "mira": "izq",
+          "y": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3.2,
+              "hace": "nada",
+              "a": 1650,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "fuego",
+          "x": 1050,
+          "y": 790,
+          "intensidad": 0.8,
+          "dur": 1
+        },
+        {
+          "en": 1.4,
+          "tipo": "humo",
+          "x": 1100,
+          "y": 700,
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "olas-suben",
+          "dur": 1
+        },
+        {
+          "en": 3.5,
+          "tipo": "olas-suben",
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "destello",
+          "dur": 0.2
+        }
+      ]
+    },
+    {
+      "id": "huesos",
+      "fondo": "playa_negra",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sus huesos quedaron tirados en la costa de Maui.",
+          "en": "Her bones were left lying on the coast of Maui."
+        },
+        {
+          "es": "Según Emerson y Westervelt, quedaron en Kahikinui, y los llaman Nā iwi o Pele: los huesos de Pele.",
+          "en": "Emerson and Westervelt say they lie at Kahikinui, and are called Nā iwi o Pele: the bones of Pele."
+        },
+        {
+          "es": "Otra tradición los pone en Hāna, en una colina roja junto al cerro Kaʻuiki: Ka iwi o Pele.",
+          "en": "Another tradition puts them at Hāna, in a red hill beside Kaʻuiki Head: Ka iwi o Pele."
+        },
+        {
+          "es": "Son rocas de lava rotas, oscuras, junto al mar.",
+          "en": "They are broken, dark rocks of lava, beside the sea."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 700,
+          "s": 0.8
+        },
+        {
+          "tipo": "roca",
+          "x": 900,
+          "s": 1.1
+        },
+        {
+          "tipo": "roca",
+          "x": 1100,
+          "s": 0.7
+        },
+        {
+          "tipo": "petroglifo",
+          "x": 350,
+          "s": 0.6,
+          "props": {
+            "figura": "persona"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "kamoho",
+          "como": "alii",
+          "x": 1400,
+          "mira": "izq",
+          "props": {
+            "objeto": "hoe",
+            "capa": "#4A5560",
+            "barba": true
+          },
+          "rotulo": "KAMOHOALIʻI",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.4,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "arrodilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "humo",
+          "x": 900,
+          "y": 740,
+          "dur": 1.5
+        },
+        {
+          "en": 1,
+          "tipo": "olas-bajan",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "POR ESO MAUI TIENE «LOS HUESOS DE PELE»",
+            "en": "THAT'S WHY MAUI HAS 'THE BONES OF PELE'"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 3.5,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "llanto",
+      "fondo": "haleakala",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Nāmaka se fue feliz. Estaba segura de que su enemiga había muerto.",
+          "en": "Nāmaka left happy. She was sure her enemy was dead."
+        },
+        {
+          "es": "La familia de Pele lloraba. Kamohoaliʻi estaba deshecho.",
+          "en": "Pele's family wept. Kamohoaliʻi was heartbroken."
+        },
+        {
+          "es": "¿Tú la habrías dejado pelear sola, si fueras su hermano?",
+          "en": "If you were her brother, would you have let her fight alone?"
+        },
+        {
+          "es": "Pero entonces Kamohoaliʻi miró hacia el sur, más allá del mar.",
+          "en": "But then Kamohoaliʻi looked south, across the sea."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "namaka",
+          "como": "namaka",
+          "x": 1600,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 2200,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "kamoho",
+          "como": "alii",
+          "x": 800,
+          "props": {
+            "objeto": "hoe",
+            "capa": "#4A5560",
+            "barba": true
+          },
+          "rotulo": "KAMOHOALIʻI",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.5,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.2,
+              "hace": "mira",
+              "a": 1800
+            }
+          ]
+        },
+        {
+          "id": "hermana",
+          "como": "hawaiana",
+          "x": 450,
+          "props": {
+            "capa": "#7A1E10"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.5
+        }
+      ]
+    },
+    {
+      "id": "espiritu",
+      "fondo": "cielo_navegante",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al otro lado del canal, sobre las montañas de la isla de Hawaiʻi, había una luz.",
+          "en": "Across the channel, above the mountains of the island of Hawaiʻi, there was a light."
+        },
+        {
+          "es": "Era Pele. Su cuerpo se había perdido, pero su espíritu ardía en el cielo, sobre Mauna Loa y Mauna Kea.",
+          "en": "It was Pele. Her body was gone, but her spirit blazed in the sky above Mauna Loa and Mauna Kea."
+        },
+        {
+          "es": "Nāmaka también lo vio, y quiso volver a pelear.",
+          "en": "Nāmaka saw it too, and wanted to fight again."
+        },
+        {
+          "es": "Pero Kānemilohai la detuvo. «No puedes vencerla», le dijo. «Se ha vuelto espíritu.»",
+          "en": "But Kānemilohai stopped her. \"You cannot beat her,\" he said. \"She has become a spirit.\""
+        },
+        {
+          "es": "Furiosa, Nāmaka volvió al mar, y Pele quedó libre.",
+          "en": "Furious, Nāmaka went back into the sea, and Pele was free."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1300,
+          "mira": "izq",
+          "escala": 1.3,
+          "y": 600,
+          "props": {
+            "objeto": null,
+            "contorno": true
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 2.5
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "namaka",
+          "como": "namaka",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 4,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "kanemilohai",
+          "como": "hawaiano",
+          "x": 800,
+          "mira": "izq",
+          "props": {
+            "capa": "#E8B81C"
+          },
+          "rotulo": "KĀNEMILOHAI",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.4,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 420,
+          "dur": 2.5
+        },
+        {
+          "en": 1.2,
+          "tipo": "fuego",
+          "x": 1300,
+          "y": 790,
+          "intensidad": 0.4,
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "familia",
+      "fondo": "mauna_kea",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pele ya no quiso quedarse en Maui. Una versión dice que Haleakalā era tan grande que no podía mantenerlo caliente.",
+          "en": "Pele no longer wanted to stay on Maui. One account says Haleakalā was so big she could not keep it warm."
+        },
+        {
+          "es": "Su familia vio la luz sobre la isla de Hawaiʻi, y cruzó el canal para seguirla.",
+          "en": "Her family saw the light over the island of Hawaiʻi, and crossed the channel to follow her."
+        },
+        {
+          "es": "Desde entonces, sus hermanos y hermanas la sirven.",
+          "en": "From then on, her brothers and sisters served her."
+        },
+        {
+          "es": "Cuidan sus fuegos, y sueltan los ríos de lava cuando ella lo ordena.",
+          "en": "They tend her fires, and they let loose the rivers of lava when she commands."
+        },
+        {
+          "es": "Y cuando la tierra tiembla, decían los antiguos, es Pele que golpea el piso con el pie.",
+          "en": "And when the earth shakes, the old people said, it is Pele stamping her foot."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fuente_lava",
+          "x": 1900,
+          "s": 0.7,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "kamoho",
+          "como": "alii",
+          "x": 500,
+          "props": {
+            "objeto": "hoe",
+            "capa": "#4A5560",
+            "barba": true
+          },
+          "rotulo": "KAMOHOALIʻI",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 1.4,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "hermana",
+          "como": "hawaiana",
+          "x": 250,
+          "props": {
+            "capa": "#7A1E10",
+            "objeto": "antorcha"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 650,
+              "dur": 1.2
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1500,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 0.5,
+              "hace": "niega"
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.2,
+          "tipo": "fuego",
+          "x": 1900,
+          "y": 790,
+          "intensidad": 0.6,
+          "dur": 1.5
+        },
+        {
+          "en": 4.2,
+          "tipo": "temblor",
+          "dur": 0.6
+        }
+      ]
+    },
+    {
+      "id": "kilauea",
+      "fondo": "crater",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero primero había que encontrar el lugar exacto para su casa.",
+          "en": "But first, she had to find the exact place for her home."
+        },
+        {
+          "es": "La familia desembarcó en Puakō, una costa seca, y caminó tierra adentro.",
+          "en": "The family landed at Puakō, a dry coast, and walked inland."
+        },
+        {
+          "es": "Llegaron a un cráter enorme. Allí durmieron.",
+          "en": "They came to a huge crater. There they slept."
+        },
+        {
+          "es": "Al amanecer cantó el ʻelepaio, un pajarito del bosque. Pele clavó el Paoa una vez más.",
+          "en": "At dawn, the ʻelepaio, a small forest bird, sang. Pele pushed in the Paoa once more."
+        },
+        {
+          "es": "Esta vez, las señales eran buenas. El mar no podía llegar tan alto.",
+          "en": "This time, the signs were good. The sea could not reach so high."
+        },
+        {
+          "es": "Aquí iba a vivir el fuego: en Kīlauea.",
+          "en": "Here the fire would live: at Kīlauea."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lago_lava",
+          "x": 1500,
+          "s": 1,
+          "en": 4,
+          "props": {
+            "ancho": 640
+          }
+        },
+        {
+          "tipo": "fuente_lava",
+          "x": 1500,
+          "s": 0.8,
+          "en": 5
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 500,
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1.5
+            },
+            {
+              "en": 2.3,
+              "hace": "sienta"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "brilla",
+              "dur": 1.5
+            },
+            {
+              "en": 4.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "kamoho",
+          "como": "alii",
+          "x": 250,
+          "props": {
+            "objeto": "hoe",
+            "capa": "#4A5560",
+            "barba": true
+          },
+          "rotulo": "KAMOHOALIʻI",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 600,
+              "dur": 1.5
+            },
+            {
+              "en": 5,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4.2,
+          "tipo": "fuego",
+          "x": 1500,
+          "y": 790,
+          "intensidad": 0.7,
+          "dur": 1.8
+        },
+        {
+          "en": 5,
+          "tipo": "humo",
+          "x": 1500,
+          "y": 620,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 5.1,
+          "texto": {
+            "es": "KĪLAUEA",
+            "en": "KĪLAUEA"
+          },
+          "x": 1200,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "crater",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La gente plantó taro, ʻulu y plátanos en las tierras verdes de abajo, cerca de Hilo y de Puna.",
+          "en": "People planted taro, breadfruit and bananas in the green lands below, near Hilo and Puna."
+        },
+        {
+          "es": "Y cuenta Emerson que el Paoa, plantado en la tierra de Panaʻewa, se volvió un árbol vivo.",
+          "en": "And Emerson tells that the Paoa, planted in the land of Panaʻewa, became a living tree."
+        },
+        {
+          "es": "¿Crees que Pele y Nāmaka podrán hacer las paces algún día?",
+          "en": "Do you think Pele and Nāmaka could ever make peace?"
+        },
+        {
+          "es": "La próxima vez, en el calor del volcán, el huevo que Pele cuidó todo el viaje por fin se abre.",
+          "en": "Next time, in the warmth of the volcano, the egg Pele kept safe all the way finally cracks open."
+        },
+        {
+          "es": "Es «Nace Hiʻiaka».",
+          "en": "It is Hiʻiaka Hatches."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kalo",
+          "x": 250,
+          "s": 0.8
+        },
+        {
+          "tipo": "lehua",
+          "x": 1450,
+          "s": 0.9,
+          "en": 1
+        },
+        {
+          "tipo": "lago_lava",
+          "x": 1750,
+          "s": 0.8,
+          "props": {
+            "ancho": 420
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 900,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "abraza",
+              "dur": 1.5
+            },
+            {
+              "en": 3.2,
+              "hace": "brilla",
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "hawaiana",
+          "como": "hawaiana",
+          "x": 400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 920,
+          "y": 580,
+          "dur": 1.5
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La pelea entre la diosa del fuego y la del mar",
+        "en": "The fire goddess against the sea goddess"
+      },
+      "escena": "batalla",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "Pele perdió su cuerpo, pero no su fuego",
+        "en": "Pele lost her body, but not her fire"
+      },
+      "escena": "espiritu",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1000
+    }
+  ]
+}

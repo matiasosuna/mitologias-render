@@ -1,0 +1,1350 @@
+{
+  "id": "hawaianas-18-pele-y-kamapuaa",
+  "serie": "hawaianas",
+  "numero": "18",
+  "titulo": {
+    "es": "Pele y Kamapuaʻa",
+    "en": "Pele and Kamapuaʻa"
+  },
+  "tituloGriego": "PELE AND KAMAPUAʻA",
+  "miniatura": {
+    "heroe": "pele",
+    "rival": "kamapuaa"
+  },
+  "siguiente": {
+    "es": "La nieve y el fuego",
+    "en": "The Snow and the Fire"
+  },
+  "escenas": [
+    {
+      "id": "gancho",
+      "fondo": "crater",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Kamapuaʻa, el hombre cerdo, llegó al borde del volcán Kīlauea.",
+          "en": "Last time, Kamapuaʻa, the pig-man, came to the edge of the volcano Kīlauea."
+        },
+        {
+          "es": "Se paró en lo alto de una colina, tocando un tamborcito y bailando a la luz de la mañana.",
+          "en": "He stood on top of a hill, beating a small drum and dancing in the morning light."
+        },
+        {
+          "es": "Las hermanas de Pele lo vieron desde abajo.",
+          "en": "Pele's sisters saw him from below."
+        },
+        {
+          "es": "«¡Miren a ese hombre!», dijo una. «Derecho como un acantilado, con la cara brillante como la luna.»",
+          "en": "\"Look at that man!\" said one. \"Straight as a cliff, with a face as bright as the moon.\""
+        },
+        {
+          "es": "«Quizás Pele lo deje ser el esposo de alguna de nosotras.»",
+          "en": "\"Maybe Pele will let him be a husband for one of us.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lago_lava",
+          "x": 1550,
+          "s": 1,
+          "props": {
+            "ancho": 700
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 550,
+          "props": {
+            "objeto": "tambor",
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.3,
+              "hace": "gira"
+            },
+            {
+              "en": 1.8,
+              "hace": "salta"
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hermana",
+          "como": "hawaiana",
+          "x": 1250,
+          "mira": "izq",
+          "props": {
+            "capa": "#7A1E10"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 550
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hermana2",
+          "como": "hawaiana",
+          "x": 1500,
+          "mira": "izq",
+          "props": {
+            "capa": "#E8B81C"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 550
+            },
+            {
+              "en": 4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1800,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": []
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        }
+      ]
+    },
+    {
+      "id": "insulto",
+      "fondo": "crater",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pele miró y dijo: «Ese no es un hombre. Es un cerdo, hijo de un cerdo».",
+          "en": "Pele looked and said: \"That is not a man. That is a pig, and the son of a pig.\""
+        },
+        {
+          "es": "Kamapuaʻa la oyó, y su canto de amor se volvió un canto de burla.",
+          "en": "Kamapuaʻa heard her, and his love song turned into a song of mockery."
+        },
+        {
+          "es": "Le gritó que tenía los ojos rojos, como irritados por el humo, y las cejas quemadas.",
+          "en": "He shouted that her eyes were red, as if sore from smoke, and her eyebrows burned away."
+        },
+        {
+          "es": "Pele le contestó con más insultos. Así empezaban las peleas entre jefes: con palabras.",
+          "en": "Pele answered with more insults. That was how fights between chiefs began: with words."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lago_lava",
+          "x": 1500,
+          "s": 0.9,
+          "props": {
+            "ancho": 560
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1450,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.2,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 650,
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "enoja"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.1,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "hermana",
+          "como": "hawaiana",
+          "x": 1800,
+          "mira": "izq",
+          "props": {
+            "capa": "#7A1E10"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    },
+    {
+      "id": "lava",
+      "fondo": "crater",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Pele soltó el fuego. Una nube de humo y un río de lava corrieron hacia él.",
+          "en": "Then Pele let loose her fire. A cloud of smoke and a river of lava rushed at him."
+        },
+        {
+          "es": "Pero Kamapuaʻa apartó el humo con las manos, y quedó parado, sin una quemadura.",
+          "en": "But Kamapuaʻa brushed the smoke away with his hands, and stood there without a burn."
+        },
+        {
+          "es": "Los hermanos de Pele lo rodearon por arriba y por abajo, para ahogarlo en humo.",
+          "en": "Pele's brothers surrounded him above and below, to smother him in smoke."
+        },
+        {
+          "es": "Pero un dios amigo de Kamapuaʻa los distrajo con un truco, y se fueron detrás de una mujer.",
+          "en": "But a god who was Kamapuaʻa's friend distracted them with a trick, and they ran off after a woman."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fuente_lava",
+          "x": 1500,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1500,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lanza"
+            },
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 650,
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "kamoho",
+          "como": "alii",
+          "x": 1100,
+          "mira": "izq",
+          "props": {
+            "objeto": "hoe",
+            "capa": "#4A5560",
+            "barba": true
+          },
+          "rotulo": "KAMOHOALIʻI",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 2.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.3,
+              "hace": "mira",
+              "a": 1900
+            },
+            {
+              "en": 3.5,
+              "hace": "corre",
+              "a": 2300,
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "fuego",
+          "x": 1000,
+          "y": 790,
+          "intensidad": 0.7,
+          "dur": 1
+        },
+        {
+          "en": 0.3,
+          "tipo": "humo",
+          "x": 800,
+          "y": 650,
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 650,
+          "y": 600,
+          "dur": 1.2
+        }
+      ]
+    },
+    {
+      "id": "juntos",
+      "fondo": "bosque_lehua",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Westervelt cuenta que, por un tiempo, las hermanas convencieron a Pele, y los dos vivieron juntos en Puna.",
+          "en": "Westervelt tells that for a while, the sisters won Pele over, and the two lived together in Puna."
+        },
+        {
+          "es": "Pero no duró. Él tenía demasiadas costumbres de cerdo para el gusto de Pele.",
+          "en": "But it did not last. He had too many pig habits for Pele's taste."
+        },
+        {
+          "es": "Y ella se enojaba demasiado rápido para el gusto de él.",
+          "en": "And she lost her temper far too fast for his."
+        },
+        {
+          "es": "Las burlas volaron otra vez. Y esta vez, la pelea fue de verdad.",
+          "en": "The taunts flew again. And this time, the fight was real."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lehua",
+          "x": 300,
+          "s": 1
+        },
+        {
+          "tipo": "lehua",
+          "x": 1700,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1150,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 1,
+              "hace": "niega"
+            },
+            {
+              "en": 2,
+              "hace": "enoja"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 700,
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 1,
+              "hace": "salta"
+            },
+            {
+              "en": 2,
+              "hace": "enoja"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.5
+        }
+      ]
+    },
+    {
+      "id": "diluvio",
+      "fondo": "crater",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Kamapuaʻa llamó a la lluvia. Nubes negras se juntaron sobre el cráter.",
+          "en": "Kamapuaʻa called the rain. Black clouds gathered over the crater."
+        },
+        {
+          "es": "Una hermana suya trajo niebla y aguaceros. Y cerdos, cientos de cerdos, corrieron por todas partes.",
+          "en": "A sister of his brought fog and heavy rain. And pigs, hundreds of pigs, ran everywhere."
+        },
+        {
+          "es": "El agua llenó el pozo de Pele hasta el borde.",
+          "en": "Water filled Pele's pit to the brim."
+        },
+        {
+          "es": "Uno a uno, los fuegos se apagaron. Pele casi se ahoga.",
+          "en": "One by one, the fires went out. Pele almost drowned."
+        },
+        {
+          "es": "Solo quedaban los palos de hacer fuego.",
+          "en": "All that was left were the fire sticks."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "nube",
+          "x": 900,
+          "s": 1.2,
+          "y": 220
+        },
+        {
+          "tipo": "nube",
+          "x": 1500,
+          "s": 1,
+          "y": 260
+        },
+        {
+          "tipo": "lago_lava",
+          "x": 1650,
+          "s": 0.9,
+          "hasta": 3,
+          "props": {
+            "ancho": 560
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 550,
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "cerdo1",
+          "como": "puaa",
+          "x": 900,
+          "escala": 1,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 1.5,
+              "hace": "corre",
+              "a": 1300,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "cerdo2",
+          "como": "puaa",
+          "x": 750,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 1.7,
+              "hace": "corre",
+              "a": 1100,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1650,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "tiembla",
+              "dur": 1
+            },
+            {
+              "en": 3.5,
+              "hace": "arrodilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 3,
+          "intensidad": 0.6
+        },
+        {
+          "en": 0.5,
+          "tipo": "lluvia",
+          "dur": 4
+        },
+        {
+          "en": 1,
+          "tipo": "niebla",
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "olas-suben",
+          "dur": 1.5
+        },
+        {
+          "en": 3.2,
+          "tipo": "humo",
+          "x": 1650,
+          "y": 720,
+          "dur": 1.5
+        }
+      ]
+    },
+    {
+      "id": "chispa",
+      "fondo": "crater",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero el guardián del fuego, Lonomakua, había protegido los palos de fuego. Los guardaba secos.",
+          "en": "But the keeper of the fire, Lonomakua, had protected the fire sticks. He kept them dry."
+        },
+        {
+          "es": "Con ellos encendió el fuego otra vez.",
+          "en": "With them, he lit the fire again."
+        },
+        {
+          "es": "Y la lava volvió a subir, rugiendo, más fuerte que antes.",
+          "en": "And the lava came roaring back, stronger than before."
+        },
+        {
+          "es": "Si tuvieras que apostar, ¿le apostarías al fuego o a la lluvia?",
+          "en": "If you had to bet, would you bet on the fire or the rain?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fuente_lava",
+          "x": 1100,
+          "s": 0.9,
+          "en": 2
+        },
+        {
+          "tipo": "lago_lava",
+          "x": 1300,
+          "s": 0.9,
+          "en": 2.2,
+          "props": {
+            "ancho": 600
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "lono",
+          "como": "kahuna",
+          "x": 900,
+          "props": {
+            "objeto": "antorcha",
+            "capa": "#B2331F"
+          },
+          "rotulo": "LONOMAKUA",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 0.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.5,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1400,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 400,
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 950,
+          "y": 720,
+          "dur": 1
+        },
+        {
+          "en": 1.3,
+          "tipo": "fogata",
+          "x": 950,
+          "y": 790
+        },
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 2.1,
+          "tipo": "fuego",
+          "x": 1100,
+          "y": 790,
+          "intensidad": 0.9,
+          "dur": 1.8
+        }
+      ]
+    },
+    {
+      "id": "pasto",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La lava corrió detrás de Kamapuaʻa. Él se volvió pasto y cubrió un campo entero.",
+          "en": "The lava chased Kamapuaʻa. He turned himself into grass and covered a whole field."
+        },
+        {
+          "es": "Por un rato, el pasto desvió la lava. Pero después empezó a arder.",
+          "en": "For a while, the grass turned the lava aside. But then it began to burn."
+        },
+        {
+          "es": "Kamapuaʻa volvió a ser hombre, con las cerdas chamuscadas.",
+          "en": "Kamapuaʻa became a man again, his bristles singed."
+        },
+        {
+          "es": "Por eso, dicen, los cerdos casi no tienen pelo en la panza.",
+          "en": "And that, they say, is why pigs have so little hair on their bellies."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fuente_lava",
+          "x": 1800,
+          "s": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 800,
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "corre",
+              "a": 900,
+              "dur": 0.4
+            },
+            {
+              "en": 0.5,
+              "hace": "desaparece",
+              "con": "humo"
+            },
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 2.2,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "cerdo",
+          "como": "puaa",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 3.2,
+              "hace": "camina",
+              "a": 1350,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 1600,
+          "y": 790,
+          "intensidad": 0.6,
+          "dur": 1.5
+        },
+        {
+          "en": 1.2,
+          "tipo": "fuego",
+          "x": 950,
+          "y": 790,
+          "intensidad": 0.7,
+          "dur": 1
+        },
+        {
+          "en": 1.5,
+          "tipo": "humo",
+          "x": 950,
+          "y": 700,
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "pez",
+      "fondo": "playa_negra",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Corrió hacia el mar, pero la lava le cortaba el camino por los dos lados.",
+          "en": "He ran for the sea, but the lava cut off his path on both sides."
+        },
+        {
+          "es": "Saltó al agua, que ya hervía. Y se volvió pez.",
+          "en": "He leaped into the water, which was already boiling. And he turned into a fish."
+        },
+        {
+          "es": "Era el humuhumunukunukuāpuaʻa, con su piel dura, para aguantar las olas calientes.",
+          "en": "It was the humuhumunukunukuāpuaʻa, with its tough skin, to survive the hot waves."
+        },
+        {
+          "es": "Pele le tiró grandes bloques de lava, y el mar se revolvió.",
+          "en": "Pele hurled great lumps of lava after him, and the sea churned."
+        },
+        {
+          "es": "Así se escapó nadando, mar adentro.",
+          "en": "And so he escaped, swimming out to the deep sea."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fuente_lava",
+          "x": 900,
+          "s": 0.6
+        },
+        {
+          "tipo": "roca",
+          "x": 1650,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 700,
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "corre",
+              "a": 1200,
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "salta"
+            },
+            {
+              "en": 1.2,
+              "hace": "transforma",
+              "en_que": "pez"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 350,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 450
+            },
+            {
+              "en": 1,
+              "hace": "lanza"
+            },
+            {
+              "en": 3,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "fuego",
+          "x": 900,
+          "y": 790,
+          "intensidad": 0.7,
+          "dur": 1.5
+        },
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "dur": 1
+        },
+        {
+          "en": 1.3,
+          "tipo": "humo",
+          "x": 1300,
+          "y": 720,
+          "dur": 1.5
+        }
+      ]
+    },
+    {
+      "id": "reparto",
+      "fondo": "volcan",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ninguno de los dos podía ganar del todo. Así que se repartieron la isla de Hawaiʻi.",
+          "en": "Neither one could win for good. So they divided the island of Hawaiʻi between them."
+        },
+        {
+          "es": "Pele se quedó con Puna, Kaʻū y Kona, las tierras por donde corre la lava.",
+          "en": "Pele kept Puna, Kaʻū and Kona, the lands where the lava runs."
+        },
+        {
+          "es": "Kamapuaʻa se quedó con Kohala, Hāmākua y Hilo, el lado del viento, siempre mojado por la lluvia.",
+          "en": "Kamapuaʻa took Kohala, Hāmākua and Hilo, the windward side, always wet with rain."
+        },
+        {
+          "es": "Hasta hoy, un lado de la isla tiene lava negra, y el otro, selva verde.",
+          "en": "To this day, one side of the island has black lava, and the other, green rainforest."
+        },
+        {
+          "es": "Lo juraron con un juramento sagrado. Y las historias dicen que nunca se rompió.",
+          "en": "They swore a sacred oath. And the stories say it has never been broken."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fuente_lava",
+          "x": 1900,
+          "s": 0.7
+        },
+        {
+          "tipo": "niu",
+          "x": 250,
+          "s": 1
+        },
+        {
+          "tipo": "niu",
+          "x": 450,
+          "s": 0.8
+        },
+        {
+          "tipo": "kalo",
+          "x": 350,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1550,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 700,
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "asiente"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "lluvia",
+          "x": 400,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "POR ESO UN LADO ES LAVA Y EL OTRO, SELVA",
+            "en": "THAT'S WHY ONE SIDE IS LAVA, ONE IS GREEN"
+          },
+          "x": 960,
+          "y": 220,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "cielo_navegante",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Kamakau dice que tuvieron un hijo, antepasado de muchas familias de Hawaiʻi.",
+          "en": "Kamakau says they had a child, an ancestor of many families of Hawaiʻi."
+        },
+        {
+          "es": "Y por mucho tiempo, cuando no había un cerdo para ofrecerle a Pele, se le ofrecía ese pez gruñón.",
+          "en": "And for a long time, when there was no pig to offer Pele, the grunting fish was offered instead."
+        },
+        {
+          "es": "¿Quién crees que ganó de verdad, Pele o Kamapuaʻa?",
+          "en": "Who do you think really won, Pele or Kamapuaʻa?"
+        },
+        {
+          "es": "La próxima vez, Pele se disfraza para jugar en la nieve de Mauna Kea, y encuentra una rival de hielo.",
+          "en": "Next time, Pele goes in disguise to play in the snow of Mauna Kea, and meets a rival made of ice."
+        },
+        {
+          "es": "Es «La nieve y el fuego».",
+          "en": "It is The Snow and the Fire."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "petroglifo",
+          "x": 1000,
+          "s": 0.7,
+          "props": {
+            "figura": "persona"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1300,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 700
+            }
+          ]
+        },
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 700,
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1300
+            }
+          ]
+        },
+        {
+          "id": "poliahu",
+          "como": "poliahu",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 3.2,
+          "tipo": "nieve",
+          "dur": 1.8
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El hombre cerdo que casi apaga el volcán",
+        "en": "The pig-man who nearly put out the volcano"
+      },
+      "escena": "diluvio",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Por qué los cerdos tienen la panza pelada",
+        "en": "Why pigs have bare bellies"
+      },
+      "escena": "pasto",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Por qué Hawaiʻi tiene un lado de lava y otro de selva",
+        "en": "Why Hawaiʻi has a lava side and a jungle side"
+      },
+      "escena": "reparto",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1100
+    }
+  ]
+}

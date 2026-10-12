@@ -1,0 +1,1286 @@
+{
+  "id": "hawaianas-17-el-nino-cerdo",
+  "serie": "hawaianas",
+  "numero": "17",
+  "titulo": {
+    "es": "El niño cerdo",
+    "en": "The Hog Child"
+  },
+  "tituloGriego": "THE HOG CHILD",
+  "miniatura": {
+    "heroe": "kamapuaa",
+    "rival": "puaa"
+  },
+  "siguiente": {
+    "es": "Pele y Kamapuaʻa",
+    "en": "Pele and Kamapuaʻa"
+  },
+  "escenas": [
+    {
+      "id": "gancho",
+      "fondo": "valle",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Hiʻiaka bailó la primera hula con su amiga Hōpoe, junto al mar de Puna.",
+          "en": "Last time, Hiʻiaka danced the first hula with her friend Hōpoe, beside the sea of Puna."
+        },
+        {
+          "es": "Pero lejos de allí, en la isla de Oʻahu, nació un niño muy distinto.",
+          "en": "But far from there, on the island of Oʻahu, a very different child was born."
+        },
+        {
+          "es": "Lo llamaron Kamapuaʻa, que quiere decir «niño cerdo».",
+          "en": "He was named Kamapuaʻa, which means \"hog child.\""
+        },
+        {
+          "es": "Fue uno de los personajes más queridos de las historias hawaianas: fuerte, travieso y difícil de atrapar.",
+          "en": "He became one of the best-loved figures in Hawaiian stories: strong, mischievous, and hard to catch."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "niu",
+          "x": 1900,
+          "s": 1
+        },
+        {
+          "tipo": "niu",
+          "x": 250,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 500,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.3,
+              "hace": "gira"
+            },
+            {
+              "en": 1,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 1100,
+          "mira": "izq",
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.5,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "cerdo",
+          "como": "puaa",
+          "x": 1550,
+          "mira": "izq",
+          "escala": 1.1,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "polvo"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "KAMAPUAʻA = NIÑO CERDO",
+            "en": "KAMAPUAʻA = HOG CHILD"
+          },
+          "x": 1100,
+          "y": 210,
+          "hasta": 3.8
+        }
+      ]
+    },
+    {
+      "id": "nace",
+      "fondo": "aldea_hale",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Nació en Kaluanui, en la costa norte de Oʻahu. Su madre era Hina, y su padre, el jefe Kahikiʻula.",
+          "en": "He was born at Kaluanui, on the north coast of Oʻahu. His mother was Hina, and his father was the chief Kahikiʻula."
+        },
+        {
+          "es": "Pero nació antes de tiempo, sin una forma de bebé, y su hermano mayor quiso tirarlo.",
+          "en": "But he was born too early, without a baby's shape, and his older brother tried to throw him away."
+        },
+        {
+          "es": "Cuando Hina salió de su baño, encontró sobre su falda un cerdito recién nacido.",
+          "en": "When Hina came out of her bath, she found a newborn piglet lying on her skirt."
+        },
+        {
+          "es": "Lo llevaron a la abuela, Kamaunuaniho, una hechicera sabia.",
+          "en": "They took him to his grandmother, Kamaunuaniho, a wise sorceress."
+        },
+        {
+          "es": "Ella lo miró y entendió enseguida: era su nieto, y no era un cerdo común.",
+          "en": "She looked at him and understood at once: this was her grandson, and no ordinary pig."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1850,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hina",
+          "como": "hina",
+          "x": 600,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.4,
+              "hace": "toma"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "hermano",
+          "como": "hawaiano",
+          "x": 950,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "niega"
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "cerdito",
+          "como": "puaa",
+          "x": 850,
+          "escala": 0.5,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "abuela",
+          "como": "hawaiana",
+          "x": 1450,
+          "mira": "izq",
+          "props": {
+            "cuerpo": "viejo",
+            "canas": true,
+            "capa": "#6B3F1D"
+          },
+          "rotulo": "KAMAUNUANIHO",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3.4,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    },
+    {
+      "id": "kupua",
+      "fondo": "valle_cascada",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La abuela lo crió, y Kamapuaʻa creció grande y fuerte.",
+          "en": "His grandmother raised him, and Kamapuaʻa grew big and strong."
+        },
+        {
+          "es": "Era un kupua: un ser que podía cambiar de forma cuando quería.",
+          "en": "He was a kupua: a being who could change his shape whenever he wished."
+        },
+        {
+          "es": "Como hombre era alto y apuesto, con ojos que brillaban.",
+          "en": "As a man, he was tall and handsome, with sparkling eyes."
+        },
+        {
+          "es": "Pero tenía cerdas de cerdo en la espalda, y las escondía bajo una capa.",
+          "en": "But he had pig bristles down his back, and he hid them under a cape."
+        },
+        {
+          "es": "Y cuando quería, se volvía un jabalí enorme, de colmillos largos.",
+          "en": "And whenever he wanted, he became a huge boar with long tusks."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "niu",
+          "x": 1700,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "abuela",
+          "como": "hawaiana",
+          "x": 500,
+          "props": {
+            "cuerpo": "viejo",
+            "canas": true,
+            "capa": "#6B3F1D"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 1050,
+          "mira": "izq",
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "crece",
+              "escala": 1.1
+            },
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "gira"
+            },
+            {
+              "en": 4,
+              "hace": "transforma",
+              "en_que": "puaa"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4,
+          "tipo": "humo",
+          "x": 1050,
+          "y": 700,
+          "dur": 0.6
+        }
+      ]
+    },
+    {
+      "id": "formas",
+      "fondo": "playa",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Kamapuaʻa no solo se volvía cerdo. También se volvía pez.",
+          "en": "Kamapuaʻa did not only turn into a pig. He also turned into a fish."
+        },
+        {
+          "es": "Era un pez de piel dura, con cara de cerdito, que hasta gruñe: el humuhumunukunukuāpuaʻa.",
+          "en": "It was a tough-skinned fish with a little pig's face, that even grunts: the humuhumunukunukuāpuaʻa."
+        },
+        {
+          "es": "Su nombre quiere decir, más o menos, «el humuhumu con hocico de cerdo».",
+          "en": "Its name means, more or less, \"the humuhumu with a snout like a pig.\""
+        },
+        {
+          "es": "Y también se volvía plantas, como un pasto áspero que crece en manchas por las islas.",
+          "en": "And he could turn into plants, like a rough grass that grows in patches across the islands."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "niu",
+          "x": 250,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 700,
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 0.6,
+              "hace": "transforma",
+              "en_que": "pez"
+            },
+            {
+              "en": 3,
+              "hace": "transforma",
+              "en_que": "kamapuaa"
+            }
+          ]
+        },
+        {
+          "id": "pez",
+          "como": "pez",
+          "x": 1250,
+          "escala": 1.6,
+          "y": 720,
+          "props": {
+            "color": "#E8B81C"
+          },
+          "rotulo": "HUMUHUMU",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.3,
+              "hace": "nada",
+              "a": 1450,
+              "dur": 1.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "olas-suben",
+          "dur": 0.8
+        },
+        {
+          "en": 3.1,
+          "tipo": "polvo",
+          "x": 700,
+          "y": 790,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "POR ESO UN PEZ SE LLAMA COMO UN CERDO",
+            "en": "THAT'S WHY A FISH HAS A PIG'S NAME"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 3.5,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "gallinas",
+      "fondo": "aldea_hale",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El que mandaba en esa parte de Oʻahu era Olopana, hermano de su padre.",
+          "en": "The ruling chief of that part of Oʻahu was Olopana, his father's brother."
+        },
+        {
+          "es": "Y a Kamapuaʻa le encantaba hacerle travesuras.",
+          "en": "And Kamapuaʻa loved to cause him trouble."
+        },
+        {
+          "es": "Un gallo mágico lo guiaba de noche hasta el gallinero de Olopana. Y Kamapuaʻa se robaba las gallinas.",
+          "en": "A magic rooster led him at night to Olopana's hen house. And Kamapuaʻa stole the chickens."
+        },
+        {
+          "es": "Los guardias lo atraparon cuatro veces, con forma de cerdo, y lo ataron a un palo.",
+          "en": "Four times the guards caught him in his pig shape, and tied him to a pole."
+        },
+        {
+          "es": "Y las cuatro veces, la abuela cantó un hechizo, y él quedó libre.",
+          "en": "And four times, his grandmother chanted a spell, and he was free again."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1150,
+          "s": 0.7,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "olopana",
+          "como": "alii",
+          "x": 1850,
+          "mira": "izq",
+          "rotulo": "OLOPANA",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "cerdo",
+          "como": "puaa",
+          "x": 700,
+          "escala": 1.2,
+          "rotulo": "KAMAPUAʻA",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "corre",
+              "a": 1300,
+              "dur": 0.8
+            },
+            {
+              "en": 3.2,
+              "hace": "tiembla",
+              "dur": 0.8
+            },
+            {
+              "en": 4.3,
+              "hace": "corre",
+              "a": 300,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "guardia",
+          "como": "hawaiano",
+          "x": 1550,
+          "mira": "izq",
+          "props": {
+            "objeto": "lanza"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "corre",
+              "a": 1400,
+              "dur": 0.5
+            },
+            {
+              "en": 4.3,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "abuela",
+          "como": "hawaiana",
+          "x": 350,
+          "props": {
+            "cuerpo": "viejo",
+            "canas": true,
+            "capa": "#6B3F1D"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 4.1,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.5
+        },
+        {
+          "en": 4.2,
+          "tipo": "luz",
+          "x": 700,
+          "y": 650,
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "id": "acantilado",
+      "fondo": "valle_cascada",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al final, toda la región se levantó contra él. Los guerreros rodearon el valle de Kaliuwaʻa, donde vivía su familia.",
+          "en": "In the end, the whole district rose against him. Warriors surrounded the valley of Kaliuwaʻa, where his family lived."
+        },
+        {
+          "es": "No había salida. Detrás de ellos había un acantilado altísimo.",
+          "en": "There was no way out. Behind them stood a towering cliff."
+        },
+        {
+          "es": "Entonces Kamapuaʻa se apoyó contra la roca y estiró su cuerpo hasta arriba, como un puente.",
+          "en": "Then Kamapuaʻa leaned against the rock and stretched his body all the way up, like a bridge."
+        },
+        {
+          "es": "Su familia subió por su espalda y escapó por arriba.",
+          "en": "His family climbed up his back and escaped over the top."
+        },
+        {
+          "es": "¿Te habrías animado a subir por la espalda de un hombre cerdo gigante?",
+          "en": "Would you have dared to climb up the back of a giant pig-man?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1250,
+          "s": 1.6,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 1000,
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1700
+            },
+            {
+              "en": 2,
+              "hace": "crece",
+              "escala": 1.8,
+              "dur": 1
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "abuela",
+          "como": "hawaiana",
+          "x": 650,
+          "props": {
+            "cuerpo": "viejo",
+            "canas": true,
+            "capa": "#6B3F1D"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                1150,
+                260
+              ],
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "hina",
+          "como": "hina",
+          "x": 400,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3.3,
+              "hace": "vuela",
+              "a": [
+                1250,
+                250
+              ],
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "guardia",
+          "como": "hawaiano",
+          "x": 1750,
+          "mira": "izq",
+          "props": {
+            "objeto": "lanza"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1650
+            },
+            {
+              "en": 4,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.1,
+          "tipo": "temblor",
+          "dur": 0.5
+        }
+      ]
+    },
+    {
+      "id": "marcas",
+      "fondo": "valle_cascada",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hoy ese valle tiene una cascada famosa. Y en la roca del acantilado hay unas canaletas largas.",
+          "en": "Today that valley has a famous waterfall. And on the cliff there are long grooves in the rock."
+        },
+        {
+          "es": "Algunos dicen que las dejó la espalda de Kamapuaʻa, cuando su familia subió por él.",
+          "en": "Some say they were left by Kamapuaʻa's back, when his family climbed over him."
+        },
+        {
+          "es": "Otros dicen que fueron sus pezuñas, cuando escapó trepando.",
+          "en": "Others say they were made by his hooves, as he climbed away."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1450,
+          "s": 1.5,
+          "capa": "medio"
+        },
+        {
+          "tipo": "petroglifo",
+          "x": 1450,
+          "s": 0.8,
+          "capa": "medio",
+          "props": {
+            "figura": "persona"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "pescador",
+          "como": "hawaiano",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "nina",
+          "como": "hawaiana",
+          "x": 1000,
+          "props": {
+            "cuerpo": "nino"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 2,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    },
+    {
+      "id": "olopana",
+      "fondo": "heiau",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero un día Olopana por fin lo capturó, y lo ató para matarlo en su templo.",
+          "en": "But one day Olopana finally captured him, and had him tied up to be put to death at his temple."
+        },
+        {
+          "es": "Un viejo sacerdote, Lonoaohi, estaba enojado con Olopana porque lo había humillado.",
+          "en": "An old priest, Lonoaohi, was angry with Olopana, who had shamed him."
+        },
+        {
+          "es": "Así que les dijo a sus hijos que ataran a Kamapuaʻa de mentira, con los nudos flojos.",
+          "en": "So he told his sons to tie Kamapuaʻa only for show, with loose knots."
+        },
+        {
+          "es": "A la mañana, cuando llegó Olopana, Kamapuaʻa se levantó de un salto.",
+          "en": "In the morning, when Olopana came, Kamapuaʻa sprang to his feet."
+        },
+        {
+          "es": "Olopana y sus hombres cayeron. Solo uno escapó para contarlo.",
+          "en": "Olopana and his men fell. Only one escaped to tell the tale."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kii",
+          "x": 1950,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "olopana",
+          "como": "alii",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "OLOPANA",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1350,
+              "dur": 0.5
+            },
+            {
+              "en": 3.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 950,
+          "mira": "der",
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.5,
+              "hace": "mira",
+              "a": 600
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.1,
+              "hace": "salta"
+            },
+            {
+              "en": 3.6,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "lonoaohi",
+          "como": "kahuna",
+          "x": 450,
+          "rotulo": "LONOAOHI",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.8,
+          "tipo": "destello",
+          "dur": 0.2
+        },
+        {
+          "en": 4,
+          "tipo": "polvo",
+          "x": 1450,
+          "y": 790,
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "id": "viaje",
+      "fondo": "oceano",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después, Kamapuaʻa dejó Oʻahu y vivió muchas aventuras en otras islas, y hasta en Kahiki.",
+          "en": "After that, Kamapuaʻa left Oʻahu and had many adventures on other islands, and even in Kahiki."
+        },
+        {
+          "es": "En una historia, Westervelt cuenta que viajaba en un caracol mágico.",
+          "en": "In one story, Westervelt tells that he traveled in a magic seashell."
+        },
+        {
+          "es": "Al llegar a tierra, el caracol se achicaba, y él lo guardaba en su taparrabos.",
+          "en": "When he reached land, the shell shrank, and he tucked it into his loincloth."
+        },
+        {
+          "es": "Si viajaba con su familia, el caracol crecía hasta ser una canoa grande.",
+          "en": "If his family traveled with him, the shell grew into a great canoe."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waa",
+          "x": 900,
+          "s": 0.7,
+          "en": 3,
+          "props": {
+            "vela": false
+          }
+        },
+        {
+          "tipo": "isla",
+          "x": 1900,
+          "s": 0.6,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 800,
+          "y": 720,
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 2,
+              "hace": "nada",
+              "a": 1300,
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "pez",
+          "como": "pez",
+          "x": 1500,
+          "escala": 1.3,
+          "y": 700,
+          "props": {
+            "color": "#E8B81C"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.6,
+              "hace": "nada",
+              "a": 1800,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "olas-suben",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "crater",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, Kamapuaʻa llegó a la isla de Hawaiʻi y subió hasta el borde de Kīlauea.",
+          "en": "One day, Kamapuaʻa came to the island of Hawaiʻi and climbed to the edge of Kīlauea."
+        },
+        {
+          "es": "Abajo, en el lago de fuego, bailaban Pele y sus hermanas.",
+          "en": "Down below, in the lake of fire, Pele and her sisters were dancing."
+        },
+        {
+          "es": "Kamapuaʻa miró a la diosa del volcán, y quiso casarse con ella.",
+          "en": "Kamapuaʻa looked at the goddess of the volcano, and he wanted to marry her."
+        },
+        {
+          "es": "¿Qué crees que va a responder Pele?",
+          "en": "What do you think Pele will say?"
+        },
+        {
+          "es": "La próxima vez: el fuego contra la lluvia, en «Pele y Kamapuaʻa».",
+          "en": "Next time: fire against rain, in Pele and Kamapuaʻa."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lago_lava",
+          "x": 1550,
+          "s": 1,
+          "props": {
+            "ancho": 700
+          }
+        },
+        {
+          "tipo": "fuente_lava",
+          "x": 2000,
+          "s": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 600,
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 600
+            },
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1500
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1450,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.3,
+              "hace": "gira"
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 600
+            },
+            {
+              "en": 3.2,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "hermana",
+          "como": "hawaiana",
+          "x": 1750,
+          "mira": "izq",
+          "props": {
+            "capa": "#7A1E10"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "gira"
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El hombre cerdo que se volvió un puente",
+        "en": "The pig-man who became a bridge"
+      },
+      "escena": "acantilado",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Por qué un pez tiene nombre de cerdo",
+        "en": "Why a fish has a pig's name"
+      },
+      "escena": "formas",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    }
+  ]
+}

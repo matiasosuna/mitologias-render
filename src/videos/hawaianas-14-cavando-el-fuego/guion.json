@@ -1,0 +1,1267 @@
+{
+  "id": "hawaianas-14-cavando-el-fuego",
+  "serie": "hawaianas",
+  "numero": "14",
+  "titulo": {
+    "es": "Cavando en busca del fuego",
+    "en": "Digging for Fire"
+  },
+  "tituloGriego": "DIGGING FOR FIRE",
+  "miniatura": {
+    "heroe": "pele",
+    "rival": "namaka"
+  },
+  "siguiente": {
+    "es": "Los huesos de Pele",
+    "en": "The Bones of Pele"
+  },
+  "escenas": [
+    {
+      "id": "gancho",
+      "fondo": "oceano",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Pele huyó de Kahiki en una gran canoa, con su hermanita dentro de un huevo.",
+          "en": "Last time, Pele fled Kahiki in a great canoe, with her baby sister inside an egg."
+        },
+        {
+          "es": "Navegaron muchos días sin ver tierra.",
+          "en": "They sailed for many days without seeing land."
+        },
+        {
+          "es": "Hasta que, una mañana, apareció una roca en el mar.",
+          "en": "Until one morning, a rock appeared in the sea."
+        },
+        {
+          "es": "Era Nihoa, una isla pequeña y alta, en el extremo de la cadena de Hawaiʻi.",
+          "en": "It was Nihoa, a small, steep island at the far end of the Hawaiian chain."
+        },
+        {
+          "es": "Pele bajó a tierra con su palo mágico, Paoa.",
+          "en": "Pele went ashore with her magic stick, Paoa."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waa",
+          "x": 750,
+          "s": 1.1
+        },
+        {
+          "tipo": "isla",
+          "x": 1750,
+          "s": 0.7,
+          "en": 2,
+          "sube": 250,
+          "props": {
+            "verde": false
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "kamoho",
+          "como": "alii",
+          "x": 600,
+          "y": 712,
+          "props": {
+            "objeto": "hoe",
+            "capa": "#4A5560",
+            "barba": true
+          },
+          "rotulo": "KAMOHOALIʻI",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 850,
+          "y": 712,
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 1700
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "paoa",
+      "fondo": "playa_negra",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El Paoa no era un palo común. Servía para probar la tierra.",
+          "en": "The Paoa was no ordinary stick. It was used to test the ground."
+        },
+        {
+          "es": "Pele lo clavaba en el suelo, y el palo le decía si ese lugar servía para su fuego.",
+          "en": "Pele pushed it into the ground, and the stick told her if the place was right for her fire."
+        },
+        {
+          "es": "La tierra tenía que ser fuerte, para que el agua del mar no pudiera entrar.",
+          "en": "The land had to be strong, so that sea water could not get in."
+        },
+        {
+          "es": "Y el Paoa también era una pala, para cavar el pozo del fuego.",
+          "en": "And the Paoa was also a spade, to dig the fire pit."
+        },
+        {
+          "es": "En Nihoa, el palo dijo que no.",
+          "en": "On Nihoa, the stick said no."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 500,
+          "s": 0.9
+        },
+        {
+          "tipo": "roca",
+          "x": 1750,
+          "s": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 900,
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.4,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "niega"
+            },
+            {
+              "en": 4.2,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "kamoho",
+          "como": "alii",
+          "x": 1350,
+          "mira": "izq",
+          "props": {
+            "objeto": "hoe",
+            "capa": "#4A5560",
+            "barba": true
+          },
+          "rotulo": "KAMOHOALIʻI",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "asiente"
+            },
+            {
+              "en": 4.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.2,
+          "tipo": "polvo",
+          "x": 950,
+          "y": 790,
+          "dur": 0.8
+        },
+        {
+          "en": 4,
+          "tipo": "olas-suben",
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "id": "kaneapua",
+      "fondo": "oceano",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En Nihoa pasó algo más. El hermano menor, Kāneʻapua, había cargado demasiado la proa.",
+          "en": "Something else happened at Nihoa. The youngest brother, Kāneʻapua, had loaded the front of the canoe too heavily."
+        },
+        {
+          "es": "La canoa se hundía de punta en las olas. Kamohoaliʻi se enojó y lo dejó en la roca.",
+          "en": "The canoe dipped its nose into the waves. Kamohoaliʻi got angry and left him on the rock."
+        },
+        {
+          "es": "Siguieron hasta otra isla chiquita, que luego se llamaría Lehua, como la flor roja.",
+          "en": "They sailed on to another tiny island, later called Lehua, like the red flower."
+        },
+        {
+          "es": "Pero Pele se acordó del hermanito. «Qué pena me da», dijo.",
+          "en": "But Pele thought of their little brother. \"I feel so sorry for him,\" she said."
+        },
+        {
+          "es": "Kamohoaliʻi dio vuelta la canoa, y volvieron a buscarlo.",
+          "en": "So Kamohoaliʻi turned the canoe around, and they went back for him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla",
+          "x": 330,
+          "s": 0.55,
+          "props": {
+            "verde": false
+          }
+        },
+        {
+          "tipo": "waa",
+          "x": 850,
+          "s": 1.1
+        },
+        {
+          "tipo": "isla",
+          "x": 1850,
+          "s": 0.45,
+          "en": 2,
+          "sube": 150
+        }
+      ],
+      "actores": [
+        {
+          "id": "kamoho",
+          "como": "alii",
+          "x": 700,
+          "y": 712,
+          "props": {
+            "objeto": "hoe",
+            "capa": "#4A5560",
+            "barba": true
+          },
+          "rotulo": "KAMOHOALIʻI",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "gira"
+            },
+            {
+              "en": 4.3,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 950,
+          "y": 712,
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entristece"
+            },
+            {
+              "en": 3.3,
+              "hace": "mira",
+              "a": 300
+            }
+          ]
+        },
+        {
+          "id": "kaneapua",
+          "como": "hawaiano",
+          "x": 350,
+          "escala": 0.75,
+          "y": 640,
+          "rotulo": "KĀNEʻAPUA",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "lamenta"
+            },
+            {
+              "en": 4.5,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    },
+    {
+      "id": "kauai",
+      "fondo": "valle",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después llegaron a las islas grandes. Primero, a Kauaʻi, verde y llena de ríos.",
+          "en": "Then they reached the big islands. First came Kauaʻi, green and full of rivers."
+        },
+        {
+          "es": "Pele clavó su palo y cavó un pozo profundo. El fuego salió, y se levantó una colina.",
+          "en": "Pele drove in her stick and dug a deep pit. Fire came up, and a hill rose."
+        },
+        {
+          "es": "Pero el agua subió desde abajo y apagó las llamas.",
+          "en": "But water rose from below and put out the flames."
+        },
+        {
+          "es": "Kauaʻi tenía demasiada agua para el fuego de Pele.",
+          "en": "Kauaʻi had too much water for Pele's fire."
+        },
+        {
+          "es": "Una historia dice que esa colina todavía se llama Puʻu o Pele, la colina de Pele.",
+          "en": "One story says that hill is still called Puʻu o Pele, the Hill of Pele."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "niu",
+          "x": 300,
+          "s": 1
+        },
+        {
+          "tipo": "niu",
+          "x": 1900,
+          "s": 0.9
+        },
+        {
+          "tipo": "fuente_lava",
+          "x": 1050,
+          "s": 0.6,
+          "en": 1.2,
+          "hasta": 2.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 800,
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "kamoho",
+          "como": "alii",
+          "x": 1350,
+          "mira": "izq",
+          "props": {
+            "objeto": "hoe",
+            "capa": "#4A5560",
+            "barba": true
+          },
+          "rotulo": "KAMOHOALIʻI",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "niega"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "fuego",
+          "x": 1050,
+          "y": 790,
+          "intensidad": 0.6,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "olas-suben",
+          "dur": 1
+        },
+        {
+          "en": 2.3,
+          "tipo": "humo",
+          "x": 1050,
+          "y": 720,
+          "dur": 1.5
+        }
+      ]
+    },
+    {
+      "id": "a_pie",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 350,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al llegar a Oʻahu, Kamohoaliʻi dejó la canoa al cuidado de un ayudante.",
+          "en": "When they reached Oʻahu, Kamohoaliʻi left the canoe in the care of a helper."
+        },
+        {
+          "es": "La familia siguió a pie, cruzando la isla, mientras Pele probaba la tierra.",
+          "en": "The family went on by foot across the island, while Pele tested the ground."
+        },
+        {
+          "es": "En un lugar llamado Peleʻula, que hoy queda dentro de Honolulu, Pele creyó que por fin había encontrado su hogar.",
+          "en": "At a place called Peleʻula, now inside the city of Honolulu, Pele thought she had found her home at last."
+        },
+        {
+          "es": "Pero no. El viaje por tierra terminó en la punta de Makapuʻu, frente al mar.",
+          "en": "But no. The journey by land ended at Makapuʻu Point, facing the sea."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waa",
+          "x": 150,
+          "s": 0.8,
+          "props": {
+            "quieta": true
+          }
+        },
+        {
+          "tipo": "niu",
+          "x": 1500,
+          "s": 0.9
+        },
+        {
+          "tipo": "roca",
+          "x": 2150,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "kamoho",
+          "como": "alii",
+          "x": 450,
+          "props": {
+            "objeto": "hoe",
+            "capa": "#4A5560",
+            "barba": true
+          },
+          "rotulo": "KAMOHOALIʻI",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 900,
+              "dur": 2
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 700,
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 1.5
+            },
+            {
+              "en": 2.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.2,
+              "hace": "entristece"
+            },
+            {
+              "en": 3.5,
+              "hace": "camina",
+              "a": 1800,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "hermana",
+          "como": "hawaiana",
+          "x": 200,
+          "props": {
+            "capa": "#7A1E10"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 600,
+              "dur": 2
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.3,
+          "tipo": "olas-suben",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "oahu",
+      "fondo": "playa",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En el camino por Oʻahu, Pele había probado muchos lugares.",
+          "en": "Along the way across Oʻahu, Pele had tried many places."
+        },
+        {
+          "es": "Cavó en Āliapaʻakai, pero el pozo se llenó de agua salada. Hoy lo llaman Salt Lake, el lago de sal.",
+          "en": "She dug at Āliapaʻakai, but the pit filled with salt water. Today it is called Salt Lake."
+        },
+        {
+          "es": "Probó en Puowaina, la colina que hoy llaman Punchbowl.",
+          "en": "She tried at Puowaina, the hill that people today call Punchbowl."
+        },
+        {
+          "es": "Probó en Lēʻahi, que hoy se llama Diamond Head. Allí lanzó mucha roca de fuego.",
+          "en": "She tried at Lēʻahi, which today is called Diamond Head. There she threw up a great deal of fire-rock."
+        },
+        {
+          "es": "Pero siempre, al cavar hondo, encontraba agua. Y el agua mataba el fuego.",
+          "en": "But every time she dug deep, she found water. And the water killed the fire."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla",
+          "x": 900,
+          "s": 0.7,
+          "props": {
+            "verde": false
+          }
+        },
+        {
+          "tipo": "isla",
+          "x": 1500,
+          "s": 0.8,
+          "props": {
+            "verde": false
+          }
+        },
+        {
+          "tipo": "fuente_lava",
+          "x": 2050,
+          "s": 0.6,
+          "en": 3.5,
+          "hasta": 4.5
+        },
+        {
+          "tipo": "niu",
+          "x": 300,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 600,
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.6,
+              "hace": "entristece"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 0.8
+            },
+            {
+              "en": 2.9,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1650,
+              "dur": 0.8
+            },
+            {
+              "en": 3.8,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.3,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "olas-suben",
+          "dur": 0.8
+        },
+        {
+          "en": 3.6,
+          "tipo": "fuego",
+          "x": 2050,
+          "y": 790,
+          "intensidad": 0.7,
+          "dur": 0.9
+        },
+        {
+          "en": 4.3,
+          "tipo": "humo",
+          "x": 2050,
+          "y": 720,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "SALT LAKE",
+            "en": "SALT LAKE"
+          },
+          "x": 760,
+          "y": 260,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "PUNCHBOWL",
+            "en": "PUNCHBOWL"
+          },
+          "x": 960,
+          "y": 260,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "DIAMOND HEAD",
+            "en": "DIAMOND HEAD"
+          },
+          "x": 1200,
+          "y": 260,
+          "hasta": 4.2
+        }
+      ]
+    },
+    {
+      "id": "crateres",
+      "fondo": "valle",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los hawaianos dicen que esos cráteres de Oʻahu son pozos viejos de Pele.",
+          "en": "Hawaiians say those craters on Oʻahu are old pits of Pele."
+        },
+        {
+          "es": "Y es cierto que esas colinas nacieron del fuego, hace muchísimo tiempo.",
+          "en": "And it is true that those hills were born from fire, a very long time ago."
+        },
+        {
+          "es": "Hoy son volcanes dormidos. Ya no queda fuego adentro.",
+          "en": "Today they are sleeping volcanoes. No fire is left inside."
+        },
+        {
+          "es": "Pele no estaba contenta. Necesitaba una tierra donde su fuego pudiera vivir para siempre.",
+          "en": "Pele was not happy. She needed a land where her fire could live forever."
+        },
+        {
+          "es": "¿Tú habrías seguido cavando, o te habrías rendido?",
+          "en": "Would you have kept on digging, or given up?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla",
+          "x": 1000,
+          "s": 0.9,
+          "capa": "fondo",
+          "props": {
+            "verde": false
+          }
+        },
+        {
+          "tipo": "petroglifo",
+          "x": 1650,
+          "s": 0.7,
+          "props": {
+            "figura": "espiral"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 750,
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "hawaiana",
+          "como": "hawaiana",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 1.5,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 0.5,
+          "texto": {
+            "es": "POR ESO OʻAHU ESTÁ LLENA DE CRÁTERES",
+            "en": "THAT'S WHY OʻAHU IS DOTTED WITH CRATERS"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 2.5,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "agua",
+      "fondo": "oceano",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "¿Por qué siempre aparecía el agua? Una historia lo explica.",
+          "en": "Why did the water always come? One story explains it."
+        },
+        {
+          "es": "Desde un lugar alto, muy lejos, Nāmaka miraba todos los mares.",
+          "en": "From a high place far away, Nāmaka watched over all the seas."
+        },
+        {
+          "es": "Cada vez que veía subir el humo de un fuego nuevo, corría a apagarlo.",
+          "en": "Every time she saw smoke rising from a new fire, she rushed to put it out."
+        },
+        {
+          "es": "El mar era de Nāmaka. Y Nāmaka no perdonaba.",
+          "en": "The sea belonged to Nāmaka. And Nāmaka did not forgive."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla",
+          "x": 450,
+          "s": 0.6,
+          "props": {
+            "verde": false
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "namaka",
+          "como": "namaka",
+          "x": 1200,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.4,
+              "hace": "mira",
+              "a": 400
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.4,
+              "hace": "corre",
+              "a": 700,
+              "dur": 1
+            },
+            {
+              "en": 3.2,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 450,
+          "y": 650,
+          "dur": 1
+        },
+        {
+          "en": 2.5,
+          "tipo": "olas-suben",
+          "dur": 1.2
+        },
+        {
+          "en": 3,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "maui",
+      "fondo": "haleakala",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pele le dijo adiós a Oʻahu. «Seguimos buscando un hogar», cantó.",
+          "en": "Pele said goodbye to Oʻahu. \"We go on, searching for a home,\" she sang."
+        },
+        {
+          "es": "Probó en Molokaʻi, en Lānaʻi y en el oeste de Maui. Nada.",
+          "en": "She tried on Molokaʻi, on Lānaʻi, and in West Maui. Nothing."
+        },
+        {
+          "es": "Entonces llegó a la gran montaña del este de Maui: Haleakalā, la Casa del Sol.",
+          "en": "Then she came to the great mountain of East Maui: Haleakalā, the House of the Sun."
+        },
+        {
+          "es": "Allí cavó con el Paoa, y la lava salió en grandes chorros.",
+          "en": "There she dug with the Paoa, and lava poured out in great streams."
+        },
+        {
+          "es": "Por primera vez, el fuego aguantaba. Pele sonrió.",
+          "en": "For the first time, the fire held. Pele smiled."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fuente_lava",
+          "x": 1500,
+          "s": 0.9,
+          "en": 3
+        },
+        {
+          "tipo": "lago_lava",
+          "x": 1500,
+          "s": 0.8,
+          "en": 3.4,
+          "props": {
+            "ancho": 520
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 500,
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1.5
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.3,
+              "hace": "brilla",
+              "dur": 1.5
+            },
+            {
+              "en": 4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "kamoho",
+          "como": "alii",
+          "x": 250,
+          "props": {
+            "objeto": "hoe",
+            "capa": "#4A5560",
+            "barba": true
+          },
+          "rotulo": "KAMOHOALIʻI",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 4.1,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 3.2,
+          "tipo": "fuego",
+          "x": 1500,
+          "y": 790,
+          "intensidad": 0.9,
+          "dur": 1.6
+        },
+        {
+          "en": 3.6,
+          "tipo": "humo",
+          "x": 1500,
+          "y": 640,
+          "dur": 1.4
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "oceano",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero el humo de Haleakalā subió muy alto. Y Nāmaka lo vio.",
+          "en": "But the smoke of Haleakalā rose very high. And Nāmaka saw it."
+        },
+        {
+          "es": "Esta vez no vino sola. Con ella nadaba un dragón del mar llamado Haui.",
+          "en": "This time she did not come alone. With her swam a sea dragon named Haui."
+        },
+        {
+          "es": "¿Quién crees que va a ganar: el fuego o el mar?",
+          "en": "Who do you think will win: the fire or the sea?"
+        },
+        {
+          "es": "La próxima vez, las dos hermanas pelean cara a cara, y Pele pierde su cuerpo.",
+          "en": "Next time, the two sisters fight face to face, and Pele loses her body."
+        },
+        {
+          "es": "Es «Los huesos de Pele».",
+          "en": "It is The Bones of Pele."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla",
+          "x": 1700,
+          "s": 0.9,
+          "capa": "fondo",
+          "props": {
+            "verde": false
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "namaka",
+          "como": "namaka",
+          "x": 900,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "mira",
+              "a": 1700
+            },
+            {
+              "en": 0.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "haui",
+          "como": "monstruo_marino",
+          "x": 450,
+          "y": 780,
+          "rotulo": "HAUI",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.5,
+              "hace": "nada",
+              "a": 650,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1700,
+          "mira": "izq",
+          "capa": "medio",
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "humo",
+          "x": 1700,
+          "y": 520,
+          "dur": 2
+        },
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "dur": 1.5
+        },
+        {
+          "en": 3.2,
+          "tipo": "fuego",
+          "x": 1700,
+          "y": 700,
+          "intensidad": 0.5,
+          "dur": 1.5
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Por qué Oʻahu está llena de cráteres",
+        "en": "Why Oʻahu is dotted with craters"
+      },
+      "escena": "oahu",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "El hermano abandonado en una roca",
+        "en": "The brother left on a rock"
+      },
+      "escena": "kaneapua",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 700
+    }
+  ]
+}

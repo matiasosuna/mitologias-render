@@ -1,0 +1,1177 @@
+{
+  "id": "hawaianas-19-la-nieve-y-el-fuego",
+  "serie": "hawaianas",
+  "numero": "19",
+  "titulo": {
+    "es": "La nieve y el fuego",
+    "en": "The Snow and the Fire"
+  },
+  "tituloGriego": "THE SNOW AND THE FIRE",
+  "miniatura": {
+    "heroe": "poliahu",
+    "rival": "pele"
+  },
+  "siguiente": {
+    "es": "El sueño de Lohiʻau",
+    "en": "The Dream of Lohiʻau"
+  },
+  "escenas": [
+    {
+      "id": "gancho",
+      "fondo": "mauna_kea",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Pele y Kamapuaʻa pelearon con fuego y lluvia, y se repartieron la isla.",
+          "en": "Last time, Pele and Kamapuaʻa fought with fire and rain, and divided the island between them."
+        },
+        {
+          "es": "Pero Pele tenía otra rival, más callada y más fría.",
+          "en": "But Pele had another rival, quieter and colder."
+        },
+        {
+          "es": "Al norte de Kīlauea se levanta Mauna Kea, la Montaña Blanca.",
+          "en": "North of Kīlauea rises Mauna Kea, the White Mountain."
+        },
+        {
+          "es": "En invierno, su cumbre se cubre de nieve, aunque esté en el medio del mar tropical.",
+          "en": "In winter, its summit is covered with snow, even though it stands in the middle of a tropical sea."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 500,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1500
+            },
+            {
+              "en": 1.3,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "kamapuaa",
+          "como": "kamapuaa",
+          "x": 250,
+          "props": {
+            "objeto": null,
+            "capa": "#5A3A2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "poliahu",
+          "como": "poliahu",
+          "x": 1500,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "nieve",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "MAUNA KEA",
+            "en": "MAUNA KEA"
+          },
+          "x": 1200,
+          "y": 200,
+          "hasta": 3.8
+        }
+      ]
+    },
+    {
+      "id": "doncellas",
+      "fondo": "mauna_kea",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Allí vivían cuatro doncellas del manto blanco, las diosas de las montañas nevadas.",
+          "en": "There lived four maidens of the white mantle, the goddesses of the snowy mountains."
+        },
+        {
+          "es": "Lilinoe, la diosa de la niebla fina, también ligada a Haleakalā.",
+          "en": "Lilinoe, the goddess of the fine mist, also linked to Haleakalā."
+        },
+        {
+          "es": "Waiau, la del lago que brilla en la cumbre de Mauna Kea.",
+          "en": "Waiau, the goddess of the lake that shines on the summit of Mauna Kea."
+        },
+        {
+          "es": "Kahoupokane, la de las nieves de Hualālai.",
+          "en": "Kahoupokane, the goddess of the snows of Hualālai."
+        },
+        {
+          "es": "Y la más famosa de todas: Poliʻahu, la diosa de la nieve de Mauna Kea.",
+          "en": "And the most famous of all: Poliʻahu, the snow goddess of Mauna Kea."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "lilinoe",
+          "como": "hawaiana",
+          "x": 500,
+          "props": {
+            "capa": "#F4F4F4"
+          },
+          "rotulo": "LILINOE",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "waiau",
+          "como": "hawaiana",
+          "x": 850,
+          "props": {
+            "capa": "#F4F4F4"
+          },
+          "rotulo": "WAIAU",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "kahoupokane",
+          "como": "hawaiana",
+          "x": 1200,
+          "props": {
+            "capa": "#F4F4F4"
+          },
+          "rotulo": "KAHOUPOKANE",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "poliahu",
+          "como": "poliahu",
+          "x": 1650,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.3,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve",
+          "dur": 5
+        },
+        {
+          "en": 1,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "poliahu",
+      "fondo": "valle_cascada",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Poliʻahu amaba los acantilados de Hāmākua, donde las cascadas caen al mar.",
+          "en": "Poliʻahu loved the cliffs of Hāmākua, where waterfalls drop into the sea."
+        },
+        {
+          "es": "Allí se sentaba sobre una roca, con su manto de kapa blanca.",
+          "en": "There she would sit on a rock, in her mantle of white kapa cloth."
+        },
+        {
+          "es": "Ese manto era de nieve. Donde ella iba, llegaba el frío.",
+          "en": "That mantle was made of snow. Wherever she went, the cold came with her."
+        },
+        {
+          "es": "Pero también podía sacárselo, y ponerse un vestido hecho de sol dorado.",
+          "en": "But she could also take it off, and put on a dress made of golden sunshine."
+        },
+        {
+          "es": "Le gustaba bajar a encontrarse con los jefes y jugar a sus juegos de destreza.",
+          "en": "She liked to come down to meet the chiefs, and to play their games of skill."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1000,
+          "s": 0.9,
+          "capa": "medio"
+        },
+        {
+          "tipo": "niu",
+          "x": 1700,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "poliahu",
+          "como": "poliahu",
+          "x": 1000,
+          "mira": "izq",
+          "props": {
+            "capa": "#F4F4F4"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.2,
+              "hace": "transforma",
+              "en_que": "hawaiana"
+            },
+            {
+              "en": 3.4,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "nieve",
+          "dur": 1.2
+        },
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 550,
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "holua",
+      "fondo": "mauna_kea",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "A los jefes de antes les encantaba el hōlua: carreras de trineos largos y finos, por laderas de pasto.",
+          "en": "The chiefs of old loved hōlua: races on long, narrow sleds, down grassy slopes."
+        },
+        {
+          "es": "Se tiraban cuesta abajo a toda velocidad, sobre un trineo apenas más ancho que una persona.",
+          "en": "They raced downhill at full speed, on a sled barely wider than a person."
+        },
+        {
+          "es": "Las pistas se hacían de piedra cubierta de pasto, y algunas todavía se pueden ver hoy.",
+          "en": "The tracks were built of stone and covered with grass, and some can still be seen today."
+        },
+        {
+          "es": "Un día, Poliʻahu y sus amigas bajaron de Mauna Kea para correr en una ladera al sur de Hāmākua.",
+          "en": "One day, Poliʻahu and her friends came down Mauna Kea to race on a slope south of Hāmākua."
+        },
+        {
+          "es": "Era un gran día de juegos, con mucha gente mirando.",
+          "en": "It was a great day of games, with many people watching."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "niu",
+          "x": 2200,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "corredor",
+          "como": "hawaiano",
+          "x": 300,
+          "props": {
+            "objeto": null
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "corre",
+              "a": 1300,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "poliahu",
+          "como": "poliahu",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "lilinoe",
+          "como": "hawaiana",
+          "x": 1800,
+          "mira": "izq",
+          "props": {
+            "capa": "#F4F4F4"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "publico",
+          "como": "hawaiana",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "polvo",
+          "x": 900,
+          "y": 790,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "HŌLUA",
+            "en": "HŌLUA"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1.8
+        }
+      ]
+    },
+    {
+      "id": "extrana",
+      "fondo": "mauna_kea",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "De pronto, entre la gente apareció una desconocida, bellísima.",
+          "en": "Suddenly, among the crowd, a stranger appeared, very beautiful."
+        },
+        {
+          "es": "Nadie sabía de dónde venía. Poliʻahu la recibió con amabilidad, y siguieron las carreras.",
+          "en": "No one knew where she came from. Poliʻahu welcomed her kindly, and the races went on."
+        },
+        {
+          "es": "Pero esa desconocida era Pele, disfrazada.",
+          "en": "But the stranger was Pele, in disguise."
+        },
+        {
+          "es": "Algunos cuentan que Pele se enojó porque Poliʻahu bajaba más rápido y mejor que ella.",
+          "en": "Some say Pele grew angry because Poliʻahu raced faster and better than she did."
+        },
+        {
+          "es": "El suelo empezó a calentarse bajo los pies. Y Poliʻahu supo quién era su enemiga.",
+          "en": "The ground began to grow warm underfoot. And Poliʻahu knew who her enemy was."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 700,
+          "props": {
+            "objeto": null,
+            "capa": "#E8B81C"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1,
+              "hace": "asiente"
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 3,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "poliahu",
+          "como": "poliahu",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.2,
+              "hace": "corre",
+              "a": 1500,
+              "dur": 0.5
+            },
+            {
+              "en": 4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.3,
+              "hace": "mira",
+              "a": 700
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4,
+          "tipo": "humo",
+          "x": 900,
+          "y": 760,
+          "dur": 1.2
+        },
+        {
+          "en": 4.2,
+          "tipo": "temblor",
+          "dur": 0.4
+        }
+      ]
+    },
+    {
+      "id": "fuego",
+      "fondo": "mauna_kea",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pele se arrancó el disfraz y llamó al fuego.",
+          "en": "Pele threw off her disguise and called up the fire."
+        },
+        {
+          "es": "Las puertas de las cuevas de Mauna Kea se abrieron, y fuentes de lava subieron por la montaña.",
+          "en": "The doors of the caves under Mauna Kea burst open, and fountains of lava climbed the mountain."
+        },
+        {
+          "es": "Poliʻahu huyó hacia la cumbre. Su manto de nieve empezó a arder.",
+          "en": "Poliʻahu fled toward the summit. Her snow mantle began to burn."
+        },
+        {
+          "es": "Lo agarró y se lo llevó con ella, arrastrándolo entre las llamas.",
+          "en": "She grabbed it and dragged it away with her, through the flames."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fuente_lava",
+          "x": 1100,
+          "s": 0.8,
+          "en": 1
+        },
+        {
+          "tipo": "fuente_lava",
+          "x": 1500,
+          "s": 0.6,
+          "en": 1.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 650,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "transforma",
+              "en_que": "pele"
+            },
+            {
+              "en": 0.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "poliahu",
+          "como": "poliahu",
+          "x": 1300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "corre",
+              "a": 1900,
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.1,
+          "tipo": "destello",
+          "dur": 0.2
+        },
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 1.2,
+          "tipo": "fuego",
+          "x": 1300,
+          "y": 790,
+          "intensidad": 0.8,
+          "dur": 2.5
+        },
+        {
+          "en": 2.3,
+          "tipo": "humo",
+          "x": 1800,
+          "y": 600,
+          "dur": 1.5
+        }
+      ]
+    },
+    {
+      "id": "nieve",
+      "fondo": "mauna_kea",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero arriba, Poliʻahu recuperó las fuerzas. Tiró su manto sobre la montaña.",
+          "en": "But up high, Poliʻahu got her strength back. She threw her mantle over the mountain."
+        },
+        {
+          "es": "La tierra tembló una y otra vez. Las nubes se juntaron, grises de frío.",
+          "en": "The earth shook again and again. Clouds gathered, gray with cold."
+        },
+        {
+          "es": "Cayó nieve, profunda y rápida. El manto blanco se extendió cuesta abajo, hasta las fuentes de fuego.",
+          "en": "Snow fell, deep and fast. The white mantle spread downhill, right onto the fountains of fire."
+        },
+        {
+          "es": "La lava se enfrió, se endureció y se volvió piedra.",
+          "en": "The lava cooled, hardened, and turned to stone."
+        },
+        {
+          "es": "¿Habrías imaginado que la nieve le podía ganar al fuego?",
+          "en": "Did you ever think snow could beat fire?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fuente_lava",
+          "x": 950,
+          "s": 0.8,
+          "hasta": 3
+        },
+        {
+          "tipo": "nube",
+          "x": 900,
+          "s": 1.2,
+          "y": 230,
+          "en": 1
+        },
+        {
+          "tipo": "nube",
+          "x": 1500,
+          "s": 1,
+          "y": 200,
+          "en": 1.3
+        },
+        {
+          "tipo": "roca",
+          "x": 950,
+          "s": 0.8,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "poliahu",
+          "como": "poliahu",
+          "x": 1500,
+          "mira": "izq",
+          "y": 600,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 2
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 600,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.5,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 1.2,
+          "tipo": "oscurecer",
+          "dur": 1.5,
+          "intensidad": 0.4
+        },
+        {
+          "en": 2,
+          "tipo": "nieve",
+          "dur": 2.5,
+          "intensidad": 1
+        },
+        {
+          "en": 3,
+          "tipo": "humo",
+          "x": 950,
+          "y": 720,
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "costa",
+      "fondo": "playa_negra",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los ríos de lava que ya corrían fueron empujados hacia el mar.",
+          "en": "The rivers of lava that were already flowing were pushed down to the sea."
+        },
+        {
+          "es": "Westervelt cuenta que así se formó la punta rocosa de Laupāhoehoe, y el arco de piedra de Onomea.",
+          "en": "Westervelt tells that this is how the rocky point of Laupāhoehoe was formed, and the stone arch of Onomea."
+        },
+        {
+          "es": "Y las rocas afiladas de esa costa son los restos de aquella batalla.",
+          "en": "And the sharp rocks along that coast are what is left of that battle."
+        },
+        {
+          "es": "Mientras tanto, arriba, la cumbre quedó blanca y en silencio.",
+          "en": "Meanwhile, up above, the summit lay white and silent."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1300,
+          "s": 1.2
+        },
+        {
+          "tipo": "roca",
+          "x": 1600,
+          "s": 0.8
+        },
+        {
+          "tipo": "fuente_lava",
+          "x": 1900,
+          "s": 0.5,
+          "hasta": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "pescador",
+          "como": "hawaiano",
+          "x": 700,
+          "props": {
+            "objeto": "hoe"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "humo",
+          "x": 1800,
+          "y": 700,
+          "dur": 1.2
+        },
+        {
+          "en": 0.5,
+          "tipo": "olas-suben",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "reparto",
+      "fondo": "mauna_kea",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pele y Poliʻahu pelearon muchas veces más.",
+          "en": "Pele and Poliʻahu fought many more times."
+        },
+        {
+          "es": "Pero los hawaianos dicen que, en esa montaña, Pele siempre pierde.",
+          "en": "But Hawaiians say that on that mountain, Pele always loses."
+        },
+        {
+          "es": "El reino de Pele quedó en la mitad sur de la isla. El norte es de las doncellas de la nieve.",
+          "en": "Pele's kingdom stayed in the south half of the island. The north belongs to the snow maidens."
+        },
+        {
+          "es": "Por eso Mauna Kea se viste de blanco, mientras Mauna Loa y Kīlauea siguen echando fuego.",
+          "en": "That is why Mauna Kea wears white, while Mauna Loa and Kīlauea still pour out fire."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fuente_lava",
+          "x": 250,
+          "s": 0.6,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 500,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "entristece"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "poliahu",
+          "como": "poliahu",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "nieve",
+          "x": 1450,
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "POR ESO MAUNA KEA TIENE NIEVE",
+            "en": "THAT'S WHY MAUNA KEA WEARS SNOW"
+          },
+          "x": 960,
+          "y": 220,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "playa",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pele volvió a Puna, cansada de tanta pelea.",
+          "en": "Pele went back to Puna, tired of so much fighting."
+        },
+        {
+          "es": "Un día, en la playa, mientras Hiʻiaka bailaba con Hōpoe, le dio mucho sueño.",
+          "en": "One day at the beach, while Hiʻiaka danced with Hōpoe, she grew very sleepy."
+        },
+        {
+          "es": "¿Tú de qué lado estás: el fuego de Pele o la nieve de Poliʻahu?",
+          "en": "Whose side are you on: Pele's fire or Poliʻahu's snow?"
+        },
+        {
+          "es": "La próxima vez, Pele se duerme, y en su sueño oye tambores muy lejos.",
+          "en": "Next time, Pele falls asleep, and in her dream she hears drums far away."
+        },
+        {
+          "es": "Es «El sueño de Lohiʻau».",
+          "en": "It is The Dream of Lohiʻau."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "niu",
+          "x": 1850,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 600,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 600
+            },
+            {
+              "en": 1,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.5,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 1100,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.3,
+              "hace": "gira"
+            }
+          ]
+        },
+        {
+          "id": "hopoe",
+          "como": "hawaiana",
+          "x": 1450,
+          "mira": "izq",
+          "props": {
+            "capa": "#C2185B"
+          },
+          "rotulo": "HŌPOE",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "gira"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.5
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Cuando la nieve le ganó al fuego",
+        "en": "When snow beat fire"
+      },
+      "escena": "nieve",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "La diosa del fuego, disfrazada en una carrera",
+        "en": "The fire goddess in disguise at a sled race"
+      },
+      "escena": "extrana",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1000
+    }
+  ]
+}

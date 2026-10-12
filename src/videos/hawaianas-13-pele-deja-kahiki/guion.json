@@ -1,0 +1,1326 @@
+{
+  "id": "hawaianas-13-pele-deja-kahiki",
+  "serie": "hawaianas",
+  "numero": "13",
+  "titulo": {
+    "es": "Pele deja Kahiki",
+    "en": "Pele Leaves Kahiki"
+  },
+  "tituloGriego": "PELE LEAVES KAHIKI",
+  "miniatura": {
+    "heroe": "pele",
+    "rival": "namaka"
+  },
+  "siguiente": {
+    "es": "Cavando en busca del fuego",
+    "en": "Digging for Fire"
+  },
+  "escenas": [
+    {
+      "id": "gancho",
+      "fondo": "cielo_navegante",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La temporada pasada, Māui le robó el fuego a las ʻalae y se lo dio a la gente.",
+          "en": "Last season, Māui took fire from the ʻalae birds and gave it to people."
+        },
+        {
+          "es": "Pero las historias hawaianas dicen que el fuego tiene una dueña de verdad.",
+          "en": "But Hawaiian stories say that fire has a true owner."
+        },
+        {
+          "es": "Se llama Pele, o Pelehonuamea: la diosa del volcán.",
+          "en": "Her name is Pele, or Pelehonuamea: the goddess of the volcano."
+        },
+        {
+          "es": "Todavía hoy, mucha gente la honra en el volcán Kīlauea, en la isla de Hawaiʻi.",
+          "en": "Even today, many people honor her at the volcano Kīlauea, on the island of Hawaiʻi."
+        },
+        {
+          "es": "Pero Pele no nació en Hawaiʻi. Llegó desde muy lejos, cruzando el mar.",
+          "en": "But Pele was not born in Hawaiʻi. She came from far away, across the sea."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "petroglifo",
+          "x": 850,
+          "s": 0.7,
+          "props": {
+            "figura": "espiral"
+          }
+        },
+        {
+          "tipo": "fuente_lava",
+          "x": 1650,
+          "s": 0.8,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "maui",
+          "x": 500,
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            },
+            {
+              "en": 1.5,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1250,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 2.1,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 4,
+              "hace": "mira",
+              "a": 1900
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 0.3,
+          "tipo": "fogata",
+          "x": 700,
+          "y": 790,
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "kahiki",
+      "fondo": "valle",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pele nació en Kahiki, la tierra lejana de donde vienen los antepasados.",
+          "en": "Pele was born in Kahiki, the far-away homeland of the ancestors."
+        },
+        {
+          "es": "En una versión, esa tierra flotaba libre en el mar, como un sueño.",
+          "en": "In one telling, that land floated free on the sea, like a dream."
+        },
+        {
+          "es": "Su madre era Haumea, una diosa muy antigua de la tierra.",
+          "en": "Her mother was Haumea, a very old goddess of the earth."
+        },
+        {
+          "es": "Haumea tuvo muchos hijos: diosas del mar, del fuego y de las nubes, y dioses tiburón.",
+          "en": "Haumea had many children: goddesses of sea, fire and clouds, and shark gods."
+        },
+        {
+          "es": "Pele era una de las hijas mayores. Y desde chica tenía un solo amor: el fuego.",
+          "en": "Pele was one of the older daughters. And from childhood, she had one love: fire."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "niu",
+          "x": 300,
+          "s": 0.9
+        },
+        {
+          "tipo": "hale",
+          "x": 1950,
+          "s": 0.7,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "haumea",
+          "como": "haumea",
+          "x": 700,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1100,
+          "mira": "izq",
+          "escala": 0.85,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "entra",
+              "a": 1100
+            },
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1700
+            },
+            {
+              "en": 4,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "namaka",
+          "como": "namaka",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "hermano",
+          "como": "hawaiano",
+          "x": 1750,
+          "mira": "izq",
+          "props": {
+            "capa": "#4A5560"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.3,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "niebla",
+          "dur": 1.2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "KAHIKI",
+            "en": "KAHIKI"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "fogon",
+      "fondo": "aldea_hale",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pele pasaba los días sentada junto al fogón de su madre.",
+          "en": "Pele spent her days sitting by her mother's fireplace."
+        },
+        {
+          "es": "Allí trabajaba Lonomakua, el guardián del fuego.",
+          "en": "There worked Lonomakua, the keeper of the fire."
+        },
+        {
+          "es": "Pele miraba todo lo que él hacía: cómo encendía la llama y cómo la mantenía viva.",
+          "en": "Pele watched everything he did: how he lit the flame, and how he kept it alive."
+        },
+        {
+          "es": "No era un juego. Era su escuela.",
+          "en": "It was not a game. It was her school."
+        },
+        {
+          "es": "Pele estaba aprendiendo a ser la reina del fuego.",
+          "en": "Pele was learning to become the queen of fire."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1600,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "lono",
+          "como": "kahuna",
+          "x": 1150,
+          "mira": "izq",
+          "props": {
+            "objeto": "antorcha",
+            "capa": "#B2331F"
+          },
+          "rotulo": "LONOMAKUA",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.4,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 700,
+          "escala": 0.85,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.5,
+              "hace": "levantarse"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.1,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fogata",
+          "x": 930,
+          "y": 790
+        },
+        {
+          "en": 2.2,
+          "tipo": "chispas",
+          "x": 930,
+          "y": 720,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "fuego",
+          "x": 930,
+          "y": 790,
+          "intensidad": 0.6,
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "namaka",
+      "fondo": "playa",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero alguien la miraba con desconfianza: su hermana mayor, Nāmaka.",
+          "en": "But someone watched her with suspicion: her older sister, Nāmaka."
+        },
+        {
+          "es": "Su nombre completo es Nāmakaokahaʻi, y es una diosa del mar.",
+          "en": "Her full name is Nāmakaokahaʻi, and she is a goddess of the sea."
+        },
+        {
+          "es": "Nāmaka entendía lo que quería Pele.",
+          "en": "Nāmaka understood what Pele wanted."
+        },
+        {
+          "es": "Y sabía que el fuego de su hermana traería problemas a la tierra de la familia.",
+          "en": "And she knew that her sister's fire would bring trouble to the family's land."
+        },
+        {
+          "es": "Un día, Nāmaka se fue de viaje, lejos, al otro lado del mar.",
+          "en": "One day, Nāmaka went on a journey, far away across the sea."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "namaka",
+          "como": "namaka",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "niega"
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 2300,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 650,
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "olas-suben",
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "olas-bajan",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "lava",
+      "fondo": "volcan",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mientras Nāmaka no estaba, Pele usó todo lo que había aprendido.",
+          "en": "While Nāmaka was away, Pele used everything she had learned."
+        },
+        {
+          "es": "La tierra se abrió, y el fuego salió de golpe.",
+          "en": "The ground cracked open, and fire burst out."
+        },
+        {
+          "es": "Ríos de lava corrieron por los campos y taparon una parte de la tierra de la familia.",
+          "en": "Rivers of lava ran over the fields and covered part of the family's land."
+        },
+        {
+          "es": "Cuando Nāmaka volvió, vio la tierra negra y humeante.",
+          "en": "When Nāmaka came home, she saw the land black and smoking."
+        },
+        {
+          "es": "Y se enojó como se enoja el mar en una tormenta.",
+          "en": "And she grew angry, the way the sea grows angry in a storm."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fuente_lava",
+          "x": 1100,
+          "s": 0.8,
+          "en": 1
+        },
+        {
+          "tipo": "lago_lava",
+          "x": 1250,
+          "s": 0.8,
+          "en": 2,
+          "props": {
+            "ancho": 500
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 650,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 1.5
+            },
+            {
+              "en": 2.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "namaka",
+          "como": "namaka",
+          "x": 1600,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "enoja"
+            },
+            {
+              "en": 4.1,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 1.2,
+          "tipo": "fuego",
+          "x": 1100,
+          "y": 790,
+          "intensidad": 0.8,
+          "dur": 2
+        },
+        {
+          "en": 2.2,
+          "tipo": "humo",
+          "x": 1300,
+          "y": 700,
+          "dur": 2
+        },
+        {
+          "en": 4,
+          "tipo": "olas-suben",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "refugio",
+      "fondo": "aldea_hale",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pele estaba en peligro. Pero su madre, Haumea, la protegió.",
+          "en": "Pele was in danger. But her mother, Haumea, protected her."
+        },
+        {
+          "es": "La mandó a esconderse junto a su hermano mayor, Kamohoaliʻi.",
+          "en": "She sent her to hide beside her older brother, Kamohoaliʻi."
+        },
+        {
+          "es": "Kamohoaliʻi era el rey de los tiburones. Era tan poderoso que pocos se atrevían a acercarse.",
+          "en": "Kamohoaliʻi was the king of the sharks. He was so powerful that few dared to come near him."
+        },
+        {
+          "es": "Pero ese escondite no podía durar para siempre.",
+          "en": "But that hiding place could not last forever."
+        },
+        {
+          "es": "Para estar a salvo, Pele tenía que irse de Kahiki.",
+          "en": "To be safe, Pele had to leave Kahiki."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 250,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "haumea",
+          "como": "haumea",
+          "x": 600,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "abraza",
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 900,
+          "mira": "izq",
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "entristece"
+            },
+            {
+              "en": 4,
+              "hace": "mira",
+              "a": 1900
+            }
+          ]
+        },
+        {
+          "id": "kamoho",
+          "como": "alii",
+          "x": 1450,
+          "mira": "izq",
+          "props": {
+            "objeto": "hoe",
+            "capa": "#4A5560",
+            "barba": true
+          },
+          "rotulo": "KAMOHOALIʻI",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.6,
+              "hace": "baja"
+            },
+            {
+              "en": 4.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    },
+    {
+      "id": "versiones",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "¿Por qué se pelearon las dos hermanas? Las historias no dicen todas lo mismo.",
+          "en": "Why did the two sisters fight? The old stories do not all agree."
+        },
+        {
+          "es": "En la versión que sigue Emerson, es por el fuego que Pele soltó en la tierra de la familia.",
+          "en": "In the telling Emerson follows, it was the fire Pele let loose on the family's land."
+        },
+        {
+          "es": "En otra, Pele se enamora del esposo de Nāmaka.",
+          "en": "In another, Pele falls in love with Nāmaka's husband."
+        },
+        {
+          "es": "Y en otra más, Pele simplemente sueña con tierras lejanas y pide un barco para irse.",
+          "en": "And in yet another, Pele simply dreams of far-off lands, and asks for a canoe to go."
+        },
+        {
+          "es": "¿Tú cuál crees? ¿Fue el fuego, el amor o las ganas de viajar?",
+          "en": "What do you think it was: the fire, love, or the wish to travel?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "petroglifo",
+          "x": 260,
+          "s": 0.7,
+          "props": {
+            "figura": "persona"
+          }
+        },
+        {
+          "tipo": "waa",
+          "x": 1950,
+          "s": 0.8,
+          "en": 3,
+          "props": {
+            "quieta": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "kahuna",
+          "como": "kahuna",
+          "x": 500,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1000,
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 1900
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "namaka",
+          "como": "namaka",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "esposo",
+          "como": "hawaiano",
+          "x": 1650,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.9,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "fogata",
+          "x": 1000,
+          "y": 790,
+          "dur": 0.9
+        }
+      ]
+    },
+    {
+      "id": "huevo",
+      "fondo": "aldea_hale",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Antes de partir, había que decidir algo más.",
+          "en": "Before leaving, there was one more thing to decide."
+        },
+        {
+          "es": "La hermana más chica de la familia todavía no había nacido. Era un huevo.",
+          "en": "The youngest sister in the family had not been born yet. She was an egg."
+        },
+        {
+          "es": "«¿Qué vas a hacer con tu hermanita del huevo?», le preguntaron a Pele.",
+          "en": "\"What will you do with your little egg sister?\" they asked Pele."
+        },
+        {
+          "es": "Pele tomó el huevo, lo envolvió en su falda y lo guardó contra su cuerpo, para darle calor.",
+          "en": "Pele took the egg, wrapped it in her skirt, and held it close to her body to keep it warm."
+        },
+        {
+          "es": "«Va a estar siempre conmigo», dijo. Esa hermanita se llamaría Hiʻiaka.",
+          "en": "\"She will always be with me,\" she said. That little sister would be named Hiʻiaka."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1550,
+          "s": 0.8,
+          "capa": "medio"
+        },
+        {
+          "tipo": "kalo",
+          "x": 300,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "haumea",
+          "como": "haumea",
+          "x": 650,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1050,
+          "mira": "izq",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 650
+            },
+            {
+              "en": 3,
+              "hace": "toma"
+            },
+            {
+              "en": 3.2,
+              "hace": "abraza",
+              "dur": 2
+            },
+            {
+              "en": 3.5,
+              "hace": "brilla",
+              "dur": 1.5
+            },
+            {
+              "en": 4.1,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "luz",
+          "x": 780,
+          "y": 600,
+          "dur": 1.8
+        },
+        {
+          "en": 3.4,
+          "tipo": "luz",
+          "x": 1080,
+          "y": 560,
+          "dur": 1.5
+        }
+      ]
+    },
+    {
+      "id": "canoa",
+      "fondo": "oceano",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Kamohoaliʻi preparó una gran canoa doble. Se llamaba Honuaiākea.",
+          "en": "Kamohoaliʻi made ready a great double canoe. Its name was Honuaiākea."
+        },
+        {
+          "es": "Subieron hermanos y hermanas: Kāneʻapua, Kānemilohai y muchos más.",
+          "en": "Brothers and sisters climbed aboard: Kāneʻapua, Kānemilohai, and many more."
+        },
+        {
+          "es": "Pele llevaba el huevo contra su pecho y, en la mano, un palo mágico de cavar llamado Paoa.",
+          "en": "Pele held the egg to her chest, and in her hand, a magic digging stick called Paoa."
+        },
+        {
+          "es": "Kamohoaliʻi iba al timón. Era el mejor piloto del océano.",
+          "en": "Kamohoaliʻi steered. He was the finest pilot on the ocean."
+        },
+        {
+          "es": "Navegaron hacia el norte, día tras día, sobre las olas.",
+          "en": "They sailed north, day after day, over the waves."
+        },
+        {
+          "es": "Y muy atrás, desde el mar, Nāmaka los vigilaba.",
+          "en": "And far behind them, from the sea, Nāmaka was watching."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waa",
+          "x": 880,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "kamoho",
+          "como": "alii",
+          "x": 650,
+          "y": 712,
+          "props": {
+            "objeto": "hoe",
+            "capa": "#4A5560",
+            "barba": true
+          },
+          "rotulo": "KAMOHOALIʻI",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "kaneapua",
+          "como": "hawaiano",
+          "x": 880,
+          "escala": 0.8,
+          "y": 712,
+          "rotulo": "KĀNEʻAPUA",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.6,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1080,
+          "mira": "izq",
+          "y": 712,
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "mira",
+              "a": 2300
+            }
+          ]
+        },
+        {
+          "id": "namaka",
+          "como": "namaka",
+          "x": 2150,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 5.3,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4,
+          "tipo": "olas-suben",
+          "dur": 1.5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "cielo_navegante",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pele dejó atrás su hogar, su madre y la tierra que había quemado.",
+          "en": "Pele left behind her home, her mother, and the land she had burned."
+        },
+        {
+          "es": "Por delante solo había agua. Y en algún lugar, una tierra nueva para su fuego.",
+          "en": "Ahead there was only water. And somewhere, a new land for her fire."
+        },
+        {
+          "es": "Si tuvieras que dejarlo todo, ¿qué te llevarías en la canoa?",
+          "en": "If you had to leave everything behind, what would you take in your canoe?"
+        },
+        {
+          "es": "La próxima vez, Pele llega a las islas y prueba la tierra con su palo mágico.",
+          "en": "Next time, Pele reaches the islands and tests the ground with her magic stick."
+        },
+        {
+          "es": "Pero cada vez que cava, el mar entra. Es «Cavando en busca del fuego».",
+          "en": "But every time she digs, the sea comes in. It is Digging for Fire."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "petroglifo",
+          "x": 400,
+          "s": 0.8,
+          "props": {
+            "figura": "canoa"
+          }
+        },
+        {
+          "tipo": "isla",
+          "x": 1300,
+          "s": 0.6,
+          "en": 1,
+          "sube": 200
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 900,
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 0.5,
+              "hace": "entristece"
+            },
+            {
+              "en": 1.4,
+              "hace": "mira",
+              "a": 1600
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "namaka",
+          "como": "namaka",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 4.3,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 4.2,
+          "tipo": "olas-suben",
+          "dur": 1
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La hermana que viajó dentro de un huevo",
+        "en": "The sister who traveled inside an egg"
+      },
+      "escena": "huevo",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Por qué la diosa del fuego tuvo que huir",
+        "en": "Why the fire goddess had to flee"
+      },
+      "escena": "lava",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1000
+    }
+  ]
+}
