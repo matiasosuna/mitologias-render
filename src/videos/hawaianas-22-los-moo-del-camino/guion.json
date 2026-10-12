@@ -1,0 +1,1345 @@
+{
+  "id": "hawaianas-22-los-moo-del-camino",
+  "serie": "hawaianas",
+  "numero": "22",
+  "titulo": {
+    "es": "Los moʻo del camino",
+    "en": "The Moʻo of the Road"
+  },
+  "tituloGriego": "THE MOʻO OF THE ROAD",
+  "miniatura": {
+    "heroe": "hiiaka",
+    "rival": "moo"
+  },
+  "siguiente": {
+    "es": "El bosque quemado",
+    "en": "The Burning of the Grove"
+  },
+  "escenas": [
+    {
+      "id": "gancho",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Hiʻiaka salió de Kīlauea con una falda llena de rayos y dos compañeras.",
+          "en": "Last time, Hiʻiaka left Kīlauea with a skirt full of lightning and two companions."
+        },
+        {
+          "es": "Ahora tenía que cruzar todas las islas, hasta Kauaʻi. Y el camino estaba lleno de moʻo.",
+          "en": "Now she had to cross every island, all the way to Kauaʻi. And the road was full of moʻo."
+        },
+        {
+          "es": "Los moʻo son espíritus con forma de lagarto gigante. Muchos cuidan el agua dulce.",
+          "en": "Moʻo are spirits shaped like giant lizards. Many of them guard fresh water."
+        },
+        {
+          "es": "Algunos son buenos guardianes. Pero otros cobran peaje, engañan a los viajeros, o se los comen.",
+          "en": "Some are good guardians. But others demand a toll, trick travelers, or eat them."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 650,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 850,
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "wahineomao",
+          "como": "hawaiana",
+          "x": 350,
+          "props": {
+            "capa": "#9CC48A"
+          },
+          "rotulo": "WAHINEʻŌMAʻO",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 550,
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "moo",
+          "como": "moo",
+          "x": 1500,
+          "mira": "izq",
+          "escala": 3,
+          "rotulo": "MOʻO",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1400,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "niebla",
+          "dur": 1.5
+        }
+      ]
+    },
+    {
+      "id": "panaewa",
+      "fondo": "bosque_lehua",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El primero era Panaʻewa, el moʻo que mandaba en el bosque sobre Hilo.",
+          "en": "The first was Panaʻewa, the moʻo who ruled the forest above Hilo."
+        },
+        {
+          "es": "Podía ser lagarto, persona, niebla o lluvia. Y hacía perderse a los viajeros.",
+          "en": "It could be a lizard, a person, fog or rain. And it made travelers lose their way."
+        },
+        {
+          "es": "Dos pajaritos le servían de espías. «Es una de las mujeres del cráter», dijo uno.",
+          "en": "Two little birds were its spies. \"She is one of the women from the crater,\" said one."
+        },
+        {
+          "es": "«No es tan fuerte como Panaʻewa», dijo el otro. Hiʻiaka los oyó, y se rió.",
+          "en": "\"She is not as strong as Panaʻewa,\" said the other. Hiʻiaka heard them, and laughed."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lehua",
+          "x": 300,
+          "s": 1
+        },
+        {
+          "tipo": "lehua",
+          "x": 1300,
+          "s": 1.1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "lehua",
+          "x": 2050,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 700,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 3.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "panaewa",
+          "como": "moo",
+          "x": 1700,
+          "mira": "izq",
+          "escala": 3.2,
+          "rotulo": "PANAʻEWA",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1,
+              "hace": "transforma",
+              "en_que": "hawaiano"
+            },
+            {
+              "en": 1.6,
+              "hace": "transforma",
+              "en_que": "moo"
+            }
+          ]
+        },
+        {
+          "id": "ave1",
+          "como": "buho",
+          "x": 1250,
+          "escala": 0.9,
+          "y": 380,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1100,
+                420
+              ],
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "ave2",
+          "como": "buho",
+          "x": 1450,
+          "escala": 0.8,
+          "y": 340,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                1250,
+                360
+              ],
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "niebla",
+          "dur": 0.8
+        },
+        {
+          "en": 1.5,
+          "tipo": "lluvia",
+          "dur": 0.4
+        }
+      ]
+    },
+    {
+      "id": "niebla",
+      "fondo": "bosque_lehua",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Panaʻewa la atacó primero con su cuerpo de niebla, fría y espesa, que la dejaba ciega.",
+          "en": "Panaʻewa attacked first in its body of fog, cold and thick, blinding her."
+        },
+        {
+          "es": "«Agárrate de mi cinturón», le dijo Hiʻiaka a Wahineʻōmaʻo. Y barrió la niebla con su falda.",
+          "en": "\"Hold on to my belt,\" Hiʻiaka told Wahineʻōmaʻo. And she swept the fog away with her skirt."
+        },
+        {
+          "es": "Después vino una lluvia helada que pinchaba la piel, y vientos que tumbaban árboles.",
+          "en": "Then came a freezing rain that stung the skin, and winds that knocked trees down."
+        },
+        {
+          "es": "Las ramas la golpeaban. Las enredaderas le atrapaban los pies.",
+          "en": "Branches struck at her. Vines caught her feet."
+        },
+        {
+          "es": "Hiʻiaka peleaba con su falda de rayos, hasta que los brazos casi no le respondían.",
+          "en": "Hiʻiaka fought with her lightning skirt, until her arms could barely move."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lehua",
+          "x": 1300,
+          "s": 1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "lehua",
+          "x": 300,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 900,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.2,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 4,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.5,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "wahineomao",
+          "como": "hawaiana",
+          "x": 600,
+          "props": {
+            "capa": "#9CC48A"
+          },
+          "rotulo": "WAHINEʻŌMAʻO",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "abraza",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "panaewa",
+          "como": "moo",
+          "x": 1650,
+          "mira": "izq",
+          "escala": 3.2,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.5,
+              "hace": "camina",
+              "a": 1450,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1.5
+        },
+        {
+          "en": 1.3,
+          "tipo": "rayo",
+          "x": 1000,
+          "dur": 0.3
+        },
+        {
+          "en": 2,
+          "tipo": "lluvia",
+          "dur": 2
+        },
+        {
+          "en": 2.3,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 4,
+          "tipo": "rayo",
+          "x": 1300,
+          "dur": 0.3
+        }
+      ]
+    },
+    {
+      "id": "ayuda",
+      "fondo": "bosque_lehua",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Agotada, Hiʻiaka llamó a su hermana: «¡Pele!».",
+          "en": "Exhausted, Hiʻiaka called out to her sister: \"Pele!\""
+        },
+        {
+          "es": "Desde Kīlauea, Pele la oyó. Y mandó tormentas de rayos contra el bosque.",
+          "en": "From Kīlauea, Pele heard her. And she sent lightning storms against the forest."
+        },
+        {
+          "es": "Una lluvia enorme llenó los barrancos de agua roja, y arrastró a los ayudantes de Panaʻewa hasta el mar.",
+          "en": "A great rain filled the ravines with red water, and swept Panaʻewa's helpers down to the sea."
+        },
+        {
+          "es": "El bosque quedó libre. Hasta hoy, esa tierra cerca de Hilo se llama Panaʻewa.",
+          "en": "The forest was free. To this day, that land near Hilo is called Panaʻewa."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lehua",
+          "x": 300,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 750,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "panaewa",
+          "como": "moo",
+          "x": 1500,
+          "mira": "izq",
+          "escala": 3.2,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 1850,
+          "mira": "izq",
+          "capa": "fondo",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 1.2,
+              "hace": "lanza"
+            },
+            {
+              "en": 1.9,
+              "hace": "desaparece",
+              "con": "fuego"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "rayo",
+          "x": 1400,
+          "dur": 0.3
+        },
+        {
+          "en": 1.3,
+          "tipo": "rayo",
+          "x": 1600,
+          "dur": 0.3
+        },
+        {
+          "en": 1.5,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "lluvia",
+          "dur": 1
+        },
+        {
+          "en": 2.2,
+          "tipo": "olas-suben",
+          "color": "rojo",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        }
+      ]
+    },
+    {
+      "id": "rio",
+      "fondo": "valle_cascada",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cerca de Hilo, en el río Wailuku, vivían otros dos moʻo: Pili y Noho.",
+          "en": "Near Hilo, on the Wailuku River, lived two more moʻo: Pili and Noho."
+        },
+        {
+          "es": "Sus lenguas flotaban en el agua como troncos, y servían de puente. Pero solo si les pagabas.",
+          "en": "Their tongues floated in the water like logs, and served as a bridge. But only if you paid them."
+        },
+        {
+          "es": "Hiʻiaka les ordenó abrir el paso. Ellos se negaron.",
+          "en": "Hiʻiaka ordered them to open the way. They refused."
+        },
+        {
+          "es": "Un jefe se rió de ella. «¿Vas a pelear con dioses lagarto? Te apuesto lo que quieras a que pierdes.»",
+          "en": "A chief laughed at her. \"You will fight lizard gods? I will bet you anything that you lose.\""
+        },
+        {
+          "es": "«No tengo nada», dijo Hiʻiaka. «Te apuesto mi vida.»",
+          "en": "\"I own nothing,\" said Hiʻiaka. \"I bet you my life.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1500,
+          "s": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "pili",
+          "como": "moo",
+          "x": 1300,
+          "mira": "izq",
+          "escala": 2.6,
+          "y": 800,
+          "rotulo": "PILI",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "niega"
+            },
+            {
+              "en": 2.2,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "noho",
+          "como": "moo",
+          "x": 1700,
+          "mira": "izq",
+          "escala": 2.6,
+          "y": 800,
+          "rotulo": "NOHO",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 750,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.2,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "jefe",
+          "como": "alii",
+          "x": 400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.5,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "olas-suben",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "apuesta",
+      "fondo": "valle_cascada",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los moʻo batieron el agua en remolinos, para arrastrar a las viajeras al río.",
+          "en": "The moʻo churned the water into whirlpools, to drag the travelers into the river."
+        },
+        {
+          "es": "Hiʻiaka los golpeó con su falda, una y otra vez, con la fuerza del rayo.",
+          "en": "Hiʻiaka struck them with her skirt, again and again, with the force of lightning."
+        },
+        {
+          "es": "Los dos moʻo quedaron vencidos. Westervelt dice que se volvieron bloques de piedra.",
+          "en": "Both moʻo were defeated. Westervelt says they turned into blocks of stone."
+        },
+        {
+          "es": "Hiʻiaka le devolvió todo al jefe. «El camino ya es seguro para tu gente», le dijo.",
+          "en": "Hiʻiaka gave the chief back everything. \"The way is safe for your people now,\" she said."
+        },
+        {
+          "es": "¿Tú habrías apostado tu vida como Hiʻiaka?",
+          "en": "Would you have bet your life like Hiʻiaka?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1300,
+          "s": 0.9,
+          "en": 2.1
+        },
+        {
+          "tipo": "roca",
+          "x": 1700,
+          "s": 0.8,
+          "en": 2.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 800,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.8,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "pili",
+          "como": "moo",
+          "x": 1300,
+          "mira": "izq",
+          "escala": 2.6,
+          "y": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "tiembla",
+              "dur": 1
+            },
+            {
+              "en": 2.1,
+              "hace": "desaparece",
+              "con": "polvo"
+            }
+          ]
+        },
+        {
+          "id": "noho",
+          "como": "moo",
+          "x": 1700,
+          "mira": "izq",
+          "escala": 2.6,
+          "y": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "tiembla",
+              "dur": 1
+            },
+            {
+              "en": 2.2,
+              "hace": "desaparece",
+              "con": "polvo"
+            }
+          ]
+        },
+        {
+          "id": "jefe",
+          "como": "alii",
+          "x": 400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "olas-suben",
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "rayo",
+          "x": 1300,
+          "dur": 0.3
+        },
+        {
+          "en": 1.5,
+          "tipo": "rayo",
+          "x": 1700,
+          "dur": 0.3
+        },
+        {
+          "en": 1.8,
+          "tipo": "destello",
+          "dur": 0.2
+        }
+      ]
+    },
+    {
+      "id": "molokai",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hiʻiaka siguió por la costa de Hawaiʻi, venciendo moʻo y tiburones, y cruzó el mar hasta Maui.",
+          "en": "Hiʻiaka went on along the coast of Hawaiʻi, defeating moʻo and sharks, and crossed the sea to Maui."
+        },
+        {
+          "es": "En Molokaʻi, una moʻo llamada Kikipua estiraba la lengua sobre el agua, como un puente falso.",
+          "en": "On Molokaʻi, a moʻo named Kikipua stretched her tongue over the water, like a false bridge."
+        },
+        {
+          "es": "Los viajeros que la pisaban se caían y no volvían.",
+          "en": "Travelers who stepped on it fell in and never came back."
+        },
+        {
+          "es": "Hiʻiaka la venció, y tendió su propia falda como puente. Así cruzaron sin peligro.",
+          "en": "Hiʻiaka defeated her, and laid down her own skirt as a bridge. So they crossed safely."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla",
+          "x": 1800,
+          "s": 0.6,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 500,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 750,
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.4,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "wahineomao",
+          "como": "hawaiana",
+          "x": 250,
+          "props": {
+            "capa": "#9CC48A"
+          },
+          "rotulo": "WAHINEʻŌMAʻO",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 450,
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "kikipua",
+          "como": "moo",
+          "x": 1350,
+          "mira": "izq",
+          "escala": 3,
+          "y": 790,
+          "rotulo": "KIKIPUA",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 3.3,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "olas-suben",
+          "dur": 1
+        },
+        {
+          "en": 3.1,
+          "tipo": "rayo",
+          "x": 1350,
+          "dur": 0.3
+        }
+      ]
+    },
+    {
+      "id": "mokolii",
+      "fondo": "playa",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En Oʻahu, Hiʻiaka eligió el lado rocoso de la isla.",
+          "en": "On Oʻahu, Hiʻiaka chose the rocky side of the island."
+        },
+        {
+          "es": "En Kualoa, aplastó a otra moʻo malvada, llamada Mokoliʻi.",
+          "en": "At Kualoa, she crushed another evil moʻo, named Mokoliʻi."
+        },
+        {
+          "es": "Los hawaianos cuentan que la cola cortada de la moʻo cayó al mar, y quedó allí como un islote.",
+          "en": "Hawaiians tell that the moʻo's severed tail fell into the sea, and stayed there as a small island."
+        },
+        {
+          "es": "Ese islote, frente a Kualoa, todavía se llama Mokoliʻi: «lagartito».",
+          "en": "That islet, off Kualoa, is still called Mokoliʻi: \"little lizard.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla",
+          "x": 1750,
+          "s": 0.6,
+          "en": 2,
+          "sube": 150,
+          "props": {
+            "verde": true
+          }
+        },
+        {
+          "tipo": "niu",
+          "x": 250,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 700,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "mokolii",
+          "como": "moo",
+          "x": 1300,
+          "mira": "izq",
+          "escala": 3.2,
+          "rotulo": "MOKOLIʻI",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.8,
+              "hace": "desaparece",
+              "con": "polvo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "rayo",
+          "x": 1300,
+          "dur": 0.3
+        },
+        {
+          "en": 2,
+          "tipo": "olas-suben",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "ASÍ NACIÓ EL ISLOTE MOKOLIʻI",
+            "en": "THAT'S HOW MOKOLIʻI ISLAND WAS BORN"
+          },
+          "x": 960,
+          "y": 220,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "kaena",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al fin llegó a Kaʻena, la punta de Oʻahu desde donde Pele había oído la música en su sueño.",
+          "en": "At last she reached Kaʻena, the point of Oʻahu where Pele had heard the music in her dream."
+        },
+        {
+          "es": "Allí le pidió a la vieja roca Pōhakuokauaʻi una canoa para cruzar a Kauaʻi.",
+          "en": "There she asked the old rock Pōhakuokauaʻi for a canoe to cross to Kauaʻi."
+        },
+        {
+          "es": "El viaje ya llevaba muchos días. Y los cuarenta días se estaban acabando.",
+          "en": "The journey had already taken many days. And the forty days were running out."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1350,
+          "s": 1.1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "waa",
+          "x": 1850,
+          "s": 0.8,
+          "en": 1.8,
+          "props": {
+            "quieta": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 800,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "mira",
+              "a": 1700
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "viejo",
+          "como": "kahuna",
+          "x": 1350,
+          "mira": "izq",
+          "props": {
+            "capa": "#6B6B6B"
+          },
+          "rotulo": "PŌHAKUOKAUAʻI",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.8,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "wahineomao",
+          "como": "hawaiana",
+          "x": 450,
+          "props": {
+            "capa": "#9CC48A"
+          },
+          "rotulo": "WAHINEʻŌMAʻO",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "valle_cascada",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En Kauaʻi, Hiʻiaka buscó a Lohiʻau. Y entonces lo vio.",
+          "en": "On Kauaʻi, Hiʻiaka looked for Lohiʻau. And then she saw him."
+        },
+        {
+          "es": "No a él, sino a su espíritu, parado en la boca de una cueva, en lo alto del acantilado.",
+          "en": "Not him, but his spirit, standing at the mouth of a cave, high up on the cliff."
+        },
+        {
+          "es": "Lohiʻau estaba muerto. Y muy lejos, sobre Puna, empezaba a subir humo.",
+          "en": "Lohiʻau was dead. And far away, over Puna, smoke was beginning to rise."
+        },
+        {
+          "es": "¿Qué crees que está haciendo Pele mientras espera?",
+          "en": "What do you think Pele is doing while she waits?"
+        },
+        {
+          "es": "La próxima vez: «El bosque quemado».",
+          "en": "Next time: The Burning of the Grove."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1450,
+          "s": 1.6,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 700,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.5,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "lohiau",
+          "como": "hawaiano",
+          "x": 1450,
+          "mira": "izq",
+          "y": 560,
+          "props": {
+            "objeto": null,
+            "capa": "#E8B81C",
+            "contorno": true
+          },
+          "rotulo": "LOHIʻAU",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 480,
+          "dur": 1.5
+        },
+        {
+          "en": 2.3,
+          "tipo": "humo",
+          "x": 300,
+          "y": 500,
+          "dur": 2
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Le apostó su vida a dos lagartos gigantes",
+        "en": "She bet her life against two giant lizards"
+      },
+      "escena": "rio",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "La isla que era la cola de un lagarto",
+        "en": "The island that was a lizard's tail"
+      },
+      "escena": "mokolii",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    }
+  ]
+}

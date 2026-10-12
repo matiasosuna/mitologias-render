@@ -1,0 +1,1349 @@
+{
+  "id": "hawaianas-23-el-bosque-quemado",
+  "serie": "hawaianas",
+  "numero": "23",
+  "titulo": {
+    "es": "El bosque quemado",
+    "en": "The Burning of the Grove"
+  },
+  "tituloGriego": "THE BURNING OF THE GROVE",
+  "miniatura": {
+    "heroe": "hiiaka",
+    "rival": "pele"
+  },
+  "siguiente": {
+    "es": "El beso al borde del cráter",
+    "en": "The Kiss on the Crater's Rim"
+  },
+  "escenas": [
+    {
+      "id": "gancho",
+      "fondo": "valle_cascada",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Hiʻiaka llegó a Kauaʻi y vio el espíritu de Lohiʻau en la boca de una cueva.",
+          "en": "Last time, Hiʻiaka reached Kauaʻi and saw Lohiʻau's spirit at the mouth of a cave."
+        },
+        {
+          "es": "La gente le contó la verdad: Lohiʻau había muerto de tristeza, esperando a la mujer de Puna.",
+          "en": "The people told her the truth: Lohiʻau had died of sorrow, waiting for the woman from Puna."
+        },
+        {
+          "es": "Y dos mujeres moʻo habían escondido su cuerpo en lo alto del acantilado, y tenían atrapado su espíritu.",
+          "en": "And two moʻo women had hidden his body high up on the cliff, and held his spirit captive."
+        },
+        {
+          "es": "Westervelt dice que eran las mismas moʻo que Pele había humillado en la fiesta de hula.",
+          "en": "Westervelt says they were the same moʻo women Pele had shamed at the hula feast."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1500,
+          "s": 1.6,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 650,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 1,
+              "hace": "entristece"
+            },
+            {
+              "en": 2,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "hermana",
+          "como": "hawaiana",
+          "x": 350,
+          "props": {
+            "capa": "#E8B81C"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "moo1",
+          "como": "hawaiana",
+          "x": 1350,
+          "mira": "izq",
+          "props": {
+            "capa": "#3E6670",
+            "piel": "#9CB4A8"
+          },
+          "rotulo": "MOʻO",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.4,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "moo2",
+          "como": "hawaiana",
+          "x": 1650,
+          "mira": "izq",
+          "props": {
+            "capa": "#3E6670",
+            "piel": "#9CB4A8"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "sombra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.4
+        }
+      ]
+    },
+    {
+      "id": "subida",
+      "fondo": "valle_cascada",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al amanecer, Hiʻiaka y Wahineʻōmaʻo subieron por el acantilado, bajo una tormenta.",
+          "en": "At dawn, Hiʻiaka and Wahineʻōmaʻo climbed the cliff, in a storm."
+        },
+        {
+          "es": "Las moʻo les tiraron lluvias de piedras desde arriba.",
+          "en": "The moʻo women hurled showers of stones down on them."
+        },
+        {
+          "es": "Una piedra grande golpeó a Hiʻiaka en el pecho, y cayó del acantilado.",
+          "en": "A big stone struck Hiʻiaka in the chest, and she fell from the cliff."
+        },
+        {
+          "es": "Pero se levantó. Y volvió a subir.",
+          "en": "But she got up. And she climbed again."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1500,
+          "s": 1.6,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 700,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 2.3,
+              "hace": "cae"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.3,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "wahineomao",
+          "como": "hawaiana",
+          "x": 450,
+          "props": {
+            "capa": "#9CC48A"
+          },
+          "rotulo": "WAHINEʻŌMAʻO",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 650,
+              "dur": 1
+            },
+            {
+              "en": 2.4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "moo1",
+          "como": "hawaiana",
+          "x": 1500,
+          "mira": "izq",
+          "y": 560,
+          "props": {
+            "capa": "#3E6670",
+            "piel": "#9CB4A8"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "lanza"
+            },
+            {
+              "en": 1.6,
+              "hace": "lanza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "lluvia",
+          "dur": 4
+        },
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 1100,
+          "y": 700,
+          "dur": 1
+        },
+        {
+          "en": 2.2,
+          "tipo": "destello",
+          "dur": 0.2
+        }
+      ]
+    },
+    {
+      "id": "pelea",
+      "fondo": "valle_cascada",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Las moʻo saltaron sobre ella con forma de lagarto, mordiendo y golpeando con la cola.",
+          "en": "The moʻo leaped on her in lizard form, biting and lashing with their tails."
+        },
+        {
+          "es": "Hiʻiaka las golpeó con su falda de rayos y les rompió el cuerpo. Pero tomaron cuerpos nuevos.",
+          "en": "Hiʻiaka struck them with her lightning skirt and broke their bodies. But they took new bodies."
+        },
+        {
+          "es": "Entonces, desde la isla de Hawaiʻi, la mujer de los helechos mandó su poder.",
+          "en": "Then, from the island of Hawaiʻi, the fern woman sent her power."
+        },
+        {
+          "es": "Helechos y raíces brotaron del suelo y les enredaron las patas.",
+          "en": "Ferns and roots sprang from the ground and tangled the lizards' legs."
+        },
+        {
+          "es": "Hiʻiaka golpeó otra vez, y las moʻo quedaron vencidas.",
+          "en": "Hiʻiaka struck once more, and the moʻo were beaten."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kalo",
+          "x": 1250,
+          "s": 0.9,
+          "en": 3
+        },
+        {
+          "tipo": "kalo",
+          "x": 1600,
+          "s": 0.8,
+          "en": 3.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 800,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "moo1",
+          "como": "moo",
+          "x": 1250,
+          "mira": "izq",
+          "escala": 3,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.3,
+              "hace": "desaparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.7,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3.2,
+              "hace": "tiembla",
+              "dur": 0.8
+            },
+            {
+              "en": 4.2,
+              "hace": "desaparece",
+              "con": "polvo"
+            }
+          ]
+        },
+        {
+          "id": "moo2",
+          "como": "moo",
+          "x": 1600,
+          "mira": "izq",
+          "escala": 2.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.4,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.3,
+              "hace": "desaparece",
+              "con": "polvo"
+            }
+          ]
+        },
+        {
+          "id": "pauopalae",
+          "como": "hawaiana",
+          "x": 400,
+          "capa": "medio",
+          "props": {
+            "capa": "#4E7A3A",
+            "tocado": "haku"
+          },
+          "rotulo": "PĀʻŪOPALAʻE",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "rayo",
+          "x": 1250,
+          "dur": 0.3
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 400,
+          "y": 600,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "polvo",
+          "x": 1400,
+          "y": 790,
+          "dur": 0.8
+        },
+        {
+          "en": 4,
+          "tipo": "rayo",
+          "x": 1450,
+          "dur": 0.3
+        }
+      ]
+    },
+    {
+      "id": "sol",
+      "fondo": "valle_cascada",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ya caía la tarde. No quedaba tiempo para subir, buscar el espíritu y bajar.",
+          "en": "Evening was falling. There was no time left to climb, find the spirit, and come down."
+        },
+        {
+          "es": "Westervelt cuenta que Hiʻiaka le pidió al sol que esperara. Y el sol esperó.",
+          "en": "Westervelt tells that Hiʻiaka asked the sun to wait. And the sun waited."
+        },
+        {
+          "es": "Entonces oyó una vocecita: «Estoy en un coco chiquito, bien cerrado».",
+          "en": "Then she heard a tiny voice: \"I am in a little coconut shell, shut up tight.\""
+        },
+        {
+          "es": "Sobre un coco cerrado con plumas había un pequeño arcoíris. Allí estaba el espíritu de Lohiʻau.",
+          "en": "Above a coconut sealed with feathers rested a tiny rainbow. There was Lohiʻau's spirit."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 1650,
+          "s": 1,
+          "y": 420
+        },
+        {
+          "tipo": "niu",
+          "x": 1300,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 800,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "mira",
+              "a": 1700
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "toma"
+            },
+            {
+              "en": 3.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "wahineomao",
+          "como": "hawaiana",
+          "x": 500,
+          "props": {
+            "capa": "#9CC48A"
+          },
+          "rotulo": "WAHINEʻŌMAʻO",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.4
+        },
+        {
+          "en": 1.5,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 600,
+          "dur": 1.2
+        }
+      ],
+      "sinAstros": true
+    },
+    {
+      "id": "vida",
+      "fondo": "aldea_hale",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Bajaron el cuerpo a una casa hecha de hojas de ti.",
+          "en": "They carried the body down to a house made of ti leaves."
+        },
+        {
+          "es": "Durante diez días, Hiʻiaka cantó los cantos que devuelven un espíritu a su cuerpo, mientras abajo la gente bailaba hula.",
+          "en": "For ten days, Hiʻiaka chanted the chants that return a spirit to its body, while the people below danced hula."
+        },
+        {
+          "es": "Wahineʻōmaʻo le frotaba los pies. El espíritu entró por las plantas de los pies, y subió despacio.",
+          "en": "Wahineʻōmaʻo rubbed his feet. The spirit went in through the soles of his feet, and slowly rose."
+        },
+        {
+          "es": "Al final, Lohiʻau respiró. Abrió los ojos. Estaba vivo.",
+          "en": "At last, Lohiʻau took a breath. He opened his eyes. He was alive."
+        },
+        {
+          "es": "Los tres bajaron sobre un arcoíris y se lavaron en el mar.",
+          "en": "The three of them came down on a rainbow and washed themselves in the sea."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1150,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "lohiau",
+          "como": "hawaiano",
+          "x": 1050,
+          "props": {
+            "objeto": null,
+            "capa": "#E8B81C",
+            "barba": false,
+            "tocado": null
+          },
+          "rotulo": "LOHIʻAU",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 700,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 3.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "wahineomao",
+          "como": "hawaiana",
+          "x": 1400,
+          "mira": "izq",
+          "props": {
+            "capa": "#9CC48A"
+          },
+          "rotulo": "WAHINEʻŌMAʻO",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.2,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "bailarina",
+          "como": "hawaiana",
+          "x": 1800,
+          "mira": "izq",
+          "props": {
+            "capa": "#C2185B"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.4,
+              "hace": "gira"
+            },
+            {
+              "en": 2.2,
+              "hace": "gira"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.5,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 650,
+          "dur": 1.5
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 400,
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "espera",
+      "fondo": "crater",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero todo eso llevó mucho tiempo. Los cuarenta días habían pasado hacía rato.",
+          "en": "But all of this took a long time. The forty days were long gone."
+        },
+        {
+          "es": "En Kīlauea, Pele esperaba, cada vez más furiosa.",
+          "en": "At Kīlauea, Pele waited, angrier and angrier."
+        },
+        {
+          "es": "«Mi hermana se lo quedó para ella», pensaba. Y los celos le quemaban como su propio fuego.",
+          "en": "\"My sister has kept him for herself,\" she thought. And jealousy burned in her like her own fire."
+        },
+        {
+          "es": "La tierra temblaba alrededor del cráter.",
+          "en": "The earth shook around the crater."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lago_lava",
+          "x": 1500,
+          "s": 1,
+          "props": {
+            "ancho": 640
+          }
+        },
+        {
+          "tipo": "fuente_lava",
+          "x": 1700,
+          "s": 0.7,
+          "en": 2.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 900,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1200,
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "hermana",
+          "como": "hawaiana",
+          "x": 500,
+          "props": {
+            "capa": "#7A1E10"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "tiembla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.5,
+          "tipo": "fuego",
+          "x": 1600,
+          "y": 790,
+          "intensidad": 0.8,
+          "dur": 1.5
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "id": "bosque",
+      "fondo": "bosque_lehua",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Y Pele rompió su juramento.",
+          "en": "And Pele broke her oath."
+        },
+        {
+          "es": "Mandó la lava hacia el bosque de lehua de Hiʻiaka, el que había prometido cuidar.",
+          "en": "She sent the lava into Hiʻiaka's lehua forest, the one she had promised to protect."
+        },
+        {
+          "es": "Los árboles de flores rojas ardieron uno tras otro.",
+          "en": "The trees with red blossoms burned, one after another."
+        },
+        {
+          "es": "Donde había un jardín, quedó lava negra y humo.",
+          "en": "Where there had been a garden, there was black lava and smoke."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lehua",
+          "x": 900,
+          "s": 1,
+          "hasta": 2.2
+        },
+        {
+          "tipo": "lehua",
+          "x": 1300,
+          "s": 1.1,
+          "hasta": 2.6
+        },
+        {
+          "tipo": "lehua",
+          "x": 1750,
+          "s": 1,
+          "hasta": 3
+        },
+        {
+          "tipo": "fuente_lava",
+          "x": 1100,
+          "s": 0.7,
+          "en": 1.5
+        },
+        {
+          "tipo": "roca",
+          "x": 1500,
+          "s": 0.8,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "como": "pele",
+          "x": 400,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 0.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "lanza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "fuego",
+          "x": 1100,
+          "y": 790,
+          "intensidad": 0.9,
+          "dur": 2.5
+        },
+        {
+          "en": 2,
+          "tipo": "fuego",
+          "x": 1600,
+          "y": 790,
+          "intensidad": 0.8,
+          "dur": 2
+        },
+        {
+          "en": 2.5,
+          "tipo": "humo",
+          "x": 1400,
+          "y": 600,
+          "dur": 2
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.4
+        }
+      ]
+    },
+    {
+      "id": "hopoe",
+      "fondo": "playa_negra",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después, la lava bajó hacia el mar, hacia Keaʻau, donde vivía Hōpoe.",
+          "en": "Then the lava came down toward the sea, toward Keaʻau, where Hōpoe lived."
+        },
+        {
+          "es": "Hōpoe vio el fuego venir. No tenía adónde escapar.",
+          "en": "Hōpoe saw the fire coming. She had nowhere to run."
+        },
+        {
+          "es": "Se puso los lei que amaba Hiʻiaka y su mejor falda de hojas de hala. Y empezó a bailar.",
+          "en": "She put on the lei Hiʻiaka loved, and her finest skirt of hala leaves. And she began to dance."
+        },
+        {
+          "es": "El fuego la alcanzó. Pele la convirtió en una piedra de lava, en equilibrio junto al mar.",
+          "en": "The fire reached her. Pele turned her into a stone of lava, balanced beside the sea."
+        },
+        {
+          "es": "Westervelt cuenta que esa piedra se movía con el viento y las olas, como si siguiera bailando.",
+          "en": "Westervelt tells that the stone rocked with the wind and the waves, as if she were still dancing."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fuente_lava",
+          "x": 1650,
+          "s": 0.7
+        },
+        {
+          "tipo": "roca",
+          "x": 1000,
+          "s": 0.9,
+          "en": 3.5
+        },
+        {
+          "tipo": "niu",
+          "x": 300,
+          "s": 0.9,
+          "hasta": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "hopoe",
+          "como": "hawaiana",
+          "x": 1000,
+          "mira": "izq",
+          "props": {
+            "capa": "#C2185B"
+          },
+          "rotulo": "HŌPOE",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.5,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.6,
+              "hace": "gira"
+            },
+            {
+              "en": 3,
+              "hace": "gira"
+            },
+            {
+              "en": 3.4,
+              "hace": "brilla",
+              "dur": 0.4
+            },
+            {
+              "en": 3.5,
+              "hace": "desaparece",
+              "con": "fuego"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 1700,
+          "y": 790,
+          "intensidad": 0.7,
+          "dur": 3.5
+        },
+        {
+          "en": 1,
+          "tipo": "humo",
+          "x": 1600,
+          "y": 600,
+          "dur": 2.5
+        },
+        {
+          "en": 4,
+          "tipo": "olas-suben",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "POR ESO LA PIEDRA DE HŌPOE BAILA",
+            "en": "THAT'S WHY HŌPOE'S STONE CAN DANCE"
+          },
+          "x": 960,
+          "y": 220,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "pohakea",
+      "fondo": "valle",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hiʻiaka ya volvía con Lohiʻau. En Oʻahu cruzó la isla a pie, y subió a la cresta de Pōhākea.",
+          "en": "Hiʻiaka was already on her way back with Lohiʻau. On Oʻahu she crossed on foot, and climbed the ridge of Pōhākea."
+        },
+        {
+          "es": "Desde allí miró hacia su casa, más allá del mar. Y vio su bosque en llamas.",
+          "en": "From there she looked toward her home, across the sea. And she saw her forest in flames."
+        },
+        {
+          "es": "Vio a Hōpoe envuelta en lava.",
+          "en": "She saw Hōpoe wrapped in lava."
+        },
+        {
+          "es": "Hiʻiaka cantó un lamento: «Creí que mis lehua eran sagradas. Los pájaros de fuego se las comen».",
+          "en": "Hiʻiaka chanted a lament: \"I thought my lehua were sacred. The birds of fire are eating them.\""
+        },
+        {
+          "es": "Si fueras Hiʻiaka, ¿qué harías ahora?",
+          "en": "If you were Hiʻiaka, what would you do now?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla",
+          "x": 1750,
+          "s": 0.6,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 800,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1900
+            },
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.5,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "humo",
+          "x": 1750,
+          "y": 520,
+          "dur": 3
+        },
+        {
+          "en": 1.5,
+          "tipo": "fuego",
+          "x": 1750,
+          "y": 650,
+          "intensidad": 0.4,
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.4
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "oceano",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pele había roto su promesa. Pero Hiʻiaka todavía cumplía la suya: llevaba a Lohiʻau hacia Pele.",
+          "en": "Pele had broken her promise. But Hiʻiaka was still keeping hers: she was bringing Lohiʻau to Pele."
+        },
+        {
+          "es": "Solo que, en el camino, algo había cambiado en su corazón.",
+          "en": "Only, along the way, something had changed in her heart."
+        },
+        {
+          "es": "Iba a hacer justo lo que Pele le había prohibido. Y lo iba a hacer frente a sus ojos.",
+          "en": "She would do the very thing Pele had forbidden. And she would do it before her eyes."
+        },
+        {
+          "es": "¿Crees que Hiʻiaka tiene derecho a vengarse?",
+          "en": "Do you think Hiʻiaka has the right to take revenge?"
+        },
+        {
+          "es": "La próxima vez, el final de la temporada: «El beso al borde del cráter».",
+          "en": "Next time, the season finale: The Kiss on the Crater's Rim."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waa",
+          "x": 900,
+          "s": 1.1
+        },
+        {
+          "tipo": "isla",
+          "x": 1900,
+          "s": 0.7,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiiaka",
+          "como": "hiiaka",
+          "x": 900,
+          "y": 712,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "entristece"
+            },
+            {
+              "en": 2,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "lohiau",
+          "como": "hawaiano",
+          "x": 650,
+          "y": 712,
+          "props": {
+            "objeto": null,
+            "capa": "#E8B81C",
+            "barba": false,
+            "tocado": null
+          },
+          "rotulo": "LOHIʻAU",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 900
+            }
+          ]
+        },
+        {
+          "id": "wahineomao",
+          "como": "hawaiana",
+          "x": 1150,
+          "mira": "izq",
+          "y": 712,
+          "props": {
+            "capa": "#9CC48A"
+          },
+          "rotulo": "WAHINEʻŌMAʻO",
+          "pasos": []
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 1900,
+          "y": 500,
+          "dur": 2
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La amiga que bailó hasta convertirse en piedra",
+        "en": "The friend who danced until she turned to stone"
+      },
+      "escena": "hopoe",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "El espíritu escondido en un coco",
+        "en": "The spirit hidden in a coconut"
+      },
+      "escena": "sol",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    }
+  ]
+}
