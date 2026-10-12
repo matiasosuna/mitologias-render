@@ -1,0 +1,1249 @@
+{
+  "id": "aztecas-06-el-diluvio-y-el-cielo-que-cayo",
+  "serie": "aztecas",
+  "numero": "06",
+  "titulo": {
+    "es": "El diluvio y el cielo que cayó",
+    "en": "The Flood and the Fallen Sky"
+  },
+  "tituloGriego": "THE FLOOD AND THE FALLEN SKY",
+  "miniatura": {
+    "heroe": "chalchiuhtlicue",
+    "rival": "tezcatlipoca"
+  },
+  "siguiente": {
+    "es": "Los huesos del Mictlan",
+    "en": "The Bones of Mictlan"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "valle",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, una lluvia de fuego terminó con el tercer sol, y la gente se convirtió en guajolotes.",
+          "en": "Last time, a rain of fire ended the third sun, and the people turned into turkeys."
+        },
+        {
+          "es": "El cielo necesitaba un sol nuevo. Y esta vez le tocó a una diosa.",
+          "en": "The sky needed a new sun. And this time, it was a goddess's turn."
+        },
+        {
+          "es": "Recuerda: cada sol había terminado en un desastre distinto.",
+          "en": "Remember: every sun had ended in a different disaster."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "g1",
+          "como": "huexolotl",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 760,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "como": "huexolotl",
+          "x": 900,
+          "mira": "izq",
+          "rotulo": ""
+        },
+        {
+          "id": "chalchi",
+          "como": "chalchiuhtlicue",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        },
+        {
+          "en": 1.2,
+          "tipo": "luz",
+          "x": 1400,
+          "y": 500,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "chalchi",
+      "fondo": "lago_texcoco",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Chalchiuhtlicue era la diosa del agua: de los ríos, los lagos y los manantiales.",
+          "en": "Chalchiuhtlicue was the goddess of water: of rivers, lakes and springs."
+        },
+        {
+          "es": "Su nombre quiere decir \"la de la falda de jade\". El agua clara brilla verde, como esa piedra.",
+          "en": "Her name means \"She of the Jade Skirt\". Clear water shines green, like that stone."
+        },
+        {
+          "es": "Los mexicas le pedían por los recién nacidos, en su primer baño.",
+          "en": "The Mexica prayed to her for newborn babies, at their first bath."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tule",
+          "x": 1500,
+          "s": 0.9
+        },
+        {
+          "tipo": "acalli",
+          "x": 400,
+          "y": 770,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "chalchi",
+          "como": "chalchiuhtlicue",
+          "x": 900,
+          "y": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "madre",
+          "como": "mexica_mujer",
+          "x": 1300,
+          "y": 800,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.8,
+              "hace": "entra",
+              "a": 1300
+            },
+            {
+              "en": 2.4,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 900,
+          "y": 560,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "chalchi_sol",
+      "fondo": "lago_texcoco",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Chalchiuhtlicue subió al cielo y se convirtió en el sol. Comenzó la cuarta época.",
+          "en": "Chalchiuhtlicue rose into the sky and became the sun. The fourth age began."
+        },
+        {
+          "es": "Los mexicas la llamaban Nahui Atl, Cuatro Agua: el Sol de Agua.",
+          "en": "The Mexica called it Nahui Atl, Four Water: the Water Sun."
+        },
+        {
+          "es": "Bajo su sol, los ríos corrían limpios y los lagos estaban llenos.",
+          "en": "Under her sun, the rivers ran clear and the lakes were full."
+        },
+        {
+          "es": "Según la Leyenda de los Soles, duró seiscientos setenta y seis años, igual que el primero.",
+          "en": "According to the Legend of the Suns, it lasted six hundred and seventy-six years, just like the first."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 960,
+          "y": 280,
+          "s": 1.25,
+          "en": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "chalchi",
+          "como": "chalchiuhtlicue",
+          "x": 960,
+          "escala": 0.8,
+          "y": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                960,
+                520
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 0.6,
+              "hace": "brilla",
+              "dur": 0.4
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "luz",
+          "x": 960,
+          "y": 300,
+          "dur": 1
+        },
+        {
+          "en": 0.7,
+          "tipo": "aclarar",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "NAHUI ATL",
+            "en": "NAHUI ATL"
+          },
+          "x": 1450,
+          "y": 260,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "676",
+            "en": "676"
+          },
+          "x": 1450,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "aviso",
+      "fondo": "encinar",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al final de ese sol, Tezcatlipoca bajó a hablar con un hombre, Tata, y su esposa, Nene.",
+          "en": "At the end of that sun, Tezcatlipoca came down to speak to a man named Tata and his wife, Nene."
+        },
+        {
+          "es": "Les dijo: \"Ahuequen un gran ahuehuete y métanse adentro.\"",
+          "en": "He told them: \"Hollow out a great cypress tree and climb inside.\""
+        },
+        {
+          "es": "\"Coman solo una mazorca de maíz cada uno, y nada más.\"",
+          "en": "\"Each of you may eat one ear of maize, and nothing else.\""
+        },
+        {
+          "es": "Así lo cuenta la Leyenda de los Soles.",
+          "en": "That is how the Legend of the Suns tells it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "ahuehuete",
+          "x": 1600,
+          "s": 1,
+          "hasta": 2
+        },
+        {
+          "tipo": "tronco",
+          "x": 1500,
+          "s": 0.9,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "tezca",
+          "como": "tezcatlipoca",
+          "x": 520,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 0.6,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "tata",
+          "como": "mexica",
+          "x": 950,
+          "mira": "izq",
+          "rotulo": "TATA",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.4,
+              "hace": "asiente"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1200
+            }
+          ]
+        },
+        {
+          "id": "nene",
+          "como": "mexica_mujer",
+          "x": 1130,
+          "mira": "izq",
+          "rotulo": "NENE",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "asiente"
+            },
+            {
+              "en": 3.1,
+              "hace": "camina",
+              "a": 1330
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "polvo",
+          "x": 1550,
+          "y": 760,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "diluvio",
+      "fondo": "lago_texcoco",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces empezó a llover. Llovió y llovió, sin parar.",
+          "en": "Then it began to rain. It rained and rained, without stopping."
+        },
+        {
+          "es": "El agua subió tanto que cubrió hasta las montañas.",
+          "en": "The water rose so high that it covered even the mountains."
+        },
+        {
+          "es": "La gente de esa época se convirtió en peces.",
+          "en": "The people of that age were turned into fish."
+        },
+        {
+          "es": "Y en medio del agua, un tronco flotaba solo.",
+          "en": "And in the middle of all that water, a single log floated."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tronco",
+          "x": 1300,
+          "y": 590,
+          "s": 0.8,
+          "en": 3,
+          "props": {
+            "flota": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "p1",
+          "como": "mexica",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "transforma",
+              "en_que": "pez"
+            },
+            {
+              "en": 2.4,
+              "hace": "vuela",
+              "a": [
+                700,
+                520
+              ],
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "como": "mexica_mujer",
+          "x": 900,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "transforma",
+              "en_que": "pez"
+            },
+            {
+              "en": 2.6,
+              "hace": "vuela",
+              "a": [
+                860,
+                560
+              ],
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "lluvia",
+          "dur": 3.5
+        },
+        {
+          "en": 0.5,
+          "tipo": "oscurecer",
+          "dur": 3
+        },
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "dur": 1.2,
+          "intensidad": 0.35
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "pescado",
+      "fondo": "valle",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuando por fin bajó el agua, el tronco quedó en tierra, y Tata y Nene salieron.",
+          "en": "When the water finally went down, the log came to rest on land, and Tata and Nene climbed out."
+        },
+        {
+          "es": "Vieron un pez. Tenían muchísima hambre.",
+          "en": "They saw a fish. They were very, very hungry."
+        },
+        {
+          "es": "Hicieron fuego frotando palitos, y asaron el pescado.",
+          "en": "They made fire by rubbing sticks together, and roasted the fish."
+        },
+        {
+          "es": "El humo subió hasta el cielo, y los dioses de las estrellas preguntaron: \"¿Quién está haciendo humo?\"",
+          "en": "The smoke rose to the sky, and the star gods asked: \"Who is making smoke?\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tronco",
+          "x": 400,
+          "s": 0.8
+        },
+        {
+          "tipo": "fogata",
+          "x": 1000,
+          "s": 1,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "tata",
+          "como": "mexica",
+          "x": 600,
+          "rotulo": "TATA",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 760
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "nene",
+          "como": "mexica_mujer",
+          "x": 640,
+          "rotulo": "NENE",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "entra",
+              "a": 1250
+            },
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.3,
+              "hace": "mira",
+              "a": 1000
+            }
+          ]
+        },
+        {
+          "id": "pez",
+          "como": "pez",
+          "x": 1120,
+          "y": 770,
+          "rotulo": "",
+          "props": {
+            "color": "#3A8FA8"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 720,
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "humo",
+          "x": 1000,
+          "y": 720,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "perros",
+      "fondo": "valle",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Tezcatlipoca bajó muy enojado: \"¿Qué están haciendo? ¿Por qué hicieron esto?\"",
+          "en": "Tezcatlipoca came down, very angry: \"What are you doing? Why did you do this?\""
+        },
+        {
+          "es": "Y como castigo, los convirtió en perros.",
+          "en": "And as a punishment, he turned them into dogs."
+        },
+        {
+          "es": "¿Te parece justo el castigo por asar un pescado? Cuéntanos en los comentarios.",
+          "en": "Does that seem like a fair punishment for roasting a fish? Tell us in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 1000,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "tezca",
+          "como": "tezcatlipoca",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 0.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.5,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "tata",
+          "como": "mexica",
+          "x": 650,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.3,
+              "hace": "transforma",
+              "en_que": "perro"
+            }
+          ]
+        },
+        {
+          "id": "nene",
+          "como": "mexica_mujer",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.5,
+              "hace": "transforma",
+              "en_que": "perro"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 1.3,
+          "tipo": "humo",
+          "x": 650,
+          "y": 700,
+          "dur": 0.5
+        },
+        {
+          "en": 1.5,
+          "tipo": "humo",
+          "x": 1250,
+          "y": 700,
+          "dur": 0.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cielo_cae",
+      "fondo": "valle",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Otro libro, la Historia de los mexicanos por sus pinturas, cuenta lo que pasó después.",
+          "en": "Another book, the History of the Mexicans as Told by Their Paintings, tells what happened next."
+        },
+        {
+          "es": "Después del diluvio, el cielo se cayó sobre la tierra.",
+          "en": "After the flood, the sky fell down onto the earth."
+        },
+        {
+          "es": "Los dioses abrieron cuatro caminos por el centro de la tierra, para entrar y levantarlo.",
+          "en": "The gods opened four roads through the middle of the earth, so they could go in and lift it."
+        },
+        {
+          "es": "Y crearon a cuatro hombres para que los ayudaran.",
+          "en": "And they made four men to help them."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cielo_bajo",
+          "x": 960,
+          "y": 430,
+          "en": 1,
+          "sube": -260,
+          "durSube": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "h1",
+          "como": "mexica",
+          "x": 500,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "h2",
+          "como": "mexica",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "h3",
+          "como": "mexica",
+          "x": 1100,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.6,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "h4",
+          "como": "mexica",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.7,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 1.4,
+          "tipo": "polvo",
+          "x": 960,
+          "y": 760,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 960,
+          "y": 600,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "arboles",
+      "fondo": "valle",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Tezcatlipoca y Quetzalcóatl se convirtieron en dos árboles enormes.",
+          "en": "Tezcatlipoca and Quetzalcoatl turned themselves into two enormous trees."
+        },
+        {
+          "es": "Con los árboles y los cuatro hombres, empujaron el cielo hacia arriba, con todas sus estrellas.",
+          "en": "With the trees and the four men, they pushed the sky back up, with all its stars."
+        },
+        {
+          "es": "Por una vez, los dos rivales sostuvieron juntos el mundo.",
+          "en": "For once, the two rivals held up the world together."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cielo_bajo",
+          "x": 960,
+          "y": 430,
+          "hasta": 1.2
+        },
+        {
+          "tipo": "cielo_bajo",
+          "x": 960,
+          "y": 172,
+          "en": 1.2,
+          "sube": 260,
+          "durSube": 0.8
+        },
+        {
+          "tipo": "ahuehuete",
+          "x": 560,
+          "s": 1.1,
+          "en": 0.4,
+          "sube": 300,
+          "durSube": 0.5
+        },
+        {
+          "tipo": "ahuehuete",
+          "x": 1360,
+          "s": 1.1,
+          "en": 0.5,
+          "sube": 300,
+          "durSube": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "tezca",
+          "como": "tezcatlipoca",
+          "x": 560,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 1360,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "h1",
+          "como": "mexica",
+          "x": 860,
+          "rotulo": "",
+          "props": {
+            "brazo": [
+              170,
+              10
+            ],
+            "brazoAtras": [
+              170,
+              10
+            ]
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "h2",
+          "como": "mexica",
+          "x": 1060,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "brazo": [
+              170,
+              10
+            ],
+            "brazoAtras": [
+              170,
+              10
+            ]
+          },
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.1,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.6,
+          "tipo": "estrellas",
+          "dur": 1.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "via_lactea",
+      "fondo": "firmamento",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Su padre los hizo señores del cielo y de las estrellas.",
+          "en": "Their father made them lords of the sky and of the stars."
+        },
+        {
+          "es": "Y el camino que dejaron al subir todavía se ve de noche: la Vía Láctea.",
+          "en": "And the road they left behind as they climbed can still be seen at night: the Milky Way."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "via_lactea",
+          "x": 1000,
+          "y": 380,
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "nino",
+          "como": "mexica",
+          "x": 600,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "abuela",
+          "como": "anciana_mexica",
+          "x": 820,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "POR ESO SE VE LA VÍA LÁCTEA",
+            "en": "THAT'S WHY THE MILKY WAY CROSSES THE SKY"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "firmamento",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuatro soles, cuatro mundos terminados. El cielo estaba arriba otra vez, pero no había sol, ni gente.",
+          "en": "Four suns, four worlds ended. The sky was up again, but there was no sun, and no people."
+        },
+        {
+          "es": "¿De dónde crees que saldrá la gente nueva? Cuéntanos tu idea en los comentarios.",
+          "en": "Where do you think the new people will come from? Tell us your guess in the comments."
+        },
+        {
+          "es": "La próxima vez, Quetzalcóatl baja a la tierra de los muertos a buscar unos huesos muy especiales. Es Los huesos del Mictlan.",
+          "en": "Next time, Quetzalcoatl goes down to the land of the dead for some special bones. It is The Bones of Mictlan."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Los convirtió en perros por asar un pescado",
+        "en": "Turned into dogs for roasting a fish"
+      },
+      "escena": "pescado",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "El día que se cayó el cielo",
+        "en": "The day the sky fell down"
+      },
+      "escena": "cielo_cae",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "De dónde viene la Vía Láctea",
+        "en": "Where the Milky Way came from"
+      },
+      "escena": "via_lactea",
+      "desde": 0,
+      "hasta": 1,
+      "foco": 900
+    }
+  ]
+}

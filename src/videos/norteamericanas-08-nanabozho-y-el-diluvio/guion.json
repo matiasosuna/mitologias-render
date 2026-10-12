@@ -1,0 +1,1253 @@
+{
+  "id": "norteamericanas-08-nanabozho-y-el-diluvio",
+  "serie": "norteamericanas",
+  "numero": "08",
+  "titulo": {
+    "es": "Nanabozho y el gran diluvio",
+    "en": "Nanabozho and the Great Flood"
+  },
+  "tituloGriego": "NANABOZHO AND THE GREAT FLOOD",
+  "miniatura": {
+    "heroe": "nanabozho",
+    "rival": "rata_almizclera"
+  },
+  "siguiente": {
+    "es": "El Cuervo roba la luz",
+    "en": "Raven Steals the Light"
+  },
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "lago",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, las lágrimas del Sol hicieron una inundación en una historia cherokee.",
+          "en": "Last time, the Sun's tears made a flood in a Cherokee story."
+        },
+        {
+          "es": "Ahora viajamos al norte, a los Grandes Lagos, hogar de los anishinaabe: ojibwe, odawa y potawatomi.",
+          "en": "Now we travel north, to the Great Lakes, home of the Anishinaabe: the Ojibwe, Odawa and Potawatomi."
+        },
+        {
+          "es": "Esta versión viene de El libro de Mishomis, del maestro ojibwe Edward Benton-Banai.",
+          "en": "This version comes from The Mishomis Book, by the Ojibwe teacher Edward Benton-Banai."
+        },
+        {
+          "es": "Los narradores anishinaabe cuentan estas historias en invierno, cuando la nieve cubre el suelo.",
+          "en": "Anishinaabe storytellers share these stories in winter, when snow covers the ground."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 860
+        },
+        {
+          "tipo": "abedul",
+          "x": 1700,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "abuelo",
+          "como": "anciano_nativo",
+          "x": 600,
+          "rotulo": "",
+          "props": {
+            "tocado": "cintaTejida"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.6,
+              "hace": "baja"
+            },
+            {
+              "en": 3.2,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "nina",
+          "como": "anishinaabe_mujer",
+          "x": 1100,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino"
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "anishinaabe",
+          "x": 1260,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "madre",
+          "como": "anishinaabe_mujer",
+          "x": 1430,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.3,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "nieve",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "ANISHINAABE",
+            "en": "ANISHINAABE"
+          },
+          "x": 1250,
+          "y": 250,
+          "hasta": 2.2
+        }
+      ]
+    },
+    {
+      "id": "quien",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Nanabozho es un gran héroe espíritu de los anishinaabe. En este libro se llama Waynaboozhoo.",
+          "en": "Nanabozho is a great spirit hero of the Anishinaabe. In this book, he is called Waynaboozhoo."
+        },
+        {
+          "es": "Puede ser sabio y bueno, y también muy gracioso.",
+          "en": "He can be wise and kind, and he can be very funny."
+        },
+        {
+          "es": "Hace mucho, dice la historia, la gente dejó de vivir de buena manera. Empezaron a pelear y discutir.",
+          "en": "Long ago, the story says, people stopped living in a good way. They began to fight and argue."
+        },
+        {
+          "es": "Entonces el Creador mandó un gran diluvio, para limpiar la tierra.",
+          "en": "So the Creator sent a great flood, to wash the earth clean."
+        }
+      ],
+      "actores": [
+        {
+          "id": "nanabozho",
+          "como": "nanabozho",
+          "x": 820,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.3,
+              "hace": "salta"
+            },
+            {
+              "en": 2.4,
+              "hace": "entristece"
+            },
+            {
+              "en": 3.2,
+              "hace": "mira",
+              "a": 1500
+            }
+          ]
+        },
+        {
+          "id": "h1",
+          "como": "anishinaabe",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.5,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "h2",
+          "como": "anishinaabe",
+          "x": 1560,
+          "mira": "izq",
+          "rotulo": "",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.6,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.2,
+          "tipo": "lluvia",
+          "dur": 0.8
+        },
+        {
+          "en": 3.4,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "WAYNABOOZHOO",
+            "en": "WAYNABOOZHOO"
+          },
+          "x": 820,
+          "y": 260,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "diluvio",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "El agua subió y subió, hasta cubrirlo todo, hasta las montañas.",
+          "en": "The water rose and rose, until it covered everything, even the mountains."
+        },
+        {
+          "es": "Waynaboozhoo sobrevivió. Flotaba sobre un tronco enorme, con muchos animales y aves.",
+          "en": "Waynaboozhoo survived. He floated on a huge log, with many animals and birds."
+        },
+        {
+          "es": "Se turnaban para descansar en el tronco. Pero no había tierra en ninguna parte.",
+          "en": "They took turns resting on the log. But there was no land anywhere."
+        },
+        {
+          "es": "En algunas versiones, Waynaboozhoo se zambulló primero. Pero el agua era demasiado honda.",
+          "en": "In some tellings, Waynaboozhoo dove down first himself. But the water was far too deep."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tronco",
+          "x": 960,
+          "s": 1.2,
+          "en": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "nanabozho",
+          "como": "nanabozho",
+          "x": 900,
+          "y": 704,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "mira",
+              "a": 600
+            },
+            {
+              "en": 3.1,
+              "hace": "vuela",
+              "a": [
+                900,
+                860
+              ],
+              "dur": 0.3
+            },
+            {
+              "en": 3.4,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "nanabozho2",
+          "como": "nanabozho",
+          "x": 900,
+          "y": 704,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.75,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3.85,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "nutria",
+          "como": "nutria",
+          "x": 700,
+          "y": 704,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "rata",
+          "como": "rata_almizclera",
+          "x": 1120,
+          "y": 704,
+          "escala": 0.9,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "colimbo",
+          "como": "colimbo",
+          "x": 1500,
+          "y": 806,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "nada",
+              "a": 1400,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "tortuga",
+          "como": "tortuga",
+          "x": 420,
+          "y": 812,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.7,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "olas-suben",
+          "dur": 1
+        },
+        {
+          "en": 0.2,
+          "tipo": "lluvia",
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "id": "buceo",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces el Colimbo, Maang, se zambulló. Estuvo mucho tiempo abajo, pero subió sin nada.",
+          "en": "Then the Loon, Maang, dove down. He was gone a long time, but he came up with nothing."
+        },
+        {
+          "es": "Después fue el Somormujo, un pajarito buceador. Tampoco llegó al fondo.",
+          "en": "Next went the Helldiver, a small diving bird. He could not reach the bottom either."
+        },
+        {
+          "es": "Después lo intentó el Visón, y luego la Tortuga. Todos volvieron sin nada.",
+          "en": "Then the Mink tried, and then the Turtle. Each one came back with nothing."
+        },
+        {
+          "es": "'Este agua no debe tener fondo', dijeron.",
+          "en": "'There must be no bottom to this water,' they said."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tronco",
+          "x": 960,
+          "s": 1.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "nanabozho",
+          "como": "nanabozho",
+          "x": 900,
+          "y": 704,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 3,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "colimbo",
+          "como": "colimbo",
+          "x": 1400,
+          "y": 806,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "desaparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.7,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.85,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "somormujo",
+          "como": "somormujo",
+          "x": 1700,
+          "y": 800,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "desaparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.7,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.85,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "vison",
+          "como": "vison",
+          "x": 620,
+          "y": 704,
+          "escala": 1.1,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "desaparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.5,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "tortuga",
+          "como": "tortuga",
+          "x": 380,
+          "y": 812,
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "desaparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.85,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3.2,
+              "hace": "niega"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rata",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces una vocecita dijo: 'Yo lo intentaré.' Era la pequeña Rata Almizclera, Wazhashk.",
+          "en": "Then a small voice said, 'I will try.' It was the little Muskrat, Wazhashk."
+        },
+        {
+          "es": "Algunos animales grandes se rieron de ella. Pero Waynaboozhoo dijo: 'Solo el Creador puede juzgar a los demás.'",
+          "en": "Some of the bigger animals laughed at him. But Waynaboozhoo said, 'Only the Creator can judge others.'"
+        },
+        {
+          "es": "La Rata Almizclera se zambulló. Tardó tanto que los demás creyeron que se había perdido.",
+          "en": "The Muskrat dove. He was gone so long, the others thought he was lost."
+        },
+        {
+          "es": "Por fin, su cuerpito subió flotando. Había dado la vida para llegar al fondo.",
+          "en": "At last, his little body floated up. He had given his life to reach the bottom."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tronco",
+          "x": 960,
+          "s": 1.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "rata",
+          "como": "rata_almizclera",
+          "x": 1060,
+          "y": 704,
+          "escala": 1.1,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "salta"
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1160,
+                860
+              ],
+              "dur": 0.2
+            },
+            {
+              "en": 2.2,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "rata2",
+          "como": "rata_almizclera",
+          "x": 1250,
+          "y": 812,
+          "escala": 1.1,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "nanabozho",
+          "como": "nanabozho",
+          "x": 860,
+          "y": 704,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.6,
+              "hace": "mira",
+              "a": 1250
+            },
+            {
+              "en": 3.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.6,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "vison",
+          "como": "vison",
+          "x": 640,
+          "y": 704,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.5,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "colimbo",
+          "como": "colimbo",
+          "x": 1550,
+          "y": 806,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.05,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.4,
+              "hace": "mira",
+              "a": 1250
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "olas-bajan",
+          "dur": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "WAZHASHK",
+            "en": "WAZHASHK"
+          },
+          "x": 1060,
+          "y": 470,
+          "hasta": 1.2
+        }
+      ]
+    },
+    {
+      "id": "tierra",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.08,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "En su patita, bien apretada, había una bolita de tierra.",
+          "en": "In his tiny paw, held tight, was a little ball of earth."
+        },
+        {
+          "es": "Era el animal más chico de todos, e hizo lo que nadie más pudo.",
+          "en": "He was the smallest of them all, and he did what no one else could."
+        },
+        {
+          "es": "¿Tú habrías creído que la pequeña Rata Almizclera lo lograría?",
+          "en": "Would you have believed the little Muskrat could do it?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tronco",
+          "x": 960,
+          "s": 1.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "rata",
+          "como": "rata_almizclera",
+          "x": 1060,
+          "y": 704,
+          "escala": 1.1,
+          "rotulo": ""
+        },
+        {
+          "id": "nanabozho",
+          "como": "nanabozho",
+          "x": 860,
+          "y": 704,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.4,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "colimbo",
+          "como": "colimbo",
+          "x": 1450,
+          "y": 806,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 1080,
+          "y": 680,
+          "dur": 0.8,
+          "intensidad": 0.6
+        }
+      ]
+    },
+    {
+      "id": "tortuga",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.04,
+          1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces la Tortuga se acercó nadando. 'Pon la tierra sobre mi espalda', dijo.",
+          "en": "Then the Turtle swam up. 'Put the earth on my back,' said the Turtle."
+        },
+        {
+          "es": "Waynaboozhoo puso la tierra sobre el caparazón, y los vientos soplaron de las cuatro direcciones.",
+          "en": "Waynaboozhoo placed the earth on the Turtle's shell, and winds blew from the four directions."
+        },
+        {
+          "es": "Waynaboozhoo cantó, y los animales bailaron en círculo. El poquito de tierra creció y creció.",
+          "en": "Waynaboozhoo sang, and the animals danced in a circle. The little bit of earth grew and grew."
+        },
+        {
+          "es": "Se volvió una gran isla en el agua: la tierra donde vivimos hoy.",
+          "en": "It became a great island in the water: the land we live on today."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla_tortuga",
+          "x": 960,
+          "s": 1,
+          "hasta": 1.2,
+          "props": {
+            "tierra": 0.1
+          }
+        },
+        {
+          "tipo": "isla_tortuga",
+          "x": 960,
+          "s": 1,
+          "en": 1.2,
+          "hasta": 2.3,
+          "props": {
+            "tierra": 0.45
+          }
+        },
+        {
+          "tipo": "isla_tortuga",
+          "x": 960,
+          "s": 1.05,
+          "en": 2.3,
+          "hasta": 3,
+          "props": {
+            "tierra": 0.8,
+            "arboles": true
+          }
+        },
+        {
+          "tipo": "isla_tortuga",
+          "x": 960,
+          "s": 1.1,
+          "en": 3,
+          "props": {
+            "tierra": 1,
+            "arboles": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "nanabozho",
+          "como": "nanabozho",
+          "x": 700,
+          "y": 610,
+          "escala": 0.75,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.2,
+              "hace": "baja"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "nutria",
+          "como": "nutria",
+          "x": 1200,
+          "y": 600,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "salta"
+            },
+            {
+              "en": 2.6,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "vison",
+          "como": "vison",
+          "x": 1360,
+          "y": 612,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.15,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "salta"
+            },
+            {
+              "en": 2.8,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "colimbo",
+          "como": "colimbo",
+          "x": 1700,
+          "y": 806,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "niebla",
+          "dur": 0.6
+        },
+        {
+          "en": 1.3,
+          "tipo": "polvo",
+          "x": 960,
+          "y": 620,
+          "dur": 0.6
+        },
+        {
+          "en": 2.4,
+          "tipo": "polvo",
+          "x": 960,
+          "y": 600,
+          "dur": 0.6
+        }
+      ]
+    },
+    {
+      "id": "isla",
+      "fondo": "lago",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por eso los anishinaabe, igual que los haudenosaunee, llaman a esta tierra Isla Tortuga.",
+          "en": "That is why the Anishinaabe, like the Haudenosaunee, call this land Turtle Island."
+        },
+        {
+          "es": "Dos naciones, dos historias, y en las dos, una valiente Rata Almizclera.",
+          "en": "Two nations, two stories, and in both, a brave little Muskrat."
+        },
+        {
+          "es": "Cada vez que se cuenta la historia, se honra a Wazhashk.",
+          "en": "Every time the story is told, Wazhashk is honored."
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "anishinaabe_mujer",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "senala",
+              "a": 1400
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "anishinaabe",
+          "x": 920,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "rata",
+          "como": "rata_almizclera",
+          "x": 1350,
+          "escala": 1.3,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "POR ESO SE LLAMA ISLA TORTUGA",
+            "en": "WHY IT IS CALLED TURTLE ISLAND"
+          },
+          "x": 960,
+          "y": 210,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "lago",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "¿Qué versión te gusta más, la haudenosaunee o la anishinaabe? Cuéntanos en los comentarios.",
+          "en": "Which telling do you like more, the Haudenosaunee one or the Anishinaabe one? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez viajamos al oeste, a la costa del Pacífico, donde el mundo todavía está oscuro.",
+          "en": "Next time, we travel west, to the Pacific coast, where the world is still dark."
+        },
+        {
+          "es": "Allí, un Cuervo astuto tiene un plan. Es El Cuervo roba la luz.",
+          "en": "There, a clever Raven has a plan. It is Raven Steals the Light."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "abuelo",
+          "como": "anciano_nativo",
+          "x": 700,
+          "rotulo": "",
+          "props": {
+            "tocado": "cintaTejida"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "anishinaabe",
+          "x": 1200,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "cuervo",
+          "como": "cuervo_negro",
+          "x": 1900,
+          "y": 280,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "vuela",
+              "a": [
+                1500,
+                330
+              ],
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "nieve",
+          "dur": 1
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Todos se rieron del animal más chico",
+        "en": "Everyone laughed at the smallest animal"
+      },
+      "escena": "rata",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "La historia anishinaabe de Isla Tortuga",
+        "en": "The Anishinaabe story of Turtle Island"
+      },
+      "escena": "tortuga",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Nadie llegaba al fondo",
+        "en": "No one could reach the bottom"
+      },
+      "escena": "buceo",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    }
+  ]
+}

@@ -1,0 +1,1008 @@
+{
+  "id": "aztecas-03-el-sol-de-jaguar",
+  "serie": "aztecas",
+  "numero": "03",
+  "titulo": {
+    "es": "El Sol de Jaguar",
+    "en": "The Jaguar Sun"
+  },
+  "tituloGriego": "THE JAGUAR SUN",
+  "miniatura": {
+    "heroe": "tezcatlipoca",
+    "rival": "quinametzin"
+  },
+  "siguiente": {
+    "es": "El Sol de Viento",
+    "en": "The Wind Sun"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "valle",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Tezcatlipoca y Quetzalcóatl partieron a un monstruo en dos, y con él hicieron la tierra y el cielo.",
+          "en": "Last time, Tezcatlipoca and Quetzalcoatl split a monster in two, and made the earth and the sky from her."
+        },
+        {
+          "es": "Pero el cielo solo tenía medio sol. El mundo estaba casi a oscuras.",
+          "en": "But the sky had only half a sun. The world was almost dark."
+        },
+        {
+          "es": "Hacía falta un sol de verdad. Y alguien tenía que serlo.",
+          "en": "A real sun was needed. And someone had to become it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 1400,
+          "y": 270,
+          "s": 0.8,
+          "props": {
+            "medio": true,
+            "luz": 0.3
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "negro",
+          "como": "tezcatlipoca",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 1050,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "asiente"
+            },
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 1400
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "soles",
+      "fondo": "omeyocan",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los mexicas creían que el mundo ya había tenido varios soles, varias épocas, y que cada una terminó en un desastre.",
+          "en": "The Mexica believed the world had already had several suns, several ages, and that each one ended in disaster."
+        },
+        {
+          "es": "Un libro escrito en náhuatl en 1558, la Leyenda de los Soles, le da un nombre a cada época.",
+          "en": "A book written in Nahuatl in 1558, the Legend of the Suns, gives each of those ages a name."
+        },
+        {
+          "es": "Sol de Jaguar, Sol de Viento, Sol de Lluvia de Fuego y Sol de Agua.",
+          "en": "The Jaguar Sun, the Wind Sun, the Sun of Fiery Rain, and the Water Sun."
+        },
+        {
+          "es": "Y nosotros vivimos en el quinto: el Sol de Movimiento.",
+          "en": "And we live under the fifth one: the Sun of Movement."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 420,
+          "y": 360,
+          "s": 0.6,
+          "en": 2,
+          "props": {
+            "luz": 0.3
+          }
+        },
+        {
+          "tipo": "sol_codice",
+          "x": 740,
+          "y": 360,
+          "s": 0.6,
+          "en": 2.25,
+          "props": {
+            "luz": 0.3
+          }
+        },
+        {
+          "tipo": "sol_codice",
+          "x": 1060,
+          "y": 360,
+          "s": 0.6,
+          "en": 2.5,
+          "props": {
+            "luz": 0.3
+          }
+        },
+        {
+          "tipo": "sol_codice",
+          "x": 1380,
+          "y": 360,
+          "s": 0.6,
+          "en": 2.75,
+          "props": {
+            "luz": 0.3
+          }
+        },
+        {
+          "tipo": "sol_codice",
+          "x": 1700,
+          "y": 340,
+          "s": 0.85,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_mexica",
+          "x": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "mexica",
+          "x": 520,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 3.2,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1700,
+          "y": 340,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "LEYENDA DE LOS SOLES · 1558",
+            "en": "LEGEND OF THE SUNS · 1558"
+          },
+          "x": 1250,
+          "y": 600,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "tezca_sol",
+      "fondo": "encinar",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Tezcatlipoca, el dios del espejo humeante, decidió convertirse él mismo en el sol.",
+          "en": "Tezcatlipoca, the god of the smoking mirror, decided to become the sun himself."
+        },
+        {
+          "es": "Subió al cielo y empezó a brillar. Así comenzó la primera época: el Sol de Jaguar.",
+          "en": "He rose into the sky and began to shine. So began the first age: the Jaguar Sun."
+        },
+        {
+          "es": "Los mexicas la llamaban Nahui Océlotl, que quiere decir Cuatro Jaguar.",
+          "en": "The Mexica called it Nahui Ocelotl, which means Four Jaguar."
+        },
+        {
+          "es": "Desde allá arriba, su luz caía sobre un mundo nuevo, cubierto de bosques.",
+          "en": "From up there, his light fell on a new world, covered in forests."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 1000,
+          "y": 280,
+          "s": 1.3,
+          "en": 1.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "negro",
+          "como": "tezcatlipoca",
+          "x": 900,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.7,
+              "hace": "vuela",
+              "a": [
+                1000,
+                520
+              ],
+              "dur": 0.7
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.6,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 340,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "mira",
+              "a": 1000
+            },
+            {
+              "en": 2.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.2,
+              "hace": "camina",
+              "a": 520
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 300,
+          "dur": 1
+        },
+        {
+          "en": 1.3,
+          "tipo": "aclarar",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "NAHUI OCÉLOTL",
+            "en": "NAHUI OCELOTL"
+          },
+          "x": 1500,
+          "y": 520,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "gigantes",
+      "fondo": "encinar",
+      "camara": {
+        "de": 0,
+        "a": 320,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En ese primer mundo vivían gigantes. Eran tan fuertes que arrancaban los árboles con las manos.",
+          "en": "Giants lived in that first world. They were so strong that they could pull up trees with their bare hands."
+        },
+        {
+          "es": "Un libro antiguo dice que no comían otra cosa que bellotas.",
+          "en": "One old book says they ate nothing but acorns."
+        },
+        {
+          "es": "Ese sol duró seiscientos setenta y seis años: trece veces cincuenta y dos.",
+          "en": "That sun lasted six hundred and seventy-six years: thirteen times fifty-two."
+        },
+        {
+          "es": "Para los mexicas, cincuenta y dos años eran como un siglo para nosotros.",
+          "en": "For the Mexica, fifty-two years was like a century is for us."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "encino",
+          "x": 1000,
+          "s": 0.9,
+          "hasta": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "g1",
+          "como": "quinametzin",
+          "x": 760,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 880,
+              "dur": 0.4
+            },
+            {
+              "en": 0.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.3,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "como": "quinametzin",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "pelo": "#4A3020"
+          },
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "como": "quinametzin",
+          "x": 1900,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "mujer": true
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1780
+            },
+            {
+              "en": 3,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "polvo",
+          "x": 1000,
+          "y": 760,
+          "dur": 0.6
+        },
+        {
+          "en": 0.65,
+          "tipo": "temblor",
+          "dur": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.1,
+          "texto": {
+            "es": "676 = 13 × 52",
+            "en": "676 = 13 × 52"
+          },
+          "x": 1300,
+          "y": 230,
+          "hasta": 3.9
+        }
+      ]
+    },
+    {
+      "id": "golpe",
+      "fondo": "lago_texcoco",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero al final, Quetzalcóatl tomó un gran bastón y golpeó al sol.",
+          "en": "But in the end, Quetzalcoatl took a great staff and struck the sun."
+        },
+        {
+          "es": "Tezcatlipoca cayó del cielo, hasta el fondo del agua.",
+          "en": "Tezcatlipoca fell out of the sky, all the way down into the water."
+        },
+        {
+          "es": "El sol se apagó, y el mundo de los gigantes se quedó a oscuras.",
+          "en": "The sun went out, and the world of the giants was left in darkness."
+        },
+        {
+          "es": "¿Por qué lo hizo? El libro antiguo no lo dice. ¿Tú qué crees? Cuéntanos en los comentarios.",
+          "en": "Why did he do it? The old book does not say. What do you think? Tell us in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 1100,
+          "y": 280,
+          "s": 1.2,
+          "hasta": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 520,
+          "escala": 0.8,
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                760,
+                600
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 0.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 1100
+            }
+          ]
+        },
+        {
+          "id": "negro",
+          "como": "tezcatlipoca",
+          "x": 1100,
+          "y": 560,
+          "escala": 0.75,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "tiembla",
+              "dur": 0.2
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1200,
+                900
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 1.6,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.7,
+          "tipo": "destello",
+          "x": 1000,
+          "y": 360
+        },
+        {
+          "en": 1.6,
+          "tipo": "destello",
+          "x": 1200,
+          "y": 760
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "jaguar",
+      "fondo": "encinar",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Del agua salió convertido en un jaguar enorme.",
+          "en": "He came out of the water as a huge jaguar."
+        },
+        {
+          "es": "Y los jaguares cazaron a los gigantes, hasta que no quedó ninguno.",
+          "en": "And the jaguars hunted the giants, until none were left."
+        },
+        {
+          "es": "La Leyenda de los Soles lo dice en pocas palabras: en ese sol, a la gente se la comieron los jaguares.",
+          "en": "The Legend of the Suns says it in a few words: under that sun, the people were eaten by jaguars."
+        },
+        {
+          "es": "Así terminó el primer sol.",
+          "en": "That is how the first sun came to an end."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "jaguar",
+          "como": "ocelotl",
+          "x": 420,
+          "escala": 1.2,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 1500,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "jaguar2",
+          "como": "ocelotl",
+          "x": 150,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 1.2,
+              "hace": "corre",
+              "a": 1300,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "g1",
+          "como": "quinametzin",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.1,
+              "hace": "corre",
+              "a": 2700,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "como": "quinametzin",
+          "x": 1700,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "pelo": "#4A3020"
+          },
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.2,
+              "hace": "corre",
+              "a": 2900,
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "polvo",
+          "x": 1300,
+          "y": 760,
+          "dur": 0.8
+        },
+        {
+          "en": 2.2,
+          "tipo": "niebla",
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "osa",
+      "fondo": "firmamento",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Tezcatlipoca nunca se fue del todo. Los mexicas decían que todavía se lo puede ver.",
+          "en": "But Tezcatlipoca never fully left. The Mexica said you can still see him."
+        },
+        {
+          "es": "De noche, las estrellas de la Osa Mayor bajan hacia el agua. Decían que es él, Tezcatlipoca convertido en jaguar.",
+          "en": "At night, the stars of the Great Bear sink down toward the water. They said that is him: Tezcatlipoca the jaguar."
+        },
+        {
+          "es": "Los mexicas observaban las estrellas con mucho cuidado, y con ellas llevaban la cuenta del tiempo.",
+          "en": "The Mexica watched the stars with great care, and used them to keep track of time."
+        },
+        {
+          "es": "Mira al norte en una noche clara: ahí está el jaguar.",
+          "en": "Look north on a clear night, and there is the jaguar."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "jaguar_cielo",
+          "como": "ocelotl",
+          "x": 1000,
+          "y": 420,
+          "escala": 0.7,
+          "capa": "fondo",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "vuela",
+              "a": [
+                1350,
+                600
+              ],
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "mexica",
+          "x": 420,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "abuela",
+          "como": "anciana_mexica",
+          "x": 640,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "estrellas",
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "estrellas",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.6,
+          "texto": {
+            "es": "POR ESO LA OSA MAYOR BAJA AL AGUA",
+            "en": "THAT'S WHY THE GREAT BEAR DIPS TO THE WATER"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "encinar",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El primer mundo se había acabado, y el cielo se quedó sin sol.",
+          "en": "The first world was over, and the sky was left without a sun."
+        },
+        {
+          "es": "Si tú pudieras elegir al próximo sol, ¿a quién elegirías? Cuéntanos en los comentarios.",
+          "en": "If you could choose the next sun, who would you pick? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, Quetzalcóatl se convierte en sol, y Tezcatlipoca busca venganza. Es El Sol de Viento.",
+          "en": "Next time, Quetzalcoatl becomes the sun, and Tezcatlipoca wants revenge. It is The Wind Sun."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 760,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "mira",
+              "a": 1200
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.3,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "jaguar",
+          "como": "ocelotl",
+          "x": 1450,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.5,
+              "hace": "habla",
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 760,
+          "y": 420,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El dios que se convirtió en el sol",
+        "en": "The god who made himself the sun"
+      },
+      "escena": "tezca_sol",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Lo tumbaron del cielo de un bastonazo",
+        "en": "Knocked out of the sky with a staff"
+      },
+      "escena": "golpe",
+      "desde": 0,
+      "hasta": 1,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "La Osa Mayor es un jaguar",
+        "en": "The Great Bear is really a jaguar"
+      },
+      "escena": "osa",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 900
+    }
+  ]
+}

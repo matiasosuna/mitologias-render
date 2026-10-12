@@ -1,0 +1,311 @@
+{
+  "id": "short-nordicas-anciana-utgard",
+  "formato": "short",
+  "serie": "nordicas",
+  "numero": "S",
+  "titulo": {
+    "es": "Thor perdió una pelea contra una anciana",
+    "en": "Thor lost a fight to an old woman"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Thor perdió una pelea contra una anciana",
+    "en": "Thor lost a fight to an old woman"
+  },
+  "cierre": {
+    "es": "Mándaselo a la persona más fuerte que conozcas",
+    "en": "Send this to the strongest person you know"
+  },
+  "episodio": "nordicas-09-thor-gigantes",
+  "escenas": [
+    {
+      "id": "cuerno",
+      "fondo": "salon",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "En el castillo de un rey gigante, Thor tuvo que pasar unas pruebas.",
+          "en": "In a giant king's castle, Thor had to pass some tests."
+        },
+        {
+          "es": "Primero, vaciar un cuerno. Bebió y bebió… y apenas bajó.",
+          "en": "First, empty a drinking horn. He drank and drank… it barely went down."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thor",
+          "escala": 1.2,
+          "props": {
+            "objeto": "cuerno"
+          },
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 1150
+            },
+            {
+              "en": 1.05,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            },
+            {
+              "en": 1.65,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "como": "jotun",
+          "mira": "izq",
+          "escala": 1,
+          "rotulo": "UTGARDA-LOKI",
+          "props": {
+            "objeto": null
+          },
+          "x": 1170,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.75,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lucha",
+      "fondo": "salon",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Después, luchar con la vieja nodriza del rey, Elli.",
+          "en": "Next, wrestle the king's old nurse, Elli."
+        },
+        {
+          "es": "La ancianita hizo caer de rodillas al dios del trueno.",
+          "en": "The tiny old woman brought the god of thunder down to one knee."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thor",
+          "escala": 1.2,
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 880,
+              "dur": 0.3
+            },
+            {
+              "en": 1.3,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 1.6,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "elli",
+          "como": "anciana",
+          "mira": "izq",
+          "escala": 1,
+          "rotulo": "ELLI",
+          "props": {
+            "cuerpo": "viejo"
+          },
+          "x": 1060,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1010,
+              "dur": 0.3
+            },
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.75,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verdad",
+      "fondo": "fiordo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "A la mañana siguiente, cuando Thor se iba, el rey le dijo la verdad.",
+          "en": "Next morning, as Thor left, the king told him the truth."
+        },
+        {
+          "es": "La otra punta del cuerno estaba en el mar. Thor hizo bajar el mar.",
+          "en": "The horn's other end was in the sea. Thor drank the sea down."
+        },
+        {
+          "es": "Esa fue la primera marea baja.",
+          "en": "That was the first low tide."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "olas-bajan",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "POR ESO HAY MAREA BAJA",
+            "en": "THAT'S WHY THERE'S LOW TIDE"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ],
+      "actores": [
+        {
+          "id": "thor",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 780,
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "como": "jotun",
+          "mira": "izq",
+          "escala": 1,
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.1,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vejez",
+      "fondo": "jotunheim",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "¿Y la anciana? Era la Vejez en persona.",
+          "en": "And the old woman? She was Old Age itself."
+        },
+        {
+          "es": "Nadie le gana nunca. Pero Thor estuvo cerca.",
+          "en": "No one ever beats her. But Thor came close."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thor",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.7,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "elli",
+          "como": "anciana",
+          "mira": "izq",
+          "escala": 1,
+          "rotulo": "OLD AGE",
+          "props": {
+            "cuerpo": "viejo"
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.15,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 0.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.3,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "id": "short-griegas-voto-atenas",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "Atenas ganó su nombre por un voto",
+    "en": "Athens got its name by one vote"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Atenas ganó su nombre por un voto",
+    "en": "Athens got its name by one vote"
+  },
+  "cierre": {
+    "es": "Mándaselo a alguien que dice que un voto no importa",
+    "en": "Send this to someone who says one vote doesn't matter"
+  },
+  "episodio": "griegas-10-atenea-poseidon",
+  "escenas": [
+    {
+      "id": "regalos",
+      "fondo": "ciudad",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Una ciudad nueva necesitaba un dios protector, y dos dioses la querían.",
+          "en": "A new city needed a patron god, and two gods wanted it."
+        },
+        {
+          "es": "Poseidón hizo brotar agua. Atenea hizo crecer un olivo.",
+          "en": "Poseidon made a spring of water burst out. Athena made an olive tree grow."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "olivo",
+          "x": 1190,
+          "s": 0.8,
+          "capa": "medio",
+          "en": 1.5,
+          "sube": 200
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.15,
+          "tipo": "olas-suben",
+          "dur": 0.4,
+          "intensidad": 0.1
+        },
+        {
+          "en": 1.15,
+          "tipo": "chispas",
+          "x": 840,
+          "y": 700
+        }
+      ],
+      "actores": [
+        {
+          "id": "poseidon",
+          "escala": 1.2,
+          "x": 780,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.05,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "atenea",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.5,
+              "hace": "mira",
+              "a": 1190
+            },
+            {
+              "en": 1.6,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "votacion",
+      "fondo": "ciudad",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Así que el rey dejó votar al pueblo, hombres y mujeres juntos.",
+          "en": "So the king let the people vote, men and women together."
+        },
+        {
+          "es": "Los hombres votaron por Poseidón. Las mujeres, por Atenea.",
+          "en": "The men voted for Poseidon. The women voted for Athena."
+        },
+        {
+          "es": "Había una mujer más que hombres. Atenea ganó, por un solo voto.",
+          "en": "There was one more woman than men. Athena won, by a single vote."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.3,
+          "texto": {
+            "es": "+1",
+            "en": "+1"
+          },
+          "x": 950,
+          "y": 300
+        }
+      ],
+      "actores": [
+        {
+          "id": "rey",
+          "como": "rey",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "CECROPS",
+          "x": 1160,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "hombre",
+          "escala": 1.2,
+          "x": 780,
+          "pasos": [
+            {
+              "en": 1.05,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            },
+            {
+              "en": 2.5,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mujer",
+          "escala": 1.2,
+          "x": 960,
+          "pasos": [
+            {
+              "en": 1.55,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.6,
+              "hace": "salta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "castigo",
+      "fondo": "ciudad",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Poseidón se enfureció, e inundó la tierra.",
+          "en": "Poseidon was furious, and flooded the land."
+        },
+        {
+          "es": "Para calmarlo, los hombres castigaron a las mujeres.",
+          "en": "To calm him down, the men punished the women."
+        },
+        {
+          "es": "Las mujeres no pudieron votar nunca más.",
+          "en": "Women could never vote again."
+        },
+        {
+          "es": "Le dieron a la ciudad su nombre… y perdieron su voz.",
+          "en": "They gave the city its name… and lost their voice."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "olas-suben",
+          "dur": 0.6,
+          "intensidad": 0.3
+        },
+        {
+          "en": 1,
+          "tipo": "olas-bajan",
+          "dur": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "poseidon",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.45,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.95,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "hombre",
+          "escala": 1.2,
+          "x": 800,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 1.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.2,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mujer",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1060,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "entristece"
+            },
+            {
+              "en": 2.3,
+              "hace": "niega"
+            },
+            {
+              "en": 3.3,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

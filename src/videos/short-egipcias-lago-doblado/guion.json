@@ -1,0 +1,367 @@
+{
+  "id": "short-egipcias-lago-doblado",
+  "formato": "short",
+  "serie": "egipcias",
+  "numero": "S",
+  "titulo": {
+    "es": "Dobló un lago por la mitad",
+    "en": "He folded a lake in half"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Dobló un lago por la mitad",
+    "en": "He folded a lake in half"
+  },
+  "cierre": {
+    "es": "Mándaselo al amigo que no acepta un reemplazo",
+    "en": "Send this to the friend who won't take a replacement"
+  },
+  "episodio": "egipcias-12-keops-y-los-magos",
+  "escenas": [
+    {
+      "id": "aburrido",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "El rey Snefru estaba aburrido. Nada en su palacio lo alegraba.",
+          "en": "King Sneferu was bored. Nothing in his palace made him happy."
+        },
+        {
+          "es": "Su mago le dijo: «Sal a remar al lago, con veinte mujeres a los remos».",
+          "en": "His magician said: 'Go rowing on the lake, with twenty women at the oars.'"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 780,
+          "capa": "medio",
+          "props": {
+            "oro": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "snefru",
+          "como": "faraon",
+          "escala": 1.2,
+          "rotulo": "SNEFERU",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.3,
+              "hace": "entristece"
+            },
+            {
+              "en": 0.6,
+              "hace": "niega"
+            },
+            {
+              "en": 1.7,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "mago",
+          "como": "sacerdote_egipcio",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "DJADJAEMANKH",
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.5,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colgante",
+      "fondo": "nilo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Al rey le encantó. Hasta que la remera principal se detuvo.",
+          "en": "The king loved it. Until the lead rower stopped."
+        },
+        {
+          "es": "Se le había caído al agua su colgante con forma de pez.",
+          "en": "Her fish-shaped pendant had fallen into the water."
+        },
+        {
+          "es": "«Te doy uno nuevo», dijo el rey. «No. Quiero el mío».",
+          "en": "'I'll give you a new one,' said the king. 'No. I want mine.'"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 960,
+          "props": {
+            "vela": false
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.05,
+          "tipo": "olas-suben",
+          "dur": 0.3,
+          "intensidad": 0.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "snefru",
+          "como": "faraon",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 860,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 2.2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "remera",
+          "como": "egipcia",
+          "mira": "izq",
+          "escala": 1.2,
+          "props": {
+            "ropa": "corta"
+          },
+          "x": 1080,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.35,
+              "hace": "baja"
+            },
+            {
+              "en": 0.55,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.75,
+              "hace": "baja"
+            },
+            {
+              "en": 1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.3,
+              "hace": "entristece"
+            },
+            {
+              "en": 2.5,
+              "hace": "niega"
+            },
+            {
+              "en": 2.7,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doblar",
+      "fondo": "nilo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Entonces el mago dijo un hechizo, y dobló el lago por la mitad.",
+          "en": "So the magician spoke a spell, and folded the lake in half."
+        },
+        {
+          "es": "Una mitad del agua quedó encima de la otra.",
+          "en": "One half of the water now lay on top of the other."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "olas-suben",
+          "dur": 0.6,
+          "intensidad": 0.5
+        },
+        {
+          "en": 1.2,
+          "tipo": "olas-bajan",
+          "dur": 0.6,
+          "intensidad": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "mago",
+          "como": "sacerdote_egipcio",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 0.6,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "remera",
+          "como": "egipcia",
+          "mira": "izq",
+          "escala": 1.2,
+          "props": {
+            "ropa": "corta"
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.6,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fondo",
+      "fondo": "nilo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Ahí, en el fondo seco, estaba su colgante.",
+          "en": "There, on the dry bottom, lay her pendant."
+        },
+        {
+          "es": "Se lo devolvió, y volvió a desdoblar el lago.",
+          "en": "He gave it back, and unfolded the lake."
+        },
+        {
+          "es": "El rey recuperó la diversión. La remera, su colgante.",
+          "en": "The king got his fun back. The rower got her pendant."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 900,
+          "y": 780,
+          "dur": 0.5
+        },
+        {
+          "en": 1.4,
+          "tipo": "olas-suben",
+          "dur": 0.4,
+          "intensidad": 0.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "mago",
+          "como": "sacerdote_egipcio",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.7,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.1,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "remera",
+          "como": "egipcia",
+          "mira": "izq",
+          "escala": 1.2,
+          "props": {
+            "ropa": "corta"
+          },
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "snefru",
+          "como": "faraon",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 1180,
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

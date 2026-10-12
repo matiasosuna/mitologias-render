@@ -1,6 +1,7 @@
 // Fondos (lugares) y elementos de escenario para el guion visual.
 import React from 'react';
 import { fondoNorteamericano, elementoNorteamericano } from './fondosNorte';
+import { fondoAzteca, elementoAzteca, CIELO_AZTECA } from './fondosAzteca';
 import { C, Capa, SUELO, Suelo, Monte, Olivo, Templo, Olas, Nube, Luna, Sol, Estrellas, Fuego, suave, Inc, Borde, Personaje, azar, TEMA, TextoRunico, Entrelazado, Jeroglificos, Bloques, miembro, Chispas, type P } from '../comun/vasija';
 
 export type Cielo = 'barro' | 'noche' | 'mar' | 'inframundo';
@@ -13,6 +14,7 @@ export const CIELO: Record<string, Cielo> = { campo: 'barro', olimpo: 'barro', m
   po: 'inframundo', fondo_marino: 'mar', oceano: 'mar', oceano_abierto: 'mar', playa: 'mar', playa_negra: 'mar', aldea_hale: 'barro', loi: 'barro', 'lōʻi': 'barro', valle: 'barro', valle_cascada: 'barro', bosque_lehua: 'barro', volcan: 'inframundo', crater: 'inframundo', haleakala: 'barro', mauna_kea: 'barro', cielo_navegante: 'noche', heiau: 'barro',
   // norteamericanos (tema pintado)
   mundo_cielo: 'barro', agua_primordial: 'mar', aldea_casa_larga: 'barro', pradera: 'barro', costa_noroeste: 'mar', rio: 'barro', montanas: 'barro', lago: 'mar', bajo_agua: 'mar' };
+Object.assign(CIELO, CIELO_AZTECA); // aztecas (tema códice): fondosAzteca.tsx
 
 const Mar: React.FC<{ f: number; y?: number; desde?: number }> = ({ f, y = SUELO - 30, desde = -800 }) => (
   <g>
@@ -26,6 +28,7 @@ export const Fondo: React.FC<{ tipo: string; f: number; astros?: boolean }> = ({
   if (TEMA.nombre === 'papiro') { const n = fondoEgipcio(tipo, f, astros); if (n) return n; }
   if ((TEMA.nombre as string) === 'kapa') { const n = fondoHawaiano(tipo, f, astros); if (n) return n; }
   if ((TEMA.nombre as string) === 'pintado') { const n = fondoNorteamericano(tipo, f, astros); if (n) return n; }
+  if ((TEMA.nombre as string) === 'codice') { const n = fondoAzteca(tipo, f, astros); if (n) return n; }
   switch (tipo) {
     case 'olimpo':
       return (
@@ -290,6 +293,7 @@ export const ElementoSVG: React.FC<{ tipo: string; x: number; y?: number; s?: nu
   const runas = TEMA.nombre === 'runas';
   const kapa = (TEMA.nombre as string) === 'kapa';
   if ((TEMA.nombre as string) === 'pintado') { const n = elementoNorteamericano(tipo, x, y, s, f, props); if (n) return n; }
+  if ((TEMA.nombre as string) === 'codice') { const n = elementoAzteca(tipo, x, y, s, f, props); if (n) return n; }
   if (kapa) {
     switch (tipo) {
       case 'palmera': case 'olivo': case 'arbol': return <Niu x={x} y={yy} s={s} f={f} inclina={(props.inclina as number) ?? 0.2} espejo={props.espejo === true} />;

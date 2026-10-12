@@ -1,0 +1,1041 @@
+{
+  "id": "aztecas-09-la-hoguera-de-teotihuacan",
+  "serie": "aztecas",
+  "numero": "09",
+  "titulo": {
+    "es": "La hoguera de Teotihuacan",
+    "en": "The Bonfire at Teotihuacan"
+  },
+  "tituloGriego": "THE BONFIRE AT TEOTIHUACAN",
+  "miniatura": {
+    "heroe": "nanahuatzin",
+    "rival": "tecciztecatl"
+  },
+  "siguiente": {
+    "es": "El conejo en la luna",
+    "en": "The Rabbit in the Moon"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "teotihuacan_noche",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, la gente recibió el maíz. Pero el mundo seguía a oscuras.",
+          "en": "Last time, the people received maize. But the world was still in darkness."
+        },
+        {
+          "es": "Los dioses se reunieron en Teotihuacan, de noche.",
+          "en": "The gods gathered at Teotihuacan, in the night."
+        },
+        {
+          "es": "El Códice Florentino cuenta que se preguntaron: \"¿Quién va a encargarse de alumbrar el mundo?\"",
+          "en": "The Florentine Codex says they asked: \"Who will take on the task of lighting up the world?\""
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 520,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 640,
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "tezca",
+          "como": "tezcatlipoca",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 960,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "tlaloc",
+          "como": "tlaloc",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "mira",
+              "a": 600
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 2
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "ciudad",
+      "fondo": "teotihuacan",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Teotihuacan es una ciudad real, con pirámides enormes, cerca de la actual Ciudad de México.",
+          "en": "Teotihuacan is a real city with enormous pyramids, near today's Mexico City."
+        },
+        {
+          "es": "Cuando los mexicas la encontraron, ya estaba en ruinas: tenía muchos siglos.",
+          "en": "When the Mexica found it, it was already in ruins, many centuries old."
+        },
+        {
+          "es": "Ellos la llamaron Teotihuacan, que suele traducirse como \"el lugar donde se hacen los dioses\".",
+          "en": "They called it Teotihuacan, often translated as \"the place where gods are made\"."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "hombre",
+          "como": "mexica",
+          "x": 500,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 800,
+              "dur": 1
+            },
+            {
+              "en": 1.6,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "mexica",
+          "x": 300,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "camina",
+              "a": 620,
+              "dur": 1
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "TEOTIHUACAN",
+            "en": "TEOTIHUACAN"
+          },
+          "x": 1300,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "voluntarios",
+      "fondo": "teotihuacan_noche",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Primero habló Tecciztécatl, un dios rico y orgulloso: \"Yo lo haré.\"",
+          "en": "First Tecciztecatl spoke, a rich and proud god: \"I will do it.\""
+        },
+        {
+          "es": "Los dioses preguntaron: \"¿Y quién más?\" Nadie se atrevía.",
+          "en": "The gods asked: \"And who else?\" No one dared."
+        },
+        {
+          "es": "Entonces miraron a Nanahuatzin, el dios humilde, lleno de llagas.",
+          "en": "Then they looked at Nanahuatzin, the humble god covered in sores."
+        },
+        {
+          "es": "Nanahuatzin no tenía nada: ni ropa fina, ni joyas.",
+          "en": "Nanahuatzin had nothing: no fine clothes, no jewels."
+        },
+        {
+          "es": "Él aceptó: \"Está bien. Lo haré.\"",
+          "en": "He accepted: \"Very well. I will do it.\""
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "tecci",
+          "como": "tecciztecatl",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 900,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1400
+            }
+          ]
+        },
+        {
+          "id": "nana",
+          "como": "nanahuatzin",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "asiente"
+            },
+            {
+              "en": 4.3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "ofrendas",
+      "fondo": "teotihuacan_noche",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Durante cuatro días, los dos se prepararon con ayunos y ofrendas.",
+          "en": "For four days, the two of them prepared, fasting and making offerings."
+        },
+        {
+          "es": "Tecciztécatl ofreció plumas de quetzal, bolas de oro y piedras preciosas.",
+          "en": "Tecciztecatl offered quetzal feathers, balls of gold, and precious stones."
+        },
+        {
+          "es": "Nanahuatzin ofreció cañas verdes y ramas de pino. Era todo lo que tenía.",
+          "en": "Nanahuatzin offered green reeds and pine branches. It was all he had."
+        },
+        {
+          "es": "Cada uno ayunó sobre un cerro. Los mexicas decían que esos cerros son las Pirámides del Sol y de la Luna.",
+          "en": "Each fasted on a hill of his own. The Mexica said those hills are the Pyramids of the Sun and the Moon."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "momoztli",
+          "x": 560,
+          "s": 0.9
+        },
+        {
+          "tipo": "momoztli",
+          "x": 1360,
+          "s": 0.9
+        },
+        {
+          "tipo": "tule",
+          "x": 1460,
+          "s": 0.5,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "tecci",
+          "como": "tecciztecatl",
+          "x": 760,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "nana",
+          "como": "nanahuatzin",
+          "x": 1160,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.6,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "humo",
+          "x": 560,
+          "y": 660,
+          "dur": 3
+        },
+        {
+          "en": 0,
+          "tipo": "humo",
+          "x": 1360,
+          "y": 660,
+          "dur": 3
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "hoguera",
+      "fondo": "teotihuacan_noche",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mientras tanto, los dioses encendieron una gran hoguera, que ardió durante cuatro días.",
+          "en": "Meanwhile, the gods lit a great bonfire, which burned for four days."
+        },
+        {
+          "es": "Esa hoguera se llamaba teotexcalli, el fogón de los dioses.",
+          "en": "That bonfire was called the teotexcalli, the hearth of the gods."
+        },
+        {
+          "es": "A medianoche, los dioses se pusieron en fila a los dos lados del fuego.",
+          "en": "At midnight, the gods lined up on both sides of the fire."
+        },
+        {
+          "es": "Le dijeron a Tecciztécatl: \"¡Anda, Tecciztécatl! Entra al fuego.\"",
+          "en": "They said to Tecciztecatl: \"Go on, Tecciztecatl! Into the fire.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hoguera",
+          "x": 1000,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 520,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 620,
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "tlaloc",
+          "como": "tlaloc",
+          "x": 1420,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "camina",
+              "a": 1380,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "tecci",
+          "como": "tecciztecatl",
+          "x": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 420,
+              "dur": 0.5
+            },
+            {
+              "en": 3.5,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 560,
+          "dur": 3
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "duda",
+      "fondo": "teotihuacan_noche",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Tecciztécatl corrió hacia la hoguera. Pero el calor era terrible, y se detuvo.",
+          "en": "Tecciztecatl ran toward the bonfire. But the heat was terrible, and he stopped."
+        },
+        {
+          "es": "Lo intentó cuatro veces. Las cuatro veces tuvo miedo y se echó para atrás.",
+          "en": "He tried four times. All four times, he was afraid and pulled back."
+        },
+        {
+          "es": "Los dioses lo miraban en silencio.",
+          "en": "The gods watched him in silence."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hoguera",
+          "x": 1000,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "tecci",
+          "como": "tecciztecatl",
+          "x": 420,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "corre",
+              "a": 760,
+              "dur": 0.4
+            },
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.8,
+              "hace": "camina",
+              "a": 500,
+              "dur": 0.3
+            },
+            {
+              "en": 1.1,
+              "hace": "corre",
+              "a": 760,
+              "dur": 0.2
+            },
+            {
+              "en": 1.3,
+              "hace": "camina",
+              "a": 480,
+              "dur": 0.2
+            },
+            {
+              "en": 1.5,
+              "hace": "corre",
+              "a": 740,
+              "dur": 0.2
+            },
+            {
+              "en": 1.7,
+              "hace": "camina",
+              "a": 460,
+              "dur": 0.2
+            },
+            {
+              "en": 1.8,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 560,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "salto",
+      "fondo": "teotihuacan_noche",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces los dioses le dijeron a Nanahuatzin: \"Anda, Nanahuatzin. Ahora tú.\"",
+          "en": "Then the gods said to Nanahuatzin: \"Go on, Nanahuatzin. Now you.\""
+        },
+        {
+          "es": "Nanahuatzin cerró los ojos, corrió y se lanzó al fuego sin dudar.",
+          "en": "Nanahuatzin closed his eyes, ran, and leapt into the fire without stopping."
+        },
+        {
+          "es": "Al verlo, Tecciztécatl sintió vergüenza y saltó detrás de él.",
+          "en": "Seeing that, Tecciztecatl felt ashamed, and jumped in after him."
+        },
+        {
+          "es": "¿Quién fue más valiente: el que saltó primero, o el que saltó con miedo? Cuéntanos en los comentarios.",
+          "en": "Who was braver: the one who jumped first, or the one who jumped while afraid? Tell us in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hoguera",
+          "x": 1000,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "nana",
+          "como": "nanahuatzin",
+          "x": 1600,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "asiente"
+            },
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 1060,
+              "dur": 0.4
+            },
+            {
+              "en": 1.4,
+              "hace": "desaparece",
+              "con": "fuego"
+            }
+          ]
+        },
+        {
+          "id": "tecci",
+          "como": "tecciztecatl",
+          "x": 460,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "corre",
+              "a": 940,
+              "dur": 0.4
+            },
+            {
+              "en": 2.4,
+              "hace": "desaparece",
+              "con": "fuego"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.45,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 520,
+          "dur": 1
+        },
+        {
+          "en": 2.4,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "aguila_jaguar",
+      "fondo": "teotihuacan_noche",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Detrás de ellos entraron un águila y un jaguar.",
+          "en": "After them, an eagle and a jaguar went in."
+        },
+        {
+          "es": "El águila se chamuscó: por eso sus plumas son oscuras.",
+          "en": "The eagle was singed: that is why its feathers are dark."
+        },
+        {
+          "es": "El jaguar entró cuando el fuego ya bajaba, y quedó manchado: por eso tiene manchas negras.",
+          "en": "The jaguar went in as the fire was dying down, and got smudged: that is why it has black spots."
+        },
+        {
+          "es": "Desde entonces, los guerreros más valientes de los mexicas se llamaron Águilas y Jaguares.",
+          "en": "Ever since, the bravest Mexica warriors were called Eagles and Jaguars."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hoguera",
+          "x": 1000,
+          "s": 1,
+          "props": {
+            "brasas": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "aguila",
+          "como": "cuauhtli_claro",
+          "x": 520,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "transforma",
+              "en_que": "cuauhtli"
+            },
+            {
+              "en": 1.4,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "jaguar",
+          "como": "ocelotl_liso",
+          "x": 1600,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "camina",
+              "a": 1200,
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "transforma",
+              "en_que": "ocelotl"
+            },
+            {
+              "en": 2.4,
+              "hace": "camina",
+              "a": 1450,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "g1",
+          "como": "guerrero_aguila",
+          "x": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "como": "guerrero_jaguar",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "humo",
+          "x": 900,
+          "y": 700,
+          "dur": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 1200,
+          "y": 700,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.3,
+          "texto": {
+            "es": "POR ESO EL JAGUAR TIENE MANCHAS",
+            "en": "THAT'S WHY THE JAGUAR HAS SPOTS"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "espera",
+      "fondo": "teotihuacan_noche",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dioses se sentaron a esperar. ¿Por dónde iba a salir el sol?",
+          "en": "The gods sat down to wait. Where would the sun come out?"
+        },
+        {
+          "es": "Unos miraron al norte, otros al sur, otros al oeste.",
+          "en": "Some looked north, others south, others west."
+        },
+        {
+          "es": "Miraron a todos lados. Algunos acertaron: Quetzalcóatl y Tezcatlipoca miraron al este.",
+          "en": "They looked in every direction. Some guessed right: Quetzalcoatl and Tezcatlipoca looked east."
+        },
+        {
+          "es": "Y el cielo empezó a ponerse rojo.",
+          "en": "And the sky began to turn red."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "tlaloc",
+          "como": "tlaloc",
+          "x": 400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 100
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 1700
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "tezca",
+          "como": "tezcatlipoca",
+          "x": 1200,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.3,
+              "hace": "mira",
+              "a": 1700
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1800,
+          "y": 600,
+          "dur": 1,
+          "intensidad": 1.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "teotihuacan",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El sol estaba por nacer. Pero algo raro iba a pasar.",
+          "en": "The sun was about to be born. But something strange was about to happen."
+        },
+        {
+          "es": "Si hubieras estado en Teotihuacan aquella noche, ¿te habrías ofrecido? Cuéntanos en los comentarios.",
+          "en": "If you had been at Teotihuacan that night, would you have stepped forward? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez salen dos soles, y un conejo vuela por el cielo. Es El conejo en la luna.",
+          "en": "Next time, two suns rise, and a rabbit flies across the sky. It is The Rabbit in the Moon."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 1500,
+          "y": 420,
+          "s": 0.9,
+          "props": {
+            "medio": true,
+            "luz": 0.8
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "mira",
+              "a": 1500
+            },
+            {
+              "en": 2.3,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 420,
+          "dur": 3
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El dios humilde que saltó al fuego",
+        "en": "The humble god who leapt into the fire"
+      },
+      "escena": "salto",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Cuatro veces tuvo miedo",
+        "en": "He was afraid four times"
+      },
+      "escena": "duda",
+      "desde": 0,
+      "hasta": 1,
+      "foco": 800
+    },
+    {
+      "gancho": {
+        "es": "Por qué el jaguar tiene manchas",
+        "en": "Why the jaguar has spots"
+      },
+      "escena": "aguila_jaguar",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 960
+    }
+  ]
+}

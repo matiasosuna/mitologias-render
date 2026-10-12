@@ -1,0 +1,320 @@
+{
+  "id": "short-egipcias-set-salva-sol",
+  "formato": "short",
+  "serie": "egipcias",
+  "numero": "S",
+  "titulo": {
+    "es": "Cada noche, el villano salva al sol",
+    "en": "Every night, the villain saves the sun"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Cada noche, el villano salva al sol",
+    "en": "Every night, the villain saves the sun"
+  },
+  "cierre": {
+    "es": "Mándaselo al amigo al que todos juzgan mal",
+    "en": "Send this to the friend everyone misjudges"
+  },
+  "episodio": "egipcias-10-viaje-nocturno",
+  "escenas": [
+    {
+      "id": "barca",
+      "fondo": "duat",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Cada noche, el dios sol Ra navega por el inframundo en una barca.",
+          "en": "Every night, the sun god Ra sails through the underworld in a boat."
+        },
+        {
+          "es": "Y cada noche, una serpiente gigante lo ataca: Apep, la serpiente del caos.",
+          "en": "And every night, a giant serpent attacks him: Apep, the snake of chaos."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 920,
+          "props": {
+            "disco": false
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "oscurecer",
+          "dur": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "escala": 1.1,
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "apofis",
+          "mira": "izq",
+          "escala": 0.6,
+          "x": 1200,
+          "pasos": [
+            {
+              "en": 1.05,
+              "hace": "aparece",
+              "con": "sombra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mirada",
+      "fondo": "duat",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "La mirada de Apep es tan fuerte que deja paralizados a los dioses.",
+          "en": "Apep's stare is so strong, it freezes the gods in place."
+        },
+        {
+          "es": "Solo un dios puede mirarlo sin miedo.",
+          "en": "Only one god can look back without fear."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 900,
+          "props": {
+            "disco": false
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "escala": 1.1,
+          "rotulo": "",
+          "x": 780,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "escala": 1.2,
+          "x": 970,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.5,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "apofis",
+          "mira": "izq",
+          "escala": 0.6,
+          "rotulo": "",
+          "x": 1210
+        }
+      ]
+    },
+    {
+      "id": "set",
+      "fondo": "duat",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es Set. Sí, Set, el dios que mató a su propio hermano.",
+          "en": "It is Set. Yes, Set, the god who killed his own brother."
+        },
+        {
+          "es": "Parado en la proa, le clava su lanza a la serpiente.",
+          "en": "Standing at the front of the boat, he drives his spear into the serpent."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 900,
+          "props": {
+            "disco": false
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "destello",
+          "x": 1150,
+          "y": 600,
+          "dur": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "escala": 1.1,
+          "rotulo": "",
+          "x": 780,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "escala": 1.2,
+          "props": {
+            "objeto": "lanza"
+          },
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.6,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "apofis",
+          "mira": "izq",
+          "escala": 0.6,
+          "rotulo": "",
+          "x": 1210,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "amanecer",
+      "fondo": "nilo",
+      "foco": 960,
+      "sinAstros": true,
+      "frases": [
+        {
+          "es": "Apep retrocede, y la barca sigue navegando hacia la mañana.",
+          "en": "Apep falls back, and the boat sails on toward morning."
+        },
+        {
+          "es": "Así que la próxima vez que veas un amanecer, agradécele al malo.",
+          "en": "So the next time you see a sunrise, thank the bad guy."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 1100,
+          "y": 300,
+          "en": 0.4,
+          "sube": 250,
+          "durSube": 1.2
+        },
+        {
+          "tipo": "barca_solar",
+          "x": 960,
+          "props": {
+            "disco": false
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "aclarar",
+          "dur": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "escala": 1.1,
+          "rotulo": "",
+          "x": 820,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "props": {
+            "objeto": "lanza"
+          },
+          "x": 1100,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1029 @@
+{
+  "id": "aztecas-08-el-maiz-del-cerro",
+  "serie": "aztecas",
+  "numero": "08",
+  "titulo": {
+    "es": "El maíz del cerro",
+    "en": "Maize from the Mountain"
+  },
+  "tituloGriego": "MAIZE FROM THE MOUNTAIN",
+  "miniatura": {
+    "heroe": "quetzalcoatl",
+    "rival": "nanahuatzin"
+  },
+  "siguiente": {
+    "es": "La hoguera de Teotihuacan",
+    "en": "The Bonfire at Teotihuacan"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "omeyocan",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Quetzalcóatl trajo los huesos del Mictlan, y los dioses hicieron gente nueva.",
+          "en": "Last time, Quetzalcoatl brought the bones up from Mictlan, and the gods made new people."
+        },
+        {
+          "es": "Pero los dioses se preguntaron: \"¿Y qué van a comer?\"",
+          "en": "But the gods asked each other: \"And what will they eat?\""
+        },
+        {
+          "es": "Así que empezaron a buscar alimento.",
+          "en": "So they began to search for food."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1400
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "mexica",
+          "x": 1000,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "cihua",
+          "como": "cihuacoatl",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "hormiga",
+      "fondo": "valle",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Quetzalcóatl vio a una hormiga roja que cargaba un grano de maíz.",
+          "en": "Then Quetzalcoatl saw a red ant carrying a kernel of maize."
+        },
+        {
+          "es": "\"¿De dónde sacaste eso?\", le preguntó.",
+          "en": "\"Where did you get that?\" he asked."
+        },
+        {
+          "es": "Al principio, la hormiga no quiso decirle.",
+          "en": "At first, the ant refused to tell him."
+        },
+        {
+          "es": "Pero él insistió tanto que al final le dijo: \"Allá, en el Tonacatépetl.\"",
+          "en": "But he kept asking, and at last she said: \"Over there, in Tonacatepetl.\""
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 900
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 2.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "hormiga",
+          "como": "azcatl",
+          "x": 950,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 860,
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "gira"
+            },
+            {
+              "en": 3.3,
+              "hace": "gira"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.6,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 500,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cerro",
+      "fondo": "valle",
+      "camara": {
+        "de": 0,
+        "a": 220,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Tonacatépetl quiere decir Cerro de Nuestro Sustento. Adentro se guardaban el maíz y todas las semillas.",
+          "en": "Tonacatepetl means Mountain of Our Sustenance. Inside it, maize and every kind of seed were kept."
+        },
+        {
+          "es": "Pero el cerro estaba cerrado. Solo una hormiga podía meterse por las rendijas.",
+          "en": "But the mountain was sealed shut. Only an ant could slip in through the cracks."
+        },
+        {
+          "es": "Las hormigas entraban y salían por las rendijas, sacando granos.",
+          "en": "Ants came and went through the cracks, carrying out kernels."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tonacatepetl",
+          "x": 1350,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 520,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "senala"
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 800,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "hormiga",
+          "como": "azcatl",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 1350,
+          "y": 600,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "TONACATÉPETL",
+            "en": "TONACATEPETL"
+          },
+          "x": 1500,
+          "y": 230,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "hormiga_negra",
+      "fondo": "valle",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así que Quetzalcóatl se convirtió en una hormiga negra.",
+          "en": "So Quetzalcoatl turned himself into a black ant."
+        },
+        {
+          "es": "Siguió a la hormiga roja hasta el corazón del cerro.",
+          "en": "He followed the red ant into the heart of the mountain."
+        },
+        {
+          "es": "Tomó unos granos de maíz y los cargó, con mucho esfuerzo, hasta Tamoanchan.",
+          "en": "He took some kernels of maize and carried them, with great effort, all the way back to Tamoanchan."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tonacatepetl",
+          "x": 1450,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "transforma",
+              "en_que": "azcatl_negra"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1200,
+              "dur": 1
+            },
+            {
+              "en": 1.9,
+              "hace": "desaparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "camina",
+              "a": 500,
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "hormiga",
+          "como": "azcatl",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "camina",
+              "a": 1300,
+              "dur": 1
+            },
+            {
+              "en": 1.8,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "humo",
+          "x": 700,
+          "y": 700,
+          "dur": 0.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "tamoanchan",
+      "fondo": "omeyocan",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dioses masticaron el maíz y se lo pusieron en la boca a las personas, como a los bebés.",
+          "en": "The gods chewed the maize and put it in the people's mouths, the way you feed babies."
+        },
+        {
+          "es": "Así la gente se hizo fuerte.",
+          "en": "And so the people grew strong."
+        },
+        {
+          "es": "Tortillas, tamales, atole: todavía hoy, en México, casi todo empieza con maíz.",
+          "en": "Tortillas, tamales, atole: even today in Mexico, almost everything starts with maize."
+        },
+        {
+          "es": "¿Cuál es tu comida favorita hecha de maíz? Cuéntanos en los comentarios.",
+          "en": "What is your favorite food made from maize? Tell us in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "maiz_codice",
+          "x": 1500,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "n1",
+          "como": "mexica",
+          "x": 900,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 1,
+              "hace": "crece",
+              "escala": 1.4
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "como": "mexica_mujer",
+          "x": 1100,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino"
+          },
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.1,
+              "hace": "crece",
+              "escala": 1.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 600,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cargar",
+      "fondo": "valle",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero un poco de maíz no alcanzaba. Hacía falta todo el cerro.",
+          "en": "But a little maize was not enough. They needed the whole mountain."
+        },
+        {
+          "es": "Quetzalcóatl ató el cerro con una cuerda y trató de cargarlo.",
+          "en": "Quetzalcoatl tied a rope around the mountain and tried to carry it."
+        },
+        {
+          "es": "No pudo: era demasiado pesado.",
+          "en": "He could not. It was far too heavy."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tonacatepetl",
+          "x": 1250,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 760,
+          "rotulo": "",
+          "props": {
+            "brazo": [
+              70,
+              20
+            ]
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.6,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "entristece"
+            },
+            {
+              "en": 2.3,
+              "hace": "arrodilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "polvo",
+          "x": 760,
+          "y": 770,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "suertes",
+      "fondo": "milpa",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Oxomoco y Cipactónal, la primera pareja, echaron suertes con granos de maíz.",
+          "en": "Then Oxomoco and Cipactonal, the first couple, cast lots with kernels of maize."
+        },
+        {
+          "es": "Ellos sabían leer el calendario y las señales. Por eso los dioses les preguntaron a ellos.",
+          "en": "They knew how to read the calendar and the signs. That is why the gods asked them."
+        },
+        {
+          "es": "Los granos dijeron: \"Solo Nanahuatzin puede abrir el cerro.\"",
+          "en": "The kernels said: \"Only Nanahuatzin can break the mountain open.\""
+        },
+        {
+          "es": "Nanahuatzin era un dios humilde y enfermo, con la piel llena de llagas.",
+          "en": "Nanahuatzin was a humble, sickly god, his skin covered in sores."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "oxomoco",
+          "como": "oxomoco",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "cipactonal",
+          "como": "cipactonal",
+          "x": 860,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.1,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "nana",
+          "como": "nanahuatzin",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 3.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "chispas",
+          "x": 710,
+          "y": 720,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "rayo",
+      "fondo": "valle",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Llegaron también los tlaloques, los dioses de la lluvia: azules, blancos, amarillos y rojos.",
+          "en": "The tlaloque came too, the gods of rain: blue ones, white ones, yellow ones and red ones."
+        },
+        {
+          "es": "Nanahuatzin golpeó el cerro con un rayo, y el cerro se partió.",
+          "en": "Nanahuatzin struck the mountain with lightning, and it split open."
+        },
+        {
+          "es": "El golpe fue tan fuerte que retumbó en todo el valle.",
+          "en": "The blow was so strong that it echoed across the whole valley."
+        },
+        {
+          "es": "Los tlaloques corrieron y se llevaron las semillas.",
+          "en": "The tlaloque rushed in and carried off the seeds."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tonacatepetl",
+          "x": 1250,
+          "s": 1,
+          "hasta": 1.2
+        },
+        {
+          "tipo": "tonacatepetl",
+          "x": 1250,
+          "s": 1,
+          "en": 1.2,
+          "props": {
+            "abierto": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "nana",
+          "como": "nanahuatzin",
+          "x": 520,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "t1",
+          "como": "tlaloque",
+          "x": 760,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3,
+              "hace": "corre",
+              "a": 1150,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "t2",
+          "como": "tlaloque",
+          "x": 1700,
+          "mira": "izq",
+          "props": {
+            "piel": "#E9E0C8"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3.1,
+              "hace": "corre",
+              "a": 1400,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "t3",
+          "como": "tlaloque",
+          "x": 1900,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "piel": "#E6B12E"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3.2,
+              "hace": "corre",
+              "a": 1550,
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "rayo",
+          "x": 1250
+        },
+        {
+          "en": 1.15,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.2,
+          "tipo": "temblor",
+          "dur": 0.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "colores",
+      "fondo": "milpa",
+      "camara": {
+        "de": 0,
+        "a": 220,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Se llevaron el maíz blanco, el negro, el amarillo y el rojo. Y también frijol, amaranto y chía.",
+          "en": "They took the white maize, the black, the yellow and the red. And beans, amaranth and chia too."
+        },
+        {
+          "es": "Por eso el maíz no es solo amarillo: en México hay maíz blanco, azul, negro y rojo.",
+          "en": "That is why maize is not only yellow: in Mexico there is white, blue, black and red maize."
+        },
+        {
+          "es": "Desde entonces, los tlaloques guardan esas semillas y las devuelven con la lluvia.",
+          "en": "Since then, the tlaloque keep those seeds, and give them back with the rain."
+        },
+        {
+          "es": "Por eso, decían, cuando no llueve no hay cosecha.",
+          "en": "That is why, they said, when there is no rain, there is no harvest."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "maiz_codice",
+          "x": 600,
+          "s": 0.9,
+          "en": 0.2
+        },
+        {
+          "tipo": "maiz_codice",
+          "x": 800,
+          "s": 0.9,
+          "en": 0.4
+        },
+        {
+          "tipo": "maiz_codice",
+          "x": 1000,
+          "s": 0.9,
+          "en": 0.6
+        },
+        {
+          "tipo": "maiz_codice",
+          "x": 1200,
+          "s": 0.9,
+          "en": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "t1",
+          "como": "tlaloque",
+          "x": 400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "t2",
+          "como": "tlaloque",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "piel": "#B8321F"
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "salta"
+            },
+            {
+              "en": 2.6,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.3,
+          "tipo": "lluvia",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.6,
+          "texto": {
+            "es": "POR ESO HAY MAÍZ DE CUATRO COLORES",
+            "en": "THAT'S WHY MAIZE COMES IN FOUR COLORS"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "teotihuacan_noche",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ya había gente, y había maíz. Pero el mundo seguía a oscuras: no había sol.",
+          "en": "Now there were people, and there was maize. But the world was still dark: there was no sun."
+        },
+        {
+          "es": "Los dioses se reunieron en un lugar llamado Teotihuacan.",
+          "en": "The gods gathered at a place called Teotihuacan."
+        },
+        {
+          "es": "¿Quién crees que será tan valiente como para convertirse en el sol? Cuéntanos en los comentarios.",
+          "en": "Who do you think will be brave enough to become the sun? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, dos dioses frente a una gran hoguera. Es La hoguera de Teotihuacan.",
+          "en": "Next time, two gods stand before a great bonfire. It is The Bonfire at Teotihuacan."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 520,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "nana",
+          "como": "nanahuatzin",
+          "x": 1000,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 1400
+            }
+          ]
+        },
+        {
+          "id": "tecci",
+          "como": "tecciztecatl",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 2
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La hormiga que guardaba el secreto del maíz",
+        "en": "The ant who knew where maize was hidden"
+      },
+      "escena": "hormiga",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 760
+    },
+    {
+      "gancho": {
+        "es": "El dios que se convirtió en hormiga",
+        "en": "The god who turned into an ant"
+      },
+      "escena": "hormiga_negra",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Por qué hay maíz de cuatro colores",
+        "en": "Why maize comes in four colors"
+      },
+      "escena": "rayo",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1100
+    }
+  ]
+}

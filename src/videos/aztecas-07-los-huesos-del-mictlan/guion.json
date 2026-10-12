@@ -1,0 +1,1132 @@
+{
+  "id": "aztecas-07-los-huesos-del-mictlan",
+  "serie": "aztecas",
+  "numero": "07",
+  "titulo": {
+    "es": "Los huesos del Mictlan",
+    "en": "The Bones of Mictlan"
+  },
+  "tituloGriego": "THE BONES OF MICTLAN",
+  "miniatura": {
+    "heroe": "quetzalcoatl",
+    "rival": "mictlantecuhtli"
+  },
+  "siguiente": {
+    "es": "El maíz del cerro",
+    "en": "Maize from the Mountain"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "firmamento",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, el cielo se cayó, y los dioses lo levantaron otra vez.",
+          "en": "Last time, the sky fell, and the gods lifted it back up."
+        },
+        {
+          "es": "Pero el mundo estaba vacío. La gente de las épocas anteriores ya no estaba.",
+          "en": "But the world was empty. The people of the earlier ages were gone."
+        },
+        {
+          "es": "Cuatro soles se habían terminado, y con ellos, toda la gente de antes.",
+          "en": "Four suns had ended, and with them, all the people from before."
+        },
+        {
+          "es": "Los dioses se preguntaron: \"¿Quién va a vivir en la tierra?\"",
+          "en": "The gods asked each other: \"Who will live on the earth?\""
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "tezca",
+          "como": "tezcatlipoca",
+          "x": 1000,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "tlaloc",
+          "como": "tlaloc",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "niega"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "plan",
+      "fondo": "omeyocan",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Quetzalcóatl se ofreció a buscar una respuesta.",
+          "en": "Quetzalcoatl offered to find an answer."
+        },
+        {
+          "es": "En el Mictlan, la tierra de los muertos, estaban guardados los huesos de la gente de antes.",
+          "en": "In Mictlan, the land of the dead, the bones of the earlier people were kept."
+        },
+        {
+          "es": "Con esos huesos preciosos se podía hacer gente nueva. Pero había que pedírselos al Señor de los Muertos.",
+          "en": "With those precious bones, new people could be made. But he would have to ask the Lord of the Dead."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "huesos",
+          "x": 1450,
+          "s": 0.9,
+          "en": 1,
+          "props": {
+            "brillo": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 640,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.4,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "chalchi",
+          "como": "chalchiuhtlicue",
+          "x": 1000,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.3,
+              "hace": "mira",
+              "a": 1450
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 680,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "bajada",
+      "fondo": "mictlan",
+      "camara": {
+        "de": 0,
+        "a": 260,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Quetzalcóatl bajó al Mictlan, muy abajo, donde todo era oscuro.",
+          "en": "Quetzalcoatl went down to Mictlan, far below, where everything was dark."
+        },
+        {
+          "es": "Allí lo esperaban Mictlantecuhtli y Mictecacíhuatl, el Señor y la Señora de los Muertos.",
+          "en": "There, Mictlantecuhtli and Mictecacihuatl were waiting for him, the Lord and Lady of the Dead."
+        },
+        {
+          "es": "\"Vengo por los huesos preciosos que tú guardas\", le dijo Quetzalcóatl.",
+          "en": "\"I have come for the precious bones you keep,\" Quetzalcoatl told him."
+        },
+        {
+          "es": "\"¿Para qué los quieres?\", le preguntó el Señor de los Muertos.",
+          "en": "\"What do you want them for?\" asked the Lord of the Dead."
+        },
+        {
+          "es": "\"Los dioses quieren que alguien viva en la tierra\", respondió.",
+          "en": "\"The gods want someone to live on the earth,\" he answered."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "huesos",
+          "x": 1750,
+          "s": 0.8,
+          "props": {
+            "brillo": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 760,
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "mictlan",
+          "como": "mictlantecuhtli",
+          "x": 1200,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "mictecaci",
+          "como": "mictecacihuatl",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 4.3,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "caracol",
+      "fondo": "mictlan",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El Señor de los Muertos le puso una prueba: \"Toca mi caracol, y dale cuatro vueltas a mi círculo de jade.\"",
+          "en": "The Lord of the Dead set him a test: \"Blow my conch shell, and walk four times around my circle of jade.\""
+        },
+        {
+          "es": "Pero era una trampa: el caracol no tenía agujeros. No podía sonar.",
+          "en": "But it was a trick: the shell had no holes. It could not make a sound."
+        },
+        {
+          "es": "Quetzalcóatl sopló y sopló, y no salió ni un ruido.",
+          "en": "Quetzalcoatl blew and blew, and not a sound came out."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "caracol",
+          "x": 960,
+          "y": 600,
+          "s": 1.1,
+          "en": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "mictlan",
+          "como": "mictlantecuhtli",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 960
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.6,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "gusanos",
+      "fondo": "mictlan",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Quetzalcóatl llamó a los gusanos, y los gusanos le hicieron agujeros al caracol.",
+          "en": "So Quetzalcoatl called the worms, and the worms bored holes in the shell."
+        },
+        {
+          "es": "Después llamó a las abejas, que entraron en el caracol y lo hicieron zumbar.",
+          "en": "Then he called the bees, and they flew inside the shell and made it hum."
+        },
+        {
+          "es": "El caracol sonó fuerte en todo el Mictlan.",
+          "en": "The shell sounded loudly through all of Mictlan."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "caracol",
+          "x": 960,
+          "y": 600,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "mictlan",
+          "como": "mictlantecuhtli",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "polvo",
+          "x": 960,
+          "y": 640,
+          "dur": 0.6
+        },
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 560,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 960,
+          "y": 560,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "trampa",
+      "fondo": "mictlan",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El Señor de los Muertos lo dejó llevarse los huesos, pero en secreto les ordenó a sus ayudantes que se los quitaran.",
+          "en": "The Lord of the Dead let him take the bones, but secretly ordered his helpers to take them back."
+        },
+        {
+          "es": "Quetzalcóatl juntó los huesos: de un lado los de hombre, del otro los de mujer, y empezó a correr.",
+          "en": "Quetzalcoatl gathered the bones, men's on one side and women's on the other, and started to run."
+        },
+        {
+          "es": "Los ayudantes cavaron un pozo en su camino.",
+          "en": "The helpers dug a pit in his path."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "huesos",
+          "x": 900,
+          "s": 0.8,
+          "hasta": 1.2
+        },
+        {
+          "tipo": "pozo",
+          "x": 1500,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "mictlan",
+          "como": "mictlantecuhtli",
+          "x": 400,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "asiente"
+            },
+            {
+              "en": 0.6,
+              "hace": "mira",
+              "a": 200
+            },
+            {
+              "en": 0.8,
+              "hace": "habla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 760,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.4,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.6,
+              "hace": "corre",
+              "a": 1250,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "ayudante",
+          "como": "mictecacihuatl",
+          "x": 1800,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.3,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "polvo",
+          "x": 1500,
+          "y": 760,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "pozo",
+      "fondo": "mictlan",
+      "camara": {
+        "de": 0,
+        "a": 60,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "De pronto salieron unas codornices y asustaron a Quetzalcóatl.",
+          "en": "Suddenly some quail burst out and startled Quetzalcoatl."
+        },
+        {
+          "es": "Tropezó, cayó en el pozo, y los huesos se le rompieron en pedazos.",
+          "en": "He tripped and fell into the pit, and the bones broke into pieces."
+        },
+        {
+          "es": "Las codornices los mordisquearon. Por un momento, pareció que todo estaba perdido.",
+          "en": "The quail pecked at them. For a moment, it seemed that all was lost."
+        },
+        {
+          "es": "¿Tú te habrías rendido? Cuéntanos qué habrías hecho en los comentarios.",
+          "en": "Would you have given up? Tell us what you would have done in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pozo",
+          "x": 1000
+        },
+        {
+          "tipo": "huesos",
+          "x": 1000,
+          "y": 800,
+          "s": 0.5,
+          "en": 1.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "corre",
+              "a": 900,
+              "dur": 0.6
+            },
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.2,
+              "hace": "cae"
+            },
+            {
+              "en": 1.3,
+              "hace": "vuela",
+              "a": [
+                1000,
+                830
+              ],
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "z1",
+          "como": "zolin",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 0.5,
+              "hace": "corre",
+              "a": 1150,
+              "dur": 0.4
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1080,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "z2",
+          "como": "zolin",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 2.2,
+              "hace": "camina",
+              "a": 1180,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "z3",
+          "como": "zolin",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 2.4,
+              "hace": "camina",
+              "a": 1320,
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 1.3,
+          "tipo": "polvo",
+          "x": 1000,
+          "y": 780,
+          "dur": 0.6
+        },
+        {
+          "en": 2.8,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "rescate",
+      "fondo": "mictlan",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Quetzalcóatl se levantó, juntó los huesos rotos y salió del Mictlan.",
+          "en": "But Quetzalcoatl got back up, gathered the broken bones, and climbed out of Mictlan."
+        },
+        {
+          "es": "Los huesos estaban rotos, pero no se rindió.",
+          "en": "The bones were broken, but he did not give up."
+        },
+        {
+          "es": "Muchos narradores de hoy dicen que por eso las personas son de distintos tamaños: altas, bajas, grandes y chicas.",
+          "en": "Many storytellers today say that is why people come in different sizes: tall, short, big and small."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "huesos",
+          "x": 900,
+          "s": 0.6,
+          "hasta": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 760,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 0.5,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.8,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "luz",
+          "x": 900,
+          "y": 600,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "molienda",
+      "fondo": "omeyocan",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Llevó los huesos a Tamoanchan, un lugar de los dioses.",
+          "en": "He took the bones to Tamoanchan, a place of the gods."
+        },
+        {
+          "es": "Allí, la diosa Cihuacóatl los molió en un cuenco de jade, como se muele el maíz.",
+          "en": "There, the goddess Cihuacoatl ground them in a bowl of jade, the way maize is ground."
+        },
+        {
+          "es": "Luego Quetzalcóatl y los otros dioses dejaron caer en el cuenco unas gotas de su propia sangre.",
+          "en": "Then Quetzalcoatl and the other gods let a few drops of their own blood fall into the bowl."
+        },
+        {
+          "es": "Y de esa masa nacieron las personas nuevas: los macehualtin, la gente.",
+          "en": "And from that dough, the new people were born: the macehualtin, the people."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cajete",
+          "x": 960,
+          "s": 1,
+          "en": 1,
+          "props": {
+            "brillo": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 520,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 640,
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "cihua",
+          "como": "cihuacoatl",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.6,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "bebe",
+          "como": "mexica",
+          "x": 1000,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.4,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 960,
+          "y": 640,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "merecidos",
+      "fondo": "milpa",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La Leyenda de los Soles une la palabra macehualtin con \"merecer\": los dioses nos merecieron con su sacrificio.",
+          "en": "The Legend of the Suns links the word macehualtin to \"deserving\": the gods earned us with their sacrifice."
+        },
+        {
+          "es": "Por eso, decían los mexicas, la gente tenía una deuda con los dioses, y les hacía ofrendas.",
+          "en": "That is why, the Mexica said, people owed the gods a debt, and made offerings to them."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "momoztli",
+          "x": 1300,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "hombre",
+          "como": "mexica",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 1.3,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mexica_mujer",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "humo",
+          "x": 1300,
+          "y": 640,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "milpa",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ya había gente nueva. Pero tenían hambre: ¿qué iban a comer?",
+          "en": "Now there were new people. But they were hungry. What would they eat?"
+        },
+        {
+          "es": "¿Qué crees que les dieron de comer los dioses? Cuéntanos en los comentarios.",
+          "en": "What do you think the gods gave them to eat? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, una hormiga roja guarda un secreto dentro de una montaña. Es El maíz del cerro.",
+          "en": "Next time, a red ant keeps a secret inside a mountain. It is Maize from the Mountain."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "nino",
+          "como": "mexica",
+          "x": 700,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 1100,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 700
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "hormiga",
+          "como": "azcatl",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "camina",
+              "a": 1350,
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Un caracol sin agujeros en la tierra de los muertos",
+        "en": "A shell with no holes in the land of the dead"
+      },
+      "escena": "caracol",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Por qué la gente es de distintos tamaños",
+        "en": "Why people come in different sizes"
+      },
+      "escena": "pozo",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Hechos de huesos molidos",
+        "en": "Made from ground-up bones"
+      },
+      "escena": "molienda",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 960
+    }
+  ]
+}

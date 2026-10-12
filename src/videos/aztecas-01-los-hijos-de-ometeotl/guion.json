@@ -1,0 +1,1361 @@
+{
+  "id": "aztecas-01-los-hijos-de-ometeotl",
+  "serie": "aztecas",
+  "numero": "01",
+  "titulo": {
+    "es": "Los hijos de Ometeotl",
+    "en": "The Four Sons of Ometeotl"
+  },
+  "tituloGriego": "THE FOUR SONS OF OMETEOTL",
+  "miniatura": {
+    "heroe": "quetzalcoatl",
+    "rival": "tezcatlipoca_joven"
+  },
+  "siguiente": {
+    "es": "El monstruo de la tierra",
+    "en": "The Earth Monster"
+  },
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "tenochtitlan",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hace setecientos años, en un gran lago de México, los mexicas construyeron una ciudad: Tenochtitlan.",
+          "en": "Seven hundred years ago, on a great lake in Mexico, the Mexica people built a city called Tenochtitlan."
+        },
+        {
+          "es": "Hoy solemos llamarlos aztecas. Donde estaba su ciudad, hoy está la Ciudad de México.",
+          "en": "Today we often call them the Aztecs. Mexico City now stands where their city once stood."
+        },
+        {
+          "es": "Pintaban sus historias en libros de piel de venado y papel de corteza, llamados códices.",
+          "en": "They painted their stories in books made of deerskin and bark paper. These books are called codices."
+        },
+        {
+          "es": "Después de la conquista española, sabios nahuas y frailes escribieron lo que recordaban los ancianos.",
+          "en": "After the Spanish conquest, Nahua scholars and Spanish friars wrote down what the elders remembered."
+        },
+        {
+          "es": "Cada libro cuenta el principio del mundo un poco distinto. Esta es una de esas maneras.",
+          "en": "Each book tells the beginning of the world a little differently. This is one of those ways."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "calendario",
+          "x": 1720,
+          "y": 420,
+          "s": 0.55,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "narrador",
+          "como": "anciano_mexica",
+          "x": 640,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2.1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "nino1",
+          "como": "mexica",
+          "x": 1000,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 2.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 600
+            }
+          ]
+        },
+        {
+          "id": "nina1",
+          "como": "mexica_mujer",
+          "x": 1160,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino"
+          },
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "madre",
+          "como": "mexica_mujer",
+          "x": 1360,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1720,
+          "y": 420,
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "TENOCHTITLAN",
+            "en": "TENOCHTITLAN"
+          },
+          "x": 1250,
+          "y": 240,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "pareja",
+      "fondo": "omeyocan",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por encima de todo, en el más alto de los trece cielos, vivía una pareja divina.",
+          "en": "Above everything, in the highest of the thirteen heavens, lived a divine couple."
+        },
+        {
+          "es": "Eran el Señor y la Señora de la Dualidad, Ometecuhtli y Omecíhuatl. Dualidad quiere decir ser dos en uno.",
+          "en": "They were the Lord and Lady of Duality, Ometecuhtli and Omecihuatl. Duality means being two in one."
+        },
+        {
+          "es": "Un libro antiguo, la Historia de los mexicanos por sus pinturas, los llama Señor y Señora de Nuestro Sustento.",
+          "en": "One old book, the History of the Mexicans as Told by Their Paintings, calls them the Lord and Lady of Our Food."
+        },
+        {
+          "es": "Algunos estudiosos los llaman juntos Ometeotl, que quiere decir Dios Dos.",
+          "en": "Some scholars call them together Ometeotl, which means Two God."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "icpalli",
+          "x": 560,
+          "s": 0.9,
+          "capa": "medio"
+        },
+        {
+          "tipo": "icpalli",
+          "x": 1240,
+          "s": 0.9,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ome",
+          "como": "ometecuhtli",
+          "x": 760,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 3.2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "omecihuatl",
+          "como": "omecihuatl",
+          "x": 1120,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.3,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 940,
+          "y": 400,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 940,
+          "y": 380,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "OMEYOCAN",
+            "en": "OMEYOCAN"
+          },
+          "x": 1500,
+          "y": 240,
+          "hasta": 1
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "OMETEOTL",
+            "en": "OMETEOTL"
+          },
+          "x": 1020,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "hijos",
+      "fondo": "omeyocan",
+      "camara": {
+        "de": 0,
+        "a": 360,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La pareja tuvo cuatro hijos. Los cuatro serían dioses muy poderosos.",
+          "en": "The couple had four sons. All four would become mighty gods."
+        },
+        {
+          "es": "El primero fue Tezcatlipoca Rojo, al que también llamaban Camaxtli.",
+          "en": "The first was Red Tezcatlipoca, who was also called Camaxtli."
+        },
+        {
+          "es": "El segundo fue Tezcatlipoca Negro, el más grande y el más temido de los cuatro.",
+          "en": "The second was Black Tezcatlipoca, the greatest and the most feared of the four."
+        },
+        {
+          "es": "Su nombre quiere decir Espejo Humeante. En muchas versiones, su espejo podía ver todo lo que pasaba.",
+          "en": "His name means Smoking Mirror. In many tellings, his mirror could see everything that happened."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "espejo",
+          "x": 1900,
+          "y": 420,
+          "s": 0.75,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "ome",
+          "como": "ometecuhtli",
+          "x": 320,
+          "capa": "fondo",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "omecihuatl",
+          "como": "omecihuatl",
+          "x": 520,
+          "capa": "fondo",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "rojo",
+          "como": "tezcatlipoca_rojo",
+          "x": 1000,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 1.6,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "negro",
+          "como": "tezcatlipoca_joven",
+          "x": 1420,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.6,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "humo",
+          "x": 1900,
+          "y": 380,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "hijos2",
+      "fondo": "omeyocan",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El tercero fue Quetzalcóatl, la Serpiente Emplumada, dios del viento y de la sabiduría.",
+          "en": "The third was Quetzalcoatl, the Feathered Serpent, god of the wind and of wisdom."
+        },
+        {
+          "es": "Su nombre junta dos palabras: quetzal, un pájaro de plumas verdes, y cóatl, serpiente.",
+          "en": "His name joins two words: quetzal, a bird with bright green feathers, and coatl, a snake."
+        },
+        {
+          "es": "El cuarto fue Huitzilopochtli, el Colibrí del Sur. Y nació de una manera muy extraña.",
+          "en": "The fourth was Huitzilopochtli, the Hummingbird of the South. And he was born in a very strange way."
+        },
+        {
+          "es": "Aquel libro antiguo dice que nació sin carne, solo con los huesos. Y así se quedó seiscientos años.",
+          "en": "That old book says he was born with no flesh, only bones. And he stayed that way for six hundred years."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.6,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "como": "serpiente_emplumada",
+          "x": 1180,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "colibri",
+          "como": "huitzitzilin",
+          "x": 1250,
+          "y": 330,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "vuela",
+              "a": [
+                1650,
+                300
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "huitzil",
+          "como": "huitzilopochtli",
+          "x": 1680,
+          "mira": "izq",
+          "props": {
+            "piel": "#E9E0C8",
+            "contorno": true
+          },
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3.3,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 3.6,
+              "hace": "mira",
+              "a": 560
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 560,
+          "y": 420,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "fuego",
+      "fondo": "firmamento",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después de seiscientos años, los cuatro hermanos se reunieron para decidir qué iban a crear.",
+          "en": "After six hundred years, the four brothers met to decide what they would create."
+        },
+        {
+          "es": "Eligieron a Quetzalcóatl y a Huitzilopochtli para hacer el trabajo.",
+          "en": "They chose Quetzalcoatl and Huitzilopochtli to do the work."
+        },
+        {
+          "es": "Lo primero que hicieron fue el fuego.",
+          "en": "The first thing they made was fire."
+        },
+        {
+          "es": "Después hicieron un sol. Pero era solo medio sol, y alumbraba muy poco.",
+          "en": "Then they made a sun. But it was only half a sun, and it gave very little light."
+        },
+        {
+          "es": "Los dioses hicieron el fuego antes que la luz. ¿Tú qué habrías creado primero? Cuéntanos en los comentarios.",
+          "en": "The gods made fire before light. What would you have made first? Tell us in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hoguera",
+          "x": 960,
+          "s": 0.8,
+          "en": 2
+        },
+        {
+          "tipo": "sol_codice",
+          "x": 1500,
+          "y": 300,
+          "s": 1.1,
+          "en": 3,
+          "props": {
+            "medio": true,
+            "luz": 0.35
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "rojo",
+          "como": "tezcatlipoca_rojo",
+          "x": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 420
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 640,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "camina",
+              "a": 700
+            },
+            {
+              "en": 1.3,
+              "hace": "asiente"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "huitzil",
+          "como": "huitzilopochtli",
+          "x": 1260,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "piel": "#E9E0C8",
+            "contorno": true
+          },
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            },
+            {
+              "en": 2.1,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.2,
+              "hace": "mira",
+              "a": 1600
+            }
+          ]
+        },
+        {
+          "id": "negro",
+          "como": "tezcatlipoca_joven",
+          "x": 1560,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "camina",
+              "a": 1500
+            },
+            {
+              "en": 1.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.6,
+              "hace": "niega"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 600,
+          "dur": 1
+        },
+        {
+          "en": 2.1,
+          "tipo": "luz",
+          "x": 960,
+          "y": 560,
+          "dur": 0.8
+        },
+        {
+          "en": 4.3,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 620,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "primeros",
+      "fondo": "milpa",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Luego crearon al primer hombre y a la primera mujer: Oxomoco y Cipactónal.",
+          "en": "Next they made the first man and the first woman: Oxomoco and Cipactonal."
+        },
+        {
+          "es": "A él le mandaron trabajar la tierra. A ella, hilar y tejer.",
+          "en": "They told him to work the land. They told her to spin thread and weave cloth."
+        },
+        {
+          "es": "A ella también le dieron granos de maíz, para curar a los enfermos y para adivinar el futuro.",
+          "en": "They also gave her grains of maize, to heal the sick and to read the future."
+        },
+        {
+          "es": "De esta pareja nacería la gente común. Los mexicas la llamaban macehualtin.",
+          "en": "From this couple, the common people would be born. The Mexica called them macehualtin."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 1500,
+          "y": 260,
+          "s": 0.8,
+          "props": {
+            "medio": true,
+            "luz": 0.35
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "oxomoco",
+          "como": "oxomoco",
+          "x": 640,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "cipactonal",
+          "como": "cipactonal",
+          "x": 1000,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.6,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.8,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "mexica",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 1400
+            }
+          ]
+        },
+        {
+          "id": "nina",
+          "como": "mexica_mujer",
+          "x": 1680,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino"
+          },
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "entra",
+              "a": 1580
+            },
+            {
+              "en": 3.7,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 1040,
+          "y": 520,
+          "dur": 0.8
+        },
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 760,
+          "y": 780,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "dias",
+      "fondo": "omeyocan",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después hicieron los días, y los juntaron en meses de veinte días.",
+          "en": "Then they made the days, and grouped them into months of twenty days each."
+        },
+        {
+          "es": "Dieciocho de esos meses formaban un año de trescientos sesenta días.",
+          "en": "Eighteen of those months made a year of three hundred and sixty days."
+        },
+        {
+          "es": "Así el tiempo tuvo orden, y la gente podría contar los días de sus fiestas.",
+          "en": "That way, time had order, and people could count the days until their festivals."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "calendario",
+          "x": 960,
+          "y": 450,
+          "s": 1.05,
+          "en": 0
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 420,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "huitzil",
+          "como": "huitzilopochtli",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "piel": "#E9E0C8",
+            "contorno": true
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 960,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "estrellas",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "20 DÍAS",
+            "en": "20 DAYS"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "18 × 20 = 360",
+            "en": "18 × 20 = 360"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "mictlan",
+      "fondo": "mictlan",
+      "camara": {
+        "de": 0,
+        "a": 220,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Muy abajo, hicieron el Mictlan, la tierra de los muertos.",
+          "en": "Far below, they made Mictlan, the land of the dead."
+        },
+        {
+          "es": "Y le dieron dos señores: Mictlantecuhtli y Mictecacíhuatl, el Señor y la Señora de los Muertos.",
+          "en": "And they gave it two rulers: Mictlantecuhtli and Mictecacihuatl, the Lord and Lady of the Dead."
+        },
+        {
+          "es": "Los mexicas creían que casi todos los que morían hacían un largo viaje hasta allí.",
+          "en": "The Mexica believed that most people who died made a long journey down there."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "huesos",
+          "x": 1640,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "mictlantecuhtli",
+          "como": "mictlantecuhtli",
+          "x": 820,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1.7,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "mictecacihuatl",
+          "como": "mictecacihuatl",
+          "x": 1180,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.2,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "MICTLAN",
+            "en": "MICTLAN"
+          },
+          "x": 1400,
+          "y": 250,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "agua",
+      "fondo": "aguas_primeras",
+      "camara": {
+        "de": 0,
+        "a": 320,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por último, hicieron los cielos de abajo y una gran agua.",
+          "en": "Last of all, they made the lower heavens, and a great water."
+        },
+        {
+          "es": "En esa agua nadaba una criatura enorme, parecida a un caimán. Se llamaba Cipactli.",
+          "en": "In that water swam a huge creature, a bit like a crocodile. Its name was Cipactli."
+        },
+        {
+          "es": "Con ella, los dioses iban a hacer la tierra. Pero no iba a ser fácil.",
+          "en": "From it, the gods would make the earth. But it would not be easy."
+        },
+        {
+          "es": "También crearon a los dioses del agua: Tláloc, señor de la lluvia, y su esposa Chalchiuhtlicue.",
+          "en": "They also made the gods of water: Tlaloc, lord of the rain, and his wife Chalchiuhtlicue."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 380,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.4,
+              "hace": "mira",
+              "a": 1700
+            }
+          ]
+        },
+        {
+          "id": "cipactli",
+          "como": "cipactli",
+          "x": 1500,
+          "y": 830,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.1,
+              "hace": "nada",
+              "a": 1250,
+              "dur": 1.4
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "tlaloc",
+          "como": "tlaloc",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "chalchiuhtlicue",
+          "como": "chalchiuhtlicue",
+          "x": 1900,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3.6,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 1.2,
+          "tipo": "destello",
+          "x": 1250,
+          "y": 720
+        },
+        {
+          "en": 3.3,
+          "tipo": "lluvia",
+          "dur": 0.7
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "omeyocan",
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ya había fuego, medio sol, gente, días, una tierra de los muertos y un gran mar.",
+          "en": "Now there was fire, half a sun, people, days, a land of the dead and a great sea."
+        },
+        {
+          "es": "Si tuvieras que confiar en uno de los cuatro hermanos para construir un mundo, ¿a cuál elegirías? Cuéntanos.",
+          "en": "If you had to trust one of the four brothers to build a world, which one would you pick? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, dos rivales se unen para partir a un monstruo en dos. Es El monstruo de la tierra.",
+          "en": "Next time, two rivals team up to split a monster in two. It is The Earth Monster."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "rojo",
+          "como": "tezcatlipoca_rojo",
+          "x": 360,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "negro",
+          "como": "tezcatlipoca_joven",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 2.2,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 1120,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.3,
+              "hace": "mira",
+              "a": 700
+            }
+          ]
+        },
+        {
+          "id": "huitzil",
+          "como": "huitzilopochtli",
+          "x": 1460,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "piel": "#E9E0C8",
+            "contorno": true
+          },
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 900,
+          "y": 420,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "estrellas",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El dios que nació solo con huesos",
+        "en": "The god who was born with only bones"
+      },
+      "escena": "hijos2",
+      "desde": 2,
+      "hasta": 3,
+      "foco": 1300
+    },
+    {
+      "gancho": {
+        "es": "Los dioses hicieron medio sol",
+        "en": "The gods made only half a sun"
+      },
+      "escena": "fuego",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 1050
+    },
+    {
+      "gancho": {
+        "es": "El primer hombre y la primera mujer",
+        "en": "The first man and woman, Aztec style"
+      },
+      "escena": "primeros",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 760
+    }
+  ]
+}

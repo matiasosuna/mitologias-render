@@ -1,0 +1,1094 @@
+{
+  "id": "aztecas-02-el-monstruo-de-la-tierra",
+  "serie": "aztecas",
+  "numero": "02",
+  "titulo": {
+    "es": "El monstruo de la tierra",
+    "en": "The Earth Monster"
+  },
+  "tituloGriego": "THE EARTH MONSTER",
+  "miniatura": {
+    "heroe": "tezcatlipoca_joven",
+    "rival": "quetzalcoatl"
+  },
+  "siguiente": {
+    "es": "El Sol de Jaguar",
+    "en": "The Jaguar Sun"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "aguas_primeras",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, los hijos de la pareja divina hicieron el fuego, medio sol, la gente y un gran mar.",
+          "en": "Last time, the sons of the divine couple made fire, half a sun, the first people and a great sea."
+        },
+        {
+          "es": "Pero todavía no había tierra firme. Solo agua, por todas partes.",
+          "en": "But there was still no solid ground. Only water, everywhere."
+        },
+        {
+          "es": "Tezcatlipoca y Quetzalcóatl casi siempre eran rivales. Pero esta vez estaban de acuerdo: el mundo necesitaba tierra.",
+          "en": "Tezcatlipoca and Quetzalcoatl were usually rivals. But this time they agreed: the world needed land."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "negro",
+          "como": "tezcatlipoca_joven",
+          "x": 600,
+          "y": 800,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 1.2,
+              "hace": "niega"
+            },
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 1100
+            },
+            {
+              "en": 2.6,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 1150,
+          "y": 800,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "senala"
+            },
+            {
+              "en": 2.3,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 1.3,
+          "tipo": "niebla",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "monstruo",
+      "fondo": "omeyocan",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un libro antiguo, escrito en francés hacia 1547, habla de Tlaltecuhtli, la Señora de la Tierra.",
+          "en": "An old book, written in French around 1547, tells of Tlaltecuhtli, the Lady of the Earth."
+        },
+        {
+          "es": "Vivía arriba, en los cielos. Era gigantesca y salvaje.",
+          "en": "She lived high up in the heavens. She was gigantic and wild."
+        },
+        {
+          "es": "Tenía ojos y bocas en todas sus coyunturas, y mordía como una fiera.",
+          "en": "She had eyes and mouths on every joint, and she bit like a wild beast."
+        },
+        {
+          "es": "Otros libros la llaman Cipactli, un gran pez parecido a un caimán. Las historias no siempre coinciden.",
+          "en": "Other books call her Cipactli, a great fish like a crocodile. The old stories do not always agree."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "tlal",
+          "como": "tlaltecuhtli",
+          "x": 1250,
+          "escala": 1.15,
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.5,
+              "hace": "habla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "negro",
+          "como": "tezcatlipoca_joven",
+          "x": 260,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "temblor",
+          "dur": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "CIPACTLI",
+            "en": "CIPACTLI"
+          },
+          "x": 1300,
+          "y": 220,
+          "hasta": 3.9
+        }
+      ]
+    },
+    {
+      "id": "bajada",
+      "fondo": "aguas_primeras",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dos dioses la bajaron del cielo hasta la gran agua.",
+          "en": "The two gods brought her down from the sky to the great water."
+        },
+        {
+          "es": "Ella se sacudía y mordía, y el agua temblaba.",
+          "en": "She thrashed and bit, and the water shook."
+        },
+        {
+          "es": "Entonces Tezcatlipoca y Quetzalcóatl se convirtieron en dos serpientes enormes.",
+          "en": "Then Tezcatlipoca and Quetzalcoatl turned themselves into two enormous serpents."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "tlal",
+          "como": "tlaltecuhtli",
+          "x": 1150,
+          "y": 360,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                1150,
+                830
+              ],
+              "dur": 0.9
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "negro",
+          "como": "tezcatlipoca_joven",
+          "x": 380,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "transforma",
+              "en_que": "serpiente_negra"
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 1900,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.3,
+              "hace": "transforma",
+              "en_que": "serpiente_emplumada"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.9,
+          "tipo": "destello",
+          "x": 1150,
+          "y": 740
+        },
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 380,
+          "y": 650,
+          "dur": 0.6
+        },
+        {
+          "en": 2.3,
+          "tipo": "humo",
+          "x": 1820,
+          "y": 650,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "partida",
+      "fondo": "aguas_primeras",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Una serpiente la agarró de la mano derecha y del pie izquierdo. La otra, de la mano izquierda y del pie derecho.",
+          "en": "One serpent grabbed her right hand and left foot. The other grabbed her left hand and right foot."
+        },
+        {
+          "es": "Apretaron y tiraron con tanta fuerza que la partieron en dos.",
+          "en": "They squeezed and pulled so hard that they broke her in two."
+        },
+        {
+          "es": "¿Fue justo partirla para hacer un mundo? Cuéntanos qué piensas en los comentarios.",
+          "en": "Was it fair to break her in two to make a world? Tell us what you think in the comments."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "cabeza",
+          "como": "tlaltecuhtli",
+          "x": 1080,
+          "y": 830,
+          "rotulo": "",
+          "props": {
+            "parte": "cabeza"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 1.4,
+              "hace": "vuela",
+              "a": [
+                1340,
+                560
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "cola",
+          "como": "tlaltecuhtli",
+          "x": 1080,
+          "y": 830,
+          "rotulo": "",
+          "props": {
+            "parte": "cola"
+          },
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "tiembla",
+              "dur": 0.3
+            }
+          ]
+        },
+        {
+          "id": "s_negra",
+          "como": "serpiente_negra",
+          "x": 420,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 520,
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "s_pluma",
+          "como": "serpiente_emplumada",
+          "x": 1900,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "camina",
+              "a": 1700,
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 1.3,
+          "tipo": "destello",
+          "x": 760,
+          "y": 700
+        },
+        {
+          "en": 1.5,
+          "tipo": "niebla",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cielo_tierra",
+      "fondo": "aguas_primeras",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "De una mitad hicieron la tierra. La otra mitad la subieron, y se convirtió en el cielo.",
+          "en": "From one half they made the earth. The other half they lifted up, and it became the sky."
+        },
+        {
+          "es": "Los otros dioses se enojaron mucho. Les pareció injusto lo que le habían hecho.",
+          "en": "The other gods were very upset. What had been done to her seemed unfair."
+        },
+        {
+          "es": "Así que bajaron a consolarla. Y decidieron que de ella saldría todo lo que la gente necesita para vivir.",
+          "en": "So they came down to comfort her. They decided that everything people need to live would come from her."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tepetl",
+          "x": 520,
+          "s": 0.9,
+          "en": 0,
+          "sube": 380,
+          "durSube": 0.8
+        },
+        {
+          "tipo": "tepetl",
+          "x": 1450,
+          "s": 1.1,
+          "en": 0.2,
+          "sube": 420,
+          "durSube": 0.8
+        },
+        {
+          "tipo": "cielo_bajo",
+          "x": 960,
+          "y": 172,
+          "en": 0.4,
+          "sube": 300,
+          "durSube": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "rojo",
+          "como": "tezcatlipoca_rojo",
+          "x": 760,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.3,
+              "hace": "camina",
+              "a": 880
+            }
+          ]
+        },
+        {
+          "id": "huitzil",
+          "como": "huitzilopochtli",
+          "x": 1040,
+          "rotulo": "",
+          "props": {
+            "piel": "#E9E0C8",
+            "contorno": true
+          },
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.6,
+              "hace": "niega"
+            },
+            {
+              "en": 2.4,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "chalchi",
+          "como": "chalchiuhtlicue",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.7,
+              "hace": "entristece"
+            },
+            {
+              "en": 2.5,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 0.3,
+          "tipo": "polvo",
+          "x": 1000,
+          "y": 760,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "regalos",
+      "fondo": "valle",
+      "camara": {
+        "de": 0,
+        "a": 260,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "De su pelo nacieron los árboles, las flores y las hierbas.",
+          "en": "From her hair grew trees, flowers and herbs."
+        },
+        {
+          "es": "De su piel, el pasto y las florecitas. De sus ojos, los pozos y los manantiales.",
+          "en": "From her skin came grass and little flowers. From her eyes came wells and springs."
+        },
+        {
+          "es": "De su boca, los ríos y las cuevas grandes. De su nariz, los valles. De sus hombros, las montañas.",
+          "en": "From her mouth came rivers and great caves. From her nose, valleys. From her shoulders, mountains."
+        },
+        {
+          "es": "Por eso, decían, todo lo que comemos sale de la tierra.",
+          "en": "That is why, they said, everything we eat comes out of the earth."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "ahuehuete",
+          "x": 420,
+          "s": 0.8,
+          "en": 0,
+          "sube": 300,
+          "durSube": 0.5
+        },
+        {
+          "tipo": "encino",
+          "x": 700,
+          "s": 0.75,
+          "en": 0.3,
+          "sube": 300,
+          "durSube": 0.5
+        },
+        {
+          "tipo": "maguey",
+          "x": 1000,
+          "s": 0.7,
+          "en": 1
+        },
+        {
+          "tipo": "tule",
+          "x": 1150,
+          "s": 0.8,
+          "en": 1.4
+        },
+        {
+          "tipo": "chicomoztoc",
+          "x": 1650,
+          "s": 0.55,
+          "en": 2,
+          "capa": "medio"
+        },
+        {
+          "tipo": "tepetl",
+          "x": 2050,
+          "s": 0.9,
+          "en": 2.5,
+          "sube": 360,
+          "durSube": 0.6,
+          "capa": "medio"
+        },
+        {
+          "tipo": "maiz_codice",
+          "x": 880,
+          "s": 0.9,
+          "en": 3
+        },
+        {
+          "tipo": "maiz_codice",
+          "x": 1300,
+          "s": 0.85,
+          "en": 3.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 240,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "tlaloc",
+          "como": "tlaloc",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "lluvia",
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 600,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.3,
+          "texto": {
+            "es": "POR ESO LA TIERRA NOS DA DE COMER",
+            "en": "THAT'S WHY THE EARTH FEEDS US"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "llanto",
+      "fondo": "firmamento",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero el libro antiguo cuenta algo más. De noche, a veces, la tierra lloraba.",
+          "en": "But the old book tells one more thing. Sometimes, at night, the earth would cry."
+        },
+        {
+          "es": "Decían que tenía hambre, y que no daría frutos si no recibía ofrendas.",
+          "en": "People said she was hungry, and that she would not give fruit unless she received offerings."
+        },
+        {
+          "es": "Los mexicas creían que la tierra y el sol necesitaban ofrendas, incluso vidas humanas. Por eso hacían sacrificios.",
+          "en": "The Mexica believed the earth and the sun needed offerings, even human lives. That is why they made sacrifices."
+        },
+        {
+          "es": "Para ellos era como una deuda: la tierra nos alimenta, y había que devolverle algo.",
+          "en": "To them it was like a debt: the earth feeds us, so something had to be given back."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "momoztli",
+          "x": 1150,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "mexica_mujer",
+          "x": 560,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "entristece"
+            },
+            {
+              "en": 1.3,
+              "hace": "mira",
+              "a": 1150
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 900
+            },
+            {
+              "en": 3.4,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_mexica",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "reza"
+            },
+            {
+              "en": 3.2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "mexica",
+          "x": 340,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.5,
+              "hace": "mira",
+              "a": 1150
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1.2
+        },
+        {
+          "en": 0.4,
+          "tipo": "estrellas",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 1150,
+          "y": 640,
+          "dur": 1.2
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "pie",
+      "fondo": "aguas_primeras",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En muchas pinturas antiguas, a Tezcatlipoca le falta un pie. En su lugar lleva un espejo que humea.",
+          "en": "In many old paintings, Tezcatlipoca is missing a foot. In its place there is a smoking mirror."
+        },
+        {
+          "es": "Algunos narradores de hoy dicen que lo perdió en esta pelea: el monstruo se lo llevó de un mordisco.",
+          "en": "Some modern storytellers say he lost it in this fight. The monster took it in one bite."
+        },
+        {
+          "es": "Los libros antiguos no lo cuentan así. Pero el espejo en el pie se convirtió en su marca.",
+          "en": "The old books do not tell it that way. But the mirror for a foot became his mark."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "espejo",
+          "x": 1500,
+          "y": 380,
+          "s": 0.7,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "negro",
+          "como": "tezcatlipoca_joven",
+          "x": 760,
+          "y": 800,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 1.6,
+              "hace": "transforma",
+              "en_que": "tezcatlipoca"
+            },
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 1500
+            }
+          ]
+        },
+        {
+          "id": "tlal",
+          "como": "tlaltecuhtli",
+          "x": 1500,
+          "y": 840,
+          "capa": "fondo",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 2,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 340,
+          "y": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.8,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "humo",
+          "x": 780,
+          "y": 760,
+          "dur": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 1500,
+          "y": 340,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "valle",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ahora había tierra y cielo. Pero en el cielo seguía ese medio sol, débil y pálido.",
+          "en": "Now there was earth and sky. But the sky still held that weak, pale half sun."
+        },
+        {
+          "es": "¿Quién crees que debería ser el sol: el oscuro Tezcatlipoca o Quetzalcóatl? Cuéntanos en los comentarios.",
+          "en": "Who do you think should be the sun: dark Tezcatlipoca or Quetzalcoatl? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, Tezcatlipoca se convierte en sol, y la tierra se llena de gigantes. Es El Sol de Jaguar.",
+          "en": "Next time, Tezcatlipoca becomes the sun, and the earth fills up with giants. It is The Jaguar Sun."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 1450,
+          "y": 270,
+          "s": 0.9,
+          "props": {
+            "medio": true,
+            "luz": 0.3
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "negro",
+          "como": "tezcatlipoca",
+          "x": 640,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "mira",
+              "a": 1450
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 1060,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 640
+            },
+            {
+              "en": 2.5,
+              "hace": "niega"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        },
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 300,
+          "dur": 0.7
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Partieron a un monstruo para hacer el mundo",
+        "en": "They split a monster in two to make the world"
+      },
+      "escena": "partida",
+      "desde": 0,
+      "hasta": 1,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Todo lo que comemos sale de ella",
+        "en": "Everything we eat came from her"
+      },
+      "escena": "regalos",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "El dios con un espejo en lugar de pie",
+        "en": "The god with a mirror for a foot"
+      },
+      "escena": "pie",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 760
+    }
+  ]
+}

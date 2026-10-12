@@ -1,0 +1,1062 @@
+{
+  "id": "aztecas-10-el-conejo-en-la-luna",
+  "serie": "aztecas",
+  "numero": "10",
+  "titulo": {
+    "es": "El conejo en la luna",
+    "en": "The Rabbit in the Moon"
+  },
+  "tituloGriego": "THE RABBIT IN THE MOON",
+  "miniatura": {
+    "heroe": "tecciztecatl",
+    "rival": "xolotl"
+  },
+  "siguiente": {
+    "es": "La batalla de Coatepec",
+    "en": "The Battle at Coatepec"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "teotihuacan",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Nanahuatzin y Tecciztécatl saltaron a la gran hoguera de Teotihuacan.",
+          "en": "Last time, Nanahuatzin and Tecciztecatl leapt into the great bonfire at Teotihuacan."
+        },
+        {
+          "es": "Los dioses esperaban, mirando hacia el este.",
+          "en": "The gods waited, looking toward the east."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hoguera",
+          "x": 600,
+          "s": 0.8,
+          "props": {
+            "brasas": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 1000,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1700
+            }
+          ]
+        },
+        {
+          "id": "tezca",
+          "como": "tezcatlipoca",
+          "x": 1250,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "mira",
+              "a": 1700
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.2
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "dos_soles",
+      "fondo": "teotihuacan",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Primero salió Nanahuatzin, convertido en el sol, rojo y brillante.",
+          "en": "First Nanahuatzin rose, now the sun, red and shining."
+        },
+        {
+          "es": "Y detrás salió Tecciztécatl, brillando igual que él.",
+          "en": "And behind him rose Tecciztecatl, shining just as brightly."
+        },
+        {
+          "es": "Había dos soles iguales. Era demasiada luz.",
+          "en": "There were two identical suns. It was far too much light."
+        },
+        {
+          "es": "Los dioses tuvieron que taparse los ojos.",
+          "en": "The gods had to shield their eyes."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 760,
+          "y": 340,
+          "s": 1.1,
+          "en": 0,
+          "sube": 300,
+          "durSube": 0.8
+        },
+        {
+          "tipo": "sol_codice",
+          "x": 1260,
+          "y": 340,
+          "s": 1.1,
+          "en": 1,
+          "sube": 300,
+          "durSube": 0.8,
+          "props": {
+            "cara": false
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "hombre",
+          "como": "mexica",
+          "x": 400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 1600,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.2,
+              "hace": "niega"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "aclarar",
+          "dur": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 340,
+          "dur": 1,
+          "intensidad": 1.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "conejo",
+      "fondo": "teotihuacan",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dioses dijeron: \"¿Cómo va a ser esto? ¿Dos soles iguales?\"",
+          "en": "The gods said: \"How can this be? Two equal suns?\""
+        },
+        {
+          "es": "Entonces uno de ellos corrió y le lanzó un conejo a la cara a Tecciztécatl.",
+          "en": "Then one of them ran and threw a rabbit right into Tecciztecatl's face."
+        },
+        {
+          "es": "Su luz se apagó un poco, y Tecciztécatl se convirtió en la luna.",
+          "en": "His light dimmed, and Tecciztecatl became the moon."
+        },
+        {
+          "es": "Y el conejo le quedó marcado en la cara.",
+          "en": "And the rabbit stayed marked on his face."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 760,
+          "y": 340,
+          "s": 1.1
+        },
+        {
+          "tipo": "sol_codice",
+          "x": 1260,
+          "y": 340,
+          "s": 1.1,
+          "hasta": 2,
+          "props": {
+            "cara": false
+          }
+        },
+        {
+          "tipo": "luna_codice",
+          "x": 1260,
+          "y": 340,
+          "s": 1.2,
+          "en": 2,
+          "props": {
+            "conejo": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "dios",
+          "como": "tezcatlipoca_rojo",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "conejo",
+          "como": "tochtli",
+          "x": 1050,
+          "y": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "vuela",
+              "a": [
+                1260,
+                330
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 1.9,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.9,
+          "tipo": "destello"
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "POR ESO HAY UN CONEJO EN LA LUNA",
+            "en": "THAT'S WHY THERE IS A RABBIT ON THE MOON"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "mirar",
+      "fondo": "firmamento",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mira la luna llena: sus manchas oscuras forman un conejo.",
+          "en": "Look at the full moon: its dark patches make the shape of a rabbit."
+        },
+        {
+          "es": "En México, mucha gente todavía lo llama el conejo de la luna.",
+          "en": "In Mexico, many people still call it the rabbit in the moon."
+        },
+        {
+          "es": "¿Tú qué ves en la luna: un conejo, o una cara? Cuéntanos en los comentarios.",
+          "en": "What do you see in the moon: a rabbit, or a face? Tell us in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "luna_codice",
+          "x": 1200,
+          "y": 320,
+          "s": 1.6,
+          "props": {
+            "conejo": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "nino",
+          "como": "mexica",
+          "x": 600,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "abuela",
+          "como": "anciana_mexica",
+          "x": 820,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 3
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "quietos",
+      "fondo": "teotihuacan",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero había otro problema: el sol y la luna no se movían.",
+          "en": "But there was another problem: the sun and the moon did not move."
+        },
+        {
+          "es": "Se quedaban quietos en el cielo, sin avanzar.",
+          "en": "They stayed still in the sky, going nowhere."
+        },
+        {
+          "es": "Los dioses se preguntaron: \"¿Cómo vamos a vivir así?\"",
+          "en": "The gods asked: \"How are we going to live like this?\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 900,
+          "y": 330,
+          "s": 1.1
+        },
+        {
+          "tipo": "luna_codice",
+          "x": 1450,
+          "y": 340,
+          "s": 0.9,
+          "props": {
+            "conejo": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 520,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "mira",
+              "a": 900
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "tlaloc",
+          "como": "tlaloc",
+          "x": 1200,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "niega"
+            },
+            {
+              "en": 2.2,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "ofrenda_dioses",
+      "fondo": "teotihuacan",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dioses decidieron dar su propia vida para que el sol se moviera.",
+          "en": "The gods decided to give their own lives so that the sun would move."
+        },
+        {
+          "es": "El Códice Florentino dice que Ehécatl, el viento, fue quien cumplió esa tarea.",
+          "en": "The Florentine Codex says that Ehecatl, the wind, was the one who carried out that task."
+        },
+        {
+          "es": "Los mexicas creían que el sol necesitaba esa fuerza para caminar. Por eso le ofrecían vidas humanas.",
+          "en": "The Mexica believed the sun needed that strength to keep moving. That is why they offered it human lives."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 1000,
+          "y": 330,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 1000,
+          "rotulo": "EHECATL",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "tlaloc",
+          "como": "tlaloc",
+          "x": 500,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "reza"
+            },
+            {
+              "en": 1.4,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "rojo",
+          "como": "tezcatlipoca_rojo",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "reza"
+            },
+            {
+              "en": 1.6,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 340,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "xolotl",
+      "fondo": "milpa",
+      "camara": {
+        "de": 0,
+        "a": 260,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Xólotl era un dios con cabeza de perro, gemelo de Quetzalcóatl en muchas historias.",
+          "en": "Xolotl was a dog-headed god, the twin of Quetzalcoatl in many stories."
+        },
+        {
+          "es": "Pero un dios no quería morir: Xólotl.",
+          "en": "But one god did not want to die: Xolotl."
+        },
+        {
+          "es": "Xólotl lloró y escapó. Se escondió en un campo de maíz y se convirtió en una planta de maíz doble.",
+          "en": "Xolotl wept and ran away. He hid in a maize field and turned into a double maize stalk."
+        },
+        {
+          "es": "Lo encontraron. Escapó otra vez y se convirtió en un maguey doble.",
+          "en": "They found him. He escaped again and turned into a double maguey plant."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "maiz_codice",
+          "x": 900,
+          "s": 1.1,
+          "en": 2.3
+        },
+        {
+          "tipo": "maiz_codice",
+          "x": 960,
+          "s": 1,
+          "en": 2.3
+        },
+        {
+          "tipo": "maguey",
+          "x": 1550,
+          "s": 1.1,
+          "en": 3.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "xolotl",
+          "como": "xolotl",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "entristece",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "corre",
+              "a": 930,
+              "dur": 0.4
+            },
+            {
+              "en": 2.3,
+              "hace": "desaparece",
+              "con": "humo"
+            },
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3.1,
+              "hace": "corre",
+              "a": 1550,
+              "dur": 0.3
+            },
+            {
+              "en": 3.4,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "camina",
+              "a": 800,
+              "dur": 0.6
+            },
+            {
+              "en": 3.1,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "ajolote",
+      "fondo": "lago_texcoco",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Lo encontraron de nuevo. Saltó al agua y se convirtió en un ajolote.",
+          "en": "They found him again. He jumped into the water and became an axolotl."
+        },
+        {
+          "es": "Pero allí también lo atraparon.",
+          "en": "But they caught him there too."
+        },
+        {
+          "es": "Los ajolotes todavía viven en los canales de Xochimilco, en la Ciudad de México.",
+          "en": "Axolotls still live in the canals of Xochimilco, in Mexico City."
+        },
+        {
+          "es": "Hoy están en peligro, y mucha gente trabaja para cuidarlos.",
+          "en": "Today they are endangered, and many people work to protect them."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tule",
+          "x": 1400,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "xolotl",
+          "como": "xolotl",
+          "x": 600,
+          "y": 800,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "corre",
+              "a": 900,
+              "dur": 0.3
+            },
+            {
+              "en": 0.5,
+              "hace": "transforma",
+              "en_que": "axolotl"
+            },
+            {
+              "en": 0.7,
+              "hace": "nada",
+              "a": 1100,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 300,
+          "y": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 760,
+              "dur": 0.5
+            },
+            {
+              "en": 1.4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "humo",
+          "x": 900,
+          "y": 720,
+          "dur": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "viento",
+      "fondo": "teotihuacan",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Ehécatl, el viento, sopló con todas sus fuerzas.",
+          "en": "Then Ehecatl, the wind, blew with all his might."
+        },
+        {
+          "es": "Y el sol empezó a caminar por el cielo.",
+          "en": "And the sun began to move across the sky."
+        },
+        {
+          "es": "La luna empezó a caminar después. Por eso, decían, el sol y la luna salen a horas distintas.",
+          "en": "The moon began to move later. That is why, they said, the sun and moon rise at different times."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "remolino",
+          "x": 700,
+          "s": 0.7,
+          "hasta": 1.8
+        },
+        {
+          "tipo": "sol_codice",
+          "x": 1000,
+          "y": 330,
+          "s": 1.1,
+          "hasta": 1
+        },
+        {
+          "tipo": "sol_codice",
+          "x": 1500,
+          "y": 220,
+          "s": 1.1,
+          "en": 1,
+          "sube": 80,
+          "durSube": 1
+        },
+        {
+          "tipo": "luna_codice",
+          "x": 600,
+          "y": 360,
+          "s": 0.8,
+          "en": 2,
+          "props": {
+            "conejo": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 520,
+          "rotulo": "EHECATL",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "niebla",
+          "dur": 1.2
+        },
+        {
+          "en": 0.4,
+          "tipo": "polvo",
+          "x": 800,
+          "y": 760,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "quinto_sol",
+      "fondo": "tenochtitlan",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así nació el quinto sol, el nuestro: Nahui Ollin, Cuatro Movimiento.",
+          "en": "So the fifth sun was born, our own: Nahui Ollin, Four Movement."
+        },
+        {
+          "es": "La Leyenda de los Soles dice que este sol también terminará algún día, con temblores de tierra.",
+          "en": "The Legend of the Suns says that this sun will also end one day, with earthquakes."
+        },
+        {
+          "es": "Por eso los mexicas cuidaban al sol con fiestas y ofrendas: para que siguiera caminando.",
+          "en": "That is why the Mexica cared for the sun with festivals and offerings: to keep it moving."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_mexica",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mexica_mujer",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.2,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "temblor",
+          "dur": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "NAHUI OLLIN",
+            "en": "NAHUI OLLIN"
+          },
+          "x": 1400,
+          "y": 400,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "teotihuacan",
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ya había sol, luna, gente y maíz. Faltaba una historia: el nacimiento del dios de los mexicas.",
+          "en": "Now there was a sun, a moon, people and maize. One story remained: the birth of the Mexica's own god."
+        },
+        {
+          "es": "De los cinco soles, ¿cuál te pareció la historia más extraña? Cuéntanos en los comentarios.",
+          "en": "Of the five suns, which story seemed the strangest to you? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, en el Cerro de la Serpiente, nace Huitzilopochtli. Es La batalla de Coatepec.",
+          "en": "Next time, on the Hill of the Serpent, Huitzilopochtli is born. It is The Battle at Coatepec."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "tochtli",
+          "como": "tochtli",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "huitzil",
+          "como": "huitzilopochtli",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Por qué hay un conejo en la luna",
+        "en": "Why there is a rabbit on the moon"
+      },
+      "escena": "conejo",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1050
+    },
+    {
+      "gancho": {
+        "es": "El dios que se escondió como ajolote",
+        "en": "The god who hid as an axolotl"
+      },
+      "escena": "xolotl",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "El día que salieron dos soles",
+        "en": "The day two suns rose"
+      },
+      "escena": "dos_soles",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 1000
+    }
+  ]
+}

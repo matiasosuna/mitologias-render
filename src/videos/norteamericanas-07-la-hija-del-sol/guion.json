@@ -1,0 +1,1839 @@
+{
+  "id": "norteamericanas-07-la-hija-del-sol",
+  "serie": "norteamericanas",
+  "numero": "07",
+  "titulo": {
+    "es": "La hija del Sol",
+    "en": "The Daughter of the Sun"
+  },
+  "tituloGriego": "THE DAUGHTER OF THE SUN",
+  "miniatura": {
+    "heroe": "sol_cherokee",
+    "rival": "hija_sol"
+  },
+  "siguiente": {
+    "es": "Nanabozho y el gran diluvio",
+    "en": "Nanabozho and the Great Flood"
+  },
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "montanas",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, la pequeña Araña de Agua trajo el fuego al mundo.",
+          "en": "Last time, the little Water Spider brought fire to the world."
+        },
+        {
+          "es": "Esta historia también es cherokee. Trata del Sol, de la Luna y de la gente de la tierra.",
+          "en": "This story is also Cherokee. It is about the Sun, the Moon, and the people of the earth."
+        },
+        {
+          "es": "En esta historia cherokee, el Sol es una mujer, y la Luna es su hermano.",
+          "en": "In this Cherokee story, the Sun is a woman, and the Moon is her brother."
+        }
+      ],
+      "actores": [
+        {
+          "id": "sol",
+          "como": "sol_cherokee",
+          "x": 760,
+          "pasos": [
+            {
+              "en": 1.9,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.9,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "luna",
+          "como": "luna_cherokee",
+          "x": 1160,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "cherokee",
+          "x": 400,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "salta"
+            },
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 900
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "luz",
+          "x": 960,
+          "y": 300,
+          "dur": 1,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "CHEROKEE",
+            "en": "CHEROKEE"
+          },
+          "x": 1150,
+          "y": 250,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "visita",
+      "fondo": "montanas",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El Sol vivía del otro lado del cielo. Pero su hija vivía justo en el medio del cielo.",
+          "en": "The Sun lived on the far side of the sky. But her daughter lived right in the middle of the sky."
+        },
+        {
+          "es": "Cada día, al cruzar el cielo, el Sol paraba a cenar en la casa de su hija.",
+          "en": "Every day, as the Sun crossed the sky, she stopped at her daughter's house for dinner."
+        },
+        {
+          "es": "Pero al Sol no le gustaba la gente de la tierra. Siempre entrecerraban los ojos al mirarla.",
+          "en": "But the Sun did not like the people on the earth. They always squinted when they looked at her."
+        },
+        {
+          "es": "'Mis nietos son feos', le dijo a su hermano. 'Me ponen caras raras.'",
+          "en": "'My grandchildren are ugly,' she told her brother. 'They screw up their faces at me.'"
+        },
+        {
+          "es": "Pero la Luna dijo: 'A mí me gustan. Siempre me sonríen, porque mi luz es suave.'",
+          "en": "But the Moon said, 'I like them. They always smile at me, because my light is soft.'"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "nube",
+          "x": 700,
+          "y": 640,
+          "s": 1.2
+        },
+        {
+          "tipo": "nube",
+          "x": 1150,
+          "y": 650,
+          "s": 1.4
+        },
+        {
+          "tipo": "nube",
+          "x": 1600,
+          "y": 640,
+          "s": 1.1
+        },
+        {
+          "tipo": "casa_cherokee",
+          "x": 1350,
+          "y": 600,
+          "s": 0.75
+        }
+      ],
+      "actores": [
+        {
+          "id": "hija",
+          "como": "hija_sol",
+          "x": 1180,
+          "mira": "izq",
+          "y": 600,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.6,
+              "hace": "abraza"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "sol",
+          "como": "sol_cherokee",
+          "x": 300,
+          "y": 600,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 960,
+              "dur": 0.6
+            },
+            {
+              "en": 1.5,
+              "hace": "abraza"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 2.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "brilla",
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "luna",
+          "como": "luna_cherokee",
+          "x": 1750,
+          "mira": "izq",
+          "y": 600,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 3.6,
+              "hace": "entra",
+              "a": 1640
+            },
+            {
+              "en": 4.1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4.4,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.1,
+          "tipo": "luz",
+          "x": 900,
+          "y": 420,
+          "dur": 1,
+          "intensidad": 0.5
+        }
+      ]
+    },
+    {
+      "id": "fiebre",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "El Sol se puso celoso. Mandó rayos calientes y ardientes, y una fiebre terrible se esparció entre la gente.",
+          "en": "The Sun grew jealous. She sent down hot, burning rays, and a terrible fever spread among the people."
+        },
+        {
+          "es": "Murió mucha gente. Todos perdieron a alguien que querían.",
+          "en": "Many people died. Everyone lost someone they loved."
+        },
+        {
+          "es": "Entonces la gente fue a pedir ayuda a los Hombrecitos, que sabían una medicina muy poderosa.",
+          "en": "So the people went to the Little Men for help. The Little Men knew powerful medicine."
+        },
+        {
+          "es": "'Hay una sola manera', dijeron. 'Tienen que matar al Sol.'",
+          "en": "'There is only one way,' they said. 'You must kill the Sun.'"
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "cherokee_mujer",
+          "x": 520,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "cherokee",
+          "x": 760,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.1,
+              "hace": "entristece",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "hombrecito1",
+          "como": "cherokee",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "THE LITTLE MEN",
+          "props": {
+            "cuerpo": "nino",
+            "tocado": null,
+            "capa": "#4E7A3A"
+          },
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "hombrecito2",
+          "como": "cherokee",
+          "x": 1460,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "tocado": null,
+            "capa": "#2F5D8A"
+          },
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3.3,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 960,
+          "y": 200,
+          "dur": 1.5,
+          "intensidad": 0.8
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "serpientes",
+      "fondo": "montanas",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los Hombrecitos convirtieron a dos hombres en serpientes: la Víbora Sopladora y la Cabeza de Cobre.",
+          "en": "The Little Men changed two men into snakes: the Spreading Adder and the Copperhead."
+        },
+        {
+          "es": "Las serpientes se escondieron junto a la puerta de la hija, para morder al Sol cuando viniera a cenar.",
+          "en": "The snakes hid by the daughter's door, to bite the Sun when she came for dinner."
+        },
+        {
+          "es": "Pero cuando llegó el Sol, su luz cegó a la Víbora. Solo pudo escupir una baba amarilla.",
+          "en": "But when the Sun came, her bright light blinded the Adder. He could only spit yellow slime."
+        },
+        {
+          "es": "El Sol le dijo que era una cosa asquerosa y entró. La Cabeza de Cobre se fue arrastrándose.",
+          "en": "The Sun called him a nasty thing and walked inside. The Copperhead just crawled away."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "nube",
+          "x": 700,
+          "y": 640,
+          "s": 1.2
+        },
+        {
+          "tipo": "nube",
+          "x": 1150,
+          "y": 650,
+          "s": 1.4
+        },
+        {
+          "tipo": "nube",
+          "x": 1600,
+          "y": 640,
+          "s": 1.1
+        },
+        {
+          "tipo": "casa_cherokee",
+          "x": 1350,
+          "y": 600,
+          "s": 0.75
+        }
+      ],
+      "actores": [
+        {
+          "id": "vibora",
+          "como": "serpiente",
+          "x": 1000,
+          "y": 600,
+          "rotulo": "SPREADING ADDER",
+          "props": {
+            "largo": 280,
+            "grosor": 28,
+            "color": "#A8904A",
+            "manchas": true
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.2,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 2.5,
+              "hace": "calla"
+            }
+          ]
+        },
+        {
+          "id": "cobre",
+          "como": "serpiente",
+          "x": 1700,
+          "y": 600,
+          "mira": "izq",
+          "rotulo": "COPPERHEAD",
+          "props": {
+            "largo": 280,
+            "grosor": 24,
+            "color": "#B0602E"
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3.4,
+              "hace": "nada",
+              "a": 2300,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "sol",
+          "como": "sol_cherokee",
+          "x": 200,
+          "rotulo": "",
+          "y": 600,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 1.8,
+              "hace": "camina",
+              "a": 760,
+              "dur": 0.5
+            },
+            {
+              "en": 2.2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.1,
+              "hace": "senala",
+              "a": 1000
+            },
+            {
+              "en": 3.4,
+              "hace": "camina",
+              "a": 1350,
+              "dur": 0.4
+            },
+            {
+              "en": 3.8,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "destello",
+          "x": 900,
+          "y": 420,
+          "dur": 0.3
+        },
+        {
+          "en": 2.5,
+          "tipo": "humo",
+          "x": 1060,
+          "y": 560,
+          "dur": 0.5
+        }
+      ]
+    },
+    {
+      "id": "cascabel",
+      "fondo": "montanas",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los Hombrecitos hicieron una Cascabel, y el Uktena, una serpiente gigante con cuernos. Seguro que él lo lograría.",
+          "en": "So the Little Men made a Rattlesnake, and the Uktena, a giant snake with horns. Surely he would do it."
+        },
+        {
+          "es": "Pero la Cascabel era rápida y ansiosa. Llegó primero y se enroscó junto a la puerta.",
+          "en": "But the Rattlesnake was quick and eager. He got there first, and coiled up by the door."
+        },
+        {
+          "es": "La hija del Sol abrió la puerta para buscar a su madre. La Cascabel saltó y la mordió.",
+          "en": "The Sun's daughter opened the door to look for her mother. The Rattlesnake sprang, and bit her."
+        },
+        {
+          "es": "Cayó en la puerta, y ya no se levantó.",
+          "en": "She fell in the doorway, and she did not get up again."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "nube",
+          "x": 700,
+          "y": 640,
+          "s": 1.2
+        },
+        {
+          "tipo": "nube",
+          "x": 1150,
+          "y": 650,
+          "s": 1.4
+        },
+        {
+          "tipo": "nube",
+          "x": 1600,
+          "y": 640,
+          "s": 1.1
+        },
+        {
+          "tipo": "casa_cherokee",
+          "x": 1350,
+          "y": 600,
+          "s": 0.75,
+          "hasta": 2
+        },
+        {
+          "tipo": "casa_cherokee",
+          "x": 1350,
+          "y": 600,
+          "s": 0.75,
+          "en": 2,
+          "props": {
+            "abierta": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "uktena",
+          "como": "uktena",
+          "x": 600,
+          "y": 640,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 0.8,
+              "hace": "crece",
+              "escala": 1.1
+            },
+            {
+              "en": 1.3,
+              "hace": "mira",
+              "a": 1300
+            }
+          ]
+        },
+        {
+          "id": "cascabel",
+          "como": "serpiente",
+          "x": 900,
+          "y": 600,
+          "rotulo": "RATTLESNAKE",
+          "props": {
+            "largo": 300,
+            "grosor": 26,
+            "color": "#7A6040",
+            "manchas": true,
+            "erguida": 0.8
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1,
+              "hace": "nada",
+              "a": 1160,
+              "dur": 0.4
+            },
+            {
+              "en": 2.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.45,
+              "hace": "vuela",
+              "a": [
+                1240,
+                600
+              ],
+              "dur": 0.15
+            },
+            {
+              "en": 2.7,
+              "hace": "nada",
+              "a": 900,
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "hija",
+          "como": "hija_sol",
+          "x": 1350,
+          "mira": "izq",
+          "y": 600,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 900
+            },
+            {
+              "en": 2.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.5,
+          "tipo": "destello",
+          "x": 1300,
+          "y": 450,
+          "dur": 0.3
+        },
+        {
+          "en": 3.2,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "id": "oscuridad",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "sinAstros": true,
+      "frases": [
+        {
+          "es": "Cuando el Sol encontró a su hija, entró en la casa y lloró su pena.",
+          "en": "When the Sun found her daughter, she went into the house and grieved."
+        },
+        {
+          "es": "La fiebre paró y la gente dejó de morir. Pero ahora el mundo estaba oscuro todo el tiempo.",
+          "en": "The fever stopped, and people stopped dying. But now the world was dark all the time."
+        },
+        {
+          "es": "Otra vez, la gente fue a pedir ayuda a los Hombrecitos.",
+          "en": "Once again, the people went to the Little Men for help."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_cherokee",
+          "x": 1300,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "sol",
+          "como": "sol_cherokee",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 0.6,
+              "hace": "camina",
+              "a": 1300,
+              "dur": 0.5
+            },
+            {
+              "en": 1.1,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "cherokee",
+          "x": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "entra",
+              "a": 420
+            },
+            {
+              "en": 1.8,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 2.1,
+              "hace": "camina",
+              "a": 650,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "cherokee_mujer",
+          "x": 200,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "entra",
+              "a": 260
+            },
+            {
+              "en": 1.9,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "hombrecito",
+          "como": "cherokee",
+          "x": 900,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "tocado": null,
+            "capa": "#4E7A3A"
+          },
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.6,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 1.5
+        }
+      ]
+    },
+    {
+      "id": "encargo",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los Hombrecitos dijeron: 'Traigan a su hija del País de los Espíritus, en la Tierra Oscura del oeste.'",
+          "en": "The Little Men said, 'Bring back her daughter from the Ghost Country, in the Darkening Land in the west.'"
+        },
+        {
+          "es": "Salieron siete hombres. Cada uno llevaba una varita corta de madera, y llevaban una caja.",
+          "en": "Seven men set out. Each one carried a short rod of sourwood, and they took a box."
+        },
+        {
+          "es": "'Cuando la encuentren, pónganla en la caja', dijeron. 'Y no la abran hasta llegar a casa.'",
+          "en": "'When you find her, put her in the box,' said the Little Men. 'And never open it until you are home.'"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hombrecito",
+          "como": "cherokee",
+          "x": 400,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "tocado": null,
+            "capa": "#4E7A3A"
+          },
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 2.1,
+              "hace": "senala",
+              "a": 1700
+            },
+            {
+              "en": 2.5,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "h1",
+          "como": "cherokee",
+          "x": 800,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "h2",
+          "como": "cherokee",
+          "x": 980,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "caja",
+          "como": "caja_simple",
+          "x": 1160,
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "h3",
+          "como": "cherokee",
+          "x": 1340,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.8,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "h4",
+          "como": "cherokee",
+          "x": 1520,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "LA TIERRA OSCURA",
+            "en": "THE DARKENING LAND"
+          },
+          "x": 1500,
+          "y": 280,
+          "hasta": 1.2
+        }
+      ]
+    },
+    {
+      "id": "baile",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "A los siete días llegaron a la Tierra Oscura. Los espíritus estaban bailando, como en casa.",
+          "en": "After seven days, they reached the Darkening Land. The ghosts were having a dance, just like at home."
+        },
+        {
+          "es": "Cuando la joven pasó bailando, un hombre la tocó con su varita. Después otro, y otro.",
+          "en": "When the young woman danced past, one man touched her with his rod. Then another, and another."
+        },
+        {
+          "es": "Al séptimo toque, cayó fuera de la ronda. La pusieron en la caja y cerraron la tapa.",
+          "en": "At the seventh touch, she fell out of the circle. They put her in the box and closed the lid."
+        }
+      ],
+      "actores": [
+        {
+          "id": "e1",
+          "como": "cherokee_mujer",
+          "x": 700,
+          "rotulo": "",
+          "props": {
+            "piel": "#9AA4B0",
+            "capa": "#5E6A7A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 700,
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "e2",
+          "como": "cherokee",
+          "x": 1000,
+          "rotulo": "",
+          "props": {
+            "piel": "#9AA4B0",
+            "capa": "#5E6A7A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 820,
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 820,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "hija",
+          "como": "hija_sol",
+          "x": 1200,
+          "rotulo": "",
+          "props": {
+            "piel": "#B8A89A"
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "camina",
+              "a": 1350,
+              "dur": 0.8
+            },
+            {
+              "en": 1.4,
+              "hace": "camina",
+              "a": 1200,
+              "dur": 0.5
+            },
+            {
+              "en": 2.1,
+              "hace": "cae"
+            },
+            {
+              "en": 2.6,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "h1",
+          "como": "cherokee",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "caja",
+          "como": "caja_simple",
+          "x": 1360,
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1.5
+        },
+        {
+          "en": 2.1,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 600,
+          "dur": 0.5,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "EL PAÍS DE LOS ESPÍRITUS",
+            "en": "THE GHOST COUNTRY"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1.2
+        }
+      ]
+    },
+    {
+      "id": "caja",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "De vuelta a casa, la joven volvió a la vida. 'Por favor, déjenme salir', dijo.",
+          "en": "On the way home, the girl came back to life. 'Please, let me out,' she said."
+        },
+        {
+          "es": "'Tengo hambre', dijo. Y después: 'Tengo sed.' Los hombres no contestaron.",
+          "en": "'I am hungry,' she said. Then, 'I am thirsty.' The men did not answer."
+        },
+        {
+          "es": "Cerca de casa, rogó: 'Por favor, abran un poquito la tapa. No puedo respirar.'",
+          "en": "Near home, she begged, 'Please, open the lid a little. I cannot breathe.'"
+        },
+        {
+          "es": "Tuvieron miedo de que se estuviera muriendo otra vez. Así que levantaron la tapa, solo un poquito.",
+          "en": "They were afraid she was dying again. So they lifted the lid, just a little."
+        },
+        {
+          "es": "Algo salió aleteando y se metió entre los arbustos. Oyeron un pájaro rojo cantar: 'kwish, kwish, kwish.'",
+          "en": "Something fluttered out, past them, into the bushes. They heard a redbird calling: 'kwish, kwish, kwish.'"
+        }
+      ],
+      "actores": [
+        {
+          "id": "h1",
+          "como": "cherokee",
+          "x": 600,
+          "rotulo": "",
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 800,
+              "dur": 1
+            },
+            {
+              "en": 1.4,
+              "hace": "niega"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 880,
+              "dur": 0.4
+            },
+            {
+              "en": 4.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "caja",
+          "como": "caja_simple",
+          "x": 820,
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1020,
+              "dur": 1
+            },
+            {
+              "en": 0.4,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 2.3,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "caja_abierta",
+          "como": "caja_simple",
+          "x": 1020,
+          "escala": 1.2,
+          "props": {
+            "abierta": true
+          },
+          "pasos": [
+            {
+              "en": 3.6,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "h2",
+          "como": "cherokee",
+          "x": 1240,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1240,
+              "dur": 1
+            },
+            {
+              "en": 2.6,
+              "hace": "mira",
+              "a": 1020
+            },
+            {
+              "en": 3.4,
+              "hace": "senala",
+              "a": 1020
+            },
+            {
+              "en": 4.3,
+              "hace": "mira",
+              "a": 1700
+            }
+          ]
+        },
+        {
+          "id": "cardenal",
+          "como": "cardenal",
+          "x": 1040,
+          "y": 640,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "vuela",
+              "a": [
+                1700,
+                380
+              ],
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4,
+          "tipo": "destello",
+          "x": 1030,
+          "y": 680,
+          "dur": 0.3
+        }
+      ]
+    },
+    {
+      "id": "vacia",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuando llegaron a casa y abrieron la caja, estaba vacía.",
+          "en": "When they got home and opened the box, it was empty."
+        },
+        {
+          "es": "Por eso los cherokee dicen que el Cardenal es la hija del Sol.",
+          "en": "So the Cherokee say the Redbird is the daughter of the Sun."
+        },
+        {
+          "es": "Y dicen que si los hombres no hubieran abierto la caja, podríamos traer de vuelta a los que perdemos. Pero ya no se puede.",
+          "en": "And they say that if the men had kept the box closed, we could bring back the ones we lose. But now we cannot."
+        },
+        {
+          "es": "¿Tú habrías abierto la caja?",
+          "en": "Would you have opened the box?"
+        }
+      ],
+      "actores": [
+        {
+          "id": "caja",
+          "como": "caja_simple",
+          "x": 960,
+          "escala": 1.3,
+          "props": {
+            "abierta": true
+          }
+        },
+        {
+          "id": "h1",
+          "como": "cherokee",
+          "x": 700,
+          "rotulo": "",
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "entristece"
+            },
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 1500
+            }
+          ]
+        },
+        {
+          "id": "h2",
+          "como": "cherokee",
+          "x": 1220,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": "palo"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "cardenal",
+          "como": "cardenal",
+          "x": 1600,
+          "y": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1500,
+                400
+              ],
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "POR ESO LOS MUERTOS NO VUELVEN",
+            "en": "WHY THE DEAD CANNOT COME BACK"
+          },
+          "x": 960,
+          "y": 210,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "lagrimas",
+      "fondo": "montanas",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "El Sol lloró: '¡Mi hija, mi hija!' Sus lágrimas hicieron una gran inundación sobre la tierra.",
+          "en": "The Sun cried, 'My daughter, my daughter!' Her tears made a great flood upon the earth."
+        },
+        {
+          "es": "Entonces la gente mandó a sus mejores bailarines y cantores jóvenes para alegrarla.",
+          "en": "So the people sent their best young dancers and singers to cheer her up."
+        },
+        {
+          "es": "Bailaron y cantaron, pero por mucho tiempo el Sol siguió tapándose la cara.",
+          "en": "They danced and sang, but for a long time, the Sun kept her face covered."
+        },
+        {
+          "es": "Entonces el tamborero cambió de golpe la canción. El Sol levantó la cara, y sonrió.",
+          "en": "Then the drummer suddenly changed the song. The Sun lifted her face, and she smiled."
+        }
+      ],
+      "actores": [
+        {
+          "id": "sol",
+          "como": "sol_cherokee",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.9,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3.5,
+              "hace": "baja"
+            },
+            {
+              "en": 3.6,
+              "hace": "alegra",
+              "dur": 1
+            },
+            {
+              "en": 3.6,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "bailarina",
+          "como": "cherokee_mujer",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.4,
+              "hace": "salta"
+            },
+            {
+              "en": 2,
+              "hace": "salta"
+            },
+            {
+              "en": 3.7,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "bailarin",
+          "como": "cherokee",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.6,
+              "hace": "salta"
+            },
+            {
+              "en": 2.2,
+              "hace": "salta"
+            },
+            {
+              "en": 3.8,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "tamborero",
+          "como": "cherokee",
+          "x": 1020,
+          "rotulo": "",
+          "props": {
+            "objeto": "tambor"
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.2,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "lluvia",
+          "dur": 1
+        },
+        {
+          "en": 0.6,
+          "tipo": "olas-suben",
+          "dur": 0.8
+        },
+        {
+          "en": 1.4,
+          "tipo": "olas-bajan",
+          "dur": 0.6
+        },
+        {
+          "en": 3.6,
+          "tipo": "luz",
+          "x": 1400,
+          "y": 400,
+          "dur": 1.2,
+          "intensidad": 0.7
+        },
+        {
+          "en": 3.6,
+          "tipo": "aclarar",
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "montanas",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Le gustó tanto que se olvidó de su pena, y sonrió.",
+          "en": "She was so pleased, she forgot her grief, and she smiled."
+        },
+        {
+          "es": "¿Alguna vez una canción te alegró cuando estabas triste? Cuéntanos en los comentarios.",
+          "en": "Has a song ever cheered you up when you were sad? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez viajamos al norte, a los Grandes Lagos, donde un gran diluvio cubre el mundo.",
+          "en": "Next time, we travel north to the Great Lakes, where a great flood covers the world."
+        },
+        {
+          "es": "Es Nanabozho y el gran diluvio.",
+          "en": "It is Nanabozho and the Great Flood."
+        }
+      ],
+      "actores": [
+        {
+          "id": "sol",
+          "como": "sol_cherokee",
+          "x": 1200,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra",
+              "dur": 1.5
+            },
+            {
+              "en": 0.2,
+              "hace": "brilla",
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "tamborero",
+          "como": "cherokee",
+          "x": 700,
+          "rotulo": "",
+          "props": {
+            "objeto": "tambor"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "bailarina",
+          "como": "cherokee_mujer",
+          "x": 480,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "salta"
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "cardenal",
+          "como": "cardenal",
+          "x": 300,
+          "y": 350,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1700,
+                300
+              ],
+              "dur": 1.5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Nunca abras la caja",
+        "en": "Never open the box"
+      },
+      "escena": "caja",
+      "desde": 2,
+      "hasta": 4,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Al Sol no le gustaba cómo la mirábamos",
+        "en": "The Sun hated how we looked at her"
+      },
+      "escena": "visita",
+      "desde": 2,
+      "hasta": 4,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "La canción que trajo de vuelta al Sol",
+        "en": "A song that brought back the Sun"
+      },
+      "escena": "lagrimas",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    }
+  ]
+}

@@ -1,0 +1,421 @@
+{
+  "id": "short-egipcias-estornudo",
+  "formato": "short",
+  "serie": "egipcias",
+  "numero": "S",
+  "titulo": {
+    "es": "Los primeros dioses nacieron de un estornudo",
+    "en": "The first gods came from a sneeze"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Los primeros dioses nacieron de un estornudo",
+    "en": "The first gods came from a sneeze"
+  },
+  "cierre": {
+    "es": "La primera mañana del mundo: La primera colina — Mitología egipcia, ep. 1",
+    "en": "The first morning of the world: The First Mound — Egyptian Mythology Ep. 1"
+  },
+  "episodio": "egipcias-01-primer-monticulo",
+  "escenas": [
+    {
+      "id": "atum",
+      "fondo": "nun",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Al principio solo había agua oscura, y un dios solitario: Atum.",
+          "en": "In the beginning, there was only dark water, and one lonely god: Atum."
+        },
+        {
+          "es": "Así que estornudó… y salió Shu, el aire.",
+          "en": "So he sneezed… and out came Shu, the air."
+        },
+        {
+          "es": "Después escupió, y salió Tefnut, la humedad.",
+          "en": "Then he spat, and out came Tefnut, the moisture."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "humo",
+          "x": 1100,
+          "y": 600,
+          "dur": 0.3
+        },
+        {
+          "en": 2.3,
+          "tipo": "olas-suben",
+          "dur": 0.3,
+          "intensidad": 0.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "atum",
+          "escala": 1.2,
+          "x": 960,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.6,
+              "hace": "entristece"
+            },
+            {
+              "en": 1.15,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.35,
+              "hace": "salta"
+            },
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "shu",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1170,
+          "pasos": [
+            {
+              "en": 1.45,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.8,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "tefnut",
+          "escala": 1.2,
+          "x": 760,
+          "pasos": [
+            {
+              "en": 2.35,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.7,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "perdidos",
+      "fondo": "nun",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero los dos hijos se alejaron en el agua oscura, y se perdieron.",
+          "en": "But the two children wandered off into the dark water, and got lost."
+        },
+        {
+          "es": "Atum mandó a su Ojo a buscarlos.",
+          "en": "Atum sent his Eye to find them."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "niebla",
+          "dur": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "atum",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.9,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "shu",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 1180,
+              "dur": 0.5
+            },
+            {
+              "en": 0.75,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "tefnut",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 1110,
+          "pasos": [
+            {
+              "en": 0.25,
+              "hace": "camina",
+              "a": 1220,
+              "dur": 0.5
+            },
+            {
+              "en": 0.8,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "ojo_ra",
+          "escala": 1.2,
+          "x": 1050,
+          "y": 380,
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "vuela",
+              "a": [
+                1250,
+                300
+              ],
+              "dur": 0.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lagrimas",
+      "fondo": "nun",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Cuando el Ojo los trajo de vuelta, Atum lloró de alegría.",
+          "en": "When the Eye brought them home, Atum cried with joy."
+        },
+        {
+          "es": "Sus lágrimas cayeron… y se volvieron los primeros humanos.",
+          "en": "His tears fell… and became the first humans."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 900,
+          "y": 700
+        }
+      ],
+      "actores": [
+        {
+          "id": "atum",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.6,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "shu",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.95,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "ojo_ra",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 1180,
+          "y": 330,
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "egipcio",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 1.15,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "egipcia",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1180,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.6,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nombre",
+      "fondo": "nilo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "En egipcio, «lágrimas» y «gente» suenan casi igual: remyt y remetj.",
+          "en": "In Egyptian, 'tears' and 'people' sound almost the same: remyt and remetj."
+        },
+        {
+          "es": "Así que, según este mito, somos las lágrimas de alegría de un dios.",
+          "en": "So, according to this myth, we are the happy tears of a god."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "REMYT = LÁGRIMAS",
+            "en": "REMYT = TEARS"
+          },
+          "x": 960,
+          "y": 230
+        },
+        {
+          "en": 0.6,
+          "texto": {
+            "es": "REMETJ = GENTE",
+            "en": "REMETJ = PEOPLE"
+          },
+          "x": 960,
+          "y": 310
+        }
+      ],
+      "actores": [
+        {
+          "id": "egipcio",
+          "escala": 1.2,
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "atum",
+          "escala": 1.3,
+          "rotulo": "",
+          "x": 980,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "egipcia",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1160,
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.5,
+              "hace": "abraza"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

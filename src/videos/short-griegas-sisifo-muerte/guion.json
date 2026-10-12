@@ -1,0 +1,377 @@
+{
+  "id": "short-griegas-sisifo-muerte",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "El hombre que encadenó a la Muerte",
+    "en": "The man who chained up Death"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "El hombre que encadenó a la Muerte",
+    "en": "The man who chained up Death"
+  },
+  "cierre": {
+    "es": "Mándaselo al amigo que siempre encuentra la trampa en las reglas",
+    "en": "Send this to the friend who always finds a loophole"
+  },
+  "episodio": "griegas-99-reino-de-hades",
+  "escenas": [
+    {
+      "id": "cadenas",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Zeus mandó a la Muerte a llevarse al rey Sísifo.",
+          "en": "Zeus sent Death to take King Sisyphus away."
+        },
+        {
+          "es": "Pero Sísifo engañó a la Muerte, y la encerró con cadenas.",
+          "en": "But Sisyphus tricked Death, and locked him up in chains."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.6,
+          "tipo": "destello",
+          "x": 1150,
+          "y": 600,
+          "dur": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "muerte",
+          "como": "hombre",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "DEATH",
+          "props": {
+            "ropa": "larga",
+            "capa": "#1A1410",
+            "contorno": true,
+            "barba": false,
+            "piel": "#6E6A72"
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.7,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "sisifo",
+          "como": "rey",
+          "escala": 1.2,
+          "rotulo": "SISYPHUS",
+          "x": 780,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nadie",
+      "fondo": "batalla",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "De repente, nadie en la Tierra podía morir.",
+          "en": "Suddenly, no one on Earth could die."
+        },
+        {
+          "es": "Ni siquiera en la guerra. Eso enfureció a Ares, el dios de la guerra.",
+          "en": "Not even in battle. That made Ares, the god of war, furious."
+        },
+        {
+          "es": "Liberó a la Muerte, y le entregó a Sísifo.",
+          "en": "He set Death free, and handed Sisyphus over."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.25,
+          "tipo": "destello",
+          "x": 780,
+          "y": 550,
+          "dur": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "guerrero",
+          "escala": 1.1,
+          "x": 780,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "cae"
+            },
+            {
+              "en": 0.6,
+              "hace": "levantarse"
+            },
+            {
+              "en": 0.8,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "ares",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1170,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 1.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "muerte",
+          "como": "hombre",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "props": {
+            "ropa": "larga",
+            "capa": "#1A1410",
+            "contorno": true,
+            "barba": false,
+            "piel": "#6E6A72"
+          },
+          "x": 970,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.5,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "truco",
+      "fondo": "inframundo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero Sísifo le había dicho a su esposa: «No me entierres».",
+          "en": "But Sisyphus had told his wife: 'Don't bury me.'"
+        },
+        {
+          "es": "Entre los muertos se quejó: «¡Mi esposa no me enterró! Déjenme castigarla».",
+          "en": "Among the dead he complained: 'My wife didn't bury me! Let me punish her.'"
+        },
+        {
+          "es": "Hades lo dejó ir… y nunca volvió.",
+          "en": "Hades let him go… and he never came back."
+        }
+      ],
+      "actores": [
+        {
+          "id": "sisifo",
+          "como": "rey",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.6,
+              "hace": "desaparece",
+              "con": "polvo"
+            }
+          ]
+        },
+        {
+          "id": "esposa",
+          "como": "reina",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "MEROPE",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 0.5,
+              "hace": "asiente"
+            },
+            {
+              "en": 0.95,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "hades",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1160,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "asiente"
+            },
+            {
+              "en": 2.05,
+              "hace": "senala"
+            },
+            {
+              "en": 2.7,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "roca",
+      "fondo": "monte",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Vivió hasta muy viejo. Solo entonces volvió, para siempre.",
+          "en": "He lived to be very old. Only then did he return, for good."
+        },
+        {
+          "es": "Su castigo: empujar una roca enorme cuesta arriba. Para siempre.",
+          "en": "His punishment: roll a huge rock up a hill. Forever."
+        },
+        {
+          "es": "Cada vez que llega casi a la cima, rueda otra vez hacia abajo.",
+          "en": "Every time it nears the top, it rolls back down."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1000,
+          "s": 0.8,
+          "hasta": 2.3
+        },
+        {
+          "tipo": "roca",
+          "x": 1190,
+          "s": 0.8,
+          "en": 2.3
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.3,
+          "tipo": "polvo",
+          "x": 1190
+        }
+      ],
+      "actores": [
+        {
+          "id": "sisifo",
+          "como": "rey",
+          "escala": 1.2,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "viejo"
+          },
+          "x": 840,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 880,
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.6,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

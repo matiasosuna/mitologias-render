@@ -1,0 +1,386 @@
+{
+  "id": "short-egipcias-siete-escorpiones",
+  "formato": "short",
+  "serie": "egipcias",
+  "numero": "S",
+  "titulo": {
+    "es": "Nunca le cierres la puerta a Isis",
+    "en": "Never shut the door on Isis"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Nunca le cierres la puerta a Isis",
+    "en": "Never shut the door on Isis"
+  },
+  "cierre": {
+    "es": "Dónde se escondía Isis: Horus en los juncos — Mitología egipcia, ep. 8",
+    "en": "Where Isis was hiding: Horus in the Marshes — Egyptian Mythology Ep. 8"
+  },
+  "episodio": "egipcias-08-horus-en-los-juncos",
+  "escenas": [
+    {
+      "id": "huida",
+      "fondo": "juncal",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Isis se escondía de Set con el bebé Horus. Siete escorpiones la cuidaban.",
+          "en": "Isis was hiding from Set with baby Horus. Seven scorpions guarded her."
+        },
+        {
+          "es": "Una noche, golpeó la puerta de la casa de una mujer rica.",
+          "en": "One night, she knocked on the door of a rich woman's house."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 1240,
+          "s": 0.8,
+          "capa": "medio",
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "escala": 1.2,
+          "x": 880,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "mira",
+              "a": 720
+            },
+            {
+              "en": 0.7,
+              "hace": "mira",
+              "a": 1100
+            },
+            {
+              "en": 1.15,
+              "hace": "camina",
+              "a": 1030,
+              "dur": 0.5
+            },
+            {
+              "en": 1.7,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "horus_nino",
+          "escala": 2,
+          "x": 770,
+          "pasos": [
+            {
+              "en": 1.15,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "escorpion",
+          "escala": 0.8,
+          "x": 730,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "brilla",
+              "dur": 0.4
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 780,
+              "dur": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "puerta",
+      "fondo": "ciudad",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "La mujer rica vio los escorpiones… y le cerró la puerta en la cara.",
+          "en": "The rich woman saw the scorpions… and slammed the door."
+        },
+        {
+          "es": "Pero una pobre muchacha pescadora dejó dormir a Isis en su humilde casa.",
+          "en": "But a poor fisher girl let Isis sleep in her humble home."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 1240,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "entristece"
+            },
+            {
+              "en": 1.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "rica",
+          "como": "egipcia",
+          "mira": "izq",
+          "escala": 1.2,
+          "props": {
+            "capa": "#E8B81C",
+            "tocado": "peluca"
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.7,
+              "hace": "niega"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece",
+              "con": "polvo"
+            }
+          ]
+        },
+        {
+          "id": "pobre",
+          "como": "egipcia",
+          "mira": "izq",
+          "escala": 1.2,
+          "props": {
+            "ropa": "corta"
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.7,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "picadura",
+      "fondo": "noche",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Los escorpiones estaban furiosos. Seis le dieron su veneno al séptimo, Tefen.",
+          "en": "The scorpions were furious. Six of them gave their poison to the seventh, Tefen."
+        },
+        {
+          "es": "Tefen se metió por debajo de la puerta de la rica, y picó a su hijo.",
+          "en": "Tefen crawled under the rich woman's door, and stung her son."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 1240,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "chispas",
+          "x": 800,
+          "y": 740
+        },
+        {
+          "en": 1.65,
+          "tipo": "destello",
+          "x": 1150,
+          "y": 700,
+          "dur": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "tefen",
+          "como": "escorpion",
+          "escala": 1.2,
+          "rotulo": "TEFEN",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.1,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "hijo",
+          "como": "nino",
+          "mira": "izq",
+          "escala": 1.1,
+          "x": 1160,
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.8,
+              "hace": "cae"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cura",
+      "fondo": "ciudad",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "La madre pidió ayuda a gritos. Nadie vino. Solo Isis.",
+          "en": "The mother screamed for help. No one came. Only Isis."
+        },
+        {
+          "es": "Llamó a cada escorpión por su nombre, y el veneno desapareció.",
+          "en": "She called each scorpion by its name, and the poison went away."
+        },
+        {
+          "es": "La rica sintió tanta vergüenza que le dio su riqueza a la muchacha pobre.",
+          "en": "The rich woman was so ashamed, she gave her riches to the poor girl."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 1300,
+          "s": 0.8,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 700,
+          "dur": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "hijo",
+          "como": "nino",
+          "mira": "izq",
+          "escala": 1.1,
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 1.4,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.7,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "rica",
+          "como": "egipcia",
+          "mira": "izq",
+          "escala": 1.2,
+          "props": {
+            "capa": "#E8B81C",
+            "tocado": "peluca"
+          },
+          "x": 1170,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.2,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

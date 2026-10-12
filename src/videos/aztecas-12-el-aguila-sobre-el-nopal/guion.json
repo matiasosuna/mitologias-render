@@ -1,0 +1,983 @@
+{
+  "id": "aztecas-12-el-aguila-sobre-el-nopal",
+  "serie": "aztecas",
+  "numero": "12",
+  "titulo": {
+    "es": "El águila sobre el nopal",
+    "en": "The Eagle on the Cactus"
+  },
+  "tituloGriego": "THE EAGLE ON THE CACTUS",
+  "miniatura": {
+    "heroe": "tenoch",
+    "rival": "teomama"
+  },
+  "siguiente": {
+    "es": "Quetzalcóatl y Tollan",
+    "en": "Quetzalcoatl and Tollan"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "coatepec",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, en Coatepec, nació Huitzilopochtli, el dios protector de los mexicas.",
+          "en": "Last time, at Coatepec, Huitzilopochtli was born, the protector god of the Mexica."
+        },
+        {
+          "es": "Hoy, el final de la temporada: cómo los mexicas encontraron su hogar.",
+          "en": "Today, the end of the season: how the Mexica found their home."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "huitzil",
+          "como": "huitzilopochtli",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "aztlan",
+      "fondo": "aztlan",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los mexicas contaban que venían de Aztlán, una isla en medio de un lago.",
+          "en": "The Mexica said they came from Aztlan, an island in the middle of a lake."
+        },
+        {
+          "es": "Aztlán quizá quiere decir \"el lugar de las garzas\" o \"el lugar de la blancura\".",
+          "en": "Aztlan may mean \"the place of herons\" or \"the place of whiteness\"."
+        },
+        {
+          "es": "De ahí viene la palabra azteca: la gente de Aztlán.",
+          "en": "That is where the word Aztec comes from: the people of Aztlan."
+        },
+        {
+          "es": "Nadie sabe dónde quedaba. Puede que estuviera en el norte de México.",
+          "en": "No one knows where it was. It may have been somewhere in northern Mexico."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "acalli",
+          "x": 1400,
+          "y": 760,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "tenoch",
+          "como": "tenoch",
+          "x": 600,
+          "y": 800,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mexica_mujer",
+          "x": 900,
+          "y": 800,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "asiente"
+            },
+            {
+              "en": 3.2,
+              "hace": "mira",
+              "a": 1600
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "AZTLÁN",
+            "en": "AZTLAN"
+          },
+          "x": 1300,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "salida",
+      "fondo": "aztlan",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, Huitzilopochtli les habló y les dijo que tenían que partir.",
+          "en": "One day, Huitzilopochtli spoke to them and told them they had to leave."
+        },
+        {
+          "es": "El Códice Boturini, un libro pintado en una larga tira de papel, muestra cómo salieron en canoa.",
+          "en": "The Codex Boturini, a book painted on one long strip of paper, shows them leaving by canoe."
+        },
+        {
+          "es": "Otros libros dicen que en el camino pasaron por Chicomóztoc, el cerro de las siete cuevas.",
+          "en": "Other books say that on the way they passed Chicomoztoc, the hill of the seven caves."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "acalli",
+          "x": 900,
+          "y": 760,
+          "s": 0.9
+        },
+        {
+          "tipo": "chicomoztoc",
+          "x": 1900,
+          "s": 0.6,
+          "en": 2,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "huitzil",
+          "como": "huitzilopochtli",
+          "x": 400,
+          "y": 560,
+          "escala": 0.6,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "tenoch",
+          "como": "tenoch",
+          "x": 800,
+          "y": 760,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1300,
+                760
+              ],
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mexica_mujer",
+          "x": 1000,
+          "y": 760,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1500,
+                760
+              ],
+              "dur": 1.4
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "CÓDICE BOTURINI",
+            "en": "CODEX BOTURINI"
+          },
+          "x": 1300,
+          "y": 240,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "teomamas",
+      "fondo": "valle",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los cargadores del dios, los teomamas, llevaban a Huitzilopochtli en un bulto sagrado.",
+          "en": "The god-bearers, the teomamas, carried Huitzilopochtli in a sacred bundle."
+        },
+        {
+          "es": "De noche, el dios les hablaba y les decía por dónde ir.",
+          "en": "At night, the god spoke to them and told them which way to go."
+        },
+        {
+          "es": "El Códice Boturini muestra a cuatro teomamas, y una de ellos era una mujer, Chimalma.",
+          "en": "The Codex Boturini shows four teomamas, and one of them was a woman, Chimalma."
+        },
+        {
+          "es": "Les dio un nombre nuevo: desde entonces se llamarían mexicas.",
+          "en": "He gave them a new name: from then on, they would be called the Mexica."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "teomama",
+          "como": "teomama",
+          "x": 400,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "tenoch",
+          "como": "tenoch",
+          "x": 200,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 650,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mexica_mujer",
+          "x": 0,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 450,
+              "dur": 1
+            },
+            {
+              "en": 3.4,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1.2
+        },
+        {
+          "en": 1.2,
+          "tipo": "luz",
+          "x": 860,
+          "y": 520,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "viaje",
+      "fondo": "encinar",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El viaje duró unos doscientos años.",
+          "en": "The journey lasted around two hundred years."
+        },
+        {
+          "es": "Se quedaban un tiempo en un lugar, sembraban, y volvían a partir.",
+          "en": "They would stay somewhere for a while, plant crops, and then move on."
+        },
+        {
+          "es": "Pasaron por Coatepec, por Tula y por Chapultepec. En muchos lugares no los querían.",
+          "en": "They passed through Coatepec, Tula and Chapultepec. In many places, they were not welcome."
+        },
+        {
+          "es": "En Coatepec, algunos quisieron quedarse para siempre, pero Huitzilopochtli no los dejó.",
+          "en": "At Coatepec, some wanted to stay forever, but Huitzilopochtli would not allow it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "maiz_codice",
+          "x": 1400,
+          "s": 0.8,
+          "en": 1
+        },
+        {
+          "tipo": "maiz_codice",
+          "x": 1550,
+          "s": 0.8,
+          "en": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "teomama",
+          "como": "teomama",
+          "x": 500,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1900,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "tenoch",
+          "como": "tenoch",
+          "x": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1
+            },
+            {
+              "en": 1.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.8,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1700,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mexica_mujer",
+          "x": 100,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 700,
+              "dur": 1
+            },
+            {
+              "en": 2.1,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "COATEPEC · TULA · CHAPULTEPEC",
+            "en": "COATEPEC · TULA · CHAPULTEPEC"
+          },
+          "x": 1300,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "senal",
+      "fondo": "lago_texcoco",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Huitzilopochtli les había dado una señal: \"Busquen un águila parada sobre un nopal.\"",
+          "en": "Huitzilopochtli had given them a sign: \"Look for an eagle standing on a prickly pear cactus.\""
+        },
+        {
+          "es": "\"El nopal crece sobre una piedra, en medio del agua. Ahí será su ciudad.\"",
+          "en": "\"The cactus grows on a rock in the middle of the water. That is where your city will be.\""
+        },
+        {
+          "es": "Buscaron entre los tules y los carrizos del lago, día tras día.",
+          "en": "They searched among the reeds and rushes of the lake, day after day."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "teomama",
+          "como": "teomama",
+          "x": 700,
+          "y": 800,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "tenoch",
+          "como": "tenoch",
+          "x": 1000,
+          "y": 800,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.4,
+              "hace": "mira",
+              "a": 1600
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 700,
+          "y": 520,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "aguila",
+      "fondo": "lago_texcoco",
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por fin, en una isla del lago de Texcoco, la vieron.",
+          "en": "At last, on an island in Lake Texcoco, they saw it."
+        },
+        {
+          "es": "Un águila, sobre un nopal con tunas rojas, que crecía de una piedra.",
+          "en": "An eagle, on a cactus with red fruit, growing out of a rock."
+        },
+        {
+          "es": "Algunos libros dicen que el águila comía una serpiente. Otros, que comía un pájaro.",
+          "en": "Some books say the eagle was eating a serpent. Others say it was eating a bird."
+        },
+        {
+          "es": "Fray Diego Durán escribió que el águila inclinó la cabeza, como saludándolos.",
+          "en": "The friar Diego Duran wrote that the eagle bowed its head, as if to greet them."
+        },
+        {
+          "es": "¿Qué señal te gustaría recibir para saber dónde vivir? Cuéntanos en los comentarios.",
+          "en": "What sign would you want, to know where to make your home? Tell us in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "nopal",
+          "x": 1250,
+          "y": 770,
+          "s": 1.1,
+          "props": {
+            "roca": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "aguila",
+          "como": "cuauhtli",
+          "x": 1270,
+          "y": 470,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "tenoch",
+          "como": "tenoch",
+          "x": 500,
+          "y": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.2,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "teomama",
+          "como": "teomama",
+          "x": 300,
+          "y": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.3,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.9,
+          "tipo": "luz",
+          "x": 1260,
+          "y": 460,
+          "dur": 1.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "fundacion",
+      "fondo": "tenochtitlan",
+      "camara": {
+        "de": 0,
+        "a": 260,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Allí fundaron su ciudad, en el año 1325: México-Tenochtitlan.",
+          "en": "There they founded their city, in the year 1325: Mexico-Tenochtitlan."
+        },
+        {
+          "es": "El nombre se suele explicar con tetl, piedra, y nochtli, tuna: el lugar del nopal sobre la piedra.",
+          "en": "The name is often explained with tetl, stone, and nochtli, cactus fruit: the place of the cactus on the stone."
+        },
+        {
+          "es": "Con los años, la ciudad creció sobre el lago, con canales, templos y huertos flotantes.",
+          "en": "Over the years, the city spread across the lake, with canals, temples and floating gardens."
+        },
+        {
+          "es": "En el centro levantaron el Templo Mayor, con dos santuarios: uno para Tláloc y otro para Huitzilopochtli.",
+          "en": "At its heart they built the Great Temple, with two shrines: one for Tlaloc and one for Huitzilopochtli."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "templo_mayor",
+          "x": 1500,
+          "s": 0.9,
+          "en": 3,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "tenoch",
+          "como": "tenoch",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.4,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mexica_mujer",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "mexica",
+          "x": 1100,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "salta"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "1325",
+            "en": "1325"
+          },
+          "x": 1400,
+          "y": 230,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "bandera",
+      "fondo": "lago_texcoco",
+      "camara": {
+        "de": 0,
+        "a": 60,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hoy, esa águila sobre el nopal está en el escudo de la bandera de México.",
+          "en": "Today, that eagle on the cactus is on the coat of arms of Mexico's flag."
+        },
+        {
+          "es": "El escudo de hoy muestra al águila comiéndose una serpiente, como en la versión de Durán.",
+          "en": "Today's coat of arms shows the eagle eating a serpent, just as in Duran's version."
+        },
+        {
+          "es": "Y la Ciudad de México está construida justo encima de Tenochtitlan.",
+          "en": "And Mexico City is built right on top of Tenochtitlan."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "nopal",
+          "x": 960,
+          "y": 770,
+          "s": 1.2,
+          "props": {
+            "roca": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "aguila",
+          "como": "cuauhtli",
+          "x": 985,
+          "y": 450,
+          "rotulo": "",
+          "props": {
+            "alas": true
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "habla",
+              "dur": 0.3
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 960,
+          "y": 450,
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.6,
+          "texto": {
+            "es": "POR ESO HAY UN ÁGUILA EN LA BANDERA DE MÉXICO",
+            "en": "THAT'S WHY AN EAGLE IS ON MEXICO'S FLAG"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "temporada",
+      "fondo": "omeyocan",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así termina esta temporada: de la pareja divina a los cinco soles, y de Aztlán a Tenochtitlan.",
+          "en": "And so this season ends: from the divine couple to the five suns, and from Aztlan to Tenochtitlan."
+        },
+        {
+          "es": "Gracias por viajar con nosotros por el mundo de los mexicas.",
+          "en": "Thank you for traveling with us through the world of the Mexica."
+        },
+        {
+          "es": "De todos los episodios, ¿cuál fue tu favorito? Cuéntanos en los comentarios.",
+          "en": "Of all the episodes, which was your favorite? Tell us in the comments."
+        },
+        {
+          "es": "En la próxima temporada: Quetzalcóatl, rey de Tollan, y el espejo que lo cambió todo.",
+          "en": "Next season: Quetzalcoatl, king of Tollan, and the mirror that changed everything."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "espejo",
+          "x": 1500,
+          "y": 380,
+          "s": 0.7,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 1500
+            }
+          ]
+        },
+        {
+          "id": "tezca",
+          "como": "tezcatlipoca",
+          "x": 1000,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "humo",
+          "x": 1500,
+          "y": 340,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La señal: un águila sobre un nopal",
+        "en": "The sign: an eagle on a cactus"
+      },
+      "escena": "aguila",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1050
+    },
+    {
+      "gancho": {
+        "es": "De dónde viene la palabra azteca",
+        "en": "Where the word Aztec comes from"
+      },
+      "escena": "aztlan",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 760
+    },
+    {
+      "gancho": {
+        "es": "Por qué hay un águila en la bandera de México",
+        "en": "Why there's an eagle on Mexico's flag"
+      },
+      "escena": "bandera",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 960
+    }
+  ]
+}

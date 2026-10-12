@@ -11,6 +11,7 @@ const TEMPORADAS = {
   egipcias: [[11, 'SEASON 1 · ORIGINS'], [99, 'SEASON 2 · KINGS, MAGICIANS & TRAVELERS']],
   hawaianas: [[12, 'SEASON 1 · ORIGINS'], [24, 'SEASON 2 · PELE AND HIʻIAKA']],
   norteamericanas: [[12, 'SEASON 1 · THE MAKING OF THE WORLD'], [24, 'SEASON 2 · TRICKSTERS AND HEROES'], [36, 'SEASON 3 · SKY AND STARS'], [99, 'SEASON 4 · GUARDIANS AND GIANTS']],
+  aztecas: [[12, 'SEASON 1 · THE FIVE SUNS'], [24, 'SEASON 2 · QUETZALCOATL AND TOLLAN'], [36, 'SEASON 3 · GODS, DAYS AND MICTLAN'], [99, 'SEASON 4 · LEGENDS OF TENOCHTITLAN']],
 };
 // Personajes de los episodios viejos sin "miniatura" en el guion (los mismos que sus miniaturas de YouTube).
 const src = readFileSync('scripts/miniaturas.mjs', 'utf8');

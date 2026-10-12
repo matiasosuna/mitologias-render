@@ -4,6 +4,7 @@ import React, { createContext, useContext } from 'react';
 import { AbsoluteFill, Img, staticFile, useCurrentFrame, interpolate, Easing } from 'remotion';
 import { loadFont as cargarGaramond } from '@remotion/google-fonts/EBGaramond';
 import { loadFont as cargarCinzel } from '@remotion/google-fonts/Cinzel';
+import { GuardasCodice, SueloCodice } from './codice';
 
 export const { fontFamily: TEXTO } = cargarGaramond('normal', { weights: ['500'], subsets: ['latin'] });
 export const { fontFamily: TITULO } = cargarCinzel('normal', { weights: ['400', '700'], subsets: ['latin'] });
@@ -19,7 +20,7 @@ export const C = {
 // ---------- temas por mitología ----------
 // Cada mitología tiene la "piel" de su arte: griega = vasija de figuras negras; nórdica = piedra rúnica
 // helada (azules, nieve y rojo de runa). El motor es el mismo; cambian paleta, cielos, guardas y suelo.
-export type NombreTema = 'vasija' | 'runas' | 'papiro' | 'kapa' | 'pintado';
+export type NombreTema = 'vasija' | 'runas' | 'papiro' | 'kapa' | 'pintado' | 'codice';
 type Cielos = Record<'barro' | 'noche' | 'mar' | 'inframundo', [string, string, string]>;
 const TEMAS: Record<NombreTema, { C: typeof C; cielos: Cielos; musica: string; ropa?: string; pielH?: string; pielM?: string }> = {
   vasija: {
@@ -53,11 +54,19 @@ const TEMAS: Record<NombreTema, { C: typeof C; cielos: Cielos; musica: string; r
     musica: 'musica/norteamericana.wav',
     ropa: '#B98A55', pielH: '#8E5634', pielM: '#A2673F',
   },
+  // Azteca (mexica): pintura de códice (Borgia, Borbónico, Florentino) — crema de piel de venado, ocre rojo,
+  // turquesa, azul maya, amarillo y negro; colores planos con contorno negro. Guardas y suelo en ./codice.tsx.
+  codice: {
+    C: { barro: '#E9D6A6', barroClaro: '#F6EBCB', barroOscuro: '#8A4A22', negro: '#1A1311', crema: '#F3E6C4', purpura: '#B8321F', blanco: '#FBF5E4', oro: '#E6B12E', noche: '#101830', mar: '#2E7F98' },
+    cielos: { barro: ['#FBF2D8', '#EFDAA8', '#CC9C5E'], noche: ['#26385F', '#131D3B', '#070B18'], mar: ['#EDF5E6', '#AED8C8', '#4E9C9C'], inframundo: ['#3E2232', '#1E1018', '#0A0608'] },
+    musica: 'musica/azteca.wav',
+    ropa: '#F3E6C4', pielH: '#A8603A', pielM: '#C98E4E',
+  },
 };
 export const TEMA = { nombre: 'vasija' as NombreTema, cielos: TEMAS.vasija.cielos, musica: TEMAS.vasija.musica, ropa: undefined as string | undefined, pielH: undefined as string | undefined, pielM: undefined as string | undefined };
-export const temaDeSerie = (serie?: string): NombreTema => (serie === 'nordicas' ? 'runas' : serie === 'egipcias' ? 'papiro' : serie === 'hawaianas' ? 'kapa' : serie === 'norteamericanas' ? 'pintado' : 'vasija');
+export const temaDeSerie = (serie?: string): NombreTema => (serie === 'nordicas' ? 'runas' : serie === 'egipcias' ? 'papiro' : serie === 'hawaianas' ? 'kapa' : serie === 'norteamericanas' ? 'pintado' : serie === 'aztecas' ? 'codice' : 'vasija');
 /** Nombre de la serie en pantalla (inglés) y en español, por tema. */
-export const NOMBRE_SERIE: Record<NombreTema, { en: string; es: string }> = { vasija: { en: 'Greek Mythology', es: 'Mitología griega' }, runas: { en: 'Norse Mythology', es: 'Mitología nórdica' }, papiro: { en: 'Egyptian Mythology', es: 'Mitología egipcia' }, kapa: { en: 'Hawaiian Mythology', es: 'Mitología hawaiana' }, pintado: { en: 'Native American Mythology', es: 'Mitología Norteamericana' } };
+export const NOMBRE_SERIE: Record<NombreTema, { en: string; es: string }> = { vasija: { en: 'Greek Mythology', es: 'Mitología griega' }, runas: { en: 'Norse Mythology', es: 'Mitología nórdica' }, papiro: { en: 'Egyptian Mythology', es: 'Mitología egipcia' }, kapa: { en: 'Hawaiian Mythology', es: 'Mitología hawaiana' }, pintado: { en: 'Native American Mythology', es: 'Mitología Norteamericana' }, codice: { en: 'Aztec Mythology', es: 'Mitología Azteca' } };
 /** Cambia la paleta y la piel antes de dibujar (cada render corre en su propia pestaña). */
 export function aplicarTema(serie?: string) {
   const n = temaDeSerie(serie);
@@ -230,7 +239,7 @@ export const FrisoPalmetas: React.FC<{ y: number; desplaz: number }> = ({ y, des
 );
 
 /** Guardas fijas del marco: lengüetas + meandro arriba, palmetas abajo y franja negra de subtítulos. */
-export const Guardas: React.FC<{ desplaz: number }> = ({ desplaz }) => TEMA.nombre === 'runas' ? <GuardasRunas desplaz={desplaz} /> : TEMA.nombre === 'papiro' ? <GuardasPapiro desplaz={desplaz} /> : TEMA.nombre === 'kapa' ? <GuardasKapa desplaz={desplaz} /> : TEMA.nombre === 'pintado' ? <GuardasPintado desplaz={desplaz} /> : (
+export const Guardas: React.FC<{ desplaz: number }> = ({ desplaz }) => TEMA.nombre === 'codice' ? <GuardasCodice desplaz={desplaz} /> : TEMA.nombre === 'runas' ? <GuardasRunas desplaz={desplaz} /> : TEMA.nombre === 'papiro' ? <GuardasPapiro desplaz={desplaz} /> : TEMA.nombre === 'kapa' ? <GuardasKapa desplaz={desplaz} /> : TEMA.nombre === 'pintado' ? <GuardasPintado desplaz={desplaz} /> : (
   <>
     <rect x={0} y={0} width={1920} height={ARRIBA} fill={C.barro} />
     <Lenguetas y={0} desplaz={desplaz} />
@@ -318,7 +327,12 @@ export type PersonajeProps = {
   sentado?: number;
   /** Calidad mejorada: volumen (luz y sombra), contorno, grano, sombra en el piso y movimiento secundario. */
   hd?: boolean;
+  /** Piezas propias en coordenadas del cuerpo (tocados, pintura de cara, pectorales, escudos…): cada tema o
+   * elenco las arma sin tocar el Personaje. detras = antes de todo; cuerpo = sobre el torso; cabeza = en la
+   * cabeza (de perfil, mirando a la derecha); pie = en el tobillo de adelante; mano/manoAtras = en cada mano. */
+  adornos?: Adornos;
 };
+export type Adornos = { detras?: React.ReactNode; cuerpo?: React.ReactNode; cabeza?: React.ReactNode; pie?: React.ReactNode; mano?: React.ReactNode; manoAtras?: React.ReactNode };
 
 /** Activa la calidad mejorada para todos los personajes de adentro (salvo que un personaje diga hd={false}). */
 export const CalidadHD = createContext(false);
@@ -674,6 +688,7 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
         </filter>
       </defs>
       <g transform={`translate(0 ${baja}) rotate(${inclinar + (hd ? (accion === 'parado' ? peso * 1.2 : Math.sin(fase * 2) * 1.4) : 0)} 0 -176)`}>
+        {props.adornos?.detras}
         {capa && (() => {
           const arriba: P[] = Array.from({ length: 7 }, (_, i) => [-6 - i * (accion === 'parado' ? 14 : 34), -300 + i * (accion === 'parado' ? 34 : 9) + ondea(i)] as P);
           const abajo: P[] = Array.from({ length: 7 }, (_, i) => [-20 - i * (accion === 'parado' ? 8 : 32), -230 + i * (accion === 'parado' ? 30 : 2) + ondea(i) * 1.3] as P).reverse();
@@ -688,6 +703,7 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
         {/* brazo y escudo de atrás */}
         <path d={brazoD(hT, cT, mT, 24 * ancho, props.brazoSuave)} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />
         {props.brazoSuave ? <Mano m={mT} ang={bTh + bTc + 40} piel={piel} k={0.85} /> : <circle cx={mT[0]} cy={mT[1]} r={8} fill={piel} />}
+        {props.adornos?.manoAtras && <g transform={`translate(${f1(mT[0])} ${f1(mT[1])})`}>{props.adornos.manoAtras}</g>}
         {/* pierna de atrás */}
         {!larga && <path d={pT.path} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />}
         <path d={pT.pie} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />
@@ -729,6 +745,7 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
         {props.estrellado && Array.from({ length: 14 }, (_, i) => <path key={i} d={`M${-24 + (i * 37) % 50} ${-296 + (i * 53) % 280} l2 5 5 0 -4 3 2 5 -5 -3 -5 3 2 -5 -4 -3 5 0 Z`} fill={C.oro} />)}
         {hawaiano && (props.collar ?? true) && ropa !== 'armadura' && Array.from({ length: 9 }, (_, i) => { const t = i / 8, cx = -24 + t * 58, cy = -300 + Math.sin(t * Math.PI) * 22; return <g key={`lei${i}`}><circle cx={cx} cy={cy} r={6.5} fill={['#E8724B', C.oro, '#F7EEDB', '#C2185B'][i % 4]} stroke={C.negro} strokeWidth={1.5} /><circle cx={cx} cy={cy} r={2} fill={C.purpura} /></g>; })}
         {nativo && (props.collar ?? true) && ropa !== 'armadura' && Array.from({ length: 7 }, (_, i) => { const t = i / 6, cx = -18 + t * 44, cy = -298 + Math.sin(t * Math.PI) * 10; return <circle key={`cu${i}`} cx={cx} cy={cy} r={3.6} fill={['#2F5D8A', C.blanco, C.purpura, C.oro][i % 4]} stroke={C.negro} strokeWidth={1} />; })}
+        {props.adornos?.cuerpo}
         {(props.collar ?? egipcio) && !hawaiano && !nativo && ropa !== 'armadura' && [0, 1, 2].map((k) => <path key={k} d={`M${-24 + k * 2} ${-300 + k * 7} Q ${4} ${-276 + k * 9} ${34 - k * 2} ${-296 + k * 6}`} stroke={['#2E5FA8', '#2E8B6E', C.purpura][k]} strokeWidth={6} fill="none" strokeLinecap="round" />)}
         {/* pierna de adelante */}
         {!larga && (
@@ -740,6 +757,7 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
           </>
         )}
         <path d={pD.pie} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />
+        {props.adornos?.pie && <g transform={`translate(${f1(pD.tob[0])} ${f1(pD.tob[1])})`}>{props.adornos.pie}</g>}
         {alas && !egipcio && <path d={`M${pD.tob[0] - 6} ${pD.tob[1] - 10} l -26 -16 l 6 12 l -14 -4 l 12 12 Z`} fill={C.purpura} stroke={C.negro} strokeWidth={2} />}
         {/* cabeza */}
         <g transform={`translate(${20 * ancho} -334) rotate(${-6 - cabeza + cabeceo + (hd ? -peso * 1.5 : 0)}) scale(${(nino ? 1.4 : 1) * (1 - 0.3 * (props.cabezaGiro ?? 0))} ${nino ? 1.4 : 1})`} filter={hd ? (props.sinSombraBorde ? 'url(#contornoParteHD)' : 'url(#parteHD)') : undefined}>
@@ -813,6 +831,7 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
           {tocado === 'sombrero' && <path d="M-56 -14 C -30 -30, 34 -32, 60 -16 C 30 -20, -24 -20, -56 -14 Z M-28 -20 C -26 -60, 22 -64, 26 -20 Z" fill={C.negro} stroke={C.crema} strokeWidth={2} />}
           <TocadoEgipcio t={tocado} mujer={!!mujer} />
           <TocadoNativo t={tocado} nacion={props.nacion} f={fr} />
+          {props.adornos?.cabeza}
           {tocado === 'casco' && (
             <g>
               <path d="M-34 10 C -44 -50, 36 -60, 38 -2 L 38 40 L 16 40 L 16 6 L -2 6 L -2 44 L -30 44 Z" fill={C.negro} stroke={C.crema} strokeWidth={2.5} />
@@ -829,6 +848,7 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
         </g>
         <g transform={`translate(${mD[0]} ${mD[1]})`}>
           <ObjetoMano tipo={objeto} f={fr} />
+          {props.adornos?.mano}
         </g>
         {props.brazoSuave ? <Mano m={mD} ang={bDh + bDc} piel={piel} k={1} /> : <circle cx={mD[0]} cy={mD[1]} r={10} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />}
         {escudo && (
@@ -981,7 +1001,7 @@ export const Relampago: React.FC<{ a: P; b: P; f: number; desde: number; dur?: n
 };
 
 /** Suelo de la escena: franja negra con puntitos y piedras (en el tema nórdico, con nieve encima). */
-export const Suelo: React.FC<{ desde?: number; hasta?: number; color?: string }> = ({ desde: x0 = -400, hasta = 5000, color = C.negro }) => TEMA.nombre === 'pintado' ? (
+export const Suelo: React.FC<{ desde?: number; hasta?: number; color?: string }> = ({ desde: x0 = -400, hasta = 5000, color = C.negro }) => TEMA.nombre === 'codice' ? <SueloCodice desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'pintado' ? (
   <g>
     <rect x={x0} y={SUELO} width={hasta - x0} height={200} fill="#8A5A34" />
     <rect x={x0} y={SUELO} width={hasta - x0} height={6} fill={C.negro} />

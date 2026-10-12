@@ -1,0 +1,366 @@
+{
+  "id": "short-nordicas-terremotos",
+  "formato": "short",
+  "serie": "nordicas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Terremotos? Culpa de Loki.",
+    "en": "Earthquakes? Blame Loki."
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Terremotos? Culpa de Loki.",
+    "en": "Earthquakes? Blame Loki."
+  },
+  "cierre": {
+    "es": "Por qué lo ataron: Loki atado — Mitología nórdica, ep. 11",
+    "en": "Why they tied him up: Loki Bound — Norse Mythology Ep. 11"
+  },
+  "episodio": "nordicas-11-loki-atado",
+  "escenas": [
+    {
+      "id": "atrapado",
+      "fondo": "cueva",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Después de que Loki causó la muerte de Baldr, los dioses lo atraparon.",
+          "en": "After Loki caused Baldr's death, the gods caught him."
+        },
+        {
+          "es": "Lo ataron a tres rocas filosas, en lo hondo de una cueva.",
+          "en": "They tied him to three sharp rocks, deep in a cave."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 900,
+          "s": 0.45,
+          "capa": "medio"
+        },
+        {
+          "tipo": "roca",
+          "x": 1010,
+          "s": 0.45,
+          "capa": "medio"
+        },
+        {
+          "tipo": "roca",
+          "x": 1120,
+          "s": 0.45,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "escala": 1.2,
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.6,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.3,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "escala": 1.2,
+          "x": 780,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1190,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.2,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serpiente",
+      "fondo": "cueva",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Entonces la giganta Skadi colgó una serpiente sobre su cara.",
+          "en": "Then the giantess Skadi hung a snake above his face."
+        },
+        {
+          "es": "Gota a gota, su veneno cae sobre él.",
+          "en": "Drop by drop, its poison falls on him."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "chispas",
+          "x": 900,
+          "y": 720
+        },
+        {
+          "en": 1.6,
+          "tipo": "chispas",
+          "x": 900,
+          "y": 720
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 1.25,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "skadi",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.15,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 0.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "escala": 0.6,
+          "x": 960,
+          "y": 380,
+          "pasos": [
+            {
+              "en": 0.65,
+              "hace": "aparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sigyn",
+      "fondo": "cueva",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero su esposa, Sigyn, se queda con él. Sostiene un cuenco para atrapar el veneno.",
+          "en": "But his wife, Sigyn, stays with him. She holds a bowl to catch the poison."
+        },
+        {
+          "es": "Cuando el cuenco se llena, tiene que ir a vaciarlo.",
+          "en": "When the bowl is full, she has to go and empty it."
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 880,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "escala": 0.6,
+          "x": 940,
+          "y": 380
+        },
+        {
+          "id": "sigyn",
+          "como": "mujer",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "SIGYN",
+          "props": {
+            "objeto": "copa",
+            "tocado": "velo"
+          },
+          "x": 1060,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.3,
+              "hace": "baja"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 1210,
+              "dur": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "temblor",
+      "fondo": "cueva",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "En ese momento, el veneno le cae a Loki en la cara.",
+          "en": "In that moment, the poison hits Loki's face."
+        },
+        {
+          "es": "Se retuerce de dolor con tanta fuerza que tiembla toda la tierra.",
+          "en": "He twists in pain so hard that the whole earth shakes."
+        },
+        {
+          "es": "Eso es lo que llamamos un terremoto.",
+          "en": "That's what we call an earthquake."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "chispas",
+          "x": 900,
+          "y": 720
+        },
+        {
+          "en": 1.1,
+          "tipo": "temblor",
+          "dur": 1.5
+        },
+        {
+          "en": 1.2,
+          "tipo": "polvo",
+          "x": 960
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "POR ESO TIEMBLA LA TIERRA",
+            "en": "THAT'S WHY THE EARTH SHAKES"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ],
+      "actores": [
+        {
+          "id": "loki",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 0.35,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.1,
+              "hace": "tiembla",
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "escala": 0.6,
+          "x": 960,
+          "y": 380
+        },
+        {
+          "id": "sigyn",
+          "como": "mujer",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "props": {
+            "objeto": "copa",
+            "tocado": "velo"
+          },
+          "x": 1160,
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

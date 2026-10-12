@@ -1,0 +1,350 @@
+{
+  "id": "short-egipcias-cabeza-ganso",
+  "formato": "short",
+  "serie": "egipcias",
+  "numero": "S",
+  "titulo": {
+    "es": "Le volvió a pegar la cabeza a un ganso",
+    "en": "He put a goose's head back on"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Le volvió a pegar la cabeza a un ganso",
+    "en": "He put a goose's head back on"
+  },
+  "cierre": {
+    "es": "Más magia para el rey: Khufu y los magos — Mitología egipcia, ep. 12",
+    "en": "More magic for the king: Khufu and the Magicians — Egyptian Mythology Ep. 12"
+  },
+  "episodio": "egipcias-12-keops-y-los-magos",
+  "escenas": [
+    {
+      "id": "mago",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "El faraón Khufu oyó de un mago, Djedi, de ciento diez años.",
+          "en": "Pharaoh Khufu heard of a magician, Djedi, a hundred and ten years old."
+        },
+        {
+          "es": "Cada día comía quinientos panes, y tomaba cien jarras de cerveza.",
+          "en": "Every day he ate five hundred loaves, and drank a hundred jugs of beer."
+        },
+        {
+          "es": "Y podía volver a pegar una cabeza cortada.",
+          "en": "And he could put a cut-off head back on."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 770,
+          "capa": "medio",
+          "props": {
+            "oro": true
+          }
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "hasta": 2,
+          "texto": {
+            "es": "500 PANES · 100 CERVEZAS",
+            "en": "500 LOAVES · 100 BEERS"
+          },
+          "x": 960,
+          "y": 250
+        }
+      ],
+      "actores": [
+        {
+          "id": "faraon",
+          "escala": 1.2,
+          "rotulo": "KHUFU",
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "djedi",
+          "como": "sacerdote_egipcio",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "DJEDI",
+          "props": {
+            "cuerpo": "viejo"
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prueba",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "«Muéstramelo», dijo Khufu. «Traigan a un prisionero».",
+          "en": "'Show me,' said Khufu. 'Bring a prisoner.'"
+        },
+        {
+          "es": "Djedi se negó: «A un humano no, mi rey».",
+          "en": "Djedi refused: 'Not a human, my king.'"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 770,
+          "capa": "medio",
+          "props": {
+            "oro": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "faraon",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 0.5,
+              "hace": "habla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "djedi",
+          "como": "sacerdote_egipcio",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "viejo"
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "niega"
+            },
+            {
+              "en": 1.4,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ganso",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Así que trajeron un ganso, y le cortaron la cabeza.",
+          "en": "So they brought a goose, and cut off its head."
+        },
+        {
+          "es": "Djedi dijo sus palabras mágicas. La cabeza y el cuerpo empezaron a acercarse.",
+          "en": "Djedi spoke his magic. The head and body began moving toward each other."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "destello",
+          "x": 980,
+          "y": 650,
+          "dur": 0.3
+        },
+        {
+          "en": 1.5,
+          "tipo": "luz",
+          "x": 980,
+          "y": 700,
+          "dur": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "faraon",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.7,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "ganso",
+          "escala": 1,
+          "x": 980,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "cae"
+            },
+            {
+              "en": 1.6,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "djedi",
+          "como": "sacerdote_egipcio",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "viejo"
+          },
+          "x": 1160,
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.5,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vive",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "El ganso se levantó… y empezó a graznar.",
+          "en": "The goose stood up… and started honking."
+        },
+        {
+          "es": "Después lo hizo otra vez, con otra ave y con un buey.",
+          "en": "Then he did it again, with another bird and with an ox."
+        },
+        {
+          "es": "¿Pero con un humano? Jamás.",
+          "en": "But on a human? Never."
+        }
+      ],
+      "actores": [
+        {
+          "id": "djedi",
+          "como": "sacerdote_egipcio",
+          "escala": 1.2,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "viejo"
+          },
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.3,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "ganso",
+          "escala": 1,
+          "x": 960,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 0.3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 0.6,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "buey",
+          "mira": "izq",
+          "escala": 0.8,
+          "x": 1170,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1016 @@
+{
+  "id": "aztecas-11-la-batalla-de-coatepec",
+  "serie": "aztecas",
+  "numero": "11",
+  "titulo": {
+    "es": "La batalla de Coatepec",
+    "en": "The Battle at Coatepec"
+  },
+  "tituloGriego": "THE BATTLE AT COATEPEC",
+  "miniatura": {
+    "heroe": "huitzilopochtli_xiuhcoatl",
+    "rival": "coyolxauhqui"
+  },
+  "siguiente": {
+    "es": "El águila sobre el nopal",
+    "en": "The Eagle on the Cactus"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "teotihuacan",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez nació el quinto sol, el que todavía nos alumbra.",
+          "en": "Last time, the fifth sun was born, the one that still shines on us."
+        },
+        {
+          "es": "Hoy, una historia que los mexicas sentían como la más suya: el nacimiento de Huitzilopochtli.",
+          "en": "Today, a story the Mexica held as their very own: the birth of Huitzilopochtli."
+        },
+        {
+          "es": "En el primer episodio, él era uno de los cuatro hijos divinos. Esta es otra historia, de otro libro: el Códice Florentino.",
+          "en": "In episode one, he was one of the four divine sons. This is another story, from another book: the Florentine Codex."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "huitzil",
+          "como": "huitzilopochtli",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.8,
+          "tipo": "luz",
+          "x": 960,
+          "y": 500,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "coatlicue",
+      "fondo": "coatepec",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En Coatepec, el Cerro de la Serpiente, vivía una mujer llamada Coatlicue.",
+          "en": "On Coatepec, the Hill of the Serpent, lived a woman named Coatlicue."
+        },
+        {
+          "es": "Su nombre quiere decir \"la de la falda de serpientes\".",
+          "en": "Her name means \"She of the Serpent Skirt\"."
+        },
+        {
+          "es": "Tenía una hija, Coyolxauhqui, y cuatrocientos hijos, los Centzon Huitznahua.",
+          "en": "She had a daughter, Coyolxauhqui, and four hundred sons, the Centzon Huitznahua."
+        },
+        {
+          "es": "Cada día, Coatlicue barría el templo del cerro.",
+          "en": "Every day, Coatlicue swept the temple on the hill."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "coatlicue",
+          "como": "coatlicue",
+          "x": 760,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.5,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "coyol",
+          "como": "coyolxauhqui",
+          "x": 1200,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "h1",
+          "como": "huitznahua",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece",
+              "con": "polvo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.2,
+          "tipo": "polvo",
+          "x": 760,
+          "y": 770,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "plumas",
+      "fondo": "coatepec",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, mientras barría, cayó del cielo una bola de plumas.",
+          "en": "One day, as she swept, a ball of feathers fell from the sky."
+        },
+        {
+          "es": "Coatlicue la tomó y la guardó en su cintura.",
+          "en": "Coatlicue picked it up and tucked it into her waistband."
+        },
+        {
+          "es": "Cuando terminó de barrer, la buscó, y ya no estaba. Pero ahora Coatlicue esperaba un bebé.",
+          "en": "When she finished sweeping, she looked for it, and it was gone. But now Coatlicue was expecting a baby."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pluma_bola",
+          "x": 960,
+          "y": 280,
+          "en": 0,
+          "sube": -150,
+          "durSube": 0.8,
+          "hasta": 1.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "coatlicue",
+          "como": "coatlicue",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "mira",
+              "a": 960
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.4,
+              "hace": "baja"
+            },
+            {
+              "en": 2.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.8,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.6,
+          "tipo": "luz",
+          "x": 820,
+          "y": 560,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "enojo",
+      "fondo": "coatepec",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sus cuatrocientos hijos se enojaron muchísimo: \"¿Quién es el padre? ¡Qué vergüenza!\"",
+          "en": "Her four hundred sons were furious: \"Who is the father? What a disgrace!\""
+        },
+        {
+          "es": "Coyolxauhqui, la hermana mayor, los convenció de matar a su madre.",
+          "en": "Coyolxauhqui, the eldest sister, persuaded them to kill their mother."
+        },
+        {
+          "es": "Coyolxauhqui los guiaba, con cascabeles de oro en las mejillas.",
+          "en": "Coyolxauhqui led them, with golden bells on her cheeks."
+        },
+        {
+          "es": "Se pusieron sus ropas de guerra y se pintaron la cara.",
+          "en": "They put on their war clothes and painted their faces."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "coyol",
+          "como": "coyolxauhqui",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.6,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "h1",
+          "como": "huitznahua",
+          "x": 1050,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "h2",
+          "como": "huitznahua",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "h3",
+          "como": "huitznahua",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "miedo",
+      "fondo": "coatepec",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Coatlicue tuvo mucho miedo.",
+          "en": "Coatlicue was very frightened."
+        },
+        {
+          "es": "Pero el bebé le habló desde adentro: \"No tengas miedo. Yo sé lo que tengo que hacer.\"",
+          "en": "But the baby spoke to her from inside: \"Do not be afraid. I know what to do.\""
+        },
+        {
+          "es": "Uno de los hermanos, Cuahuitlicac, no estaba de acuerdo con los demás. En secreto, avisaba por dónde venían.",
+          "en": "One brother, Cuahuitlicac, did not agree with the others. In secret, he kept telling where they were."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "coatlicue",
+          "como": "coatlicue",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "cuahui",
+          "como": "cuahuitlicac",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1150
+            },
+            {
+              "en": 2.5,
+              "hace": "habla",
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 720,
+          "y": 560,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "marcha",
+      "fondo": "coatepec",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Coyolxauhqui y los cuatrocientos subieron el cerro, en fila, listos para pelear.",
+          "en": "Coyolxauhqui and the four hundred climbed the hill in a line, ready to fight."
+        },
+        {
+          "es": "Cuahuitlicac avisaba: \"Ya están en Tzompantitlan... ya están en Coaxalpan... ¡ya llegaron arriba!\"",
+          "en": "Cuahuitlicac called out: \"They are at Tzompantitlan... now at Coaxalpan... now they are at the top!\""
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "coyol",
+          "como": "coyolxauhqui",
+          "x": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 1.8
+            }
+          ]
+        },
+        {
+          "id": "h1",
+          "como": "huitznahua",
+          "x": 100,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 800,
+              "dur": 1.8
+            }
+          ]
+        },
+        {
+          "id": "h2",
+          "como": "huitznahua",
+          "x": -100,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 600,
+              "dur": 1.8
+            }
+          ]
+        },
+        {
+          "id": "cuahui",
+          "como": "cuahuitlicac",
+          "x": 1900,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 1.6,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "polvo",
+          "x": 400,
+          "y": 770,
+          "dur": 1.2
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "nacimiento",
+      "fondo": "coatepec",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Justo en ese momento nació Huitzilopochtli, ya grande y armado.",
+          "en": "At that very moment, Huitzilopochtli was born, already grown and armed."
+        },
+        {
+          "es": "Traía su escudo, sus dardos, y la cara pintada con franjas.",
+          "en": "He carried his shield and his darts, and his face was painted with stripes."
+        },
+        {
+          "es": "Y en la mano llevaba la Xiuhcóatl, la serpiente de fuego.",
+          "en": "And in his hand he held the Xiuhcoatl, the serpent of fire."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "coatlicue",
+          "como": "coatlicue",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "huitzil",
+          "como": "huitzilopochtli_xiuhcoatl",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 0.3,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 500,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1060,
+          "y": 360,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "XIUHCÓATL",
+            "en": "XIUHCOATL"
+          },
+          "x": 1450,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "batalla",
+      "fondo": "coatepec",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Con la serpiente de fuego venció a Coyolxauhqui. Ella murió, y su cuerpo rodó hasta el pie del cerro.",
+          "en": "With the fire serpent he struck down Coyolxauhqui. She died, and her body tumbled to the foot of the hill."
+        },
+        {
+          "es": "Después persiguió a los cuatrocientos alrededor del cerro, cuatro veces.",
+          "en": "Then he chased the four hundred around the hill, four times."
+        },
+        {
+          "es": "Casi todos cayeron. Solo unos pocos escaparon hacia el sur.",
+          "en": "Almost all of them fell. Only a few escaped toward the south."
+        },
+        {
+          "es": "¿De qué lado habrías estado: del de Coyolxauhqui, o del de Huitzilopochtli? Cuéntanos en los comentarios.",
+          "en": "Whose side would you have been on: Coyolxauhqui's, or Huitzilopochtli's? Tell us in the comments."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "huitzil",
+          "como": "huitzilopochtli_xiuhcoatl",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 1500,
+              "dur": 1
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "coyol",
+          "como": "coyolxauhqui",
+          "x": 1050,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "cae"
+            },
+            {
+              "en": 0.6,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "h1",
+          "como": "huitznahua",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.1,
+              "hace": "corre",
+              "a": 2500,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "h2",
+          "como": "huitznahua",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.2,
+              "hace": "corre",
+              "a": 2700,
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.35,
+          "tipo": "destello"
+        },
+        {
+          "en": 0.4,
+          "tipo": "fuego",
+          "x": 1050,
+          "y": 760,
+          "dur": 0.4
+        },
+        {
+          "en": 1.2,
+          "tipo": "polvo",
+          "x": 1400,
+          "y": 770,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cielo",
+      "fondo": "firmamento",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Muchos estudiosos ven en esta historia el cielo de cada amanecer.",
+          "en": "Many scholars see in this story the sky at every dawn."
+        },
+        {
+          "es": "Huitzilopochtli sería el sol que sale; Coyolxauhqui, la luna; y los cuatrocientos, las estrellas que se apagan.",
+          "en": "Huitzilopochtli would be the rising sun; Coyolxauhqui, the moon; and the four hundred, the fading stars."
+        },
+        {
+          "es": "Es una lectura moderna, pero muy conocida.",
+          "en": "It is a modern reading, but a very well-known one."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "luna_codice",
+          "x": 600,
+          "y": 360,
+          "s": 0.9
+        },
+        {
+          "tipo": "sol_codice",
+          "x": 1400,
+          "y": 520,
+          "s": 1,
+          "en": 1,
+          "sube": 200,
+          "durSube": 1.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "nino",
+          "como": "mexica",
+          "x": 900,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 1.5
+        },
+        {
+          "en": 1.2,
+          "tipo": "aclarar",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "piedra",
+      "fondo": "tenochtitlan",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En 1978, unos trabajadores de la luz encontraron una piedra enorme en el centro de la Ciudad de México.",
+          "en": "In 1978, electricity workers found a huge stone in the center of Mexico City."
+        },
+        {
+          "es": "Tenía tallada a Coyolxauhqui, al pie del Templo Mayor, como si acabara de caer del cerro.",
+          "en": "Coyolxauhqui was carved on it, at the foot of the Great Temple, as if she had just fallen from the hill."
+        },
+        {
+          "es": "La piedra pesa unas ocho toneladas.",
+          "en": "The stone weighs about eight tons."
+        },
+        {
+          "es": "Así se redescubrió el Templo Mayor, que hoy se puede visitar.",
+          "en": "That is how the Great Temple was rediscovered. Today you can visit it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "templo_mayor",
+          "x": 1300,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "t1",
+          "como": "mexica",
+          "x": 500,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "t2",
+          "como": "mexica",
+          "x": 760,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "polvo",
+          "x": 620,
+          "y": 770,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "1978",
+            "en": "1978"
+          },
+          "x": 1500,
+          "y": 230,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "coatepec",
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Huitzilopochtli se convirtió en el dios protector de los mexicas.",
+          "en": "Huitzilopochtli became the protector god of the Mexica."
+        },
+        {
+          "es": "Y un día les iba a mostrar dónde construir su ciudad.",
+          "en": "And one day, he would show them where to build their city."
+        },
+        {
+          "es": "Si encontraras una piedra tallada debajo de tu ciudad, ¿qué historia te gustaría que contara? Cuéntanos.",
+          "en": "If you found a carved stone under your city, what story would you want it to tell? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, el largo viaje desde Aztlán, y un águila sobre un nopal. Es El águila sobre el nopal.",
+          "en": "Next time, the long journey from Aztlan, and an eagle on a cactus. It is The Eagle on the Cactus."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "huitzil",
+          "como": "huitzilopochtli_xiuhcoatl",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "teomama",
+          "como": "teomama",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1250
+            },
+            {
+              "en": 1.6,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Nació ya grande y armado",
+        "en": "Born fully grown and armed"
+      },
+      "escena": "nacimiento",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Una bola de plumas cayó del cielo",
+        "en": "A ball of feathers fell from the sky"
+      },
+      "escena": "plumas",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 880
+    },
+    {
+      "gancho": {
+        "es": "La piedra que encontraron unos electricistas",
+        "en": "The stone found by electricity workers"
+      },
+      "escena": "piedra",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 700
+    }
+  ]
+}

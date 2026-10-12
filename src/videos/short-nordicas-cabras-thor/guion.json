@@ -1,0 +1,348 @@
+{
+  "id": "short-nordicas-cabras-thor",
+  "formato": "short",
+  "serie": "nordicas",
+  "numero": "S",
+  "titulo": {
+    "es": "La cena de Thor volvió a la vida",
+    "en": "Thor's dinner came back to life"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "La cena de Thor volvió a la vida",
+    "en": "Thor's dinner came back to life"
+  },
+  "cierre": {
+    "es": "Dónde terminó este viaje: Thor entre los gigantes — Mitología nórdica, ep. 9",
+    "en": "Where this trip ended: Thor Among the Giants — Norse Mythology Ep. 9"
+  },
+  "episodio": "nordicas-09-thor-gigantes",
+  "escenas": [
+    {
+      "id": "cena",
+      "fondo": "aldea",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Thor paró en la casa de un granjero pobre, con dos cabras tirando de su carro.",
+          "en": "Thor stopped at a poor farmer's house, with two goats pulling his cart."
+        },
+        {
+          "es": "No había comida. Así que Thor mató a sus cabras, y las cocinó para todos.",
+          "en": "There was no food. So Thor killed his goats, and cooked them for everyone."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 1320,
+          "s": 0.8,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "fogata",
+          "x": 1050,
+          "en": 1.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "thor",
+          "escala": 1.2,
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "mira",
+              "a": 1100
+            },
+            {
+              "en": 1.15,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.7,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "cabra1",
+          "como": "cabra",
+          "mira": "izq",
+          "escala": 1,
+          "x": 1040,
+          "pasos": [
+            {
+              "en": 1.25,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "cabra2",
+          "como": "cabra",
+          "mira": "izq",
+          "escala": 1,
+          "x": 1200,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "huesos",
+      "fondo": "aldea",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su única regla: «Tiren todos los huesos sobre las pieles. No rompan ninguno».",
+          "en": "His one rule: 'Throw every bone onto the goatskins. Don't break any.'"
+        },
+        {
+          "es": "Pero el hijo del granjero, Thialfi, partió un hueso para comerse el tuétano.",
+          "en": "But the farmer's son, Thjalfi, cracked a leg bone to eat the marrow."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 980,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "thor",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 780,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "thjalfi",
+          "como": "joven",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "THJALFI",
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 1220
+            },
+            {
+              "en": 1.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.7,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magia",
+      "fondo": "aldea",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "A la mañana, Thor levantó su martillo sobre las pieles.",
+          "en": "In the morning, Thor raised his hammer over the skins."
+        },
+        {
+          "es": "¡Las cabras se levantaron, vivas otra vez!",
+          "en": "The goats jumped up, alive again!"
+        },
+        {
+          "es": "Pero una de ellas cojeaba.",
+          "en": "But one of them was limping."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "luz",
+          "x": 1090,
+          "y": 650,
+          "dur": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "thor",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 780,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.6,
+              "hace": "brilla",
+              "dur": 0.4
+            },
+            {
+              "en": 1.6,
+              "hace": "baja"
+            },
+            {
+              "en": 2.3,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "cabra1",
+          "como": "cabra",
+          "mira": "izq",
+          "escala": 1,
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "cabra2",
+          "como": "cabra",
+          "mira": "izq",
+          "escala": 1,
+          "x": 1180,
+          "pasos": [
+            {
+              "en": 1.05,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.1,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "precio",
+      "fondo": "aldea",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Thor se enojó tanto que se le pusieron blancos los nudillos.",
+          "en": "Thor was so angry, his knuckles turned white."
+        },
+        {
+          "es": "Para hacer las paces, el granjero le dio a sus dos hijos como sirvientes.",
+          "en": "To make peace, the farmer gave him his two children as servants."
+        },
+        {
+          "es": "Todo por un hueso partido.",
+          "en": "All for one cracked bone."
+        }
+      ],
+      "actores": [
+        {
+          "id": "thor",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 780,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.6,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.6,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "granjero",
+          "como": "hombre",
+          "mira": "izq",
+          "escala": 1.2,
+          "props": {
+            "cuerpo": "flaco"
+          },
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.6,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "thjalfi",
+          "como": "joven",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 1180,
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "entristece"
+            },
+            {
+              "en": 2.3,
+              "hace": "niega"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

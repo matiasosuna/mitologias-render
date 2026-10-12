@@ -1,0 +1,345 @@
+{
+  "id": "short-egipcias-cinco-dias",
+  "formato": "short",
+  "serie": "egipcias",
+  "numero": "S",
+  "titulo": {
+    "es": "Ganó cinco días en un juego de mesa",
+    "en": "He won five days in a board game"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Ganó cinco días en un juego de mesa",
+    "en": "He won five days in a board game"
+  },
+  "cierre": {
+    "es": "Mándaselo al amigo que siempre gana en los juegos de mesa",
+    "en": "Send this to the friend who always wins at board games"
+  },
+  "episodio": "egipcias-02-cielo-y-tierra",
+  "escenas": [
+    {
+      "id": "maldicion",
+      "fondo": "cielo_nut",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Nut, la diosa del cielo, iba a tener hijos.",
+          "en": "Nut, goddess of the sky, was going to have children."
+        },
+        {
+          "es": "Pero Ra, el dios sol, la maldijo: no podría dar a luz ningún día del año.",
+          "en": "But Ra, the sun god, cursed her: no birth on any day of the year."
+        },
+        {
+          "es": "En ese tiempo, el año tenía solo 360 días.",
+          "en": "Back then, a year had only 360 days."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.1,
+          "texto": {
+            "es": "360 DÍAS",
+            "en": "360 DAYS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ],
+      "actores": [
+        {
+          "id": "nut",
+          "escala": 1.2,
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.7,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.1,
+              "hace": "senala"
+            },
+            {
+              "en": 1.35,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "juego",
+      "fondo": "noche",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Thot, el astuto dios de la sabiduría, tuvo una idea.",
+          "en": "Thoth, the clever god of wisdom, had an idea."
+        },
+        {
+          "es": "Desafió a la Luna a un juego de mesa, y ganó una y otra vez.",
+          "en": "He challenged the Moon to a board game, and won again and again."
+        },
+        {
+          "es": "Su premio: un poquito de la luz de la Luna.",
+          "en": "His prize: a little bit of the Moon's light."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "luna",
+          "x": 1100,
+          "y": 220
+        },
+        {
+          "tipo": "altar",
+          "x": 960,
+          "s": 0.6
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.6,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 600
+        },
+        {
+          "en": 2.3,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 220,
+          "dur": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "escala": 1.2,
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.1,
+              "hace": "senala"
+            },
+            {
+              "en": 1.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "luna_dios",
+          "como": "egipcio",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "MOON",
+          "props": {
+            "tocado": "disco",
+            "piel": "#B9BEC6"
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 1.15,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.8,
+              "hace": "entristece"
+            },
+            {
+              "en": 2.4,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dias",
+      "fondo": "cielo_nut",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Con esa luz, hizo cinco días nuevos, fuera del año viejo.",
+          "en": "With that light, he made five new days, outside the old year."
+        },
+        {
+          "es": "La maldición de Ra no valía en esos días. Nut tuvo cinco hijos, uno por día.",
+          "en": "Ra's curse didn't count on those days. Nut had five children, one each day."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "+5 DÍAS",
+            "en": "+5 DAYS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.4,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 0.9,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "nut",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 1160,
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.3,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "bebe",
+          "como": "horus_nino",
+          "escala": 2,
+          "rotulo": "",
+          "x": 990,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.8,
+              "hace": "salta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "por-eso",
+      "fondo": "cielo_nut",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Por eso nuestro año tiene 365 días.",
+          "en": "That's why our year has 365 days."
+        },
+        {
+          "es": "Todo gracias a un juego de mesa con suerte.",
+          "en": "All thanks to one lucky board game."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "estrellas",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "POR ESO EL AÑO TIENE 365 DÍAS",
+            "en": "THAT'S WHY A YEAR HAS 365 DAYS"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "nut",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

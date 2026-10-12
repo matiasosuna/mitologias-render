@@ -1,0 +1,912 @@
+{
+  "id": "norteamericanas-10-el-cuervo-y-la-almeja",
+  "serie": "norteamericanas",
+  "numero": "10",
+  "titulo": {
+    "es": "El Cuervo y la primera gente",
+    "en": "Raven and the First People"
+  },
+  "tituloGriego": "RAVEN AND THE FIRST PEOPLE",
+  "miniatura": {
+    "heroe": "cuervo_pie"
+  },
+  "siguiente": {
+    "es": "Coyote pone las estrellas",
+    "en": "Coyote Places the Stars"
+  },
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "costa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, un Cuervo tlingit robó la luz y se la dio a todo el mundo.",
+          "en": "Last time, a Tlingit Raven stole the light, and gave it to the whole world."
+        },
+        {
+          "es": "Ahora navegamos al sur, a Haida Gwaii, un grupo de islas frente a la costa de Canadá.",
+          "en": "Now we sail south, to Haida Gwaii, a group of islands off the coast of Canada."
+        },
+        {
+          "es": "El nombre Haida Gwaii quiere decir 'islas de la gente'.",
+          "en": "The name Haida Gwaii means 'islands of the people.'"
+        },
+        {
+          "es": "Es el hogar del pueblo haida: grandes talladores, constructores de canoas y narradores.",
+          "en": "This is the home of the Haida people: great carvers, canoe makers and storytellers."
+        },
+        {
+          "es": "Los haida cuentan muchas historias del Cuervo. Esta cuenta cómo apareció la primera gente.",
+          "en": "The Haida tell many stories about Raven. This one tells how the first people came to be."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "canoa_cedro",
+          "x": 1650,
+          "y": 780,
+          "s": 0.7,
+          "props": {
+            "quieta": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "hombre",
+          "como": "haida",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "camina",
+              "a": 820,
+              "dur": 0.6
+            },
+            {
+              "en": 3.2,
+              "hace": "senala",
+              "a": 1650
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "haida_mujer",
+          "x": 1080,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "cuervo",
+          "como": "cuervo_negro",
+          "x": 1900,
+          "y": 260,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "vuela",
+              "a": [
+                1200,
+                320
+              ],
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "HAIDA GWAII",
+            "en": "HAIDA GWAII"
+          },
+          "x": 1250,
+          "y": 250,
+          "hasta": 2.2
+        }
+      ]
+    },
+    {
+      "id": "playa",
+      "fondo": "playa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hace mucho, un gran diluvio había cubierto el mundo. Por fin, el agua bajó.",
+          "en": "Long ago, a great flood had covered the world. At last, the water went down."
+        },
+        {
+          "es": "En la punta norte de Haida Gwaii hay una larga playa de arena, llamada Rose Spit.",
+          "en": "At the northern tip of Haida Gwaii, there is a long beach of sand, called Rose Spit."
+        },
+        {
+          "es": "El Cuervo caminaba por ahí, solito. Estaba aburrido, buscando algo nuevo.",
+          "en": "Raven was walking there, all alone. He was bored, and looking for something new."
+        }
+      ],
+      "actores": [
+        {
+          "id": "cuervo",
+          "como": "cuervo_pie",
+          "x": 300,
+          "escala": 1.3,
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1.2
+            },
+            {
+              "en": 2.4,
+              "hace": "mira",
+              "a": 600
+            },
+            {
+              "en": 2.8,
+              "hace": "mira",
+              "a": 1400
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "olas-bajan",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "ROSE SPIT",
+            "en": "ROSE SPIT"
+          },
+          "x": 1300,
+          "y": 300,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "almeja",
+      "fondo": "playa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces oyó un sonidito que salía de la arena, a sus pies.",
+          "en": "Then he heard a tiny sound, coming from the sand at his feet."
+        },
+        {
+          "es": "Era una almeja gigante, un poco abierta.",
+          "en": "It was a giant clamshell, partly open."
+        },
+        {
+          "es": "El Cuervo se acercó. Unas caritas lo espiaban desde adentro.",
+          "en": "Raven leaned in close. Little faces were peeking out at him."
+        },
+        {
+          "es": "Adentro había unas criaturas pequeñas, con mucho miedo del gran mundo de afuera.",
+          "en": "Inside were small creatures, very afraid of the big world outside."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "almeja",
+          "x": 1200,
+          "s": 1.1,
+          "hasta": 2,
+          "props": {
+            "abierta": 0.15
+          }
+        },
+        {
+          "tipo": "almeja",
+          "x": 1200,
+          "s": 1.1,
+          "en": 2,
+          "props": {
+            "abierta": 0.35,
+            "ojos": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "cuervo",
+          "como": "cuervo_pie",
+          "x": 700,
+          "escala": 1.3,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "mira",
+              "a": 1200
+            },
+            {
+              "en": 0.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 880,
+              "dur": 0.5
+            },
+            {
+              "en": 2.1,
+              "hace": "salta"
+            },
+            {
+              "en": 3.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "polvo",
+          "x": 1200,
+          "y": 760,
+          "dur": 0.5
+        }
+      ]
+    },
+    {
+      "id": "convence",
+      "fondo": "playa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.05,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "El Cuervo tenía curiosidad. Quería ver qué harían.",
+          "en": "Raven was curious. He wanted to see what they would do."
+        },
+        {
+          "es": "Así que les habló con su voz suave y dulce de embaucador.",
+          "en": "So he spoke to them in his smooth, sweet trickster's voice."
+        },
+        {
+          "es": "'Salgan', les dijo. 'Salgan a ver mi mundo maravilloso.'",
+          "en": "'Come out,' he said. 'Come out and see my wonderful world.'"
+        },
+        {
+          "es": "Al principio, nadie se movió.",
+          "en": "At first, no one moved."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "almeja",
+          "x": 1150,
+          "s": 1.1,
+          "props": {
+            "abierta": 0.35,
+            "ojos": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "cuervo",
+          "como": "cuervo_pie",
+          "x": 760,
+          "escala": 1.3,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 1150
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 1.5
+            },
+            {
+              "en": 2.2,
+              "hace": "salta"
+            },
+            {
+              "en": 3.3,
+              "hace": "mira",
+              "a": 1500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "salen",
+      "fondo": "playa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.05,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces salió una carita. Y después otra. Tenían demasiada curiosidad para quedarse adentro.",
+          "en": "Then one little face came out. Then another. They were too curious to stay inside."
+        },
+        {
+          "es": "Una por una, salieron de la almeja a la arena.",
+          "en": "One by one, they climbed out of the clamshell onto the sand."
+        },
+        {
+          "es": "No tenían plumas ni pelo. Se paraban en dos piernas, parpadeando a la luz.",
+          "en": "They had no feathers and no fur. They stood on two legs, blinking in the light."
+        },
+        {
+          "es": "Eran los primeros haida, la primera gente.",
+          "en": "These were the first Haida, the first people."
+        },
+        {
+          "es": "Si hubieras estado dentro de esa almeja, ¿habrías salido?",
+          "en": "If you had been inside that shell, would you have come out?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "almeja",
+          "x": 1150,
+          "s": 1.1,
+          "hasta": 1,
+          "props": {
+            "abierta": 0.5,
+            "ojos": true
+          }
+        },
+        {
+          "tipo": "almeja",
+          "x": 1150,
+          "s": 1.1,
+          "en": 1,
+          "props": {
+            "abierta": 0.75,
+            "ojos": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "cuervo",
+          "como": "cuervo_pie",
+          "x": 640,
+          "escala": 1.3,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.5,
+              "hace": "salta"
+            },
+            {
+              "en": 3.2,
+              "hace": "mira",
+              "a": 1000
+            }
+          ]
+        },
+        {
+          "id": "g1",
+          "como": "haida",
+          "x": 1100,
+          "escala": 0.22,
+          "rotulo": "",
+          "props": {
+            "tocado": null,
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.4,
+              "hace": "camina",
+              "a": 960,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "como": "haida_mujer",
+          "x": 1180,
+          "escala": 0.22,
+          "rotulo": "",
+          "props": {
+            "tocado": null,
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.7,
+              "hace": "camina",
+              "a": 1060,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "como": "haida",
+          "x": 1120,
+          "escala": 0.22,
+          "rotulo": "",
+          "props": {
+            "tocado": null,
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2000000000000002,
+              "hace": "camina",
+              "a": 1300,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "como": "haida_mujer",
+          "x": 1220,
+          "escala": 0.22,
+          "rotulo": "",
+          "props": {
+            "tocado": null,
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.4000000000000001,
+              "hace": "camina",
+              "a": 1420,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "como": "haida",
+          "x": 1150,
+          "escala": 0.22,
+          "rotulo": "",
+          "props": {
+            "tocado": null,
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.6,
+              "hace": "camina",
+              "a": 860,
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 640,
+          "dur": 0.8,
+          "intensidad": 0.4
+        }
+      ]
+    },
+    {
+      "id": "mundo",
+      "fondo": "playa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al Cuervo le divirtieron, por un tiempo.",
+          "en": "Raven was amused by them, for a while."
+        },
+        {
+          "es": "Desde ese día, hubo gente en Haida Gwaii.",
+          "en": "From that day on, there were people on Haida Gwaii."
+        },
+        {
+          "es": "Y los haida siguen viviendo allí hoy, en sus islas.",
+          "en": "And the Haida still live there today, on their islands."
+        }
+      ],
+      "actores": [
+        {
+          "id": "cuervo",
+          "como": "cuervo_pie",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "salta"
+            },
+            {
+              "en": 0.6,
+              "hace": "salta"
+            },
+            {
+              "en": 1.3,
+              "hace": "vuela",
+              "a": [
+                1200,
+                260
+              ],
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "g1",
+          "como": "haida",
+          "x": 900,
+          "escala": 0.3,
+          "rotulo": "",
+          "props": {
+            "tocado": null,
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "como": "haida_mujer",
+          "x": 1050,
+          "escala": 0.3,
+          "rotulo": "",
+          "props": {
+            "tocado": null,
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "haida",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "haida_mujer",
+          "x": 1700,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "escultura",
+      "fondo": "costa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "En 1980, el artista haida Bill Reid terminó una talla gigante de esta historia.",
+          "en": "In 1980, the Haida artist Bill Reid finished a giant carving of this story."
+        },
+        {
+          "es": "La talló en más de cien vigas de cedro amarillo, pegadas en un solo bloque.",
+          "en": "He carved it from more than one hundred beams of yellow cedar, glued together into one block."
+        },
+        {
+          "es": "Muestra al Cuervo sentado sobre la almeja, con la primera gente saliendo.",
+          "en": "It shows Raven sitting on the clamshell, with the first people coming out."
+        },
+        {
+          "es": "Está en el Museo de Antropología de Vancouver, sobre arena traída de Haida Gwaii.",
+          "en": "It stands in the Museum of Anthropology in Vancouver, on sand brought from Haida Gwaii."
+        },
+        {
+          "es": "Durante algunos años, hasta apareció en el billete canadiense de veinte dólares.",
+          "en": "For some years, it was even pictured on Canada's twenty-dollar bill."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "almeja",
+          "x": 1060,
+          "s": 1.25,
+          "props": {
+            "abierta": 0.5
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "talla",
+          "como": "cuervo_pie",
+          "x": 1080,
+          "y": 640,
+          "escala": 1.6,
+          "rotulo": "",
+          "props": {
+            "color": "#D8B070"
+          }
+        },
+        {
+          "id": "reid",
+          "como": "haida",
+          "x": 520,
+          "rotulo": "BILL REID",
+          "props": {
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "senala",
+              "a": 1060
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.9,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "visita",
+          "como": "haida_mujer",
+          "x": 1650,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 1600
+            },
+            {
+              "en": 3.4,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.6,
+          "tipo": "polvo",
+          "x": 900,
+          "y": 700,
+          "dur": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "MUSEO DE ANTROPOLOGÍA, VANCOUVER",
+            "en": "MUSEUM OF ANTHROPOLOGY, VANCOUVER"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "costa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los narradores haida la cuentan de muchas maneras, y cada versión agrega algo nuevo.",
+          "en": "Haida storytellers tell it in many ways, and each telling adds something new."
+        },
+        {
+          "es": "Si pudieras tallar una historia de esta temporada, ¿cuál sería? Cuéntanos en los comentarios.",
+          "en": "If you could carve one story from this season, which one would it be? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez vamos tierra adentro, al río Columbia, donde Coyote mira el cielo de noche.",
+          "en": "Next time, we go inland, to the Columbia River, where Coyote looks up at the night sky."
+        },
+        {
+          "es": "Es Coyote pone las estrellas.",
+          "en": "It is Coyote Places the Stars."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hombre",
+          "como": "haida",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "haida_mujer",
+          "x": 950,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "coyote",
+          "como": "coyote",
+          "x": 1900,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1500
+            },
+            {
+              "en": 2.8,
+              "hace": "mira",
+              "a": 1300
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El Cuervo encontró a la primera gente en una almeja",
+        "en": "Raven found the first people in a clam"
+      },
+      "escena": "salen",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1050
+    },
+    {
+      "gancho": {
+        "es": "Caritas dentro de una almeja gigante",
+        "en": "Little faces inside a giant clam"
+      },
+      "escena": "almeja",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    }
+  ]
+}

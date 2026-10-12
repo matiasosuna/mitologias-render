@@ -1,0 +1,357 @@
+{
+  "id": "short-griegas-ninos-cien-anos",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "Cien años, y todavía un bebé",
+    "en": "A hundred years old, and still a baby"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Cien años, y todavía un bebé",
+    "en": "A hundred years old, and still a baby"
+  },
+  "cierre": {
+    "es": "Mándaselo al amigo que nunca va a crecer",
+    "en": "Send this to the friend who'll never grow up"
+  },
+  "episodio": "griegas-04-edades",
+  "escenas": [
+    {
+      "id": "plata",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Hace mucho, los dioses crearon una segunda raza de gente, hecha de plata.",
+          "en": "Long ago, the gods made a second race of people, made of silver."
+        },
+        {
+          "es": "Sus hijos se quedaban al lado de su madre durante cien años.",
+          "en": "Their children stayed at their mother's side for a hundred years."
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "escala": 1.2,
+          "x": 770,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.4,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 0.9,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "madre",
+          "como": "mujer",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1170,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "hijo",
+          "como": "nino",
+          "escala": 1.1,
+          "x": 1010,
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "salta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "juego",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Cien años jugando en casa, como niños pequeños.",
+          "en": "A hundred years of playing at home, like little kids."
+        },
+        {
+          "es": "Nunca aprendían nada.",
+          "en": "They never learned a thing."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 1300,
+          "s": 0.8,
+          "capa": "fondo"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "100 AÑOS",
+            "en": "100 YEARS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ],
+      "actores": [
+        {
+          "id": "hijo",
+          "como": "nino",
+          "escala": 1.1,
+          "props": {
+            "barba": true,
+            "canas": true
+          },
+          "x": 880,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "salta"
+            },
+            {
+              "en": 0.7,
+              "hace": "salta"
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.6,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "madre",
+          "como": "mujer",
+          "mira": "izq",
+          "escala": 1.2,
+          "props": {
+            "canas": true
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "entristece"
+            },
+            {
+              "en": 1.3,
+              "hace": "niega"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adultos",
+      "fondo": "ciudad",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Cuando por fin crecían, vivían muy poco tiempo.",
+          "en": "When they finally grew up, they lived only a short time."
+        },
+        {
+          "es": "Se peleaban entre ellos, y se negaban a honrar a los dioses.",
+          "en": "They fought each other, and refused to honor the gods."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "altar",
+          "x": 960,
+          "s": 0.6,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "uno",
+          "como": "joven",
+          "escala": 1.2,
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 1.05,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.7,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "otro",
+          "como": "joven",
+          "mira": "izq",
+          "escala": 1.2,
+          "props": {
+            "capa": "#9C6A2E"
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 1.1,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.25,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.75,
+              "hace": "niega"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fin",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Así que Zeus se enojó, y los escondió a todos bajo la tierra.",
+          "en": "So Zeus got angry, and hid them all under the earth."
+        },
+        {
+          "es": "Ahí se volvieron espíritus, y la gente igual los honraba.",
+          "en": "There they became spirits, and people still honored them."
+        },
+        {
+          "es": "La raza de plata: cien años de niños, y apenas unos pocos de adultos.",
+          "en": "The silver race: a hundred years as children, and just a few as adults."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.7,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 0.75,
+          "tipo": "polvo",
+          "x": 1150
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.7,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "otro",
+          "como": "joven",
+          "mira": "izq",
+          "escala": 1.2,
+          "props": {
+            "capa": "#9C6A2E"
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "espiritu",
+          "como": "joven",
+          "mira": "izq",
+          "escala": 1.2,
+          "props": {
+            "capa": "#C9CDD2"
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 1.05,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 1.5
+            },
+            {
+              "en": 2.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1315 @@
+{
+  "id": "norteamericanas-09-el-cuervo-roba-la-luz",
+  "serie": "norteamericanas",
+  "numero": "09",
+  "titulo": {
+    "es": "El Cuervo roba la luz",
+    "en": "Raven Steals the Light"
+  },
+  "tituloGriego": "RAVEN STEALS THE LIGHT",
+  "miniatura": {
+    "heroe": "cuervo_blanco",
+    "rival": "tlingit"
+  },
+  "siguiente": {
+    "es": "El Cuervo y la primera gente",
+    "en": "Raven and the First People"
+  },
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "costa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, una pequeña Rata Almizclera subió la tierra, y el mundo anishinaabe creció sobre la Tortuga.",
+          "en": "Last time, a little Muskrat brought up the earth, and the Anishinaabe world grew on the Turtle's back."
+        },
+        {
+          "es": "Ahora viajamos al oeste, a la costa del Pacífico en Alaska, hogar del pueblo tlingit.",
+          "en": "Now we travel west, to the Pacific coast of Alaska, home of the Tlingit people."
+        },
+        {
+          "es": "Es una tierra de islas, bosques de cedro y mares fríos. Y su gran héroe embaucador es el Cuervo.",
+          "en": "It is a land of islands, cedar forests and cold seas. And its great trickster hero is Raven."
+        },
+        {
+          "es": "Esta versión la contaron narradores tlingit en Sitka, y John Swanton la escribió en 1904.",
+          "en": "This version was told by Tlingit storytellers in Sitka, and written down by John Swanton in 1904."
+        },
+        {
+          "es": "Sus vecinos, los haida, también la cuentan, a su manera.",
+          "en": "Their neighbors, the Haida, tell it too, in their own way."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hombre",
+          "como": "tlingit",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 820,
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "senala",
+              "a": 1300
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "tlingit_mujer",
+          "x": 1050,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "cuervo",
+          "como": "cuervo_negro",
+          "x": 1900,
+          "y": 280,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1300,
+                320
+              ],
+              "dur": 1
+            },
+            {
+              "en": 3.3,
+              "hace": "vuela",
+              "a": [
+                400,
+                260
+              ],
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "haida",
+          "como": "haida",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "HAIDA",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "entra",
+              "a": 1450
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.8,
+          "texto": {
+            "es": "TLINGIT",
+            "en": "TLINGIT"
+          },
+          "x": 1150,
+          "y": 250,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "oscuro",
+      "fondo": "costa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al principio de todo no había luz del día. El mundo estaba a oscuras.",
+          "en": "At the beginning of things, there was no daylight. The world lay in darkness."
+        },
+        {
+          "es": "Río Nass arriba vivía un hombre rico. Guardaba toda la luz del mundo para él solo.",
+          "en": "Far up the Nass River lived a rich man. He kept all the light in the world for himself."
+        },
+        {
+          "es": "En las paredes de su casa colgaban bultos redondos. En ellos guardaba las estrellas y la luna.",
+          "en": "Round bundles hung on the walls of his house. In them, he kept the stars and the moon."
+        },
+        {
+          "es": "Y en una caja guardaba la luz del día.",
+          "en": "And in a box, he kept the daylight."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "interior_tablones",
+          "x": 960,
+          "s": 0.7
+        },
+        {
+          "tipo": "caja",
+          "x": 1380,
+          "s": 0.8,
+          "en": 3,
+          "props": {
+            "luz": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "abuelo",
+          "como": "tlingit",
+          "x": 640,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "viejo",
+            "canas": true
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "senala",
+              "a": 900
+            },
+            {
+              "en": 3.1,
+              "hace": "senala",
+              "a": 1380
+            }
+          ]
+        },
+        {
+          "id": "hija",
+          "como": "tlingit_mujer",
+          "x": 1100,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "mira",
+              "a": 1380
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1380,
+          "y": 700,
+          "dur": 0.8,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "EL RÍO NASS",
+            "en": "THE NASS RIVER"
+          },
+          "x": 1450,
+          "y": 280,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "plan",
+      "fondo": "costa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "sinAstros": true,
+      "frases": [
+        {
+          "es": "El Cuervo sintió pena por la gente que vivía a oscuras. Así que hizo un plan.",
+          "en": "Raven felt sorry for the people living in the dark. So he made a plan."
+        },
+        {
+          "es": "El hombre rico tenía una hija. Un día, ella fue a tomar agua.",
+          "en": "The rich man had a daughter. One day, she went to drink some water."
+        },
+        {
+          "es": "El Cuervo se hizo muy chiquito. En una versión, se volvió una agujita de tsuga. En otra, una motita de tierra.",
+          "en": "Raven made himself very small. In one telling, he became a hemlock needle. In another, a speck of dirt."
+        },
+        {
+          "es": "Flotó en su agua, y ella se lo tragó sin darse cuenta.",
+          "en": "He floated in her water, and she swallowed him without knowing."
+        },
+        {
+          "es": "Poco después, tuvo un bebé.",
+          "en": "Soon after, she had a baby boy."
+        }
+      ],
+      "actores": [
+        {
+          "id": "cuervo",
+          "como": "cuervo_blanco",
+          "x": 520,
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "mira",
+              "a": 1200
+            },
+            {
+              "en": 0.6,
+              "hace": "entristece"
+            },
+            {
+              "en": 2,
+              "hace": "encoge",
+              "escala": 0.2,
+              "dur": 0.5
+            },
+            {
+              "en": 2.6,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "hija",
+          "como": "tlingit_mujer",
+          "x": 1150,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.5
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.5,
+              "hace": "baja"
+            },
+            {
+              "en": 4.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "bebe",
+          "como": "tlingit",
+          "x": 900,
+          "escala": 0.7,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 2.5,
+          "tipo": "chispas",
+          "x": 520,
+          "y": 700,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "UNA AGUJITA DE TSUGA",
+            "en": "A HEMLOCK NEEDLE"
+          },
+          "x": 520,
+          "y": 420,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "bebe",
+      "fondo": "costa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los ojos del bebé eran muy brillantes y se movían rápido.",
+          "en": "The baby's eyes were very bright, and they moved around quickly."
+        },
+        {
+          "es": "Su abuelo lo quería muchísimo.",
+          "en": "His grandfather loved him very much."
+        },
+        {
+          "es": "El bebé gateaba por la casa, llorando y llorando, y señalando los bultos.",
+          "en": "The baby crawled around the house, crying and crying, and pointing at the bundles."
+        },
+        {
+          "es": "'Denle lo que pide', dijo el abuelo. 'Denle la bolsa de las estrellas.'",
+          "en": "'Give him what he is crying for,' said the grandfather. 'Give him the bag of stars.'"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "interior_tablones",
+          "x": 960,
+          "s": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "abuelo",
+          "como": "tlingit",
+          "x": 560,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "viejo",
+            "canas": true
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "abraza"
+            },
+            {
+              "en": 1.9,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "bebe",
+          "como": "tlingit",
+          "x": 900,
+          "escala": 0.7,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 0.5
+            },
+            {
+              "en": 2.3,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.6,
+              "hace": "senala",
+              "a": 900
+            },
+            {
+              "en": 3.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hija",
+          "como": "tlingit_mujer",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "estrellas",
+      "fondo": "costa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El bebé hizo rodar la bolsa por el piso. Y de repente, la soltó para arriba por el agujero del humo.",
+          "en": "The baby rolled the bag around on the floor. Then suddenly, he let it go up through the smoke hole."
+        },
+        {
+          "es": "Voló al cielo, y las estrellas se desparramaron, tal como las ves hoy.",
+          "en": "It flew into the sky, and the stars scattered out of it, the way you see them now."
+        },
+        {
+          "es": "Después volvió a llorar, tanto que creyeron que se moría. Así que le dieron el bulto siguiente.",
+          "en": "Then he cried again, so hard that they thought he would die. So they gave him the next bundle."
+        },
+        {
+          "es": "También lo soltó por el agujero del humo. Y ahí estaba la gran luna.",
+          "en": "He let that one go up the smoke hole too. And there was the big moon."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "interior_tablones",
+          "x": 960,
+          "s": 0.7
+        },
+        {
+          "tipo": "bulto",
+          "x": 960,
+          "y": 760,
+          "s": 0.8,
+          "hasta": 0.6
+        },
+        {
+          "tipo": "bulto",
+          "x": 960,
+          "y": 200,
+          "s": 0.6,
+          "en": 0.6,
+          "hasta": 1.2,
+          "sube": 560,
+          "durSube": 0.5,
+          "props": {
+            "luz": true
+          }
+        },
+        {
+          "tipo": "bulto",
+          "x": 960,
+          "y": 760,
+          "s": 0.9,
+          "en": 2.3,
+          "hasta": 3
+        },
+        {
+          "tipo": "bulto",
+          "x": 960,
+          "y": 200,
+          "s": 0.6,
+          "en": 3,
+          "hasta": 3.6,
+          "sube": 560,
+          "durSube": 0.5,
+          "props": {
+            "luz": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "bebe",
+          "como": "tlingit",
+          "x": 820,
+          "escala": 0.7,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            },
+            {
+              "en": 2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.9,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.4,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "abuelo",
+          "como": "tlingit",
+          "x": 480,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "viejo",
+            "canas": true
+          },
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.6,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "hija",
+          "como": "tlingit_mujer",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 960
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "estrellas",
+          "dur": 1.5
+        },
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 220,
+          "dur": 0.8
+        },
+        {
+          "en": 3.5,
+          "tipo": "luz",
+          "x": 960,
+          "y": 200,
+          "dur": 0.8,
+          "intensidad": 0.7
+        }
+      ]
+    },
+    {
+      "id": "luz",
+      "fondo": "costa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ya solo quedaba una cosa: la caja que guardaba la luz del día.",
+          "en": "Now only one thing was left: the box that held the daylight."
+        },
+        {
+          "es": "El bebé lloró por ella, y sus ojos daban vueltas y mostraban colores raros.",
+          "en": "The baby cried for it, and his eyes rolled around and showed strange colors."
+        },
+        {
+          "es": "Su abuelo se puso muy triste. Pero dijo: 'Desaten lo último y dénselo.'",
+          "en": "His grandfather felt very sad. But he said, 'Untie the last thing, and give it to him.'"
+        },
+        {
+          "es": "Apenas la tuvo, el bebé lanzó un grito de cuervo, '¡Ga!', y salió volando por el agujero del humo con la caja.",
+          "en": "The moment he had it, the baby gave a raven cry, 'Ga!', and flew out the smoke hole with the box."
+        },
+        {
+          "es": "¿Crees que el abuelo sabía desde el principio quién era ese bebé en realidad?",
+          "en": "Do you think the grandfather knew all along who that baby really was?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "interior_tablones",
+          "x": 960,
+          "s": 0.7
+        },
+        {
+          "tipo": "caja",
+          "x": 1250,
+          "s": 0.7,
+          "hasta": 3.1,
+          "props": {
+            "luz": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "bebe",
+          "como": "tlingit",
+          "x": 960,
+          "escala": 0.7,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "senala",
+              "a": 1250
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.6,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.4
+            },
+            {
+              "en": 3.1,
+              "hace": "transforma",
+              "en_que": "cuervo_blanco"
+            },
+            {
+              "en": 3.4,
+              "hace": "vuela",
+              "a": [
+                960,
+                200
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 3.85,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "abuelo",
+          "como": "tlingit",
+          "x": 560,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "viejo",
+            "canas": true
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entristece"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.5,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "hija",
+          "como": "tlingit_mujer",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.1,
+          "tipo": "destello",
+          "x": 1150,
+          "y": 650,
+          "dur": 0.3
+        },
+        {
+          "en": 3.8,
+          "tipo": "luz",
+          "x": 960,
+          "y": 200,
+          "dur": 0.8,
+          "intensidad": 0.8
+        }
+      ]
+    },
+    {
+      "id": "pescadores",
+      "fondo": "costa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "sinAstros": true,
+      "frases": [
+        {
+          "es": "El Cuervo siguió volando, hasta llegar a gente que pescaba a oscuras, junto a un río.",
+          "en": "Raven flew on, until he came to people fishing in the dark, by a river."
+        },
+        {
+          "es": "Les pidió que lo cruzaran, pero no quisieron.",
+          "en": "He asked them to take him across, but they would not."
+        },
+        {
+          "es": "'Si no lo hacen', dijo el Cuervo, '¡les suelto la luz del día!' Pero ellos solo discutieron con él.",
+          "en": "'If you don't,' said Raven, 'I will let daylight break on you!' But they only argued with him."
+        },
+        {
+          "es": "Entonces el Cuervo abrió la caja. El sol voló al cielo, y hubo luz del día por todas partes.",
+          "en": "So Raven opened the box. The sun flew up into the sky, and there was daylight everywhere."
+        },
+        {
+          "es": "Algunos se asustaron tanto que corrieron al mar o al bosque, y se volvieron los animales cuyas pieles llevaban.",
+          "en": "Some people were so frightened, they ran into the sea or the forest, and became the animals whose skins they wore."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "canoa_cedro",
+          "x": 1500,
+          "y": 780,
+          "s": 0.7,
+          "props": {
+            "quieta": true
+          }
+        },
+        {
+          "tipo": "caja",
+          "x": 620,
+          "s": 0.7,
+          "en": 2.8,
+          "props": {
+            "luz": true
+          }
+        },
+        {
+          "tipo": "sol",
+          "x": 1100,
+          "y": 240,
+          "en": 3,
+          "sube": 500,
+          "durSube": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "cuervo",
+          "como": "cuervo_blanco",
+          "x": 200,
+          "escala": 1.1,
+          "y": 320,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                520,
+                790
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "salta"
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "p1",
+          "como": "tlingit",
+          "x": 1200,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "niega"
+            },
+            {
+              "en": 2.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.5,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 3.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.2,
+              "hace": "transforma",
+              "en_que": "oso"
+            },
+            {
+              "en": 4.5,
+              "hace": "corre",
+              "a": 2300,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "como": "tlingit_mujer",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "niega"
+            },
+            {
+              "en": 3.25,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "como": "tlingit",
+          "x": 1650,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 3.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.3,
+              "hace": "transforma",
+              "en_que": "nutria"
+            },
+            {
+              "en": 4.6,
+              "hace": "corre",
+              "a": 2200,
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.55,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "destello",
+          "x": 620,
+          "y": 650,
+          "dur": 0.3
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar",
+          "dur": 0.6
+        },
+        {
+          "en": 3.1,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 300,
+          "dur": 1,
+          "intensidad": 0.8
+        }
+      ]
+    },
+    {
+      "id": "negro",
+      "fondo": "costa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En esa misma versión, el Cuervo al principio era blanco.",
+          "en": "In that same telling, Raven was pure white at first."
+        },
+        {
+          "es": "Después le robó el agua dulce a un hombre llamado Petrel, y voló por el agujero del humo de su casa.",
+          "en": "Later, he stole fresh water from a man named Petrel, and flew up through Petrel's smoke hole."
+        },
+        {
+          "es": "Pero los espíritus de Petrel lo dejaron atascado ahí, y el humo lo volvió negro.",
+          "en": "But Petrel's spirits held him stuck there, and the smoke turned him black."
+        },
+        {
+          "es": "Mientras el Cuervo se iba volando, le caían gotas del pico, y se volvieron los grandes ríos de la costa.",
+          "en": "As Raven flew away, drops of water fell from his beak, and became the great rivers of the coast."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "interior_tablones",
+          "x": 960,
+          "s": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "cuervo",
+          "como": "cuervo_blanco",
+          "x": 650,
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "vuela",
+              "a": [
+                960,
+                220
+              ],
+              "dur": 0.5
+            },
+            {
+              "en": 2,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.4,
+              "hace": "transforma",
+              "en_que": "cuervo_pie"
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                960,
+                -150
+              ],
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "petrel",
+          "como": "tlingit",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "PETREL",
+          "props": {
+            "capa": "#2F5D8A",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.6,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.8,
+              "hace": "senala",
+              "a": 960
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 960,
+          "y": 230,
+          "dur": 0.9
+        },
+        {
+          "en": 3.3,
+          "tipo": "lluvia",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.5,
+          "texto": {
+            "es": "POR ESO EL CUERVO ES NEGRO",
+            "en": "THAT'S WHY THE RAVEN IS BLACK"
+          },
+          "x": 960,
+          "y": 210,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "costa_noroeste",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los cherokee dicen que el fuego chamuscó al Cuervo. Los tlingit dicen que fue el humo.",
+          "en": "The Cherokee say the Raven was scorched black by fire. The Tlingit say it was smoke."
+        },
+        {
+          "es": "¿Qué explicación te gusta más? Cuéntanos en los comentarios.",
+          "en": "Which explanation do you like better? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez navegamos a Haida Gwaii, donde el Cuervo encuentra algo raro dentro de una almeja gigante.",
+          "en": "Next time, we sail to Haida Gwaii, where Raven finds something strange inside a giant clam."
+        },
+        {
+          "es": "Es El Cuervo y la primera gente.",
+          "en": "It is Raven and the First People."
+        }
+      ],
+      "actores": [
+        {
+          "id": "cuervo",
+          "como": "cuervo_pie",
+          "x": 760,
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "salta"
+            },
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 2.2,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "tlingit",
+          "x": 1150,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "haida_mujer",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El bebé que se robó las estrellas",
+        "en": "The baby who stole the stars"
+      },
+      "escena": "estrellas",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "El Cuervo era blanco, hasta que pasó esto",
+        "en": "Raven was white, until this happened"
+      },
+      "escena": "negro",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Abrió la caja de la luz",
+        "en": "He opened the box of daylight"
+      },
+      "escena": "pescadores",
+      "desde": 2,
+      "hasta": 4,
+      "foco": 900
+    }
+  ]
+}

@@ -1,0 +1,350 @@
+{
+  "id": "short-hawaianas-poliahu",
+  "formato": "short",
+  "serie": "hawaianas",
+  "numero": "S",
+  "titulo": {
+    "es": "La nieve venció a la diosa del volcán",
+    "en": "Snow beat the volcano goddess"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "La nieve venció a la diosa del volcán",
+    "en": "Snow beat the volcano goddess"
+  },
+  "cierre": {
+    "es": "Mándaselo al amigo que no sabe perder",
+    "en": "Send this to the friend who's a sore loser"
+  },
+  "episodio": "hawaianas-03-la-tierra-despierta",
+  "escenas": [
+    {
+      "id": "trineo",
+      "fondo": "mauna_kea",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "En la montaña nevada de Mauna Kea, a la diosa de la nieve, Poliʻahu, le encantaba deslizarse en trineo.",
+          "en": "On the snowy mountain Mauna Kea, the snow goddess Poliʻahu loved sledding."
+        },
+        {
+          "es": "Un día, una desconocida hermosa le pidió competir.",
+          "en": "One day, a beautiful stranger asked to race her."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.1,
+          "tipo": "nieve",
+          "dur": 1.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "poliahu",
+          "escala": 1.2,
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "corre",
+              "a": 900,
+              "dur": 0.5
+            },
+            {
+              "en": 0.8,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "mira",
+              "a": 1150
+            }
+          ]
+        },
+        {
+          "id": "extranjera",
+          "como": "pele",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "props": {
+            "pelo": "#2B1A10",
+            "capa": "#E8D9B8"
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 1.3,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "carrera",
+      "fondo": "mauna_kea",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Poliʻahu ganó. Y volvió a ganar.",
+          "en": "Poliʻahu won. Then she won again."
+        },
+        {
+          "es": "Los ojos de la desconocida se pusieron rojos. ¡Era Pele, la diosa del volcán!",
+          "en": "The stranger's eyes burned red. She was Pele, the volcano goddess!"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.1,
+          "tipo": "nieve",
+          "dur": 1
+        },
+        {
+          "en": 1.2,
+          "tipo": "fuego",
+          "x": 1150,
+          "y": 760,
+          "dur": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "poliahu",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 780,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "corre",
+              "a": 900,
+              "dur": 0.3
+            },
+            {
+              "en": 0.5,
+              "hace": "salta"
+            },
+            {
+              "en": 0.9,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "extranjera",
+          "como": "pele",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "props": {
+            "pelo": "#2B1A10",
+            "capa": "#E8D9B8"
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.2,
+              "hace": "transforma",
+              "en_que": "pele"
+            },
+            {
+              "en": 1.5,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lava",
+      "fondo": "mauna_kea",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pele abrió la montaña, y ríos de lava persiguieron a Poliʻahu.",
+          "en": "Pele split the mountain open, and rivers of lava chased Poliʻahu."
+        },
+        {
+          "es": "Su capa blanca se prendió fuego.",
+          "en": "Her white cape caught fire."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fuente_lava",
+          "x": 1180,
+          "s": 0.8,
+          "capa": "fondo",
+          "en": 0.3,
+          "sube": 200
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 1.1,
+          "tipo": "fuego",
+          "x": 820,
+          "y": 600,
+          "dur": 0.4
+        },
+        {
+          "en": 1.3,
+          "tipo": "humo",
+          "x": 820,
+          "y": 500,
+          "dur": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "pele",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.4,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "poliahu",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 840,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.8,
+              "hace": "corre",
+              "a": 770,
+              "dur": 0.3
+            },
+            {
+              "en": 1.3,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nieve",
+      "fondo": "mauna_kea",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero Poliʻahu lanzó su capa de nieve sobre la tierra, y la lava se congeló en piedra.",
+          "en": "But Poliʻahu threw her snow cape over the land, and the lava froze into stone."
+        },
+        {
+          "es": "Pele tuvo que volver al sur, a su propio volcán.",
+          "en": "Pele had to go back south, to her own volcano."
+        },
+        {
+          "es": "Hasta hoy, Mauna Kea lleva la nieve, y Pele arde en el sur.",
+          "en": "To this day, Mauna Kea wears the snow, and Pele burns in the south."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fuente_lava",
+          "x": 1180,
+          "s": 0.8,
+          "capa": "fondo",
+          "hasta": 0.7
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "nieve",
+          "dur": 2.5
+        },
+        {
+          "en": 0.6,
+          "tipo": "humo",
+          "x": 1100,
+          "y": 600,
+          "dur": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "poliahu",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "lanza"
+            },
+            {
+              "en": 0.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "pele",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 1160,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 1,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.4,
+              "hace": "desaparece",
+              "con": "fuego"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

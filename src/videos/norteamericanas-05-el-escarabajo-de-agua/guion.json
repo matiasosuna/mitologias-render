@@ -1,0 +1,1449 @@
+{
+  "id": "norteamericanas-05-el-escarabajo-de-agua",
+  "serie": "norteamericanas",
+  "numero": "05",
+  "titulo": {
+    "es": "El escarabajo de agua y el gran zopilote",
+    "en": "The Water Beetle and the Great Buzzard"
+  },
+  "tituloGriego": "THE WATER BEETLE AND THE GREAT BUZZARD",
+  "miniatura": {
+    "heroe": "escarabajo_agua",
+    "rival": "zopilote"
+  },
+  "siguiente": {
+    "es": "La araña de agua trae el fuego",
+    "en": "The Water Spider Brings Fire"
+  },
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "montanas",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Brote y Pedernal le dieron forma al mundo, en una historia haudenosaunee.",
+          "en": "Last time, Sapling and Flint shaped the world, in a story of the Haudenosaunee."
+        },
+        {
+          "es": "Ahora viajamos al sur, con los cherokee, en las montañas de lo que hoy es el sureste de Estados Unidos.",
+          "en": "Now we travel south, to the Cherokee, in the mountains of what is now the southeastern United States."
+        },
+        {
+          "es": "A fines del siglo XIX, narradores cherokee le contaron esta historia a James Mooney, y él la escribió.",
+          "en": "In the late 1800s, Cherokee storytellers shared this story with a man named James Mooney, and he wrote it down."
+        },
+        {
+          "es": "Empieza mucho antes de que hubiera tierra.",
+          "en": "It begins long before there was any land at all."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 900
+        }
+      ],
+      "actores": [
+        {
+          "id": "anciano",
+          "como": "cherokee",
+          "x": 640,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "viejo",
+            "canas": true
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "cherokee",
+          "x": 1120,
+          "rotulo": "",
+          "mira": "izq",
+          "props": {
+            "cuerpo": "nino",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "mira",
+              "a": 1000
+            },
+            {
+              "en": 1.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 640
+            }
+          ]
+        },
+        {
+          "id": "nina",
+          "como": "cherokee_mujer",
+          "x": 1280,
+          "rotulo": "",
+          "mira": "izq",
+          "props": {
+            "cuerpo": "nino"
+          },
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "madre",
+          "como": "cherokee_mujer",
+          "x": 1460,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 900,
+          "y": 720,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "CHEROKEE",
+            "en": "CHEROKEE"
+          },
+          "x": 1150,
+          "y": 250,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "agua",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hace mucho tiempo, todo el mundo era agua. No había tierra en ninguna parte.",
+          "en": "Long ago, the whole world was water. There was no land anywhere."
+        },
+        {
+          "es": "Muy arriba, más allá de una gran bóveda de piedra en el cielo, había un lugar que los cherokee llaman Galunlati.",
+          "en": "High above, beyond a great arch of stone in the sky, was a place the Cherokee call Galunlati."
+        },
+        {
+          "es": "Todos los animales vivían allí arriba. Pero estaban muy apretados y querían más lugar.",
+          "en": "All the animals lived up there. But it was very crowded, and they wanted more room."
+        },
+        {
+          "es": "Miraron el agua allá abajo y se preguntaron: ¿qué habrá ahí debajo?",
+          "en": "They looked down at the water and wondered: what is under there?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "boveda",
+          "x": 960,
+          "y": 330,
+          "en": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "ciervo",
+          "como": "ciervo",
+          "x": 560,
+          "y": 330,
+          "escala": 0.45,
+          "rotulo": "",
+          "props": {
+            "color": "#9A6A3A"
+          },
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "oso",
+          "como": "oso",
+          "x": 720,
+          "y": 330,
+          "escala": 0.45,
+          "rotulo": "",
+          "props": {
+            "color": "#4A3428"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "mira",
+              "a": 560
+            }
+          ]
+        },
+        {
+          "id": "castor",
+          "como": "castor",
+          "x": 870,
+          "y": 330,
+          "escala": 0.55,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "tortuga",
+          "como": "tortuga",
+          "x": 1010,
+          "y": 330,
+          "escala": 0.6,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "escarabajo",
+          "como": "escarabajo_agua",
+          "x": 1130,
+          "y": 330,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "lobo",
+          "como": "lobo",
+          "x": 1290,
+          "y": 330,
+          "escala": 0.45,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "color": "#8A8478"
+          },
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "mira",
+              "a": 1400
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "GALUNLATI",
+            "en": "GALUNLATI"
+          },
+          "x": 960,
+          "y": 520,
+          "hasta": 2.6
+        }
+      ],
+      "sinAstros": true
+    },
+    {
+      "id": "escarabajo",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces habló el pequeño Escarabajo de Agua. 'Yo iré a ver', dijo.",
+          "en": "Then the little Water Beetle spoke up. 'I will go and see,' he said."
+        },
+        {
+          "es": "Los cherokee lo llaman Dayunisi, que quiere decir 'el nieto del castor'.",
+          "en": "The Cherokee call him Dayunisi, which means Beaver's Grandchild."
+        },
+        {
+          "es": "Corrió por toda el agua, de aquí para allá, pero no encontró dónde descansar.",
+          "en": "He darted all over the water, this way and that, but he found no place to rest."
+        },
+        {
+          "es": "Entonces se zambulló hasta el fondo, y subió con un poco de barro blando.",
+          "en": "So he dove down to the very bottom, and came up with a little soft mud."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla_barro",
+          "x": 1060,
+          "en": 3.7,
+          "props": {
+            "tierra": 0.06
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "escarabajo",
+          "como": "escarabajo_agua",
+          "x": 420,
+          "y": 806,
+          "escala": 1.7,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.5,
+              "hace": "nada",
+              "a": 640,
+              "dur": 0.5
+            },
+            {
+              "en": 2,
+              "hace": "nada",
+              "a": 1300,
+              "dur": 0.3
+            },
+            {
+              "en": 2.35,
+              "hace": "nada",
+              "a": 760,
+              "dur": 0.3
+            },
+            {
+              "en": 2.7,
+              "hace": "nada",
+              "a": 1060,
+              "dur": 0.25
+            },
+            {
+              "en": 3.1,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "escarabajo2",
+          "como": "escarabajo_agua",
+          "x": 1060,
+          "y": 760,
+          "escala": 1.4,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.6,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3.8,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.6,
+          "tipo": "luz",
+          "x": 1060,
+          "y": 740,
+          "dur": 0.6,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "DAYUNISI · EL NIETO DEL CASTOR",
+            "en": "DAYUNISI · BEAVER'S GRANDCHILD"
+          },
+          "x": 1250,
+          "y": 300,
+          "hasta": 2
+        }
+      ],
+      "sinAstros": true
+    },
+    {
+      "id": "crece",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.06,
+          1
+        ]
+      },
+      "frases": [
+        {
+          "es": "El barro empezó a crecer. Se extendió para todos lados.",
+          "en": "The mud began to grow. It spread out on every side."
+        },
+        {
+          "es": "Creció y creció, hasta volverse una gran isla: la tierra donde vivimos.",
+          "en": "It grew and grew, until it became a great island: the earth we live on."
+        },
+        {
+          "es": "Después, la isla quedó atada al cielo con cuatro cuerdas largas. Pero nadie recuerda quién lo hizo.",
+          "en": "Later, the island was tied to the sky with four long cords. But no one remembers who did it."
+        },
+        {
+          "es": "Los cherokee dicen que la tierra sigue colgada ahí, flotando sobre el agua.",
+          "en": "The Cherokee say the earth still hangs there today, floating on the water."
+        },
+        {
+          "es": "Y algunos dicen que un día, cuando el mundo sea muy viejo, las cuerdas se romperán.",
+          "en": "And some say that one day, when the world grows very old, the cords will break."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla_barro",
+          "x": 960,
+          "hasta": 0.6,
+          "props": {
+            "tierra": 0.15
+          }
+        },
+        {
+          "tipo": "isla_barro",
+          "x": 960,
+          "en": 0.6,
+          "hasta": 1.2,
+          "props": {
+            "tierra": 0.4
+          }
+        },
+        {
+          "tipo": "isla_barro",
+          "x": 960,
+          "en": 1.2,
+          "hasta": 2.2,
+          "props": {
+            "tierra": 0.8
+          }
+        },
+        {
+          "tipo": "isla_barro",
+          "x": 960,
+          "en": 2.2,
+          "props": {
+            "tierra": 1,
+            "cuerdas": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "escarabajo",
+          "como": "escarabajo_agua",
+          "x": 1760,
+          "y": 806,
+          "escala": 1.4,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.4,
+              "hace": "mira",
+              "a": 1300
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "polvo",
+          "x": 960,
+          "y": 760,
+          "dur": 0.6
+        },
+        {
+          "en": 1.2,
+          "tipo": "polvo",
+          "x": 960,
+          "y": 740,
+          "dur": 0.6
+        },
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 960,
+          "y": 300,
+          "dur": 0.8,
+          "intensidad": 0.4
+        },
+        {
+          "en": 4.3,
+          "tipo": "niebla",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.3,
+          "texto": {
+            "es": "CUATRO CUERDAS",
+            "en": "FOUR CORDS"
+          },
+          "x": 1500,
+          "y": 300,
+          "hasta": 3.4
+        }
+      ],
+      "sinAstros": true
+    },
+    {
+      "id": "zopilote",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al principio, la tierra nueva era plana, y muy blanda y mojada.",
+          "en": "At first, the new earth was flat, and very soft and wet."
+        },
+        {
+          "es": "Los animales mandaron aves a ver si ya estaba seca. Pero las aves no encontraron dónde posarse.",
+          "en": "The animals sent birds down to see if it was dry yet. But the birds found nowhere to land."
+        },
+        {
+          "es": "Por fin mandaron al Gran Zopilote, el padre de todos los zopilotes.",
+          "en": "At last, they sent the Great Buzzard, the father of all buzzards."
+        },
+        {
+          "es": "'Baja y prepárala para nosotros', le dijeron.",
+          "en": "'Go down and make it ready for us,' they told him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla_barro",
+          "x": 1050,
+          "s": 1.2,
+          "props": {
+            "tierra": 1,
+            "cuerdas": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "ave1",
+          "como": "aguila",
+          "x": 300,
+          "y": 260,
+          "escala": 0.5,
+          "rotulo": "",
+          "props": {
+            "color": "#5B4A3A"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1000,
+                520
+              ],
+              "dur": 0.7
+            },
+            {
+              "en": 1.8,
+              "hace": "vuela",
+              "a": [
+                400,
+                300
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "ave2",
+          "como": "aguila",
+          "x": 1900,
+          "y": 300,
+          "escala": 0.45,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "color": "#7A6A5A"
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "vuela",
+              "a": [
+                1250,
+                560
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 1.9,
+              "hace": "vuela",
+              "a": [
+                1900,
+                280
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "zopilote",
+          "como": "zopilote",
+          "x": 200,
+          "y": 200,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                760,
+                360
+              ],
+              "dur": 1
+            },
+            {
+              "en": 3.2,
+              "hace": "vuela",
+              "a": [
+                960,
+                420
+              ],
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "sinAstros": true
+    },
+    {
+      "id": "montes",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El Gran Zopilote voló por toda la tierra, bajito, cerca del suelo.",
+          "en": "The Great Buzzard flew all over the earth, low down, close to the ground."
+        },
+        {
+          "es": "Cuando llegó a la tierra de los cherokee, estaba muy cansado.",
+          "en": "When he reached the land of the Cherokee, he was very tired."
+        },
+        {
+          "es": "Sus alas empezaron a aletear y a golpear el suelo blando. Donde golpeaban, quedaba un valle.",
+          "en": "His wings began to flap and strike the soft ground. Wherever they struck, there was a valley."
+        },
+        {
+          "es": "Y donde volvían a subir, quedaba una montaña.",
+          "en": "And wherever they turned up again, there was a mountain."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "isla_barro",
+          "x": 1150,
+          "s": 1.35,
+          "hasta": 2.4,
+          "props": {
+            "tierra": 1
+          }
+        },
+        {
+          "tipo": "isla_barro",
+          "x": 1150,
+          "s": 1.35,
+          "en": 2.4,
+          "hasta": 3.1,
+          "props": {
+            "tierra": 1,
+            "montes": 0.5
+          }
+        },
+        {
+          "tipo": "isla_barro",
+          "x": 1150,
+          "s": 1.35,
+          "en": 3.1,
+          "props": {
+            "tierra": 1,
+            "montes": 1
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "zopilote",
+          "como": "zopilote",
+          "x": 150,
+          "y": 420,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                800,
+                560
+              ],
+              "dur": 1.2
+            },
+            {
+              "en": 1.3,
+              "hace": "vuela",
+              "a": [
+                1050,
+                620
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 1.6,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 2.1,
+              "hace": "vuela",
+              "a": [
+                1500,
+                600
+              ],
+              "dur": 1
+            },
+            {
+              "en": 3.1,
+              "hace": "vuela",
+              "a": [
+                2000,
+                560
+              ],
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.4,
+          "tipo": "polvo",
+          "x": 1000,
+          "y": 700,
+          "dur": 0.5
+        },
+        {
+          "en": 2.7,
+          "tipo": "polvo",
+          "x": 1300,
+          "y": 690,
+          "dur": 0.5
+        },
+        {
+          "en": 3.1,
+          "tipo": "polvo",
+          "x": 1650,
+          "y": 690,
+          "dur": 0.5
+        },
+        {
+          "en": 3.3,
+          "tipo": "temblor",
+          "dur": 0.4,
+          "intensidad": 0.4
+        }
+      ],
+      "sinAstros": true
+    },
+    {
+      "id": "llamada",
+      "fondo": "montanas",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los animales de arriba se preocuparon. '¡Pronto todo el mundo va a ser montañas!', dijeron.",
+          "en": "The animals up above were worried. 'Soon the whole world will be mountains!' they said."
+        },
+        {
+          "es": "Así que llamaron al Zopilote para que volviera.",
+          "en": "So they called the Buzzard back."
+        },
+        {
+          "es": "Pero el país cherokee sigue lleno de montañas hasta hoy.",
+          "en": "But the Cherokee country is full of mountains to this day."
+        },
+        {
+          "es": "¿Alguna vez viste las montañas Great Smoky? ¿Te parecen marcas de unas alas gigantes?",
+          "en": "Have you ever seen the Great Smoky Mountains? Do they look like the marks of giant wings to you?"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ciervo",
+          "como": "ciervo",
+          "x": 520,
+          "rotulo": "",
+          "props": {
+            "color": "#9A6A3A"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.4,
+              "hace": "mira",
+              "a": 1400
+            }
+          ]
+        },
+        {
+          "id": "oso",
+          "como": "oso",
+          "x": 780,
+          "rotulo": "",
+          "props": {
+            "color": "#4A3428"
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "castor",
+          "como": "castor",
+          "x": 1000,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "zopilote",
+          "como": "zopilote",
+          "x": 1500,
+          "y": 420,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                2200,
+                160
+              ],
+              "dur": 1.2
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "POR ESO EL PAÍS CHEROKEE ES DE MONTAÑAS",
+            "en": "WHY CHEROKEE LAND IS FULL OF MOUNTAINS"
+          },
+          "x": 960,
+          "y": 210,
+          "estilo": "porque"
+        }
+      ],
+      "sinAstros": true
+    },
+    {
+      "id": "sol",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "sinAstros": true,
+      "frases": [
+        {
+          "es": "Entonces los animales bajaron a la tierra nueva. Pero todavía estaba oscuro.",
+          "en": "Then the animals came down to the new earth. But it was still dark."
+        },
+        {
+          "es": "Así que consiguieron el sol y lo pusieron en un camino por el cielo, de este a oeste.",
+          "en": "So they got the sun, and set it on a path across the sky, from east to west."
+        },
+        {
+          "es": "Al principio estaba muy bajo y quemaba demasiado. El Cangrejo de Río quedó rojo de tanto calor.",
+          "en": "At first it was too low, and much too hot. The Red Crawfish was scorched bright red."
+        },
+        {
+          "es": "Entonces subieron el sol una mano más, y otra, siete veces, hasta que quedó justo bien.",
+          "en": "So the sun was raised one hand higher, then another, seven times, until it was just right."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 1100,
+          "y": 560,
+          "en": 1,
+          "hasta": 3
+        },
+        {
+          "tipo": "sol",
+          "x": 1100,
+          "y": 230,
+          "en": 3,
+          "sube": 330,
+          "durSube": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "ciervo",
+          "como": "ciervo",
+          "x": 420,
+          "rotulo": "",
+          "props": {
+            "color": "#9A6A3A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 420
+            },
+            {
+              "en": 1.4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "cangrejo",
+          "como": "cangrejo",
+          "x": 760,
+          "escala": 1.4,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 2.5,
+              "hace": "desaparece",
+              "con": "fuego"
+            }
+          ]
+        },
+        {
+          "id": "cangrejo_rojo",
+          "como": "cangrejo",
+          "x": 760,
+          "escala": 1.4,
+          "rotulo": "",
+          "props": {
+            "color": "#C8321E"
+          },
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 3.4,
+              "hace": "camina",
+              "a": 600,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "oso",
+          "como": "oso",
+          "x": 1600,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "color": "#4A3428"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "entra",
+              "a": 1600
+            },
+            {
+              "en": 3.6,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 2.3,
+          "tipo": "fuego",
+          "x": 760,
+          "y": 760,
+          "dur": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 300,
+          "dur": 1,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.4,
+          "texto": {
+            "es": "CANGREJO ROJO",
+            "en": "RED CRAWFISH"
+          },
+          "x": 760,
+          "y": 560,
+          "hasta": 3.2
+        }
+      ]
+    },
+    {
+      "id": "siete_noches",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuando hicieron a los animales y las plantas, les dijeron que se quedaran despiertos siete noches.",
+          "en": "When the animals and plants were first made, they were told to stay awake for seven nights."
+        },
+        {
+          "es": "Uno a uno se fueron durmiendo. En la séptima noche, solo el búho, el puma y unos pocos más seguían despiertos.",
+          "en": "One by one, they fell asleep. By the seventh night, only the owl, the panther and a few others were awake."
+        },
+        {
+          "es": "Por eso recibieron el poder de ver en la oscuridad.",
+          "en": "So they were given the power to see in the dark."
+        },
+        {
+          "es": "De los árboles, solo unos pocos se quedaron despiertos, como el cedro y el pino.",
+          "en": "Of the trees, only a few stayed awake, like the cedar and the pine."
+        },
+        {
+          "es": "Por eso están verdes todo el año. Los demás árboles pierden las hojas cada invierno.",
+          "en": "So they stay green all year. The other trees lose their leaves every winter."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cedro",
+          "x": 280,
+          "s": 0.85
+        },
+        {
+          "tipo": "arce",
+          "x": 1250,
+          "s": 0.9,
+          "props": {
+            "color": "#B2541E"
+          }
+        },
+        {
+          "tipo": "pino",
+          "x": 1900,
+          "s": 1.05
+        }
+      ],
+      "actores": [
+        {
+          "id": "ciervo",
+          "como": "ciervo",
+          "x": 560,
+          "rotulo": "",
+          "props": {
+            "color": "#9A6A3A"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "oso",
+          "como": "oso",
+          "x": 800,
+          "rotulo": "",
+          "props": {
+            "color": "#4A3428"
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "castor",
+          "como": "castor",
+          "x": 1000,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.35,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "buho",
+          "como": "buho_cornudo",
+          "x": 1500,
+          "escala": 1.3,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "estrellas",
+          "dur": 1.5
+        },
+        {
+          "en": 3.3,
+          "tipo": "luz",
+          "x": 280,
+          "y": 420,
+          "dur": 0.8,
+          "intensidad": 0.4
+        },
+        {
+          "en": 4.2,
+          "tipo": "nieve",
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "montanas",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así se hizo el mundo cherokee, como se lo contaron a James Mooney hace mucho.",
+          "en": "That is how the Cherokee world was made, as it was told to James Mooney long ago."
+        },
+        {
+          "es": "Si hubieras sido uno de los animales, ¿te habrías quedado despierto las siete noches? Cuéntanos en los comentarios.",
+          "en": "If you had been one of the animals, would you have stayed awake all seven nights? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, el mundo tiene frío y los animales necesitan fuego. Pero el fuego está en una isla.",
+          "en": "Next time, the world is cold, and the animals need fire. But the fire is on an island."
+        },
+        {
+          "es": "Es La araña de agua trae el fuego.",
+          "en": "It is The Water Spider Brings Fire."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hombre",
+          "como": "cherokee",
+          "x": 640,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 760,
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "senala",
+              "a": 1300
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "cherokee_mujer",
+          "x": 1040,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "cherokee",
+          "x": 1260,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "arana",
+          "como": "arana_agua",
+          "x": 1700,
+          "mira": "izq",
+          "escala": 1.3,
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El ave cansada que hizo las montañas",
+        "en": "The tired bird who made the mountains"
+      },
+      "escena": "montes",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Los cherokee dicen que la tierra cuelga de cuatro cuerdas",
+        "en": "The Cherokee say the earth hangs from four cords"
+      },
+      "escena": "crece",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Por qué el cangrejo de río es rojo",
+        "en": "Why the crawfish turned red"
+      },
+      "escena": "sol",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    }
+  ]
+}

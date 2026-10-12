@@ -1,0 +1,1075 @@
+{
+  "id": "aztecas-04-el-sol-de-viento",
+  "serie": "aztecas",
+  "numero": "04",
+  "titulo": {
+    "es": "El Sol de Viento",
+    "en": "The Wind Sun"
+  },
+  "tituloGriego": "THE WIND SUN",
+  "miniatura": {
+    "heroe": "quetzalcoatl",
+    "rival": "tezcatlipoca"
+  },
+  "siguiente": {
+    "es": "La lluvia de fuego",
+    "en": "The Rain of Fire"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "encinar",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, los jaguares terminaron con el primer mundo y con sus gigantes.",
+          "en": "Last time, the jaguars brought the first world and its giants to an end."
+        },
+        {
+          "es": "Tezcatlipoca, el dios oscuro, había caído del cielo por un golpe de Quetzalcóatl.",
+          "en": "Tezcatlipoca, the dark god, had been knocked out of the sky by Quetzalcoatl."
+        },
+        {
+          "es": "Ahora el cielo esperaba un sol nuevo.",
+          "en": "Now the sky was waiting for a new sun."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "jaguar",
+          "como": "ocelotl",
+          "x": 420,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 760,
+              "dur": 0.8
+            },
+            {
+              "en": 1.3,
+              "hace": "habla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1600
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "aclarar",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "quetzal_sol",
+      "fondo": "valle",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Esta vez, el sol fue Quetzalcóatl, la Serpiente Emplumada.",
+          "en": "This time, the sun was Quetzalcoatl, the Feathered Serpent."
+        },
+        {
+          "es": "Subió al cielo y empezó a brillar. Comenzó la segunda época.",
+          "en": "He rose into the sky and began to shine. The second age began."
+        },
+        {
+          "es": "Los mexicas la llamaban Nahui Ehécatl, Cuatro Viento: el Sol de Viento.",
+          "en": "The Mexica called it Nahui Ehecatl, Four Wind: the Wind Sun."
+        },
+        {
+          "es": "Según la Leyenda de los Soles, este sol duró trescientos sesenta y cuatro años.",
+          "en": "According to the Legend of the Suns, this sun lasted three hundred and sixty-four years."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 960,
+          "y": 280,
+          "s": 1.25,
+          "en": 1.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 960,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.6,
+              "hace": "vuela",
+              "a": [
+                960,
+                520
+              ],
+              "dur": 0.7
+            },
+            {
+              "en": 1.1,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.5,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "mexica",
+          "x": 420,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mexica_mujer",
+          "x": 1520,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "luz",
+          "x": 960,
+          "y": 300,
+          "dur": 1
+        },
+        {
+          "en": 1.2,
+          "tipo": "aclarar",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "NAHUI EHÉCATL",
+            "en": "NAHUI EHECATL"
+          },
+          "x": 1450,
+          "y": 260,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "364",
+            "en": "364"
+          },
+          "x": 1450,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "ehecatl",
+      "fondo": "milpa",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 220,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Quetzalcóatl también era Ehécatl, el dios del viento.",
+          "en": "Quetzalcoatl was also Ehecatl, the god of the wind."
+        },
+        {
+          "es": "En los códices lleva una máscara roja con forma de pico, para soplar.",
+          "en": "In the codices he wears a red mask shaped like a beak, so he can blow."
+        },
+        {
+          "es": "El Códice Florentino dice que el viento barre los caminos para que llegue la lluvia.",
+          "en": "The Florentine Codex says the wind sweeps the roads so that the rain can come."
+        },
+        {
+          "es": "En este nuevo mundo vivía gente nueva, y todo estaba tranquilo.",
+          "en": "New people lived in this new world, and everything was calm."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 1600,
+          "y": 250,
+          "s": 0.8
+        },
+        {
+          "tipo": "nube_codice",
+          "x": 1300,
+          "y": 300,
+          "s": 0.9,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 560,
+          "rotulo": "EHECATL",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "mexica",
+          "x": 1200,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1100
+            },
+            {
+              "en": 3.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mexica_mujer",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "mexica",
+          "x": 1600,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 3.3,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.6,
+          "tipo": "niebla",
+          "dur": 0.8
+        },
+        {
+          "en": 2.3,
+          "tipo": "lluvia",
+          "dur": 0.7
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "rival",
+      "fondo": "valle",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Tezcatlipoca no se había olvidado de aquel golpe.",
+          "en": "But Tezcatlipoca had not forgotten that blow."
+        },
+        {
+          "es": "Tezcatlipoca era un dios de la noche y de los cambios repentinos. Nada se le escapaba en su espejo.",
+          "en": "Tezcatlipoca was a god of the night and of sudden change. Nothing escaped his mirror."
+        },
+        {
+          "es": "Como era un dios, podía convertirse en jaguar cuando quería.",
+          "en": "Because he was a god, he could turn into a jaguar whenever he wanted."
+        },
+        {
+          "es": "Así que tomó la forma de un jaguar y subió hacia el sol.",
+          "en": "So he took the shape of a jaguar and climbed up toward the sun."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 1500,
+          "y": 260,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "negro",
+          "como": "tezcatlipoca",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 1500
+            },
+            {
+              "en": 0.6,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            },
+            {
+              "en": 2.4,
+              "hace": "transforma",
+              "en_que": "ocelotl"
+            },
+            {
+              "en": 3.1,
+              "hace": "vuela",
+              "a": [
+                1200,
+                520
+              ],
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.4,
+          "tipo": "humo",
+          "x": 700,
+          "y": 640,
+          "dur": 0.6
+        },
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 0.6
+        },
+        {
+          "en": 1.3,
+          "tipo": "humo",
+          "x": 760,
+          "y": 420,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "zarpazo",
+      "fondo": "valle",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Con un gran zarpazo, derribó a Quetzalcóatl del cielo.",
+          "en": "With one great swipe of his paw, he knocked Quetzalcoatl out of the sky."
+        },
+        {
+          "es": "Y cuando Quetzalcóatl cayó, se levantó un viento terrible.",
+          "en": "And as Quetzalcoatl fell, a terrible wind rose up."
+        },
+        {
+          "es": "¿Fue venganza, o solo su rivalidad de siempre? ¿Tú qué piensas? Cuéntanos en los comentarios.",
+          "en": "Was it revenge, or just their old rivalry? What do you think? Tell us in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 1100,
+          "y": 280,
+          "s": 1.1,
+          "hasta": 0.6
+        },
+        {
+          "tipo": "remolino",
+          "x": 1400,
+          "s": 0.9,
+          "en": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "jaguar",
+          "como": "ocelotl",
+          "x": 760,
+          "y": 470,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "salta"
+            },
+            {
+              "en": 0.35,
+              "hace": "habla",
+              "dur": 0.3
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 1100,
+          "y": 560,
+          "escala": 0.75,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "tiembla",
+              "dur": 0.2
+            },
+            {
+              "en": 0.6,
+              "hace": "vuela",
+              "a": [
+                1250,
+                790
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "destello",
+          "x": 1000,
+          "y": 360
+        },
+        {
+          "en": 0.7,
+          "tipo": "oscurecer",
+          "dur": 0.5
+        },
+        {
+          "en": 1.1,
+          "tipo": "polvo",
+          "x": 1300,
+          "y": 760,
+          "dur": 1
+        },
+        {
+          "en": 1.2,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 1.4,
+          "tipo": "niebla",
+          "dur": 1.2
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "viento",
+      "fondo": "valle",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El viento arrancó los árboles y se llevó las casas.",
+          "en": "The wind tore up the trees and carried away the houses."
+        },
+        {
+          "es": "Se llevó también a casi toda la gente de ese mundo.",
+          "en": "It also carried away almost all the people of that world."
+        },
+        {
+          "es": "En la Leyenda de los Soles, ese final hasta tiene fecha: un día llamado Cuatro Viento.",
+          "en": "In the Legend of the Suns, this ending even has a date: a day called Four Wind."
+        },
+        {
+          "es": "El Sol de Viento había terminado.",
+          "en": "The Wind Sun was over."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "remolino",
+          "x": 1000,
+          "s": 1.2,
+          "hasta": 3
+        },
+        {
+          "tipo": "casa_mexica",
+          "x": 520,
+          "s": 0.8,
+          "hasta": 0.7
+        },
+        {
+          "tipo": "ahuehuete",
+          "x": 1500,
+          "s": 0.8,
+          "hasta": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "hombre",
+          "como": "mexica",
+          "x": 360,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.8,
+              "hace": "corre",
+              "a": -400,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mexica_mujer",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1500,
+                300
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 1.7,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "polvo",
+          "x": 900,
+          "y": 760,
+          "dur": 1
+        },
+        {
+          "en": 0.5,
+          "tipo": "niebla",
+          "dur": 1.5
+        },
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 2.2,
+          "tipo": "polvo",
+          "x": 1200,
+          "y": 760,
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "monos",
+      "fondo": "selva",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero unos pocos lograron agarrarse, muy alto, en el aire y en los árboles.",
+          "en": "But a few managed to hold on, high up in the air and in the trees."
+        },
+        {
+          "es": "Y esos pocos se convirtieron en monos.",
+          "en": "And those few were turned into monkeys."
+        },
+        {
+          "es": "Así lo cuentan dos libros antiguos: la Historia de los mexicanos por sus pinturas y la Leyenda de los Soles.",
+          "en": "That is how two old books tell it: the History of the Mexicans as Told by Their Paintings, and the Legend of the Suns."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "m1",
+          "como": "mexica",
+          "x": 620,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 1,
+              "hace": "transforma",
+              "en_que": "ozomatli"
+            },
+            {
+              "en": 2,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "m2",
+          "como": "mexica_mujer",
+          "x": 1000,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 1.2,
+              "hace": "transforma",
+              "en_que": "ozomatli"
+            },
+            {
+              "en": 2.3,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "m3",
+          "como": "mexica",
+          "x": 1360,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "transforma",
+              "en_que": "ozomatli"
+            },
+            {
+              "en": 2.6,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 0.8
+        },
+        {
+          "en": 1,
+          "tipo": "humo",
+          "x": 620,
+          "y": 640,
+          "dur": 0.5
+        },
+        {
+          "en": 1.2,
+          "tipo": "humo",
+          "x": 1000,
+          "y": 640,
+          "dur": 0.5
+        },
+        {
+          "en": 1.4,
+          "tipo": "humo",
+          "x": 1360,
+          "y": 700,
+          "dur": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "OZOMATLI",
+            "en": "MONKEYS"
+          },
+          "x": 1000,
+          "y": 250,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "ciclo",
+      "fondo": "omeyocan",
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ya se habían acabado dos soles. Y las dos veces, todo empezó con la pelea de Tezcatlipoca y Quetzalcóatl.",
+          "en": "Two suns had now ended. Both times, it all began with the fight between Tezcatlipoca and Quetzalcoatl."
+        },
+        {
+          "es": "Uno derriba al otro, y el mundo se vuelve a hacer. Muchos estudiosos lo ven como un ciclo: crear y destruir.",
+          "en": "One knocks the other down, and the world is made again. Many scholars see it as a cycle of making and breaking."
+        },
+        {
+          "es": "Ningún sol había durado para siempre. ¿Alguno lo lograría?",
+          "en": "No sun had lasted forever. Would any of them?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 950,
+          "y": 260,
+          "s": 0.7,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "negro",
+          "como": "tezcatlipoca",
+          "x": 720,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.1,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 1180,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.3,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "destello",
+          "x": 950,
+          "y": 520
+        },
+        {
+          "en": 1.2,
+          "tipo": "destello",
+          "x": 950,
+          "y": 520
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 950,
+          "y": 280,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "valle",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ahora los dioses eligieron a otro sol: Tláloc, el dios de la lluvia.",
+          "en": "Now the gods chose another sun: Tlaloc, the god of rain."
+        },
+        {
+          "es": "De los soles que ya conoces, ¿bajo cuál te habría gustado vivir? Cuéntanos en los comentarios.",
+          "en": "Of the suns you have met so far, which one would you have liked to live under? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, el cielo se enciende y llueve fuego. Es La lluvia de fuego.",
+          "en": "Next time, the sky catches fire and flames fall like rain. It is The Rain of Fire."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 460,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "mira",
+              "a": 960
+            },
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "tlaloc",
+          "como": "tlaloc",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.7,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "negro",
+          "como": "tezcatlipoca",
+          "x": 1460,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 960
+            },
+            {
+              "en": 2.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.7,
+          "tipo": "lluvia",
+          "dur": 0.8
+        },
+        {
+          "en": 2.2,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 260,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El jaguar que derribó al sol",
+        "en": "The jaguar who knocked down the sun"
+      },
+      "escena": "zarpazo",
+      "desde": 0,
+      "hasta": 1,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "La gente que se convirtió en monos",
+        "en": "The people who turned into monkeys"
+      },
+      "escena": "monos",
+      "desde": 0,
+      "hasta": 1,
+      "foco": 1000
+    }
+  ]
+}

@@ -1,0 +1,306 @@
+{
+  "id": "short-hawaianas-hina-luna",
+  "formato": "short",
+  "serie": "hawaianas",
+  "numero": "S",
+  "titulo": {
+    "es": "Se escapó de casa… a la luna",
+    "en": "She ran away from home… to the moon"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Se escapó de casa… a la luna",
+    "en": "She ran away from home… to the moon"
+  },
+  "cierre": {
+    "es": "Mándaselo a quien hace todas las tareas de la casa",
+    "en": "Send this to the person who does all the chores at home"
+  },
+  "episodio": "hawaianas-01-canto-de-la-noche",
+  "escenas": [
+    {
+      "id": "cansada",
+      "fondo": "aldea_hale",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Hina estaba cansada. Todo el día golpeaba corteza para hacer tela, y atendía a su familia.",
+          "en": "Hina was tired. All day she beat tree bark into cloth, and served her family."
+        },
+        {
+          "es": "Nadie la ayudaba nunca. Nadie le daba las gracias.",
+          "en": "Nobody ever helped her. Nobody said thank you."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1320,
+          "s": 0.8,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hina",
+          "escala": 1.2,
+          "x": 820,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.45,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.7,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.3,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "esposo",
+          "como": "hawaiano",
+          "mira": "izq",
+          "escala": 1.2,
+          "props": {
+            "cuerpo": "gordo"
+          },
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "senala"
+            },
+            {
+              "en": 1.35,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arcoiris",
+      "fondo": "aldea_hale",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Así que una tarde, Hina tomó su calabaza y subió por un arcoíris.",
+          "en": "So one evening, Hina took her gourd and climbed up a rainbow."
+        },
+        {
+          "es": "Primero probó el sol. ¡Demasiado caliente! La quemó.",
+          "en": "First she tried the sun. Too hot! It burned her."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 1150,
+          "y": 260,
+          "en": 0.9
+        },
+        {
+          "tipo": "ipu",
+          "x": 820,
+          "s": 0.7,
+          "hasta": 0.3
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "luz",
+          "x": 960,
+          "y": 500,
+          "dur": 0.6
+        },
+        {
+          "en": 1.5,
+          "tipo": "fuego",
+          "x": 1100,
+          "y": 330,
+          "dur": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "hina",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 820,
+          "pasos": [
+            {
+              "en": 0.25,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.5,
+              "hace": "vuela",
+              "a": [
+                980,
+                450
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "vuela",
+              "a": [
+                1060,
+                360
+              ],
+              "dur": 0.3
+            },
+            {
+              "en": 1.55,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.75,
+              "hace": "vuela",
+              "a": [
+                900,
+                500
+              ],
+              "dur": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "luna",
+      "fondo": "noche",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Así que subió a la luna, fresca y tranquila.",
+          "en": "So she climbed to the moon, cool and quiet."
+        },
+        {
+          "es": "Su esposo corrió tras ella y le agarró la pierna. Se le quedó en la mano.",
+          "en": "Her husband ran after her and grabbed her leg. It broke off in his hand."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "luna",
+          "x": 1100,
+          "y": 230
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.6,
+          "tipo": "destello",
+          "x": 950,
+          "y": 500,
+          "dur": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "hina",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 900,
+          "y": 500,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "vuela",
+              "a": [
+                1080,
+                320
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 1.6,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "esposo",
+          "como": "hawaiano",
+          "escala": 1.2,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "gordo"
+          },
+          "x": 780,
+          "pasos": [
+            {
+              "en": 1.05,
+              "hace": "corre",
+              "a": 900,
+              "dur": 0.3
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.7,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mira",
+      "fondo": "noche",
+      "foco": 960,
+      "sinAstros": true,
+      "frases": [
+        {
+          "es": "Pero Hina se quedó. Todavía vive allá arriba, con su calabaza y su tela.",
+          "en": "But Hina stayed. She still lives up there, with her gourd and her cloth."
+        },
+        {
+          "es": "Mira la luna llena esta noche. Esa figura es Hina, por fin descansando.",
+          "en": "Look at the full moon tonight. That shape is Hina, finally resting."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "luna",
+          "x": 960,
+          "y": 330,
+          "s": 1.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "hina",
+          "escala": 0.6,
+          "rotulo": "",
+          "x": 960,
+          "y": 380,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 1.2
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

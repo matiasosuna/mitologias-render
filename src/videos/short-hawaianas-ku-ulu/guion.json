@@ -1,0 +1,314 @@
+{
+  "id": "short-hawaianas-ku-ulu",
+  "formato": "short",
+  "serie": "hawaianas",
+  "numero": "S",
+  "titulo": {
+    "es": "Se volvió árbol para alimentar a sus hijos",
+    "en": "He became a tree to feed his kids"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Se volvió árbol para alimentar a sus hijos",
+    "en": "He became a tree to feed his kids"
+  },
+  "cierre": {
+    "es": "Los dioses que formaron a la gente: Hechos de tierra roja — Mitología hawaiana, ep. 4",
+    "en": "The gods who shaped people: Made from Red Earth — Hawaiian Mythology Ep. 4"
+  },
+  "episodio": "hawaianas-04-hechos-de-tierra-roja",
+  "escenas": [
+    {
+      "id": "hambre",
+      "fondo": "aldea_hale",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Hace mucho, una hambruna terrible llegó a la isla de Hawaiʻi.",
+          "en": "Long ago, a terrible famine came to the island of Hawaiʻi."
+        },
+        {
+          "es": "Kū, un dios que vivía como hombre, veía adelgazar a sus hijos.",
+          "en": "Kū, a god living as a man, watched his children grow thin."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1330,
+          "s": 0.8,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ku",
+          "escala": 1.2,
+          "props": {
+            "tocado": null,
+            "objeto": null
+          },
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "entristece"
+            },
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 1100
+            },
+            {
+              "en": 1.5,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "mira": "izq",
+          "escala": 1.6,
+          "props": {
+            "cuerpo": "flaco"
+          },
+          "x": 1050,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "nina",
+          "mira": "izq",
+          "escala": 1.6,
+          "props": {
+            "cuerpo": "flaco"
+          },
+          "x": 1200,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "despedida",
+      "fondo": "aldea_hale",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Una noche le dijo a su esposa: «Tengo que irme. Pero no pasarán hambre».",
+          "en": "One night he told his wife: 'I must go away. But you will not starve.'"
+        },
+        {
+          "es": "Entonces se paró de cabeza, y se hundió despacio en la tierra.",
+          "en": "Then he stood on his head, and slowly sank into the ground."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "polvo",
+          "x": 1000
+        }
+      ],
+      "actores": [
+        {
+          "id": "esposa",
+          "como": "hawaiana",
+          "escala": 1.2,
+          "x": 780,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "entristece"
+            },
+            {
+              "en": 1.8,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "ku",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "props": {
+            "tocado": null,
+            "objeto": null
+          },
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.6,
+              "hace": "abraza"
+            },
+            {
+              "en": 1.15,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 1.4,
+              "hace": "encoge",
+              "escala": 0.3,
+              "dur": 0.4
+            },
+            {
+              "en": 1.7,
+              "hace": "desaparece",
+              "con": "polvo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "brote",
+      "fondo": "aldea_hale",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su esposa lloraba en ese lugar cada noche, regándolo con sus lágrimas.",
+          "en": "His wife cried at that spot every night, watering it with her tears."
+        },
+        {
+          "es": "Entonces apareció un brote. Creció hasta ser un árbol, cargado de frutos.",
+          "en": "Then a sprout appeared. It grew into a tree, heavy with fruit."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "arbol",
+          "x": 1020,
+          "en": 1,
+          "sube": 320,
+          "durSube": 0.8
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1020,
+          "y": 720,
+          "dur": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "esposa",
+          "como": "hawaiana",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.4,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.7,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ulu",
+      "fondo": "aldea_hale",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus piernas se volvieron las ramas. Su cuerpo, el tronco.",
+          "en": "His legs became the branches. His body became the trunk."
+        },
+        {
+          "es": "Era el primer árbol del pan, el ʻulu. Y su familia nunca más pasó hambre.",
+          "en": "It was the first breadfruit tree, the ʻulu. And his family never went hungry again."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "arbol",
+          "x": 1020
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 1020,
+          "y": 500,
+          "dur": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "esposa",
+          "como": "hawaiana",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.3,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "mira": "izq",
+          "escala": 1.6,
+          "rotulo": "",
+          "x": 1190,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 1.2,
+              "hace": "salta"
+            },
+            {
+              "en": 1.7,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

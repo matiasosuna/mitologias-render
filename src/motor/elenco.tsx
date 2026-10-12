@@ -3,6 +3,8 @@
 import React, { useContext } from 'react';
 import { C, Personaje, PersonajeProps, Borde, CalidadHD } from '../comun/vasija';
 import { Cuadrupedo, Serpiente, Ave, Pez, Escorpion, AvePie, Bichito, TipoCuadrupedo } from './bestias';
+import { AnimalNorte, EspecieNorte } from './norteExtra';
+import { ELENCO_AZTECA, NOMBRE_EN_AZTECA, type DibujoProps } from './elencoAzteca';
 
 type Persona = { tipo: 'persona'; p: Partial<PersonajeProps>; griego?: string; extra?: 'minotauro' | 'medusa' | 'ciclope' | 'centauro' | 'alado' };
 type Bestia =
@@ -13,13 +15,16 @@ type Bestia =
   | { tipo: 'ojo'; p?: Record<string, unknown>; griego?: string }
   | { tipo: 'escorpion'; p?: Record<string, unknown>; griego?: string }
   | { tipo: 'avepie'; p?: Record<string, unknown>; griego?: string }
-  | { tipo: 'bichito'; p?: Record<string, unknown>; griego?: string };
+  | { tipo: 'bichito'; p?: Record<string, unknown>; griego?: string }
+  | { tipo: 'norte'; p?: Record<string, unknown>; griego?: string } // animales y cosas de norteExtra.tsx
+  | { tipo: 'dibujo'; Dibujo: React.FC<DibujoProps>; p?: Record<string, unknown>; griego?: string }; // criatura con dibujo propio (elencoAzteca.tsx)
 export type Ficha = Persona | Bestia;
 
 const h = (p: Partial<PersonajeProps>, griego?: string, extra?: Persona['extra']): Persona => ({ tipo: 'persona', p, griego, extra });
 const m = (p: Partial<PersonajeProps>, griego?: string, extra?: Persona['extra']): Persona => ({ tipo: 'persona', p: { mujer: true, ...p }, griego, extra });
 
 export const ELENCO: Record<string, Ficha> = {
+  ...ELENCO_AZTECA, // aztecas (tema códice): elencoAzteca.tsx
   // Olímpicos
   zeus: h({ tocado: 'corona', capa: C.purpura, objeto: 'rayo', barba: true }, 'ΖΕΥΣ'),
   hera: m({ tocado: 'corona', objeto: 'cetro', capa: C.purpura }, 'ΗΡΑ'),
@@ -157,6 +162,22 @@ export const ELENCO: Record<string, Ficha> = {
   arana_agua: { tipo: 'bichito', p: { especie: 'arana', s: 1.2 }, griego: 'WATER SPIDER' },
   abuela_arana: { tipo: 'bichito', p: { especie: 'arana', color: '#5A4A3A', s: 1.3 }, griego: 'GRANDMOTHER SPIDER' },
   escarabajo_agua: { tipo: 'bichito', p: { especie: 'escarabajo', s: 1.2 }, griego: 'WATER BEETLE' },
+  // T1 5–12 (dibujos en norteExtra.tsx)
+  zarigueya: { tipo: 'norte', p: { especie: 'zarigueya' }, griego: 'POSSUM' },
+  buho_cornudo: { tipo: 'norte', p: { especie: 'buho', cuernos: true }, griego: 'OWL' },
+  tecolote: { tipo: 'norte', p: { especie: 'buho', s: 0.7, cuernos: true, color: '#8A7A6A' }, griego: 'SCREECH OWL' },
+  cangrejo: { tipo: 'norte', p: { especie: 'cangrejo' }, griego: 'CRAWFISH' },
+  cuervo_pie: { tipo: 'norte', p: { especie: 'cuervo', color: '#15161A' }, griego: 'RAVEN' },
+  cuervo_blanco: { tipo: 'norte', p: { especie: 'cuervo', color: '#F4F1E8' }, griego: 'RAVEN' },
+  caja_simple: { tipo: 'norte', p: { especie: 'caja' } },
+  vison: { tipo: 'bichito', p: { especie: 'nutria', color: '#2E2018', s: 1.0 }, griego: 'MINK' },
+  somormujo: { tipo: 'avepie', p: { especie: 'gallineta', color: '#6E5038', s: 0.7 }, griego: 'HELLDIVER' },
+  zorro: { tipo: 'cuadrupedo', animal: 'lobo', p: { color: '#C8642A', s: 0.75 }, griego: 'FOX' },
+  cardenal: { tipo: 'ave', p: { color: '#C8321E', ala2: '#9E1E14', pico: '#E8B04A', s: 0.4 }, griego: 'REDBIRD' },
+  uktena: { tipo: 'serpiente', p: { largo: 700, grosor: 60, color: '#3A4A3A', manchas: true, dragon: true, s: 1.1 }, griego: 'UKTENA' },
+  sol_cherokee: m({ capa: '#E8B83A', pelo: '#1A1410' }, 'THE SUN'),
+  hija_sol: m({ capa: '#C8321E' }, 'THE SUN\'S DAUGHTER'),
+  luna_cherokee: h({ capa: '#7FB0C8', tocado: 'plumaAtras' }, 'THE MOON'),
   hombre: h({ barba: true }),
   joven: h({ barba: false }),
   anciano: h({ barba: true, canas: true, ropa: 'larga', objeto: 'cetro' }),
@@ -298,7 +319,7 @@ export const ELENCO: Record<string, Ficha> = {
 };
 
 /** Nombre en pantalla por idioma (por ahora inglés; si falta, el griego). */
-export const NOMBRE_EN: Record<string, string> = {"zeus": "ZEUS", "hera": "HERA", "poseidon": "POSEIDON", "hades": "HADES", "demeter": "DEMETER", "hestia": "HESTIA", "atenea": "ATHENA", "apolo": "APOLLO", "artemisa": "ARTEMIS", "ares": "ARES", "afrodita": "APHRODITE", "hefesto": "HEPHAESTUS", "hermes": "HERMES", "dioniso": "DIONYSUS", "persefone": "PERSEPHONE", "eros": "EROS", "helios": "HELIOS", "selene": "SELENE", "eos": "EOS", "nix": "NYX", "cronos": "CRONUS", "rea": "RHEA", "gea": "GAIA", "urano": "URANUS", "metis": "METIS", "temis": "THEMIS", "atlas": "ATLAS", "prometeo": "PROMETHEUS", "epimeteo": "EPIMETHEUS", "oceano": "OCEANUS", "heracles": "HERACLES", "perseo": "PERSEUS", "teseo": "THESEUS", "jason": "JASON", "aquiles": "ACHILLES", "hector": "HECTOR", "agamenon": "AGAMEMNON", "menelao": "MENELAUS", "odiseo": "ODYSSEUS", "paris": "PARIS", "priamo": "PRIAM", "helena": "HELEN", "penelope": "PENELOPE", "andromaca": "ANDROMACHE", "casandra": "CASSANDRA", "medea": "MEDEA", "ariadna": "ARIADNE", "orfeo": "ORPHEUS", "euridice": "EURYDICE", "pandora": "PANDORA", "edipo": "OEDIPUS", "antigona": "ANTIGONE", "dedalo": "DAEDALUS", "icaro": "ICARUS", "minos": "MINOS", "midas": "MIDAS", "narciso": "NARCISSUS", "eco": "ECHO", "psique": "PSYCHE", "aracne": "ARACHNE", "tiresias": "TIRESIAS", "caronte": "CHARON", "ciclope": "CYCLOPS", "minotauro": "MINOTAUR", "medusa": "MEDUSA", "gorgona": "GORGON", "centauro": "CENTAUR", "quiron": "CHIRON", "furia": "FURY", "musa": "MUSE", "pegaso": "PEGASUS", "cerbero": "CERBERUS", "esfinge": "SPHINX", "quimera": "CHIMERA", "piton": "PYTHON", "dragon": "DRAGON", "hidra": "HYDRA", "tifon": "TYPHON", "monstruo_marino": "SEA MONSTER", "arpia": "HARPY", "sirena": "SIREN"};
+export const NOMBRE_EN: Record<string, string> = {...NOMBRE_EN_AZTECA, "zeus": "ZEUS", "hera": "HERA", "poseidon": "POSEIDON", "hades": "HADES", "demeter": "DEMETER", "hestia": "HESTIA", "atenea": "ATHENA", "apolo": "APOLLO", "artemisa": "ARTEMIS", "ares": "ARES", "afrodita": "APHRODITE", "hefesto": "HEPHAESTUS", "hermes": "HERMES", "dioniso": "DIONYSUS", "persefone": "PERSEPHONE", "eros": "EROS", "helios": "HELIOS", "selene": "SELENE", "eos": "EOS", "nix": "NYX", "cronos": "CRONUS", "rea": "RHEA", "gea": "GAIA", "urano": "URANUS", "metis": "METIS", "temis": "THEMIS", "atlas": "ATLAS", "prometeo": "PROMETHEUS", "epimeteo": "EPIMETHEUS", "oceano": "OCEANUS", "heracles": "HERACLES", "perseo": "PERSEUS", "teseo": "THESEUS", "jason": "JASON", "aquiles": "ACHILLES", "hector": "HECTOR", "agamenon": "AGAMEMNON", "menelao": "MENELAUS", "odiseo": "ODYSSEUS", "paris": "PARIS", "priamo": "PRIAM", "helena": "HELEN", "penelope": "PENELOPE", "andromaca": "ANDROMACHE", "casandra": "CASSANDRA", "medea": "MEDEA", "ariadna": "ARIADNE", "orfeo": "ORPHEUS", "euridice": "EURYDICE", "pandora": "PANDORA", "edipo": "OEDIPUS", "antigona": "ANTIGONE", "dedalo": "DAEDALUS", "icaro": "ICARUS", "minos": "MINOS", "midas": "MIDAS", "narciso": "NARCISSUS", "eco": "ECHO", "psique": "PSYCHE", "aracne": "ARACHNE", "tiresias": "TIRESIAS", "caronte": "CHARON", "ciclope": "CYCLOPS", "minotauro": "MINOTAUR", "medusa": "MEDUSA", "gorgona": "GORGON", "centauro": "CENTAUR", "quiron": "CHIRON", "furia": "FURY", "musa": "MUSE", "pegaso": "PEGASUS", "cerbero": "CERBERUS", "esfinge": "SPHINX", "quimera": "CHIMERA", "piton": "PYTHON", "dragon": "DRAGON", "hidra": "HYDRA", "tifon": "TYPHON", "monstruo_marino": "SEA MONSTER", "arpia": "HARPY", "sirena": "SIREN"};
 
 export type Estado = {
   x: number; y: number; s: number; voltear: boolean; opacity: number;
@@ -392,6 +413,10 @@ export const DibujarActor: React.FC<{ ficha: Ficha; e: Estado; props?: Record<st
   } else if (ficha.tipo === 'avepie') {
     const ks = e.s * (((ficha.p?.s as number) ?? 1));
     cuerpo = <g transform={e.rot ? `rotate(${e.rot} ${base.x} ${base.y})` : undefined}><AvePie {...(ficha.p as object)} {...props} {...base} s={ks} moviendo={e.accion !== 'parado'} /></g>;
+  } else if (ficha.tipo === 'norte') {
+    cuerpo = <AnimalNorte {...(ficha.p as { especie: EspecieNorte })} {...props} {...base} f={f} volando={e.volando} s={e.s * (((ficha.p?.s as number) ?? 1))} moviendo={e.accion !== 'parado'} />;
+  } else if (ficha.tipo === 'dibujo') {
+    cuerpo = <g transform={e.rot ? `rotate(${e.rot} ${base.x} ${base.y})` : undefined}><ficha.Dibujo {...(ficha.p as object)} {...props} {...base} f={f} s={e.s * (((ficha.p?.s as number) ?? 1))} moviendo={e.accion !== 'parado'} corriendo={e.accion === 'correr'} boca={e.boca || (ficha.p?.boca as boolean)} /></g>;
   } else if (ficha.tipo === 'ave') {
     cuerpo = <Ave {...(ficha.p as object)} {...props} {...base} s={e.s * (((ficha.p?.s as number) ?? 1))} />;
   } else {

@@ -4,6 +4,7 @@
 // (Bosques del Este), praderas con tipis (Llanuras), casas de tablones y postes tallados (costa noroeste).
 import React from 'react';
 import { C, Capa, SUELO, Nube, Luna, Estrellas, Sol, Fuego, suave, Inc, azar } from '../comun/vasija';
+import { fondoNorteExtra, elementoNorteExtra } from './norteExtra';
 
 export const N = {
   cuero: '#E9D4A8', ocre: '#C98A3A', rojo: '#B23A24', hollin: '#1C1612', azul: '#2F5D8A', azulClaro: '#7FB0C8',
@@ -391,7 +392,7 @@ export function fondoNorteamericano(tipo: string, f: number, astros = true): Rea
       <Capa p={0.4}><rect x={-2000} y={700} width={8000} height={600} fill="#14202E" />{pinos(Array.from({ length: 20 }, (_, i) => -800 + i * 260), 0.6, 720, 8).map((p, i) => <g key={i} opacity={0.9}>{p}</g>)}</Capa>
       <SueloN tipo="oscuro" />
     </>);
-    default: return null;
+    default: return fondoNorteExtra(tipo, f, astros); // T1 5–12 (norteExtra.tsx)
   }
 }
 
@@ -417,6 +418,6 @@ export function elementoNorteamericano(tipo: string, x: number, y: number | unde
     case 'monticulo': return <g transform={`translate(${x} ${yy}) scale(${s})`}><path d="M-130 2 C -100 -60, 100 -60, 130 2 Z" fill={N.tierra} stroke={C.negro} strokeWidth={3} />{[-70, -30, 10, 50, 85].map((dx, i) => <path key={i} d={`M${dx} ${-28 - (i % 2) * 8} l 4 -12 M${dx + 8} ${-28 - (i % 2) * 8} l -2 -14`} stroke="#5E7E3A" strokeWidth={3} strokeLinecap="round" />)}</g>;
     case 'caja': return <Caja x={x} y={yy} s={s} f={f} luz={props.luz === true} />;
     case 'fogata': return <g transform={`translate(${x} ${yy})`}><path d="M-50 0 L 40 -20 M-40 -20 L 50 0" stroke={N.cortezaOsc} strokeWidth={14} strokeLinecap="round" /><g transform="translate(0 -14)"><Fuego f={f} s={0.8 * s} /></g></g>;
-    default: return null;
+    default: return elementoNorteExtra(tipo, x, y, s, f, props); // T1 5–12 (norteExtra.tsx)
   }
 }

@@ -1,0 +1,339 @@
+{
+  "id": "short-nordicas-cabeza-mimir",
+  "formato": "short",
+  "serie": "nordicas",
+  "numero": "S",
+  "titulo": {
+    "es": "Odín guardaba una cabeza que hablaba",
+    "en": "Odin kept a talking head"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Odín guardaba una cabeza que hablaba",
+    "en": "Odin kept a talking head"
+  },
+  "cierre": {
+    "es": "Cómo empezó la guerra: La guerra de los dioses — Mitología nórdica, ep. 4",
+    "en": "How the war started: The War of the Gods — Norse Mythology Ep. 4"
+  },
+  "episodio": "nordicas-04-guerra-dioses",
+  "escenas": [
+    {
+      "id": "rehenes",
+      "fondo": "asgard",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Tras una guerra, los dioses intercambiaron rehenes con sus rivales, los Vanir.",
+          "en": "After a war, the gods traded hostages with their rivals, the Vanir."
+        },
+        {
+          "es": "Mandaron al alto y apuesto Hoenir… y al viejo y sabio Mimir.",
+          "en": "They sent tall, handsome Hoenir… and wise old Mimir."
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "escala": 1.2,
+          "x": 780,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.9,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "hoenir",
+          "como": "hombre",
+          "escala": 1.12,
+          "rotulo": "HOENIR",
+          "props": {
+            "barba": false,
+            "ropa": "larga",
+            "tocado": "cinta",
+            "pelo": "#E9C46A"
+          },
+          "x": 980,
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "mimir",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1170,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decide",
+      "fondo": "salon",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Los Vanir hicieron jefe a Hoenir. Pero había un problema.",
+          "en": "The Vanir made Hoenir a chief. But there was a problem."
+        },
+        {
+          "es": "Sin Mimir susurrándole, Hoenir siempre decía: «Que decidan otros».",
+          "en": "Without Mimir whispering to him, Hoenir always said: 'Let others decide.'"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hoenir",
+          "como": "hombre",
+          "escala": 1.12,
+          "rotulo": "",
+          "props": {
+            "barba": false,
+            "ropa": "larga",
+            "tocado": "cinta",
+            "pelo": "#E9C46A"
+          },
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.6,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "vanir",
+          "como": "vikingo",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "VANIR",
+          "props": {
+            "capa": "#3E6B4E"
+          },
+          "x": 1160,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 1.7,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.9,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cabeza",
+      "fondo": "salon",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Los Vanir se sintieron estafados. Furiosos, le cortaron la cabeza a Mimir…",
+          "en": "The Vanir felt cheated. In their anger, they cut off Mimir's head…"
+        },
+        {
+          "es": "…y se la mandaron a Odín.",
+          "en": "…and sent it to Odin."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 1000,
+          "s": 0.7,
+          "en": 1
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.8,
+          "tipo": "destello",
+          "x": 800,
+          "y": 500,
+          "dur": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "mimir",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.55,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 0.85,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "vanir",
+          "como": "vikingo",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "props": {
+            "capa": "#3E6B4E"
+          },
+          "x": 1160,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.75,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magia",
+      "fondo": "asgard",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Odín cubrió la cabeza con hierbas, y le cantó magia.",
+          "en": "Odin covered the head in herbs, and sang magic over it."
+        },
+        {
+          "es": "Y la cabeza abrió los ojos… y habló.",
+          "en": "And the head opened its eyes… and spoke."
+        },
+        {
+          "es": "Desde entonces, le susurró secretos solo a Odín.",
+          "en": "From then on, it whispered secrets to Odin alone."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 1000,
+          "s": 0.7
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 650
+        },
+        {
+          "en": 1.1,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 600,
+          "dur": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 790,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "mimir",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 1160,
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 1.4,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

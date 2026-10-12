@@ -1,0 +1,1578 @@
+{
+  "id": "norteamericanas-06-el-primer-fuego",
+  "serie": "norteamericanas",
+  "numero": "06",
+  "titulo": {
+    "es": "La araña de agua trae el fuego",
+    "en": "The Water Spider Brings Fire"
+  },
+  "tituloGriego": "THE WATER SPIDER BRINGS FIRE",
+  "miniatura": {
+    "heroe": "arana_agua",
+    "rival": "cuervo_pie"
+  },
+  "siguiente": {
+    "es": "La hija del Sol",
+    "en": "The Daughter of the Sun"
+  },
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, un pequeño Escarabajo de Agua trajo el barro que se volvió la tierra cherokee.",
+          "en": "Last time, a little Water Beetle brought up the mud that became the Cherokee earth."
+        },
+        {
+          "es": "Pero al principio no había fuego, y el mundo tenía frío.",
+          "en": "But in the beginning, there was no fire, and the world was cold."
+        },
+        {
+          "es": "Esta historia la contaron dos ancianos cherokee, Swimmer y John Ax, hace más de cien años.",
+          "en": "This story was told by two Cherokee elders, Swimmer and John Ax, more than a hundred years ago."
+        },
+        {
+          "es": "James Mooney la escribió tal como ellos la contaron.",
+          "en": "James Mooney wrote it down, the way they told it."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ciervo",
+          "como": "ciervo",
+          "x": 420,
+          "rotulo": "",
+          "props": {
+            "color": "#9A6A3A"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "oso",
+          "como": "oso",
+          "x": 680,
+          "rotulo": "",
+          "props": {
+            "color": "#4A3428"
+          },
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "tiembla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "swimmer",
+          "como": "cherokee",
+          "x": 1180,
+          "rotulo": "SWIMMER",
+          "mira": "izq",
+          "props": {
+            "cuerpo": "viejo",
+            "canas": true
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.3,
+              "hace": "habla",
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "ax",
+          "como": "cherokee",
+          "x": 1440,
+          "rotulo": "JOHN AX",
+          "mira": "izq",
+          "props": {
+            "cuerpo": "viejo",
+            "canas": true,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.2,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.8,
+          "tipo": "nieve",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "CHEROKEE",
+            "en": "CHEROKEE"
+          },
+          "x": 1150,
+          "y": 250,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "rayo",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "sinAstros": true,
+      "frases": [
+        {
+          "es": "Entonces los Truenos, que vivían allá arriba, mandaron su rayo.",
+          "en": "Then the Thunders, who lived up above, sent down their lightning."
+        },
+        {
+          "es": "Cayó en un sicomoro hueco que crecía en una isla.",
+          "en": "It struck a hollow sycamore tree that grew on an island."
+        },
+        {
+          "es": "El fuego empezó a arder dentro del árbol. Por arriba salía humo.",
+          "en": "Fire began to burn deep inside the tree. Smoke rose out of the top."
+        },
+        {
+          "es": "Los animales veían el humo. Pero la isla estaba lejos, del otro lado del agua.",
+          "en": "The animals could see the smoke. But the island was far away, across the water."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sicomoro",
+          "x": 1300,
+          "hasta": 1.15,
+          "props": {
+            "isla": true
+          }
+        },
+        {
+          "tipo": "sicomoro",
+          "x": 1300,
+          "props": {
+            "isla": true,
+            "fuego": true
+          },
+          "en": 1.15
+        }
+      ],
+      "actores": [
+        {
+          "id": "cuervo",
+          "como": "cuervo_blanco",
+          "x": 260,
+          "y": 330,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                420,
+                380
+              ],
+              "dur": 1
+            },
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 1300
+            }
+          ]
+        },
+        {
+          "id": "tecolote",
+          "como": "tecolote",
+          "x": 120,
+          "y": 400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.8,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.8,
+              "hace": "vuela",
+              "a": [
+                620,
+                440
+              ],
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "rayo",
+          "x": 1300
+        },
+        {
+          "en": 1.05,
+          "tipo": "destello",
+          "dur": 0.3
+        },
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 1300,
+          "y": 280,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "SICOMORO",
+            "en": "SYCAMORE"
+          },
+          "x": 1650,
+          "y": 300,
+          "hasta": 2.4
+        }
+      ]
+    },
+    {
+      "id": "consejo",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los animales hicieron un consejo. ¿Quién podía cruzar el agua y traer el fuego?",
+          "en": "The animals held a council. Who could cross the water and bring back the fire?"
+        },
+        {
+          "es": "Todos los animales que podían volar o nadar querían ir.",
+          "en": "Every animal that could fly or swim wanted to go."
+        },
+        {
+          "es": "Primero se ofreció el Cuervo. Era grande y fuerte, así que lo mandaron.",
+          "en": "The Raven offered first. He was big and strong, so they sent him."
+        }
+      ],
+      "actores": [
+        {
+          "id": "buho",
+          "como": "buho_cornudo",
+          "x": 420,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "tecolote",
+          "como": "tecolote",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "cuervo",
+          "como": "cuervo_blanco",
+          "x": 840,
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "salta"
+            },
+            {
+              "en": 2.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "culebra",
+          "como": "serpiente",
+          "x": 1180,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "largo": 300,
+            "grosor": 22,
+            "color": "#8A7A50",
+            "erguida": 0.3
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 0.3
+            }
+          ]
+        },
+        {
+          "id": "arana",
+          "como": "arana_agua",
+          "x": 1420,
+          "escala": 1.3,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "ciervo",
+          "como": "ciervo",
+          "x": 1680,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "color": "#9A6A3A"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.5,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cuervo",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "sinAstros": true,
+      "frases": [
+        {
+          "es": "Voló alto y lejos sobre el agua, y se posó en el árbol en llamas.",
+          "en": "He flew high and far across the water, and landed on the burning tree."
+        },
+        {
+          "es": "Mientras pensaba qué hacer, el calor le chamuscó todas las plumas hasta dejarlas negras.",
+          "en": "While he was wondering what to do, the heat scorched all his feathers black."
+        },
+        {
+          "es": "Se asustó y volvió a casa sin el fuego.",
+          "en": "He was frightened, and he flew home without the fire."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sicomoro",
+          "x": 1300,
+          "props": {
+            "isla": true,
+            "fuego": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "cuervo",
+          "como": "cuervo_blanco",
+          "x": 200,
+          "y": 380,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                1490,
+                330
+              ],
+              "dur": 0.9
+            },
+            {
+              "en": 1.1,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 1.3,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 1.4,
+              "hace": "transforma",
+              "en_que": "cuervo_pie"
+            },
+            {
+              "en": 1.9,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.1,
+              "hace": "vuela",
+              "a": [
+                150,
+                300
+              ],
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.25,
+          "tipo": "humo",
+          "x": 1490,
+          "y": 260,
+          "dur": 0.8
+        },
+        {
+          "en": 1.35,
+          "tipo": "chispas",
+          "x": 1490,
+          "y": 330,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.5,
+          "texto": {
+            "es": "POR ESO EL CUERVO ES NEGRO",
+            "en": "THAT'S WHY THE RAVEN IS BLACK"
+          },
+          "x": 960,
+          "y": 210,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "buhos",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "sinAstros": true,
+      "frases": [
+        {
+          "es": "Después fue el pequeño Tecolote. Voló hasta el árbol y miró dentro del hueco.",
+          "en": "Then the little Screech Owl went. He flew to the tree and looked down into the hollow."
+        },
+        {
+          "es": "Subió una ráfaga de aire caliente que casi le quema los ojos. Todavía hoy tiene los ojos rojos.",
+          "en": "A blast of hot air came up and nearly burned his eyes. His eyes are red to this day."
+        },
+        {
+          "es": "Después fueron juntos el Búho Ululador y el Búho Cornudo.",
+          "en": "Next, the Hooting Owl and the Horned Owl went together."
+        },
+        {
+          "es": "El humo casi los dejó ciegos, y la ceniza les dejó aros blancos alrededor de los ojos.",
+          "en": "The smoke nearly blinded them, and the ashes made white rings around their eyes."
+        },
+        {
+          "es": "Se frotaron y frotaron, pero los aros blancos nunca se borraron.",
+          "en": "They rubbed and rubbed, but the white rings never came off."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sicomoro",
+          "x": 1300,
+          "props": {
+            "isla": true,
+            "fuego": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "tecolote",
+          "como": "tecolote",
+          "x": 200,
+          "y": 400,
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                1310,
+                250
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 1.05,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 1.3,
+              "hace": "desaparece",
+              "con": "fuego"
+            }
+          ]
+        },
+        {
+          "id": "tecolote_rojo",
+          "como": "tecolote",
+          "x": 1310,
+          "y": 250,
+          "escala": 1.2,
+          "rotulo": "",
+          "props": {
+            "ojosRojos": true
+          },
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 1.5,
+              "hace": "vuela",
+              "a": [
+                250,
+                420
+              ],
+              "dur": 0.5
+            },
+            {
+              "en": 2,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "ululador",
+          "como": "buho_cornudo",
+          "x": 100,
+          "y": 360,
+          "rotulo": "HOOTING OWL",
+          "props": {
+            "cuernos": false,
+            "color": "#7A6A58"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1180,
+                270
+              ],
+              "dur": 0.9
+            },
+            {
+              "en": 3.2,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "cornudo",
+          "como": "buho_cornudo",
+          "x": 60,
+          "y": 420,
+          "rotulo": "HORNED OWL",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "vuela",
+              "a": [
+                1440,
+                270
+              ],
+              "dur": 0.9
+            },
+            {
+              "en": 3.2,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "ululador2",
+          "como": "buho_cornudo",
+          "x": 1180,
+          "y": 270,
+          "rotulo": "",
+          "props": {
+            "cuernos": false,
+            "color": "#7A6A58",
+            "aros": true
+          },
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3.9,
+              "hace": "vuela",
+              "a": [
+                500,
+                330
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 4.4,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "cornudo2",
+          "como": "buho_cornudo",
+          "x": 1440,
+          "y": 270,
+          "rotulo": "",
+          "props": {
+            "aros": true
+          },
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3.95,
+              "hace": "vuela",
+              "a": [
+                760,
+                380
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 4.5,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "fuego",
+          "x": 1310,
+          "y": 330,
+          "dur": 0.4
+        },
+        {
+          "en": 3,
+          "tipo": "humo",
+          "x": 1300,
+          "y": 260,
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "id": "corredora",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "sinAstros": true,
+      "frases": [
+        {
+          "es": "Ya ningún ave quería ir. Entonces la pequeña culebra Corredora dijo que cruzaría nadando.",
+          "en": "Now no bird wanted to go. So the little Black Racer snake said he would swim across."
+        },
+        {
+          "es": "Se arrastró por el pasto y se metió por un hoyito al pie del árbol.",
+          "en": "He crawled through the grass, and slipped into a small hole at the bottom of the tree."
+        },
+        {
+          "es": "El calor y el humo eran terribles. Corrió por las cenizas calientes y apenas pudo salir.",
+          "en": "The heat and smoke were terrible. He darted around on the hot ashes, and just barely got out."
+        },
+        {
+          "es": "Pero quedó chamuscada, negra. Y desde entonces corre y da vueltas, como si todavía escapara.",
+          "en": "But his body was scorched black. And ever since, he darts and doubles back, as if still escaping."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sicomoro",
+          "x": 1300,
+          "props": {
+            "isla": true,
+            "fuego": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "culebra",
+          "como": "serpiente",
+          "x": 250,
+          "y": 812,
+          "rotulo": "BLACK RACER",
+          "props": {
+            "largo": 300,
+            "grosor": 22,
+            "color": "#8A7A50",
+            "erguida": 0.3
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "nada",
+              "a": 1050,
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1200,
+                724
+              ],
+              "dur": 0.2
+            },
+            {
+              "en": 1.3,
+              "hace": "camina",
+              "a": 1290,
+              "dur": 0.3
+            },
+            {
+              "en": 1.65,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "culebra_negra",
+          "como": "serpiente",
+          "x": 1300,
+          "y": 724,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "largo": 300,
+            "grosor": 22,
+            "color": "#1A1612",
+            "erguida": 0.3
+          },
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.6,
+              "hace": "corre",
+              "a": 1080,
+              "dur": 0.2
+            },
+            {
+              "en": 2.85,
+              "hace": "corre",
+              "a": 1220,
+              "dur": 0.2
+            },
+            {
+              "en": 3.1,
+              "hace": "corre",
+              "a": 1000,
+              "dur": 0.2
+            },
+            {
+              "en": 3.4,
+              "hace": "corre",
+              "a": 1180,
+              "dur": 0.2
+            },
+            {
+              "en": 3.7,
+              "hace": "corre",
+              "a": 950,
+              "dur": 0.2
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.8,
+          "tipo": "humo",
+          "x": 1300,
+          "y": 640,
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1300,
+          "y": 720,
+          "dur": 0.6
+        },
+        {
+          "en": 2.2,
+          "tipo": "temblor",
+          "dur": 0.3,
+          "intensidad": 0.3
+        }
+      ]
+    },
+    {
+      "id": "trepadora",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "sinAstros": true,
+      "frases": [
+        {
+          "es": "Entonces la gran Culebra Negra, la Trepadora, se ofreció.",
+          "en": "Then the big Black Snake, called the Climber, offered to go."
+        },
+        {
+          "es": "Nadó hasta la isla y trepó por fuera del árbol, como todavía hacen las culebras negras.",
+          "en": "He swam to the island and climbed up the outside of the tree, the way black snakes still do."
+        },
+        {
+          "es": "Pero al asomarse al hueco, el humo la ahogó. Se cayó adentro, y salió igual de negra.",
+          "en": "But when he looked into the hole, the smoke choked him. He fell in, and came out just as black."
+        },
+        {
+          "es": "Ya todos tenían miedo. ¿Quién crees que debería intentarlo ahora?",
+          "en": "By now, everyone was afraid. Who do you think should try next?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sicomoro",
+          "x": 1300,
+          "props": {
+            "isla": true,
+            "fuego": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "trepadora",
+          "como": "serpiente",
+          "x": 250,
+          "y": 812,
+          "rotulo": "THE CLIMBER",
+          "props": {
+            "largo": 480,
+            "grosor": 30,
+            "color": "#6E6A50",
+            "erguida": 0.4
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "nada",
+              "a": 1150,
+              "dur": 0.6
+            },
+            {
+              "en": 1.3,
+              "hace": "vuela",
+              "a": [
+                1310,
+                330
+              ],
+              "dur": 0.7
+            },
+            {
+              "en": 2.2,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 2.45,
+              "hace": "vuela",
+              "a": [
+                1300,
+                700
+              ],
+              "dur": 0.2
+            },
+            {
+              "en": 2.65,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "trepadora_negra",
+          "como": "serpiente",
+          "x": 1250,
+          "y": 812,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "largo": 480,
+            "grosor": 30,
+            "color": "#1A1612",
+            "erguida": 0.4
+          },
+          "pasos": [
+            {
+              "en": 2.9,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3.1,
+              "hace": "nada",
+              "a": 500,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "humo",
+          "x": 1310,
+          "y": 270,
+          "dur": 0.8
+        },
+        {
+          "en": 2.6,
+          "tipo": "chispas",
+          "x": 1300,
+          "y": 700,
+          "dur": 0.5
+        }
+      ]
+    },
+    {
+      "id": "otra_version",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En otra versión cherokee, primero lo intentaron la Zarigüeya y el Zopilote.",
+          "en": "In another Cherokee telling, the Possum and the Buzzard tried first."
+        },
+        {
+          "es": "La Zarigüeya se quemó todo el pelo de la cola. El Zopilote se quemó las plumas de la cabeza.",
+          "en": "The Possum burned all the hair off his tail. The Buzzard burned the feathers off his head."
+        },
+        {
+          "es": "Y ninguno de los dos trajo el fuego.",
+          "en": "And neither of them brought back the fire."
+        }
+      ],
+      "actores": [
+        {
+          "id": "zarigueya",
+          "como": "zarigueya",
+          "x": 700,
+          "escala": 1.5,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "entra",
+              "a": 700
+            },
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 1.25,
+              "hace": "desaparece",
+              "con": "fuego"
+            }
+          ]
+        },
+        {
+          "id": "zarigueya2",
+          "como": "zarigueya",
+          "x": 700,
+          "escala": 1.5,
+          "rotulo": "",
+          "props": {
+            "colaPelada": true
+          },
+          "pasos": [
+            {
+              "en": 1.25,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.3,
+              "hace": "camina",
+              "a": 500,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "zopilote",
+          "como": "zopilote",
+          "x": 1300,
+          "y": 300,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "vuela",
+              "a": [
+                1200,
+                380
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 1.6,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 2.2,
+              "hace": "vuela",
+              "a": [
+                1800,
+                260
+              ],
+              "dur": 0.7
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "humo",
+          "x": 600,
+          "y": 720,
+          "dur": 0.5
+        },
+        {
+          "en": 1.65,
+          "tipo": "humo",
+          "x": 1260,
+          "y": 330,
+          "dur": 0.5
+        }
+      ]
+    },
+    {
+      "id": "arana",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los animales hicieron otro consejo. El mundo seguía frío, y todos tenían una excusa.",
+          "en": "The animals held another council. The world was still cold, and everyone had an excuse."
+        },
+        {
+          "es": "Por fin, la pequeña Araña de Agua dijo: 'Yo iré'.",
+          "en": "At last, the little Water Spider said, 'I will go.'"
+        },
+        {
+          "es": "Tiene pelito negro y suave y rayas rojas, y puede correr sobre el agua.",
+          "en": "She has black, downy hair and red stripes, and she can run on top of the water."
+        },
+        {
+          "es": "'¿Pero cómo vas a llevar el fuego?', le preguntaron. 'Ya me las arreglaré', dijo la Araña de Agua.",
+          "en": "'But how will you carry the fire?' they asked. 'I'll manage that,' said the Water Spider."
+        }
+      ],
+      "actores": [
+        {
+          "id": "cuervo",
+          "como": "cuervo_pie",
+          "x": 420,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "buho",
+          "como": "buho_cornudo",
+          "x": 620,
+          "rotulo": "",
+          "props": {
+            "aros": true
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "arana",
+          "como": "arana_agua",
+          "x": 960,
+          "escala": 1.9,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 960
+            },
+            {
+              "en": 1.6,
+              "hace": "salta"
+            },
+            {
+              "en": 3.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "ciervo",
+          "como": "ciervo",
+          "x": 1360,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "color": "#9A6A3A"
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "niega"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "zarigueya",
+          "como": "zarigueya",
+          "x": 1640,
+          "mira": "izq",
+          "escala": 1.3,
+          "rotulo": "",
+          "props": {
+            "colaPelada": true
+          },
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tusti",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "sinAstros": true,
+      "frases": [
+        {
+          "es": "Hiló un hilo de su propio cuerpo y lo tejió en un cuenquito, llamado tusti.",
+          "en": "She spun a thread from her own body, and wove it into a little bowl, called a tusti."
+        },
+        {
+          "es": "Se ató el cuenco a la espalda y corrió sobre el agua hasta la isla.",
+          "en": "She tied the bowl on her back, and ran across the water to the island."
+        },
+        {
+          "es": "Puso una brasita de fuego en el cuenco, y la llevó todo el camino de vuelta.",
+          "en": "She put one little coal of fire into her bowl, and carried it all the way back."
+        },
+        {
+          "es": "Y desde entonces tenemos fuego.",
+          "en": "And ever since, we have had fire."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sicomoro",
+          "x": 1300,
+          "props": {
+            "isla": true,
+            "fuego": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "arana",
+          "como": "arana_agua",
+          "x": 320,
+          "y": 806,
+          "escala": 1.7,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "nada",
+              "a": 1180,
+              "dur": 1
+            },
+            {
+              "en": 2.1,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "arana2",
+          "como": "arana_agua",
+          "x": 1180,
+          "y": 724,
+          "escala": 1.7,
+          "rotulo": "",
+          "props": {
+            "cuenco": true
+          },
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.4,
+              "hace": "vuela",
+              "a": [
+                1000,
+                806
+              ],
+              "dur": 0.2
+            },
+            {
+              "en": 2.6,
+              "hace": "nada",
+              "a": 380,
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "chispas",
+          "x": 320,
+          "y": 740,
+          "dur": 0.6
+        },
+        {
+          "en": 2.1,
+          "tipo": "chispas",
+          "x": 1180,
+          "y": 640,
+          "dur": 0.6
+        },
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 380,
+          "y": 700,
+          "dur": 0.8,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.5,
+          "texto": {
+            "es": "TUSTI",
+            "en": "TUSTI"
+          },
+          "x": 320,
+          "y": 520,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Y la Araña de Agua todavía lleva su cuenco tusti en la espalda.",
+          "en": "And the Water Spider still carries her tusti bowl on her back."
+        },
+        {
+          "es": "¿Quién fue el más valiente: el Cuervo, los búhos, las culebras o la pequeña araña? Cuéntanos en los comentarios.",
+          "en": "Who was the bravest: the Raven, the owls, the snakes, or the little spider? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, el Sol está enojado con la gente de la tierra, y su hija corre peligro.",
+          "en": "Next time, the Sun is angry with the people of the earth, and her daughter is in danger."
+        },
+        {
+          "es": "Es La hija del Sol.",
+          "en": "It is The Daughter of the Sun."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "arana",
+          "como": "arana_agua",
+          "x": 700,
+          "escala": 1.6,
+          "rotulo": "",
+          "props": {
+            "cuenco": true
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "cherokee",
+          "x": 1200,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "cherokee_mujer",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "cherokee",
+          "x": 1580,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 720,
+          "dur": 1
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Por qué el cuervo es negro",
+        "en": "Why the raven is black"
+      },
+      "escena": "cuervo",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 1200
+    },
+    {
+      "gancho": {
+        "es": "Los búhos que fueron por el fuego",
+        "en": "The owls that went for fire"
+      },
+      "escena": "buhos",
+      "desde": 2,
+      "hasta": 4,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Una arañita hizo lo que nadie pudo",
+        "en": "A tiny spider did what no one else could"
+      },
+      "escena": "tusti",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    }
+  ]
+}

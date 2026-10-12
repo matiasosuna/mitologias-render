@@ -1,0 +1,399 @@
+{
+  "id": "short-griegas-hierba-gigantes",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "Zeus apagó el sol para ganar",
+    "en": "Zeus switched off the sun to win"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Zeus apagó el sol para ganar",
+    "en": "Zeus switched off the sun to win"
+  },
+  "cierre": {
+    "es": "La batalla completa: La Gigantomaquia — Mitología griega, ep. 6",
+    "en": "The whole battle: The War of the Giants — Greek Mythology Ep. 6"
+  },
+  "episodio": "griegas-06-gigantomaquia",
+  "escenas": [
+    {
+      "id": "profecia",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Los dioses estaban en guerra con los Gigantes, y una profecía los asustó.",
+          "en": "The gods were at war with the Giants, and a prophecy scared them."
+        },
+        {
+          "es": "Ningún dios podía matar a un Gigante. Solo un mortal podía.",
+          "en": "No god could kill a Giant. Only a mortal could."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.1,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 1.35,
+          "tipo": "destello",
+          "x": 1100,
+          "y": 500,
+          "dur": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "escala": 1.2,
+          "x": 780,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.6,
+              "hace": "mira",
+              "a": 1170
+            }
+          ]
+        },
+        {
+          "id": "gigante",
+          "mira": "izq",
+          "escala": 1,
+          "rotulo": "GIANT",
+          "x": 1170,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 0.6,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hierba",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Entonces Gea, la madre de los Gigantes, buscó una hierba mágica.",
+          "en": "So Gaia, mother of the Giants, searched for a magic herb."
+        },
+        {
+          "es": "Con ella, ni siquiera un mortal podría lastimarlos.",
+          "en": "With it, not even a mortal could ever hurt them."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "olivo",
+          "x": 1320,
+          "s": 0.8,
+          "capa": "fondo"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 720,
+          "dur": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "gea",
+          "escala": 1.2,
+          "x": 780,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 980,
+              "dur": 0.8
+            },
+            {
+              "en": 0.7,
+              "hace": "mira",
+              "a": 760
+            },
+            {
+              "en": 1.1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "gigante",
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "x": 1190,
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.6,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oscuro",
+      "fondo": "noche",
+      "foco": 960,
+      "sinAstros": true,
+      "frases": [
+        {
+          "es": "Zeus se enteró, y dio una orden extraña.",
+          "en": "Zeus heard about it, and gave a strange order."
+        },
+        {
+          "es": "Sol, Luna y Aurora: no brillen. Ni una vez.",
+          "en": "Sun, Moon and Dawn: do not shine. Not even once."
+        },
+        {
+          "es": "En la oscuridad total, Gea buscó y buscó.",
+          "en": "In total darkness, Gaia searched and searched."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 1150,
+          "y": 250,
+          "hasta": 1.4
+        },
+        {
+          "tipo": "luna",
+          "x": 820,
+          "y": 230,
+          "hasta": 1.6
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "oscurecer",
+          "dur": 1.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "escala": 1.2,
+          "x": 760,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.9,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "helios",
+          "mira": "izq",
+          "escala": 1.1,
+          "x": 1170,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.6,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "gea",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.2,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.7
+            },
+            {
+              "en": 2.6,
+              "hace": "mira",
+              "a": 1200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "robo",
+      "fondo": "monte",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero Zeus encontró la hierba primero, y la cortó él mismo.",
+          "en": "But Zeus found the herb first, and cut it himself."
+        },
+        {
+          "es": "Después llamó a un mortal para pelear junto a los dioses: Heracles.",
+          "en": "Then he called a mortal to fight beside the gods: Heracles."
+        },
+        {
+          "es": "Los Gigantes no tuvieron ninguna oportunidad.",
+          "en": "The Giants never stood a chance."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "destello",
+          "x": 820,
+          "y": 600,
+          "dur": 0.3
+        },
+        {
+          "en": 2.2,
+          "tipo": "rayo",
+          "x": 1150
+        },
+        {
+          "en": 2.25,
+          "tipo": "temblor",
+          "dur": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "escala": 1.2,
+          "props": {
+            "objeto": "hoz"
+          },
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.5,
+              "hace": "levantarse"
+            },
+            {
+              "en": 0.7,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.9,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "gea",
+          "mira": "izq",
+          "escala": 1.2,
+          "rotulo": "",
+          "x": 1180,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.9,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.15,
+              "hace": "desaparece",
+              "con": "polvo"
+            }
+          ]
+        },
+        {
+          "id": "heracles",
+          "mira": "izq",
+          "escala": 1.2,
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.7,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.5,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
