@@ -20,9 +20,9 @@ export const KB = (SUELO_V - 230) / (SUELO_MUNDO - ARRIBA_MUNDO);
 /** Cada cuántos cuadros se muestrea la escena para encuadrarla. */
 export const PASO = 3;
 /** Escala de los actores según cuántos hay en la escena (1 = mismo tamaño en px que en el horizontal). */
-export const ESCALA_GRUPO = [0.56, 0.56, 0.56, 0.56, 0.55, 0.53, 0.5]; // toma de lejos (pedido 2026-10-11: "más chicos, como una toma de lejos")
+export const ESCALA_GRUPO = [0.72, 0.72, 0.72, 0.72, 0.7, 0.68, 0.65]; // 10% más lejos que la foto griega aprobada (pedido 2026-10-11) // toma de lejos (pedido 2026-10-11: "más chicos, como una toma de lejos")
 /** Escala mínima y máxima de una escena. */
-export const K_MIN = 0.22, K_MAX = 0.6;
+export const K_MIN = 0.25, K_MAX = 0.77;
 
 export type Capa = 'fondo' | 'medio' | 'frente';
 /** Tamaño de un actor a escala 1 mirando a la derecha: cuánto ocupa hacia atrás (izq), hacia adelante (der) y de alto. */
