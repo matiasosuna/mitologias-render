@@ -131,7 +131,9 @@ export const ABAJO = SUELO + 40; // inicio del friso inferior
  * Lienzo de una escena: cielo de barro, cámara (x, zoom) animada, textura de arcilla y guardas.
  * camara: lista de [frame, x, zoom] por los que pasa la cámara.
  */
-export const Escenario: React.FC<{ dur: number; camara?: [number, number, number][]; cielo?: 'barro' | 'noche' | 'mar' | 'inframundo'; children: React.ReactNode; guardas?: boolean }> = ({ dur, camara = [[0, 0, 1]], cielo = 'barro', children, guardas = true }) => {
+export const Escenario: React.FC<{ dur: number; camara?: [number, number, number][]; cielo?: 'barro' | 'noche' | 'mar' | 'inframundo'; children: React.ReactNode; guardas?: boolean;
+  /** Solo puesta vertical nativa: viewBox propio [x, y, ancho, alto] y capa transparente (sin cielo ni texturas). */
+  vista?: [number, number, number, number]; transparente?: boolean }> = ({ dur, camara = [[0, 0, 1]], cielo = 'barro', children, guardas = true, vista, transparente }) => {
   const f = useCurrentFrame();
   const ks = camara.map((c) => c[0]);
   const x = camara.length > 1 ? interpolate(f, ks, camara.map((c) => c[1]), { ...cl, easing: Easing.inOut(Easing.sin) }) : camara[0][1];
@@ -140,8 +142,8 @@ export const Escenario: React.FC<{ dur: number; camara?: [number, number, number
   const fondos = TEMA.cielos[cielo];
   const vert = useContext(ModoVertical);
   return (
-    <AbsoluteFill style={{ backgroundColor: C.negro, opacity: fade }}>
-      <svg viewBox={vert ? `0 ${-VERT_ARRIBA} 1920 ${1080 + VERT_ARRIBA}` : '0 0 1920 1080'} width="100%" height="100%">
+    <AbsoluteFill style={transparente ? { opacity: fade } : { backgroundColor: C.negro, opacity: fade }}>
+      <svg viewBox={vista ? vista.join(' ') : vert ? `0 ${-VERT_ARRIBA} 1920 ${1080 + VERT_ARRIBA}` : '0 0 1920 1080'} width="100%" height="100%">
         <defs>
           <radialGradient id="cielo" cx="50%" cy="40%" r="80%">
             <stop offset="0%" stopColor={fondos[0]} />
@@ -158,21 +160,21 @@ export const Escenario: React.FC<{ dur: number; camara?: [number, number, number
             <stop offset="100%" stopColor="#FFF6DD" stopOpacity={0} />
           </radialGradient>
           <clipPath id="ventana">
-            {vert ? <rect x={-2000} y={-VERT_ARRIBA} width={6000} height={1080 + VERT_ARRIBA} /> : <rect x={0} y={ARRIBA - 4} width={1920} height={ABAJO - ARRIBA + 4} />}
+            {vista ? <rect x={-6000} y={-6000} width={14000} height={14000} /> : vert ? <rect x={-2000} y={-VERT_ARRIBA} width={6000} height={1080 + VERT_ARRIBA} /> : <rect x={0} y={ARRIBA - 4} width={1920} height={ABAJO - ARRIBA + 4} />}
           </clipPath>
         </defs>
         <FiltrosHD />
-        <g clipPath="url(#ventana)">
-          {vert ? <rect x={-2000} y={-VERT_ARRIBA} width={6000} height={1080 + VERT_ARRIBA} fill="url(#cielo)" /> : <rect width={1920} height={1080} fill="url(#cielo)" />}
-          {TEMA.nombre === 'runas' && cielo === 'noche' && <Aurora f={f} />}
+        <g clipPath={vista ? undefined : 'url(#ventana)'}>
+          {transparente ? null : vista ? <rect x={vista[0] - 10} y={vista[1] - 10} width={vista[2] + 20} height={vista[3] + 20} fill="url(#cielo)" /> : vert ? <rect x={-2000} y={-VERT_ARRIBA} width={6000} height={1080 + VERT_ARRIBA} fill="url(#cielo)" /> : <rect width={1920} height={1080} fill="url(#cielo)" />}
+          {!transparente && TEMA.nombre === 'runas' && cielo === 'noche' && <Aurora f={f} />}
           <g transform={`translate(960 ${SUELO}) scale(${z}) translate(-960 ${-SUELO})`}>
             <Cam.Provider value={{ x, y: 0, z }}>{children}</Cam.Provider>
           </g>
         </g>
         {guardas && !vert && <Guardas desplaz={x * 0.2} />}
       </svg>
-      <Img src={staticFile('texturas/manchas.png')} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', mixBlendMode: 'multiply', opacity: 0.35 }} />
-      <Img src={staticFile('texturas/grano.png')} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', mixBlendMode: 'multiply', opacity: 0.22 }} />
+      {!transparente && <Img src={staticFile('texturas/manchas.png')} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', mixBlendMode: 'multiply', opacity: 0.35 }} />}
+      {!transparente && <Img src={staticFile('texturas/grano.png')} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', mixBlendMode: 'multiply', opacity: 0.22 }} />}
     </AbsoluteFill>
   );
 };

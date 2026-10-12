@@ -50,6 +50,11 @@ Cada video es **un solo archivo**: `src/videos/<id>/guion.json` (tipos en `src/m
 - `gancho`: frase corta e intrigante en mayúsculas iniciales ("The Titan who ate his own children"). `foco`: x de pantalla (0–1920) que queda en el centro del vertical (se ve ~860 px de ancho): poné ahí a los protagonistas de ese tramo.
 - Render: `node scripts/motor-short.mjs <id>` → `out/<id>/short-N.mp4` (reusa la narración, no gasta créditos).
 
+## Episodio vertical (Reels: `<id>-vertical`, `<id>-parte`)
+- No es un recorte ni un zoom del horizontal: `src/motor/puestaVertical.ts` arma cada escena para 9:16 sola (no hay que tocar el guion). Un encuadre FIJO por escena: la cámara no se mueve, sin cortes ni acercamientos.
+- Todos los actores de la escena entran juntos en el cuadro: se acercan entre sí (mismo orden izquierda/derecha y misma mirada, sin encimarse si estaban separados) y la escena tiene una escala única (algo más grandes que en el horizontal si son 1–2, más chicos si son muchos). Entradas, caminatas y salidas pasan por la misma compresión. Los elementos que quedarían afuera entran por el costado sin tapar a nadie. Fondo a escala fija con sol/luna/nubes/estrellas del tema en el cielo alto; carteles de escena arriba, en pantalla.
+- Pruebas: `node --test test/puesta-vertical.test.mjs`.
+
 ## Egipcias (tema papiro)
 - `props.alas: true` en el tema egipcio = alas de diosa en los brazos (Isis, Neftis, Maat); se abren con los brazos (`brazo`/`brazoAtras`). En los otros temas siguen siendo alas en los pies.
 - Calidad HD (volumen, contorno, sombra, movimiento secundario) activa por defecto; `"hd": false` en el guion la apaga.

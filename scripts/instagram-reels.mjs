@@ -2,7 +2,8 @@
 // Instagram no acepta Reels largos por subida directa, así que el video se sirve desde la Mac con un túnel
 // temporal de Cloudflare (cloudflared) y Instagram lo descarga de ahí.
 // Reparto: por tandas — una temporada 1 completa y después la siguiente mitología (griegas → nórdicas → egipcias → hawaianas).
-// Usa la versión vertical de verdad (out/<id>/<id>.vertical.mp4, de scripts/vertical-render.mjs).
+// Desde 2026-10-10 cada episodio va en PARTES de < 3 min (scripts/vertical-partes.mjs → out/<id>/<id>.parte-N.mp4):
+// Instagram casi no recomienda Reels más largos a quien no te sigue. Se publican en orden: ep. 8 parte 1, parte 2, ep. 9…
 // Portada del Reel (cover_url) = la portada diseñada. Control de duplicados antes y después de publicar.
 // Uso: node scripts/instagram-reels.mjs [--probar] [--solo=<id>]
 import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'node:fs';
@@ -28,24 +29,33 @@ const ids = JSON.parse(readFileSync('src/videos/youtube-ids.json', 'utf8'));
 const reg = 'out/subidas-instagram.json';
 const hist = () => (existsSync(reg) ? JSON.parse(readFileSync(reg, 'utf8')) : []);
 // Cuentan como hechos los Reels de episodio ya publicados (también los apaisados del 2026-10-09, que quedan).
+const partesDe = (d) => (existsSync(join('out', d, 'partes.json')) ? JSON.parse(readFileSync(join('out', d, 'partes.json'), 'utf8')).de : null);
+const partesHechas = (d) => new Set(hist().filter((h) => h.tipo === 'reel-parte' && h.id === d).map((h) => h.parte));
 const hechos = new Set(hist().filter((h) => ['reel-episodio', 'reel-apaisado-a-archivar'].includes(h.tipo)).map((h) => h.id));
+for (const d of new Set(hist().filter((h) => h.tipo === 'reel-parte').map((h) => h.id))) if (partesDe(d) && partesHechas(d).size >= partesDe(d)) hechos.add(d);
 const pendientes = readdirSync('src/videos').filter((d) => /^[a-z]+-\d\d-/.test(d) && ids[d] && Number(d.split('-')[1]) <= (T1[d.split('-')[0]] ?? 0) && !hechos.has(d))
   .sort((a, b) => ORDEN.indexOf(a.split('-')[0]) - ORDEN.indexOf(b.split('-')[0]) || a.localeCompare(b));
 const id = opt('solo') ?? pendientes[0];
 if (!id) { console.log('nada pendiente'); process.exit(0); }
 // En orden estricto: si el próximo todavía no tiene su versión vertical, esperar (no saltear).
-if (!existsSync(join('out', id, `${id}.vertical.mp4`))) { console.log(`esperando render vertical de ${id}`); process.exit(0); }
+const de = partesDe(id);
+if (!de) { console.log(`esperando render en partes de ${id}`); process.exit(0); }
+const parte = [...Array(de).keys()].map((i) => i + 1).find((n) => !partesHechas(id).has(n));
+const archivoParte = join('out', id, `${id}.parte-${parte}.mp4`);
+if (!existsSync(archivoParte)) { console.log(`esperando render en partes de ${id}`); process.exit(0); }
 
 const gu = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8'));
 const yt = existsSync(join('src/videos', id, 'youtube.json')) ? JSON.parse(readFileSync(join('src/videos', id, 'youtube.json'), 'utf8')) : {};
 if (!yt.gancho) yt.gancho = JSON.parse(readFileSync('src/videos/meta-youtube.json', 'utf8')).episodios?.[id]?.gancho;
 const [nombre, tags] = SERIE[gu.serie];
-const titulo = `${gu.titulo.en} | ${nombre} Mythology Ep. ${Number(gu.numero)} 🏺`;
-const texto = `${titulo}\n\n${yt.gancho ?? ''}\n\n🇪🇸 ${gu.titulo.es}\n\nThe whole season, in order, in our Reels and on YouTube (link in bio).\n\n${tags} #mythology #animation #mythsonclay`;
+const titulo = `${gu.titulo.en} | ${nombre} Mythology Ep. ${Number(gu.numero)}${de > 1 ? ` · Part ${parte}/${de}` : ''} 🏺`;
+const intro = parte > 1 ? `Continued from Part ${parte - 1}: watch it first in our Reels.` : (yt.gancho ?? '');
+const sigue = parte < de ? `\n\nFollow so you don't miss Part ${parte + 1} 👀` : '';
+const texto = `${titulo}\n\n${intro}${sigue}\n\n🇪🇸 ${gu.titulo.es}${de > 1 ? ` · Parte ${parte}/${de}` : ''}\n\nThe whole season, in order, in our Reels and on YouTube (link in bio).\n\n${tags} #mythology #animation #mythsonclay`;
 if (args.includes('--probar')) { console.log(id, '\n', texto); process.exit(0); }
 
 const yaEsta = async () => (await g('GET', `/${IG}/media`, { fields: 'id,caption,permalink,media_type', limit: '100' })).data.find((m) => m.media_type === 'VIDEO' && (m.caption ?? '').split('\n')[0] === titulo);
-const anotar = (m) => { const h = hist(); h.push({ id, tipo: 'reel-episodio', media: m.id, permalink: m.permalink, fecha: new Date().toISOString() }); writeFileSync(reg, JSON.stringify(h, null, 1)); };
+const anotar = (m) => { const h = hist(); h.push({ id, tipo: 'reel-parte', parte, de, media: m.id, permalink: m.permalink, fecha: new Date().toISOString() }); writeFileSync(reg, JSON.stringify(h, null, 1)); };
 const previo = await yaEsta();
 if (previo) { anotar(previo); console.log(id, 'ya estaba:', previo.permalink); process.exit(0); }
 
@@ -55,7 +65,7 @@ execFileSync('node', ['scripts/portadas-ig.mjs', id], { stdio: 'ignore' });
 const port = join('out', id, 'portada-ig.jpg');
 const video = join(dir, `${id}.mp4`), tapa = join(dir, `${id}.jpg`);
 // El video ya es vertical de verdad (scripts/vertical-render.mjs); solo se copia para servirlo.
-execFileSync('cp', [join('out', id, `${id}.vertical.mp4`), video]);
+execFileSync('cp', [archivoParte, video]);
 execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', port, '-filter_complex', '[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=30:4,eq=brightness=-0.25[bg];[bg][0:v]overlay=0:285', '-frames:v', '1', '-q:v', '2', tapa]);
 
 // 2) servir la carpeta con un túnel temporal

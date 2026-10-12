@@ -55,7 +55,7 @@ if (nativo) {
   // "Previous episode" = título del episodio anterior de la misma serie
   const prev = Object.keys(ids).length && (() => { const fs = JSON.parse(execFileSync('ls', ['src/videos']).toString().split('\n').filter(Boolean).map((d) => JSON.stringify(d)).join(',').replace(/^/, '[').replace(/$/, ']')); const d = fs.find((x) => x.startsWith(g.serie + '-' + String(Number(g.numero) - 1).padStart(2, '0'))); return d ? JSON.parse(readFileSync(join('src/videos', d, 'guion.json'), 'utf8')).titulo.en : null; })();
   let desc = meta.descripcion.replace('📜 ', '').replace('▶ ', '');
-  if (prev) desc = desc.replace('Next episode:', `Previous episode: ${prev}\nNext episode:`);
+  if (prev && !g.especial) desc = desc.replace('Next episode:', `Previous episode: ${prev}\nNext episode:`);
   add('description', desc);
   [...new Set(meta.etiquetas)].slice(0, 30).forEach((t) => add('tags[]', t));
   const lista = opt('lista') || listas[meta.lista];

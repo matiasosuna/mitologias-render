@@ -1,30 +1,16 @@
-// Versión vertical (1080×1920) de un episodio para Reels: misma voz, subtítulos y escenas que el horizontal,
-// pero con una cámara que encuadra en vertical a quien habla o actúa (paneos y zoom suaves), subtítulos grandes,
-// la portada vertical al principio y un cierre corto. No gasta créditos: reusa el audio y el timeline.
+// Versión vertical (1080×1920) de un episodio para Reels: misma voz, subtítulos y tiempos que el horizontal, pero
+// con una puesta en escena PROPIA del formato alto (no un recorte ni un zoom): cada escena tiene un encuadre fijo con
+// todos sus actores juntos dentro del cuadro (ver EscenaVertical.tsx y puestaVertical.ts), subtítulos grandes, la portada vertical al principio y un cierre corto.
+// No gasta créditos: reusa el audio y el timeline.
 import React from 'react';
 import { AbsoluteFill, Audio, Freeze, Img, Sequence, staticFile, useCurrentFrame, interpolate } from 'remotion';
-import { C, TITULO, TEXTO, ap, cl, SUELO, TEMA, aplicarTema, CalidadHD, ModoVertical, VERT_ARRIBA, FranjaKapa, FranjaCuentas, Bloques, Entrelazado, FrisoPalmetas } from '../comun/vasija';
-import { EscenaMotor, encuadreVertical } from './Escena';
-import type { GuionVisual, Timeline, Escena, EscenaTL } from './tipos';
+import { C, TITULO, TEXTO, ap, cl, TEMA, aplicarTema, CalidadHD, ModoVertical, FranjaKapa, FranjaCuentas, Bloques, Entrelazado, FrisoPalmetas } from '../comun/vasija';
+import { EscenaVerticalNativa } from './EscenaVertical';
+import type { GuionVisual, Timeline } from './tipos';
 
 const NOMBRE: Record<string, string> = { vasija: 'GREEK MYTHOLOGY', runas: 'NORSE MYTHOLOGY', papiro: 'EGYPTIAN MYTHOLOGY', kapa: 'HAWAIIAN MYTHOLOGY', pintado: 'NATIVE AMERICAN MYTHOLOGY' };
 export const CIERRE_VERTICAL = 3; // segundos del cierre (en lugar de los 12 s de pantalla final de YouTube)
-const SUELO_PANTALLA = 1400, SUBS = 1470;
-
-/** Escena encuadrada en vertical: el encuadre se suaviza promediando varios cuadros alrededor. */
-const EscenaVertical: React.FC<{ esc: Escena; tl: EscenaTL }> = ({ esc, tl }) => {
-  const f = useCurrentFrame();
-  let x = 0, ancho = 0, n = 0;
-  for (let d = -24; d <= 24; d += 6) { const m = encuadreVertical(esc, tl, Math.max(0, Math.min(tl.durationInFrames - 1, f + d))); x += m.x; ancho += m.ancho; n++; }
-  x /= n; ancho /= n;
-  const K = Math.max(0.98, Math.min(1.55, 1080 / (ancho + 560)));
-  const fx = Math.max(540 / K, Math.min(1920 - 540 / K, x));
-  return (
-    <div style={{ position: 'absolute', left: 0, top: 0, width: 1920, height: 1080 + VERT_ARRIBA, transformOrigin: '0 0', transform: `translate(${540 - fx * K}px, ${SUELO_PANTALLA - (SUELO + VERT_ARRIBA) * K}px) scale(${K})` }}>
-      <EscenaMotor esc={esc} tl={tl} idioma="en" />
-    </div>
-  );
-};
+const SUBS = 1470;
 
 export const VideoVertical: React.FC<{ guion: GuionVisual; timeline: Timeline; portada?: string }> = ({ guion, timeline, portada }) => {
   aplicarTema(guion.serie);
@@ -44,7 +30,7 @@ export const VideoVertical: React.FC<{ guion: GuionVisual; timeline: Timeline; p
           {timeline.escenas.map((e, i) => (
             <Sequence key={e.id} from={e.from} durationInFrames={e.durationInFrames}>
               {e.frases.map((fr, j) => fr.audio.en ? <Sequence key={j} from={fr.from} durationInFrames={fr.dur + 6}><Audio src={staticFile(fr.audio.en!)} /></Sequence> : null)}
-              <EscenaVertical esc={guion.escenas[i]} tl={e} />
+              <EscenaVerticalNativa esc={guion.escenas[i]} tl={e} />
             </Sequence>
           ))}
           {/* cabecera chica: mitología y episodio */}

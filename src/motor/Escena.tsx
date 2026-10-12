@@ -164,7 +164,7 @@ const Aparicion: React.FC<{ con: string; t0: number; sale: boolean; f: number; x
   }
 };
 
-const Efectos: React.FC<{ ef: Efecto[]; tl: EscenaTL; f: number; fase: 'fondo' | 'frente' }> = ({ ef, tl, f, fase }) => (
+export const Efectos: React.FC<{ ef: Efecto[]; tl: EscenaTL; f: number; fase: 'fondo' | 'frente'; vert?: boolean }> = ({ ef, tl, f, fase, vert }) => (
   <>
     {ef.map((x, i) => {
       const t0 = momento(tl, x.en), t1 = x.dur !== undefined ? momento(tl, x.en + x.dur) : tl.durationInFrames;
@@ -184,11 +184,15 @@ const Efectos: React.FC<{ ef: Efecto[]; tl: EscenaTL; f: number; fase: 'fondo' |
         case 'polvo': return <g key={i} opacity={k * 0.5}>{Array.from({ length: 6 }, (_, j) => <ellipse key={j} cx={cx + (j - 3) * 70 + Math.sin(f / 10 + j) * 20} cy={cy - 20} rx={90} ry={30} fill={C.barroClaro} />)}</g>;
         case 'luz': return <circle key={i} cx={cx} cy={x.y ?? 400} r={300 * n} fill="url(#haloBlanco)" opacity={k} />;
         case 'niebla': return <g key={i} opacity={k * 0.5}>{Array.from({ length: 6 }, (_, j) => <ellipse key={j} cx={((j * 400 + f * 1.2) % 2400) - 240} cy={SUELO - 60 - (j % 3) * 50} rx={320} ry={50} fill={C.crema} />)}</g>;
-        case 'lluvia': return <g key={i} opacity={k * 0.7}>{Array.from({ length: 90 }, (_, j) => { const xx = azar(j) * 2200 - 140, yy = ((azar(j + 50) * 900 + f * 26) % 820) + 100; return <path key={j} d={`M${xx} ${yy} l -10 34`} stroke={C.crema} strokeWidth={2} />; })}</g>;
-        case 'nieve': return <g key={i} opacity={k}>{Array.from({ length: 70 }, (_, j) => { const xx = azar(j) * 2000 + Math.sin(f / 20 + j) * 20, yy = ((azar(j + 50) * 900 + f * 3) % 760) + 120; return <circle key={j} cx={xx} cy={yy} r={3} fill={C.blanco} />; })}</g>;
-        case 'oscurecer': return <rect key={i} x={-2000} y={-500} width={6000} height={2000} fill={C.noche} opacity={k * 0.55 * n} />;
-        case 'aclarar': return <rect key={i} x={-2000} y={-500} width={6000} height={2000} fill="#FFF3D6" opacity={(1 - interpolate(f, [t0, t0 + 15], [0, 1], cl)) * 0.5} />;
-        case 'destello': return <rect key={i} x={-2000} y={-500} width={6000} height={2000} fill="#FFF6E0" opacity={interpolate(f, [t0, t0 + 4, t0 + 20], [0, 0.9, 0], cl)} />;
+        case 'lluvia': return vert
+          ? <g key={i} opacity={k * 0.7}>{Array.from({ length: 170 }, (_, j) => { const xx = azar(j) * 2200 - 140, yy = ((azar(j + 50) * 1900 + f * 26) % 1800) - 1000; return <path key={j} d={`M${xx} ${yy} l -10 34`} stroke={C.crema} strokeWidth={2} />; })}</g>
+          : <g key={i} opacity={k * 0.7}>{Array.from({ length: 90 }, (_, j) => { const xx = azar(j) * 2200 - 140, yy = ((azar(j + 50) * 900 + f * 26) % 820) + 100; return <path key={j} d={`M${xx} ${yy} l -10 34`} stroke={C.crema} strokeWidth={2} />; })}</g>;
+        case 'nieve': return vert
+          ? <g key={i} opacity={k}>{Array.from({ length: 130 }, (_, j) => { const xx = azar(j) * 2000 + Math.sin(f / 20 + j) * 20, yy = ((azar(j + 50) * 1900 + f * 3) % 1800) - 1000; return <circle key={j} cx={xx} cy={yy} r={3} fill={C.blanco} />; })}</g>
+          : <g key={i} opacity={k}>{Array.from({ length: 70 }, (_, j) => { const xx = azar(j) * 2000 + Math.sin(f / 20 + j) * 20, yy = ((azar(j + 50) * 900 + f * 3) % 760) + 120; return <circle key={j} cx={xx} cy={yy} r={3} fill={C.blanco} />; })}</g>;
+        case 'oscurecer': return <rect key={i} x={-2000} y={vert ? -3000 : -500} width={6000} height={vert ? 6000 : 2000} fill={C.noche} opacity={k * 0.55 * n} />;
+        case 'aclarar': return <rect key={i} x={-2000} y={vert ? -3000 : -500} width={6000} height={vert ? 6000 : 2000} fill="#FFF3D6" opacity={(1 - interpolate(f, [t0, t0 + 15], [0, 1], cl)) * 0.5} />;
+        case 'destello': return <rect key={i} x={-2000} y={vert ? -3000 : -500} width={6000} height={vert ? 6000 : 2000} fill="#FFF6E0" opacity={interpolate(f, [t0, t0 + 4, t0 + 20], [0, 0.9, 0], cl)} />;
         case 'olas-suben': case 'olas-bajan': {
           const nivel = x.tipo === 'olas-suben' ? interpolate(f, [t0, t1], [0, 1], cl) : 1 - interpolate(f, [t0, t1], [0, 1], cl);
           const y0 = SUELO - nivel * 560 * n;
@@ -215,37 +219,35 @@ const Placa: React.FC<{ texto: string; o: number }> = ({ texto, o }) => {
   );
 };
 
-/** Escena animada a partir del guion visual. */
 /**
- * Encuadre para el render vertical: x de pantalla (0–1920, ya con la cámara de la escena aplicada) hacia donde mirar
- * y cuánto abrir. Pesa más quien habla y quien hace algo (gesto, camina, brilla, aparece); los de fondo pesan poco.
+ * Puesta vertical nativa (VideoVertical): en lugar de la cámara del horizontal, cada plano reubica las cosas.
+ * x: mundo → x virtual del cuadro vertical; ver: qué actores están en el plano; elementoX: x virtual de cada
+ * elemento (los que quedaron afuera entran por el costado); rotuloX: nombre entero dentro del cuadro.
+ * Con puesta no se dibuja el fondo (va en otra capa) ni los carteles de escena (van en pantalla, arriba).
  */
-export function encuadreVertical(esc: EscenaT, tl: EscenaTL, f: number): { x: number; ancho: number } {
-  const cam = esc.camara ?? {}, zz = cam.zoom ?? [1, 1.05];
-  const k = interpolate(f, [0, tl.durationInFrames], [0, 1], { ...cl, easing: Easing.inOut(Easing.sin) });
-  const camX = (cam.de ?? 0) + ((cam.a ?? cam.de ?? 0) - (cam.de ?? 0)) * k, z = zz[0] + (zz[1] - zz[0]) * k;
-  const pts: [number, number][] = [];
-  for (const a of esc.actores ?? []) {
-    const { e } = estadoActor(a, tl, f, ELENCO[a.como ?? a.id] ?? ELENCO.hombre);
-    if (e.opacity < 0.3) continue;
-    const capa = a.capa ?? 'frente';
-    const sx = 960 + (e.x - camX * P_CAPA[capa] - 960) * z;
-    let w = capa === 'fondo' ? 0.4 : capa === 'medio' ? 0.8 : 1;
-    if (e.hablando) w *= 4;
-    if (e.brazo || e.accion !== 'parado' || e.brillo > 0.2 || e.aparicion || e.expresion) w *= 2;
-    pts.push([sx, w]);
-  }
-  if (!pts.length) return { x: 960, ancho: 900 };
-  const W = pts.reduce((t, p) => t + p[1], 0), x = pts.reduce((t, p) => t + p[0] * p[1], 0) / W;
-  const max = Math.max(...pts.map((p) => p[1])), imp = pts.filter((p) => p[1] >= max / 2).map((p) => p[0]);
-  return { x, ancho: Math.max(...imp) - Math.min(...imp) };
-}
+export type PuestaVertical = {
+  x: (x: number) => number;
+  ver: (id: string) => boolean;
+  elementoX: (i: number, x: number) => number;
+  rotuloX: (vx: number, ancho: number) => number;
+};
 
+/** Escena animada a partir del guion visual. */
 export const EscenaMotor: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Idioma }> = ({ esc, tl, idioma = 'en' }) => {
-  const f = useCurrentFrame();
   const dur = tl.durationInFrames;
   const cam = esc.camara ?? {};
   const z = cam.zoom ?? [1, 1.05];
+  return (
+    <Escenario dur={dur} cielo={CIELO[esc.fondo] ?? 'barro'} camara={[[0, cam.de ?? 0, z[0]], [dur, cam.a ?? cam.de ?? 0, z[1]]]}>
+      <ContenidoEscena esc={esc} tl={tl} idioma={idioma} />
+    </Escenario>
+  );
+};
+
+/** Todo lo que va dentro del Escenario: fondo, elementos, actores, efectos y carteles. */
+export const ContenidoEscena: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Idioma; puesta?: PuestaVertical }> = ({ esc, tl, idioma = 'en', puesta }) => {
+  const f = useCurrentFrame();
+  const dur = tl.durationInFrames;
   const temblores = (esc.efectos ?? []).filter((x) => x.tipo === 'temblor');
   const shake = temblores.reduce((acc, x) => {
     const t0 = momento(tl, x.en), t1 = x.dur !== undefined ? momento(tl, x.en + x.dur) : t0 + 45;
@@ -258,11 +260,11 @@ export const EscenaMotor: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Idioma
     const { e, como } = estadoActor(a, tl, f, fichaBase);
     estados[a.id] = { e, como, ficha: ELENCO[como] ?? fichaBase };
   }
+  const efectos = puesta ? (esc.efectos ?? []).map((x) => (x.x !== undefined ? { ...x, x: puesta.x(x.x) } : x)) : esc.efectos ?? [];
   return (
-    <Escenario dur={dur} cielo={CIELO[esc.fondo] ?? 'barro'} camara={[[0, cam.de ?? 0, z[0]], [dur, cam.a ?? cam.de ?? 0, z[1]]]}>
       <g transform={shake ? `translate(${Math.sin(f * 2.1) * shake} ${Math.cos(f * 1.7) * shake * 0.6})` : undefined}>
-        <Efectos ef={esc.efectos ?? []} tl={tl} f={f} fase="fondo" />
-        <Fondo tipo={esc.fondo} f={f} astros={!esc.sinAstros} />
+        {!puesta && <Efectos ef={esc.efectos ?? []} tl={tl} f={f} fase="fondo" />}
+        {!puesta && <Fondo tipo={esc.fondo} f={f} astros={!esc.sinAstros} />}
         {capas.map((capa) => (
           <Capa key={capa} p={P_CAPA[capa]}>
             <g opacity={capa === 'fondo' ? 0.75 : 1}>
@@ -271,9 +273,9 @@ export const EscenaMotor: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Idioma
                 const o = (el.en !== undefined ? interpolate(f, [t0, t0 + 15], [0, 1], cl) : 1) * (el.hasta !== undefined ? 1 - interpolate(f, [momento(tl, el.hasta), momento(tl, el.hasta) + 15], [0, 1], cl) : 1);
                 const dy = el.sube ? el.sube * (1 - interpolate(f, [t0, Math.max(t0 + 1, momento(tl, (el.en ?? 0) + (el.durSube ?? 1)))], [0, 1], { ...cl, easing: Easing.out(Easing.cubic) })) : 0;
                 const yOff = capa === 'fondo' ? -50 : capa === 'medio' ? -20 : 0;
-                return <g key={i} opacity={o}><ElementoSVG tipo={el.tipo} x={el.x} y={(el.y !== undefined ? el.y : SUELO + yOff) + dy} s={(el.s ?? 1) * ESCALA_CAPA[capa]} f={f} props={el.props} /></g>;
+                return <g key={i} opacity={o}><ElementoSVG tipo={el.tipo} x={puesta ? puesta.elementoX((esc.elementos ?? []).indexOf(el), el.x) : el.x} y={(el.y !== undefined ? el.y : SUELO + yOff) + dy} s={(el.s ?? 1) * ESCALA_CAPA[capa]} f={f} props={el.props} /></g>;
               })}
-              {(esc.actores ?? []).filter((a) => (a.capa ?? 'frente') === capa).map((a) => {
+              {(esc.actores ?? []).filter((a) => (a.capa ?? 'frente') === capa && (!puesta || puesta.ver(a.id))).map((a) => {
                 const { e, como, ficha } = estados[a.id];
                 // Escucha: si otro habla, inclina la cabeza hacia él y asiente apenas (sin girarse solo).
                 const habla = Object.entries(estados).find(([id, o]) => id !== a.id && o.e.hablando && o.e.opacity > 0.5);
@@ -291,11 +293,12 @@ export const EscenaMotor: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Idioma
                 const CORONA_ALTA: Record<string, number> = { doble: 110, blanca: 110, atef: 120, trono: 90, plumas: 130, cuernosDisco: 110, disco: 90, pluma: 100, corona: 60, yelmoAlas: 70, casco: 70, roja: 80, gustoweh: 90, tocadoPlumas: 90, roach: 50, plumaAtras: 40, sombreroCesteria: 30 };
                 const extra = Math.max(CORONA_ALTA[pp.tocado as string] ?? 0, ['chacal', 'set'].includes(pp.cabezaAnimal as string) ? 50 : 0);
                 const alto = ficha.tipo === 'persona' ? (400 + extra) * (pp.gigante ? 1.2 : 1) * ((pp.s as number) ?? 1) : ficha.tipo === 'cuadrupedo' ? 260 : 200;
+                const ev = puesta ? { ...e, x: puesta.x(e.x) } : e;
                 return (
                   <g key={a.id}>
-                    <DibujarActor ficha={ficha} e={e} props={a.props} f={f} />
-                    {e.aparicion && <Aparicion {...e.aparicion} f={f} x={e.x} y={e.y} s={e.s} />}
-                    {oR > 0 && <Rotulo x={e.x} y={Math.max(160, e.y - alto * e.s)} texto={griego!} o={oR} tam={30} />}
+                    <DibujarActor ficha={ficha} e={ev} props={a.props} f={f} />
+                    {ev.aparicion && <Aparicion {...ev.aparicion} f={f} x={ev.x} y={ev.y} s={ev.s} />}
+                    {oR > 0 && <Rotulo x={puesta ? puesta.rotuloX(ev.x, griego!.length * 30 + 20) : ev.x} y={Math.max(160, ev.y - alto * ev.s)} texto={griego!} o={oR} tam={30} />}
                   </g>
                 );
               })}
@@ -303,8 +306,8 @@ export const EscenaMotor: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Idioma
           </Capa>
         ))}
         <Capa p={1}>
-          <Efectos ef={esc.efectos ?? []} tl={tl} f={f} fase="frente" />
-          {(esc.rotulos ?? []).map((r, i) => {
+          <Efectos ef={efectos} tl={tl} f={f} fase="frente" vert={!!puesta} />
+          {!puesta && (esc.rotulos ?? []).map((r, i) => {
             const t0 = momento(tl, r.en), t1 = r.hasta !== undefined ? momento(tl, r.hasta) : dur;
             const o = interpolate(f, [t0, t0 + 12, t1 - 12, t1], [0, 1, 1, 0], cl);
             const txt = typeof r.texto === 'string' ? r.texto : r.texto[idioma] ?? r.texto.es;
@@ -313,7 +316,7 @@ export const EscenaMotor: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Idioma
           })}
         </Capa>
         <Capa p={0}>
-          {(esc.rotulos ?? []).filter((r) => r.estilo === 'porque').map((r, i) => {
+          {!puesta && (esc.rotulos ?? []).filter((r) => r.estilo === 'porque').map((r, i) => {
             const t0 = momento(tl, r.en), t1 = r.hasta !== undefined ? momento(tl, r.hasta) : Math.min(dur, t0 + 110);
             const o = interpolate(f, [t0, t0 + 10, t1 - 10, t1], [0, 1, 1, 0], cl);
             const txt = (typeof r.texto === 'string' ? r.texto : r.texto[idioma] ?? r.texto.es).toUpperCase();
@@ -321,6 +324,5 @@ export const EscenaMotor: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Idioma
           })}
         </Capa>
       </g>
-    </Escenario>
   );
 };
