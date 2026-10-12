@@ -10,6 +10,12 @@ git ls-files | grep -vE '^(lib/voz-matias|pruebas/|\.github/workflows/voz\.yml)'
 mkdir -p $DEST
 rsync -a --exclude .git --files-from=$LISTA ./ $DEST/
 cd $DEST
+# indice.ts se regenera al narrar y puede nombrar episodios todavía sin commitear: rehacerlo con lo que sí se copió
+node -e "
+const { readdirSync, existsSync, writeFileSync } = require('fs');
+const ids = readdirSync('src/videos').filter((d) => existsSync('src/videos/' + d + '/timeline.json') && existsSync('src/videos/' + d + '/guion.json')).sort();
+writeFileSync('src/motor/indice.ts', '// Generado por scripts/motor-narrar.mjs — no editar a mano.\n' + ids.map((d, i) => \"import g\" + i + \" from '../videos/\" + d + \"/guion.json';\nimport t\" + i + \" from '../videos/\" + d + \"/timeline.json';\").join('\n') + '\n\nexport const VIDEOS: { guion: unknown; timeline: unknown }[] = [' + ids.map((_, i) => '{ guion: g' + i + ', timeline: t' + i + ' }').join(', ') + '];\n');
+"
 if [ ! -d .git ]; then
   git init -q -b main
   gh repo view matiasosuna/mitologias-render >/dev/null 2>&1 || gh repo create matiasosuna/mitologias-render --public --description "Render en la nube de Myths on Clay" >/dev/null
