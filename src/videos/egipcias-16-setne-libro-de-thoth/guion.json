@@ -1,0 +1,2343 @@
+{
+  "id": "egipcias-16-setne-libro-de-thoth",
+  "serie": "egipcias",
+  "numero": "16",
+  "titulo": {
+    "es": "Setne y el libro de Thoth",
+    "en": "Setne and the Book of Thoth"
+  },
+  "tituloGriego": "SETNE AND THE BOOK OF THOTH",
+  "miniatura": {
+    "heroe": "sacerdote_egipcio",
+    "rival": "thoth"
+  },
+  "siguiente": {
+    "es": "Imhotep, el hombre que se convirtió en dios",
+    "en": "Imhotep, the Man Who Became a God"
+  },
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "piramides",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, se encontró el corazón de un hermano, y él volvió a vivir.",
+          "en": "Last time, a brother's heart was found, and he lived again."
+        },
+        {
+          "es": "Hoy conocemos a Setne Khamwas, un príncipe, hijo del gran rey Ramsés Segundo.",
+          "en": "Today we meet Setne Khamwas, a prince, son of the great king Ramesses the Second."
+        },
+        {
+          "es": "Existió de verdad. Fue un sacerdote que amaba las tumbas antiguas, y las restauraba.",
+          "en": "He really lived. He was a priest who loved old tombs, and repaired them."
+        },
+        {
+          "es": "Mucho después, los egipcios escribieron cuentos mágicos sobre él. Este está en un papiro que hoy está en El Cairo.",
+          "en": "Long after, Egyptians wrote magic tales about him. This one is on a papyrus now in Cairo."
+        },
+        {
+          "es": "Setne oyó hablar de un libro escrito por Thoth, el dios de la sabiduría, de su propia mano.",
+          "en": "Setne heard of a book written by Thoth, the god of wisdom, with his own hand."
+        },
+        {
+          "es": "Estaba en la tumba de un antiguo príncipe, Naneferkaptah, en la ciudad de Menfis.",
+          "en": "It lay in the tomb of an ancient prince, Naneferkaptah, in the city of Memphis."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "papiro",
+          "x": 250,
+          "s": 1,
+          "en": 3
+        },
+        {
+          "tipo": "tumba",
+          "x": 1700,
+          "s": 1,
+          "en": 5
+        }
+      ],
+      "actores": [
+        {
+          "id": "bata",
+          "como": "egipcio",
+          "x": 700,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "setne",
+          "como": "sacerdote_egipcio",
+          "x": 750,
+          "y": 758,
+          "props": {
+            "trenza": true
+          },
+          "rotulo": "SETNE",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.6,
+              "hace": "baja"
+            },
+            {
+              "en": 4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 5,
+              "hace": "camina",
+              "a": 1350,
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "ramses",
+          "como": "faraon",
+          "x": 1200,
+          "mira": "izq",
+          "rotulo": "RAMESSES II",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "como": "thoth",
+          "x": 1200,
+          "y": 758,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.9,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1200,
+          "y": 450,
+          "dur": 1,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 5,
+          "texto": {
+            "es": "MENFIS",
+            "en": "MEMPHIS"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "tumba",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Setne bajó a la tumba con su hermano, Inaros.",
+          "en": "Setne went down into the tomb with his brother, Inaros."
+        },
+        {
+          "es": "Adentro, el libro brillaba como el sol. Toda la tumba estaba llena de luz.",
+          "en": "Inside, the book shone like the sun. The whole tomb was full of light."
+        },
+        {
+          "es": "Pero la tumba no estaba vacía. Adentro había fantasmas.",
+          "en": "But the tomb was not empty. There were ghosts inside."
+        },
+        {
+          "es": "Uno era Naneferkaptah. Con él estaban los espíritus de su esposa y de su hijito.",
+          "en": "One was Naneferkaptah. With him were the spirits of his wife and his little son."
+        },
+        {
+          "es": "«No te lleves el libro», dijo su esposa, Ahwere. «Nos costó todo. Deja que te cuente por qué.»",
+          "en": "\"Do not take the book,\" said his wife, Ahwere. \"It cost us everything. Let me tell you why.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sarcofago",
+          "x": 1650,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "setne",
+          "como": "sacerdote_egipcio",
+          "x": 500,
+          "y": 758,
+          "props": {
+            "trenza": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 500
+            },
+            {
+              "en": 1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            },
+            {
+              "en": 2.4,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "inaros",
+          "como": "egipcio",
+          "x": 300,
+          "y": 758,
+          "rotulo": "INAROS",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "entra",
+              "a": 300
+            },
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "nanef",
+          "como": "egipcio",
+          "x": 1350,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "piel": "#AFC3D6",
+            "ropaColor": "#DCE6EE",
+            "ropa": "larga",
+            "tocado": "nemes"
+          },
+          "rotulo": "NANEFERKAPTAH",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "ahwere",
+          "como": "egipcia",
+          "x": 1130,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "piel": "#AFC3D6",
+            "ropaColor": "#DCE6EE"
+          },
+          "rotulo": "AHWERE",
+          "pasos": [
+            {
+              "en": 3.3,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 4.3,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "merib",
+          "como": "egipcio",
+          "x": 950,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "cuerpo": "nino",
+            "trenza": true,
+            "piel": "#AFC3D6",
+            "ropaColor": "#DCE6EE"
+          },
+          "rotulo": "MERIB",
+          "pasos": [
+            {
+              "en": 3.5,
+              "hace": "aparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1650,
+          "y": 550,
+          "dur": 1.5,
+          "intensidad": 0.9
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 0.6,
+          "intensidad": 0.3
+        }
+      ]
+    },
+    {
+      "id": "historia",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hace mucho, contó Ahwere, su esposo solo quería leer escritos antiguos.",
+          "en": "Long ago, Ahwere said, her husband only wanted to read old writings."
+        },
+        {
+          "es": "Un viejo sacerdote se rio de él. «Yo sé dónde está el Libro de Thoth», dijo.",
+          "en": "An old priest laughed at him. \"I know where the Book of Thoth lies,\" he said."
+        },
+        {
+          "es": "«Con su primer hechizo puedes encantar el cielo, la tierra y el mar, y entender a las aves y los peces.»",
+          "en": "\"With its first spell, you can charm the sky, the earth and the sea, and understand the birds and fish.\""
+        },
+        {
+          "es": "«Con el segundo, aun después de la muerte, puedes volver a ver salir el sol.»",
+          "en": "\"With the second, even after death, you can see the sun rise again.\""
+        },
+        {
+          "es": "Naneferkaptah le pagó al sacerdote en plata y le preguntó dónde estaba el libro.",
+          "en": "Naneferkaptah paid the priest in silver, and asked where the book was."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "papiro",
+          "x": 300,
+          "s": 0.9
+        },
+        {
+          "tipo": "sol",
+          "x": 1550,
+          "y": 250,
+          "s": 1.3,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "nanef",
+          "como": "egipcio",
+          "x": 750,
+          "y": 758,
+          "props": {
+            "ropa": "larga",
+            "tocado": "nemes",
+            "objeto": "cana"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            },
+            {
+              "en": 2.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "ahwere",
+          "como": "egipcia",
+          "x": 480,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio",
+          "x": 1250,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "canas": true,
+            "cuerpo": "viejo"
+          },
+          "rotulo": "THE OLD PRIEST",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.5,
+              "hace": "habla",
+              "dur": 1.5
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 4.3,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "halcon",
+          "como": "halcon",
+          "x": 1000,
+          "y": 350,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "vuela",
+              "a": [
+                1750,
+                250
+              ],
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "pez",
+          "como": "pez",
+          "x": 1550,
+          "y": 680,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.6,
+              "hace": "nada",
+              "a": 1450,
+              "dur": 0.8
+            },
+            {
+              "en": 3.6,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 450,
+          "dur": 1.2,
+          "intensidad": 0.4
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1550,
+          "y": 260,
+          "dur": 1,
+          "intensidad": 0.6
+        },
+        {
+          "en": 4.2,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 600,
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "id": "cofres",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "«Está en el fondo del río, en Coptos, una ciudad del sur», dijo el sacerdote.",
+          "en": "\"It lies at the bottom of the river at Coptos, a city in the south,\" said the priest."
+        },
+        {
+          "es": "«Está encerrado en seis cajas, una dentro de otra. La última es de oro.»",
+          "en": "\"It is locked in six boxes, one inside the other. The last box is made of gold.\""
+        },
+        {
+          "es": "«Serpientes y escorpiones cubren el río a su alrededor por kilómetros.»",
+          "en": "\"Snakes and scorpions cover the river around it for miles.\""
+        },
+        {
+          "es": "«Y alrededor de las cajas hay una serpiente que no puede morir.»",
+          "en": "\"And around the boxes lies a serpent that cannot die.\""
+        },
+        {
+          "es": "Así que Naneferkaptah navegó al sur, hasta Coptos, con su esposa y su hijito.",
+          "en": "So Naneferkaptah sailed south to Coptos, with his wife and little son."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 1000,
+          "s": 1.3,
+          "en": 1,
+          "hasta": 4
+        },
+        {
+          "tipo": "cofre",
+          "x": 1000,
+          "s": 1.05,
+          "en": 1.15,
+          "hasta": 4
+        },
+        {
+          "tipo": "cofre",
+          "x": 1000,
+          "s": 0.85,
+          "en": 1.3,
+          "hasta": 4
+        },
+        {
+          "tipo": "cofre",
+          "x": 1000,
+          "s": 0.65,
+          "en": 1.45,
+          "hasta": 4
+        },
+        {
+          "tipo": "cofre",
+          "x": 1000,
+          "s": 0.5,
+          "en": 1.6,
+          "hasta": 4
+        },
+        {
+          "tipo": "cofre",
+          "x": 1000,
+          "s": 0.36,
+          "en": 1.75,
+          "hasta": 4
+        },
+        {
+          "tipo": "barco",
+          "x": 1450,
+          "s": 0.9,
+          "en": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio",
+          "x": 350,
+          "y": 758,
+          "props": {
+            "canas": true,
+            "cuerpo": "viejo"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1.5
+            },
+            {
+              "en": 3.9,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "escorpion1",
+          "como": "escorpion",
+          "x": 650,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.9,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "escorpion2",
+          "como": "escorpion",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.9,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "como": "serpiente",
+          "x": 1000,
+          "mira": "izq",
+          "props": {
+            "largo": 900,
+            "grosor": 55,
+            "color": "#3A2A4E",
+            "erguida": 1.2,
+            "boca": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3.9,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "nanef",
+          "como": "egipcio",
+          "x": 1450,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "ropa": "larga",
+            "tocado": "nemes"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.8,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 600,
+          "dur": 1,
+          "intensidad": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.35
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "COPTOS",
+            "en": "COPTOS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "6 CAJAS",
+            "en": "6 BOXES"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "cera",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En Coptos, Naneferkaptah hizo un barquito de cera, con hombres de cera para remar.",
+          "en": "At Coptos, Naneferkaptah made a little boat of wax, with wax men to row it."
+        },
+        {
+          "es": "Leyó un hechizo sobre ellos, ¡y cobraron vida!",
+          "en": "He read a spell over them, and they came to life!"
+        },
+        {
+          "es": "Remaron tres días y tres noches, hasta el lugar donde estaba el libro.",
+          "en": "They rowed for three days and three nights, to the place where the book lay."
+        },
+        {
+          "es": "Con un hechizo, hizo que las serpientes y los escorpiones se quedaran quietos.",
+          "en": "With a spell, he made the snakes and scorpions stand still."
+        },
+        {
+          "es": "Luego bajó al fondo del río y encontró a la serpiente inmortal.",
+          "en": "Then he went down to the riverbed, and found the deathless serpent."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1050,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "nanef",
+          "como": "egipcio",
+          "x": 600,
+          "y": 758,
+          "props": {
+            "ropa": "larga",
+            "tocado": "nemes"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "cera1",
+          "como": "egipcio",
+          "x": 950,
+          "y": 758,
+          "escala": 0.8,
+          "props": {
+            "piel": "#E8D9A0",
+            "ropaColor": "#E8D9A0"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.4,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "cera2",
+          "como": "egipcio",
+          "x": 1150,
+          "y": 758,
+          "escala": 0.8,
+          "props": {
+            "piel": "#E8D9A0",
+            "ropaColor": "#E8D9A0"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "escorpion",
+          "como": "escorpion",
+          "x": 1650,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "como": "serpiente",
+          "x": 1450,
+          "mira": "izq",
+          "props": {
+            "largo": 800,
+            "grosor": 55,
+            "color": "#3A2A4E",
+            "erguida": 1.3,
+            "boca": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4.3,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 600,
+          "dur": 0.8,
+          "intensidad": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 0.5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "estrellas",
+          "dur": 0.5
+        },
+        {
+          "en": 2.5,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3.4,
+          "tipo": "luz",
+          "x": 1650,
+          "y": 650,
+          "dur": 0.6,
+          "intensidad": 0.4
+        },
+        {
+          "en": 4.1,
+          "tipo": "olas-suben",
+          "dur": 0.5,
+          "intensidad": 0.15
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "3 DÍAS Y 3 NOCHES",
+            "en": "3 DAYS AND 3 NIGHTS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "serpiente",
+      "fondo": "nun",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Luchó con la serpiente y la mató. Pero volvió a la vida.",
+          "en": "He fought the serpent and killed it. But it came back to life."
+        },
+        {
+          "es": "La mató otra vez, y otra vez volvió.",
+          "en": "He killed it again, and again it came back."
+        },
+        {
+          "es": "La tercera vez, la cortó en dos y puso arena entre los pedazos. Así ya no pudo volver a unirse.",
+          "en": "The third time, he cut it in two, and put sand between the pieces. Now it could not join again."
+        },
+        {
+          "es": "Abrió las cajas, una por una. En la caja de oro estaba el Libro de Thoth.",
+          "en": "He opened the boxes, one by one. In the box of gold lay the Book of Thoth."
+        },
+        {
+          "es": "Leyó el primer hechizo. Entendió a las aves del cielo y a los peces del fondo.",
+          "en": "He read the first spell. He understood the birds of the sky and the fish of the deep."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 1350,
+          "s": 1,
+          "en": 3
+        },
+        {
+          "tipo": "cofre",
+          "x": 1350,
+          "s": 0.7,
+          "en": 3.2
+        },
+        {
+          "tipo": "cofre",
+          "x": 1350,
+          "s": 0.45,
+          "en": 3.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "nanef",
+          "como": "egipcio",
+          "x": 700,
+          "y": 758,
+          "props": {
+            "ropa": "larga",
+            "tocado": "nemes",
+            "objeto": "espada"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1080,
+              "dur": 0.5
+            },
+            {
+              "en": 3.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 4.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "como": "serpiente",
+          "x": 1150,
+          "mira": "izq",
+          "props": {
+            "largo": 800,
+            "grosor": 55,
+            "color": "#3A2A4E",
+            "erguida": 1.3,
+            "boca": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "desaparece",
+              "con": "humo"
+            },
+            {
+              "en": 0.8,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.3,
+              "hace": "desaparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.7,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.3,
+              "hace": "desaparece",
+              "con": "polvo"
+            }
+          ]
+        },
+        {
+          "id": "pez",
+          "como": "pez",
+          "x": 1550,
+          "y": 650,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.1,
+              "hace": "nada",
+              "a": 1750,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "halcon",
+          "como": "halcon",
+          "x": 900,
+          "y": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.3,
+              "hace": "vuela",
+              "a": [
+                400,
+                200
+              ],
+              "dur": 0.7
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "destello",
+          "dur": 0.2
+        },
+        {
+          "en": 1.2,
+          "tipo": "destello",
+          "dur": 0.2
+        },
+        {
+          "en": 2.2,
+          "tipo": "destello",
+          "dur": 0.2
+        },
+        {
+          "en": 2.4,
+          "tipo": "polvo",
+          "x": 1150,
+          "y": 780,
+          "dur": 0.8
+        },
+        {
+          "en": 3.6,
+          "tipo": "luz",
+          "x": 1350,
+          "y": 600,
+          "dur": 1,
+          "intensidad": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "EL LIBRO DE THOTH",
+            "en": "THE BOOK OF THOTH"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "castigo",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Thoth se enteró. Furioso, fue ante Ra: «¡Este hombre robó mi libro!»",
+          "en": "But Thoth found out. Angry, he went to Ra: \"This man stole my book!\""
+        },
+        {
+          "es": "Ra dijo: «Es tuyo. Haz con él lo que quieras.»",
+          "en": "Ra said: \"He is yours. Do with him as you wish.\""
+        },
+        {
+          "es": "En el viaje de regreso, el pequeño Merib cayó del barco al río y se ahogó.",
+          "en": "On the way home, little Merib fell from the boat into the river, and drowned."
+        },
+        {
+          "es": "Luego Ahwere también cayó al agua y se perdió.",
+          "en": "Then Ahwere fell into the water too, and was lost."
+        },
+        {
+          "es": "Naneferkaptah se ató el libro al cuerpo y se arrojó al río tras ellos.",
+          "en": "Naneferkaptah tied the book to his body, and threw himself into the river after them."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1450,
+          "s": 1,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "como": "thoth",
+          "x": 450,
+          "y": 758,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.5,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.8,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "como": "ra",
+          "x": 750,
+          "y": 758,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            },
+            {
+              "en": 1.9,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "merib",
+          "como": "egipcio",
+          "x": 1250,
+          "y": 758,
+          "props": {
+            "cuerpo": "nino",
+            "trenza": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "ahwere",
+          "como": "egipcia",
+          "x": 1450,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.7,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3.4,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "nanef",
+          "como": "egipcio",
+          "x": 1650,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "ropa": "larga",
+            "tocado": "nemes"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.6,
+              "hace": "lamenta"
+            },
+            {
+              "en": 4.4,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 600,
+          "y": 400,
+          "dur": 1.5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 3,
+          "intensidad": 0.35
+        },
+        {
+          "en": 2.4,
+          "tipo": "olas-suben",
+          "dur": 0.4,
+          "intensidad": 0.12
+        },
+        {
+          "en": 3.3,
+          "tipo": "olas-suben",
+          "dur": 0.4,
+          "intensidad": 0.12
+        },
+        {
+          "en": 4.3,
+          "tipo": "olas-suben",
+          "dur": 0.6,
+          "intensidad": 0.15
+        }
+      ]
+    },
+    {
+      "id": "juego",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ahwere lo perdió todo por ese libro. ¿Tú igual querrías leerlo? Cuéntanos en los comentarios.",
+          "en": "Ahwere lost everything for that book. Would you still want to read it? Tell us in the comments."
+        },
+        {
+          "es": "Setne no escuchó. «Dame ese libro», dijo, «o me lo llevaré por la fuerza.»",
+          "en": "Setne did not listen. \"Give me that book,\" he said, \"or I will take it by force.\""
+        },
+        {
+          "es": "El fantasma de Naneferkaptah se levantó. «Entonces juguemos por él», dijo, «al senet, nuestro juego de tablero.»",
+          "en": "Naneferkaptah's ghost rose up. \"Then let us play for it,\" he said, \"at senet, our board game.\""
+        },
+        {
+          "es": "Naneferkaptah ganó la primera partida. Con un hechizo, hundió a Setne en la tierra hasta las rodillas.",
+          "en": "Naneferkaptah won the first game. With a spell, he pushed Setne into the ground, up to his knees."
+        },
+        {
+          "es": "Volvió a ganar, y Setne se hundió hasta la cintura. ¡Ganó por tercera vez, y Setne se hundió hasta las orejas!",
+          "en": "He won again, and Setne sank to his waist. He won a third time, and Setne sank to his ears!"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "altar",
+          "x": 960,
+          "s": 0.6,
+          "en": 2
+        },
+        {
+          "tipo": "sarcofago",
+          "x": 1750,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "ahwere",
+          "como": "egipcia",
+          "x": 1550,
+          "capa": "medio",
+          "mira": "izq",
+          "props": {
+            "piel": "#AFC3D6",
+            "ropaColor": "#DCE6EE"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "setne",
+          "como": "sacerdote_egipcio",
+          "x": 650,
+          "y": 758,
+          "props": {
+            "trenza": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "encoge",
+              "escala": 0.65,
+              "dur": 0.3
+            },
+            {
+              "en": 4.55,
+              "hace": "encoge",
+              "escala": 0.4,
+              "dur": 0.3
+            },
+            {
+              "en": 4.7,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "nanef",
+          "como": "egipcio",
+          "x": 1250,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "piel": "#AFC3D6",
+            "ropaColor": "#DCE6EE",
+            "ropa": "larga",
+            "tocado": "nemes"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.3,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.8,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "inaros",
+          "como": "egipcio",
+          "x": 350,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.6,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.4,
+          "tipo": "luz",
+          "x": 960,
+          "y": 650,
+          "dur": 0.6,
+          "intensidad": 0.4
+        },
+        {
+          "en": 3.1,
+          "tipo": "polvo",
+          "x": 650,
+          "y": 790,
+          "dur": 0.5
+        },
+        {
+          "en": 3.1,
+          "tipo": "temblor",
+          "dur": 0.3,
+          "intensidad": 0.4
+        },
+        {
+          "en": 4.1,
+          "tipo": "polvo",
+          "x": 650,
+          "y": 790,
+          "dur": 0.4
+        },
+        {
+          "en": 4.6,
+          "tipo": "polvo",
+          "x": 650,
+          "y": 790,
+          "dur": 0.4
+        },
+        {
+          "en": 4.6,
+          "tipo": "temblor",
+          "dur": 0.3,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "SENET",
+            "en": "SENET"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "amuletos",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "«¡Inaros!», gritó Setne. «¡Corre a ver al rey! ¡Trae mis amuletos, mis talismanes mágicos!»",
+          "en": "\"Inaros!\" Setne shouted. \"Run to the king! Bring my amulets, my magic charms!\""
+        },
+        {
+          "es": "Inaros salió corriendo de la tumba y volvió con los amuletos.",
+          "en": "Inaros ran up out of the tomb, and came back with the amulets."
+        },
+        {
+          "es": "Se los puso a Setne. ¡Al instante, Setne salió volando de la tierra!",
+          "en": "He placed them on Setne. At once, Setne flew up out of the ground!"
+        },
+        {
+          "es": "Agarró el libro y salió de la tumba. La luz iba delante de él, y la oscuridad detrás.",
+          "en": "He grabbed the book and climbed out of the tomb. Light went before him, and darkness behind."
+        },
+        {
+          "es": "Naneferkaptah se rio: «Haré que lo devuelva.»",
+          "en": "Naneferkaptah laughed: \"I will make him bring it back.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sarcofago",
+          "x": 1750,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "setne",
+          "como": "sacerdote_egipcio",
+          "x": 650,
+          "y": 758,
+          "escala": 0.4,
+          "props": {
+            "trenza": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "crece",
+              "escala": 1,
+              "dur": 0.3
+            },
+            {
+              "en": 2.1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.3,
+              "hace": "salta"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.3,
+              "hace": "mira",
+              "a": 0
+            },
+            {
+              "en": 3.4,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "inaros",
+          "como": "egipcio",
+          "x": 400,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": -500,
+              "dur": 0.4
+            },
+            {
+              "en": 1.5,
+              "hace": "corre",
+              "a": 420,
+              "dur": 0.4
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "nanef",
+          "como": "egipcio",
+          "x": 1250,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "piel": "#AFC3D6",
+            "ropaColor": "#DCE6EE",
+            "ropa": "larga",
+            "tocado": "nemes"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.1,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "ahwere",
+          "como": "egipcia",
+          "x": 1500,
+          "capa": "medio",
+          "mira": "izq",
+          "props": {
+            "piel": "#AFC3D6",
+            "ropaColor": "#DCE6EE"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.5,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 650,
+          "y": 600,
+          "dur": 1,
+          "intensidad": 0.7
+        },
+        {
+          "en": 2.2,
+          "tipo": "temblor",
+          "dur": 0.3,
+          "intensidad": 0.4
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 500,
+          "y": 500,
+          "dur": 0.8,
+          "intensidad": 0.6
+        },
+        {
+          "en": 3.5,
+          "tipo": "oscurecer",
+          "dur": 1.5,
+          "intensidad": 0.4
+        }
+      ]
+    },
+    {
+      "id": "leccion",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El rey, padre de Setne, le dijo: «Devuelve el libro, o ese fantasma te obligará.»",
+          "en": "The king, Setne's father, said: \"Take the book back, or that ghost will make you.\""
+        },
+        {
+          "es": "Pero Setne siguió leyéndolo, día y noche.",
+          "en": "But Setne kept reading it, day and night."
+        },
+        {
+          "es": "Entonces conoció a una mujer hermosa llamada Tabubu, y perdió la cabeza por ella.",
+          "en": "Then he met a beautiful woman named Tabubu, and he lost his head over her."
+        },
+        {
+          "es": "Se volvió tan tonto que le dio todo lo que tenía.",
+          "en": "He became so foolish that he gave her everything he owned."
+        },
+        {
+          "es": "Entonces despertó tirado en el camino, sin nada de nada. Todo había sido un sueño mágico.",
+          "en": "Then he woke up lying in the road, with nothing at all. It had all been a magic dream."
+        },
+        {
+          "es": "Setne sintió una gran vergüenza. Ahora entendía: el libro no era suyo.",
+          "en": "Setne felt deeply ashamed. Now he understood: the book was not his to keep."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1500,
+          "s": 1
+        },
+        {
+          "tipo": "anfora",
+          "x": 1000,
+          "s": 0.7,
+          "en": 3,
+          "hasta": 4
+        },
+        {
+          "tipo": "anfora",
+          "x": 1110,
+          "s": 0.6,
+          "en": 3.1,
+          "hasta": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "rey",
+          "como": "faraon",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "RAMESSES II",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 1.4,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "setne",
+          "como": "sacerdote_egipcio",
+          "x": 750,
+          "y": 758,
+          "props": {
+            "trenza": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 2.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4,
+              "hace": "cae"
+            },
+            {
+              "en": 4.6,
+              "hace": "levantarse"
+            },
+            {
+              "en": 5,
+              "hace": "entristece"
+            },
+            {
+              "en": 5.3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "tabubu",
+          "como": "egipcia",
+          "x": 1150,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "ropaColor": "#B4412C"
+          },
+          "rotulo": "TABUBU",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 4,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 0.8,
+          "intensidad": 0.4
+        },
+        {
+          "en": 1,
+          "tipo": "estrellas",
+          "dur": 0.8
+        },
+        {
+          "en": 1.9,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4.1,
+          "tipo": "niebla",
+          "dur": 0.6,
+          "intensidad": 0.5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así que Setne volvió a la tumba, con un palo en horquilla en la mano y un brasero en la cabeza.",
+          "en": "So Setne went back to the tomb, with a forked stick in his hand and a fire pot on his head."
+        },
+        {
+          "es": "Naneferkaptah se rio. «¿Ves? Te dije que lo traerías de vuelta.»",
+          "en": "Naneferkaptah laughed. \"You see? I told you that you would bring it back.\""
+        },
+        {
+          "es": "Setne devolvió el libro. También trajo de Coptos a la esposa y al hijo, para que la familia descansara unida.",
+          "en": "Setne returned the book. He also brought the wife and son from Coptos, so the family could rest together."
+        },
+        {
+          "es": "La tumba se cerró para siempre, con el libro adentro.",
+          "en": "The tomb was closed forever, with the book inside."
+        },
+        {
+          "es": "¿Qué harías con un libro que te deja entender a las aves y los peces? Cuéntanos en los comentarios.",
+          "en": "What would you do with a book that lets you understand birds and fish? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez: Imhotep, el hombre que se convirtió en dios. Él construyó la primera pirámide.",
+          "en": "Next time: Imhotep, the Man Who Became a God. He built the first pyramid."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sarcofago",
+          "x": 1500,
+          "s": 0.9
+        },
+        {
+          "tipo": "sarcofago",
+          "x": 1720,
+          "s": 0.6,
+          "en": 2.4
+        },
+        {
+          "tipo": "piramide",
+          "x": 1100,
+          "s": 0.8,
+          "capa": "fondo",
+          "en": 5
+        }
+      ],
+      "actores": [
+        {
+          "id": "setne",
+          "como": "sacerdote_egipcio",
+          "x": 650,
+          "y": 758,
+          "props": {
+            "trenza": true,
+            "objeto": "palo"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "entristece"
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.9,
+              "hace": "gira"
+            },
+            {
+              "en": 3,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "nanef",
+          "como": "egipcio",
+          "x": 1250,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "piel": "#AFC3D6",
+            "ropaColor": "#DCE6EE",
+            "ropa": "larga",
+            "tocado": "nemes"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.1,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 2.2,
+              "hace": "asiente"
+            },
+            {
+              "en": 4,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "ahwere",
+          "como": "egipcia",
+          "x": 1450,
+          "capa": "medio",
+          "mira": "izq",
+          "props": {
+            "piel": "#AFC3D6",
+            "ropaColor": "#DCE6EE"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "merib",
+          "como": "egipcio",
+          "x": 1650,
+          "capa": "medio",
+          "mira": "izq",
+          "props": {
+            "cuerpo": "nino",
+            "trenza": true,
+            "piel": "#AFC3D6",
+            "ropaColor": "#DCE6EE"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "imhotep",
+          "como": "escriba",
+          "x": 800,
+          "y": 758,
+          "rotulo": "IMHOTEP",
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 5.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 650,
+          "y": 375,
+          "dur": 2.8,
+          "intensidad": 0.35
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.6
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 550,
+          "dur": 1,
+          "intensidad": 0.6
+        },
+        {
+          "en": 5,
+          "tipo": "aclarar"
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El fantasma que apostó un libro mágico en un juego de mesa",
+        "en": "The ghost who played a board game for a magic book"
+      },
+      "escena": "juego",
+      "desde": 2,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "La serpiente que no podía morir",
+        "en": "The serpent that could not die"
+      },
+      "escena": "serpiente",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Hundido en la tierra hasta las orejas",
+        "en": "Sunk into the ground up to his ears"
+      },
+      "escena": "amuletos",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 650
+    }
+  ]
+}

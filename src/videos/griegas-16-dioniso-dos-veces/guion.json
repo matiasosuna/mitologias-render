@@ -1,0 +1,1867 @@
+{
+  "id": "griegas-16-dioniso-dos-veces",
+  "serie": "griegas",
+  "numero": "16",
+  "titulo": {
+    "es": "Dioniso, el nacido dos veces",
+    "en": "Dionysus, the Twice-Born"
+  },
+  "tituloGriego": "ΔΙΟΝΥΣΟΣ",
+  "miniatura": {
+    "heroe": "dioniso",
+    "rival": "hera"
+  },
+  "siguiente": {
+    "es": "Dioniso y los piratas",
+    "en": "Dionysus and the Pirates"
+  },
+  "escenas": [
+    {
+      "id": "inicio",
+      "fondo": "olimpo",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada, el bebé Hermes le robó las vacas a Apolo y se convirtió en el mensajero de los dioses.",
+          "en": "Last time, baby Hermes stole Apollo's cows, and became the messenger of the gods."
+        },
+        {
+          "es": "Hoy, Hermes tiene un trabajo importante. Debe llevar a un dios bebé a un lugar seguro.",
+          "en": "Today, Hermes has an important job. He must carry a baby god to safety."
+        },
+        {
+          "es": "Ese bebé era Dioniso. Fue el único dios que nació dos veces.",
+          "en": "That baby was Dionysus. He was the only god who was born twice."
+        },
+        {
+          "es": "Su historia empieza en Tebas, una gran ciudad de Grecia.",
+          "en": "His story begins in Thebes, a great city in Greece."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 600
+            },
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "vuela",
+              "a": [
+                800,
+                600
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 1.8,
+              "hace": "vuela",
+              "a": [
+                800,
+                790
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "dioniso",
+          "x": 1250,
+          "mira": "izq",
+          "props": {
+            "cuerpo": "nino",
+            "barba": false,
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "x": 1700,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 1.5,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 600,
+          "dur": 1.5
+        },
+        {
+          "en": 3.2,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "NACIDO DOS VECES",
+            "en": "BORN TWICE"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 3
+        },
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "TEBAS",
+            "en": "THEBES"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "semele",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "En Tebas vivía Sémele, una princesa. Su padre, el rey Cadmo, había fundado la ciudad.",
+          "en": "In Thebes lived Semele, a princess. Her father, King Cadmus, had founded the city."
+        },
+        {
+          "es": "Zeus, el rey de los dioses, se enamoró de ella.",
+          "en": "Zeus, the king of the gods, fell in love with her."
+        },
+        {
+          "es": "La visitaba en secreto, con la forma de un hombre.",
+          "en": "He visited her in secret, in the shape of a man."
+        },
+        {
+          "es": "Pronto, Sémele iba a tener un bebé, un hijo de Zeus.",
+          "en": "Soon, Semele was going to have a baby, a child of Zeus."
+        },
+        {
+          "es": "Pero alguien en el Olimpo estaba mirando: Hera, la esposa de Zeus.",
+          "en": "But someone on Olympus was watching: Hera, the wife of Zeus."
+        }
+      ],
+      "actores": [
+        {
+          "id": "semele",
+          "como": "mujer",
+          "rotulo": "Semele",
+          "x": 400,
+          "mira": "der",
+          "props": {
+            "tocado": "diadema",
+            "ropa": "larga",
+            "capa": "#8C3B5E"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 700
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "abraza"
+            },
+            {
+              "en": 3.3,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "cadmo",
+          "como": "rey",
+          "rotulo": "Cadmus",
+          "x": 250,
+          "capa": "medio",
+          "mira": "der",
+          "props": {
+            "canas": true
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.7,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.1,
+              "hace": "transforma",
+              "en_que": "hombre"
+            },
+            {
+              "en": 2.4,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.8
+            },
+            {
+              "en": 3.4,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "x": 1900,
+          "capa": "fondo",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 4.6,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1350,
+          "y": 380,
+          "dur": 1
+        },
+        {
+          "en": 2.1,
+          "tipo": "humo",
+          "x": 1350,
+          "y": 650,
+          "dur": 0.8
+        },
+        {
+          "en": 3.3,
+          "tipo": "luz",
+          "x": 700,
+          "y": 550,
+          "dur": 1
+        },
+        {
+          "en": 4.2,
+          "tipo": "oscurecer",
+          "intensidad": 0.35,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "LA PRINCESA DE TEBAS",
+            "en": "THE PRINCESS OF THEBES"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "hera",
+      "fondo": "olimpo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hera estaba furiosa. Otra vez, su esposo amaba a otra.",
+          "en": "Hera was furious. Once again, her husband loved someone else."
+        },
+        {
+          "es": "No quería solo castigar a Sémele. Quería que desapareciera para siempre.",
+          "en": "She did not want only to punish Semele. She wanted her gone forever."
+        },
+        {
+          "es": "Así que pensó en un truco cruel.",
+          "en": "So she thought of a cruel trick."
+        },
+        {
+          "es": "Se transformó en una anciana: Béroe, la nodriza que había cuidado a Sémele de niña.",
+          "en": "She changed into an old woman: Beroe, the nurse who had cared for Semele as a child."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hera",
+          "x": 800,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "transforma",
+              "en_que": "anciana"
+            },
+            {
+              "en": 3.3,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "semele",
+          "como": "mujer",
+          "rotulo": "Semele",
+          "x": 1500,
+          "capa": "medio",
+          "mira": "izq",
+          "props": {
+            "tocado": "diadema",
+            "ropa": "larga",
+            "capa": "#8C3B5E"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.8,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "humo",
+          "x": 800,
+          "y": 650,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.3,
+          "texto": {
+            "es": "BÉROE, LA VIEJA NODRIZA",
+            "en": "BEROE, THE OLD NURSE"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "beroe",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 200
+      },
+      "frases": [
+        {
+          "es": "La vieja «nodriza» fue a visitar a Sémele, y la princesa se alegró de verla.",
+          "en": "The old \"nurse\" came to visit Semele, and the princess was happy to see her."
+        },
+        {
+          "es": "Hablaron mucho tiempo, del bebé y de su padre.",
+          "en": "They talked for a long time, about the baby and about its father."
+        },
+        {
+          "es": "«¿Dice que es Zeus?», preguntó la anciana. «Muchos hombres dicen eso, hija mía».",
+          "en": "\"He says he is Zeus?\" asked the old woman. \"Many men say that, my child.\""
+        },
+        {
+          "es": "«Pídele una prueba. Pídele que venga a ti como va con Hera, con todo su poder».",
+          "en": "\"Ask him for proof. Ask him to come to you as he comes to Hera, in all his power.\""
+        },
+        {
+          "es": "Sémele empezó a dudar. Y esa duda era todo lo que Hera necesitaba.",
+          "en": "Semele began to doubt. And that doubt was all Hera needed."
+        }
+      ],
+      "actores": [
+        {
+          "id": "beroe",
+          "como": "anciana",
+          "rotulo": "Beroe",
+          "x": 200,
+          "mira": "der",
+          "props": {
+            "cuerpo": "viejo"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 650
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "niega"
+            },
+            {
+              "en": 2.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 3.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "semele",
+          "como": "mujer",
+          "rotulo": "Semele",
+          "x": 1150,
+          "mira": "izq",
+          "props": {
+            "tocado": "diadema",
+            "ropa": "larga",
+            "capa": "#8C3B5E"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.6,
+              "hace": "abraza"
+            },
+            {
+              "en": 1.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "x": 1800,
+          "capa": "fondo",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4.3,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 4.6,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 900,
+          "y": 250,
+          "dur": 0.8
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "intensidad": 0.35,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "«PÍDELE UNA PRUEBA»",
+            "en": "\"ASK HIM FOR PROOF\""
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "promesa",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Esa noche, Zeus fue a ver a Sémele. «¿Me concederás un deseo?», le preguntó.",
+          "en": "That night, Zeus came to Semele. \"Will you give me one wish?\" she asked."
+        },
+        {
+          "es": "Zeus la amaba, así que le hizo una promesa. Juró por la Estigia, el río del inframundo.",
+          "en": "Zeus loved her, so he made a promise. He swore by the Styx, the river of the underworld."
+        },
+        {
+          "es": "Una promesa por la Estigia no se podía romper jamás, ni siquiera un dios.",
+          "en": "A promise on the Styx could never be broken, not even by a god."
+        },
+        {
+          "es": "Entonces Sémele dijo: «Muéstrate ante mí como eres de verdad, como te ve Hera».",
+          "en": "Then Semele said: \"Show yourself to me as you truly are, as you appear to Hera.\""
+        },
+        {
+          "es": "Zeus quiso detenerla, pero era tarde. Las palabras ya estaban dichas.",
+          "en": "Zeus tried to stop her, but it was too late. The words were out."
+        }
+      ],
+      "actores": [
+        {
+          "id": "semele",
+          "como": "mujer",
+          "rotulo": "Semele",
+          "x": 700,
+          "mira": "der",
+          "props": {
+            "tocado": "diadema",
+            "ropa": "larga",
+            "capa": "#8C3B5E"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.6,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "habla",
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "niega"
+            },
+            {
+              "en": 4.3,
+              "hace": "senala"
+            },
+            {
+              "en": 4.7,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        },
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 5
+        },
+        {
+          "en": 1.4,
+          "tipo": "niebla",
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.4,
+          "texto": {
+            "es": "UN JURAMENTO POR LA ESTIGIA",
+            "en": "AN OATH ON THE STYX"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "rayo",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Zeus estaba muy triste. Pero había jurado, y tenía que cumplir su palabra.",
+          "en": "Zeus was very sad. But he had sworn, and he had to keep his word."
+        },
+        {
+          "es": "Eligió su rayo más pequeño y más suave, el más débil que tenía.",
+          "en": "He chose his smallest and gentlest lightning bolt, the weakest one he had."
+        },
+        {
+          "es": "Entonces se presentó ante Sémele como el rey de los dioses, entre truenos y una luz ardiente.",
+          "en": "Then he came to Semele as the king of the gods, in thunder and blazing light."
+        },
+        {
+          "es": "Pero ningún cuerpo humano soporta ese poder. Sémele se consumió en la luz.",
+          "en": "But no human body can bear that power. Semele burned away in the light."
+        },
+        {
+          "es": "¿Tú le habrías pedido a Zeus esa prueba?",
+          "en": "Would you have asked Zeus for that proof?"
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "crece",
+              "escala": 1.3
+            },
+            {
+              "en": 2.1,
+              "hace": "brilla",
+              "dur": 1.5
+            },
+            {
+              "en": 2.4,
+              "hace": "lanza"
+            },
+            {
+              "en": 4,
+              "hace": "encoge",
+              "escala": 1
+            },
+            {
+              "en": 4.2,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "semele",
+          "como": "mujer",
+          "rotulo": "Semele",
+          "x": 650,
+          "mira": "der",
+          "props": {
+            "tocado": "diadema",
+            "ropa": "larga",
+            "capa": "#8C3B5E"
+          },
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.6,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.2,
+              "hace": "desaparece",
+              "con": "fuego"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 350,
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "rayo",
+          "x": 1250
+        },
+        {
+          "en": 2.1,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 400,
+          "intensidad": 1.5,
+          "dur": 1.5
+        },
+        {
+          "en": 2.2,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.2,
+          "tipo": "fuego",
+          "x": 650,
+          "y": 790,
+          "dur": 0.8
+        },
+        {
+          "en": 3.6,
+          "tipo": "humo",
+          "x": 650,
+          "y": 700,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "muslo",
+      "fondo": "olimpo",
+      "camara": {
+        "de": 0,
+        "a": 250
+      },
+      "frases": [
+        {
+          "es": "Pero en el fuego, Zeus salvó una cosa: el bebé diminuto, que todavía no había nacido.",
+          "en": "But in the fire, Zeus saved one thing: the tiny baby, who was not born yet."
+        },
+        {
+          "es": "El bebé era demasiado pequeño para vivir solo. Así que Zeus hizo algo asombroso.",
+          "en": "The baby was too small to live on his own. So Zeus did something amazing."
+        },
+        {
+          "es": "Abrió su propio muslo, puso al bebé adentro y lo cosió.",
+          "en": "He opened his own thigh, placed the baby inside, and sewed it closed."
+        },
+        {
+          "es": "Allí el bebé siguió creciendo, seguro y abrigado, unos meses más.",
+          "en": "There the baby kept growing, safe and warm, for a few more months."
+        },
+        {
+          "es": "Después Zeus volvió a abrir su muslo, y Dioniso nació por segunda vez.",
+          "en": "Then Zeus opened his thigh again, and Dionysus was born a second time."
+        },
+        {
+          "es": "Por eso los griegos lo llamaron el nacido dos veces.",
+          "en": "So the Greeks called him the Twice-Born."
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "x": 850,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 0.6,
+              "hace": "abraza"
+            },
+            {
+              "en": 2,
+              "hace": "sienta"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 4,
+              "hace": "levantarse"
+            },
+            {
+              "en": 4.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "dioniso",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 0.8,
+          "props": {
+            "cuerpo": "nino",
+            "barba": false,
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.4,
+              "hace": "desaparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 5.2,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "hermes",
+          "x": 1750,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 5.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 1200,
+          "y": 790,
+          "dur": 0.6
+        },
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 1200,
+          "y": 600,
+          "dur": 1
+        },
+        {
+          "en": 2.4,
+          "tipo": "luz",
+          "x": 850,
+          "y": 600,
+          "dur": 1.2
+        },
+        {
+          "en": 3,
+          "tipo": "estrellas",
+          "dur": 1
+        },
+        {
+          "en": 4.3,
+          "tipo": "destello"
+        },
+        {
+          "en": 4.4,
+          "tipo": "chispas",
+          "x": 1200,
+          "y": 600,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "EL MUSLO DE ZEUS",
+            "en": "THE THIGH OF ZEUS"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 3.8
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "EL NACIDO DOS VECES",
+            "en": "THE TWICE-BORN"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "ino",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Pero Hera seguía enojada, y Zeus tuvo que esconderle al niño.",
+          "en": "But Hera was still angry, and Zeus had to hide the child from her."
+        },
+        {
+          "es": "Hermes, el mensajero, llevó al bebé con Ino, la hermana de Sémele, para criarlo en secreto.",
+          "en": "Hermes, the messenger, took the baby to Ino, Semele's sister, to raise him in secret."
+        },
+        {
+          "es": "Pero Hera lo descubrió. Mandó la locura a la casa de Ino.",
+          "en": "But Hera found out. She sent madness into Ino's house."
+        },
+        {
+          "es": "Entonces Zeus convirtió al niño en un cabrito, para que Hera no lo reconociera.",
+          "en": "So Zeus changed the little boy into a young goat, so that Hera would not know him."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "x": 150,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "camina",
+              "a": 650,
+              "dur": 1
+            },
+            {
+              "en": 1.8,
+              "hace": "senala"
+            },
+            {
+              "en": 3.6,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "dioniso",
+          "x": 350,
+          "mira": "der",
+          "escala": 0.8,
+          "props": {
+            "cuerpo": "nino",
+            "barba": false,
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1
+            },
+            {
+              "en": 2.5,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 3.2,
+              "hace": "transforma",
+              "en_que": "cabra"
+            },
+            {
+              "en": 3.3,
+              "hace": "encoge",
+              "escala": 0.6
+            }
+          ]
+        },
+        {
+          "id": "ino",
+          "como": "mujer",
+          "rotulo": "Ino",
+          "x": 1350,
+          "mira": "izq",
+          "props": {
+            "tocado": "diadema"
+          },
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.4,
+              "hace": "tiembla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.8,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "x": 1900,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 0.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.4,
+              "hace": "mira",
+              "a": 900
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 0.9
+        },
+        {
+          "en": 2.2,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 2.3,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 2.3,
+          "tipo": "humo",
+          "x": 1350,
+          "y": 650,
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 900,
+          "y": 650,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.4,
+          "texto": {
+            "es": "UN CABRITO",
+            "en": "A LITTLE GOAT"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "nisa",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Hermes se llevó al cabrito muy lejos, a Nisa, un monte escondido y cubierto de bosques.",
+          "en": "Hermes carried the little goat far away, to Nysa, a hidden mountain covered in forests."
+        },
+        {
+          "es": "Allí vivían las ninfas de Nisa, espíritus amables de los bosques.",
+          "en": "There lived the nymphs of Nysa, kind spirits of the woods."
+        },
+        {
+          "es": "Escondieron al pequeño dios en una cueva y lo criaron con amor.",
+          "en": "They hid the little god in a cave, and raised him with love."
+        },
+        {
+          "es": "Y esta vez, Hera nunca lo encontró.",
+          "en": "And this time, Hera never found him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cueva",
+          "x": 1700,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "x": 100,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 600
+            },
+            {
+              "en": 1.1,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                100,
+                200
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "dioniso",
+          "como": "cabra",
+          "rotulo": "Dionysus",
+          "x": 300,
+          "escala": 0.6,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 850
+            },
+            {
+              "en": 2.3,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.6
+            },
+            {
+              "en": 3.2,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "ninfa1",
+          "como": "ninfa",
+          "rotulo": "Nymph",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.4,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "ninfa2",
+          "como": "ninfa",
+          "rotulo": "",
+          "x": 1550,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.6,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1400,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3.2,
+          "tipo": "chispas",
+          "x": 1050,
+          "y": 650,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "NISA",
+            "en": "NYSA"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "vino",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Dioniso creció entre las ninfas, los árboles y los animales salvajes.",
+          "en": "Dionysus grew up among the nymphs, the trees and the wild animals."
+        },
+        {
+          "es": "Un día encontró una planta trepadora de frutos dulces y morados: la vid.",
+          "en": "One day, he found a climbing plant with sweet purple fruit: the grapevine."
+        },
+        {
+          "es": "Aplastó las uvas y aprendió a hacer vino.",
+          "en": "He crushed the grapes, and learned how to make wine."
+        },
+        {
+          "es": "El vino trajo alegría, música y baile.",
+          "en": "Wine brought joy, music and dancing."
+        },
+        {
+          "es": "Se convirtió en el dios del vino, de las fiestas y de la naturaleza salvaje.",
+          "en": "He became the god of wine, of parties, and of wild nature."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "olivo",
+          "x": 1200,
+          "s": 0.9,
+          "en": 1,
+          "sube": 250,
+          "durSube": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "dioniso",
+          "x": 300,
+          "mira": "der",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 750
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.7,
+              "hace": "toma",
+              "objeto": "copa"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "leon",
+          "rotulo": "",
+          "x": 1650,
+          "capa": "medio",
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.6,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "ninfa",
+          "rotulo": "",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "salta"
+            },
+            {
+              "en": 3.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "musa",
+          "rotulo": "",
+          "x": 150,
+          "capa": "medio",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1200,
+          "y": 500,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 650,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 450,
+          "dur": 1.5
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 750,
+          "y": 380,
+          "dur": 1.2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "EL DIOS DEL VINO",
+            "en": "THE GOD OF WINE"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "inframundo",
+      "camara": {
+        "de": 0,
+        "a": 250
+      },
+      "frases": [
+        {
+          "es": "Dioniso nunca olvidó a su madre. Un día bajó al mundo de los muertos.",
+          "en": "Dionysus never forgot his mother. One day, he went down to the world of the dead."
+        },
+        {
+          "es": "Rescató a Sémele y la llevó al Olimpo, para que viviera entre los dioses.",
+          "en": "He brought Semele back, and took her up to Olympus, to live among the gods."
+        },
+        {
+          "es": "Después recorrió el mundo enseñando a hacer vino. Pero no todos creían que fuera un dios.",
+          "en": "Then he traveled the world, teaching people to make wine. But not everyone believed he was a god."
+        },
+        {
+          "es": "Cuéntame en los comentarios: ¿Sémele fue ingenua, o simplemente la engañaron?",
+          "en": "Tell me in the comments: was Semele foolish, or was she simply tricked?"
+        },
+        {
+          "es": "En el próximo episodio, unos piratas cometen un error terrible: Dioniso y los piratas.",
+          "en": "Next time, some pirates make a terrible mistake: Dionysus and the Pirates."
+        }
+      ],
+      "actores": [
+        {
+          "id": "dioniso",
+          "x": 200,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 650
+            },
+            {
+              "en": 1,
+              "hace": "abraza"
+            },
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.4,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.8
+            },
+            {
+              "en": 4.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "semele",
+          "como": "mujer",
+          "rotulo": "Semele",
+          "x": 1100,
+          "mira": "izq",
+          "props": {
+            "tocado": "diadema",
+            "ropa": "larga",
+            "capa": "#8C3B5E"
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.6,
+              "hace": "vuela",
+              "a": [
+                1200,
+                250
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 2.1,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "pirata",
+          "como": "hombre",
+          "rotulo": "Pirate",
+          "x": 1700,
+          "mira": "izq",
+          "props": {
+            "tocado": "cinta",
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 4.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "niebla",
+          "dur": 1.2
+        },
+        {
+          "en": 1.4,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 350,
+          "dur": 1
+        },
+        {
+          "en": 2.2,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4.2,
+          "texto": {
+            "es": "DIONISO Y LOS PIRATAS",
+            "en": "DIONYSUS AND THE PIRATES"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Pidió ver a Zeus como era de verdad",
+        "en": "She Asked to See Zeus as He Truly Was"
+      },
+      "escena": "rayo",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "El dios que nació del muslo de su padre",
+        "en": "The God Born From His Father's Thigh"
+      },
+      "escena": "muslo",
+      "desde": 0,
+      "hasta": 5,
+      "foco": 850
+    },
+    {
+      "gancho": {
+        "es": "El truco más cruel de Hera",
+        "en": "Hera's Cruelest Trick"
+      },
+      "escena": "beroe",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 750
+    }
+  ]
+}

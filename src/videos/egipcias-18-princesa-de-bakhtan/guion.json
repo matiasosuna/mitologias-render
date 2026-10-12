@@ -1,0 +1,335 @@
+{
+  "id": "egipcias-18-princesa-de-bakhtan",
+  "serie": "egipcias",
+  "numero": "18",
+  "titulo": { "es": "La princesa de Bakhtan", "en": "The Princess of Bakhtan" },
+  "tituloGriego": "THE PRINCESS OF BAKHTAN",
+  "miniatura": { "heroe": { "cabezaAnimal": "halcon", "tocado": "disco", "objeto": "was", "piel": "#D4A017" }, "rival": "egipcia" },
+  "siguiente": { "es": "El príncipe predestinado", "en": "The Doomed Prince" },
+  "shorts": [
+    { "gancho": { "es": "El espíritu que le pidió una fiesta a un dios", "en": "The spirit who asked a god for a feast" }, "escena": "curacion", "desde": 1, "hasta": 3, "foco": 900 },
+    { "gancho": { "es": "El dios que volvió a casa como un halcón de oro", "en": "The god who flew home as a golden falcon" }, "escena": "sueno", "desde": 1, "hasta": 3, "foco": 1050 },
+    { "gancho": { "es": "Un viaje de 17 meses para curar a una princesa", "en": "A 17-month journey to heal a princess" }, "escena": "viaje", "desde": 0, "hasta": 3, "foco": 900 }
+  ],
+  "escenas": [
+    {
+      "id": "marco",
+      "frases": [
+        { "es": "La última vez, Imhotep construyó la primera pirámide de piedra, y tras su muerte se volvió dios de la curación.", "en": "Last time, Imhotep built the first stone pyramid. After his death, he became a god of healing." },
+        { "es": "Hoy, otro dios emprende un viaje para curar, muy lejos de Egipto.", "en": "Today, another god goes on a journey to heal someone, far away from Egypt." },
+        { "es": "Esta historia está tallada en una losa de piedra, la Estela de Bentresh. Hoy está en el Museo del Louvre, en París.", "en": "This story is carved on a stone slab called the Bentresh Stela. Today it is in the Louvre Museum, in Paris." },
+        { "es": "Ocurre en tiempos de Ramsés II, uno de los reyes más famosos de Egipto.", "en": "It takes place in the time of Ramesses the Second, one of the most famous kings of Egypt." }
+      ],
+      "fondo": "templo",
+      "camara": { "de": 0, "a": 200, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "estela", "x": 550, "s": 1.2, "en": 2 },
+        { "tipo": "pilono", "x": 1850, "s": 0.9, "capa": "fondo" }
+      ],
+      "actores": [
+        { "id": "imhotep", "como": "escriba", "x": 450, "y": 758, "props": { "ropa": "larga", "tocado": "peluca" }, "rotulo": "IMHOTEP", "pasos": [{ "en": 0, "hace": "aparece" }, { "en": 0.4, "hace": "brilla", "dur": 0.5 }, { "en": 1, "hace": "desaparece", "con": "luz" }] },
+        { "id": "khonsu", "como": "ra", "x": 1050, "y": 758, "mira": "izq", "props": { "piel": "#D4A017" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "aparece", "con": "luz" }, { "en": 1.4, "hace": "levanta" }, { "en": 2, "hace": "baja" }] },
+        { "id": "ramses", "como": "faraon", "x": 1450, "y": 758, "mira": "izq", "rotulo": "RAMESSES II", "pasos": [{ "en": 3, "hace": "aparece" }, { "en": 3.4, "hace": "levanta" }] }
+      ],
+      "efectos": [
+        { "en": 0, "tipo": "aclarar" },
+        { "en": 0.4, "tipo": "luz", "x": 450, "y": 450, "dur": 0.8, "intensidad": 0.5 },
+        { "en": 1, "tipo": "luz", "x": 1050, "y": 450, "dur": 1, "intensidad": 0.6 },
+        { "en": 2, "tipo": "chispas", "x": 550, "y": 600, "dur": 0.8 }
+      ],
+      "rotulos": [
+        { "en": 2, "texto": { "es": "LA ESTELA DE BENTRESH", "en": "THE BENTRESH STELA" }, "x": 960, "y": 230, "hasta": 3 }
+      ]
+    },
+    {
+      "id": "naharin",
+      "frases": [
+        { "es": "Ramsés estaba en Naharin, una tierra muy al norte de Egipto, junto al gran río Éufrates.", "en": "Ramesses was in Naharin, a land far to the north of Egypt, by the great river Euphrates." },
+        { "es": "Los príncipes de la región vinieron a saludarlo. Traían oro, piedra azul y maderas preciosas.", "en": "The local princes came to greet him. They brought gold, blue stone and precious wood." },
+        { "es": "Entre ellos estaba el príncipe de Bakhtan. Su reino estaba tan lejos que hoy nadie sabe dónde quedaba.", "en": "Among them was the prince of Bakhtan. His kingdom was so far away that today no one knows where it was." },
+        { "es": "Delante de sus regalos, puso a su hija mayor. Era más hermosa que nadie.", "en": "In front of his gifts, he placed his eldest daughter. She was more beautiful than anyone." },
+        { "es": "El rey la amó. La llevó a Egipto y la hizo su gran reina, con un nuevo nombre: Neferure.", "en": "The king loved her. He took her to Egypt and made her his great queen, with a new name: Neferure." }
+      ],
+      "fondo": "ciudad",
+      "camara": { "de": 0, "a": 250, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "trono", "x": 1750, "s": 1.1 },
+        { "tipo": "anfora", "x": 1080, "s": 0.7, "en": 1 },
+        { "tipo": "anfora", "x": 1170, "s": 0.6, "en": 1 },
+        { "tipo": "palmera", "x": 300, "s": 1.3, "capa": "fondo" }
+      ],
+      "actores": [
+        { "id": "ramses", "como": "faraon", "x": 1750, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0, "hace": "sienta" }, { "en": 4, "hace": "levantarse" }, { "en": 4.3, "hace": "ofrece" }] },
+        { "id": "principe1", "como": "egipcio", "x": 550, "y": 758, "props": { "barba": true, "ropa": "larga" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "entra", "a": 550 }, { "en": 1.6, "hace": "ofrece" }, { "en": 2.5, "hace": "baja" }] },
+        { "id": "bakhtan", "como": "rey", "x": 800, "y": 758, "rotulo": "PRINCE OF BAKHTAN", "pasos": [{ "en": 2, "hace": "entra", "a": 800 }, { "en": 3, "hace": "senala" }, { "en": 4, "hace": "baja" }] },
+        { "id": "hija", "como": "egipcia", "x": 1300, "y": 758, "rotulo": "", "pasos": [{ "en": 3, "hace": "aparece" }, { "en": 4, "hace": "camina", "a": 1450, "dur": 0.4 }, { "en": 4.5, "hace": "transforma", "en_que": "reina_egipcia" }] }
+      ],
+      "efectos": [
+        { "en": 1.5, "tipo": "chispas", "x": 1120, "y": 680, "dur": 0.8 },
+        { "en": 3, "tipo": "luz", "x": 1300, "y": 500, "dur": 1, "intensidad": 0.5 },
+        { "en": 4.5, "tipo": "chispas", "x": 1450, "y": 600, "dur": 0.8 }
+      ],
+      "rotulos": [
+        { "en": 0, "texto": { "es": "NAHARIN", "en": "NAHARIN" }, "x": 960, "y": 230, "hasta": 1 },
+        { "en": 4, "texto": { "es": "LA REINA NEFERURE", "en": "QUEEN NEFERURE" }, "x": 960, "y": 230 }
+      ]
+    },
+    {
+      "id": "mensajero",
+      "frases": [
+        { "es": "Años después, el rey estaba en Tebas, en una gran fiesta de Amón, el rey de los dioses.", "en": "Years later, the king was in Thebes, at a great festival for Amun, the king of the gods." },
+        { "es": "Llegó un mensajero de Bakhtan, con regalos para la reina. Se inclinó hasta el suelo ante el rey.", "en": "A messenger arrived from Bakhtan, with gifts for the queen. He bowed to the ground before the king." },
+        { "es": "«Majestad, vengo por Bentresh, la hermana pequeña de la reina. Una enfermedad ha entrado en su cuerpo.»", "en": "\"Majesty, I come for Bentresh, the queen's little sister. A sickness has entered her body.\"" },
+        { "es": "«Por favor, envía a un sabio que pueda ver qué le pasa.»", "en": "\"Please send a wise man who can see what is wrong with her.\"" },
+        { "es": "El rey llamó a los escribas de la Casa de la Vida, la escuela del templo. Eligieron a Djehutyemheb.", "en": "The king called the scribes of the House of Life, the temple school. They chose a wise one, Djehutyemheb." }
+      ],
+      "fondo": "palacio",
+      "camara": { "de": 0, "a": 150, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "trono", "x": 1350, "s": 1.1 },
+        { "tipo": "columna_papiro", "x": 150, "s": 1.3, "capa": "fondo" },
+        { "tipo": "anfora", "x": 1000, "s": 0.6, "en": 1.5 }
+      ],
+      "actores": [
+        { "id": "ramses", "como": "faraon", "x": 1350, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0, "hace": "sienta" }, { "en": 4, "hace": "senala" }] },
+        { "id": "reina", "como": "reina_egipcia", "x": 1650, "y": 758, "mira": "izq", "rotulo": "NEFERURE", "pasos": [{ "en": 2.3, "hace": "lamenta" }, { "en": 3.5, "hace": "baja" }] },
+        { "id": "mensajero", "como": "egipcio", "x": 800, "y": 758, "props": { "barba": true }, "rotulo": "THE MESSENGER", "pasos": [{ "en": 1, "hace": "entra", "a": 800 }, { "en": 1.6, "hace": "arrodilla" }, { "en": 2, "hace": "habla", "dur": 1 }, { "en": 3, "hace": "ofrece" }] },
+        { "id": "djehuty", "como": "escriba", "x": 450, "y": 758, "rotulo": "DJEHUTYEMHEB", "pasos": [{ "en": 4, "hace": "entra", "a": 450 }] }
+      ],
+      "efectos": [
+        { "en": 0, "tipo": "luz", "x": 960, "y": 400, "dur": 1, "intensidad": 0.4 },
+        { "en": 2.3, "tipo": "oscurecer", "dur": 1, "intensidad": 0.25 }
+      ],
+      "rotulos": [
+        { "en": 0, "texto": { "es": "TEBAS", "en": "THEBES" }, "x": 960, "y": 230, "hasta": 1 },
+        { "en": 2, "texto": { "es": "BENTRESH", "en": "BENTRESH" }, "x": 960, "y": 230, "hasta": 3 }
+      ]
+    },
+    {
+      "id": "espiritu",
+      "frases": [
+        { "es": "Djehutyemheb hizo el largo viaje a Bakhtan. Allí encontró a Bentresh, enferma en cama.", "en": "Djehutyemheb made the long trip to Bakhtan. There he found Bentresh, lying sick." },
+        { "es": "Un espíritu se había apoderado de ella, un ser invisible que vivía dentro de su cuerpo.", "en": "A spirit had taken hold of her, an unseen being that lived inside her body." },
+        { "es": "Djehutyemheb luchó contra él con toda su habilidad. Pero el espíritu era fuerte, y no quiso irse.", "en": "Djehutyemheb fought it with all his skill. But the spirit was strong, and it would not leave." },
+        { "es": "Así que el príncipe de Bakhtan volvió a enviar a su mensajero a Egipto. Esta vez no pidió un hombre. Pidió un dios.", "en": "So the prince of Bakhtan sent his messenger to Egypt again. This time, he did not ask for a man. He asked for a god." }
+      ],
+      "fondo": "ciudad",
+      "camara": { "de": 0, "a": 150, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "palmera", "x": 250, "s": 1.3, "capa": "fondo" }
+      ],
+      "actores": [
+        { "id": "djehuty", "como": "escriba", "x": 600, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "entra", "a": 600 }, { "en": 2, "hace": "levanta" }, { "en": 2.8, "hace": "baja" }, { "en": 3, "hace": "lamenta" }] },
+        { "id": "bentresh", "como": "egipcia", "x": 1000, "y": 758, "rotulo": "BENTRESH", "pasos": [{ "en": 0.4, "hace": "cae" }, { "en": 2.3, "hace": "tiembla", "dur": 0.6 }] },
+        { "id": "espiritu", "como": "egipcio", "x": 1250, "y": 758, "capa": "medio", "props": { "piel": "#3A2A4E" }, "rotulo": "THE SPIRIT", "pasos": [{ "en": 1, "hace": "aparece", "con": "sombra" }, { "en": 2.5, "hace": "niega" }] },
+        { "id": "bakhtan", "como": "rey", "x": 1650, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 1.2, "hace": "sorprende" }, { "en": 3, "hace": "senala" }] }
+      ],
+      "efectos": [
+        { "en": 1, "tipo": "oscurecer", "dur": 1.5, "intensidad": 0.35 },
+        { "en": 2.2, "tipo": "destello", "dur": 0.3 },
+        { "en": 2.4, "tipo": "humo", "x": 1100, "y": 600, "dur": 1 }
+      ],
+      "rotulos": [
+        { "en": 0, "texto": { "es": "BAKHTAN", "en": "BAKHTAN" }, "x": 960, "y": 230, "hasta": 1 }
+      ]
+    },
+    {
+      "id": "khonsu",
+      "frases": [
+        { "es": "Ramsés fue ante Khonsu, el joven dios de la luna de Tebas, hijo de Amón.", "en": "Ramesses went before Khonsu, the young moon god of Thebes, the son of Amun." },
+        { "es": "En su templo, Khonsu tenía dos estatuas, como dos caras del mismo dios.", "en": "In his temple, Khonsu had two statues, like two faces of the same god." },
+        { "es": "Una era Khonsu el Bondadoso. La otra, Khonsu el Hacedor de Planes, que ahuyentaba a los espíritus de la enfermedad.", "en": "One was Khonsu the Kind. The other was Khonsu the Plan-Maker, who chased away the spirits of sickness." },
+        { "es": "«Buen señor», dijo el rey, «¿enviarás al Hacedor de Planes a Bakhtan, para salvar a la princesa?»", "en": "\"Good lord,\" said the king, \"will you send the Plan-Maker to Bakhtan, to save the princess?\"" },
+        { "es": "La gran estatua asintió: sí. Cuatro veces le pasó su poder mágico al Hacedor de Planes.", "en": "The great statue nodded: yes. Four times, it passed its magic power to the Plan-Maker." }
+      ],
+      "fondo": "templo",
+      "camara": { "de": 0, "a": 150, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "luna", "x": 1150, "y": 200, "s": 1, "en": 0 },
+        { "tipo": "pilono", "x": 1850, "s": 0.9, "capa": "fondo" },
+        { "tipo": "columna_papiro", "x": 150, "s": 1.3, "capa": "fondo" }
+      ],
+      "actores": [
+        { "id": "ramses", "como": "faraon", "x": 500, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "entra", "a": 500 }, { "en": 3, "hace": "reza" }, { "en": 4.5, "hace": "baja" }] },
+        { "id": "khonsu1", "como": "ra", "x": 1000, "y": 758, "mira": "izq", "props": { "piel": "#D4A017" }, "rotulo": "KHONSU THE KIND", "pasos": [{ "en": 1, "hace": "aparece", "con": "luz" }, { "en": 4, "hace": "asiente" }, { "en": 4.3, "hace": "senala" }] },
+        { "id": "khonsu2", "como": "ra", "x": 1300, "y": 758, "escala": 0.9, "mira": "izq", "props": { "piel": "#E8C04A" }, "rotulo": "THE PLAN-MAKER", "pasos": [{ "en": 1.4, "hace": "aparece", "con": "luz" }, { "en": 2.3, "hace": "levanta" }, { "en": 3, "hace": "baja" }, { "en": 4.4, "hace": "brilla", "dur": 0.6 }] },
+        { "id": "sacerdote", "como": "sacerdote_egipcio", "x": 1650, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0.5, "hace": "aparece" }, { "en": 1, "hace": "senala" }, { "en": 2, "hace": "baja" }] }
+      ],
+      "efectos": [
+        { "en": 0, "tipo": "luz", "x": 1150, "y": 220, "dur": 1, "intensidad": 0.4 },
+        { "en": 2.3, "tipo": "humo", "x": 1450, "y": 650, "dur": 0.8 },
+        { "en": 4.3, "tipo": "luz", "x": 1150, "y": 450, "dur": 1, "intensidad": 0.7 },
+        { "en": 4.5, "tipo": "chispas", "x": 1300, "y": 550, "dur": 0.8 }
+      ],
+      "rotulos": [
+        { "en": 4, "texto": { "es": "4 VECES", "en": "4 TIMES" }, "x": 960, "y": 230 }
+      ]
+    },
+    {
+      "id": "viaje",
+      "frases": [
+        { "es": "El Hacedor de Planes partió en una gran barca, con cinco barcas más pequeñas, carros y caballos.", "en": "The Plan-Maker set off in a great boat, with five smaller boats, chariots and horses." },
+        { "es": "El viaje duró un año y cinco meses. Así de lejos estaba Bakhtan.", "en": "The trip took one year and five months. That is how far away Bakhtan was." },
+        { "es": "Cuando el dios llegó, el príncipe de Bakhtan salió a recibirlo, con sus soldados y sus nobles.", "en": "When the god arrived, the prince of Bakhtan came out to meet him, with his soldiers and nobles." },
+        { "es": "Se tiró al suelo ante el dios. «¡Has venido a nosotros! ¡Sé bondadoso con nosotros!»", "en": "He threw himself on the ground before the god. \"You have come to us! Be kind to us!\"" }
+      ],
+      "fondo": "desierto",
+      "camara": { "de": 0, "a": 700, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "barco", "x": 550, "s": 1.2, "hasta": 1 },
+        { "tipo": "palmera", "x": 1500, "s": 1.2, "capa": "fondo" },
+        { "tipo": "palmera", "x": 2600, "s": 1.3, "capa": "fondo" }
+      ],
+      "actores": [
+        { "id": "khonsu", "como": "ra", "x": 550, "y": 758, "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 0.8, "hace": "camina", "a": 1550, "dur": 1.6 }] },
+        { "id": "sacerdote", "como": "sacerdote_egipcio", "x": 330, "y": 758, "rotulo": "", "pasos": [{ "en": 0.8, "hace": "camina", "a": 1350, "dur": 1.6 }] },
+        { "id": "caballo", "como": "caballo", "x": 100, "rotulo": "", "pasos": [{ "en": 1, "hace": "camina", "a": 1100, "dur": 1.4 }] },
+        { "id": "bakhtan", "como": "rey", "x": 2000, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2, "hace": "entra", "a": 1900 }, { "en": 3, "hace": "arrodilla" }, { "en": 3.4, "hace": "reza" }] },
+        { "id": "soldado", "como": "egipcio", "x": 2250, "y": 758, "mira": "izq", "props": { "barba": true, "objeto": "lanza" }, "rotulo": "", "pasos": [{ "en": 2.2, "hace": "entra", "a": 2200 }] }
+      ],
+      "efectos": [
+        { "en": 1, "tipo": "polvo", "dur": 1 },
+        { "en": 3, "tipo": "luz", "x": 1550, "y": 450, "dur": 1, "intensidad": 0.5 }
+      ],
+      "rotulos": [
+        { "en": 1, "texto": { "es": "17 MESES DE VIAJE", "en": "A 17-MONTH JOURNEY" }, "x": 960, "y": 230, "hasta": 2 }
+      ]
+    },
+    {
+      "id": "curacion",
+      "frases": [
+        { "es": "Khonsu fue directo hacia Bentresh, y puso su protección mágica sobre ella.", "en": "Khonsu went straight to Bentresh, and placed his magic protection over her." },
+        { "es": "Al instante, se sanó. Y el espíritu salió de su cuerpo, y se paró ante el dios.", "en": "At once, she was well. And the spirit came out of her body, and stood before the god." },
+        { "es": "«Bienvenido en paz, gran dios», dijo el espíritu. «Esta tierra es tuya, y yo soy tu siervo.»", "en": "\"Welcome in peace, great god,\" said the spirit. \"This land is yours, and I am your servant.\"" },
+        { "es": "«Volveré al lugar de donde vine. Pero antes, celebremos un banquete, con el príncipe de Bakhtan.»", "en": "\"I will go back to where I came from. But first, let us share a feast, with the prince of Bakhtan.\"" }
+      ],
+      "fondo": "palacio",
+      "camara": { "de": 0, "a": 150, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "columna_papiro", "x": 150, "s": 1.3, "capa": "fondo" }
+      ],
+      "actores": [
+        { "id": "khonsu", "como": "ra", "x": 600, "y": 758, "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 0.2, "hace": "levanta" }, { "en": 0.5, "hace": "brilla", "dur": 1 }, { "en": 1.6, "hace": "baja" }] },
+        { "id": "bentresh", "como": "egipcia", "x": 950, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "cae" }, { "en": 1, "hace": "levantarse" }, { "en": 1.3, "hace": "alegra" }] },
+        { "id": "espiritu", "como": "egipcio", "x": 1300, "y": 758, "mira": "izq", "props": { "piel": "#3A2A4E" }, "rotulo": "", "pasos": [{ "en": 1.3, "hace": "aparece", "con": "sombra" }, { "en": 2, "hace": "habla", "dur": 1 }, { "en": 2.2, "hace": "arrodilla" }, { "en": 3, "hace": "levantarse" }, { "en": 3.1, "hace": "habla", "dur": 0.8 }] },
+        { "id": "bakhtan", "como": "rey", "x": 1700, "y": 758, "mira": "izq", "capa": "medio", "rotulo": "", "pasos": [{ "en": 1.4, "hace": "sorprende" }, { "en": 3.6, "hace": "tiembla", "dur": 0.4 }] }
+      ],
+      "efectos": [
+        { "en": 0.4, "tipo": "luz", "x": 950, "y": 600, "dur": 1.2, "intensidad": 0.7 },
+        { "en": 1.3, "tipo": "humo", "x": 1300, "y": 650, "dur": 0.8 }
+      ]
+    },
+    {
+      "id": "fiesta",
+      "frases": [
+        { "es": "Khonsu le hizo una seña a su sacerdote: sí. El príncipe tenía miedo, pero preparó una gran ofrenda.", "en": "Khonsu nodded to his priest: yes. The prince was afraid, but he prepared a great offering." },
+        { "es": "Así que el dios, el espíritu y el príncipe celebraron un banquete, uno al lado del otro.", "en": "So the god, the spirit and the prince shared a feast, side by side." },
+        { "es": "Luego el espíritu se fue en paz, tal como había prometido. El pueblo de Bakhtan lo celebró.", "en": "Then the spirit left in peace, just as it had promised. The people of Bakhtan cheered." },
+        { "es": "¿Compartirías una comida con un espíritu, si prometiera irse en paz? Cuéntanos en los comentarios.", "en": "Would you share a meal with a spirit, if it promised to leave in peace? Tell us in the comments." }
+      ],
+      "fondo": "palacio",
+      "camara": { "de": 0, "a": 200, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "anfora", "x": 1100, "s": 0.7 },
+        { "tipo": "anfora", "x": 1180, "s": 0.6 },
+        { "tipo": "columna_papiro", "x": 1950, "s": 1.3, "capa": "fondo" }
+      ],
+      "actores": [
+        { "id": "sacerdote", "como": "sacerdote_egipcio", "x": 300, "y": 758, "rotulo": "", "pasos": [{ "en": 0.3, "hace": "asiente" }] },
+        { "id": "khonsu", "como": "ra", "x": 600, "y": 758, "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 0, "hace": "mira", "a": 300 }, { "en": 0.1, "hace": "asiente" }, { "en": 0.6, "hace": "mira", "a": 1000 }, { "en": 1, "hace": "ofrece" }, { "en": 2, "hace": "baja" }] },
+        { "id": "espiritu", "como": "egipcio", "x": 900, "y": 758, "props": { "piel": "#3A2A4E" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "ofrece" }, { "en": 2, "hace": "desaparece", "con": "sombra" }] },
+        { "id": "bakhtan", "como": "rey", "x": 1350, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0.4, "hace": "tiembla", "dur": 0.5 }, { "en": 0.8, "hace": "ofrece" }, { "en": 2.4, "hace": "alegra" }, { "en": 2.5, "hace": "levanta" }] },
+        { "id": "bentresh", "como": "egipcia", "x": 1650, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2.5, "hace": "aparece" }, { "en": 2.7, "hace": "salta" }] }
+      ],
+      "efectos": [
+        { "en": 1, "tipo": "fogata", "x": 1140, "y": 790, "dur": 1.5 },
+        { "en": 2, "tipo": "humo", "x": 900, "y": 600, "dur": 1 },
+        { "en": 2.3, "tipo": "aclarar" }
+      ]
+    },
+    {
+      "id": "sueno",
+      "frases": [
+        { "es": "Pero el príncipe tuvo una idea. «Me quedaré con este dios aquí, en Bakhtan», pensó.", "en": "But the prince had an idea. \"I will keep this god here in Bakhtan,\" he thought." },
+        { "es": "Y así, Khonsu se quedó en Bakhtan tres años y nueve meses.", "en": "And so Khonsu stayed in Bakhtan for three years and nine months." },
+        { "es": "Una noche, el príncipe tuvo un sueño. El dios salió de su santuario convertido en un halcón de oro.", "en": "One night, the prince had a dream. The god came out of his shrine as a falcon of gold." },
+        { "es": "El halcón voló hacia el cielo, rumbo a Egipto. El príncipe despertó temblando.", "en": "The falcon flew up into the sky, and away toward Egypt. The prince woke up trembling." }
+      ],
+      "fondo": "noche",
+      "camara": { "de": 0, "a": 200, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "puerta", "x": 1250, "s": 0.9 },
+        { "tipo": "palmera", "x": 300, "s": 1.3, "capa": "fondo" }
+      ],
+      "actores": [
+        { "id": "bakhtan", "como": "rey", "x": 650, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "habla", "dur": 0.8 }, { "en": 1.5, "hace": "cae" }, { "en": 3.5, "hace": "levantarse" }, { "en": 3.6, "hace": "tiembla", "dur": 0.4 }] },
+        { "id": "khonsu", "como": "ra", "x": 1250, "y": 758, "mira": "izq", "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "brilla", "dur": 0.6 }, { "en": 2.3, "hace": "desaparece", "con": "luz" }] },
+        { "id": "halcon", "como": "halcon", "x": 1250, "y": 560, "props": { "color": "#D4A017" }, "rotulo": "", "pasos": [{ "en": 2.4, "hace": "aparece", "con": "luz" }, { "en": 2.6, "hace": "vuela", "a": [1400, 380], "dur": 0.4 }, { "en": 3, "hace": "vuela", "a": [2300, 150], "dur": 0.8 }] }
+      ],
+      "efectos": [
+        { "en": 0, "tipo": "estrellas" },
+        { "en": 2.3, "tipo": "luz", "x": 1250, "y": 500, "dur": 1, "intensidad": 0.7 },
+        { "en": 3, "tipo": "chispas", "x": 1500, "y": 350, "dur": 0.8 }
+      ],
+      "rotulos": [
+        { "en": 1, "texto": { "es": "3 AÑOS Y 9 MESES", "en": "3 YEARS AND 9 MONTHS" }, "x": 960, "y": 230, "hasta": 2 }
+      ]
+    },
+    {
+      "id": "regreso",
+      "frases": [
+        { "es": "Por la mañana, le dijo al sacerdote del dios: «Khonsu quiere volver a casa. Que regrese a Egipto.»", "en": "In the morning, he told the god's priest: \"Khonsu wants to go home. Let him return to Egypt.\"" },
+        { "es": "Envió al dios de regreso con regalos de toda clase, y con soldados y caballos.", "en": "He sent the god back with gifts of every kind, and with soldiers and horses." },
+        { "es": "En Tebas, el Hacedor de Planes le dio todos esos regalos a Khonsu el Bondadoso. No se quedó con nada.", "en": "In Thebes, the Plan-Maker gave all those gifts to Khonsu the Kind. He kept nothing for himself." }
+      ],
+      "fondo": "desierto",
+      "camara": { "de": 0, "a": 250, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "anfora", "x": 820, "s": 0.7, "en": 1 },
+        { "tipo": "anfora", "x": 910, "s": 0.6, "en": 1 },
+        { "tipo": "pilono", "x": 1950, "s": 0.9, "capa": "fondo", "en": 2 }
+      ],
+      "actores": [
+        { "id": "bakhtan", "como": "rey", "x": 400, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "habla", "dur": 1 }, { "en": 1, "hace": "senala" }] },
+        { "id": "sacerdote", "como": "sacerdote_egipcio", "x": 650, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0.8, "hace": "asiente" }] },
+        { "id": "khonsu", "como": "ra", "x": 1050, "y": 758, "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "camina", "a": 1450, "dur": 1 }, { "en": 2.5, "hace": "ofrece" }] },
+        { "id": "caballo", "como": "caballo", "x": 850, "rotulo": "", "pasos": [{ "en": 1.2, "hace": "camina", "a": 1200, "dur": 1 }] },
+        { "id": "khonsu1", "como": "ra", "x": 1800, "y": 758, "mira": "izq", "props": { "piel": "#D4A017" }, "rotulo": "", "pasos": [{ "en": 2, "hace": "aparece", "con": "luz" }, { "en": 2.6, "hace": "asiente" }] }
+      ],
+      "efectos": [
+        { "en": 1, "tipo": "polvo", "dur": 1 },
+        { "en": 2, "tipo": "luz", "x": 1650, "y": 450, "dur": 1, "intensidad": 0.6 }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        { "es": "La estela dice que todo pasó en tiempos de Ramsés. Pero los expertos creen que se talló casi mil años después.", "en": "The stela says all this happened under Ramesses. But experts think it was carved almost a thousand years later." },
+        { "es": "Seguramente la escribieron los sacerdotes de Khonsu, para que todos recordaran lo poderoso que era su dios.", "en": "Khonsu's priests probably wrote it, so everyone would remember how powerful their god was." },
+        { "es": "Y Ramsés de verdad se casó con una princesa extranjera, de la tierra de los hititas, en la actual Turquía.", "en": "And Ramesses really did marry a foreign princess, from the land of the Hittites, in today's Turkey." },
+        { "es": "¿Debió el príncipe quedarse con el dios, o hizo bien en devolverlo? Cuéntanos en los comentarios.", "en": "Should the prince have kept the god, or was he right to send him home? Tell us in the comments." },
+        { "es": "La próxima vez, nace un príncipe con tres destinos mortales: un cocodrilo, una serpiente y un perro. Es El príncipe predestinado.", "en": "Next time, a prince is born with three deadly fates: a crocodile, a snake and a dog. It is The Doomed Prince." }
+      ],
+      "fondo": "templo",
+      "camara": { "de": 0, "a": 150, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "estela", "x": 400, "s": 1.2 },
+        { "tipo": "pilono", "x": 1850, "s": 0.9, "capa": "fondo" }
+      ],
+      "actores": [
+        { "id": "sacerdote", "como": "sacerdote_egipcio", "x": 700, "y": 758, "rotulo": "", "pasos": [{ "en": 0.3, "hace": "mira", "a": 400 }, { "en": 0.4, "hace": "senala" }, { "en": 1, "hace": "mira", "a": 1000 }, { "en": 1.1, "hace": "habla", "dur": 0.8 }] },
+        { "id": "ramses", "como": "faraon", "x": 1050, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2, "hace": "aparece" }, { "en": 2.4, "hace": "ofrece" }, { "en": 3.5, "hace": "baja" }] },
+        { "id": "hitita", "como": "reina_egipcia", "x": 1300, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2.2, "hace": "aparece" }] },
+        { "id": "cocodrilo", "como": "cocodrilo", "x": 1600, "mira": "izq", "rotulo": "", "pasos": [{ "en": 4, "hace": "aparece", "con": "sombra" }] },
+        { "id": "perro", "como": "perro", "x": 1800, "mira": "izq", "rotulo": "", "pasos": [{ "en": 4.3, "hace": "aparece", "con": "sombra" }] }
+      ],
+      "efectos": [
+        { "en": 0, "tipo": "luz", "x": 400, "y": 550, "dur": 1, "intensidad": 0.4 },
+        { "en": 4, "tipo": "oscurecer", "dur": 1, "intensidad": 0.3 }
+      ],
+      "rotulos": [
+        { "en": 0, "texto": { "es": "TALLADA MUCHO DESPUÉS", "en": "CARVED MUCH LATER" }, "x": 960, "y": 230, "hasta": 1 }
+      ]
+    }
+  ]
+}

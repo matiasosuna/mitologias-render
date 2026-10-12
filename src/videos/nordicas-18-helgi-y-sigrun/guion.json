@@ -1,0 +1,2199 @@
+{
+  "id": "nordicas-18-helgi-y-sigrun",
+  "serie": "nordicas",
+  "numero": "18",
+  "titulo": {
+    "es": "Helgi y Sigrún",
+    "en": "Helgi and Sigrun"
+  },
+  "tituloGriego": "HELGI AND SIGRUN",
+  "escenas": [
+    {
+      "id": "nornas",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada, Brynhild acompañó a Sigurd en su hoguera funeraria, y el oro maldito pasó a otras manos.",
+          "en": "Last time, Brynhild joined Sigurd on his funeral fire, and the cursed gold passed on."
+        },
+        {
+          "es": "Hoy volvemos a otro hijo de Sigmund el Volsungo. Se llamaba Helgi.",
+          "en": "Today we go back to another son of Sigmund the Volsung. His name was Helgi."
+        },
+        {
+          "es": "La noche en que nació Helgi, llegaron las nornas. Son las mujeres que deciden el destino de cada persona.",
+          "en": "The night Helgi was born, the norns came. They are the women who decide the fate of every person."
+        },
+        {
+          "es": "Hilaron hilos de oro y los tendieron por el cielo, de este a oeste.",
+          "en": "They spun threads of gold and stretched them across the sky, from east to west."
+        },
+        {
+          "es": "Le dieron al bebé un gran destino: ser el más famoso de todos los príncipes.",
+          "en": "They gave the baby a great fate: to be the most famous of all princes."
+        },
+        {
+          "es": "Un cuervo lo vio y dijo: ¡un día de vida, y ya está listo para la guerra!",
+          "en": "A raven saw him and said: One day old, and already ready for war!"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 1500,
+          "s": 1.2,
+          "capa": "medio",
+          "hasta": 1
+        },
+        {
+          "tipo": "casa_larga",
+          "x": 400,
+          "s": 1,
+          "capa": "fondo",
+          "en": 1
+        },
+        {
+          "tipo": "pino",
+          "x": 200,
+          "s": 1.1,
+          "capa": "medio",
+          "en": 5
+        }
+      ],
+      "actores": [
+        {
+          "id": "helgi",
+          "como": "nino",
+          "x": 650,
+          "escala": 0.6,
+          "rotulo": "HELGI",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.2,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 5.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "n1",
+          "como": "norna",
+          "x": 1050,
+          "mira": "izq",
+          "rotulo": "NORN",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "como": "norna",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.1,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.1,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "como": "norna",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.2,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "cuervo",
+          "como": "cuervo",
+          "x": 250,
+          "y": 380,
+          "capa": "medio",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.2,
+              "hace": "habla",
+              "dur": 0.7
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 1500,
+          "y": 650,
+          "dur": 0.9
+        },
+        {
+          "en": 0.9,
+          "tipo": "humo",
+          "x": 1500,
+          "y": 600,
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "estrellas",
+          "dur": 1.5
+        },
+        {
+          "en": 3.1,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 300,
+          "dur": 1
+        },
+        {
+          "en": 4.2,
+          "tipo": "luz",
+          "x": 650,
+          "y": 650,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "HELGI, HIJO DE SIGMUND",
+            "en": "HELGI, SON OF SIGMUND"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "LOS HILOS DEL DESTINO",
+            "en": "THE THREADS OF FATE"
+          },
+          "x": 1300,
+          "y": 230,
+          "hasta": 4.5
+        }
+      ]
+    },
+    {
+      "id": "hunding",
+      "fondo": "batalla",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Helgi creció fuerte y valiente. Cuando tenía apenas quince años, fue a la guerra.",
+          "en": "Helgi grew up strong and brave. When he was only fifteen, he went to war."
+        },
+        {
+          "es": "Luchó contra el rey Hunding, un viejo enemigo de su familia.",
+          "en": "He fought King Hunding, an old enemy of his family."
+        },
+        {
+          "es": "Helgi mató a Hunding en batalla. Desde entonces lo llamaron Helgi Hundingsbani, el que mató a Hunding.",
+          "en": "Helgi killed Hunding in battle. From then on, people called him Helgi Hundingsbane, the killer of Hunding."
+        },
+        {
+          "es": "Los hijos de Hunding vinieron a vengarse. Helgi también los venció.",
+          "en": "Hunding's sons came for revenge. Helgi defeated them too."
+        }
+      ],
+      "actores": [
+        {
+          "id": "helgi",
+          "como": "joven",
+          "x": 500,
+          "escala": 0.6,
+          "rotulo": "HELGI",
+          "props": {
+            "objeto": "espada",
+            "escudo": true,
+            "tocado": "yelmo",
+            "pelo": "#B5652A",
+            "capa": "#2E4A7A"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "crece",
+              "escala": 1,
+              "dur": 0.6
+            },
+            {
+              "en": 0.9,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "corre",
+              "a": 1000,
+              "dur": 0.4
+            },
+            {
+              "en": 2.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.8,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "hunding",
+          "como": "rey",
+          "x": 2200,
+          "mira": "izq",
+          "rotulo": "HUNDING",
+          "props": {
+            "objeto": "hacha"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1350,
+              "dur": 0.6
+            },
+            {
+              "en": 1.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.5,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "h1",
+          "como": "vikingo",
+          "x": 2300,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 1600,
+              "dur": 0.4
+            },
+            {
+              "en": 3.5,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "h2",
+          "como": "vikingo",
+          "x": 2500,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "entra",
+              "a": 1850,
+              "dur": 0.4
+            },
+            {
+              "en": 3.7,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.6,
+          "tipo": "polvo",
+          "x": 1350,
+          "dur": 0.6
+        },
+        {
+          "en": 2.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.6,
+          "tipo": "polvo",
+          "x": 1700,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "QUINCE AÑOS",
+            "en": "FIFTEEN YEARS OLD"
+          },
+          "x": 600,
+          "y": 260,
+          "hasta": 1
+        },
+        {
+          "en": 2.6,
+          "texto": {
+            "es": "HELGI HUNDINGSBANI",
+            "en": "HELGI HUNDINGSBANE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3.5
+        }
+      ]
+    },
+    {
+      "id": "sigrun",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después de la batalla, Helgi descansaba junto a una roca. De pronto, un relámpago cruzó el cielo.",
+          "en": "After the battle, Helgi rested by a rock. Suddenly, lightning flashed across the sky."
+        },
+        {
+          "es": "Llegaron valquirias cabalgando por el aire, con yelmos y lanzas brillantes.",
+          "en": "Valkyries came riding through the air, with helmets and shining spears."
+        },
+        {
+          "es": "Su jefa era Sigrún, hija de un rey y valquiria.",
+          "en": "Their leader was Sigrun, a king's daughter and a valkyrie."
+        },
+        {
+          "es": "Mi padre me prometió al rey Höðbroddr, dijo. Pero es más o menos igual de valiente que un gatito.",
+          "en": "My father has promised me to King Hodbrodd, she said. But he is about as brave as a kitten."
+        },
+        {
+          "es": "En pocos días vendrá a llevarme, a menos que tú lo detengas.",
+          "en": "In a few days he will come to take me, unless you stop him."
+        },
+        {
+          "es": "No tengas miedo, dijo Helgi. Höðbroddr tendrá que pelear primero conmigo.",
+          "en": "Do not be afraid, said Helgi. Hodbrodd will have to fight me first."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 350,
+          "s": 0.9,
+          "capa": "medio"
+        },
+        {
+          "tipo": "pino",
+          "x": 1800,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "helgi",
+          "como": "joven",
+          "x": 550,
+          "rotulo": "HELGI",
+          "props": {
+            "objeto": "espada",
+            "escudo": true,
+            "tocado": "yelmo",
+            "pelo": "#B5652A",
+            "capa": "#2E4A7A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 5,
+              "hace": "levantarse"
+            },
+            {
+              "en": 5.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 5.6,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "sigrun",
+          "como": "valquiria",
+          "x": 1850,
+          "y": 300,
+          "mira": "izq",
+          "rotulo": "SIGRUN",
+          "props": {
+            "pelo": "#F2D49B"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1300,
+                380
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.6,
+              "hace": "vuela",
+              "a": [
+                1050,
+                790
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.6,
+              "hace": "niega"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "v2",
+          "como": "valquiria",
+          "x": 1950,
+          "y": 250,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.1,
+              "hace": "vuela",
+              "a": [
+                1650,
+                300
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "v3",
+          "como": "valquiria",
+          "x": 2050,
+          "y": 420,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "vuela",
+              "a": [
+                1950,
+                420
+              ],
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "rayo",
+          "x": 1300,
+          "dur": 0.4
+        },
+        {
+          "en": 0.6,
+          "tipo": "destello"
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 350,
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1300,
+          "y": 380
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "SIGRÚN, LA VALQUIRIA",
+            "en": "SIGRUN, THE VALKYRIE"
+          },
+          "x": 1250,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "¿HÖÐBRODDR? UN GATITO",
+            "en": "HODBRODD? A KITTEN"
+          },
+          "x": 1250,
+          "y": 230,
+          "hasta": 4.4
+        }
+      ]
+    },
+    {
+      "id": "tormenta",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Helgi reunió un gran ejército y se hizo a la mar con muchos barcos.",
+          "en": "Helgi gathered a great army, and sailed out with many ships."
+        },
+        {
+          "es": "En el mar se desató una tormenta terrible. Olas enormes golpeaban los barcos.",
+          "en": "At sea, a terrible storm broke out. Huge waves crashed against the ships."
+        },
+        {
+          "es": "Los rayos caían sobre el agua. Los barcos se sacudían como juguetes.",
+          "en": "Lightning struck the water. The ships were tossed around like toys."
+        },
+        {
+          "es": "Entonces Sigrún bajó volando desde lo alto, con sus valquirias.",
+          "en": "Then Sigrun came flying down from above, with her valkyries."
+        },
+        {
+          "es": "Ella mantuvo a salvo los barcos. Rán, la diosa del mar, no pudo hundirlos.",
+          "en": "She held the ships safe. Ran, the goddess of the sea, could not pull them down."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "drakkar",
+          "x": 900,
+          "s": 0.8,
+          "capa": "medio"
+        },
+        {
+          "tipo": "drakkar",
+          "x": 1400,
+          "s": 0.7,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "drakkar",
+          "x": 1900,
+          "s": 0.6,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "helgi",
+          "como": "joven",
+          "x": 450,
+          "rotulo": "HELGI",
+          "props": {
+            "objeto": "espada",
+            "escudo": true,
+            "tocado": "yelmo",
+            "pelo": "#B5652A",
+            "capa": "#2E4A7A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 1.5
+            },
+            {
+              "en": 3.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "sigrun",
+          "como": "valquiria",
+          "x": 1900,
+          "y": 200,
+          "mira": "izq",
+          "rotulo": "SIGRUN",
+          "props": {
+            "pelo": "#F2D49B"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.9,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                1250,
+                350
+              ],
+              "dur": 0.7
+            },
+            {
+              "en": 3.8,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 4.2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "v2",
+          "como": "valquiria",
+          "x": 2050,
+          "y": 250,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.1,
+              "hace": "vuela",
+              "a": [
+                1800,
+                280
+              ],
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "ran",
+          "como": "mujer",
+          "x": 1700,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "RAN",
+          "props": {
+            "piel": "#4E6E8A",
+            "pelo": "#2B4660",
+            "tocado": "velo",
+            "ropa": "larga"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 4.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.7,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 2
+        },
+        {
+          "en": 1,
+          "tipo": "lluvia",
+          "dur": 2.8
+        },
+        {
+          "en": 1.2,
+          "tipo": "olas-suben",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "rayo",
+          "x": 1300,
+          "dur": 0.4
+        },
+        {
+          "en": 2.1,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 2.5,
+          "tipo": "rayo",
+          "x": 800,
+          "dur": 0.4
+        },
+        {
+          "en": 3.3,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 350,
+          "dur": 1.5
+        },
+        {
+          "en": 4.5,
+          "tipo": "olas-bajan",
+          "dur": 0.5
+        },
+        {
+          "en": 4.6,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA TORMENTA",
+            "en": "THE STORM"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "batalla",
+      "fondo": "batalla",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "El ejército de Helgi desembarcó y se enfrentó a los guerreros de Höðbroddr en Frekasteinn, la Piedra del Lobo.",
+          "en": "Helgi's army landed, and met Hodbrodd's warriors at Frekastein, the Wolf Stone."
+        },
+        {
+          "es": "La batalla fue feroz. Sigrún y sus valquirias volaban sobre ella.",
+          "en": "The battle was fierce. Sigrun and her valkyries flew above it."
+        },
+        {
+          "es": "Höðbroddr cayó. Pero el padre de Sigrún y uno de sus hermanos también cayeron, luchando del lado de Höðbroddr.",
+          "en": "Hodbrodd fell. But Sigrun's father and one of her brothers fell too, fighting on Hodbrodd's side."
+        },
+        {
+          "es": "Sigrún lloró. Helgi le dijo: no llores. Nadie puede luchar contra el destino.",
+          "en": "Sigrun wept. Helgi told her: Do not cry. No one can fight against fate."
+        },
+        {
+          "es": "Solo su hermano menor, Dag, fue perdonado. Le juró la paz a Helgi.",
+          "en": "Only her youngest brother, Dag, was spared. He swore an oath of peace to Helgi."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piedra_runica",
+          "x": 1850,
+          "s": 0.8,
+          "capa": "medio",
+          "props": {
+            "texto": "FREKASTEIN"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "helgi",
+          "como": "joven",
+          "x": 450,
+          "rotulo": "HELGI",
+          "props": {
+            "objeto": "espada",
+            "escudo": true,
+            "tocado": "yelmo",
+            "pelo": "#B5652A",
+            "capa": "#2E4A7A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 650,
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.7,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "hodbrodd",
+          "como": "rey",
+          "x": 1100,
+          "mira": "izq",
+          "rotulo": "HODBRODD",
+          "props": {
+            "objeto": "espada",
+            "escudo": true
+          },
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.1,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "padre",
+          "como": "rey",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "canas": true,
+            "objeto": "lanza"
+          },
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.5,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "sigrun",
+          "como": "valquiria",
+          "x": 900,
+          "y": 300,
+          "rotulo": "SIGRUN",
+          "props": {
+            "pelo": "#F2D49B"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.8,
+              "hace": "vuela",
+              "a": [
+                850,
+                790
+              ],
+              "dur": 0.3
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "dag",
+          "como": "joven",
+          "x": 2400,
+          "mira": "izq",
+          "rotulo": "DAG",
+          "props": {
+            "objeto": null,
+            "pelo": "#F2D49B"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "entra",
+              "a": 1250,
+              "dur": 0.4
+            },
+            {
+              "en": 4.4,
+              "hace": "arrodilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 900,
+          "dur": 1
+        },
+        {
+          "en": 1.4,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 2.1,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "FREKASTEINN",
+            "en": "FREKASTEIN"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "NADIE LUCHA CONTRA EL DESTINO",
+            "en": "NO ONE FIGHTS FATE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "dag",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Helgi se casó con Sigrún, y por un tiempo fueron felices.",
+          "en": "Helgi married Sigrun, and for a time they were happy."
+        },
+        {
+          "es": "Pero Dag no podía olvidar la muerte de su padre.",
+          "en": "But Dag could not forget his father's death."
+        },
+        {
+          "es": "Le hizo una ofrenda a Odín y le pidió venganza. Odín le prestó su propia lanza.",
+          "en": "He made an offering to Odin and asked for revenge. Odin lent him his own spear."
+        },
+        {
+          "es": "Dag encontró a Helgi solo en un bosquecillo y lo derribó con la lanza de Odín.",
+          "en": "Dag found Helgi alone in a grove, and struck him down with Odin's spear."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 600,
+          "s": 1,
+          "capa": "fondo",
+          "hasta": 1
+        },
+        {
+          "tipo": "altar",
+          "x": 1550,
+          "s": 0.8,
+          "capa": "medio",
+          "en": 1.8,
+          "hasta": 3
+        },
+        {
+          "tipo": "pino",
+          "x": 300,
+          "s": 1.1,
+          "capa": "medio",
+          "en": 3
+        },
+        {
+          "tipo": "pino",
+          "x": 1900,
+          "s": 1,
+          "capa": "fondo",
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "helgi",
+          "como": "joven",
+          "x": 600,
+          "rotulo": "HELGI",
+          "props": {
+            "objeto": null,
+            "escudo": false,
+            "tocado": "yelmo",
+            "pelo": "#B5652A",
+            "capa": "#2E4A7A"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "abraza"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 750,
+              "dur": 0.3
+            },
+            {
+              "en": 3.6,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "sigrun",
+          "como": "valquiria",
+          "x": 850,
+          "mira": "izq",
+          "rotulo": "SIGRUN",
+          "props": {
+            "pelo": "#F2D49B",
+            "objeto": null,
+            "escudo": false
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "abraza"
+            },
+            {
+              "en": 0.9,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "dag",
+          "como": "joven",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "DAG",
+          "props": {
+            "objeto": null,
+            "pelo": "#F2D49B"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 2,
+              "hace": "reza"
+            },
+            {
+              "en": 2.6,
+              "hace": "toma",
+              "objeto": "lanza"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.4
+            },
+            {
+              "en": 3.4,
+              "hace": "lanza",
+              "objeto": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "como": "odin",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "ODIN",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.9,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 720,
+          "y": 450,
+          "dur": 0.6
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 3
+        },
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 1750,
+          "y": 400,
+          "dur": 0.6
+        },
+        {
+          "en": 3.5,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.4,
+          "texto": {
+            "es": "LA LANZA DE ODÍN",
+            "en": "ODIN'S SPEAR"
+          },
+          "x": 1500,
+          "y": 260,
+          "hasta": 3.3
+        }
+      ]
+    },
+    {
+      "id": "maldicion",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Dag volvió a casa con su hermana. Helgi está muerto, le dijo.",
+          "en": "Dag rode home to his sister. Helgi is dead, he told her."
+        },
+        {
+          "es": "Sigrún maldijo a su hermano. Que tu barco nunca navegue, dijo, aunque tenga buen viento.",
+          "en": "Sigrun cursed her brother. May your ship never sail, she said, even with a good wind behind it."
+        },
+        {
+          "es": "Que tu caballo nunca corra, aunque te persigan tus enemigos.",
+          "en": "May your horse never run, even when your enemies are chasing you."
+        },
+        {
+          "es": "Helgi fue enterrado en un gran túmulo, una colina de tierra levantada sobre su tumba.",
+          "en": "Helgi was buried in a great mound, a hill of earth built over his grave."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "drakkar",
+          "x": 1750,
+          "s": 0.6,
+          "capa": "fondo",
+          "hasta": 3
+        },
+        {
+          "tipo": "monte",
+          "x": 1150,
+          "s": 0.7,
+          "capa": "medio",
+          "en": 3
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 850,
+          "s": 0.7,
+          "capa": "medio",
+          "en": 3.2,
+          "props": {
+            "texto": "HELGI"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "sigrun",
+          "como": "valquiria",
+          "x": 500,
+          "rotulo": "SIGRUN",
+          "props": {
+            "pelo": "#F2D49B",
+            "objeto": null,
+            "escudo": false
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "dag",
+          "como": "joven",
+          "x": 2200,
+          "mira": "izq",
+          "rotulo": "DAG",
+          "props": {
+            "objeto": null,
+            "pelo": "#F2D49B"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1050,
+              "dur": 0.5
+            },
+            {
+              "en": 0.6,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 1.4,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.5,
+              "hace": "camina",
+              "a": 2400,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "caballo",
+          "como": "caballo",
+          "x": 1600,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "props": {
+            "color": "#5A4632"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.8,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 2
+        },
+        {
+          "en": 1.4,
+          "tipo": "temblor",
+          "dur": 0.4,
+          "intensidad": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA MALDICIÓN DE SIGRÚN",
+            "en": "SIGRUN'S CURSE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "EL TÚMULO DE HELGI",
+            "en": "HELGI'S MOUND"
+          },
+          "x": 1150,
+          "y": 300
+        }
+      ]
+    },
+    {
+      "id": "tumulo",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Una tarde, una criada vio a Helgi entrar a caballo en su túmulo, con muchos hombres.",
+          "en": "One evening, a servant girl saw Helgi riding into his mound, with many men."
+        },
+        {
+          "es": "Corrió a ver a Sigrún. El túmulo está abierto, dijo. Helgi ha vuelto.",
+          "en": "She ran to Sigrun. The mound is open, she said. Helgi has come back."
+        },
+        {
+          "es": "Sigrún entró en el túmulo. El pelo de Helgi estaba cubierto de escarcha, y él estaba mojado de rocío.",
+          "en": "Sigrun went into the mound. Helgi's hair was covered in frost, and he was wet with dew."
+        },
+        {
+          "es": "Tus lágrimas caen sobre mi pecho, dijo con dulzura, frías y pesadas. Cada una me duele.",
+          "en": "Your tears fall on my chest, he said gently, cold and heavy. Each one hurts me."
+        },
+        {
+          "es": "Sigrún preparó una cama en el túmulo y se quedó a su lado toda la noche.",
+          "en": "Sigrun made a bed in the mound, and stayed by his side through the night."
+        },
+        {
+          "es": "¿Tú habrías entrado en el túmulo, como Sigrún? Dímelo en los comentarios.",
+          "en": "Would you have gone into the mound, like Sigrun? Tell me in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "monte",
+          "x": 1350,
+          "s": 0.8,
+          "capa": "medio"
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1000,
+          "s": 0.7,
+          "capa": "medio",
+          "props": {
+            "texto": "HELGI"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "criada",
+          "como": "mujer",
+          "x": 450,
+          "rotulo": "",
+          "props": {
+            "ropa": "larga",
+            "tocado": "velo"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 250,
+              "dur": 0.3
+            },
+            {
+              "en": 1.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.6,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "helgi",
+          "como": "joven",
+          "x": 2100,
+          "mira": "izq",
+          "rotulo": "HELGI",
+          "props": {
+            "objeto": "espada",
+            "escudo": true,
+            "tocado": "yelmo",
+            "pelo": "#B5652A",
+            "capa": "#2E4A7A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1450,
+              "dur": 0.6
+            },
+            {
+              "en": 0.7,
+              "hace": "desaparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.3,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4.3,
+              "hace": "sienta"
+            }
+          ]
+        },
+        {
+          "id": "sigrun",
+          "como": "valquiria",
+          "x": -300,
+          "rotulo": "SIGRUN",
+          "props": {
+            "pelo": "#F2D49B",
+            "objeto": null,
+            "escudo": false
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 50,
+              "dur": 0.4
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.5
+            },
+            {
+              "en": 3.5,
+              "hace": "lamenta"
+            },
+            {
+              "en": 4.2,
+              "hace": "sienta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 2.2,
+          "tipo": "nieve",
+          "dur": 1
+        },
+        {
+          "en": 2.3,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 500,
+          "dur": 0.8
+        },
+        {
+          "en": 4,
+          "tipo": "estrellas",
+          "dur": 1
+        },
+        {
+          "en": 4.5,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.4,
+          "texto": {
+            "es": "“HELGI HA VUELTO”",
+            "en": "“HELGI HAS COME BACK”"
+          },
+          "x": 700,
+          "y": 260,
+          "hasta": 2.2
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "¿TÚ HABRÍAS ENTRADO?",
+            "en": "WOULD YOU HAVE GONE IN?"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "alba",
+      "fondo": "aurora",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Antes de que cantara el gallo, Helgi se levantó. Debo cabalgar por los caminos rojos del cielo, dijo.",
+          "en": "Before the rooster crowed, Helgi stood up. I must ride the red roads of the sky, he said."
+        },
+        {
+          "es": "Debo volver al Valhalla, la gran sala de Odín, antes de que el gallo despierte a los héroes.",
+          "en": "I must be back in Valhalla, the great hall of Odin, before the rooster wakes the heroes."
+        },
+        {
+          "es": "Helgi se alejó cabalgando por el cielo, y el túmulo se cerró tras él.",
+          "en": "Helgi rode away into the sky, and the mound closed behind him."
+        },
+        {
+          "es": "La tarde siguiente, Sigrún esperó junto al túmulo. Pero Helgi no volvió nunca más.",
+          "en": "The next evening, Sigrun waited by the mound. But Helgi never came again."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "monte",
+          "x": 1450,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "helgi",
+          "como": "joven",
+          "x": 1150,
+          "mira": "izq",
+          "rotulo": "HELGI",
+          "props": {
+            "objeto": "espada",
+            "escudo": true,
+            "tocado": "yelmo",
+            "pelo": "#B5652A",
+            "capa": "#2E4A7A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 0.6,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "gira"
+            },
+            {
+              "en": 2.2,
+              "hace": "vuela",
+              "a": [
+                2500,
+                200
+              ],
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "caballo",
+          "como": "caballo",
+          "x": 1450,
+          "mira": "der",
+          "rotulo": "",
+          "props": {
+            "color": "#C9CED6"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.1,
+              "hace": "vuela",
+              "a": [
+                2650,
+                250
+              ],
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "sigrun",
+          "como": "valquiria",
+          "x": 750,
+          "rotulo": "SIGRUN",
+          "props": {
+            "pelo": "#F2D49B",
+            "objeto": null,
+            "escudo": false
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.5,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.4,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3.2,
+              "hace": "sienta"
+            },
+            {
+              "en": 3.5,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 300,
+          "dur": 1
+        },
+        {
+          "en": 2.2,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 2.3,
+          "tipo": "estrellas",
+          "dur": 0.7
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "EL VALHALLA LO ESPERA",
+            "en": "VALHALLA IS WAITING"
+          },
+          "x": 1300,
+          "y": 230,
+          "hasta": 2.2
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.02,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "La pena de Sigrún era demasiado grande. Poco después, murió de tristeza.",
+          "en": "Sigrun's grief was too heavy. Soon after, she died of sorrow."
+        },
+        {
+          "es": "Pero en los tiempos antiguos, la gente creía que Helgi y Sigrún volvieron a nacer.",
+          "en": "But in the old days, people believed that Helgi and Sigrun were born again."
+        },
+        {
+          "es": "Él fue otro héroe, y ella otra valquiria. Y se encontraron una vez más.",
+          "en": "He became another hero, and she became another valkyrie. And they found each other once more."
+        },
+        {
+          "es": "¿Puede el amor ser más fuerte que la muerte? Dímelo en los comentarios.",
+          "en": "Can love be stronger than death? Tell me in the comments."
+        },
+        {
+          "es": "En el próximo episodio: Hervör y la espada Tyrfing.",
+          "en": "Next time: Hervor and the Sword Tyrfing."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "monte",
+          "x": 1600,
+          "s": 0.7,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "sigrun",
+          "como": "valquiria",
+          "x": 700,
+          "rotulo": "SIGRUN",
+          "props": {
+            "pelo": "#F2D49B",
+            "objeto": null,
+            "escudo": false
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 0.6,
+              "hace": "desaparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "helgi",
+          "como": "joven",
+          "x": 450,
+          "rotulo": "HELGI",
+          "props": {
+            "objeto": "espada",
+            "escudo": true,
+            "tocado": "yelmo",
+            "pelo": "#B5652A",
+            "capa": "#2E4A7A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "hervor",
+          "como": "mujer",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "HERVOR",
+          "props": {
+            "ropa": "armadura",
+            "objeto": "espada",
+            "escudo": true,
+            "tocado": "yelmo",
+            "pelo": "#2B2B2B"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 4.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.4,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "luz",
+          "x": 700,
+          "y": 450,
+          "dur": 0.8
+        },
+        {
+          "en": 1.2,
+          "tipo": "estrellas",
+          "dur": 2
+        },
+        {
+          "en": 2.5,
+          "tipo": "luz",
+          "x": 575,
+          "y": 450,
+          "dur": 0.8
+        },
+        {
+          "en": 4,
+          "tipo": "fuego",
+          "x": 1550,
+          "y": 650,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.5,
+          "texto": {
+            "es": "NACIDOS DE NUEVO",
+            "en": "BORN AGAIN"
+          },
+          "x": 600,
+          "y": 260,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "¿MÁS FUERTE QUE LA MUERTE?",
+            "en": "STRONGER THAN DEATH?"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "PRÓXIMO: HERVÖR Y LA ESPADA TYRFING",
+            "en": "NEXT: HERVOR AND THE SWORD TYRFING"
+          },
+          "x": 960,
+          "y": 290
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El héroe muerto que volvió por una noche",
+        "en": "The dead hero who came back for one night"
+      },
+      "escena": "tumulo",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Una valquiria salvó sus barcos de la tormenta",
+        "en": "A valkyrie saved his ships from the storm"
+      },
+      "escena": "tormenta",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "La noche en que las nornas hilaron el destino de un héroe",
+        "en": "The night the norns spun a hero's fate"
+      },
+      "escena": "nornas",
+      "desde": 2,
+      "hasta": 5,
+      "foco": 950
+    }
+  ],
+  "miniatura": {
+    "heroe": {
+      "objeto": "espada",
+      "escudo": true,
+      "tocado": "yelmo",
+      "pelo": "#B5652A",
+      "capa": "#2E4A7A"
+    },
+    "rival": "valquiria"
+  },
+  "siguiente": {
+    "es": "Hervör y la espada Tyrfing",
+    "en": "Hervor and the Sword Tyrfing"
+  }
+}

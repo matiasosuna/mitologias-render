@@ -1,0 +1,2569 @@
+{
+  "id": "nordicas-21-starkad",
+  "serie": "nordicas",
+  "numero": "21",
+  "titulo": {
+    "es": "Starkad y los tres destinos",
+    "en": "Starkad and the Three Fates"
+  },
+  "tituloGriego": "STARKAD AND THE THREE FATES",
+  "miniatura": {
+    "heroe": {
+      "barba": true,
+      "tocado": "yelmo",
+      "objeto": "espada",
+      "escudo": true,
+      "pelo": "#2B2B2B",
+      "capa": "#3E5A73"
+    },
+    "rival": "odin"
+  },
+  "siguiente": {
+    "es": "Una nueva temporada",
+    "en": "A New Season"
+  },
+  "escenas": [
+    {
+      "id": "gancho",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada, un molino mágico molió tanta sal que hundió un barco, y el mar quedó salado.",
+          "en": "Last time, a magic mill ground so much salt that it sank a ship, and made the sea salty."
+        },
+        {
+          "es": "Hoy contamos la última historia de esta temporada, Héroes del Norte.",
+          "en": "Today we tell the last story of this season, Heroes of the North."
+        },
+        {
+          "es": "Es sobre un guerrero cuya vida entera decidieron los dioses en una sola noche.",
+          "en": "It is about a warrior whose whole life was decided by the gods, in a single night."
+        },
+        {
+          "es": "Se llamaba Starkad.",
+          "en": "His name was Starkad."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "drakkar",
+          "x": 1300,
+          "s": 0.9,
+          "capa": "medio",
+          "hasta": 1,
+          "sube": -300,
+          "durSube": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "fenja",
+          "como": "jotun",
+          "x": 900,
+          "escala": 0.9,
+          "rotulo": "",
+          "props": {
+            "mujer": true,
+            "barba": false,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#B5452A"
+          },
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.5,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "como": "odin",
+          "x": 650,
+          "capa": "medio",
+          "rotulo": "ODIN",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.9,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "como": "thor",
+          "x": 1650,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "THOR",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "starkad",
+          "como": "vikingo",
+          "x": 1100,
+          "escala": 1.15,
+          "rotulo": "STARKAD",
+          "props": {
+            "objeto": "espada",
+            "pelo": "#2B2B2B",
+            "capa": "#3E5A73"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "olas-suben",
+          "dur": 0.8
+        },
+        {
+          "en": 1.1,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 2.5,
+          "tipo": "rayo",
+          "x": 1500
+        },
+        {
+          "en": 3,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "HÉROES DEL NORTE: LA ÚLTIMA HISTORIA",
+            "en": "HEROES OF THE NORTH: THE LAST STORY"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "STARKAD",
+            "en": "STARKAD"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "linaje",
+      "fondo": "bosque_nevado",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Starkad era nieto de un gigante. Creció enorme y fuerte, mucho más grande que los demás hombres.",
+          "en": "Starkad was the grandson of a giant. He grew huge and strong, much bigger than other men."
+        },
+        {
+          "es": "Cuando era un niño pequeño, mataron a su padre. Un anciano llamado Grani Crin de Caballo lo recogió.",
+          "en": "When he was a small boy, his father was killed. An old man called Horsehair Grani took him in."
+        },
+        {
+          "es": "Nadie sabía quién era en verdad ese anciano.",
+          "en": "No one knew who this old man really was."
+        },
+        {
+          "es": "Starkad se hizo un gran guerrero. Luchó junto a un joven rey, Víkar, y se volvió su mejor amigo.",
+          "en": "Starkad grew up to be a great warrior. He fought beside a young king, Vikar, and became his closest friend."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 200,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "monte_nevado",
+          "x": 1900,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "abuelo",
+          "como": "jotun",
+          "x": 1650,
+          "mira": "izq",
+          "capa": "fondo",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "starkad",
+          "como": "vikingo",
+          "x": 500,
+          "escala": 1.15,
+          "rotulo": "STARKAD",
+          "props": {
+            "objeto": "espada",
+            "pelo": "#2B2B2B",
+            "capa": "#3E5A73"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "desaparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.6,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "nino",
+          "x": 500,
+          "rotulo": "",
+          "props": {
+            "pelo": "#2B2B2B"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.9,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "grani",
+          "como": "anciano",
+          "x": 2300,
+          "mira": "izq",
+          "rotulo": "HORSEHAIR GRANI",
+          "props": {
+            "tocado": "sombrero",
+            "objeto": "cayado",
+            "capa": "#2B4660"
+          },
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "camina",
+              "a": 850,
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.3,
+              "hace": "mira",
+              "a": 1700
+            },
+            {
+              "en": 2.9,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "vikar",
+          "como": "joven",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "VIKAR",
+          "props": {
+            "tocado": "corona",
+            "objeto": "espada",
+            "capa": "#2B4660"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "entra",
+              "a": 1250,
+              "dur": 0.4
+            },
+            {
+              "en": 3.6,
+              "hace": "abraza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve",
+          "dur": 2
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "NIETO DE UN GIGANTE",
+            "en": "GRANDSON OF A GIANT"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "¿QUIÉN ERA GRANI?",
+            "en": "WHO WAS GRANI?"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "suertes",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, Víkar y Starkad salieron a navegar con sus barcos. Pero el viento se puso en contra.",
+          "en": "One day, Vikar and Starkad sailed out with their ships. But the wind turned against them."
+        },
+        {
+          "es": "Durante días no pudieron avanzar. Así que pidieron ayuda a los dioses.",
+          "en": "For days, they could not sail on. So they asked the gods for help."
+        },
+        {
+          "es": "La respuesta llegó: Odín quiere un sacrificio. Hay que colgar a un hombre para él.",
+          "en": "The answer came: Odin wants a sacrifice. A man must be hanged for him."
+        },
+        {
+          "es": "Echaron suertes para elegir al hombre. Y la suerte cayó sobre el propio rey Víkar.",
+          "en": "They drew lots to choose the man. And the lot fell on King Vikar himself."
+        },
+        {
+          "es": "Todos se quedaron callados. Nadie quería entregar a su rey a Odín.",
+          "en": "Everyone fell silent. No one wanted to give their king to Odin."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "drakkar",
+          "x": 1700,
+          "s": 0.8,
+          "capa": "medio"
+        },
+        {
+          "tipo": "drakkar",
+          "x": 2100,
+          "s": 0.5,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "starkad",
+          "como": "vikingo",
+          "x": 450,
+          "escala": 1.15,
+          "rotulo": "",
+          "props": {
+            "objeto": "espada",
+            "pelo": "#2B2B2B",
+            "capa": "#3E5A73"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "senala"
+            },
+            {
+              "en": 3.4,
+              "hace": "mira",
+              "a": 800
+            },
+            {
+              "en": 4.2,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "vikar",
+          "como": "joven",
+          "x": 800,
+          "rotulo": "VIKAR",
+          "props": {
+            "tocado": "corona",
+            "objeto": "espada",
+            "capa": "#2B4660"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "reza"
+            },
+            {
+              "en": 3.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "marino1",
+          "como": "vikingo",
+          "x": 1200,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "reza"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4.1,
+              "hace": "calla"
+            }
+          ]
+        },
+        {
+          "id": "marino2",
+          "como": "vikingo",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "reza"
+            },
+            {
+              "en": 3.4,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 4.2,
+              "hace": "niega"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "olas-suben",
+          "dur": 1
+        },
+        {
+          "en": 0.5,
+          "tipo": "niebla",
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 2.2,
+          "tipo": "rayo",
+          "x": 1500
+        },
+        {
+          "en": 3.2,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "ODÍN QUIERE UN SACRIFICIO",
+            "en": "ODIN WANTS A SACRIFICE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "LA SUERTE: EL REY",
+            "en": "THE LOT: THE KING"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "consejo",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "A medianoche, Grani despertó a Starkad. Ven conmigo, le dijo.",
+          "en": "At midnight, Grani woke Starkad. Come with me, he said."
+        },
+        {
+          "es": "Remaron hasta una isla y entraron en un claro del bosque.",
+          "en": "They rowed to an island, and walked into a clearing in the forest."
+        },
+        {
+          "es": "Allí había once hombres sentados en sillas. Una silla número doce estaba vacía, la más alta de todas.",
+          "en": "Eleven men sat there on chairs. A twelfth chair stood empty, the highest of all."
+        },
+        {
+          "es": "Grani se sentó en ella. Y todos los demás lo saludaron como Odín.",
+          "en": "Grani sat down in it. And all the others greeted him as Odin."
+        },
+        {
+          "es": "El anciano había sido Odín desde el principio. Los otros eran dioses. Esa noche decidirían el destino de Starkad.",
+          "en": "The old man had been Odin all along. The others were gods. Tonight, they would decide Starkad's fate."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 150,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "trono",
+          "x": 1250,
+          "s": 1.2,
+          "capa": "medio",
+          "props": {
+            "oro": true
+          }
+        },
+        {
+          "tipo": "trono",
+          "x": 1650,
+          "s": 1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "trono",
+          "x": 1900,
+          "s": 0.9,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "starkad",
+          "como": "vikingo",
+          "x": 200,
+          "escala": 1.15,
+          "rotulo": "STARKAD",
+          "props": {
+            "objeto": "espada",
+            "pelo": "#2B2B2B",
+            "capa": "#3E5A73"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 500,
+              "dur": 0.8
+            },
+            {
+              "en": 3.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.3,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "grani",
+          "como": "anciano",
+          "x": 450,
+          "rotulo": "",
+          "props": {
+            "tocado": "sombrero",
+            "objeto": "cayado",
+            "capa": "#2B4660"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 800,
+              "dur": 0.8
+            },
+            {
+              "en": 2.6,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 0.4
+            },
+            {
+              "en": 3,
+              "hace": "transforma",
+              "en_que": "odin",
+              "dur": 0.5
+            },
+            {
+              "en": 3.5,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 4.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "como": "thor",
+          "x": 1500,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.2,
+              "hace": "sienta"
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "tyr",
+          "como": "tyr",
+          "x": 1850,
+          "mira": "izq",
+          "capa": "fondo",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.3,
+              "hace": "sienta"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 0.1,
+          "tipo": "estrellas",
+          "dur": 2
+        },
+        {
+          "en": 1.2,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.1,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 450,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "DOCE SILLAS",
+            "en": "TWELVE CHAIRS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "EL CONSEJO DE LOS DIOSES",
+            "en": "THE COUNCIL OF THE GODS"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "thor",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Thor, el dios del trueno, habló primero. Odiaba a la familia de Starkad.",
+          "en": "Thor, the god of thunder, spoke first. He hated Starkad's family."
+        },
+        {
+          "es": "Hacía mucho, la abuela de Starkad había preferido a un gigante antes que al propio Thor.",
+          "en": "Long ago, Starkad's grandmother had chosen a giant over Thor himself."
+        },
+        {
+          "es": "Así que Thor dijo: Starkad no tendrá hijos. Su familia terminará con él.",
+          "en": "So Thor said: Starkad will have no children. His family will end with him."
+        },
+        {
+          "es": "Entonces habló Odín: le doy tres vidas. Vivirá tanto como tres hombres.",
+          "en": "Then Odin spoke: I give him three lifetimes. He will live as long as three men."
+        },
+        {
+          "es": "Thor respondió: en cada vida, cometerá un crimen terrible.",
+          "en": "Thor answered: In each lifetime, he will do a terrible deed."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1000,
+          "s": 1.2,
+          "capa": "medio",
+          "props": {
+            "oro": true
+          }
+        },
+        {
+          "tipo": "trono",
+          "x": 1500,
+          "s": 1,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "starkad",
+          "como": "vikingo",
+          "x": 350,
+          "escala": 1.15,
+          "rotulo": "",
+          "props": {
+            "objeto": "espada",
+            "pelo": "#2B2B2B",
+            "capa": "#3E5A73"
+          },
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 3.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.4,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "como": "odin",
+          "x": 900,
+          "mira": "izq",
+          "rotulo": "ODIN",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.2,
+              "hace": "habla",
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "como": "thor",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "THOR",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.6,
+              "hace": "enoja"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.2,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "abuela",
+          "como": "jotun",
+          "x": 1800,
+          "mira": "izq",
+          "capa": "fondo",
+          "rotulo": "",
+          "props": {
+            "mujer": true,
+            "barba": false,
+            "objeto": null
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.9,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "rayo",
+          "x": 1450
+        },
+        {
+          "en": 1,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 2.2,
+          "tipo": "rayo",
+          "x": 1300
+        },
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 600,
+          "y": 450,
+          "dur": 0.8
+        },
+        {
+          "en": 4.1,
+          "tipo": "rayo",
+          "x": 1300
+        },
+        {
+          "en": 4.1,
+          "tipo": "temblor",
+          "dur": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "SIN HIJOS",
+            "en": "NO CHILDREN"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "TRES VIDAS",
+            "en": "THREE LIFETIMES"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "UN CRIMEN EN CADA UNA",
+            "en": "A TERRIBLE DEED IN EACH"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "destinos",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.04,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Odín le dio las mejores armas y ropas. Thor dijo que nunca tendría tierras.",
+          "en": "Odin gave him the best weapons and clothes. Thor said he would never own any land."
+        },
+        {
+          "es": "Odín le dio el don de la poesía. Thor dijo que olvidaría cada poema que hiciera.",
+          "en": "Odin gave him the gift of poetry. Thor said he would forget every poem he made."
+        },
+        {
+          "es": "Odín le dio la victoria en cada batalla. Thor dijo que en cada batalla sufriría una herida terrible.",
+          "en": "Odin gave him victory in every battle. Thor said he would be badly wounded in every battle."
+        },
+        {
+          "es": "Odín dijo que los grandes lo amarían. Thor dijo que la gente común lo odiaría.",
+          "en": "Odin said the greatest men would love him. Thor said the common people would hate him."
+        },
+        {
+          "es": "Todos los dioses estuvieron de acuerdo. Todo lo dicho esa noche se cumpliría.",
+          "en": "Then all the gods agreed. Everything said that night would come true."
+        },
+        {
+          "es": "¿Aceptarías los dones de Odín, si vinieran con las maldiciones de Thor? Cuéntamelo en los comentarios.",
+          "en": "Would you take Odin's gifts, if Thor's curses came with them? Tell me in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1000,
+          "s": 1.2,
+          "capa": "medio",
+          "props": {
+            "oro": true
+          }
+        },
+        {
+          "tipo": "trono",
+          "x": 1500,
+          "s": 1,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "starkad",
+          "como": "vikingo",
+          "x": 350,
+          "escala": 1.15,
+          "rotulo": "",
+          "props": {
+            "objeto": null,
+            "pelo": "#2B2B2B",
+            "capa": "#3E5A73"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "toma",
+              "objeto": "espada"
+            },
+            {
+              "en": 0.5,
+              "hace": "brilla",
+              "dur": 0.4
+            },
+            {
+              "en": 1.6,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.6,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 3.6,
+              "hace": "lamenta"
+            },
+            {
+              "en": 4.4,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "como": "odin",
+          "x": 900,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "thor",
+          "como": "thor",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 1.5,
+              "hace": "senala"
+            },
+            {
+              "en": 2.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.5,
+              "hace": "senala"
+            },
+            {
+              "en": 4.1,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "tyr",
+          "como": "tyr",
+          "x": 1800,
+          "mira": "izq",
+          "capa": "fondo",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "asiente"
+            },
+            {
+              "en": 4.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.1,
+          "tipo": "luz",
+          "x": 500,
+          "y": 450,
+          "dur": 0.4
+        },
+        {
+          "en": 0.55,
+          "tipo": "rayo",
+          "x": 1300
+        },
+        {
+          "en": 1.1,
+          "tipo": "luz",
+          "x": 500,
+          "y": 450,
+          "dur": 0.4
+        },
+        {
+          "en": 1.55,
+          "tipo": "rayo",
+          "x": 1300
+        },
+        {
+          "en": 2.1,
+          "tipo": "luz",
+          "x": 500,
+          "y": 450,
+          "dur": 0.4
+        },
+        {
+          "en": 2.55,
+          "tipo": "rayo",
+          "x": 1300
+        },
+        {
+          "en": 3.1,
+          "tipo": "luz",
+          "x": 500,
+          "y": 450,
+          "dur": 0.4
+        },
+        {
+          "en": 3.55,
+          "tipo": "rayo",
+          "x": 1300
+        },
+        {
+          "en": 4,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 4.1,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "ARMAS · SIN TIERRAS",
+            "en": "WEAPONS · NO LAND"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "POESÍA · OLVIDO",
+            "en": "POETRY · FORGETTING"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "VICTORIA · HERIDAS",
+            "en": "VICTORY · WOUNDS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "AMADO · ODIADO",
+            "en": "LOVED · HATED"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "¿LOS ACEPTARÍAS?",
+            "en": "WOULD YOU ACCEPT?"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "precio",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "De vuelta en el bote, Grani sonrió. Ahora me debes algo, hijo mío, dijo.",
+          "en": "Back at the boat, Grani smiled. Now you owe me, my son, he said."
+        },
+        {
+          "es": "Mándame al rey Víkar. Ese es mi precio.",
+          "en": "Send me King Vikar. That is my price."
+        },
+        {
+          "es": "Starkad aceptó. Grani le dio una caña delgada, el tallo de una planta.",
+          "en": "Starkad agreed. Grani handed him a thin reed, the stem of a plant."
+        },
+        {
+          "es": "Esto es una lanza, dijo, aunque parezca una caña.",
+          "en": "This is a spear, he said, even though it looks like a reed."
+        },
+        {
+          "es": "Luego remaron de vuelta en la oscuridad. Starkad le había hecho una promesa a un dios.",
+          "en": "Then they rowed back in the dark. Starkad had made a promise to a god."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "drakkar",
+          "x": 1650,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "starkad",
+          "como": "vikingo",
+          "x": 500,
+          "escala": 1.15,
+          "rotulo": "",
+          "props": {
+            "objeto": null,
+            "pelo": "#2B2B2B",
+            "capa": "#3E5A73"
+          },
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "asiente"
+            },
+            {
+              "en": 2.4,
+              "hace": "toma",
+              "objeto": "cana"
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.3,
+              "hace": "mira",
+              "a": 1700
+            }
+          ]
+        },
+        {
+          "id": "grani",
+          "como": "anciano",
+          "x": 1000,
+          "mira": "izq",
+          "rotulo": "GRANI",
+          "props": {
+            "tocado": "sombrero",
+            "objeto": "cayado",
+            "capa": "#2B4660"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "vikar",
+          "como": "joven",
+          "x": 1850,
+          "mira": "izq",
+          "capa": "fondo",
+          "rotulo": "VIKAR",
+          "props": {
+            "tocado": "corona",
+            "objeto": null,
+            "capa": "#2B4660"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.9,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 2
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 500,
+          "y": 450,
+          "dur": 0.8
+        },
+        {
+          "en": 3.3,
+          "tipo": "chispas",
+          "x": 500,
+          "y": 450
+        },
+        {
+          "en": 4,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "EL PRECIO DE ODÍN",
+            "en": "ODIN'S PRICE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2.4,
+          "texto": {
+            "es": "UNA CAÑA",
+            "en": "A REED"
+          },
+          "x": 600,
+          "y": 300,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "UNA LANZA",
+            "en": "A SPEAR"
+          },
+          "x": 600,
+          "y": 300,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "horca",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "A la mañana, los hombres decidieron hacer un sacrificio fingido. Un ahorcamiento que no dañaría al rey.",
+          "en": "In the morning, the men decided on a pretend sacrifice. A hanging that would not really hurt the king."
+        },
+        {
+          "es": "Junto a un pino había un tocón alto. Encima colgaba una rama delgada.",
+          "en": "Near a pine tree stood a tall stump. A thin branch hung down above it."
+        },
+        {
+          "es": "Starkad le pidió al cocinero unas tripas de ternero. Las ató a la rama, como una cuerda blanda.",
+          "en": "Starkad took some calf guts from the cook. He tied them to the branch, like a soft rope."
+        },
+        {
+          "es": "El rey Víkar se subió al tocón. Starkad le puso el lazo al cuello. Parecía inofensivo.",
+          "en": "King Vikar climbed onto the stump. Starkad put the loop around his neck. It looked harmless."
+        },
+        {
+          "es": "Entonces Starkad tocó al rey con la caña y dijo: Ahora te entrego a Odín.",
+          "en": "Then Starkad touched the king with the reed, and said: Now I give you to Odin."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 1350,
+          "s": 1.4,
+          "capa": "medio"
+        },
+        {
+          "tipo": "roca",
+          "x": 1250,
+          "s": 0.45,
+          "capa": "medio",
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "starkad",
+          "como": "vikingo",
+          "x": 500,
+          "escala": 1.15,
+          "rotulo": "STARKAD",
+          "props": {
+            "objeto": "cana",
+            "pelo": "#2B2B2B",
+            "capa": "#3E5A73"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.4,
+              "hace": "camina",
+              "a": 800,
+              "dur": 0.4
+            },
+            {
+              "en": 2.8,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.2,
+              "hace": "senala"
+            },
+            {
+              "en": 4.5,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "cocinero",
+          "como": "hombre",
+          "x": 200,
+          "rotulo": "",
+          "props": {
+            "objeto": null,
+            "ropa": "corta",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.6,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "vikar",
+          "como": "joven",
+          "x": 1700,
+          "mira": "izq",
+          "rotulo": "VIKAR",
+          "props": {
+            "tocado": "corona",
+            "objeto": null,
+            "capa": "#2B4660"
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "asiente"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.4
+            },
+            {
+              "en": 3.4,
+              "hace": "vuela",
+              "a": [
+                1150,
+                740
+              ],
+              "dur": 0.3
+            },
+            {
+              "en": 3.8,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "marino",
+          "como": "vikingo",
+          "x": 2050,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.6,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 500,
+          "dur": 0.8
+        },
+        {
+          "en": 4.3,
+          "tipo": "oscurecer",
+          "dur": 0.7
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "UN SACRIFICIO FINGIDO",
+            "en": "A PRETEND SACRIFICE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 4.4,
+          "texto": {
+            "es": "TE ENTREGO A ODÍN",
+            "en": "NOW I GIVE YOU TO ODIN"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "sacrificio",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1.02,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "En ese instante, la caña se volvió lanza. El tocón cayó. Las tripas se volvieron una cuerda fuerte.",
+          "en": "At that moment, the reed became a spear. The stump fell away. The calf guts became a strong rope."
+        },
+        {
+          "es": "La rama saltó hacia arriba y alzó al rey hasta lo alto del árbol. Allí murió el rey Víkar.",
+          "en": "The branch sprang up, and lifted the king high into the tree. King Vikar died there."
+        },
+        {
+          "es": "Ese fue el primer crimen terrible de Starkad. Había entregado a su propio amigo a Odín.",
+          "en": "That was the first of Starkad's terrible deeds. He had given his own friend to Odin."
+        },
+        {
+          "es": "La gente lo odió por eso. Tuvo que dejar esa tierra y vagar lejos.",
+          "en": "People hated him for it. He had to leave that land, and wander far away."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 1350,
+          "s": 1.4,
+          "capa": "medio"
+        },
+        {
+          "tipo": "roca",
+          "x": 1250,
+          "s": 0.45,
+          "capa": "medio",
+          "hasta": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "starkad",
+          "como": "vikingo",
+          "x": 750,
+          "escala": 1.15,
+          "rotulo": "",
+          "props": {
+            "objeto": "cana",
+            "pelo": "#2B2B2B",
+            "capa": "#3E5A73"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "toma",
+              "objeto": "lanza"
+            },
+            {
+              "en": 0.2,
+              "hace": "lanza"
+            },
+            {
+              "en": 2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2.6,
+              "hace": "entristece"
+            },
+            {
+              "en": 3.3,
+              "hace": "camina",
+              "a": -300,
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "vikar",
+          "como": "joven",
+          "x": 1150,
+          "y": 740,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "tocado": "corona",
+            "objeto": null,
+            "capa": "#2B4660"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1150,
+                480
+              ],
+              "dur": 0.3
+            },
+            {
+              "en": 1.5,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "marino1",
+          "como": "vikingo",
+          "x": 1650,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.7,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "marino2",
+          "como": "vikingo",
+          "x": 1900,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 3.1,
+              "hace": "niega"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 0.4,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 1250
+        },
+        {
+          "en": 1.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.5,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "EL PRIMER CRIMEN",
+            "en": "THE FIRST TERRIBLE DEED"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "vejez",
+      "fondo": "nieve",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Starkad vivió tres largas vidas. Ganó todas sus batallas, y en todas salió herido.",
+          "en": "Starkad lived three long lifetimes. He won every battle, and was wounded in every one."
+        },
+        {
+          "es": "Una vez, incluso mató a un rey por oro. Después se odió a sí mismo por eso.",
+          "en": "Once, he even killed a king for gold. Later, he hated himself for it."
+        },
+        {
+          "es": "Al final era viejo y casi ciego. Caminaba con dos bastones, cargando ese mismo oro.",
+          "en": "At last he was old and nearly blind. He walked with two sticks, carrying that same gold."
+        },
+        {
+          "es": "No quería morir en la cama. Quería morir por la espada.",
+          "en": "He did not want to die in bed. He wanted to die by the sword."
+        },
+        {
+          "es": "Conoció a un joven, Hather, cuyo padre él había matado. Le ofreció el oro a cambio de un golpe rápido.",
+          "en": "He met a young man, Hather, whose father he had killed. He offered him the gold for one quick blow."
+        },
+        {
+          "es": "Hather golpeó. Y así, el gran guerrero eligió su propio final.",
+          "en": "Hather struck. And so the great warrior chose his own end."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 150,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1950,
+          "s": 0.9,
+          "capa": "fondo",
+          "props": {
+            "texto": "STARKAD"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "starkad",
+          "como": "vikingo",
+          "x": 600,
+          "escala": 1.15,
+          "rotulo": "",
+          "props": {
+            "objeto": "espada",
+            "pelo": "#2B2B2B",
+            "capa": "#3E5A73"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.6,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.7,
+              "hace": "lamenta"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "enemigo",
+          "como": "vikingo",
+          "x": 950,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "capa": "#7A2418"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.5,
+              "hace": "cae"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "como": "rey",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.4,
+              "hace": "cae"
+            },
+            {
+              "en": 1.9,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "viejo",
+          "como": "vikingo",
+          "x": 450,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "viejo",
+            "ojosCerrados": true,
+            "canas": true,
+            "tocado": null,
+            "escudo": false,
+            "objeto": "cayado",
+            "capa": "#3E5A73"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.2,
+              "hace": "camina",
+              "a": 800,
+              "dur": 1
+            },
+            {
+              "en": 3.4,
+              "hace": "niega"
+            },
+            {
+              "en": 4.5,
+              "hace": "ofrece"
+            },
+            {
+              "en": 5.3,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "hather",
+          "como": "joven",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "HATHER",
+          "props": {
+            "objeto": "espada",
+            "pelo": "#9C7A4E"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "entra",
+              "a": 1250,
+              "dur": 0.5
+            },
+            {
+              "en": 4.7,
+              "hace": "asiente"
+            },
+            {
+              "en": 5.1,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve",
+          "dur": 2
+        },
+        {
+          "en": 0.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.5,
+          "tipo": "chispas",
+          "x": 1150,
+          "y": 600
+        },
+        {
+          "en": 2,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 4.5,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 550,
+          "dur": 0.6
+        },
+        {
+          "en": 5.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 5.3,
+          "tipo": "oscurecer",
+          "dur": 0.7
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "TRES VIDAS",
+            "en": "THREE LIFETIMES"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "MORIR COMO GUERRERO",
+            "en": "TO DIE LIKE A WARRIOR"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "aurora",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.02,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Starkad tuvo todos los dones que un guerrero podía desear. Pero cada don venía con una maldición.",
+          "en": "Starkad had every gift a warrior could want. But every gift came with a curse."
+        },
+        {
+          "es": "Entonces, ¿Starkad fue un héroe o un villano? Cuéntamelo en los comentarios.",
+          "en": "So, was Starkad a hero, or a villain? Tell me in the comments."
+        },
+        {
+          "es": "Con su historia termina nuestra temporada, Héroes del Norte.",
+          "en": "With his story, our season, Heroes of the North, comes to an end."
+        },
+        {
+          "es": "Gracias por viajar con todos estos héroes.",
+          "en": "Thank you for traveling with all these heroes."
+        },
+        {
+          "es": "En el próximo episodio: una nueva temporada. Vienen más historias del norte.",
+          "en": "Next time: A New Season. More stories from the north are on their way."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piedra_runica",
+          "x": 1950,
+          "s": 0.9,
+          "capa": "fondo",
+          "props": {
+            "texto": "HEROES"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "starkad",
+          "como": "vikingo",
+          "x": 400,
+          "escala": 1.15,
+          "rotulo": "STARKAD",
+          "props": {
+            "objeto": "espada",
+            "pelo": "#2B2B2B",
+            "capa": "#3E5A73"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.7,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "hervor",
+          "como": "mujer",
+          "x": 750,
+          "rotulo": "HERVOR",
+          "props": {
+            "ropa": "armadura",
+            "tocado": "yelmo",
+            "escudo": true,
+            "objeto": "espada",
+            "pelo": "#E9C46A",
+            "capa": "#7A2418"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.1,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "volund",
+          "como": "hombre",
+          "x": 1100,
+          "rotulo": "VOLUND",
+          "props": {
+            "barba": true,
+            "objeto": "martillo",
+            "ropa": "corta",
+            "pelo": "#B5452A",
+            "capa": "#7A4A2A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": "espada",
+            "barba": false,
+            "pelo": "#E9C46A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "brynhild",
+          "como": "valquiria",
+          "x": 1850,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "BRYNHILD",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.7,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 400,
+          "y": 450,
+          "dur": 0.6
+        },
+        {
+          "en": 1,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3,
+          "tipo": "estrellas",
+          "dur": 2
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 960,
+          "y": 400,
+          "dur": 1
+        },
+        {
+          "en": 4.2,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 400
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "¿HÉROE O VILLANO?",
+            "en": "HERO OR VILLAIN?"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "FIN DE LA TEMPORADA",
+            "en": "END OF THE SEASON"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "PRÓXIMO: UNA NUEVA TEMPORADA",
+            "en": "NEXT: A NEW SEASON"
+          },
+          "x": 960,
+          "y": 290
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Odín le dio dones... y Thor los maldijo uno por uno",
+        "en": "Odin gave him gifts... and Thor cursed every one"
+      },
+      "escena": "destinos",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Un sacrificio fingido que se volvió real",
+        "en": "A pretend sacrifice that became real"
+      },
+      "escena": "sacrificio",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "El anciano que crió a Starkad era Odín",
+        "en": "The old man who raised Starkad was Odin"
+      },
+      "escena": "consejo",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 900
+    }
+  ]
+}

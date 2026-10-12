@@ -1,0 +1,2263 @@
+{
+  "id": "egipcias-14-sinuhe",
+  "serie": "egipcias",
+  "numero": "14",
+  "titulo": {
+    "es": "La historia de Sinuhé",
+    "en": "The Story of Sinuhe"
+  },
+  "tituloGriego": "THE STORY OF SINUHE",
+  "miniatura": {
+    "heroe": "egipcio",
+    "rival": {
+      "barba": true,
+      "ropa": "larga",
+      "ropaColor": "#7E2B22",
+      "tocado": "cinta",
+      "objeto": "hacha",
+      "escudo": true
+    }
+  },
+  "siguiente": {
+    "es": "El cuento de los dos hermanos",
+    "en": "The Tale of Two Brothers"
+  },
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, un marinero sobrevivió a una tormenta y conoció a una serpiente de oro.",
+          "en": "Last time, a sailor survived a storm and met a golden serpent."
+        },
+        {
+          "es": "Hoy conocemos a otro viajero. Se llama Sinuhé, y sirve a la familia del rey.",
+          "en": "Today we meet another traveler. His name is Sinuhe, and he serves the king's family."
+        },
+        {
+          "es": "Su historia tiene casi cuatro mil años. Los egipcios la amaban, y los alumnos la copiaban en la escuela.",
+          "en": "His story is almost four thousand years old. Egyptians loved it, and students copied it at school."
+        },
+        {
+          "es": "Empieza con una noticia triste. El viejo rey Amenemhat ha muerto.",
+          "en": "It begins with sad news. The old king, Amenemhat, has died."
+        },
+        {
+          "es": "El palacio quedó en silencio. Cerraron las grandes puertas, y todos lloraron.",
+          "en": "The palace fell silent. The great gates were closed, and everyone wept."
+        },
+        {
+          "es": "Otro texto antiguo cuenta que el rey fue atacado de noche por sus propios guardias.",
+          "en": "Another old text says the king was attacked at night, by his own guards."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1300,
+          "s": 1.1
+        },
+        {
+          "tipo": "papiro",
+          "x": 250,
+          "s": 1,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "marinero",
+          "como": "egipcio",
+          "x": 700,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "como": "serpiente",
+          "x": 1050,
+          "escala": 0.7,
+          "mira": "izq",
+          "props": {
+            "largo": 600,
+            "grosor": 60,
+            "erguida": 1.4,
+            "color": "#D4A017",
+            "boca": false
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "sinuhe",
+          "como": "egipcio",
+          "x": 650,
+          "y": 758,
+          "props": {
+            "ropa": "larga"
+          },
+          "rotulo": "SINUHE",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "asiente"
+            },
+            {
+              "en": 4,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "corte",
+          "como": "egipcia",
+          "x": 420,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.2,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "como": "faraon",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "AMENEMHAT",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "sienta"
+            },
+            {
+              "en": 3.6,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "guardia1",
+          "como": "egipcio",
+          "x": 1050,
+          "y": 758,
+          "props": {
+            "objeto": "lanza"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 5.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "guardia2",
+          "como": "egipcio",
+          "x": 1560,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "objeto": "lanza"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 5.1,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 5.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.4
+        },
+        {
+          "en": 5.5,
+          "tipo": "destello",
+          "dur": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "HACE CASI 4000 AÑOS",
+            "en": "ALMOST 4,000 YEARS AGO"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "campamento",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En ese momento, Senusret, el hijo del rey, estaba lejos, en guerra en Libia.",
+          "en": "At that time, Senusret, the king's son, was far away, fighting a war in Libya."
+        },
+        {
+          "es": "De noche, unos mensajeros llegaron a su campamento con la noticia.",
+          "en": "At night, messengers reached his army camp with the news."
+        },
+        {
+          "es": "Senusret no les dijo nada a sus soldados. Voló hacia el palacio como un halcón.",
+          "en": "Senusret told his soldiers nothing. He flew back to the palace like a falcon."
+        },
+        {
+          "es": "Pero Sinuhé estaba cerca, y oyó las palabras secretas.",
+          "en": "But Sinuhe was standing nearby, and he heard the secret words."
+        },
+        {
+          "es": "Su corazón se agitó. Sus brazos se abrieron, y todo su cuerpo tembló.",
+          "en": "His heart raced. His arms spread wide, and his whole body shook."
+        },
+        {
+          "es": "Pensó que vendría una guerra por el trono. Y huyó.",
+          "en": "He thought a war for the throne would come. And he ran away."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 300,
+          "s": 1.2,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "senusret",
+          "como": "egipcio",
+          "x": 1150,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "tocado": "nemes",
+            "objeto": "lanza"
+          },
+          "rotulo": "SENUSRET",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "corre",
+              "a": 2700,
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "soldado",
+          "como": "egipcio",
+          "x": 1750,
+          "capa": "medio",
+          "props": {
+            "objeto": "lanza"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "mira",
+              "a": 2400
+            }
+          ]
+        },
+        {
+          "id": "mensajero",
+          "como": "egipcio",
+          "x": 850,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 850
+            },
+            {
+              "en": 1.4,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "halcon",
+          "como": "halcon",
+          "x": 1150,
+          "y": 420,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "vuela",
+              "a": [
+                2500,
+                200
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "sinuhe",
+          "como": "egipcio",
+          "x": 450,
+          "y": 758,
+          "props": {
+            "ropa": "larga"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.1,
+              "hace": "tiembla",
+              "dur": 0.9
+            },
+            {
+              "en": 5,
+              "hace": "baja"
+            },
+            {
+              "en": 5.2,
+              "hace": "corre",
+              "a": -400,
+              "dur": 0.7
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fogata",
+          "x": 1450,
+          "y": 790,
+          "dur": 6
+        },
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LIBIA",
+            "en": "LIBYA"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "huida",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 600,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Se escondió entre dos arbustos, lejos del camino, hasta que pasó el peligro.",
+          "en": "He hid between two bushes, away from the road, until the danger passed."
+        },
+        {
+          "es": "Luego caminó hacia el sur, solo, de día y de noche.",
+          "en": "Then he walked south, alone, by day and by night."
+        },
+        {
+          "es": "Llegó al Nilo, el gran río de Egipto. Lo cruzó en una barca sin timón.",
+          "en": "He reached the Nile, the great river of Egypt. He crossed it on a boat with no rudder."
+        },
+        {
+          "es": "Solo lo empujaba el viento del oeste.",
+          "en": "Only the west wind pushed it along."
+        },
+        {
+          "es": "En la frontera había un gran muro, el Muro del Gobernante, hecho para frenar a los extranjeros.",
+          "en": "At the border stood a great wall, the Walls of the Ruler, built to keep out foreigners."
+        },
+        {
+          "es": "Sinuhé se agachó entre los arbustos para que los guardias del muro no lo vieran.",
+          "en": "Sinuhe crouched in the bushes, so the guards on the wall would not see him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "papiro",
+          "x": 450,
+          "s": 1.1
+        },
+        {
+          "tipo": "papiro",
+          "x": 680,
+          "s": 1
+        },
+        {
+          "tipo": "barco",
+          "x": 1300,
+          "s": 0.9,
+          "en": 2,
+          "hasta": 4
+        },
+        {
+          "tipo": "nube",
+          "x": 1500,
+          "y": 260,
+          "s": 1.2,
+          "en": 3
+        },
+        {
+          "tipo": "muralla",
+          "x": 2000,
+          "capa": "fondo",
+          "en": 4,
+          "props": {
+            "ancho": 900,
+            "alto": 260
+          }
+        },
+        {
+          "tipo": "papiro",
+          "x": 1800,
+          "s": 1,
+          "en": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "sinuhe",
+          "como": "egipcio",
+          "x": 560,
+          "y": 758,
+          "props": {
+            "ropa": "larga"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "camina",
+              "a": 1300,
+              "dur": 0.5
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 1750,
+              "dur": 0.7
+            },
+            {
+              "en": 5,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "soldado",
+          "como": "egipcio",
+          "x": 1250,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "objeto": "lanza"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 150,
+              "dur": 0.7
+            },
+            {
+              "en": 0.95,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "guardia1",
+          "como": "egipcio",
+          "x": 2050,
+          "capa": "medio",
+          "mira": "izq",
+          "props": {
+            "objeto": "lanza"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.2,
+              "hace": "mira",
+              "a": 1500
+            }
+          ]
+        },
+        {
+          "id": "guardia2",
+          "como": "egipcio",
+          "x": 2250,
+          "capa": "medio",
+          "mira": "izq",
+          "props": {
+            "objeto": "lanza"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4.2,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 0.8,
+          "intensidad": 0.3
+        },
+        {
+          "en": 3,
+          "tipo": "polvo",
+          "x": 1300,
+          "y": 760,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "niebla",
+          "dur": 1,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "EL NILO",
+            "en": "THE NILE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "EL MURO DEL GOBERNANTE",
+            "en": "THE WALLS OF THE RULER"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 5
+        }
+      ]
+    },
+    {
+      "id": "sed",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cruzó de noche. Al amanecer, estaba solo en el desierto.",
+          "en": "He crossed at night. At dawn, he was alone in the desert."
+        },
+        {
+          "es": "La sed lo atacó. Le ardía la garganta, y cayó al suelo.",
+          "en": "Thirst attacked him. His throat burned, and he fell to the ground."
+        },
+        {
+          "es": "Pensó: «Este es el sabor de la muerte.»",
+          "en": "He said to himself: \"This is the taste of death.\""
+        },
+        {
+          "es": "Entonces oyó mugir el ganado. Pasaban unos nómadas del desierto.",
+          "en": "Then he heard cattle. Desert nomads were passing by."
+        },
+        {
+          "es": "Su jefe había estado en Egipto, y reconoció a Sinuhé.",
+          "en": "Their chief had once been to Egypt, and he recognized Sinuhe."
+        },
+        {
+          "es": "Le dio agua, y hirvió leche para él. Sinuhé estaba a salvo.",
+          "en": "He gave him water, and boiled milk for him. Sinuhe was saved."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 250,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "sinuhe",
+          "como": "egipcio",
+          "x": 500,
+          "y": 758,
+          "props": {
+            "ropa": "larga"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.5,
+              "hace": "cae"
+            },
+            {
+              "en": 2,
+              "hace": "entristece"
+            },
+            {
+              "en": 5.3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 5.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "jefe",
+          "como": "egipcio",
+          "x": 1300,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "barba": true,
+            "ropa": "larga",
+            "ropaColor": "#B4412C",
+            "capa": "#2E7A8C",
+            "tocado": "cinta",
+            "objeto": "palo"
+          },
+          "rotulo": "THE NOMAD CHIEF",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 1300
+            },
+            {
+              "en": 4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.3,
+              "hace": "senala"
+            },
+            {
+              "en": 5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "nomada",
+          "como": "egipcio",
+          "x": 1650,
+          "capa": "medio",
+          "mira": "izq",
+          "props": {
+            "barba": true,
+            "ropa": "larga",
+            "ropaColor": "#2E5FA8",
+            "tocado": "cinta"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "entra",
+              "a": 1650
+            }
+          ]
+        },
+        {
+          "id": "vaca",
+          "como": "buey",
+          "x": 1950,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 1950
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1600,
+          "y": 240,
+          "dur": 1.5,
+          "intensidad": 0.7
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 0.9,
+          "intensidad": 0.45
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3,
+          "tipo": "polvo",
+          "x": 1700,
+          "y": 780,
+          "dur": 0.8
+        },
+        {
+          "en": 5,
+          "tipo": "fogata",
+          "x": 1100,
+          "y": 790,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "EL SABOR DE LA MUERTE",
+            "en": "THE TASTE OF DEATH"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "amunenshi",
+      "fondo": "batalla",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sinuhé se fue con los nómadas, de tierra en tierra, hasta Biblos, una ciudad junto al mar.",
+          "en": "Sinuhe went with the nomads, from land to land, as far as Byblos, a city by the sea."
+        },
+        {
+          "es": "Después conoció a Amunenshi, un jefe de Retenu, la tierra de colinas al noreste de Egipto.",
+          "en": "Later he met Ammunenshi, a ruler of Retjenu, the hill country north-east of Egypt."
+        },
+        {
+          "es": "«Quédate conmigo», dijo Amunenshi. «Aquí oirás la lengua de Egipto.»",
+          "en": "\"Stay with me,\" said Ammunenshi. \"Here you will hear the language of Egypt.\""
+        },
+        {
+          "es": "Le preguntó por qué había huido. Sinuhé dijo: «Fue como un sueño. No sé por qué.»",
+          "en": "He asked why Sinuhe had run away. Sinuhe said: \"It was like a dream. I do not know why.\""
+        },
+        {
+          "es": "Amunenshi le dio a Sinuhé su hija mayor como esposa.",
+          "en": "Ammunenshi gave Sinuhe his eldest daughter as his wife."
+        },
+        {
+          "es": "Y lo dejó elegir la mejor tierra de su país.",
+          "en": "And he let him choose the best land in his country."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1700,
+          "s": 0.6,
+          "hasta": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "sinuhe",
+          "como": "egipcio",
+          "x": 650,
+          "y": 758,
+          "props": {
+            "ropa": "larga"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 650
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.4,
+              "hace": "niega"
+            },
+            {
+              "en": 4.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "amunenshi",
+          "como": "egipcio",
+          "x": 1300,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "barba": true,
+            "ropa": "larga",
+            "ropaColor": "#B4412C",
+            "capa": "#2E5FA8",
+            "tocado": "cinta",
+            "objeto": "cetro"
+          },
+          "rotulo": "AMMUNENSHI",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "paisano",
+          "como": "egipcio",
+          "x": 330,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.7,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "hija",
+          "como": "egipcia",
+          "x": 960,
+          "y": 758,
+          "props": {
+            "ropaColor": "#B4412C"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "entra",
+              "a": 960
+            },
+            {
+              "en": 4.6,
+              "hace": "mira",
+              "a": 650
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 5,
+          "tipo": "luz",
+          "x": 1600,
+          "y": 420,
+          "dur": 1,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "BIBLOS",
+            "en": "BYBLOS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "RETENU",
+            "en": "RETJENU"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "yaa",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La tierra se llamaba Yaa. Era una tierra buena.",
+          "en": "The land was called Yaa. It was a good land."
+        },
+        {
+          "es": "Tenía higos y uvas, y había más vino que agua.",
+          "en": "It had figs and grapes, and there was more wine than water."
+        },
+        {
+          "es": "Había miel y aceite de oliva, cebada, trigo y ganado sin fin.",
+          "en": "There was honey and olive oil, barley, wheat, and endless cattle."
+        },
+        {
+          "es": "Sinuhé vivió allí muchos años. Sus hijos crecieron y se hicieron hombres fuertes.",
+          "en": "Sinuhe lived there for many years. His children grew up into strong men."
+        },
+        {
+          "es": "Daba agua al sediento y mostraba el camino al perdido. Todos lo querían.",
+          "en": "He gave water to the thirsty and showed the way to the lost. Everyone loved him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 1600,
+          "s": 0.9,
+          "capa": "medio"
+        },
+        {
+          "tipo": "anfora",
+          "x": 330,
+          "s": 0.8,
+          "en": 1
+        },
+        {
+          "tipo": "anfora",
+          "x": 440,
+          "s": 0.7,
+          "en": 1.2
+        },
+        {
+          "tipo": "palmera",
+          "x": 1900,
+          "s": 1.3,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "sinuhe",
+          "como": "egipcio",
+          "x": 700,
+          "y": 758,
+          "props": {
+            "barba": true,
+            "ropa": "larga",
+            "ropaColor": "#2E5FA8",
+            "tocado": "cinta"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "baja"
+            },
+            {
+              "en": 4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4.6,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "esposa",
+          "como": "egipcia",
+          "x": 900,
+          "y": 758,
+          "props": {
+            "ropaColor": "#B4412C"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "asiente"
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 1150
+            }
+          ]
+        },
+        {
+          "id": "vaca",
+          "como": "buey",
+          "x": 1750,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1750
+            }
+          ]
+        },
+        {
+          "id": "hijo1",
+          "como": "egipcio",
+          "x": 1150,
+          "y": 758,
+          "escala": 0.55,
+          "props": {
+            "ropaColor": "#2E5FA8",
+            "tocado": "cinta"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.4,
+              "hace": "crece",
+              "escala": 1,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "hijo2",
+          "como": "egipcio",
+          "x": 1330,
+          "y": 758,
+          "escala": 0.55,
+          "props": {
+            "ropaColor": "#B4412C",
+            "tocado": "cinta"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.6,
+              "hace": "crece",
+              "escala": 1,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 800,
+          "y": 450,
+          "dur": 1,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "YAA",
+            "en": "YAA"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "MÁS VINO QUE AGUA",
+            "en": "MORE WINE THAN WATER"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "duelo",
+      "fondo": "batalla",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día llegó a su tienda un hombre fuerte de Retenu. Era un campeón que nadie había vencido.",
+          "en": "One day, a strong man of Retjenu came to his tent. He was a champion no one had ever beaten."
+        },
+        {
+          "es": "Quería pelear con Sinuhé y quedarse con su ganado.",
+          "en": "He wanted to fight Sinuhe and take his cattle."
+        },
+        {
+          "es": "Al amanecer, todo el país vino a mirar. Las mujeres y los hombres gritaban.",
+          "en": "At dawn, the whole country came to watch. Women and men shouted."
+        },
+        {
+          "es": "El campeón tenía escudo, hacha y muchas lanzas. Sinuhé dejó que las lanzas pasaran de largo.",
+          "en": "The champion had a shield, an axe and many spears. Sinuhe let the spears fly past him."
+        },
+        {
+          "es": "Luego disparó una sola flecha. El hombre fuerte cayó de cara.",
+          "en": "Then he shot one arrow. The strong man fell on his face."
+        },
+        {
+          "es": "Sinuhé lo terminó con su propia hacha, y lanzó un grito de victoria.",
+          "en": "Sinuhe finished him with his own axe, and gave a cry of victory."
+        }
+      ],
+      "actores": [
+        {
+          "id": "campeon",
+          "como": "egipcio",
+          "x": 1350,
+          "y": 758,
+          "mira": "izq",
+          "escala": 1.12,
+          "props": {
+            "gigante": true,
+            "barba": true,
+            "ropaColor": "#7E2B22",
+            "tocado": "cinta",
+            "objeto": "hacha",
+            "escudo": true
+          },
+          "rotulo": "THE STRONG MAN",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1350
+            },
+            {
+              "en": 1,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "toma",
+              "objeto": "lanza"
+            },
+            {
+              "en": 3.1,
+              "hace": "lanza"
+            },
+            {
+              "en": 3.5,
+              "hace": "toma",
+              "objeto": "lanza"
+            },
+            {
+              "en": 3.6,
+              "hace": "lanza"
+            },
+            {
+              "en": 4.3,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "sinuhe",
+          "como": "egipcio",
+          "x": 720,
+          "y": 758,
+          "props": {
+            "barba": true,
+            "ropa": "larga",
+            "ropaColor": "#2E5FA8",
+            "tocado": "cinta",
+            "objeto": "arco"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1350
+            },
+            {
+              "en": 3.2,
+              "hace": "salta"
+            },
+            {
+              "en": 3.65,
+              "hace": "salta"
+            },
+            {
+              "en": 4,
+              "hace": "lanza"
+            },
+            {
+              "en": 5,
+              "hace": "toma",
+              "objeto": "hacha"
+            },
+            {
+              "en": 5.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 5.6,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "gente1",
+          "como": "egipcio",
+          "x": 300,
+          "capa": "medio",
+          "props": {
+            "barba": true,
+            "ropa": "larga",
+            "ropaColor": "#B4412C",
+            "tocado": "cinta"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 5.7,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "gente2",
+          "como": "egipcia",
+          "x": 1750,
+          "capa": "medio",
+          "mira": "izq",
+          "props": {
+            "ropaColor": "#2E5FA8"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.5,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3.2,
+          "tipo": "polvo",
+          "x": 720,
+          "y": 780,
+          "dur": 0.7
+        },
+        {
+          "en": 4.1,
+          "tipo": "destello",
+          "x": 1350,
+          "y": 550,
+          "dur": 0.3
+        },
+        {
+          "en": 4.4,
+          "tipo": "polvo",
+          "x": 1350,
+          "y": 790,
+          "dur": 0.8
+        },
+        {
+          "en": 5.3,
+          "tipo": "destello",
+          "dur": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "EL CAMPEÓN DE RETENU",
+            "en": "THE CHAMPION OF RETJENU"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "vejez",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Una vez Sinuhé huyó del peligro; esta vez lo enfrentó. ¿Tú habrías peleado con el campeón? Cuéntanos en los comentarios.",
+          "en": "Once, Sinuhe ran from danger. This time he faced it. Would you have fought the champion? Tell us in the comments."
+        },
+        {
+          "es": "Pasaron los años, y Sinuhé envejeció. Se le cansaron los ojos, y se le debilitaron las piernas.",
+          "en": "The years passed, and Sinuhe grew old. His eyes grew tired, and his legs grew weak."
+        },
+        {
+          "es": "Soñaba con Egipto. Quería que lo enterraran allí, no en tierra extraña.",
+          "en": "He dreamed of Egypt. He wanted to be buried there, not in a foreign land."
+        },
+        {
+          "es": "Rezó: «Dios que me hiciste huir, ten piedad. Llévame a casa.»",
+          "en": "He prayed: \"God who made me run away, have mercy. Bring me home.\""
+        },
+        {
+          "es": "Y lejos, en Egipto, el rey Senusret oyó hablar de él.",
+          "en": "And far away in Egypt, King Senusret heard about him."
+        }
+      ],
+      "actores": [
+        {
+          "id": "sinuhe",
+          "como": "egipcio",
+          "x": 650,
+          "y": 758,
+          "props": {
+            "barba": true,
+            "ropa": "larga",
+            "ropaColor": "#2E5FA8",
+            "tocado": "cinta",
+            "objeto": "hacha"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "viejo",
+          "como": "egipcio",
+          "x": 650,
+          "y": 758,
+          "props": {
+            "barba": true,
+            "canas": true,
+            "cuerpo": "viejo",
+            "ropa": "larga",
+            "ropaColor": "#2E5FA8",
+            "tocado": "cinta"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2,
+              "hace": "entristece"
+            },
+            {
+              "en": 3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.2,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "senusret",
+          "como": "faraon",
+          "x": 1450,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "KING SENUSRET",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.3
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 520,
+          "dur": 1.2,
+          "intensidad": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 650,
+          "y": 300,
+          "dur": 1,
+          "intensidad": 0.4
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 450,
+          "dur": 1,
+          "intensidad": 0.6
+        }
+      ]
+    },
+    {
+      "id": "carta",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El rey le envió una carta con regalos: «Vuelve a Egipto. No morirás entre extranjeros.»",
+          "en": "The king sent a letter with gifts: \"Come back to Egypt. You will not die among strangers.\""
+        },
+        {
+          "es": "«No te enterrarán envuelto en una piel de oveja. Piensa en tu cuerpo, y vuelve.»",
+          "en": "\"You will not be buried in a sheepskin. Think of your body, and come home.\""
+        },
+        {
+          "es": "Sinuhé leyó la carta. Se echó al suelo, y de alegría se puso tierra sobre el pecho.",
+          "en": "Sinuhe read the letter. He lay down on the ground, and spread dust on his chest for joy."
+        },
+        {
+          "es": "Dio todo lo que tenía a sus hijos. Su hijo mayor quedó como jefe de la tribu.",
+          "en": "He gave all he owned to his children. His eldest son became chief of the tribe."
+        },
+        {
+          "es": "Luego viajó al sur. Soldados egipcios lo recibieron en la frontera y lo llevaron a casa en barco.",
+          "en": "Then he traveled south. Egyptian soldiers met him at the border and took him home by boat."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "anfora",
+          "x": 1050,
+          "s": 0.7,
+          "en": 0.5
+        },
+        {
+          "tipo": "anfora",
+          "x": 1150,
+          "s": 0.6,
+          "en": 0.6
+        },
+        {
+          "tipo": "barco",
+          "x": 2100,
+          "s": 0.8,
+          "en": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "mensajero",
+          "como": "egipcio",
+          "x": 1350,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "THE KING'S MESSENGER",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1350
+            },
+            {
+              "en": 0.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 2.5,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "viejo",
+          "como": "egipcio",
+          "x": 750,
+          "y": 758,
+          "props": {
+            "barba": true,
+            "canas": true,
+            "cuerpo": "viejo",
+            "ropa": "larga",
+            "ropaColor": "#2E5FA8",
+            "tocado": "cinta"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 1750,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "hijo",
+          "como": "egipcio",
+          "x": 450,
+          "y": 758,
+          "props": {
+            "barba": true,
+            "ropa": "larga",
+            "ropaColor": "#B4412C",
+            "tocado": "cinta"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 750
+            },
+            {
+              "en": 3.4,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "soldado",
+          "como": "egipcio",
+          "x": 1950,
+          "capa": "medio",
+          "mira": "izq",
+          "props": {
+            "objeto": "lanza"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 650,
+          "dur": 1
+        },
+        {
+          "en": 2.4,
+          "tipo": "polvo",
+          "x": 750,
+          "y": 780,
+          "dur": 0.6
+        }
+      ]
+    },
+    {
+      "id": "palacio",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En el palacio, los hijos del rey lo esperaban en la puerta.",
+          "en": "At the palace, the king's children waited for him at the gate."
+        },
+        {
+          "es": "Sinuhé se postró ante el rey. Se desmayó, como un hombre perdido en la oscuridad.",
+          "en": "Sinuhe threw himself down before the king. He fainted, like a man lost in darkness."
+        },
+        {
+          "es": "El rey le dijo a la reina: «¡Mira! Sinuhé volvió vestido como un hombre del desierto.»",
+          "en": "The king said to the queen: \"Look! Sinuhe is back, dressed like a man of the desert!\""
+        },
+        {
+          "es": "La reina gritó de sorpresa. Los hijos del rey exclamaron: «¿De verdad es él?»",
+          "en": "The queen cried out in surprise. The royal children shouted: \"Is it really him?\""
+        },
+        {
+          "es": "Luego sacudieron sus sonajas y le cantaron al rey: «¡Perdónalo! ¡Dale el aliento de la vida!»",
+          "en": "Then they shook their rattles and sang to the king: \"Forgive him! Give him the breath of life!\""
+        },
+        {
+          "es": "El rey lo perdonó, y lo nombró amigo de honor del rey.",
+          "en": "The king forgave him, and made him an honored friend of the king."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1400,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "rey",
+          "como": "faraon",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "KING SENUSRET",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            },
+            {
+              "en": 5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "reina",
+          "como": "reina_egipcia",
+          "x": 1650,
+          "mira": "izq",
+          "rotulo": "THE QUEEN",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "viejo",
+          "como": "egipcio",
+          "x": 850,
+          "y": 758,
+          "props": {
+            "barba": true,
+            "canas": true,
+            "cuerpo": "viejo",
+            "ropa": "larga",
+            "ropaColor": "#2E5FA8",
+            "tocado": "cinta"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 850
+            },
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.4,
+              "hace": "cae"
+            },
+            {
+              "en": 4,
+              "hace": "levantarse"
+            },
+            {
+              "en": 5.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "principe",
+          "como": "egipcio",
+          "x": 500,
+          "capa": "medio",
+          "props": {
+            "trenza": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "princesa",
+          "como": "egipcia",
+          "x": 300,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.1,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "oscurecer",
+          "dur": 0.8,
+          "intensidad": 0.35
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 500,
+          "y": 450,
+          "dur": 1.2,
+          "intensidad": 0.5
+        },
+        {
+          "en": 5,
+          "tipo": "chispas",
+          "x": 900,
+          "y": 500,
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "piramides",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Le dieron la casa de un príncipe. Se bañó, y le afeitaron la barba y le peinaron el pelo.",
+          "en": "He got a prince's house. He bathed, and they shaved his beard and combed his hair."
+        },
+        {
+          "es": "Vistió lino fino y durmió en una cama. «Los años se fueron de mi cuerpo», dijo.",
+          "en": "He wore fine linen and slept in a bed. \"The years left my body,\" he said."
+        },
+        {
+          "es": "El rey hasta le construyó una pirámide de piedra como tumba.",
+          "en": "The king even built him a stone pyramid as his tomb."
+        },
+        {
+          "es": "Sinuhé vivió el resto de su vida querido por el rey. Y fue enterrado en Egipto.",
+          "en": "Sinuhe lived out his life, loved by the king. And he was buried in Egypt."
+        },
+        {
+          "es": "¿Sinuhé fue un cobarde por huir, o un héroe por volver? Cuéntanos en los comentarios.",
+          "en": "Was Sinuhe a coward for running away, or a hero for coming home? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez: El cuento de los dos hermanos. Una mentira, un corazón escondido y vacas que hablan.",
+          "en": "Next time: The Tale of Two Brothers. A lie, a hidden heart, and cows that can talk."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 400,
+          "s": 0.9
+        },
+        {
+          "tipo": "piramide",
+          "x": 1250,
+          "s": 0.6,
+          "en": 2
+        },
+        {
+          "tipo": "sarcofago",
+          "x": 1100,
+          "s": 0.8,
+          "en": 3.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "viejo",
+          "como": "egipcio",
+          "x": 800,
+          "y": 758,
+          "props": {
+            "barba": true,
+            "canas": true,
+            "cuerpo": "viejo",
+            "ropa": "larga",
+            "ropaColor": "#2E5FA8",
+            "tocado": "cinta"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "sinuhe",
+          "como": "egipcio",
+          "x": 800,
+          "y": 758,
+          "props": {
+            "canas": true,
+            "cuerpo": "viejo",
+            "ropa": "larga"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 0.5
+            },
+            {
+              "en": 3.5,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "como": "faraon",
+          "x": 1600,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "bata",
+          "como": "egipcio",
+          "x": 500,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "vaca",
+          "como": "buey",
+          "x": 800,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 5.2,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 550,
+          "dur": 1,
+          "intensidad": 0.5
+        },
+        {
+          "en": 4,
+          "tipo": "estrellas",
+          "dur": 1
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Perdido en el desierto: «Este es el sabor de la muerte»",
+        "en": "Lost in the desert: \"This is the taste of death\""
+      },
+      "escena": "sed",
+      "desde": 0,
+      "hasta": 5,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Una sola flecha contra el campeón de Retenu",
+        "en": "One arrow against the champion of Retjenu"
+      },
+      "escena": "duelo",
+      "desde": 2,
+      "hasta": 5,
+      "foco": 930
+    },
+    {
+      "gancho": {
+        "es": "El exiliado que volvió a casa vestido de extranjero",
+        "en": "The exile who came home dressed as a stranger"
+      },
+      "escena": "palacio",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1050
+    }
+  ]
+}

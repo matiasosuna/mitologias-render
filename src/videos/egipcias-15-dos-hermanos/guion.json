@@ -1,0 +1,2312 @@
+{
+  "id": "egipcias-15-dos-hermanos",
+  "serie": "egipcias",
+  "numero": "15",
+  "titulo": {
+    "es": "El cuento de los dos hermanos",
+    "en": "The Tale of Two Brothers"
+  },
+  "tituloGriego": "THE TALE OF TWO BROTHERS",
+  "miniatura": {
+    "heroe": "egipcio",
+    "rival": "toro"
+  },
+  "siguiente": {
+    "es": "Setne y el libro de Thoth",
+    "en": "Setne and the Book of Thoth"
+  },
+  "escenas": [
+    {
+      "id": "marco",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Sinuhé huyó de Egipto y volvió a casa ya anciano.",
+          "en": "Last time, Sinuhe ran away from Egypt, and came home as an old man."
+        },
+        {
+          "es": "El cuento de hoy se escribió en un papiro hace más de tres mil años. Hoy está en Londres.",
+          "en": "Today's tale was written on a papyrus more than three thousand years ago. It is now in London."
+        },
+        {
+          "es": "Trata de dos hermanos. El mayor, un granjero, se llamaba Anubis, como el dios.",
+          "en": "It is about two brothers. The older one, a farmer, was named Anubis, like the god."
+        },
+        {
+          "es": "Pero era solo un hombre, con una casa y una esposa.",
+          "en": "But he was only a man, with a house and a wife."
+        },
+        {
+          "es": "El hermano menor era Bata. Vivía con ellos, como un hijo. Nadie en el país era tan fuerte.",
+          "en": "The younger brother was Bata. He lived with them, like a son. No one in the land was as strong."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "papiro",
+          "x": 300,
+          "s": 1,
+          "en": 1
+        },
+        {
+          "tipo": "casa",
+          "x": 1750,
+          "s": 0.9,
+          "capa": "medio",
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "sinuhe",
+          "como": "egipcio",
+          "x": 700,
+          "y": 758,
+          "props": {
+            "canas": true,
+            "cuerpo": "viejo",
+            "ropa": "larga"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "como": "egipcio",
+          "x": 1100,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "objeto": "hoe"
+          },
+          "rotulo": "ANUBIS",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "dios",
+          "como": "anubis",
+          "x": 1450,
+          "y": 758,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "esposa",
+          "como": "egipcia",
+          "x": 1450,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "bata",
+          "como": "egipcio",
+          "x": 700,
+          "y": 758,
+          "rotulo": "BATA",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.6,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4.6,
+          "tipo": "luz",
+          "x": 700,
+          "y": 450,
+          "dur": 0.8,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "HACE MÁS DE 3000 AÑOS",
+            "en": "MORE THAN 3,000 YEARS AGO"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "vacas",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cada día, Bata llevaba las vacas al campo.",
+          "en": "Every day, Bata took the cows out to the fields."
+        },
+        {
+          "es": "Y Bata tenía un don. Entendía lo que decían las vacas.",
+          "en": "And Bata had a gift. He could understand what the cows said."
+        },
+        {
+          "es": "«Allí la hierba es buena», le decían. Y él las llevaba allí.",
+          "en": "\"The grass is good over there,\" they told him. And he took them there."
+        },
+        {
+          "es": "Las vacas engordaron, se pusieron fuertes y tuvieron muchos terneros.",
+          "en": "The cows grew fat and strong, and had many calves."
+        },
+        {
+          "es": "Al atardecer volvía a casa con leche, leña y verduras para su hermano.",
+          "en": "In the evening, he came home with milk, wood and vegetables for his brother."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 1600,
+          "s": 1.2,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "bata",
+          "como": "egipcio",
+          "x": 500,
+          "y": 758,
+          "props": {
+            "objeto": "cayado"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 700,
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1100
+            },
+            {
+              "en": 1.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.4,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.6
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 1550,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "vaca1",
+          "como": "buey",
+          "x": 950,
+          "props": {
+            "color": "#C8A070"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.4,
+              "hace": "camina",
+              "a": 1350,
+              "dur": 0.6
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 1850,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "vaca2",
+          "como": "buey",
+          "x": 1350,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1550,
+              "dur": 1
+            },
+            {
+              "en": 2.4,
+              "hace": "camina",
+              "a": 1700,
+              "dur": 0.6
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 2150,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "ternero",
+          "como": "buey",
+          "x": 1950,
+          "escala": 0.5,
+          "props": {
+            "color": "#C8A070"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 2300,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.4,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 600,
+          "dur": 0.8,
+          "intensidad": 0.4
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "«¡ALLÍ LA HIERBA ES BUENA!»",
+            "en": "\"THE GRASS IS GOOD THERE!\""
+          },
+          "x": 960,
+          "y": 330,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "mentira",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, en tiempo de arar, Anubis mandó a Bata a casa a buscar semillas.",
+          "en": "One day, at plowing time, Anubis sent Bata home to fetch seed."
+        },
+        {
+          "es": "Bata sacó al hombro una enorme carga de grano. La esposa de Anubis vio lo fuerte que era.",
+          "en": "Bata carried out a huge load of grain on his shoulder. Anubis's wife saw how strong he was."
+        },
+        {
+          "es": "Ella intentó que traicionara a su hermano.",
+          "en": "She tried to make him betray his brother."
+        },
+        {
+          "es": "Bata se enojó como un leopardo. «¡No! Tú eres como una madre para mí, y mi hermano como un padre.»",
+          "en": "Bata became angry like a leopard. \"No! You are like a mother to me, and my brother like a father.\""
+        },
+        {
+          "es": "«No se lo diré a nadie», dijo. Y volvió al campo.",
+          "en": "\"I will tell no one about this,\" he said. And he went back to the fields."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 1650,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "anubis",
+          "como": "egipcio",
+          "x": 350,
+          "y": 758,
+          "props": {
+            "objeto": "hoe"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 0.5,
+              "hace": "habla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "bata",
+          "como": "egipcio",
+          "x": 600,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.7
+            },
+            {
+              "en": 1,
+              "hace": "toma",
+              "objeto": "semillas"
+            },
+            {
+              "en": 1.1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.8,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.2,
+              "hace": "niega"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 4.5,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "esposa",
+          "como": "egipcia",
+          "x": 1450,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "ANUBIS'S WIFE",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.4,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.3,
+          "intensidad": 0.3
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "lanza",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La esposa tuvo miedo. Así que fingió estar herida, y le mintió a su esposo.",
+          "en": "The wife was afraid. So she made herself look hurt, and lied to her husband."
+        },
+        {
+          "es": "«¡Tu hermano me atacó!», le dijo a Anubis.",
+          "en": "\"Your brother attacked me!\" she told Anubis."
+        },
+        {
+          "es": "Anubis se enojó como un leopardo. Tomó su lanza y se escondió detrás de la puerta del establo.",
+          "en": "Anubis became angry like a leopard. He took his spear and hid behind the stable door."
+        },
+        {
+          "es": "Al atardecer, Bata volvió con las vacas. La primera vaca entró, y habló.",
+          "en": "At sunset, Bata came home with the cows. The first cow went in, and she spoke."
+        },
+        {
+          "es": "«¡Corre! ¡Tu hermano te espera detrás de la puerta con una lanza!» La segunda vaca dijo lo mismo.",
+          "en": "\"Run! Your brother is waiting behind the door with a spear!\" The second cow said the same."
+        },
+        {
+          "es": "Bata miró por debajo de la puerta y vio los pies de su hermano. Y huyó.",
+          "en": "Bata looked under the door, and saw his brother's feet. He ran."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 1750,
+          "s": 0.9,
+          "capa": "medio"
+        },
+        {
+          "tipo": "puerta",
+          "x": 1350,
+          "s": 0.8,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "esposa",
+          "como": "egipcia",
+          "x": 600,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.6,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "como": "egipcio",
+          "x": 950,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "objeto": "lanza"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "entra",
+              "a": 950
+            },
+            {
+              "en": 2,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.5,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 0.5
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 600
+            }
+          ]
+        },
+        {
+          "id": "bata",
+          "como": "egipcio",
+          "x": 600,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 600
+            },
+            {
+              "en": 4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 5,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 5.3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 5.5,
+              "hace": "corre",
+              "a": -300,
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "vaca1",
+          "como": "buey",
+          "x": 900,
+          "props": {
+            "color": "#C8A070"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 900
+            },
+            {
+              "en": 3.5,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.4
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "vaca2",
+          "como": "buey",
+          "x": 350,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "entra",
+              "a": 350
+            },
+            {
+              "en": 4.6,
+              "hace": "habla",
+              "dur": 0.3
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 0.3,
+          "intensidad": 0.3
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 3,
+          "intensidad": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "«¡CORRE!»",
+            "en": "\"RUN!\""
+          },
+          "x": 1100,
+          "y": 420,
+          "hasta": 5
+        }
+      ]
+    },
+    {
+      "id": "rio",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Anubis corrió tras él con su lanza. Bata le rezó a Ra, el dios sol, pidiendo ayuda.",
+          "en": "Anubis ran after him with his spear. Bata prayed to Ra, the sun god, for help."
+        },
+        {
+          "es": "Ra lo escuchó. Hizo aparecer un gran río entre los dos hermanos.",
+          "en": "Ra heard him. He made a great river appear between the two brothers."
+        },
+        {
+          "es": "Y el río estaba lleno de cocodrilos. Bata quedó en una orilla, y Anubis en la otra.",
+          "en": "And the river was full of crocodiles. Bata was on one side, Anubis on the other."
+        },
+        {
+          "es": "Al amanecer, Bata le contó a su hermano toda la verdad sobre la mentira.",
+          "en": "At dawn, Bata told his brother the whole truth about the lie."
+        },
+        {
+          "es": "Para mostrar que era verdad, se cortó con una caña afilada, y quedó débil.",
+          "en": "To show it was true, he cut himself with a sharp reed, and grew weak."
+        },
+        {
+          "es": "Anubis lloró. Lo lamentaba, pero no podía cruzar el río para ayudarlo.",
+          "en": "Anubis wept. He was sorry, but he could not cross the river to help him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 960,
+          "y": 220,
+          "s": 1.4,
+          "en": 0.5,
+          "hasta": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "bata",
+          "como": "egipcio",
+          "x": 900,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "corre",
+              "a": 420,
+              "dur": 0.4
+            },
+            {
+              "en": 0.5,
+              "hace": "reza"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            },
+            {
+              "en": 2.8,
+              "hace": "mira",
+              "a": 1500
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 4,
+              "hace": "toma",
+              "objeto": "cana"
+            },
+            {
+              "en": 4.3,
+              "hace": "suelta"
+            },
+            {
+              "en": 4.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4.6,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "como": "egipcio",
+          "x": 1750,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "objeto": "lanza"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "corre",
+              "a": 1450,
+              "dur": 0.5
+            },
+            {
+              "en": 1.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.5,
+              "hace": "entristece"
+            },
+            {
+              "en": 5,
+              "hace": "suelta"
+            },
+            {
+              "en": 5.1,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "como": "ra",
+          "x": 950,
+          "y": 758,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.8,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "croc1",
+          "como": "cocodrilo",
+          "x": 820,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.2,
+              "hace": "nada",
+              "a": 1050,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "croc2",
+          "como": "cocodrilo",
+          "x": 1200,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.4,
+              "hace": "nada",
+              "a": 1000,
+              "dur": 1.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "luz",
+          "x": 960,
+          "y": 240,
+          "dur": 1,
+          "intensidad": 0.7
+        },
+        {
+          "en": 1.4,
+          "tipo": "olas-suben",
+          "dur": 0.8,
+          "intensidad": 0.18
+        },
+        {
+          "en": 2.5,
+          "tipo": "oscurecer",
+          "dur": 0.5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4.3,
+          "tipo": "destello",
+          "dur": 0.2
+        }
+      ]
+    },
+    {
+      "id": "promesa",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Si tu hermano creyera una mentira sobre ti, ¿podrías perdonarlo? Cuéntanos en los comentarios.",
+          "en": "If your brother believed a lie about you, could you forgive him? Tell us in the comments."
+        },
+        {
+          "es": "Bata dijo: «Me voy lejos, al Valle del Pino. Pondré mi corazón en la flor del pino.»",
+          "en": "Bata said: \"I am going far away, to the Valley of the Pine. I will put my heart on the pine's flower.\""
+        },
+        {
+          "es": "«Si cortan el pino, mi corazón caerá, y moriré. Entonces tendrás que venir a buscarlo.»",
+          "en": "\"If the pine is cut down, my heart will fall, and I will die. Then you must come and find it.\""
+        },
+        {
+          "es": "«Lo sabrás, porque tu cerveza hará espuma en la copa.»",
+          "en": "\"You will know, because your beer will foam in your cup.\""
+        },
+        {
+          "es": "Anubis volvió a casa y castigó a su esposa por su mentira. Luego se sentó, triste por su hermano.",
+          "en": "Anubis went home and punished his wife for her lie. Then he sat in sorrow for his brother."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 300,
+          "s": 1.4,
+          "capa": "fondo",
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "bata",
+          "como": "egipcio",
+          "x": 550,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 2
+            },
+            {
+              "en": 1.5,
+              "hace": "mira",
+              "a": 300
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 3.7,
+              "hace": "mira",
+              "a": 0
+            },
+            {
+              "en": 3.8,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "croc",
+          "como": "cocodrilo",
+          "x": 1000,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "nada",
+              "a": 930,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "como": "egipcio",
+          "x": 1400,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "toma",
+              "objeto": "copa"
+            },
+            {
+              "en": 4,
+              "hace": "suelta"
+            },
+            {
+              "en": 4.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4.6,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "esposa",
+          "como": "egipcia",
+          "x": 1700,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.3,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "luz",
+          "x": 300,
+          "y": 350,
+          "dur": 1,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 0.5,
+          "intensidad": 0.3
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1400,
+          "y": 520,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "EL VALLE DEL PINO",
+            "en": "THE VALLEY OF THE PINE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "dioses",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En el Valle del Pino, Bata vivía solo. Cazaba, y se construyó una casa.",
+          "en": "In the Valley of the Pine, Bata lived alone. He hunted, and built himself a house."
+        },
+        {
+          "es": "Un día pasaron los dioses, y sintieron pena por él.",
+          "en": "One day, the gods passed by, and they felt sorry for him."
+        },
+        {
+          "es": "Ra le pidió a Khnum, el dios alfarero que da forma a las personas, que le hiciera una esposa a Bata.",
+          "en": "Ra asked Khnum, the potter god who shapes people, to make Bata a wife."
+        },
+        {
+          "es": "Era más hermosa que cualquier mujer del país.",
+          "en": "She was more beautiful than any woman in the land."
+        },
+        {
+          "es": "Bata la amó y le contó su secreto: «Mi corazón está en la flor del pino.»",
+          "en": "Bata loved her, and told her his secret: \"My heart is on the flower of the pine.\""
+        },
+        {
+          "es": "«No te acerques al mar», le advirtió. «Podría llevarte.»",
+          "en": "\"Do not go near the sea,\" he warned. \"It could carry you away.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 1850,
+          "s": 1.6
+        },
+        {
+          "tipo": "casa",
+          "x": 400,
+          "s": 0.9,
+          "en": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "bata",
+          "como": "egipcio",
+          "x": 650,
+          "y": 758,
+          "props": {
+            "objeto": "arco"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 750,
+              "dur": 0.5
+            },
+            {
+              "en": 1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 4.4,
+              "hace": "senala"
+            },
+            {
+              "en": 5,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "como": "ra",
+          "x": 1300,
+          "y": 758,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 3.6,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "khnum",
+          "como": "khnum",
+          "x": 1550,
+          "y": 758,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.7,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "esposa",
+          "como": "egipcia",
+          "x": 1050,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "ropaColor": "#E3B23C"
+          },
+          "rotulo": "BATA'S WIFE",
+          "pasos": [
+            {
+              "en": 2.7,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 5.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.6,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 500,
+          "dur": 1,
+          "intensidad": 0.6
+        },
+        {
+          "en": 4.4,
+          "tipo": "luz",
+          "x": 1850,
+          "y": 330,
+          "dur": 0.8,
+          "intensidad": 0.5
+        }
+      ]
+    },
+    {
+      "id": "mar",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, ella paseó junto al mar. El mar se levantó y la persiguió.",
+          "en": "One day, she walked by the sea. The sea rose up and chased her."
+        },
+        {
+          "es": "Ella escapó, pero el pino atrapó un mechón de su pelo, y el mar lo llevó hasta Egipto.",
+          "en": "She escaped, but the pine caught a lock of her hair, and the sea carried it to Egypt."
+        },
+        {
+          "es": "Allí lo encontraron los lavanderos del faraón. Olía tan dulce que la ropa del rey olía igual.",
+          "en": "There, the pharaoh's washermen found it. It smelled so sweet that the king's clothes smelled of it."
+        },
+        {
+          "es": "El faraón mandó soldados, con joyas hermosas para ella. La esposa de Bata se fue con ellos.",
+          "en": "The pharaoh sent soldiers, with beautiful jewels for her. Bata's wife left with them."
+        },
+        {
+          "es": "Ella le temía a Bata. Así que le dijo al faraón que cortara el pino.",
+          "en": "She was afraid of Bata. So she told the pharaoh to cut down the pine."
+        },
+        {
+          "es": "La flor cayó, y con ella el corazón de Bata. En ese instante, Bata cayó muerto.",
+          "en": "The flower fell, and Bata's heart with it. At that moment, Bata fell dead."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 330,
+          "s": 1.5,
+          "hasta": 5
+        }
+      ],
+      "actores": [
+        {
+          "id": "esposa",
+          "como": "egipcia",
+          "x": 650,
+          "y": 758,
+          "props": {
+            "ropaColor": "#E3B23C"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.6
+            },
+            {
+              "en": 0.7,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 480,
+              "dur": 0.4
+            },
+            {
+              "en": 3.3,
+              "hace": "camina",
+              "a": 1080,
+              "dur": 0.5
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "lavandero",
+          "como": "egipcio",
+          "x": 1450,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.6,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "faraon",
+          "como": "faraon",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "THE PHARAOH",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.8,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 4.3,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "soldado",
+          "como": "egipcio",
+          "x": 1250,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "objeto": "hacha"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.3,
+              "hace": "camina",
+              "a": 480,
+              "dur": 0.4
+            },
+            {
+              "en": 4.75,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "bata",
+          "como": "egipcio",
+          "x": 160,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4.8,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.3,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "olas-suben",
+          "dur": 0.8,
+          "intensidad": 0.35
+        },
+        {
+          "en": 1.2,
+          "tipo": "chispas",
+          "x": 330,
+          "y": 350,
+          "dur": 0.8
+        },
+        {
+          "en": 1.3,
+          "tipo": "olas-bajan",
+          "dur": 0.6
+        },
+        {
+          "en": 2.3,
+          "tipo": "chispas",
+          "x": 1450,
+          "y": 600,
+          "dur": 1
+        },
+        {
+          "en": 4.8,
+          "tipo": "polvo",
+          "x": 330,
+          "y": 780,
+          "dur": 0.6
+        },
+        {
+          "en": 5,
+          "tipo": "temblor",
+          "dur": 0.5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 5.3,
+          "tipo": "oscurecer",
+          "dur": 0.7,
+          "intensidad": 0.45
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "UN MECHÓN DE PELO",
+            "en": "A LOCK OF HAIR"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "EGIPTO",
+            "en": "EGYPT"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "corazon",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Lejos de allí, a Anubis le dieron una copa de cerveza. Hizo espuma, y lo supo.",
+          "en": "Far away, Anubis was given a cup of beer. It foamed over, and he knew."
+        },
+        {
+          "es": "Tomó su bastón y fue al Valle del Pino. Bata yacía muerto.",
+          "en": "He took his staff and went to the Valley of the Pine. Bata lay dead."
+        },
+        {
+          "es": "Buscó el corazón tres años enteros. Al cuarto año, lo encontró, pequeño como una semilla.",
+          "en": "He searched for the heart for three whole years. In the fourth, he found it, small as a seed."
+        },
+        {
+          "es": "Lo puso en un cuenco de agua fresca. Durante la noche, el corazón bebió el agua.",
+          "en": "He put it in a bowl of cool water. In the night, the heart drank the water."
+        },
+        {
+          "es": "El cuerpo de Bata tembló. Abrió los ojos y miró a su hermano.",
+          "en": "Bata's body trembled. He opened his eyes, and looked at his brother."
+        },
+        {
+          "es": "Anubis le dio a beber el agua. Bata volvió a vivir, y los hermanos se abrazaron.",
+          "en": "Anubis gave him the water to drink. Bata lived again, and the brothers hugged."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 1550,
+          "s": 0.9,
+          "capa": "medio"
+        },
+        {
+          "tipo": "loto",
+          "x": 1120,
+          "s": 0.5,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "anubis",
+          "como": "egipcio",
+          "x": 400,
+          "y": 758,
+          "props": {
+            "objeto": "copa"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.5,
+              "hace": "suelta"
+            },
+            {
+              "en": 1,
+              "hace": "toma",
+              "objeto": "cayado"
+            },
+            {
+              "en": 1.1,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.7
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 650,
+              "dur": 0.4
+            },
+            {
+              "en": 2.4,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.4
+            },
+            {
+              "en": 2.9,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.5,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 5,
+              "hace": "levantarse"
+            },
+            {
+              "en": 5.3,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "bata",
+          "como": "egipcio",
+          "x": 1250,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 4,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 4.4,
+              "hace": "levantarse"
+            },
+            {
+              "en": 5.3,
+              "hace": "abraza"
+            },
+            {
+              "en": 5.4,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "chispas",
+          "x": 400,
+          "y": 520,
+          "dur": 0.8
+        },
+        {
+          "en": 2.8,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 650,
+          "dur": 0.8,
+          "intensidad": 0.5
+        },
+        {
+          "en": 3.3,
+          "tipo": "oscurecer",
+          "dur": 0.8,
+          "intensidad": 0.4
+        },
+        {
+          "en": 3.3,
+          "tipo": "estrellas",
+          "dur": 0.8
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 600,
+          "dur": 1,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "3 AÑOS",
+            "en": "3 YEARS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "toro",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Bata dijo: «Me convertiré en un gran toro. Llévame ante el faraón.»",
+          "en": "Bata said: \"I will become a great bull. Take me to the pharaoh.\""
+        },
+        {
+          "es": "En el palacio, el toro le susurró a su esposa: «Mira, sigo vivo.»",
+          "en": "At the palace, the bull whispered to his wife: \"Look, I am still alive.\""
+        },
+        {
+          "es": "Ella tuvo miedo. Le pidió al faraón que sacrificara al toro.",
+          "en": "She was afraid. She asked the pharaoh to sacrifice the bull."
+        },
+        {
+          "es": "Dos gotas de su sangre cayeron junto a la puerta del palacio. Al amanecer, allí crecieron dos árboles sagrados de persea.",
+          "en": "Two drops of its blood fell by the palace door. By morning, two sacred persea trees grew there."
+        },
+        {
+          "es": "Otra vez Bata le habló, desde los árboles. Y otra vez ella los hizo cortar.",
+          "en": "Again Bata spoke to her, from the trees. And again she had them cut down."
+        },
+        {
+          "es": "Una astilla diminuta le entró en la boca. Tiempo después, tuvo un niño. Era Bata.",
+          "en": "A tiny splinter flew into her mouth. Some time later, she had a baby boy. It was Bata."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1700,
+          "s": 1
+        },
+        {
+          "tipo": "cipres",
+          "x": 950,
+          "s": 1.2,
+          "en": 3.3,
+          "hasta": 4.8
+        },
+        {
+          "tipo": "cipres",
+          "x": 1120,
+          "s": 1.3,
+          "en": 3.4,
+          "hasta": 4.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "bata",
+          "como": "egipcio",
+          "x": 600,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 0.6,
+              "hace": "transforma",
+              "en_que": "toro"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 850,
+              "dur": 0.4
+            },
+            {
+              "en": 3,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "como": "egipcio",
+          "x": 300,
+          "y": 758,
+          "props": {
+            "objeto": "cayado"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "asiente"
+            },
+            {
+              "en": 0.9,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "esposa",
+          "como": "egipcia",
+          "x": 1250,
+          "y": 758,
+          "mira": "izq",
+          "props": {
+            "ropaColor": "#E3B23C"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "gira"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.2,
+              "hace": "mira",
+              "a": 1000
+            },
+            {
+              "en": 4.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.6,
+              "hace": "senala"
+            },
+            {
+              "en": 5.1,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "faraon",
+          "como": "faraon",
+          "x": 1700,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 2.7,
+              "hace": "asiente"
+            },
+            {
+              "en": 4.7,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "egipcio",
+          "x": 1460,
+          "y": 758,
+          "props": {
+            "cuerpo": "nino",
+            "trenza": true
+          },
+          "rotulo": "BATA",
+          "pasos": [
+            {
+              "en": 5.5,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "destello",
+          "dur": 0.3
+        },
+        {
+          "en": 3.2,
+          "tipo": "oscurecer",
+          "dur": 0.4,
+          "intensidad": 0.3
+        },
+        {
+          "en": 3.4,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 450,
+          "dur": 0.8,
+          "intensidad": 0.5
+        },
+        {
+          "en": 4.1,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 450,
+          "dur": 0.6,
+          "intensidad": 0.5
+        },
+        {
+          "en": 4.7,
+          "tipo": "polvo",
+          "x": 1050,
+          "y": 780,
+          "dur": 0.6
+        },
+        {
+          "en": 5.1,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 450,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "ÁRBOLES DE PERSEA",
+            "en": "PERSEA TREES"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El faraón amó al niño y lo hizo su heredero. Cuando el viejo rey murió, Bata se convirtió en rey.",
+          "en": "The pharaoh loved the boy, and made him his heir. When the old king died, Bata became king."
+        },
+        {
+          "es": "Llamó a su hermano Anubis y lo nombró príncipe heredero, el próximo rey después de él.",
+          "en": "He called his brother Anubis, and made him crown prince, the next king after him."
+        },
+        {
+          "es": "Bata gobernó Egipto treinta años. Después de él, Anubis fue rey.",
+          "en": "Bata ruled Egypt for thirty years. After him, Anubis became king."
+        },
+        {
+          "es": "Bata fue hombre, toro, dos árboles y rey. ¿Qué cambio te sorprendió más? Cuéntanos en los comentarios.",
+          "en": "Bata was a man, a bull, two trees, and a king. Which change surprised you most? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez: Setne y el libro de Thoth. Un príncipe abre una tumba para llevarse un libro de magia.",
+          "en": "Next time: Setne and the Book of Thoth. A prince opens a tomb to take a book of magic."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1400,
+          "s": 1.1
+        },
+        {
+          "tipo": "cipres",
+          "x": 250,
+          "s": 1.1,
+          "capa": "medio",
+          "en": 3,
+          "hasta": 4
+        },
+        {
+          "tipo": "tumba",
+          "x": 350,
+          "s": 0.9,
+          "en": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "viejo",
+          "como": "faraon",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.6,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "bata",
+          "como": "egipcio",
+          "x": 800,
+          "y": 758,
+          "escala": 0.55,
+          "props": {
+            "trenza": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "crece",
+              "escala": 1,
+              "dur": 0.5
+            },
+            {
+              "en": 0.7,
+              "hace": "transforma",
+              "en_que": "faraon"
+            },
+            {
+              "en": 0.8,
+              "hace": "camina",
+              "a": 1400,
+              "dur": 0.2
+            },
+            {
+              "en": 1,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.4,
+              "hace": "senala"
+            },
+            {
+              "en": 2.5,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "como": "egipcio",
+          "x": 950,
+          "y": 758,
+          "rotulo": "ANUBIS",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 950
+            },
+            {
+              "en": 1.5,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.6,
+              "hace": "transforma",
+              "en_que": "faraon"
+            },
+            {
+              "en": 2.7,
+              "hace": "camina",
+              "a": 1400,
+              "dur": 0.25
+            },
+            {
+              "en": 3,
+              "hace": "sienta"
+            }
+          ]
+        },
+        {
+          "id": "toro",
+          "como": "toro",
+          "x": 550,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.9,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "setne",
+          "como": "sacerdote_egipcio",
+          "x": 650,
+          "y": 758,
+          "props": {
+            "trenza": true
+          },
+          "rotulo": "SETNE",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "luz",
+          "x": 1400,
+          "y": 450,
+          "dur": 0.6,
+          "intensidad": 0.5
+        },
+        {
+          "en": 1.5,
+          "tipo": "chispas",
+          "x": 950,
+          "y": 500,
+          "dur": 0.8
+        },
+        {
+          "en": 2.6,
+          "tipo": "luz",
+          "x": 1400,
+          "y": 450,
+          "dur": 0.6,
+          "intensidad": 0.5
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "30 AÑOS",
+            "en": "30 YEARS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La vaca que le salvó la vida",
+        "en": "The cow that saved his life"
+      },
+      "escena": "lanza",
+      "desde": 3,
+      "hasta": 5,
+      "foco": 700
+    },
+    {
+      "gancho": {
+        "es": "Un río de cocodrilos entre dos hermanos",
+        "en": "A river of crocodiles between two brothers"
+      },
+      "escena": "rio",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Buscó el corazón de su hermano durante tres años",
+        "en": "He searched three years for his brother's heart"
+      },
+      "escena": "corazon",
+      "desde": 2,
+      "hasta": 5,
+      "foco": 950
+    }
+  ]
+}

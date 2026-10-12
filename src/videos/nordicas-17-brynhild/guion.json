@@ -1,0 +1,2315 @@
+{
+  "id": "nordicas-17-brynhild",
+  "serie": "nordicas",
+  "numero": "17",
+  "titulo": {
+    "es": "Brynhild, la valquiria dormida",
+    "en": "Brynhild, the Sleeping Valkyrie"
+  },
+  "tituloGriego": "BRYNHILD, THE SLEEPING VALKYRIE",
+  "escenas": [
+    {
+      "id": "fuego",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada, Sigurd mató al dragón Fáfnir y se llevó su oro maldito. Después los pájaros le hablaron de una doncella dormida.",
+          "en": "Last time, Sigurd killed the dragon Fafnir and took his cursed gold. Then the birds told him about a sleeping maiden."
+        },
+        {
+          "es": "Sigurd cabalgó en Grani hasta una montaña llamada Hindarfjall.",
+          "en": "Sigurd rode on Grani to a mountain called Hindarfjall."
+        },
+        {
+          "es": "En la cima vio una gran luz, como si un fuego ardiera hasta el cielo.",
+          "en": "On the top he saw a great light, as if a fire was burning up to the sky."
+        },
+        {
+          "es": "Al acercarse, encontró un muro hecho de escudos. Adentro, alguien dormía con toda la armadura puesta.",
+          "en": "When he came closer, he found a wall made of shields. Inside, someone lay asleep in full armor."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 300,
+          "s": 0.9,
+          "capa": "medio",
+          "hasta": 1
+        },
+        {
+          "tipo": "monte_nevado",
+          "x": 1700,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "muralla",
+          "x": 1550,
+          "capa": "medio",
+          "en": 3,
+          "props": {
+            "ancho": 520,
+            "alto": 120
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "grani",
+          "como": "caballo",
+          "x": -500,
+          "rotulo": "GRANI",
+          "props": {
+            "color": "#9AA5AE"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 350,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": 650,
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": "espada",
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.6
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "brynhild",
+          "como": "valquiria",
+          "x": 1500,
+          "rotulo": "",
+          "props": {
+            "pelo": "#E9C46A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.45,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 300,
+          "y": 600,
+          "dur": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "fuego",
+          "x": 1550,
+          "y": 600,
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1550,
+          "y": 400,
+          "dur": 2
+        },
+        {
+          "en": 3.5,
+          "tipo": "niebla",
+          "dur": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "HINDARFJALL",
+            "en": "HINDARFJALL"
+          },
+          "x": 1300,
+          "y": 230,
+          "hasta": 2.5
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "EL MURO DE ESCUDOS",
+            "en": "THE WALL OF SHIELDS"
+          },
+          "x": 1350,
+          "y": 300
+        }
+      ]
+    },
+    {
+      "id": "despertar",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1.02,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sigurd le quitó el yelmo a quien dormía. Era una mujer.",
+          "en": "Sigurd took off the sleeper's helmet. It was a woman."
+        },
+        {
+          "es": "Su armadura estaba tan apretada que parecía haber crecido en su piel.",
+          "en": "Her armor was so tight, it seemed to have grown into her skin."
+        },
+        {
+          "es": "Con Gram, Sigurd cortó la armadura con cuidado, por delante y a lo largo de las dos mangas.",
+          "en": "With Gram, Sigurd carefully cut the armor open, down the front and along both sleeves."
+        },
+        {
+          "es": "La mujer abrió los ojos. ¿Quién cortó mi armadura?, preguntó. ¿Quién me despertó?",
+          "en": "The woman opened her eyes. Who has cut my armor? she asked. Who woke me from my sleep?"
+        },
+        {
+          "es": "Después saludó al día, a la noche, a los dioses y a la tierra verde.",
+          "en": "Then she greeted the day, the night, the gods, and the green earth."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 1250,
+          "capa": "fondo",
+          "props": {
+            "ancho": 900,
+            "alto": 120
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": 600,
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": "espada",
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.5,
+              "hace": "mira",
+              "a": 1100
+            },
+            {
+              "en": 2.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "brynhild",
+          "como": "valquiria",
+          "x": 1100,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "pelo": "#E9C46A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.5,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 650,
+          "dur": 0.6
+        },
+        {
+          "en": 2.3,
+          "tipo": "chispas",
+          "x": 1050,
+          "y": 700
+        },
+        {
+          "en": 3,
+          "tipo": "destello"
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4.1,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 350,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "¡SALVE, DÍA!",
+            "en": "HAIL, DAY!"
+          },
+          "x": 1100,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "espina",
+      "fondo": "batalla",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Se llamaba Brynhild. Era una valquiria, una de las doncellas guerreras de Odín.",
+          "en": "Her name was Brynhild. She was a valkyrie, one of Odin's warrior maidens."
+        },
+        {
+          "es": "Algunos poemas antiguos la llaman Sigrdrífa, la que trae la victoria.",
+          "en": "Some old poems call her Sigrdrifa, the one who brings victory."
+        },
+        {
+          "es": "Odín le había prometido la victoria a un rey viejo. Pero Brynhild se la dio a un rey joven.",
+          "en": "Odin had promised victory to an old king. But Brynhild gave the victory to a young king instead."
+        },
+        {
+          "es": "Odín se enfureció. La pinchó con una espina del sueño, y ella cayó en un sueño profundo.",
+          "en": "Odin was furious. He pricked her with a sleep thorn, and she fell into a deep sleep."
+        },
+        {
+          "es": "Nunca más ganarás una batalla, dijo Odín. Te casarás, como cualquier otra mujer.",
+          "en": "You will never win another battle, said Odin. You will marry, like any other woman."
+        },
+        {
+          "es": "Pero Brynhild hizo un juramento: solo se casaría con un hombre que no conociera el miedo.",
+          "en": "But Brynhild swore an oath: she would only marry a man who knew no fear."
+        }
+      ],
+      "actores": [
+        {
+          "id": "brynhild",
+          "como": "valquiria",
+          "x": 450,
+          "rotulo": "BRYNHILD",
+          "props": {
+            "pelo": "#E9C46A"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            },
+            {
+              "en": 3.5,
+              "hace": "cae"
+            },
+            {
+              "en": 5,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "como": "odin",
+          "x": 850,
+          "mira": "izq",
+          "rotulo": "ODIN",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4.4,
+              "hace": "senala"
+            },
+            {
+              "en": 5.5,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "viejo",
+          "como": "rey",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "canas": true,
+            "objeto": "espada"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.6,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "joven",
+          "como": "joven",
+          "x": 1650,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "tocado": "corona",
+            "objeto": "espada",
+            "escudo": true
+          },
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.8,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.6,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 2
+        },
+        {
+          "en": 3.4,
+          "tipo": "luz",
+          "x": 450,
+          "y": 600,
+          "dur": 0.6
+        },
+        {
+          "en": 5,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "SIGRDRÍFA",
+            "en": "SIGRDRIFA"
+          },
+          "x": 450,
+          "y": 260,
+          "hasta": 2
+        },
+        {
+          "en": 3.3,
+          "texto": {
+            "es": "LA ESPINA DEL SUEÑO",
+            "en": "THE SLEEP THORN"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4.5
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "SOLO UN HOMBRE SIN MIEDO",
+            "en": "ONLY A MAN WITHOUT FEAR"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "runas",
+      "fondo": "aurora",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sigurd le pidió que le enseñara sabiduría. Primero, ella le trajo un cuerno de hidromiel.",
+          "en": "Sigurd asked her to teach him wisdom. First, she brought him a horn of mead."
+        },
+        {
+          "es": "Después le enseñó runas. Runas de victoria, para tallar en una espada.",
+          "en": "Then she taught him runes. Victory runes, to carve on a sword."
+        },
+        {
+          "es": "Runas del mar, para proteger los barcos. Runas de sanación, para ayudar a los heridos.",
+          "en": "Sea runes, to keep ships safe. Healing runes, to help the wounded."
+        },
+        {
+          "es": "Y runas del habla, para hablar con sabiduría cuando el pueblo se reúne.",
+          "en": "And speech runes, to speak wisely when the people meet."
+        },
+        {
+          "es": "También le dio buenos consejos: sé leal a tu familia y nunca rompas un juramento.",
+          "en": "She gave him good advice too: be loyal to your family, and never break an oath."
+        },
+        {
+          "es": "Nadie es más sabio que tú, dijo Sigurd. Juro que me casaré contigo.",
+          "en": "No one is wiser than you, said Sigurd. I swear that I will marry you."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piedra_runica",
+          "x": 1400,
+          "s": 0.7,
+          "capa": "medio",
+          "en": 1,
+          "props": {
+            "texto": "VICTORY"
+          }
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1600,
+          "s": 0.7,
+          "capa": "medio",
+          "en": 2,
+          "props": {
+            "texto": "SEA"
+          }
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1800,
+          "s": 0.7,
+          "capa": "medio",
+          "en": 2.5,
+          "props": {
+            "texto": "HEALING"
+          }
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 250,
+          "s": 0.7,
+          "capa": "medio",
+          "en": 3,
+          "props": {
+            "texto": "SPEECH"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": 600,
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": "espada",
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 0.8,
+              "hace": "toma",
+              "objeto": "cuerno"
+            },
+            {
+              "en": 0.9,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "suelta"
+            },
+            {
+              "en": 2.2,
+              "hace": "asiente"
+            },
+            {
+              "en": 4.5,
+              "hace": "asiente"
+            },
+            {
+              "en": 5,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 5.5,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "brynhild",
+          "como": "valquiria",
+          "x": 1100,
+          "mira": "izq",
+          "rotulo": "BRYNHILD",
+          "props": {
+            "pelo": "#E9C46A",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "toma",
+              "objeto": "cuerno"
+            },
+            {
+              "en": 0.6,
+              "hace": "ofrece"
+            },
+            {
+              "en": 0.8,
+              "hace": "suelta"
+            },
+            {
+              "en": 1.1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1400,
+          "y": 550,
+          "dur": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1600,
+          "y": 550,
+          "dur": 0.5
+        },
+        {
+          "en": 2.5,
+          "tipo": "luz",
+          "x": 1800,
+          "y": 550,
+          "dur": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 250,
+          "y": 550,
+          "dur": 0.5
+        },
+        {
+          "en": 5.5,
+          "tipo": "estrellas",
+          "dur": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LAS RUNAS DE BRYNHILD",
+            "en": "BRYNHILD'S RUNES"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "NUNCA ROMPAS UN JURAMENTO",
+            "en": "NEVER BREAK AN OATH"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 5
+        }
+      ]
+    },
+    {
+      "id": "anillo",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1.02,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Brynhild respondió: te elegiría a ti, aunque pudiera elegir entre todos los hombres.",
+          "en": "Brynhild answered: I would choose you, even if I could choose among all men."
+        },
+        {
+          "es": "Se juraron casarse el uno con el otro, y lo decían en serio.",
+          "en": "They swore to marry each other, and they meant it."
+        },
+        {
+          "es": "Sigurd le dio un anillo como promesa. Era Andvaranaut, el anillo maldito del oro de Fáfnir.",
+          "en": "Sigurd gave her a ring as a promise. It was Andvaranaut, the cursed ring from Fafnir's gold."
+        },
+        {
+          "es": "Después Sigurd partió a recorrer el mundo. Prometió volver a buscarla.",
+          "en": "Then Sigurd rode away to see the world. He promised to come back for her."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 1500,
+          "capa": "fondo",
+          "props": {
+            "ancho": 700,
+            "alto": 120
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "grani",
+          "como": "caballo",
+          "x": 250,
+          "rotulo": "",
+          "props": {
+            "color": "#9AA5AE"
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": -700,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": 700,
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": "espada",
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "abraza"
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": -400,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "brynhild",
+          "como": "valquiria",
+          "x": 1050,
+          "mira": "izq",
+          "rotulo": "BRYNHILD",
+          "props": {
+            "pelo": "#E9C46A",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "abraza"
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.4,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 880,
+          "y": 450,
+          "dur": 0.8
+        },
+        {
+          "en": 2.3,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.4,
+          "tipo": "chispas",
+          "x": 1050,
+          "y": 450
+        },
+        {
+          "en": 2.8,
+          "tipo": "oscurecer",
+          "dur": 0.6
+        },
+        {
+          "en": 3.2,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.3,
+          "texto": {
+            "es": "ANDVARANAUT",
+            "en": "ANDVARANAUT"
+          },
+          "x": 1050,
+          "y": 260,
+          "hasta": 3.2
+        }
+      ]
+    },
+    {
+      "id": "olvido",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sigurd llegó a la sala del rey Giuki. El rey tenía dos hijos valientes y una hija llamada Gudrún.",
+          "en": "Sigurd came to the hall of King Gjuki. The king had two brave sons and a daughter named Gudrun."
+        },
+        {
+          "es": "La reina, Grimhild, sabía magia oscura. Quería a Sigurd y su oro para su propia familia.",
+          "en": "The queen, Grimhild, knew dark magic. She wanted Sigurd and his gold for her own family."
+        },
+        {
+          "es": "Le dio a Sigurd un cuerno para beber. Era una poción del olvido.",
+          "en": "She gave Sigurd a horn to drink. It was a potion of forgetting."
+        },
+        {
+          "es": "En cuanto la bebió, Sigurd se olvidó por completo de Brynhild.",
+          "en": "As soon as he drank it, Sigurd forgot Brynhild completely."
+        },
+        {
+          "es": "Se casó con Gudrún. Y juró ser un hermano para Gunnar, el hermano de ella.",
+          "en": "He married Gudrun. And he swore to be a brother to her brother Gunnar."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1800,
+          "s": 1,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": -250,
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": "espada",
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 500,
+              "dur": 0.8
+            },
+            {
+              "en": 2.4,
+              "hace": "toma",
+              "objeto": "cuerno"
+            },
+            {
+              "en": 2.7,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.2,
+              "hace": "suelta"
+            },
+            {
+              "en": 3.3,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.2,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.4
+            },
+            {
+              "en": 4.6,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "grimhild",
+          "como": "reina",
+          "x": 900,
+          "mira": "izq",
+          "rotulo": "GRIMHILD",
+          "props": {
+            "objeto": null,
+            "capa": "#3A2A4A"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.8,
+              "hace": "toma",
+              "objeto": "cuerno"
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.4,
+              "hace": "suelta"
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "gudrun",
+          "como": "mujer",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "GUDRUN",
+          "props": {
+            "tocado": "diadema",
+            "ropa": "larga",
+            "pelo": "#6B3A22"
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.2,
+              "hace": "camina",
+              "a": 950,
+              "dur": 0.4
+            },
+            {
+              "en": 4.6,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "gunnar",
+          "como": "vikingo",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "GUNNAR",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.7,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "gjuki",
+          "como": "rey",
+          "x": 1800,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "GJUKI",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "humo",
+          "x": 900,
+          "y": 550,
+          "dur": 1
+        },
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 700,
+          "y": 500,
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 3.3,
+          "tipo": "niebla",
+          "dur": 0.8
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "LA POCIÓN DEL OLVIDO",
+            "en": "THE POTION OF FORGETTING"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "llamas",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ahora Gunnar quería casarse con Brynhild. Pero ella vivía en una sala rodeada por un muro de fuego.",
+          "en": "Now Gunnar wanted to marry Brynhild. But she lived in a hall surrounded by a wall of fire."
+        },
+        {
+          "es": "Solo se casaría con el hombre que cruzara esas llamas a caballo.",
+          "en": "She would only marry the man who rode through those flames."
+        },
+        {
+          "es": "El caballo de Gunnar no quiso acercarse al fuego. Ni siquiera en Grani pudo pasar.",
+          "en": "Gunnar's horse would not go near the fire. Even on Grani, Gunnar could not pass."
+        },
+        {
+          "es": "Así que la magia de Grimhild les cambió la forma. Ahora Sigurd se veía igual a Gunnar.",
+          "en": "So Grimhild's magic changed their shapes. Sigurd now looked exactly like Gunnar."
+        },
+        {
+          "es": "Sigurd entró en las llamas. La tierra tembló, y el fuego rugió hasta el cielo.",
+          "en": "Sigurd rode into the flames. The earth shook, and the fire roared up to the sky."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 1800,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "fogata",
+          "x": 1350,
+          "s": 1.3,
+          "capa": "medio"
+        },
+        {
+          "tipo": "fogata",
+          "x": 1550,
+          "s": 1.1,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": 250,
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": "espada",
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "transforma",
+              "dur": 0.5,
+              "en_que": "vikingo"
+            },
+            {
+              "en": 4,
+              "hace": "corre",
+              "a": 1500,
+              "dur": 0.6
+            },
+            {
+              "en": 4.6,
+              "hace": "brilla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "gunnar",
+          "como": "vikingo",
+          "x": 550,
+          "rotulo": "GUNNAR",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 950,
+              "dur": 0.4
+            },
+            {
+              "en": 2.5,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 2.9,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.3
+            }
+          ]
+        },
+        {
+          "id": "grani",
+          "como": "caballo",
+          "x": -400,
+          "rotulo": "GRANI",
+          "props": {
+            "color": "#9AA5AE"
+          },
+          "pasos": [
+            {
+              "en": 1.8,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.5
+            },
+            {
+              "en": 2.4,
+              "hace": "gira"
+            },
+            {
+              "en": 4,
+              "hace": "corre",
+              "a": 1750,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "grimhild",
+          "como": "reina",
+          "x": 450,
+          "capa": "medio",
+          "rotulo": "",
+          "props": {
+            "objeto": null,
+            "capa": "#3A2A4A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.9,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 1450,
+          "y": 650,
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "fuego",
+          "x": 1450,
+          "y": 650,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "humo",
+          "x": 300,
+          "y": 600,
+          "dur": 0.6
+        },
+        {
+          "en": 4,
+          "tipo": "fuego",
+          "x": 1450,
+          "y": 600,
+          "dur": 1
+        },
+        {
+          "en": 4.3,
+          "tipo": "temblor",
+          "dur": 0.7
+        },
+        {
+          "en": 4.4,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 400,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.5,
+          "texto": {
+            "es": "EL MURO DE FUEGO",
+            "en": "THE WALL OF FIRE"
+          },
+          "x": 1300,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "SIGURD CON LA FORMA DE GUNNAR",
+            "en": "SIGURD IN GUNNAR'S SHAPE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4.5
+        }
+      ]
+    },
+    {
+      "id": "noches",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Brynhild tenía que cumplir su juramento. Aceptó casarse con el hombre que había cruzado el fuego.",
+          "en": "Brynhild had to keep her oath. She agreed to marry the man who had crossed the fire."
+        },
+        {
+          "es": "Durante tres noches compartieron la cama. Pero Sigurd puso su espada Gram entre los dos.",
+          "en": "For three nights they shared a bed. But Sigurd laid his sword Gram between them."
+        },
+        {
+          "es": "Antes de irse, recuperó el anillo Andvaranaut. A cambio, le dio otro anillo.",
+          "en": "Before he left, he took back the ring Andvaranaut. He gave her another ring instead."
+        },
+        {
+          "es": "Después volvió, y los dos hombres recuperaron su propia forma.",
+          "en": "Then he rode back, and the two men took their own shapes again."
+        },
+        {
+          "es": "Más tarde, en el banquete de bodas, Sigurd recuperó la memoria. Pero era demasiado tarde, y no dijo nada.",
+          "en": "Later, at the wedding feast, Sigurd's memory came back. But it was too late, and he said nothing."
+        }
+      ],
+      "actores": [
+        {
+          "id": "falso",
+          "como": "vikingo",
+          "x": 650,
+          "rotulo": "SIGURD",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.2,
+              "hace": "baja"
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 400,
+              "dur": 0.4
+            },
+            {
+              "en": 3.4,
+              "hace": "transforma",
+              "dur": 0.4,
+              "en_que": "joven"
+            },
+            {
+              "en": 4.3,
+              "hace": "entristece"
+            },
+            {
+              "en": 4.6,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "brynhild",
+          "como": "valquiria",
+          "x": 1200,
+          "mira": "izq",
+          "rotulo": "BRYNHILD",
+          "props": {
+            "pelo": "#E9C46A",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 0.6,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.3,
+              "hace": "sienta"
+            },
+            {
+              "en": 2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "gunnar",
+          "como": "vikingo",
+          "x": 50,
+          "rotulo": "GUNNAR",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 150,
+              "dur": 0.4
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 950,
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 1.2,
+          "tipo": "luz",
+          "x": 900,
+          "y": 650,
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 2.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.4,
+          "tipo": "humo",
+          "x": 400,
+          "y": 600,
+          "dur": 0.5
+        },
+        {
+          "en": 4.1,
+          "tipo": "chispas",
+          "x": 400,
+          "y": 450
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "GRAM ENTRE LOS DOS",
+            "en": "GRAM BETWEEN THEM"
+          },
+          "x": 900,
+          "y": 300,
+          "hasta": 2.2
+        },
+        {
+          "en": 4.2,
+          "texto": {
+            "es": "LA MEMORIA VUELVE",
+            "en": "HIS MEMORY RETURNS"
+          },
+          "x": 400,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "rio",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, las dos reinas fueron al río a lavarse el pelo.",
+          "en": "One day, the two queens went to the river to wash their hair."
+        },
+        {
+          "es": "Brynhild se adentró más río arriba. Mi esposo es más valiente que el tuyo, dijo. Yo debo lavarme primero.",
+          "en": "Brynhild walked further upstream. My husband is braver than yours, she said. I should wash first."
+        },
+        {
+          "es": "Gudrún se rio. No fue Gunnar quien cruzó el fuego, dijo. Fue Sigurd.",
+          "en": "Gudrun laughed. It was not Gunnar who rode through the fire, she said. It was Sigurd."
+        },
+        {
+          "es": "Levantó la mano. En ella brillaba Andvaranaut, el anillo que Sigurd le había quitado a Brynhild.",
+          "en": "She held up her hand. On it shone Andvaranaut, the ring Sigurd had taken back from Brynhild."
+        },
+        {
+          "es": "Brynhild se puso pálida como la muerte. Ahora sabía que la habían engañado.",
+          "en": "Brynhild turned as pale as death. Now she knew that she had been tricked."
+        },
+        {
+          "es": "¿A quién le hicieron más daño: a Brynhild, a Gudrún o a Sigurd? Dímelo en los comentarios.",
+          "en": "Who was wronged the most: Brynhild, Gudrun, or Sigurd? Tell me in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "rio",
+          "x": 1100,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pino",
+          "x": 200,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "gudrun",
+          "como": "mujer",
+          "x": -200,
+          "rotulo": "GUDRUN",
+          "props": {
+            "tocado": "diadema",
+            "ropa": "larga",
+            "pelo": "#6B3A22"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 650,
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.5,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.2,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "brynhild",
+          "como": "valquiria",
+          "x": -500,
+          "rotulo": "BRYNHILD",
+          "props": {
+            "pelo": "#E9C46A",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 950,
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1300,
+              "dur": 0.5
+            },
+            {
+              "en": 1.5,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.6,
+              "hace": "gira"
+            },
+            {
+              "en": 4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.2,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.8,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 650,
+          "y": 450,
+          "dur": 0.8
+        },
+        {
+          "en": 3.3,
+          "tipo": "chispas",
+          "x": 650,
+          "y": 450
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 4.1,
+          "tipo": "temblor",
+          "dur": 0.5,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "ANDVARANAUT",
+            "en": "ANDVARANAUT"
+          },
+          "x": 650,
+          "y": 260,
+          "hasta": 4.5
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "¿A QUIÉN LE HICIERON MÁS DAÑO?",
+            "en": "WHO WAS WRONGED THE MOST?"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "pena",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Brynhild se quedó en cama durante días y no quiso hablar con nadie.",
+          "en": "Brynhild lay in her bed for days, and would not speak to anyone."
+        },
+        {
+          "es": "Sigurd fue a verla. Le ofreció dejar a Gudrún y casarse con ella. Pero Brynhild se negó.",
+          "en": "Sigurd came to her. He offered to leave Gudrun and marry her instead. But Brynhild refused."
+        },
+        {
+          "es": "Le dijo a Gunnar: Sigurd debe morir, o te dejaré.",
+          "en": "She told Gunnar: Sigurd must die, or I will leave you."
+        },
+        {
+          "es": "Gunnar le había jurado lealtad a Sigurd. Así que envió a su hermano menor, Guttorm, que no había jurado nada.",
+          "en": "Gunnar had sworn an oath to Sigurd. So he sent his youngest brother, Guttorm, who had sworn nothing."
+        },
+        {
+          "es": "Esa noche, Guttorm atacó a Sigurd mientras dormía.",
+          "en": "That night, Guttorm struck Sigurd as he slept."
+        },
+        {
+          "es": "Sigurd despertó y lanzó su espada, y Guttorm cayó. Pero Sigurd estaba herido, y murió junto a Gudrún.",
+          "en": "Sigurd woke and threw his sword, and Guttorm fell. But Sigurd was wounded, and he died beside Gudrun."
+        }
+      ],
+      "actores": [
+        {
+          "id": "brynhild",
+          "como": "valquiria",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "BRYNHILD",
+          "props": {
+            "pelo": "#E9C46A",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.3,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.6,
+              "hace": "niega"
+            },
+            {
+              "en": 2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": 2400,
+          "mira": "izq",
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": "espada",
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1150,
+              "dur": 0.4
+            },
+            {
+              "en": 1.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.9,
+              "hace": "camina",
+              "a": 2500,
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "gunnar",
+          "como": "vikingo",
+          "x": 650,
+          "rotulo": "GUNNAR",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 3.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "guttorm",
+          "como": "joven",
+          "x": 300,
+          "rotulo": "GUTTORM",
+          "props": {
+            "objeto": "espada",
+            "pelo": "#3A2A1E"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.7,
+              "hace": "asiente"
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 2600,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "gudrun",
+          "como": "mujer",
+          "x": 1100,
+          "rotulo": "GUDRUN",
+          "props": {
+            "tocado": "diadema",
+            "ropa": "larga",
+            "pelo": "#6B3A22"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 5.6,
+              "hace": "arrodilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.3,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 4.8,
+          "tipo": "destello"
+        },
+        {
+          "en": 5.1,
+          "tipo": "destello"
+        },
+        {
+          "en": 5.3,
+          "tipo": "niebla",
+          "dur": 0.7
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.3,
+          "texto": {
+            "es": "“SIGURD DEBE MORIR”",
+            "en": "“SIGURD MUST DIE”"
+          },
+          "x": 1300,
+          "y": 260,
+          "hasta": 3.4
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.02,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Se levantó una gran hoguera funeraria para Sigurd.",
+          "en": "A great funeral fire was built for Sigurd."
+        },
+        {
+          "es": "Brynhild pidió yacer a su lado, con una espada entre los dos, como en aquellas tres noches.",
+          "en": "Brynhild asked to lie beside him, with a sword between them, as on those three nights."
+        },
+        {
+          "es": "Subió a la hoguera y acompañó a Sigurd en la muerte.",
+          "en": "She climbed onto the fire, and joined Sigurd in death."
+        },
+        {
+          "es": "El oro y el anillo pasaron ahora a Gunnar y a su hermano. La maldición todavía no había terminado.",
+          "en": "The gold and the ring now passed to Gunnar and his brother. The curse was not finished yet."
+        },
+        {
+          "es": "¿Podría Brynhild haber perdonado a Sigurd? Dímelo en los comentarios.",
+          "en": "Could Brynhild have forgiven Sigurd? Tell me in the comments."
+        },
+        {
+          "es": "En el próximo episodio: Helgi y Sigrún.",
+          "en": "Next time: Helgi and Sigrun."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 950,
+          "s": 1.6,
+          "capa": "medio"
+        },
+        {
+          "tipo": "cofre",
+          "x": 350,
+          "s": 1,
+          "capa": "medio",
+          "en": 3
+        },
+        {
+          "tipo": "cofre",
+          "x": 150,
+          "s": 0.8,
+          "capa": "medio",
+          "en": 3.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": 950,
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": "espada",
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 2.6,
+              "hace": "desaparece",
+              "con": "fuego"
+            }
+          ]
+        },
+        {
+          "id": "brynhild",
+          "como": "valquiria",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "BRYNHILD",
+          "props": {
+            "pelo": "#E9C46A"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1200,
+              "dur": 0.6
+            },
+            {
+              "en": 1.6,
+              "hace": "reza"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.4
+            },
+            {
+              "en": 2.5,
+              "hace": "desaparece",
+              "con": "fuego"
+            }
+          ]
+        },
+        {
+          "id": "gunnar",
+          "como": "vikingo",
+          "x": 600,
+          "rotulo": "GUNNAR",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.7,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "helgi",
+          "como": "joven",
+          "x": 1500,
+          "rotulo": "HELGI",
+          "props": {
+            "objeto": "espada",
+            "escudo": true,
+            "tocado": "yelmo",
+            "pelo": "#B5652A",
+            "capa": "#2E4A7A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "sigrun",
+          "como": "valquiria",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "SIGRUN",
+          "props": {
+            "pelo": "#F2D49B"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 5.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 5.4,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 950,
+          "y": 650,
+          "dur": 3
+        },
+        {
+          "en": 2.5,
+          "tipo": "luz",
+          "x": 950,
+          "y": 400,
+          "dur": 0.8
+        },
+        {
+          "en": 3.4,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 3.5,
+          "tipo": "chispas",
+          "x": 300,
+          "y": 600
+        },
+        {
+          "en": 5,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.4,
+          "texto": {
+            "es": "LA MALDICIÓN SIGUE",
+            "en": "THE CURSE GOES ON"
+          },
+          "x": 500,
+          "y": 260,
+          "hasta": 4
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "¿PODRÍA HABERLO PERDONADO?",
+            "en": "COULD SHE HAVE FORGIVEN HIM?"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 5
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "PRÓXIMO: HELGI Y SIGRÚN",
+            "en": "NEXT: HELGI AND SIGRUN"
+          },
+          "x": 960,
+          "y": 290
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Cortó su armadura y despertó a una valquiria",
+        "en": "He cut her armor and woke a valkyrie"
+      },
+      "escena": "despertar",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 850
+    },
+    {
+      "gancho": {
+        "es": "Cruzó el fuego con la cara de otro hombre",
+        "en": "He crossed the fire wearing another man's face"
+      },
+      "escena": "llamas",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "El anillo que reveló una mentira terrible",
+        "en": "The ring that revealed a terrible lie"
+      },
+      "escena": "rio",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 900
+    }
+  ],
+  "miniatura": {
+    "heroe": "valquiria",
+    "rival": {
+      "objeto": "espada",
+      "barba": false,
+      "pelo": "#E9C46A",
+      "capa": "#8A2E2A"
+    }
+  },
+  "siguiente": {
+    "es": "Helgi y Sigrún",
+    "en": "Helgi and Sigrun"
+  }
+}

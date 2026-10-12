@@ -1,0 +1,1953 @@
+{
+  "id": "griegas-14-apolo-piton",
+  "serie": "griegas",
+  "numero": "14",
+  "titulo": {
+    "es": "Apolo y la serpiente Pitón",
+    "en": "Apollo and the Python"
+  },
+  "tituloGriego": "ΠΥΘΩΝ",
+  "miniatura": {
+    "heroe": "apolo",
+    "rival": "piton"
+  },
+  "siguiente": {
+    "es": "Hermes, el bebé ladrón",
+    "en": "Hermes, the Baby Thief"
+  },
+  "escenas": [
+    {
+      "id": "crece",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 600,
+          "s": 1
+        }
+      ],
+      "frases": [
+        {
+          "es": "La vez pasada, Leto dio a luz a dos gemelos en la isla de Delos: Artemisa y Apolo.",
+          "en": "Last time, Leto gave birth to twins on the island of Delos: Artemis and Apollo."
+        },
+        {
+          "es": "Temis, la diosa de la justicia, alimentó al pequeño Apolo con néctar y ambrosía, la comida de los dioses.",
+          "en": "Themis, the goddess of justice, fed baby Apollo nectar and ambrosia, the food of the gods."
+        },
+        {
+          "es": "Al instante, el bebé creció. Un poema antiguo dice que las cintas de oro que lo envolvían se rompieron.",
+          "en": "At once, the baby grew. An old poem says the golden bands around him burst apart."
+        },
+        {
+          "es": "Se puso de pie, ya un joven dios, y dijo: «La lira y el arco serán míos».",
+          "en": "He stood up, a young god now, and said: \"The lyre and the bow will be mine.\""
+        },
+        {
+          "es": "Algunos relatos posteriores dicen que Hefesto, el herrero de los dioses, le hizo el arco y las flechas.",
+          "en": "Some later tales say that Hephaestus, the smith of the gods, made his bow and arrows."
+        }
+      ],
+      "actores": [
+        {
+          "id": "leto",
+          "como": "mujer",
+          "rotulo": "Leto",
+          "x": 400,
+          "mira": "der",
+          "props": {
+            "tocado": "velo",
+            "capa": "#6A7FB0",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "abraza"
+            },
+            {
+              "en": 2.4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "apolo_nino",
+          "como": "apolo",
+          "x": 850,
+          "escala": 0.55,
+          "mira": "der",
+          "props": {
+            "cuerpo": "nino",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.5,
+              "hace": "toma",
+              "objeto": "copa"
+            },
+            {
+              "en": 2.1,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "temis",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "apolo",
+          "x": 850,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.6,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 4.3,
+              "hace": "toma",
+              "objeto": "arco"
+            },
+            {
+              "en": 4.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "hefesto",
+          "x": 1650,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 4.2,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 550,
+          "intensidad": 0.6,
+          "dur": 0.8
+        },
+        {
+          "en": 2.1,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.1,
+          "tipo": "luz",
+          "x": 850,
+          "y": 450,
+          "dur": 1.2
+        },
+        {
+          "en": 2.2,
+          "tipo": "chispas",
+          "x": 850,
+          "y": 550,
+          "dur": 1
+        },
+        {
+          "en": 4.3,
+          "tipo": "chispas",
+          "x": 1500,
+          "y": 600,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "NÉCTAR Y AMBROSÍA",
+            "en": "NECTAR AND AMBROSIA"
+          },
+          "x": 1100,
+          "y": 200,
+          "hasta": 2
+        },
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "«LA LIRA Y EL ARCO»",
+            "en": "\"THE LYRE AND THE BOW\""
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "deseos",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 400
+      },
+      "elementos": [
+        {
+          "tipo": "monte",
+          "x": 1800,
+          "s": 1.2,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "olivo",
+          "x": 300,
+          "s": 0.9
+        }
+      ],
+      "frases": [
+        {
+          "es": "Apolo tenía dos deseos.",
+          "en": "Apollo had two wishes."
+        },
+        {
+          "es": "Primero, quería un oráculo: un lugar sagrado donde la gente pudiera preguntarle a un dios por el futuro.",
+          "en": "First, he wanted an oracle. That is a holy place where people can ask a god about the future."
+        },
+        {
+          "es": "Segundo, no había olvidado a Pitón, la serpiente gigante que persiguió a su madre.",
+          "en": "Second, he had not forgotten Python, the giant serpent that hunted his mother."
+        },
+        {
+          "es": "Así que dejó Delos y recorrió Grecia, buscando el lugar perfecto.",
+          "en": "So he left Delos and walked across Greece, looking for the perfect place."
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "x": 650,
+          "mira": "der",
+          "props": {
+            "objeto": "arco"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "sacerdotisa",
+          "x": 1250,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "reza"
+            },
+            {
+              "en": 1.9,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "piton",
+          "x": 1500,
+          "capa": "fondo",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.8,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 400,
+          "intensidad": 0.6,
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 0.9
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3.2,
+          "tipo": "polvo",
+          "x": 1000,
+          "y": 760,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "1. UN ORÁCULO",
+            "en": "1. AN ORACLE"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 1.9
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "2. PITÓN",
+            "en": "2. PYTHON"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 2.9
+        }
+      ]
+    },
+    {
+      "id": "parnaso",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 400
+      },
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1400,
+          "s": 1.4
+        },
+        {
+          "tipo": "rio",
+          "x": 1150,
+          "s": 0.8
+        }
+      ],
+      "frases": [
+        {
+          "es": "Por fin llegó al monte Parnaso, una montaña alta, con acantilados empinados y un manantial claro.",
+          "en": "At last he came to Mount Parnassus, a high mountain with steep cliffs and a clear spring."
+        },
+        {
+          "es": "El lugar se llamaba Pitó. Más tarde, la gente lo llamaría Delfos.",
+          "en": "The place was called Pytho. Later, people would call it Delphi."
+        },
+        {
+          "es": "A Apolo le gustó enseguida. Aquí construiría su templo.",
+          "en": "Apollo liked it at once. Here he would build his temple."
+        },
+        {
+          "es": "Pero el manantial tenía un guardián. Era Pitón.",
+          "en": "But the spring had a guard. It was Python."
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "x": 750,
+          "mira": "der",
+          "props": {
+            "objeto": "arco"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 750
+            },
+            {
+              "en": 0.6,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "pastor",
+          "x": 1300,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "corre",
+              "a": 300,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "piton",
+          "x": 1950,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 3.3,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 600,
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 750,
+          "y": 400,
+          "intensidad": 0.5,
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 1
+        },
+        {
+          "en": 3.1,
+          "tipo": "temblor",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "EL MONTE PARNASO",
+            "en": "MOUNT PARNASSUS"
+          },
+          "x": 1100,
+          "y": 200,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "PITÓ → DELFOS",
+            "en": "PYTHO → DELPHI"
+          },
+          "x": 1100,
+          "y": 200,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "monstruo",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Pitón era enorme. Su cuerpo daba vueltas y vueltas alrededor de la montaña.",
+          "en": "Python was enormous. Its body wrapped around the mountain again and again."
+        },
+        {
+          "es": "El poeta Ovidio dice que nació del barro tibio que quedó después del gran diluvio.",
+          "en": "The poet Ovid says it was born from the warm mud left after the great flood."
+        },
+        {
+          "es": "Sí, el mismo diluvio que una vez cubrió el mundo entero.",
+          "en": "Yes, the same flood that once covered the whole world."
+        },
+        {
+          "es": "Pitón mataba las ovejas de los pastores y a la gente que venía a beber al manantial.",
+          "en": "Python killed the shepherds' sheep, and the people who came to drink at the spring."
+        },
+        {
+          "es": "Todos alrededor de la montaña vivían con miedo.",
+          "en": "Everyone around the mountain lived in fear."
+        }
+      ],
+      "actores": [
+        {
+          "id": "piton",
+          "x": 1100,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "crece",
+              "escala": 1.4,
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1400,
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "oveja",
+          "x": 1650,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.8,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.4,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "pastor",
+          "x": 1900,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.9,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "gira"
+            },
+            {
+              "en": 3.6,
+              "hace": "corre",
+              "a": 2500,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "x": 600,
+          "capa": "medio",
+          "mira": "der",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.3,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 1,
+          "tipo": "olas-bajan",
+          "dur": 1
+        },
+        {
+          "en": 1.1,
+          "tipo": "humo",
+          "x": 900,
+          "y": 720,
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "lluvia",
+          "dur": 0.9
+        },
+        {
+          "en": 3.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "NACIDO DEL BARRO",
+            "en": "BORN FROM THE MUD"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 2.8
+        }
+      ]
+    },
+    {
+      "id": "flechas",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Apolo se paró frente a la serpiente. Era joven, y estaba solo.",
+          "en": "Apollo stood before the serpent. He was young, and he was alone."
+        },
+        {
+          "es": "Pitón se levantó y silbó. Sus ojos ardían como el fuego.",
+          "en": "Python rose up and hissed. Its eyes burned like fire."
+        },
+        {
+          "es": "Apolo tensó su arco y disparó una flecha. Y otra, y otra más.",
+          "en": "Apollo drew his bow and shot an arrow. Then another, and another."
+        },
+        {
+          "es": "Ovidio dice que disparó mil flechas, hasta casi vaciar su aljaba, la bolsa de las flechas.",
+          "en": "Ovid says he shot a thousand arrows, until his quiver, the bag for his arrows, was almost empty."
+        },
+        {
+          "es": "La gran serpiente se retorció, rugió y quedó inmóvil. Pitón había muerto.",
+          "en": "The great serpent twisted, roared, and lay still. Python was dead."
+        },
+        {
+          "es": "¿Apolo fue un héroe aquí, o la serpiente solo estaba cuidando su hogar?",
+          "en": "Was Apollo a hero here, or was the serpent only guarding its home?"
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "x": 450,
+          "mira": "der",
+          "props": {
+            "objeto": "arco"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 600,
+              "dur": 0.6
+            },
+            {
+              "en": 2.1,
+              "hace": "senala"
+            },
+            {
+              "en": 2.5,
+              "hace": "senala"
+            },
+            {
+              "en": 2.9,
+              "hace": "senala"
+            },
+            {
+              "en": 3.3,
+              "hace": "senala"
+            },
+            {
+              "en": 3.7,
+              "hace": "senala"
+            },
+            {
+              "en": 4.4,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "piton",
+          "x": 1350,
+          "mira": "izq",
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "crece",
+              "escala": 1.4,
+              "dur": 0.5
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.2,
+              "hace": "tiembla",
+              "dur": 2
+            },
+            {
+              "en": 4.2,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 1.4,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 560,
+          "dur": 0.6
+        },
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 600,
+          "intensidad": 0.6,
+          "dur": 0.3
+        },
+        {
+          "en": 2.6,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 640,
+          "intensidad": 0.6,
+          "dur": 0.3
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 620,
+          "intensidad": 0.6,
+          "dur": 0.3
+        },
+        {
+          "en": 3.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.8,
+          "tipo": "destello"
+        },
+        {
+          "en": 4.2,
+          "tipo": "polvo",
+          "x": 1300,
+          "y": 760,
+          "dur": 1
+        },
+        {
+          "en": 4.3,
+          "tipo": "temblor",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "MIL FLECHAS",
+            "en": "A THOUSAND ARROWS"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 4.2
+        }
+      ]
+    },
+    {
+      "id": "pito",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 250
+      },
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 1300,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "frases": [
+        {
+          "es": "Apolo se paró junto al cuerpo y dijo: «Ahora púdrete aquí, sobre la tierra que alimenta a los hombres».",
+          "en": "Apollo stood over the body and said: \"Now rot here, on the earth that feeds mankind.\""
+        },
+        {
+          "es": "Y el sol ardiente cayó sobre la serpiente hasta que se pudrió.",
+          "en": "And the hot sun beat down on the serpent until it rotted away."
+        },
+        {
+          "es": "En griego antiguo, «pudrirse» suena como «Pitó». El himno dice que por eso el lugar recibió ese nombre.",
+          "en": "In old Greek, \"to rot\" sounds like \"Pytho\". The hymn says that is how the place got its name."
+        },
+        {
+          "es": "Y Apolo también recibió un nombre nuevo: Apolo Pitio.",
+          "en": "And Apollo got a new name too: Pythian Apollo."
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "x": 650,
+          "mira": "der",
+          "props": {
+            "objeto": "arco"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.2,
+              "hace": "brilla",
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "piton",
+          "x": 1450,
+          "mira": "izq",
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "cae"
+            },
+            {
+              "en": 1.6,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "pastor",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 300,
+          "dur": 1
+        },
+        {
+          "en": 1.2,
+          "tipo": "humo",
+          "x": 1500,
+          "y": 700,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 650,
+          "y": 400,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "POR ESO SE LLAMÓ PITÓ",
+            "en": "THAT'S WHY IT WAS CALLED PYTHO"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3,
+          "estilo": "porque"
+        },
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "APOLO PITIO",
+            "en": "PYTHIAN APOLLO"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "oraculo",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1250,
+          "s": 0.9
+        }
+      ],
+      "frases": [
+        {
+          "es": "En ese lugar, Apolo construyó su templo. Se convirtió en el oráculo más famoso del mundo: Delfos.",
+          "en": "On that spot, Apollo built his temple. It became the most famous oracle in the world: Delphi."
+        },
+        {
+          "es": "Una sacerdotisa llamada la Pitia se sentaba en un asiento alto de tres patas y daba las respuestas del dios.",
+          "en": "A priestess called the Pythia sat on a tall three-legged seat and gave the god's answers."
+        },
+        {
+          "es": "Reyes y campesinos venían de lejos a preguntarle por la guerra, el matrimonio y el futuro.",
+          "en": "Kings and farmers came from far away to ask her about war, marriage, and the future."
+        },
+        {
+          "es": "Los griegos también contaban que Zeus soltó una vez dos águilas, desde los dos extremos del mundo.",
+          "en": "The Greeks also told that Zeus once set two eagles free, from opposite ends of the world."
+        },
+        {
+          "es": "Se encontraron justo encima de Delfos. Así que lo llamaban el centro, el ombligo del mundo.",
+          "en": "They met right above Delphi. So the Greeks called it the center, the navel of the world."
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 1.8,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "pitia",
+          "como": "sacerdotisa",
+          "rotulo": "Pythia",
+          "x": 1230,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.3,
+              "hace": "sienta"
+            },
+            {
+              "en": 2.6,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1650
+            },
+            {
+              "en": 2.4,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "aguila",
+          "x": 350,
+          "y": 260,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "vuela",
+              "a": [
+                1050,
+                240
+              ],
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "aguila2",
+          "como": "aguila",
+          "rotulo": "",
+          "x": 2050,
+          "y": 260,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "vuela",
+              "a": [
+                1250,
+                240
+              ],
+              "dur": 1.2
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 400,
+          "intensidad": 0.6,
+          "dur": 1
+        },
+        {
+          "en": 1.4,
+          "tipo": "humo",
+          "x": 1250,
+          "y": 680,
+          "dur": 2
+        },
+        {
+          "en": 4.1,
+          "tipo": "destello"
+        },
+        {
+          "en": 4.1,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 260,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "EL ORÁCULO DE DELFOS",
+            "en": "THE ORACLE OF DELPHI"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 1.6
+        },
+        {
+          "en": 4.2,
+          "texto": {
+            "es": "EL OMBLIGO DEL MUNDO",
+            "en": "THE NAVEL OF THE WORLD"
+          },
+          "x": 1150,
+          "y": 420
+        }
+      ]
+    },
+    {
+      "id": "tempe",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "elementos": [
+        {
+          "tipo": "rio",
+          "x": 1150,
+          "s": 1
+        },
+        {
+          "tipo": "cipres",
+          "x": 1650,
+          "s": 1
+        }
+      ],
+      "frases": [
+        {
+          "es": "Pero hasta un dios tenía que purificarse después de matar. La sangre dejaba una mancha que había que lavar.",
+          "en": "But even a god had to be cleansed after killing. Blood left a stain that had to be washed away."
+        },
+        {
+          "es": "Así que Apolo viajó al norte, a Tempe, un valle verde con un río fresco.",
+          "en": "So Apollo traveled north to Tempe, a green valley with a cool river."
+        },
+        {
+          "es": "Allí se lavó en el río y quedó puro otra vez.",
+          "en": "There he washed in the river and was made pure again."
+        },
+        {
+          "es": "Volvió a Delfos con una corona de laurel, un árbol de hojas verdes y brillantes.",
+          "en": "He came back to Delphi wearing a crown of laurel, a tree with shining green leaves."
+        },
+        {
+          "es": "Cada cuatro años, los griegos celebraban allí los Juegos Píticos, con música, carreras y coronas de laurel.",
+          "en": "Every four years, the Greeks held the Pythian Games there, with music, races, and laurel crowns."
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.8
+            },
+            {
+              "en": 2.1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.7,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.8,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "musa",
+          "x": 1450,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "joven",
+          "x": 300,
+          "mira": "der",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.1,
+              "hace": "corre",
+              "a": 900,
+              "dur": 0.6
+            },
+            {
+              "en": 4.7,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        },
+        {
+          "en": 1.2,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 2.2,
+          "tipo": "chispas",
+          "x": 1050,
+          "y": 720,
+          "dur": 1
+        },
+        {
+          "en": 2.6,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 3.3,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 330,
+          "intensidad": 0.6,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "EL VALLE DE TEMPE",
+            "en": "THE VALLEY OF TEMPE"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 2.5
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "LOS JUEGOS PÍTICOS",
+            "en": "THE PYTHIAN GAMES"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "delfin",
+      "fondo": "mar",
+      "camara": {
+        "de": 0,
+        "a": 400
+      },
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1350,
+          "s": 1.3
+        }
+      ],
+      "frases": [
+        {
+          "es": "Ahora Apolo necesitaba sacerdotes que cuidaran su templo.",
+          "en": "Now Apollo needed priests to care for his temple."
+        },
+        {
+          "es": "En el mar, vio un barco de marineros de Creta, una gran isla del sur.",
+          "en": "Out at sea, he saw a ship of sailors from Crete, a large island in the south."
+        },
+        {
+          "es": "Apolo se convirtió en un enorme delfín y saltó a la cubierta.",
+          "en": "Apollo turned into a huge dolphin and leaped onto the deck."
+        },
+        {
+          "es": "Los marineros se quedaron helados de miedo. Cada vez que se movían, el delfín sacudía todo el barco.",
+          "en": "The sailors froze in fear. Each time they moved, the dolphin shook the whole ship."
+        },
+        {
+          "es": "El barco siguió navegando solo, como guiado, hasta el puerto que está debajo de Delfos.",
+          "en": "The ship sailed on by itself, as if guided, all the way to the harbor below Delphi."
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "x": 450,
+          "y": 420,
+          "visible": true,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                800,
+                770
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 2.4,
+              "hace": "transforma",
+              "en_que": "delfin"
+            },
+            {
+              "en": 2.6,
+              "hace": "salta"
+            },
+            {
+              "en": 2.8,
+              "hace": "nada",
+              "a": 1050,
+              "dur": 0.4
+            },
+            {
+              "en": 3.4,
+              "hace": "salta"
+            },
+            {
+              "en": 3.8,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "marinero",
+          "como": "hombre",
+          "rotulo": "Cretan sailors",
+          "x": 1400,
+          "mira": "izq",
+          "props": {
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.8,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.3,
+              "hace": "tiembla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "marinero2",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 1650,
+          "mira": "izq",
+          "props": {
+            "ropa": "corta",
+            "barba": false
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3.5,
+              "hace": "tiembla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 450,
+          "y": 420,
+          "intensidad": 0.6,
+          "dur": 0.8
+        },
+        {
+          "en": 2.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.6,
+          "tipo": "chispas",
+          "x": 850,
+          "y": 740,
+          "dur": 0.8
+        },
+        {
+          "en": 3.4,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 3.8,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 4,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 4.2,
+          "tipo": "luz",
+          "x": 1350,
+          "y": 450,
+          "intensidad": 0.5,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "MARINEROS DE CRETA",
+            "en": "SAILORS FROM CRETE"
+          },
+          "x": 1300,
+          "y": 200,
+          "hasta": 2.2
+        }
+      ]
+    },
+    {
+      "id": "sacerdotes",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 450,
+          "s": 1.1
+        },
+        {
+          "tipo": "templo",
+          "x": 1900,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "frases": [
+        {
+          "es": "En el puerto, el delfín saltó del barco como una estrella fugaz, lleno de fuego y de luz.",
+          "en": "At the harbor, the dolphin leaped from the ship like a shooting star, full of fire and light."
+        },
+        {
+          "es": "Luego apareció como un joven hermoso y les habló a los marineros asustados.",
+          "en": "Then he appeared as a handsome young man and spoke to the frightened sailors."
+        },
+        {
+          "es": "«Nunca volverán a casa», les dijo. «Cuidarán mi templo, y el mundo entero los honrará».",
+          "en": "\"You will never go home,\" he said. \"You will guard my temple, and the whole world will honor you.\""
+        },
+        {
+          "es": "Fueron sus primeros sacerdotes. Le rezaban como Apolo Delfinio, el dios delfín.",
+          "en": "They became his first priests. They prayed to him as Apollo Delphinios, the dolphin god."
+        },
+        {
+          "es": "Algunos dicen que el propio nombre de Delfos viene de aquel delfín.",
+          "en": "Some say the name Delphi itself comes from that dolphin."
+        }
+      ],
+      "actores": [
+        {
+          "id": "delfin",
+          "x": 650,
+          "y": 770,
+          "rotulo": "",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "salta"
+            },
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 0.4
+            },
+            {
+              "en": 0.6,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "apolo",
+          "x": 950,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.6,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "marinero",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 1300,
+          "mira": "izq",
+          "props": {
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "marinero2",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 1550,
+          "mira": "izq",
+          "props": {
+            "ropa": "corta",
+            "barba": false
+          },
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.4,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "chispas",
+          "x": 700,
+          "y": 550,
+          "dur": 1
+        },
+        {
+          "en": 0.4,
+          "tipo": "fuego",
+          "x": 700,
+          "y": 650,
+          "dur": 0.5
+        },
+        {
+          "en": 0.6,
+          "tipo": "destello"
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 950,
+          "y": 420,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1700,
+          "y": 450,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "APOLO DELFINIO",
+            "en": "APOLLO DELPHINIOS"
+          },
+          "x": 1100,
+          "y": 200,
+          "hasta": 4
+        },
+        {
+          "en": 4.1,
+          "texto": {
+            "es": "DELFÍN → DELFOS",
+            "en": "DOLPHIN → DELPHI"
+          },
+          "x": 1100,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 250
+      },
+      "elementos": [
+        {
+          "tipo": "templo",
+          "x": 400,
+          "s": 0.8,
+          "capa": "fondo"
+        }
+      ],
+      "frases": [
+        {
+          "es": "Apolo había vengado a su madre, y por fin tenía su oráculo.",
+          "en": "Apollo had avenged his mother, and at last he had his oracle."
+        },
+        {
+          "es": "También tenía una manada de vacas hermosas, que pastaban en campos verdes, lejos, al norte.",
+          "en": "He also had a herd of fine cattle, grazing in green fields far to the north."
+        },
+        {
+          "es": "Pero pronto, en una cueva lejana, nació un nuevo dios bebé. Era astuto, veloz y muy travieso.",
+          "en": "But soon, in a faraway cave, a new baby god was born. He was clever, fast, and full of mischief."
+        },
+        {
+          "es": "Cuéntame en los comentarios: ¿qué pregunta le harías tú al oráculo de Delfos?",
+          "en": "Tell me in the comments: what one question would you ask the oracle of Delphi?"
+        },
+        {
+          "es": "En el próximo episodio: Hermes, el bebé ladrón.",
+          "en": "Next time: Hermes, the Baby Thief."
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "x": 600,
+          "mira": "der",
+          "props": {
+            "objeto": "arco"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.6,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "buey",
+          "x": 1350,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "buey2",
+          "como": "buey",
+          "x": 1650,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "hermes",
+          "x": 1050,
+          "escala": 0.5,
+          "mira": "der",
+          "props": {
+            "cuerpo": "nino"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.4,
+              "hace": "salta"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 600,
+          "y": 400,
+          "intensidad": 0.5,
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 1050,
+          "y": 700,
+          "dur": 0.8
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 500,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "HERMES, EL BEBÉ LADRÓN",
+            "en": "HERMES, THE BABY THIEF"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Mil flechas contra una serpiente gigante",
+        "en": "A Thousand Arrows Against a Giant Serpent"
+      },
+      "escena": "flechas",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 850
+    },
+    {
+      "gancho": {
+        "es": "El dios que se convirtió en delfín",
+        "en": "The God Who Became a Dolphin"
+      },
+      "escena": "delfin",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Las dos águilas que hallaron el centro del mundo",
+        "en": "Two Eagles Found the Center of the World"
+      },
+      "escena": "oraculo",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 950
+    }
+  ]
+}

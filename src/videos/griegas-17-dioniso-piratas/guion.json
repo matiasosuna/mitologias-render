@@ -1,0 +1,2084 @@
+{
+  "id": "griegas-17-dioniso-piratas",
+  "serie": "griegas",
+  "numero": "17",
+  "titulo": {
+    "es": "Dioniso y los piratas",
+    "en": "Dionysus and the Pirates"
+  },
+  "tituloGriego": "ΔΕΛΦΙΝΕΣ",
+  "miniatura": {
+    "heroe": "dioniso",
+    "rival": "delfin"
+  },
+  "siguiente": {
+    "es": "El rapto de Perséfone",
+    "en": "The Abduction of Persephone"
+  },
+  "escenas": [
+    {
+      "id": "inicio",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada, Dioniso nació dos veces: una de su madre Sémele, y otra del muslo de Zeus.",
+          "en": "Last time, Dionysus was born twice: once from his mother Semele, and once from the thigh of Zeus."
+        },
+        {
+          "es": "Creció, descubrió el vino y empezó a recorrer el mundo.",
+          "en": "He grew up, discovered wine, and began to travel the world."
+        },
+        {
+          "es": "Pero muchas veces parecía un joven cualquiera.",
+          "en": "But he often looked like an ordinary young man."
+        },
+        {
+          "es": "Y un día, eso les trajo un gran problema a unos piratas.",
+          "en": "And one day, that got some pirates into big trouble."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1900,
+          "s": 1,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "semele",
+          "como": "mujer",
+          "rotulo": "Semele",
+          "x": 1250,
+          "capa": "medio",
+          "mira": "izq",
+          "props": {
+            "tocado": "diadema",
+            "ropa": "larga",
+            "capa": "#8C3B5E"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "x": 1550,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.95,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "dioniso",
+          "x": 200,
+          "mira": "der",
+          "props": {
+            "barba": false,
+            "tocado": null,
+            "objeto": null,
+            "ropa": "larga",
+            "capa": "#5E2750"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 700
+            },
+            {
+              "en": 1.4,
+              "hace": "toma",
+              "objeto": "copa"
+            },
+            {
+              "en": 1.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.3,
+              "hace": "suelta"
+            },
+            {
+              "en": 2.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.3,
+              "hace": "mira",
+              "a": 1900
+            }
+          ]
+        },
+        {
+          "id": "capitan",
+          "como": "hombre",
+          "rotulo": "Pirate",
+          "x": 1950,
+          "y": 760,
+          "escala": 0.7,
+          "mira": "izq",
+          "props": {
+            "tocado": "cinta",
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 1400,
+          "y": 400,
+          "dur": 1
+        },
+        {
+          "en": 1.6,
+          "tipo": "chispas",
+          "x": 700,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "niebla",
+          "dur": 0.8
+        },
+        {
+          "en": 3.3,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "id": "orilla",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 250
+      },
+      "frases": [
+        {
+          "es": "Un día, Dioniso estaba de pie sobre una roca alta, junto al mar.",
+          "en": "One day, Dionysus stood on a high rock by the sea."
+        },
+        {
+          "es": "Tenía el pelo largo y oscuro, y un manto morado. Parecía un joven apuesto.",
+          "en": "He had long dark hair and a purple cloak. He looked like a handsome young man."
+        },
+        {
+          "es": "Pasó un barco. Era de piratas, ladrones del mar de una tierra llamada Tirrenia.",
+          "en": "A ship sailed by. It belonged to pirates, sea robbers from a land called Tyrrhenia."
+        },
+        {
+          "es": "Vieron su manto morado y lujoso, y pensaron: «¡Debe de ser un príncipe!»",
+          "en": "They saw his rich purple cloak and thought: \"He must be a prince!\""
+        },
+        {
+          "es": "«Su familia pagará mucho oro para recuperarlo»",
+          "en": "\"His family will pay a lot of gold to get him back.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 450,
+          "s": 1.2
+        },
+        {
+          "tipo": "barco",
+          "x": 1600,
+          "s": 1.1,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "dioniso",
+          "x": 700,
+          "mira": "der",
+          "props": {
+            "barba": false,
+            "tocado": null,
+            "objeto": null,
+            "ropa": "larga",
+            "capa": "#5E2750"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.4,
+              "hace": "mira",
+              "a": 1600
+            }
+          ]
+        },
+        {
+          "id": "capitan",
+          "como": "hombre",
+          "rotulo": "Captain",
+          "x": 1450,
+          "y": 760,
+          "escala": 0.7,
+          "mira": "izq",
+          "props": {
+            "tocado": "cinta",
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 3.4,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "pirata",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 1650,
+          "y": 760,
+          "escala": 0.7,
+          "mira": "izq",
+          "props": {
+            "tocado": "cinta",
+            "ropa": "corta",
+            "barba": false
+          },
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "pirata2",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 1800,
+          "y": 760,
+          "escala": 0.7,
+          "mira": "izq",
+          "props": {
+            "tocado": "cinta",
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 700,
+          "y": 400,
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "niebla",
+          "dur": 0.6
+        },
+        {
+          "en": 4,
+          "tipo": "chispas",
+          "x": 1650,
+          "y": 500,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.3,
+          "texto": {
+            "es": "PIRATAS TIRRENOS",
+            "en": "TYRRHENIAN PIRATES"
+          },
+          "x": 1300,
+          "y": 200,
+          "hasta": 3.8
+        }
+      ]
+    },
+    {
+      "id": "secuestro",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Los piratas saltaron a la orilla y lo agarraron.",
+          "en": "The pirates jumped onto the shore and grabbed him."
+        },
+        {
+          "es": "Lo arrastraron hasta su barco, riéndose. Ya soñaban con el oro.",
+          "en": "They dragged him onto their ship, laughing. They were already dreaming of gold."
+        },
+        {
+          "es": "Le ataron las manos y los pies con cuerdas fuertes.",
+          "en": "They tied his hands and feet with strong ropes."
+        },
+        {
+          "es": "Pero las cuerdas no lo sujetaban. Se soltaban solas y caían a la cubierta.",
+          "en": "But the ropes would not hold him. They slipped off and fell to the deck."
+        },
+        {
+          "es": "Y Dioniso se quedó sentado, sonriendo con sus ojos oscuros.",
+          "en": "And Dionysus just sat there, smiling with his dark eyes."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1750,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "dioniso",
+          "x": 650,
+          "mira": "der",
+          "props": {
+            "barba": false,
+            "tocado": null,
+            "objeto": null,
+            "ropa": "larga",
+            "capa": "#5E2750"
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1300,
+              "dur": 1
+            },
+            {
+              "en": 3.2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 4,
+              "hace": "sienta"
+            },
+            {
+              "en": 4.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "capitan",
+          "como": "hombre",
+          "rotulo": "Captain",
+          "x": 1400,
+          "mira": "izq",
+          "props": {
+            "tocado": "cinta",
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "corre",
+              "a": 850,
+              "dur": 0.5
+            },
+            {
+              "en": 0.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 1
+            },
+            {
+              "en": 1.3,
+              "hace": "mira",
+              "a": 2000
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 2.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "pirata",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 1650,
+          "mira": "izq",
+          "props": {
+            "tocado": "cinta",
+            "ropa": "corta",
+            "barba": false
+          },
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "corre",
+              "a": 1000,
+              "dur": 0.5
+            },
+            {
+              "en": 0.8,
+              "hace": "alegra"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 1
+            },
+            {
+              "en": 2.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.4,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.1,
+          "tipo": "polvo",
+          "x": 1000,
+          "y": 780,
+          "dur": 0.6
+        },
+        {
+          "en": 3.1,
+          "tipo": "chispas",
+          "x": 1300,
+          "y": 600,
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 550,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "LAS CUERDAS SE SUELTAN",
+            "en": "THE ROPES FALL OFF"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "timonel",
+      "fondo": "mar",
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Solo un hombre entendió. Era el timonel, el marinero que maneja el rumbo del barco.",
+          "en": "Only one man understood. It was the helmsman, the sailor who steers the ship."
+        },
+        {
+          "es": "Un poeta romano llamado Ovidio cuenta que se llamaba Acetes.",
+          "en": "A Roman poet named Ovid says his name was Acoetes."
+        },
+        {
+          "es": "«¡Necios!», gritó. «Este no es un príncipe. ¡Es un dios!»",
+          "en": "\"Fools!\" he shouted. \"This is no prince. This is a god!\""
+        },
+        {
+          "es": "«¡Suéltenlo ahora, o nos mandará vientos y tormentas terribles!»",
+          "en": "\"Let him go now, or he will send terrible winds and storms against us!\""
+        },
+        {
+          "es": "Pero el capitán se rió. «Ocúpate de la vela, timonel. Este muchacho es nuestro»",
+          "en": "But the captain laughed. \"Mind the sail, helmsman. This boy is ours.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 960,
+          "y": 745,
+          "s": 1.5,
+          "props": {
+            "vela": false
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "acetes",
+          "como": "joven",
+          "rotulo": "Acoetes",
+          "x": 620,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "der",
+          "props": {
+            "tocado": "petaso",
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "mira",
+              "a": 1250
+            },
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.6,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "capitan",
+          "como": "hombre",
+          "rotulo": "Captain",
+          "x": 800,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "der",
+          "props": {
+            "tocado": "cinta",
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "mira",
+              "a": 600
+            },
+            {
+              "en": 4,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "pirata",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 980,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "der",
+          "props": {
+            "tocado": "cinta",
+            "ropa": "corta",
+            "barba": false
+          },
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "mira",
+              "a": 600
+            },
+            {
+              "en": 4.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "dioniso",
+          "x": 1250,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "izq",
+          "props": {
+            "barba": false,
+            "tocado": null,
+            "objeto": null,
+            "ropa": "larga",
+            "capa": "#5E2750"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 2.4,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.6,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.3,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 520,
+          "dur": 0.8
+        },
+        {
+          "en": 3.3,
+          "tipo": "oscurecer",
+          "intensidad": 0.35,
+          "dur": 0.8
+        },
+        {
+          "en": 3.4,
+          "tipo": "niebla",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "ACETES, EL TIMONEL",
+            "en": "ACOETES, THE HELMSMAN"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "vino",
+      "fondo": "mar",
+      "camara": {
+        "de": 0,
+        "a": 80
+      },
+      "frases": [
+        {
+          "es": "Los piratas izaron la vela, y el viento los llevó mar adentro.",
+          "en": "The pirates raised the sail, and the wind carried them out to the open sea."
+        },
+        {
+          "es": "Entonces un aroma dulce llenó el aire. Un vino oscuro corría por la cubierta.",
+          "en": "Then a sweet smell filled the air. Dark wine was flowing across the deck."
+        },
+        {
+          "es": "Nadie lo había servido. Los piratas miraban, asombrados.",
+          "en": "Nobody had poured it. The pirates stared, amazed."
+        },
+        {
+          "es": "Después una parra creció a lo largo de la vela, cargada de uvas.",
+          "en": "Then a grapevine grew along the top of the sail, heavy with grapes."
+        },
+        {
+          "es": "Y la hiedra, una planta trepadora verde oscura, se enroscó en el mástil.",
+          "en": "And ivy, a dark green climbing plant, wrapped itself around the mast."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 960,
+          "y": 745,
+          "s": 1.5,
+          "props": {
+            "vela": false
+          },
+          "hasta": 0.4
+        },
+        {
+          "tipo": "barco",
+          "x": 960,
+          "y": 745,
+          "s": 1.5,
+          "en": 0.4
+        },
+        {
+          "tipo": "olivo",
+          "x": 740,
+          "y": 735,
+          "s": 0.5,
+          "en": 3,
+          "sube": 120,
+          "durSube": 0.6
+        },
+        {
+          "tipo": "olivo",
+          "x": 1110,
+          "y": 735,
+          "s": 0.5,
+          "en": 3.2,
+          "sube": 120,
+          "durSube": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "acetes",
+          "como": "joven",
+          "rotulo": "Acoetes",
+          "x": 620,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "der",
+          "props": {
+            "tocado": "petaso",
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.4,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "capitan",
+          "como": "hombre",
+          "rotulo": "Captain",
+          "x": 800,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "der",
+          "props": {
+            "tocado": "cinta",
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 1000
+            },
+            {
+              "en": 2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.2,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "pirata",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 980,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "der",
+          "props": {
+            "tocado": "cinta",
+            "ropa": "corta",
+            "barba": false
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            },
+            {
+              "en": 4.3,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "dioniso",
+          "x": 1250,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "izq",
+          "props": {
+            "barba": false,
+            "tocado": null,
+            "objeto": null,
+            "ropa": "larga",
+            "capa": "#5E2750"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "color": "#5B1A3A",
+          "intensidad": 0.1,
+          "dur": 0.8
+        },
+        {
+          "en": 1.2,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 650,
+          "dur": 1.2
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 960,
+          "y": 380,
+          "dur": 1.2
+        },
+        {
+          "en": 3.1,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 350,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 550,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "UN RÍO DE VINO",
+            "en": "A RIVER OF WINE"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 2.6
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "HIEDRA EN EL MÁSTIL",
+            "en": "IVY ON THE MAST"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "fieras",
+      "fondo": "mar",
+      "camara": {
+        "de": 0,
+        "a": 60,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ahora los piratas tenían miedo. «¡Lleva el barco a tierra!», le gritaron al timonel.",
+          "en": "Now the pirates were afraid. \"Steer to land!\" they shouted at the helmsman."
+        },
+        {
+          "es": "Pero era demasiado tarde.",
+          "en": "But it was too late."
+        },
+        {
+          "es": "Dioniso cambió. Se convirtió en un león enorme, y rugió desde la cubierta.",
+          "en": "Dionysus changed. He became a huge lion, and he roared from the deck."
+        },
+        {
+          "es": "Y en medio del barco apareció un oso peludo, parado sobre sus patas traseras.",
+          "en": "And in the middle of the ship, a shaggy bear appeared, standing on its back legs."
+        },
+        {
+          "es": "Los piratas corrieron a la popa y se amontonaron alrededor del timonel.",
+          "en": "The pirates ran to the back of the ship, and crowded around the helmsman."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 960,
+          "y": 745,
+          "s": 1.5
+        },
+        {
+          "tipo": "olivo",
+          "x": 740,
+          "y": 735,
+          "s": 0.5
+        },
+        {
+          "tipo": "olivo",
+          "x": 1110,
+          "y": 735,
+          "s": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "acetes",
+          "como": "joven",
+          "rotulo": "Acoetes",
+          "x": 620,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "der",
+          "props": {
+            "tocado": "petaso",
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "niega"
+            },
+            {
+              "en": 2.4,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "capitan",
+          "como": "hombre",
+          "rotulo": "Captain",
+          "x": 820,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "izq",
+          "props": {
+            "tocado": "cinta",
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "senala"
+            },
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 1250
+            },
+            {
+              "en": 2.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "corre",
+              "a": 760,
+              "dur": 0.4
+            },
+            {
+              "en": 4.4,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "pirata",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 1000,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "izq",
+          "props": {
+            "tocado": "cinta",
+            "ropa": "corta",
+            "barba": false
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 2.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.3,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 4.1,
+              "hace": "corre",
+              "a": 900,
+              "dur": 0.4
+            },
+            {
+              "en": 4.5,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "dioniso",
+          "x": 1260,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "izq",
+          "props": {
+            "barba": false,
+            "tocado": null,
+            "objeto": null,
+            "ropa": "larga",
+            "capa": "#5E2750"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "transforma",
+              "en_que": "leon"
+            },
+            {
+              "en": 2.4,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "oso",
+          "rotulo": "",
+          "x": 1080,
+          "y": 730,
+          "escala": 0.6,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 1
+        },
+        {
+          "en": 1.2,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "destello"
+        },
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 1260,
+          "y": 650,
+          "dur": 0.6
+        },
+        {
+          "en": 2.4,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "humo",
+          "x": 1080,
+          "y": 650,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "UN LEÓN",
+            "en": "A LION"
+          },
+          "x": 1300,
+          "y": 220,
+          "hasta": 3
+        },
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "UN OSO",
+            "en": "A BEAR"
+          },
+          "x": 1000,
+          "y": 220,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "salto",
+      "fondo": "mar",
+      "camara": {
+        "de": 0,
+        "a": 60
+      },
+      "frases": [
+        {
+          "es": "El león saltó sobre el capitán con un rugido terrible.",
+          "en": "The lion leaped at the captain with a terrible roar."
+        },
+        {
+          "es": "El capitán y sus hombres gritaron y se tiraron al mar, uno tras otro.",
+          "en": "The captain and his men screamed, and jumped into the sea, one after another."
+        },
+        {
+          "es": "Pero al caer al agua, sus cuerpos empezaron a cambiar.",
+          "en": "But as they hit the water, their bodies began to change."
+        },
+        {
+          "es": "Sus brazos se volvieron aletas, sus espaldas se curvaron y les crecieron colas.",
+          "en": "Their arms became fins, their backs curved, and they grew tails."
+        },
+        {
+          "es": "Se habían convertido en delfines. ¿Crees que se lo merecían?",
+          "en": "They had become dolphins. Do you think they deserved it?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 960,
+          "y": 745,
+          "s": 1.5
+        },
+        {
+          "tipo": "olivo",
+          "x": 740,
+          "y": 735,
+          "s": 0.5
+        },
+        {
+          "tipo": "olivo",
+          "x": 1110,
+          "y": 735,
+          "s": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "dioniso",
+          "como": "leon",
+          "rotulo": "Dionysus",
+          "x": 1250,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "salta"
+            },
+            {
+              "en": 0.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.6,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "capitan",
+          "como": "hombre",
+          "rotulo": "Captain",
+          "x": 820,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "der",
+          "props": {
+            "tocado": "cinta",
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                560,
+                790
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.6,
+              "hace": "transforma",
+              "en_que": "delfin"
+            },
+            {
+              "en": 3,
+              "hace": "nada",
+              "a": 470
+            },
+            {
+              "en": 4,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "pirata",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 980,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "der",
+          "props": {
+            "tocado": "cinta",
+            "ropa": "corta",
+            "barba": false
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.1,
+              "hace": "vuela",
+              "a": [
+                1380,
+                790
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 2.1,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.7,
+              "hace": "transforma",
+              "en_que": "delfin"
+            },
+            {
+              "en": 3,
+              "hace": "nada",
+              "a": 1460
+            },
+            {
+              "en": 4.1,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "acetes",
+          "como": "joven",
+          "rotulo": "Acoetes",
+          "x": 640,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "der",
+          "props": {
+            "tocado": "petaso",
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.5,
+              "hace": "senala"
+            },
+            {
+              "en": 2.6,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.4,
+          "tipo": "olas-suben",
+          "intensidad": 0.08,
+          "dur": 0.4
+        },
+        {
+          "en": 1.5,
+          "tipo": "olas-bajan",
+          "intensidad": 0.08,
+          "dur": 0.5
+        },
+        {
+          "en": 2.6,
+          "tipo": "luz",
+          "x": 560,
+          "y": 700,
+          "dur": 0.8
+        },
+        {
+          "en": 2.7,
+          "tipo": "luz",
+          "x": 1380,
+          "y": 700,
+          "dur": 0.8
+        },
+        {
+          "en": 2.6,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 650,
+          "dur": 1.2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "DELFINES",
+            "en": "DOLPHINS"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "salvado",
+      "fondo": "mar",
+      "camara": {
+        "de": 0,
+        "a": 60
+      },
+      "frases": [
+        {
+          "es": "Solo el timonel quedó en el barco, temblando de miedo.",
+          "en": "Only the helmsman was left on the ship, shaking with fear."
+        },
+        {
+          "es": "Entonces el león volvió a ser un joven. «No tengas miedo», le dijo. «Tú fuiste bueno conmigo»",
+          "en": "Then the lion became a young man again. \"Don't be afraid,\" he said. \"You were kind to me.\""
+        },
+        {
+          "es": "«Soy Dioniso, hijo de Zeus y de Sémele, la princesa de Tebas»",
+          "en": "\"I am Dionysus, son of Zeus and of Semele, the princess of Thebes.\""
+        },
+        {
+          "es": "Desde ese día, el timonel siguió al dios y lo sirvió toda su vida.",
+          "en": "From that day on, the helmsman followed the god, and served him all his life."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 960,
+          "y": 745,
+          "s": 1.5
+        },
+        {
+          "tipo": "olivo",
+          "x": 740,
+          "y": 735,
+          "s": 0.5
+        },
+        {
+          "tipo": "olivo",
+          "x": 1110,
+          "y": 735,
+          "s": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "acetes",
+          "como": "joven",
+          "rotulo": "Acoetes",
+          "x": 700,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "der",
+          "props": {
+            "tocado": "petaso",
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "tiembla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.2,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "dioniso",
+          "como": "leon",
+          "rotulo": "Dionysus",
+          "x": 1200,
+          "y": 730,
+          "escala": 0.7,
+          "mira": "izq",
+          "props": {
+            "barba": false,
+            "tocado": null,
+            "objeto": null,
+            "ropa": "larga",
+            "capa": "#5E2750"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "transforma",
+              "en_que": "dioniso"
+            },
+            {
+              "en": 1.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "delfin",
+          "rotulo": "",
+          "x": 250,
+          "y": 700,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "nada",
+              "a": 420,
+              "dur": 1.5
+            },
+            {
+              "en": 3,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "humo",
+          "x": 1200,
+          "y": 650,
+          "dur": 0.6
+        },
+        {
+          "en": 1,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1200,
+          "y": 450,
+          "dur": 1.2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.1,
+          "texto": {
+            "es": "HIJO DE ZEUS Y SÉMELE",
+            "en": "SON OF ZEUS AND SEMELE"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "delfines",
+      "fondo": "mar",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "¿Y los delfines? Se alejaron nadando por el ancho mar azul.",
+          "en": "And the dolphins? They swam away, into the wide blue sea."
+        },
+        {
+          "es": "Escritores griegos posteriores contaron que los delfines nunca olvidaron que alguna vez fueron humanos.",
+          "en": "Later Greek writers said the dolphins never forgot that they were once human."
+        },
+        {
+          "es": "Por eso, decían, a los delfines les gusta nadar junto a los barcos, y son amables con los marineros.",
+          "en": "That is why, they said, dolphins like to swim beside ships, and are kind to sailors."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1500,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "delfin1",
+          "como": "delfin",
+          "rotulo": "",
+          "x": 200,
+          "y": 640,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "nada",
+              "a": 800,
+              "dur": 1.5
+            },
+            {
+              "en": 2,
+              "hace": "nada",
+              "a": 1250,
+              "dur": 1
+            },
+            {
+              "en": 2.6,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "delfin2",
+          "como": "delfin",
+          "rotulo": "",
+          "x": 0,
+          "y": 720,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "nada",
+              "a": 550,
+              "dur": 1.5
+            },
+            {
+              "en": 2.1,
+              "hace": "nada",
+              "a": 1050,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "marinero",
+          "como": "hombre",
+          "rotulo": "",
+          "x": 1550,
+          "y": 740,
+          "escala": 0.6,
+          "capa": "medio",
+          "mira": "izq",
+          "props": {
+            "tocado": "petaso",
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            },
+            {
+              "en": 2.8,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 700,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 2.6,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 600,
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "olimpo",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Con esta historia termina nuestra temporada sobre los dioses del Olimpo.",
+          "en": "With this story, our season about the gods of Olympus comes to an end."
+        },
+        {
+          "es": "Conocimos a los grandes dioses uno por uno, y vimos cómo cada uno encontró su lugar en el Olimpo.",
+          "en": "We met the great gods one by one, and saw how each of them found a place on Olympus."
+        },
+        {
+          "es": "Cuéntame en los comentarios: si hubieras visto a ese joven en la orilla, ¿te habrías dado cuenta de que era un dios?",
+          "en": "Tell me in the comments: if you saw that young man on the shore, would you have known he was a god?"
+        },
+        {
+          "es": "Ahora empieza una nueva temporada. Baja a las profundidades de la tierra, al reino de Hades.",
+          "en": "Now a new season begins. It goes deep under the earth, to the kingdom of Hades."
+        },
+        {
+          "es": "En el próximo episodio: El rapto de Perséfone.",
+          "en": "Next time: The Abduction of Persephone."
+        }
+      ],
+      "actores": [
+        {
+          "id": "dioniso",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 600
+            },
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "x": 1000,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "atenea",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "hermes",
+          "x": 1600,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "hades",
+          "x": 1900,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 3.5,
+              "hace": "senala"
+            },
+            {
+              "en": 4.3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 380,
+          "dur": 1.5
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 2
+        },
+        {
+          "en": 3.2,
+          "tipo": "humo",
+          "x": 1900,
+          "y": 650,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "LOS DIOSES DEL OLIMPO",
+            "en": "THE GODS OF OLYMPUS"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 2
+        },
+        {
+          "en": 3.3,
+          "texto": {
+            "es": "NUEVA TEMPORADA",
+            "en": "NEW SEASON"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 4
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "EL RAPTO DE PERSÉFONE",
+            "en": "THE ABDUCTION OF PERSEPHONE"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Secuestraron al joven equivocado",
+        "en": "They Kidnapped the Wrong Young Man"
+      },
+      "escena": "secuestro",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1050
+    },
+    {
+      "gancho": {
+        "es": "El barco que se volvió un viñedo",
+        "en": "The Ship That Turned Into a Vineyard"
+      },
+      "escena": "vino",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Cómo unos piratas se volvieron delfines",
+        "en": "How Pirates Became Dolphins"
+      },
+      "escena": "salto",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 960
+    }
+  ]
+}

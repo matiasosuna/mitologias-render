@@ -1,0 +1,2488 @@
+{
+  "id": "nordicas-19-hervor-y-tyrfing",
+  "serie": "nordicas",
+  "numero": "19",
+  "titulo": {
+    "es": "Hervör y la espada Tyrfing",
+    "en": "Hervor and the Sword Tyrfing"
+  },
+  "tituloGriego": "HERVOR AND THE SWORD TYRFING",
+  "miniatura": {
+    "heroe": {
+      "mujer": true,
+      "ropa": "armadura",
+      "tocado": "yelmo",
+      "objeto": "espada",
+      "escudo": true,
+      "pelo": "#E9C46A",
+      "capa": "#7A2418"
+    },
+    "rival": "enano"
+  },
+  "siguiente": {
+    "es": "El molino Grotti",
+    "en": "The Mill Grotti"
+  },
+  "escenas": [
+    {
+      "id": "gancho",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada, un héroe muerto volvió de su tumba por una última noche con la mujer que amaba.",
+          "en": "Last time, a dead hero came back from his grave for one last night with the woman he loved."
+        },
+        {
+          "es": "Hoy, otro muerto hablará desde su tumba. Su hija quiere su espada, una espada maldita por los enanos.",
+          "en": "Today, another dead man will speak from his grave. His daughter wants his sword, a sword cursed by dwarves."
+        },
+        {
+          "es": "Se llamaba Tyrfing. Y su historia empieza con un rey codicioso.",
+          "en": "Its name was Tyrfing. And its story begins with a greedy king."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1250,
+          "s": 1.4,
+          "capa": "medio"
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1650,
+          "s": 0.9,
+          "capa": "fondo",
+          "props": {
+            "texto": "ANGANTYR"
+          }
+        },
+        {
+          "tipo": "roca",
+          "x": 350,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "helgi",
+          "como": "vikingo",
+          "x": 900,
+          "capa": "fondo",
+          "rotulo": "HELGI",
+          "props": {
+            "piel": "#4E6E8A",
+            "contorno": true,
+            "escudo": false,
+            "objeto": null
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.4,
+              "hace": "camina",
+              "a": 1400,
+              "dur": 0.5
+            },
+            {
+              "en": 0.95,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "hervor",
+          "como": "mujer",
+          "x": 500,
+          "rotulo": "HERVOR",
+          "props": {
+            "ropa": "armadura",
+            "tocado": "yelmo",
+            "escudo": true,
+            "objeto": null,
+            "pelo": "#E9C46A",
+            "capa": "#7A2418"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 500,
+              "dur": 0.5
+            },
+            {
+              "en": 1.4,
+              "hace": "senala"
+            },
+            {
+              "en": 1.8,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "angantyr",
+          "como": "vikingo",
+          "x": 1150,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "piel": "#4E6E8A",
+            "contorno": true,
+            "escudo": false,
+            "objeto": "espada",
+            "pelo": "#2B2B2B"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.65,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.05,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "svafrlami",
+          "como": "rey",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": null,
+            "capa": "#2B4660"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.15,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1.2
+        },
+        {
+          "en": 1.1,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        },
+        {
+          "en": 1.6,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 450,
+          "dur": 0.6
+        },
+        {
+          "en": 1.7,
+          "tipo": "chispas",
+          "x": 1150,
+          "y": 500
+        },
+        {
+          "en": 2.05,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.5,
+          "texto": {
+            "es": "LA ESPADA MALDITA",
+            "en": "THE CURSED SWORD"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "TYRFING",
+            "en": "TYRFING"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "enanos",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hace mucho tiempo vivía un rey llamado Svafrlami, nieto de Odín, el dios principal.",
+          "en": "Long ago lived a king named Svafrlami, a grandson of Odin, the chief god."
+        },
+        {
+          "es": "Un día, cazando, encontró a dos enanos junto a una piedra enorme. Los enanos eran herreros mágicos que vivían en las rocas.",
+          "en": "One day, while hunting, he found two dwarves by a huge stone. Dwarves were magic smiths who lived in rocks."
+        },
+        {
+          "es": "El rey los atrapó con su espada. Se llamaban Dvalin y Durin.",
+          "en": "The king trapped them with his sword. Their names were Dvalin and Durin."
+        },
+        {
+          "es": "Háganme una espada, dijo el rey, o morirán. La empuñadura será de oro.",
+          "en": "Make me a sword, said the king, or you will die. Its hilt must be gold."
+        },
+        {
+          "es": "Nunca fallará y nunca se oxidará. Cortará el hierro tan fácil como la tela.",
+          "en": "It must never miss, and never rust. It must cut iron as easily as cloth."
+        },
+        {
+          "es": "Y quien la empuñe ganará todas sus peleas.",
+          "en": "And whoever holds it must win every fight."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1550,
+          "s": 2,
+          "capa": "medio"
+        },
+        {
+          "tipo": "pino",
+          "x": 250,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pino",
+          "x": 2000,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "svafrlami",
+          "como": "rey",
+          "x": -250,
+          "rotulo": "SVAFRLAMI",
+          "props": {
+            "objeto": "espada",
+            "capa": "#2B4660"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 450,
+              "dur": 1
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "corre",
+              "a": 800,
+              "dur": 0.4
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            },
+            {
+              "en": 5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "ciervo",
+          "como": "ciervo",
+          "x": 1250,
+          "escala": 0.8,
+          "capa": "fondo",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "corre",
+              "a": 2400,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "dvalin",
+          "como": "enano",
+          "x": 1150,
+          "mira": "izq",
+          "rotulo": "DVALIN",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 2.3,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.3,
+              "hace": "reza"
+            },
+            {
+              "en": 4.3,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "durin",
+          "como": "enano",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "DURIN",
+          "props": {
+            "pelo": "#9C7A4E"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 2.4,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.4,
+              "hace": "reza"
+            },
+            {
+              "en": 5.2,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 2.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.6,
+          "tipo": "luz",
+          "x": 960,
+          "y": 420,
+          "dur": 1
+        },
+        {
+          "en": 4.6,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 450
+        },
+        {
+          "en": 5.2,
+          "tipo": "luz",
+          "x": 800,
+          "y": 420,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "SVAFRLAMI, NIETO DE ODÍN",
+            "en": "SVAFRLAMI, GRANDSON OF ODIN"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 3.5,
+          "texto": {
+            "es": "ORO · NUNCA FALLA · NUNCA SE OXIDA",
+            "en": "GOLD · NEVER MISSES · NEVER RUSTS"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "maldicion",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los enanos hicieron la espada. Brillaba como un rayo de sol.",
+          "en": "The dwarves made the sword. It shone like a ray of sunlight."
+        },
+        {
+          "es": "Pero al entregarla, Dvalin lanzó una maldición.",
+          "en": "But as they handed it over, Dvalin spoke a curse."
+        },
+        {
+          "es": "Cada vez que esta espada salga de su vaina, morirá un hombre.",
+          "en": "Each time this sword is drawn, a man will die."
+        },
+        {
+          "es": "Con ella se harán tres grandes maldades. Y también será tu muerte.",
+          "en": "Three great evils will be done with it. And it will be your death, too."
+        },
+        {
+          "es": "El rey atacó furioso a los enanos. Pero ellos corrieron dentro de su piedra.",
+          "en": "The king struck at the dwarves in fury. But they ran into their stone."
+        },
+        {
+          "es": "La hoja se hundió en la roca hasta la empuñadura de oro. El rey llamó a su espada Tyrfing.",
+          "en": "The blade sank into the rock, right up to the golden hilt. The king named his sword Tyrfing."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1500,
+          "s": 2,
+          "capa": "medio"
+        },
+        {
+          "tipo": "pino",
+          "x": 200,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "svafrlami",
+          "como": "rey",
+          "x": 450,
+          "rotulo": "",
+          "props": {
+            "objeto": null,
+            "capa": "#2B4660"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "toma",
+              "objeto": "espada"
+            },
+            {
+              "en": 0.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.3,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 4,
+              "hace": "enoja"
+            },
+            {
+              "en": 4.1,
+              "hace": "corre",
+              "a": 1050,
+              "dur": 0.4
+            },
+            {
+              "en": 4.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 5.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "dvalin",
+          "como": "enano",
+          "x": 850,
+          "mira": "izq",
+          "rotulo": "DVALIN",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1300,
+              "dur": 0.4
+            },
+            {
+              "en": 1.4,
+              "hace": "mira",
+              "a": 450
+            },
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1.8
+            },
+            {
+              "en": 4.6,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "durin",
+          "como": "enano",
+          "x": 1600,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "pelo": "#9C7A4E"
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 4.5,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 650,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 0.4,
+          "tipo": "chispas",
+          "x": 650,
+          "y": 500
+        },
+        {
+          "en": 1.5,
+          "tipo": "oscurecer",
+          "dur": 2.5
+        },
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 0.8,
+          "intensidad": 0.6
+        },
+        {
+          "en": 4.6,
+          "tipo": "destello"
+        },
+        {
+          "en": 4.7,
+          "tipo": "chispas",
+          "x": 1300,
+          "y": 560
+        },
+        {
+          "en": 5,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 5.3,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.5,
+          "texto": {
+            "es": "LA MALDICIÓN DE LOS ENANOS",
+            "en": "THE DWARVES' CURSE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        },
+        {
+          "en": 5.3,
+          "texto": {
+            "es": "TYRFING",
+            "en": "TYRFING"
+          },
+          "x": 1100,
+          "y": 280
+        }
+      ]
+    },
+    {
+      "id": "arngrim",
+      "fondo": "batalla",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "La maldición se cumplió pronto. Un guerrero salvaje llamado Arngrim vino a pelear con el rey.",
+          "en": "The curse soon came true. A wild warrior named Arngrim came to fight the king."
+        },
+        {
+          "es": "El rey blandió a Tyrfing. Atravesó el escudo de Arngrim y se clavó en la tierra.",
+          "en": "The king swung Tyrfing. It cut through Arngrim's shield, and stuck deep in the ground."
+        },
+        {
+          "es": "Arngrim contraatacó. Le quitó a Tyrfing y mató al rey con su propia espada.",
+          "en": "Arngrim struck back. He took Tyrfing, and killed the king with his own sword."
+        },
+        {
+          "es": "También tomó por esposa a Eyfura, la hija del rey. Tuvieron doce hijos.",
+          "en": "He also took the king's daughter, Eyfura, as his wife. They had twelve sons."
+        },
+        {
+          "es": "Los doce eran berserkers: guerreros que caían en una furia salvaje en la batalla.",
+          "en": "All twelve were berserkers: warriors who fell into a wild rage in battle."
+        }
+      ],
+      "actores": [
+        {
+          "id": "svafrlami",
+          "como": "rey",
+          "x": 700,
+          "rotulo": "",
+          "props": {
+            "objeto": "espada",
+            "capa": "#2B4660"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.4,
+              "hace": "cae"
+            },
+            {
+              "en": 3,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "arngrim",
+          "como": "vikingo",
+          "x": 2100,
+          "mira": "izq",
+          "rotulo": "ARNGRIM",
+          "props": {
+            "pelo": "#2B2B2B",
+            "capa": "#7A2418"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "corre",
+              "a": 1050,
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 2,
+              "hace": "toma",
+              "objeto": "espada"
+            },
+            {
+              "en": 2.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.4,
+              "hace": "mira",
+              "a": 500
+            },
+            {
+              "en": 4.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "eyfura",
+          "como": "mujer",
+          "x": 450,
+          "rotulo": "EYFURA",
+          "props": {
+            "tocado": "diadema",
+            "ropa": "larga"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.4,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "hijo1",
+          "como": "vikingo",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.6,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 4.3,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "hijo2",
+          "como": "vikingo",
+          "x": 1900,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.8,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 4.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "polvo",
+          "x": 1500,
+          "dur": 0.8
+        },
+        {
+          "en": 1.1,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.2,
+          "tipo": "polvo",
+          "x": 900
+        },
+        {
+          "en": 2.3,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.4,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4.2,
+          "tipo": "temblor",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "DOCE BERSERKERS",
+            "en": "TWELVE BERSERKERS"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "hermanos",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "El mayor, Angantyr, era el más fuerte. Cuando su padre envejeció, Tyrfing pasó a sus manos.",
+          "en": "The eldest son, Angantyr, was the strongest. When his father grew old, Tyrfing passed to him."
+        },
+        {
+          "es": "Uno de sus hermanos quería casarse con una princesa de Suecia. Pero ella eligió a otro hombre.",
+          "en": "One of his brothers wanted to marry a princess of Sweden. But she chose another man."
+        },
+        {
+          "es": "Se llamaba Hjalmar, y era un guerrero famoso y valiente.",
+          "en": "His name was Hjalmar, a famous and brave warrior."
+        },
+        {
+          "es": "El hermano, furioso, retó a Hjalmar a un duelo en una pequeña isla llamada Samsø.",
+          "en": "The angry brother challenged Hjalmar to a duel, on a small island called Samso."
+        },
+        {
+          "es": "Hjalmar llevó a su mejor amigo, Orvar-Odd. Odd tenía una camisa mágica de seda que ningún arma podía cortar.",
+          "en": "Hjalmar brought his best friend, Orvar-Odd. Odd wore a magic silk shirt that no weapon could cut."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1950,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "angantyr",
+          "como": "vikingo",
+          "x": 300,
+          "rotulo": "ANGANTYR",
+          "props": {
+            "objeto": "espada",
+            "pelo": "#2B2B2B",
+            "capa": "#7A2418"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.4,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.4,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "hermano",
+          "como": "vikingo",
+          "x": 600,
+          "rotulo": "",
+          "props": {
+            "capa": "#7A2418"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 750,
+              "dur": 0.4
+            },
+            {
+              "en": 1.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "princesa",
+          "como": "mujer",
+          "x": 1150,
+          "mira": "izq",
+          "rotulo": "PRINCESS",
+          "props": {
+            "tocado": "diadema",
+            "ropa": "larga"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.6,
+              "hace": "niega"
+            },
+            {
+              "en": 2.1,
+              "hace": "mira",
+              "a": 1500
+            }
+          ]
+        },
+        {
+          "id": "hjalmar",
+          "como": "hombre",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "HJALMAR",
+          "props": {
+            "tocado": "yelmo",
+            "objeto": "espada",
+            "escudo": true,
+            "ropa": "armadura",
+            "capa": "#2B4660"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1500,
+              "dur": 0.5
+            },
+            {
+              "en": 3.4,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "odd",
+          "como": "hombre",
+          "x": 1800,
+          "mira": "izq",
+          "rotulo": "ORVAR-ODD",
+          "props": {
+            "objeto": "arco",
+            "ropa": "larga",
+            "tocado": null,
+            "capa": "#E9C46A",
+            "pelo": "#9C7A4E"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "entra",
+              "a": 1800,
+              "dur": 0.5
+            },
+            {
+              "en": 4.5,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "luz",
+          "x": 300,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 4.5,
+          "tipo": "chispas",
+          "x": 1700,
+          "y": 500
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "DUELO EN SAMSØ",
+            "en": "A DUEL ON SAMSO"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        },
+        {
+          "en": 4.4,
+          "texto": {
+            "es": "LA CAMISA DE SEDA",
+            "en": "THE SILK SHIRT"
+          },
+          "x": 1500,
+          "y": 280
+        }
+      ]
+    },
+    {
+      "id": "samso",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En Samsø, la furia se apoderó de los doce hermanos. Aullaban como lobos y mordían sus escudos.",
+          "en": "On Samso, the rage came over the twelve brothers. They howled like wolves, and bit their shields."
+        },
+        {
+          "es": "Hjalmar peleó con Angantyr. Odd peleó con los otros once hermanos, uno tras otro.",
+          "en": "Hjalmar fought Angantyr. Odd fought the other eleven brothers, one after another."
+        },
+        {
+          "es": "Odd mató a los once. Su camisa de seda lo protegió.",
+          "en": "Odd killed all eleven. His silk shirt kept him safe."
+        },
+        {
+          "es": "Hjalmar mató a Angantyr. Pero Tyrfing también lo había herido, una y otra vez.",
+          "en": "Hjalmar killed Angantyr. But Tyrfing had cut him too, again and again."
+        },
+        {
+          "es": "Hjalmar se sentó en una pequeña colina. Dijo un último poema para la mujer que amaba, y murió.",
+          "en": "Hjalmar sat down on a small hill. He spoke a last poem for the woman he loved, and died."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "drakkar",
+          "x": 1950,
+          "s": 0.6,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 650,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "angantyr",
+          "como": "vikingo",
+          "x": 400,
+          "rotulo": "ANGANTYR",
+          "props": {
+            "objeto": "espada",
+            "pelo": "#2B2B2B",
+            "capa": "#7A2418"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.2,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "hjalmar",
+          "como": "hombre",
+          "x": 750,
+          "mira": "izq",
+          "rotulo": "HJALMAR",
+          "props": {
+            "tocado": "yelmo",
+            "objeto": "espada",
+            "escudo": true,
+            "ropa": "armadura",
+            "capa": "#2B4660"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.5,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 4,
+              "hace": "sienta"
+            },
+            {
+              "en": 4.3,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 4.8,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "odd",
+          "como": "hombre",
+          "x": 1150,
+          "rotulo": "ORVAR-ODD",
+          "props": {
+            "objeto": "arco",
+            "ropa": "larga",
+            "tocado": null,
+            "capa": "#E9C46A",
+            "pelo": "#9C7A4E"
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "lanza"
+            },
+            {
+              "en": 1.7,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.6,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.5,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "b1",
+          "como": "vikingo",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "capa": "#7A2418"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 2,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "como": "vikingo",
+          "x": 1700,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.8,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.2,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 1.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 2,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.2,
+          "tipo": "polvo",
+          "x": 1600
+        },
+        {
+          "en": 3.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.5,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 4.7,
+          "tipo": "niebla",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LA ISLA DE SAMSØ",
+            "en": "THE ISLAND OF SAMSO"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "DOCE CONTRA DOS",
+            "en": "TWELVE AGAINST TWO"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "hervor",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Odd enterró a los hermanos en Samsø, en túmulos de tierra. Tyrfing quedó enterrada con Angantyr.",
+          "en": "Odd buried the brothers on Samso, in mounds of earth. Tyrfing was buried with Angantyr."
+        },
+        {
+          "es": "Pero la prometida de Angantyr, Svafa, esperaba un bebé suyo. Tuvo una niña, llamada Hervör.",
+          "en": "But Angantyr's bride, Svafa, was going to have his baby. She had a girl, named Hervor."
+        },
+        {
+          "es": "Hervör creció fuerte y salvaje. Le gustaban más las espadas y los arcos que la costura.",
+          "en": "Hervor grew up strong and wild. She liked swords and bows more than sewing."
+        },
+        {
+          "es": "Durante años le dijeron que su padre era un esclavo. Hasta que su abuelo le contó la verdad.",
+          "en": "For years, people told her that her father was a slave. Then her grandfather told her the truth."
+        },
+        {
+          "es": "Tu padre era Angantyr, el berserker. Hervör decidió ir a Samsø y tomar su espada.",
+          "en": "Your father was Angantyr, the berserker. Hervor decided to go to Samso, and take his sword."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 1750,
+          "s": 1.2,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 350,
+          "s": 1.2,
+          "capa": "medio",
+          "hasta": 1
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 650,
+          "s": 0.8,
+          "capa": "medio",
+          "hasta": 1,
+          "props": {
+            "texto": "ANGANTYR"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "odd",
+          "como": "hombre",
+          "x": 950,
+          "rotulo": "",
+          "props": {
+            "objeto": "arco",
+            "ropa": "larga",
+            "tocado": null,
+            "capa": "#E9C46A",
+            "pelo": "#9C7A4E"
+          },
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "reza"
+            },
+            {
+              "en": 0.8,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "svafa",
+          "como": "mujer",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "SVAFA",
+          "props": {
+            "tocado": "velo",
+            "ropa": "larga"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "abraza"
+            },
+            {
+              "en": 2.1,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "bebe",
+          "como": "nina",
+          "x": 1050,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "hervor",
+          "como": "mujer",
+          "x": 700,
+          "rotulo": "HERVOR",
+          "props": {
+            "ropa": "corta",
+            "tocado": null,
+            "objeto": "espada",
+            "pelo": "#E9C46A",
+            "capa": "#7A2418"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.8,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.6,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 4.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.6,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "abuelo",
+          "como": "anciano",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.4,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "destello"
+        },
+        {
+          "en": 4.6,
+          "tipo": "luz",
+          "x": 700,
+          "y": 450,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LOS TÚMULOS DE SAMSØ",
+            "en": "THE GRAVE MOUNDS OF SAMSO"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "HIJA DE ANGANTYR",
+            "en": "DAUGHTER OF ANGANTYR"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "viaje",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hervör se vistió de hombre y se unió a unos vikingos. Juntos navegaron hasta Samsø.",
+          "en": "Hervor dressed as a man, and joined a crew of vikings. Together, they sailed to Samso."
+        },
+        {
+          "es": "Llegaron al atardecer. Los marineros no quisieron bajar. Decían que de noche allí caminaban los muertos.",
+          "en": "They arrived at sunset. The sailors refused to go ashore. They said the dead walked there at night."
+        },
+        {
+          "es": "Así que Hervör fue sola. En la orilla, un pastor pasó corriendo a su lado, aterrado.",
+          "en": "So Hervor went alone. On the shore, a shepherd ran past her, terrified."
+        },
+        {
+          "es": "¡Vuélvete!, gritó. ¡Cuando se pone el sol, sale fuego de las tumbas!",
+          "en": "Go back! he cried. When the sun goes down, fire comes out of the graves!"
+        },
+        {
+          "es": "Cayó la noche. Por toda la isla, los túmulos se abrieron y ardieron con un fuego fantasmal.",
+          "en": "Night fell. All across the island, the grave mounds opened, and burned with a ghostly fire."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "drakkar",
+          "x": 400,
+          "s": 0.8,
+          "capa": "medio"
+        },
+        {
+          "tipo": "roca",
+          "x": 1650,
+          "s": 1.3,
+          "capa": "medio",
+          "en": 4
+        },
+        {
+          "tipo": "roca",
+          "x": 2000,
+          "s": 1.1,
+          "capa": "medio",
+          "en": 4.2
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1900,
+          "s": 0.8,
+          "capa": "fondo",
+          "props": {
+            "texto": "SAMSO"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "hervor",
+          "como": "mujer",
+          "x": -200,
+          "rotulo": "HERVOR",
+          "props": {
+            "ropa": "armadura",
+            "tocado": "yelmo",
+            "escudo": true,
+            "objeto": null,
+            "pelo": "#E9C46A",
+            "capa": "#7A2418"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 750,
+              "dur": 0.9
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.6
+            },
+            {
+              "en": 3.3,
+              "hace": "niega"
+            },
+            {
+              "en": 4.3,
+              "hace": "camina",
+              "a": 1350,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "v1",
+          "como": "vikingo",
+          "x": 250,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "niega"
+            },
+            {
+              "en": 1.5,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "v2",
+          "como": "vikingo",
+          "x": 500,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 1.6,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "pastor",
+          "como": "hombre",
+          "x": 2300,
+          "mira": "izq",
+          "rotulo": "SHEPHERD",
+          "props": {
+            "objeto": "cayado",
+            "tocado": null,
+            "ropa": "corta"
+          },
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "corre",
+              "a": 1500,
+              "dur": 0.5
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.1,
+              "hace": "senala"
+            },
+            {
+              "en": 3.7,
+              "hace": "corre",
+              "a": -300,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 1.3,
+          "tipo": "niebla",
+          "dur": 1.5
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 4.1,
+          "tipo": "fuego",
+          "x": 1400,
+          "y": 700
+        },
+        {
+          "en": 4.3,
+          "tipo": "fuego",
+          "x": 1750,
+          "y": 700
+        },
+        {
+          "en": 4.5,
+          "tipo": "humo",
+          "x": 1550,
+          "y": 600
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "RUMBO A SAMSØ",
+            "en": "SAILING TO SAMSO"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 4.2,
+          "texto": {
+            "es": "FUEGO EN LAS TUMBAS",
+            "en": "FIRE ON THE GRAVES"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "despertar",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hervör caminó entre las llamas hasta el túmulo de su padre. No tenía miedo.",
+          "en": "Hervor walked straight through the flames to her father's mound. She was not afraid."
+        },
+        {
+          "es": "¡Despierta, Angantyr!, gritó. Soy Hervör, tu única hija. ¡Dame la espada que hicieron los enanos!",
+          "en": "Wake up, Angantyr! she called. It is Hervor, your only daughter. Give me the sword the dwarves made!"
+        },
+        {
+          "es": "La tierra tembló. El túmulo se abrió, y una voz muerta respondió desde dentro.",
+          "en": "The ground shook. The mound split open, and a dead voice answered from inside."
+        },
+        {
+          "es": "Hervör, hija mía, ¿por qué me llamas? Corres hacia tu perdición.",
+          "en": "Hervor, my daughter, why do you call me? You are running toward your doom."
+        },
+        {
+          "es": "Imagina estar a solas entre tumbas en llamas, de noche. ¿Te quedarías o saldrías corriendo? Cuéntamelo en los comentarios.",
+          "en": "Imagine standing alone among burning graves, at night. Would you stay, or run? Tell me in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1300,
+          "s": 1.6,
+          "capa": "medio"
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1700,
+          "s": 1,
+          "capa": "medio",
+          "props": {
+            "texto": "ANGANTYR"
+          }
+        },
+        {
+          "tipo": "roca",
+          "x": 300,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hervor",
+          "como": "mujer",
+          "x": -150,
+          "rotulo": "HERVOR",
+          "props": {
+            "ropa": "armadura",
+            "tocado": "yelmo",
+            "escudo": true,
+            "objeto": null,
+            "pelo": "#E9C46A",
+            "capa": "#7A2418"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 650,
+              "dur": 0.9
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.5,
+              "hace": "mira",
+              "a": 1200
+            },
+            {
+              "en": 4.3,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "angantyr",
+          "como": "vikingo",
+          "x": 1200,
+          "mira": "izq",
+          "rotulo": "ANGANTYR",
+          "props": {
+            "piel": "#4E6E8A",
+            "contorno": true,
+            "escudo": false,
+            "objeto": null,
+            "pelo": "#2B2B2B"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 1000,
+          "y": 720,
+          "dur": 2
+        },
+        {
+          "en": 0.3,
+          "tipo": "fuego",
+          "x": 350,
+          "y": 720,
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 2.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.3,
+          "tipo": "humo",
+          "x": 1200,
+          "y": 600,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "¡DESPIERTA, ANGANTYR!",
+            "en": "WAKE UP, ANGANTYR!"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "¿TE QUEDARÍAS?",
+            "en": "WOULD YOU STAY?"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "espada",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1.04,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Primero, Angantyr intentó engañarla. La espada no está aquí, dijo. Hervör no le creyó.",
+          "en": "First, Angantyr tried to trick her. The sword is not here, he said. Hervor did not believe him."
+        },
+        {
+          "es": "Entonces le advirtió. La espada está entre llamas, dijo. Ninguna muchacha se atrevería a tocarla.",
+          "en": "Then he warned her. The sword lies in fire, he said. No girl would dare to touch it."
+        },
+        {
+          "es": "Yo la tomaré, dijo Hervör. No le tengo miedo a tu fuego.",
+          "en": "I will take it, said Hervor. I am not afraid of your fire."
+        },
+        {
+          "es": "Así que Angantyr le dio a Tyrfing. Pero escucha, dijo. Esta espada destruirá a toda tu familia.",
+          "en": "So Angantyr gave her Tyrfing. But listen, he said. This sword will destroy your whole family."
+        },
+        {
+          "es": "Hervör levantó la espada. Ahora soy más feliz, dijo, que si tuviera toda Noruega.",
+          "en": "Hervor held the sword high. I am happier now, she said, than if I owned all of Norway."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1350,
+          "s": 1.6,
+          "capa": "medio"
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1750,
+          "s": 1,
+          "capa": "medio",
+          "props": {
+            "texto": "ANGANTYR"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "hervor",
+          "como": "mujer",
+          "x": 650,
+          "rotulo": "",
+          "props": {
+            "ropa": "armadura",
+            "tocado": "yelmo",
+            "escudo": true,
+            "objeto": null,
+            "pelo": "#E9C46A",
+            "capa": "#7A2418"
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "niega"
+            },
+            {
+              "en": 1.6,
+              "hace": "niega"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.4,
+              "hace": "toma",
+              "objeto": "espada"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "angantyr",
+          "como": "vikingo",
+          "x": 1200,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "piel": "#4E6E8A",
+            "contorno": true,
+            "escudo": false,
+            "objeto": null,
+            "pelo": "#2B2B2B"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 0.4,
+              "hace": "niega"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.6,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.6,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "fuego",
+          "x": 1200,
+          "y": 720,
+          "dur": 1.5
+        },
+        {
+          "en": 3.3,
+          "tipo": "luz",
+          "x": 900,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 3.4,
+          "tipo": "chispas",
+          "x": 900,
+          "y": 500
+        },
+        {
+          "en": 3.7,
+          "tipo": "temblor",
+          "dur": 0.5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 4,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.5,
+          "texto": {
+            "es": "DESTRUIRÁ A TU FAMILIA",
+            "en": "IT WILL DESTROY YOUR FAMILY"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4.5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.02,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hervör volvió entre los fuegos que se apagaban. Su barco había huido, pero ella encontró su camino.",
+          "en": "Hervor walked back through the dying fires. Her ship had fled, but she found her own way."
+        },
+        {
+          "es": "Tyrfing pasaría a su hijo, y a los hijos de su hijo. Y la maldición del enano la seguiría siempre.",
+          "en": "Tyrfing would pass to her son, and to his sons. And the dwarf's curse would follow it every time."
+        },
+        {
+          "es": "Entonces, ¿Hervör fue valiente o insensata al tomar esa espada? Cuéntamelo en los comentarios.",
+          "en": "So, was Hervor brave, or foolish, to take that sword? Tell me in the comments."
+        },
+        {
+          "es": "En el próximo episodio: un molino mágico que podía moler cualquier cosa. El molino Grotti.",
+          "en": "Next time: a magic mill that could grind out anything. The Mill Grotti."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "drakkar",
+          "x": 1700,
+          "s": 0.6,
+          "capa": "fondo",
+          "hasta": 0.7
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1600,
+          "s": 1,
+          "capa": "medio",
+          "en": 3,
+          "props": {
+            "texto": "GROTTI"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "hervor",
+          "como": "mujer",
+          "x": -150,
+          "rotulo": "HERVOR",
+          "props": {
+            "ropa": "armadura",
+            "tocado": "yelmo",
+            "escudo": true,
+            "objeto": "espada",
+            "pelo": "#E9C46A",
+            "capa": "#7A2418"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 650,
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.3,
+              "hace": "mira",
+              "a": 1500
+            }
+          ]
+        },
+        {
+          "id": "hijo",
+          "como": "joven",
+          "x": 1050,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "pelo": "#E9C46A",
+            "objeto": null
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.6,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.6,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "fenja",
+          "como": "jotun",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "mujer": true,
+            "barba": false,
+            "objeto": null,
+            "pelo": "#5A3A1C"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 3.3,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 0.2,
+          "tipo": "humo",
+          "x": 400,
+          "y": 650,
+          "dur": 1
+        },
+        {
+          "en": 1.2,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 1.4,
+          "tipo": "chispas",
+          "x": 650,
+          "y": 450
+        },
+        {
+          "en": 3,
+          "tipo": "polvo",
+          "x": 1500
+        },
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 1600,
+          "y": 500,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "¿VALIENTE O INSENSATA?",
+            "en": "BRAVE OR FOOLISH?"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "PRÓXIMO: EL MOLINO GROTTI",
+            "en": "NEXT: THE MILL GROTTI"
+          },
+          "x": 960,
+          "y": 290
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Los enanos forjaron la espada perfecta... y la maldijeron",
+        "en": "The dwarves forged the perfect sword... and cursed it"
+      },
+      "escena": "maldicion",
+      "desde": 0,
+      "hasta": 5,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Doce berserkers contra dos hombres",
+        "en": "Twelve berserkers against two men"
+      },
+      "escena": "samso",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Despertó a su padre muerto para quitarle la espada",
+        "en": "She woke her dead father to take his sword"
+      },
+      "escena": "despertar",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    }
+  ]
+}

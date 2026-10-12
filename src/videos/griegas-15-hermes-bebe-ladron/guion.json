@@ -1,0 +1,2141 @@
+{
+  "id": "griegas-15-hermes-bebe-ladron",
+  "serie": "griegas",
+  "numero": "15",
+  "titulo": {
+    "es": "Hermes, el bebé ladrón",
+    "en": "Hermes, the Baby Thief"
+  },
+  "tituloGriego": "ΕΡΜΗΣ",
+  "miniatura": {
+    "heroe": "hermes",
+    "rival": "apolo"
+  },
+  "siguiente": {
+    "es": "Dioniso, el nacido dos veces",
+    "en": "Dionysus, the Twice-Born"
+  },
+  "escenas": [
+    {
+      "id": "nacimiento",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada, Apolo mató a la serpiente Pitón y fundó su oráculo en Delfos.",
+          "en": "Last time, Apollo killed the Python and built his oracle at Delphi."
+        },
+        {
+          "es": "Pero lejos de allí, en una cueva oscura del monte Cilene, un nuevo dios estaba a punto de nacer.",
+          "en": "But far away, in a dark cave on Mount Cyllene, a new god was about to be born."
+        },
+        {
+          "es": "Allí vivía Maya, una ninfa tímida. Las ninfas son espíritus amables de la naturaleza.",
+          "en": "There lived Maia, a shy nymph. Nymphs are gentle spirits of nature."
+        },
+        {
+          "es": "Zeus, el rey de los dioses, la visitaba de noche, mientras su esposa Hera dormía.",
+          "en": "Zeus, the king of the gods, visited her at night, while his wife Hera slept."
+        },
+        {
+          "es": "Una mañana, al amanecer, Maya tuvo un hijo. Se llamaba Hermes.",
+          "en": "One morning, at dawn, Maia had a baby boy. His name was Hermes."
+        },
+        {
+          "es": "Y en su primer día de vida, este bebé le robaría a Apolo.",
+          "en": "And on his very first day of life, this baby would rob Apollo."
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "x": 1500,
+          "mira": "izq",
+          "props": {
+            "objeto": "arco"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "maia",
+          "como": "ninfa",
+          "rotulo": "Maia",
+          "x": 600,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "reza"
+            },
+            {
+              "en": 4.4,
+              "hace": "abraza"
+            },
+            {
+              "en": 5.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.85,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "hermes",
+          "x": 950,
+          "mira": "izq",
+          "props": {
+            "cuerpo": "nino",
+            "barba": false,
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 5,
+              "hace": "mira",
+              "a": 2000
+            },
+            {
+              "en": 5.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 380,
+          "dur": 0.9
+        },
+        {
+          "en": 1,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 0.9
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 950,
+          "y": 600,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "EL MONTE CILENE",
+            "en": "MOUNT CYLLENE"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 2.5
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "EL BEBÉ LADRÓN",
+            "en": "THE BABY THIEF"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "lira",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Pero Hermes no se quedó mucho tiempo en la cuna. Salió y caminó hasta la entrada de la cueva.",
+          "en": "But Hermes did not stay in his cradle for long. He climbed out and walked to the door of the cave."
+        },
+        {
+          "es": "Allí encontró una tortuga de tierra, lenta, que estaba comiendo pasto.",
+          "en": "There he found a tortoise, a slow turtle that lives on land. It was eating grass."
+        },
+        {
+          "es": "Hermes se rió. Tuvo una idea. Se llevó la tortuga adentro y usó su caparazón redondo.",
+          "en": "Hermes laughed. He had an idea. He took the tortoise inside, and used its round shell."
+        },
+        {
+          "es": "Le agregó dos brazos de madera y siete cuerdas.",
+          "en": "He added two arms of wood, and seven strings."
+        },
+        {
+          "es": "Al mediodía ya había inventado la lira, un arpa pequeña. Y se puso a cantar.",
+          "en": "By midday, he had invented the lyre, a small harp. And he began to sing."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cueva",
+          "x": 350,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "x": 450,
+          "mira": "der",
+          "props": {
+            "cuerpo": "nino",
+            "barba": false,
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 850,
+              "dur": 0.8
+            },
+            {
+              "en": 1.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.2,
+              "hace": "toma",
+              "objeto": "lira"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.4,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "tortuga",
+          "rotulo": "Tortoise",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.1,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.9
+            },
+            {
+              "en": 2.7,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "maia",
+          "como": "ninfa",
+          "rotulo": "Maia",
+          "x": 250,
+          "capa": "medio",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 4.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.5,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 2.7,
+          "tipo": "polvo",
+          "x": 1050,
+          "y": 760,
+          "dur": 0.6
+        },
+        {
+          "en": 3.2,
+          "tipo": "chispas",
+          "x": 850,
+          "y": 600,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 850,
+          "y": 520,
+          "dur": 1.5
+        },
+        {
+          "en": 4.4,
+          "tipo": "chispas",
+          "x": 900,
+          "y": 500,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "LA PRIMERA LIRA",
+            "en": "THE FIRST LYRE"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "robo",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 400
+      },
+      "frases": [
+        {
+          "es": "Al atardecer, Hermes corrió muy lejos, a las colinas verdes donde Apolo cuidaba las vacas de los dioses.",
+          "en": "In the evening, Hermes ran far away, to the green hills where Apollo kept the cows of the gods."
+        },
+        {
+          "es": "Mientras se ponía el sol, el bebé se robó cincuenta.",
+          "en": "As the sun went down, the baby stole fifty of them."
+        },
+        {
+          "es": "Pero las vacas dejan huellas en la tierra. Así que Hermes las hizo caminar hacia atrás.",
+          "en": "But cows leave tracks in the dirt. So Hermes made them walk backwards."
+        },
+        {
+          "es": "Ahora las huellas apuntaban al revés, como si las vacas llegaran en vez de irse.",
+          "en": "Now the tracks pointed the wrong way, as if the cows were coming, not going."
+        },
+        {
+          "es": "Después se hizo unas sandalias raras con ramas y hojas, para esconder sus propios pies pequeños.",
+          "en": "Then he made himself strange sandals out of branches and leaves, to hide his own small feet."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "olivo",
+          "x": 2050,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "x": 150,
+          "mira": "der",
+          "props": {
+            "cuerpo": "nino",
+            "barba": false,
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "corre",
+              "a": 650,
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 1.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4.6,
+              "hace": "levantarse"
+            },
+            {
+              "en": 4.8,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "vaca1",
+          "como": "buey",
+          "rotulo": "",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.6
+            },
+            {
+              "en": 2.4,
+              "hace": "mira",
+              "a": 3000
+            },
+            {
+              "en": 2.5,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "vaca2",
+          "como": "buey",
+          "rotulo": "",
+          "x": 1500,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "camina",
+              "a": 1400,
+              "dur": 0.6
+            },
+            {
+              "en": 2.45,
+              "hace": "mira",
+              "a": 3000
+            },
+            {
+              "en": 2.55,
+              "hace": "camina",
+              "a": 1300,
+              "dur": 1.4
+            }
+          ]
+        },
+        {
+          "id": "vaca3",
+          "como": "buey",
+          "rotulo": "",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "camina",
+              "a": 1650,
+              "dur": 0.6
+            },
+            {
+              "en": 2.5,
+              "hace": "mira",
+              "a": 3000
+            },
+            {
+              "en": 2.6,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 1.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "polvo",
+          "x": 500,
+          "y": 770,
+          "dur": 0.8
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "intensidad": 0.35,
+          "dur": 4
+        },
+        {
+          "en": 2.6,
+          "tipo": "polvo",
+          "x": 1300,
+          "y": 780,
+          "dur": 1.2
+        },
+        {
+          "en": 4.1,
+          "tipo": "chispas",
+          "x": 650,
+          "y": 740,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.6,
+          "texto": {
+            "es": "¡HACIA ATRÁS!",
+            "en": "BACKWARDS!"
+          },
+          "x": 1300,
+          "y": 220,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "campesino",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Solo un hombre lo vio: un viejo campesino que trabajaba entre sus uvas, en un lugar llamado Onquesto.",
+          "en": "Only one man saw him: an old farmer working among his grapes, in a place called Onchestus."
+        },
+        {
+          "es": "Hermes le dijo: «Si eres sabio, no viste nada y no oíste nada».",
+          "en": "Hermes told him: \"If you are wise, you saw nothing, and you heard nothing.\""
+        },
+        {
+          "es": "Después arreó las vacas toda la noche, hasta llegar a un río llamado Alfeo.",
+          "en": "Then he drove the cows all night, until he reached a river called Alpheus."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "olivo",
+          "x": 1650,
+          "s": 0.7,
+          "capa": "medio"
+        },
+        {
+          "tipo": "rio",
+          "x": 2100,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "campesino",
+          "como": "anciano",
+          "rotulo": "Old Farmer",
+          "x": 1400,
+          "mira": "izq",
+          "props": {
+            "objeto": "cana",
+            "cuerpo": "viejo"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.6,
+              "hace": "asiente"
+            },
+            {
+              "en": 2.2,
+              "hace": "gira"
+            }
+          ]
+        },
+        {
+          "id": "hermes",
+          "x": 650,
+          "mira": "der",
+          "props": {
+            "cuerpo": "nino",
+            "barba": false,
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "vaca1",
+          "como": "buey",
+          "rotulo": "",
+          "x": 250,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 800,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "vaca2",
+          "como": "buey",
+          "rotulo": "",
+          "x": 100,
+          "capa": "medio",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "camina",
+              "a": 650,
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 3
+        },
+        {
+          "en": 1.2,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 0.8
+        },
+        {
+          "en": 2.1,
+          "tipo": "polvo",
+          "x": 700,
+          "y": 780,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "ONQUESTO",
+            "en": "ONCHESTUS"
+          },
+          "x": 1100,
+          "y": 220,
+          "hasta": 1
+        },
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "EL RÍO ALFEO",
+            "en": "RIVER ALPHEUS"
+          },
+          "x": 1100,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "fuego",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 250
+      },
+      "frases": [
+        {
+          "es": "Junto al río, Hermes frotó dos palos y encendió fuego.",
+          "en": "By the river, Hermes rubbed two sticks together, and made fire."
+        },
+        {
+          "es": "Los griegos decían que fue el primero en hacer fuego de esa manera.",
+          "en": "The Greeks said he was the first one to make fire this way."
+        },
+        {
+          "es": "Después ofreció dos de las vacas y las asó en el fuego.",
+          "en": "Then he offered two of the cows, and roasted them over the fire."
+        },
+        {
+          "es": "Cortó la carne en doce partes iguales, como un regalo para los dioses.",
+          "en": "He cut the meat into twelve equal parts, like a gift for the gods."
+        },
+        {
+          "es": "Olía delicioso. Hermes quería comer, pero no probó ni un bocado.",
+          "en": "It smelled delicious. Hermes wanted to eat, but he did not take a single bite."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "rio",
+          "x": 1700,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "fogata",
+          "x": 1050,
+          "en": 0.7
+        },
+        {
+          "tipo": "altar",
+          "x": 1350,
+          "s": 0.8,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "x": 800,
+          "mira": "der",
+          "props": {
+            "cuerpo": "nino",
+            "barba": false,
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.25,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.5,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "vaca1",
+          "como": "buey",
+          "rotulo": "",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "vaca2",
+          "como": "buey",
+          "rotulo": "",
+          "x": 1700,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 740,
+          "dur": 1
+        },
+        {
+          "en": 0.7,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 650,
+          "dur": 1.2
+        },
+        {
+          "en": 2.4,
+          "tipo": "humo",
+          "x": 1050,
+          "y": 600,
+          "dur": 1.5
+        },
+        {
+          "en": 3.3,
+          "tipo": "luz",
+          "x": 1350,
+          "y": 550,
+          "dur": 1
+        },
+        {
+          "en": 4.2,
+          "tipo": "humo",
+          "x": 1050,
+          "y": 620,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LOS PRIMEROS PALOS DE FUEGO",
+            "en": "THE FIRST FIRE STICKS"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 2
+        },
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "DOCE PARTES",
+            "en": "TWELVE PARTS"
+          },
+          "x": 1100,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "regreso",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 200
+      },
+      "frases": [
+        {
+          "es": "Luego tiró las sandalias al río y escondió las otras vacas en una cueva.",
+          "en": "Then he threw his sandals into the river, and hid the other cows in a cave."
+        },
+        {
+          "es": "Al amanecer volvió a casa. Se metió en la cueva por el ojo de la cerradura, como una neblina.",
+          "en": "At dawn, he came home. He slipped into the cave through the keyhole, like a mist."
+        },
+        {
+          "es": "Saltó a su cuna y se tapó con la manta, inocente como un recién nacido.",
+          "en": "He jumped into his cradle and pulled up his blanket, as innocent as a newborn."
+        },
+        {
+          "es": "Pero Maya estaba despierta. «¿Dónde estuviste, pequeño tramposo?», le preguntó.",
+          "en": "But Maia was awake. \"Where have you been, you little trickster?\" she asked."
+        },
+        {
+          "es": "Hermes sonrió. «No te preocupes, madre. Un día seremos ricos y viviremos con los dioses».",
+          "en": "Hermes smiled. \"Don't worry, mother. One day we will be rich, and live with the gods.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 950,
+          "s": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes_fuera",
+          "como": "hermes",
+          "x": 350,
+          "mira": "der",
+          "props": {
+            "cuerpo": "nino",
+            "barba": false,
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "lanza"
+            },
+            {
+              "en": 0.7,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.1,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "hermes",
+          "x": 950,
+          "mira": "der",
+          "visible": false,
+          "props": {
+            "cuerpo": "nino",
+            "barba": false,
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2,
+              "hace": "salta"
+            },
+            {
+              "en": 2.3,
+              "hace": "sienta"
+            },
+            {
+              "en": 3.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.2,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 4.6,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "maia",
+          "como": "ninfa",
+          "rotulo": "Maia",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.4,
+              "hace": "senala"
+            },
+            {
+              "en": 4.6,
+              "hace": "niega"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "polvo",
+          "x": 500,
+          "y": 760,
+          "dur": 0.6
+        },
+        {
+          "en": 1,
+          "tipo": "niebla",
+          "dur": 1.2
+        },
+        {
+          "en": 1.3,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4.4,
+          "tipo": "luz",
+          "x": 950,
+          "y": 550,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "AMANECER",
+            "en": "DAWN"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "busqueda",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 400
+      },
+      "frases": [
+        {
+          "es": "A la mañana, Apolo fue a ver sus vacas. Faltaban cincuenta.",
+          "en": "In the morning, Apollo came to see his cows. Fifty of them were gone."
+        },
+        {
+          "es": "Siguió las huellas raras, y no tenían ningún sentido.",
+          "en": "He followed the strange tracks, and they made no sense."
+        },
+        {
+          "es": "Entonces encontró al viejo campesino de Onquesto. «Vi a un bebé», dijo el anciano, «arreando vacas hacia atrás».",
+          "en": "Then he met the old farmer of Onchestus. \"I saw a baby,\" said the old man, \"driving cows backwards.\""
+        },
+        {
+          "es": "Luego pasó volando un pájaro de alas largas. Para Apolo, el dios de las profecías, era una señal.",
+          "en": "Then a bird with long wings flew by. For Apollo, the god of prophecy, it was a sign."
+        },
+        {
+          "es": "Ahora lo sabía. El ladrón era un hijo de Zeus, y vivía en una cueva del monte Cilene.",
+          "en": "Now he knew. The thief was a son of Zeus, and he lived in a cave on Mount Cyllene."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "olivo",
+          "x": 1600,
+          "s": 0.8,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "x": 250,
+          "mira": "der",
+          "props": {
+            "objeto": "arco"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 550
+            },
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 850,
+              "dur": 1
+            },
+            {
+              "en": 1.6,
+              "hace": "niega"
+            },
+            {
+              "en": 3.4,
+              "hace": "mira",
+              "a": 600
+            },
+            {
+              "en": 3.7,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "enoja"
+            },
+            {
+              "en": 4.4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "campesino",
+          "como": "anciano",
+          "rotulo": "Old Farmer",
+          "x": 1350,
+          "mira": "izq",
+          "props": {
+            "objeto": "cana",
+            "cuerpo": "viejo"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.6,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "pajaro",
+          "como": "aguila",
+          "rotulo": "",
+          "x": 1950,
+          "y": 260,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "vuela",
+              "a": [
+                700,
+                220
+              ],
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 1.1,
+          "tipo": "polvo",
+          "x": 750,
+          "y": 780,
+          "dur": 1
+        },
+        {
+          "en": 3.7,
+          "tipo": "luz",
+          "x": 850,
+          "y": 380,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4.2,
+          "texto": {
+            "es": "UN HIJO DE ZEUS",
+            "en": "A SON OF ZEUS"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "cuna",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Apolo entró furioso en la cueva. Hermes se acurrucó en su manta, haciéndose el dormido.",
+          "en": "Apollo stormed into the cave. Hermes curled up in his blanket, pretending to sleep."
+        },
+        {
+          "es": "«Dime dónde están mis vacas», dijo Apolo, «¡o te arrojaré al pozo más oscuro bajo la tierra!»",
+          "en": "\"Tell me where my cows are,\" said Apollo, \"or I will throw you into the darkest pit under the earth!\""
+        },
+        {
+          "es": "Hermes abrió sus ojos grandes. «¿Vacas? ¿Qué son las vacas? ¡Nací ayer!»",
+          "en": "Hermes opened his big eyes. \"Cows? What are cows? I was born yesterday!\""
+        },
+        {
+          "es": "«Mis pies son demasiado blandos para andar sobre piedras. Solo me importan el sueño y la leche».",
+          "en": "\"My feet are too soft to walk on stones. I only care about sleep and milk.\""
+        },
+        {
+          "es": "Apolo se rió, pero no le creyó ni una palabra. «Vamos. Zeus va a juzgar esto».",
+          "en": "Apollo laughed, but he did not believe one word. \"Come. Zeus will judge this.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 850,
+          "s": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "x": 850,
+          "mira": "der",
+          "props": {
+            "cuerpo": "nino",
+            "barba": false,
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.5,
+              "hace": "encoge",
+              "escala": 0.9
+            },
+            {
+              "en": 2,
+              "hace": "crece",
+              "escala": 1
+            },
+            {
+              "en": 2.1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "niega"
+            },
+            {
+              "en": 3.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "maia",
+          "como": "ninfa",
+          "rotulo": "Maia",
+          "x": 350,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.3,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "apolo",
+          "x": 1800,
+          "mira": "izq",
+          "props": {
+            "objeto": "arco"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1300,
+              "dur": 0.6
+            },
+            {
+              "en": 0.6,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.5,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.1,
+          "tipo": "polvo",
+          "x": 1450,
+          "y": 780,
+          "dur": 0.6
+        },
+        {
+          "en": 1.4,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 1.4,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 0.8
+        },
+        {
+          "en": 2.2,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.3,
+          "texto": {
+            "es": "«¡NACÍ AYER!»",
+            "en": "\"I WAS BORN YESTERDAY!\""
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 3.8
+        }
+      ]
+    },
+    {
+      "id": "juicio",
+      "fondo": "olimpo",
+      "camara": {
+        "de": 0,
+        "a": 200
+      },
+      "frases": [
+        {
+          "es": "En el Olimpo, los dioses se reunieron a mirar. Apolo le contó todo a Zeus.",
+          "en": "On Olympus, the gods gathered to watch. Apollo told Zeus everything."
+        },
+        {
+          "es": "Entonces el pequeño Hermes habló, con la cara más dulce del mundo.",
+          "en": "Then little Hermes spoke, with the sweetest face in the world."
+        },
+        {
+          "es": "«Padre, soy muy honesto. No sé mentir. ¡Nunca vi sus vacas!»",
+          "en": "\"Father, I am very honest. I don't know how to lie. I never saw his cows!\""
+        },
+        {
+          "es": "Zeus sabía que su hijo mentía. Y soltó una carcajada.",
+          "en": "Zeus knew his son was lying. And he burst out laughing."
+        },
+        {
+          "es": "¿Tú habrías castigado a ese bebé, o te habrías reído como Zeus?",
+          "en": "Would you have punished that baby, or laughed like Zeus?"
+        },
+        {
+          "es": "Zeus les ordenó a los hermanos hacer las paces, y a Hermes devolver las vacas.",
+          "en": "Zeus told the brothers to make peace, and told Hermes to give back the cows."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1500
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 3,
+              "hace": "alegra",
+              "dur": 2
+            },
+            {
+              "en": 3.3,
+              "hace": "asiente"
+            },
+            {
+              "en": 5,
+              "hace": "levantarse"
+            },
+            {
+              "en": 5.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "apolo",
+          "x": 450,
+          "mira": "der",
+          "props": {
+            "objeto": "arco"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 0.6,
+              "hace": "senala"
+            },
+            {
+              "en": 2.6,
+              "hace": "enoja"
+            },
+            {
+              "en": 5.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "hermes",
+          "x": 900,
+          "mira": "der",
+          "props": {
+            "cuerpo": "nino",
+            "barba": false,
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.5,
+              "hace": "niega"
+            },
+            {
+              "en": 4,
+              "hace": "salta"
+            },
+            {
+              "en": 5.6,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "x": 1950,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "atenea",
+          "x": 200,
+          "capa": "medio",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.4,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 350,
+          "dur": 1
+        },
+        {
+          "en": 3.1,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 400,
+          "dur": 1.2
+        },
+        {
+          "en": 3.1,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 5.2,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "«NO SÉ MENTIR»",
+            "en": "\"I DON'T KNOW HOW TO LIE\""
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "trato",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Junto al río, Apolo vio lo que quedaba de sus dos vacas. Y se enojó otra vez.",
+          "en": "At the river, Apollo saw what was left of his two cows. He grew angry again."
+        },
+        {
+          "es": "Intentó atar a Hermes con ramas. Pero las ramas se soltaron y echaron raíces en el suelo.",
+          "en": "He tried to tie Hermes up with branches. But the branches fell off and grew roots in the ground."
+        },
+        {
+          "es": "Entonces Hermes sacó su lira y empezó a tocar.",
+          "en": "Then Hermes took out his lyre and began to play."
+        },
+        {
+          "es": "Apolo nunca había oído una música así. Su enojo se derritió.",
+          "en": "Apollo had never heard music like this. His anger melted away."
+        },
+        {
+          "es": "«Dame esa lira», dijo, «y puedes quedarte con las vacas».",
+          "en": "\"Give me that lyre,\" he said, \"and you can keep the cows.\""
+        },
+        {
+          "es": "Así la lira pasó a Apolo. Desde ese día, siempre la tocó.",
+          "en": "So the lyre went to Apollo. From that day on, he always played it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "rio",
+          "x": 1800,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "olivo",
+          "x": 350,
+          "s": 0.8,
+          "en": 1.5,
+          "sube": 250,
+          "durSube": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "x": 1200,
+          "mira": "izq",
+          "props": {
+            "objeto": "arco"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.6,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.4
+            },
+            {
+              "en": 1.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.5,
+              "hace": "ofrece"
+            },
+            {
+              "en": 5,
+              "hace": "toma",
+              "objeto": "lira"
+            },
+            {
+              "en": 5.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "hermes",
+          "x": 650,
+          "mira": "der",
+          "props": {
+            "cuerpo": "nino",
+            "barba": false,
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 1.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 2,
+              "hace": "toma",
+              "objeto": "lira"
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.8,
+              "hace": "ofrece"
+            },
+            {
+              "en": 5,
+              "hace": "suelta"
+            },
+            {
+              "en": 5.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "vaca1",
+          "como": "buey",
+          "rotulo": "",
+          "x": 2000,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4.6,
+              "hace": "camina",
+              "a": 1700,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "polvo",
+          "x": 350,
+          "y": 780,
+          "dur": 0.8
+        },
+        {
+          "en": 2.3,
+          "tipo": "luz",
+          "x": 650,
+          "y": 520,
+          "dur": 2
+        },
+        {
+          "en": 2.4,
+          "tipo": "chispas",
+          "x": 650,
+          "y": 560,
+          "dur": 1.5
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 5.3,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 450,
+          "dur": 1.2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 5.2,
+          "texto": {
+            "es": "LA LIRA DE APOLO",
+            "en": "APOLLO'S LYRE"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "olimpo",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Apolo también le hizo un regalo a Hermes: un bastón de oro. Más tarde lo llamaron caduceo.",
+          "en": "Apollo also gave Hermes a gift: a golden staff. Later, people called it the caduceus."
+        },
+        {
+          "es": "Zeus hizo a Hermes el mensajero de los dioses, rápido como el viento.",
+          "en": "Zeus made Hermes the messenger of the gods, as fast as the wind."
+        },
+        {
+          "es": "También se volvió el dios de los viajeros, y de los ladrones astutos.",
+          "en": "He also became the god of travelers, and of clever thieves."
+        },
+        {
+          "es": "Y guía a las almas de los muertos hasta el mundo de Hades.",
+          "en": "And he guides the souls of the dead down to the world of Hades."
+        },
+        {
+          "es": "Cuéntame en los comentarios: ¿quién fue más listo, el bebé Hermes o el gran Apolo?",
+          "en": "Tell me in the comments: who was smarter, the baby Hermes or the great Apollo?"
+        },
+        {
+          "es": "En el próximo episodio, un dios que nació dos veces: Dioniso, el nacido dos veces.",
+          "en": "Next time, a god who was born twice: Dionysus, the Twice-Born."
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "x": 500,
+          "mira": "der",
+          "props": {
+            "objeto": "lira"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hermes",
+          "x": 950,
+          "mira": "izq",
+          "props": {
+            "cuerpo": "nino",
+            "barba": false,
+            "objeto": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "toma",
+              "objeto": "caduceo"
+            },
+            {
+              "en": 0.7,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "vuela",
+              "a": [
+                1250,
+                450
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "vuela",
+              "a": [
+                1250,
+                790
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 4.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "dioniso",
+          "x": 1950,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 5.3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 0.5,
+          "tipo": "luz",
+          "x": 950,
+          "y": 500,
+          "dur": 1
+        },
+        {
+          "en": 1.3,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "intensidad": 0.35,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 5,
+          "tipo": "luz",
+          "x": 1900,
+          "y": 400,
+          "dur": 1.2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.7,
+          "texto": {
+            "es": "EL CADUCEO",
+            "en": "THE CADUCEUS"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 1.8
+        },
+        {
+          "en": 1.8,
+          "texto": {
+            "es": "MENSAJERO DE LOS DIOSES",
+            "en": "MESSENGER OF THE GODS"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 3
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "DIONISO, EL NACIDO DOS VECES",
+            "en": "DIONYSUS, THE TWICE-BORN"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Un bebé que le robó a un dios",
+        "en": "A Baby Who Robbed a God"
+      },
+      "escena": "robo",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "«¡Nací ayer!»",
+        "en": "\"I Was Born Yesterday!\""
+      },
+      "escena": "cuna",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "El bebé que hizo reír a Zeus",
+        "en": "The Baby Who Made Zeus Laugh"
+      },
+      "escena": "juicio",
+      "desde": 0,
+      "hasta": 5,
+      "foco": 1050
+    }
+  ]
+}

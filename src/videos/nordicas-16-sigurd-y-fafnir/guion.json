@@ -1,0 +1,1986 @@
+{
+  "id": "nordicas-16-sigurd-y-fafnir",
+  "serie": "nordicas",
+  "numero": "16",
+  "titulo": {
+    "es": "Sigurd y el dragón Fáfnir",
+    "en": "Sigurd and the Dragon Fafnir"
+  },
+  "tituloGriego": "SIGURD AND THE DRAGON FAFNIR",
+  "escenas": [
+    {
+      "id": "sigurd",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada, Fáfnir mató a su padre por un tesoro maldito. Después se convirtió en dragón para guardarlo.",
+          "en": "Last time, Fafnir killed his father for a cursed treasure. Then he turned into a dragon to guard it."
+        },
+        {
+          "es": "Su hermano Regin, un herrero astuto, se fue a vivir a la corte de un rey. Y allí esperó.",
+          "en": "His brother Regin, a clever smith, went to live at a king's court. And there, he waited."
+        },
+        {
+          "es": "En esa corte vivía un niño llamado Sigurd. Su padre era Sigmund, un gran héroe de la familia de los Volsungos.",
+          "en": "At that court lived a boy named Sigurd. His father was Sigmund, a great hero of the Volsung family."
+        },
+        {
+          "es": "Sigmund murió en batalla antes de que Sigurd naciera. Solo dejó una espada rota.",
+          "en": "Sigmund died in battle before Sigurd was born. He left behind only a broken sword."
+        },
+        {
+          "es": "Regin se convirtió en el maestro del niño. Le enseñó runas, idiomas y juegos de destreza.",
+          "en": "Regin became the boy's teacher. He taught him runes, languages, and games of skill."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1750,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1050,
+          "s": 0.7,
+          "capa": "medio",
+          "en": 4,
+          "props": {
+            "texto": "SIGURD"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "fafnir",
+          "como": "dragon",
+          "x": 1300,
+          "y": 520,
+          "escala": 0.6,
+          "capa": "fondo",
+          "rotulo": "FAFNIR",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "regin",
+          "como": "enano",
+          "x": 2200,
+          "mira": "izq",
+          "rotulo": "REGIN",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1450,
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": 800,
+          "escala": 0.85,
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": null,
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.6,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "madre",
+          "como": "reina",
+          "x": 400,
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3.6,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 520,
+          "dur": 0.6
+        },
+        {
+          "en": 1,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3.6,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.3,
+          "texto": {
+            "es": "SIGURD, HIJO DE SIGMUND",
+            "en": "SIGURD, SON OF SIGMUND"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3.4
+        },
+        {
+          "en": 3.5,
+          "texto": {
+            "es": "LA ESPADA ROTA",
+            "en": "THE BROKEN SWORD"
+          },
+          "x": 450,
+          "y": 300,
+          "hasta": 4.4
+        }
+      ]
+    },
+    {
+      "id": "grani",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, Regin dijo: un héroe necesita un buen caballo. Ve y elige uno.",
+          "en": "One day, Regin said: A hero needs a good horse. Go and choose one."
+        },
+        {
+          "es": "En el camino, Sigurd se encontró con un anciano de barba larga. Era Odín, el dios principal, disfrazado.",
+          "en": "On the way, Sigurd met an old man with a long beard. It was Odin, the chief god, in disguise."
+        },
+        {
+          "es": "Lleva los caballos al río, dijo el anciano. Quédate con el que no se dé la vuelta.",
+          "en": "Drive the horses into the river, said the old man. Keep the one that does not turn back."
+        },
+        {
+          "es": "Los otros caballos volvieron nadando. Solo un caballo gris cruzó el agua profunda.",
+          "en": "The other horses swam back. Only one grey horse crossed the deep water."
+        },
+        {
+          "es": "Se llamaba Grani. Venía de la familia de Sleipnir, el caballo del propio Odín.",
+          "en": "His name was Grani. He came from the family of Sleipnir, Odin's own horse."
+        },
+        {
+          "es": "Sigurd se volvió para darle las gracias al anciano, pero ya no estaba.",
+          "en": "Sigurd turned to thank the old man, but he was gone."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "rio",
+          "x": 1500,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pino",
+          "x": 150,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "regin",
+          "como": "enano",
+          "x": 250,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 0.6,
+              "hace": "senala"
+            },
+            {
+              "en": 0.9,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": -300,
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": null,
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "camina",
+              "a": 600,
+              "dur": 0.8
+            },
+            {
+              "en": 5.2,
+              "hace": "mira",
+              "a": 1050
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "como": "odin",
+          "x": 1050,
+          "mira": "izq",
+          "rotulo": "ODIN",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.5,
+              "hace": "senala"
+            },
+            {
+              "en": 5,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "grani",
+          "como": "caballo",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "GRANI",
+          "props": {
+            "color": "#9AA5AE"
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1650,
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "caballo2",
+          "como": "caballo",
+          "x": 1800,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "props": {
+            "color": "#7A5230"
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "gira"
+            },
+            {
+              "en": 3.2,
+              "hace": "camina",
+              "a": 2300,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 450,
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "olas-suben",
+          "dur": 0.8
+        },
+        {
+          "en": 3.8,
+          "tipo": "olas-bajan",
+          "dur": 0.6
+        },
+        {
+          "en": 5.1,
+          "tipo": "niebla",
+          "dur": 0.9
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "GRANI, DE LA SANGRE DE SLEIPNIR",
+            "en": "GRANI, OF SLEIPNIR’S LINE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 5
+        }
+      ]
+    },
+    {
+      "id": "gram",
+      "fondo": "fragua",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Regin le habló a Sigurd de Fáfnir y su oro. Mata al dragón, le dijo, y el tesoro es tuyo.",
+          "en": "Regin told Sigurd about Fafnir and his gold. Kill the dragon, he said, and the treasure is yours."
+        },
+        {
+          "es": "Hazme una espada, dijo Sigurd. Regin hizo dos espadas, pero cada una se rompió contra el yunque.",
+          "en": "Make me a sword, said Sigurd. Regin made two swords, but each one broke on the anvil."
+        },
+        {
+          "es": "Sigurd fue a ver a su madre. Ella había guardado los pedazos de la espada de su padre.",
+          "en": "Sigurd went to his mother. She had kept the pieces of his father's sword."
+        },
+        {
+          "es": "Regin forjó los pedazos en una hoja nueva. Parecía que le corrían llamas por los filos.",
+          "en": "Regin forged the pieces into a new blade. Flames seemed to run along its edges."
+        },
+        {
+          "es": "Esta era Gram. Sigurd golpeó el yunque, y Gram lo partió en dos.",
+          "en": "This was Gram. Sigurd struck the anvil, and Gram split it in two."
+        },
+        {
+          "es": "En el río, un mechón de lana flotó contra la hoja. Gram lo cortó en dos.",
+          "en": "In the river, a tuft of wool floated against the blade. Gram cut it in two."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 1500,
+          "capa": "medio"
+        },
+        {
+          "tipo": "cofre",
+          "x": 1750,
+          "s": 0.9,
+          "capa": "fondo",
+          "en": 0.3,
+          "hasta": 1
+        },
+        {
+          "tipo": "roca",
+          "x": 1000,
+          "s": 0.45,
+          "hasta": 4.4
+        },
+        {
+          "tipo": "roca",
+          "x": 940,
+          "s": 0.3,
+          "en": 4.4
+        },
+        {
+          "tipo": "roca",
+          "x": 1070,
+          "s": 0.3,
+          "en": 4.4
+        },
+        {
+          "tipo": "rio",
+          "x": 1900,
+          "capa": "fondo",
+          "en": 5
+        }
+      ],
+      "actores": [
+        {
+          "id": "regin",
+          "como": "enano",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "REGIN",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 0.6,
+              "hace": "senala"
+            },
+            {
+              "en": 1.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.5,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.6,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": 700,
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": null,
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 650,
+              "dur": 0.4
+            },
+            {
+              "en": 3.7,
+              "hace": "toma",
+              "objeto": "espada"
+            },
+            {
+              "en": 4.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 5,
+              "hace": "camina",
+              "a": 1650,
+              "dur": 0.6
+            },
+            {
+              "en": 5.7,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "madre",
+          "como": "reina",
+          "x": 250,
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 1750,
+          "y": 600,
+          "dur": 0.6
+        },
+        {
+          "en": 1.6,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 700
+        },
+        {
+          "en": 1.7,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.2,
+          "tipo": "fuego",
+          "x": 1500,
+          "y": 650,
+          "dur": 0.6
+        },
+        {
+          "en": 3.5,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 600
+        },
+        {
+          "en": 4.3,
+          "tipo": "destello"
+        },
+        {
+          "en": 4.3,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 4.3,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 700
+        },
+        {
+          "en": 5.6,
+          "tipo": "luz",
+          "x": 1650,
+          "y": 450,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "GRAM",
+            "en": "GRAM"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 5
+        }
+      ]
+    },
+    {
+      "id": "brezal",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sigurd y Regin cabalgaron hasta Gnitaheiðr, el páramo solitario donde vivía Fáfnir.",
+          "en": "Sigurd and Regin rode to Gnitaheath, the lonely heath where Fafnir lived."
+        },
+        {
+          "es": "Encontraron el rastro que el dragón dejaba cada día al bajar a beber.",
+          "en": "They found the track the dragon made each day, crawling down to drink."
+        },
+        {
+          "es": "Cava un pozo en ese camino, dijo Regin. Escóndete en él y apuñala al dragón desde abajo.",
+          "en": "Dig a pit in that path, said Regin. Hide in it, and stab the dragon from below."
+        },
+        {
+          "es": "Después Regin se alejó a caballo, porque tenía miedo.",
+          "en": "Then Regin rode far away, because he was afraid."
+        },
+        {
+          "es": "Mientras Sigurd cavaba, el anciano de barba larga apareció de nuevo.",
+          "en": "As Sigurd dug, the old man with the long beard appeared again."
+        },
+        {
+          "es": "Cava más de un pozo, dijo, para que la sangre se escurra. Si no, la sangre del dragón te ahogará.",
+          "en": "Dig more than one pit, he said, so the blood can run away. If not, the dragon's blood will drown you."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1500,
+          "s": 0.9,
+          "capa": "medio"
+        },
+        {
+          "tipo": "monte_nevado",
+          "x": 1900,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 2000,
+          "s": 0.7,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "grani",
+          "como": "caballo",
+          "x": -500,
+          "rotulo": "GRANI",
+          "props": {
+            "color": "#9AA5AE"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 250,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": -250,
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": "espada",
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 550,
+              "dur": 1
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.8,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 5.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "regin",
+          "como": "enano",
+          "x": 0,
+          "rotulo": "REGIN",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 850,
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 3.4,
+              "hace": "corre",
+              "a": -700,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "como": "odin",
+          "x": 1150,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 4.2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 5,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 5.4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "polvo",
+          "x": 1300,
+          "dur": 0.8
+        },
+        {
+          "en": 3.9,
+          "tipo": "polvo",
+          "x": 650,
+          "dur": 0.8
+        },
+        {
+          "en": 4.2,
+          "tipo": "niebla",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "GNITAHEIÐR",
+            "en": "GNITAHEATH"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "EL CAMINO DEL DRAGÓN",
+            "en": "THE DRAGON'S PATH"
+          },
+          "x": 1250,
+          "y": 300,
+          "hasta": 2.2
+        }
+      ]
+    },
+    {
+      "id": "fafnir",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sigurd cavó los pozos y se escondió en uno. El anciano desapareció.",
+          "en": "Sigurd dug the pits and hid in one. The old man vanished."
+        },
+        {
+          "es": "Entonces la tierra tembló. Fáfnir bajó por el camino, soplando veneno delante de él.",
+          "en": "Then the earth shook. Fafnir crawled down the path, blowing poison in front of him."
+        },
+        {
+          "es": "Sigurd no huyó. Esperó en la oscuridad, con Gram en las manos.",
+          "en": "Sigurd did not run. He waited in the dark, with Gram in his hands."
+        },
+        {
+          "es": "Cuando el dragón pasó sobre el pozo, Sigurd le clavó a Gram desde abajo, hasta la empuñadura.",
+          "en": "As the dragon crawled over the pit, Sigurd thrust Gram up into him, all the way to the hilt."
+        },
+        {
+          "es": "Fáfnir rugió y sacudió la cabeza y la cola. Las rocas y los árboles se rompían a su alrededor.",
+          "en": "Fafnir roared and thrashed his head and tail. Rocks and trees broke all around him."
+        },
+        {
+          "es": "¿Te atreverías a esperar en ese pozo, debajo de un dragón? Cuéntamelo en los comentarios.",
+          "en": "Would you dare to wait in that pit, under a dragon? Tell me in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 250,
+          "s": 0.8,
+          "capa": "medio"
+        },
+        {
+          "tipo": "pino",
+          "x": 1800,
+          "s": 1,
+          "capa": "fondo",
+          "hasta": 4.5
+        },
+        {
+          "tipo": "roca",
+          "x": 1650,
+          "s": 0.7,
+          "capa": "medio",
+          "hasta": 4.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": 700,
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": "espada",
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1200
+            },
+            {
+              "en": 3.2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 5,
+              "hace": "mira",
+              "a": 1100
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "como": "odin",
+          "x": 1150,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "fafnir",
+          "como": "dragon",
+          "x": 2400,
+          "mira": "izq",
+          "rotulo": "FAFNIR",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1150,
+              "dur": 1.4
+            },
+            {
+              "en": 1.6,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.5,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 4,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.4,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 4.9,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 1.4,
+          "tipo": "humo",
+          "x": 1100,
+          "y": 650,
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 3.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 4,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 4.2,
+          "tipo": "polvo",
+          "x": 1500,
+          "dur": 0.8
+        },
+        {
+          "en": 4.4,
+          "tipo": "polvo",
+          "x": 900,
+          "dur": 0.6
+        },
+        {
+          "en": 5,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 5,
+          "texto": {
+            "es": "¿TE ATREVERÍAS?",
+            "en": "WOULD YOU DARE?"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "palabras",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1.04,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mientras moría, Fáfnir habló. ¿Quién eres?, preguntó, ¿y quién te envió?",
+          "en": "As he lay dying, Fafnir spoke. Who are you, he asked, and who sent you?"
+        },
+        {
+          "es": "Sigurd le dijo su nombre. Entonces Fáfnir le dio una advertencia.",
+          "en": "Sigurd told him his name. Then Fafnir gave him a warning."
+        },
+        {
+          "es": "Ese oro será tu muerte, dijo, y la muerte de todo el que lo posea.",
+          "en": "That gold will be your death, he said, and the death of everyone who owns it."
+        },
+        {
+          "es": "Y mi hermano Regin me traicionó. A ti también te traicionará.",
+          "en": "And my brother Regin betrayed me. He will betray you too."
+        },
+        {
+          "es": "Sigurd respondió: todos morimos algún día. Me llevaré el oro. Entonces Fáfnir murió.",
+          "en": "Sigurd answered: Every man dies one day. I will take the gold. Then Fafnir died."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 1650,
+          "s": 1,
+          "capa": "medio",
+          "en": 2
+        },
+        {
+          "tipo": "cofre",
+          "x": 1850,
+          "s": 0.8,
+          "capa": "medio",
+          "en": 2.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "fafnir",
+          "como": "dragon",
+          "x": 1100,
+          "mira": "izq",
+          "rotulo": "FAFNIR",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.5,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4.7,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": 450,
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": "espada",
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "regin",
+          "como": "enano",
+          "x": 1500,
+          "mira": "izq",
+          "capa": "fondo",
+          "rotulo": "REGIN",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 3.9,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 2
+        },
+        {
+          "en": 2.1,
+          "tipo": "luz",
+          "x": 1750,
+          "y": 550,
+          "dur": 1
+        },
+        {
+          "en": 4.7,
+          "tipo": "polvo",
+          "x": 1100,
+          "dur": 0.6
+        },
+        {
+          "en": 4.8,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "LA ADVERTENCIA DE FÁFNIR",
+            "en": "FAFNIR'S WARNING"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "corazon",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Regin volvió y le sacó el corazón al dragón. Bebió un poco de la sangre de Fáfnir.",
+          "en": "Regin came back, and cut out the dragon's heart. He drank some of Fafnir's blood."
+        },
+        {
+          "es": "Ásame este corazón, le dijo a Sigurd. Después se acostó a dormir.",
+          "en": "Roast this heart for me, he told Sigurd. Then he lay down to sleep."
+        },
+        {
+          "es": "Sigurd lo asó sobre el fuego. Lo tocó para ver si estaba listo y se quemó el pulgar.",
+          "en": "Sigurd roasted it over a fire. He touched it to see if it was ready, and burned his thumb."
+        },
+        {
+          "es": "Se metió el pulgar en la boca. La sangre del dragón le tocó la lengua.",
+          "en": "He put his thumb in his mouth. The dragon's blood touched his tongue."
+        },
+        {
+          "es": "De pronto, entendió a los pájaros que cantaban en el árbol sobre él.",
+          "en": "Suddenly, he understood the birds singing in the tree above him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 250,
+          "s": 1.2,
+          "capa": "medio"
+        },
+        {
+          "tipo": "fogata",
+          "x": 900,
+          "capa": "medio"
+        },
+        {
+          "tipo": "pino",
+          "x": 1850,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "regin",
+          "como": "enano",
+          "x": 2100,
+          "mira": "izq",
+          "rotulo": "REGIN",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1400,
+              "dur": 0.6
+            },
+            {
+              "en": 0.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.8,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            },
+            {
+              "en": 1.6,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.8,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": 600,
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": "espada",
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "asiente"
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.7,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "mira",
+              "a": 250
+            },
+            {
+              "en": 4.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "ave1",
+          "como": "cuervo",
+          "x": 220,
+          "y": 380,
+          "capa": "medio",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.8,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.1,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "ave2",
+          "como": "cuervo",
+          "x": 400,
+          "y": 330,
+          "capa": "medio",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.9,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.3,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "destello"
+        },
+        {
+          "en": 2,
+          "tipo": "fuego",
+          "x": 900,
+          "y": 700,
+          "dur": 0.6
+        },
+        {
+          "en": 2.6,
+          "tipo": "chispas",
+          "x": 800,
+          "y": 600
+        },
+        {
+          "en": 3.3,
+          "tipo": "luz",
+          "x": 600,
+          "y": 450,
+          "dur": 0.8
+        },
+        {
+          "en": 4.2,
+          "tipo": "luz",
+          "x": 320,
+          "y": 360,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "ENTIENDE A LOS PÁJAROS",
+            "en": "HE UNDERSTANDS THE BIRDS"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "aves",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ahí está Sigurd, cantó un pájaro, asando el corazón. Debería comérselo él y volverse el más sabio de los hombres.",
+          "en": "There sits Sigurd, sang one bird, roasting the heart. He should eat it himself, and become the wisest of men."
+        },
+        {
+          "es": "Ahí está Regin, cantó otro. Quiere engañar al muchacho y quedarse con todo el oro.",
+          "en": "There lies Regin, sang another. He wants to trick the boy, and keep all the gold."
+        },
+        {
+          "es": "Debería atacar primero, cantó un tercero, y quedarse con el tesoro.",
+          "en": "He should strike first, sang a third, and keep the treasure for himself."
+        },
+        {
+          "es": "Sigurd miró a Regin, dormido. Después sacó a Gram y lo mató de un solo golpe.",
+          "en": "Sigurd looked at Regin, asleep. Then he drew Gram, and killed him with one blow."
+        },
+        {
+          "es": "Comió una parte del corazón del dragón y guardó el resto.",
+          "en": "He ate part of the dragon's heart, and kept the rest."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 400,
+          "s": 1.2,
+          "capa": "medio"
+        },
+        {
+          "tipo": "fogata",
+          "x": 700,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ave1",
+          "como": "cuervo",
+          "x": 200,
+          "y": 360,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "ave2",
+          "como": "cuervo",
+          "x": 400,
+          "y": 300,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "ave3",
+          "como": "cuervo",
+          "x": 600,
+          "y": 360,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": 950,
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": "espada",
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 300
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 1550
+            },
+            {
+              "en": 3.3,
+              "hace": "camina",
+              "a": 1300,
+              "dur": 0.3
+            },
+            {
+              "en": 3.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.4
+            },
+            {
+              "en": 4.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "regin",
+          "como": "enano",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "REGIN",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 3.7,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 3.6,
+          "tipo": "destello"
+        },
+        {
+          "en": 4.2,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4.4,
+          "tipo": "luz",
+          "x": 900,
+          "y": 450,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "“QUIERE ENGAÑARTE”",
+            "en": "“HE WANTS TO TRICK YOU”"
+          },
+          "x": 1300,
+          "y": 260,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "cueva",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.02,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sigurd encontró la guarida de Fáfnir, tras unas puertas de hierro. Llenó dos grandes cofres de oro.",
+          "en": "Sigurd found Fafnir's lair, behind doors of iron. He filled two great chests with gold."
+        },
+        {
+          "es": "También se llevó el yelmo del terror y el anillo Andvaranaut. Ahora el oro maldito era suyo.",
+          "en": "He also took the helm of terror, and the ring Andvaranaut. Now the cursed gold was his."
+        },
+        {
+          "es": "Mientras se alejaba en Grani, los pájaros cantaron una vez más.",
+          "en": "As he rode away on Grani, the birds sang once more."
+        },
+        {
+          "es": "En una montaña alta, cantaron, duerme una doncella, dentro de un anillo de fuego.",
+          "en": "On a high mountain, they sang, a maiden lies asleep, inside a ring of fire."
+        },
+        {
+          "es": "¿Sigurd debería haber dejado el oro maldito? Dímelo en los comentarios.",
+          "en": "Should Sigurd have left the cursed gold behind? Tell me in the comments."
+        },
+        {
+          "es": "En el próximo episodio: Brynhild, la valquiria dormida.",
+          "en": "Next time: Brynhild, the Sleeping Valkyrie."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "puerta",
+          "x": 300,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "cofre",
+          "x": 1000,
+          "s": 1.1,
+          "capa": "medio",
+          "hasta": 2.2
+        },
+        {
+          "tipo": "cofre",
+          "x": 1200,
+          "s": 0.9,
+          "capa": "medio",
+          "hasta": 2.2
+        },
+        {
+          "tipo": "fogata",
+          "x": 1750,
+          "s": 0.8,
+          "capa": "fondo",
+          "en": 3
+        },
+        {
+          "tipo": "fogata",
+          "x": 1900,
+          "s": 0.8,
+          "capa": "fondo",
+          "en": 3.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "sigurd",
+          "como": "joven",
+          "x": -200,
+          "rotulo": "SIGURD",
+          "props": {
+            "objeto": "espada",
+            "barba": false,
+            "pelo": "#E9C46A",
+            "capa": "#8A2E2A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 650,
+              "dur": 0.8
+            },
+            {
+              "en": 0.9,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.8,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.3,
+              "hace": "camina",
+              "a": 950,
+              "dur": 0.6
+            },
+            {
+              "en": 3.2,
+              "hace": "mira",
+              "a": 1800
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "grani",
+          "como": "caballo",
+          "x": -500,
+          "rotulo": "",
+          "props": {
+            "color": "#9AA5AE"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 650,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "ave1",
+          "como": "cuervo",
+          "x": 1400,
+          "y": 300,
+          "capa": "medio",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.8,
+              "hace": "vuela",
+              "a": [
+                2200,
+                250
+              ],
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "brynhild",
+          "como": "valquiria",
+          "x": 1650,
+          "capa": "medio",
+          "rotulo": "",
+          "props": {
+            "pelo": "#E9C46A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 3.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 5.1,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 550,
+          "dur": 1
+        },
+        {
+          "en": 0.5,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 650
+        },
+        {
+          "en": 1.4,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        },
+        {
+          "en": 2.2,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3.1,
+          "tipo": "fuego",
+          "x": 1500,
+          "y": 650,
+          "dur": 1.5
+        },
+        {
+          "en": 5,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 450,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "EL YELMO DEL TERROR · ANDVARANAUT",
+            "en": "THE HELM OF TERROR · ANDVARANAUT"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "¿DEBIÓ DEJAR EL ORO?",
+            "en": "LEAVE THE GOLD BEHIND?"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 5
+        },
+        {
+          "en": 5,
+          "texto": {
+            "es": "PRÓXIMO: BRYNHILD, LA VALQUIRIA DORMIDA",
+            "en": "NEXT: BRYNHILD, THE SLEEPING VALKYRIE"
+          },
+          "x": 960,
+          "y": 290
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Cómo se mata a un dragón: desde abajo",
+        "en": "How to kill a dragon: from below"
+      },
+      "escena": "fafnir",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "Probó sangre de dragón y entendió a los pájaros",
+        "en": "He tasted dragon blood and understood the birds"
+      },
+      "escena": "corazon",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 700
+    },
+    {
+      "gancho": {
+        "es": "La espada que partió un yunque en dos",
+        "en": "The sword that split an anvil in two"
+      },
+      "escena": "gram",
+      "desde": 2,
+      "hasta": 4,
+      "foco": 850
+    }
+  ],
+  "miniatura": {
+    "heroe": {
+      "objeto": "espada",
+      "barba": false,
+      "pelo": "#E9C46A",
+      "capa": "#8A2E2A"
+    },
+    "rival": "dragon"
+  },
+  "siguiente": {
+    "es": "Brynhild, la valquiria dormida",
+    "en": "Brynhild, the Sleeping Valkyrie"
+  }
+}

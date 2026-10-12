@@ -1,0 +1,352 @@
+{
+  "id": "egipcias-17-imhotep",
+  "serie": "egipcias",
+  "numero": "17",
+  "titulo": { "es": "Imhotep, el hombre que se volvió dios", "en": "Imhotep, the Man Who Became a God" },
+  "tituloGriego": "IMHOTEP, THE MAN WHO BECAME A GOD",
+  "miniatura": { "heroe": { "objeto": "cana", "ropa": "larga", "tocado": "peluca" }, "rival": "khnum" },
+  "siguiente": { "es": "La princesa de Bakhtan", "en": "The Princess of Bakhtan" },
+  "shorts": [
+    { "gancho": { "es": "La primera pirámide de piedra del mundo", "en": "The first stone pyramid in the world" }, "escena": "piramide", "desde": 0, "hasta": 3, "foco": 1000 },
+    { "gancho": { "es": "El dios que hizo crecer el Nilo en un sueño", "en": "The god who made the Nile rise in a dream" }, "escena": "sueno", "desde": 1, "hasta": 4, "foco": 1050 },
+    { "gancho": { "es": "Cómo un hombre real se volvió dios", "en": "How a real man became a god" }, "escena": "dios", "desde": 0, "hasta": 4, "foco": 900 }
+  ],
+  "escenas": [
+    {
+      "id": "marco",
+      "frases": [
+        { "es": "La última vez, el príncipe Setne robó el Libro de Thoth de una tumba, y tuvo que devolverlo.", "en": "Last time, Prince Setne stole the Book of Thoth from a tomb, and had to give it back." },
+        { "es": "El Setne real amaba los monumentos antiguos. Reparó muchos en Saqqara, un gran campo de tumbas cerca de Menfis.", "en": "The real Setne loved old monuments. He repaired many of them at Saqqara, a great field of tombs near Memphis." },
+        { "es": "El más antiguo de todos lo construyó un solo hombre, hace casi cinco mil años. Se llamaba Imhotep.", "en": "The oldest of them all was built by one man, almost five thousand years ago. His name was Imhotep." },
+        { "es": "Al principio, Imhotep no era una leyenda. Fue un hombre real, y sabemos dónde trabajó.", "en": "At first, Imhotep was not a legend. He was a real man, and we know where he worked." },
+        { "es": "Pero después de su muerte pasó algo asombroso. Poco a poco, los egipcios lo convirtieron en un dios.", "en": "But after he died, something amazing happened. Little by little, the Egyptians turned him into a god." }
+      ],
+      "fondo": "piramides",
+      "camara": { "de": 0, "a": 200, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "piramide", "x": 1550, "s": 1.3, "capa": "fondo", "en": 2 },
+        { "tipo": "tumba", "x": 300, "s": 1, "capa": "medio" }
+      ],
+      "actores": [
+        { "id": "setne", "como": "sacerdote_egipcio", "x": 600, "y": 758, "rotulo": "SETNE", "pasos": [{ "en": 0, "hace": "aparece" }, { "en": 0.4, "hace": "ofrece" }, { "en": 1, "hace": "baja" }, { "en": 1.1, "hace": "camina", "a": 850, "dur": 0.6 }, { "en": 2, "hace": "senala" }] },
+        { "id": "imhotep", "como": "escriba", "x": 1300, "y": 758, "mira": "izq", "props": { "ropa": "larga", "tocado": "peluca" }, "rotulo": "IMHOTEP", "pasos": [{ "en": 2.5, "hace": "aparece", "con": "luz" }, { "en": 3.2, "hace": "habla", "dur": 0.6 }, { "en": 4, "hace": "brilla", "dur": 1 }] }
+      ],
+      "efectos": [
+        { "en": 0, "tipo": "aclarar" },
+        { "en": 2, "tipo": "luz", "x": 1550, "y": 420, "dur": 1.5, "intensidad": 0.5 },
+        { "en": 4, "tipo": "luz", "x": 1300, "y": 450, "dur": 1.2, "intensidad": 0.6 }
+      ],
+      "rotulos": [
+        { "en": 3, "texto": { "es": "UN HOMBRE REAL · HACIA 2650 a. C.", "en": "A REAL MAN · AROUND 2650 BC" }, "x": 960, "y": 230, "hasta": 4 }
+      ]
+    },
+    {
+      "id": "djoser",
+      "frases": [
+        { "es": "Imhotep vivió hacia el año 2650 a. C. Sirvió a un rey llamado Djoser, uno de los primeros grandes faraones.", "en": "Imhotep lived around 2650 BC. He served a king named Djoser, one of Egypt's first great pharaohs." },
+        { "es": "Era el visir, el primer ministro del rey. Se ocupaba del palacio, del grano y de los trabajadores.", "en": "He was the vizier, the king's chief minister. He took care of the palace, the grain and the workers." },
+        { "es": "También era sumo sacerdote de Ra, el dios del sol, en la ciudad sagrada de Heliópolis.", "en": "He was also a high priest of Ra, the sun god, in the holy city of Heliopolis." },
+        { "es": "¿Cómo lo sabemos? Su nombre está tallado en la base de una estatua del rey Djoser.", "en": "How do we know? His name is carved on the base of a statue of King Djoser." },
+        { "es": "Era un honor muy raro. Casi nadie más tenía su nombre escrito junto al del rey.", "en": "That was a rare honor. Almost no one else had their name written next to the king's." }
+      ],
+      "fondo": "palacio",
+      "camara": { "de": 0, "a": 150, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "trono", "x": 1350, "s": 1.1 },
+        { "tipo": "anfora", "x": 250, "s": 0.7, "en": 1 },
+        { "tipo": "anfora", "x": 340, "s": 0.6, "en": 1 },
+        { "tipo": "obelisco", "x": 1850, "s": 1.1, "capa": "fondo", "en": 2 },
+        { "tipo": "estatua", "x": 560, "s": 0.9, "en": 3, "props": { "tocado": "nemes", "barbaPostiza": true } }
+      ],
+      "actores": [
+        { "id": "djoser", "como": "faraon", "x": 1350, "mira": "izq", "rotulo": "DJOSER", "pasos": [{ "en": 0, "hace": "sienta" }, { "en": 4, "hace": "levanta" }] },
+        { "id": "imhotep", "como": "escriba", "x": 950, "y": 758, "props": { "ropa": "larga", "tocado": "peluca" }, "rotulo": "", "pasos": [{ "en": 0, "hace": "entra", "a": 950 }, { "en": 0.6, "hace": "arrodilla" }, { "en": 1, "hace": "levantarse" }, { "en": 1.2, "hace": "senala" }, { "en": 2, "hace": "baja" }, { "en": 3, "hace": "mira", "a": 500 }, { "en": 3.2, "hace": "senala" }, { "en": 4, "hace": "mira", "a": 1350 }, { "en": 4.1, "hace": "baja" }] },
+        { "id": "obrero", "como": "egipcio", "x": 200, "capa": "medio", "rotulo": "", "pasos": [{ "en": 1.3, "hace": "aparece" }] }
+      ],
+      "efectos": [
+        { "en": 2, "tipo": "luz", "x": 1700, "y": 400, "dur": 1, "intensidad": 0.5 },
+        { "en": 3, "tipo": "chispas", "x": 560, "y": 650, "dur": 0.8 }
+      ],
+      "rotulos": [
+        { "en": 1, "texto": { "es": "VISIR: EL PRIMER MINISTRO", "en": "VIZIER: THE KING'S CHIEF MINISTER" }, "x": 960, "y": 230, "hasta": 2 }
+      ]
+    },
+    {
+      "id": "mastaba",
+      "frases": [
+        { "es": "Antes de Imhotep, los reyes se enterraban bajo tumbas planas de adobe, con forma de banco bajo.", "en": "Before Imhotep, kings were buried under flat tombs of mud brick, shaped like a low bench." },
+        { "es": "Hoy las llamamos mastabas. En árabe, esa palabra significa banco.", "en": "Today we call them mastabas. In Arabic, that word means bench." },
+        { "es": "Pero Djoser quería algo más grande. E Imhotep tuvo una idea audaz: construirlo todo en piedra.", "en": "But Djoser wanted something greater. And Imhotep had a bold idea: build it all in stone." },
+        { "es": "El adobe se desmorona con el tiempo. La piedra puede durar miles de años.", "en": "Mud brick crumbles with time. Stone can last for thousands of years." },
+        { "es": "Así que los obreros empezaron a cortar grandes bloques de piedra caliza y a arrastrarlos por la arena.", "en": "So workers began to cut great blocks of limestone and drag them across the sand." }
+      ],
+      "fondo": "desierto",
+      "camara": { "de": 0, "a": 200, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "tumba", "x": 450, "s": 1.2 },
+        { "tipo": "tumba", "x": 1750, "s": 1, "capa": "fondo" },
+        { "tipo": "palmera", "x": 2000, "s": 1.2, "capa": "fondo" }
+      ],
+      "actores": [
+        { "id": "imhotep", "como": "escriba", "x": 800, "y": 758, "props": { "ropa": "larga", "tocado": "peluca" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "mira", "a": 450 }, { "en": 1.1, "hace": "senala" }, { "en": 2, "hace": "mira", "a": 1100 }, { "en": 2.5, "hace": "levanta" }, { "en": 3.5, "hace": "baja" }] },
+        { "id": "djoser", "como": "faraon", "x": 1100, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2, "hace": "habla", "dur": 0.5 }, { "en": 3, "hace": "asiente" }] },
+        { "id": "obrero1", "como": "egipcio", "x": 1450, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 4, "hace": "aparece" }, { "en": 4.2, "hace": "golpea" }] },
+        { "id": "obrero2", "como": "egipcio", "x": 1650, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 4.2, "hace": "aparece" }, { "en": 4.4, "hace": "camina", "a": 1600, "dur": 0.5 }] }
+      ],
+      "efectos": [
+        { "en": 0, "tipo": "luz", "x": 450, "y": 600, "dur": 1, "intensidad": 0.4 },
+        { "en": 2.5, "tipo": "destello", "dur": 0.3 },
+        { "en": 3, "tipo": "polvo", "dur": 1 },
+        { "en": 4.3, "tipo": "polvo", "dur": 0.8 }
+      ],
+      "rotulos": [
+        { "en": 1, "texto": { "es": "MASTABA = BANCO", "en": "MASTABA = BENCH" }, "x": 960, "y": 230, "hasta": 2 }
+      ]
+    },
+    {
+      "id": "piramide",
+      "frases": [
+        { "es": "Primero, Imhotep construyó una gran mastaba cuadrada de piedra. Luego puso otra más pequeña encima.", "en": "First, Imhotep built a big square mastaba of stone. Then he placed a smaller one on top." },
+        { "es": "Luego otra, y otra más, cada una más pequeña que la anterior. Seis escalones subieron hacia el cielo.", "en": "Then another, and another, each one smaller than the last. Six steps rose toward the sky." },
+        { "es": "Medía unos sesenta metros de alto, como una escalera gigante. Es la Pirámide Escalonada de Saqqara.", "en": "It stood about sixty meters tall, like a giant staircase. It is the Step Pyramid of Saqqara." },
+        { "es": "Muchos expertos la consideran el primer gran edificio hecho todo de piedra en el mundo.", "en": "Many experts call it the first great building made all of stone in the world." },
+        { "es": "Y todavía sigue en pie, después de casi cinco mil años.", "en": "And it is still standing today, after almost five thousand years." }
+      ],
+      "fondo": "desierto",
+      "camara": { "de": 0, "a": 200, "zoom": [1, 1.06] },
+      "elementos": [
+        { "tipo": "piramide", "x": 1250, "s": 1.6, "en": 0, "sube": 520, "durSube": 2 },
+        { "tipo": "palmera", "x": 250, "s": 1.2, "capa": "fondo" }
+      ],
+      "actores": [
+        { "id": "imhotep", "como": "escriba", "x": 500, "y": 758, "props": { "ropa": "larga", "tocado": "peluca" }, "rotulo": "", "pasos": [{ "en": 0, "hace": "senala" }, { "en": 1, "hace": "levanta" }, { "en": 2, "hace": "baja" }, { "en": 3, "hace": "senala" }, { "en": 4, "hace": "baja" }] },
+        { "id": "obrero1", "como": "egipcio", "x": 800, "y": 758, "escala": 0.9, "rotulo": "", "pasos": [{ "en": 0.2, "hace": "golpea" }, { "en": 1.2, "hace": "golpea" }] },
+        { "id": "obrero2", "como": "egipcio", "x": 1000, "y": 758, "escala": 0.9, "rotulo": "", "pasos": [{ "en": 0.5, "hace": "golpea" }, { "en": 1.5, "hace": "golpea" }] },
+        { "id": "djoser", "como": "faraon", "x": 1850, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2, "hace": "aparece" }, { "en": 4, "hace": "alegra" }, { "en": 4.2, "hace": "levanta" }] }
+      ],
+      "efectos": [
+        { "en": 0, "tipo": "polvo", "dur": 1 },
+        { "en": 1, "tipo": "polvo", "dur": 1 },
+        { "en": 2, "tipo": "luz", "x": 1250, "y": 350, "dur": 1.5, "intensidad": 0.6 },
+        { "en": 4, "tipo": "aclarar" }
+      ],
+      "rotulos": [
+        { "en": 1, "texto": { "es": "6 ESCALONES", "en": "6 STEPS" }, "x": 960, "y": 230, "hasta": 2 },
+        { "en": 2, "texto": { "es": "UNOS 60 METROS", "en": "ABOUT 60 METERS TALL" }, "x": 960, "y": 230, "hasta": 3 }
+      ]
+    },
+    {
+      "id": "sabio",
+      "frases": [
+        { "es": "Pero Imhotep era más que un constructor. Los egipcios de después lo recordaban como un gran médico.", "en": "But Imhotep was more than a builder. Later Egyptians remembered him as a great doctor." },
+        { "es": "Se contaba que sabía curar heridas y fiebres, y que entendía el cuerpo humano.", "en": "Stories said he could heal wounds and fevers, and that he understood the human body." },
+        { "es": "También era escriba y sabio. Durante siglos, la gente repitió sus palabras sabias.", "en": "He was also a scribe and a wise man. For centuries, people repeated his wise words." },
+        { "es": "Una canción antigua lo nombra junto al príncipe Hordedef, el que encontró a Djedi en la historia de Khufu.", "en": "An old song names him with Prince Hordedef, the prince who found Djedi in Khufu's story." },
+        { "es": "Por desgracia, su libro de sabiduría se perdió. No ha sobrevivido ni una sola línea.", "en": "Sadly, his book of wisdom is lost. Not a single line of it has survived." }
+      ],
+      "fondo": "templo",
+      "camara": { "de": 0, "a": 150, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "columna_papiro", "x": 150, "s": 1.3, "capa": "fondo" },
+        { "tipo": "columna_papiro", "x": 1850, "s": 1.3, "capa": "fondo" }
+      ],
+      "actores": [
+        { "id": "imhotep", "como": "escriba", "x": 800, "y": 758, "props": { "ropa": "larga", "tocado": "peluca" }, "rotulo": "", "pasos": [{ "en": 0, "hace": "habla", "dur": 0.6 }, { "en": 1, "hace": "levanta" }, { "en": 1.9, "hace": "baja" }, { "en": 2.2, "hace": "habla", "dur": 0.7 }, { "en": 4, "hace": "lamenta" }] },
+        { "id": "enfermo", "como": "egipcio", "x": 1150, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0.3, "hace": "aparece" }, { "en": 0.5, "hace": "cae" }, { "en": 1.5, "hace": "levantarse" }, { "en": 1.7, "hace": "alegra" }, { "en": 2, "hace": "desaparece" }] },
+        { "id": "escriba", "como": "escriba", "x": 1450, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2, "hace": "aparece" }, { "en": 2.4, "hace": "ofrece" }, { "en": 3, "hace": "baja" }] },
+        { "id": "hordedef", "como": "egipcio", "x": 450, "y": 758, "props": { "trenza": true }, "rotulo": "HORDEDEF", "pasos": [{ "en": 3, "hace": "aparece", "con": "luz" }, { "en": 4, "hace": "desaparece", "con": "luz" }] }
+      ],
+      "efectos": [
+        { "en": 1.2, "tipo": "luz", "x": 1150, "y": 550, "dur": 1, "intensidad": 0.5 },
+        { "en": 4, "tipo": "oscurecer", "dur": 1, "intensidad": 0.35 }
+      ],
+      "rotulos": [
+        { "en": 2, "texto": { "es": "MÉDICO · ESCRIBA · SABIO", "en": "DOCTOR · SCRIBE · WISE MAN" }, "x": 960, "y": 230, "hasta": 3 }
+      ]
+    },
+    {
+      "id": "hambre",
+      "frases": [
+        { "es": "Ahora viene una leyenda. Está tallada en una gran roca de Sehel, una islita cerca de Asuán, en el extremo sur.", "en": "Now comes a legend. It is carved on a big rock on Sehel, a little island near Aswan, in the far south." },
+        { "es": "La llamamos la Estela del Hambre. Cuenta siete años terribles en tiempos de Djoser.", "en": "We call it the Famine Stela. It tells of seven terrible years in the time of Djoser." },
+        { "es": "Cada verano, el Nilo crecía y regaba los campos. Pero durante siete años, casi no creció.", "en": "Every summer, the Nile rose and watered the fields. But for seven years, it barely rose at all." },
+        { "es": "Casi no había grano. La gente se robaba entre sí. Los niños lloraban, y los viejos estaban cabizbajos.", "en": "There was almost no grain. People stole from each other. Children cried, and the old sat with bowed heads." },
+        { "es": "En su palacio, Djoser estaba lleno de tristeza. Así que llamó a su sabio, Imhotep.", "en": "In his palace, Djoser was full of sorrow. So he called for his wise man, Imhotep." }
+      ],
+      "fondo": "desierto",
+      "camara": { "de": 0, "a": 250, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "estela", "x": 420, "s": 1.2 },
+        { "tipo": "palmera", "x": 1900, "s": 1.2, "capa": "fondo" }
+      ],
+      "actores": [
+        { "id": "hombre", "como": "egipcio", "x": 850, "y": 758, "rotulo": "", "pasos": [{ "en": 2.5, "hace": "aparece" }, { "en": 3, "hace": "lamenta" }] },
+        { "id": "mujer", "como": "egipcia", "x": 1050, "y": 758, "rotulo": "", "pasos": [{ "en": 2.6, "hace": "aparece" }, { "en": 3.2, "hace": "lamenta" }] },
+        { "id": "nino", "como": "egipcio", "x": 1220, "y": 758, "props": { "cuerpo": "nino", "trenza": true }, "rotulo": "", "pasos": [{ "en": 2.7, "hace": "aparece" }, { "en": 3.4, "hace": "entristece" }] },
+        { "id": "anciano", "como": "egipcio", "x": 1400, "y": 758, "props": { "cuerpo": "viejo", "canas": true }, "rotulo": "", "pasos": [{ "en": 2.8, "hace": "aparece" }, { "en": 3.6, "hace": "lamenta" }] },
+        { "id": "djoser", "como": "faraon", "x": 1750, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 4, "hace": "aparece" }, { "en": 4.3, "hace": "lamenta" }] }
+      ],
+      "efectos": [
+        { "en": 0.5, "tipo": "luz", "x": 420, "y": 550, "dur": 1.2, "intensidad": 0.5 },
+        { "en": 2, "tipo": "polvo", "dur": 1.5 },
+        { "en": 3, "tipo": "oscurecer", "dur": 2, "intensidad": 0.3 }
+      ],
+      "rotulos": [
+        { "en": 1, "texto": { "es": "LA ESTELA DEL HAMBRE", "en": "THE FAMINE STELA" }, "x": 960, "y": 230, "hasta": 2 },
+        { "en": 2, "texto": { "es": "7 AÑOS SIN CRECIDA", "en": "7 YEARS WITHOUT A FLOOD" }, "x": 960, "y": 230, "hasta": 3 }
+      ]
+    },
+    {
+      "id": "libros",
+      "frases": [
+        { "es": "Djoser le preguntó: «¿Dónde nace el Nilo? ¿Y qué dios vive allí?»", "en": "Djoser asked him: \"Where is the Nile born? And which god lives there?\"" },
+        { "es": "Imhotep fue a la Casa de la Vida, la biblioteca del templo, y buscó en los antiguos libros sagrados.", "en": "Imhotep went to the House of Life, the temple library, and searched the old sacred books." },
+        { "es": "Volvió con la respuesta. «El Nilo nace en Elefantina, una isla del sur.»", "en": "He came back with the answer. \"The Nile is born at Elephantine, an island in the south.\"" },
+        { "es": "«Allí, el agua brota de dos cuevas bajo las rocas. Y el dios Khnum guarda las puertas.»", "en": "\"There, the water rises from two caves under the rocks. And the god Khnum guards the doors.\"" },
+        { "es": "Khnum era un dios con cabeza de carnero. Modelaba a las personas con barro en su torno de alfarero.", "en": "Khnum was a god with the head of a ram. He shaped people out of clay on his potter's wheel." }
+      ],
+      "fondo": "templo",
+      "camara": { "de": 0, "a": 200, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "trono", "x": 1500, "s": 1.1 },
+        { "tipo": "papiro", "x": 250, "s": 1, "en": 1 },
+        { "tipo": "cueva", "x": 650, "s": 0.8, "capa": "fondo", "en": 3 },
+        { "tipo": "rio", "x": 0, "en": 2 }
+      ],
+      "actores": [
+        { "id": "djoser", "como": "faraon", "x": 1500, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0, "hace": "sienta" }, { "en": 0, "hace": "habla", "dur": 1 }, { "en": 2.6, "hace": "asiente" }] },
+        { "id": "imhotep", "como": "escriba", "x": 1050, "y": 758, "props": { "ropa": "larga", "tocado": "peluca" }, "rotulo": "", "pasos": [{ "en": 0.5, "hace": "asiente" }, { "en": 1, "hace": "camina", "a": 450, "dur": 0.6 }, { "en": 1.7, "hace": "levanta" }, { "en": 2, "hace": "baja" }, { "en": 2, "hace": "camina", "a": 1050, "dur": 0.5 }, { "en": 2.6, "hace": "habla", "dur": 1 }, { "en": 3.6, "hace": "mira", "a": 650 }, { "en": 3.7, "hace": "senala" }] },
+        { "id": "khnum", "como": "khnum", "x": 700, "y": 758, "capa": "medio", "rotulo": "KHNUM", "pasos": [{ "en": 3.5, "hace": "aparece", "con": "luz" }, { "en": 4.2, "hace": "levanta" }] }
+      ],
+      "efectos": [
+        { "en": 1.5, "tipo": "luz", "x": 350, "y": 450, "dur": 1, "intensidad": 0.4 },
+        { "en": 3.5, "tipo": "luz", "x": 650, "y": 420, "dur": 1.2, "intensidad": 0.6 },
+        { "en": 4.3, "tipo": "chispas", "x": 650, "y": 600, "dur": 0.8 }
+      ],
+      "rotulos": [
+        { "en": 1, "texto": { "es": "LA CASA DE LA VIDA", "en": "THE HOUSE OF LIFE" }, "x": 960, "y": 230, "hasta": 2 },
+        { "en": 2, "texto": { "es": "ELEFANTINA", "en": "ELEPHANTINE" }, "x": 960, "y": 230, "hasta": 3 }
+      ]
+    },
+    {
+      "id": "sueno",
+      "frases": [
+        { "es": "Djoser viajó al sur, a Elefantina, y le dio ricas ofrendas a Khnum. Esa noche se quedó dormido.", "en": "Djoser traveled south to Elephantine and gave rich offerings to Khnum. That night, he fell asleep." },
+        { "es": "En un sueño, Khnum se presentó ante él. «Soy Khnum, el que te creó», dijo el dios.", "en": "In a dream, Khnum stood before him. \"I am Khnum, who made you,\" said the god." },
+        { "es": "«Haré crecer el Nilo para ti. No habrá más años vacíos.»", "en": "\"I will make the Nile rise for you. There will be no more empty years.\"" },
+        { "es": "«Los campos volverán a ser verdes, y el grano se doblará bajo su propio peso.»", "en": "\"The fields will be green again, and the grain will bend under its own weight.\"" },
+        { "es": "Djoser despertó lleno de alegría. Le dio tierras y regalos al templo de Khnum, como el dios quería.", "en": "Djoser woke up full of joy. He gave land and gifts to Khnum's temple, as the god wished." }
+      ],
+      "fondo": "noche",
+      "camara": { "de": 0, "a": 150, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "altar", "x": 520, "s": 1, "props": { "fuego": true } },
+        { "tipo": "palmera", "x": 1900, "s": 1.2, "capa": "fondo" }
+      ],
+      "actores": [
+        { "id": "sacerdote", "como": "sacerdote_egipcio", "x": 300, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "reza" }, { "en": 1, "hace": "baja" }] },
+        { "id": "djoser", "como": "faraon", "x": 850, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "mira", "a": 520 }, { "en": 0.1, "hace": "ofrece" }, { "en": 0.6, "hace": "mira", "a": 1400 }, { "en": 0.7, "hace": "cae" }, { "en": 4, "hace": "levantarse" }, { "en": 4.2, "hace": "alegra" }, { "en": 4.5, "hace": "levanta" }] },
+        { "id": "khnum", "como": "khnum", "x": 1400, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 1, "hace": "aparece", "con": "luz" }, { "en": 1.3, "hace": "habla", "dur": 0.7 }, { "en": 2, "hace": "levanta" }, { "en": 3, "hace": "habla", "dur": 0.8 }, { "en": 4, "hace": "desaparece", "con": "luz" }] }
+      ],
+      "efectos": [
+        { "en": 0, "tipo": "estrellas" },
+        { "en": 1, "tipo": "luz", "x": 1400, "y": 450, "dur": 1.5, "intensidad": 0.7 },
+        { "en": 2.4, "tipo": "olas-suben", "dur": 1, "intensidad": 0.15 },
+        { "en": 3.3, "tipo": "chispas", "x": 1100, "y": 650, "dur": 1 },
+        { "en": 4, "tipo": "aclarar" }
+      ]
+    },
+    {
+      "id": "nilo",
+      "frases": [
+        { "es": "Y así, dice la leyenda, el Nilo volvió a crecer. Los campos reverdecieron, y el hambre terminó.", "en": "And so, the legend says, the Nile rose again. The fields turned green, and the famine was over." },
+        { "es": "Si fueras el rey, ¿confiarías en un sueño para salvar a tu pueblo? Cuéntanos en los comentarios.", "en": "If you were the king, would you trust a dream to save your people? Tell us in the comments." },
+        { "es": "¿Es verdad la historia? Los expertos creen que la estela se talló unos 2400 años después de Djoser.", "en": "Is the story true? Experts think the stela was carved about 2,400 years after Djoser." },
+        { "es": "Seguramente la escribieron los sacerdotes de Khnum, para mostrar que sus tierras eran un regalo del gran Djoser.", "en": "Khnum's priests probably wrote it, to show that their temple's land was a gift from great Djoser." },
+        { "es": "Pero eligieron a Imhotep como el sabio de la respuesta. Para entonces, ya era una leyenda.", "en": "But they chose Imhotep as the wise man with the answer. By then, he was already a legend." }
+      ],
+      "fondo": "nilo",
+      "camara": { "de": 0, "a": 200, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "palmera", "x": 300, "s": 1.3, "capa": "fondo" },
+        { "tipo": "loto", "x": 1550, "s": 1.1, "en": 0 },
+        { "tipo": "papiro", "x": 1750, "s": 1 },
+        { "tipo": "estela", "x": 550, "s": 1.1, "en": 2 }
+      ],
+      "actores": [
+        { "id": "hombre", "como": "egipcio", "x": 850, "y": 758, "rotulo": "", "pasos": [{ "en": 0.3, "hace": "alegra" }, { "en": 0.4, "hace": "levanta" }, { "en": 1.5, "hace": "baja" }] },
+        { "id": "mujer", "como": "egipcia", "x": 1050, "y": 758, "rotulo": "", "pasos": [{ "en": 0.5, "hace": "alegra" }, { "en": 0.6, "hace": "salta" }] },
+        { "id": "sacerdote", "como": "sacerdote_egipcio", "x": 1400, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 3, "hace": "aparece" }, { "en": 3.3, "hace": "senala" }, { "en": 4, "hace": "baja" }] },
+        { "id": "imhotep", "como": "escriba", "x": 1700, "y": 758, "mira": "izq", "props": { "ropa": "larga", "tocado": "peluca" }, "rotulo": "", "pasos": [{ "en": 4, "hace": "aparece", "con": "luz" }, { "en": 4.3, "hace": "brilla", "dur": 0.6 }] }
+      ],
+      "efectos": [
+        { "en": 0, "tipo": "aclarar" },
+        { "en": 0, "tipo": "olas-suben", "dur": 1, "intensidad": 0.2 },
+        { "en": 2, "tipo": "luz", "x": 550, "y": 550, "dur": 1, "intensidad": 0.4 },
+        { "en": 4, "tipo": "luz", "x": 1700, "y": 450, "dur": 1, "intensidad": 0.6 }
+      ],
+      "rotulos": [
+        { "en": 2, "texto": { "es": "TALLADA HACIA EL 200 a. C.", "en": "CARVED AROUND 200 BC" }, "x": 960, "y": 230, "hasta": 3 }
+      ]
+    },
+    {
+      "id": "dios",
+      "frases": [
+        { "es": "Incluso antes, los escribas lo honraban. Antes de escribir, derramaban una gota de agua para Imhotep.", "en": "Even before that, scribes honored him. Before writing, they poured a drop of water for Imhotep." },
+        { "es": "Unos dos mil años después de su muerte, los egipcios empezaron a adorarlo como dios de la medicina.", "en": "About two thousand years after his death, Egyptians began to worship him as a god of medicine." },
+        { "es": "Lo llamaban hijo de Ptah, el dios de los constructores y artesanos de Menfis.", "en": "They called him a son of Ptah, the god of builders and craftsmen in Memphis." },
+        { "es": "Los enfermos dormían en sus templos. Esperaban que Imhotep llegara en sus sueños y los curara.", "en": "Sick people slept in his temples. They hoped Imhotep would come in their dreams and heal them." },
+        { "es": "Los griegos lo llamaban Imutes. Decían que era su propio dios de la curación, Asclepio.", "en": "The Greeks called him Imouthes. They said he was their own god of healing, Asclepius." }
+      ],
+      "fondo": "templo",
+      "camara": { "de": 0, "a": 200, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "columna_papiro", "x": 150, "s": 1.3, "capa": "fondo" },
+        { "tipo": "estatua", "x": 1900, "s": 0.9, "en": 1, "props": { "tocado": "peluca", "ropa": "larga", "piel": "#D4A017" } }
+      ],
+      "actores": [
+        { "id": "escriba", "como": "escriba", "x": 380, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "ofrece" }, { "en": 0.7, "hace": "baja" }] },
+        { "id": "imhotep", "como": "escriba", "x": 900, "y": 758, "props": { "ropa": "larga", "tocado": "peluca" }, "rotulo": "", "pasos": [{ "en": 0.3, "hace": "aparece", "con": "luz" }, { "en": 1, "hace": "brilla", "dur": 1.5 }, { "en": 3.3, "hace": "levanta" }, { "en": 4, "hace": "baja" }] },
+        { "id": "ptah", "como": "ptah", "x": 1200, "y": 758, "mira": "izq", "pasos": [{ "en": 2, "hace": "aparece", "con": "luz" }, { "en": 3, "hace": "desaparece", "con": "luz" }] },
+        { "id": "enfermo", "como": "egipcio", "x": 620, "y": 758, "rotulo": "", "pasos": [{ "en": 3, "hace": "aparece" }, { "en": 3.1, "hace": "cae" }] },
+        { "id": "asclepio", "como": "hombre", "x": 1450, "y": 758, "mira": "izq", "props": { "barba": true, "ropa": "larga", "objeto": "cana" }, "rotulo": "ASCLEPIUS", "pasos": [{ "en": 4, "hace": "aparece", "con": "luz" }, { "en": 4.4, "hace": "asiente" }] }
+      ],
+      "efectos": [
+        { "en": 0.2, "tipo": "chispas", "x": 450, "y": 700, "dur": 0.6 },
+        { "en": 1, "tipo": "luz", "x": 900, "y": 450, "dur": 1.5, "intensidad": 0.6 },
+        { "en": 3, "tipo": "oscurecer", "dur": 1, "intensidad": 0.3 },
+        { "en": 3.4, "tipo": "luz", "x": 620, "y": 600, "dur": 0.8, "intensidad": 0.5 }
+      ],
+      "rotulos": [
+        { "en": 1, "texto": { "es": "DIOS DE LA MEDICINA", "en": "GOD OF MEDICINE" }, "x": 960, "y": 230, "hasta": 2 },
+        { "en": 4, "texto": { "es": "IMUTES = ASCLEPIO", "en": "IMOUTHES = ASCLEPIUS" }, "x": 960, "y": 230 }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        { "es": "Su tumba nunca se ha encontrado. En algún lugar bajo la arena de Saqqara, quizá todavía espera.", "en": "His tomb has never been found. Somewhere under the sand of Saqqara, it may still be waiting." },
+        { "es": "Un hombre real que construyó en piedra y se volvió dios. Muy pocas personas en la historia llegaron tan alto.", "en": "A real man who built in stone, and became a god. Very few people in history have climbed so high." },
+        { "es": "¿Qué Imhotep te gusta más: el constructor, el médico o el dios? Cuéntanos en los comentarios.", "en": "Which Imhotep do you like most: the builder, the doctor, or the god? Tell us in the comments." },
+        { "es": "La próxima vez, un dios viaja lejos de Egipto para salvar a una princesa enferma. Es La princesa de Bakhtan.", "en": "Next time, a god travels far from Egypt to save a sick princess. It is The Princess of Bakhtan." }
+      ],
+      "fondo": "piramides",
+      "camara": { "de": 0, "a": 150, "zoom": [1, 1.05] },
+      "elementos": [
+        { "tipo": "tumba", "x": 350, "s": 1, "capa": "medio" },
+        { "tipo": "barco", "x": 1750, "s": 0.5, "en": 3 }
+      ],
+      "actores": [
+        { "id": "imhotep", "como": "escriba", "x": 700, "y": 758, "props": { "ropa": "larga", "tocado": "peluca" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "levanta" }, { "en": 1.2, "hace": "brilla", "dur": 0.8 }, { "en": 2, "hace": "baja" }, { "en": 2.2, "hace": "habla", "dur": 0.6 }] },
+        { "id": "djoser", "como": "faraon", "x": 1000, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 1.5, "hace": "asiente" }] },
+        { "id": "princesa", "como": "egipcia", "x": 1350, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 3, "hace": "aparece" }, { "en": 3.3, "hace": "lamenta" }] },
+        { "id": "khonsu", "como": "ra", "x": 1600, "y": 758, "mira": "izq", "props": { "piel": "#D4A017" }, "rotulo": "", "pasos": [{ "en": 3.2, "hace": "aparece", "con": "luz" }] }
+      ],
+      "efectos": [
+        { "en": 0, "tipo": "polvo", "dur": 1 },
+        { "en": 1, "tipo": "luz", "x": 700, "y": 450, "dur": 1.2, "intensidad": 0.6 },
+        { "en": 3, "tipo": "estrellas", "dur": 1 }
+      ]
+    }
+  ]
+}

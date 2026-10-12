@@ -1,0 +1,2010 @@
+{
+  "id": "griegas-13-leto-y-los-gemelos",
+  "serie": "griegas",
+  "numero": "13",
+  "titulo": {
+    "es": "Leto y los gemelos",
+    "en": "Leto and the Twins"
+  },
+  "tituloGriego": "ΛΗΤΩ",
+  "miniatura": {
+    "heroe": {
+      "mujer": true,
+      "tocado": "velo",
+      "capa": "#6A7FB0",
+      "ropa": "larga"
+    },
+    "rival": "hera"
+  },
+  "siguiente": {
+    "es": "Apolo y la serpiente Pitón",
+    "en": "Apollo and the Python"
+  },
+  "escenas": [
+    {
+      "id": "leto",
+      "fondo": "olimpo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada, Hefesto atrapó a Ares y a Afrodita en una red, y todos los dioses se rieron.",
+          "en": "Last time, Hephaestus caught Ares and Aphrodite in a net, and all the gods laughed."
+        },
+        {
+          "es": "Pero el rey de los dioses también tenía secretos. Zeus había amado a Leto, una dulce diosa titánide.",
+          "en": "But the king of the gods had secrets too. Zeus had loved Leto, a gentle Titan goddess."
+        },
+        {
+          "es": "El poeta Hesíodo dice que era la más amable de todo el Olimpo, siempre suave y tranquila.",
+          "en": "The poet Hesiod says she was the kindest one on Olympus, always soft and calm."
+        },
+        {
+          "es": "Ahora Leto iba a tener gemelos, una niña y un niño.",
+          "en": "Now Leto was going to have twins, a girl and a boy."
+        },
+        {
+          "es": "Cuando Hera, la esposa de Zeus, se enteró, se llenó de furia.",
+          "en": "When Hera, the wife of Zeus, found out, she was filled with rage."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "leto",
+          "como": "mujer",
+          "rotulo": "Leto",
+          "x": 950,
+          "mira": "der",
+          "props": {
+            "tocado": "velo",
+            "capa": "#6A7FB0",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.2,
+              "hace": "brilla",
+              "dur": 0.7
+            },
+            {
+              "en": 3.2,
+              "hace": "abraza"
+            },
+            {
+              "en": 4.4,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 4.4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "chispas",
+          "x": 520,
+          "y": 640,
+          "dur": 0.8
+        },
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 950,
+          "y": 400,
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 950,
+          "y": 520,
+          "intensidad": 0.6,
+          "dur": 1
+        },
+        {
+          "en": 4.3,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 0.8
+        },
+        {
+          "en": 4.4,
+          "tipo": "rayo",
+          "x": 700
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "GEMELOS",
+            "en": "TWINS"
+          },
+          "x": 950,
+          "y": 200,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "orden",
+      "fondo": "cielo",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "elementos": [
+        {
+          "tipo": "monte",
+          "x": 300,
+          "s": 1.2,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "monte",
+          "x": 1800,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "nube",
+          "x": 1100,
+          "s": 1.2,
+          "capa": "fondo"
+        }
+      ],
+      "frases": [
+        {
+          "es": "Hera dio una orden terrible. Ninguna tierra del mundo podía recibir a Leto.",
+          "en": "Hera gave a terrible order. No land on earth was allowed to welcome Leto."
+        },
+        {
+          "es": "Ninguna montaña, ninguna isla, ninguna ciudad podía darle un lugar para tener a sus hijos.",
+          "en": "No mountain, no island, no city could give her a place to have her babies."
+        },
+        {
+          "es": "Calímaco cuenta que Hera puso dos guardias: Ares en la tierra, e Iris, la diosa del arcoíris, sobre las islas.",
+          "en": "Callimachus says Hera set two guards: Ares on the land, and Iris, the rainbow goddess, over the islands."
+        },
+        {
+          "es": "Todas las tierras temblaron de miedo. Nadie se atrevía a enojar a Hera.",
+          "en": "Every land trembled with fear. No one dared to make Hera angry."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hera",
+          "x": 950,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "ares",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "iris",
+          "como": "mujer",
+          "rotulo": "Iris",
+          "x": 1550,
+          "y": 380,
+          "mira": "izq",
+          "props": {
+            "alas": true,
+            "capa": "#8E6CC0",
+            "tocado": "diadema"
+          },
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.6,
+              "hace": "vuela",
+              "a": [
+                1650,
+                340
+              ],
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.1,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1.5
+        },
+        {
+          "en": 0.3,
+          "tipo": "rayo",
+          "x": 1300
+        },
+        {
+          "en": 2.4,
+          "tipo": "luz",
+          "x": 1550,
+          "y": 380,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 3.1,
+          "tipo": "polvo",
+          "x": 1000,
+          "y": 760,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.5,
+          "texto": {
+            "es": "NINGUNA TIERRA",
+            "en": "NO LAND AT ALL"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 1.8
+        }
+      ]
+    },
+    {
+      "id": "piton",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 400
+      },
+      "frases": [
+        {
+          "es": "Y había otro peligro. Algunos relatos dicen que una serpiente gigante llamada Pitón perseguía a Leto.",
+          "en": "And there was another danger. Some old tales say a giant serpent called Python hunted Leto."
+        },
+        {
+          "es": "Pitón había oído una profecía, un mensaje sobre el futuro: el hijo de Leto lo mataría algún día.",
+          "en": "Python had heard a prophecy, a message about the future: Leto's son would one day kill him."
+        },
+        {
+          "es": "Así que la serpiente quería matar a Leto antes de que nacieran sus hijos.",
+          "en": "So the serpent wanted to kill Leto before her children were born."
+        },
+        {
+          "es": "Leto corría y corría, pesada y cansada, con la serpiente siempre detrás.",
+          "en": "Leto ran and ran, heavy and tired, with the serpent always close behind her."
+        }
+      ],
+      "actores": [
+        {
+          "id": "leto",
+          "como": "mujer",
+          "rotulo": "Leto",
+          "x": 950,
+          "mira": "izq",
+          "props": {
+            "tocado": "velo",
+            "capa": "#6A7FB0",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.3,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 3,
+              "hace": "corre",
+              "a": 1750,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "piton",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 500
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.1,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "oscurecer",
+          "intensidad": 0.35,
+          "dur": 3.5
+        },
+        {
+          "en": 1.3,
+          "tipo": "luz",
+          "x": 950,
+          "y": 450,
+          "intensidad": 0.5,
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 450,
+          "y": 700,
+          "dur": 1
+        },
+        {
+          "en": 3.1,
+          "tipo": "polvo",
+          "x": 1300,
+          "y": 760,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "UNA PROFECÍA",
+            "en": "A PROPHECY"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 2.2
+        }
+      ]
+    },
+    {
+      "id": "viaje",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 500
+      },
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 1050,
+          "s": 0.8
+        },
+        {
+          "tipo": "casa",
+          "x": 1650,
+          "s": 0.7
+        },
+        {
+          "tipo": "monte",
+          "x": 1400,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "frases": [
+        {
+          "es": "Leto vagó de tierra en tierra, pidiendo ayuda.",
+          "en": "Leto wandered from land to land, asking for help."
+        },
+        {
+          "es": "Llamó a la puerta de cada lugar. Y cada lugar le dijo que no.",
+          "en": "She knocked at the door of every place. And every place said no."
+        },
+        {
+          "es": "Las tierras no eran crueles. Tenían miedo de Hera, y miedo del poderoso hijo que Leto iba a tener.",
+          "en": "The lands were not cruel. They were afraid of Hera, and afraid of the mighty son Leto would have."
+        },
+        {
+          "es": "Pasaron los días. Leto estaba lejos de casa, y ya no tenía adónde ir.",
+          "en": "Days passed. Leto was far from home, and she had nowhere left to go."
+        }
+      ],
+      "actores": [
+        {
+          "id": "leto",
+          "como": "mujer",
+          "rotulo": "Leto",
+          "x": 400,
+          "mira": "der",
+          "props": {
+            "tocado": "velo",
+            "capa": "#6A7FB0",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 750,
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1350,
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3.5,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "x": 1000,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "niega"
+            },
+            {
+              "en": 1.6,
+              "hace": "gira"
+            },
+            {
+              "en": 1.7,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "x": 1800,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "niega"
+            },
+            {
+              "en": 2.8,
+              "hace": "gira"
+            },
+            {
+              "en": 2.9,
+              "hace": "sale"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "polvo",
+          "x": 1000,
+          "y": 760,
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "lluvia",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "«NO»",
+            "en": "\"NO\""
+          },
+          "x": 1000,
+          "y": 220,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "delos",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 250
+      },
+      "elementos": [
+        {
+          "tipo": "isla",
+          "x": 1450,
+          "s": 1.3,
+          "capa": "medio",
+          "en": 0.2,
+          "sube": 120
+        }
+      ],
+      "frases": [
+        {
+          "es": "Entonces Leto vio una pequeña isla de roca que flotaba sobre las olas. Se llamaba Delos.",
+          "en": "Then Leto saw a small rocky island, floating on the waves. Its name was Delos."
+        },
+        {
+          "es": "Hace mucho, había sido Asteria, la propia hermana de Leto. Saltó al mar y se convirtió en isla.",
+          "en": "Long ago, it had been Asteria, Leto's own sister. She jumped into the sea and became an island."
+        },
+        {
+          "es": "Delos no estaba sujeta a la tierra. Flotaba a la deriva, así que la orden de Hera no la alcanzaba.",
+          "en": "Delos was not tied to the earth. It drifted on the sea, so Hera's order did not reach it."
+        },
+        {
+          "es": "Aun así, Delos tenía miedo. «Tu hijo será tan fuerte», le dijo, «que quizá me hunda en el mar».",
+          "en": "Still, Delos was afraid. \"Your son will be so strong,\" it said. \"He may kick me into the sea.\""
+        },
+        {
+          "es": "Entonces Leto le hizo una promesa: su hijo construiría aquí su templo y honraría a Delos para siempre.",
+          "en": "So Leto made a promise. Her son would build his temple here, and honor Delos forever."
+        },
+        {
+          "es": "Y la pequeña isla dijo que sí.",
+          "en": "And the little island said yes."
+        }
+      ],
+      "actores": [
+        {
+          "id": "leto",
+          "como": "mujer",
+          "rotulo": "Leto",
+          "x": 600,
+          "mira": "der",
+          "props": {
+            "tocado": "velo",
+            "capa": "#6A7FB0",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 3.6,
+              "hace": "lamenta"
+            },
+            {
+              "en": 4.1,
+              "hace": "levanta"
+            },
+            {
+              "en": 5.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "asteria",
+          "como": "ninfa",
+          "rotulo": "Asteria",
+          "x": 1050,
+          "mira": "der",
+          "props": {
+            "capa": "#7FA7C9"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "salta"
+            },
+            {
+              "en": 1.8,
+              "hace": "desaparece",
+              "con": "agua"
+            },
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3.2,
+              "hace": "mira",
+              "a": 600
+            },
+            {
+              "en": 3.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 5,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 0.4,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 600,
+          "intensidad": 0.6,
+          "dur": 1
+        },
+        {
+          "en": 2.2,
+          "tipo": "olas-suben",
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "olas-bajan",
+          "dur": 0.6
+        },
+        {
+          "en": 4.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 4.2,
+          "tipo": "luz",
+          "x": 600,
+          "y": 400,
+          "dur": 1
+        },
+        {
+          "en": 5,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.5,
+          "texto": {
+            "es": "DELOS, LA ISLA FLOTANTE",
+            "en": "DELOS, THE FLOATING ISLAND"
+          },
+          "x": 1100,
+          "y": 200,
+          "hasta": 2.5
+        },
+        {
+          "en": 4.2,
+          "texto": {
+            "es": "LA PROMESA DE LETO",
+            "en": "LETO'S PROMISE"
+          },
+          "x": 900,
+          "y": 200,
+          "hasta": 5.5
+        }
+      ]
+    },
+    {
+      "id": "espera",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 250
+      },
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 800,
+          "s": 1
+        }
+      ],
+      "frases": [
+        {
+          "es": "Leto pisó Delos. Y allí empezaron los dolores.",
+          "en": "Leto stepped onto Delos. And there, her pains began."
+        },
+        {
+          "es": "Llegaron diosas amables a acompañarla, como Rea, la madre de Zeus.",
+          "en": "Kind goddesses came to stay with her, like Rhea, the mother of Zeus."
+        },
+        {
+          "es": "Pero durante nueve días y nueve noches, los bebés no nacían.",
+          "en": "But for nine days and nine nights, the babies would not come."
+        },
+        {
+          "es": "Algo faltaba. Ilitía, la diosa que ayuda en cada parto, no estaba allí.",
+          "en": "Something was missing. Eileithyia, the goddess who helps every birth, was not there."
+        },
+        {
+          "es": "Hera la tenía en el Olimpo, escondida bajo nubes doradas, para que no se enterara de nada.",
+          "en": "Hera kept her on Olympus, hidden under golden clouds, so she would not hear a thing."
+        }
+      ],
+      "actores": [
+        {
+          "id": "leto",
+          "como": "mujer",
+          "rotulo": "Leto",
+          "x": 950,
+          "mira": "der",
+          "props": {
+            "tocado": "velo",
+            "capa": "#6A7FB0",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1000
+            },
+            {
+              "en": 0.6,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "rea",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.3,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "ninfa",
+          "x": 1650,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "x": 450,
+          "capa": "medio",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 550,
+          "intensidad": 0.4,
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "estrellas",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 350,
+          "y": 350,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "NUEVE DÍAS Y NUEVE NOCHES",
+            "en": "NINE DAYS AND NINE NIGHTS"
+          },
+          "x": 1100,
+          "y": 200,
+          "hasta": 3
+        },
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "¿DÓNDE ESTÁ ILITÍA?",
+            "en": "WHERE IS EILEITHYIA?"
+          },
+          "x": 1100,
+          "y": 200,
+          "hasta": 4.5
+        }
+      ]
+    },
+    {
+      "id": "iris",
+      "fondo": "cielo",
+      "camara": {
+        "de": 0,
+        "a": 400
+      },
+      "elementos": [
+        {
+          "tipo": "nube",
+          "x": 1650,
+          "s": 1.4,
+          "capa": "medio"
+        },
+        {
+          "tipo": "nube",
+          "x": 2050,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "frases": [
+        {
+          "es": "Así que las diosas de Delos enviaron a Iris, el arcoíris, la veloz mensajera de los dioses.",
+          "en": "So the goddesses on Delos sent Iris, the rainbow, the swift messenger of the gods."
+        },
+        {
+          "es": "Le dieron un regalo para llevar: un largo collar de hilos de oro.",
+          "en": "They gave her a gift to carry: a long necklace of golden threads."
+        },
+        {
+          "es": "Iris voló al Olimpo y encontró a Ilitía lejos de la mirada de Hera.",
+          "en": "Iris flew to Olympus and found Eileithyia far from Hera's eyes."
+        },
+        {
+          "es": "Le mostró el collar y le susurró: «Ven rápido. Leto te necesita».",
+          "en": "She showed her the necklace and whispered: \"Come quickly. Leto needs you.\""
+        },
+        {
+          "es": "Ilitía aceptó. Las dos diosas bajaron volando a Delos como un par de palomas.",
+          "en": "Eileithyia agreed. The two goddesses flew down to Delos like a pair of gentle doves."
+        }
+      ],
+      "actores": [
+        {
+          "id": "iris",
+          "como": "mujer",
+          "rotulo": "Iris",
+          "x": 450,
+          "y": 420,
+          "mira": "der",
+          "props": {
+            "alas": true,
+            "capa": "#8E6CC0",
+            "tocado": "diadema"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1250,
+                560
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4.2,
+              "hace": "vuela",
+              "a": [
+                700,
+                620
+              ],
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "ilitia",
+          "como": "mujer",
+          "rotulo": "Eileithyia",
+          "x": 1600,
+          "mira": "izq",
+          "props": {
+            "objeto": "antorcha",
+            "tocado": "velo",
+            "ropa": "larga",
+            "capa": "#C98A4B"
+          },
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "asiente"
+            },
+            {
+              "en": 4.3,
+              "hace": "vuela",
+              "a": [
+                950,
+                600
+              ],
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "x": 1900,
+          "capa": "fondo",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 450,
+          "y": 420,
+          "dur": 1
+        },
+        {
+          "en": 1.2,
+          "tipo": "chispas",
+          "x": 550,
+          "y": 420,
+          "dur": 1
+        },
+        {
+          "en": 1.3,
+          "tipo": "luz",
+          "x": 550,
+          "y": 420,
+          "intensidad": 0.7,
+          "dur": 0.8
+        },
+        {
+          "en": 3.1,
+          "tipo": "luz",
+          "x": 1350,
+          "y": 500,
+          "intensidad": 0.6,
+          "dur": 0.8
+        },
+        {
+          "en": 4.3,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "EL COLLAR DE ORO",
+            "en": "THE GOLDEN NECKLACE"
+          },
+          "x": 900,
+          "y": 200,
+          "hasta": 2.2
+        }
+      ]
+    },
+    {
+      "id": "artemisa",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 200
+      },
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 800,
+          "s": 1
+        }
+      ],
+      "frases": [
+        {
+          "es": "En cuanto Ilitía pisó Delos, nació el primer bebé. Era una niña: Artemisa.",
+          "en": "The moment Eileithyia set foot on Delos, the first baby was born. It was a girl: Artemis."
+        },
+        {
+          "es": "Sería la diosa de la caza y de los animales salvajes.",
+          "en": "She would become the goddess of the hunt and of wild animals."
+        },
+        {
+          "es": "Un relato antiguo, contado por Apolodoro, dice algo asombroso sobre ella.",
+          "en": "One old tale, told by Apollodorus, says something amazing about her."
+        },
+        {
+          "es": "Apenas nació, la pequeña Artemisa ayudó a su madre a traer al mundo a su hermano gemelo.",
+          "en": "Right after she was born, little Artemis helped her mother bring her twin brother into the world."
+        },
+        {
+          "es": "Más tarde, las mujeres griegas que iban a tener un bebé le rezaban a Artemisa pidiendo ayuda.",
+          "en": "Later, Greek women who were about to have a baby prayed to Artemis for help."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ilitia",
+          "como": "mujer",
+          "rotulo": "Eileithyia",
+          "x": 450,
+          "mira": "der",
+          "props": {
+            "objeto": "antorcha",
+            "tocado": "velo",
+            "ropa": "larga",
+            "capa": "#C98A4B"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "leto",
+          "como": "mujer",
+          "rotulo": "Leto",
+          "x": 1000,
+          "mira": "der",
+          "props": {
+            "tocado": "velo",
+            "capa": "#6A7FB0",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.4,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "artemisa",
+          "x": 1300,
+          "escala": 0.55,
+          "mira": "izq",
+          "props": {
+            "cuerpo": "nino"
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1170,
+              "dur": 0.4
+            },
+            {
+              "en": 3.4,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "x": 1700,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.3,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 0.5,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 600,
+          "dur": 1.2
+        },
+        {
+          "en": 1.2,
+          "tipo": "chispas",
+          "x": 1300,
+          "y": 600,
+          "dur": 1
+        },
+        {
+          "en": 3.3,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 550,
+          "intensidad": 0.6,
+          "dur": 1
+        },
+        {
+          "en": 4.3,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 400,
+          "intensidad": 0.5,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA DIOSA DE LA CAZA",
+            "en": "THE GODDESS OF THE HUNT"
+          },
+          "x": 1100,
+          "y": 200,
+          "hasta": 2.2
+        }
+      ]
+    },
+    {
+      "id": "apolo",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 800,
+          "s": 1
+        }
+      ],
+      "frases": [
+        {
+          "es": "Entonces Leto abrazó una palmera y se arrodilló sobre la hierba suave.",
+          "en": "Then Leto threw her arms around a palm tree and knelt on the soft grass."
+        },
+        {
+          "es": "La tierra sonrió bajo ella. Y Apolo saltó hacia la luz.",
+          "en": "The earth smiled beneath her. And Apollo leaped out into the light."
+        },
+        {
+          "es": "Todas las diosas gritaron de alegría.",
+          "en": "All the goddesses cried out with joy."
+        },
+        {
+          "es": "Calímaco cuenta que unos cisnes llegaron desde el río y dieron siete vueltas a la isla, cantando.",
+          "en": "Callimachus says that swans flew in from the river and circled the island seven times, singing."
+        },
+        {
+          "es": "Dice que por eso la lira de Apolo tendría siete cuerdas.",
+          "en": "He says that is why Apollo's lyre would have seven strings."
+        },
+        {
+          "es": "¿Tú te habrías atrevido a recibir a Leto, sabiendo que Hera estaba mirando?",
+          "en": "Would you have dared to welcome Leto, knowing that Hera was watching?"
+        }
+      ],
+      "actores": [
+        {
+          "id": "leto",
+          "como": "mujer",
+          "rotulo": "Leto",
+          "x": 900,
+          "mira": "izq",
+          "props": {
+            "tocado": "velo",
+            "capa": "#6A7FB0",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "abraza"
+            },
+            {
+              "en": 0.6,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "apolo",
+          "x": 1200,
+          "escala": 0.55,
+          "mira": "izq",
+          "props": {
+            "cuerpo": "nino",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 4.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "artemisa",
+          "x": 1450,
+          "escala": 0.55,
+          "mira": "izq",
+          "props": {
+            "cuerpo": "nino"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "salta"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "cisne",
+          "como": "aguila",
+          "rotulo": "Swans",
+          "x": 200,
+          "y": 300,
+          "props": {
+            "color": "#F4F1E8"
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "vuela",
+              "a": [
+                1700,
+                250
+              ],
+              "dur": 0.9
+            },
+            {
+              "en": 4,
+              "hace": "vuela",
+              "a": [
+                700,
+                200
+              ],
+              "dur": 0.9
+            },
+            {
+              "en": 5,
+              "hace": "vuela",
+              "a": [
+                1500,
+                240
+              ],
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "cisne2",
+          "como": "aguila",
+          "rotulo": "",
+          "x": 100,
+          "y": 400,
+          "props": {
+            "color": "#F4F1E8"
+          },
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "vuela",
+              "a": [
+                1500,
+                360
+              ],
+              "dur": 0.9
+            },
+            {
+              "en": 4.2,
+              "hace": "vuela",
+              "a": [
+                500,
+                320
+              ],
+              "dur": 0.9
+            },
+            {
+              "en": 5.2,
+              "hace": "vuela",
+              "a": [
+                1300,
+                360
+              ],
+              "dur": 0.7
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 1.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.4,
+          "tipo": "luz",
+          "x": 1200,
+          "y": 550,
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1300,
+          "y": 500,
+          "dur": 1.2
+        },
+        {
+          "en": 4.2,
+          "tipo": "luz",
+          "x": 1200,
+          "y": 450,
+          "intensidad": 0.6,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.5,
+          "texto": {
+            "es": "APOLO",
+            "en": "APOLLO"
+          },
+          "x": 1200,
+          "y": 220,
+          "hasta": 2.8
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "POR ESO LA LIRA TIENE SIETE CUERDAS",
+            "en": "THAT'S WHY THE LYRE HAS SEVEN STRINGS"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 5,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "oro",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "elementos": [
+        {
+          "tipo": "isla",
+          "x": 1550,
+          "s": 1.4,
+          "capa": "medio"
+        },
+        {
+          "tipo": "columna",
+          "x": 1350,
+          "s": 0.8,
+          "capa": "medio",
+          "en": 2,
+          "sube": 300
+        },
+        {
+          "tipo": "columna",
+          "x": 1750,
+          "s": 0.8,
+          "capa": "medio",
+          "en": 2.2,
+          "sube": 300
+        },
+        {
+          "tipo": "templo",
+          "x": 1950,
+          "s": 0.8,
+          "en": 4
+        }
+      ],
+      "frases": [
+        {
+          "es": "En ese momento, toda la isla brilló de oro, como una colina cubierta de flores.",
+          "en": "At that moment, the whole island shone with gold, like a hill covered in flowers."
+        },
+        {
+          "es": "Las diosas bañaron al pequeño Apolo y lo envolvieron en una tela blanca y fina.",
+          "en": "The goddesses bathed baby Apollo and wrapped him in a fine white cloth."
+        },
+        {
+          "es": "Y Delos dejó de flotar. El poeta Píndaro dice que cuatro columnas subieron del fondo del mar para sostenerla.",
+          "en": "And Delos stopped drifting. The poet Pindar says four pillars rose from the seabed to hold it."
+        },
+        {
+          "es": "Desde entonces, la pequeña isla se quedó quieta. Se volvió uno de los lugares más sagrados de Grecia.",
+          "en": "From then on, the little island stood still. It became one of the holiest places in Greece."
+        },
+        {
+          "es": "Y la promesa de Leto se cumplió: allí se construyó el gran templo de Apolo.",
+          "en": "And Leto's promise came true. Apollo's great temple was built there."
+        }
+      ],
+      "actores": [
+        {
+          "id": "leto",
+          "como": "mujer",
+          "rotulo": "Leto",
+          "x": 450,
+          "mira": "der",
+          "props": {
+            "tocado": "velo",
+            "capa": "#6A7FB0",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "apolo",
+          "x": 650,
+          "escala": 0.55,
+          "mira": "der",
+          "props": {
+            "cuerpo": "nino",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "ninfa",
+          "x": 900,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 1550,
+          "y": 550,
+          "dur": 1.5
+        },
+        {
+          "en": 0.2,
+          "tipo": "chispas",
+          "x": 1550,
+          "y": 550,
+          "dur": 1.5
+        },
+        {
+          "en": 1.2,
+          "tipo": "luz",
+          "x": 750,
+          "y": 600,
+          "intensidad": 0.5,
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 2.1,
+          "tipo": "destello"
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1950,
+          "y": 450,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "LA ISLA DE ORO",
+            "en": "THE GOLDEN ISLAND"
+          },
+          "x": 1300,
+          "y": 200,
+          "hasta": 1.5
+        },
+        {
+          "en": 2.3,
+          "texto": {
+            "es": "CUATRO COLUMNAS",
+            "en": "FOUR PILLARS"
+          },
+          "x": 1300,
+          "y": 200,
+          "hasta": 3.5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 250
+      },
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 450,
+          "s": 1
+        }
+      ],
+      "frases": [
+        {
+          "es": "Por fin Leto estaba a salvo, con sus dos hijos a su lado.",
+          "en": "Leto was safe at last, with her two children by her side."
+        },
+        {
+          "es": "Pero Apolo no fue un bebé por mucho tiempo. Pronto pidió un arco y flechas.",
+          "en": "But Apollo did not stay a baby for long. Soon he asked for a bow and arrows."
+        },
+        {
+          "es": "Porque no había olvidado a la serpiente gigante que persiguió a su madre.",
+          "en": "Because he had not forgotten the giant serpent that chased his mother."
+        },
+        {
+          "es": "Cuéntame en los comentarios: ¿a quién admiras más en esta historia, a Leto o a la pequeña isla de Delos?",
+          "en": "Tell me in the comments: who do you admire more in this story, Leto or the little island of Delos?"
+        },
+        {
+          "es": "En el próximo episodio: Apolo y la serpiente Pitón.",
+          "en": "Next time: Apollo and the Python."
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo_nino",
+          "como": "apolo",
+          "x": 650,
+          "escala": 0.55,
+          "mira": "der",
+          "props": {
+            "cuerpo": "nino",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "leto",
+          "como": "mujer",
+          "rotulo": "Leto",
+          "x": 850,
+          "mira": "der",
+          "props": {
+            "tocado": "velo",
+            "capa": "#6A7FB0",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "abraza"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "artemisa",
+          "x": 1050,
+          "escala": 0.55,
+          "mira": "izq",
+          "props": {
+            "cuerpo": "nino"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "apolo",
+          "x": 650,
+          "mira": "der",
+          "props": {
+            "objeto": "arco"
+          },
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "piton",
+          "x": 1550,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 850,
+          "y": 450,
+          "intensidad": 0.5,
+          "dur": 1
+        },
+        {
+          "en": 1.1,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.2,
+          "tipo": "luz",
+          "x": 650,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "intensidad": 0.35,
+          "dur": 1.5
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 650,
+          "y": 400,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "APOLO Y LA SERPIENTE PITÓN",
+            "en": "APOLLO AND THE PYTHON"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La isla flotante que desafió a Hera",
+        "en": "The Floating Island That Defied Hera"
+      },
+      "escena": "delos",
+      "desde": 0,
+      "hasta": 5,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Nueve días sin poder dar a luz",
+        "en": "Nine Days Without the Goddess of Birth"
+      },
+      "escena": "iris",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Los cisnes que dieron siete vueltas",
+        "en": "The Swans That Circled Seven Times"
+      },
+      "escena": "apolo",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1000
+    }
+  ]
+}

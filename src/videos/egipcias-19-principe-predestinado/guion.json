@@ -1,0 +1,2197 @@
+{
+  "id": "egipcias-19-principe-predestinado",
+  "serie": "egipcias",
+  "numero": "19",
+  "titulo": {
+    "es": "El príncipe predestinado",
+    "en": "The Doomed Prince"
+  },
+  "tituloGriego": "THE DOOMED PRINCE",
+  "miniatura": {
+    "heroe": {
+      "trenza": true
+    },
+    "rival": "cocodrilo"
+  },
+  "siguiente": {
+    "es": "Una nueva temporada",
+    "en": "A New Season"
+  },
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Saltar hasta una ventana a 30 metros para ganar a la princesa",
+        "en": "Jump to a window 30 meters up to win the princess"
+      },
+      "escena": "salto",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1250
+    },
+    {
+      "gancho": {
+        "es": "La princesa que emborrachó a una serpiente mortal",
+        "en": "The princess who got a deadly snake drunk"
+      },
+      "escena": "serpiente",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Siete diosas deciden el destino de un bebé",
+        "en": "Seven goddesses decide a baby's fate"
+      },
+      "escena": "hathors",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    }
+  ],
+  "escenas": [
+    {
+      "id": "marco",
+      "frases": [
+        {
+          "es": "La última vez, un halcón de oro voló de regreso a Egipto, después de salvar a una princesa en una tierra lejana.",
+          "en": "Last time, a golden falcon flew home to Egypt, after saving a princess in a faraway land."
+        },
+        {
+          "es": "El cuento de hoy se escribió en un papiro hace más de tres mil años. Trata de un príncipe con un destino terrible.",
+          "en": "Today's tale was written on a papyrus over three thousand years ago. It is about a prince with a terrible fate."
+        },
+        {
+          "es": "Hace mucho, se cuenta, hubo un rey de Egipto que no tenía ningún hijo. Su corazón estaba triste.",
+          "en": "Long ago, it is said, there was a king of Egypt who had no son. His heart was sad."
+        },
+        {
+          "es": "Les pidió un hijo a los dioses. Ellos lo escucharon, y pronto la reina dio a luz a un niño.",
+          "en": "He asked the gods for a child. They heard him, and soon the queen gave birth to a baby boy."
+        }
+      ],
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1350,
+          "s": 1.1
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 150,
+          "s": 1.3,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "papiro",
+          "x": 450,
+          "s": 1,
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "halcon",
+          "como": "halcon",
+          "x": 300,
+          "y": 420,
+          "props": {
+            "color": "#D4A017"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.2,
+              "hace": "vuela",
+              "a": [
+                2200,
+                180
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "como": "faraon",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "THE KING",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "sienta"
+            },
+            {
+              "en": 2.5,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.1,
+              "hace": "reza"
+            },
+            {
+              "en": 3.7,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "reina",
+          "como": "reina_egipcia",
+          "x": 850,
+          "y": 758,
+          "rotulo": "THE QUEEN",
+          "pasos": [
+            {
+              "en": 3.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "bebe",
+          "como": "egipcio",
+          "x": 1050,
+          "y": 758,
+          "escala": 0.6,
+          "props": {
+            "cuerpo": "nino",
+            "trenza": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.5,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 300,
+          "y": 420,
+          "dur": 0.8,
+          "intensidad": 0.5
+        },
+        {
+          "en": 1,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 2.5,
+          "tipo": "oscurecer",
+          "dur": 0.8,
+          "intensidad": 0.25
+        },
+        {
+          "en": 3.5,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 600,
+          "dur": 1,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "PAPIRO HARRIS 500",
+            "en": "PAPYRUS HARRIS 500"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "hathors",
+      "frases": [
+        {
+          "es": "Entonces llegaron las Siete Hathor. Eran diosas que anunciaban el destino de cada niño al nacer.",
+          "en": "Then the Seven Hathors came. They were goddesses who spoke each child's fate when it was born."
+        },
+        {
+          "es": "Rodearon al bebé y miraron su futuro. Luego hablaron.",
+          "en": "They gathered around the baby and looked into his future. Then they spoke."
+        },
+        {
+          "es": "«Morirá por el cocodrilo, o por la serpiente, o por el perro.»",
+          "en": "\"He will die by the crocodile, or by the snake, or by the dog.\""
+        },
+        {
+          "es": "El rey lo oyó, y su corazón se llenó de una tristeza enorme.",
+          "en": "The king heard this, and his heart became very, very sad."
+        }
+      ],
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "actores": [
+        {
+          "id": "h1",
+          "como": "hathor",
+          "x": 300,
+          "y": 758,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "h2",
+          "como": "hathor",
+          "x": 450,
+          "y": 758,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "h3",
+          "como": "hathor",
+          "x": 600,
+          "y": 758,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "bebe",
+          "como": "egipcio",
+          "x": 780,
+          "y": 758,
+          "escala": 0.6,
+          "props": {
+            "cuerpo": "nino",
+            "trenza": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "h4",
+          "como": "hathor",
+          "x": 960,
+          "y": 758,
+          "escala": 0.9,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "h5",
+          "como": "hathor",
+          "x": 1110,
+          "y": 758,
+          "escala": 0.9,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "h6",
+          "como": "hathor",
+          "x": 1260,
+          "y": 758,
+          "escala": 0.9,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "h7",
+          "como": "hathor",
+          "x": 1410,
+          "y": 758,
+          "escala": 0.9,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "cocodrilo",
+          "como": "cocodrilo",
+          "x": 400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 3.5,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "como": "serpiente",
+          "x": 1050,
+          "mira": "izq",
+          "props": {
+            "largo": 320,
+            "grosor": 32,
+            "erguida": 1
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 3.5,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "perro",
+          "como": "perro",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.7,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 3.5,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "como": "faraon",
+          "x": 1750,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "entristece"
+            },
+            {
+              "en": 3.4,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 850,
+          "y": 450,
+          "dur": 1.5,
+          "intensidad": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 2,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LAS SIETE HATHOR",
+            "en": "THE SEVEN HATHORS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1.5
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "COCODRILO · SERPIENTE · PERRO",
+            "en": "CROCODILE · SNAKE · DOG"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "casa",
+      "frases": [
+        {
+          "es": "Pero el rey tenía un plan para proteger a su hijo.",
+          "en": "But the king had a plan to protect his son."
+        },
+        {
+          "es": "Construyó una casa de piedra en el desierto, llena de sirvientes y de todo lo bueno del palacio.",
+          "en": "He built a house of stone in the desert, full of servants and every good thing from the palace."
+        },
+        {
+          "es": "El niño vivía allí, y nunca lo dejaban salir.",
+          "en": "The boy lived there, and he was never allowed to go outside."
+        },
+        {
+          "es": "Un día, desde la azotea, el niño vio pasar a un hombre por el camino. Detrás del hombre venía un perro.",
+          "en": "One day, from the roof, the boy saw a man walking on the road. Behind the man came a dog."
+        },
+        {
+          "es": "«¿Qué es eso?», preguntó. «Un perro», dijo su sirviente. «¡Quiero uno!», dijo el niño.",
+          "en": "\"What is that?\" he asked. \"A dog,\" said his servant. \"I want one!\" said the boy."
+        }
+      ],
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 750,
+          "s": 1.3,
+          "en": 1
+        },
+        {
+          "tipo": "palmera",
+          "x": 1900,
+          "s": 1.2,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "rey",
+          "como": "faraon",
+          "x": 400,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "egipcio",
+          "x": 980,
+          "y": 758,
+          "escala": 0.8,
+          "props": {
+            "cuerpo": "nino",
+            "trenza": true
+          },
+          "rotulo": "THE PRINCE",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "entristece"
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                750,
+                580
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 3.6,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 4.7,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "sirviente",
+          "como": "egipcio",
+          "x": 1200,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.3,
+              "hace": "habla",
+              "dur": 0.3
+            }
+          ]
+        },
+        {
+          "id": "caminante",
+          "como": "egipcio",
+          "x": 1700,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "entra",
+              "a": 1650
+            }
+          ]
+        },
+        {
+          "id": "perro",
+          "como": "perro",
+          "x": 1900,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "entra",
+              "a": 1880
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1,
+          "intensidad": 0.2
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        }
+      ]
+    },
+    {
+      "id": "partida",
+      "frases": [
+        {
+          "es": "El rey pensó: si le digo que no, su corazón estará triste. Así que le mandó un cachorrito.",
+          "en": "The king thought: if I say no, his heart will be sad. So he sent the boy a little puppy."
+        },
+        {
+          "es": "El niño y su perro crecieron juntos. Años después, el joven le envió un mensaje a su padre.",
+          "en": "The boy and his dog grew up together. Years later, the young man sent a message to his father."
+        },
+        {
+          "es": "«¿Por qué me tienes encerrado? Mi destino ya está decidido. Déjame ir y vivir como quiera.»",
+          "en": "\"Why keep me shut in here? My fate is already decided. Let me go and live as I wish.\""
+        },
+        {
+          "es": "«Que los dioses hagan su voluntad.» Así que el rey le dio un carro, armas y un sirviente.",
+          "en": "\"Let the gods do what they will.\" So the king gave him a chariot, weapons and a servant."
+        },
+        {
+          "es": "El príncipe partió con su perro. Viajó hacia el norte por el desierto, y vivía de la caza.",
+          "en": "The prince set off with his dog. He traveled north across the desert, and lived by hunting."
+        }
+      ],
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 350,
+          "s": 1.3
+        },
+        {
+          "tipo": "palmera",
+          "x": 2100,
+          "s": 1.2,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "nino",
+          "como": "egipcio",
+          "x": 650,
+          "y": 758,
+          "escala": 0.8,
+          "props": {
+            "cuerpo": "nino",
+            "trenza": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "principe",
+          "como": "egipcio",
+          "x": 650,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 1850,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "perro",
+          "como": "perro",
+          "x": 900,
+          "escala": 0.5,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "crece",
+              "escala": 1,
+              "dur": 0.5
+            },
+            {
+              "en": 4,
+              "hace": "corre",
+              "a": 1650,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "como": "faraon",
+          "x": 1250,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "asiente"
+            },
+            {
+              "en": 3,
+              "hace": "asiente"
+            },
+            {
+              "en": 3.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "caballo",
+          "como": "caballo",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.1,
+              "hace": "camina",
+              "a": 2050,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "sirviente",
+          "como": "egipcio",
+          "x": 1700,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.2,
+              "hace": "camina",
+              "a": 2200,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "chispas",
+          "x": 900,
+          "y": 720,
+          "dur": 0.6
+        },
+        {
+          "en": 4,
+          "tipo": "polvo",
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "id": "torre",
+      "frases": [
+        {
+          "es": "Por fin llegó a Naharin, la lejana tierra del norte que visitamos la vez pasada.",
+          "en": "At last he came to Naharin, the far northern land we visited last time."
+        },
+        {
+          "es": "El príncipe de Naharin tenía una sola hija. Le había construido una casa con una ventana muy alta.",
+          "en": "The prince of Naharin had only one child, a daughter. He had built her a house with a very high window."
+        },
+        {
+          "es": "La ventana estaba a setenta codos del suelo. ¡Eso es más de treinta metros de altura!",
+          "en": "The window was seventy cubits from the ground. That is more than thirty meters up!"
+        },
+        {
+          "es": "«Quien salte hasta la ventana de mi hija», dijo su padre, «la tendrá como esposa.»",
+          "en": "\"Whoever jumps up to my daughter's window,\" said her father, \"will have her as his wife.\""
+        },
+        {
+          "es": "Jóvenes príncipes de Siria lo intentaron, día tras día. Ninguno lograba alcanzarla.",
+          "en": "Young princes from Syria tried, day after day. Not one of them could reach it."
+        }
+      ],
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 1250,
+          "en": 1,
+          "props": {
+            "ancho": 260,
+            "alto": 440
+          }
+        },
+        {
+          "tipo": "palmera",
+          "x": 250,
+          "s": 1.3,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "principe",
+          "como": "egipcio",
+          "x": 400,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 400
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "princesa",
+          "como": "egipcia",
+          "x": 1380,
+          "y": 318,
+          "rotulo": "THE PRINCESS",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "padre",
+          "como": "rey",
+          "x": 1750,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "PRINCE OF NAHARIN",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.4,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "joven1",
+          "como": "egipcio",
+          "x": 750,
+          "y": 758,
+          "props": {
+            "barba": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.2,
+              "hace": "salta"
+            },
+            {
+              "en": 4.7,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "joven2",
+          "como": "egipcio",
+          "x": 1000,
+          "y": 758,
+          "props": {
+            "barba": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4.1,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.5,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "dur": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1380,
+          "y": 300,
+          "dur": 1,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "NAHARIN",
+            "en": "NAHARIN"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "70 CODOS: MÁS DE 30 METROS",
+            "en": "70 CUBITS: OVER 30 METERS"
+          },
+          "x": 700,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "salto",
+      "frases": [
+        {
+          "es": "El egipcio ocultó quién era. «Soy hijo de un oficial», dijo. «Huí de una madrastra cruel.»",
+          "en": "The Egyptian hid who he really was. \"I am an officer's son,\" he said. \"I ran away from a cruel stepmother.\""
+        },
+        {
+          "es": "Se unió a los demás y los vio intentarlo. Hasta que un día respiró hondo, y saltó.",
+          "en": "He joined the others and watched them try. Then one day, he took a deep breath, and jumped."
+        },
+        {
+          "es": "Voló hacia arriba, cada vez más alto, ¡y alcanzó la ventana! La princesa lo besó y lo abrazó.",
+          "en": "Up he flew, higher and higher, and reached the window! The princess kissed him and held him tight."
+        },
+        {
+          "es": "Su padre se puso furioso. «¿Dar a mi hija a un fugitivo de Egipto? ¡Jamás! ¡Que se vaya!»",
+          "en": "Her father was furious. \"Give my daughter to a runaway from Egypt? Never! Send him away!\""
+        },
+        {
+          "es": "Pero la princesa dijo: «Si me lo quitas, no comeré ni beberé. Me moriré.»",
+          "en": "But the princess said: \"If you take him from me, I will not eat or drink. I will die.\""
+        }
+      ],
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "muralla",
+          "x": 1250,
+          "props": {
+            "ancho": 260,
+            "alto": 440
+          }
+        },
+        {
+          "tipo": "palmera",
+          "x": 250,
+          "s": 1.3,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "principe",
+          "como": "egipcio",
+          "x": 800,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 1.6,
+              "hace": "salta"
+            },
+            {
+              "en": 1.8,
+              "hace": "vuela",
+              "a": [
+                1470,
+                318
+              ],
+              "dur": 0.5
+            },
+            {
+              "en": 2.4,
+              "hace": "abraza"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "princesa",
+          "como": "egipcia",
+          "x": 1360,
+          "y": 318,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.4,
+              "hace": "abraza"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "padre",
+          "como": "rey",
+          "x": 1750,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "baja"
+            },
+            {
+              "en": 4.6,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "joven1",
+          "como": "egipcio",
+          "x": 500,
+          "y": 758,
+          "props": {
+            "barba": true
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "salta"
+            },
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.8,
+          "tipo": "polvo",
+          "dur": 0.5
+        },
+        {
+          "en": 2.2,
+          "tipo": "chispas",
+          "x": 1420,
+          "y": 300,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.5,
+          "intensidad": 0.3
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 0.8,
+          "intensidad": 0.25
+        }
+      ]
+    },
+    {
+      "id": "destino",
+      "frases": [
+        {
+          "es": "Así que su padre cedió. Recibió al joven, y les dio una casa, campos y ganado.",
+          "en": "So her father gave in. He welcomed the young man, and gave them a house, fields and cattle."
+        },
+        {
+          "es": "Un día, el príncipe le contó su secreto a su esposa. «Mi destino es morir por un cocodrilo, una serpiente o un perro.»",
+          "en": "One day, the prince told his wife his secret. \"I am fated to die by a crocodile, a snake or a dog.\""
+        },
+        {
+          "es": "«Entonces haz matar a tu perro», dijo ella. «No», respondió él. «Lo crié desde que era un cachorrito.»",
+          "en": "\"Then have your dog killed,\" she said. \"No,\" he answered. \"I raised him from a little puppy.\""
+        },
+        {
+          "es": "Así que ella lo cuidaba día y noche. No lo dejaba salir solo.",
+          "en": "So she watched over him day and night. She did not let him go out alone."
+        }
+      ],
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "columna_papiro",
+          "x": 150,
+          "s": 1.3,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 1900,
+          "s": 1.3,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "perro",
+          "como": "perro",
+          "x": 500,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "principe",
+          "como": "egipcio",
+          "x": 800,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 2.5,
+              "hace": "niega"
+            },
+            {
+              "en": 2.7,
+              "hace": "mira",
+              "a": 500
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 1150
+            }
+          ]
+        },
+        {
+          "id": "esposa",
+          "como": "egipcia",
+          "x": 1150,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.5,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.4
+            },
+            {
+              "en": 3.5,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "cocodrilo",
+          "como": "cocodrilo",
+          "x": 1600,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "padre",
+          "como": "rey",
+          "x": 1550,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "asiente"
+            },
+            {
+              "en": 0.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "buey",
+          "como": "buey",
+          "x": 1850,
+          "escala": 0.8,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "oscurecer",
+          "dur": 0.8,
+          "intensidad": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "COCODRILO · SERPIENTE · PERRO",
+            "en": "CROCODILE · SNAKE · DOG"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "lago",
+      "frases": [
+        {
+          "es": "Mientras tanto, su destino se acercaba. Un cocodrilo lo había seguido hasta el lago de su pueblo.",
+          "en": "Meanwhile, his fate was coming closer. A crocodile had followed him to the lake of his town."
+        },
+        {
+          "es": "Pero en ese lago también vivía un espíritu del agua. No dejaba salir al cocodrilo.",
+          "en": "But a water spirit also lived in that lake. It would not let the crocodile come out."
+        },
+        {
+          "es": "Y el cocodrilo tampoco dejaba salir al espíritu. Cada día, al salir el sol, peleaban.",
+          "en": "And the crocodile would not let the spirit out, either. Every day at sunrise, they fought."
+        },
+        {
+          "es": "Así pelearon durante tres meses enteros.",
+          "en": "They fought like that for three whole months."
+        }
+      ],
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "rio",
+          "x": 0
+        },
+        {
+          "tipo": "palmera",
+          "x": 300,
+          "s": 1.3,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "papiro",
+          "x": 1900,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "cocodrilo",
+          "como": "cocodrilo",
+          "x": 2000,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "nada",
+              "a": 1300,
+              "dur": 1
+            },
+            {
+              "en": 2.3,
+              "hace": "nada",
+              "a": 1150,
+              "dur": 0.3
+            },
+            {
+              "en": 2.7,
+              "hace": "nada",
+              "a": 1350,
+              "dur": 0.3
+            },
+            {
+              "en": 3,
+              "hace": "nada",
+              "a": 1150,
+              "dur": 0.3
+            },
+            {
+              "en": 3.4,
+              "hace": "nada",
+              "a": 1350,
+              "dur": 0.3
+            }
+          ]
+        },
+        {
+          "id": "espiritu",
+          "como": "egipcio",
+          "x": 800,
+          "y": 758,
+          "props": {
+            "piel": "#3E7FA8"
+          },
+          "rotulo": "WATER SPIRIT",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.5,
+              "hace": "niega"
+            },
+            {
+              "en": 2.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.5,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 2.3,
+          "tipo": "destello",
+          "dur": 0.3
+        },
+        {
+          "en": 2.5,
+          "tipo": "olas-suben",
+          "dur": 0.6,
+          "intensidad": 0.12
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 700,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "3 MESES",
+            "en": "3 MONTHS"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "serpiente",
+      "frases": [
+        {
+          "es": "Una noche, después de una fiesta, el príncipe se acostó en su cama y se quedó dormido.",
+          "en": "One evening, after a feast, the prince lay down on his bed and fell asleep."
+        },
+        {
+          "es": "Su esposa se quedó despierta. Dejó en el suelo un tazón de vino y otro de cerveza.",
+          "en": "His wife stayed awake. She set down a bowl of wine and a bowl of beer."
+        },
+        {
+          "es": "Entonces una serpiente salió de su agujero para morderlo. Pero antes, bebió de los tazones.",
+          "en": "Then a snake crept out of its hole to bite him. But first, it drank from the bowls."
+        },
+        {
+          "es": "Bebió hasta emborracharse, y quedó panza arriba. La princesa la golpeó con un hacha.",
+          "en": "It drank until it was drunk, and rolled over on its back. The princess struck it with an axe."
+        },
+        {
+          "es": "Despertó a su esposo. «¡Mira! Tu dios ha puesto uno de tus destinos en tus manos.»",
+          "en": "She woke her husband. \"Look! Your god has put one of your fates into your hands.\""
+        },
+        {
+          "es": "¿Tú te quedarías con el perro? Cuéntanos en los comentarios.",
+          "en": "Would you still keep the dog? Tell us in the comments."
+        }
+      ],
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "anfora",
+          "x": 1000,
+          "s": 0.45,
+          "en": 1
+        },
+        {
+          "tipo": "anfora",
+          "x": 1080,
+          "s": 0.4,
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "perro",
+          "como": "perro",
+          "x": 350,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "principe",
+          "como": "egipcio",
+          "x": 700,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "cae"
+            },
+            {
+              "en": 4.3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 4.5,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "esposa",
+          "como": "egipcia",
+          "x": 1350,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.7,
+              "hace": "baja"
+            },
+            {
+              "en": 3.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "como": "serpiente",
+          "x": 1900,
+          "mira": "izq",
+          "props": {
+            "largo": 320,
+            "grosor": 32
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.7
+            },
+            {
+              "en": 3,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 3.2,
+              "hace": "cae"
+            },
+            {
+              "en": 3.6,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 3.5,
+          "tipo": "destello",
+          "dur": 0.3
+        },
+        {
+          "en": 4.4,
+          "tipo": "luz",
+          "x": 700,
+          "y": 550,
+          "dur": 1,
+          "intensidad": 0.5
+        }
+      ]
+    },
+    {
+      "id": "perro",
+      "frases": [
+        {
+          "es": "Unos días después, el príncipe salió a pasear por sus tierras. Su perro iba con él.",
+          "en": "Some days later, the prince went for a walk on his land. His dog went with him."
+        },
+        {
+          "es": "De pronto, el perro corrió tras él. El príncipe huyó, y se metió en el lago.",
+          "en": "Suddenly, the dog ran after him. The prince fled from it, and went down into the lake."
+        },
+        {
+          "es": "Allí el cocodrilo lo atrapó. «Soy tu destino», dijo. «Te he seguido todo este camino.»",
+          "en": "There the crocodile seized him. \"I am your fate,\" it said. \"I have followed you all this way.\""
+        },
+        {
+          "es": "Luego habló del espíritu del agua, como si le pidiera ayuda. Pero aquí, el papiro está roto.",
+          "en": "Then it spoke of the water spirit, as if asking for his help. But here, the papyrus is torn."
+        },
+        {
+          "es": "La última página se perdió. Nadie sabe cómo termina la historia.",
+          "en": "The last page is lost. Nobody knows how the story ends."
+        }
+      ],
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "rio",
+          "x": 0
+        },
+        {
+          "tipo": "palmera",
+          "x": 250,
+          "s": 1.3,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "principe",
+          "como": "egipcio",
+          "x": 600,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 850,
+              "dur": 1
+            },
+            {
+              "en": 1.3,
+              "hace": "corre",
+              "a": 1250,
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "perro",
+          "como": "perro",
+          "x": 350,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 650,
+              "dur": 1
+            },
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 1000,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "cocodrilo",
+          "como": "cocodrilo",
+          "x": 1900,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "nada",
+              "a": 1450,
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "espiritu",
+          "como": "egipcio",
+          "x": 1750,
+          "y": 758,
+          "capa": "medio",
+          "props": {
+            "piel": "#3E7FA8"
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.9,
+          "tipo": "olas-suben",
+          "dur": 0.5,
+          "intensidad": 0.12
+        },
+        {
+          "en": 2,
+          "tipo": "destello",
+          "dur": 0.3
+        },
+        {
+          "en": 3.5,
+          "tipo": "oscurecer",
+          "dur": 1.5,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "EL FINAL SE PERDIÓ",
+            "en": "THE ENDING IS LOST"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "es": "¿Escapó el príncipe? Muchos expertos creen que sí. Los cuentos egipcios suelen terminar bien.",
+          "en": "Did the prince escape? Many experts think so. Egyptian tales usually end well."
+        },
+        {
+          "es": "Y sus dioses ya lo habían salvado una vez, de la serpiente. Pero nunca lo sabremos con certeza.",
+          "en": "And his gods had already saved him once, from the snake. But we will never know for sure."
+        },
+        {
+          "es": "¿Cómo crees que termina la historia? Escribe tu propio final en los comentarios.",
+          "en": "How do you think the story ends? Write your own ending in the comments."
+        },
+        {
+          "es": "Con este cuento termina nuestra segunda temporada de reyes, magos y viajeros.",
+          "en": "With this tale, our second season of kings, magicians and travelers comes to an end."
+        },
+        {
+          "es": "La próxima vez comienza una nueva temporada de historias egipcias. ¡Gracias por viajar con nosotros!",
+          "en": "Next time, a new season of Egyptian stories begins. Thank you for traveling with us!"
+        }
+      ],
+      "fondo": "piramides",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1750,
+          "s": 0.55,
+          "en": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "perro",
+          "como": "perro",
+          "x": 450,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "principe",
+          "como": "egipcio",
+          "x": 750,
+          "y": 758,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 450
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "esposa",
+          "como": "egipcia",
+          "x": 1000,
+          "y": 758,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "abraza"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "cocodrilo",
+          "como": "cocodrilo",
+          "x": 1450,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1,
+              "hace": "desaparece",
+              "con": "agua"
+            },
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 3,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 0.8,
+          "intensidad": 0.3
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 900,
+          "y": 450,
+          "dur": 1.2,
+          "intensidad": 0.5
+        },
+        {
+          "en": 4,
+          "tipo": "estrellas",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "FIN DE LA TEMPORADA 2",
+            "en": "END OF SEASON 2"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    }
+  ]
+}

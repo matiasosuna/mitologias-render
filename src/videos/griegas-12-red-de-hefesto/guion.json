@@ -1,0 +1,1656 @@
+{
+  "id": "griegas-12-red-de-hefesto",
+  "serie": "griegas",
+  "numero": "12",
+  "titulo": {
+    "es": "La red de Hefesto",
+    "en": "The Net of Hephaestus"
+  },
+  "tituloGriego": "ΔΕΣΜΟΙ ΗΦΑΙΣΤΟΥ",
+  "miniatura": {
+    "heroe": "hefesto",
+    "rival": "ares"
+  },
+  "siguiente": {
+    "es": "Leto y los gemelos",
+    "en": "Leto and the Twins"
+  },
+  "escenas": [
+    {
+      "id": "secreto",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada, Hefesto se casó con Afrodita, la diosa del amor. Pero ella amaba a Ares, el dios de la guerra.",
+          "en": "Last time, Hephaestus married Aphrodite, the goddess of love. But she loved Ares, the god of war."
+        },
+        {
+          "es": "Esta historia es muy antigua. Homero la cuenta en la Odisea, su gran poema sobre un largo viaje a casa.",
+          "en": "This story is very old. Homer tells it in the Odyssey, his great poem about a long journey home."
+        },
+        {
+          "es": "En el poema, un cantor ciego llamado Demódoco la canta en un banquete real.",
+          "en": "In the poem, a blind singer named Demodocus sings it at a royal feast."
+        },
+        {
+          "es": "Canta que Ares iba en secreto a la casa de Hefesto cada vez que el herrero no estaba.",
+          "en": "He sings that Ares came to the house of Hephaestus in secret, whenever the smith was away."
+        },
+        {
+          "es": "Le llevaba a Afrodita muchos regalos. Y los dos creían que nadie los veía.",
+          "en": "He brought Aphrodite many gifts. And they both believed that no one could see them."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.6,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "afrodita",
+          "x": 1050,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.2,
+              "hace": "toma",
+              "objeto": "copa"
+            }
+          ]
+        },
+        {
+          "id": "ares",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 800,
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "demodoco",
+          "como": "anciano",
+          "rotulo": "Demodocus",
+          "x": 1600,
+          "mira": "izq",
+          "props": {
+            "objeto": "lira",
+            "canas": true
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "habla",
+              "dur": 1.5
+            },
+            {
+              "en": 3.6,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 380,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1600,
+          "y": 400,
+          "dur": 1
+        },
+        {
+          "en": 4.4,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA ODISEA DE HOMERO",
+            "en": "HOMER'S ODYSSEY"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 2
+        },
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "EN SECRETO",
+            "en": "IN SECRET"
+          },
+          "x": 900,
+          "y": 200,
+          "hasta": 4.6
+        }
+      ]
+    },
+    {
+      "id": "helios",
+      "fondo": "cielo",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 500,
+          "s": 1.2,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "nube",
+          "x": 1100,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "nube",
+          "x": 1900,
+          "s": 0.8,
+          "capa": "fondo"
+        }
+      ],
+      "frases": [
+        {
+          "es": "Pero hay un dios que lo ve todo: Helios, el Sol. Cada día cruza el cielo en su carro brillante.",
+          "en": "But one god sees everything: Helios, the Sun. Every day, he drives his bright chariot across the sky."
+        },
+        {
+          "es": "Desde allá arriba, nada en la tierra puede esconderse de su luz.",
+          "en": "From up there, nothing on earth can hide from his light."
+        },
+        {
+          "es": "Helios miró hacia abajo y vio a Ares y a Afrodita juntos.",
+          "en": "Helios looked down and saw Ares and Aphrodite together."
+        },
+        {
+          "es": "No guardó el secreto. Fue directo a ver a Hefesto y le contó todo.",
+          "en": "He did not keep the secret. He went straight to Hephaestus and told him everything."
+        }
+      ],
+      "actores": [
+        {
+          "id": "helios",
+          "x": 600,
+          "y": 320,
+          "visible": true,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "brilla",
+              "dur": 1.2
+            },
+            {
+              "en": 0.3,
+              "hace": "vuela",
+              "a": [
+                1000,
+                280
+              ],
+              "dur": 1.4
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                1800,
+                560
+              ],
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "ares",
+          "x": 1450,
+          "capa": "fondo",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1.8,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "afrodita",
+          "x": 1650,
+          "capa": "fondo",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.9,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 0.1,
+          "tipo": "luz",
+          "x": 650,
+          "y": 320,
+          "dur": 1.5
+        },
+        {
+          "en": 2.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 500,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "EL SOL LO VE TODO",
+            "en": "THE SUN SEES EVERYTHING"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "red",
+      "fondo": "fragua",
+      "camara": {
+        "de": 0,
+        "a": 250
+      },
+      "frases": [
+        {
+          "es": "Hefesto escuchó en silencio. El enojo le llenó el corazón, pero no gritó.",
+          "en": "Hephaestus listened in silence. His heart filled with anger, but he did not shout."
+        },
+        {
+          "es": "Fue a su fragua, puso en su lugar el gran yunque y se puso a trabajar.",
+          "en": "He went to his forge, set up his great anvil, and began to work."
+        },
+        {
+          "es": "Forjó cadenas tan finas como una tela de araña. Ni siquiera un dios podía verlas.",
+          "en": "He forged chains as thin as a spider's web. Not even a god could see them."
+        },
+        {
+          "es": "Y eran tan fuertes que nadie podía romperlas.",
+          "en": "And they were so strong that no one could break them."
+        },
+        {
+          "es": "Llevó la red a su dormitorio y la colgó alrededor de la cama, como una trampa escondida.",
+          "en": "He carried the net to his bedroom and hung it all around the bed, like a hidden trap."
+        }
+      ],
+      "actores": [
+        {
+          "id": "helios",
+          "x": 550,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.8,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "hefesto",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.8,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 1650,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "chispas",
+          "x": 1150,
+          "y": 640,
+          "dur": 1
+        },
+        {
+          "en": 1.8,
+          "tipo": "chispas",
+          "x": 1150,
+          "y": 640,
+          "dur": 1
+        },
+        {
+          "en": 2.3,
+          "tipo": "chispas",
+          "x": 1150,
+          "y": 640,
+          "dur": 1
+        },
+        {
+          "en": 2.6,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 450,
+          "intensidad": 0.6,
+          "dur": 1.2
+        },
+        {
+          "en": 3.1,
+          "tipo": "destello"
+        },
+        {
+          "en": 4.2,
+          "tipo": "humo",
+          "x": 1100,
+          "y": 600,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "LA RED INVISIBLE",
+            "en": "THE INVISIBLE NET"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 3.8
+        }
+      ]
+    },
+    {
+      "id": "lemnos",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 200
+      },
+      "elementos": [
+        {
+          "tipo": "isla",
+          "x": 1950,
+          "s": 0.7,
+          "capa": "fondo",
+          "props": {
+            "verde": false
+          }
+        },
+        {
+          "tipo": "casa",
+          "x": 300,
+          "s": 0.8
+        }
+      ],
+      "frases": [
+        {
+          "es": "Entonces Hefesto hizo una trampa. Dijo que se iba a Lemnos, su isla favorita.",
+          "en": "Then Hephaestus played a trick. He said he was going away to Lemnos, his favorite island."
+        },
+        {
+          "es": "Era la tierra que más quería en todo el mundo.",
+          "en": "It was the land he loved most in all the world."
+        },
+        {
+          "es": "Se fue cojeando por el camino, despacio, para que todos lo vieran partir.",
+          "en": "He limped away down the road, slowly, so that everyone could see him leave."
+        },
+        {
+          "es": "Ares lo miraba desde lejos. En cuanto Hefesto se fue, sonrió.",
+          "en": "Ares was watching from far away. As soon as Hephaestus was gone, he smiled."
+        },
+        {
+          "es": "Corrió a la casa de Hefesto, donde Afrodita lo esperaba.",
+          "en": "He ran to the house of Hephaestus, where Aphrodite was waiting."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "x": 700,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "senala"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "ares",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 4,
+              "hace": "corre",
+              "a": 380,
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "afrodita",
+          "x": 280,
+          "capa": "medio",
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 4.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.5,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "luz",
+          "x": 1700,
+          "y": 520,
+          "dur": 1.2
+        },
+        {
+          "en": 2.2,
+          "tipo": "polvo",
+          "x": 1100,
+          "y": 760,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "polvo",
+          "x": 450,
+          "y": 760,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.5,
+          "texto": {
+            "es": "LEMNOS",
+            "en": "LEMNOS"
+          },
+          "x": 1700,
+          "y": 260,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ares y Afrodita se encontraron en el dormitorio, seguros de que estaban solos.",
+          "en": "Ares and Aphrodite met in the bedroom, sure that they were alone."
+        },
+        {
+          "es": "Pero en cuanto se acostaron juntos, la red escondida cayó sobre ellos.",
+          "en": "But as soon as they lay down together, the hidden net fell on them."
+        },
+        {
+          "es": "Las cadenas finas los envolvieron. No podían mover ni una mano ni un pie.",
+          "en": "The fine chains wrapped around them. They could not move a hand or a foot."
+        },
+        {
+          "es": "Ares, el poderoso dios de la guerra, tiró con todas sus fuerzas. La red no se rompió.",
+          "en": "Ares, the mighty god of war, pulled with all his strength. The net did not break."
+        },
+        {
+          "es": "Y Helios, que seguía mirando desde el cielo, corrió a avisarle a Hefesto: ya están atrapados.",
+          "en": "And Helios, still watching from the sky, hurried to tell Hephaestus: they are caught."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ares",
+          "x": 800,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 850
+            },
+            {
+              "en": 1.2,
+              "hace": "sienta"
+            },
+            {
+              "en": 2.1,
+              "hace": "tiembla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.8,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "afrodita",
+          "x": 1100,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.2,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.2,
+              "hace": "tiembla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.6,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "helios",
+          "x": 1650,
+          "y": 260,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.2,
+              "hace": "senala"
+            },
+            {
+              "en": 4.6,
+              "hace": "vuela",
+              "a": [
+                2300,
+                200
+              ],
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.5,
+          "tipo": "luz",
+          "x": 975,
+          "y": 550,
+          "dur": 2
+        },
+        {
+          "en": 1.6,
+          "tipo": "chispas",
+          "x": 975,
+          "y": 600,
+          "dur": 2.5
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1650,
+          "y": 260,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.6,
+          "texto": {
+            "es": "ATRAPADOS",
+            "en": "CAUGHT"
+          },
+          "x": 975,
+          "y": 200,
+          "hasta": 3.8
+        }
+      ]
+    },
+    {
+      "id": "llamada",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 250
+      },
+      "frases": [
+        {
+          "es": "Hefesto volvió enseguida. Se paró en la puerta, ardiendo de rabia.",
+          "en": "Hephaestus came back at once. He stood at the door, burning with anger."
+        },
+        {
+          "es": "Entonces hizo algo que nadie esperaba. Llamó a todos los dioses para que vinieran a mirar.",
+          "en": "Then he did something no one expected. He called all the gods to come and look."
+        },
+        {
+          "es": "«¡Padre Zeus, ven a ver!», gritó. «Mi esposa ama a Ares porque es hermoso y veloz, y yo soy cojo».",
+          "en": "\"Father Zeus, come and see!\" he shouted. \"My wife loves Ares because he is handsome and fast, and I am lame.\""
+        },
+        {
+          "es": "Dijo que no abriría la red hasta que Zeus le devolviera todos los regalos de boda.",
+          "en": "He said he would not open the net until Zeus gave back all his wedding gifts."
+        },
+        {
+          "es": "¿Tú habrías llamado a todos para que vieran, o habrías guardado tu dolor en secreto?",
+          "en": "Would you have called everyone to see, or kept your pain a secret?"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "x": 500,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 550
+            },
+            {
+              "en": 0.6,
+              "hace": "enoja",
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 2.6,
+              "hace": "senala"
+            },
+            {
+              "en": 3.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "ares",
+          "x": 1000,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.8,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "afrodita",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 2.7,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.5,
+              "hace": "niega"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "chispas",
+          "x": 1125,
+          "y": 600,
+          "dur": 4
+        },
+        {
+          "en": 1.2,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 1750,
+          "y": 350,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "«¡VENGAN A VER!»",
+            "en": "\"COME AND SEE!\""
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 2.8
+        },
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "LOS REGALOS DE BODA",
+            "en": "THE WEDDING GIFTS"
+          },
+          "x": 1100,
+          "y": 200,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "risa",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Los dioses llegaron corriendo a la casa. Entre ellos estaba Poseidón, el dios del mar.",
+          "en": "The gods came running to the house. Among them was Poseidon, the god of the sea."
+        },
+        {
+          "es": "Pero las diosas se quedaron en casa. Sentían que no estaba bien mirar.",
+          "en": "But the goddesses stayed at home. They felt it was not right to look."
+        },
+        {
+          "es": "Los dioses se pararon en la puerta y vieron a los dos amantes en la red. Y se echaron a reír.",
+          "en": "The gods stood at the door and saw the two lovers in the net. And they began to laugh."
+        },
+        {
+          "es": "Homero dice que su risa no paraba. Resonaba en todo el Olimpo.",
+          "en": "Homer says their laughter would not stop. It rang through all of Olympus."
+        },
+        {
+          "es": "«Miren», decían. «El lento atrapó al rápido. Hefesto, el cojo, atrapó a Ares, el más veloz».",
+          "en": "\"Look,\" they said. \"The slow one has caught the fast one. Lame Hephaestus caught Ares, the fastest.\""
+        }
+      ],
+      "actores": [
+        {
+          "id": "ares",
+          "x": 750,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 2.6,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "afrodita",
+          "x": 950,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 2.8,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "poseidon",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1400
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "hermes",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "entra",
+              "a": 1700
+            },
+            {
+              "en": 2.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "salta"
+            },
+            {
+              "en": 4.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "x": 420,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "niega"
+            },
+            {
+              "en": 1.8,
+              "hace": "gira"
+            },
+            {
+              "en": 1.9,
+              "hace": "sale"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "polvo",
+          "x": 1500,
+          "y": 760,
+          "dur": 0.8
+        },
+        {
+          "en": 0,
+          "tipo": "chispas",
+          "x": 850,
+          "y": 600,
+          "dur": 5
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 3.1,
+          "tipo": "luz",
+          "x": 1550,
+          "y": 380,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "LAS DIOSAS NO VINIERON",
+            "en": "THE GODDESSES STAYED HOME"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 2
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "EL LENTO ATRAPA AL RÁPIDO",
+            "en": "THE SLOW CATCHES THE FAST"
+          },
+          "x": 1100,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "fianza",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 200
+      },
+      "frases": [
+        {
+          "es": "Solo Poseidón no se reía. Le pidió a Hefesto que liberara a Ares.",
+          "en": "Only Poseidon did not laugh. He asked Hephaestus to set Ares free."
+        },
+        {
+          "es": "«Suéltalo», le dijo. «Te prometo que Ares te pagará lo que te debe».",
+          "en": "\"Let him go,\" he said. \"I promise that Ares will pay you what he owes.\""
+        },
+        {
+          "es": "Hefesto negó con la cabeza. «¿Y si Ares huye sin pagar? ¿Cómo podría encadenarte a ti?»",
+          "en": "Hephaestus shook his head. \"And if Ares runs away without paying? How could I chain you instead?\""
+        },
+        {
+          "es": "«Entonces lo pagaré yo mismo», dijo Poseidón.",
+          "en": "\"Then I will pay it myself,\" said Poseidon."
+        },
+        {
+          "es": "Hefesto no pudo negarse ante el gran dios del mar. Abrió la red.",
+          "en": "Hephaestus could not say no to the great god of the sea. He opened the net."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "x": 650,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "niega"
+            },
+            {
+              "en": 2.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4,
+              "hace": "asiente"
+            },
+            {
+              "en": 4.3,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "ares",
+          "x": 950,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 4.5,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "afrodita",
+          "x": 1150,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 4.5,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "poseidon",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "chispas",
+          "x": 1050,
+          "y": 600,
+          "dur": 4
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1550,
+          "y": 380,
+          "dur": 1
+        },
+        {
+          "en": 4.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 4.4,
+          "tipo": "chispas",
+          "x": 1050,
+          "y": 550,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "LA PROMESA DE POSEIDÓN",
+            "en": "POSEIDON'S PROMISE"
+          },
+          "x": 1100,
+          "y": 200,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "huida",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 450
+      },
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 1750,
+          "s": 0.9,
+          "en": 2.3
+        },
+        {
+          "tipo": "templo",
+          "x": 2150,
+          "s": 0.8,
+          "capa": "medio",
+          "en": 2.8
+        }
+      ],
+      "frases": [
+        {
+          "es": "Apenas quedaron libres, los dos amantes huyeron en direcciones opuestas.",
+          "en": "The moment they were free, the two lovers fled in opposite directions."
+        },
+        {
+          "es": "Ares corrió al norte, a Tracia, una tierra salvaje y tormentosa de guerreros.",
+          "en": "Ares rushed north to Thrace, a wild and stormy land of warriors."
+        },
+        {
+          "es": "Afrodita voló sobre el mar hasta Chipre, la isla donde había nacido de la espuma.",
+          "en": "Aphrodite flew over the sea to Cyprus, the island where she was born from the foam."
+        },
+        {
+          "es": "Allí, en su templo de Pafos, las Gracias, diosas de la alegría, la bañaron y la vistieron con ropas hermosas.",
+          "en": "There, at her temple in Paphos, the Graces, goddesses of joy, bathed her and dressed her in lovely clothes."
+        },
+        {
+          "es": "Y Hefesto volvió a su fragua, solo.",
+          "en": "And Hephaestus went back to his forge, alone."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ares",
+          "x": 800,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 300,
+              "dur": 0.6
+            },
+            {
+              "en": 1.6,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "afrodita",
+          "x": 1050,
+          "y": 790,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1600,
+                380
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 2.6,
+              "hace": "vuela",
+              "a": [
+                1950,
+                790
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 3.3,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "gracia",
+          "como": "ninfa",
+          "rotulo": "Graces",
+          "x": 2250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.4,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "hefesto",
+          "x": 1150,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.3,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "polvo",
+          "x": 600,
+          "y": 760,
+          "dur": 0.8
+        },
+        {
+          "en": 2.1,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 400,
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 2050,
+          "y": 450,
+          "dur": 1.2
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "TRACIA",
+            "en": "THRACE"
+          },
+          "x": 500,
+          "y": 220,
+          "hasta": 2
+        },
+        {
+          "en": 2.3,
+          "texto": {
+            "es": "CHIPRE",
+            "en": "CYPRUS"
+          },
+          "x": 1500,
+          "y": 220,
+          "hasta": 3.6
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "olimpo",
+      "camara": {
+        "de": 0,
+        "a": 250
+      },
+      "frases": [
+        {
+          "es": "La trampa del herrero cojo funcionó. Pero también mostró su dolor a todo el mundo.",
+          "en": "The trap of the lame smith worked. But it also showed his pain to the whole world."
+        },
+        {
+          "es": "Y en el Olimpo había muchos más secretos. El mismo Zeus había amado a otras diosas.",
+          "en": "And on Olympus, there were many more secrets. Zeus himself had loved other goddesses."
+        },
+        {
+          "es": "Una de ellas fue Leto, una dulce diosa titánide. Iba a tener gemelos.",
+          "en": "One of them was Leto, a gentle Titan goddess. She was going to have twins."
+        },
+        {
+          "es": "Cuando Hera se enteró, sus celos se volvieron una tormenta.",
+          "en": "When Hera found out, her jealousy became a storm."
+        },
+        {
+          "es": "Cuéntame en los comentarios: ¿quién salió peor parado de esta historia? ¿Ares, Afrodita o Hefesto?",
+          "en": "Tell me in the comments: who came out of this story worst? Ares, Aphrodite, or Hephaestus?"
+        },
+        {
+          "es": "En el próximo episodio: Leto y los gemelos.",
+          "en": "Next time: Leto and the Twins."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "x": 450,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "leto",
+          "como": "mujer",
+          "rotulo": "Leto",
+          "x": 1050,
+          "mira": "der",
+          "props": {
+            "tocado": "velo",
+            "capa": "#6A7FB0",
+            "ropa": "larga"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.5,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "x": 500,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 400,
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "oscurecer",
+          "intensidad": 0.4,
+          "dur": 1.5
+        },
+        {
+          "en": 3.3,
+          "tipo": "rayo",
+          "x": 800
+        },
+        {
+          "en": 3.3,
+          "tipo": "lluvia",
+          "dur": 1.5
+        },
+        {
+          "en": 5,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 5,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 400,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 5,
+          "texto": {
+            "es": "LETO Y LOS GEMELOS",
+            "en": "LETO AND THE TWINS"
+          },
+          "x": 1000,
+          "y": 200
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La red que ningún dios podía ver",
+        "en": "The Net No God Could See"
+      },
+      "escena": "trampa",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Los dioses no paraban de reírse",
+        "en": "The Gods Could Not Stop Laughing"
+      },
+      "escena": "risa",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Un dios traicionado llama a todo el Olimpo",
+        "en": "A Betrayed God Calls All of Olympus"
+      },
+      "escena": "llamada",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 850
+    }
+  ]
+}

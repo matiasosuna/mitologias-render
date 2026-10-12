@@ -1,0 +1,2245 @@
+{
+  "id": "nordicas-20-molino-grotti",
+  "serie": "nordicas",
+  "numero": "20",
+  "titulo": {
+    "es": "El molino Grotti",
+    "en": "The Mill Grotti"
+  },
+  "tituloGriego": "THE MILL GROTTI",
+  "miniatura": {
+    "heroe": {
+      "gigante": true,
+      "mujer": true,
+      "barba": false,
+      "objeto": null,
+      "ropa": "corta",
+      "pelo": "#B5452A"
+    },
+    "rival": "rey"
+  },
+  "siguiente": {
+    "es": "Starkad y los tres destinos",
+    "en": "Starkad and the Three Fates"
+  },
+  "escenas": [
+    {
+      "id": "gancho",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada, una joven despertó a su padre muerto y se llevó su espada maldita.",
+          "en": "Last time, a young woman woke her dead father, and took his cursed sword."
+        },
+        {
+          "es": "El tesoro de hoy no es una espada. Es un molino.",
+          "en": "Today's treasure is not a sword. It is a mill."
+        },
+        {
+          "es": "Un molino son dos grandes piedras redondas. Al girar, convierten el grano en harina.",
+          "en": "A mill is two big round stones. When they turn, they grind grain into flour."
+        },
+        {
+          "es": "Pero este molino podía moler cualquier cosa que le pidieras. Se llamaba Grotti.",
+          "en": "But this mill could grind out anything you asked for. Its name was Grotti."
+        },
+        {
+          "es": "Y esta historia te contará por qué el mar es salado.",
+          "en": "And this story will tell you why the sea is salty."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 1900,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 1000,
+          "s": 0.9,
+          "capa": "medio",
+          "en": 1
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1200,
+          "s": 1.2,
+          "capa": "medio",
+          "en": 1.1,
+          "props": {
+            "texto": "GROTTI"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "hervor",
+          "como": "mujer",
+          "x": 500,
+          "rotulo": "",
+          "props": {
+            "ropa": "armadura",
+            "tocado": "yelmo",
+            "escudo": true,
+            "objeto": "espada",
+            "pelo": "#E9C46A",
+            "capa": "#7A2418"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 0.85,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "molinero",
+          "como": "hombre",
+          "x": 750,
+          "rotulo": "",
+          "props": {
+            "objeto": null,
+            "ropa": "corta",
+            "tocado": null
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.2,
+              "hace": "mira",
+              "a": 1700
+            }
+          ]
+        },
+        {
+          "id": "fenja",
+          "como": "jotun",
+          "x": 1650,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "props": {
+            "mujer": true,
+            "barba": false,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#B5452A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 500,
+          "dur": 0.8
+        },
+        {
+          "en": 2.2,
+          "tipo": "polvo",
+          "x": 1100
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 520
+        },
+        {
+          "en": 3.1,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 480,
+          "dur": 0.8
+        },
+        {
+          "en": 4,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "GROTTI",
+            "en": "GROTTI"
+          },
+          "x": 1100,
+          "y": 260,
+          "hasta": 4
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "¿POR QUÉ EL MAR ES SALADO?",
+            "en": "WHY IS THE SEA SALTY?"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "frodi",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hace mucho tiempo, Dinamarca tenía un rey llamado Fródi. Era el rey más poderoso del norte.",
+          "en": "Long ago, Denmark had a king named Frodi. He was the most powerful king in the north."
+        },
+        {
+          "es": "En su tiempo hubo una gran paz. La gente la llamó la Paz de Fródi.",
+          "en": "In his time, there was a great peace. People called it Frodi's Peace."
+        },
+        {
+          "es": "Nadie hacía daño a nadie. Aunque un hombre encontrara al asesino de su padre, lo dejaba ir en paz.",
+          "en": "No one hurt anyone. Even if a man met his father's killer, he let him go in peace."
+        },
+        {
+          "es": "No había ladrones ni bandidos.",
+          "en": "There were no thieves and no robbers."
+        },
+        {
+          "es": "Un anillo de oro quedó tirado en un páramo, un campo abierto, durante años. Nadie lo tomó.",
+          "en": "A gold ring lay on a heath, an open field, for years. Nobody took it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 150,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "casa_larga",
+          "x": 2050,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "frodi",
+          "como": "rey",
+          "x": 400,
+          "rotulo": "FRODI",
+          "props": {
+            "capa": "#7A2418"
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "hombre1",
+          "como": "hombre",
+          "x": 800,
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 950,
+              "dur": 0.4
+            },
+            {
+              "en": 2.5,
+              "hace": "asiente"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": -300,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "hombre2",
+          "como": "vikingo",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": null,
+            "escudo": false
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1200,
+              "dur": 0.4
+            },
+            {
+              "en": 2.5,
+              "hace": "asiente"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 2500,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "viajero",
+          "como": "anciano",
+          "x": 2500,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": "cayado"
+          },
+          "pasos": [
+            {
+              "en": 3.3,
+              "hace": "camina",
+              "a": 1750,
+              "dur": 0.8
+            },
+            {
+              "en": 4.2,
+              "hace": "senala"
+            },
+            {
+              "en": 4.6,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 400,
+          "y": 420,
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 740,
+          "dur": 1
+        },
+        {
+          "en": 4.1,
+          "tipo": "chispas",
+          "x": 1500,
+          "y": 760
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA PAZ DE FRÓDI",
+            "en": "FRODI'S PEACE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "UN ANILLO DE ORO",
+            "en": "A GOLD RING"
+          },
+          "x": 1350,
+          "y": 560
+        }
+      ]
+    },
+    {
+      "id": "molino",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Fródi tenía un regalo extraño: dos piedras de molino gigantes. Eran tan pesadas que ningún hombre podía moverlas.",
+          "en": "Frodi owned a strange gift: two giant millstones. They were so heavy that no man could turn them."
+        },
+        {
+          "es": "Pero eran mágicas. El molino molía cualquier cosa que le pidiera quien lo hacía girar.",
+          "en": "But they were magic. The mill would grind out anything its grinder asked for."
+        },
+        {
+          "es": "Oro, paz, felicidad: cualquier cosa.",
+          "en": "Gold, peace, happiness: anything at all."
+        },
+        {
+          "es": "Fródi solo necesitaba a alguien con fuerza suficiente para moverlo.",
+          "en": "Frodi only needed someone strong enough to turn it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa_larga",
+          "x": 1950,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 1000,
+          "s": 1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1200,
+          "s": 1.3,
+          "capa": "medio",
+          "props": {
+            "texto": "GROTTI"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "frodi",
+          "como": "rey",
+          "x": 400,
+          "rotulo": "",
+          "props": {
+            "capa": "#7A2418"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.4,
+              "hace": "mira",
+              "a": 1500
+            }
+          ]
+        },
+        {
+          "id": "m1",
+          "como": "hombre",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.6,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 3.5,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "m2",
+          "como": "vikingo",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "objeto": null,
+            "escudo": false
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.8,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3.6,
+              "hace": "niega"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "polvo",
+          "x": 1100
+        },
+        {
+          "en": 1.1,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 480,
+          "dur": 1
+        },
+        {
+          "en": 1.3,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 520
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 520
+        },
+        {
+          "en": 2.1,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 480,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "EL MOLINO GROTTI",
+            "en": "THE MILL GROTTI"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "ORO · PAZ · FELICIDAD",
+            "en": "GOLD · PEACE · HAPPINESS"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "gigantas",
+      "fondo": "bosque_nevado",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así que Fródi viajó a Suecia, a visitar al rey Fjölnir.",
+          "en": "So Frodi traveled to Sweden, to visit King Fjolnir."
+        },
+        {
+          "es": "Allí compró dos esclavas. Eran gigantas, mujeres de la raza de los gigantes.",
+          "en": "There he bought two slaves. They were giantesses, women of the giant race."
+        },
+        {
+          "es": "Se llamaban Fenja y Menja. Eran enormes y muy fuertes.",
+          "en": "Their names were Fenja and Menja. They were huge, and very strong."
+        },
+        {
+          "es": "Fródi las llevó a Dinamarca y las puso frente al molino.",
+          "en": "Frodi took them home to Denmark, and led them to the mill."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 200,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "monte_nevado",
+          "x": 1700,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "frodi",
+          "como": "rey",
+          "x": -250,
+          "rotulo": "FRODI",
+          "props": {
+            "capa": "#7A2418"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 450,
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": -300,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "fjolnir",
+          "como": "rey",
+          "x": 850,
+          "mira": "izq",
+          "rotulo": "FJOLNIR",
+          "props": {
+            "capa": "#2B4660"
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "fenja",
+          "como": "jotun",
+          "x": 1300,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "FENJA",
+          "props": {
+            "mujer": true,
+            "barba": false,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#B5452A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.1,
+              "hace": "camina",
+              "a": -200,
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "menja",
+          "como": "jotun",
+          "x": 1650,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "MENJA",
+          "props": {
+            "mujer": true,
+            "barba": false,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#E9C46A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.2,
+              "hace": "camina",
+              "a": 100,
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve",
+          "dur": 2
+        },
+        {
+          "en": 1.4,
+          "tipo": "polvo",
+          "x": 1500,
+          "dur": 0.8
+        },
+        {
+          "en": 2.3,
+          "tipo": "temblor",
+          "dur": 0.5,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "SUECIA",
+            "en": "SWEDEN"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "DOS GIGANTAS",
+            "en": "TWO GIANTESSES"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "moler",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Muelan, dijo Fródi. Muelan oro, paz y felicidad para mí.",
+          "en": "Grind, said Frodi. Grind gold, peace, and happiness for me."
+        },
+        {
+          "es": "Las gigantas empujaron las grandes piedras, y empezaron a girar. Salió oro a montones.",
+          "en": "The giantesses pushed the great stones, and they began to turn. Gold poured out."
+        },
+        {
+          "es": "Pero Fródi era codicioso. Casi no las dejaba descansar.",
+          "en": "But Frodi was greedy. He gave them almost no rest."
+        },
+        {
+          "es": "Solo podían descansar mientras el cuco callaba, o mientras se cantaba una canción.",
+          "en": "They could rest only while the cuckoo bird was silent, or while one song was sung."
+        },
+        {
+          "es": "Día y noche, las piedras giraban. Y las gigantas se iban enojando.",
+          "en": "Day and night, the great stones turned. And the giantesses grew angry."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 950,
+          "s": 1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1100,
+          "s": 1.3,
+          "capa": "medio",
+          "props": {
+            "texto": "GROTTI"
+          }
+        },
+        {
+          "tipo": "cofre",
+          "x": 650,
+          "s": 0.8,
+          "capa": "medio",
+          "en": 1.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "frodi",
+          "como": "rey",
+          "x": 300,
+          "rotulo": "",
+          "props": {
+            "capa": "#7A2418"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 1.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "fenja",
+          "como": "jotun",
+          "x": 850,
+          "escala": 0.9,
+          "rotulo": "FENJA",
+          "props": {
+            "mujer": true,
+            "barba": false,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#B5452A"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.8,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.5,
+              "hace": "lamenta"
+            },
+            {
+              "en": 4,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.6,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "menja",
+          "como": "jotun",
+          "x": 1350,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "MENJA",
+          "props": {
+            "mujer": true,
+            "barba": false,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#E9C46A"
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.6,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 4.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.7,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "cuco",
+          "como": "cuervo",
+          "x": 1700,
+          "y": 380,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "CUCKOO",
+          "props": {
+            "color": "#8A8F96",
+            "ala2": "#6B6F75",
+            "pico": "#C9A26B"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "habla",
+              "dur": 0.3
+            },
+            {
+              "en": 3.5,
+              "hace": "calla"
+            },
+            {
+              "en": 3.9,
+              "hace": "vuela",
+              "a": [
+                2600,
+                250
+              ],
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 1050
+        },
+        {
+          "en": 1.3,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 500,
+          "dur": 1
+        },
+        {
+          "en": 1.4,
+          "tipo": "chispas",
+          "x": 1050,
+          "y": 560
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 4.2,
+          "tipo": "polvo",
+          "x": 1050
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "SOLO MIENTRAS CALLA EL CUCO",
+            "en": "ONLY WHILE THE CUCKOO IS SILENT"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "canto",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Una noche, mientras el rey dormía, las gigantas empezaron a cantar.",
+          "en": "One night, while the king slept, the giantesses began to sing."
+        },
+        {
+          "es": "No somos esclavas débiles, cantaban. Somos hijas de gigantes. De niñas movíamos montañas.",
+          "en": "We are not weak slaves, they sang. We are daughters of giants. As girls, we moved mountains."
+        },
+        {
+          "es": "¡Despierta, Fródi! Vemos fuego en el este. Se acerca un ejército.",
+          "en": "Wake up, Frodi! We see fire in the east. An army is coming."
+        },
+        {
+          "es": "Hicieron girar el molino más y más rápido. Y del molino, molieron un ejército.",
+          "en": "They turned the mill faster and faster. And out of the mill, they ground an army."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 850,
+          "s": 1,
+          "capa": "medio"
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1000,
+          "s": 1.3,
+          "capa": "medio",
+          "props": {
+            "texto": "GROTTI"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "frodi",
+          "como": "rey",
+          "x": 250,
+          "rotulo": "",
+          "props": {
+            "capa": "#7A2418",
+            "ojosCerrados": true,
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 2.2,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "fenja",
+          "como": "jotun",
+          "x": 650,
+          "escala": 0.9,
+          "rotulo": "",
+          "props": {
+            "mujer": true,
+            "barba": false,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#B5452A"
+          },
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 1.4
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.3,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "menja",
+          "como": "jotun",
+          "x": 1250,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "props": {
+            "mujer": true,
+            "barba": false,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#E9C46A"
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "habla",
+              "dur": 1.4
+            },
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.4,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "ej1",
+          "como": "vikingo",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.5,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 3.8,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "ej2",
+          "como": "vikingo",
+          "x": 1800,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.6,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 3.9,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 2
+        },
+        {
+          "en": 1.3,
+          "tipo": "temblor",
+          "dur": 0.5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "fuego",
+          "x": 1700,
+          "y": 650,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.8
+        },
+        {
+          "en": 3.3,
+          "tipo": "polvo",
+          "x": 1650,
+          "dur": 0.8
+        },
+        {
+          "en": 3.5,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "EL CANTO DEL MOLINO",
+            "en": "THE MILL SONG"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 3.5,
+          "texto": {
+            "es": "UN EJÉRCITO",
+            "en": "AN ARMY"
+          },
+          "x": 1650,
+          "y": 280
+        }
+      ]
+    },
+    {
+      "id": "mysing",
+      "fondo": "fiordo",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Esa misma noche desembarcó un rey del mar llamado Mýsing, con sus guerreros. Un rey del mar era un jefe pirata.",
+          "en": "That same night, a sea king named Mysing landed with his warriors. A sea king was a pirate chief."
+        },
+        {
+          "es": "Atacó la sala del rey y mató a Fródi. Así terminó la Paz de Fródi.",
+          "en": "He attacked the king's hall, and killed Frodi. That was the end of Frodi's Peace."
+        },
+        {
+          "es": "Fródi tenía oro y paz, pero nunca dejó descansar a sus sirvientas. ¿Se merecía este final? Cuéntamelo en los comentarios.",
+          "en": "Frodi had gold and peace, but he never let his servants rest. Did he deserve this end? Tell me in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "drakkar",
+          "x": 350,
+          "s": 0.8,
+          "capa": "medio"
+        },
+        {
+          "tipo": "casa_larga",
+          "x": 2100,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "mysing",
+          "como": "vikingo",
+          "x": -150,
+          "rotulo": "MYSING",
+          "props": {
+            "objeto": "espada",
+            "capa": "#7A2418",
+            "pelo": "#2B2B2B"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.7
+            },
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 1150,
+              "dur": 0.4
+            },
+            {
+              "en": 1.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.9,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "pirata",
+          "como": "vikingo",
+          "x": -400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "camina",
+              "a": 450,
+              "dur": 0.7
+            },
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "frodi",
+          "como": "rey",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "FRODI",
+          "props": {
+            "capa": "#7A2418",
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 1.5,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "menja",
+          "como": "jotun",
+          "x": 1850,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "props": {
+            "mujer": true,
+            "barba": false,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#E9C46A"
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1500
+            },
+            {
+              "en": 2.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 0.2,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 1.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.5,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 1.7,
+          "tipo": "fuego",
+          "x": 1900,
+          "y": 650,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "MÝSING, REY DEL MAR",
+            "en": "MYSING, THE SEA KING"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 1.6,
+          "texto": {
+            "es": "FIN DE LA PAZ DE FRÓDI",
+            "en": "THE END OF FRODI'S PEACE"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2.3
+        },
+        {
+          "en": 2.4,
+          "texto": {
+            "es": "¿SE LO MERECÍA?",
+            "en": "DID HE DESERVE IT?"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "sal",
+      "fondo": "mar",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mýsing se llevó todo. Subió el molino y a las dos gigantas a su barco.",
+          "en": "Mysing took everything. He loaded the mill and the two giantesses onto his ship."
+        },
+        {
+          "es": "En alta mar, les dio una nueva orden: ¡Muelan sal!",
+          "en": "Out at sea, he gave them a new order: Grind salt!"
+        },
+        {
+          "es": "En esa época la sal era valiosa. Servía para que la comida no se echara a perder.",
+          "en": "Back then, salt was precious. It kept food from going bad."
+        },
+        {
+          "es": "Así que las gigantas molieron sal. El montón blanco crecía y crecía.",
+          "en": "So the giantesses ground salt. The white pile grew bigger and bigger."
+        },
+        {
+          "es": "A medianoche preguntaron: ¿Ya tienes suficiente sal?",
+          "en": "At midnight, they asked: Do you have enough salt yet?"
+        },
+        {
+          "es": "No, dijo Mýsing. ¡Muelan más!",
+          "en": "No, said Mysing. Grind more!"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "drakkar",
+          "x": 1000,
+          "s": 1.6,
+          "capa": "medio"
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1100,
+          "s": 0.7,
+          "capa": "medio",
+          "en": 0.4,
+          "props": {
+            "texto": "GROTTI"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "mysing",
+          "como": "vikingo",
+          "x": 450,
+          "rotulo": "MYSING",
+          "props": {
+            "objeto": "espada",
+            "capa": "#7A2418",
+            "pelo": "#2B2B2B"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 5,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 5.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "fenja",
+          "como": "jotun",
+          "x": 850,
+          "escala": 0.9,
+          "rotulo": "FENJA",
+          "props": {
+            "mujer": true,
+            "barba": false,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#B5452A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 5.4,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "menja",
+          "como": "jotun",
+          "x": 1400,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "MENJA",
+          "props": {
+            "mujer": true,
+            "barba": false,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#E9C46A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.2,
+              "hace": "senala"
+            },
+            {
+              "en": 5.5,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "dur": 1,
+          "intensidad": 0.4
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 520,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "nieve",
+          "dur": 1.5
+        },
+        {
+          "en": 3.2,
+          "tipo": "polvo",
+          "x": 1100
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 4.1,
+          "tipo": "estrellas",
+          "dur": 1.5
+        },
+        {
+          "en": 5.3,
+          "tipo": "temblor",
+          "dur": 0.5,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "¡MUELAN SAL!",
+            "en": "GRIND SALT!"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "LA SAL ERA UN TESORO",
+            "en": "SALT WAS PRECIOUS"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "¿SUFICIENTE SAL?",
+            "en": "ENOUGH SALT?"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "hundimiento",
+      "fondo": "mar",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Molieron y molieron. La sal pesaba tanto que el barco empezó a hundirse.",
+          "en": "They ground, and ground. The salt grew so heavy that the ship began to sink."
+        },
+        {
+          "es": "El agua entró por los costados. El barco se hundió, con el molino y todos los que iban a bordo.",
+          "en": "Water rushed over the sides. The ship went down, with the mill and everyone on board."
+        },
+        {
+          "es": "Donde se hundió, se formó un remolino en el mar. El agua caía por el agujero de la piedra de molino.",
+          "en": "Where it sank, a whirlpool formed in the sea. The water poured through the hole in the millstone."
+        },
+        {
+          "es": "Y desde entonces, el mar es salado.",
+          "en": "And from then on, the sea was salty."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "drakkar",
+          "x": 1000,
+          "s": 1.6,
+          "capa": "medio",
+          "en": 0,
+          "hasta": 1.8,
+          "sube": -450,
+          "durSube": 1.5
+        },
+        {
+          "tipo": "piedra_runica",
+          "x": 1100,
+          "s": 0.7,
+          "capa": "medio",
+          "hasta": 1.8,
+          "props": {
+            "texto": "GROTTI"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "mysing",
+          "como": "vikingo",
+          "x": 600,
+          "rotulo": "",
+          "props": {
+            "objeto": "espada",
+            "capa": "#7A2418",
+            "pelo": "#2B2B2B"
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.7,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.3,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "fenja",
+          "como": "jotun",
+          "x": 900,
+          "escala": 0.9,
+          "rotulo": "",
+          "props": {
+            "mujer": true,
+            "barba": false,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#B5452A"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.4,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "menja",
+          "como": "jotun",
+          "x": 1350,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "props": {
+            "mujer": true,
+            "barba": false,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#E9C46A"
+          },
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 0.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.5,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "pez",
+          "como": "pez",
+          "x": 1700,
+          "y": 760,
+          "escala": 0.8,
+          "mira": "izq",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.1,
+              "hace": "nada",
+              "a": 1150,
+              "dur": 0.9
+            },
+            {
+              "en": 3.2,
+              "hace": "nada",
+              "a": 400,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 0.8,
+          "tipo": "olas-suben",
+          "dur": 1.2
+        },
+        {
+          "en": 1.6,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "niebla",
+          "dur": 1.5
+        },
+        {
+          "en": 2.2,
+          "tipo": "olas-bajan",
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3.1,
+          "tipo": "luz",
+          "x": 960,
+          "y": 600,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "EL REMOLINO",
+            "en": "THE WHIRLPOOL"
+          },
+          "x": 960,
+          "y": 300,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "POR ESO EL MAR ES SALADO",
+            "en": "THAT'S WHY THE SEA IS SALTY"
+          },
+          "x": 960,
+          "y": 230,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.02,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así que la próxima vez que pruebes el agua del mar, acuérdate del molino Grotti.",
+          "en": "So the next time you taste sea water, remember the mill Grotti."
+        },
+        {
+          "es": "Los antiguos poetas hasta le dieron un nombre al oro. Lo llamaban la harina de Fródi.",
+          "en": "The old poets even had a name for gold. They called it Frodi's flour."
+        },
+        {
+          "es": "Cuéntame en los comentarios: si tuvieras un molino como Grotti, ¿qué le pedirías que moliera?",
+          "en": "Tell me in the comments: if you had a mill like Grotti, what would you ask it to grind?"
+        },
+        {
+          "es": "En el próximo episodio: un guerrero cuya vida entera decidieron los dioses. Starkad y los tres destinos.",
+          "en": "Next time: a warrior whose whole life was decided by the gods. Starkad and the Three Fates."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piedra_runica",
+          "x": 1200,
+          "s": 1,
+          "capa": "fondo",
+          "props": {
+            "texto": "GROTTI"
+          }
+        },
+        {
+          "tipo": "cofre",
+          "x": 1050,
+          "s": 0.8,
+          "capa": "medio",
+          "en": 1,
+          "hasta": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "pescador",
+          "como": "hombre",
+          "x": 450,
+          "rotulo": "",
+          "props": {
+            "objeto": null,
+            "ropa": "corta",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.6,
+              "hace": "levantarse"
+            },
+            {
+              "en": 0.7,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "fenja",
+          "como": "jotun",
+          "x": 1400,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "props": {
+            "mujer": true,
+            "barba": false,
+            "objeto": null,
+            "ropa": "corta",
+            "pelo": "#B5452A"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.9,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "starkad",
+          "como": "vikingo",
+          "x": 1250,
+          "mira": "izq",
+          "escala": 1.15,
+          "rotulo": "STARKAD",
+          "props": {
+            "objeto": "espada",
+            "pelo": "#2B2B2B",
+            "capa": "#3E5A73"
+          },
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "odin",
+          "como": "odin",
+          "x": 1700,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "visible": false,
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.5,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "olas-suben",
+          "dur": 1,
+          "intensidad": 0.4
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 600,
+          "dur": 1
+        },
+        {
+          "en": 1.2,
+          "tipo": "chispas",
+          "x": 1050,
+          "y": 640
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        },
+        {
+          "en": 3.1,
+          "tipo": "rayo",
+          "x": 1500
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "EL ORO: LA HARINA DE FRÓDI",
+            "en": "GOLD: FRODI'S FLOUR"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "¿QUÉ MOLERÍAS?",
+            "en": "WHAT WOULD YOU GRIND?"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3
+        },
+        {
+          "en": 3,
+          "texto": {
+            "es": "PRÓXIMO: STARKAD Y LOS TRES DESTINOS",
+            "en": "NEXT: STARKAD AND THE THREE FATES"
+          },
+          "x": 960,
+          "y": 290
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Las gigantas obligadas a moler oro día y noche",
+        "en": "The giantesses forced to grind gold day and night"
+      },
+      "escena": "moler",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Le pidió sal a un molino mágico... y no supo parar",
+        "en": "He asked a magic mill for salt... and never said stop"
+      },
+      "escena": "sal",
+      "desde": 1,
+      "hasta": 5,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "Por qué el mar es salado, según el mito nórdico",
+        "en": "Why the sea is salty, according to Norse myth"
+      },
+      "escena": "hundimiento",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    }
+  ]
+}
