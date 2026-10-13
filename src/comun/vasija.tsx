@@ -630,13 +630,20 @@ const AlaDiosa: React.FC<{ h: P; c: P; m: P; ang: number; f: number }> = ({ h, c
   );
 };
 
-/** Mano de muñequito: palma con pulgar (no una bola), orientada según el antebrazo (ángulo del motor: 0 = abajo). */
+/** Mano de muñequito, orientada según el antebrazo (ángulo del motor: 0 = abajo). 2026-10-13: la palma alargada con
+ * pulgar se leía fálica (comentarios en IG) → mano abierta, más ancha que larga, con cuatro dedos cortos separados,
+ * pulgar hacia afuera y puño de manga en la muñeca. Nunca volver a una forma de tubo con punta redondeada. */
 const Mano: React.FC<{ m: P; ang: number; piel: string; k: number }> = ({ m, ang, piel, k }) => {
   const borde = piel === C.negro ? 'none' : C.negro;
+  const dedos: [number, number][] = [[-6.2, -12], [-2.2, -4], [1.8, 4], [5.8, 12]]; // x de cada dedo y su abanico (grados)
   return (
     <g transform={`translate(${f1(m[0])} ${f1(m[1])}) rotate(${f1(-ang)}) scale(${k})`}>
-      <path d="M-7 -4 C -9 4, -8 12, -4 16 C 0 19, 5 17, 7 12 C 9 6, 8 0, 7 -4 Z" fill={piel} stroke={borde} strokeWidth={2} />
-      <path d="M6 -1 C 11 1, 13 6, 11 9 C 9 10, 7 8, 6 6 Z" fill={piel} stroke={borde} strokeWidth={1.6} />
+      {dedos.map(([x, g]) => (
+        <rect key={x} x={x - 1.7} y={4} width={3.4} height={12} rx={1.7} fill={piel} stroke={borde} strokeWidth={1.4} transform={`rotate(${g} ${x} 6)`} />
+      ))}
+      <path d="M7 1 L 15 4 C 17 5, 16 8, 14 8 L 7 6 Z" fill={piel} stroke={borde} strokeWidth={1.4} strokeLinejoin="round" />
+      <rect x={-8.5} y={-3} width={17} height={11} rx={4} fill={piel} stroke={borde} strokeWidth={1.8} />
+      <path d="M-8 -3 L 8 -3" stroke={borde === 'none' ? C.crema : borde} strokeWidth={2.4} strokeLinecap="round" />
     </g>
   );
 };
