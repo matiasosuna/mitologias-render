@@ -13,6 +13,7 @@ export const ARCHIVOS = {
   'subidas-instagram.json': 'out/subidas-instagram.json',
   'subidas-buffer.json': 'out/subidas-buffer.json',
   'youtube-ids.json': 'src/videos/youtube-ids.json',
+  'miniaturas-youtube.json': 'out/miniaturas-youtube.json', // miniaturas pendientes por el límite de YouTube
 };
 export const LISTA = 'out/shorts-orden.txt';
 

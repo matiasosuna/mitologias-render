@@ -1,6 +1,8 @@
 # Colas de publicación en la nube (repo público mitologias-render: minutos gratis), para que la Mac pueda estar cerrada.
-# Cada 4 h: (a) un Short a YouTube, (b) un Reel a Instagram (episodio a las 00/08/16 HST, Short a las 04/12/20 HST) y
-# (c) relleno de la cola de TikTok en Buffer. Cada paso es independiente; si alguno falla, el job termina en rojo.
+# Corre cada 4 h y cada paso decide si le toca (scripts/nube.mjs):
+#   Shorts a YouTube: 4/día (2, 10, 14, 22 UTC) · Reels a Instagram: 3/día (00, 08, 16 HST), alternando episodio y Short
+#   TikTok (cola de Buffer): en cada corrida · Episodio largo de T1 a YouTube: 1/día (18 UTC = 08 HST) + miniaturas pendientes
+# Cada paso es independiente; si alguno falla, el job termina en rojo.
 # Estado (registros + orden): rama "estado" (scripts/estado-*.sh). Videos: release "media" (scripts/nube.mjs);
 # si falta alguno, se renderiza en la misma corrida. En el repo privado NO corre (sus minutos se pagan).
 # A mano: gh workflow run publicar -R matiasosuna/mitologias-render [-f slot=ep|short]
@@ -19,6 +21,7 @@ concurrency:
   cancel-in-progress: false
 permissions:
   contents: write
+  actions: read # artefactos de render-nube y hora de creación de la corrida
 jobs:
   publicar:
     if: github.repository == 'matiasosuna/mitologias-render'
@@ -58,6 +61,9 @@ jobs:
             for (const v of [t.refresh_token, t.access_token]) if (v) console.log("::add-mask::" + v);
             fs.writeFileSync(".yt-token.json", JSON.stringify({ ...t, vence: 0 }), { mode: 0o600 }); // se renueva en la corrida
           '
+      - name: turno (hora de creación de la corrida, aunque haya esperado en la cola)
+        run: |
+          echo "TURNO_FECHA=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" -q .created_at)" >> "$GITHUB_ENV"
       - name: git
         run: |
           git config --global user.name "github-actions[bot]"
@@ -97,6 +103,16 @@ jobs:
         continue-on-error: true
         run: scripts/estado-subir.sh
 
+      # al final: si hay que renderizar el episodio, no atrasa a Instagram ni a TikTok
+      - name: YouTube (episodio largo)
+        id: ep
+        continue-on-error: true
+        run: node scripts/nube.mjs episodio
+      - name: guardar estado
+        id: e4
+        continue-on-error: true
+        run: scripts/estado-subir.sh
+
       - name: adelantar renders de los próximos turnos
         continue-on-error: true
         run: node scripts/nube.mjs adelantar "$LISTA"
@@ -104,7 +120,7 @@ jobs:
       - name: resultado
         if: always()
         run: |
-          echo "youtube=${{ steps.yt.outcome }} instagram=${{ steps.ig.outcome }} tiktok=${{ steps.tk.outcome }} estado=${{ steps.e1.outcome }}/${{ steps.e2.outcome }}/${{ steps.e3.outcome }}"
-          for o in "${{ steps.yt.outcome }}" "${{ steps.ig.outcome }}" "${{ steps.tk.outcome }}" "${{ steps.e1.outcome }}" "${{ steps.e2.outcome }}" "${{ steps.e3.outcome }}"; do
+          echo "shorts=${{ steps.yt.outcome }} instagram=${{ steps.ig.outcome }} tiktok=${{ steps.tk.outcome }} episodio=${{ steps.ep.outcome }} estado=${{ steps.e1.outcome }}/${{ steps.e2.outcome }}/${{ steps.e3.outcome }}/${{ steps.e4.outcome }}"
+          for o in "${{ steps.yt.outcome }}" "${{ steps.ig.outcome }}" "${{ steps.tk.outcome }}" "${{ steps.ep.outcome }}" "${{ steps.e1.outcome }}" "${{ steps.e2.outcome }}" "${{ steps.e3.outcome }}" "${{ steps.e4.outcome }}"; do
             [ "$o" = success ] || exit 1
           done
