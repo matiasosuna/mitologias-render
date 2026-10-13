@@ -2,6 +2,8 @@
 # Corre cada 4 h y cada paso decide si le toca (scripts/nube.mjs):
 #   Shorts a YouTube: 4/día (2, 10, 14, 22 UTC) · Reels a Instagram: 3/día (00, 08, 16 HST), alternando episodio y Short
 #   TikTok (cola de Buffer): en cada corrida · Episodio largo de T1 a YouTube: 1/día (18 UTC = 08 HST) + miniaturas pendientes
+#   Especial PROGRAMADO a YouTube: 1/noche (22 UTC) hasta terminar la lista de scripts/nube.mjs
+# Cada paso se hace una vez por turno (out/turnos.json en el estado), así el cron de respaldo (:17) no repite nada.
 # Cada paso es independiente; si alguno falla, el job termina en rojo.
 # Estado (registros + orden): rama "estado" (scripts/estado-*.sh). Videos: release "media" (scripts/nube.mjs);
 # si falta alguno, se renderiza en la misma corrida. En el repo privado NO corre (sus minutos se pagan).
@@ -10,6 +12,7 @@ name: publicar
 on:
   schedule:
     - cron: '0 2,6,10,14,18,22 * * *' # 16, 20, 00, 04, 08 y 12 HST
+    - cron: '17 2,6,10,14,18,22 * * *' # respaldo por si GitHub saltea el anterior (lo ya hecho en el turno no se repite)
   workflow_dispatch:
     inputs:
       slot:
@@ -113,6 +116,15 @@ jobs:
         continue-on-error: true
         run: scripts/estado-subir.sh
 
+      - name: YouTube (especial programado)
+        id: es
+        continue-on-error: true
+        run: node scripts/nube.mjs especial
+      - name: guardar estado
+        id: e5
+        continue-on-error: true
+        run: scripts/estado-subir.sh
+
       - name: adelantar renders de los próximos turnos
         continue-on-error: true
         run: node scripts/nube.mjs adelantar "$LISTA"
@@ -120,7 +132,7 @@ jobs:
       - name: resultado
         if: always()
         run: |
-          echo "shorts=${{ steps.yt.outcome }} instagram=${{ steps.ig.outcome }} tiktok=${{ steps.tk.outcome }} episodio=${{ steps.ep.outcome }} estado=${{ steps.e1.outcome }}/${{ steps.e2.outcome }}/${{ steps.e3.outcome }}/${{ steps.e4.outcome }}"
-          for o in "${{ steps.yt.outcome }}" "${{ steps.ig.outcome }}" "${{ steps.tk.outcome }}" "${{ steps.ep.outcome }}" "${{ steps.e1.outcome }}" "${{ steps.e2.outcome }}" "${{ steps.e3.outcome }}" "${{ steps.e4.outcome }}"; do
+          echo "shorts=${{ steps.yt.outcome }} instagram=${{ steps.ig.outcome }} tiktok=${{ steps.tk.outcome }} episodio=${{ steps.ep.outcome }} especial=${{ steps.es.outcome }} estado=${{ steps.e1.outcome }}/${{ steps.e2.outcome }}/${{ steps.e3.outcome }}/${{ steps.e4.outcome }}/${{ steps.e5.outcome }}"
+          for o in "${{ steps.yt.outcome }}" "${{ steps.ig.outcome }}" "${{ steps.tk.outcome }}" "${{ steps.ep.outcome }}" "${{ steps.es.outcome }}" "${{ steps.e1.outcome }}" "${{ steps.e2.outcome }}" "${{ steps.e3.outcome }}" "${{ steps.e4.outcome }}" "${{ steps.e5.outcome }}"; do
             [ "$o" = success ] || exit 1
           done

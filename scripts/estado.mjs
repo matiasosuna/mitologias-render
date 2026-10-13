@@ -14,6 +14,7 @@ export const ARCHIVOS = {
   'subidas-buffer.json': 'out/subidas-buffer.json',
   'youtube-ids.json': 'src/videos/youtube-ids.json',
   'miniaturas-youtube.json': 'out/miniaturas-youtube.json', // miniaturas pendientes por el límite de YouTube
+  'turnos.json': 'out/turnos.json', // pasos ya hechos en cada turno (un 2.º cron del mismo turno no repite)
 };
 export const LISTA = 'out/shorts-orden.txt';
 

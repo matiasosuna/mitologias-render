@@ -7,6 +7,8 @@
 //   node scripts/nube.mjs ig <lista> [ep|short]    → un Reel: episodio (parte) o Short según el turno
 //   node scripts/nube.mjs episodio                 → el próximo episodio largo de T1 a YouTube (turno de las 18 UTC)
 //                                                    + reintenta las miniaturas que quedaron pendientes
+//   node scripts/nube.mjs especial                 → el próximo especial, PROGRAMADO (turno de las 22 UTC)
+// Cada paso se hace una sola vez por turno (out/turnos.json en el estado): un segundo cron del mismo turno no repite.
 //   node scripts/nube.mjs adelantar <lista>        → deja en el release lo que van a usar los próximos turnos
 //   node scripts/nube.mjs sembrar <lista> [--max=4] → (Mac) sube al release lo ya renderizado de lo próximo de cada cola
 import { readFileSync, writeFileSync, existsSync, mkdirSync, renameSync, rmSync, copyFileSync, mkdtempSync, readdirSync } from 'node:fs';
@@ -29,13 +31,21 @@ export const turnoUTC = (fecha) => [...HORAS_UTC].reverse().find((h) => h <= fec
 export const horaHST = (horaUTC) => (horaUTC + 14) % 24;
 export const tocaShortYT = (fecha) => SHORTS_YT_UTC.includes(turnoUTC(fecha));
 export const tocaEpisodioYT = (fecha) => turnoUTC(fecha) === EPISODIO_UTC;
+export const ESPECIAL_UTC = 22; // 1 especial programado por noche
+export const tocaEspecialYT = (fecha) => turnoUTC(fecha) === ESPECIAL_UTC;
+/** Comienzo (ms UTC) del turno al que pertenece una fecha. */
+export function inicioTurno(fecha) {
+  const t = turnoUTC(fecha);
+  return Date.UTC(fecha.getUTCFullYear(), fecha.getUTCMonth(), fecha.getUTCDate(), t) - (t > fecha.getUTCHours() ? 864e5 : 0);
+}
+/** Clave de "este paso ya se hizo en este turno", p. ej. 2026-10-14T18Z|episodio. */
+export const claveTurno = (fecha, paso) => `${new Date(inicioTurno(fecha)).toISOString().slice(0, 13)}Z|${paso}`;
 /** Instagram: 00, 08 y 16 HST, alternando episodio y Short sin cortar entre días (ep short ep · short ep short · …).
  *  null = no es turno de Instagram. */
 export function tipoIG(fecha) {
-  const t = turnoUTC(fecha), i = IG_HST.indexOf(horaHST(t));
+  const i = IG_HST.indexOf(horaHST(turnoUTC(fecha)));
   if (i < 0) return null;
-  const inicio = Date.UTC(fecha.getUTCFullYear(), fecha.getUTCMonth(), fecha.getUTCDate(), t) - (t > fecha.getUTCHours() ? 864e5 : 0);
-  const diaHST = Math.floor((inicio - 10 * 3600e3) / 864e5);
+  const diaHST = Math.floor((inicioTurno(fecha) - 10 * 3600e3) / 864e5);
   return (diaHST * 3 + i) % 2 === 0 ? 'ep' : 'short';
 }
 
@@ -74,6 +84,16 @@ export function episodiosPendientesYT(titulos, ids, existe = () => true) {
     .sort((a, b) => titulos[a].episodio - titulos[b].episodio || a.localeCompare(b)));
 }
 export const proximoEpisodioYT = (titulos, ids, existe) => episodiosPendientesYT(titulos, ids, existe)[0] ?? null;
+/** Especiales que quedan, en orden, PROGRAMADOS (privados hasta la fecha; hora de Nueva York como en subir.mjs). */
+export const ESPECIALES = [
+  { id: 'griegas-99-reino-de-hades', fecha: '2026-10-24T10:00:00', lista: 'Lords of the Dead' },
+  { id: 'nordicas-99-hel', fecha: '2026-10-26T10:00:00', lista: 'Lords of the Dead' },
+  { id: 'egipcias-99-anubis-y-la-duat', fecha: '2026-10-28T10:00:00', lista: 'Lords of the Dead' },
+  { id: 'hawaianas-99-milu', fecha: '2026-10-31T10:00:00', lista: 'Lords of the Dead' },
+  { id: 'griegas-97-odisea-1', fecha: '2026-11-03T10:00:00', lista: 'The Odyssey' },
+  { id: 'griegas-98-odisea-2', fecha: '2026-11-07T10:00:00', lista: 'The Odyssey' },
+];
+export const proximoEspecialYT = (ids, especiales = ESPECIALES) => especiales.find((e) => !ids[e.id]) ?? null;
 /** Miniaturas que YouTube rechazó (límite): registro solo-agregar con estado pendiente | ok, por video. */
 export function miniaturasPendientes(reg) {
   const ok = new Set(reg.filter((r) => r.estado === 'ok').map((r) => r.video));
@@ -246,22 +266,20 @@ function reintentarMiniaturas() {
   }
 }
 
-function episodio(forzar) {
-  reintentarMiniaturas();
-  if (!forzar && !tocaEpisodioYT(fechaTurno())) return console.log('YouTube episodio: no es turno');
-  const titulos = leerJSON('src/videos/titulos.json', {}), idsF = 'src/videos/youtube-ids.json', reg = 'out/subidas-api.json';
-  const id = proximoEpisodioYT(titulos, leerJSON(idsF, {}), (x) => existsSync(join('src/videos', x, 'guion.json')));
-  if (!id) return console.log('YouTube episodio: nada pendiente');
+/** Sube un video largo (episodio o especial) con subir.mjs --api: duplicados por título, anota aunque se corte después
+ *  de subir, y deja la miniatura pendiente si YouTube no la aceptó. */
+function subirLargo(id, titulo, extra = [], cuando = 'ya') {
+  const idsF = 'src/videos/youtube-ids.json', reg = 'out/subidas-api.json';
   const anotar = (video, nota) => {
     const ids = leerJSON(idsF, {}), hist = leerJSON(reg, []);
     if (ids[id] !== video) { ids[id] = video; writeFileSync(idsF, JSON.stringify(ids, null, 2)); }
-    if (!hist.some((h) => h.id === id && h.video === video)) { hist.push({ id, short: null, video, cuando: 'ya', fecha: new Date().toISOString(), ...(nota ? { nota } : {}) }); writeFileSync(reg, JSON.stringify(hist, null, 1)); }
+    if (!hist.some((h) => h.id === id && h.video === video)) { hist.push({ id, short: null, video, cuando, fecha: new Date().toISOString(), ...(nota ? { nota } : {}) }); writeFileSync(reg, JSON.stringify(hist, null, 1)); }
   };
   const listado = execFileSync('node', ['scripts/youtube-api.mjs', 'videos'], { encoding: 'utf8', maxBuffer: 1 << 24 });
-  const previo = buscarTitulo(listado, titulos[id].titulo);
-  if (previo) { anotar(previo, 'ya estaba en el canal'); return console.log(`YouTube episodio: ${id} ya estaba: https://youtu.be/${previo}`); }
+  const previo = buscarTitulo(listado, titulo);
+  if (previo) { anotar(previo, 'ya estaba en el canal'); return console.log(`YouTube: ${id} ya estaba: https://youtu.be/${previo}`); }
   if (!asegurarEpisodio(id)) throw new Error(`no hay video de ${id}`);
-  const r = spawnSync('node', ['scripts/subir.mjs', id, '--api'], { encoding: 'utf8', maxBuffer: 1 << 24 });
+  const r = spawnSync('node', ['scripts/subir.mjs', id, '--api', ...extra], { encoding: 'utf8', maxBuffer: 1 << 24 });
   const salida = `${r.stdout}\n${r.stderr}`;
   const video = salida.match(/subido: https:\/\/youtu\.be\/(\S+)/)?.[1];
   if (video) {
@@ -271,8 +289,49 @@ function episodio(forzar) {
       console.log(`miniatura pendiente: ${id} (se reintenta en las próximas corridas)`);
     }
   }
-  if (r.status !== 0 || !video) throw new Error(`YouTube episodio ${id}: ${salida.match(/uploadLimitExceeded|quotaExceeded|Error: .{0,160}/)?.[0] ?? salida.trim().slice(-300)}`);
-  console.log(`YouTube episodio: ${id} https://youtu.be/${video}`);
+  if (r.status !== 0 || !video) throw new Error(`YouTube ${id}: ${salida.match(/uploadLimitExceeded|quotaExceeded|Error: .{0,160}/)?.[0] ?? salida.trim().slice(-300)}`);
+  console.log(`YouTube: ${id} https://youtu.be/${video}${cuando !== 'ya' ? ` (programado ${cuando})` : ''}`);
+}
+
+function episodio(forzar) {
+  reintentarMiniaturas();
+  if (!forzar && !tocaEpisodioYT(fechaTurno())) return console.log('YouTube episodio: no es turno');
+  const titulos = leerJSON('src/videos/titulos.json', {});
+  const id = proximoEpisodioYT(titulos, leerJSON('src/videos/youtube-ids.json', {}), (x) => existsSync(join('src/videos', x, 'guion.json')));
+  if (!id) return console.log('YouTube episodio: nada pendiente');
+  subirLargo(id, titulos[id].titulo);
+}
+
+function especial(forzar) {
+  if (!forzar && !tocaEspecialYT(fechaTurno())) return console.log('YouTube especial: no es turno');
+  const e = proximoEspecialYT(leerJSON('src/videos/youtube-ids.json', {}));
+  if (!e) return console.log('YouTube especial: nada pendiente');
+  if (new Date(`${e.fecha}-04:00`) < new Date(Date.now() + 3600e3)) throw new Error(`${e.id}: la fecha ${e.fecha} ya pasó; revisar a mano`);
+  const lista = leerJSON('src/videos/listas.json', {})[e.lista];
+  if (!lista) throw new Error(`no está la lista "${e.lista}" en listas.json`);
+  const titulo = leerJSON('src/videos/titulos.json', {})[e.id]?.titulo;
+  if (!titulo) throw new Error(`${e.id} no tiene título en titulos.json`);
+  subirLargo(e.id, titulo, [`--programar=${e.fecha}`, `--lista=${lista}`], e.fecha);
+}
+
+// ── una vez por turno
+const TURNOS = 'out/turnos.json';
+/** También cuenta como hecho si los registros muestran una publicación de ese paso desde que empezó el turno
+ *  (p. ej. una corrida manual o de antes de out/turnos.json). */
+export function hechoPorRegistro(paso, desde, { api = [], instagram = [] } = {}) {
+  const desdeAhi = (h) => h.fecha && Date.parse(h.fecha) >= desde;
+  if (paso === 'shorts') return api.some((h) => h.short === 'nativo' && desdeAhi(h));
+  if (paso === 'episodio') return api.some((h) => h.short == null && h.cuando === 'ya' && desdeAhi(h));
+  if (paso === 'especial') return api.some((h) => h.short == null && h.cuando && h.cuando !== 'ya' && desdeAhi(h));
+  if (paso === 'instagram') return instagram.some(desdeAhi);
+  return false;
+}
+async function unaVez(paso, fn, forzado = false) {
+  const clave = claveTurno(fechaTurno(), paso), hechos = leerJSON(TURNOS, []);
+  const regs = { api: leerJSON('out/subidas-api.json', []), instagram: leerJSON('out/subidas-instagram.json', []) };
+  if (!forzado && (hechos.includes(clave) || hechoPorRegistro(paso, inicioTurno(fechaTurno()), regs))) return console.log(`${paso}: ya hecho en este turno (${clave})`);
+  await fn();
+  const h = leerJSON(TURNOS, []); if (!h.includes(clave)) { h.push(clave); writeFileSync(TURNOS, JSON.stringify(h, null, 1)); }
 }
 
 /** Copia al release los episodios pendientes que están en artefactos de render-nube (vencen a los 7 días). Sin render. */
@@ -336,12 +395,13 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const [cmd, ...a] = process.argv.slice(2);
   const pos = a.filter((x) => !x.startsWith('--')), max = Number(a.find((x) => x.startsWith('--max='))?.split('=')[1] ?? 4);
   try {
-    if (cmd === 'slot') { const f = fechaTurno(); console.log(JSON.stringify({ turnoUTC: turnoUTC(f), shortYT: tocaShortYT(f), episodioYT: tocaEpisodioYT(f), instagram: pos[0] || tipoIG(f) })); }
-    else if (cmd === 'episodio') episodio(a.includes('--forzar'));
-    else if (cmd === 'yt') yt(pos[0]);
-    else if (cmd === 'ig') await ig(pos[0], pos[1]);
+    if (cmd === 'slot') { const f = fechaTurno(); console.log(JSON.stringify({ turnoUTC: turnoUTC(f), shortYT: tocaShortYT(f), episodioYT: tocaEpisodioYT(f), especialYT: tocaEspecialYT(f), instagram: pos[0] || tipoIG(f) })); }
+    else if (cmd === 'episodio') await unaVez('episodio', () => episodio(a.includes('--forzar')), a.includes('--forzar'));
+    else if (cmd === 'especial') await unaVez('especial', () => especial(a.includes('--forzar')), a.includes('--forzar'));
+    else if (cmd === 'yt') await unaVez('shorts', () => yt(pos[0]));
+    else if (cmd === 'ig') await unaVez('instagram', () => ig(pos[0], pos[1]), Boolean(pos[1]));
     else if (cmd === 'adelantar') adelantar(pos[0]);
     else if (cmd === 'sembrar') sembrar(pos[0], max);
-    else throw new Error('uso: node scripts/nube.mjs slot|yt|ig|episodio|adelantar|sembrar <lista>');
+    else throw new Error('uso: node scripts/nube.mjs slot|yt|ig|episodio|especial|adelantar|sembrar <lista>');
   } catch (e) { console.error(String(e.message ?? e).slice(0, 500)); process.exit(1); }
 }
