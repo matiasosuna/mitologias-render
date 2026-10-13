@@ -4,7 +4,7 @@
 # Uso: scripts/estado-traer.sh
 set -euo pipefail
 cd "$(dirname "$0")/.."
-REPO=https://github.com/matiasosuna/mitologias-render.git
+REPO=${ESTADO_REPO:-https://github.com/matiasosuna/mitologias-render.git}  # en la nube: ESTADO_REPO = remote del clon (pasa por el proxy con permiso)
 TMP=$(mktemp -d); trap 'rm -rf "$TMP"' EXIT
 git clone -q --depth 1 --branch estado "$REPO" "$TMP/e"
 node scripts/estado.mjs traer "$TMP/e"

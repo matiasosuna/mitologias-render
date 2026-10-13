@@ -1,19 +1,32 @@
 // Narra un guion visual en varios idiomas (voces de macOS, gratis) y genera su timeline.
 // Uso: node scripts/motor-narrar.mjs griegas-02-prometeo [es,pt,en]
+// Nube (Linux, sin `say`): VOZ_EN=chatterbox node scripts/motor-narrar.mjs <id> en   (Modal: MODAL_BIN o `modal` del PATH)
 // Reutiliza los audios ya generados si el texto no cambió.
 import { execFileSync } from 'node:child_process';
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, statSync, rmSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { join } from 'node:path';
+import { join, dirname, basename } from 'node:path';
 import { ralentizar, retimear } from './narracion-lenta.mjs';
 import { T_SHORT, timelineMulti } from '../lib/motor-tiempos.mjs';
+import { leerEnv, usaChatterbox, binModal, motorDeVoz } from '../lib/voz-config.mjs';
 
 // Inglés: tu voz clonada en ElevenLabs (si hay clave en .env); el resto, voces de macOS gratis.
-const ENV = Object.fromEntries((existsSync('.env') ? readFileSync('.env', 'utf8') : '').split('\n').filter((l) => l.includes('=')).map((l) => [l.slice(0, l.indexOf('=')), l.slice(l.indexOf('=') + 1).trim()]));
+// En la nube no hay .env: las variables del entorno mandan (VOZ_EN, MODAL_BIN).
+const ENV = leerEnv(existsSync('.env') ? readFileSync('.env', 'utf8') : '');
 const ELEVEN = ENV.ELEVENLABS_API_KEY && ENV.ELEVENLABS_VOICE_ID ? { key: ENV.ELEVENLABS_API_KEY, voz: ENV.ELEVENLABS_VOICE_ID, modelo: ENV.ELEVENLABS_MODEL ?? 'eleven_flash_v2_5', velocidad: Number(ENV.ELEVENLABS_SPEED ?? 1) } : null;
 const VOZ = { es: ['Paulina', 168], pt: ['Luciana', 175], en: ['Samantha', 170] };
 // VOZ_EN=chatterbox en .env → inglés con Chatterbox (gratis, GPU de Modal, scripts/modal_voz.py) en vez de ElevenLabs.
-const CHATTER = ENV.VOZ_EN === 'chatterbox';
+const CHATTER = usaChatterbox(process.env, ENV);
+const vacio = (f) => existsSync(f) && statSync(f).size === 0;
+// Borra un .wav vacío y lo saca del registro de tempo (si no, el nuevo no se estiraría al 90 %).
+function borrarVacio(wav) {
+  rmSync(wav);
+  const reg = join(dirname(wav), '.tempo.json');
+  if (!existsSync(reg)) return;
+  const hechos = JSON.parse(readFileSync(reg, 'utf8'));
+  delete hechos[basename(wav)];
+  writeFileSync(reg, JSON.stringify(hechos, null, 1));
+}
 const CB = ['chatterbox-turbo', 1];
 let caracteres = 0;
 const enOrden = async (lista, fn) => { const r = []; for (const [i, x] of lista.entries()) r.push(await fn(x, i)); return r; };
@@ -37,13 +50,16 @@ const dur = (wav) => Number(execFileSync('ffprobe', ['-v', 'error', '-show_entri
 // Chatterbox: genera de una vez (una sola máquina con GPU) todas las frases en inglés que todavía no tienen audio.
 const cbDir = join('out', '.voz', id);
 if (CHATTER && idiomas.includes('en')) {
-  const dirEn = join('public/audio', id, 'en'), hechos = existsSync(dirEn) ? readdirSync(dirEn) : [];
+  const dirEn = join('public/audio', id, 'en');
+  // un .wav de 0 bytes (corte de Modal) cuenta como faltante: se borra y se vuelve a narrar
+  if (existsSync(dirEn)) for (const n of readdirSync(dirEn)) if (n.endsWith('.wav') && vacio(join(dirEn, n))) borrarVacio(join(dirEn, n));
+  const hechos = existsSync(dirEn) ? readdirSync(dirEn) : [];
   const faltan = g.escenas.flatMap((e) => e.frases).filter((t) => t.en).map((t) => ({ h: createHash('sha1').update(`${CB[0]}|${CB[1]}|${t.en}`).digest('hex').slice(0, 8), texto: t.en }))
     .filter((f, i, a) => a.findIndex((x) => x.h === f.h) === i && !hechos.some((n) => n.endsWith(`-${f.h}.wav`)));
   if (faltan.length) {
     mkdirSync(cbDir, { recursive: true });
     writeFileSync(join(cbDir, 'entrada.json'), JSON.stringify(faltan));
-    execFileSync('.venv/bin/modal', ['run', 'scripts/modal_voz.py'], { timeout: 20 * 60 * 1000, killSignal: 'SIGINT', stdio: 'inherit', env: { ...process.env, VOZ_ENTRADA: join(cbDir, 'entrada.json'), VOZ_SALIDA: cbDir } });
+    execFileSync(binModal({ ...ENV, ...process.env }, existsSync), ['run', 'scripts/modal_voz.py'], { timeout: 20 * 60 * 1000, killSignal: 'SIGINT', stdio: 'inherit', env: { ...process.env, VOZ_ENTRADA: join(cbDir, 'entrada.json'), VOZ_SALIDA: cbDir } });
   }
 }
 
@@ -54,21 +70,24 @@ for (const esc of g.escenas) escenas.push({
     const audio = {}, segundos = {};
     for (const l of idiomas) {
       if (!texto[l]) continue;
-      const conCB = l === 'en' && CHATTER, conEleven = l === 'en' && !CHATTER && ELEVEN;
+      const motor = motorDeVoz(l, { chatter: CHATTER, eleven: !!ELEVEN, plataforma: process.platform });
+      const conCB = motor === 'chatterbox', conEleven = motor === 'eleven';
       const [voz, vel] = conCB ? CB : conEleven ? [ELEVEN.voz + ELEVEN.modelo, ELEVEN.velocidad] : VOZ[l];
       const h = createHash('sha1').update(`${voz}|${vel}|${texto[l]}`).digest('hex').slice(0, 8);
       // Reusar el audio si ya existe con el mismo texto (aunque la frase haya cambiado de lugar): no se paga dos veces.
       const dirL = join('public/audio', id, l);
-      const previo = existsSync(dirL) ? readdirSync(dirL).find((n) => n.endsWith(`-${h}.wav`)) : undefined;
+      const previo = existsSync(dirL) ? readdirSync(dirL).find((n) => n.endsWith(`-${h}.wav`) && !vacio(join(dirL, n))) : undefined;
       const rel = previo ? `audio/${id}/${l}/${previo}` : `audio/${id}/${l}/${esc.id}-${j}-${h}.wav`, wav = join('public', rel);
+      if (vacio(wav)) borrarVacio(wav);
       if (!existsSync(wav)) {
         mkdirSync(join('public/audio', id, l), { recursive: true });
         const crudo = conCB ? join(cbDir, `${h}.wav`) : wav.replace(/\.wav$/, conEleven ? '.mp3' : '.aiff');
-        if (conCB) { if (!existsSync(crudo)) throw new Error(`Chatterbox no devolvió la frase ${h}`); }
+        if (conCB) { if (!existsSync(crudo) || vacio(crudo)) throw new Error(`Chatterbox no devolvió la frase ${h} (volvé a correr motor-narrar)`); }
         else if (conEleven) await eleven(texto[l], crudo);
         else execFileSync('say', ['-v', voz, '-r', String(vel), '-o', crudo, texto[l]]);
         execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', crudo, '-af', conCB ? 'highpass=f=60,loudnorm=I=-20:TP=-1.5:LRA=11' : conEleven ? 'highpass=f=60' : 'highpass=f=70,acompressor=threshold=-20dB:ratio=3,volume=1.6', '-ar', '48000', '-ac', '1', wav]);
-        execFileSync('rm', [crudo]);
+        rmSync(crudo);
+        if (vacio(wav)) { borrarVacio(wav); throw new Error(`audio vacío: ${wav} (volvé a correr motor-narrar)`); }
         process.stdout.write('.');
       }
       audio[l] = rel;

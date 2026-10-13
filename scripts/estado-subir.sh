@@ -4,7 +4,7 @@
 # Uso: scripts/estado-subir.sh [lista-de-shorts.txt]   (por defecto out/shorts-orden.txt)
 set -euo pipefail
 cd "$(dirname "$0")/.."
-REPO=https://github.com/matiasosuna/mitologias-render.git
+REPO=${ESTADO_REPO:-https://github.com/matiasosuna/mitologias-render.git}  # en la nube: ESTADO_REPO = remote del clon (pasa por el proxy con permiso)
 LISTA=${1:-out/shorts-orden.txt}
 TMP=$(mktemp -d); trap 'rm -rf "$TMP"' EXIT
 for intento in 1 2 3 4 5 6; do

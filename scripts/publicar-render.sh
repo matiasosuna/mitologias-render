@@ -1,10 +1,17 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 # Copia al repo PÚBLICO matiasosuna/mitologias-render solo lo necesario para renderizar en GitHub Actions
 # (gratis e ilimitado en repos públicos). NO incluye muestras de voz (lib/voz-matias-*), pruebas/, ni nada fuera de git.
 # Uso: scripts/publicar-render.sh   → después: gh workflow run render-nube -R matiasosuna/mitologias-render -f ids='[...]' -f tipo=vertical
+# Destino: ~/Projects/mitologias-render, o MOC_RENDER_DIR=<clon del repo público> (la rutina de la nube).
 set -e
 cd "$(dirname "$0")/.."
-DEST=~/Projects/mitologias-render
+DEST=${MOC_RENDER_DIR:-$HOME/Projects/mitologias-render}
+# ponerse al día con main del repo público antes de copiar (si alguien más empujó, el push no choca)
+if [ -d "$DEST/.git" ]; then
+  git -C "$DEST" fetch -q origin main
+  git -C "$DEST" checkout -q main 2>/dev/null || git -C "$DEST" checkout -q -b main origin/main
+  git -C "$DEST" merge -q --ff-only origin/main
+fi
 LISTA=$(mktemp)
 git ls-files | grep -vE '^(lib/voz-matias|pruebas/|\.github/workflows/voz\.yml)' > $LISTA
 mkdir -p $DEST
@@ -25,6 +32,6 @@ fi
 git ls-files | grep -vxFf $LISTA | while read f; do git rm -q --cached "$f"; rm -f "$f"; done
 git add -A
 git diff --cached --quiet || git commit -qm "Sync desde mitologias ($(date +%Y-%m-%d))"
-git push -q -u origin main
+git push -q -u origin HEAD:main
 rm -f $LISTA
 echo "repo público al día: https://github.com/matiasosuna/mitologias-render"
