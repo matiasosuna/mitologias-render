@@ -1,12 +1,14 @@
 // Shorts nativos como Reels en @mythsonclay, SOLO en la pestaña Reels (share_to_feed=false): la grilla queda con los episodios.
 // Publica el próximo de la lista (archivo con un id por línea) que todavía no esté en Instagram.
 // Control de duplicados antes y después (por la 1.ª línea del texto), igual que instagram-reels.mjs.
+// Con NUBE=1 (GitHub Actions): si el video no está en out/, se baja del release "media" (o se renderiza ahí).
 // Uso: node scripts/instagram-shorts.mjs <lista.txt> [--probar]
 import { readFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { join } from 'node:path';
 
 process.chdir(new URL('..', import.meta.url).pathname);
+const nube = process.env.NUBE === '1' ? await import('./nube.mjs') : null;
 const args = process.argv.slice(2), lista = args.find((a) => !a.startsWith('--'));
 const env = Object.fromEntries(readFileSync('.env', 'utf8').split('\n').filter((l) => l.includes('=')).map((l) => [l.slice(0, l.indexOf('=')), l.slice(l.indexOf('=') + 1).trim()]));
 const TOKEN = env.MOC_PAGE_TOKEN, IG = env.MOC_IG_USER_ID, V = 'v21.0';
@@ -19,6 +21,7 @@ const ids = readFileSync(lista, 'utf8').split('\n').map((s) => s.trim()).filter(
 const id = ids.find((d) => !hechos.has(join('out', d, `${d}.mp4`)));
 if (!id) { console.log('nada pendiente'); process.exit(0); }
 const archivo = join('out', id, `${id}.mp4`);
+if (nube && !existsSync(archivo)) nube.asegurar(id, 'short');
 if (!existsSync(archivo)) { console.log(`esperando render de ${id}`); process.exit(0); }
 
 const gu = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8'));

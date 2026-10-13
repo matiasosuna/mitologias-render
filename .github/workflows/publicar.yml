@@ -1,0 +1,110 @@
+# Colas de publicación en la nube (repo público mitologias-render: minutos gratis), para que la Mac pueda estar cerrada.
+# Cada 4 h: (a) un Short a YouTube, (b) un Reel a Instagram (episodio a las 00/08/16 HST, Short a las 04/12/20 HST) y
+# (c) relleno de la cola de TikTok en Buffer. Cada paso es independiente; si alguno falla, el job termina en rojo.
+# Estado (registros + orden): rama "estado" (scripts/estado-*.sh). Videos: release "media" (scripts/nube.mjs);
+# si falta alguno, se renderiza en la misma corrida. En el repo privado NO corre (sus minutos se pagan).
+# A mano: gh workflow run publicar -R matiasosuna/mitologias-render [-f slot=ep|short]
+name: publicar
+on:
+  schedule:
+    - cron: '0 2,6,10,14,18,22 * * *' # 16, 20, 00, 04, 08 y 12 HST
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: 'Turno de Instagram: ep | short (vacío = según la hora HST)'
+        required: false
+        default: ''
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  publicar:
+    if: github.repository == 'matiasosuna/mitologias-render'
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      NUBE: '1'
+      GH_TOKEN: ${{ github.token }}
+      LISTA: out/shorts-orden.txt
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: sudo apt-get update && sudo apt-get install -y libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2t64 fonts-noto-core ffmpeg
+      - run: npx remotion browser ensure
+      - name: claves (.env y .yt-token.json desde los secretos; nunca se imprimen)
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+          MOC_PAGE_TOKEN: ${{ secrets.MOC_PAGE_TOKEN }}
+          MOC_IG_USER_ID: ${{ secrets.MOC_IG_USER_ID }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          node -e '
+            const fs = require("fs"), e = process.env;
+            const k = ["YT_CLIENT_ID", "YT_CLIENT_SECRET", "MOC_PAGE_TOKEN", "MOC_IG_USER_ID", "BUFFER_API_KEY"];
+            const faltan = k.filter((x) => !e[x]).concat(e.YT_TOKEN_JSON ? [] : ["YT_TOKEN_JSON"]);
+            if (faltan.length) { console.error("faltan secretos: " + faltan.join(", ")); process.exit(1); }
+            if (e.GEMINI_API_KEY) k.push("GEMINI_API_KEY"); // opcional
+            fs.writeFileSync(".env", k.map((x) => x + "=" + e[x].trim()).join("\n") + "\n", { mode: 0o600 });
+            const t = JSON.parse(e.YT_TOKEN_JSON);
+            for (const v of [t.refresh_token, t.access_token]) if (v) console.log("::add-mask::" + v);
+            fs.writeFileSync(".yt-token.json", JSON.stringify({ ...t, vence: 0 }), { mode: 0o600 }); // se renueva en la corrida
+          '
+      - name: git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
+      # sin estado no se publica nada (los pasos de abajo solo corren si todo lo anterior salió bien)
+      - name: traer estado
+        run: scripts/estado-traer.sh
+
+      # cada paso con continue-on-error: si falla uno, los demás siguen; "resultado" pone el job en rojo
+      - name: YouTube (Short)
+        id: yt
+        continue-on-error: true
+        run: node scripts/nube.mjs yt "$LISTA"
+      - name: guardar estado
+        id: e1
+        continue-on-error: true
+        run: scripts/estado-subir.sh
+
+      - name: Instagram (episodio o Short)
+        id: ig
+        continue-on-error: true
+        env:
+          SLOT: ${{ inputs.slot }}
+        run: node scripts/nube.mjs ig "$LISTA" "$SLOT"
+      - name: guardar estado
+        id: e2
+        continue-on-error: true
+        run: scripts/estado-subir.sh
+
+      - name: TikTok (cola de Buffer)
+        id: tk
+        continue-on-error: true
+        run: node scripts/buffer-tiktok.mjs "$LISTA"
+      - name: guardar estado
+        id: e3
+        continue-on-error: true
+        run: scripts/estado-subir.sh
+
+      - name: adelantar renders de los próximos turnos
+        continue-on-error: true
+        run: node scripts/nube.mjs adelantar "$LISTA"
+
+      - name: resultado
+        if: always()
+        run: |
+          echo "youtube=${{ steps.yt.outcome }} instagram=${{ steps.ig.outcome }} tiktok=${{ steps.tk.outcome }} estado=${{ steps.e1.outcome }}/${{ steps.e2.outcome }}/${{ steps.e3.outcome }}"
+          for o in "${{ steps.yt.outcome }}" "${{ steps.ig.outcome }}" "${{ steps.tk.outcome }}" "${{ steps.e1.outcome }}" "${{ steps.e2.outcome }}" "${{ steps.e3.outcome }}"; do
+            [ "$o" = success ] || exit 1
+          done

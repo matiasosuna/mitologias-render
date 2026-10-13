@@ -72,7 +72,7 @@ campos.push(['-F', `video=@${archivo}`]);
 add('categoryId', '27'); // Education
 add('privacyStatus', 'public');
 add('selfDeclaredMadeForKids', 'false');
-add('containsSyntheticMedia', 'true');
+add('containsSyntheticMedia', 'false'); // animación claramente no realista: sin etiqueta de IA (decisión de Matías 2026-10-13)
 add('defaultLanguage', 'en');
 add('defaultAudioLanguage', 'en');
 add('async_upload', 'true');

@@ -82,6 +82,27 @@ else if (cmd === 'videos') {
     for (const it of p.items) console.log(`${it.snippet.resourceId.videoId}\t${it.status.privacyStatus}\t${it.snippet.title}`);
     page = p.nextPageToken;
   } while (page);
+} else if (cmd === 'sin-ia') {
+  // Saca la marca "contenido alterado o sintético" de todos los videos del canal (o de los ids dados), sin tocar el resto del estado.
+  let ids = a;
+  if (!ids.length) {
+    const subidas = (await api('GET', '/channels', { query: { part: 'contentDetails', mine: 'true' } })).items[0].contentDetails.relatedPlaylists.uploads;
+    let page; ids = [];
+    do { const p = await api('GET', '/playlistItems', { query: { part: 'snippet', playlistId: subidas, maxResults: '50', ...(page ? { pageToken: page } : {}) } }); ids.push(...p.items.map((it) => it.snippet.resourceId.videoId)); page = p.nextPageToken; } while (page);
+  }
+  for (let i = 0; i < ids.length; i += 50) {
+    const v = await api('GET', '/videos', { query: { part: 'status', id: ids.slice(i, i + 50).join(',') } });
+    for (const it of v.items) {
+      if (it.status.containsSyntheticMedia === false) { console.log(`${it.id} ya estaba`); continue; }
+      const { privacyStatus, publishAt, license, embeddable, publicStatsViewable, selfDeclaredMadeForKids } = it.status;
+      const status = { privacyStatus, license, embeddable, publicStatsViewable, selfDeclaredMadeForKids: selfDeclaredMadeForKids ?? false, containsSyntheticMedia: false, ...(publishAt && privacyStatus === 'private' && new Date(publishAt) > new Date() ? { publishAt } : {}) };
+      try { await api('PUT', '/videos', { query: { part: 'status' }, json: { id: it.id, status } }); } catch (e) { console.log(`${it.id} ERROR ${String(e.message).slice(0, 120)}`); continue; }
+      console.log(`${it.id} sin etiqueta (${privacyStatus}${publishAt ? ' ' + publishAt : ''})`);
+    }
+  }
+} else if (cmd === 'canal') {
+  const s = (await api('GET', '/channels', { query: { part: 'statistics', mine: 'true' } })).items[0].statistics;
+  console.log(`suscriptores ${s.subscriberCount} · vistas ${s.viewCount} · videos ${s.videoCount}`);
 } else if (cmd === 'miniatura') {
   const [videoId, archivo] = a;
   await api('POST', 'https://www.googleapis.com/upload/youtube/v3/thumbnails/set', { query: { videoId, uploadType: 'media' }, cuerpo: readFileSync(archivo), tipo: archivo.endsWith('.png') ? 'image/png' : 'image/jpeg' });
@@ -116,7 +137,7 @@ else if (cmd === 'videos') {
   const cuerpoMeta = {
     snippet: { title: m.titulo, description: m.descripcion ?? '', tags: m.etiquetas ?? [], categoryId: '27', defaultLanguage: 'en', defaultAudioLanguage: 'en' },
     // Se crea en privado: si la subida del archivo falla (límite diario), no queda un video vacío público.
-    status: { privacyStatus: 'private', selfDeclaredMadeForKids: false, containsSyntheticMedia: true, ...(m.publicar ? { publishAt: m.publicar } : {}) },
+    status: { privacyStatus: 'private', selfDeclaredMadeForKids: false, containsSyntheticMedia: false, ...(m.publicar ? { publishAt: m.publicar } : {}) },
   };
   const ini = await fetch(`https://www.googleapis.com/upload/youtube/v3/videos?${new URLSearchParams({ uploadType: 'resumable', part: 'snippet,status' })}`, {
     method: 'POST', headers: { authorization: `Bearer ${await acceso()}`, 'content-type': 'application/json; charset=UTF-8', 'x-upload-content-type': 'video/mp4', 'x-upload-content-length': String(datos.length) }, body: JSON.stringify(cuerpoMeta),
