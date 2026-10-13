@@ -1,0 +1,1542 @@
+{
+  "id": "hindues-01-el-dios-que-suena-el-mundo",
+  "serie": "hindues",
+  "numero": "01",
+  "titulo": {
+    "es": "El dios que sueña el mundo",
+    "en": "The God Who Dreams the World"
+  },
+  "tituloGriego": "THE GOD WHO DREAMS THE WORLD",
+  "miniatura": {
+    "heroe": "vishnu",
+    "rival": "brahma"
+  },
+  "siguiente": {
+    "es": "El pilar sin fin",
+    "en": "The Pillar With No End"
+  },
+  "escenas": [
+    {
+      "id": "inicio",
+      "fondo": "oceano_cosmico",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Antes de que hubiera cielo, antes de que hubiera tierra, solo había agua y oscuridad.",
+          "en": "Before there was a sky, before there was an earth, there was only water and darkness."
+        },
+        {
+          "es": "Así imagina el principio una de las religiones más antiguas del mundo: el hinduismo.",
+          "en": "This is how one of the oldest religions in the world imagines the beginning: Hinduism."
+        },
+        {
+          "es": "Hoy la siguen más de mil millones de personas, y sus historias tienen miles de años.",
+          "en": "More than a billion people follow it today, and its stories are thousands of years old."
+        },
+        {
+          "es": "Y empieza con una pregunta muy rara: ¿quién hizo el mundo, y alguien lo sabe de verdad?",
+          "en": "And it starts with a very strange question: who made the world, and does anyone really know?"
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "sabio",
+          "como": "sabio",
+          "x": 1450,
+          "mira": "izq",
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 800
+            },
+            {
+              "en": 3.3,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "nino_aldea",
+          "x": 1700,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.5,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "estrellas",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "MÁS DE MIL MILLONES DE PERSONAS",
+            "en": "MORE THAN A BILLION PEOPLE"
+          },
+          "x": 960,
+          "y": 260,
+          "hasta": 2.9
+        }
+      ]
+    },
+    {
+      "id": "himno",
+      "fondo": "oceano_cosmico",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los textos hindúes más antiguos son los Vedas. El más viejo, el Rig Veda, tiene más de tres mil años.",
+          "en": "The oldest Hindu texts are the Vedas. The oldest of all, the Rig Veda, is over three thousand years old."
+        },
+        {
+          "es": "Uno de sus himnos se pregunta cómo empezó todo.",
+          "en": "One of its hymns asks how everything began."
+        },
+        {
+          "es": "Dice que al principio no había ser ni no ser, ni aire, ni cielo. La oscuridad estaba escondida en oscuridad.",
+          "en": "It says that at first there was neither being nor non-being, no air, no sky. Darkness was hidden in darkness."
+        },
+        {
+          "es": "Después, del calor, nació el primer deseo, la primera semilla de todo.",
+          "en": "Then, out of heat, the first desire was born, the first seed of everything."
+        },
+        {
+          "es": "Y el himno termina así: quizá lo sabe el que mira desde el cielo más alto… o quizá ni él lo sabe.",
+          "en": "And the hymn ends like this: perhaps the one who watches from the highest heaven knows… or perhaps he does not."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "vedas",
+          "x": 1150,
+          "y": 700,
+          "s": 1,
+          "en": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "sabio",
+          "como": "sabio",
+          "x": 620,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.3,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "nino_aldea",
+          "x": 330,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "mira",
+              "a": 1100
+            },
+            {
+              "en": 4.6,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "chispas",
+          "x": 1150,
+          "y": 520,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "RIG VEDA",
+            "en": "RIG VEDA"
+          },
+          "x": 1150,
+          "y": 240,
+          "hasta": 1.8
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "RIG VEDA 10.129",
+            "en": "RIG VEDA 10.129"
+          },
+          "x": 1300,
+          "y": 240,
+          "hasta": 4.9
+        }
+      ]
+    },
+    {
+      "id": "huevo",
+      "fondo": "oceano_cosmico",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Otro himno del Rig Veda imagina una semilla de oro flotando sobre las aguas.",
+          "en": "Another hymn of the Rig Veda imagines a golden seed floating on the waters."
+        },
+        {
+          "es": "La llama Hiranyagarbha, el embrión de oro: lo primero que existió.",
+          "en": "It calls it Hiranyagarbha, the golden embryo: the very first thing that existed."
+        },
+        {
+          "es": "Textos posteriores convirtieron esa semilla en un huevo de oro que brillaba en la oscuridad.",
+          "en": "Later texts turned that seed into a golden egg, shining in the dark."
+        },
+        {
+          "es": "Una Upanishad, un libro de enseñanzas antiguas, dice que se partió en dos: una mitad fue la tierra y la otra, el cielo.",
+          "en": "An Upanishad, a book of ancient teachings, says it split in two: one half became the earth, the other the sky."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "huevo_oro",
+          "x": 1150,
+          "y": 470,
+          "s": 0.9,
+          "en": 0.2,
+          "hasta": 3.4
+        },
+        {
+          "tipo": "huevo_oro",
+          "x": 1150,
+          "y": 470,
+          "s": 0.9,
+          "en": 3.4,
+          "props": {
+            "abierto": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "sabio",
+          "como": "sabio",
+          "x": 420,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "mira",
+              "a": 1150
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 3.4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "nino_aldea",
+          "x": 640,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "salta"
+            },
+            {
+              "en": 3.6,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 420,
+          "dur": 1.5
+        },
+        {
+          "en": 3.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.5,
+          "tipo": "estrellas",
+          "dur": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "HIRANYAGARBHA · EL EMBRIÓN DE ORO",
+            "en": "HIRANYAGARBHA · THE GOLDEN EMBRYO"
+          },
+          "x": 1150,
+          "y": 190,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "sueno",
+      "fondo": "oceano_cosmico",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero la imagen más famosa está en los Puranas, libros de historias antiguas: entre un mundo y otro, todo vuelve a las aguas.",
+          "en": "But the most famous picture is in the Puranas, books of old stories: between one world and the next, all returns to the waters."
+        },
+        {
+          "es": "Sobre esas aguas oscuras flota Shesha, una serpiente de mil cabezas.",
+          "en": "On those dark waters floats Shesha, a serpent with a thousand heads."
+        },
+        {
+          "es": "Y sobre sus anillos duerme el dios Vishnu, el protector del mundo, con su esposa Lakshmi a sus pies.",
+          "en": "And on its coils sleeps the god Vishnu, the protector of the world, with his wife Lakshmi at his feet."
+        },
+        {
+          "es": "En las pinturas, Vishnu siempre tiene la piel azul, como el cielo y el mar profundo.",
+          "en": "In paintings, Vishnu always has blue skin, like the sky and the deep sea."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "vishnu_shesha",
+          "x": 900,
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "garuda",
+          "como": "garuda",
+          "x": 1650,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.4,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "sabio",
+          "como": "sabio",
+          "x": 200,
+          "escala": 0.75,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.2,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "olas-suben",
+          "dur": 0.6,
+          "intensidad": 0.1
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 900,
+          "y": 600,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "SHESHA",
+            "en": "SHESHA"
+          },
+          "x": 560,
+          "y": 330,
+          "hasta": 1.9
+        },
+        {
+          "en": 2.1,
+          "texto": {
+            "es": "VISHNU",
+            "en": "VISHNU"
+          },
+          "x": 980,
+          "y": 300,
+          "hasta": 2.9
+        }
+      ]
+    },
+    {
+      "id": "loto",
+      "fondo": "oceano_cosmico",
+      "camara": {
+        "de": 0,
+        "a": 220,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mientras Vishnu duerme, de su ombligo empieza a crecer un tallo.",
+          "en": "As Vishnu sleeps, a stem begins to grow from his navel."
+        },
+        {
+          "es": "En la punta se abre un loto, la flor del agua que en la India es sagrada.",
+          "en": "At its tip, a lotus opens: the water flower that is sacred in India."
+        },
+        {
+          "es": "Y sobre el loto aparece Brahma, el creador, con cuatro caras que miran a todos lados.",
+          "en": "And on the lotus appears Brahma, the creator, with four faces looking in every direction."
+        },
+        {
+          "es": "El Bhagavata Purana dice que Brahma no sabía de dónde venía. Bajó por el tallo, pero nunca encontró la raíz.",
+          "en": "The Bhagavata Purana says Brahma did not know where he came from. He climbed down the stem, but never found its root."
+        },
+        {
+          "es": "Así que se sentó en su loto y meditó durante muchísimo tiempo.",
+          "en": "So he sat on his lotus and meditated for a very long time."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "vishnu_shesha",
+          "x": 760,
+          "hasta": 0.6
+        },
+        {
+          "tipo": "vishnu_shesha",
+          "x": 760,
+          "en": 0.5,
+          "props": {
+            "loto": true
+          }
+        },
+        {
+          "tipo": "loto",
+          "x": 1650,
+          "s": 0.85,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 1650,
+          "mira": "izq",
+          "escala": 0.8,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "mira",
+              "a": 700
+            },
+            {
+              "en": 3.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.6,
+              "hace": "niega"
+            },
+            {
+              "en": 4,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "garuda",
+          "como": "garuda",
+          "x": 220,
+          "escala": 0.8,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.4,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 700,
+          "y": 330,
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "estrellas",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "LOTO",
+            "en": "LOTUS"
+          },
+          "x": 700,
+          "y": 200,
+          "hasta": 1.9
+        }
+      ]
+    },
+    {
+      "id": "crea",
+      "fondo": "orilla_rio",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 260,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después de su meditación, Vishnu se le apareció a Brahma y le dio su tarea: crear los mundos.",
+          "en": "After his meditation, Vishnu appeared to Brahma and gave him his task: to create the worlds."
+        },
+        {
+          "es": "Brahma partió el loto en tres: la tierra abajo, el aire en el medio y los cielos arriba.",
+          "en": "Brahma divided the lotus into three: the earth below, the air in the middle, and the heavens above."
+        },
+        {
+          "es": "Después hizo las montañas y los ríos, las plantas y los animales.",
+          "en": "Then he made the mountains and the rivers, the plants and the animals."
+        },
+        {
+          "es": "Y lo acompañaba Hamsa, un cisne blanco que lo lleva a todas partes.",
+          "en": "And with him came Hamsa, a white swan that carries him everywhere."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kailash_pico",
+          "x": 1500,
+          "s": 0.6,
+          "capa": "fondo",
+          "en": 2,
+          "sube": 260
+        },
+        {
+          "tipo": "arbol_pahari",
+          "x": 1250,
+          "s": 0.75,
+          "capa": "medio",
+          "en": 2.3
+        },
+        {
+          "tipo": "mango",
+          "x": 2050,
+          "s": 0.7,
+          "capa": "medio",
+          "en": 2.5
+        },
+        {
+          "tipo": "sol_pahari",
+          "x": 1700,
+          "y": 250,
+          "s": 0.7,
+          "en": 1.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 560,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 960,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.6,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "sabio",
+          "como": "sabio",
+          "x": 1100,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.2,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "hamsa",
+          "como": "hamsa",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "nandi",
+          "como": "nandi",
+          "x": 1700,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece",
+              "con": "polvo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello"
+        },
+        {
+          "en": 2,
+          "tipo": "polvo",
+          "x": 1500
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "trimurti",
+      "fondo": "svarga",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Muchos hindúes describen lo divino en tres grandes formas. Juntas se llaman la Trimurti.",
+          "en": "Many Hindus describe the divine in three great forms. Together they are called the Trimurti."
+        },
+        {
+          "es": "Brahma crea el mundo. Vishnu lo protege.",
+          "en": "Brahma creates the world. Vishnu protects it."
+        },
+        {
+          "es": "Y Shiva lo destruye cuando su tiempo termina, para que pueda nacer de nuevo.",
+          "en": "And Shiva destroys it when its time is over, so that it can be born again."
+        },
+        {
+          "es": "No todos lo ven igual: para unos, Vishnu es el más alto; para otros, Shiva; para otros, la Diosa.",
+          "en": "Not everyone sees it the same way: for some, Vishnu is the highest; for others, Shiva; for others, the Goddess."
+        },
+        {
+          "es": "En las historias, los tres se encuentran una y otra vez. Y no siempre están de acuerdo.",
+          "en": "In the stories, the three meet again and again. And they do not always agree."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 520,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.3,
+              "hace": "mira",
+              "a": 900
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 920,
+          "escala": 0.8,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.6,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4.3,
+              "hace": "mira",
+              "a": 500
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 1340,
+          "escala": 0.8,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "parvati",
+          "como": "parvati",
+          "x": 1720,
+          "escala": 0.75,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.8,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.1,
+          "tipo": "chispas",
+          "x": 1340,
+          "y": 600,
+          "dur": 0.7
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "TRIMURTI",
+            "en": "TRIMURTI"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 0.9
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "CREA",
+            "en": "CREATES"
+          },
+          "x": 520,
+          "y": 200,
+          "hasta": 2.9
+        },
+        {
+          "en": 1.4,
+          "texto": {
+            "es": "PROTEGE",
+            "en": "PROTECTS"
+          },
+          "x": 920,
+          "y": 200,
+          "hasta": 2.9
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "DESTRUYE",
+            "en": "DESTROYS"
+          },
+          "x": 1340,
+          "y": 200,
+          "hasta": 2.9
+        }
+      ]
+    },
+    {
+      "id": "tiempo",
+      "fondo": "cielo_cosmico",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Y ahora, lo más asombroso: en la tradición hindú, el tiempo no corre en línea recta. Gira en círculos.",
+          "en": "Now the most astonishing part: in Hindu tradition, time does not run in a straight line. It turns in circles."
+        },
+        {
+          "es": "El Vishnu Purana dice que un solo día en la vida de Brahma dura mil grandes eras.",
+          "en": "The Vishnu Purana says that a single day in the life of Brahma lasts a thousand great ages."
+        },
+        {
+          "es": "En años humanos, eso es cuatro mil trescientos veinte millones de años.",
+          "en": "In human years, that is four billion, three hundred and twenty million years."
+        },
+        {
+          "es": "Su noche dura lo mismo. Cuando cae, los mundos se hunden en las aguas y Vishnu vuelve a dormir.",
+          "en": "His night lasts just as long. When it falls, the worlds sink into the waters, and Vishnu sleeps again."
+        },
+        {
+          "es": "Cuando llega la mañana, el loto vuelve a crecer y todo empieza otra vez.",
+          "en": "When morning comes, the lotus grows again, and everything begins once more."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_pahari",
+          "x": 520,
+          "y": 300,
+          "s": 1,
+          "hasta": 3
+        },
+        {
+          "tipo": "luna_pahari",
+          "x": 1400,
+          "y": 300,
+          "s": 1,
+          "en": 3,
+          "hasta": 4
+        },
+        {
+          "tipo": "sol_pahari",
+          "x": 520,
+          "y": 300,
+          "s": 1,
+          "en": 4
+        },
+        {
+          "tipo": "loto",
+          "x": 960,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 960,
+          "escala": 0.75,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "reza"
+            },
+            {
+              "en": 4,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 0.9
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "1 DÍA DE BRAHMA = 4.320.000.000 AÑOS",
+            "en": "1 DAY OF BRAHMA = 4,320,000,000 YEARS"
+          },
+          "x": 960,
+          "y": 210,
+          "hasta": 2.95
+        }
+      ]
+    },
+    {
+      "id": "edades",
+      "fondo": "campo_pahari",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cada gran era tiene cuatro eras más chicas. En cada una, la bondad se debilita un poco más.",
+          "en": "Each great age has four smaller ages. In each one, goodness grows a little weaker."
+        },
+        {
+          "es": "En la primera, la gente era sincera y buena. La última se llama Kali Yuga, la era de la discordia.",
+          "en": "In the first, people were truthful and good. The last one is called the Kali Yuga, the age of strife."
+        },
+        {
+          "es": "Según la tradición, ahora mismo estamos viviendo en el Kali Yuga.",
+          "en": "According to tradition, we are living in the Kali Yuga right now."
+        },
+        {
+          "es": "¿Tú qué prefieres: un mundo que empieza una sola vez, o uno que vuelve a empezar una y otra vez?",
+          "en": "Which would you prefer: a world that begins only once, or one that begins again and again?"
+        },
+        {
+          "es": "Pero hay esperanza: cuando la bondad se debilita demasiado, Vishnu baja a ayudar.",
+          "en": "But there is hope: whenever goodness grows too weak, Vishnu comes down to help."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "anciano",
+          "como": "anciano_aldea",
+          "x": 500,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "aldeana",
+          "como": "aldeana",
+          "x": 760,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.2,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "aldeano",
+          "como": "aldeano",
+          "x": 1100,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "nino_aldea",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.3,
+              "hace": "mira",
+              "a": 1700
+            },
+            {
+              "en": 4.3,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1720,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "oscurecer",
+          "dur": 1.8
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 4.1,
+          "tipo": "luz",
+          "x": 1720,
+          "y": 520,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.4,
+          "texto": {
+            "es": "KALI YUGA",
+            "en": "KALI YUGA"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 2.9
+        }
+      ]
+    },
+    {
+      "id": "avatares",
+      "fondo": "svarga",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En el Bhagavad Gita, uno de los libros hindúes más queridos, Vishnu, en la forma de Krishna, lo dice así:",
+          "en": "In the Bhagavad Gita, one of the most loved Hindu books, Vishnu, in the form of Krishna, says it himself:"
+        },
+        {
+          "es": "\"Cada vez que la bondad decae y el mal crece, yo vengo al mundo, era tras era.\"",
+          "en": "\"Whenever goodness declines and evil rises, I come into the world, age after age.\""
+        },
+        {
+          "es": "Esas bajadas se llaman avatares. Sí: de ahí viene la palabra.",
+          "en": "These descents are called avatars. Yes, that is where the word comes from."
+        },
+        {
+          "es": "Esta temporada vas a conocer algunos: un pez gigante, una tortuga, un hombre león y un niño de pasos enormes.",
+          "en": "This season you will meet some: a giant fish, a tortoise, a man-lion and a boy who takes huge steps."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lluvia_oro",
+          "x": 960,
+          "en": 1,
+          "hasta": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 520,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 1.4
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "narasimha",
+          "como": "narasimha",
+          "x": 1050,
+          "mira": "izq",
+          "escala": 0.72,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 3.3,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "vamana",
+          "como": "vamana",
+          "x": 1420,
+          "mira": "izq",
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 3.6,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "kurma",
+          "como": "kurma",
+          "x": 1750,
+          "mira": "izq",
+          "escala": 0.5,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 3.15,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "matsya",
+          "como": "matsya",
+          "x": 1300,
+          "mira": "izq",
+          "y": 470,
+          "escala": 0.6,
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 520,
+          "y": 500,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.1,
+          "texto": {
+            "es": "AVATAR = \"DESCENSO\"",
+            "en": "AVATAR = \"DESCENT\""
+          },
+          "x": 1200,
+          "y": 260,
+          "hasta": 2.95
+        },
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "BHAGAVAD GITA 4.7–8",
+            "en": "BHAGAVAD GITA 4.7–8"
+          },
+          "x": 1250,
+          "y": 260,
+          "hasta": 1.9
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "oceano_cosmico",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así empieza el mundo: en el sueño de un dios dormido, sobre una flor que nace de su cuerpo.",
+          "en": "So this is how the world begins: in the dream of a sleeping god, on a flower that grows from his body."
+        },
+        {
+          "es": "¿Qué imagen del principio te gusta más: el himno, el huevo de oro o el loto?",
+          "en": "Which picture of the beginning do you like best: the hymn, the golden egg, or the lotus?"
+        },
+        {
+          "es": "Pero, de los tres dioses, ¿quién es el más grande? Brahma y Vishnu discutieron justamente eso.",
+          "en": "But which of the three gods is the greatest? Brahma and Vishnu once argued about exactly that."
+        },
+        {
+          "es": "La próxima vez: entre ellos aparece un pilar de fuego. Un pilar sin fin.",
+          "en": "Next time: a pillar of fire appears between them. A pillar with no end."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "vishnu_shesha",
+          "x": 960,
+          "hasta": 2,
+          "props": {
+            "loto": true
+          }
+        },
+        {
+          "tipo": "pilar_fuego",
+          "x": 960,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "garuda",
+          "como": "garuda",
+          "x": 1700,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "reza"
+            },
+            {
+              "en": 2,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 560,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1360,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.6,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.3,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.1,
+          "tipo": "temblor",
+          "dur": 0.4
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Un día de Brahma dura 4.320 millones de años",
+        "en": "One day of Brahma lasts 4.32 billion years"
+      },
+      "escena": "tiempo",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "El himno más viejo del mundo termina con una duda",
+        "en": "The oldest creation hymn ends with a doubt"
+      },
+      "escena": "himno",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 760
+    },
+    {
+      "gancho": {
+        "es": "Un dios dormido, y una flor que crece de su ombligo",
+        "en": "A sleeping god, and a flower growing from his navel"
+      },
+      "escena": "loto",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 960
+    }
+  ]
+}

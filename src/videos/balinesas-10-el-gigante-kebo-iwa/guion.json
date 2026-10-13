@@ -1,0 +1,1199 @@
+{
+  "id": "balinesas-10-el-gigante-kebo-iwa",
+  "serie": "balinesas",
+  "numero": "10",
+  "titulo": {
+    "es": "El gigante Kebo Iwa",
+    "en": "The Giant Kebo Iwa"
+  },
+  "tituloGriego": "THE GIANT KEBO IWA",
+  "miniatura": {
+    "heroe": "kebo_iwa",
+    "rival": "gajah_mada"
+  },
+  "siguiente": {
+    "es": "Las serpientes de Tanah Lot",
+    "en": "The Sea Snakes of Tanah Lot"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "pura_malam",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, el Barong y Rangda bailaron su batalla que nunca termina.",
+          "en": "Last time, the Barong and Rangda danced their battle that never ends."
+        },
+        {
+          "es": "Esta vez viajamos a los años 1300, a Bedahulu, el último reino del viejo Bali.",
+          "en": "This time, we travel to the 1300s, to Bedahulu, the last kingdom of old Bali."
+        },
+        {
+          "es": "Su mayor defensor era un gigante, y se llamaba Kebo Iwa.",
+          "en": "Its greatest defender was a giant, and his name was Kebo Iwa."
+        },
+        {
+          "es": "Su historia es una leyenda local, contada en su aldea natal y en viejas crónicas balinesas.",
+          "en": "His story is a local legend, told in his home village and in old Balinese chronicles."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "barong",
+          "como": "barong",
+          "x": 400,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "kebo",
+          "como": "kebo_iwa",
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 1.8,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.8,
+          "tipo": "temblor",
+          "dur": 0.3
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "nacimiento",
+      "fondo": "desa",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En la aldea de Blahbatuh, un marido y su esposa rezaron durante muchos años por un hijo.",
+          "en": "In the village of Blahbatuh, a husband and wife prayed for many years for a child."
+        },
+        {
+          "es": "Por fin nació un varón. Y tenía hambre. Mucha, mucha hambre.",
+          "en": "At last a son was born. And he was hungry. Very, very hungry."
+        },
+        {
+          "es": "Comía más de lo que toda su familia podía cultivar, y no paraba de crecer.",
+          "en": "He ate more than his whole family could grow, and he kept on growing."
+        },
+        {
+          "es": "Kebo significa búfalo de agua, un buen nombre para alguien tan grande y fuerte.",
+          "en": "Kebo means water buffalo, a good name for someone so big and strong."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "madre",
+          "como": "wanita_bali",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "reza"
+            },
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "padre",
+          "como": "pria_bali",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "reza"
+            },
+            {
+              "en": 2.5,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "kebo",
+          "como": "anak_bali",
+          "x": 1100,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "transforma",
+              "en_que": "kebo_iwa"
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "trato",
+      "fondo": "desa",
+      "camara": {
+        "de": 200,
+        "a": 320,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pronto sus padres ya no pudieron alimentarlo.",
+          "en": "Soon his parents could not feed him anymore."
+        },
+        {
+          "es": "Entonces la aldea hizo un trato con el joven gigante: ellos cocinarían para él, y él trabajaría para ellos.",
+          "en": "So the village made a deal with the young giant: they would cook for him, and he would work for them."
+        },
+        {
+          "es": "Cada día, las mujeres de la aldea cocinaban enormes ollas de arroz, solo para él.",
+          "en": "Every day, the women of the village cooked huge pots of rice, just for him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "gebogan",
+          "x": 1150,
+          "s": 1.4,
+          "en": 2
+        },
+        {
+          "tipo": "api",
+          "x": 1350,
+          "s": 0.6,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "kebo",
+          "como": "kebo_iwa",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "entristece"
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            },
+            {
+              "en": 2.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "jefe",
+          "como": "kakek_bali",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.6,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "wanita_bali",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "obras",
+      "fondo": "sawah",
+      "camara": {
+        "de": 0,
+        "a": 220,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "A cambio, Kebo Iwa cavaba pozos con sus propias manos y abría canales para regar los arrozales.",
+          "en": "In return, Kebo Iwa dug wells with his bare hands, and opened canals to water the rice fields."
+        },
+        {
+          "es": "Cargaba piedras que diez hombres no podían levantar, y ayudaba a construir templos.",
+          "en": "He carried stones that ten men could not lift, and he helped to build temples."
+        },
+        {
+          "es": "La leyenda local hasta dice que talló los relieves de roca de Yeh Pulu con las uñas.",
+          "en": "Local legend even says he carved the rock reliefs at Yeh Pulu with his fingernails."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sumur",
+          "x": 600,
+          "s": 0.7,
+          "en": 0.5
+        },
+        {
+          "tipo": "batu",
+          "x": 1250,
+          "s": 0.6,
+          "hasta": 1.2
+        },
+        {
+          "tipo": "meru",
+          "x": 1700,
+          "s": 0.6,
+          "en": 1.6,
+          "sube": 200
+        }
+      ],
+      "actores": [
+        {
+          "id": "kebo",
+          "como": "kebo_iwa",
+          "x": 400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.4
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.6,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 0.4
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "anak_bali",
+          "x": 900,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.8,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "polvo",
+          "x": 600,
+          "y": 780,
+          "dur": 0.5
+        },
+        {
+          "en": 1.6,
+          "tipo": "polvo",
+          "x": 1700,
+          "y": 780,
+          "dur": 0.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "patih",
+      "fondo": "puri",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La noticia llegó al rey de Bedahulu, y nombró a Kebo Iwa su primer ministro y general.",
+          "en": "Word reached the king of Bedahulu, and he made Kebo Iwa his chief minister and general."
+        },
+        {
+          "es": "Mientras Kebo Iwa estuviera junto al trono, ningún enemigo se animaba a atacar Bali.",
+          "en": "While Kebo Iwa stood beside the throne, no enemy dared to attack Bali."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "rey",
+          "como": "raja_bedahulu",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 0.8,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "kebo",
+          "como": "kebo_iwa",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "cabeza",
+      "fondo": "puri",
+      "camara": {
+        "de": 100,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero el rey de Bedahulu tenía un secreto.",
+          "en": "But the king of Bedahulu had a secret."
+        },
+        {
+          "es": "La leyenda dice que podía quitarse la cabeza por arte de magia, mientras meditaba.",
+          "en": "Legend says he could take off his own head by magic, while he meditated."
+        },
+        {
+          "es": "Un día algo salió mal, y su cabeza se perdió.",
+          "en": "One day, something went wrong, and his head was lost."
+        },
+        {
+          "es": "Desesperado, un sirviente la reemplazó con la primera cabeza que encontró: la de un cerdo.",
+          "en": "In a panic, a servant replaced it with the first head he could find: the head of a pig."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "rey",
+          "como": "raja_bedahulu",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "sienta"
+            },
+            {
+              "en": 1,
+              "hace": "reza"
+            },
+            {
+              "en": 1.6,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.2,
+              "hace": "transforma",
+              "en_que": "raja_bedahulu_babi"
+            },
+            {
+              "en": 3.6,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "sirviente",
+          "como": "pria_bali",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.6,
+              "hace": "corre",
+              "a": 1150,
+              "dur": 0.4
+            },
+            {
+              "en": 3.6,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 900,
+          "y": 450,
+          "dur": 0.6
+        },
+        {
+          "en": 3.2,
+          "tipo": "humo",
+          "x": 900,
+          "y": 450,
+          "dur": 0.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "torre",
+      "fondo": "puri",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Desde entonces, el rey se escondió en una torre alta, y nadie tenía permitido mirarlo.",
+          "en": "From then on, the king hid in a tall tower, and no one was allowed to look up at him."
+        },
+        {
+          "es": "Algunos dicen que de ahí viene el nombre Bedahulu: 'beda hulu', otra cabeza.",
+          "en": "Some say that is where the name Bedahulu comes from: 'beda hulu', a different head."
+        },
+        {
+          "es": "¿Habrías guardado el secreto del rey? Cuéntanos en los comentarios.",
+          "en": "Would you have kept the king's secret? Tell us in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "menara",
+          "x": 1250
+        }
+      ],
+      "actores": [
+        {
+          "id": "rey",
+          "como": "raja_bedahulu_babi",
+          "x": 1230,
+          "y": 414,
+          "escala": 0.6,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 600
+            }
+          ]
+        },
+        {
+          "id": "pueblo",
+          "como": "pria_bali",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.8,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "wanita_bali",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "arrodilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "BEDA HULU = OTRA CABEZA",
+            "en": "BEDA HULU = A DIFFERENT HEAD"
+          },
+          "x": 700,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "majapahit",
+      "fondo": "puri",
+      "camara": {
+        "de": 200,
+        "a": 320,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Del otro lado del mar, en Java, crecía el gran reino de Majapahit.",
+          "en": "Across the sea, in Java, the great kingdom of Majapahit was growing."
+        },
+        {
+          "es": "Su primer ministro, Gajah Mada, juró poner muchas islas bajo su dominio. Bali estaba en su lista.",
+          "en": "Its prime minister, Gajah Mada, swore an oath to bring many islands under its rule. Bali was on his list."
+        },
+        {
+          "es": "Ese juramento está registrado en una vieja crónica javanesa, el Pararaton.",
+          "en": "That oath is recorded in an old Javanese chronicle, the Pararaton."
+        },
+        {
+          "es": "Pero mientras Kebo Iwa viviera, Bali no podía ser conquistada.",
+          "en": "But as long as Kebo Iwa lived, Bali could not be taken."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "gajah",
+          "como": "gajah_mada",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "soldado",
+          "como": "prajurit_jawa",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            },
+            {
+              "en": 3.2,
+              "hace": "niega"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "invitacion",
+      "fondo": "pantai",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Majapahit mandó una invitación amistosa.",
+          "en": "So Majapahit sent a friendly invitation."
+        },
+        {
+          "es": "Ven a Java, le dijeron a Kebo Iwa. Te daremos una esposa noble.",
+          "en": "Come to Java, they told Kebo Iwa. We will give you a noble bride."
+        },
+        {
+          "es": "Kebo Iwa aceptó, y cruzó el mar.",
+          "en": "Kebo Iwa accepted, and crossed the sea."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "mensajero",
+          "como": "prajurit_jawa",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 800,
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.2,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "kebo",
+          "como": "kebo_iwa",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.8,
+              "hace": "asiente"
+            },
+            {
+              "en": 2.1,
+              "hace": "sale"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "pozo",
+      "fondo": "desa",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En Java, le pidieron un favor antes de la boda: cavar un pozo.",
+          "en": "In Java, they asked him for one favor before the wedding: to dig a well."
+        },
+        {
+          "es": "Kebo Iwa cavó cada vez más hondo, hasta que solo se oía su voz.",
+          "en": "Kebo Iwa dug deeper and deeper, until only his voice could be heard."
+        },
+        {
+          "es": "Entonces los soldados empezaron a tirar piedras dentro del pozo.",
+          "en": "Then the soldiers began to throw stones down the well."
+        },
+        {
+          "es": "En algunos relatos, él las atrapaba y las devolvía. Al final, echaron cal, y lo enterraron.",
+          "en": "In some tellings, he caught them and threw them back. In the end, they poured in lime, and buried him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sumur",
+          "x": 960,
+          "s": 1.1,
+          "props": {
+            "hondo": true
+          }
+        },
+        {
+          "tipo": "batu",
+          "x": 1300,
+          "s": 0.4,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "kebo",
+          "como": "kebo_iwa",
+          "x": 960,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "encoge",
+              "escala": 0.5,
+              "dur": 0.8
+            },
+            {
+              "en": 1.6,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "s1",
+          "como": "prajurit_jawa",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "lanza"
+            },
+            {
+              "en": 2.5,
+              "hace": "lanza"
+            },
+            {
+              "en": 3.2,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "s2",
+          "como": "prajurit_jawa",
+          "x": 400,
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "lanza"
+            },
+            {
+              "en": 3,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "gajah",
+          "como": "gajah_mada",
+          "x": 200,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 960,
+          "y": 780,
+          "dur": 0.8
+        },
+        {
+          "en": 3.3,
+          "tipo": "polvo",
+          "x": 960,
+          "y": 760,
+          "dur": 0.8,
+          "intensidad": 1.4
+        },
+        {
+          "en": 3.4,
+          "tipo": "temblor",
+          "dur": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "eleccion",
+      "fondo": "pura_malam",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Algunos dicen que Kebo Iwa sabía de la trampa desde el principio.",
+          "en": "Some say Kebo Iwa knew about the trap all along."
+        },
+        {
+          "es": "En su versión, les dijo a sus enemigos cómo podían vencerlo, y lo dejó pasar, para ahorrarle a Bali una larga guerra.",
+          "en": "In their telling, he told his enemies how he could be defeated, and let it happen, to spare Bali a long war."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "kebo",
+          "como": "kebo_iwa",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.6,
+              "hace": "reza"
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.8,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 2
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "caida",
+      "fondo": "puri",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sin su gigante, Bedahulu quedó indefensa.",
+          "en": "Without its giant, Bedahulu was open."
+        },
+        {
+          "es": "Una leyenda dice que Gajah Mada fue al palacio y le pidió al rey un trago de agua.",
+          "en": "One legend says Gajah Mada came to the palace and asked the king for a drink of water."
+        },
+        {
+          "es": "Echó la cabeza hacia atrás para beber, y miró de frente la cara del rey. El secreto quedó al descubierto.",
+          "en": "He tipped his head back to drink, and looked straight up at the king's face. The secret was out."
+        },
+        {
+          "es": "En 1343, los ejércitos de Majapahit tomaron Bali, y empezó una nueva época en la isla.",
+          "en": "In 1343, the armies of Majapahit took Bali, and a new age began on the island."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "menara",
+          "x": 1300
+        }
+      ],
+      "actores": [
+        {
+          "id": "rey",
+          "como": "raja_bedahulu_babi",
+          "x": 1280,
+          "y": 414,
+          "escala": 0.6,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.6,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "gajah",
+          "como": "gajah_mada",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 900,
+              "dur": 0.6
+            },
+            {
+              "en": 1.7,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "soldado",
+          "como": "prajurit_jawa",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 500,
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "polvo",
+          "x": 600,
+          "y": 780,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "desa",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En Blahbatuh, un templo guarda una cabeza gigante de piedra. La gente del lugar dice que es Kebo Iwa.",
+          "en": "In Blahbatuh, a temple keeps a giant stone head. Local people say it is Kebo Iwa."
+        },
+        {
+          "es": "¿A Kebo Iwa lo traicionaron, o eligió su propio final? Cuéntanos qué piensas.",
+          "en": "Was Kebo Iwa betrayed, or did he choose his own end? Tell us what you think."
+        },
+        {
+          "es": "La próxima vez: un sacerdote que cruzó el mar en una calabaza, y un templo cuidado por serpientes de mar.",
+          "en": "Next time: a priest who crossed the sea in a gourd, and a temple guarded by sea snakes."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "batu",
+          "x": 1000,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "nino",
+          "como": "anak_bali",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "nirartha",
+          "como": "nirartha",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El rey con cabeza de cerdo",
+        "en": "The king with the head of a pig"
+      },
+      "escena": "cabeza",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Enterraron a un gigante en un pozo",
+        "en": "They buried a giant in a well"
+      },
+      "escena": "pozo",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "El gigante que comía como un ejército",
+        "en": "The giant who ate like a whole army"
+      },
+      "escena": "nacimiento",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 900
+    }
+  ]
+}

@@ -5,6 +5,9 @@ import { AbsoluteFill, Img, staticFile, useCurrentFrame, interpolate, Easing } f
 import { loadFont as cargarGaramond } from '@remotion/google-fonts/EBGaramond';
 import { loadFont as cargarCinzel } from '@remotion/google-fonts/Cinzel';
 import { GuardasCodice, SueloCodice } from './codice';
+import { GuardasPahari, SueloPahari } from './pahari';
+import { GuardasKamasan, SueloKamasan } from './kamasan';
+import { GuardasMaori, SueloMaori } from './kowhaiwhai';
 
 export const { fontFamily: TEXTO } = cargarGaramond('normal', { weights: ['500'], subsets: ['latin'] });
 export const { fontFamily: TITULO } = cargarCinzel('normal', { weights: ['400', '700'], subsets: ['latin'] });
@@ -20,7 +23,7 @@ export const C = {
 // ---------- temas por mitología ----------
 // Cada mitología tiene la "piel" de su arte: griega = vasija de figuras negras; nórdica = piedra rúnica
 // helada (azules, nieve y rojo de runa). El motor es el mismo; cambian paleta, cielos, guardas y suelo.
-export type NombreTema = 'vasija' | 'runas' | 'papiro' | 'kapa' | 'pintado' | 'codice';
+export type NombreTema = 'pahari' | 'vasija' | 'runas' | 'papiro' | 'kapa' | 'pintado' | 'codice' | 'kowhaiwhai' | 'kamasan';
 type Cielos = Record<'barro' | 'noche' | 'mar' | 'inframundo', [string, string, string]>;
 const TEMAS: Record<NombreTema, { C: typeof C; cielos: Cielos; musica: string; ropa?: string; pielH?: string; pielM?: string }> = {
   vasija: {
@@ -62,11 +65,35 @@ const TEMAS: Record<NombreTema, { C: typeof C; cielos: Cielos; musica: string; r
     musica: 'musica/azteca.wav',
     ropa: '#F3E6C4', pielH: '#A8603A', pielM: '#C98E4E',
   },
+  // Hindú: pintura en miniatura rajput y pahari — marfil, ocre, rojo indio, azafrán, lapislázuli, malaquita y oro;
+  // cielos en franja con nubes rizadas. Guardas y suelo en ./pahari.tsx.
+  pahari: {
+    C: { barro: '#E9C77A', barroClaro: '#F7E7BC', barroOscuro: '#8A3B1E', negro: '#1E1410', crema: '#F6ECD2', purpura: '#B3261E', blanco: '#FFF9EC', oro: '#D9A62E', noche: '#16205A', mar: '#2F6FA0' },
+    cielos: { barro: ['#FBF0CF', '#F2D58C', '#D9A24A'], noche: ['#2B3A7A', '#16205A', '#080C2A'], mar: ['#EEF4F0', '#BFD9DC', '#6FA3B0'], inframundo: ['#4A1E3A', '#26102A', '#0E0610'] },
+    musica: 'musica/hindu.wav',
+    ropa: '#F4EEE0', pielH: '#C8875A', pielM: '#E0A878',
+  },
+  // Maorí: kōwhaiwhai (vigas pintadas) y talla — rojo kōkōwai, negro, blanco y ocre, con acentos de pāua y pounamu.
+  // Guardas y suelo en ./kowhaiwhai.tsx.
+  kowhaiwhai: {
+    C: { barro: '#E6CDA0', barroClaro: '#F5E7C8', barroOscuro: '#6E1610', negro: '#15100E', crema: '#F3E7CF', purpura: '#A8251B', blanco: '#FAF5EA', oro: '#D9A441', noche: '#0C1424', mar: '#1E6E78' },
+    cielos: { barro: ['#FBEFD6', '#EFD3A0', '#C98E4E'], noche: ['#22385E', '#101C36', '#050A16'], mar: ['#E4F2EC', '#9ED0C8', '#2E8A8C'], inframundo: ['#3A1A1C', '#1C0C0E', '#080404'] },
+    musica: 'musica/maori.wav',
+    ropa: '#B89A5C', pielH: '#8A5434', pielM: '#A36A42',
+  },
+  // Balinesa: pintura wayang de Kamasan — tela crema, rojo, ocre, índigo, hollín y blanco de hueso; nubes en
+  // voluta, llamas y tela poleng. Guardas y suelo en ./kamasan.tsx.
+  kamasan: {
+    C: { barro: '#E2CC9C', barroClaro: '#F3E7C8', barroOscuro: '#8A5A2E', negro: '#1E1612', crema: '#EFE0BE', purpura: '#B23A26', blanco: '#F8F1DF', oro: '#D9A63A', noche: '#141C36', mar: '#3E5C8A' },
+    cielos: { barro: ['#F6EBCF', '#EBD6A6', '#C9A16A'], noche: ['#3A4A78', '#1E2A4E', '#0B1024'], mar: ['#F1EEDD', '#C7D3DE', '#7F95BC'], inframundo: ['#5A2A22', '#2E1410', '#120806'] },
+    musica: 'musica/balinesa.wav',
+    ropa: '#EFE0BE', pielH: '#C8955E', pielM: '#E2BB86',
+  },
 };
 export const TEMA = { nombre: 'vasija' as NombreTema, cielos: TEMAS.vasija.cielos, musica: TEMAS.vasija.musica, ropa: undefined as string | undefined, pielH: undefined as string | undefined, pielM: undefined as string | undefined };
-export const temaDeSerie = (serie?: string): NombreTema => (serie === 'nordicas' ? 'runas' : serie === 'egipcias' ? 'papiro' : serie === 'hawaianas' ? 'kapa' : serie === 'norteamericanas' ? 'pintado' : serie === 'aztecas' ? 'codice' : 'vasija');
+export const temaDeSerie = (serie?: string): NombreTema => (serie === 'nordicas' ? 'runas' : serie === 'egipcias' ? 'papiro' : serie === 'hawaianas' ? 'kapa' : serie === 'norteamericanas' ? 'pintado' : serie === 'aztecas' ? 'codice' : serie === 'hindues' ? 'pahari' : serie === 'maories' ? 'kowhaiwhai' : serie === 'balinesas' ? 'kamasan' : 'vasija');
 /** Nombre de la serie en pantalla (inglés) y en español, por tema. */
-export const NOMBRE_SERIE: Record<NombreTema, { en: string; es: string }> = { vasija: { en: 'Greek Mythology', es: 'Mitología griega' }, runas: { en: 'Norse Mythology', es: 'Mitología nórdica' }, papiro: { en: 'Egyptian Mythology', es: 'Mitología egipcia' }, kapa: { en: 'Hawaiian Mythology', es: 'Mitología hawaiana' }, pintado: { en: 'Native American Mythology', es: 'Mitología Norteamericana' }, codice: { en: 'Aztec Mythology', es: 'Mitología Azteca' } };
+export const NOMBRE_SERIE: Record<NombreTema, { en: string; es: string }> = { vasija: { en: 'Greek Mythology', es: 'Mitología griega' }, runas: { en: 'Norse Mythology', es: 'Mitología nórdica' }, papiro: { en: 'Egyptian Mythology', es: 'Mitología egipcia' }, kapa: { en: 'Hawaiian Mythology', es: 'Mitología hawaiana' }, pintado: { en: 'Native American Mythology', es: 'Mitología Norteamericana' }, codice: { en: 'Aztec Mythology', es: 'Mitología Azteca' }, pahari: { en: 'Hindu Mythology', es: 'Mitología Hindú' }, kamasan: { en: 'Balinese Mythology', es: 'Mitología Balinesa' },kowhaiwhai: { en: 'Māori Mythology', es: 'Mitología maorí' } };
 /** Cambia la paleta y la piel antes de dibujar (cada render corre en su propia pestaña). */
 export function aplicarTema(serie?: string) {
   const n = temaDeSerie(serie);
@@ -239,7 +266,7 @@ export const FrisoPalmetas: React.FC<{ y: number; desplaz: number }> = ({ y, des
 );
 
 /** Guardas fijas del marco: lengüetas + meandro arriba, palmetas abajo y franja negra de subtítulos. */
-export const Guardas: React.FC<{ desplaz: number }> = ({ desplaz }) => TEMA.nombre === 'codice' ? <GuardasCodice desplaz={desplaz} /> : TEMA.nombre === 'runas' ? <GuardasRunas desplaz={desplaz} /> : TEMA.nombre === 'papiro' ? <GuardasPapiro desplaz={desplaz} /> : TEMA.nombre === 'kapa' ? <GuardasKapa desplaz={desplaz} /> : TEMA.nombre === 'pintado' ? <GuardasPintado desplaz={desplaz} /> : (
+export const Guardas: React.FC<{ desplaz: number }> = ({ desplaz }) => TEMA.nombre === 'kamasan' ? <GuardasKamasan desplaz={desplaz} /> : TEMA.nombre ==='kowhaiwhai' ? <GuardasMaori desplaz={desplaz} /> : TEMA.nombre === 'pahari' ? <GuardasPahari desplaz={desplaz} /> : TEMA.nombre === 'codice' ? <GuardasCodice desplaz={desplaz} /> : TEMA.nombre === 'runas' ? <GuardasRunas desplaz={desplaz} /> : TEMA.nombre === 'papiro' ? <GuardasPapiro desplaz={desplaz} /> : TEMA.nombre === 'kapa' ? <GuardasKapa desplaz={desplaz} /> : TEMA.nombre === 'pintado' ? <GuardasPintado desplaz={desplaz} /> : (
   <>
     <rect x={0} y={0} width={1920} height={ARRIBA} fill={C.barro} />
     <Lenguetas y={0} desplaz={desplaz} />
@@ -1001,7 +1028,7 @@ export const Relampago: React.FC<{ a: P; b: P; f: number; desde: number; dur?: n
 };
 
 /** Suelo de la escena: franja negra con puntitos y piedras (en el tema nórdico, con nieve encima). */
-export const Suelo: React.FC<{ desde?: number; hasta?: number; color?: string }> = ({ desde: x0 = -400, hasta = 5000, color = C.negro }) => TEMA.nombre === 'codice' ? <SueloCodice desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'pintado' ? (
+export const Suelo: React.FC<{ desde?: number; hasta?: number; color?: string }> = ({ desde: x0 = -400, hasta = 5000, color = C.negro }) => TEMA.nombre === 'kamasan' ? <SueloKamasan desde={x0} hasta={hasta} color={color} /> : TEMA.nombre ==='kowhaiwhai' ? <SueloMaori desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'pahari' ? <SueloPahari desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'codice' ? <SueloCodice desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'pintado' ? (
   <g>
     <rect x={x0} y={SUELO} width={hasta - x0} height={200} fill="#8A5A34" />
     <rect x={x0} y={SUELO} width={hasta - x0} height={6} fill={C.negro} />

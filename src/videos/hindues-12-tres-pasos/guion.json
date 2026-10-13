@@ -1,0 +1,1784 @@
+{
+  "id": "hindues-12-tres-pasos",
+  "serie": "hindues",
+  "numero": "12",
+  "titulo": {
+    "es": "Tres pasos",
+    "en": "Three Steps"
+  },
+  "tituloGriego": "THREE STEPS",
+  "miniatura": {
+    "heroe": "vamana",
+    "rival": "bali"
+  },
+  "siguiente": {
+    "es": "El nacimiento de Rama",
+    "en": "The Birth of Rama"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "palacio_pahari",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Narasimha salió de una columna, y el niño Prahlada se convirtió en rey.",
+          "en": "Last time, Narasimha burst out of a pillar, and the boy Prahlada became king."
+        },
+        {
+          "es": "Muchos años después, su nieto Bali era el rey de los asuras, los rivales de los dioses.",
+          "en": "Many years later, his grandson Bali was king of the asuras, the rivals of the gods."
+        },
+        {
+          "es": "Bali era fuerte, pero era famoso por su generosidad: nadie que le pedía algo se iba con las manos vacías.",
+          "en": "Bali was strong, but famous for his generosity: no one who asked him for something left empty-handed."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono_indio",
+          "x": 900
+        }
+      ],
+      "actores": [
+        {
+          "id": "prahlada",
+          "como": "prahlada",
+          "x": 550,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.8,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "bali",
+          "como": "bali",
+          "x": 900,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "sienta"
+            },
+            {
+              "en": 2.5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "asura",
+          "como": "asura",
+          "x": 1500,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "aldeano",
+          "como": "aldeano",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1250
+            },
+            {
+              "en": 2.4,
+              "hace": "reza"
+            },
+            {
+              "en": 2.7,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 900,
+          "y": 450,
+          "dur": 0.8
+        },
+        {
+          "en": 2.6,
+          "tipo": "chispas",
+          "x": 1080,
+          "y": 560,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "conquista",
+      "fondo": "svarga",
+      "camara": {
+        "de": 0,
+        "a": 240,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Su maestro era Shukra, un sabio poderoso. Con su ayuda, Bali se volvió más fuerte que nunca.",
+          "en": "His teacher was Shukra, a powerful sage. With his help, Bali grew stronger than ever."
+        },
+        {
+          "es": "Atacó el cielo, y ni Indra ni los dioses pudieron detenerlo.",
+          "en": "He attacked heaven, and neither Indra nor the gods could stop him."
+        },
+        {
+          "es": "Bali se convirtió en rey de los tres mundos: la tierra, el cielo y el mundo de abajo.",
+          "en": "Bali became king of the three worlds: the earth, the heavens, and the world below."
+        },
+        {
+          "es": "Los dioses tuvieron que dejar su hogar y esconderse.",
+          "en": "The gods had to leave their home and hide."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "shukra",
+          "como": "shukra",
+          "x": 380,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "bali",
+          "como": "bali",
+          "x": 700,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.6
+            },
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 1450,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "corre",
+              "a": 2800,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "deva",
+          "como": "deva",
+          "x": 1750,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 3.1,
+              "hace": "corre",
+              "a": 3000,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "asura",
+          "como": "asura_rojo",
+          "x": 250,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "rayo",
+          "x": 1300
+        },
+        {
+          "en": 1.3,
+          "tipo": "temblor",
+          "dur": 0.3
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 960,
+          "y": 320,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.1,
+          "texto": {
+            "es": "LOS TRES MUNDOS",
+            "en": "THE THREE WORLDS"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "aditi",
+      "fondo": "ashram",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Aditi, la madre de los dioses, sufría al ver a sus hijos sin hogar.",
+          "en": "Aditi, the mother of the gods, was heartbroken to see her sons without a home."
+        },
+        {
+          "es": "Su esposo, el sabio Kashyapa, le enseñó un voto especial de oración y ayuno.",
+          "en": "Her husband, the sage Kashyapa, taught her a special vow of prayer and fasting."
+        },
+        {
+          "es": "El Bhagavata Purana cuenta que rezó a Vishnu durante doce días, y Vishnu se le apareció.",
+          "en": "The Bhagavata Purana says she prayed to Vishnu for twelve days, and Vishnu appeared before her."
+        },
+        {
+          "es": "\"Naceré como tu hijo\", le prometió.",
+          "en": "\"I will be born as your son,\" he promised."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "aditi",
+          "como": "apsara",
+          "x": 750,
+          "escala": 0.85,
+          "rotulo": "ADITI",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.6,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.7,
+              "hace": "reza"
+            },
+            {
+              "en": 3.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "kashyapa",
+          "como": "sabio",
+          "x": 400,
+          "rotulo": "KASHYAPA",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1300,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.2,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.3,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 450,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "vamana",
+      "fondo": "ashram",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así nació Vishnu: como un niño brahmán muy pequeño, un joven estudiante de los textos sagrados.",
+          "en": "So Vishnu was born as a very small brahmin boy, a young student of the sacred texts."
+        },
+        {
+          "es": "Su nombre era Vamana, que quiere decir \"el enano\".",
+          "en": "His name was Vamana, which means \"the dwarf\"."
+        },
+        {
+          "es": "Llevaba una sombrilla pequeña y una vasija de agua.",
+          "en": "He carried a little umbrella and a water pot."
+        },
+        {
+          "es": "Y caminó hacia el gran sacrificio que celebraba el rey Bali.",
+          "en": "And he walked to the great sacrifice that King Bali was holding."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lluvia_oro",
+          "x": 960,
+          "en": 0,
+          "hasta": 1.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "vamana",
+          "como": "vamana",
+          "x": 950,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 2100,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "aditi",
+          "como": "apsara",
+          "x": 650,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.3,
+              "hace": "abraza"
+            },
+            {
+              "en": 3.2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "kashyapa",
+          "como": "sabio",
+          "x": 350,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "deva",
+          "como": "deva",
+          "x": 1600,
+          "capa": "fondo",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 950,
+          "y": 600,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "pedido",
+      "fondo": "orilla_rio",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Bali celebraba un gran sacrificio a orillas del río Narmada.",
+          "en": "Bali was holding a great sacrifice on the banks of the Narmada River."
+        },
+        {
+          "es": "Cuando llegó el niño, todos se pusieron de pie, asombrados por su brillo.",
+          "en": "When the little boy arrived, everyone stood up, amazed by how he shone."
+        },
+        {
+          "es": "Bali lo recibió con honores. \"Pide lo que quieras\", dijo. \"Oro, vacas, aldeas…\"",
+          "en": "Bali welcomed him with honor. \"Ask for anything,\" he said. \"Gold, cows, villages...\""
+        },
+        {
+          "es": "Vamana sonrió. \"Solo quiero tres pasos de tierra, medidos con mis propios pies\".",
+          "en": "Vamana smiled. \"I only want three steps of land, measured with my own feet.\""
+        },
+        {
+          "es": "\"¿Solo tres pasos?\", se rió Bali. \"¡Pide más!\" Pero el niño no quería nada más.",
+          "en": "\"Only three steps?\" Bali laughed. \"Ask for more!\" But the boy wanted nothing more."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yajna",
+          "x": 820,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "bali",
+          "como": "bali",
+          "x": 1150,
+          "mira": "izq",
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "reza"
+            },
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 2.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "shukra",
+          "como": "shukra",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.3,
+              "hace": "mira",
+              "a": 500
+            }
+          ]
+        },
+        {
+          "id": "brahman",
+          "como": "brahman",
+          "x": 1800,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "vamana",
+          "como": "vamana",
+          "x": 550,
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "entra",
+              "a": 550
+            },
+            {
+              "en": 1.5,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.3,
+              "hace": "niega"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "luz",
+          "x": 550,
+          "y": 550,
+          "dur": 0.7
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.3,
+          "texto": {
+            "es": "TRES PASOS",
+            "en": "THREE STEPS"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 4.5
+        }
+      ]
+    },
+    {
+      "id": "shukra",
+      "fondo": "orilla_rio",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Shukra, el maestro de Bali, vio quién era de verdad el niño.",
+          "en": "But Shukra, Bali's teacher, saw who the boy really was."
+        },
+        {
+          "es": "\"¡Es Vishnu!\", le advirtió. \"Con dos pasos te va a quitar todo lo que tienes\".",
+          "en": "\"That is Vishnu!\" he warned. \"With two steps, he will take everything you have.\""
+        },
+        {
+          "es": "Bali lo pensó un momento. \"Ya di mi palabra\", dijo. \"No la voy a romper\".",
+          "en": "Bali thought for a moment. \"I have given my word,\" he said. \"I will not break it.\""
+        },
+        {
+          "es": "Shukra se enojó tanto que lo maldijo. Pero Bali no cambió de idea.",
+          "en": "Shukra was so angry that he cursed him. But Bali did not change his mind."
+        },
+        {
+          "es": "Y vertió agua en la mano del niño, para sellar el regalo.",
+          "en": "Then he poured water into the boy's hand, to seal the gift."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yajna",
+          "x": 700,
+          "s": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "shukra",
+          "como": "shukra",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "bali",
+          "como": "bali",
+          "x": 950,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.8,
+              "hace": "mira",
+              "a": 500
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 2.3,
+              "hace": "niega"
+            },
+            {
+              "en": 4,
+              "hace": "mira",
+              "a": 500
+            },
+            {
+              "en": 4.2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "vamana",
+          "como": "vamana",
+          "x": 480,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.3,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.1,
+          "tipo": "rayo",
+          "x": 1200
+        },
+        {
+          "en": 4.4,
+          "tipo": "chispas",
+          "x": 650,
+          "y": 600,
+          "dur": 0.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "pasos",
+      "fondo": "campo_pahari",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1
+        ]
+      },
+      "frases": [
+        {
+          "es": "En ese momento, el niño empezó a crecer.",
+          "en": "At that moment, the little boy began to grow."
+        },
+        {
+          "es": "Creció más que los árboles, más que las montañas, hasta llenar el cielo.",
+          "en": "He grew taller than the trees, taller than the mountains, until he filled the sky."
+        },
+        {
+          "es": "Ahora era Trivikrama, \"el de los tres pasos\". Con el primero, cubrió toda la tierra.",
+          "en": "Now he was Trivikrama, \"the one of three steps\". With his first step, he covered the whole earth."
+        },
+        {
+          "es": "Con el segundo, cruzó los cielos, hasta lo más alto del universo.",
+          "en": "With his second step, he crossed the heavens, up to the very top of the universe."
+        },
+        {
+          "es": "Ya no quedaba lugar para el tercer paso.",
+          "en": "Now there was nowhere left for the third step."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "arbol_pahari",
+          "x": 1700,
+          "s": 0.9
+        },
+        {
+          "tipo": "kailash_pico",
+          "x": 1600,
+          "s": 0.5,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "vamana",
+          "como": "vamana",
+          "x": 1150,
+          "rotulo": "TRIVIKRAMA",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 0.4,
+              "hace": "transforma",
+              "en_que": "vishnu"
+            },
+            {
+              "en": 0.6,
+              "hace": "crece",
+              "escala": 1.3,
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "crece",
+              "escala": 1.9,
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "camina",
+              "a": 1300,
+              "dur": 0.5
+            },
+            {
+              "en": 3,
+              "hace": "crece",
+              "escala": 2.4,
+              "dur": 0.6
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "bali",
+          "como": "bali",
+          "x": 450,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.5,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 4,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "shukra",
+          "como": "shukra",
+          "x": 200,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.2,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 600,
+          "dur": 0.6
+        },
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 2.3,
+          "tipo": "temblor",
+          "dur": 0.3
+        },
+        {
+          "en": 2.3,
+          "tipo": "polvo",
+          "x": 1300,
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "estrellas",
+          "dur": 1.5
+        },
+        {
+          "en": 3.2,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.4,
+          "texto": {
+            "es": "PRIMER PASO: LA TIERRA",
+            "en": "FIRST STEP: THE EARTH"
+          },
+          "x": 560,
+          "y": 220,
+          "hasta": 3
+        },
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "SEGUNDO PASO: EL CIELO",
+            "en": "SECOND STEP: THE HEAVENS"
+          },
+          "x": 560,
+          "y": 220,
+          "hasta": 4
+        },
+        {
+          "en": 4.1,
+          "texto": {
+            "es": "¿Y EL TERCERO?",
+            "en": "AND THE THIRD?"
+          },
+          "x": 560,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "cabeza",
+      "fondo": "campo_pahari",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "\"¿Dónde pongo mi tercer paso?\", preguntó Vishnu.",
+          "en": "\"Where shall I put my third step?\" asked Vishnu."
+        },
+        {
+          "es": "Bali se inclinó. \"Ponlo sobre mi cabeza\", dijo. \"Así cumpliré mi promesa\".",
+          "en": "Bali bowed low. \"Put it on my head,\" he said. \"Then I will have kept my promise.\""
+        },
+        {
+          "es": "Y Vishnu puso su pie sobre la cabeza de Bali.",
+          "en": "And Vishnu placed his foot on Bali's head."
+        },
+        {
+          "es": "Bali lo había perdido todo, pero había cumplido su palabra.",
+          "en": "Bali had lost everything, but he had kept his word."
+        },
+        {
+          "es": "¿Tú habrías cumplido tu promesa, como Bali, o habrías escuchado a Shukra?",
+          "en": "Would you have kept your promise like Bali, or listened to Shukra?"
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1250,
+          "mira": "izq",
+          "escala": 1.3,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "bali",
+          "como": "bali",
+          "x": 600,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.2,
+              "hace": "reza"
+            },
+            {
+              "en": 2.1,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "shukra",
+          "como": "shukra",
+          "x": 280,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 600,
+          "y": 600,
+          "dur": 0.8
+        },
+        {
+          "en": 2.1,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "sutala",
+      "fondo": "patala",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Vishnu no castigó a Bali. Lo había conmovido su honestidad.",
+          "en": "But Vishnu did not punish Bali. He was moved by his honesty."
+        },
+        {
+          "es": "Lo envió a gobernar Sutala, un mundo hermoso bajo la tierra, más rico que el mismo cielo.",
+          "en": "He sent him to rule Sutala, a beautiful world under the earth, richer than heaven itself."
+        },
+        {
+          "es": "Y le prometió protegerlo, y estar siempre cerca de su puerta, con la maza en la mano.",
+          "en": "And he promised to protect him, and to stay near his door forever, mace in hand."
+        },
+        {
+          "es": "Arriba, los dioses recuperaron su cielo, e Indra volvió a ser su rey.",
+          "en": "Up above, the gods got their heaven back, and Indra was king again."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono_indio",
+          "x": 1000
+        }
+      ],
+      "actores": [
+        {
+          "id": "bali",
+          "como": "bali",
+          "x": 1000,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "sienta"
+            },
+            {
+              "en": 2.5,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1450,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "asura",
+          "como": "asura",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "asura2",
+          "como": "asura_violeta",
+          "x": 380,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 1950,
+          "capa": "fondo",
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 500,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "SUTALA",
+            "en": "SUTALA"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "onam",
+      "fondo": "campo_pahari",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En Kerala, en el sur de la India, esta historia se vive de una forma especial.",
+          "en": "In Kerala, in the south of India, this story is lived in a special way."
+        },
+        {
+          "es": "No está en el Purana, es una tradición de Kerala: una vez al año, Bali vuelve a visitar a su gente.",
+          "en": "It is not in the Purana, but a Kerala tradition: once a year, Bali comes back to visit his people."
+        },
+        {
+          "es": "Esa fiesta se llama Onam. Las familias hacen alfombras de flores y grandes banquetes para recibirlo.",
+          "en": "That festival is called Onam. Families make carpets of flowers and big feasts to welcome him."
+        },
+        {
+          "es": "Sus canciones dicen que, en tiempos de Bali, todos eran iguales y felices.",
+          "en": "Their songs say that in Bali's time, everyone was equal and happy."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "loto",
+          "x": 820,
+          "s": 0.6,
+          "en": 2
+        },
+        {
+          "tipo": "loto",
+          "x": 1020,
+          "s": 0.7,
+          "en": 2.2
+        },
+        {
+          "tipo": "loto",
+          "x": 1220,
+          "s": 0.6,
+          "en": 2.4
+        },
+        {
+          "tipo": "lluvia_oro",
+          "x": 960,
+          "en": 2,
+          "hasta": 3.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "aldeana",
+          "como": "aldeana",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "aldeano",
+          "como": "aldeano",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "nino_aldea",
+          "x": 920,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "salta"
+            },
+            {
+              "en": 3.3,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "bali",
+          "como": "bali",
+          "x": 1750,
+          "mira": "izq",
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1750,
+          "y": 450,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "KERALA",
+            "en": "KERALA"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 1
+        },
+        {
+          "en": 2.1,
+          "texto": {
+            "es": "ONAM",
+            "en": "ONAM"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "avatares",
+      "fondo": "cielo_cosmico",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La idea de los tres pasos es muy antigua. El Rig Veda ya alababa las tres grandes zancadas de Vishnu.",
+          "en": "The idea of the three steps is very old. The Rig Veda already praised Vishnu's three wide strides."
+        },
+        {
+          "es": "Y aquí termina nuestra primera temporada.",
+          "en": "And here our first season comes to an end."
+        },
+        {
+          "es": "Vimos a Vishnu como pez, tortuga, jabalí, hombre león y enano.",
+          "en": "We have seen Vishnu as a fish, a tortoise, a boar, a man-lion and a dwarf."
+        },
+        {
+          "es": "Muchos textos cuentan diez avatares principales. El séptimo es un príncipe: Rama.",
+          "en": "Many texts count ten main avatars. The seventh is a prince named Rama."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "vamana",
+          "como": "vamana",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.4,
+              "hace": "camina",
+              "a": 1650,
+              "dur": 0.6
+            },
+            {
+              "en": 2.4,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "matsya",
+          "como": "matsya",
+          "x": 300,
+          "y": 520,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "kurma",
+          "como": "kurma",
+          "x": 620,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "varaha",
+          "como": "varaha",
+          "x": 950,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "narasimha",
+          "como": "narasimha",
+          "x": 1250,
+          "escala": 0.7,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 500,
+          "dur": 0.6
+        },
+        {
+          "en": 1,
+          "tipo": "estrellas",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 400,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "RIG VEDA 1.154",
+            "en": "RIG VEDA 1.154"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "FIN DE LA TEMPORADA 1",
+            "en": "END OF SEASON 1"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 2
+        },
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "RAMA",
+            "en": "RAMA"
+          },
+          "x": 960,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "palacio_pahari",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "¿Qué avatar de Vishnu te gustó más hasta ahora?",
+          "en": "Which avatar of Vishnu has been your favorite so far?"
+        },
+        {
+          "es": "La segunda temporada es el Ramayana: la historia de Rama, el séptimo avatar de Vishnu.",
+          "en": "Season two is the Ramayana: the story of Rama, the seventh avatar of Vishnu."
+        },
+        {
+          "es": "El Ramayana es un gran poema épico, contado por el sabio Valmiki.",
+          "en": "The Ramayana is a great epic poem, told by the sage Valmiki."
+        },
+        {
+          "es": "La próxima vez: un rey sin hijos, un gran sacrificio y cuatro príncipes. Es El nacimiento de Rama.",
+          "en": "Next time: a king with no sons, a great sacrifice, and four princes. It is The Birth of Rama."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yajna",
+          "x": 960,
+          "en": 3,
+          "s": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1350,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.4,
+              "hace": "brilla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "valmiki",
+          "como": "sabio",
+          "x": 400,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.3,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "como": "raja",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 700
+            },
+            {
+              "en": 3.4,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1350,
+          "y": 450,
+          "dur": 0.6
+        },
+        {
+          "en": 3.2,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 650,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "TEMPORADA 2: EL RAMAYANA",
+            "en": "SEASON 2: THE RAMAYANA"
+          },
+          "x": 960,
+          "y": 220
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Solo pidió tres pasos de tierra",
+        "en": "He only asked for three steps of land"
+      },
+      "escena": "pedido",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 850
+    },
+    {
+      "gancho": {
+        "es": "Tres pasos para todo el universo",
+        "en": "Three steps for the whole universe"
+      },
+      "escena": "pasos",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "El rey que cumplió su palabra",
+        "en": "The king who kept his word"
+      },
+      "escena": "cabeza",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    }
+  ]
+}

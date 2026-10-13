@@ -34,7 +34,7 @@ if (nativo) {
   // Short nativo (historia propia, vertical): link al episodio relacionado y cierre del guion.
   archivo = join(out, `${id}.mp4`);
   const ep = g.episodio, gEp = ep && existsSync(join('src/videos', ep, 'guion.json')) ? JSON.parse(readFileSync(join('src/videos', ep, 'guion.json'), 'utf8')) : null;
-  const S = { nordicas: ['Norse', '#NorseMythology #Vikings'], egipcias: ['Egyptian', '#EgyptianMythology #AncientEgypt'], hawaianas: ['Hawaiian', '#HawaiianMythology #Polynesian'], norteamericanas: ['Native American', '#NativeAmericanMythology'], aztecas: ['Aztec', '#AztecMythology #Mexica'], griegas: ['Greek', '#GreekMythology #GreekGods'] }[g.serie ?? 'griegas'];
+  const S = { nordicas: ['Norse', '#NorseMythology #Vikings'], egipcias: ['Egyptian', '#EgyptianMythology #AncientEgypt'], hawaianas: ['Hawaiian', '#HawaiianMythology #Polynesian'], norteamericanas: ['Native American', '#NativeAmericanMythology'], aztecas: ['Aztec', '#AztecMythology #Mexica'], balinesas: ['Balinese', '#BalineseMythology #Bali'], hindues: ['Hindu', '#HinduMythology #IndianMythology'], maories: ['Māori', '#MaoriMythology #Aotearoa'], griegas: ['Greek', '#GreekMythology #GreekGods'] }[g.serie ?? 'griegas'];
   add('title', `${g.gancho.en} #Shorts`);
   const full = gEp && ids[ep] ? `\n\nThe full story: ${gEp.titulo.en} (${S[0]} Mythology Ep. ${Number(gEp.numero)})\nhttps://youtu.be/${ids[ep]}` : '';
   const cierre = g.cierre?.en && !/Ep\. \d/.test(g.cierre.en) ? `\n${g.cierre.en}` : '';
@@ -44,8 +44,8 @@ if (nativo) {
   const sh = g.shorts[Number(nShort) - 1];
   archivo = join(out, `short-${nShort}.mp4`);
   const titulo = `${sh.gancho.en} #Shorts`;
-  const serie = g.serie === 'nordicas' ? 'Norse' : g.serie === 'egipcias' ? 'Egyptian' : g.serie === 'hawaianas' ? 'Hawaiian' : g.serie === 'norteamericanas' ? 'Native American' : g.serie === 'aztecas' ? 'Aztec' : 'Greek';
-  const tag = g.serie === 'nordicas' ? '#NorseMythology #Vikings' : g.serie === 'egipcias' ? '#EgyptianMythology #AncientEgypt' : g.serie === 'hawaianas' ? '#HawaiianMythology #Polynesian' : g.serie === 'norteamericanas' ? '#NativeAmericanMythology #IndigenousStories' : g.serie === 'aztecas' ? '#AztecMythology #Mexica' : '#GreekMythology';
+  const serie = g.serie === 'nordicas' ? 'Norse' : g.serie === 'egipcias' ? 'Egyptian' : g.serie === 'hawaianas' ? 'Hawaiian' : g.serie === 'norteamericanas' ? 'Native American' : g.serie === 'hindues' ? 'Hindu' : g.serie === 'aztecas' ? 'Aztec' : g.serie === 'balinesas' ? 'Balinese' : g.serie === 'maories' ? 'Māori' : 'Greek';
+  const tag = g.serie === 'nordicas' ? '#NorseMythology #Vikings' : g.serie === 'egipcias' ? '#EgyptianMythology #AncientEgypt' : g.serie === 'hawaianas' ? '#HawaiianMythology #Polynesian' : g.serie === 'norteamericanas' ? '#NativeAmericanMythology #IndigenousStories' : g.serie === 'hindues' ? '#HinduMythology #IndianMythology' : g.serie === 'aztecas' ? '#AztecMythology #Mexica' : g.serie === 'balinesas' ? '#BalineseMythology #Bali' : g.serie === 'maories' ? '#MaoriMythology #Aotearoa' : '#GreekMythology';
   const link = ids[id] ? `\nhttps://youtu.be/${ids[id]}` : '';
   add('title', titulo);
   add('description', `${sh.gancho.en}. The full story: ${g.titulo.en} (${serie} Mythology Ep. ${Number(g.numero)})${link}\n\n${tag} #Mythology #Shorts`);

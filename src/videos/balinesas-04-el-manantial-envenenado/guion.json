@@ -1,0 +1,1175 @@
+{
+  "id": "balinesas-04-el-manantial-envenenado",
+  "serie": "balinesas",
+  "numero": "04",
+  "titulo": {
+    "es": "El manantial envenenado",
+    "en": "The Poisoned Spring"
+  },
+  "tituloGriego": "THE POISONED SPRING",
+  "miniatura": {
+    "heroe": "bhatara_indra",
+    "rival": "mayadenawa"
+  },
+  "siguiente": {
+    "es": "El rey, la diosa y la princesa china",
+    "en": "The King, the Goddess and the Chinese Princess"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "alas",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, el rey demonio Mayadenawa perdió su ejército ante Indra, el rey del cielo, y huyó en la noche.",
+          "en": "Last time, the demon king Mayadenawa lost his army to Indra, the king of heaven, and fled into the night."
+        },
+        {
+          "es": "Los soldados de Indra dormían junto a un río, sin imaginar lo que se venía.",
+          "en": "Indra's soldiers slept by a river, never guessing what was coming."
+        },
+        {
+          "es": "La vieja crónica, el Usana Bali, cuenta lo que pasó después.",
+          "en": "The old chronicle, the Usana Bali, tells what happened next."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "api",
+          "x": 950,
+          "s": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "guerrero1",
+          "como": "prajurit_dewa",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "guerrero2",
+          "como": "prajurit_dewa",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "sombra",
+          "como": "mayadenawa",
+          "x": 1750,
+          "capa": "fondo",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 3,
+          "intensidad": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "pasos",
+      "fondo": "alas",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mayadenawa se acercó al campamento dormido, moviéndose como una sombra entre los árboles.",
+          "en": "Mayadenawa crept toward the sleeping camp, moving like a shadow between the trees."
+        },
+        {
+          "es": "Para esconder su rastro, caminó sobre los costados de los pies, así sus huellas quedaban torcidas.",
+          "en": "To hide his tracks, he walked on the sides of his feet, so his footprints leaned sideways."
+        },
+        {
+          "es": "Nadie adivinaría que esas huellas raras eran suyas.",
+          "en": "Nobody would ever guess that those strange prints were his."
+        },
+        {
+          "es": "El lugar por donde caminó todavía se llama Tampaksiring, que significa 'huellas inclinadas'.",
+          "en": "The place where he walked is still called Tampaksiring, which means 'tilted footprints'."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "maya",
+          "como": "mayadenawa",
+          "x": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 1200,
+              "dur": 1.6
+            },
+            {
+              "en": 3.2,
+              "hace": "mira",
+              "a": 600
+            },
+            {
+              "en": 3.5,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 4,
+          "intensidad": 0.7
+        },
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "TAMPAKSIRING",
+            "en": "TAMPAKSIRING"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "veneno",
+      "fondo": "alas",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cerca del campamento, usó su magia para hacer un manantial nuevo.",
+          "en": "Near the camp, he used his magic to make a new spring."
+        },
+        {
+          "es": "Su agua parecía limpia y fresca. Pero era veneno.",
+          "en": "Its water looked clear and fresh. But it was poison."
+        },
+        {
+          "es": "Después volvió a escabullirse, sonriendo en la oscuridad.",
+          "en": "Then he slipped away again, smiling in the dark."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kolam",
+          "x": 1100,
+          "en": 0.5,
+          "props": {
+            "w": 500
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "maya",
+          "como": "mayadenawa",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.1,
+              "hace": "sale"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "humo",
+          "x": 1100,
+          "y": 760,
+          "dur": 0.6
+        },
+        {
+          "en": 1.2,
+          "tipo": "niebla",
+          "dur": 1
+        },
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 3,
+          "intensidad": 0.7
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "enfermos",
+      "fondo": "alas",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "A la mañana, los soldados de Indra se despertaron con sed.",
+          "en": "In the morning, Indra's soldiers woke up thirsty."
+        },
+        {
+          "es": "Bebieron del manantial nuevo y, uno a uno, se enfermaron.",
+          "en": "They drank from the new spring, and one by one, they fell sick."
+        },
+        {
+          "es": "Se les puso pálida la cara y les empezaron a temblar las manos.",
+          "en": "Their faces turned pale, and their hands began to shake."
+        },
+        {
+          "es": "Pronto todo el ejército estaba tirado en el suelo, demasiado débil para pararse.",
+          "en": "Soon the whole army lay on the ground, too weak to stand."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kolam",
+          "x": 1100,
+          "props": {
+            "w": 500
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "guerrero1",
+          "como": "prajurit_dewa",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.8,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.5
+            },
+            {
+              "en": 1.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.8,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 3.2,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "guerrero2",
+          "como": "prajurit_dewa",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.4,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "guerrero3",
+          "como": "prajurit_dewa",
+          "x": 1750,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3.6,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "tirta",
+      "fondo": "tirta_empul",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Indra vio lo que había pasado, y se enfureció.",
+          "en": "Indra saw what had happened, and he was furious."
+        },
+        {
+          "es": "Golpeó el suelo con toda su fuerza, y un manantial de agua pura brotó de la tierra.",
+          "en": "He struck the ground with all his strength, and a spring of pure water burst out of the earth."
+        },
+        {
+          "es": "Lo llamaron Tirta Empul, el manantial sagrado.",
+          "en": "It was called Tirta Empul, the holy spring."
+        },
+        {
+          "es": "Los soldados enfermos se bañaron en él y bebieron de él, y se curaron.",
+          "en": "The sick soldiers bathed in it and drank from it, and they were healed."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "indra",
+          "como": "bhatara_indra",
+          "x": 450,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "guerrero1",
+          "como": "prajurit_dewa",
+          "x": 1050,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "guerrero2",
+          "como": "prajurit_dewa",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.5,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "wanita_bali",
+          "x": 1750,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "entra",
+              "a": 1700,
+              "dur": 0.5
+            },
+            {
+              "en": 3.6,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.15,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 1.2,
+          "tipo": "luz",
+          "x": 900,
+          "y": 600,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "TIRTA EMPUL",
+            "en": "TIRTA EMPUL"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "hoy",
+      "fondo": "tirta_empul",
+      "camara": {
+        "de": 200,
+        "a": 320,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Tirta Empul es un templo real. Una vieja inscripción en piedra del año 962 registra su fundación.",
+          "en": "Tirta Empul is a real temple. An old stone inscription from the year 962 records its founding."
+        },
+        {
+          "es": "Hoy miles de balineses vienen aquí a hacer melukat, una limpieza ritual del cuerpo y del espíritu.",
+          "en": "Today, thousands of Balinese come here for melukat, a ritual cleansing of body and spirit."
+        },
+        {
+          "es": "Pasan de caño en caño a lo largo de la pileta, rezando bajo cada uno.",
+          "en": "They move from spout to spout along the pool, praying under each one."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "wanita_bali",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.6
+            },
+            {
+              "en": 1.4,
+              "hace": "reza"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1200,
+              "dur": 0.6
+            },
+            {
+              "en": 2.6,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "pria_bali",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "reza"
+            },
+            {
+              "en": 2.2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "pemangku",
+          "x": 1850,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "caza",
+      "fondo": "sawah",
+      "camara": {
+        "de": 0,
+        "a": 260,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Indra salió a cazar a Mayadenawa.",
+          "en": "Then Indra went hunting for Mayadenawa."
+        },
+        {
+          "es": "El demonio huyó por los arrozales, cambiando de forma para esconderse.",
+          "en": "The demon fled across the rice fields, changing his shape to hide."
+        },
+        {
+          "es": "Se volvió un ave enorme. Donde se posó hay ahora una aldea llamada Manukaya, de manuk, la palabra para ave.",
+          "en": "He became a great bird. Where he landed, there is now a village called Manukaya, from manuk, the word for bird."
+        },
+        {
+          "es": "Indra lo siguió, sin perderlo nunca de vista.",
+          "en": "Indra followed him, never letting him out of his sight."
+        },
+        {
+          "es": "Los viejos relatos nombran más disfraces, y cada uno le dio nombre a un lugar.",
+          "en": "The old tellings list more disguises, and each one gave its name to a place."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "maya",
+          "como": "mayadenawa",
+          "x": 1000,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "corre",
+              "a": 1500,
+              "dur": 0.8
+            },
+            {
+              "en": 1.6,
+              "hace": "transforma",
+              "en_que": "manuk"
+            },
+            {
+              "en": 2,
+              "hace": "corre",
+              "a": 1900,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "bhatara_indra",
+          "x": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 0.8,
+              "hace": "corre",
+              "a": 900,
+              "dur": 1.4
+            },
+            {
+              "en": 2.6,
+              "hace": "mira",
+              "a": 1900
+            },
+            {
+              "en": 3.1,
+              "hace": "corre",
+              "a": 1500,
+              "dur": 0.6
+            },
+            {
+              "en": 4.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.6,
+          "tipo": "humo",
+          "x": 1500,
+          "y": 640,
+          "dur": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.4,
+          "texto": {
+            "es": "MANUKAYA",
+            "en": "MANUKAYA"
+          },
+          "x": 1700,
+          "y": 240,
+          "hasta": 3.5
+        }
+      ]
+    },
+    {
+      "id": "piedra",
+      "fondo": "alas",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por último, Mayadenawa se convirtió en una piedra junto al río.",
+          "en": "At last, Mayadenawa turned himself into a stone by the river."
+        },
+        {
+          "es": "Se quedó perfectamente quieto, como si siempre hubiera estado ahí.",
+          "en": "He stood perfectly still, as if he had been there forever."
+        },
+        {
+          "es": "Pero Indra no se dejó engañar. Tensó su arco y disparó una flecha directo a la piedra.",
+          "en": "But Indra was not fooled. He drew his bow, and shot an arrow straight into the stone."
+        },
+        {
+          "es": "La magia se rompió, y el rey demonio cayó, vencido al fin.",
+          "en": "The magic broke, and the demon king fell, defeated at last."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "maya",
+          "como": "manuk",
+          "x": 1350,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "transforma",
+              "en_que": "batu_sakti"
+            },
+            {
+              "en": 3,
+              "hace": "transforma",
+              "en_que": "mayadenawa"
+            },
+            {
+              "en": 3.3,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "bhatara_indra",
+          "x": 500,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 650,
+              "dur": 0.6
+            },
+            {
+              "en": 1.6,
+              "hace": "mira",
+              "a": 1350
+            },
+            {
+              "en": 2.1,
+              "hace": "niega"
+            },
+            {
+              "en": 2.4,
+              "hace": "lanza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "humo",
+          "x": 1350,
+          "y": 640,
+          "dur": 0.4
+        },
+        {
+          "en": 2.7,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.8,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 3.1,
+          "tipo": "polvo",
+          "x": 1350,
+          "y": 780,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "petanu",
+      "fondo": "alas",
+      "camara": {
+        "de": 100,
+        "a": 260,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Se dice que su sangre corrió hacia un río, el Petanu.",
+          "en": "It is said that his blood flowed into a river, the Petanu."
+        },
+        {
+          "es": "El río quedó maldito. Durante mil años, dice la gente, su agua no se pudo usar para los arrozales.",
+          "en": "The river was cursed. For a thousand years, people say, its water could not be used for the rice fields."
+        },
+        {
+          "es": "¿Era justo que un río pagara por el crimen de un demonio? Cuéntanos qué piensas en los comentarios.",
+          "en": "Was it fair that a river paid for a demon's crime? Tell us what you think in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "garis_air",
+          "x": 1000,
+          "y": 760
+        }
+      ],
+      "actores": [
+        {
+          "id": "campesino",
+          "como": "kakek_bali",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.6
+            },
+            {
+              "en": 1.4,
+              "hace": "niega"
+            },
+            {
+              "en": 1.8,
+              "hace": "gira"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "anak_bali",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 1700
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.5,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "RÍO PETANU",
+            "en": "PETANU RIVER"
+          },
+          "x": 1100,
+          "y": 260,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "galungan",
+      "fondo": "desa",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El día de la victoria de Indra se recuerda en Bali como Galungan.",
+          "en": "The day of Indra's victory is remembered in Bali as Galungan."
+        },
+        {
+          "es": "Galungan celebra el dharma, el bien y el orden justo, que vence al adharma, su contrario.",
+          "en": "Galungan celebrates dharma, goodness and right order, winning over adharma, its opposite."
+        },
+        {
+          "es": "Llega cada 210 días según el calendario balinés. Las calles se llenan de penjor, altas cañas que se curvan como arroz maduro.",
+          "en": "It comes every 210 days on the Balinese calendar. Streets fill with penjor, tall bamboo poles that bend like ripe rice."
+        },
+        {
+          "es": "Las familias creen que sus antepasados vuelven a visitarlos. Diez días después, en Kuningan, se despiden.",
+          "en": "Families believe their ancestors come home to visit. Ten days later, on Kuningan, they say goodbye."
+        },
+        {
+          "es": "Y los bailarines de Barong van de casa en casa, para espantar la mala suerte.",
+          "en": "And Barong dancers go from house to house, to chase bad luck away."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "gebogan",
+          "x": 1100,
+          "en": 1.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "wanita_bali",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1
+            },
+            {
+              "en": 1.6,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.1,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "pria_bali",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.6,
+              "hace": "mira",
+              "a": 2200
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "abuelo",
+          "como": "kakek_bali",
+          "x": 2050,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "barong",
+          "como": "barong",
+          "x": 2600,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "entra",
+              "a": 1950,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "POR ESO BALI CELEBRA GALUNGAN",
+            "en": "THAT'S WHY BALI CELEBRATES GALUNGAN"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "pura",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así los templos de Bali se llenaron otra vez de flores, música y rezos.",
+          "en": "So the temples of Bali filled again with flowers, music and prayers."
+        },
+        {
+          "es": "¿Cuál de los trucos de Mayadenawa fue el más astuto? Cuéntanos en los comentarios.",
+          "en": "Which of Mayadenawa's tricks was the cleverest? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez: un rey de Bali, una princesa de China y una diosa a la que le mintieron.",
+          "en": "Next time: a king of Bali, a princess from China, and a goddess who was lied to."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "penjor",
+          "x": 1550,
+          "s": 0.9
+        },
+        {
+          "tipo": "gebogan",
+          "x": 900
+        }
+      ],
+      "actores": [
+        {
+          "id": "sacerdote",
+          "como": "pemangku",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "como": "sri_jaya_pangus",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "princesa",
+          "como": "kang_cing_wie",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Caminó de costado para que nadie lo rastreara",
+        "en": "He walked sideways so no one could track him"
+      },
+      "escena": "pasos",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "El manantial sagrado que nació de un golpe",
+        "en": "The holy spring born from a single blow"
+      },
+      "escena": "tirta",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "El demonio que se convirtió en piedra",
+        "en": "The demon who turned into a stone"
+      },
+      "escena": "piedra",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    }
+  ]
+}

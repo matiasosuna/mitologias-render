@@ -1,0 +1,1804 @@
+{
+  "id": "maories-11-la-canoa-de-rata",
+  "serie": "maories",
+  "numero": "11",
+  "titulo": {
+    "es": "La canoa de Rātā",
+    "en": "Rātā's Canoe"
+  },
+  "tituloGriego": "RĀTĀ'S CANOE",
+  "miniatura": {
+    "heroe": "rata_toa",
+    "rival": "hakuturi"
+  },
+  "siguiente": {
+    "es": "Kupe y la larga nube blanca",
+    "en": "Kupe and the Long White Cloud"
+  },
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El árbol talado que amaneció de pie",
+        "en": "The fallen tree that stood up again"
+      },
+      "escena": "de_pie",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "El ejército secreto del bosque",
+        "en": "The secret army of the forest"
+      },
+      "escena": "ejercito",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "El héroe que olvidó pedir permiso",
+        "en": "The hero who forgot to ask permission"
+      },
+      "escena": "reto",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 850
+    }
+  ],
+  "escenas": [
+    {
+      "id": "intro",
+      "fondo": "kainga",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Tāwhaki subió por las enredaderas hasta el cielo.",
+          "en": "Last time, Tāwhaki climbed the vines all the way up into the sky."
+        },
+        {
+          "es": "Pero en la tierra, Tāwhaki tenía un hijo llamado Wahieroa.",
+          "en": "But down on earth, Tāwhaki had a son named Wahieroa."
+        },
+        {
+          "es": "Y Wahieroa tuvo su propio hijo: Rātā. Esta es su historia.",
+          "en": "And Wahieroa had a son of his own: Rātā. This is his story."
+        },
+        {
+          "es": "Así la publicó George Grey en 1855, en su libro Polynesian Mythology.",
+          "en": "This is how George Grey published it in 1855, in his book Polynesian Mythology."
+        },
+        {
+          "es": "Muchas tribus la cuentan, cada una a su manera. Pero empieza con una gran pérdida.",
+          "en": "Many tribes tell it, each in its own way. But it begins with a terrible loss."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kapua",
+          "x": 700,
+          "y": 280,
+          "s": 0.8,
+          "capa": "medio"
+        },
+        {
+          "tipo": "harakeke",
+          "x": 300,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "tawhaki",
+          "como": "tawhaki",
+          "x": 1300,
+          "y": 360,
+          "escala": 0.6,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.6,
+              "hace": "vuela",
+              "a": [
+                1400,
+                280
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "wahieroa",
+          "como": "rangatira",
+          "x": 700,
+          "rotulo": "WAHIEROA",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "rata_nino",
+          "como": "tamaiti",
+          "x": 980,
+          "rotulo": "RĀTĀ",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 950
+            },
+            {
+              "en": 2.4,
+              "hace": "salta"
+            },
+            {
+              "en": 4.3,
+              "hace": "mira",
+              "a": 1500
+            }
+          ]
+        },
+        {
+          "id": "kuia",
+          "como": "kuia",
+          "x": 1450,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.2,
+              "hace": "habla",
+              "dur": 1.5
+            },
+            {
+              "en": 4.4,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4.4,
+          "tipo": "oscurecer",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "GEORGE GREY · 1855",
+            "en": "GEORGE GREY · 1855"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "matuku",
+      "fondo": "po_whetu",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "A Wahieroa lo mató Matuku-tangotango, un ser gigante y terrible que vivía bajo la tierra.",
+          "en": "Wahieroa was killed by Matuku-tangotango, a terrible giant being who lived under the ground."
+        },
+        {
+          "es": "Wahieroa cayó, y ya no se levantó.",
+          "en": "Wahieroa fell, and he did not rise again."
+        },
+        {
+          "es": "Rātā creció sin su padre.",
+          "en": "Rātā grew up without his father."
+        },
+        {
+          "es": "Pero nunca lo olvidó. Cuando se hizo hombre, quiso justicia.",
+          "en": "But he never forgot. When he became a man, he wanted justice."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "toka",
+          "x": 1600,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "matuku",
+          "como": "matuku_tangotango",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 0.6,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.9,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.6,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "wahieroa",
+          "como": "rangatira",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1,
+              "hace": "cae"
+            },
+            {
+              "en": 1.5,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "rata",
+          "como": "tamaiti",
+          "x": 820,
+          "rotulo": "RĀTĀ",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.3,
+              "hace": "entristece"
+            },
+            {
+              "en": 3,
+              "hace": "transforma",
+              "en_que": "rata_toa"
+            },
+            {
+              "en": 3.5,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello",
+          "x": 900,
+          "y": 520,
+          "dur": 0.4
+        },
+        {
+          "en": 1.2,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 820,
+          "y": 520,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "secreto",
+      "fondo": "kainga",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Rātā preguntó a todos dónde podía encontrar a Matuku. Por fin, alguien le contó el secreto.",
+          "en": "Rātā asked everyone where he could find Matuku. At last, someone told him the secret."
+        },
+        {
+          "es": "«Matuku vive bajo la tierra. Solo sale cuando hay luna nueva.»",
+          "en": "'Matuku lives under the earth. He only comes out when the moon is new.'"
+        },
+        {
+          "es": "«Entonces va a un pozo de agua, a lavarse y a mirarse en el agua.»",
+          "en": "'Then he goes to a pool of water, to wash himself and look at his face.'"
+        },
+        {
+          "es": "Rātā armó un plan: estaría esperándolo allí, en la oscuridad.",
+          "en": "Rātā made a plan. He would be waiting there, in the dark."
+        },
+        {
+          "es": "Así que Rātā esperó a la luna nueva.",
+          "en": "So Rātā waited for the new moon."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "puna",
+          "x": 1500,
+          "s": 0.8,
+          "en": 2,
+          "capa": "medio"
+        },
+        {
+          "tipo": "marama",
+          "x": 1200,
+          "y": 240,
+          "s": 0.8,
+          "en": 4,
+          "props": {
+            "luz": 0.3
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "rata",
+          "como": "rata_toa",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 700
+            },
+            {
+              "en": 0.6,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.2,
+              "hace": "asiente"
+            },
+            {
+              "en": 3.1,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.4,
+              "hace": "asiente"
+            },
+            {
+              "en": 4.2,
+              "hace": "mira",
+              "a": 1200
+            },
+            {
+              "en": 4.5,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "kaumatua",
+          "como": "kaumatua",
+          "x": 1050,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "entra",
+              "a": 1000
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 1.8
+            },
+            {
+              "en": 1.4,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LUNA NUEVA",
+            "en": "NEW MOON"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "pozo",
+      "fondo": "po_whetu",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "La noche de luna nueva, Rātā se escondió junto al pozo, muy quieto.",
+          "en": "On the night of the new moon, Rātā hid beside the pool, very still."
+        },
+        {
+          "es": "La tierra tembló. Y de debajo de la tierra salió Matuku-tangotango.",
+          "en": "The ground shook. And out of the earth climbed Matuku-tangotango."
+        },
+        {
+          "es": "El gigante se agachó sobre el agua para lavarse.",
+          "en": "The giant bent down over the water to wash."
+        },
+        {
+          "es": "Entonces Rātā saltó de su escondite y lo agarró.",
+          "en": "Then Rātā leapt out of hiding and seized him."
+        },
+        {
+          "es": "Hubo una gran lucha y un destello en la oscuridad. A Matuku-tangotango no se lo vio nunca más.",
+          "en": "There was a great struggle, and a flash in the dark. Matuku-tangotango was never seen again."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "marama",
+          "x": 1500,
+          "y": 230,
+          "s": 0.7,
+          "props": {
+            "luz": 0.3
+          }
+        },
+        {
+          "tipo": "puna",
+          "x": 1100,
+          "s": 1
+        },
+        {
+          "tipo": "toka",
+          "x": 450,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "rata",
+          "como": "rata_toa",
+          "x": 560,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.4,
+              "hace": "mira",
+              "a": 1200
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.05,
+              "hace": "corre",
+              "a": 1000
+            },
+            {
+              "en": 3.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "matuku",
+          "como": "matuku_tangotango",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 1250
+            },
+            {
+              "en": 2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.5,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.8,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.2,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.6,
+          "intensidad": 0.6
+        },
+        {
+          "en": 1.1,
+          "tipo": "polvo",
+          "x": 1400,
+          "y": 780,
+          "dur": 0.6
+        },
+        {
+          "en": 4,
+          "tipo": "destello",
+          "x": 1150,
+          "y": 520,
+          "dur": 0.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "huesos",
+      "fondo": "takutai",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero el trabajo de Rātā no había terminado. Los huesos de su padre estaban lejos, al otro lado del mar.",
+          "en": "But Rātā's work was not done. His father's bones were far away, across the sea."
+        },
+        {
+          "es": "Para traerlos a casa, necesitaba una canoa. Una grande.",
+          "en": "To bring them home, he would need a canoe. A big one."
+        },
+        {
+          "es": "Así que tomó su toki, su azuela de piedra, y se fue al bosque.",
+          "en": "So he took his toki, his stone adze, and went into the forest."
+        },
+        {
+          "es": "Necesitaba el mejor árbol de todo el bosque.",
+          "en": "He would need the finest tree in the whole forest."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "toka",
+          "x": 1650,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "rata",
+          "como": "rata_toa",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "mira",
+              "a": 1700
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 1.2,
+              "hace": "entristece"
+            },
+            {
+              "en": 1.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.1,
+              "hace": "baja"
+            },
+            {
+              "en": 2.4,
+              "hace": "mira",
+              "a": 0
+            },
+            {
+              "en": 2.6,
+              "hace": "camina",
+              "a": 200
+            }
+          ]
+        },
+        {
+          "id": "kuia",
+          "como": "kuia",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "entra",
+              "a": 1200
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "tala",
+      "fondo": "ngahere",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Eligió un tōtara alto y derecho, un árbol muy valorado para hacer canoas.",
+          "en": "He chose a tall, straight tōtara, a tree prized for making canoes."
+        },
+        {
+          "es": "No dijo ningún karakia, ninguna oración. No le pidió permiso a Tāne, el dios del bosque.",
+          "en": "He did not say a karakia, a prayer. He did not ask Tāne, god of the forest, for permission."
+        },
+        {
+          "es": "Y Tāne es el padre de todos los árboles y de todas las aves.",
+          "en": "And Tāne is the father of every tree and every bird."
+        },
+        {
+          "es": "Solo levantó la azuela, golpe tras golpe, hasta que el gran árbol cayó.",
+          "en": "He just swung his adze, chop after chop, until the great tree came crashing down."
+        },
+        {
+          "es": "Después se fue a dormir a su casa, contento con su trabajo.",
+          "en": "Then he went home to sleep, pleased with his work."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "totara",
+          "x": 1150,
+          "s": 1.1,
+          "hasta": 3.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "rata",
+          "como": "rata_toa",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "entra",
+              "a": 750
+            },
+            {
+              "en": 0.4,
+              "hace": "mira",
+              "a": 1150
+            },
+            {
+              "en": 0.7,
+              "hace": "senala"
+            },
+            {
+              "en": 2.5,
+              "hace": "camina",
+              "a": 900
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.4,
+              "hace": "mira",
+              "a": 0
+            },
+            {
+              "en": 4.5,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "tane",
+          "como": "tane",
+          "x": 1600,
+          "capa": "fondo",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.9,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "piwakawaka",
+          "como": "piwakawaka",
+          "x": 1500,
+          "y": 420,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 900
+            },
+            {
+              "en": 3.8,
+              "hace": "vuela",
+              "a": [
+                1800,
+                300
+              ],
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.8,
+          "tipo": "polvo",
+          "x": 1150,
+          "y": 780,
+          "dur": 0.8
+        },
+        {
+          "en": 3.8,
+          "tipo": "temblor",
+          "dur": 0.5,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "SIN KARAKIA",
+            "en": "NO KARAKIA"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "de_pie",
+      "fondo": "ngahere",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "A la mañana siguiente, Rātā volvió para darle forma a su canoa.",
+          "en": "The next morning, Rātā came back to shape his canoe."
+        },
+        {
+          "es": "Pero el árbol estaba otra vez de pie, entero, como si nadie lo hubiera tocado.",
+          "en": "But the tree was standing again, whole, as if nobody had ever touched it."
+        },
+        {
+          "es": "Rātā se quedó mirando. No faltaba ni una astilla.",
+          "en": "Rātā stared. Not a single chip was missing."
+        },
+        {
+          "es": "Así que lo taló por segunda vez. Y otra vez se fue a su casa.",
+          "en": "So he cut it down a second time. And once again, he went home."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "totara",
+          "x": 1150,
+          "s": 1.1,
+          "en": 1,
+          "hasta": 3.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "rata",
+          "como": "rata_toa",
+          "x": 400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "camina",
+              "a": 750
+            },
+            {
+              "en": 1.1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "niega"
+            },
+            {
+              "en": 2.4,
+              "hace": "mira",
+              "a": 1150
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 900
+            },
+            {
+              "en": 3.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.8,
+              "hace": "mira",
+              "a": 0
+            }
+          ]
+        },
+        {
+          "id": "weta",
+          "como": "weta",
+          "x": 1400,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 900
+            },
+            {
+              "en": 3.7,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello",
+          "x": 1150,
+          "y": 450,
+          "dur": 0.5
+        },
+        {
+          "en": 3.6,
+          "tipo": "polvo",
+          "x": 1150,
+          "y": 780,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "ejercito",
+      "fondo": "po_whetu",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero esa noche no durmió. Volvió a escondidas y se ocultó en la oscuridad.",
+          "en": "But that night, he did not sleep. He crept back and hid in the dark."
+        },
+        {
+          "es": "Entonces oyó un canto. De entre los árboles salió el ejército del bosque.",
+          "en": "Then he heard singing. Out of the trees came the army of the forest."
+        },
+        {
+          "es": "Aves e insectos, y los hakuturi, los espíritus guardianes del bosque.",
+          "en": "Birds and insects, and the hakuturi, the spirit guardians of the forest."
+        },
+        {
+          "es": "Astilla por astilla, juntaron cada pedazo, cantando mientras trabajaban.",
+          "en": "Chip by chip, they gathered every splinter, singing as they worked."
+        },
+        {
+          "es": "Y despacio, el gran árbol se levantó y quedó de pie otra vez.",
+          "en": "And slowly, the great tree rose up and stood tall once more."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "totara",
+          "x": 1200,
+          "s": 1.1,
+          "en": 4.1
+        },
+        {
+          "tipo": "ponga",
+          "x": 400,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "rata",
+          "como": "rata_toa",
+          "x": 420,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 500
+            },
+            {
+              "en": 0.6,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "hakuturi",
+          "como": "hakuturi",
+          "x": 950,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.6,
+              "hace": "baja"
+            },
+            {
+              "en": 4.1,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "hakuturi2",
+          "como": "hakuturi",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.1,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.7,
+              "hace": "baja"
+            },
+            {
+              "en": 4.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "tui",
+          "como": "tui",
+          "x": 1700,
+          "y": 380,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.2,
+              "hace": "vuela",
+              "a": [
+                1350,
+                300
+              ],
+              "dur": 1
+            },
+            {
+              "en": 4.3,
+              "hace": "vuela",
+              "a": [
+                1600,
+                260
+              ],
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "weta",
+          "como": "weta",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "entra",
+              "a": 1650
+            },
+            {
+              "en": 3.3,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "luz",
+          "x": 1200,
+          "y": 500,
+          "dur": 1
+        },
+        {
+          "en": 3.2,
+          "tipo": "chispas",
+          "x": 1200,
+          "y": 700,
+          "dur": 0.8
+        },
+        {
+          "en": 4.1,
+          "tipo": "destello",
+          "x": 1200,
+          "y": 450,
+          "dur": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "HAKUTURI · GUARDIANES DEL BOSQUE",
+            "en": "HAKUTURI · FOREST GUARDIANS"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "reto",
+      "fondo": "po_whetu",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1.02,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Rātā saltó de su escondite. «¿Por qué deshacen mi trabajo?», gritó.",
+          "en": "Rātā jumped out. 'Why are you undoing my work?' he shouted."
+        },
+        {
+          "es": "El bosque le respondió: «Talaste a un hijo de Tāne, y nunca pediste permiso».",
+          "en": "The forest answered him: 'You cut down a child of Tāne, and you never asked permission.'"
+        },
+        {
+          "es": "Rātā bajó la cabeza. Sintió una vergüenza muy honda.",
+          "en": "Rātā lowered his head. He felt deeply ashamed."
+        },
+        {
+          "es": "«Lo siento», dijo. «No lo pensé.»",
+          "en": "'I am sorry,' he said. 'I did not think.'"
+        },
+        {
+          "es": "¿Tú habrías discutido con el bosque, o habrías pedido perdón como Rātā?",
+          "en": "Would you have argued with the forest, or said sorry like Rātā?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "totara",
+          "x": 1250,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "rata",
+          "como": "rata_toa",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "corre",
+              "a": 750
+            },
+            {
+              "en": 0.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "entristece"
+            },
+            {
+              "en": 2.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.2,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "hakuturi",
+          "como": "hakuturi",
+          "x": 1000,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            },
+            {
+              "en": 3.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "kereru",
+          "como": "kereru",
+          "x": 1450,
+          "y": 380,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1350,
+                360
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 1.5,
+              "hace": "mira",
+              "a": 750
+            }
+          ]
+        },
+        {
+          "id": "piwakawaka",
+          "como": "piwakawaka",
+          "x": 1650,
+          "y": 560,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 750
+            },
+            {
+              "en": 3.6,
+              "hace": "vuela",
+              "a": [
+                1550,
+                480
+              ],
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 450,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "waka",
+      "fondo": "ngahere",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El bosque escuchó su disculpa. «Vuelve a casa», le dijeron. «Nosotros te haremos la canoa.»",
+          "en": "The forest heard his apology. 'Go home,' they told him. 'We will build your canoe for you.'"
+        },
+        {
+          "es": "Toda la noche trabajaron los hakuturi. Tallaron, dieron forma y cantaron.",
+          "en": "All night long, the hakuturi worked. They carved and shaped and sang."
+        },
+        {
+          "es": "A la mañana, una canoa hermosa esperaba a Rātā.",
+          "en": "In the morning, a beautiful canoe was waiting for Rātā."
+        },
+        {
+          "es": "Estaba terminada, lisa y fuerte, lista para el mar abierto.",
+          "en": "It was finished, smooth and strong, ready for the open sea."
+        },
+        {
+          "es": "En la versión de Grey, la canoa se llamaba Riwaru.",
+          "en": "In Grey's telling, the canoe was called Riwaru."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "totara",
+          "x": 1150,
+          "s": 1.1,
+          "hasta": 1.5
+        },
+        {
+          "tipo": "waka",
+          "x": 1150,
+          "s": 0.9,
+          "en": 2,
+          "props": {
+            "quieta": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "rata",
+          "como": "rata_toa",
+          "x": 500,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "asiente"
+            },
+            {
+              "en": 0.7,
+              "hace": "mira",
+              "a": 0
+            },
+            {
+              "en": 0.8,
+              "hace": "sale"
+            },
+            {
+              "en": 2.1,
+              "hace": "entra",
+              "a": 550
+            },
+            {
+              "en": 2.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "hakuturi",
+          "como": "hakuturi",
+          "x": 900,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 1.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.8,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "hakuturi2",
+          "como": "hakuturi",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.85,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "polvo",
+          "x": 1150,
+          "y": 780,
+          "dur": 0.6
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "aclarar",
+          "dur": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "destello",
+          "x": 1150,
+          "y": 700,
+          "dur": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "RIWARU",
+            "en": "RIWARU"
+          },
+          "x": 1150,
+          "y": 420
+        }
+      ]
+    },
+    {
+      "id": "permiso",
+      "fondo": "ngahere",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Las historias antiguas enseñan que por eso, antes de cortar un árbol, se dicen karakia y se pide permiso a Tāne.",
+          "en": "The old stories teach that this is why, before a tree is cut, people say karakia and ask Tāne for permission."
+        },
+        {
+          "es": "Un árbol no es solo madera. Es un hijo de Tāne, y parte de una familia.",
+          "en": "A tree is not just wood. It is a child of Tāne, and part of a family."
+        },
+        {
+          "es": "Muchos constructores de canoas todavía empiezan así hoy.",
+          "en": "Many canoe builders still begin this way today."
+        },
+        {
+          "es": "Rātā aprendió esa lección por las malas.",
+          "en": "Rātā learned that lesson the hard way."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "totara",
+          "x": 1250,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "tohunga",
+          "como": "tohunga",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "entra",
+              "a": 850
+            },
+            {
+              "en": 0.4,
+              "hace": "reza"
+            },
+            {
+              "en": 1.1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "tane",
+          "como": "tane",
+          "x": 1550,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "asiente"
+            },
+            {
+              "en": 2.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "toa",
+          "como": "toa",
+          "x": 500,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 550
+            },
+            {
+              "en": 2.3,
+              "hace": "arrodilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "luz",
+          "x": 1550,
+          "y": 450,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "POR ESO SE LE PIDE PERMISO A TĀNE",
+            "en": "THAT'S WHY PEOPLE ASK TĀNE FIRST"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque",
+          "hasta": 1.9
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "moana",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Y así Rātā echó su canoa al mar y partió a buscar los huesos de su padre.",
+          "en": "So Rātā launched his canoe and set out across the sea, to bring his father's bones home."
+        },
+        {
+          "es": "Ese viaje es otra historia.",
+          "en": "That voyage is a story of its own."
+        },
+        {
+          "es": "¿Tú le habrías pedido permiso al bosque desde el principio? Cuéntanos en los comentarios.",
+          "en": "Would you have asked the forest first? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, el más grande de los navegantes encuentra una tierra nueva. Es Kupe y la larga nube blanca.",
+          "en": "Next time, the greatest navigator of all finds a new land. It is Kupe and the Long White Cloud."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waka",
+          "x": 1000,
+          "y": 760,
+          "s": 0.9
+        },
+        {
+          "tipo": "kapua",
+          "x": 1700,
+          "y": 280,
+          "s": 1,
+          "en": 3,
+          "props": {
+            "larga": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "rata",
+          "como": "rata_toa",
+          "x": 900,
+          "y": 720,
+          "escala": 0.75,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.8,
+              "hace": "baja"
+            },
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 1800
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "kereru",
+          "como": "kereru",
+          "x": 1300,
+          "y": 420,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "vuela",
+              "a": [
+                1700,
+                320
+              ],
+              "dur": 1.2
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    }
+  ]
+}

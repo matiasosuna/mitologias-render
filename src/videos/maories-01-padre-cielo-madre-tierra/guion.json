@@ -1,0 +1,1610 @@
+{
+  "id": "maories-01-padre-cielo-madre-tierra",
+  "serie": "maories",
+  "numero": "01",
+  "titulo": {
+    "es": "Padre Cielo, Madre Tierra",
+    "en": "Sky Father, Earth Mother"
+  },
+  "tituloGriego": "SKY FATHER, EARTH MOTHER",
+  "miniatura": {
+    "heroe": "tane",
+    "rival": "tawhirimatea"
+  },
+  "siguiente": {
+    "es": "La guerra del dios de la tormenta",
+    "en": "The Storm God's War"
+  },
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El dios que separó a sus padres",
+        "en": "The god who pushed his parents apart"
+      },
+      "escena": "tane_empuja",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Por qué hay rocío cada mañana",
+        "en": "Why there is dew every morning"
+      },
+      "escena": "lagrimas",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "¿Matarlos o separarlos?",
+        "en": "Kill them, or push them apart?"
+      },
+      "escena": "consejo",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 900
+    }
+  ],
+  "escenas": [
+    {
+      "id": "intro",
+      "fondo": "takutai",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Muy lejos, en el sur del océano Pacífico, están las islas que los maoríes llaman Aotearoa.",
+          "en": "Far away in the South Pacific Ocean lie the islands that the Māori call Aotearoa."
+        },
+        {
+          "es": "Los maoríes llegaron allí hace mucho en grandes canoas, y su pueblo sigue viviendo allí hoy.",
+          "en": "The Māori sailed there long ago in great canoes, and their people still live there today."
+        },
+        {
+          "es": "Sus ancianos guardaron las historias más antiguas en cantos, discursos y tallas.",
+          "en": "Their elders kept the oldest stories alive in chants, speeches and carvings."
+        },
+        {
+          "es": "Esta versión la escribió hacia 1850 Te Rangikāheke, un sabio de la tribu Te Arawa.",
+          "en": "This version was written down around 1850 by Te Rangikāheke, a scholar of the Te Arawa tribe."
+        },
+        {
+          "es": "Cada tribu la cuenta un poco distinto. Pero así es como empieza.",
+          "en": "Every tribe tells it a little differently. But this is how it begins."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waka_hourua",
+          "x": 1150,
+          "y": 650,
+          "s": 0.45,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "harakeke",
+          "x": 300,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "kaumatua",
+          "como": "kaumatua",
+          "x": 760,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "tamaiti",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "entra",
+              "a": 1060
+            },
+            {
+              "en": 1.6,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.4,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "nina",
+          "como": "kotiro",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "entra",
+              "a": 1260
+            },
+            {
+              "en": 1.8,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4.2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "AOTEAROA · NUEVA ZELANDA",
+            "en": "AOTEAROA · NEW ZEALAND"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 1.6
+        },
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "TE RANGIKĀHEKE · TE ARAWA",
+            "en": "TE RANGIKĀHEKE · TE ARAWA"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "te_kore",
+      "fondo": "te_po",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Primero fue Te Kore, la nada. Después vino Te Pō, la noche.",
+          "en": "First there was Te Kore: the nothing. Then came Te Pō: the night."
+        },
+        {
+          "es": "Una noche tan larga que nadie podría contarla jamás.",
+          "en": "A night so long that nobody could ever count it."
+        },
+        {
+          "es": "En esa noche estaban Ranginui, el Padre Cielo, y Papatūānuku, la Madre Tierra.",
+          "en": "In that night lay Ranginui, the Sky Father, and Papatūānuku, the Earth Mother."
+        },
+        {
+          "es": "Se abrazaban tan fuerte que ni un rayo de luz podía pasar entre ellos.",
+          "en": "They held each other so tightly that not a single ray of light could pass between them."
+        },
+        {
+          "es": "Y entre ellos, en esa oscuridad apretada, nacieron sus hijos.",
+          "en": "And between them, in that cramped darkness, their children were born."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "ranginui_cielo",
+          "x": 1500,
+          "y": 480,
+          "en": 2,
+          "sube": -80,
+          "durSube": 2
+        },
+        {
+          "tipo": "papatuanuku_tierra",
+          "x": 1500,
+          "s": 1,
+          "props": {
+            "verde": 0.15
+          },
+          "en": 2.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "tane",
+          "como": "tane",
+          "x": 1020,
+          "escala": 0.55,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.2,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "tangaroa",
+          "como": "tangaroa",
+          "x": 1280,
+          "escala": 0.55,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.4,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "tumatauenga",
+          "como": "tumatauenga",
+          "x": 1540,
+          "escala": 0.55,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.6,
+              "hace": "arrodilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.6,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "TE KORE · LA NADA",
+            "en": "TE KORE · THE NOTHING"
+          },
+          "x": 960,
+          "y": 240,
+          "hasta": 0.55
+        },
+        {
+          "en": 0.55,
+          "texto": {
+            "es": "TE PŌ · LA NOCHE",
+            "en": "TE PŌ · THE NIGHT"
+          },
+          "x": 960,
+          "y": 240,
+          "hasta": 1.9
+        }
+      ]
+    },
+    {
+      "id": "hijos",
+      "fondo": "te_po",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.04
+        ]
+      },
+      "frases": [
+        {
+          "es": "Eran muchos hijos, todos dioses. Seis de ellos importan más en esta historia.",
+          "en": "There were many children, all of them gods. Six of them matter most in this story."
+        },
+        {
+          "es": "Tāne, dios de los bosques y las aves. Y Tangaroa, dios del mar y los peces.",
+          "en": "Tāne, god of the forests and the birds. And Tangaroa, god of the sea and the fish."
+        },
+        {
+          "es": "Tūmatauenga, o Tū, el dios de la guerra y de la gente.",
+          "en": "Tūmatauenga, or Tū for short, the god of war, and of people."
+        },
+        {
+          "es": "Rongo, dios del kūmara, la batata. Y Haumia, dios de la comida silvestre, como la raíz de helecho.",
+          "en": "Rongo, god of the kūmara, the sweet potato. And Haumia, god of wild food, like fern root."
+        },
+        {
+          "es": "Y Tāwhirimātea, dios de los vientos y las tormentas. Recuérdalo.",
+          "en": "And Tāwhirimātea, god of the winds and storms. Remember him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "ranginui_cielo",
+          "x": 1500,
+          "y": 480
+        },
+        {
+          "tipo": "papatuanuku_tierra",
+          "x": 1500,
+          "s": 1,
+          "props": {
+            "verde": 0.15
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "tane",
+          "como": "tane",
+          "x": 720,
+          "escala": 0.58,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "tangaroa",
+          "como": "tangaroa",
+          "x": 870,
+          "escala": 0.58,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "tumatauenga",
+          "como": "tumatauenga",
+          "x": 1100,
+          "escala": 0.58,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "rongo",
+          "como": "rongo",
+          "x": 1330,
+          "escala": 0.58,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.3,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "haumia",
+          "como": "haumia",
+          "x": 1560,
+          "escala": 0.58,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.5,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "tawhirimatea",
+          "como": "tawhirimatea",
+          "x": 1800,
+          "escala": 0.58,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 4.5,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4,
+          "tipo": "humo",
+          "x": 1800,
+          "y": 600,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "apretados",
+      "fondo": "te_po",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1.04,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los hijos no tenían lugar para pararse. Andaban agachados entre sus padres.",
+          "en": "The children had no room to stand up. They crawled and crouched between their parents."
+        },
+        {
+          "es": "Vivían en el frío y en la oscuridad, y nunca habían visto el día.",
+          "en": "They lived in the cold and the dark, and they had never seen the day."
+        },
+        {
+          "es": "Año tras año, se fueron cansando de esa noche sin fin.",
+          "en": "Year after year, they grew more and more tired of that endless night."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "ranginui_cielo",
+          "x": 1500,
+          "y": 470
+        },
+        {
+          "tipo": "papatuanuku_tierra",
+          "x": 1500,
+          "s": 1,
+          "props": {
+            "verde": 0.15
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "tane",
+          "como": "tane",
+          "x": 720,
+          "escala": 0.62,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1100
+            },
+            {
+              "en": 2.2,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "tangaroa",
+          "como": "tangaroa",
+          "x": 930,
+          "escala": 0.62,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "rongo",
+          "como": "rongo",
+          "x": 1200,
+          "escala": 0.62,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "tumatauenga",
+          "como": "tumatauenga",
+          "x": 1440,
+          "escala": 0.62,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.3,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "consejo",
+      "fondo": "te_po",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces los hermanos se reunieron en la oscuridad para decidir qué hacer.",
+          "en": "So the brothers met in the dark to decide what to do."
+        },
+        {
+          "es": "Tūmatauenga, el más feroz, habló primero. «Matemos a nuestros padres», dijo.",
+          "en": "Tūmatauenga, the fiercest of them, spoke first. 'Let us kill our parents,' he said."
+        },
+        {
+          "es": "Pero Tāne negó con la cabeza. «No. Separémoslos.»",
+          "en": "But Tāne shook his head. 'No. Let us push them apart.'"
+        },
+        {
+          "es": "«Que el Cielo quede lejos, arriba. Que la Tierra se quede cerca, abajo, y nos cuide como una madre.»",
+          "en": "'Let the Sky stand far above us. Let the Earth stay close beneath us, and care for us like a mother.'"
+        },
+        {
+          "es": "Todos estuvieron de acuerdo menos uno: Tāwhirimātea, que no dijo nada, pero ardía de rabia.",
+          "en": "They all agreed except one: Tāwhirimātea, who said nothing, but burned with anger."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "ranginui_cielo",
+          "x": 1500,
+          "y": 480
+        },
+        {
+          "tipo": "papatuanuku_tierra",
+          "x": 1500,
+          "s": 1,
+          "props": {
+            "verde": 0.15
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "tumatauenga",
+          "como": "tumatauenga",
+          "x": 720,
+          "escala": 0.6,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.1,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "tane",
+          "como": "tane",
+          "x": 950,
+          "escala": 0.6,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2,
+              "hace": "niega"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 1.8
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "rongo",
+          "como": "rongo",
+          "x": 1220,
+          "escala": 0.6,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "haumia",
+          "como": "haumia",
+          "x": 1450,
+          "escala": 0.6,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4.1,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "tawhirimatea",
+          "como": "tawhirimatea",
+          "x": 1720,
+          "escala": 0.6,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 4.5,
+              "hace": "gira"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4.3,
+          "tipo": "humo",
+          "x": 1720,
+          "y": 620,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "intentos",
+      "fondo": "te_po",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Rongo lo intentó primero. Empujó el Cielo con todas sus fuerzas. No se movió.",
+          "en": "Rongo tried first. He pushed against the Sky with all his strength. It did not move."
+        },
+        {
+          "es": "Después lo intentaron Tangaroa y Haumia. Nada.",
+          "en": "Then Tangaroa tried, and then Haumia. Nothing."
+        },
+        {
+          "es": "Tūmatauenga golpeó los lazos que unían a sus padres. Aun así, no se separaron.",
+          "en": "Tūmatauenga struck at the bonds that held his parents together. Still they would not part."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "ranginui_cielo",
+          "x": 1500,
+          "y": 480
+        },
+        {
+          "tipo": "papatuanuku_tierra",
+          "x": 1500,
+          "s": 1,
+          "props": {
+            "verde": 0.15
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "rongo",
+          "como": "rongo",
+          "x": 720,
+          "escala": 0.6,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.4,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.9,
+              "hace": "baja"
+            },
+            {
+              "en": 1,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "tangaroa",
+          "como": "tangaroa",
+          "x": 860,
+          "escala": 0.6,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.1,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 1.45,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "haumia",
+          "como": "haumia",
+          "x": 1160,
+          "escala": 0.6,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.6,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 1.9,
+              "hace": "baja"
+            },
+            {
+              "en": 1.95,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "tumatauenga",
+          "como": "tumatauenga",
+          "x": 1460,
+          "escala": 0.6,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.85,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "temblor",
+          "dur": 0.4,
+          "intensidad": 0.4
+        },
+        {
+          "en": 2.2,
+          "tipo": "destello",
+          "x": 1460,
+          "y": 520,
+          "dur": 0.3
+        },
+        {
+          "en": 2.5,
+          "tipo": "destello",
+          "x": 1460,
+          "y": 520,
+          "dur": 0.3
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "tane_empuja",
+      "fondo": "te_po",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces le tocó a Tāne.",
+          "en": "Then it was Tāne's turn."
+        },
+        {
+          "es": "Puso la cabeza contra su madre, la Tierra, y los pies contra su padre, el Cielo.",
+          "en": "He put his head down against his mother, the Earth, and his feet up against his father, the Sky."
+        },
+        {
+          "es": "Y despacio, sin parar, estiró las piernas y empujó, cada vez más fuerte.",
+          "en": "Then slowly, steadily, he straightened his legs and pushed, harder and harder."
+        },
+        {
+          "es": "Ranginui y Papatūānuku gritaron: «¿Por qué hacen esto? ¿Por qué separan a sus padres?»",
+          "en": "Ranginui and Papatūānuku cried out: 'Why are you doing this? Why tear your parents apart?'"
+        },
+        {
+          "es": "Pero Tāne no se detuvo. Cada vez más alto, el Cielo se fue alejando de la Tierra.",
+          "en": "But Tāne did not stop. Higher and higher, the Sky rose away from the Earth."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "ranginui_cielo",
+          "x": 1500,
+          "y": 480,
+          "hasta": 2.2
+        },
+        {
+          "tipo": "ranginui_cielo",
+          "x": 1500,
+          "y": 150,
+          "en": 2.2,
+          "sube": 330,
+          "durSube": 2.6,
+          "props": {
+            "lagrimas": true
+          }
+        },
+        {
+          "tipo": "papatuanuku_tierra",
+          "x": 1500,
+          "s": 1,
+          "props": {
+            "verde": 0.15
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "tane",
+          "como": "tane",
+          "x": 960,
+          "escala": 0.66,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 960
+            },
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.4,
+              "hace": "tiembla",
+              "dur": 1.6
+            },
+            {
+              "en": 4.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "rongo",
+          "como": "rongo",
+          "x": 700,
+          "escala": 0.55,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.2,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "tangaroa",
+          "como": "tangaroa",
+          "x": 1500,
+          "escala": 0.55,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.3,
+              "hace": "levantarse"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.4,
+          "tipo": "temblor",
+          "dur": 1.5,
+          "intensidad": 0.8
+        },
+        {
+          "en": 3.1,
+          "tipo": "polvo",
+          "x": 960,
+          "y": 780,
+          "dur": 0.8
+        },
+        {
+          "en": 4.3,
+          "tipo": "aclarar",
+          "dur": 0.7
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "luz",
+      "fondo": "te_ao_marama",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.05,
+          1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Y entonces, por primera vez, la luz entró en el mundo.",
+          "en": "And then, for the very first time, light poured into the world."
+        },
+        {
+          "es": "Los hermanos se pusieron de pie y se miraron a la luz del sol.",
+          "en": "The brothers stood up and looked at each other in the sunlight."
+        },
+        {
+          "es": "Y vieron a toda la gente que había estado escondida en la oscuridad, entre la Tierra y el Cielo.",
+          "en": "And they saw all the people who had been hidden in the dark, between Earth and Sky."
+        },
+        {
+          "es": "Había empezado el mundo de luz. Los maoríes lo llaman Te Ao Mārama.",
+          "en": "The world of light had begun. The Māori call it Te Ao Mārama."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kapua",
+          "x": 700,
+          "y": 300,
+          "s": 0.9,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "tumatauenga",
+          "como": "tumatauenga",
+          "x": 520,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1000
+            },
+            {
+              "en": 2.4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "tane",
+          "como": "tane",
+          "x": 860,
+          "escala": 0.95,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.9,
+              "hace": "baja"
+            },
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "rongo",
+          "como": "rongo",
+          "x": 1180,
+          "escala": 0.9,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hombre1",
+          "como": "tangata",
+          "x": 1500,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "mujer1",
+          "como": "wahine",
+          "x": 1720,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "nino1",
+          "como": "tamaiti",
+          "x": 1880,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "destello",
+          "dur": 0.5
+        },
+        {
+          "en": 0.1,
+          "tipo": "luz",
+          "x": 1600,
+          "y": 260,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "TE AO MĀRAMA · EL MUNDO DE LUZ",
+            "en": "TE AO MĀRAMA · THE WORLD OF LIGHT"
+          },
+          "x": 960,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "lagrimas",
+      "fondo": "te_ao_marama",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Ranginui y Papatūānuku todavía se amaban.",
+          "en": "But Ranginui and Papatūānuku still loved each other."
+        },
+        {
+          "es": "Ranginui lloraba por su esposa. Sus lágrimas caían sobre ella como rocío, de madrugada.",
+          "en": "Ranginui wept for his wife. His tears fell on her as dew, in the early morning."
+        },
+        {
+          "es": "Y de Papatūānuku subían nieblas hacia el cielo, como suspiros de añoranza.",
+          "en": "And from Papatūānuku, mists rose toward the sky, like sighs of longing."
+        },
+        {
+          "es": "En la versión de Grey, por eso hay rocío al amanecer y niebla que sube de los valles.",
+          "en": "In Grey's version, that is why there is dew at dawn, and mist rising from the valleys."
+        },
+        {
+          "es": "¿Tú los habrías separado, sabiendo cuánto iban a sufrir?",
+          "en": "Would you have pushed them apart, knowing how much they would grieve?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "ranginui_cielo",
+          "x": 1500,
+          "y": 230,
+          "props": {
+            "lagrimas": true
+          }
+        },
+        {
+          "tipo": "papatuanuku_tierra",
+          "x": 1500,
+          "s": 1,
+          "props": {
+            "verde": 1
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "tane",
+          "como": "tane",
+          "x": 1250,
+          "escala": 0.85,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "mira",
+              "a": 800
+            },
+            {
+              "en": 1.2,
+              "hace": "entristece"
+            },
+            {
+              "en": 4.2,
+              "hace": "mira",
+              "a": 600
+            }
+          ]
+        },
+        {
+          "id": "rongo",
+          "como": "rongo",
+          "x": 1550,
+          "escala": 0.8,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "POR ESO HAY ROCÍO AL AMANECER",
+            "en": "THAT'S WHY THERE IS DEW AT DAWN"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque",
+          "hasta": 4.6
+        }
+      ]
+    },
+    {
+      "id": "tawhiri",
+      "fondo": "te_ao_marama",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero uno de los hermanos no estaba nada contento.",
+          "en": "But one of the brothers was not happy at all."
+        },
+        {
+          "es": "Tāwhirimātea, dios de los vientos, había visto cómo arrancaban a su padre. Su rabia crecía.",
+          "en": "Tāwhirimātea, god of the winds, had watched his father being torn away. His anger kept growing."
+        },
+        {
+          "es": "Subió al cielo para vivir con Ranginui, muy por encima de sus hermanos.",
+          "en": "He rose into the sky to live with Ranginui, far above his brothers."
+        },
+        {
+          "es": "Y allá arriba, entre las nubes, empezó a planear su venganza.",
+          "en": "And up there, among the clouds, he began to plan his revenge."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kapua",
+          "x": 900,
+          "y": 260,
+          "s": 1.1,
+          "en": 2.8,
+          "props": {
+            "oscura": true
+          }
+        },
+        {
+          "tipo": "kapua",
+          "x": 1600,
+          "y": 300,
+          "s": 0.9,
+          "en": 3,
+          "props": {
+            "oscura": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "tawhirimatea",
+          "como": "tawhirimatea",
+          "x": 1200,
+          "escala": 0.95,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "mira",
+              "a": 500
+            },
+            {
+              "en": 1.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.8,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.2,
+              "hace": "vuela",
+              "a": [
+                1400,
+                330
+              ],
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "tane",
+          "como": "tane",
+          "x": 520,
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1200
+            },
+            {
+              "en": 2.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.6,
+              "hace": "mira",
+              "a": 1400
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.3,
+          "tipo": "polvo",
+          "x": 1200,
+          "y": 760,
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "te_ao_marama",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Tāne había traído la luz al mundo. Pero la guerra entre los hermanos recién empezaba.",
+          "en": "Tāne had brought light into the world. But the war between the brothers was only beginning."
+        },
+        {
+          "es": "¿De qué lado estás tú: del de Tāne o del de Tāwhirimātea? Cuéntanos en los comentarios.",
+          "en": "Whose side are you on: Tāne's, or Tāwhirimātea's? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, el dios de la tormenta le declara la guerra a sus hermanos. Es La guerra del dios de la tormenta.",
+          "en": "Next time, the storm god goes to war against his brothers. It is The Storm God's War."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kapua",
+          "x": 1350,
+          "y": 280,
+          "s": 1.2,
+          "props": {
+            "oscura": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "tane",
+          "como": "tane",
+          "x": 640,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.9,
+              "hace": "baja"
+            },
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 1350
+            }
+          ]
+        },
+        {
+          "id": "tawhirimatea",
+          "como": "tawhirimatea",
+          "x": 1350,
+          "y": 430,
+          "escala": 0.85,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        },
+        {
+          "en": 2.4,
+          "tipo": "rayo",
+          "x": 1500,
+          "dur": 0.3
+        }
+      ],
+      "rotulos": []
+    }
+  ]
+}

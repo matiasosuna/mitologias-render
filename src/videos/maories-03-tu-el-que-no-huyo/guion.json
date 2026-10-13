@@ -1,0 +1,1190 @@
+{
+  "id": "maories-03-tu-el-que-no-huyo",
+  "serie": "maories",
+  "numero": "03",
+  "titulo": {
+    "es": "Tū, el que no huyó",
+    "en": "Tū Stands Alone"
+  },
+  "tituloGriego": "TŪ STANDS ALONE",
+  "miniatura": {
+    "heroe": "tumatauenga",
+    "rival": "tawhirimatea"
+  },
+  "siguiente": {
+    "es": "La mujer hecha de tierra",
+    "en": "The Woman Made of Earth"
+  },
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El dios que se comió a los hijos de sus hermanos",
+        "en": "The god who ate his brothers' children"
+      },
+      "escena": "venganza",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "El dios de los terremotos sigue allá abajo",
+        "en": "The earthquake god is still down there"
+      },
+      "escena": "ruaumoko",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    }
+  ],
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "te_ao_marama",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada, el dios de la tormenta atacó a todos sus hermanos, y solo Tū quedó de pie.",
+          "en": "Last time, the storm god attacked all of his brothers, and only Tū was left standing."
+        },
+        {
+          "es": "Los demás se habían escondido o habían huido.",
+          "en": "The others had hidden away, or run for their lives."
+        },
+        {
+          "es": "Tū estaba herido y furioso. «Me dejaron pelear solo», pensó.",
+          "en": "Tū was hurt and furious. 'They left me to fight alone,' he thought."
+        },
+        {
+          "es": "Y decidió hacérselo pagar a todos.",
+          "en": "And he decided to make every one of them pay."
+        },
+        {
+          "es": "Esta parte también viene del libro de Grey, de los escritos de Te Rangikāheke.",
+          "en": "This part also comes from Grey's book, from the writings of Te Rangikāheke."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "tumatauenga",
+          "como": "tumatauenga",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "mira",
+              "a": 1500
+            },
+            {
+              "en": 2.1,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.6,
+              "hace": "camina",
+              "a": 1300
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.2,
+          "tipo": "destello",
+          "x": 960,
+          "y": 500,
+          "dur": 0.3
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "aves",
+      "fondo": "ngahere",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Primero fue tras los hijos de Tāne: las aves del bosque.",
+          "en": "First, he went after the children of Tāne: the birds of the forest."
+        },
+        {
+          "es": "Con hojas y fibras, hizo lazos, pequeñas trampas para atrapar aves.",
+          "en": "From leaves and plant fibres, he made snares, little loops for catching birds."
+        },
+        {
+          "es": "Los colgó en las ramas y esperó en silencio.",
+          "en": "He hung them in the branches, and waited in silence."
+        },
+        {
+          "es": "Pronto, las aves quedaron atrapadas, una tras otra.",
+          "en": "Soon the birds were caught, one after another."
+        },
+        {
+          "es": "Los hijos de Tāne ya no podían volar libres.",
+          "en": "Tāne's children could no longer fly free."
+        },
+        {
+          "es": "Los kererū, los tūī y muchas otras aves del bosque cayeron en sus trampas.",
+          "en": "The kererū pigeons, the tūī, and many other forest birds fell into his snares."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "harakeke",
+          "x": 800,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "tumatauenga",
+          "como": "tumatauenga",
+          "x": 500,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.6,
+              "hace": "baja"
+            },
+            {
+              "en": 2.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.5,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.8,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "ave1",
+          "como": "kereru",
+          "x": 1100,
+          "y": 420,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "vuela",
+              "a": [
+                1000,
+                520
+              ],
+              "dur": 1.5
+            },
+            {
+              "en": 3.1,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "ave2",
+          "como": "tui",
+          "x": 1500,
+          "y": 380,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1350,
+                500
+              ],
+              "dur": 1.2
+            },
+            {
+              "en": 3.4,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "peces",
+      "fondo": "takutai",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después fue tras los hijos de Tangaroa: los peces.",
+          "en": "Next, he went after the children of Tangaroa: the fish."
+        },
+        {
+          "es": "Con hojas de lino, el harakeke, tejió una red enorme.",
+          "en": "From the leaves of flax, called harakeke, he wove an enormous net."
+        },
+        {
+          "es": "La tiró al mar y la arrastró hasta la orilla, llena de peces.",
+          "en": "He threw it into the sea and dragged it back to the shore, full of fish."
+        },
+        {
+          "es": "Los hijos de Tangaroa quedaron atrapados en la arena.",
+          "en": "Tangaroa's children lay trapped on the sand."
+        },
+        {
+          "es": "Tangaroa, escondido en lo hondo, no pudo salvarlos.",
+          "en": "Tangaroa, hiding in the deep, could not save them."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "harakeke",
+          "x": 300,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "tumatauenga",
+          "como": "tumatauenga",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.8,
+              "hace": "lanza"
+            },
+            {
+              "en": 2.5,
+              "hace": "camina",
+              "a": 600
+            }
+          ]
+        },
+        {
+          "id": "pez1",
+          "como": "ika",
+          "x": 1100,
+          "y": 720,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "salta"
+            },
+            {
+              "en": 3,
+              "hace": "nada",
+              "a": 900
+            }
+          ]
+        },
+        {
+          "id": "pez2",
+          "como": "ika",
+          "x": 1300,
+          "y": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "salta"
+            },
+            {
+              "en": 3.1,
+              "hace": "nada",
+              "a": 1050
+            }
+          ]
+        },
+        {
+          "id": "pez3",
+          "como": "ika",
+          "x": 1500,
+          "y": 730,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "salta"
+            },
+            {
+              "en": 3.2,
+              "hace": "nada",
+              "a": 1200
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "olas-bajan",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "tierra",
+      "fondo": "te_ao_marama",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después buscó a Rongo y a Haumia, que estaban escondidos en la tierra.",
+          "en": "Then he searched for Rongo and Haumia, who were hiding in the earth."
+        },
+        {
+          "es": "Encontró el kūmara por sus hojas, que asomaban del suelo.",
+          "en": "He found the kūmara by its leaves, poking up out of the ground."
+        },
+        {
+          "es": "Con un kō, un palo de cavar, los sacó y los juntó en canastas.",
+          "en": "With a kō, a digging stick, he dug them up and piled them into baskets."
+        },
+        {
+          "es": "A la raíz de helecho de Haumia la encontró de la misma manera.",
+          "en": "He found Haumia's fern root in exactly the same way."
+        },
+        {
+          "es": "Nadie podía esconderse de Tū.",
+          "en": "Nobody could hide from Tū."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "mara_kumara",
+          "x": 1100,
+          "s": 0.9
+        },
+        {
+          "tipo": "rarauhe",
+          "x": 1500,
+          "s": 1
+        },
+        {
+          "tipo": "kete",
+          "x": 850,
+          "en": 2.6
+        },
+        {
+          "tipo": "kete",
+          "x": 950,
+          "s": 0.9,
+          "en": 3.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "tumatauenga",
+          "como": "tumatauenga",
+          "x": 650,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.1,
+          "tipo": "polvo",
+          "x": 1000,
+          "y": 780,
+          "dur": 0.5
+        },
+        {
+          "en": 3.3,
+          "tipo": "polvo",
+          "x": 1450,
+          "y": 780,
+          "dur": 0.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "venganza",
+      "fondo": "kainga",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Tū cocinó todo, y se lo comió.",
+          "en": "Then Tū cooked them all, and he ate them."
+        },
+        {
+          "es": "Esa fue su venganza: los hijos de sus hermanos se volvieron comida.",
+          "en": "That was his revenge: the children of his brothers became food."
+        },
+        {
+          "es": "Grey dice que así los volvió comunes, noa: comida que la gente puede comer.",
+          "en": "Grey says this made them common, or noa: ordinary food that people are free to eat."
+        },
+        {
+          "es": "Antes eran sagrados, de los dioses. Ahora alimentaban a todos.",
+          "en": "Before, they belonged to the gods. Now they could feed everyone."
+        },
+        {
+          "es": "¿Te parece justa la venganza de Tū, o fue demasiado lejos?",
+          "en": "Was Tū's revenge fair, or did he go too far?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "ahi",
+          "x": 1000,
+          "s": 0.9
+        },
+        {
+          "tipo": "kete",
+          "x": 560,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "tumatauenga",
+          "como": "tumatauenga",
+          "x": 750,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "tangata",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "wahine",
+          "x": 1480,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "humo",
+          "x": 1000,
+          "y": 650,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "karakia",
+      "fondo": "whare_dentro",
+      "camara": {
+        "de": 0,
+        "a": 60,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Tū también aprendió karakia: cantos y oraciones especiales.",
+          "en": "Tū also learned karakia: special chants and prayers."
+        },
+        {
+          "es": "Grey dice que aprendió karakia para cada uno de sus hermanos.",
+          "en": "Grey says he learned karakia for each one of his brothers."
+        },
+        {
+          "es": "Para que las aves vinieran, para que las redes se llenaran y para que el kūmara creciera.",
+          "en": "To bring the birds, to fill the nets, and to make the kūmara grow."
+        },
+        {
+          "es": "Así, los hijos de sus hermanos serían siempre abundantes para la gente.",
+          "en": "That way, the children of his brothers would always be plentiful for people."
+        },
+        {
+          "es": "Hasta hoy, en muchos lugares se dicen karakia antes de pescar, plantar o cortar un árbol.",
+          "en": "To this day, in many places, people say karakia before fishing, planting, or cutting a tree."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kete",
+          "x": 600,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "tumatauenga",
+          "como": "tumatauenga",
+          "x": 960,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "reza"
+            },
+            {
+              "en": 1.5,
+              "hace": "habla",
+              "dur": 1.5
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "tohunga",
+          "como": "tohunga",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.2,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 960,
+          "y": 500,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "tormenta",
+      "fondo": "moana",
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero había un hermano al que Tū nunca pudo vencer: Tāwhirimātea.",
+          "en": "But there was one brother Tū could never defeat: Tāwhirimātea."
+        },
+        {
+          "es": "El dios de la tormenta era demasiado fuerte, y estaba muy lejos, arriba en el cielo.",
+          "en": "The storm god was too strong, and too far away, up in the sky."
+        },
+        {
+          "es": "Así que la guerra entre ellos nunca terminó.",
+          "en": "So the war between them never ended."
+        },
+        {
+          "es": "En la versión de Grey, por eso las tormentas siguen atacando a la gente, en tierra y en el mar.",
+          "en": "In Grey's version, that is why storms still attack people, on land and at sea."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waka",
+          "x": 700,
+          "y": 760,
+          "s": 0.7
+        },
+        {
+          "tipo": "kapua",
+          "x": 1300,
+          "y": 260,
+          "s": 1.2,
+          "props": {
+            "oscura": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "tawhirimatea",
+          "como": "tawhirimatea",
+          "x": 1350,
+          "y": 330,
+          "escala": 0.85,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 2,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "waka_gente",
+          "como": "toa",
+          "x": 700,
+          "y": 720,
+          "escala": 0.75,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "tiembla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "lluvia",
+          "dur": 2,
+          "intensidad": 0.7
+        },
+        {
+          "en": 2.4,
+          "tipo": "rayo",
+          "x": 1100,
+          "dur": 0.3
+        },
+        {
+          "en": 3,
+          "tipo": "olas-suben",
+          "dur": 1,
+          "intensidad": 0.2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "POR ESO HAY TORMENTAS QUE ATACAN A LA GENTE",
+            "en": "THAT'S WHY STORMS STILL ATTACK PEOPLE"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque",
+          "hasta": 4
+        }
+      ],
+      "sinAstros": true
+    },
+    {
+      "id": "padres",
+      "fondo": "te_ao_marama",
+      "camara": {
+        "de": 0,
+        "a": 60,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mientras tanto, Ranginui y Papatūānuku seguían sufriendo el uno por el otro.",
+          "en": "Meanwhile, Ranginui and Papatūānuku still grieved for each other."
+        },
+        {
+          "es": "Cada noche, el Cielo lloraba. Cada mañana, la Tierra suspiraba niebla.",
+          "en": "Every night, the Sky wept. Every morning, the Earth sighed out mist."
+        },
+        {
+          "es": "Muchas tribus cuentan lo que hicieron entonces sus hijos.",
+          "en": "Many tribes tell what their children did next."
+        },
+        {
+          "es": "Dieron vuelta a su madre, boca abajo, para que sus padres no vieran la pena del otro.",
+          "en": "They turned their mother over, face down, so the parents would not see each other's sorrow."
+        },
+        {
+          "es": "La Tierra quedó con la cara hacia abajo, y el Cielo siguió llorando arriba.",
+          "en": "The Earth was left face down, and the Sky kept weeping far above."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "ranginui_cielo",
+          "x": 1500,
+          "y": 230,
+          "props": {
+            "lagrimas": true
+          }
+        },
+        {
+          "tipo": "papatuanuku_tierra",
+          "x": 1500,
+          "hasta": 3.4,
+          "props": {
+            "verde": 1
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "tane",
+          "como": "tane",
+          "x": 1150,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "mira",
+              "a": 500
+            },
+            {
+              "en": 1.2,
+              "hace": "entristece"
+            },
+            {
+              "en": 2.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.1,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "rongo",
+          "como": "rongo",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "asiente"
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.2,
+          "tipo": "temblor",
+          "dur": 0.8,
+          "intensidad": 0.8
+        },
+        {
+          "en": 3.3,
+          "tipo": "polvo",
+          "x": 900,
+          "y": 760,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "ruaumoko",
+      "fondo": "maunga",
+      "camara": {
+        "de": 0,
+        "a": 60,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero el más chico, Rūaumoko, todavía estaba en el pecho de su madre.",
+          "en": "But the youngest child, Rūaumoko, was still at his mother's breast."
+        },
+        {
+          "es": "Cuando la dieron vuelta, él quedó abajo con ella, en lo hondo de la tierra.",
+          "en": "When she was turned over, he was carried down with her, deep under the ground."
+        },
+        {
+          "es": "Le dieron fuego para que tuviera calor en la oscuridad.",
+          "en": "They gave him fire, to keep him warm in the dark."
+        },
+        {
+          "es": "Y todavía está allí abajo.",
+          "en": "And he is still down there, below."
+        },
+        {
+          "es": "Es el hijo que nunca llegó a ver la luz.",
+          "en": "He is the child who never got to see the light."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "ahi",
+          "x": 900,
+          "s": 0.8,
+          "en": 2
+        },
+        {
+          "tipo": "maunga_el",
+          "x": 500,
+          "s": 0.7,
+          "capa": "fondo",
+          "props": {
+            "humo": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "ruaumoko",
+          "como": "ruaumoko",
+          "x": 900,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "desaparece",
+              "con": "fuego"
+            }
+          ]
+        },
+        {
+          "id": "tane",
+          "como": "tane",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.2,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 2.2,
+          "tipo": "chispas",
+          "x": 900,
+          "y": 650,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "RŪAUMOKO · DIOS DE LOS TERREMOTOS",
+            "en": "RŪAUMOKO · GOD OF EARTHQUAKES"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 1.6
+        }
+      ]
+    },
+    {
+      "id": "terremotos",
+      "fondo": "maunga",
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuando Rūaumoko se mueve y camina allá abajo, el suelo tiembla.",
+          "en": "When Rūaumoko moves and walks about down there, the ground shakes."
+        },
+        {
+          "es": "Muchas tribus dicen que por eso hay terremotos, y por eso humean los volcanes.",
+          "en": "Many tribes say that is why there are earthquakes, and why the volcanoes smoke."
+        },
+        {
+          "es": "Y Aotearoa es una tierra que tiembla seguido.",
+          "en": "And Aotearoa is a land that shakes often."
+        },
+        {
+          "es": "Así lo cuentan Elsdon Best y muchas voces maoríes, cada tribu a su manera.",
+          "en": "That is how Elsdon Best and many Māori voices tell it, each tribe in its own way."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "maunga_el",
+          "x": 1450,
+          "s": 1,
+          "props": {
+            "humo": true
+          }
+        },
+        {
+          "tipo": "whare",
+          "x": 300,
+          "s": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "kaumatua",
+          "como": "kaumatua",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "nina",
+          "como": "kotiro",
+          "x": 950,
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 1.5,
+              "hace": "abraza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "temblor",
+          "dur": 0.7,
+          "intensidad": 1
+        },
+        {
+          "en": 1.4,
+          "tipo": "humo",
+          "x": 1450,
+          "y": 350,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "te_ao_marama",
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ahora el mundo tenía cielo y tierra, bosques y mar, comida, y fuego allá abajo.",
+          "en": "Now the world had sky and earth, forests and sea, food, and fire down below."
+        },
+        {
+          "es": "Pero en otra versión, que escribió John White, Tāne todavía buscaba algo: una compañera.",
+          "en": "But in another telling, written down by John White, Tāne was still looking for something: a wife."
+        },
+        {
+          "es": "¿Qué hermano habrías sido tú: Tāne, Tū o Tāwhirimātea? Cuéntanos en los comentarios.",
+          "en": "Which brother would you have been: Tāne, Tū, or Tāwhirimātea? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, Tāne le da forma a una mujer con tierra roja. Es La mujer hecha de tierra.",
+          "en": "Next time, Tāne shapes a woman out of red earth. It is The Woman Made of Earth."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "mara_kumara",
+          "x": 1000,
+          "s": 0.6,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "tane",
+          "como": "tane",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 1.5,
+              "hace": "entristece"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "tumatauenga",
+          "como": "tumatauenga",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    }
+  ]
+}

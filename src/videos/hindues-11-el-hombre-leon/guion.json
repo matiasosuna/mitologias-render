@@ -1,0 +1,1604 @@
+{
+  "id": "hindues-11-el-hombre-leon",
+  "serie": "hindues",
+  "numero": "11",
+  "titulo": {
+    "es": "El hombre león",
+    "en": "The Man-Lion"
+  },
+  "tituloGriego": "THE MAN-LION",
+  "miniatura": {
+    "heroe": "narasimha",
+    "rival": "hiranyakashipu"
+  },
+  "siguiente": {
+    "es": "Tres pasos",
+    "en": "Three Steps"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "cielo_cosmico",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Ganesha recibió su cabeza de elefante. Ahora volvemos con Vishnu.",
+          "en": "Last time, Ganesha got his elephant head. Now we return to Vishnu."
+        },
+        {
+          "es": "La Bhagavad Gita dice que, cuando el mal crece en el mundo, Vishnu baja en una forma nueva.",
+          "en": "The Bhagavad Gita says that when evil grows in the world, Vishnu comes down in a new form."
+        },
+        {
+          "es": "Cada una de esas formas se llama avatar. Ya había sido un pez y una tortuga.",
+          "en": "Each of these forms is called an avatar. He had already been a fish and a tortoise."
+        },
+        {
+          "es": "Ahora venían dos hermanos, dos demonios muy poderosos.",
+          "en": "Now came two brothers, two very powerful demons."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "ganesha",
+          "como": "ganesha",
+          "x": 380,
+          "escala": 0.75,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.6,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 960,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "matsya",
+          "como": "matsya",
+          "x": 1400,
+          "y": 520,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "kurma",
+          "como": "kurma",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "hermanos",
+          "como": "hiranyakashipu",
+          "x": 350,
+          "capa": "fondo",
+          "escala": 0.7,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 3.4,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.8,
+          "tipo": "luz",
+          "x": 960,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.1,
+          "texto": {
+            "es": "AVATAR",
+            "en": "AVATAR"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "varaha",
+      "fondo": "oceano_cosmico",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El primer hermano, Hiranyaksha, era un guerrero terrible. En esos días, la tierra se había hundido en el océano.",
+          "en": "The first brother, Hiranyaksha, was a fearsome warrior. In those days, the earth had sunk into the ocean."
+        },
+        {
+          "es": "El Bhagavata Purana cuenta que Vishnu se volvió Varaha, un jabalí gigante, y se lanzó al agua.",
+          "en": "The Bhagavata Purana tells how Vishnu became Varaha, a giant boar, and dived into the water."
+        },
+        {
+          "es": "Luchó contra Hiranyaksha y lo venció.",
+          "en": "He fought Hiranyaksha and defeated him."
+        },
+        {
+          "es": "Después levantó la tierra sobre sus colmillos y la devolvió a su lugar.",
+          "en": "Then he lifted the earth up on his tusks and set it back in its place."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "colina",
+          "x": 1000,
+          "s": 0.6,
+          "en": 3,
+          "sube": 260,
+          "durSube": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "hiranyaksha",
+          "como": "hiranyaksha",
+          "x": 1350,
+          "mira": "izq",
+          "escala": 0.75,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.2,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 2.5,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "varaha",
+          "como": "varaha",
+          "x": 550,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 950,
+              "dur": 0.5
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.4,
+          "tipo": "temblor",
+          "dur": 0.3
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 600,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "voto",
+      "fondo": "bosque_pahari",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Su hermano, Hiranyakashipu, juró vengarse de Vishnu.",
+          "en": "His brother, Hiranyakashipu, swore revenge on Vishnu."
+        },
+        {
+          "es": "Se fue a una montaña e hizo una penitencia terrible: de puntillas, con los brazos en alto, sin comer.",
+          "en": "He went to a mountain and did terrible penance: standing on his toes, arms raised, eating nothing."
+        },
+        {
+          "es": "El Bhagavata Purana dice que las hormigas hicieron su hormiguero sobre él, y aun así no se movió.",
+          "en": "The Bhagavata Purana says ants built their hill over his body, and still he did not move."
+        },
+        {
+          "es": "Al final, Brahma apareció y le ofreció un deseo.",
+          "en": "At last, Brahma appeared and offered him a wish."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "hk",
+          "como": "hiranyakashipu",
+          "x": 800,
+          "escala": 0.75,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.4,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 3.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "sabio",
+          "como": "sabio",
+          "x": 300,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 1350,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.4,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "humo",
+          "x": 800,
+          "y": 790,
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "polvo",
+          "x": 800,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1350,
+          "y": 450,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "don",
+      "fondo": "cielo_cosmico",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hiranyakashipu pidió no morir a manos de ningún hombre ni de ninguna bestia.",
+          "en": "Hiranyakashipu asked never to be killed by any man or any beast."
+        },
+        {
+          "es": "Ni de día ni de noche. Ni dentro de una casa ni fuera de ella.",
+          "en": "Not by day, and not by night. Not inside a house, and not outside."
+        },
+        {
+          "es": "Ni en la tierra ni en el cielo. Y con ningún arma.",
+          "en": "Not on the ground, not in the sky. And not with any weapon."
+        },
+        {
+          "es": "Brahma se lo concedió. Ahora creía que nadie podría matarlo jamás.",
+          "en": "Brahma granted it. Now he believed that no one could ever kill him."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "hk",
+          "como": "hiranyakashipu",
+          "x": 650,
+          "escala": 0.75,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 1250,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "asiente"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.1,
+              "hace": "brilla",
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 450,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "NI HOMBRE NI BESTIA",
+            "en": "NO MAN, NO BEAST"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1
+        },
+        {
+          "en": 1,
+          "texto": {
+            "es": "NI DE DÍA NI DE NOCHE",
+            "en": "NOT BY DAY OR NIGHT"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1.5
+        },
+        {
+          "en": 1.5,
+          "texto": {
+            "es": "NI DENTRO NI FUERA",
+            "en": "NOT INSIDE OR OUTSIDE"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "NI EN LA TIERRA NI EN EL CIELO",
+            "en": "NOT ON THE GROUND OR IN THE SKY"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2.5
+        },
+        {
+          "en": 2.5,
+          "texto": {
+            "es": "NINGÚN ARMA",
+            "en": "NO WEAPON"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "rey",
+      "fondo": "palacio_pahari",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Conquistó los tres mundos y se sentó en el trono de Indra, el rey de los dioses.",
+          "en": "He conquered the three worlds and sat on the throne of Indra, the king of the gods."
+        },
+        {
+          "es": "Ordenó que todos lo adoraran a él, y no a Vishnu.",
+          "en": "He ordered everyone to worship him, and not Vishnu."
+        },
+        {
+          "es": "Pero en su propio palacio había alguien que no le obedecía: su hijo pequeño, Prahlada.",
+          "en": "But in his own palace, someone would not obey: his little son, Prahlada."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono_indio",
+          "x": 800
+        }
+      ],
+      "actores": [
+        {
+          "id": "hk",
+          "como": "hiranyakashipu",
+          "x": 800,
+          "escala": 0.75,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "sienta"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2.5,
+              "hace": "mira",
+              "a": 1500
+            },
+            {
+              "en": 2.7,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 1250,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.3,
+              "hace": "corre",
+              "a": 2700,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "asura",
+          "como": "asura",
+          "x": 400,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "deva",
+          "como": "deva",
+          "x": 1550,
+          "capa": "medio",
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "prahlada",
+          "como": "prahlada",
+          "x": 1800,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1500
+            },
+            {
+              "en": 2.5,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "prahlada",
+      "fondo": "palacio_pahari",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Prahlada había aprendido a amar a Vishnu antes de nacer, escuchando al sabio Narada.",
+          "en": "Prahlada had learned to love Vishnu before he was even born, listening to the sage Narada."
+        },
+        {
+          "es": "Sus maestros quisieron enseñarle política y guerra. Prahlada solo hablaba de Vishnu.",
+          "en": "His teachers tried to teach him politics and war. Prahlada spoke only of Vishnu."
+        },
+        {
+          "es": "\"¿Qué es lo mejor que has aprendido?\", le preguntó su padre. \"Amar a Vishnu\", dijo el niño.",
+          "en": "\"What is the best thing you have learned?\" asked his father. \"To love Vishnu,\" said the boy."
+        },
+        {
+          "es": "El rey temblaba de rabia.",
+          "en": "The king shook with rage."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "narada",
+          "como": "narada",
+          "x": 400,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "prahlada",
+          "como": "prahlada",
+          "x": 950,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "reza"
+            },
+            {
+              "en": 1.4,
+              "hace": "niega"
+            },
+            {
+              "en": 2.5,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.7,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "maestro",
+          "como": "brahman",
+          "x": 620,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.6,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "hk",
+          "como": "hiranyakashipu",
+          "x": 1600,
+          "mira": "izq",
+          "escala": 0.75,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1350
+            },
+            {
+              "en": 2.1,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 3,
+              "hace": "tiembla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.2,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "castigo",
+      "fondo": "palacio_noche",
+      "camara": {
+        "de": 0,
+        "a": 240,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El rey ordenó castigar a su hijo. Pero nada podía hacerle daño.",
+          "en": "The king ordered his son to be punished. But nothing could harm him."
+        },
+        {
+          "es": "Mandaron elefantes enormes para aplastarlo. Los elefantes no lo tocaron.",
+          "en": "Huge elephants were sent to crush him. The elephants would not touch him."
+        },
+        {
+          "es": "Lo arrojaron al fuego. Las llamas no lo quemaron.",
+          "en": "He was thrown into a fire. The flames did not burn him."
+        },
+        {
+          "es": "El Bhagavata Purana dice que Prahlada solo seguía rezando, tranquilo, pensando en Vishnu.",
+          "en": "The Bhagavata Purana says Prahlada just kept praying, calm, with his mind on Vishnu."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "hk",
+          "como": "hiranyakashipu",
+          "x": 420,
+          "escala": 0.75,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 0.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.8,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "soldado",
+          "como": "asura_rojo",
+          "x": 700,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 850,
+              "dur": 0.5
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "prahlada",
+          "como": "prahlada",
+          "x": 1050,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "reza"
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "elefante",
+          "como": "elefante",
+          "x": 1800,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1400,
+              "dur": 0.6
+            },
+            {
+              "en": 1.6,
+              "hace": "arrodilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "fuego",
+          "x": 1050,
+          "y": 790,
+          "dur": 0.9,
+          "intensidad": 1.2
+        },
+        {
+          "en": 2.1,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 550,
+          "dur": 0.9
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "pilar",
+      "fondo": "crepusculo",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Una tarde, el rey gritó: \"¿Dónde está tu Vishnu? Dices que está en todas partes\".",
+          "en": "One evening, the king shouted: \"Where is your Vishnu? You say he is everywhere.\""
+        },
+        {
+          "es": "\"¿Está en esta columna?\" \"Sí\", dijo Prahlada. \"Está\".",
+          "en": "\"Is he in this pillar?\" \"Yes,\" said Prahlada. \"He is.\""
+        },
+        {
+          "es": "El rey golpeó la columna con el puño.",
+          "en": "The king struck the pillar with his fist."
+        },
+        {
+          "es": "La columna se partió con un rugido terrible.",
+          "en": "The pillar cracked open with a terrible roar."
+        },
+        {
+          "es": "De ella salió Vishnu, en una forma nunca vista: Narasimha, mitad hombre y mitad león.",
+          "en": "Out of it came Vishnu, in a form no one had ever seen: Narasimha, half man and half lion."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilar",
+          "x": 1000,
+          "hasta": 3
+        },
+        {
+          "tipo": "pilar",
+          "x": 1000,
+          "en": 3,
+          "props": {
+            "rota": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "hk",
+          "como": "hiranyakashipu",
+          "x": 650,
+          "escala": 0.75,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 0.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "tiembla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "prahlada",
+          "como": "prahlada",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.6,
+              "hace": "reza"
+            },
+            {
+              "en": 4.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "narasimha",
+          "como": "narasimha",
+          "x": 1000,
+          "escala": 0.75,
+          "pasos": [
+            {
+              "en": 3.6,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.1,
+              "hace": "enoja"
+            },
+            {
+              "en": 4.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.1,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 550,
+          "dur": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.5,
+          "intensidad": 1.4
+        },
+        {
+          "en": 3.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.5,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 500,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "umbral",
+      "fondo": "crepusculo",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Era el atardecer: ni de día ni de noche.",
+          "en": "It was twilight: not day, and not night."
+        },
+        {
+          "es": "Narasimha llevó al rey hasta el umbral de la puerta: ni dentro ni fuera.",
+          "en": "Narasimha carried the king to the doorway: not inside, and not outside."
+        },
+        {
+          "es": "Lo puso sobre sus rodillas: ni en la tierra ni en el cielo.",
+          "en": "He placed him on his lap: not on the ground, and not in the sky."
+        },
+        {
+          "es": "Y con sus garras, no con un arma, acabó con el rey demonio.",
+          "en": "And with his claws, not with any weapon, he put an end to the demon king."
+        },
+        {
+          "es": "Cada parte de la promesa de Brahma se había cumplido.",
+          "en": "Every part of Brahma's promise had been kept."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "puerta_palacio",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "narasimha",
+          "como": "narasimha",
+          "x": 1450,
+          "mira": "izq",
+          "escala": 0.75,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1080,
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "sienta"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.3,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "hk",
+          "como": "hiranyakashipu",
+          "x": 1750,
+          "mira": "izq",
+          "escala": 0.75,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 820,
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "prahlada",
+          "como": "prahlada",
+          "x": 350,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.3
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "ATARDECER",
+            "en": "TWILIGHT"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1
+        },
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "EL UMBRAL",
+            "en": "THE THRESHOLD"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2
+        },
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "SOBRE SUS RODILLAS",
+            "en": "ON HIS LAP"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3
+        },
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "SUS GARRAS",
+            "en": "HIS CLAWS"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "calma",
+      "fondo": "crepusculo",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero la furia de Narasimha no se calmaba. Ni los dioses se atrevían a acercarse.",
+          "en": "But Narasimha's fury did not cool. Even the gods were afraid to come near him."
+        },
+        {
+          "es": "Ni siquiera Lakshmi, su esposa. Entonces Brahma le pidió al pequeño Prahlada que fuera él.",
+          "en": "Not even Lakshmi, his wife, dared to. So Brahma asked little Prahlada to go."
+        },
+        {
+          "es": "El niño se arrodilló y rezó. Poco a poco, el hombre león se calmó.",
+          "en": "The boy knelt and prayed. Little by little, the man-lion grew calm."
+        },
+        {
+          "es": "El Bhagavata Purana dice que Narasimha le puso la mano sobre la cabeza, con cariño.",
+          "en": "The Bhagavata Purana says Narasimha placed his hand on the boy's head, with love."
+        },
+        {
+          "es": "¿Qué habrías hecho tú en el lugar de Prahlada?",
+          "en": "What would you have done in Prahlada's place?"
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "narasimha",
+          "como": "narasimha",
+          "x": 1150,
+          "mira": "izq",
+          "escala": 0.75,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.2,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 420,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 320,
+              "dur": 0.4
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "lakshmi",
+          "como": "lakshmi",
+          "x": 1650,
+          "capa": "medio",
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "prahlada",
+          "como": "prahlada",
+          "x": 650,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.5
+            },
+            {
+              "en": 2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.1,
+              "hace": "reza"
+            },
+            {
+              "en": 4,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "temblor",
+          "dur": 0.3
+        },
+        {
+          "en": 2.5,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 550,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "palacio_pahari",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Prahlada llegó a ser rey, y gobernó con bondad.",
+          "en": "Prahlada became king, and ruled with kindness."
+        },
+        {
+          "es": "Muchos hindúes honran a Narasimha como protector de quienes están en peligro.",
+          "en": "Many Hindus honor Narasimha as a protector of those in danger."
+        },
+        {
+          "es": "Años después, un nieto de Prahlada sería también un gran rey: Bali.",
+          "en": "Years later, one of Prahlada's grandsons would also become a great king: Bali."
+        },
+        {
+          "es": "Antes de que se rompiera la columna, ¿adivinaste cómo Vishnu iba a esquivar cada parte del deseo?",
+          "en": "Before the pillar broke, did you guess how Vishnu would get around every part of the wish?"
+        },
+        {
+          "es": "La próxima vez: un niño pequeño con una sombrilla le pide a un rey tres pasos de tierra. Es Tres pasos.",
+          "en": "Next time: a tiny boy with an umbrella asks a king for three steps of land. It is Three Steps."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono_indio",
+          "x": 900
+        }
+      ],
+      "actores": [
+        {
+          "id": "prahlada",
+          "como": "prahlada",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 1500
+            }
+          ]
+        },
+        {
+          "id": "aldeano",
+          "como": "aldeano",
+          "x": 450,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "aldeana",
+          "como": "aldeana",
+          "x": 250,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "narasimha",
+          "como": "narasimha",
+          "x": 1500,
+          "capa": "medio",
+          "mira": "izq",
+          "escala": 0.7,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 2,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "bali",
+          "como": "bali",
+          "x": 1450,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 450,
+          "dur": 0.6
+        },
+        {
+          "en": 4,
+          "tipo": "chispas",
+          "x": 1300,
+          "y": 500,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Ni de día ni de noche, ni dentro ni fuera",
+        "en": "Not by day or night, not inside or outside"
+      },
+      "escena": "don",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "El dios que salió de una columna",
+        "en": "The god who burst out of a pillar"
+      },
+      "escena": "pilar",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Cómo se rompe un deseo imposible",
+        "en": "How to beat an impossible wish"
+      },
+      "escena": "umbral",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1050
+    }
+  ]
+}

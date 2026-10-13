@@ -1,0 +1,1747 @@
+{
+  "id": "hindues-09-las-cenizas-de-kama",
+  "serie": "hindues",
+  "numero": "09",
+  "titulo": {
+    "es": "Las cenizas de Kama",
+    "en": "The Ashes of Kama"
+  },
+  "tituloGriego": "THE ASHES OF KAMA",
+  "miniatura": {
+    "heroe": "kama",
+    "rival": "shiva"
+  },
+  "siguiente": {
+    "es": "El niño de barro",
+    "en": "The Boy Made of Clay"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Sati dejó su cuerpo en el sacrificio de su padre. A Shiva se le rompió el corazón.",
+          "en": "Last time, Sati left her body at her father's sacrifice. Shiva's heart was broken."
+        },
+        {
+          "es": "Shiva subió al Himalaya, las montañas más altas del mundo, y se sentó a meditar.",
+          "en": "Shiva went up into the Himalaya, the highest mountains on earth, and sat down to meditate."
+        },
+        {
+          "es": "Pero lejos de allí, crecía un peligro nuevo.",
+          "en": "But far away, a new danger was growing."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piel_tigre",
+          "x": 1000
+        }
+      ],
+      "actores": [
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 560,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.6,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "nandi",
+          "como": "nandi",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "camina",
+              "a": 1400,
+              "dur": 0.4
+            },
+            {
+              "en": 1.7,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "taraka",
+          "como": "asura_violeta",
+          "x": 1950,
+          "capa": "fondo",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.4,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "nieve",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "taraka",
+      "fondo": "palacio_noche",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un demonio llamado Taraka ayunó durante años. A cambio, Brahma, el dios creador, le concedió un deseo.",
+          "en": "A demon named Taraka fasted for years. In return, Brahma, the creator god, granted him a wish."
+        },
+        {
+          "es": "El Shiva Purana cuenta lo que pidió: que solo un hijo de Shiva pudiera vencerlo.",
+          "en": "The Shiva Purana tells what he asked for: that only a son of Shiva could ever defeat him."
+        },
+        {
+          "es": "Parecía un deseo seguro. Shiva no tenía esposa ni hijos, y estaba perdido en su meditación.",
+          "en": "It seemed like a safe wish. Shiva had no wife and no son, and he was lost in meditation."
+        },
+        {
+          "es": "Entonces Taraka atacó el cielo y echó a los dioses de sus casas.",
+          "en": "So Taraka attacked heaven and drove the gods out of their homes."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "taraka",
+          "como": "asura_violeta",
+          "x": 650,
+          "escala": 0.9,
+          "rotulo": "TARAKA",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "reza"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "corre",
+              "a": 1150,
+              "dur": 0.6
+            },
+            {
+              "en": 3.4,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 1150,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "asiente"
+            },
+            {
+              "en": 2.4,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 1700,
+          "mira": "izq",
+          "escala": 0.8,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.4,
+              "hace": "corre",
+              "a": 2800,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "deva",
+          "como": "deva",
+          "x": 1950,
+          "mira": "izq",
+          "escala": 0.8,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.3,
+              "hace": "corre",
+              "a": 3000,
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 3.4,
+          "tipo": "temblor",
+          "dur": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "SOLO UN HIJO DE SHIVA",
+            "en": "ONLY A SON OF SHIVA"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 2.6
+        }
+      ]
+    },
+    {
+      "id": "parvati",
+      "fondo": "palacio_pahari",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mientras tanto, Sati volvió a nacer. Su nuevo nombre era Parvati: \"la hija de la montaña\".",
+          "en": "Meanwhile, Sati was born again. Her new name was Parvati, \"daughter of the mountain\"."
+        },
+        {
+          "es": "Su padre era Himavan, el rey de las montañas del Himalaya.",
+          "en": "Her father was Himavan, the king of the Himalaya mountains."
+        },
+        {
+          "es": "Un día los visitó Narada, un sabio que viaja por todos los mundos con su laúd.",
+          "en": "One day, Narada came to visit. He is a wise sage who travels through all the worlds with his lute."
+        },
+        {
+          "es": "Narada miró a la niña y dijo: \"Ella se casará con Shiva\".",
+          "en": "Narada looked at the girl and said: \"She will marry Shiva.\""
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "parvati",
+          "como": "parvati",
+          "x": 900,
+          "escala": 0.75,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "himavan",
+          "como": "raja",
+          "x": 520,
+          "rotulo": "HIMAVAN",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 1.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.4,
+              "hace": "mira",
+              "a": 1400
+            }
+          ]
+        },
+        {
+          "id": "narada",
+          "como": "narada",
+          "x": 1600,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1350
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 900,
+          "y": 500,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "servicio",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ya mayor, Parvati subió a la montaña a servir a Shiva. Cada día le llevaba flores y agua.",
+          "en": "When she grew up, Parvati served Shiva on the mountain, bringing him flowers and water."
+        },
+        {
+          "es": "Shiva la dejó quedarse. Pero sus ojos seguían cerrados. Ni siquiera la miraba.",
+          "en": "Shiva let her stay. But his eyes stayed closed. He did not even look at her."
+        },
+        {
+          "es": "Los dioses estaban preocupados. Solo un hijo de Shiva podía salvarlos, y Shiva no despertaba.",
+          "en": "The gods were worried. Only a son of Shiva could save them, and Shiva would not wake up."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piel_tigre",
+          "x": 1050
+        },
+        {
+          "tipo": "loto",
+          "x": 800,
+          "s": 0.6,
+          "en": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 1050,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.1,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "parvati",
+          "como": "parvati",
+          "x": 300,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 680,
+              "dur": 0.6
+            },
+            {
+              "en": 0.6,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.7,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 1700,
+          "capa": "fondo",
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.4,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "deva",
+          "como": "deva",
+          "x": 1950,
+          "capa": "fondo",
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "nieve",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "kama",
+      "fondo": "svarga",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así que Indra, el rey de los dioses, llamó a Kama, el dios del amor.",
+          "en": "So Indra, the king of the gods, called for Kama, the god of love."
+        },
+        {
+          "es": "Kama lleva un arco hecho de caña de azúcar, y sus flechas son flores.",
+          "en": "Kama carries a bow made of sugarcane, and his arrows are made of flowers."
+        },
+        {
+          "es": "Quien recibe una de sus flechas se enamora.",
+          "en": "Whoever is touched by one of his arrows falls in love."
+        },
+        {
+          "es": "Indra le pidió despertar el amor en el corazón de Shiva. Kama aceptó y partió con su esposa, Rati.",
+          "en": "Indra asked him to wake love in Shiva's heart. Kama went, with his wife Rati."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono_indio",
+          "x": 500
+        },
+        {
+          "tipo": "lluvia_oro",
+          "x": 1100,
+          "en": 2,
+          "hasta": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 500,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "kama",
+          "como": "kama",
+          "x": 1000,
+          "mira": "izq",
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "lanza"
+            },
+            {
+              "en": 3.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "rati",
+          "como": "rati",
+          "x": 1450,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 3.3,
+              "hace": "entra",
+              "a": 1350
+            },
+            {
+              "en": 3.7,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1200,
+          "y": 500,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "primavera",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Kama llevó consigo a su amiga, la Primavera. En medio de la nieve, los árboles se llenaron de flores.",
+          "en": "Kama brought his friend Spring along. In the middle of the snow, the trees burst into flower."
+        },
+        {
+          "es": "Cantaron los pájaros. El poeta Kalidasa lo cuenta en un poema famoso, el Kumarasambhava.",
+          "en": "Birds sang. The poet Kalidasa describes it in a famous poem, the Kumarasambhava."
+        },
+        {
+          "es": "Todos en la montaña lo sintieron. Todos, menos Shiva: seguía quieto como una roca.",
+          "en": "Everyone on the mountain felt it. Everyone except Shiva. He sat as still as a rock."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "arbol_pahari",
+          "x": 420,
+          "s": 0.8,
+          "en": 0.3
+        },
+        {
+          "tipo": "arbol_pahari",
+          "x": 1650,
+          "s": 0.9,
+          "en": 0.6,
+          "props": {
+            "flor": "#FBF8F0"
+          }
+        },
+        {
+          "tipo": "lluvia_oro",
+          "x": 960,
+          "en": 0.4,
+          "hasta": 2
+        },
+        {
+          "tipo": "piel_tigre",
+          "x": 1150
+        }
+      ],
+      "actores": [
+        {
+          "id": "kama",
+          "como": "kama",
+          "x": 650,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 700
+            },
+            {
+              "en": 0.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "pavo",
+          "como": "mayura_abierto",
+          "x": 1450,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 1150,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.1,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 1.2,
+          "tipo": "chispas",
+          "x": 1300,
+          "y": 450,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "flecha",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Justo entonces, Parvati se acercó con sus flores. Kama, escondido cerca, apuntó.",
+          "en": "Just then, Parvati came near with her flowers. Kama, hiding nearby, took aim."
+        },
+        {
+          "es": "Disparó su flecha de flores. Por un momento, Shiva abrió los ojos y miró a Parvati.",
+          "en": "He shot his flower arrow. For a moment, Shiva opened his eyes and looked at Parvati."
+        },
+        {
+          "es": "Después vio a Kama con su arco. Entendió quién lo había molestado.",
+          "en": "Then he saw Kama with his bow. He understood who had disturbed him."
+        },
+        {
+          "es": "Su tercer ojo, en medio de la frente, se abrió. De él salió un fuego.",
+          "en": "His third eye, in the middle of his forehead, opened. Fire shot out of it."
+        },
+        {
+          "es": "En un instante, Kama quedó convertido en cenizas.",
+          "en": "In an instant, Kama was burned to ashes."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piel_tigre",
+          "x": 960
+        },
+        {
+          "tipo": "arbol_pahari",
+          "x": 1650,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.1,
+              "hace": "reza"
+            },
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 600
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1500
+            },
+            {
+              "en": 2.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "parvati",
+          "como": "parvati",
+          "x": 330,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 620,
+              "dur": 0.6
+            },
+            {
+              "en": 0.7,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.2,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "kama",
+          "como": "kama",
+          "x": 1500,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "lanza"
+            },
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.4,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 3.95,
+              "hace": "desaparece",
+              "con": "fuego"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 1230,
+          "y": 520,
+          "dur": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 960,
+          "y": 470,
+          "dur": 1
+        },
+        {
+          "en": 3.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.6,
+          "tipo": "fuego",
+          "x": 1500,
+          "y": 790,
+          "dur": 0.8,
+          "intensidad": 1.3
+        },
+        {
+          "en": 3.6,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 4,
+          "tipo": "humo",
+          "x": 1500,
+          "y": 790,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "EL TERCER OJO",
+            "en": "THE THIRD EYE"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "rati",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Rati, la esposa de Kama, cayó de rodillas y lloró sobre las cenizas.",
+          "en": "Rati, Kama's wife, fell to her knees and wept over the ashes."
+        },
+        {
+          "es": "Según el Shiva Purana, Shiva le prometió que Kama seguiría viviendo, pero sin cuerpo.",
+          "en": "The Shiva Purana says Shiva promised her that Kama would live on, but without a body."
+        },
+        {
+          "es": "Desde entonces, a Kama también lo llaman Ananga: \"el que no tiene cuerpo\".",
+          "en": "Since then, Kama is also called Ananga: \"the one without a body\"."
+        },
+        {
+          "es": "¿Qué piensas tú: Kama fue valiente, o solo imprudente?",
+          "en": "What do you think: was Kama brave, or just reckless?"
+        },
+        {
+          "es": "Y Shiva se levantó y se fue. Parvati quedó sola en la montaña.",
+          "en": "Then Shiva rose and left. Parvati was left alone on the mountain."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piel_tigre",
+          "x": 500
+        }
+      ],
+      "actores": [
+        {
+          "id": "rati",
+          "como": "rati",
+          "x": 1250,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1150
+            },
+            {
+              "en": 0.5,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.7,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.6,
+              "hace": "reza"
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 600
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 500,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4,
+              "hace": "gira"
+            },
+            {
+              "en": 4.1,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "parvati",
+          "como": "parvati",
+          "x": 1750,
+          "capa": "medio",
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "reza"
+            },
+            {
+              "en": 4.4,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "humo",
+          "x": 960,
+          "y": 790,
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 960,
+          "y": 450,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "POR ESO A KAMA LO LLAMAN ANANGA",
+            "en": "THAT'S WHY KAMA IS CALLED ANANGA"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "tapas",
+      "fondo": "bosque_pahari",
+      "camara": {
+        "de": 0,
+        "a": 240,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Parvati eligió otro camino: tapas, una práctica espiritual muy dura.",
+          "en": "Parvati chose another way: tapas, a very hard spiritual practice."
+        },
+        {
+          "es": "Se quitó las joyas y se vistió con corteza de árbol, como los ermitaños del bosque.",
+          "en": "She took off her jewels and dressed in tree bark, like the hermits of the forest."
+        },
+        {
+          "es": "En verano meditaba entre fuegos, bajo el sol ardiente. En invierno, dentro del agua helada.",
+          "en": "In summer she meditated between fires, under the burning sun. In winter, she sat in icy water."
+        },
+        {
+          "es": "Al final no comía nada, ni siquiera hojas caídas. Por eso la llamaron Aparna: \"sin una hoja\".",
+          "en": "In the end she ate nothing, not even fallen leaves. So she got a new name: Aparna, \"without a leaf\"."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "estanque",
+          "x": 1350,
+          "en": 2.4,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "parvati",
+          "como": "parvati",
+          "x": 600,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "transforma",
+              "en_que": "parvati_asceta"
+            },
+            {
+              "en": 1.6,
+              "hace": "reza"
+            },
+            {
+              "en": 2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.3,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "sabio",
+          "como": "sabio",
+          "x": 1650,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.5,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "pavo",
+          "como": "mayura",
+          "x": 300,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 420,
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "fuego",
+          "x": 760,
+          "y": 790,
+          "dur": 0.5,
+          "intensidad": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "fuego",
+          "x": 1040,
+          "y": 790,
+          "dur": 0.5,
+          "intensidad": 0.8
+        },
+        {
+          "en": 2.5,
+          "tipo": "nieve",
+          "dur": 0.8
+        },
+        {
+          "en": 3.3,
+          "tipo": "luz",
+          "x": 900,
+          "y": 500,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "TAPAS",
+            "en": "TAPAS"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 1.5
+        },
+        {
+          "en": 3.3,
+          "texto": {
+            "es": "APARNA",
+            "en": "APARNA"
+          },
+          "x": 960,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "asceta",
+      "fondo": "ashram",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día llegó un joven ermitaño de pelo enredado. Le preguntó por qué sufría tanto.",
+          "en": "One day, a young hermit with matted hair arrived. He asked her why she was suffering so much."
+        },
+        {
+          "es": "Cuando ella dijo \"por Shiva\", él se rió: \"¿Shiva? ¡Se cubre de ceniza, lleva serpientes y monta un toro viejo!\"",
+          "en": "When she said \"for Shiva\", he laughed. \"Shiva? He wears ashes and snakes, and rides an old bull!\""
+        },
+        {
+          "es": "Parvati se enojó. \"No lo conoces\", le dijo, y le dio la espalda para irse.",
+          "en": "Parvati grew angry. \"You do not know him,\" she said, and turned to leave."
+        },
+        {
+          "es": "Entonces el joven cambió. Era el mismo Shiva, y sonreía.",
+          "en": "Then the young man changed. It was Shiva himself, and he was smiling."
+        },
+        {
+          "es": "Kalidasa cuenta que le dijo: \"Desde hoy soy tuyo\". Todo había sido una prueba.",
+          "en": "Kalidasa tells that he said: \"From today, I am yours.\" It had all been a test."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "parvati",
+          "como": "parvati_asceta",
+          "x": 650,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "mira",
+              "a": 1200
+            },
+            {
+              "en": 1.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.4,
+              "hace": "camina",
+              "a": 450,
+              "dur": 0.5
+            },
+            {
+              "en": 3.4,
+              "hace": "mira",
+              "a": 1200
+            },
+            {
+              "en": 3.7,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.4,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "joven",
+          "como": "brahman",
+          "x": 1600,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1150
+            },
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "transforma",
+              "en_que": "shiva"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "nandi",
+          "como": "nandi",
+          "x": 1750,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1150,
+          "y": 450,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "boda",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El Shiva Purana dice que fue la boda más grande que el mundo había visto.",
+          "en": "The Shiva Purana says it was the greatest wedding the world had ever seen."
+        },
+        {
+          "es": "Shiva llegó con Nandi, su toro blanco. Vishnu y Brahma vinieron como invitados.",
+          "en": "Shiva arrived with Nandi, his white bull. Vishnu and Brahma came as guests."
+        },
+        {
+          "es": "Bajo el dosel de bodas, Shiva y Parvati dieron vueltas juntos alrededor del fuego sagrado.",
+          "en": "Under the wedding canopy, Shiva and Parvati walked around the sacred fire together."
+        },
+        {
+          "es": "Brahma guió la ceremonia, y del cielo llovieron flores.",
+          "en": "Brahma led the ceremony, and flowers rained down from the sky."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "mandap",
+          "x": 960
+        },
+        {
+          "tipo": "yajna",
+          "x": 960,
+          "s": 0.55
+        },
+        {
+          "tipo": "lluvia_oro",
+          "x": 960,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "parvati",
+          "como": "parvati",
+          "x": 740,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 680,
+              "dur": 0.5
+            },
+            {
+              "en": 2.5,
+              "hace": "camina",
+              "a": 760,
+              "dur": 0.4
+            },
+            {
+              "en": 3.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 1500,
+          "mira": "izq",
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1180
+            },
+            {
+              "en": 2.1,
+              "hace": "camina",
+              "a": 1240,
+              "dur": 0.4
+            },
+            {
+              "en": 2.6,
+              "hace": "camina",
+              "a": 1170,
+              "dur": 0.4
+            },
+            {
+              "en": 3.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "nandi",
+          "como": "nandi",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1500
+            }
+          ]
+        },
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 420,
+          "capa": "medio",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1900,
+          "capa": "medio",
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.4,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar"
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 960,
+          "y": 350,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Shiva y Parvati hicieron su hogar en el monte Kailash.",
+          "en": "Shiva and Parvati made their home on Mount Kailash."
+        },
+        {
+          "es": "Con el tiempo, su hijo Skanda, un joven dios guerrero, vencería a Taraka.",
+          "en": "In time, their son Skanda, a young warrior god, would defeat Taraka."
+        },
+        {
+          "es": "Pero antes, Parvati iba a hacer un hijo con sus propias manos.",
+          "en": "But first, Parvati would make a son with her own hands."
+        },
+        {
+          "es": "¿Tú habrías defendido a Shiva como Parvati, o te habrías ido?",
+          "en": "Would you have defended Shiva like Parvati did, or walked away?"
+        },
+        {
+          "es": "La próxima vez: un niño de barro cuida una puerta y no deja pasar ni a Shiva. Es El niño de barro.",
+          "en": "Next time: a boy made of clay guards a door, and will not even let Shiva in. It is The Boy Made of Clay."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piel_tigre",
+          "x": 750
+        }
+      ],
+      "actores": [
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 750,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "parvati",
+          "como": "parvati",
+          "x": 1100,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1500
+            },
+            {
+              "en": 2.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "nandi",
+          "como": "nandi",
+          "x": 380,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 440,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "taraka",
+          "como": "asura_violeta",
+          "x": 1850,
+          "capa": "fondo",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1.6,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.3,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 620,
+          "dur": 0.8
+        },
+        {
+          "en": 4,
+          "tipo": "chispas",
+          "x": 1450,
+          "y": 650,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El dios del amor contra el tercer ojo",
+        "en": "The god of love against the third eye"
+      },
+      "escena": "flecha",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "La prueba del joven ermitaño",
+        "en": "The test of the young hermit"
+      },
+      "escena": "asceta",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Tan dura que dejó de comer hojas",
+        "en": "So strict she gave up even leaves"
+      },
+      "escena": "tapas",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 900
+    }
+  ]
+}

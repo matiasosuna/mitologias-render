@@ -1,0 +1,1966 @@
+{
+  "id": "maories-10-tawhaki-sube-al-cielo",
+  "serie": "maories",
+  "numero": "10",
+  "titulo": {
+    "es": "Tāwhaki sube al cielo",
+    "en": "Tāwhaki Climbs to the Sky"
+  },
+  "tituloGriego": "TĀWHAKI CLIMBS TO THE SKY",
+  "miniatura": {
+    "heroe": "tawhaki",
+    "rival": "ponaturi"
+  },
+  "siguiente": {
+    "es": "La canoa de Rātā",
+    "en": "Rātā's Canoe"
+  },
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Seres del mar que morían con la luz del sol",
+        "en": "Sea creatures that died in the sunlight"
+      },
+      "escena": "amanecer",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "La esposa del cielo que se fue por una frase",
+        "en": "The sky wife who left over one sentence"
+      },
+      "escena": "ofensa",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "Agárrate de la enredadera equivocada",
+        "en": "Grab the wrong vine, and the wind takes you"
+      },
+      "escena": "enredaderas",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1050
+    }
+  ],
+  "escenas": [
+    {
+      "id": "intro",
+      "fondo": "te_ao_marama",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada, Māui quiso vencer a la muerte, y la risa de un pajarito terminó con su vida.",
+          "en": "Last time, Māui tried to defeat death, and a little bird's laugh ended his life."
+        },
+        {
+          "es": "Ahora conocemos a un nuevo héroe: Tāwhaki, hermoso y valiente.",
+          "en": "Now we meet a new hero: Tāwhaki, handsome and brave."
+        },
+        {
+          "es": "Esta es su historia tal como George Grey la escribió a partir de Te Rangikāheke, de la tribu Te Arawa.",
+          "en": "This is his story as George Grey wrote it down from Te Rangikāheke, of the Te Arawa tribe."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kapua",
+          "x": 1300,
+          "y": 280,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "tawhaki",
+          "como": "tawhaki",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.7,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.9,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "tangata",
+          "x": 450,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "mira",
+              "a": 900
+            },
+            {
+              "en": 1.6,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "wahine",
+          "x": 1400,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 280,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.1,
+          "texto": {
+            "es": "TE RANGIKĀHEKE · TE ARAWA",
+            "en": "TE RANGIKĀHEKE · TE ARAWA"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 2.9
+        }
+      ]
+    },
+    {
+      "id": "ponaturi",
+      "fondo": "takutai",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Tāwhaki tenía un hermano, Karihi. Su padre, Hema, había muerto a manos de los ponaturi.",
+          "en": "Tāwhaki had a brother, Karihi. Their father, Hema, had been killed by the ponaturi."
+        },
+        {
+          "es": "Los ponaturi eran seres extraños del mar. Vivían bajo el agua de día y salían a tierra de noche.",
+          "en": "The ponaturi were strange beings of the sea. They lived under the water by day, and came ashore at night."
+        },
+        {
+          "es": "Y la luz del sol era mortal para ellos.",
+          "en": "And sunlight was deadly to them."
+        },
+        {
+          "es": "También se habían llevado a su madre, Urutonga, para que cuidara la puerta de su casa.",
+          "en": "They had also taken their mother, Urutonga, to keep the door of their house."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "whare",
+          "x": 1650,
+          "s": 0.7,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hema",
+          "como": "toa",
+          "x": 600,
+          "rotulo": "HEMA",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.85,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "p1",
+          "como": "ponaturi",
+          "x": 1150,
+          "capa": "medio",
+          "rotulo": "PONATURI",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "como": "ponaturi",
+          "x": 1400,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.3,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "urutonga",
+          "como": "wahine",
+          "x": 1900,
+          "mira": "izq",
+          "rotulo": "URUTONGA",
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "entra",
+              "a": 1700
+            },
+            {
+              "en": 3.5,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.7,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer"
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 600,
+          "y": 300,
+          "dur": 0.5
+        }
+      ],
+      "rotulos": [],
+      "sinAstros": true
+    },
+    {
+      "id": "casa",
+      "fondo": "whare_dentro",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los hermanos encontraron la casa de los ponaturi. Su madre estaba sentada en la puerta.",
+          "en": "The brothers found the ponaturi's house. Their mother sat at the door."
+        },
+        {
+          "es": "Lloró al ver a sus hijos, y les rogó que se fueran. Pero ellos se escondieron en el techo.",
+          "en": "She wept to see her sons, and begged them to leave. But they hid up in the roof."
+        },
+        {
+          "es": "«Tapen cada rendija», les dijo, «para que no entre ni un solo rayo de luz.»",
+          "en": "'Stop up every chink,' she told them, 'so that not a single ray of light can get in.'"
+        },
+        {
+          "es": "Al anochecer, los ponaturi volvieron del mar, llenaron la casa y se durmieron.",
+          "en": "At sunset, the ponaturi came home from the sea, filled the house, and fell asleep."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "urutonga",
+          "como": "wahine",
+          "x": 400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.4,
+              "hace": "niega"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "tawhaki",
+          "como": "tawhaki",
+          "x": 750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "entra",
+              "a": 750
+            },
+            {
+              "en": 1.6,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.6,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "karihi",
+          "como": "karihi",
+          "x": 950,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "entra",
+              "a": 950
+            },
+            {
+              "en": 1.7,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "p1",
+          "como": "ponaturi",
+          "x": 2200,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 1350
+            },
+            {
+              "en": 3.6,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "como": "ponaturi",
+          "x": 2400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "entra",
+              "a": 1600
+            },
+            {
+              "en": 3.7,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "como": "ponaturi",
+          "x": 2600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "entra",
+              "a": 1850
+            },
+            {
+              "en": 3.8,
+              "hace": "arrodilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.5,
+          "tipo": "oscurecer",
+          "dur": 0.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "amanecer",
+      "fondo": "whare_dentro",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1.05,
+          1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Toda la noche, un viejo ponaturi preguntaba: «¿Ya amaneció?»",
+          "en": "All night long, an old ponaturi kept calling out: 'Is it dawn yet?'"
+        },
+        {
+          "es": "Y cada vez, la madre contestaba: «No, todavía no. Todavía es noche cerrada.»",
+          "en": "And each time, their mother answered: 'No, not yet. It is still deep night.'"
+        },
+        {
+          "es": "Afuera salió el sol. Pero adentro, la casa seguía a oscuras.",
+          "en": "Outside, the sun came up. But inside, the house was still dark."
+        },
+        {
+          "es": "Entonces los hermanos sacaron los tapones y abrieron la casa de par en par.",
+          "en": "Then the brothers pulled out the stoppers, and threw the house wide open."
+        },
+        {
+          "es": "Entró la luz del sol, y los ponaturi se marchitaron y desaparecieron.",
+          "en": "The sunlight poured in, and the ponaturi withered away."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "urutonga",
+          "como": "wahine",
+          "x": 400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "tawhaki",
+          "como": "tawhaki",
+          "x": 750,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.2,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "karihi",
+          "como": "karihi",
+          "x": 950,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "p1",
+          "como": "ponaturi",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 0.2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 0.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.6,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4.2,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "como": "ponaturi",
+          "x": 1600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 4.3,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "como": "ponaturi",
+          "x": 1850,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4.1,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 4.4,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 3.6
+        },
+        {
+          "en": 3.6,
+          "tipo": "aclarar",
+          "dur": 0.8
+        },
+        {
+          "en": 4,
+          "tipo": "destello",
+          "dur": 0.4
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 400,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "¿YA AMANECIÓ?",
+            "en": "IS IT DAWN YET?"
+          },
+          "x": 1350,
+          "y": 260,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "tangotango",
+      "fondo": "po_whetu",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Llevaron a su madre de vuelta a casa. Y la fama de Tāwhaki llegó hasta el cielo.",
+          "en": "They took their mother home. And Tāwhaki's fame reached the sky."
+        },
+        {
+          "es": "En el cielo vivía Tangotango, una mujer celestial. Grey dice que también la llamaban Hāpai.",
+          "en": "In the sky lived Tangotango, a woman of the heavens. Grey says she was also called Hāpai."
+        },
+        {
+          "es": "Ella bajaba de noche a visitarlo. Al principio, él creyó que era una mujer de este mundo.",
+          "en": "She came down at night to visit him. At first, he thought she was a woman of this world."
+        },
+        {
+          "es": "Al fin le mostró quién era, y se quedó como su esposa.",
+          "en": "At last she showed him who she was, and stayed as his wife."
+        },
+        {
+          "es": "Y tuvieron una hijita.",
+          "en": "And they had a little daughter."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "whare",
+          "x": 1800,
+          "s": 0.7,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "tawhaki",
+          "como": "tawhaki",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 1200
+            },
+            {
+              "en": 1.6,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "tangotango",
+          "como": "tangotango",
+          "x": 1200,
+          "y": 300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1000,
+                790
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 4.2,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "bebe",
+          "como": "pepi_tikitiki",
+          "x": 1110,
+          "y": 620,
+          "escala": 0.6,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4.1,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "estrellas",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "ofensa",
+      "fondo": "kainga",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, Tāwhaki llevó a la bebé a un manantial para lavarla.",
+          "en": "One day, Tāwhaki took the baby to a spring to wash her."
+        },
+        {
+          "es": "Y dijo: «¡Uf! ¡Qué mal huele esta cosita!»",
+          "en": "And he said: 'Ugh! How badly the little thing smells!'"
+        },
+        {
+          "es": "Muy herida, Tangotango tomó a su hija y se elevó por el aire.",
+          "en": "Deeply hurt, Tangotango took their daughter and rose into the air."
+        },
+        {
+          "es": "Se detuvo sobre la talla del techo de la casa. «¡Vuelve!», rogó él. «No», dijo ella. «Nunca volveré.»",
+          "en": "She paused on the carving above the house. 'Come back!' he begged. 'No,' she said. 'I will never come back.'"
+        },
+        {
+          "es": "Aun así, le dejó un consejo: «Agárrate de la enredadera con raíces, no de la que se balancea.»",
+          "en": "Still, she left him some advice: 'Hold the vine with roots in the earth, not the one that swings.'"
+        },
+        {
+          "es": "¿Tú lo habrías perdonado por esas palabras?",
+          "en": "Would you have forgiven him for those words?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "puna",
+          "x": 500,
+          "s": 1
+        },
+        {
+          "tipo": "wharenui",
+          "x": 1550,
+          "s": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "tawhaki",
+          "como": "tawhaki",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.3,
+              "hace": "niega"
+            },
+            {
+              "en": 2.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.4,
+              "hace": "habla",
+              "dur": 0.3
+            },
+            {
+              "en": 5,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "bebe",
+          "como": "pepi_tikitiki",
+          "x": 900,
+          "y": 700,
+          "escala": 0.6,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "vuela",
+              "a": [
+                1370,
+                560
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                1530,
+                420
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 4.8,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "tangotango",
+          "como": "tangotango",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "entristece"
+            },
+            {
+              "en": 2.2,
+              "hace": "vuela",
+              "a": [
+                1450,
+                540
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                1620,
+                400
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 3.6,
+              "hace": "niega"
+            },
+            {
+              "en": 4.1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.8,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.4,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 500,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "abuela",
+      "fondo": "ngahere",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así que los dos hermanos salieron a buscarlas, hasta donde las enredaderas cuelgan del cielo.",
+          "en": "So the two brothers set out, to the place where the vines hang down from the sky."
+        },
+        {
+          "es": "Allí estaba sentada una anciana ciega, su abuela. Muchos narradores la llaman Matakerepo.",
+          "en": "There sat an old blind woman, their grandmother. Many tellers call her Matakerepo."
+        },
+        {
+          "es": "Estaba contando sus diez raíces de taro, una por una.",
+          "en": "She was counting her ten taro roots, one by one."
+        },
+        {
+          "es": "En silencio, Tāwhaki le sacó un taro. Ella contó otra vez: solo nueve.",
+          "en": "Quietly, Tāwhaki took one taro away. She counted again: only nine."
+        },
+        {
+          "es": "Él sacó más, hasta que ella supo que alguien estaba allí.",
+          "en": "He took more, until she knew someone was there."
+        },
+        {
+          "es": "Entonces Tāwhaki le tocó los ojos, y ella volvió a ver. Reconoció a sus nietos, y lloró.",
+          "en": "Then Tāwhaki touched her eyes, and she could see again. She knew her grandsons, and she wept."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "aka",
+          "x": 1500,
+          "s": 1
+        },
+        {
+          "tipo": "aka",
+          "x": 1750,
+          "s": 1
+        },
+        {
+          "tipo": "kete",
+          "x": 820,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "matakerepo",
+          "como": "matakerepo",
+          "x": 650,
+          "rotulo": "MATAKEREPO",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.3,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 4.2,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 4.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 5,
+              "hace": "transforma",
+              "en_que": "kuia"
+            },
+            {
+              "en": 5.4,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "tawhaki",
+          "como": "tawhaki",
+          "x": 200,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "entra",
+              "a": 1050,
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3.5,
+              "hace": "baja"
+            },
+            {
+              "en": 4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 4.4,
+              "hace": "baja"
+            },
+            {
+              "en": 5,
+              "hace": "levantarse"
+            },
+            {
+              "en": 5.1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "karihi",
+          "como": "karihi",
+          "x": 50,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "entra",
+              "a": 1300,
+              "dur": 0.8
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 5.05,
+          "tipo": "destello",
+          "x": 650,
+          "y": 560,
+          "dur": 0.3
+        },
+        {
+          "en": 5.1,
+          "tipo": "luz",
+          "x": 650,
+          "y": 560,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "10 TARO",
+            "en": "10 TARO"
+          },
+          "x": 820,
+          "y": 300,
+          "hasta": 3
+        },
+        {
+          "en": 3.4,
+          "texto": {
+            "es": "9",
+            "en": "9"
+          },
+          "x": 820,
+          "y": 300,
+          "hasta": 4
+        },
+        {
+          "en": 4.1,
+          "texto": {
+            "es": "8… 7…",
+            "en": "8… 7…"
+          },
+          "x": 820,
+          "y": 300,
+          "hasta": 5
+        }
+      ]
+    },
+    {
+      "id": "enredaderas",
+      "fondo": "ngahere",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ella les mostró las enredaderas, y les dio la misma advertencia.",
+          "en": "She showed them the vines, and gave them the same warning."
+        },
+        {
+          "es": "Karihi saltó primero. Pero se agarró de una enredadera suelta.",
+          "en": "Karihi jumped first. But he grabbed a loose vine."
+        },
+        {
+          "es": "El viento lo atrapó y lo balanceó de un lado al otro del cielo.",
+          "en": "The wind caught him, and swung him from one side of the sky to the other."
+        },
+        {
+          "es": "«¡Suéltate, hermano!», gritó Tāwhaki. Karihi se soltó, y cayó de vuelta a la tierra, a salvo.",
+          "en": "'Let go, my brother!' shouted Tāwhaki. Karihi let go, and fell back to the earth, safe."
+        },
+        {
+          "es": "En la versión de Grey, Karihi volvió a casa. En otras, no sobrevive a la caída.",
+          "en": "In Grey's version, Karihi went home to care for the families. In some others, he does not survive the fall."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "aka",
+          "x": 900,
+          "s": 1
+        },
+        {
+          "tipo": "aka",
+          "x": 1400,
+          "s": 1,
+          "props": {
+            "desde": 140
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "kuia",
+          "como": "kuia",
+          "x": 450,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "tawhaki",
+          "como": "tawhaki",
+          "x": 750,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.1,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 4.1,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "karihi",
+          "como": "karihi",
+          "x": 1150,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "salta"
+            },
+            {
+              "en": 1.2,
+              "hace": "vuela",
+              "a": [
+                1400,
+                430
+              ],
+              "dur": 0.5
+            },
+            {
+              "en": 2.1,
+              "hace": "vuela",
+              "a": [
+                1950,
+                300
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 2.5,
+              "hace": "vuela",
+              "a": [
+                700,
+                260
+              ],
+              "dur": 0.4
+            },
+            {
+              "en": 3.4,
+              "hace": "vuela",
+              "a": [
+                1200,
+                790
+              ],
+              "dur": 0.5
+            },
+            {
+              "en": 4,
+              "hace": "levantarse"
+            },
+            {
+              "en": 4.5,
+              "hace": "sale"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "polvo",
+          "x": 1500,
+          "y": 300,
+          "dur": 0.8
+        },
+        {
+          "en": 3.9,
+          "tipo": "polvo",
+          "x": 1200,
+          "y": 780,
+          "dur": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "subida",
+      "fondo": "rangi_tuhaha",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Tāwhaki se agarró de la enredadera con raíces y empezó a subir, recitando un karakia.",
+          "en": "Tāwhaki took hold of the rooted vine and began to climb, chanting a karakia, a sacred chant."
+        },
+        {
+          "es": "No miró hacia abajo. Subió y subió, hasta llegar al cielo.",
+          "en": "He did not look down. Up and up he went, until he reached the sky."
+        },
+        {
+          "es": "Allá arriba, se disfrazó de viejo feo.",
+          "en": "Up there, he disguised himself as an ugly old man."
+        },
+        {
+          "es": "Encontró a los hermanos de Tangotango, que tallaban canoas.",
+          "en": "He found Tangotango's brothers, hewing canoes."
+        },
+        {
+          "es": "No lo reconocieron, y obligaron al viejo a cargar sus hachas.",
+          "en": "They did not know him, and they made the old man carry their axes."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "aka",
+          "x": 450,
+          "s": 1
+        },
+        {
+          "tipo": "waka",
+          "x": 1450,
+          "s": 0.8,
+          "props": {
+            "quieta": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "tawhaki",
+          "como": "tawhaki",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "reza"
+            },
+            {
+              "en": 0.4,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.4
+            },
+            {
+              "en": 2,
+              "hace": "transforma",
+              "en_que": "kaumatua"
+            },
+            {
+              "en": 3.3,
+              "hace": "camina",
+              "a": 950,
+              "dur": 0.5
+            },
+            {
+              "en": 4.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.6,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "cuniado1",
+          "como": "tangata",
+          "x": 1250,
+          "mira": "der",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "cuniado2",
+          "como": "tangata",
+          "x": 1700,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 4.2,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 450,
+          "y": 500,
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 700,
+          "y": 640,
+          "dur": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "canoa",
+      "fondo": "rangi_tuhaha",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Unas mujeres le hicieron cargar leña. Y Tangotango, sin reconocerlo, lo dejó sentarse junto a su fuego.",
+          "en": "Some women made him carry firewood. And Tangotango, not knowing him, let him sit by her fire."
+        },
+        {
+          "es": "Esa noche, mientras todos dormían, el viejo volvió a la canoa.",
+          "en": "That night, while everyone slept, the old man went back to the canoe."
+        },
+        {
+          "es": "Trabajó en la oscuridad, y en una sola noche dejó terminado un lado entero.",
+          "en": "He worked in the dark, and in a single night, one whole side was finished."
+        },
+        {
+          "es": "Desconcertados, los hermanos se escondieron a mirar.",
+          "en": "Puzzled, the brothers hid and watched."
+        },
+        {
+          "es": "Y vieron al viejo quitarse el disfraz. Era joven, y brillaba, y era noble.",
+          "en": "And they saw the old man throw off his disguise. He was young, and shining, and noble."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "ahi",
+          "x": 450,
+          "s": 0.6
+        },
+        {
+          "tipo": "waka",
+          "x": 1300,
+          "s": 0.8,
+          "props": {
+            "quieta": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "tangotango",
+          "como": "tangotango",
+          "x": 250,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "tawhaki",
+          "como": "kaumatua",
+          "x": 650,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.3,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.5
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "transforma",
+              "en_que": "tawhaki"
+            },
+            {
+              "en": 4.2,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "cuniado1",
+          "como": "tangata",
+          "x": 1700,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 1650
+            },
+            {
+              "en": 3.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4.3,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "cuniado2",
+          "como": "tangata",
+          "x": 1950,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "entra",
+              "a": 1880
+            },
+            {
+              "en": 3.5,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4.4,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 3
+        },
+        {
+          "en": 2.1,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 700,
+          "dur": 0.3
+        },
+        {
+          "en": 2.5,
+          "tipo": "chispas",
+          "x": 1350,
+          "y": 700,
+          "dur": 0.3
+        },
+        {
+          "en": 4,
+          "tipo": "destello",
+          "x": 1050,
+          "y": 550,
+          "dur": 0.4
+        },
+        {
+          "en": 4.1,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 500,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "revela",
+      "fondo": "rangi_tuhaha",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Corrieron a contarle a Tangotango. «Entonces debe ser mi esposo», dijo ella.",
+          "en": "They ran to tell Tangotango. 'Then he must be my husband,' she said."
+        },
+        {
+          "es": "Tāwhaki entró, y tomó a su hija en brazos.",
+          "en": "Tāwhaki came in, and took his daughter in his arms."
+        },
+        {
+          "es": "Grey cuenta que cuando bendijeron a la niña, salían relámpagos del cuerpo de Tāwhaki.",
+          "en": "Grey tells that when the girl was blessed, lightning flashed from Tāwhaki's body."
+        },
+        {
+          "es": "Muchas tribus dicen que Tāwhaki todavía vive en el cielo, y que el relámpago es él.",
+          "en": "Many tribes say that Tāwhaki still lives in the sky, and that the lightning is him."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "cuniado1",
+          "como": "tangata",
+          "x": 450,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "corre",
+              "a": 750,
+              "dur": 0.4
+            },
+            {
+              "en": 0.5,
+              "hace": "habla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "tangotango",
+          "como": "tangotango",
+          "x": 1050,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.8,
+              "hace": "habla",
+              "dur": 0.2
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "bebe",
+          "como": "pepi_tikitiki",
+          "x": 1180,
+          "y": 640,
+          "escala": 0.6,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "vuela",
+              "a": [
+                1420,
+                620
+              ],
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "tawhaki",
+          "como": "tawhaki",
+          "x": 1900,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1500,
+              "dur": 0.4
+            },
+            {
+              "en": 1.5,
+              "hace": "abraza"
+            },
+            {
+              "en": 2.2,
+              "hace": "brilla",
+              "dur": 1.6
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.3,
+          "tipo": "rayo",
+          "x": 1500,
+          "dur": 0.3
+        },
+        {
+          "en": 2.6,
+          "tipo": "destello",
+          "x": 1500,
+          "y": 500,
+          "dur": 0.3
+        },
+        {
+          "en": 3.3,
+          "tipo": "oscurecer",
+          "dur": 0.6
+        },
+        {
+          "en": 3.5,
+          "tipo": "rayo",
+          "x": 1700,
+          "dur": 0.3
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "rangi_tuhaha",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Otras tribus cuentan otra subida al cielo, por las canastas del saber. Unos dicen que la hizo Tāne; otros, Tāwhaki.",
+          "en": "Other tribes tell of another climb to the sky, for the baskets of knowledge. Some say Tāne made it; others, Tāwhaki."
+        },
+        {
+          "es": "¿Tú subirías hasta el cielo para reparar unas palabras descuidadas? Cuéntanos en los comentarios.",
+          "en": "Would you climb to the sky to make up for a few careless words? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, un joven necesita una canoa, y el bosque entero se le pone en contra. Es La canoa de Rātā.",
+          "en": "Next time, a young man needs a canoe, and the whole forest stands against him. It is Rātā's Canoe."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kete",
+          "x": 1200,
+          "s": 1,
+          "props": {
+            "brillo": true
+          }
+        },
+        {
+          "tipo": "kete",
+          "x": 1400,
+          "s": 1,
+          "props": {
+            "brillo": true
+          }
+        },
+        {
+          "tipo": "kete",
+          "x": 1600,
+          "s": 1,
+          "props": {
+            "brillo": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "tawhaki",
+          "como": "tawhaki",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 1.4,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "tane",
+          "como": "tane",
+          "x": 1900,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.9,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "rata",
+          "como": "rata_toa",
+          "x": 200,
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "entra",
+              "a": 350,
+              "dur": 0.6
+            },
+            {
+              "en": 2.7,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 1400,
+          "y": 600,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    }
+  ]
+}

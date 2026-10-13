@@ -1,0 +1,1175 @@
+{
+  "id": "balinesas-07-la-viuda-de-girah",
+  "serie": "balinesas",
+  "numero": "07",
+  "titulo": {
+    "es": "La viuda de Girah",
+    "en": "The Widow of Girah"
+  },
+  "tituloGriego": "THE WIDOW OF GIRAH",
+  "miniatura": {
+    "heroe": "calon_arang",
+    "rival": "ratna_manggali"
+  },
+  "siguiente": {
+    "es": "El libro robado",
+    "en": "The Stolen Book"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "setra",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, un señor de colmillos del otro lado del mar mandó a sus espíritus invisibles a Bali.",
+          "en": "Last time, a fanged lord from across the sea sent his invisible spirits to Bali."
+        },
+        {
+          "es": "Esta vez, el peligro viene de una mujer que vivía en una pequeña aldea.",
+          "en": "This time, the danger comes from a woman who lived in a small village."
+        },
+        {
+          "es": "Su historia se cuenta en un viejo texto llamado Calon Arang, y todavía se baila en los escenarios de los templos.",
+          "en": "Her story is told in an old text called the Calon Arang, and it is still danced on temple stages today."
+        },
+        {
+          "es": "Sucede en el este de Java, hace casi mil años. Pero Bali la hizo suya.",
+          "en": "It takes place in East Java, almost a thousand years ago. But Bali has made it its own."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lontar",
+          "x": 960,
+          "s": 1.4,
+          "props": {
+            "brillo": true
+          },
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "calon",
+          "como": "calon_arang",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.6,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "abuela",
+          "como": "nenek_bali",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "viuda",
+      "fondo": "desa",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En la aldea de Girah vivía una viuda llamada Calon Arang.",
+          "en": "In the village of Girah lived a widow named Calon Arang."
+        },
+        {
+          "es": "En las viejas lenguas de Java y Bali, a una viuda se le dice rangda. Recuerda esa palabra.",
+          "en": "In the old languages of Java and Bali, a widow is called a rangda. Remember that word."
+        },
+        {
+          "es": "Tenía una sola hija, Ratna Manggali, que era buena y hermosa.",
+          "en": "She had one daughter, Ratna Manggali, who was kind and beautiful."
+        },
+        {
+          "es": "Pero ningún hombre de toda la tierra se animaba a casarse con ella.",
+          "en": "But no man in the whole land dared to marry her."
+        },
+        {
+          "es": "Ratna Manggali no había hecho nada malo. Aun así, pasaban los años y seguía sola.",
+          "en": "Ratna Manggali had done nothing wrong. Still, the years went by, and she stayed alone."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "calon",
+          "como": "calon_arang",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "mira",
+              "a": 1100
+            },
+            {
+              "en": 3.2,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "ratna",
+          "como": "ratna_manggali",
+          "x": 1100,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.2,
+              "hace": "entristece"
+            },
+            {
+              "en": 4.2,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "RANGDA = VIUDA",
+            "en": "RANGDA = WIDOW"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "miedo",
+      "fondo": "desa",
+      "camara": {
+        "de": 200,
+        "a": 320,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Todos sabían que su madre practicaba magia oscura.",
+          "en": "Everyone knew that her mother practiced dark magic."
+        },
+        {
+          "es": "La gente murmuraba de ella en el mercado y se apartaba cuando pasaba.",
+          "en": "People whispered about her at the market, and stepped aside when she passed."
+        },
+        {
+          "es": "Algunos hasta decían que de noche podía tomar la forma de un animal, o de una llama que flota.",
+          "en": "Some even said that at night she could take the shape of an animal, or of a floating flame."
+        },
+        {
+          "es": "Ninguna familia quería a Calon Arang como suegra.",
+          "en": "No family wanted Calon Arang as a mother-in-law."
+        },
+        {
+          "es": "Y Calon Arang lo tomó como un insulto terrible.",
+          "en": "And Calon Arang took this as a terrible insult."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "wanita_bali",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 600,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "pria_bali",
+          "x": 1200,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 1650,
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "calon",
+          "como": "calon_arang",
+          "x": 2200,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1100,
+              "dur": 0.8
+            },
+            {
+              "en": 4,
+              "hace": "enoja",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "rabia",
+      "fondo": "desa_malam",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Su enojo creció y creció, hasta que tomó una decisión.",
+          "en": "Her anger grew and grew, until she made a decision."
+        },
+        {
+          "es": "Si no respetaban a su hija, aprenderían a temerle.",
+          "en": "If they would not respect her daughter, they would learn to fear her."
+        },
+        {
+          "es": "Tomó su libro de magia, escrito en hojas de palma, y llamó a sus discípulas.",
+          "en": "She took her book of magic, written on palm leaves, and called her disciples."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "calon",
+          "como": "calon_arang",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "transforma",
+              "en_que": "calon_arang_libro"
+            },
+            {
+              "en": 2.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "d1",
+          "como": "murid_leak",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "d2",
+          "como": "murid_leak",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "aparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "ratna",
+          "como": "ratna_manggali",
+          "x": 350,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.2,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 800,
+          "y": 600,
+          "dur": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "setra",
+      "fondo": "setra",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "A medianoche, fueron al cementerio.",
+          "en": "At midnight, they went to the graveyard."
+        },
+        {
+          "es": "Con ella iban sus discípulas, mujeres que habían aprendido sus artes oscuras. El viejo texto hasta da sus nombres.",
+          "en": "With her went her disciples, women who had learned her dark arts. The old text even gives their names."
+        },
+        {
+          "es": "Allí Calon Arang le rezó a Durga, la diosa feroz que reina en el cementerio.",
+          "en": "There Calon Arang prayed to Durga, the fierce goddess who rules the graveyard."
+        },
+        {
+          "es": "Le pidió el poder de traer una peste sobre el reino.",
+          "en": "She asked for the power to bring a plague upon the kingdom."
+        },
+        {
+          "es": "Y Durga se lo concedió.",
+          "en": "And Durga granted it."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "calon",
+          "como": "calon_arang_libro",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 800,
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.3,
+              "hace": "reza"
+            },
+            {
+              "en": 4.2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 4.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "durga",
+          "como": "bhatari_durga",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 3.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 4.1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "d1",
+          "como": "murid_leak",
+          "x": 350,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 400,
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.5,
+              "hace": "arrodilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.4,
+          "tipo": "humo",
+          "x": 1350,
+          "y": 650,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "danza",
+      "fondo": "setra",
+      "camara": {
+        "de": 100,
+        "a": 240,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces las discípulas bailaron entre las tumbas, con el pelo suelto y los ojos salvajes.",
+          "en": "Then the disciples danced among the graves, with their hair loose and their eyes wild."
+        },
+        {
+          "es": "Luces extrañas se elevaron y flotaron en la oscuridad.",
+          "en": "Strange lights rose and drifted through the dark."
+        },
+        {
+          "es": "Y su danza llevó la enfermedad hacia la noche.",
+          "en": "And their dance carried the sickness out into the night."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "d1",
+          "como": "murid_leak",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.5,
+              "hace": "gira"
+            },
+            {
+              "en": 0.8,
+              "hace": "salta"
+            },
+            {
+              "en": 2,
+              "hace": "corre",
+              "a": 1100,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "d2",
+          "como": "murid_leak",
+          "x": 1050,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "gira"
+            },
+            {
+              "en": 0.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "d3",
+          "como": "murid_leak",
+          "x": 1400,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "salta"
+            },
+            {
+              "en": 0.7,
+              "hace": "gira"
+            },
+            {
+              "en": 2.2,
+              "hace": "corre",
+              "a": 1900,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "luz1",
+          "como": "api_leak",
+          "x": 900,
+          "y": 420,
+          "escala": 0.6,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "vuela",
+              "a": [
+                1500,
+                300
+              ],
+              "dur": 1.6
+            }
+          ]
+        },
+        {
+          "id": "luz2",
+          "como": "api_leak",
+          "x": 1300,
+          "y": 480,
+          "escala": 0.5,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.4,
+              "hace": "vuela",
+              "a": [
+                1900,
+                360
+              ],
+              "dur": 1.4
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "peste",
+      "fondo": "desa",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pronto la gente empezó a enfermarse en todas las aldeas.",
+          "en": "Soon, people began to fall ill in every village."
+        },
+        {
+          "es": "Muchos no se recuperaron. Las familias llevaban a sus enfermos a los templos, rezando por ayuda.",
+          "en": "Many did not recover. Families carried their sick to the temples, praying for help."
+        },
+        {
+          "es": "Todo el reino tenía miedo.",
+          "en": "The whole kingdom was afraid."
+        },
+        {
+          "es": "¿Calon Arang era simplemente mala, o una madre llevada al límite? Cuéntanos qué piensas en los comentarios.",
+          "en": "Was Calon Arang simply evil, or a mother pushed too far? Tell us what you think in the comments."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "hombre",
+          "como": "pria_bali",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "wanita_bali",
+          "x": 1000,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "abraza"
+            },
+            {
+              "en": 1.4,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "abuela",
+          "como": "nenek_bali",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 4,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "rey",
+      "fondo": "puri",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En su palacio, el rey Airlangga se enteró de la terrible noticia.",
+          "en": "In his palace, King Airlangga heard the terrible news."
+        },
+        {
+          "es": "Airlangga fue un rey real, que gobernó el este de Java en el siglo once.",
+          "en": "Airlangga was a real king, who ruled East Java in the eleventh century."
+        },
+        {
+          "es": "Y tenía raíces balinesas: su padre era Udayana, un rey de Bali.",
+          "en": "And he had Balinese roots: his father was Udayana, a king of Bali."
+        },
+        {
+          "es": "Se lo recuerda como un gobernante sabio, que construyó diques para proteger a los campesinos de su valle.",
+          "en": "He is remembered as a wise ruler, who built dams to protect the farmers of his river valley."
+        },
+        {
+          "es": "Mandó a sus soldados a Girah, para detener a la viuda de una vez por todas.",
+          "en": "He sent his soldiers to Girah, to stop the widow once and for all."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "rey",
+          "como": "prabu_airlangga",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.4,
+              "hace": "asiente"
+            },
+            {
+              "en": 3.4,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 4.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "soldado1",
+          "como": "prajurit_jawa",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4.4,
+              "hace": "gira"
+            },
+            {
+              "en": 4.6,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "soldado2",
+          "como": "prajurit_jawa",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4.5,
+              "hace": "gira"
+            },
+            {
+              "en": 4.7,
+              "hace": "sale"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "soldados",
+      "fondo": "desa_malam",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los soldados encontraron a Calon Arang dormida y se le acercaron a escondidas en la oscuridad.",
+          "en": "The soldiers found Calon Arang asleep, and crept toward her in the dark."
+        },
+        {
+          "es": "Pero ella despertó, y de sus ojos salió fuego.",
+          "en": "But she woke up, and fire flashed from her eyes."
+        },
+        {
+          "es": "Los soldados huyeron para salvar la vida.",
+          "en": "The soldiers ran for their lives."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "calon",
+          "como": "calon_arang",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 1.2,
+              "hace": "enoja",
+              "dur": 1.2
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "soldado1",
+          "como": "prajurit_jawa",
+          "x": 400,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.8
+            },
+            {
+              "en": 1.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "corre",
+              "a": -300,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "soldado2",
+          "como": "prajurit_jawa",
+          "x": 200,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 650,
+              "dur": 0.8
+            },
+            {
+              "en": 1.5,
+              "hace": "cae"
+            },
+            {
+              "en": 2.1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.2,
+              "hace": "corre",
+              "a": -400,
+              "dur": 0.7
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.35,
+          "tipo": "fuego",
+          "x": 1200,
+          "y": 600,
+          "dur": 0.6,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "segunda",
+      "fondo": "setra",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ahora Calon Arang estaba más enojada que nunca.",
+          "en": "Now Calon Arang was angrier than ever."
+        },
+        {
+          "es": "Volvió al cementerio y llamó a Durga por segunda vez.",
+          "en": "She returned to the graveyard and called on Durga a second time."
+        },
+        {
+          "es": "Y esta vez, la enfermedad llegó todavía más lejos, hasta la capital.",
+          "en": "And this time, the sickness spread even further, all the way to the capital."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "calon",
+          "como": "calon_arang_libro",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "reza"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "durga",
+          "como": "bhatari_durga",
+          "x": 1400,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 1.8,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "luz1",
+          "como": "api_leak",
+          "x": 1000,
+          "y": 460,
+          "escala": 0.6,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "vuela",
+              "a": [
+                2000,
+                300
+              ],
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "humo",
+          "x": 1400,
+          "y": 650,
+          "dur": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "puri",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ni los sacerdotes del rey pudieron detenerla. Le quedaba una última esperanza.",
+          "en": "The king's own priests could not stop it. He had one last hope."
+        },
+        {
+          "es": "Un hombre santo llamado Mpu Bharadah, el sabio más grande de la tierra.",
+          "en": "A holy man named Mpu Bharadah, the wisest sage in the land."
+        },
+        {
+          "es": "¿Cómo detendrías a una bruja que los soldados no pueden tocar? Cuéntanos en los comentarios.",
+          "en": "How would you stop a witch that soldiers cannot touch? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez: una boda, un libro robado y una batalla de magia en el cementerio.",
+          "en": "Next time: a wedding, a stolen book, and a battle of magic in the graveyard."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "rey",
+          "como": "prabu_airlangga",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1300
+            }
+          ]
+        },
+        {
+          "id": "bharadah",
+          "como": "mpu_bharadah",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La viuda que nadie se animaba a enfrentar",
+        "en": "The widow no one dared to face"
+      },
+      "escena": "miedo",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Medianoche en el cementerio",
+        "en": "Midnight in the graveyard"
+      },
+      "escena": "setra",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "De sus ojos salió fuego",
+        "en": "Fire flashed from her eyes"
+      },
+      "escena": "soldados",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 1000
+    }
+  ]
+}

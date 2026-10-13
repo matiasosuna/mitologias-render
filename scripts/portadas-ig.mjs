@@ -12,6 +12,9 @@ const TEMPORADAS = {
   hawaianas: [[12, 'SEASON 1 · ORIGINS'], [24, 'SEASON 2 · PELE AND HIʻIAKA']],
   norteamericanas: [[12, 'SEASON 1 · THE MAKING OF THE WORLD'], [24, 'SEASON 2 · TRICKSTERS AND HEROES'], [36, 'SEASON 3 · SKY AND STARS'], [99, 'SEASON 4 · GUARDIANS AND GIANTS']],
   aztecas: [[12, 'SEASON 1 · THE FIVE SUNS'], [24, 'SEASON 2 · QUETZALCOATL AND TOLLAN'], [36, 'SEASON 3 · GODS, DAYS AND MICTLAN'], [99, 'SEASON 4 · LEGENDS OF TENOCHTITLAN']],
+  balinesas: [[12, 'SEASON 1 · GODS, DEMONS AND THE ISLAND'], [24, 'SEASON 2 · PRIESTS, KINGS AND LOVERS'], [99, 'SEASON 3 · SPIRITS OF THE ISLAND']],
+  hindues: [[12, 'SEASON 1 · GODS, THE OCEAN AND THE AVATARS'], [24, 'SEASON 2 · THE RAMAYANA'], [99, 'SEASON 3 · KRISHNA AND THE MAHABHARATA']],
+  maories: [[12, 'SEASON 1 · FROM THE DARK TO AOTEAROA'], [24, 'SEASON 2 · CANOES FROM HAWAIKI'], [99, 'SEASON 3 · TANIWHA AND TIPUA']],
 };
 // Personajes de los episodios viejos sin "miniatura" en el guion (los mismos que sus miniaturas de YouTube).
 const src = readFileSync('scripts/miniaturas.mjs', 'utf8');

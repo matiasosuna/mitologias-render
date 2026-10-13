@@ -1,0 +1,1801 @@
+{
+  "id": "hindues-07-mohini-y-el-eclipse",
+  "serie": "hindues",
+  "numero": "07",
+  "titulo": {
+    "es": "Mohini y el eclipse",
+    "en": "Mohini and the Eclipse"
+  },
+  "tituloGriego": "MOHINI AND THE ECLIPSE",
+  "miniatura": {
+    "heroe": "mohini",
+    "rival": "rahu"
+  },
+  "siguiente": {
+    "es": "El fuego de Sati",
+    "en": "Sati's Fire"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "oceano_leche",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Shiva se bebió el veneno del mundo, y del océano de leche salieron tesoros.",
+          "en": "Last time, Shiva drank the poison of the world, and treasures rose from the Ocean of Milk."
+        },
+        {
+          "es": "Lakshmi, la diosa de la fortuna, eligió a Vishnu como esposo.",
+          "en": "Lakshmi, the goddess of fortune, chose Vishnu as her husband."
+        },
+        {
+          "es": "Pero todos seguían esperando una cosa: el amrita, el néctar que te hace vivir para siempre.",
+          "en": "But everyone was still waiting for one thing: amrita, the nectar that lets you live forever."
+        },
+        {
+          "es": "Todos miraban las olas blancas, esperando.",
+          "en": "Everyone stared at the white waves, waiting."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kalasha",
+          "x": 960,
+          "y": 480,
+          "en": 2,
+          "hasta": 3,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 320,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 960
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1450,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 960
+            }
+          ]
+        },
+        {
+          "id": "lakshmi",
+          "como": "lakshmi",
+          "x": 1680,
+          "escala": 0.8,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "asura",
+          "como": "asura_rojo",
+          "x": 560,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 960,
+          "y": 420,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "olas-suben",
+          "intensidad": 0.12,
+          "dur": 0.9
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "AMRITA",
+            "en": "AMRITA"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "dhanvantari",
+      "fondo": "oceano_leche",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces, de la espuma, subió una figura brillante con una vasija llena hasta el borde.",
+          "en": "Then, from the foam, a shining figure rose up, holding a pot filled to the brim."
+        },
+        {
+          "es": "Era Dhanvantari, el médico de los dioses. La vasija estaba llena de amrita.",
+          "en": "It was Dhanvantari, the physician of the gods. The pot was full of amrita."
+        },
+        {
+          "es": "El Bhagavata Purana dice que era una parte del mismo Vishnu.",
+          "en": "The Bhagavata Purana says he was a part of Vishnu himself."
+        },
+        {
+          "es": "Muchos hindúes lo honran hoy como el dios del Ayurveda, la medicina tradicional de la India.",
+          "en": "Many Hindus honor him today as the god of Ayurveda, India's traditional medicine."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "dhanvantari",
+          "como": "dhanvantari",
+          "x": 1000,
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.6,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.5,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "a1",
+          "como": "asura",
+          "x": 330,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.8,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "a2",
+          "como": "asura_violeta",
+          "x": 540,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "deva",
+          "como": "deva",
+          "x": 1650,
+          "escala": 0.8,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.2,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "olas-suben",
+          "intensidad": 0.12,
+          "dur": 0.6
+        },
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 520,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "AYURVEDA",
+            "en": "AYURVEDA"
+          },
+          "x": 1300,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "robo",
+      "fondo": "oceano_leche",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los asuras no esperaron. Le arrebataron la vasija y salieron corriendo.",
+          "en": "The asuras did not wait. They snatched the pot and ran off with it."
+        },
+        {
+          "es": "Pero enseguida empezaron a pelearse entre ellos: ¡Yo primero! ¡No, yo primero!",
+          "en": "But soon they started fighting among themselves: Me first! No, me first!"
+        },
+        {
+          "es": "Los dioses, sin el néctar, fueron tristes a pedirle ayuda a Vishnu.",
+          "en": "The gods, left without the nectar, sadly went to Vishnu for help."
+        },
+        {
+          "es": "No se preocupen, dijo Vishnu. Yo lo recuperaré.",
+          "en": "Don't worry, said Vishnu. I will get it back."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kalasha",
+          "x": 960,
+          "y": 600,
+          "hasta": 0.5,
+          "s": 1
+        },
+        {
+          "tipo": "kalasha",
+          "x": 450,
+          "y": 600,
+          "en": 1,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "a1",
+          "como": "asura_rojo",
+          "x": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "corre",
+              "a": 960,
+              "dur": 0.25
+            },
+            {
+              "en": 0.5,
+              "hace": "corre",
+              "a": 300,
+              "dur": 0.4
+            },
+            {
+              "en": 1.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.6,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "a2",
+          "como": "asura_violeta",
+          "x": 640,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.8,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 1400,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "entristece"
+            },
+            {
+              "en": 2.3,
+              "hace": "camina",
+              "a": 1750,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 2050,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.6,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "polvo",
+          "x": 470,
+          "y": 780,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "mohini",
+      "fondo": "campo_pahari",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Vishnu cambió de forma. Se convirtió en una mujer de una belleza asombrosa: Mohini.",
+          "en": "Then Vishnu changed his form. He became a woman of amazing beauty: Mohini."
+        },
+        {
+          "es": "Su nombre significa la encantadora. Quien la veía olvidaba lo que estaba haciendo.",
+          "en": "Her name means the enchantress. Anyone who saw her forgot what they were doing."
+        },
+        {
+          "es": "Caminó hacia los asuras que discutían, y la pelea se detuvo de golpe.",
+          "en": "She walked toward the arguing asuras, and the fight stopped at once."
+        },
+        {
+          "es": "¿Quién eres?, le preguntaron asombrados. Por favor, sé nuestra jueza. Reparte tú el néctar.",
+          "en": "Who are you? they asked in wonder. Please, be our judge. You share out the nectar."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "arbol_pahari",
+          "x": 1750,
+          "capa": "medio",
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1450,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 0.3
+            },
+            {
+              "en": 0.3,
+              "hace": "transforma",
+              "en_que": "mohini"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 0.7
+            },
+            {
+              "en": 3.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "a1",
+          "como": "asura_rojo",
+          "x": 280,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "a2",
+          "como": "asura_violeta",
+          "x": 480,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.4,
+              "hace": "mira",
+              "a": 1000
+            }
+          ]
+        },
+        {
+          "id": "a3",
+          "como": "asura",
+          "x": 680,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.5,
+              "hace": "calla"
+            },
+            {
+              "en": 3.3,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 520,
+          "dur": 0.8
+        },
+        {
+          "en": 2.3,
+          "tipo": "chispas",
+          "x": 700,
+          "y": 400,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "LA ENCANTADORA",
+            "en": "THE ENCHANTRESS"
+          },
+          "x": 1300,
+          "y": 200,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "reparte",
+      "fondo": "palacio_pahari",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mohini sonrió. ¿Aceptarán lo que yo haga, esté bien o mal? Sí, le prometieron.",
+          "en": "Mohini smiled. Will you accept whatever I do, right or wrong? Yes, they promised."
+        },
+        {
+          "es": "Sentó a los dioses y a los asuras en dos filas separadas.",
+          "en": "She seated the gods and the asuras in two separate rows."
+        },
+        {
+          "es": "Después empezó a servir el néctar, empezando por los dioses.",
+          "en": "Then she began to pour the nectar, starting with the gods."
+        },
+        {
+          "es": "Los asuras esperaban en silencio. Habían dado su palabra, y estaban encantados.",
+          "en": "The asuras waited quietly. They had given their word, and they were enchanted."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pabellon",
+          "x": 960,
+          "capa": "fondo",
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "a1",
+          "como": "asura_rojo",
+          "x": 250,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "asiente"
+            },
+            {
+              "en": 1,
+              "hace": "sienta"
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "a2",
+          "como": "asura",
+          "x": 450,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.1,
+              "hace": "sienta"
+            },
+            {
+              "en": 3.4,
+              "hace": "mira",
+              "a": 1300
+            }
+          ]
+        },
+        {
+          "id": "mohini",
+          "como": "mohini",
+          "x": 900,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.3,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1300,
+              "dur": 0.5
+            },
+            {
+              "en": 2.5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 1500,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "sienta"
+            },
+            {
+              "en": 2.7,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "deva",
+          "como": "deva",
+          "x": 1720,
+          "escala": 0.8,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "sienta"
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.5,
+          "tipo": "luz",
+          "x": 1400,
+          "y": 560,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "rahu",
+      "fondo": "palacio_pahari",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero un asura llamado Rahu no quería esperar.",
+          "en": "But one asura, named Rahu, did not want to wait."
+        },
+        {
+          "es": "Se disfrazó de dios y se metió en la fila de los dioses.",
+          "en": "He disguised himself as a god and slipped into the gods' row."
+        },
+        {
+          "es": "Se sentó entre Surya, el dios del Sol, y Chandra, el dios de la Luna.",
+          "en": "He sat down between Surya, the Sun god, and Chandra, the Moon god."
+        },
+        {
+          "es": "Mohini le sirvió el néctar en las manos, y Rahu bebió.",
+          "en": "Mohini poured the nectar into his hands, and Rahu drank."
+        },
+        {
+          "es": "Pero Surya y Chandra vieron quién era. ¡Es un asura!, gritaron.",
+          "en": "But Surya and Chandra saw who he was. That's an asura! they cried."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pabellon",
+          "x": 1250,
+          "capa": "fondo",
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "rahu",
+          "como": "asura_violeta",
+          "x": 350,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "mira",
+              "a": 1200
+            },
+            {
+              "en": 1,
+              "hace": "transforma",
+              "en_que": "rahu"
+            },
+            {
+              "en": 1.6,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.7
+            },
+            {
+              "en": 2.4,
+              "hace": "sienta"
+            },
+            {
+              "en": 3.6,
+              "hace": "brilla",
+              "dur": 0.3
+            },
+            {
+              "en": 4.3,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "surya",
+          "como": "surya",
+          "x": 1000,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 4,
+              "hace": "mira",
+              "a": 1250
+            },
+            {
+              "en": 4.1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "chandra",
+          "como": "chandra",
+          "x": 1500,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 4.1,
+              "hace": "senala"
+            },
+            {
+              "en": 4.2,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "mohini",
+          "como": "mohini",
+          "x": 1800,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1370,
+              "dur": 0.5
+            },
+            {
+              "en": 3.4,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "humo",
+          "x": 350,
+          "y": 720,
+          "dur": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.5,
+          "texto": {
+            "es": "SURYA · SOL",
+            "en": "SURYA · SUN"
+          },
+          "x": 1000,
+          "y": 230,
+          "hasta": 3.5
+        },
+        {
+          "en": 2.6,
+          "texto": {
+            "es": "CHANDRA · LUNA",
+            "en": "CHANDRA · MOON"
+          },
+          "x": 1500,
+          "y": 280,
+          "hasta": 3.5
+        }
+      ]
+    },
+    {
+      "id": "disco",
+      "fondo": "palacio_pahari",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mohini era Vishnu, y Vishnu actuó rápido. Lanzó su disco, el Sudarshana.",
+          "en": "Mohini was Vishnu, and Vishnu acted fast. He threw his discus, the Sudarshana."
+        },
+        {
+          "es": "En un destello de luz, el disco le cortó la cabeza a Rahu.",
+          "en": "In a flash of light, the discus cut off Rahu's head."
+        },
+        {
+          "es": "Pero el néctar ya le había llegado a la garganta. La cabeza ya no podía morir.",
+          "en": "But the nectar had already reached his throat. The head could no longer die."
+        },
+        {
+          "es": "La cabeza subió al cielo, inmortal y furiosa.",
+          "en": "The head rose into the sky, immortal and furious."
+        },
+        {
+          "es": "¿Qué piensas: el truco de Rahu fue valiente, o solo codicioso? Cuéntanos en los comentarios.",
+          "en": "What do you think: was Rahu's trick brave, or just greedy? Tell us in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pabellon",
+          "x": 1250,
+          "capa": "fondo",
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "mohini",
+          "como": "mohini",
+          "x": 1650,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "transforma",
+              "en_que": "vishnu"
+            },
+            {
+              "en": 0.6,
+              "hace": "lanza"
+            }
+          ]
+        },
+        {
+          "id": "rahu",
+          "como": "rahu",
+          "x": 1250,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.7,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 1.05,
+              "hace": "transforma",
+              "en_que": "rahu_cabeza"
+            },
+            {
+              "en": 2.2,
+              "hace": "vuela",
+              "a": [
+                1250,
+                380
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                1000,
+                260
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "surya",
+          "como": "surya",
+          "x": 1000,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.2,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "chandra",
+          "como": "chandra",
+          "x": 1450,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.3,
+              "hace": "levantarse"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 1650,
+          "y": 520,
+          "dur": 0.5
+        },
+        {
+          "en": 1,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.05,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 2.2,
+          "tipo": "humo",
+          "x": 1250,
+          "y": 700,
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "SUDARSHANA",
+            "en": "SUDARSHANA"
+          },
+          "x": 1400,
+          "y": 200,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "guerra",
+      "fondo": "campo_pahari",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mientras tanto, Mohini terminó de servir. Hasta la última gota fue para los dioses.",
+          "en": "Meanwhile, Mohini finished pouring. Every last drop went to the gods."
+        },
+        {
+          "es": "Entonces volvió a su verdadera forma: Vishnu.",
+          "en": "Then she took back her true form: Vishnu."
+        },
+        {
+          "es": "Los asuras entendieron que los habían engañado. Furiosos, atacaron.",
+          "en": "The asuras understood they had been tricked. Furious, they attacked."
+        },
+        {
+          "es": "Pero ahora los dioses eran fuertes otra vez, y ganaron la gran batalla.",
+          "en": "But now the gods were strong again, and they won the great battle."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "mohini",
+          "como": "mohini",
+          "x": 1100,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1,
+              "hace": "transforma",
+              "en_que": "vishnu"
+            },
+            {
+              "en": 1.5,
+              "hace": "mira",
+              "a": 400
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 1450,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.7,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.1,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "deva",
+          "como": "deva_azafran",
+          "x": 1680,
+          "escala": 0.8,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.2,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "bali",
+          "como": "bali",
+          "x": 300,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.3,
+              "hace": "corre",
+              "a": 700,
+              "dur": 0.5
+            },
+            {
+              "en": 3.5,
+              "hace": "corre",
+              "a": -500,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "a1",
+          "como": "asura_rojo",
+          "x": 120,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "enoja"
+            },
+            {
+              "en": 2.4,
+              "hace": "corre",
+              "a": 520,
+              "dur": 0.5
+            },
+            {
+              "en": 3.6,
+              "hace": "corre",
+              "a": -700,
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 500,
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "polvo",
+          "x": 900,
+          "y": 780,
+          "dur": 0.8
+        },
+        {
+          "en": 3.1,
+          "tipo": "temblor",
+          "dur": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "eclipse",
+      "fondo": "campo_pahari",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Desde ese día, la cabeza de Rahu odia al Sol y a la Luna, que lo delataron.",
+          "en": "Since that day, the head of Rahu hates the Sun and the Moon, who gave him away."
+        },
+        {
+          "es": "El Bhagavata Purana dice que todavía los persigue por el cielo.",
+          "en": "The Bhagavata Purana says he still chases them across the sky."
+        },
+        {
+          "es": "Cuando atrapa a uno y se lo traga, el cielo se oscurece: eso es un eclipse.",
+          "en": "When he catches one and swallows it, the sky goes dark: that is an eclipse."
+        },
+        {
+          "es": "Mucha gente agrega que, como no tiene cuerpo, el Sol o la Luna pronto vuelven a salir.",
+          "en": "Many people add that, since he has no body, the Sun or the Moon soon slips out again."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "luna_pahari",
+          "x": 450,
+          "y": 230,
+          "props": {
+            "llena": true
+          }
+        },
+        {
+          "tipo": "sol_pahari",
+          "x": 1300,
+          "y": 260,
+          "hasta": 2.2
+        },
+        {
+          "tipo": "sol_pahari",
+          "x": 1300,
+          "y": 260,
+          "en": 2.2,
+          "hasta": 2.6,
+          "props": {
+            "eclipse": 0.5
+          }
+        },
+        {
+          "tipo": "sol_pahari",
+          "x": 1300,
+          "y": 260,
+          "en": 2.6,
+          "hasta": 3.3,
+          "props": {
+            "eclipse": 1
+          }
+        },
+        {
+          "tipo": "sol_pahari",
+          "x": 1300,
+          "y": 260,
+          "en": 3.3,
+          "hasta": 3.7,
+          "props": {
+            "eclipse": 0.5
+          }
+        },
+        {
+          "tipo": "sol_pahari",
+          "x": 1300,
+          "y": 260,
+          "en": 3.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "cabeza",
+          "como": "rahu_cabeza",
+          "x": 150,
+          "y": 420,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "vuela",
+              "a": 600,
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                950,
+                330
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1230,
+                280
+              ],
+              "dur": 0.5
+            },
+            {
+              "en": 3.4,
+              "hace": "vuela",
+              "a": [
+                700,
+                400
+              ],
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "aldeano",
+          "como": "aldeano",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.8,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "nino_aldea",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.7,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 3.8,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.5,
+          "tipo": "oscurecer",
+          "dur": 0.9
+        },
+        {
+          "en": 3.5,
+          "tipo": "aclarar",
+          "dur": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.6,
+          "texto": {
+            "es": "POR ESO HAY ECLIPSES",
+            "en": "THAT'S WHY THERE ARE ECLIPSES"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "ketu",
+      "fondo": "cielo_cosmico",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "¿Y el cuerpo? La astrología india posterior lo llama Ketu, la otra mitad de Rahu.",
+          "en": "And the body? Later Indian astrology calls it Ketu, Rahu's other half."
+        },
+        {
+          "es": "En esa tradición, Rahu y Ketu se cuentan entre los nueve grahas, los poderes del cielo.",
+          "en": "In that tradition, Rahu and Ketu are counted among the nine grahas, the powers of the sky."
+        },
+        {
+          "es": "El Mahabharata cuenta la misma historia, y dice que la pelea con el Sol y la Luna nunca termina.",
+          "en": "The Mahabharata tells the same story, and says the feud with the Sun and the Moon never ends."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "estrellas_pahari",
+          "x": 960,
+          "y": 150,
+          "en": 1
+        },
+        {
+          "tipo": "sol_pahari",
+          "x": 1550,
+          "y": 250
+        },
+        {
+          "tipo": "luna_pahari",
+          "x": 350,
+          "y": 250
+        }
+      ],
+      "actores": [
+        {
+          "id": "cabeza",
+          "como": "rahu_cabeza",
+          "x": 960,
+          "y": 360,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1300,
+                300
+              ],
+              "dur": 0.5
+            },
+            {
+              "en": 2.5,
+              "hace": "vuela",
+              "a": [
+                700,
+                320
+              ],
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "surya",
+          "como": "surya",
+          "x": 1600,
+          "escala": 0.7,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.1,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "chandra",
+          "como": "chandra",
+          "x": 330,
+          "escala": 0.7,
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.6,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "estrellas",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "KETU",
+            "en": "KETU"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1
+        },
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "NAVAGRAHA · 9",
+            "en": "NAVAGRAHA · 9"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2
+        },
+        {
+          "en": 2.1,
+          "texto": {
+            "es": "MAHABHARATA",
+            "en": "MAHABHARATA"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "crepusculo",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así, los dioses se volvieron inmortales, y los asuras se quedaron sin nada.",
+          "en": "So the gods became immortal, and the asuras were left with nothing."
+        },
+        {
+          "es": "La próxima vez que veas un eclipse, acuérdate de la cabeza que una vez bebió el néctar.",
+          "en": "Next time you see an eclipse, remember the head that once drank the nectar."
+        },
+        {
+          "es": "¿Alguna vez viste un eclipse? ¿Dónde estabas? Cuéntanos en los comentarios.",
+          "en": "Have you ever seen an eclipse? Where were you? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez conocemos a la primera esposa de Shiva, y un sacrificio que termina en fuego. Es El fuego de Sati.",
+          "en": "Next time, we meet Shiva's first wife, and a sacrifice that ends in fire. It's Sati's Fire."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "luna_pahari",
+          "x": 1500,
+          "y": 230,
+          "props": {
+            "llena": true
+          }
+        },
+        {
+          "tipo": "palacio",
+          "x": 1700,
+          "capa": "fondo",
+          "s": 0.8,
+          "props": {
+            "noche": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "cabeza",
+          "como": "rahu_cabeza",
+          "x": 1100,
+          "y": 320,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1.2,
+              "hace": "vuela",
+              "a": [
+                1350,
+                260
+              ],
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "aldeano",
+          "como": "aldeano",
+          "x": 420,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 900
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "nino_aldea",
+          "x": 620,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "sati",
+          "como": "sati",
+          "x": 1050,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 1300,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1180,
+          "y": 500,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Una cabeza que se come al Sol",
+        "en": "A head that eats the Sun"
+      },
+      "escena": "disco",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "El dios que se volvió una mujer encantadora",
+        "en": "The god who became an enchantress"
+      },
+      "escena": "mohini",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "Por qué hay eclipses, según los Puranas",
+        "en": "Why there are eclipses, according to the Puranas"
+      },
+      "escena": "eclipse",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1100
+    }
+  ]
+}

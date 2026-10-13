@@ -76,7 +76,10 @@ export type Escena = {
     | 'nieve' | 'fiordo' | 'asgard' | 'salon' | 'yggdrasil' | 'ginnungagap' | 'hel' | 'jotunheim' | 'aldea' | 'bosque_nevado' | 'aurora' | 'bifrost'
     | 'nilo' | 'nun' | 'duat' | 'piramides' | 'juncal' | 'sala_juicio' | 'cielo_nut'
     | 'mundo_cielo' | 'agua_primordial' | 'aldea_casa_larga' | 'pradera' | 'costa_noroeste' | 'rio' | 'montanas' | 'lago' | 'bajo_agua' | 'playa_noroeste' | 'dentro_monstruo'
-    | 'omeyocan' | 'aguas_primeras' | 'valle' | 'encinar' | 'selva' | 'firmamento' | 'mictlan' | 'teotihuacan' | 'teotihuacan_noche' | 'coatepec' | 'aztlan' | 'lago_texcoco' | 'tenochtitlan' | 'milpa';
+    | 'omeyocan' | 'aguas_primeras' | 'valle' | 'encinar' | 'selva' | 'firmamento' | 'mictlan' | 'teotihuacan' | 'teotihuacan_noche' | 'coatepec' | 'aztlan' | 'lago_texcoco' | 'tenochtitlan' | 'milpa'
+    | 'kahyangan' | 'segara' | 'dasar_segara' | 'gunung_agung' | 'danau_batur' | 'sawah' | 'pura' | 'pura_malam' | 'puri' | 'desa' | 'desa_malam' | 'setra' | 'alas' | 'pantai' | 'tanah_lot' | 'tirta_empul' | 'selat'
+    | 'te_po' | 'te_ao_marama' | 'ngahere' | 'moana' | 'takutai' | 'kainga' | 'whare_dentro' | 'rarohenga' | 'rangi_tuhaha' | 'maunga' | 'roto' | 'ahi_mahuika' | 'po_whetu' | 'rua_ra' | 'hawaiki' | 'aotearoa'
+    | 'oceano_cosmico' | 'oceano_leche' | 'svarga' | 'kailash' | 'bosque_pahari' | 'orilla_rio' | 'palacio_pahari' | 'palacio_noche' | 'crepusculo' | 'patala' | 'cielo_cosmico' | 'diluvio' | 'campo_pahari' | 'ashram';
   /** Sin el sol/luna propios del fondo (para animarlos con elementos, p. ej. cuando los tragan los lobos). */
   sinAstros?: boolean;
   /** Cámara: x inicial y final, zoom inicial y final. */

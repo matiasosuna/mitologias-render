@@ -22,9 +22,9 @@ const env = Object.fromEntries(readFileSync('.env', 'utf8').split('\n').filter((
 const TOKEN = env.MOC_PAGE_TOKEN, IG = env.MOC_IG_USER_ID, V = 'v21.0';
 const g = async (m, ruta, q = {}) => { const r = await fetch(`https://graph.facebook.com/${V}${ruta}?${new URLSearchParams({ ...q, access_token: TOKEN })}`, { method: m }); const j = await r.json(); if (j.error) throw new Error(`${ruta}: ${j.error.message}`); return j; };
 
-const ORDEN = ['griegas', 'nordicas', 'egipcias', 'hawaianas', 'norteamericanas', 'aztecas'];
-const T1 = { griegas: 7, nordicas: 13, egipcias: 11, hawaianas: 12, norteamericanas: 12, aztecas: 12 };
-const SERIE = { griegas: ['Greek', '#greekmythology #greekgods'], nordicas: ['Norse', '#norsemythology #vikings'], egipcias: ['Egyptian', '#egyptianmythology #ancientegypt'], hawaianas: ['Hawaiian', '#hawaiianmythology #polynesian'], norteamericanas: ['Native American', '#nativeamericanmythology #indigenousstories'], aztecas: ['Aztec', '#aztecmythology #mexica'] };
+const ORDEN = ['griegas', 'nordicas', 'egipcias', 'hawaianas', 'norteamericanas', 'aztecas', 'balinesas', 'hindues', 'maories'];
+const T1 = { griegas: 7, nordicas: 13, egipcias: 11, hawaianas: 12, norteamericanas: 12, aztecas: 12, balinesas: 12, hindues: 12, maories: 12 };
+const SERIE = { griegas: ['Greek', '#greekmythology #greekgods'], nordicas: ['Norse', '#norsemythology #vikings'], egipcias: ['Egyptian', '#egyptianmythology #ancientegypt'], hawaianas: ['Hawaiian', '#hawaiianmythology #polynesian'], norteamericanas: ['Native American', '#nativeamericanmythology #indigenousstories'], aztecas: ['Aztec', '#aztecmythology #mexica'], balinesas: ['Balinese', '#balinesemythology #bali'], hindues: ['Hindu', '#hindumythology #indianmythology'], maories: ['Māori', '#maorimythology #aotearoa'] };
 const ids = JSON.parse(readFileSync('src/videos/youtube-ids.json', 'utf8'));
 const reg = 'out/subidas-instagram.json';
 const hist = () => (existsSync(reg) ? JSON.parse(readFileSync(reg, 'utf8')) : []);

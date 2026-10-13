@@ -1,0 +1,1628 @@
+{
+  "id": "hindues-10-el-nino-de-barro",
+  "serie": "hindues",
+  "numero": "10",
+  "titulo": {
+    "es": "El niño de barro",
+    "en": "The Boy Made of Clay"
+  },
+  "tituloGriego": "THE BOY MADE OF CLAY",
+  "miniatura": {
+    "heroe": "ganesha",
+    "rival": "shiva"
+  },
+  "siguiente": {
+    "es": "El hombre león",
+    "en": "The Man-Lion"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Shiva y Parvati por fin se casaron, y vivieron juntos en el monte Kailash.",
+          "en": "Last time, Shiva and Parvati were finally married, and made their home on Mount Kailash."
+        },
+        {
+          "es": "Pero Shiva salía a menudo, a recorrer el mundo o a meditar.",
+          "en": "But Shiva was often away, wandering the world or meditating."
+        },
+        {
+          "es": "Sus seguidores, los ganas, cuidaban la casa. Y todos obedecían solo a Shiva.",
+          "en": "His followers, the ganas, guarded the house. And they all obeyed Shiva alone."
+        },
+        {
+          "es": "El Shiva Purana cuenta que las amigas de Parvati le dijeron: \"Necesitas un guardia que sea solo tuyo\".",
+          "en": "The Shiva Purana says Parvati's friends told her: \"You need a guard who is yours alone.\""
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "parvati",
+          "como": "parvati",
+          "x": 600,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.1,
+              "hace": "senala"
+            },
+            {
+              "en": 3.4,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 950,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 600
+            },
+            {
+              "en": 1,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "gana",
+          "como": "virabhadra",
+          "x": 1650,
+          "capa": "medio",
+          "mira": "izq",
+          "escala": 0.7,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "amiga",
+          "como": "apsara",
+          "x": 300,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 330
+            },
+            {
+              "en": 3.2,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 1650,
+          "y": 760,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "barro",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, Parvati se preparaba para bañarse.",
+          "en": "One day, Parvati was getting ready for her bath."
+        },
+        {
+          "es": "El Shiva Purana cuenta que tomó la pasta que se había untado en la piel, y con ella formó a un niño.",
+          "en": "The Shiva Purana says she took the paste she had rubbed on her skin, and shaped it into a boy."
+        },
+        {
+          "es": "Le dio vida. Era fuerte, hermoso y valiente.",
+          "en": "She gave him life. He was strong, handsome and brave."
+        },
+        {
+          "es": "\"Eres mi hijo\", le dijo. \"Cuida mi puerta y no dejes entrar a nadie\".",
+          "en": "\"You are my son,\" she told him. \"Guard my door, and let no one in.\""
+        },
+        {
+          "es": "El niño tomó un bastón y se paró frente a la puerta.",
+          "en": "The boy picked up a stick and took his place at the door."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "puerta_palacio",
+          "x": 1400
+        },
+        {
+          "tipo": "estanque",
+          "x": 400,
+          "s": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "parvati",
+          "como": "parvati",
+          "x": 600,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.5
+            },
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.6,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "ganesha_nino",
+          "x": 980,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.6,
+              "hace": "asiente"
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.6
+            },
+            {
+              "en": 4.6,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "amiga",
+          "como": "apsara",
+          "x": 250,
+          "capa": "medio",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "luz",
+          "x": 980,
+          "y": 600,
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 980,
+          "y": 600,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "puerta",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El niño se quedó en la puerta con su bastón. Entonces Shiva volvió a casa.",
+          "en": "The boy stood guard with his stick. Then Shiva came home."
+        },
+        {
+          "es": "\"¿Quién eres? No puedes pasar\", dijo el niño. No sabía quién era Shiva.",
+          "en": "\"Who are you? You cannot go in,\" said the boy. He did not know who Shiva was."
+        },
+        {
+          "es": "Shiva tampoco lo conocía. \"Esta es mi casa\", dijo. \"Hazte a un lado\".",
+          "en": "Shiva did not know him either. \"This is my house,\" he said. \"Step aside.\""
+        },
+        {
+          "es": "Pero el niño no se movió. Su madre le había dicho: nadie entra.",
+          "en": "But the boy would not move. His mother had said: no one goes in."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "puerta_palacio",
+          "x": 850
+        }
+      ],
+      "actores": [
+        {
+          "id": "nino",
+          "como": "ganesha_nino",
+          "x": 1050,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 1.3,
+              "hace": "niega"
+            },
+            {
+              "en": 3,
+              "hace": "niega"
+            },
+            {
+              "en": 3.3,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 1500,
+          "mira": "izq",
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1450
+            },
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            },
+            {
+              "en": 3.5,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "nandi",
+          "como": "nandi",
+          "x": 1850,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "entra",
+              "a": 1820
+            },
+            {
+              "en": 3.6,
+              "hace": "tiembla",
+              "dur": 0.3
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "\"NO PUEDES PASAR\"",
+            "en": "\"YOU CANNOT GO IN\""
+          },
+          "x": 1000,
+          "y": 220,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "ganas",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 240,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Shiva mandó a sus ganas a apartar al niño.",
+          "en": "Shiva sent his ganas to move the boy out of the way."
+        },
+        {
+          "es": "El niño los venció a todos con su bastón, y volvieron corriendo.",
+          "en": "The boy beat them all with his stick, and they ran back."
+        },
+        {
+          "es": "Después vinieron los dioses a ayudar, con Indra al frente. El niño también los hizo retroceder.",
+          "en": "Then the gods came to help, led by Indra. The boy drove them back too."
+        },
+        {
+          "es": "Todo el cielo miraba. ¿Quién era ese niño al que nadie podía vencer?",
+          "en": "The whole sky was watching. Who was this little boy that no one could beat?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "puerta_palacio",
+          "x": 650
+        }
+      ],
+      "actores": [
+        {
+          "id": "nino",
+          "como": "ganesha_nino",
+          "x": 850,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.4,
+              "hace": "salta"
+            },
+            {
+              "en": 2.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "gana1",
+          "como": "virabhadra",
+          "x": 1300,
+          "mira": "izq",
+          "escala": 0.7,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1100
+            },
+            {
+              "en": 0.9,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 1.2,
+              "hace": "corre",
+              "a": 2500,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "gana2",
+          "como": "virabhadra",
+          "x": 1550,
+          "mira": "izq",
+          "escala": 0.7,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "entra",
+              "a": 1350
+            },
+            {
+              "en": 1.3,
+              "hace": "corre",
+              "a": 2700,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 1700,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1250
+            },
+            {
+              "en": 2.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.8,
+              "hace": "corre",
+              "a": 2700,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "deva",
+          "como": "deva",
+          "x": 1950,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "entra",
+              "a": 1500
+            },
+            {
+              "en": 2.9,
+              "hace": "corre",
+              "a": 2900,
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 1000,
+          "dur": 0.6
+        },
+        {
+          "en": 2.5,
+          "tipo": "polvo",
+          "x": 1100,
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 900,
+          "y": 500,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "golpe",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al final, Shiva mismo se adelantó, con su tridente.",
+          "en": "At last, Shiva himself stepped forward, with his trident."
+        },
+        {
+          "es": "El Shiva Purana cuenta que, en la pelea, Shiva le cortó la cabeza al niño.",
+          "en": "The Shiva Purana says that, in the fight, Shiva cut off the boy's head."
+        },
+        {
+          "es": "Hubo un destello de luz. Y después, silencio.",
+          "en": "There was a flash of light. And then, silence."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "puerta_palacio",
+          "x": 600
+        }
+      ],
+      "actores": [
+        {
+          "id": "nino",
+          "como": "ganesha_nino",
+          "x": 820,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.3,
+              "hace": "tiembla",
+              "dur": 0.2
+            },
+            {
+              "en": 1.5,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 1400,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 1800,
+          "capa": "fondo",
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.5,
+          "tipo": "temblor",
+          "dur": 0.2
+        },
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 0.9
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "dolor",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 180,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuando Parvati salió y vio lo que había pasado, su dolor se volvió furia.",
+          "en": "When Parvati came out and saw what had happened, her grief turned into fury."
+        },
+        {
+          "es": "El Shiva Purana dice que llamó a muchas diosas feroces, que empezaron a atacar a los dioses.",
+          "en": "The Shiva Purana says she called up many fierce goddesses, who began to attack the gods."
+        },
+        {
+          "es": "Los dioses tuvieron miedo. El sabio Narada le rogó que se calmara.",
+          "en": "The gods were terrified. The sage Narada begged her to stop."
+        },
+        {
+          "es": "Parvati respondió: \"Devuélvanle la vida a mi hijo, y hónrenlo entre todos los dioses\".",
+          "en": "Parvati answered: \"Bring my son back to life, and honor him among all the gods.\""
+        },
+        {
+          "es": "¿El niño hizo mal en cerrar la puerta, o solo fue un buen hijo?",
+          "en": "Was the boy wrong to block the door, or was he simply a good son?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "puerta_palacio",
+          "x": 450
+        }
+      ],
+      "actores": [
+        {
+          "id": "parvati",
+          "como": "parvati",
+          "x": 650,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.4,
+              "hace": "lamenta"
+            },
+            {
+              "en": 0.8,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 1350,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 2,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "deva",
+          "como": "deva",
+          "x": 1650,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "corre",
+              "a": 2700,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "narada",
+          "como": "narada",
+          "x": 1250,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1050
+            },
+            {
+              "en": 2.3,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 1850,
+          "capa": "fondo",
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.5,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 1.2,
+          "tipo": "rayo",
+          "x": 1450
+        },
+        {
+          "en": 1.3,
+          "tipo": "fuego",
+          "x": 1550,
+          "y": 790,
+          "dur": 0.8
+        },
+        {
+          "en": 1.2,
+          "tipo": "temblor",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "norte",
+      "fondo": "bosque_pahari",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Shiva ordenó a sus ganas: \"Vayan al norte. Tráiganme la cabeza del primer ser que encuentren\".",
+          "en": "Shiva told his ganas: \"Go north. Bring me the head of the first creature you meet.\""
+        },
+        {
+          "es": "Caminaron y caminaron por el bosque.",
+          "en": "They walked and walked through the forest."
+        },
+        {
+          "es": "El primero que encontraron fue un elefante con un solo colmillo.",
+          "en": "The first creature they met was an elephant with a single tusk."
+        },
+        {
+          "es": "Y volvieron a Kailash con su cabeza.",
+          "en": "And they carried its head back to Kailash."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "gana",
+          "como": "virabhadra",
+          "x": 350,
+          "escala": 0.7,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "asiente"
+            },
+            {
+              "en": 0.6,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 1.2
+            },
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "nandi",
+          "como": "nandi",
+          "x": 120,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "camina",
+              "a": 850,
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "elefante",
+          "como": "elefante",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 1550
+            },
+            {
+              "en": 3.1,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1250,
+          "y": 500,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "AL NORTE",
+            "en": "NORTH"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "elefante",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pusieron la cabeza de elefante sobre el cuerpo del niño.",
+          "en": "They placed the elephant head on the boy's body."
+        },
+        {
+          "es": "Shiva lo roció con agua sagrada y le devolvió la vida.",
+          "en": "Shiva sprinkled him with holy water, and gave him back his life."
+        },
+        {
+          "es": "El niño se levantó, vivo y radiante, con cabeza de elefante.",
+          "en": "The boy stood up, alive and glowing, with the head of an elephant."
+        },
+        {
+          "es": "Parvati corrió a abrazarlo. Su hijo había vuelto.",
+          "en": "Parvati ran to hug him. Her son had come back."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "nino",
+          "como": "ganesha_nino",
+          "x": 960,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.1,
+              "hace": "transforma",
+              "en_que": "ganesha"
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.2,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 1380,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "parvati",
+          "como": "parvati",
+          "x": 420,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "reza"
+            },
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "corre",
+              "a": 760,
+              "dur": 0.4
+            },
+            {
+              "en": 3.3,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "nandi",
+          "como": "nandi",
+          "x": 1750,
+          "capa": "medio",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.1,
+          "tipo": "luz",
+          "x": 960,
+          "y": 550,
+          "dur": 0.8
+        },
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 600,
+          "dur": 0.6
+        },
+        {
+          "en": 1.1,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "primero",
+      "fondo": "svarga",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Shiva lo nombró jefe de todos sus seguidores, los ganas.",
+          "en": "Shiva made him the leader of all his followers, the ganas."
+        },
+        {
+          "es": "Por eso se llama Ganesha: \"el señor de los ganas\".",
+          "en": "That is why he is called Ganesha: \"lord of the ganas\"."
+        },
+        {
+          "es": "Y Shiva prometió algo más: antes que a cualquier otro dios, se honraría primero a Ganesha.",
+          "en": "And Shiva promised something more: before any other god, Ganesha would be honored first."
+        },
+        {
+          "es": "Muchos hindúes todavía rezan a Ganesha antes de empezar algo nuevo: un viaje, una boda, un año de estudio.",
+          "en": "Many Hindus still pray to Ganesha before starting anything new: a journey, a wedding, a school year."
+        },
+        {
+          "es": "Es el que quita los obstáculos: el señor de los comienzos.",
+          "en": "He is the remover of obstacles, the lord of beginnings."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "ganesha",
+          "como": "ganesha",
+          "x": 960,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 560,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1380,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 1750,
+          "capa": "medio",
+          "mira": "izq",
+          "escala": 0.75,
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "mushika",
+          "como": "mushika",
+          "x": 1150,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "entra",
+              "a": 1150
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 960,
+          "y": 450,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 400,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.6,
+          "texto": {
+            "es": "POR ESO GANESHA SE HONRA PRIMERO",
+            "en": "THAT'S WHY GANESHA IS HONORED FIRST"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "otra",
+      "fondo": "palacio_pahari",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero no todos los textos lo cuentan así. El Brahmavaivarta Purana cuenta otra historia.",
+          "en": "But not every text tells it this way. The Brahmavaivarta Purana tells a different story."
+        },
+        {
+          "es": "Allí aparece Shani, el dios del planeta Saturno, cuya mirada dañaba todo lo que tocaba.",
+          "en": "In it, there is Shani, the god of the planet Saturn, whose gaze harmed whatever it fell on."
+        },
+        {
+          "es": "Shani no quería mirar al bebé de Parvati, pero ella insistió. Al mirarlo, el bebé perdió la cabeza.",
+          "en": "Shani did not want to look at Parvati's baby, but she insisted. When he looked, the baby lost his head."
+        },
+        {
+          "es": "Entonces Vishnu voló sobre Garuda, su ave gigante, y trajo la cabeza de un elefante.",
+          "en": "Then Vishnu flew off on Garuda, his giant bird, and brought back the head of an elephant."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "parvati",
+          "como": "parvati",
+          "x": 560,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.6,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "bebe",
+          "como": "ganesha_nino",
+          "x": 780,
+          "escala": 0.65,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "shani",
+          "como": "deva",
+          "x": 1350,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "SHANI",
+          "props": {
+            "piel": "#3A4466"
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1150
+            },
+            {
+              "en": 1.6,
+              "hace": "niega"
+            },
+            {
+              "en": 2.3,
+              "hace": "mira",
+              "a": 780
+            },
+            {
+              "en": 2.7,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "garuda",
+          "como": "garuda",
+          "x": 1650,
+          "y": 470,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.5,
+              "hace": "vuela",
+              "a": [
+                2600,
+                300
+              ],
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1880,
+          "y": 470,
+          "mira": "izq",
+          "escala": 0.7,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.5,
+              "hace": "vuela",
+              "a": [
+                2800,
+                300
+              ],
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1700,
+          "y": 400,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "OTRA VERSIÓN",
+            "en": "ANOTHER VERSION"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hoy Ganesha es uno de los dioses más queridos de la India. Viaja montado en un ratoncito, Mushika.",
+          "en": "Today, Ganesha is one of the most loved gods in India. He rides a little mouse called Mushika."
+        },
+        {
+          "es": "Y todo empezó con un niño de barro que cuidaba la puerta de su madre.",
+          "en": "And it all began with a boy made of clay, guarding his mother's door."
+        },
+        {
+          "es": "¿Qué versión prefieres: el tridente de Shiva, o la mirada de Shani?",
+          "en": "Which version do you prefer: Shiva's trident, or Shani's gaze?"
+        },
+        {
+          "es": "La próxima vez: un rey demonio que no puede morir ni por hombre ni por bestia. Es El hombre león.",
+          "en": "Next time: a demon king who cannot be killed by man or by beast. It is The Man-Lion."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "puerta_palacio",
+          "x": 1350
+        }
+      ],
+      "actores": [
+        {
+          "id": "ganesha",
+          "como": "ganesha",
+          "x": 800,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1350
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "mushika",
+          "como": "mushika",
+          "x": 1050,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "entra",
+              "a": 1030
+            }
+          ]
+        },
+        {
+          "id": "parvati",
+          "como": "parvati",
+          "x": 1550,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "hiranyakashipu",
+          "como": "hiranyakashipu",
+          "x": 1900,
+          "capa": "fondo",
+          "mira": "izq",
+          "escala": 0.7,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 3.4,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1350,
+          "y": 500,
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El niño que no dejó pasar a Shiva",
+        "en": "The boy who wouldn't let Shiva in"
+      },
+      "escena": "puerta",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1050
+    },
+    {
+      "gancho": {
+        "es": "Cómo Ganesha recibió su cabeza de elefante",
+        "en": "How Ganesha got his elephant head"
+      },
+      "escena": "elefante",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Otra versión: la mirada de Shani",
+        "en": "Another version: Shani's gaze"
+      },
+      "escena": "otra",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 850
+    }
+  ]
+}

@@ -2,6 +2,9 @@
 import React from 'react';
 import { fondoNorteamericano, elementoNorteamericano } from './fondosNorte';
 import { fondoAzteca, elementoAzteca, CIELO_AZTECA } from './fondosAzteca';
+import { fondoHindu, elementoHindu, CIELO_HINDU } from './fondosHindu';
+import { fondoBalines, elementoBalines, CIELO_BALINES } from './fondosBalines';
+import { fondoMaori, elementoMaori, CIELO_MAORI } from './fondosMaori';
 import { C, Capa, SUELO, Suelo, Monte, Olivo, Templo, Olas, Nube, Luna, Sol, Estrellas, Fuego, suave, Inc, Borde, Personaje, azar, TEMA, TextoRunico, Entrelazado, Jeroglificos, Bloques, miembro, Chispas, type P } from '../comun/vasija';
 
 export type Cielo = 'barro' | 'noche' | 'mar' | 'inframundo';
@@ -15,6 +18,9 @@ export const CIELO: Record<string, Cielo> = { campo: 'barro', olimpo: 'barro', m
   // norteamericanos (tema pintado)
   mundo_cielo: 'barro', agua_primordial: 'mar', aldea_casa_larga: 'barro', pradera: 'barro', costa_noroeste: 'mar', rio: 'barro', montanas: 'barro', lago: 'mar', bajo_agua: 'mar' };
 Object.assign(CIELO, CIELO_AZTECA); // aztecas (tema códice): fondosAzteca.tsx
+Object.assign(CIELO, CIELO_HINDU); // hindúes (tema pahari): fondosHindu.tsx
+Object.assign(CIELO, CIELO_BALINES); // balinesas (tema kamasan): fondosBalines.tsx
+Object.assign(CIELO, CIELO_MAORI); // maoríes (tema kōwhaiwhai): fondosMaori.tsx
 
 const Mar: React.FC<{ f: number; y?: number; desde?: number }> = ({ f, y = SUELO - 30, desde = -800 }) => (
   <g>
@@ -29,6 +35,9 @@ export const Fondo: React.FC<{ tipo: string; f: number; astros?: boolean }> = ({
   if ((TEMA.nombre as string) === 'kapa') { const n = fondoHawaiano(tipo, f, astros); if (n) return n; }
   if ((TEMA.nombre as string) === 'pintado') { const n = fondoNorteamericano(tipo, f, astros); if (n) return n; }
   if ((TEMA.nombre as string) === 'codice') { const n = fondoAzteca(tipo, f, astros); if (n) return n; }
+  if ((TEMA.nombre as string) === 'pahari') { const n = fondoHindu(tipo, f, astros); if (n) return n; }
+  if ((TEMA.nombre as string) === 'kamasan') { const n = fondoBalines(tipo, f, astros); if (n) return n; }
+  if ((TEMA.nombre as string) === 'kowhaiwhai') { const n = fondoMaori(tipo, f, astros); if (n) return n; }
   switch (tipo) {
     case 'olimpo':
       return (
@@ -294,6 +303,9 @@ export const ElementoSVG: React.FC<{ tipo: string; x: number; y?: number; s?: nu
   const kapa = (TEMA.nombre as string) === 'kapa';
   if ((TEMA.nombre as string) === 'pintado') { const n = elementoNorteamericano(tipo, x, y, s, f, props); if (n) return n; }
   if ((TEMA.nombre as string) === 'codice') { const n = elementoAzteca(tipo, x, y, s, f, props); if (n) return n; }
+  if ((TEMA.nombre as string) === 'pahari') { const n = elementoHindu(tipo, x, y, s, f, props); if (n) return n; }
+  if ((TEMA.nombre as string) === 'kamasan') { const n = elementoBalines(tipo, x, y, s, f, props); if (n) return n; }
+  if ((TEMA.nombre as string) === 'kowhaiwhai') { const n = elementoMaori(tipo, x, y, s, f, props); if (n) return n; }
   if (kapa) {
     switch (tipo) {
       case 'palmera': case 'olivo': case 'arbol': return <Niu x={x} y={yy} s={s} f={f} inclina={(props.inclina as number) ?? 0.2} espejo={props.espejo === true} />;

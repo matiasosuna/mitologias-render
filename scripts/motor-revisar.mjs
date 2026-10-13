@@ -22,6 +22,18 @@ const lista = (archivo, nombre) => ((readFileSync(archivo, 'utf8').match(new Reg
 lista('src/motor/fondosAzteca.tsx', 'FONDOS_AZTECA').forEach((x) => FONDOS.add(x));
 lista('src/motor/fondosAzteca.tsx', 'ELEMENTOS_AZTECA').forEach((x) => ELEMS.add(x));
 [...readFileSync('src/motor/elencoAzteca.tsx', 'utf8').split('export const ELENCO_AZTECA')[1].split('export const NOMBRE_EN_AZTECA')[0].matchAll(/^\s{2}(\w+): /gm)].forEach((m) => elenco.add(m[1]));
+// Hindúes (tema pahari): fondos, elementos y elenco salen de sus propios archivos.
+lista('src/motor/fondosHindu.tsx', 'FONDOS_HINDU').forEach((x) => FONDOS.add(x));
+lista('src/motor/fondosHindu.tsx', 'ELEMENTOS_HINDU').forEach((x) => ELEMS.add(x));
+[...readFileSync('src/motor/elencoHindu.tsx', 'utf8').split('export const ELENCO_HINDU')[1].split('export const NOMBRE_EN_HINDU')[0].matchAll(/^\s{2}(\w+): /gm)].forEach((m) => elenco.add(m[1]));
+// Balinesas (tema kamasan): igual, de fondosBalines.tsx y elencoBalines.tsx.
+lista('src/motor/fondosBalines.tsx', 'FONDOS_BALINES').forEach((x) => FONDOS.add(x));
+lista('src/motor/fondosBalines.tsx', 'ELEMENTOS_BALINES').forEach((x) => ELEMS.add(x));
+[...readFileSync('src/motor/elencoBalines.tsx', 'utf8').split('export const ELENCO_BALINES')[1].split('export const NOMBRE_EN_BALINES')[0].matchAll(/^\s{2}(\w+): /gm)].forEach((m) => elenco.add(m[1]));
+// Maoríes (tema kōwhaiwhai): igual, de fondosMaori.tsx y elencoMaori.tsx.
+lista('src/motor/fondosMaori.tsx', 'FONDOS_MAORI').forEach((x) => FONDOS.add(x));
+lista('src/motor/fondosMaori.tsx', 'ELEMENTOS_MAORI').forEach((x) => ELEMS.add(x));
+[...readFileSync('src/motor/elencoMaori.tsx', 'utf8').split('export const ELENCO_MAORI')[1].split('export const NOMBRE_EN_MAORI')[0].matchAll(/^\s{2}(\w+): /gm)].forEach((m) => elenco.add(m[1]));
 const P = { fondo: 0.45, medio: 0.75, frente: 1 };
 
 const avisos = [];

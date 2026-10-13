@@ -11,12 +11,12 @@ const LOCK = 'out/.instagram-cola.lock';
 if (existsSync(LOCK)) { const pid = Number(readFileSync(LOCK, 'utf8')); try { process.kill(pid, 0); console.log('ya hay una cola corriendo'); process.exit(0); } catch { /* quedó de antes */ } }
 mkdirSync('out', { recursive: true }); writeFileSync(LOCK, String(process.pid));
 process.on('exit', () => { try { if (readFileSync(LOCK, 'utf8') === String(process.pid)) execFileSync('rm', ['-f', LOCK]); } catch { /* nada */ } });
-const ORDEN = ['griegas', 'nordicas', 'egipcias', 'hawaianas', 'norteamericanas', 'aztecas'];
-const SERIE = { griegas: ['Greek', '#greekmythology #greekgods'], nordicas: ['Norse', '#norsemythology #vikings'], egipcias: ['Egyptian', '#egyptianmythology #ancientegypt'], hawaianas: ['Hawaiian', '#hawaiianmythology #polynesian'], norteamericanas: ['Native American', '#nativeamericanmythology #indigenousstories'], aztecas: ['Aztec', '#aztecmythology #mexica'] };
+const ORDEN = ['griegas', 'nordicas', 'egipcias', 'hawaianas', 'norteamericanas', 'aztecas', 'balinesas', 'hindues', 'maories'];
+const SERIE = { griegas: ['Greek', '#greekmythology #greekgods'], nordicas: ['Norse', '#norsemythology #vikings'], egipcias: ['Egyptian', '#egyptianmythology #ancientegypt'], hawaianas: ['Hawaiian', '#hawaiianmythology #polynesian'], norteamericanas: ['Native American', '#nativeamericanmythology #indigenousstories'], aztecas: ['Aztec', '#aztecmythology #mexica'], balinesas: ['Balinese', '#balinesemythology #bali'], hindues: ['Hindu', '#hindumythology #indianmythology'], maories: ['Māori', '#maorimythology #aotearoa'] };
 const ids = JSON.parse(readFileSync('src/videos/youtube-ids.json', 'utf8')); // solo lo que ya está público en YouTube
 const reg = 'out/subidas-instagram.json';
 const hechos = new Set((existsSync(reg) ? JSON.parse(readFileSync(reg, 'utf8')) : []).filter((h) => h.tipo === 'episodio').map((h) => h.id));
-const T1 = { griegas: 7, nordicas: 13, egipcias: 11, hawaianas: 12, norteamericanas: 12, aztecas: 12 }; // por ahora solo las primeras temporadas
+const T1 = { griegas: 7, nordicas: 13, egipcias: 11, hawaianas: 12, norteamericanas: 12, aztecas: 12, balinesas: 12, hindues: 12, maories: 12 }; // por ahora solo las primeras temporadas
 const episodios = readdirSync('src/videos').filter((d) => /^[a-z]+-\d\d-/.test(d) && ids[d] && Number(d.split('-')[1]) <= (T1[d.split('-')[0]] ?? 0))
   .sort((a, b) => ORDEN.indexOf(a.split('-')[0]) - ORDEN.indexOf(b.split('-')[0]) || a.localeCompare(b));
 const id = episodios.find((d) => !hechos.has(d) && existsSync(join('out', d, `${d}.en.mp4`)));

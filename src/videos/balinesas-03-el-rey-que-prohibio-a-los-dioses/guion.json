@@ -1,0 +1,1145 @@
+{
+  "id": "balinesas-03-el-rey-que-prohibio-a-los-dioses",
+  "serie": "balinesas",
+  "numero": "03",
+  "titulo": {
+    "es": "El rey que prohibió a los dioses",
+    "en": "The King Who Banned the Gods"
+  },
+  "tituloGriego": "THE KING WHO BANNED THE GODS",
+  "miniatura": {
+    "heroe": "mayadenawa",
+    "rival": "bhatara_indra"
+  },
+  "siguiente": {
+    "es": "El manantial envenenado",
+    "en": "The Poisoned Spring"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "selat",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, la furia de un dragón y el amor de un padre separaron Java y Bali.",
+          "en": "Last time, a dragon's anger and a father's love split Java and Bali apart."
+        },
+        {
+          "es": "Ahora Bali estaba sola en el mar, con sus montañas y sus templos.",
+          "en": "Now Bali stood alone in the sea, with its mountains and its temples."
+        },
+        {
+          "es": "Pero un día llegó al poder un rey que quería todos los templos vacíos.",
+          "en": "But one day, a king came to power who wanted every temple empty."
+        },
+        {
+          "es": "Es el villano de una de las historias más importantes de Bali.",
+          "en": "He is the villain of one of Bali's most important stories."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "sidhi",
+          "como": "sidhi_mantra",
+          "x": 300,
+          "y": 750,
+          "escala": 0.6,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 100,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "maya",
+          "como": "mayadenawa",
+          "x": 1500,
+          "y": 750,
+          "escala": 0.7,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 2
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "rey",
+      "fondo": "puri",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Se llamaba Mayadenawa. Una vieja crónica balinesa en hojas de palma, el Usana Bali, cuenta su historia.",
+          "en": "His name was Mayadenawa. An old Balinese palm-leaf chronicle, the Usana Bali, tells his story."
+        },
+        {
+          "es": "Era un daitya, un demonio poderoso, y un maestro de la magia.",
+          "en": "He was a daitya, a mighty demon, and a master of magic."
+        },
+        {
+          "es": "Podía cambiar de forma cuando quisiera: en un animal, en un ave, hasta en una piedra.",
+          "en": "He could change his shape whenever he wished: into an animal, a bird, even a stone."
+        },
+        {
+          "es": "Gobernaba la isla desde su palacio en Bedahulu, en el centro de Bali.",
+          "en": "He ruled the island from his palace at Bedahulu, in the middle of Bali."
+        },
+        {
+          "es": "Bedahulu todavía es una aldea, cerca del pueblo de Ubud.",
+          "en": "Bedahulu is still a village today, close to the town of Ubud."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tedung",
+          "x": 650,
+          "s": 1
+        },
+        {
+          "tipo": "tedung",
+          "x": 1250,
+          "s": 1,
+          "props": {
+            "color": "#D9A63A"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "maya",
+          "como": "mayadenawa",
+          "x": 950,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.1,
+              "hace": "transforma",
+              "en_que": "manuk"
+            },
+            {
+              "en": 2.7,
+              "hace": "transforma",
+              "en_que": "mayadenawa"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "guardia",
+          "como": "prajurit_bali",
+          "x": 1600,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4.2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 4.4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.1,
+          "tipo": "humo",
+          "x": 950,
+          "y": 650,
+          "dur": 0.4
+        },
+        {
+          "en": 2.7,
+          "tipo": "humo",
+          "x": 950,
+          "y": 650,
+          "dur": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "BEDAHULU",
+            "en": "BEDAHULU"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "prohibe",
+      "fondo": "pura",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mayadenawa no quería que nadie fuera más grande que él.",
+          "en": "Mayadenawa did not want anyone to be greater than him."
+        },
+        {
+          "es": "Entonces dio una orden: no más rezos a los dioses. No más ofrendas en los templos.",
+          "en": "So he gave an order: no more prayers to the gods. No more offerings at the temples."
+        },
+        {
+          "es": "Ahora yo soy su dios, dijo. Tráiganme sus regalos a mí.",
+          "en": "I am your god now, he said. Bring your gifts to me."
+        },
+        {
+          "es": "Sus soldados echaron a la gente, y la maleza empezó a crecer entre las piedras del templo.",
+          "en": "His soldiers chased the people out, and weeds began to grow between the temple stones."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "canang",
+          "x": 1150,
+          "hasta": 3.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "maya",
+          "como": "mayadenawa",
+          "x": 450,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "wanita_bali",
+          "x": 1200,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "reza"
+            },
+            {
+              "en": 1.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.2,
+              "hace": "corre",
+              "a": 2200,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "soldado",
+          "como": "raksasa_bali",
+          "x": 2100,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "entra",
+              "a": 1500,
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "corre",
+              "a": 2100,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "ofrendas",
+      "fondo": "desa",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Para entender lo cruel que era esa orden, hay que saber qué significan las ofrendas en Bali.",
+          "en": "To understand how cruel this order was, you need to know what offerings mean in Bali."
+        },
+        {
+          "es": "Cada día, las familias hacen bandejitas de hoja de palma con flores y arroz, llamadas canang sari.",
+          "en": "Every day, families make small trays of palm leaf with flowers and rice, called canang sari."
+        },
+        {
+          "es": "Las dejan en altares, puertas y cruces de caminos, como agradecimiento y como regalo.",
+          "en": "They place them at shrines, doorways and crossroads, as thanks and as gifts."
+        },
+        {
+          "es": "Las ofrendas equilibran a los dioses de arriba y a los espíritus dañinos de abajo. Sin ellas, ese equilibrio se rompe.",
+          "en": "Offerings keep the balance between the gods above and the harmful spirits below. Without them, that balance breaks."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "canang",
+          "x": 700,
+          "en": 1.4
+        },
+        {
+          "tipo": "canang",
+          "x": 1240,
+          "en": 2.2
+        },
+        {
+          "tipo": "candi_bentar",
+          "x": 1500,
+          "s": 0.6,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "wanita_bali",
+          "x": 400,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "camina",
+              "a": 600,
+              "dur": 0.6
+            },
+            {
+              "en": 1.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.1,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 0.6
+            },
+            {
+              "en": 2.7,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "nina",
+          "como": "anak_bali",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 600
+            },
+            {
+              "en": 3.2,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 960,
+          "y": 300,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "hambre",
+      "fondo": "sawah",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pronto toda la isla empezó a sufrir.",
+          "en": "Soon the whole island began to suffer."
+        },
+        {
+          "es": "Los arrozales se secaron y la cosecha se perdió.",
+          "en": "The rice fields dried up, and the harvest failed."
+        },
+        {
+          "es": "La enfermedad pasó de aldea en aldea, y la gente tenía demasiado miedo para rezar, incluso a escondidas.",
+          "en": "Sickness spread from village to village, and people were too afraid to pray, even in secret."
+        },
+        {
+          "es": "¿Habrías seguido rezando a escondidas, aunque el rey lo prohibiera? Cuéntanos en los comentarios.",
+          "en": "Would you have kept praying in secret, even if the king forbade it? Tell us in the comments."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "campesino",
+          "como": "kakek_bali",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.4,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "nenek_bali",
+          "x": 1050,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entristece"
+            },
+            {
+              "en": 2,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "anak_bali",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "oscurecer",
+          "dur": 3,
+          "intensidad": 0.6
+        },
+        {
+          "en": 1.1,
+          "tipo": "polvo",
+          "x": 900,
+          "y": 760,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "kulputih",
+      "fondo": "pura",
+      "camara": {
+        "de": 200,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En las laderas del monte Agung, en el gran templo de Besakih, vivía un sacerdote llamado Mpu Kulputih.",
+          "en": "On the slopes of Mount Agung, at the great temple of Besakih, lived a priest named Mpu Kulputih."
+        },
+        {
+          "es": "No soportaba ver sufrir a la gente.",
+          "en": "He could not bear to see the people suffer."
+        },
+        {
+          "es": "Entró al templo vacío, tocó su campana y rezó de día y de noche.",
+          "en": "He went into the empty temple, rang his bell, and prayed day and night."
+        },
+        {
+          "es": "Les pidió a los dioses que salvaran a la isla de su rey.",
+          "en": "He asked the gods to save the island from its king."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "padmasana",
+          "x": 1500,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "kulputih",
+          "como": "mpu_kulputih",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "entra",
+              "a": 1000,
+              "dur": 0.8
+            },
+            {
+              "en": 1.1,
+              "hace": "entristece"
+            },
+            {
+              "en": 2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 330,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cielo",
+      "fondo": "kahyangan",
+      "camara": {
+        "de": 0,
+        "a": 180,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sus oraciones subieron hasta los cielos.",
+          "en": "His prayers rose all the way to the heavens."
+        },
+        {
+          "es": "En las historias balinesas, Indra suele bajar a pelear contra los demonios que amenazan el mundo.",
+          "en": "In Balinese stories, Indra often comes down to fight demons who threaten the world."
+        },
+        {
+          "es": "Los dioses escucharon, y mandaron a Indra, el rey del cielo y señor del trueno.",
+          "en": "The gods listened, and sent Indra, the king of heaven and lord of thunder."
+        },
+        {
+          "es": "Indra reunió un ejército de guerreros celestiales y bajó a Bali.",
+          "en": "Indra gathered an army of heavenly warriors and came down to Bali."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "indra",
+          "como": "bhatara_indra",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.6,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "guerrero1",
+          "como": "prajurit_dewa",
+          "x": 1250,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.6,
+              "hace": "camina",
+              "a": 1600,
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "guerrero2",
+          "como": "prajurit_dewa",
+          "x": 1500,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.6,
+              "hace": "camina",
+              "a": 1850,
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "rayo",
+          "x": 1400,
+          "y": 700
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "guerra",
+      "fondo": "alas",
+      "camara": {
+        "de": 0,
+        "a": 220,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mayadenawa mandó a su propio ejército a enfrentarlos.",
+          "en": "Mayadenawa sent his own army to meet them."
+        },
+        {
+          "es": "Los dos ejércitos chocaron en el bosque. Volaban flechas y sonaban lanzas.",
+          "en": "The two armies clashed in the forest. Arrows flew and spears rang."
+        },
+        {
+          "es": "Los soldados del demonio eran fuertes, pero los guerreros de Indra peleaban como una tormenta.",
+          "en": "The demon's soldiers were strong, but Indra's warriors fought like a storm."
+        },
+        {
+          "es": "Uno a uno, los hombres de Mayadenawa retrocedieron.",
+          "en": "One by one, Mayadenawa's men fell back."
+        },
+        {
+          "es": "El mismo Indra encabezaba el ataque, con su arco en la mano.",
+          "en": "Indra himself led the charge, with his bow in his hand."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "indra",
+          "como": "bhatara_indra",
+          "x": 450,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "lanza"
+            },
+            {
+              "en": 2.2,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "guerrero",
+          "como": "prajurit_dewa",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 900,
+              "dur": 0.6
+            },
+            {
+              "en": 2.4,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "demonio1",
+          "como": "raksasa_bali",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 1150,
+              "dur": 0.6
+            },
+            {
+              "en": 2.5,
+              "hace": "cae"
+            },
+            {
+              "en": 3.1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.3,
+              "hace": "corre",
+              "a": 2300,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "demonio2",
+          "como": "raksasa_bali",
+          "x": 1800,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "gira"
+            },
+            {
+              "en": 3.2,
+              "hace": "corre",
+              "a": 2500,
+              "dur": 0.7
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "polvo",
+          "x": 1100,
+          "y": 780,
+          "dur": 1
+        },
+        {
+          "en": 2.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.6,
+          "tipo": "temblor",
+          "dur": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "huida",
+      "fondo": "desa_malam",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuando cayó la noche, Mayadenawa vio que estaba perdiendo.",
+          "en": "When night fell, Mayadenawa saw that he was losing."
+        },
+        {
+          "es": "Entonces se escabulló en la oscuridad, con unos pocos seguidores fieles.",
+          "en": "So he slipped away into the darkness, with only a few loyal followers."
+        },
+        {
+          "es": "Los guerreros de Indra buscaron por todas partes, pero la noche lo escondía bien.",
+          "en": "Indra's warriors searched everywhere, but the night hid him well."
+        },
+        {
+          "es": "Pero el rey demonio no había terminado. Todavía le quedaba un último truco.",
+          "en": "But the demon king was not finished. He still had one last trick."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "maya",
+          "como": "mayadenawa",
+          "x": 1000,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.1,
+              "hace": "camina",
+              "a": 400,
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 2.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "seguidor",
+          "como": "raksasa_bali",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "campamento",
+      "fondo": "alas",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mientras tanto, el ejército de Indra acampó junto a un río, cansado y con sed después de la batalla.",
+          "en": "Meanwhile, Indra's army made camp by a river, tired and thirsty after the battle."
+        },
+        {
+          "es": "Encendieron sus fogatas, dejaron sus lanzas y se durmieron.",
+          "en": "They lit their fires, laid down their spears, and fell asleep."
+        },
+        {
+          "es": "Las fogatas se fueron apagando, y el bosque quedó en silencio.",
+          "en": "The fires burned low, and the forest went quiet."
+        },
+        {
+          "es": "Ninguno vio la sombra que se movía entre los árboles.",
+          "en": "Not one of them saw the shadow moving between the trees."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "api",
+          "x": 900,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "guerrero1",
+          "como": "prajurit_dewa",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.4,
+              "hace": "sienta"
+            }
+          ]
+        },
+        {
+          "id": "guerrero2",
+          "como": "prajurit_dewa",
+          "x": 1200,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "sombra",
+          "como": "mayadenawa",
+          "x": 1700,
+          "capa": "fondo",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.2,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 0.6
+            },
+            {
+              "en": 2.8,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.5,
+          "tipo": "oscurecer",
+          "dur": 2
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "pura",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El rey demonio había perdido su ejército, pero no su magia.",
+          "en": "The demon king had lost his army, but not his magic."
+        },
+        {
+          "es": "¿Quién ganará: el rey del cielo o el demonio que puede volverse cualquier cosa? Cuéntanos qué piensas.",
+          "en": "Who will win: the king of heaven, or the demon who can become anything? Tell us what you think."
+        },
+        {
+          "es": "La próxima vez: huellas torcidas, un manantial envenenado y el nacimiento de una gran fiesta balinesa.",
+          "en": "Next time: footprints that leaned sideways, a poisoned spring, and the birth of a great Balinese festival."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "penjor",
+          "x": 1400,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "indra",
+          "como": "bhatara_indra",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 1200
+            }
+          ]
+        },
+        {
+          "id": "maya",
+          "como": "mayadenawa",
+          "x": 1150,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.2,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El rey que se hizo dios",
+        "en": "The king who made himself a god"
+      },
+      "escena": "prohibe",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "Un demonio que podía volverse cualquier cosa",
+        "en": "A demon who could become anything"
+      },
+      "escena": "rey",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 960
+    }
+  ]
+}

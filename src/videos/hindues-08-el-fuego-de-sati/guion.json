@@ -1,0 +1,1863 @@
+{
+  "id": "hindues-08-el-fuego-de-sati",
+  "serie": "hindues",
+  "numero": "08",
+  "titulo": {
+    "es": "El fuego de Sati",
+    "en": "Sati's Fire"
+  },
+  "tituloGriego": "SATI'S FIRE",
+  "miniatura": {
+    "heroe": "sati",
+    "rival": "daksha"
+  },
+  "siguiente": {
+    "es": "Las cenizas de Kama",
+    "en": "The Ashes of Kama"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, la cabeza de Rahu voló al cielo, y empezaron los eclipses.",
+          "en": "Last time, Rahu's head flew into the sky, and the eclipses began."
+        },
+        {
+          "es": "Hoy dejamos atrás el océano y subimos al monte Kailash, donde vive Shiva.",
+          "en": "Today we leave the ocean behind and climb Mount Kailash, where Shiva lives."
+        },
+        {
+          "es": "Esta es la historia de su primera esposa, Sati, y de un sacrificio que terminó en fuego.",
+          "en": "This is the story of his first wife, Sati, and of a sacrifice that ended in fire."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piel_tigre",
+          "x": 1200
+        },
+        {
+          "tipo": "vedas",
+          "x": 650,
+          "en": 2.4,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "cabeza",
+          "como": "rahu_cabeza",
+          "x": 300,
+          "y": 300,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "vuela",
+              "a": [
+                1100,
+                200
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 0.9,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 1200,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "sienta"
+            }
+          ]
+        },
+        {
+          "id": "sati",
+          "como": "sati",
+          "x": 1480,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "nandi",
+          "como": "nandi",
+          "x": 1800,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "mira",
+              "a": 1200
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "nieve",
+          "dur": 1.5
+        },
+        {
+          "en": 2.4,
+          "tipo": "luz",
+          "x": 650,
+          "y": 600,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.5,
+          "texto": {
+            "es": "BHAGAVATA · SHIVA PURANA",
+            "en": "BHAGAVATA · SHIVA PURANA"
+          },
+          "x": 700,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "daksha",
+      "fondo": "palacio_pahari",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El padre de Sati era Daksha, un hijo de Brahma, el creador.",
+          "en": "Sati's father was Daksha, a son of Brahma, the creator."
+        },
+        {
+          "es": "Daksha era un señor poderoso, uno de los padres de todas las criaturas. Y era muy orgulloso.",
+          "en": "Daksha was a mighty lord, one of the fathers of all creatures. And he was very proud."
+        },
+        {
+          "es": "Sati amaba a Shiva con todo el corazón. El Shiva Purana dice que rezó y ayunó para ganarlo.",
+          "en": "Sati loved Shiva with all her heart. The Shiva Purana says she prayed and fasted to win him."
+        },
+        {
+          "es": "Así, Sati se casó con Shiva, el yogui de las montañas, cubierto de ceniza.",
+          "en": "And so Sati married Shiva, the yogi of the mountains, covered in ash."
+        },
+        {
+          "es": "A Daksha nunca le gustó. Un ermitaño salvaje no es esposo para mi hija, pensaba.",
+          "en": "Daksha never liked him. A wild hermit is no husband for my daughter, he thought."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palacio",
+          "x": 1650,
+          "capa": "fondo",
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 330,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "daksha",
+          "como": "daksha",
+          "x": 600,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.3,
+              "hace": "baja"
+            },
+            {
+              "en": 1.5,
+              "hace": "brilla",
+              "dur": 0.4
+            },
+            {
+              "en": 4,
+              "hace": "enoja"
+            },
+            {
+              "en": 4.3,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "sati",
+          "como": "sati",
+          "x": 1050,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.2,
+              "hace": "reza"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.2,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 1480,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.5,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1350,
+          "y": 520,
+          "dur": 0.8
+        },
+        {
+          "en": 3.4,
+          "tipo": "lluvia",
+          "dur": 0.1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "PRAJAPATI",
+            "en": "PRAJAPATI"
+          },
+          "x": 600,
+          "y": 200,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "insulto",
+      "fondo": "palacio_pahari",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día hubo una gran reunión de sabios y dioses.",
+          "en": "One day, there was a great gathering of sages and gods."
+        },
+        {
+          "es": "Cuando entró Daksha, todos se pusieron de pie para honrarlo. Todos menos Brahma y Shiva.",
+          "en": "When Daksha came in, everyone stood up to honor him. Everyone except Brahma and Shiva."
+        },
+        {
+          "es": "Brahma era su padre, así que estaba bien. Pero Shiva era su yerno.",
+          "en": "Brahma was his father, so that was fine. But Shiva was his son-in-law."
+        },
+        {
+          "es": "Daksha se sintió insultado. Delante de todos, maldijo a Shiva: nunca más tendría su parte en los sacrificios.",
+          "en": "Daksha felt insulted. In front of everyone, he cursed Shiva: he would never again get a share of the sacrifices."
+        },
+        {
+          "es": "Shiva no dijo nada. Se quedó tranquilo, y simplemente se fue.",
+          "en": "Shiva said nothing. He stayed calm, and simply walked away."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pabellon",
+          "x": 960,
+          "capa": "fondo",
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "sabio",
+          "como": "sabio",
+          "x": 280,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.3,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "brahman",
+          "como": "brahman",
+          "x": 470,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1.4,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 820,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 1150,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 3.6,
+              "hace": "calla"
+            },
+            {
+              "en": 4,
+              "hace": "levantarse"
+            },
+            {
+              "en": 4.2,
+              "hace": "gira"
+            },
+            {
+              "en": 4.4,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "daksha",
+          "como": "daksha",
+          "x": 1600,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1600
+            },
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 1150
+            },
+            {
+              "en": 3,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.1,
+              "hace": "senala"
+            },
+            {
+              "en": 3.4,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1
+        },
+        {
+          "en": 3.1,
+          "tipo": "temblor",
+          "dur": 0.3
+        },
+        {
+          "en": 4.2,
+          "tipo": "aclarar",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.1,
+          "texto": {
+            "es": "EL YERNO",
+            "en": "THE SON-IN-LAW"
+          },
+          "x": 1150,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "yajna",
+      "fondo": "campo_pahari",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un tiempo después, Daksha preparó un gran yajna, un ritual sagrado de fuego.",
+          "en": "Some time later, Daksha prepared a great yajna, a sacred fire ritual."
+        },
+        {
+          "es": "Invitó a todos los dioses, a todos los sabios, a todos los seres del cielo.",
+          "en": "He invited all the gods, all the sages, all the beings of heaven."
+        },
+        {
+          "es": "Invitó a todos menos a Shiva. Y tampoco a Sati, su propia hija.",
+          "en": "He invited everyone except Shiva. And not even Sati, his own daughter."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yajna",
+          "x": 960,
+          "s": 1.1
+        },
+        {
+          "tipo": "pabellon",
+          "x": 1500,
+          "capa": "fondo",
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "daksha",
+          "como": "daksha",
+          "x": 650,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "niega"
+            },
+            {
+              "en": 2.3,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "brahman",
+          "como": "brahman",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "deva",
+          "como": "deva",
+          "x": 1500,
+          "escala": 0.8,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1500
+            }
+          ]
+        },
+        {
+          "id": "d2",
+          "como": "deva_azafran",
+          "x": 1720,
+          "escala": 0.8,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "entra",
+              "a": 1720
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 700,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "YAJNA",
+            "en": "YAJNA"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 1
+        },
+        {
+          "en": 2.1,
+          "texto": {
+            "es": "SIN SHIVA",
+            "en": "NO SHIVA"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "ruego",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Desde el Kailash, Sati vio pasar volando a los dioses, todos camino al sacrificio de su padre.",
+          "en": "From Kailash, Sati saw the gods flying past, all on their way to her father's sacrifice."
+        },
+        {
+          "es": "Quería ir. Allí estarán mi madre y mis hermanas, le dijo a Shiva. Vamos juntos.",
+          "en": "She wanted to go. My mother and sisters will be there, she told Shiva. Let's go together."
+        },
+        {
+          "es": "Shiva le advirtió con dulzura: tu padre me odia. Si vas, te va a insultar.",
+          "en": "Shiva warned her gently: your father hates me. If you go, he will insult you."
+        },
+        {
+          "es": "Sati no pudo quedarse. Fue de todos modos, con Nandi, el toro blanco, y los compañeros de Shiva.",
+          "en": "Sati could not stay. She went anyway, with Nandi, the white bull, and with Shiva’s companions."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piel_tigre",
+          "x": 1350
+        }
+      ],
+      "actores": [
+        {
+          "id": "deva",
+          "como": "deva",
+          "x": 100,
+          "escala": 0.55,
+          "y": 330,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                2300,
+                280
+              ],
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "sati",
+          "como": "sati",
+          "x": 900,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 1500
+            },
+            {
+              "en": 0.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.4,
+              "hace": "entristece"
+            },
+            {
+              "en": 3,
+              "hace": "gira"
+            },
+            {
+              "en": 3.2,
+              "hace": "camina",
+              "a": 500,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 1350,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.5,
+              "hace": "niega"
+            },
+            {
+              "en": 3.5,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "nandi",
+          "como": "nandi",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "camina",
+              "a": 720,
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 900,
+          "y": 300,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "llega",
+      "fondo": "campo_pahari",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En el sacrificio, Daksha ni siquiera la miró.",
+          "en": "At the sacrifice, Daksha did not even look at her."
+        },
+        {
+          "es": "Nadie se atrevió a recibirla; solo su madre y sus hermanas, que la abrazaron llorando.",
+          "en": "No one dared to welcome her, except her mother and her sisters, who hugged her in tears."
+        },
+        {
+          "es": "Entonces Sati miró el altar. No había ninguna parte de las ofrendas para Shiva.",
+          "en": "Then Sati looked at the altar. There was no share of the offerings for Shiva."
+        },
+        {
+          "es": "Y oyó a su padre insultar a su esposo, delante de todos.",
+          "en": "And she heard her father insult her husband, in front of everyone."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yajna",
+          "x": 1150,
+          "s": 1.1
+        },
+        {
+          "tipo": "pabellon",
+          "x": 1500,
+          "capa": "fondo",
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "madre",
+          "como": "aldeana",
+          "x": 330,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 520,
+              "dur": 0.4
+            },
+            {
+              "en": 1.4,
+              "hace": "abraza"
+            },
+            {
+              "en": 1.9,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "sati",
+          "como": "sati",
+          "x": 700,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 700
+            },
+            {
+              "en": 1.4,
+              "hace": "entristece"
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1150
+            },
+            {
+              "en": 2.4,
+              "hace": "entristece"
+            },
+            {
+              "en": 3.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "daksha",
+          "como": "daksha",
+          "x": 1450,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "gira"
+            },
+            {
+              "en": 3,
+              "hace": "gira"
+            },
+            {
+              "en": 3.1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "brahman",
+          "como": "brahman",
+          "x": 1700,
+          "mira": "izq",
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "reza"
+            },
+            {
+              "en": 3.4,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 0.9
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "sacrificio",
+      "fondo": "campo_pahari",
+      "camara": {
+        "de": 300,
+        "a": 400,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sati se levantó y les habló a todos: Shiva es amigo de todos los seres. Nunca le hizo daño a nadie.",
+          "en": "Sati rose and spoke to everyone: Shiva is the friend of all beings. He has never harmed anyone."
+        },
+        {
+          "es": "No conservaré este cuerpo, dijo, el cuerpo que recibí del hombre que lo insulta.",
+          "en": "I will not keep this body, she said, the body I received from the man who insults him."
+        },
+        {
+          "es": "Se sentó en el suelo, cerró los ojos y entró en meditación profunda.",
+          "en": "She sat down on the ground, closed her eyes, and went deep into meditation."
+        },
+        {
+          "es": "El Bhagavata Purana dice que de su interior surgió un fuego, el de su propio yoga, y así dejó su cuerpo.",
+          "en": "The Bhagavata Purana says a fire rose from within her, the fire of her own yoga, and she left her body."
+        },
+        {
+          "es": "Todos quedaron en silencio. Después, un gran lamento se escuchó en el cielo y en la tierra.",
+          "en": "Everyone fell silent. Then a great cry of sorrow rose across heaven and earth."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yajna",
+          "x": 1250,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "madre",
+          "como": "aldeana",
+          "x": 640,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "sati",
+          "como": "sati",
+          "x": 960,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 2.2,
+              "hace": "sienta"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.7,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "daksha",
+          "como": "daksha",
+          "x": 1500,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.3,
+              "hace": "calla"
+            },
+            {
+              "en": 3.8,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.2,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "brahman",
+          "como": "brahman",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.9,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.1,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 960,
+          "y": 560,
+          "dur": 0.9
+        },
+        {
+          "en": 3.7,
+          "tipo": "destello"
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "virabhadra",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Lejos, en el Kailash, Shiva se enteró de lo que había pasado.",
+          "en": "Far away on Kailash, Shiva learned what had happened."
+        },
+        {
+          "es": "Su dolor se volvió una ira terrible. Se arrancó un mechón de pelo y lo golpeó contra el suelo.",
+          "en": "His grief turned into a terrible anger. He tore out a lock of his hair and struck it against the ground."
+        },
+        {
+          "es": "De ahí surgió Virabhadra, un guerrero gigante, oscuro como una nube de tormenta, con mil brazos.",
+          "en": "From it rose Virabhadra, a giant warrior, dark as a storm cloud, with a thousand arms."
+        },
+        {
+          "es": "Ve, le dijo Shiva. Destruye el sacrificio de Daksha.",
+          "en": "Go, said Shiva. Destroy Daksha's sacrifice."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "narada",
+          "como": "narada",
+          "x": 300,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 400
+            },
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.5,
+              "hace": "tiembla",
+              "dur": 0.3
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 750,
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "entristece",
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "virabhadra",
+          "como": "virabhadra",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.4,
+              "hace": "gira"
+            },
+            {
+              "en": 3.6,
+              "hace": "corre",
+              "a": 2400,
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 2
+        },
+        {
+          "en": 1.4,
+          "tipo": "rayo",
+          "x": 950
+        },
+        {
+          "en": 1.45,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 1250,
+          "y": 760,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "destruye",
+      "fondo": "campo_pahari",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Virabhadra y los compañeros de Shiva cayeron sobre el sacrificio como un torbellino.",
+          "en": "Virabhadra and Shiva's companions swept over the sacrifice like a whirlwind."
+        },
+        {
+          "es": "Rompieron el altar, desparramaron las ofrendas y espantaron a los invitados.",
+          "en": "They broke the altar, scattered the offerings, and chased the guests away."
+        },
+        {
+          "es": "Virabhadra atrapó a Daksha. En un destello, el rey orgulloso perdió la cabeza.",
+          "en": "Virabhadra caught Daksha. In a flash, the proud king lost his head."
+        },
+        {
+          "es": "¿Fue justa la ira de Shiva, o se pasó de la raya? Cuéntanos en los comentarios.",
+          "en": "Was Shiva's anger fair, or did it go too far? Tell us in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yajna",
+          "x": 1000,
+          "s": 1.1,
+          "hasta": 1.4
+        },
+        {
+          "tipo": "yajna",
+          "x": 1000,
+          "s": 1.1,
+          "en": 1.4,
+          "props": {
+            "fuego": false
+          }
+        },
+        {
+          "tipo": "pabellon",
+          "x": 1500,
+          "capa": "fondo",
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "virabhadra",
+          "como": "virabhadra",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 600
+            },
+            {
+              "en": 1.2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "deva",
+          "como": "deva",
+          "x": 1350,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.6,
+              "hace": "corre",
+              "a": 2500,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "brahman",
+          "como": "brahman",
+          "x": 1600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 1.8,
+              "hace": "corre",
+              "a": 2700,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "daksha",
+          "como": "daksha",
+          "x": 1200,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.2,
+              "hace": "tiembla",
+              "dur": 0.3
+            },
+            {
+              "en": 2.5,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "polvo",
+          "x": 600,
+          "y": 780,
+          "dur": 0.6
+        },
+        {
+          "en": 1.3,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 1.4,
+          "tipo": "humo",
+          "x": 1000,
+          "y": 740,
+          "dur": 1
+        },
+        {
+          "en": 2.5,
+          "tipo": "destello"
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 0.9
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cabra",
+      "fondo": "campo_pahari",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dioses, asustados, fueron con Brahma a pedirle clemencia a Shiva.",
+          "en": "The frightened gods went with Brahma to ask Shiva for mercy."
+        },
+        {
+          "es": "La ira de Shiva se calmó. Aceptó devolverle la vida a Daksha y terminar el sacrificio.",
+          "en": "Shiva's anger cooled. He agreed to bring Daksha back to life, and to finish the sacrifice."
+        },
+        {
+          "es": "Pero la cabeza de Daksha ya no estaba. Así que le pusieron la cabeza de una cabra.",
+          "en": "But Daksha's own head was gone. So they gave him the head of a goat."
+        },
+        {
+          "es": "Daksha despertó, humilde. Se inclinó ante Shiva y le pidió perdón.",
+          "en": "Daksha woke up, humbled. He bowed before Shiva and asked him to forgive him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yajna",
+          "x": 1650,
+          "s": 1,
+          "capa": "medio",
+          "props": {
+            "fuego": false
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 350,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 350
+            },
+            {
+              "en": 0.6,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 560,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "entra",
+              "a": 560
+            },
+            {
+              "en": 0.7,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 950,
+          "escala": 0.9,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "calla"
+            },
+            {
+              "en": 1.2,
+              "hace": "asiente"
+            },
+            {
+              "en": 2,
+              "hace": "gira"
+            },
+            {
+              "en": 2.1,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "daksha",
+          "como": "daksha",
+          "x": 1300,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.3,
+              "hace": "transforma",
+              "en_que": "daksha_cabra"
+            },
+            {
+              "en": 3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.2,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.3,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.3,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 520,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.3,
+          "texto": {
+            "es": "PERDÓN",
+            "en": "FORGIVENESS"
+          },
+          "x": 1100,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "pithas",
+      "fondo": "crepusculo",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Shiva tenía el corazón roto.",
+          "en": "Shiva's heart was broken."
+        },
+        {
+          "es": "Textos y tradiciones posteriores agregan que Shiva recorrió el mundo cargando el cuerpo de Sati, lleno de dolor.",
+          "en": "Later texts and traditions add that Shiva wandered the world, carrying Sati's body in his grief."
+        },
+        {
+          "es": "En esos relatos, los lugares donde partes de su cuerpo tocaron la tierra se volvieron sagrados: los Shakti Pithas.",
+          "en": "In those tellings, the places where parts of her body touched the earth became holy: the Shakti Pithas."
+        },
+        {
+          "es": "Muchos hindúes visitan hoy esos santuarios de la diosa, en todo el sur de Asia.",
+          "en": "Many Hindus visit these shrines of the goddess today, all across South Asia."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "luna_pahari",
+          "x": 1500,
+          "y": 220
+        },
+        {
+          "tipo": "pabellon",
+          "x": 1900,
+          "capa": "medio",
+          "s": 0.7,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 350,
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1,
+              "hace": "abraza"
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 1.6
+            },
+            {
+              "en": 3,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "aldeano",
+          "como": "aldeano",
+          "x": 1600,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.3,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "aldeana",
+          "como": "aldeana",
+          "x": 1800,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.4,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 700,
+          "y": 740,
+          "dur": 0.6
+        },
+        {
+          "en": 2.5,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 740,
+          "dur": 0.6
+        },
+        {
+          "en": 2.8,
+          "tipo": "luz",
+          "x": 1500,
+          "y": 740,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "TRADICIÓN POSTERIOR",
+            "en": "LATER TRADITION"
+          },
+          "x": 1100,
+          "y": 200,
+          "hasta": 2.9
+        },
+        {
+          "en": 2.4,
+          "texto": {
+            "es": "SHAKTI PITHAS",
+            "en": "SHAKTI PITHAS"
+          },
+          "x": 1300,
+          "y": 280,
+          "hasta": 3.8
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero la historia de Sati no termina aquí.",
+          "en": "But the story of Sati does not end here."
+        },
+        {
+          "es": "El Bhagavata Purana dice que volvió a nacer, como hija de Himavat, el rey de las montañas del Himalaya.",
+          "en": "The Bhagavata Purana says she was born again, as the daughter of Himavat, the king of the Himalaya mountains."
+        },
+        {
+          "es": "¿Crees que el amor puede durar más que una vida? Cuéntanos en los comentarios.",
+          "en": "Do you think love can last longer than one lifetime? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, Shiva está perdido en su meditación, y el dios del amor intenta despertarlo. Es Las cenizas de Kama.",
+          "en": "Next time, Shiva is lost in meditation, and the god of love tries to wake him. It's The Ashes of Kama."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piel_tigre",
+          "x": 1300
+        }
+      ],
+      "actores": [
+        {
+          "id": "nina",
+          "como": "parvati",
+          "x": 800,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 1300,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entristece"
+            },
+            {
+              "en": 3,
+              "hace": "sienta"
+            }
+          ]
+        },
+        {
+          "id": "kama",
+          "como": "kama",
+          "x": 350,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "nandi",
+          "como": "nandi",
+          "x": 1700,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 800
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 800,
+          "y": 520,
+          "dur": 0.8
+        },
+        {
+          "en": 0,
+          "tipo": "nieve",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "HIMAVAT",
+            "en": "HIMAVAT"
+          },
+          "x": 800,
+          "y": 200,
+          "hasta": 2.2
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La diosa que dejó su cuerpo con el fuego de su yoga",
+        "en": "The goddess who left her body through her own inner fire"
+      },
+      "escena": "sacrificio",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "El guerrero nacido de un mechón de pelo",
+        "en": "The warrior born from a lock of hair"
+      },
+      "escena": "virabhadra",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Por qué Daksha tiene cabeza de cabra",
+        "en": "Why Daksha has the head of a goat"
+      },
+      "escena": "cabra",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 1100
+    }
+  ]
+}

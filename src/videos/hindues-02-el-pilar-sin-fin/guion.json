@@ -1,0 +1,1269 @@
+{
+  "id": "hindues-02-el-pilar-sin-fin",
+  "serie": "hindues",
+  "numero": "02",
+  "titulo": {
+    "es": "El pilar sin fin",
+    "en": "The Pillar With No End"
+  },
+  "tituloGriego": "THE PILLAR WITH NO END",
+  "miniatura": {
+    "heroe": "shiva",
+    "rival": "brahma"
+  },
+  "siguiente": {
+    "es": "El pez y el diluvio",
+    "en": "The Fish and the Flood"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "oceano_cosmico",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Brahma nació en un loto que crecía del ombligo de Vishnu, y creó los mundos.",
+          "en": "Last time, Brahma was born on a lotus growing from Vishnu's navel, and he created the worlds."
+        },
+        {
+          "es": "Ahora, el Shiva Purana cuenta lo que pasó un día entre esos dos dioses.",
+          "en": "Now, the Shiva Purana tells what happened one day between those two gods."
+        },
+        {
+          "es": "El Shiva Purana es un libro antiguo dedicado a Shiva. Por eso, como vas a ver, cuenta la historia desde su lado.",
+          "en": "The Shiva Purana is an ancient book devoted to Shiva. So, as you will see, it tells the story from his side."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "vishnu_shesha",
+          "x": 900,
+          "props": {
+            "loto": true
+          },
+          "hasta": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "sabio",
+          "como": "sabio",
+          "x": 1650,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "habla",
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 1250,
+          "mira": "izq",
+          "escala": 0.8,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 2.5,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "SHIVA PURANA",
+            "en": "SHIVA PURANA"
+          },
+          "x": 1250,
+          "y": 220,
+          "hasta": 2.9
+        }
+      ]
+    },
+    {
+      "id": "disputa",
+      "fondo": "oceano_cosmico",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Brahma, el creador, despertó orgulloso y encontró a Vishnu descansando.",
+          "en": "Brahma, the creator, woke up proud and found Vishnu resting."
+        },
+        {
+          "es": "—¿Quién eres tú? —le dijo—. Yo soy el que hizo todo. Levántate y salúdame.",
+          "en": "\"Who are you?\" he said. \"I am the one who made everything. Stand up and greet me.\""
+        },
+        {
+          "es": "Vishnu sonrió: —Tú naciste de mi ombligo, hijo. El más grande soy yo.",
+          "en": "Vishnu smiled. \"You were born from my navel, my son. I am the greatest.\""
+        },
+        {
+          "es": "Y empezaron a discutir. Cada uno decía: \"El más grande soy yo\".",
+          "en": "And they began to argue. Each one said: \"I am the greatest.\""
+        },
+        {
+          "es": "La discusión se volvió tan fuerte que los otros dioses temblaron de miedo.",
+          "en": "The quarrel grew so fierce that the other gods trembled with fear."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 560,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 1.6,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.4,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1260,
+          "mira": "izq",
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "mira",
+              "a": 600
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.5,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "deva1",
+          "como": "deva",
+          "x": 1700,
+          "mira": "izq",
+          "escala": 0.75,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "tiembla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "deva2",
+          "como": "deva_azafran",
+          "x": 1880,
+          "mira": "izq",
+          "escala": 0.75,
+          "capa": "fondo",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4.1,
+              "hace": "tiembla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.4,
+          "tipo": "rayo",
+          "x": 960
+        },
+        {
+          "en": 4,
+          "tipo": "temblor",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "pilar",
+      "fondo": "oceano_cosmico",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces, entre los dos, apareció algo enorme: un pilar de fuego.",
+          "en": "Then, between the two of them, something enormous appeared: a pillar of fire."
+        },
+        {
+          "es": "Brillaba más que mil soles. No se veía dónde empezaba ni dónde terminaba.",
+          "en": "It shone brighter than a thousand suns. No one could see where it began or where it ended."
+        },
+        {
+          "es": "Los dos dioses se callaron de golpe y se quedaron mirándolo.",
+          "en": "Both gods fell silent at once and stood staring at it."
+        },
+        {
+          "es": "Y se les ocurrió una prueba: el que encontrara el final del pilar sería el más grande.",
+          "en": "And they came up with a test: whoever found the end of the pillar would be the greatest."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilar_fuego",
+          "x": 960,
+          "en": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 560,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 960
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1360,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "destello"
+        },
+        {
+          "en": 0.4,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 500,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cisne",
+      "fondo": "cielo_cosmico",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Brahma tomó la forma de su cisne y voló hacia arriba, buscando la punta.",
+          "en": "Brahma took the form of his swan and flew upward, looking for the top."
+        },
+        {
+          "es": "Voló y voló, más allá de las nubes, más allá de las estrellas.",
+          "en": "He flew and flew, past the clouds, past the stars."
+        },
+        {
+          "es": "El pilar seguía subiendo, sin fin.",
+          "en": "The pillar kept rising, with no end."
+        },
+        {
+          "es": "Brahma, cansado, empezó a tener miedo de volver con las manos vacías.",
+          "en": "Brahma grew tired, and he began to fear going back with empty hands."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilar_fuego",
+          "x": 1100
+        }
+      ],
+      "actores": [
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 600,
+          "escala": 0.75,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "transforma",
+              "en_que": "hamsa_vuela"
+            },
+            {
+              "en": 0.6,
+              "hace": "vuela",
+              "a": [
+                800,
+                520
+              ],
+              "dur": 1
+            },
+            {
+              "en": 1.6,
+              "hace": "vuela",
+              "a": [
+                1500,
+                380
+              ],
+              "dur": 1.2
+            },
+            {
+              "en": 3,
+              "hace": "vuela",
+              "a": [
+                1600,
+                430
+              ],
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "estrellas",
+          "dur": 2
+        },
+        {
+          "en": 3,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "jabali",
+      "fondo": "patala",
+      "camara": {
+        "de": 0,
+        "a": 260,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mientras tanto, Vishnu tomó la forma de un jabalí y empezó a cavar hacia abajo.",
+          "en": "Meanwhile, Vishnu took the form of a boar and began to dig downward."
+        },
+        {
+          "es": "Atravesó la tierra, las rocas y los mundos de abajo, durante muchísimo tiempo.",
+          "en": "He dug through the earth, the rocks and the worlds below, for ages and ages."
+        },
+        {
+          "es": "Pero el pilar seguía bajando. Tampoco tenía raíz.",
+          "en": "But the pillar kept going down. It had no root either."
+        },
+        {
+          "es": "Vishnu entendió que estaba ante algo más grande que él, y volvió con humildad.",
+          "en": "Vishnu understood he was facing something greater than himself, and he went back humbly."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilar_fuego",
+          "x": 1350
+        }
+      ],
+      "actores": [
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 400,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "transforma",
+              "en_que": "varaha"
+            },
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "transforma",
+              "en_que": "vishnu"
+            },
+            {
+              "en": 3.3,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 900
+        },
+        {
+          "en": 1.5,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 2.2,
+          "tipo": "polvo",
+          "x": 950
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "VARAHA · EL JABALÍ",
+            "en": "VARAHA · THE BOAR"
+          },
+          "x": 600,
+          "y": 240,
+          "hasta": 1.6
+        }
+      ]
+    },
+    {
+      "id": "ketaki",
+      "fondo": "cielo_cosmico",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Arriba, Brahma vio caer una flor blanca: una ketaki, una flor de aroma muy dulce.",
+          "en": "Up above, Brahma saw a white flower falling: a ketaki, a flower with a very sweet scent."
+        },
+        {
+          "es": "La flor dijo que había caído desde la punta del pilar, hacía muchísimo tiempo.",
+          "en": "The flower said it had fallen from the top of the pillar, a very long time ago."
+        },
+        {
+          "es": "Brahma tuvo una idea: —Dirás que me viste llegar a la punta.",
+          "en": "Brahma had an idea. \"You will say that you saw me reach the top.\""
+        },
+        {
+          "es": "Y la flor aceptó mentir por él.",
+          "en": "And the flower agreed to lie for him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilar_fuego",
+          "x": 1350
+        },
+        {
+          "tipo": "loto",
+          "x": 760,
+          "y": 520,
+          "s": 0.35,
+          "en": 0.2,
+          "hasta": 3.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 520,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "mira",
+              "a": 760
+            },
+            {
+              "en": 1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 760,
+          "y": 480,
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 760,
+          "y": 500,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.5,
+          "texto": {
+            "es": "KETAKI",
+            "en": "KETAKI"
+          },
+          "x": 760,
+          "y": 330,
+          "hasta": 1.8
+        }
+      ]
+    },
+    {
+      "id": "mentira",
+      "fondo": "oceano_cosmico",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Brahma volvió y anunció: —Encontré la punta del pilar. Esta flor es mi testigo.",
+          "en": "Brahma came back and announced: \"I found the top of the pillar. This flower is my witness.\""
+        },
+        {
+          "es": "Vishnu, en cambio, dijo la verdad: —Yo no encontré el final.",
+          "en": "Vishnu, instead, told the truth: \"I did not find the end.\""
+        },
+        {
+          "es": "En ese momento, el pilar se abrió con un estruendo.",
+          "en": "At that moment, the pillar split open with a roar."
+        },
+        {
+          "es": "Y de adentro salió Shiva, con su tridente, su luna creciente y una serpiente en el cuello.",
+          "en": "And out of it came Shiva, with his trident, his crescent moon, and a serpent around his neck."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilar_fuego",
+          "x": 960
+        },
+        {
+          "tipo": "loto",
+          "x": 760,
+          "y": 540,
+          "s": 0.3,
+          "hasta": 2.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 520,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 0.6,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.3,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1420,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "niega"
+            },
+            {
+              "en": 3.4,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 960,
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 2.6,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.4,
+          "tipo": "destello"
+        },
+        {
+          "en": 2.5,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 2.6,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 480,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "castigo",
+      "fondo": "oceano_cosmico",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Shiva lo había visto todo. Y la mentira lo enfureció.",
+          "en": "Shiva had seen everything. And the lie made him furious."
+        },
+        {
+          "es": "El Shiva Purana dice que decretó que a Brahma no se le adoraría como a los demás dioses.",
+          "en": "The Shiva Purana says he decreed that Brahma would not be worshipped like the other gods."
+        },
+        {
+          "es": "Y la flor ketaki nunca más podría ofrecérsele a Shiva.",
+          "en": "And the ketaki flower could never again be offered to Shiva."
+        },
+        {
+          "es": "A Vishnu, que dijo la verdad, lo honró como su igual.",
+          "en": "Vishnu, who had told the truth, he honored as his equal."
+        },
+        {
+          "es": "Tú, ¿le habrías perdonado la mentira a Brahma?",
+          "en": "What about you: would you have forgiven Brahma for lying?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilar_fuego",
+          "x": 960,
+          "hasta": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 960,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "niega"
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 1500
+            },
+            {
+              "en": 3.2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 500,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.5,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1450,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.6,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "rayo",
+          "x": 960
+        },
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 500,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "templos",
+      "fondo": "campo_pahari",
+      "camara": {
+        "de": 0,
+        "a": 220,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por eso, cuenta la tradición, en toda la India hay muy pocos templos dedicados a Brahma.",
+          "en": "That is why, tradition says, there are very few temples devoted to Brahma in all of India."
+        },
+        {
+          "es": "Uno de los más famosos está en Pushkar, un pueblo junto a un lago sagrado.",
+          "en": "One of the most famous is in Pushkar, a town beside a sacred lake."
+        },
+        {
+          "es": "Y los devotos de Shiva todavía no le ofrecen la flor ketaki.",
+          "en": "And devotees of Shiva still do not offer him the ketaki flower."
+        },
+        {
+          "es": "Hay otras historias que explican por qué Brahma tiene tan pocos templos. Esta es la del Shiva Purana.",
+          "en": "Other stories give other reasons why Brahma has so few temples. This is the one from the Shiva Purana."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pabellon",
+          "x": 1350,
+          "s": 0.75,
+          "capa": "medio"
+        },
+        {
+          "tipo": "estanque",
+          "x": 900,
+          "s": 0.9,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "aldeana",
+          "como": "aldeana",
+          "x": 520,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "camina",
+              "a": 700,
+              "dur": 0.6
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "brahman",
+          "como": "brahman",
+          "x": 1700,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "reza"
+            },
+            {
+              "en": 2.2,
+              "hace": "niega"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "nino_aldea",
+          "x": 330,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "POR ESO BRAHMA TIENE POCOS TEMPLOS",
+            "en": "WHY BRAHMA HAS SO FEW TEMPLES"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        },
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "PUSHKAR",
+            "en": "PUSHKAR"
+          },
+          "x": 1350,
+          "y": 300,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "significado",
+      "fondo": "svarga",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Para muchos devotos de Shiva, ese pilar de fuego es la forma más antigua de Shiva: luz sin principio ni fin.",
+          "en": "For many devotees of Shiva, that pillar of fire is Shiva's oldest form: light with no beginning and no end."
+        },
+        {
+          "es": "Pero recuerda: esta es la versión del Shiva Purana.",
+          "en": "But remember: this is the version from the Shiva Purana."
+        },
+        {
+          "es": "Los libros dedicados a Vishnu cuentan otras historias, donde el más grande es Vishnu.",
+          "en": "Books devoted to Vishnu tell other stories, where Vishnu is the greatest."
+        },
+        {
+          "es": "Así es la mitología hindú: muchas voces, muchos caminos, una misma montaña.",
+          "en": "That is Hindu mythology: many voices, many paths, the same mountain."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilar_fuego",
+          "x": 600,
+          "s": 0.7,
+          "capa": "fondo",
+          "hasta": 1.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 560,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1300
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1300,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 960,
+          "escala": 0.75,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.4,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 960,
+          "y": 500,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "orilla_rio",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El orgullo de Brahma le costó caro. Pero el peligro más grande todavía no había llegado.",
+          "en": "Brahma's pride cost him dearly. But the greatest danger had not come yet."
+        },
+        {
+          "es": "¿Qué historia del principio conoces de tu cultura? ¿Se parece a esta? Escríbemela.",
+          "en": "What creation story do you know from your own culture? Is it like this one? Write it to me."
+        },
+        {
+          "es": "La próxima vez: un pececito le pide ayuda a un hombre. Y el mundo entero está por inundarse.",
+          "en": "Next time: a tiny fish asks a man for help. And the whole world is about to flood."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cuenco",
+          "x": 1300,
+          "s": 0.7,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "manu",
+          "como": "manu",
+          "x": 1000,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "pececito",
+          "como": "pececito",
+          "x": 1300,
+          "y": 745,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "lluvia",
+          "dur": 1.5
+        },
+        {
+          "en": 1,
+          "tipo": "rayo",
+          "x": 1500
+        },
+        {
+          "en": 2,
+          "tipo": "olas-suben",
+          "dur": 1,
+          "intensidad": 0.1
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La flor que mintió por un dios",
+        "en": "The flower that lied for a god"
+      },
+      "escena": "ketaki",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 700
+    },
+    {
+      "gancho": {
+        "es": "Dos dioses, y un pilar de fuego sin fin",
+        "en": "Two gods, and a pillar of fire with no end"
+      },
+      "escena": "pilar",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Por qué Brahma casi no tiene templos",
+        "en": "Why Brahma has almost no temples"
+      },
+      "escena": "castigo",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    }
+  ]
+}

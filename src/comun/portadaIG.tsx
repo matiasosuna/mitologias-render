@@ -5,6 +5,9 @@ import { AbsoluteFill } from 'remotion';
 import { C, TITULO, Personaje, Lenguetas, Meandro, aplicarTema, TEMA, TextoRunico, Entrelazado, Bloques, Jeroglificos, FranjaKapa, FranjaCuentas } from './vasija';
 import { ELENCO } from '../motor/elenco';
 import { FranjaCodice } from './codice';
+import { FranjaPahari } from './pahari';
+import { FranjaKamasan } from './kamasan';
+import { FranjaMaori } from './kowhaiwhai';
 
 // ficha: clave del elenco, props sueltas, o { __como: clave, ...props } (base del elenco + ajustes del guion)
 const ficha = (x: unknown): Record<string, unknown> => {
@@ -13,7 +16,7 @@ const ficha = (x: unknown): Record<string, unknown> => {
   if (typeof o.__como === 'string') { const { __como, ...resto } = o; return { ...((ELENCO[__como as string] as { p?: Record<string, unknown> })?.p ?? {}), ...resto }; }
   return o;
 };
-const NOMBRE: Record<string, string> = { vasija: 'GREEK MYTHOLOGY', runas: 'NORSE MYTHOLOGY', papiro: 'EGYPTIAN MYTHOLOGY', kapa: 'HAWAIIAN MYTHOLOGY', pintado: 'NATIVE AMERICAN MYTHOLOGY', codice: 'AZTEC MYTHOLOGY' };
+const NOMBRE: Record<string, string> = { vasija: 'GREEK MYTHOLOGY', runas: 'NORSE MYTHOLOGY', papiro: 'EGYPTIAN MYTHOLOGY', kapa: 'HAWAIIAN MYTHOLOGY', pintado: 'NATIVE AMERICAN MYTHOLOGY', codice: 'AZTEC MYTHOLOGY', pahari: 'HINDU MYTHOLOGY', kowhaiwhai: 'MĀORI MYTHOLOGY', kamasan: 'BALINESE MYTHOLOGY' };
 
 export const PortadaIG: React.FC<{ titulo: string; numero: string; temporada: string; heroe: unknown; rival?: unknown; serie?: string; insignia?: string }> = ({ titulo, numero, temporada, heroe, rival, serie, insignia = 'EPISODE' }) => {
   aplicarTema(serie);
@@ -24,10 +27,12 @@ export const PortadaIG: React.FC<{ titulo: string; numero: string; temporada: st
   return (
     <AbsoluteFill style={{ backgroundColor: C.barro }}>
       <svg viewBox="0 0 1080 1350" width="100%" height="100%">
-        <defs><radialGradient id="pg" cx="50%" cy="55%" r="75%"><stop offset="0%" stopColor={t === 'papiro' ? '#FFF6DE' : t === 'runas' ? '#F2F7FA' : t === 'kapa' ? '#FCEBC4' : t === 'pintado' ? '#FCF3DC' : t === 'codice' ? '#FBF2D8' : '#F0A060'} /><stop offset="60%" stopColor={C.barro} /><stop offset="100%" stopColor={C.barroOscuro} /></radialGradient></defs>
+        <defs><radialGradient id="pg" cx="50%" cy="55%" r="75%"><stop offset="0%" stopColor={t === 'kamasan' ? '#F6EBCF' : t === 'papiro' ? '#FFF6DE' : t === 'runas' ? '#F2F7FA' : t === 'kapa' ? '#FCEBC4' : t === 'pintado' ? '#FCF3DC' : t === 'kowhaiwhai' ? '#FBEFD6' : t === 'pahari' ? '#FBF0CF' : t === 'codice' ? '#FBF2D8' : '#F0A060'} /><stop offset="60%" stopColor={C.barro} /><stop offset="100%" stopColor={C.barroOscuro} /></radialGradient></defs>
         <rect width={1080} height={1350} fill="url(#pg)" />
         {/* guarda de la serie, arriba */}
-        {t === 'codice' ? <><rect width={1080} height={96} fill={C.crema} /><FranjaCodice y={6} alto={44} desplaz={0} tipo="xical" ancho={1080} /><FranjaCodice y={52} alto={36} desplaz={0} tipo="jade" ancho={1080} /><rect y={90} width={1080} height={6} fill={C.negro} /></>
+        {t === 'kamasan' ? <><rect width={1080} height={96} fill={C.crema} /><FranjaKamasan y={4} alto={50} desplaz={0} tipo="awan" ancho={1080} /><FranjaKamasan y={56} alto={16} desplaz={0} tipo="poleng" ancho={1080} /><FranjaKamasan y={72} alto={20} desplaz={0} tipo="api" ancho={1080} arriba={false} /><rect y={92} width={1080} height={4} fill={C.negro} /></> : t === 'kowhaiwhai' ? <><rect width={1080} height={96} fill={C.negro} /><FranjaMaori y={4} alto={52} desplaz={0} tipo="koru" ancho={1080} /><FranjaMaori y={58} alto={30} desplaz={0} tipo="taniko" ancho={1080} /><rect y={90} width={1080} height={6} fill={C.oro} /></>
+          : t === 'pahari' ? <><rect width={1080} height={96} fill={C.crema} /><FranjaPahari y={4} alto={46} desplaz={0} tipo="flores" ancho={1080} /><rect y={50} width={1080} height={5} fill={C.oro} /><FranjaPahari y={55} alto={35} desplaz={0} tipo="lotos" ancho={1080} /><rect y={90} width={1080} height={6} fill={C.negro} /></>
+          : t === 'codice' ? <><rect width={1080} height={96} fill={C.crema} /><FranjaCodice y={6} alto={44} desplaz={0} tipo="xical" ancho={1080} /><FranjaCodice y={52} alto={36} desplaz={0} tipo="jade" ancho={1080} /><rect y={90} width={1080} height={6} fill={C.negro} /></>
           : t === 'pintado' ? <><rect width={1080} height={96} fill={C.crema} /><FranjaCuentas y={6} alto={40} desplaz={0} tipo="escalones" /><FranjaCuentas y={50} alto={38} desplaz={0} tipo="rombos" /><rect y={90} width={1080} height={6} fill={C.negro} /></>
           : t === 'kapa' ? <><rect width={1080} height={96} fill={C.crema} /><FranjaKapa y={8} alto={34} desplaz={0} tipo="triangulos" /><FranjaKapa y={50} alto={38} desplaz={0} tipo="rombos" /><rect y={92} width={1080} height={6} fill={C.negro} /></>
           : t === 'papiro' ? <><Bloques y={0} alto={24} /><rect y={24} width={1080} height={56} fill={C.barroClaro} /><Jeroglificos x={18} y={32} n={31} /><rect y={80} width={1080} height={6} fill={C.negro} /></>

@@ -1,0 +1,1595 @@
+{
+  "id": "maories-12-kupe-y-la-larga-nube-blanca",
+  "serie": "maories",
+  "numero": "12",
+  "titulo": {
+    "es": "Kupe y la larga nube blanca",
+    "en": "Kupe and the Long White Cloud"
+  },
+  "tituloGriego": "KUPE AND THE LONG WHITE CLOUD",
+  "miniatura": {
+    "heroe": "kupe",
+    "rival": "wheke"
+  },
+  "siguiente": {
+    "es": "El primer perro",
+    "en": "The First Dog"
+  },
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Una nube en el horizonte le dio nombre a un país",
+        "en": "The cloud that named a country"
+      },
+      "escena": "nube",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "El navegante que cazó a un pulpo gigante",
+        "en": "The navigator who hunted a giant octopus"
+      },
+      "escena": "raukawa",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "El ancla trabada que no era tal",
+        "en": "The anchor that was never stuck"
+      },
+      "escena": "ancla",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 950
+    }
+  ],
+  "escenas": [
+    {
+      "id": "intro",
+      "fondo": "hawaiki",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Rātā aprendió a pedirle permiso al bosque antes de talar un árbol.",
+          "en": "Last time, Rātā learned to ask the forest before cutting down a tree."
+        },
+        {
+          "es": "Hoy conocemos a Kupe, un gran navegante de Hawaiki.",
+          "en": "Today we meet Kupe, a great navigator from Hawaiki."
+        },
+        {
+          "es": "Hawaiki es la tierra natal de la que hablan las historias antiguas, muy lejos, al otro lado del océano.",
+          "en": "Hawaiki is the homeland the old stories speak of, far away across the ocean."
+        },
+        {
+          "es": "Las tribus cuentan la historia de Kupe de maneras muy distintas.",
+          "en": "The tribes tell Kupe's story in many very different ways."
+        },
+        {
+          "es": "Aquí seguimos a Te Ara, la enciclopedia de Nueva Zelanda, y al sabio Te Rangi Hīroa.",
+          "en": "Here we follow Te Ara, the Encyclopedia of New Zealand, and the scholar Te Rangi Hīroa."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waka",
+          "x": 1350,
+          "s": 0.8,
+          "props": {
+            "quieta": true
+          }
+        },
+        {
+          "tipo": "harakeke",
+          "x": 300,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "kupe",
+          "como": "kupe",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "senala"
+            },
+            {
+              "en": 2.3,
+              "hace": "mira",
+              "a": 1700
+            },
+            {
+              "en": 2.6,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "tamaiti",
+          "como": "tamaiti",
+          "x": 1100,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "entra",
+              "a": 1080
+            },
+            {
+              "en": 2,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "kaumatua",
+          "como": "kaumatua",
+          "x": 500,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 520
+            },
+            {
+              "en": 3.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 4.2,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 800,
+          "y": 500,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "HAWAIKI · LA TIERRA NATAL",
+            "en": "HAWAIKI · THE HOMELAND"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "TE ARA · TE RANGI HĪROA",
+            "en": "TE ARA · TE RANGI HĪROA"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "hoturapa",
+      "fondo": "hawaiki",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En una de las versiones, Kupe quería a Kuramārōtini.",
+          "en": "In one version, Kupe loved a woman named Kuramārōtini."
+        },
+        {
+          "es": "Pero ella era la esposa de su primo, Hoturapa.",
+          "en": "But she was the wife of his cousin, Hoturapa."
+        },
+        {
+          "es": "Kupe la quería para él, y armó un plan cruel.",
+          "en": "Kupe wanted her for himself, and he made a cruel plan."
+        },
+        {
+          "es": "Un día, Kupe invitó a Hoturapa a pescar con él en el mar.",
+          "en": "One day, Kupe invited Hoturapa to go fishing with him out at sea."
+        },
+        {
+          "es": "Hoturapa confiaba en su primo, y dijo que sí.",
+          "en": "Hoturapa trusted his cousin, and said yes."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waka",
+          "x": 1500,
+          "s": 0.8,
+          "props": {
+            "quieta": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "kupe",
+          "como": "kupe",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "mira",
+              "a": 900
+            },
+            {
+              "en": 1.5,
+              "hace": "mira",
+              "a": 1250
+            },
+            {
+              "en": 2.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "kuramarotini",
+          "como": "kuramarotini",
+          "x": 850,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 1000
+            },
+            {
+              "en": 1.5,
+              "hace": "mira",
+              "a": 1250
+            }
+          ]
+        },
+        {
+          "id": "hoturapa",
+          "como": "hoturapa",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1200
+            },
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.2,
+              "hace": "asiente"
+            },
+            {
+              "en": 4.5,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "ancla",
+      "fondo": "moana",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "En el mar, Kupe dijo que el ancla se había trabado en el fondo.",
+          "en": "Out on the water, Kupe said that the anchor was stuck on the bottom."
+        },
+        {
+          "es": "Le pidió a Hoturapa que se tirara al agua a soltarla.",
+          "en": "He asked Hoturapa to dive down and free it."
+        },
+        {
+          "es": "Mientras Hoturapa estaba bajo el agua, Kupe se fue remando.",
+          "en": "While Hoturapa was under the water, Kupe paddled away."
+        },
+        {
+          "es": "Hoturapa nunca volvió a subir.",
+          "en": "Hoturapa never came back up."
+        },
+        {
+          "es": "Entonces Kupe tomó a Kuramārōtini como esposa, y partieron juntos en su gran canoa, Matahourua.",
+          "en": "Then Kupe took Kuramārōtini as his wife, and they set out together in his great canoe, Matahourua."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waka",
+          "x": 900,
+          "y": 760,
+          "s": 0.9,
+          "hasta": 2.5
+        },
+        {
+          "tipo": "waka",
+          "x": 1400,
+          "y": 760,
+          "s": 0.9,
+          "en": 2.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "kupe",
+          "como": "kupe",
+          "x": 800,
+          "y": 720,
+          "escala": 0.75,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.45,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "kupe2",
+          "como": "kupe",
+          "x": 1300,
+          "y": 720,
+          "escala": 0.75,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.7,
+              "hace": "mira",
+              "a": 1900
+            },
+            {
+              "en": 3.5,
+              "hace": "mira",
+              "a": 900
+            }
+          ]
+        },
+        {
+          "id": "hoturapa",
+          "como": "hoturapa",
+          "x": 1050,
+          "y": 720,
+          "escala": 0.75,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.8,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "kuramarotini",
+          "como": "kuramarotini",
+          "x": 1550,
+          "y": 720,
+          "escala": 0.75,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 0.8
+        },
+        {
+          "en": 4,
+          "tipo": "aclarar",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4.3,
+          "texto": {
+            "es": "MATAHOURUA",
+            "en": "MATAHOURUA"
+          },
+          "x": 1400,
+          "y": 420
+        }
+      ]
+    },
+    {
+      "id": "muturangi",
+      "fondo": "hawaiki",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Otra parte de la historia habla de un pulpo gigante.",
+          "en": "Another part of the story tells of a giant octopus."
+        },
+        {
+          "es": "Pertenecía a un hombre llamado Muturangi.",
+          "en": "It belonged to a man named Muturangi."
+        },
+        {
+          "es": "Se llamaba Te Wheke-a-Muturangi: el pulpo de Muturangi.",
+          "en": "It was called Te Wheke-a-Muturangi: the octopus of Muturangi."
+        },
+        {
+          "es": "Era enorme, y siempre tenía hambre.",
+          "en": "It was enormous, and it was always hungry."
+        },
+        {
+          "es": "Sus brazos largos llegaban muy lejos, por debajo de las canoas. Nadie podía detenerlo.",
+          "en": "Its long arms could reach far beneath the canoes. Nobody could stop it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "toka",
+          "x": 1650,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "wheke",
+          "como": "wheke",
+          "x": 1250,
+          "y": 700,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.2,
+              "hace": "crece"
+            },
+            {
+              "en": 3.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 4.1,
+              "hace": "gira"
+            }
+          ]
+        },
+        {
+          "id": "muturangi",
+          "como": "muturangi",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.4,
+              "hace": "mira",
+              "a": 1250
+            },
+            {
+              "en": 2.1,
+              "hace": "senala"
+            },
+            {
+              "en": 3.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "TE WHEKE-A-MUTURANGI",
+            "en": "TE WHEKE-A-MUTURANGI"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "carnada",
+      "fondo": "moana",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cada vez que la gente de Kupe salía a pescar, el pulpo se acercaba y les robaba la carnada.",
+          "en": "Whenever Kupe's people went fishing, the octopus crept up and stole their bait."
+        },
+        {
+          "es": "Sedal tras sedal subía vacío.",
+          "en": "Line after line came up empty."
+        },
+        {
+          "es": "La gente vivía de la pesca. Sin carnada, no había comida.",
+          "en": "Fishing was how the people lived. Without bait, there was no food."
+        },
+        {
+          "es": "Así que Kupe decidió cazar al pulpo, fuera adonde fuera.",
+          "en": "So Kupe decided to hunt the octopus down, wherever it went."
+        },
+        {
+          "es": "El pulpo huyó lejos, al océano abierto, y Kupe lo siguió en Matahourua.",
+          "en": "The octopus fled far out into the open ocean, and Kupe followed it in Matahourua."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waka",
+          "x": 800,
+          "y": 760,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "tangata",
+          "como": "tangata",
+          "x": 650,
+          "y": 720,
+          "escala": 0.75,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "baja"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.2,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "kupe",
+          "como": "kupe",
+          "x": 950,
+          "y": 720,
+          "escala": 0.75,
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            },
+            {
+              "en": 4.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "wheke",
+          "como": "wheke",
+          "x": 1350,
+          "y": 860,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.8,
+              "hace": "gira"
+            },
+            {
+              "en": 1.6,
+              "hace": "desaparece",
+              "con": "agua"
+            },
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 4.3,
+              "hace": "nada",
+              "a": 2000
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "estrellas",
+      "fondo": "po_whetu",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Navegaron muchos días y muchas noches por el gran océano.",
+          "en": "They sailed for many days and nights across the great ocean."
+        },
+        {
+          "es": "El océano era tan ancho que no se veía tierra por ningún lado.",
+          "en": "The ocean was so wide that no land could be seen in any direction."
+        },
+        {
+          "es": "De día, Kupe leía las olas y los vientos.",
+          "en": "By day, Kupe read the waves and the winds."
+        },
+        {
+          "es": "De noche, se guiaba por las estrellas.",
+          "en": "By night, he steered by the stars."
+        },
+        {
+          "es": "Cada estrella que salía en el horizonte le mostraba el camino.",
+          "en": "Each star rising on the horizon showed him the way."
+        },
+        {
+          "es": "Kuramārōtini miraba el cielo con él, buscando tierra.",
+          "en": "Kuramārōtini watched the sky with him, looking for land."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waka_hourua",
+          "x": 1500,
+          "s": 0.55,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "kupe",
+          "como": "kupe",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 1500
+            },
+            {
+              "en": 1.1,
+              "hace": "mira",
+              "a": 200
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.1,
+              "hace": "mira",
+              "a": 1450
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.8,
+              "hace": "baja"
+            },
+            {
+              "en": 4.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "kuramarotini",
+          "como": "kuramarotini",
+          "x": 1000,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 5,
+              "hace": "mira",
+              "a": 1450
+            },
+            {
+              "en": 5.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "estrellas",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "nube",
+      "fondo": "aotearoa",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1.06,
+          1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces, una mañana, Kuramārōtini vio algo en el horizonte.",
+          "en": "Then one morning, Kuramārōtini saw something on the horizon."
+        },
+        {
+          "es": "Una nube larga y blanca, baja sobre el mar.",
+          "en": "A long white cloud, lying low over the sea."
+        },
+        {
+          "es": "«¡He ao! ¡He ao!», gritó. «¡Una nube! ¡Una nube!»",
+          "en": "'He ao! He ao!' she cried. 'A cloud! A cloud!'"
+        },
+        {
+          "es": "Bajo esa nube había tierra: una tierra grande que Kupe nunca había visto.",
+          "en": "Beneath that cloud lay land: a great land Kupe had never seen."
+        },
+        {
+          "es": "Algunas tradiciones dicen que de ahí viene su nombre: Aotearoa, la tierra de la larga nube blanca.",
+          "en": "Some traditions say this is how it got its name: Aotearoa, the land of the long white cloud."
+        },
+        {
+          "es": "¿Te imaginas ver esa nube después de tantos días en el mar?",
+          "en": "Can you imagine seeing that cloud after so many days at sea?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waka",
+          "x": 800,
+          "y": 760,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "kuramarotini",
+          "como": "kuramarotini",
+          "x": 950,
+          "y": 720,
+          "escala": 0.75,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "kupe",
+          "como": "kupe",
+          "x": 650,
+          "y": 720,
+          "escala": 0.75,
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "mira",
+              "a": 1200
+            },
+            {
+              "en": 2.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.6,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 900,
+          "y": 330,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "«¡HE AO!» · ¡UNA NUBE!",
+            "en": "'HE AO!' · A CLOUD!"
+          },
+          "x": 1300,
+          "y": 480,
+          "hasta": 3
+        },
+        {
+          "en": 4,
+          "texto": {
+            "es": "AOTEAROA · LA TIERRA DE LA LARGA NUBE BLANCA",
+            "en": "AOTEAROA · LAND OF THE LONG WHITE CLOUD"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "raukawa",
+      "fondo": "moana",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero el pulpo seguía delante de ellos.",
+          "en": "But the octopus was still ahead of them."
+        },
+        {
+          "es": "Kupe lo persiguió hasta el estrecho entre las dos grandes islas: Raukawa, hoy llamado estrecho de Cook.",
+          "en": "Kupe chased it into the strait between the two great islands: Raukawa, known today as Cook Strait."
+        },
+        {
+          "es": "Allí el pulpo se levantó del agua para pelear.",
+          "en": "There the octopus rose out of the water to fight."
+        },
+        {
+          "es": "Kupe golpeó con todas sus fuerzas. Hubo un destello, y el gran pulpo desapareció.",
+          "en": "Kupe struck with all his strength. There was a flash, and the great octopus was gone."
+        },
+        {
+          "es": "Las aguas de Raukawa volvieron a calmarse.",
+          "en": "The waters of Raukawa grew calm again."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "motu",
+          "x": 300,
+          "y": 640,
+          "s": 0.6,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "motu",
+          "x": 1900,
+          "y": 640,
+          "s": 0.6,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "waka",
+          "x": 700,
+          "y": 760,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "kupe",
+          "como": "kupe",
+          "x": 750,
+          "y": 720,
+          "escala": 0.75,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 2.1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.8,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "kuramarotini",
+          "como": "kuramarotini",
+          "x": 520,
+          "y": 720,
+          "escala": 0.75,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.7,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.5,
+              "hace": "mira",
+              "a": 1900
+            }
+          ]
+        },
+        {
+          "id": "wheke",
+          "como": "wheke",
+          "x": 1300,
+          "y": 840,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "nada",
+              "a": 1400
+            },
+            {
+              "en": 2,
+              "hace": "crece"
+            },
+            {
+              "en": 2.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.4,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.1,
+          "tipo": "temblor",
+          "dur": 0.5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 3.3,
+          "tipo": "destello",
+          "x": 1350,
+          "y": 650,
+          "dur": 0.5
+        },
+        {
+          "en": 4,
+          "tipo": "olas-bajan",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "RAUKAWA · ESTRECHO DE COOK",
+            "en": "RAUKAWA · COOK STRAIT"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "nombres",
+      "fondo": "takutai",
+      "camara": {
+        "de": 0,
+        "a": 180,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después, Kupe recorrió la tierra nueva.",
+          "en": "After that, Kupe explored the new land."
+        },
+        {
+          "es": "Era una tierra de bosques altos, montañas y muchísimas aves.",
+          "en": "It was a land of tall forests, high mountains, and many birds."
+        },
+        {
+          "es": "Navegó por sus costas y les puso nombre a muchos lugares.",
+          "en": "He sailed along its coasts and gave names to many places."
+        },
+        {
+          "es": "Muchos lugares de Aotearoa todavía guardan recuerdos de su viaje.",
+          "en": "Many places in Aotearoa still keep memories of his journey."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waka",
+          "x": 1500,
+          "s": 0.8,
+          "props": {
+            "quieta": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "kupe",
+          "como": "kupe",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "camina",
+              "a": 800
+            },
+            {
+              "en": 0.8,
+              "hace": "mira",
+              "a": 1700
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "kuramarotini",
+          "como": "kuramarotini",
+          "x": 1050,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "entra",
+              "a": 1050
+            },
+            {
+              "en": 2.5,
+              "hace": "asiente"
+            },
+            {
+              "en": 3.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "kereru",
+          "como": "kereru",
+          "x": 1300,
+          "y": 380,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1800,
+                300
+              ],
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "regreso",
+      "fondo": "hawaiki",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por fin, Kupe volvió a Hawaiki.",
+          "en": "At last, Kupe sailed home to Hawaiki."
+        },
+        {
+          "es": "Le contó a su gente sobre la tierra bajo la larga nube blanca, y cómo llegar hasta allí.",
+          "en": "He told his people about the land under the long white cloud, and how to get there."
+        },
+        {
+          "es": "Sus palabras se guardaron y se pasaron de padres a hijos.",
+          "en": "His words were kept and passed down, from parent to child."
+        },
+        {
+          "es": "Más tarde, otras grandes canoas seguirían su camino por el océano, hasta la tierra que él encontró.",
+          "en": "Later, other great canoes would follow his path across the ocean, to the land he had found."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waka",
+          "x": 1550,
+          "s": 0.8,
+          "props": {
+            "quieta": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "kupe",
+          "como": "kupe",
+          "x": 1150,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "entra",
+              "a": 1150
+            },
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 1.4,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "rangatira",
+          "como": "rangatira",
+          "x": 500,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "entra",
+              "a": 550
+            },
+            {
+              "en": 1.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "wahine",
+          "como": "wahine",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "entra",
+              "a": 820
+            },
+            {
+              "en": 1.7,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.4,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1550,
+          "y": 600,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "hokianga",
+      "fondo": "takutai",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Kupe se fue de Aotearoa por última vez desde un puerto del norte.",
+          "en": "Kupe left Aotearoa for the last time from a harbour in the far north."
+        },
+        {
+          "es": "Te Ara y Te Rangi Hīroa cuentan que por eso se llama Hokianga-nui-a-Kupe.",
+          "en": "Te Ara and Te Rangi Hīroa tell us that this is why it is called Hokianga-nui-a-Kupe."
+        },
+        {
+          "es": "Significa «el gran lugar del regreso de Kupe».",
+          "en": "It means 'the great place of Kupe's return.'"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waka",
+          "x": 1350,
+          "y": 790,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "kupe",
+          "como": "kupe",
+          "x": 1250,
+          "y": 750,
+          "escala": 0.75,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.8,
+              "hace": "baja"
+            },
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 300
+            }
+          ]
+        },
+        {
+          "id": "kuramarotini",
+          "como": "kuramarotini",
+          "x": 1450,
+          "y": 750,
+          "escala": 0.75,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "mira",
+              "a": 300
+            }
+          ]
+        },
+        {
+          "id": "kaumatua",
+          "como": "kaumatua",
+          "x": 500,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 550
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "POR ESO SE LLAMA HOKIANGA",
+            "en": "THAT'S HOW HOKIANGA GOT ITS NAME"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque",
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "HOKIANGA-NUI-A-KUPE",
+            "en": "HOKIANGA-NUI-A-KUPE"
+          },
+          "x": 960,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "aotearoa",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Esta temporada empezó en la oscuridad de Te Pō, con el Cielo y la Tierra abrazados.",
+          "en": "This season began in the darkness of Te Pō, with Sky and Earth locked together."
+        },
+        {
+          "es": "Y termina aquí, con una larga nube blanca sobre una tierra nueva: Aotearoa.",
+          "en": "And it ends here, with a long white cloud over a new land: Aotearoa."
+        },
+        {
+          "es": "¿Qué historia de esta temporada fue tu favorita? Cuéntanos en los comentarios.",
+          "en": "Which story from this season was your favourite? Tell us in the comments."
+        },
+        {
+          "es": "La próxima temporada, las grandes canoas zarpan de Hawaiki. Y empieza con Irawaru. Es El primer perro.",
+          "en": "Next season, the great canoes sail from Hawaiki. And it begins with Irawaru. It is The First Dog."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "waka_hourua",
+          "x": 1300,
+          "y": 760,
+          "s": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "kupe",
+          "como": "kupe",
+          "x": 600,
+          "mira": "der",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "kuri",
+          "como": "kuri",
+          "x": 850,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.6,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 0.6
+        },
+        {
+          "en": 1,
+          "tipo": "aclarar",
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    }
+  ]
+}

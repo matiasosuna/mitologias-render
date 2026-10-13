@@ -1,0 +1,1709 @@
+{
+  "id": "hindues-06-la-garganta-azul",
+  "serie": "hindues",
+  "numero": "06",
+  "titulo": {
+    "es": "La garganta azul",
+    "en": "The Blue Throat"
+  },
+  "tituloGriego": "THE BLUE THROAT",
+  "miniatura": {
+    "heroe": "shiva",
+    "rival": "vishnu"
+  },
+  "siguiente": {
+    "es": "Mohini y el eclipse",
+    "en": "Mohini and the Eclipse"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "oceano_leche",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, dioses y asuras batieron el océano de leche, buscando el néctar de la vida eterna.",
+          "en": "Last time, gods and asuras churned the Ocean of Milk, hoping for the nectar of eternal life."
+        },
+        {
+          "es": "Pero lo primero que subió fue un veneno negro: el halahala.",
+          "en": "But the first thing that rose was a black poison: the halahala."
+        },
+        {
+          "es": "Se extendió sobre el agua y hacia el cielo. Su calor quemaba todo lo que tocaba.",
+          "en": "It spread over the water and into the sky. Its heat burned everything it touched."
+        },
+        {
+          "es": "Todos los seres vivos estaban en peligro, y nadie sabía cómo detenerlo.",
+          "en": "Every living thing was in danger, and no one knew how to stop it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "batido",
+          "x": 960,
+          "y": 780,
+          "props": {
+            "veneno": true,
+            "gira": false
+          }
+        },
+        {
+          "tipo": "halahala",
+          "x": 1500,
+          "en": 2,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "a1",
+          "como": "asura_rojo",
+          "x": 300,
+          "escala": 0.8,
+          "mira": "izq",
+          "props": {
+            "brazo": [
+              85,
+              10
+            ],
+            "brazoAtras": [
+              80,
+              20
+            ]
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.5,
+              "hace": "corre",
+              "a": -400,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 1500,
+          "escala": 0.8,
+          "mira": "der",
+          "props": {
+            "brazo": [
+              85,
+              10
+            ],
+            "brazoAtras": [
+              80,
+              20
+            ]
+          },
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.2,
+              "hace": "corre",
+              "a": 2400,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "cobra",
+          "como": "cobra",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 3
+        },
+        {
+          "en": 2,
+          "tipo": "humo",
+          "x": 1300,
+          "y": 650,
+          "dur": 1.8
+        },
+        {
+          "en": 2.3,
+          "tipo": "chispas",
+          "x": 1500,
+          "y": 700,
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "temblor",
+          "dur": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "HALAHALA",
+            "en": "HALAHALA"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 2.5
+        }
+      ]
+    },
+    {
+      "id": "kailash",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Desesperados, los dioses fueron al monte Kailash, el hogar nevado de Shiva.",
+          "en": "In despair, the gods went to Mount Kailash, the snowy home of Shiva."
+        },
+        {
+          "es": "Shiva es uno de los dioses más grandes del hinduismo: el gran yogui que medita en las montañas.",
+          "en": "Shiva is one of the greatest gods of Hinduism: the great yogi who meditates in the mountains."
+        },
+        {
+          "es": "Con él estaba su esposa, la diosa Bhavani.",
+          "en": "With him was his wife, the goddess Bhavani."
+        },
+        {
+          "es": "Los dioses se inclinaron y lo alabaron. Solo tú puedes salvarnos, le dijeron.",
+          "en": "The gods bowed down and praised him. Only you can save us, they said."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piel_tigre",
+          "x": 1300
+        }
+      ],
+      "actores": [
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 520,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 520
+            },
+            {
+              "en": 3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.2,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "deva",
+          "como": "deva",
+          "x": 320,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "entra",
+              "a": 320
+            },
+            {
+              "en": 3.1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.3,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva_claro",
+          "x": 1300,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.5,
+              "hace": "mira",
+              "a": 520
+            }
+          ]
+        },
+        {
+          "id": "bhavani",
+          "como": "parvati",
+          "x": 1550,
+          "escala": 0.8,
+          "mira": "izq",
+          "rotulo": "BHAVANI",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.4,
+              "hace": "sienta"
+            }
+          ]
+        },
+        {
+          "id": "nandi",
+          "como": "nandi",
+          "x": 1800,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "mira",
+              "a": 1300
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve",
+          "dur": 1.2
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 500,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "MONTE KAILASH",
+            "en": "MOUNT KAILASH"
+          },
+          "x": 1000,
+          "y": 200,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "compasion",
+      "fondo": "kailash",
+      "camara": {
+        "de": 100,
+        "a": 260,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Shiva vio el sufrimiento de todos los seres, y su corazón se llenó de compasión.",
+          "en": "Shiva saw the suffering of all beings, and his heart filled with compassion."
+        },
+        {
+          "es": "Se volvió hacia Bhavani y le dijo: debo protegerlos. Eso hacen los grandes.",
+          "en": "He turned to Bhavani and said: I must protect them. That is what the great ones do."
+        },
+        {
+          "es": "El Bhagavata Purana dice que Bhavani conocía su poder, y estuvo de acuerdo.",
+          "en": "The Bhagavata Purana says that Bhavani knew his power, and she agreed."
+        },
+        {
+          "es": "Shiva se levantó y caminó hacia el veneno.",
+          "en": "Shiva stood up and walked toward the poison."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piel_tigre",
+          "x": 1300
+        }
+      ],
+      "actores": [
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 600,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "reza"
+            },
+            {
+              "en": 3.4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva_claro",
+          "x": 1300,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.4,
+              "hace": "entristece"
+            },
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1600
+            },
+            {
+              "en": 1.1,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.3,
+              "hace": "camina",
+              "a": 850,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "bhavani",
+          "como": "parvati",
+          "x": 1600,
+          "escala": 0.8,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 2,
+              "hace": "asiente"
+            },
+            {
+              "en": 2.3,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "nandi",
+          "como": "nandi",
+          "x": 1900,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 3.3,
+              "hace": "mira",
+              "a": 900
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 480,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "bebe",
+      "fondo": "oceano_leche",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Shiva juntó todo el veneno en la palma de su mano.",
+          "en": "Shiva gathered all of the poison into the palm of his hand."
+        },
+        {
+          "es": "Y entonces, delante de todos, se lo bebió.",
+          "en": "And then, in front of everyone, he drank it."
+        },
+        {
+          "es": "El veneno no le hizo daño. Pero le dejó la garganta de un azul profundo.",
+          "en": "The poison did not harm him. But it turned his throat a deep blue."
+        },
+        {
+          "es": "El cielo se aclaró. Los mundos dejaron de arder.",
+          "en": "The sky cleared. The worlds stopped burning."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "halahala",
+          "x": 1250,
+          "s": 1,
+          "hasta": 1.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "shiva",
+          "como": "shiva_claro",
+          "x": 800,
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            },
+            {
+              "en": 1.1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.6,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.2,
+              "hace": "transforma",
+              "en_que": "shiva"
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "a1",
+          "como": "asura",
+          "x": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.3,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 1550,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.2,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "deva",
+          "como": "deva_azafran",
+          "x": 1760,
+          "escala": 0.8,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.3,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.3
+        },
+        {
+          "en": 0.3,
+          "tipo": "humo",
+          "x": 1050,
+          "y": 650,
+          "dur": 0.9
+        },
+        {
+          "en": 1.3,
+          "tipo": "luz",
+          "x": 800,
+          "y": 520,
+          "dur": 0.6
+        },
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 800,
+          "y": 560,
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "nilakantha",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Desde ese día, a Shiva lo llaman Nilakantha: el de la garganta azul.",
+          "en": "From that day on, Shiva is called Nilakantha: the one with the blue throat."
+        },
+        {
+          "es": "Muchos hindúes todavía lo pintan así, con la garganta azul.",
+          "en": "Many Hindus still paint him this way, with a blue throat."
+        },
+        {
+          "es": "El Bhagavata dice que esa marca lo adorna como una joya: es la señal de su bondad.",
+          "en": "The Bhagavata says the mark adorns him like a jewel. It is the sign of his kindness."
+        },
+        {
+          "es": "Un relato popular, que no está en el Bhagavata, agrega que su esposa le apretó la garganta para que el veneno se quedara ahí.",
+          "en": "A popular telling, not in the Bhagavata, adds that his wife pressed his throat, so the poison stayed there."
+        },
+        {
+          "es": "¿Tú te habrías bebido el veneno para salvar al mundo? Cuéntanos en los comentarios.",
+          "en": "Would you have drunk the poison to save the world? Tell us in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "joya",
+          "x": 1350,
+          "y": 330,
+          "en": 2,
+          "hasta": 3,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 950,
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.2,
+              "hace": "mira",
+              "a": 1250
+            }
+          ]
+        },
+        {
+          "id": "bhavani",
+          "como": "parvati",
+          "x": 1250,
+          "escala": 0.8,
+          "mira": "izq",
+          "rotulo": "BHAVANI",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "pintor",
+          "como": "aldeano",
+          "x": 450,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 1.8,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "nandi",
+          "como": "nandi",
+          "x": 1700,
+          "mira": "izq",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "mira",
+              "a": 950
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 950,
+          "y": 450,
+          "dur": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1350,
+          "y": 330,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "NILAKANTHA",
+            "en": "NILAKANTHA"
+          },
+          "x": 950,
+          "y": 190,
+          "hasta": 2
+        },
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "TRADICIÓN POPULAR",
+            "en": "POPULAR TRADITION"
+          },
+          "x": 1300,
+          "y": 200,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "gotas",
+      "fondo": "bosque_pahari",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mientras Shiva bebía, unas gotas se le escaparon entre los dedos y cayeron a la tierra.",
+          "en": "While Shiva drank, a few drops slipped through his fingers and fell to the earth."
+        },
+        {
+          "es": "El Bhagavata Purana dice que esas gotas las tomaron las serpientes, los escorpiones y las plantas venenosas.",
+          "en": "The Bhagavata Purana says snakes, scorpions and poisonous plants took those drops."
+        },
+        {
+          "es": "Así, dice el texto, recibieron su veneno.",
+          "en": "That, the text says, is how they got their poison."
+        },
+        {
+          "es": "Eran solo unas gotas. Todo lo demás, Shiva lo guardaba en su garganta.",
+          "en": "It was only a few drops. All the rest, Shiva kept in his throat."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "banano",
+          "x": 1600,
+          "en": 1.5,
+          "s": 0.9
+        },
+        {
+          "tipo": "roca_pahari",
+          "x": 1100,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 420,
+          "escala": 0.85,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            },
+            {
+              "en": 3.1,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "c1",
+          "como": "cobra",
+          "x": 900,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2,
+              "hace": "crece",
+              "escala": 1.2,
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "c2",
+          "como": "cobra",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.2,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "chispas",
+          "x": 800,
+          "y": 650,
+          "dur": 0.6
+        },
+        {
+          "en": 1,
+          "tipo": "humo",
+          "x": 1100,
+          "y": 760,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "POR ESO HAY SERPIENTES VENENOSAS",
+            "en": "THAT'S WHY SOME SNAKES ARE VENOMOUS"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "vaca",
+      "fondo": "oceano_leche",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pasado el peligro, dioses y asuras volvieron a tomar a Vasuki y siguieron batiendo.",
+          "en": "With the danger gone, gods and asuras took hold of Vasuki again and kept churning."
+        },
+        {
+          "es": "Ahora, del océano de leche empezaron a salir tesoros maravillosos.",
+          "en": "Now, wonderful treasures began to rise from the Ocean of Milk."
+        },
+        {
+          "es": "Primero salió Kamadhenu, la vaca de los deseos, que podía darlo todo.",
+          "en": "First came Kamadhenu, the wish-fulfilling cow, who could give anything."
+        },
+        {
+          "es": "Se la llevaron los sabios, para tener leche y mantequilla para sus rituales del fuego.",
+          "en": "The sages took her, to have milk and butter for their sacred fire rituals."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "batido",
+          "x": 960,
+          "y": 780,
+          "hasta": 1.6,
+          "props": {}
+        }
+      ],
+      "actores": [
+        {
+          "id": "a1",
+          "como": "asura_rojo",
+          "x": 300,
+          "escala": 0.8,
+          "mira": "izq",
+          "props": {
+            "brazo": [
+              85,
+              10
+            ],
+            "brazoAtras": [
+              80,
+              20
+            ]
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.6,
+              "hace": "baja"
+            },
+            {
+              "en": 2.3,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "d1",
+          "como": "deva",
+          "x": 1650,
+          "escala": 0.8,
+          "mira": "der",
+          "props": {
+            "brazo": [
+              85,
+              10
+            ],
+            "brazoAtras": [
+              80,
+              20
+            ]
+          },
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.6,
+              "hace": "baja"
+            },
+            {
+              "en": 1.7,
+              "hace": "gira"
+            },
+            {
+              "en": 2.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "vaca",
+          "como": "kamadhenu",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3.3,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "sabio",
+          "como": "sabio",
+          "x": 1950,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 1480
+            },
+            {
+              "en": 3.6,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "olas-suben",
+          "intensidad": 0.12,
+          "dur": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 960,
+          "y": 600,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.3,
+          "texto": {
+            "es": "KAMADHENU",
+            "en": "KAMADHENU"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3.2
+        }
+      ]
+    },
+    {
+      "id": "caballo",
+      "fondo": "oceano_leche",
+      "camara": {
+        "de": 200,
+        "a": 400,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después subió Uchchaihshravas, un caballo blanco y brillante, blanco como la luna.",
+          "en": "Next rose Uchchaihshravas, a shining white horse, as white as the moon."
+        },
+        {
+          "es": "Bali, el rey de los asuras, lo quiso, y los dioses le dejaron el caballo.",
+          "en": "Bali, the king of the asuras, wanted him, and the gods let him have the horse."
+        },
+        {
+          "es": "Luego llegó Airavata, un elefante blanco con cuatro colmillos. Fue para Indra.",
+          "en": "Then came Airavata, a white elephant with four tusks. He went to Indra."
+        },
+        {
+          "es": "En el Vishnu Purana, en cambio, Indra ya lo montaba antes del batido.",
+          "en": "In the Vishnu Purana, though, Indra was already riding him before the churning."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "caballo",
+          "como": "uchchaihshravas",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.6,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "bali",
+          "como": "bali",
+          "x": 380,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 520
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.7,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "elefante",
+          "como": "airavata",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.8,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 1900,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "olas-suben",
+          "intensidad": 0.12,
+          "dur": 0.6
+        },
+        {
+          "en": 2,
+          "tipo": "olas-suben",
+          "intensidad": 0.12,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "VISHNU PURANA",
+            "en": "VISHNU PURANA"
+          },
+          "x": 1500,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "maravillas",
+      "fondo": "oceano_leche",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después subió el Kaustubha, una joya brillante. Vishnu la llevó en el pecho.",
+          "en": "Then rose the Kaustubha, a shining jewel. Vishnu wore it on his chest."
+        },
+        {
+          "es": "Le siguió el Parijata, un árbol que concede deseos. Lo llevaron al cielo.",
+          "en": "After it came the Parijata, a tree that grants wishes. It was taken up to heaven."
+        },
+        {
+          "es": "Y aparecieron las apsaras: bailarinas del cielo, llenas de gracia y vestidas de oro.",
+          "en": "And the apsaras appeared: graceful dancers of heaven, dressed in gold."
+        },
+        {
+          "es": "Cada maravilla parecía más hermosa que la anterior.",
+          "en": "Each wonder seemed more beautiful than the last."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "joya",
+          "x": 720,
+          "y": 430,
+          "hasta": 0.9
+        },
+        {
+          "tipo": "kalpavriksha",
+          "x": 1100,
+          "en": 1,
+          "sube": 250,
+          "durSube": 0.8
+        },
+        {
+          "tipo": "lluvia_oro",
+          "x": 960,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 450,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.9,
+              "hace": "baja"
+            },
+            {
+              "en": 0.95,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "ap1",
+          "como": "apsara",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.6,
+              "hace": "gira"
+            },
+            {
+              "en": 3,
+              "hace": "gira"
+            },
+            {
+              "en": 3.4,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "ap2",
+          "como": "apsara",
+          "x": 1680,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2.8,
+              "hace": "gira"
+            },
+            {
+              "en": 3.2,
+              "hace": "gira"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 720,
+          "y": 430,
+          "dur": 0.8
+        },
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "intensidad": 0.12,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "KAUSTUBHA",
+            "en": "KAUSTUBHA"
+          },
+          "x": 720,
+          "y": 250,
+          "hasta": 1
+        },
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "PARIJATA",
+            "en": "PARIJATA"
+          },
+          "x": 1100,
+          "y": 200,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "lakshmi",
+      "fondo": "oceano_leche",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces, de pie sobre un loto, subió una diosa llena de luz: Lakshmi.",
+          "en": "Then, standing on a lotus, a goddess full of light rose up: Lakshmi."
+        },
+        {
+          "es": "Lakshmi es la diosa de la fortuna y la belleza. Muchos hindúes le rezan hoy para tener prosperidad.",
+          "en": "Lakshmi is the goddess of fortune and beauty. Many Hindus pray to her today for prosperity."
+        },
+        {
+          "es": "Dioses, asuras y sabios esperaban que ella los eligiera.",
+          "en": "Gods, asuras and sages all hoped she would choose them."
+        },
+        {
+          "es": "Ella los miró uno por uno, buscando a alguien sin ningún defecto.",
+          "en": "She looked at each of them, searching for someone with no faults at all."
+        },
+        {
+          "es": "Lo encontró en Vishnu. Le puso una guirnalda de lotos y lo eligió para siempre.",
+          "en": "She found him in Vishnu. She placed a lotus garland on him, and chose him forever."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "loto",
+          "x": 960,
+          "s": 1.2
+        },
+        {
+          "tipo": "lluvia_oro",
+          "x": 1200,
+          "en": 4.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "lakshmi",
+          "como": "lakshmi",
+          "x": 960,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.5,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 3,
+              "hace": "mira",
+              "a": 300
+            },
+            {
+              "en": 3.5,
+              "hace": "mira",
+              "a": 1600
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 1420,
+              "dur": 0.4
+            },
+            {
+              "en": 4.4,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "bali",
+          "como": "bali",
+          "x": 300,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "sabio",
+          "como": "sabio",
+          "x": 540,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "vishnu",
+          "como": "vishnu",
+          "x": 1650,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.6,
+              "hace": "brilla",
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.1,
+          "tipo": "luz",
+          "x": 960,
+          "y": 520,
+          "dur": 1
+        },
+        {
+          "en": 0,
+          "tipo": "olas-suben",
+          "intensidad": 0.12,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "oceano_leche",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero el tesoro más grande todavía no había aparecido: el néctar de la inmortalidad.",
+          "en": "But the greatest treasure had not appeared yet: the nectar of immortality."
+        },
+        {
+          "es": "Y los asuras miraban las olas, listos para agarrarlo primero.",
+          "en": "And the asuras were watching the waves, ready to grab it first."
+        },
+        {
+          "es": "¿Qué tesoro del océano habrías elegido tú? Cuéntanos en los comentarios.",
+          "en": "Which treasure from the ocean would you have chosen? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, aparece el néctar, y también una mujer misteriosa. Es Mohini y el eclipse.",
+          "en": "Next time, the nectar appears, and so does a mysterious woman. It's Mohini and the Eclipse."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kalasha",
+          "x": 1050,
+          "y": 600,
+          "en": 3,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "bali",
+          "como": "bali",
+          "x": 320,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1000
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "a1",
+          "como": "asura_rojo",
+          "x": 530,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.6,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "a2",
+          "como": "asura_violeta",
+          "x": 740,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 1550,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "mira",
+              "a": 1000
+            },
+            {
+              "en": 1.8,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "olas-suben",
+          "intensidad": 0.12,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 1050,
+          "y": 520,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El dios que se bebió el veneno del mundo",
+        "en": "The god who drank the poison of the world"
+      },
+      "escena": "bebe",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Por qué las serpientes tienen veneno",
+        "en": "Why snakes have venom"
+      },
+      "escena": "gotas",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 860
+    },
+    {
+      "gancho": {
+        "es": "La diosa que eligió a su esposo",
+        "en": "The goddess who chose her husband"
+      },
+      "escena": "lakshmi",
+      "desde": 2,
+      "hasta": 4,
+      "foco": 1100
+    }
+  ]
+}

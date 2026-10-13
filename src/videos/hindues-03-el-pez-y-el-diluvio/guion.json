@@ -1,0 +1,1308 @@
+{
+  "id": "hindues-03-el-pez-y-el-diluvio",
+  "serie": "hindues",
+  "numero": "03",
+  "titulo": {
+    "es": "El pez y el diluvio",
+    "en": "The Fish and the Flood"
+  },
+  "tituloGriego": "THE FISH AND THE FLOOD",
+  "miniatura": {
+    "heroe": "manu",
+    "rival": "vishnu"
+  },
+  "siguiente": {
+    "es": "La guirnalda maldita",
+    "en": "The Cursed Garland"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "orilla_rio",
+      "camara": {
+        "de": 0,
+        "a": 180,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, un pilar de fuego sin fin humilló el orgullo de Brahma.",
+          "en": "Last time, a pillar of fire with no end humbled Brahma's pride."
+        },
+        {
+          "es": "Hoy, una de las historias más antiguas de la India: la de un hombre, un pez y una inundación que lo cubre todo.",
+          "en": "Today, one of the oldest stories in India: a man, a fish, and a flood that covers everything."
+        },
+        {
+          "es": "La cuenta el Shatapatha Brahmana, un texto de casi tres mil años que explica los rituales de los Vedas.",
+          "en": "It is told in the Shatapatha Brahmana, a text nearly three thousand years old that explains the rituals of the Vedas."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "brahman",
+          "como": "brahman",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.9
+            }
+          ]
+        },
+        {
+          "id": "manu",
+          "como": "manu",
+          "x": 700,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "dur": 0.6,
+          "intensidad": 0.08
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.1,
+          "texto": {
+            "es": "SHATAPATHA BRAHMANA 1.8.1",
+            "en": "SHATAPATHA BRAHMANA 1.8.1"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 2.9
+        }
+      ]
+    },
+    {
+      "id": "manos",
+      "fondo": "orilla_rio",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Había una vez un hombre sabio y justo llamado Manu.",
+          "en": "Once there was a wise and just man named Manu."
+        },
+        {
+          "es": "Una mañana, le trajeron agua para lavarse las manos, como cada día.",
+          "en": "One morning, they brought him water to wash his hands, as on every other day."
+        },
+        {
+          "es": "Y en el agua del cuenco apareció un pececito.",
+          "en": "And in the water of the bowl, a tiny fish appeared."
+        },
+        {
+          "es": "El pez le habló: —Cuídame, y yo te salvaré.",
+          "en": "The fish spoke to him: \"Take care of me, and I will save you.\""
+        },
+        {
+          "es": "—¿Salvarme de qué? —preguntó Manu. —Va a venir una inundación que arrastrará a todos los seres.",
+          "en": "\"Save me from what?\" asked Manu. \"A flood is coming that will sweep away every creature.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cuenco",
+          "x": 1100,
+          "s": 0.9,
+          "props": {
+            "pez": false
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "manu",
+          "como": "manu",
+          "x": 760,
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.4
+            },
+            {
+              "en": 4.5,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "aldeano",
+          "como": "aldeano",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.6
+            },
+            {
+              "en": 1.6,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "pez",
+          "como": "pececito",
+          "x": 1100,
+          "y": 726,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 700,
+          "dur": 0.6
+        },
+        {
+          "en": 4.2,
+          "tipo": "oscurecer",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "crece",
+      "fondo": "campo_pahari",
+      "camara": {
+        "de": 0,
+        "a": 260,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Manu le hizo caso. Puso al pez en una vasija de barro.",
+          "en": "Manu listened. He put the fish in a clay pot."
+        },
+        {
+          "es": "Pero el pez creció, y creció. Pronto no cabía en la vasija.",
+          "en": "But the fish grew, and grew. Soon it no longer fit in the pot."
+        },
+        {
+          "es": "Manu cavó un estanque para él. Y el pez volvió a crecer.",
+          "en": "Manu dug a pond for it. And the fish grew again."
+        },
+        {
+          "es": "Por fin le dijo: —Llévame al mar. Ahí no podrán hacerme daño.",
+          "en": "At last it said: \"Take me to the sea. There, no one can harm me.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cuenco",
+          "x": 520,
+          "s": 1,
+          "hasta": 2.2
+        },
+        {
+          "tipo": "estanque",
+          "x": 1350,
+          "s": 1.1,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "manu",
+          "como": "manu",
+          "x": 760,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1050,
+              "dur": 0.6
+            },
+            {
+              "en": 2.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.3,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "pez",
+          "como": "pececito",
+          "x": 520,
+          "y": 700,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "crece",
+              "escala": 1.8,
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "pez2",
+          "como": "matsya",
+          "x": 1350,
+          "y": 800,
+          "escala": 0.4,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 3,
+              "hace": "crece",
+              "escala": 0.6,
+              "dur": 0.7
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.6,
+          "tipo": "polvo",
+          "x": 1300
+        },
+        {
+          "en": 3,
+          "tipo": "olas-suben",
+          "dur": 0.6,
+          "intensidad": 0.08
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "aviso",
+      "fondo": "orilla_rio",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Manu llevó el pez al mar. Y antes de irse nadando, el pez le hizo una advertencia.",
+          "en": "Manu carried the fish to the sea. And before swimming away, the fish gave him a warning."
+        },
+        {
+          "es": "—En tal año llegará la inundación. Constrúyete un barco y espérame.",
+          "en": "\"In such a year the flood will come. Build yourself a ship and wait for me.\""
+        },
+        {
+          "es": "Manu hizo exactamente eso. Construyó un barco fuerte y esperó.",
+          "en": "Manu did exactly that. He built a strong ship and waited."
+        },
+        {
+          "es": "Versiones posteriores, como la del Mahabharata, agregan que subió semillas de todas las plantas y a siete sabios.",
+          "en": "Later versions, like the one in the Mahabharata, add that he took seeds of every plant and seven sages aboard."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco_manu",
+          "x": 1250,
+          "y": 720,
+          "s": 0.8,
+          "capa": "medio",
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "manu",
+          "como": "manu",
+          "x": 640,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "camina",
+              "a": 820,
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "asiente"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.5,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "pez",
+          "como": "matsya",
+          "x": 1150,
+          "y": 700,
+          "escala": 0.5,
+          "capa": "fondo",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.9,
+              "hace": "nada",
+              "a": 1900,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "sabio1",
+          "como": "sabio",
+          "x": 1500,
+          "mira": "izq",
+          "escala": 0.75,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "sabio2",
+          "como": "sabio",
+          "x": 1680,
+          "mira": "izq",
+          "escala": 0.7,
+          "capa": "medio",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "polvo",
+          "x": 1100
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "lluvia",
+      "fondo": "diluvio",
+      "camara": {
+        "de": 0,
+        "a": 220,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Y el día llegó. El cielo se volvió negro y empezó a llover sin parar.",
+          "en": "And the day came. The sky turned black, and it began to rain without stopping."
+        },
+        {
+          "es": "Los ríos se desbordaron. El agua subió por encima de los campos y de los pueblos.",
+          "en": "The rivers overflowed. The water rose above the fields and the villages."
+        },
+        {
+          "es": "Después cubrió los árboles, y después las colinas.",
+          "en": "Then it covered the trees, and then the hills."
+        },
+        {
+          "es": "Manu y los suyos subieron al barco, solos en un mar sin orillas.",
+          "en": "Manu and his companions climbed aboard, alone on a sea without shores."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco_manu",
+          "x": 1000,
+          "y": 750,
+          "s": 0.9
+        },
+        {
+          "tipo": "arbol_pahari",
+          "x": 1500,
+          "s": 0.7,
+          "capa": "medio",
+          "hasta": 2.2
+        },
+        {
+          "tipo": "colina",
+          "x": 400,
+          "s": 1,
+          "capa": "fondo",
+          "hasta": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "manu",
+          "como": "manu",
+          "x": 920,
+          "escala": 0.65,
+          "y": 695,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1500
+            },
+            {
+              "en": 3,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "sabio",
+          "como": "sabio",
+          "x": 1080,
+          "escala": 0.6,
+          "y": 695,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.3,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "lluvia",
+          "dur": 4
+        },
+        {
+          "en": 0.5,
+          "tipo": "rayo",
+          "x": 1500
+        },
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "dur": 2,
+          "intensidad": 0.14
+        },
+        {
+          "en": 2.3,
+          "tipo": "rayo",
+          "x": 500
+        },
+        {
+          "en": 3,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "barco",
+      "fondo": "diluvio",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces, entre las olas, apareció el pez. Ahora era gigantesco, y tenía un cuerno en la cabeza.",
+          "en": "Then, among the waves, the fish appeared. It was now gigantic, and it had a horn on its head."
+        },
+        {
+          "es": "Manu ató la cuerda del barco a ese cuerno.",
+          "en": "Manu tied the ship's rope to that horn."
+        },
+        {
+          "es": "Y el pez arrastró el barco sobre el agua, día tras día, a través de la tormenta.",
+          "en": "And the fish pulled the ship across the water, day after day, through the storm."
+        },
+        {
+          "es": "Ningún otro ser había quedado con vida. Solo Manu, en el barco.",
+          "en": "No other creature was left alive. Only Manu, on the ship."
+        },
+        {
+          "es": "Si tú fueras Manu, ¿te habrías atrevido a cuidar de un pez que habla?",
+          "en": "If you were Manu, would you have dared to look after a fish that talks?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco_manu",
+          "x": 760,
+          "y": 750,
+          "s": 0.9,
+          "props": {
+            "soga": 420
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "pez",
+          "como": "matsya",
+          "x": 1400,
+          "y": 850,
+          "escala": 1,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2,
+              "hace": "nada",
+              "a": 1700,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "manu",
+          "como": "manu",
+          "x": 700,
+          "escala": 0.65,
+          "y": 695,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.1,
+          "tipo": "destello"
+        },
+        {
+          "en": 2,
+          "tipo": "lluvia",
+          "dur": 2
+        },
+        {
+          "en": 2.4,
+          "tipo": "rayo",
+          "x": 1200
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "monte",
+      "fondo": "kailash",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al final, el pez llevó el barco hasta una montaña del norte.",
+          "en": "At last, the fish brought the ship to a mountain in the north."
+        },
+        {
+          "es": "—Ata el barco a un árbol —le dijo—, y baja despacio, a medida que baje el agua.",
+          "en": "\"Tie the ship to a tree,\" it told him, \"and climb down slowly, as the water goes down.\""
+        },
+        {
+          "es": "Manu obedeció. Y el agua, poco a poco, se fue retirando.",
+          "en": "Manu obeyed. And little by little, the water drew back."
+        },
+        {
+          "es": "Por eso, dice el texto, ese lugar se llama \"el descenso de Manu\".",
+          "en": "That is why, the text says, that place is called \"Manu's Descent.\""
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco_manu",
+          "x": 1150,
+          "y": 640,
+          "s": 0.7,
+          "hasta": 2.5
+        },
+        {
+          "tipo": "cipres_pahari",
+          "x": 1450,
+          "s": 0.7,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "manu",
+          "como": "manu",
+          "x": 820,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 600,
+              "dur": 0.8
+            },
+            {
+              "en": 3.2,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "pez",
+          "como": "matsya",
+          "x": 1550,
+          "y": 860,
+          "escala": 0.6,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "desaparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "olas-bajan",
+          "dur": 2.5,
+          "intensidad": 0.2
+        },
+        {
+          "en": 2.2,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.2,
+          "texto": {
+            "es": "EL DESCENSO DE MANU",
+            "en": "\"MANU'S DESCENT\""
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 3.95
+        }
+      ]
+    },
+    {
+      "id": "ofrenda",
+      "fondo": "campo_pahari",
+      "camara": {
+        "de": 0,
+        "a": 180,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Manu era el único hombre que quedaba. Rezó y ofreció manteca y leche a las aguas.",
+          "en": "Manu was the only man left. He prayed and offered butter and milk to the waters."
+        },
+        {
+          "es": "De esa ofrenda, dice el Shatapatha Brahmana, nació una mujer: Ida.",
+          "en": "From that offering, says the Shatapatha Brahmana, a woman was born: Ida."
+        },
+        {
+          "es": "Con ella, Manu volvió a llenar el mundo de gente.",
+          "en": "With her, Manu filled the world with people again."
+        },
+        {
+          "es": "Y en sánscrito, una de las palabras para \"ser humano\" es \"manava\": hijo de Manu.",
+          "en": "And in Sanskrit, one of the words for \"human being\" is \"manava\": a child of Manu."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yajna",
+          "x": 900,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "manu",
+          "como": "manu",
+          "x": 600,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1,
+              "hace": "reza"
+            },
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "ida",
+          "como": "aldeana",
+          "x": 1200,
+          "mira": "izq",
+          "rotulo": "IDA",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.6,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "nino1",
+          "como": "nino_aldea",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "nino2",
+          "como": "aldeano",
+          "x": 1700,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1200,
+          "y": 500,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "MANAVA = HIJO DE MANU",
+            "en": "MANAVA = CHILD OF MANU"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 3.95
+        }
+      ]
+    },
+    {
+      "id": "matsya",
+      "fondo": "oceano_cosmico",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Siglos después, los Puranas volvieron a contar esta historia, y le agregaron un secreto.",
+          "en": "Centuries later, the Puranas told this story again, and they added a secret."
+        },
+        {
+          "es": "Aquel pez no era un pez cualquiera. Era Vishnu, el protector.",
+          "en": "That fish was no ordinary fish. It was Vishnu, the protector."
+        },
+        {
+          "es": "Fue su primer avatar: Matsya, que significa \"pez\".",
+          "en": "It was his first avatar: Matsya, which means \"fish.\""
+        },
+        {
+          "es": "El Bhagavata Purana dice que durante el diluvio también rescató los Vedas, que un demonio había robado.",
+          "en": "The Bhagavata Purana says that during the flood he also rescued the Vedas, which a demon had stolen."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "vedas",
+          "x": 1450,
+          "y": 640,
+          "s": 0.9,
+          "en": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "pez",
+          "como": "matsya",
+          "x": 650,
+          "y": 820,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "nada",
+              "a": 760,
+              "dur": 0.6
+            },
+            {
+              "en": 1,
+              "hace": "transforma",
+              "en_que": "vishnu"
+            }
+          ]
+        },
+        {
+          "id": "asura",
+          "como": "asura",
+          "x": 1650,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 3.5,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.1,
+          "tipo": "luz",
+          "x": 700,
+          "y": 500,
+          "dur": 1
+        },
+        {
+          "en": 3.4,
+          "tipo": "destello"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "MATSYA · PRIMER AVATAR",
+            "en": "MATSYA · FIRST AVATAR"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 2.95
+        }
+      ]
+    },
+    {
+      "id": "diluvios",
+      "fondo": "orilla_rio",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Quizá esta historia te suene: muchos pueblos del mundo cuentan un gran diluvio y un barco que se salva.",
+          "en": "This story may sound familiar: many peoples around the world tell of a great flood and a ship that survives."
+        },
+        {
+          "es": "Lo especial de esta es su ayudante: un pez pequeño que pidió ayuda, y que después ayudó a todo el mundo.",
+          "en": "What makes this one special is its helper: a small fish that asked for help, and then saved the whole world."
+        },
+        {
+          "es": "La bondad de Manu con un pececito fue lo que salvó a la humanidad.",
+          "en": "Manu's kindness to a tiny fish is what saved humankind."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco_manu",
+          "x": 1300,
+          "y": 710,
+          "s": 0.6,
+          "capa": "medio"
+        },
+        {
+          "tipo": "cuenco",
+          "x": 700,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "manu",
+          "como": "manu",
+          "x": 460,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 700
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "pez",
+          "como": "pececito",
+          "x": 700,
+          "y": 738,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "nina",
+          "como": "nino_aldea",
+          "x": 1000,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 700,
+          "y": 600,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "svarga",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El mundo volvió a empezar. Pero en el cielo, los dioses estaban por cometer un error terrible.",
+          "en": "The world began again. But up in heaven, the gods were about to make a terrible mistake."
+        },
+        {
+          "es": "¿Conoces otra historia de un gran diluvio? ¿En qué se parece a esta?",
+          "en": "Do you know another story of a great flood? How is it like this one?"
+        },
+        {
+          "es": "La próxima vez: una guirnalda de flores, un sabio muy enojado, y una maldición que deja a los dioses sin fuerza.",
+          "en": "Next time: a garland of flowers, a very angry sage, and a curse that leaves the gods powerless."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "indra",
+          "como": "indra",
+          "x": 760,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1300
+            }
+          ]
+        },
+        {
+          "id": "durvasa",
+          "como": "durvasa",
+          "x": 1350,
+          "mira": "izq",
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.5,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "airavata",
+          "como": "airavata",
+          "x": 300,
+          "escala": 0.6,
+          "capa": "medio",
+          "rotulo": ""
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.6,
+          "tipo": "rayo",
+          "x": 1100
+        },
+        {
+          "en": 2.7,
+          "tipo": "oscurecer",
+          "dur": 0.3
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Un pez que crece hasta llenar el mar",
+        "en": "A fish that grows until it fills the sea"
+      },
+      "escena": "crece",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "El barco atado al cuerno de un pez gigante",
+        "en": "A ship tied to the horn of a giant fish"
+      },
+      "escena": "barco",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "El pez que en realidad era un dios",
+        "en": "The fish that was really a god"
+      },
+      "escena": "matsya",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 760
+    }
+  ]
+}

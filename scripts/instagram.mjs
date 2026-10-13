@@ -15,7 +15,7 @@ const env = Object.fromEntries(readFileSync('.env', 'utf8').split('\n').filter((
 const TOKEN = env.MOC_PAGE_TOKEN, IG = env.MOC_IG_USER_ID, V = 'v21.0';
 if (!TOKEN || !IG) throw new Error('Falta conectar Instagram: node scripts/instagram-auth.mjs');
 
-const SERIE = { nordicas: ['Norse', '#norsemythology #vikings'], egipcias: ['Egyptian', '#egyptianmythology #ancientegypt'], hawaianas: ['Hawaiian', '#hawaiianmythology #polynesian'], norteamericanas: ['Native American', '#nativeamericanmythology #indigenousstories'], aztecas: ['Aztec', '#aztecmythology #mexica'], griegas: ['Greek', '#greekmythology #greekgods'] };
+const SERIE = { nordicas: ['Norse', '#norsemythology #vikings'], egipcias: ['Egyptian', '#egyptianmythology #ancientegypt'], hawaianas: ['Hawaiian', '#hawaiianmythology #polynesian'], norteamericanas: ['Native American', '#nativeamericanmythology #indigenousstories'], aztecas: ['Aztec', '#aztecmythology #mexica'], balinesas: ['Balinese', '#balinesemythology #bali'], hindues: ['Hindu', '#hindumythology #indianmythology'], maories: ['Māori', '#maorimythology #aotearoa'], griegas: ['Greek', '#greekmythology #greekgods'] };
 let archivo, texto;
 if (id) {
   const g = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8'));

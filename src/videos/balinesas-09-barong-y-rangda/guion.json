@@ -1,0 +1,1052 @@
+{
+  "id": "balinesas-09-barong-y-rangda",
+  "serie": "balinesas",
+  "numero": "09",
+  "titulo": {
+    "es": "Barong y Rangda",
+    "en": "Barong and Rangda"
+  },
+  "tituloGriego": "BARONG AND RANGDA",
+  "miniatura": {
+    "heroe": "penari_kris",
+    "rival": "calon_arang"
+  },
+  "siguiente": {
+    "es": "El gigante Kebo Iwa",
+    "en": "The Giant Kebo Iwa"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "pura_malam",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, el hombre santo Mpu Bharadah liberó a la viuda Calon Arang, y la peste terminó.",
+          "en": "Last time, the holy man Mpu Bharadah set the widow Calon Arang free, and the plague came to an end."
+        },
+        {
+          "es": "Pero en Bali, la historia no se quedó en las hojas de palma. Pasó al escenario.",
+          "en": "But in Bali, the story didn't stay on the palm leaves. It moved onto the stage."
+        },
+        {
+          "es": "Algunas noches, en los patios de los templos cerca del cementerio, las aldeas representan la danza drama Calonarang.",
+          "en": "On certain nights, in temple courtyards close to the graveyard, villages perform the Calonarang dance drama."
+        },
+        {
+          "es": "Y allí, la viuda se convierte en Rangda.",
+          "en": "And there, the widow becomes Rangda."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tedung",
+          "x": 500,
+          "s": 0.8
+        },
+        {
+          "tipo": "tedung",
+          "x": 1450,
+          "s": 0.8,
+          "props": {
+            "color": "#D9A63A"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "calon",
+          "como": "calon_arang",
+          "x": 1000,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "transforma",
+              "en_que": "rangda"
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "pemangku",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "humo",
+          "x": 1000,
+          "y": 600,
+          "dur": 0.6
+        },
+        {
+          "en": 3.1,
+          "tipo": "temblor",
+          "dur": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "rangda",
+      "fondo": "setra",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Rangda significa 'viuda'. Es la reina de los leak, las brujas de las historias balinesas.",
+          "en": "Rangda means 'widow'. She is the queen of the leak, the witches of Balinese stories."
+        },
+        {
+          "es": "Su máscara tiene ojos saltones, colmillos largos y una lengua que cuelga como una llama.",
+          "en": "Her mask has bulging eyes, long fangs, and a tongue that hangs down like a flame."
+        },
+        {
+          "es": "Su pelo blanco le cae hasta el suelo, y tiene uñas largas y curvas.",
+          "en": "Her white hair falls to the ground, and her fingernails are long and curved."
+        },
+        {
+          "es": "En la mano lleva un paño blanco, lleno de magia.",
+          "en": "In her hand she holds a white cloth, full of magic."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "rangda",
+          "como": "rangda",
+          "x": 960,
+          "escala": 0.95,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.2,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "leak",
+      "fondo": "desa_malam",
+      "camara": {
+        "de": 0,
+        "a": 180,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los cuentos balineses dicen que de día un leak parece una persona cualquiera.",
+          "en": "Balinese tales say that by day, a leak looks like an ordinary person."
+        },
+        {
+          "es": "Pero de noche, su espíritu sale del cuerpo y anda por ahí con otras formas.",
+          "en": "But at night, their spirit leaves the body and roams in other shapes."
+        },
+        {
+          "es": "Una bola de fuego que flota. Un mono sobre un muro. Un cerdo caminando por un camino vacío.",
+          "en": "A floating ball of fire. A monkey on a wall. A pig walking down an empty road."
+        },
+        {
+          "es": "La gente todavía cuenta historias de leak, a veces con un escalofrío y a veces con una risa.",
+          "en": "People still tell leak stories today, often with a shiver, and sometimes with a laugh."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "vecina",
+          "como": "wanita_bali",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 1,
+              "hace": "transforma",
+              "en_que": "api_leak"
+            }
+          ]
+        },
+        {
+          "id": "fuego",
+          "como": "api_leak",
+          "x": 1000,
+          "y": 400,
+          "escala": 0.7,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "vuela",
+              "a": [
+                1300,
+                350
+              ],
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "mono",
+          "como": "bojog",
+          "x": 1350,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.6,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "cerdo",
+          "como": "celeng",
+          "x": 2000,
+          "escala": 0.8,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.5,
+              "hace": "entra",
+              "a": 1700,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "anak_bali",
+          "x": 400,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.5,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "humo",
+          "x": 600,
+          "y": 600,
+          "dur": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "barong",
+      "fondo": "desa",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Frente a Rangda está el Barong Ket, el protector de la aldea.",
+          "en": "Against Rangda stands the Barong Ket, the protector of the village."
+        },
+        {
+          "es": "Parece un gran león, con la cara roja, una corona dorada y una larga barba blanca.",
+          "en": "He looks like a great lion, with a red face, a golden crown and a long white beard."
+        },
+        {
+          "es": "Dos bailarines se mueven dentro de él, uno adelante y otro atrás.",
+          "en": "Two dancers move inside him, one at the front and one at the back."
+        },
+        {
+          "es": "Algunos lo llaman Banaspati Raja, el señor del bosque.",
+          "en": "Some call him Banaspati Raja, the lord of the forest."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "barong",
+          "como": "barong",
+          "x": 900,
+          "escala": 1,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "entra",
+              "a": 900,
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 0.6
+            },
+            {
+              "en": 3.2,
+              "hace": "salta"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "anak_bali",
+          "x": 1650,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "sagrado",
+      "fondo": "pura",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Estas máscaras no son disfraces. Son sagradas.",
+          "en": "These masks are not costumes. They are sacred."
+        },
+        {
+          "es": "Se guardan en el templo, y reciben ofrendas antes de salir.",
+          "en": "They are kept in the temple, and they receive offerings before they come out."
+        },
+        {
+          "es": "Se cree que la barba del Barong guarda su poder. Los sacerdotes la sumergen en agua para hacer agua bendita.",
+          "en": "The Barong's beard is believed to hold his power. Priests dip it in water to make holy water."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "gebogan",
+          "x": 700,
+          "en": 1
+        },
+        {
+          "tipo": "canang",
+          "x": 820,
+          "en": 1.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "sacerdote",
+          "como": "pemangku",
+          "x": 1050,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "reza"
+            },
+            {
+              "en": 1.2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "barong",
+          "como": "barong",
+          "x": 1550,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.2,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.4,
+          "tipo": "chispas",
+          "x": 1250,
+          "y": 650,
+          "dur": 0.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "batalla",
+      "fondo": "pura_malam",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La noche del drama, la orquesta de gamelan empieza a tocar.",
+          "en": "On the night of the drama, the gamelan orchestra begins to play."
+        },
+        {
+          "es": "Aparece Rangda, chillando y agitando su paño blanco.",
+          "en": "Rangda appears, shrieking and waving her white cloth."
+        },
+        {
+          "es": "El Barong sale a su encuentro, castañeteando sus mandíbulas de madera.",
+          "en": "The Barong comes out to meet her, snapping his wooden jaws."
+        },
+        {
+          "es": "Se rodean el uno al otro, cada vez más cerca.",
+          "en": "They circle each other, closer and closer."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "rangda",
+          "como": "rangda",
+          "x": 1450,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.3,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1250,
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "barong",
+          "como": "barong",
+          "x": 450,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "entra",
+              "a": 600,
+              "dur": 0.6
+            },
+            {
+              "en": 2.4,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 780,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 0.3
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "kris",
+      "fondo": "pura_malam",
+      "camara": {
+        "de": 100,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces los seguidores del Barong se lanzan contra Rangda con sus puñales, llamados kris.",
+          "en": "Then the Barong's followers rush at Rangda with their daggers, called kris."
+        },
+        {
+          "es": "Rangda agita su paño y les lanza un hechizo.",
+          "en": "Rangda waves her cloth and casts a spell on them."
+        },
+        {
+          "es": "En trance, los bailarines vuelven las hojas contra su propio pecho.",
+          "en": "In a trance, the dancers turn the blades against their own chests."
+        },
+        {
+          "es": "Pero el poder del Barong los protege. Los puñales aprietan y se doblan, pero no atraviesan.",
+          "en": "But the Barong's power protects them. The daggers press and bend, but they do not pierce."
+        },
+        {
+          "es": "¿Te animarías a ver el Calonarang a medianoche? Cuéntanos en los comentarios.",
+          "en": "Would you dare to watch the Calonarang at midnight? Tell us in the comments."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "rangda",
+          "como": "rangda",
+          "x": 1600,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "k1",
+          "como": "penari_kris",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "corre",
+              "a": 1050,
+              "dur": 0.6
+            },
+            {
+              "en": 1.4,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.2,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "k2",
+          "como": "penari_kris",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "corre",
+              "a": 800,
+              "dur": 0.6
+            },
+            {
+              "en": 1.5,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 2.4,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "barong",
+          "como": "barong",
+          "x": 200,
+          "escala": 0.8,
+          "rotulo": "",
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 3.2,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "humo",
+          "x": 1000,
+          "y": 650,
+          "dur": 0.6
+        },
+        {
+          "en": 3.1,
+          "tipo": "luz",
+          "x": 900,
+          "y": 500,
+          "dur": 0.7
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "despertar",
+      "fondo": "pura",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después, los sacerdotes rocían a los bailarines con agua bendita, para sacarlos del trance.",
+          "en": "Afterward, priests sprinkle the dancers with holy water, to bring them out of the trance."
+        },
+        {
+          "es": "Algunos bailarines tardan mucho en despertar. Algunos no recuerdan nada.",
+          "en": "Some dancers need a long time to wake up. Some remember nothing at all."
+        },
+        {
+          "es": "Visitantes e investigadores han visto y escrito sobre estos trances desde los años treinta.",
+          "en": "Visitors and researchers have watched and written about these trances since the 1930s."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "sacerdote",
+          "como": "pemangku",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 0.6,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "k1",
+          "como": "penari_kris",
+          "x": 1150,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 1.8,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.2,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "k2",
+          "como": "penari_kris",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.4,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 640,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "nadie_gana",
+      "fondo": "pura_malam",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "¿Y quién gana la batalla? Nadie.",
+          "en": "And who wins the battle? No one."
+        },
+        {
+          "es": "Rangda vuelve a la oscuridad, y el Barong vuelve al templo.",
+          "en": "Rangda goes back into the dark, and the Barong goes back to the temple."
+        },
+        {
+          "es": "Ninguno puede destruir al otro. Son dos lados del mismo mundo, el rwa bhineda que ya conociste.",
+          "en": "Neither can destroy the other. They are two sides of the same world, the rwa bhineda you met before."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "rangda",
+          "como": "rangda",
+          "x": 1300,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "gira"
+            },
+            {
+              "en": 1.2,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "barong",
+          "como": "barong",
+          "x": 650,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "gira"
+            },
+            {
+              "en": 1.3,
+              "hace": "sale"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "POR ESO LA BATALLA NUNCA TERMINA",
+            "en": "THAT IS WHY THE BATTLE NEVER ENDS"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "hoy",
+      "fondo": "desa",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "En Bali se puede ver una danza corta del Barong casi todas las mañanas, pensada para los visitantes.",
+          "en": "In Bali you can watch a short Barong dance almost every morning, made for visitors."
+        },
+        {
+          "es": "Pero el Calonarang completo, de noche y con trance, todavía se hace para la propia aldea.",
+          "en": "But the full Calonarang, at night, with its trance, is still performed for the village itself."
+        },
+        {
+          "es": "No es un espectáculo. Es una ceremonia, para mantener la aldea a salvo y en equilibrio.",
+          "en": "It is not a show. It is a ceremony, to keep the village safe and in balance."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "turista",
+          "como": "pria_bali",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 0.8,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "barong",
+          "como": "barong",
+          "x": 1300,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "salta"
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "pemangku",
+          "x": 1750,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "cierre",
+      "fondo": "pura",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "¿De qué lado estás: del Barong o de Rangda? Cuéntanos en los comentarios.",
+          "en": "Who do you side with: the Barong, or Rangda? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez: un gigante que comía como un ejército entero, y un rey con un secreto muy extraño.",
+          "en": "Next time: a giant who ate as much as an army, and a king with a very strange secret."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "kebo",
+          "como": "kebo_iwa",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "como": "raja_bedahulu",
+          "x": 1450,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Se clavan el puñal y no se hieren",
+        "en": "They stab themselves and are not hurt"
+      },
+      "escena": "kris",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "La reina bruja de Bali",
+        "en": "The witch-queen of Bali"
+      },
+      "escena": "rangda",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Bolas de fuego, monos y cerdos de noche",
+        "en": "Fireballs, monkeys and pigs at night"
+      },
+      "escena": "leak",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1100
+    }
+  ]
+}

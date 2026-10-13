@@ -56,7 +56,7 @@ const idiomas = [...new Set(tl.escenas.flatMap((e) => e.frases.flatMap((f) => Ob
 const segTotal = tl.total / tl.fps;
 const pistas = idiomas.map((l) => {
   const frases = tl.escenas.flatMap((e) => e.frases.filter((f) => f.audio[l]).map((f) => ({ ruta: join('public', f.audio[l]), ms: Math.round(((e.from + f.from) / tl.fps) * 1000) })));
-  const args = ['-y', '-loglevel', 'error', '-i', `public/musica/${g.serie === 'nordicas' ? 'nordica' : g.serie === 'egipcias' ? 'egipcia' : g.serie === 'hawaianas' ? 'hawaiana' : g.serie === 'norteamericanas' ? 'norteamericana' : g.serie === 'aztecas' ? 'azteca' : 'lira-griega'}.wav`, ...frases.flatMap((f) => ['-i', f.ruta])];
+  const args = ['-y', '-loglevel', 'error', '-i', `public/musica/${g.serie === 'nordicas' ? 'nordica' : g.serie === 'egipcias' ? 'egipcia' : g.serie === 'hawaianas' ? 'hawaiana' : g.serie === 'norteamericanas' ? 'norteamericana' : g.serie === 'aztecas' ? 'azteca' : g.serie === 'balinesas' ? 'balinesa' : g.serie === 'hindues' ? 'hindu' : g.serie === 'maories' ? 'maori' : 'lira-griega'}.wav`, ...frases.flatMap((f) => ['-i', f.ruta])];
   const filtro = [`[0:a]atrim=0:${segTotal},volume=0.2,afade=t=out:st=${segTotal - 3}:d=3[m]`, ...frases.map((f, i) => `[${i + 1}:a]adelay=${f.ms}|${f.ms}[v${i}]`), `[m]${frases.map((_, i) => `[v${i}]`).join('')}amix=inputs=${frases.length + 1}:normalize=0[a]`].join(';');
   const m4a = join(out, `${id}.${l}.m4a`);
   execFileSync('ffmpeg', [...args, '-filter_complex', filtro, '-map', '[a]', '-c:a', 'aac', '-b:a', '160k', m4a]);

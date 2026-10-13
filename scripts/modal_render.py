@@ -14,7 +14,7 @@ import modal
 IDS = os.environ.get("MOC_ID", "").split()
 MODO = os.environ.get("MOC_MODO", "vertical")  # vertical | horizontal (YouTube: mp4 con pistas, .srt y miniatura)
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
-MUSICA = {"griegas": "lira-griega", "nordicas": "nordica", "egipcias": "egipcia", "hawaianas": "hawaiana", "norteamericanas": "norteamericana", "aztecas": "azteca"}
+MUSICA = {"griegas": "lira-griega", "nordicas": "nordica", "egipcias": "egipcia", "hawaianas": "hawaiana", "norteamericanas": "norteamericana", "aztecas": "azteca", "balinesas": "balinesa", "hindues": "hindu", "maories": "maori"}
 
 image = (
     modal.Image.from_registry("node:22-bookworm-slim", add_python="3.12")

@@ -1,0 +1,1274 @@
+{
+  "id": "balinesas-01-la-isla-que-se-mecia",
+  "serie": "balinesas",
+  "numero": "01",
+  "titulo": {
+    "es": "La isla que no se quedaba quieta",
+    "en": "The Island That Would Not Stand Still"
+  },
+  "tituloGriego": "THE ISLAND THAT WOULD NOT STAND STILL",
+  "miniatura": {
+    "heroe": "bhatara_pasupati",
+    "rival": "dewi_danu"
+  },
+  "siguiente": {
+    "es": "La joya del dragón",
+    "en": "The Dragon's Jewel"
+  },
+  "escenas": [
+    {
+      "id": "apertura",
+      "fondo": "gunung_agung",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Bali es una isla pequeña de Indonesia, famosa por sus templos, sus arrozales y sus volcanes.",
+          "en": "Bali is a small island in Indonesia, famous for its temples, its rice fields and its volcanoes."
+        },
+        {
+          "es": "Cada mañana, la gente de allí deja pequeñas ofrendas de flores para los dioses.",
+          "en": "Every morning, people there leave little offerings of flowers for the gods."
+        },
+        {
+          "es": "Pero los balineses cuentan que, hace mucho, su isla no se quedaba quieta.",
+          "en": "But the Balinese tell that, long ago, their island would not stand still."
+        },
+        {
+          "es": "Se mecía en el océano como un botecito en el viento. Esta es la historia de cómo Bali se quedó firme.",
+          "en": "It rocked on the ocean like a little boat in the wind. This is the story of how Bali was made steady."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "canang",
+          "x": 1150,
+          "s": 1.2,
+          "en": 1.3
+        },
+        {
+          "tipo": "penjor",
+          "x": 1500,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "wanita_bali",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 900,
+              "dur": 1
+            },
+            {
+              "en": 1.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.4,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "pria_bali",
+          "x": 1650,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "reza"
+            },
+            {
+              "en": 2.4,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.2,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.5,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 3.1,
+          "tipo": "temblor",
+          "dur": 0.7
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "lontar",
+      "fondo": "pura",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Esta historia viene de viejos libros balineses escritos en hojas de palma secas. Cada libro se llama lontar.",
+          "en": "This story comes from old Balinese books written on dried palm leaves. Each book is called a lontar."
+        },
+        {
+          "es": "Uno de ellos cuenta cómo los dioses le dieron forma a la isla.",
+          "en": "One of them tells how the gods shaped the island."
+        },
+        {
+          "es": "Hoy, los hindúes balineses le rezan a un Dios supremo, llamado Sang Hyang Widhi Wasa.",
+          "en": "Today, Balinese Hindus pray to one supreme God, called Sang Hyang Widhi Wasa."
+        },
+        {
+          "es": "Dicen que los muchos dioses de las viejas historias son sus distintos rostros.",
+          "en": "They say the many gods of the old stories are his different faces."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "lontar",
+          "x": 760,
+          "s": 1.4,
+          "props": {
+            "brillo": true
+          }
+        },
+        {
+          "tipo": "padmasana",
+          "x": 1450,
+          "s": 0.85,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "sacerdote",
+          "como": "pemangku",
+          "x": 480,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "dios",
+          "como": "dewa_bali",
+          "x": 1150,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "luz",
+          "x": 1450,
+          "y": 330,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "islas",
+      "fondo": "segara",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al principio, Bali y su isla vecina, Lombok, eran pequeñas y peladas.",
+          "en": "In the beginning, Bali and its neighbor island, Lombok, were small and bare."
+        },
+        {
+          "es": "Flotaban en el mar y se mecían de un lado a otro, de un lado a otro.",
+          "en": "They floated on the sea and swayed back and forth, back and forth."
+        },
+        {
+          "es": "Nada podía quedarse sobre ellas. Ni un monte, ni un templo, ni una aldea.",
+          "en": "Nothing could stay on them. No mountain, no temple, no village."
+        },
+        {
+          "es": "Los dioses miraron desde el cielo y vieron el problema. Las islas necesitaban peso para quedarse quietas.",
+          "en": "The gods looked down from the sky and saw the problem. The islands needed weight to hold them still."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pulau",
+          "x": 650,
+          "y": 770,
+          "s": 0.6
+        },
+        {
+          "tipo": "pulau",
+          "x": 1550,
+          "y": 770,
+          "s": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "dios",
+          "como": "dewa_bali",
+          "x": 1100,
+          "y": 640,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.8,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.6,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "dios2",
+          "como": "dewi_bali",
+          "x": 1400,
+          "y": 650,
+          "escala": 0.75,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.5,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 1.8,
+          "intensidad": 0.8
+        },
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "tortuga",
+      "fondo": "dasar_segara",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En lo hondo del mar, los balineses imaginan una tortuga gigante llamada Bedawang Nala.",
+          "en": "Deep below the sea, the Balinese picture a giant turtle called Bedawang Nala."
+        },
+        {
+          "es": "Su nombre suele explicarse como la tortuga de fuego, porque se dice que arde con un fuego por dentro.",
+          "en": "Its name is often explained as the turtle of fire, because it is said to burn with inner fire."
+        },
+        {
+          "es": "Dos grandes serpientes dragón, la naga Basuki y la naga Anantaboga, se enroscan en su caparazón.",
+          "en": "Two great serpent dragons, the naga Basuki and the naga Anantaboga, coil around its shell."
+        },
+        {
+          "es": "Juntas sostienen el mundo, como las piedras bajo una casa.",
+          "en": "Together they hold up the world, like the stones under a house."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "tortuga",
+          "como": "bedawang_nala",
+          "x": 980,
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "basuki",
+          "como": "naga_basuki",
+          "x": 520,
+          "y": 760,
+          "escala": 0.65,
+          "props": {
+            "largo": 500
+          },
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        },
+        {
+          "id": "ananta",
+          "como": "naga_anantaboga",
+          "x": 1560,
+          "y": 760,
+          "escala": 0.65,
+          "mira": "izq",
+          "props": {
+            "largo": 500
+          },
+          "pasos": [
+            {
+              "en": 2.3,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "chispas",
+          "x": 980,
+          "y": 600,
+          "dur": 0.9
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "padmasana",
+      "fondo": "pura",
+      "camara": {
+        "de": 100,
+        "a": 220,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Todavía se los puede ver hoy en los templos de Bali.",
+          "en": "You can still see them in Balinese temples today."
+        },
+        {
+          "es": "Al pie del alto trono de piedra, llamado padmasana, descansa una tortuga tallada con dos serpientes alrededor.",
+          "en": "At the foot of the tall stone throne, called the padmasana, a carved turtle rests with two serpents around it."
+        },
+        {
+          "es": "El asiento de arriba siempre queda vacío. Es el asiento del Dios supremo.",
+          "en": "The seat on top is always left empty. It is the seat of the supreme God."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "padmasana",
+          "x": 1100,
+          "s": 1.1
+        },
+        {
+          "tipo": "canang",
+          "x": 820,
+          "en": 1.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "wanita_bali",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 760,
+              "dur": 0.8
+            },
+            {
+              "en": 1.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "pemangku",
+          "x": 1600,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1100,
+          "y": 330,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "pasupati",
+      "fondo": "kahyangan",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Muy lejos estaba el Mahameru, la gran montaña en el centro del mundo.",
+          "en": "Far away stood Mahameru, the great mountain at the center of the world."
+        },
+        {
+          "es": "Allí vivía el dios Pasupati. Un libro balinés de hojas de palma dice que supo de las islas que se mecían.",
+          "en": "There lived the god Pasupati. A Balinese palm-leaf book says he heard about the swaying islands."
+        },
+        {
+          "es": "Decidió darles a Bali y a Lombok montañas propias.",
+          "en": "He decided to give Bali and Lombok mountains of their own."
+        },
+        {
+          "es": "Entonces quebró la cima del Mahameru y la partió en pedazos.",
+          "en": "So he broke off the top of Mahameru, and split it into pieces."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "gunung",
+          "x": 1350,
+          "s": 1.15,
+          "y": 760,
+          "capa": "medio",
+          "props": {
+            "humo": true
+          },
+          "hasta": 3.5
+        },
+        {
+          "tipo": "gunung",
+          "x": 1200,
+          "s": 0.6,
+          "y": 760,
+          "en": 3.5
+        },
+        {
+          "tipo": "gunung",
+          "x": 1520,
+          "s": 0.45,
+          "y": 760,
+          "en": 3.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "pasupati",
+          "como": "bhatara_pasupati",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 2.2,
+              "hace": "asiente"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 3.25,
+          "tipo": "temblor",
+          "dur": 0.5
+        },
+        {
+          "en": 3.3,
+          "tipo": "polvo",
+          "x": 1350,
+          "y": 700,
+          "dur": 0.7
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "montes",
+      "fondo": "segara",
+      "camara": {
+        "de": 0,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después llevó los pedazos sobre el océano, hasta las islas que se mecían.",
+          "en": "Then he carried the pieces across the ocean, all the way to the swaying islands."
+        },
+        {
+          "es": "Puso el pedazo más grande sobre Bali. Se convirtió en el monte Agung, el más alto de la isla.",
+          "en": "He set the biggest piece down on Bali. It became Mount Agung, the highest mountain on the island."
+        },
+        {
+          "es": "Otro pedazo se convirtió en el monte Batur, con un lago profundo al lado.",
+          "en": "Another piece became Mount Batur, with a deep lake beside it."
+        },
+        {
+          "es": "Y por fin, la isla dejó de mecerse.",
+          "en": "And at last, the island stopped rocking."
+        },
+        {
+          "es": "Imagina vivir en una isla que se mecía como un bote. ¿Te habrías quedado? Cuéntanos en los comentarios.",
+          "en": "Imagine living on an island that rocked like a boat. Would you have stayed there? Tell us in the comments."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pulau",
+          "x": 1500,
+          "y": 770,
+          "s": 1.1
+        },
+        {
+          "tipo": "gunung",
+          "x": 1700,
+          "y": 740,
+          "s": 1.05,
+          "en": 1,
+          "sube": 520,
+          "durSube": 0.8,
+          "props": {
+            "humo": true
+          }
+        },
+        {
+          "tipo": "gunung",
+          "x": 1150,
+          "y": 750,
+          "s": 0.6,
+          "en": 2,
+          "sube": 320,
+          "durSube": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "pasupati",
+          "como": "bhatara_pasupati",
+          "x": 200,
+          "y": 640,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                1250,
+                600
+              ],
+              "dur": 0.9
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            },
+            {
+              "en": 1.1,
+              "hace": "senala"
+            },
+            {
+              "en": 2.1,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "pria_bali",
+          "x": 1980,
+          "mira": "izq",
+          "escala": 0.7,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 1950,
+              "dur": 0.6
+            },
+            {
+              "en": 3.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 4,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 1.1,
+          "tipo": "polvo",
+          "x": 1700,
+          "y": 720,
+          "dur": 0.6
+        },
+        {
+          "en": 2.1,
+          "tipo": "polvo",
+          "x": 1150,
+          "y": 720,
+          "dur": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "aclarar"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "MONTE AGUNG",
+            "en": "MOUNT AGUNG"
+          },
+          "x": 1700,
+          "y": 180,
+          "hasta": 2
+        },
+        {
+          "en": 2.1,
+          "texto": {
+            "es": "MONTE BATUR",
+            "en": "MOUNT BATUR"
+          },
+          "x": 1150,
+          "y": 380,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "agung",
+      "fondo": "gunung_agung",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El monte Agung sigue siendo el lugar más sagrado de Bali. Su nombre significa 'la gran montaña'.",
+          "en": "Mount Agung is still the most sacred place in Bali. Its name means 'the great mountain'."
+        },
+        {
+          "es": "En sus laderas está Besakih, el templo más grande de la isla, al que suelen llamar el Templo Madre.",
+          "en": "On its slopes stands Besakih, the largest temple of the island, often called the Mother Temple."
+        },
+        {
+          "es": "Las casas y los templos balineses se ordenan pensando en la montaña.",
+          "en": "Balinese homes and temples are laid out with the mountain in mind."
+        },
+        {
+          "es": "Hacia la montaña está el lado sagrado. Hacia el mar está el lado bajo, de donde se dice que vienen los espíritus peligrosos.",
+          "en": "Toward the mountain is the holy direction. Toward the sea is the low side, where dangerous spirits are said to come from."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "wanita_bali",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "camina",
+              "a": 700,
+              "dur": 1.2
+            },
+            {
+              "en": 1.6,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "pria_bali",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 2000
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 3.6,
+              "hace": "mira",
+              "a": 800
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "BESAKIH",
+            "en": "BESAKIH"
+          },
+          "x": 940,
+          "y": 300,
+          "hasta": 2
+        }
+      ]
+    },
+    {
+      "id": "hijos",
+      "fondo": "kahyangan",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero las montañas solas no alcanzaban. La isla también necesitaba guardianes.",
+          "en": "But mountains alone were not enough. The island also needed guardians."
+        },
+        {
+          "es": "Entonces Pasupati mandó a sus propios hijos a vivir en las nuevas cumbres.",
+          "en": "So Pasupati sent his own children to live on the new peaks."
+        },
+        {
+          "es": "Su hijo Putrajaya fue al monte Agung, a cuidar de Besakih.",
+          "en": "His son Putrajaya went to Mount Agung, to watch over Besakih."
+        },
+        {
+          "es": "Su hija, Dewi Danu, fue al monte Batur y a su lago.",
+          "en": "His daughter, Dewi Danu, went to Mount Batur and its lake."
+        },
+        {
+          "es": "Y otro hijo, Genijaya, fue al monte Lempuyang, en el extremo este de la isla.",
+          "en": "And another son, Genijaya, went to Mount Lempuyang, in the far east of the island."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "pasupati",
+          "como": "bhatara_pasupati",
+          "x": 420,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 4.6,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "putrajaya",
+          "como": "bhatara_putrajaya",
+          "x": 820,
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.2,
+              "hace": "asiente"
+            },
+            {
+              "en": 2.6,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "danu",
+          "como": "dewi_danu",
+          "x": 1180,
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.2,
+              "hace": "reza"
+            },
+            {
+              "en": 3.6,
+              "hace": "sale"
+            }
+          ]
+        },
+        {
+          "id": "genijaya",
+          "como": "bhatara_genijaya",
+          "x": 1540,
+          "pasos": [
+            {
+              "en": 1.8,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.6,
+              "hace": "sale"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "danu",
+      "fondo": "danau_batur",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Dewi Danu se convirtió en la diosa del lago y del agua que alimenta la tierra.",
+          "en": "Dewi Danu became the goddess of the lake, and of the water that feeds the land."
+        },
+        {
+          "es": "Desde su lago, el agua baja por manantiales y canales hasta los arrozales.",
+          "en": "From her lake, water runs down through springs and canals to the rice fields."
+        },
+        {
+          "es": "Los campesinos todavía llevan ofrendas a su templo junto al lago, para que el agua siga corriendo.",
+          "en": "Farmers still bring offerings to her temple by the lake, so the water keeps flowing."
+        },
+        {
+          "es": "Recuérdala. Volverá en una historia de amor, mentiras y enojo.",
+          "en": "Remember her. She will return in a story of love, lies and anger."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "gebogan",
+          "x": 1350,
+          "en": 2.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "danu",
+          "como": "dewi_danu",
+          "x": 760,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "mira",
+              "a": 1300
+            }
+          ]
+        },
+        {
+          "id": "campesino",
+          "como": "kakek_bali",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 0.6
+            },
+            {
+              "en": 2.6,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 2.8,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "luz",
+          "x": 760,
+          "y": 500,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "temblores",
+      "fondo": "desa",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "¿Y Bedawang Nala? En esta vieja imagen del mundo, la tortuga sigue ahí abajo, sosteniéndolo todo.",
+          "en": "And Bedawang Nala? In this old picture of the world, the turtle is still down there, holding everything up."
+        },
+        {
+          "es": "Algunos balineses dicen que cuando la gran tortuga se mueve, la tierra de arriba tiembla.",
+          "en": "Some Balinese say that when the great turtle moves, the earth above it shakes."
+        },
+        {
+          "es": "Así, un terremoto es la tortuga del mundo, que se acomoda bajo la isla.",
+          "en": "So an earthquake is the world turtle, shifting under the island."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "nino",
+          "como": "anak_bali",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.6,
+              "hace": "corre",
+              "a": 1000,
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "abuela",
+          "como": "nenek_bali",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 1.4,
+              "hace": "abraza"
+            },
+            {
+              "en": 2.2,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "temblor",
+          "dur": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "POR ESO TIEMBLA LA TIERRA",
+            "en": "THAT'S WHY THE EARTH SHAKES"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "gunung_agung",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así Bali tuvo sus montañas, sus guardianes y su tortuga abajo.",
+          "en": "So Bali got its mountains, its guardians, and its turtle below."
+        },
+        {
+          "es": "¿Qué historia se cuenta de los terremotos donde tú vives? Cuéntanos en los comentarios.",
+          "en": "What story do people tell about earthquakes where you live? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez: un hombre santo, su hijo que no podía dejar de apostar y el dragón que vive dentro del monte Agung.",
+          "en": "Next time: a holy man, his son who could not stop gambling, and the dragon who lives inside Mount Agung."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "pasupati",
+          "como": "bhatara_pasupati",
+          "x": 600,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 1.4,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "naga",
+          "como": "naga_besukih",
+          "x": 1500,
+          "escala": 0.7,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.6,
+              "hace": "habla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.2,
+          "tipo": "humo",
+          "x": 1500,
+          "y": 600,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La isla que se mecía en el mar",
+        "en": "The island that rocked on the sea"
+      },
+      "escena": "montes",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1300
+    },
+    {
+      "gancho": {
+        "es": "La tortuga gigante bajo el mundo",
+        "en": "The giant turtle under the world"
+      },
+      "escena": "tortuga",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 980
+    },
+    {
+      "gancho": {
+        "es": "Por qué tiembla la tierra en Bali",
+        "en": "Why the earth shakes in Bali"
+      },
+      "escena": "temblores",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 960
+    }
+  ]
+}

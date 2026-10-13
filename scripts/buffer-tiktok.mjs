@@ -18,7 +18,7 @@ const gql = async (query) => {
   const r = await fetch('https://api.buffer.com', { method: 'POST', headers: { Authorization: `Bearer ${env.BUFFER_API_KEY}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ query }) });
   const j = await r.json(); if (j.errors) throw new Error(JSON.stringify(j.errors).slice(0, 300)); return j.data;
 };
-const T = { griegas: '#greekmythology #greekgods', nordicas: '#norsemythology #vikings', egipcias: '#egyptianmythology #ancientegypt', hawaianas: '#hawaiianmythology #polynesian', norteamericanas: '#nativeamericanmythology', aztecas: '#aztecmythology #mexica' };
+const T = { griegas: '#greekmythology #greekgods', nordicas: '#norsemythology #vikings', egipcias: '#egyptianmythology #ancientegypt', hawaianas: '#hawaiianmythology #polynesian', norteamericanas: '#nativeamericanmythology', aztecas: '#aztecmythology #mexica', balinesas: '#balinesemythology #bali', hindues: '#hindumythology #indianmythology', maories: '#maorimythology #aotearoa' };
 export function texto(id) {
   const g = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8'));
   const ep = g.episodio && existsSync(join('src/videos', g.episodio, 'guion.json')) ? JSON.parse(readFileSync(join('src/videos', g.episodio, 'guion.json'), 'utf8')) : null;

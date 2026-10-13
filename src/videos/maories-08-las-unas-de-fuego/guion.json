@@ -1,0 +1,1811 @@
+{
+  "id": "maories-08-las-unas-de-fuego",
+  "serie": "maories",
+  "numero": "08",
+  "titulo": {
+    "es": "Las uñas de fuego",
+    "en": "The Fingernails of Fire"
+  },
+  "tituloGriego": "THE FINGERNAILS OF FIRE",
+  "miniatura": {
+    "heroe": "maui_joven",
+    "rival": "mahuika"
+  },
+  "siguiente": {
+    "es": "Māui y la diosa de la muerte",
+    "en": "Māui and the Goddess of Death"
+  },
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La diosa que se arrancó las uñas de fuego",
+        "en": "The goddess who pulled out her fingernails of fire"
+      },
+      "escena": "una",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Le pidió una llama de más",
+        "en": "He asked for one flame too many"
+      },
+      "escena": "incendio",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Por qué el fuego vive en la madera",
+        "en": "Why fire lives inside wood"
+      },
+      "escena": "arboles",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 950
+    }
+  ],
+  "escenas": [
+    {
+      "id": "intro",
+      "fondo": "kainga",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La vez pasada, Māui pescó un pez tan grande que se convirtió en la Isla Norte.",
+          "en": "Last time, Māui pulled up a fish so big that it became the North Island."
+        },
+        {
+          "es": "Pero Māui nunca se quedaba quieto. Ahora quería saber una cosa: ¿de dónde sale el fuego?",
+          "en": "But Māui could never sit still. Now he wanted to know one thing: where does fire come from?"
+        },
+        {
+          "es": "Esta es la versión que George Grey escribió a partir de Te Rangikāheke, de la tribu Te Arawa.",
+          "en": "This is the version George Grey wrote down from Te Rangikāheke, of the Te Arawa tribe."
+        },
+        {
+          "es": "Y empieza, como casi siempre con Māui, con una travesura.",
+          "en": "And it begins, as it so often does with Māui, with a trick."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "ahi",
+          "x": 1000,
+          "s": 0.8
+        },
+        {
+          "tipo": "harakeke",
+          "x": 300,
+          "s": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "maui_joven",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "entra",
+              "a": 700
+            },
+            {
+              "en": 1,
+              "hace": "mira",
+              "a": 1000
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "tangata",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.5,
+              "hace": "mira",
+              "a": 1000
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "wahine",
+          "x": 1600,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.4,
+              "hace": "mira",
+              "a": 700
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.1,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 650,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2.1,
+          "texto": {
+            "es": "TE RANGIKĀHEKE · TE ARAWA",
+            "en": "TE RANGIKĀHEKE · TE ARAWA"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "apaga",
+      "fondo": "po_whetu",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Una noche, mientras todos dormían, Māui se levantó sin hacer ruido.",
+          "en": "One night, while everyone was asleep, Māui got up without a sound."
+        },
+        {
+          "es": "Fue de casa en casa, por toda la aldea.",
+          "en": "He crept from house to house, all through the village."
+        },
+        {
+          "es": "Y en cada cocina apagó el fuego. Uno por uno, hasta el último.",
+          "en": "And in every cooking place, he put out the fire. One by one, down to the very last."
+        },
+        {
+          "es": "Después volvió a su lugar y se hizo el dormido.",
+          "en": "Then he went back to his place and pretended to be asleep."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "whare",
+          "x": 450,
+          "s": 0.6,
+          "capa": "medio"
+        },
+        {
+          "tipo": "whare",
+          "x": 1250,
+          "s": 0.6,
+          "capa": "medio"
+        },
+        {
+          "tipo": "whare",
+          "x": 2000,
+          "s": 0.6,
+          "capa": "medio"
+        },
+        {
+          "tipo": "ahi",
+          "x": 700,
+          "s": 0.6,
+          "hasta": 1.6
+        },
+        {
+          "tipo": "ahi",
+          "x": 1400,
+          "s": 0.6,
+          "hasta": 2.15
+        },
+        {
+          "tipo": "ahi",
+          "x": 1950,
+          "s": 0.6,
+          "hasta": 2.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "maui_joven",
+          "x": 400,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levantarse"
+            },
+            {
+              "en": 0.6,
+              "hace": "mira",
+              "a": 700
+            },
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 620,
+              "dur": 0.5
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.7,
+              "hace": "camina",
+              "a": 1320,
+              "dur": 0.4
+            },
+            {
+              "en": 2.1,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.25,
+              "hace": "camina",
+              "a": 1860,
+              "dur": 0.3
+            },
+            {
+              "en": 2.55,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1100,
+              "dur": 0.6
+            },
+            {
+              "en": 3.6,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.8,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.6,
+          "tipo": "humo",
+          "x": 700,
+          "y": 740,
+          "dur": 0.6
+        },
+        {
+          "en": 2.15,
+          "tipo": "humo",
+          "x": 1400,
+          "y": 740,
+          "dur": 0.6
+        },
+        {
+          "en": 2.6,
+          "tipo": "humo",
+          "x": 1950,
+          "y": 740,
+          "dur": 0.6
+        },
+        {
+          "en": 2.8,
+          "tipo": "oscurecer",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "manana",
+      "fondo": "kainga",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "A la mañana, Māui gritó: «¡Tengo hambre! ¡Rápido, cocinen algo para mí!»",
+          "en": "In the morning, Māui shouted: 'I'm hungry! Quick, cook some food for me!'"
+        },
+        {
+          "es": "Los sirvientes corrieron a encender el fuego. Pero no quedaba ni una brasa.",
+          "en": "The servants ran to light the fire. But there was not a single ember left."
+        },
+        {
+          "es": "Su madre, Taranga, dijo: «Vayan a ver a Mahuika, nuestra antepasada. Ella guarda el fuego.»",
+          "en": "His mother, Taranga, said: 'Go to Mahuika, our ancestress. She is the keeper of fire.'"
+        },
+        {
+          "es": "Pero los sirvientes tenían miedo, y nadie quiso ir.",
+          "en": "But the servants were afraid, and nobody would go."
+        },
+        {
+          "es": "Entonces Māui dijo: «Yo iré. Yo traeré fuego para la gente.»",
+          "en": "So Māui said: 'I will go. I will fetch fire for the people.'"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "ahi",
+          "x": 1000,
+          "s": 0.7,
+          "props": {
+            "brasas": true
+          }
+        },
+        {
+          "tipo": "whare",
+          "x": 250,
+          "s": 0.7,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "maui_joven",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.9,
+              "hace": "baja"
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            },
+            {
+              "en": 4.1,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "tangata",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "corre",
+              "a": 1100,
+              "dur": 0.4
+            },
+            {
+              "en": 1.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.7,
+              "hace": "niega"
+            },
+            {
+              "en": 3.1,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3.3,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "taranga",
+          "como": "taranga",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.9
+            },
+            {
+              "en": 2.4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "wahine",
+          "x": 1750,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "niega"
+            },
+            {
+              "en": 3.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 4.4,
+              "hace": "mira",
+              "a": 500
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.4,
+          "tipo": "humo",
+          "x": 1000,
+          "y": 720,
+          "dur": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "consejo",
+      "fondo": "kainga",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sus padres le mostraron el camino: un sendero ancho, que había que seguir hasta el final.",
+          "en": "His parents showed him the way: a broad path that he must follow to the very end."
+        },
+        {
+          "es": "«Cuando ella te pregunte quién eres, dile tu nombre. Así sabrá que eres de su familia.»",
+          "en": "'When she asks who you are, tell her your name. Then she will know you are her own family.'"
+        },
+        {
+          "es": "«Y ten cuidado. No le hagas ninguna de tus travesuras.»",
+          "en": "'And be careful. Do not play any of your tricks on her.'"
+        },
+        {
+          "es": "Māui les dijo que solo quería fuego para la gente. Y se fue por el camino.",
+          "en": "Māui told them he only wanted fire for the people. And off he went down the path."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "whare",
+          "x": 300,
+          "s": 0.7,
+          "capa": "medio"
+        },
+        {
+          "tipo": "harakeke",
+          "x": 1900,
+          "s": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "makeatutara",
+          "como": "makeatutara",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 0.7
+            }
+          ]
+        },
+        {
+          "id": "taranga",
+          "como": "taranga",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "asiente"
+            },
+            {
+              "en": 2.3,
+              "hace": "mira",
+              "a": 1300
+            }
+          ]
+        },
+        {
+          "id": "maui",
+          "como": "maui_joven",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "asiente"
+            },
+            {
+              "en": 2.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 3.5,
+              "hace": "gira"
+            },
+            {
+              "en": 3.6,
+              "hace": "camina",
+              "a": 2000,
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "EL CAMINO A MAHUIKA",
+            "en": "THE PATH TO MAHUIKA"
+          },
+          "x": 1500,
+          "y": 260,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "mahuika",
+      "fondo": "ahi_mahuika",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El camino lo llevó a un lugar de roca negra y llamas: la casa de Mahuika.",
+          "en": "The path led him to a land of black rock and flames: the home of Mahuika."
+        },
+        {
+          "es": "Mahuika, la diosa del fuego, era muy anciana. Y el fuego vivía en sus uñas.",
+          "en": "Mahuika, the goddess of fire, was very old. And fire lived in her fingernails."
+        },
+        {
+          "es": "Se levantó y preguntó: «¿Quién es este mortal? ¿De dónde vienes?»",
+          "en": "She rose and asked: 'Who is this mortal? Where do you come from?'"
+        },
+        {
+          "es": "Nombró un rumbo tras otro. Al fin dijo: «¿Vienes de donde el viento sopla hacia mí?»",
+          "en": "She named one direction after another. At last she asked: 'Do you come from where the wind blows toward me?'"
+        },
+        {
+          "es": "«Sí», dijo Māui. «Entonces eres mi nieto», dijo ella. «Bienvenido. ¿Qué quieres?» «Fuego.»",
+          "en": "'I do,' said Māui. 'Then you are my grandchild,' she said. 'Welcome. What do you want?' 'Fire.'"
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "maui_joven",
+          "x": 200,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "entra",
+              "a": 650,
+              "dur": 0.8
+            },
+            {
+              "en": 1.1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3.5,
+              "hace": "asiente"
+            },
+            {
+              "en": 4,
+              "hace": "habla",
+              "dur": 0.2
+            },
+            {
+              "en": 4.7,
+              "hace": "habla",
+              "dur": 0.25
+            }
+          ]
+        },
+        {
+          "id": "mahuika",
+          "como": "mahuika",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 2,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.2,
+              "hace": "habla",
+              "dur": 1.6
+            },
+            {
+              "en": 3.3,
+              "hace": "senala"
+            },
+            {
+              "en": 4.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.3,
+              "hace": "habla",
+              "dur": 0.4
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "chispas",
+          "x": 1300,
+          "y": 560,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "una",
+      "fondo": "ahi_mahuika",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mahuika se arrancó una uña de la mano. Y de esa uña salió fuego.",
+          "en": "Mahuika pulled out one of her fingernails. And from that nail, fire flowed."
+        },
+        {
+          "es": "Se la dio a Māui: una llamita viva.",
+          "en": "She gave it to Māui: a small, living flame."
+        },
+        {
+          "es": "Māui se alejó un poco… y la apagó. Del todo.",
+          "en": "Māui walked a little way off… and put it out. Completely."
+        },
+        {
+          "es": "Volvió y dijo: «La luz que me diste se apagó. ¿Me das otra?»",
+          "en": "Then he went back and said: 'The light you gave me has gone out. Could I have another?'"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "korakora",
+          "x": 1180,
+          "y": 560,
+          "s": 0.8,
+          "en": 0.4,
+          "hasta": 1.2
+        },
+        {
+          "tipo": "korakora",
+          "x": 870,
+          "y": 560,
+          "s": 0.8,
+          "en": 1.2,
+          "hasta": 2.4
+        },
+        {
+          "tipo": "korakora",
+          "x": 400,
+          "y": 560,
+          "s": 0.8,
+          "en": 2.4,
+          "hasta": 2.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "maui_joven",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.9,
+              "hace": "baja"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 450,
+              "dur": 0.4
+            },
+            {
+              "en": 2.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 800,
+              "dur": 0.4
+            },
+            {
+              "en": 3.4,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.6,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "mahuika",
+          "como": "mahuika",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.5,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.6,
+              "hace": "baja"
+            },
+            {
+              "en": 3.5,
+              "hace": "mira",
+              "a": 800
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "chispas",
+          "x": 1180,
+          "y": 520,
+          "dur": 0.4
+        },
+        {
+          "en": 2.6,
+          "tipo": "humo",
+          "x": 400,
+          "y": 540,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "una_tras_otra",
+      "fondo": "ahi_mahuika",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ella le dio otra. Él la apagó también, y volvió a pedir.",
+          "en": "She gave him another. He put that one out too, and came back for more."
+        },
+        {
+          "es": "Así se fueron todas las uñas de una mano. Después, todas las de la otra.",
+          "en": "So all the nails of one hand were gone. Then all the nails of the other hand."
+        },
+        {
+          "es": "Después, las de un pie. Y las del otro pie, menos una: la de un dedo gordo.",
+          "en": "Then the nails of one foot. Then the other foot, all but one: the nail of a big toe."
+        },
+        {
+          "es": "Al fin, Mahuika pensó: «Este muchacho me está haciendo trampa.»",
+          "en": "At last Mahuika said to herself: 'This fellow is playing tricks on me.'"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "korakora",
+          "x": 1150,
+          "y": 560,
+          "s": 0.7,
+          "en": 0.1,
+          "hasta": 0.6
+        },
+        {
+          "tipo": "korakora",
+          "x": 1150,
+          "y": 560,
+          "s": 0.7,
+          "en": 1,
+          "hasta": 1.4
+        },
+        {
+          "tipo": "korakora",
+          "x": 1150,
+          "y": 560,
+          "s": 0.7,
+          "en": 1.6,
+          "hasta": 1.9
+        },
+        {
+          "tipo": "korakora",
+          "x": 1150,
+          "y": 700,
+          "s": 0.7,
+          "en": 2.1,
+          "hasta": 2.4
+        },
+        {
+          "tipo": "korakora",
+          "x": 1150,
+          "y": 700,
+          "s": 0.7,
+          "en": 2.6,
+          "hasta": 2.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "maui_joven",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 0.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.8,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.3,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.8,
+              "hace": "golpea"
+            },
+            {
+              "en": 3.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "mahuika",
+          "como": "mahuika",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            },
+            {
+              "en": 2.5,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 3,
+              "hace": "enoja"
+            },
+            {
+              "en": 3.4,
+              "hace": "mira",
+              "a": 600
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.6,
+          "tipo": "humo",
+          "x": 600,
+          "y": 560,
+          "dur": 0.3
+        },
+        {
+          "en": 1.4,
+          "tipo": "humo",
+          "x": 600,
+          "y": 560,
+          "dur": 0.3
+        },
+        {
+          "en": 1.9,
+          "tipo": "humo",
+          "x": 600,
+          "y": 560,
+          "dur": 0.3
+        },
+        {
+          "en": 2.4,
+          "tipo": "humo",
+          "x": 600,
+          "y": 560,
+          "dur": 0.3
+        },
+        {
+          "en": 2.9,
+          "tipo": "humo",
+          "x": 600,
+          "y": 560,
+          "dur": 0.3
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "incendio",
+      "fondo": "ahi_mahuika",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1.05,
+          1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Se arrancó la última uña, y la tiró contra el suelo.",
+          "en": "She pulled out the very last nail, and dashed it against the ground."
+        },
+        {
+          "es": "Todo el lugar se prendió fuego.",
+          "en": "The whole place burst into flames."
+        },
+        {
+          "es": "«¡Ahí lo tienes!», gritó. «¡Ahora es todo tuyo!»",
+          "en": "'There!' she cried. 'Now you have it all!'"
+        },
+        {
+          "es": "Māui echó a correr. Pero el fuego corría detrás de él, cada vez más cerca.",
+          "en": "Māui ran for his life. But the fire raced after him, closer and closer."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "korakora",
+          "x": 1250,
+          "y": 560,
+          "s": 1,
+          "hasta": 0.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "mahuika",
+          "como": "mahuika",
+          "x": 1350,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.3,
+              "hace": "lanza"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "maui",
+          "como": "maui_joven",
+          "x": 750,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.2,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "gira"
+            },
+            {
+              "en": 3.1,
+              "hace": "corre",
+              "a": 250,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "destello",
+          "x": 1100,
+          "y": 740,
+          "dur": 0.3
+        },
+        {
+          "en": 0.6,
+          "tipo": "fuego",
+          "x": 1000,
+          "y": 790,
+          "dur": 3.4,
+          "intensidad": 1.2
+        },
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 1200,
+          "y": 600,
+          "dur": 2
+        },
+        {
+          "en": 1.2,
+          "tipo": "humo",
+          "x": 1500,
+          "y": 500,
+          "dur": 2.5
+        },
+        {
+          "en": 0.6,
+          "tipo": "temblor",
+          "dur": 0.5,
+          "intensidad": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "fuego",
+          "x": 500,
+          "y": 790,
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "halcon",
+      "fondo": "ngahere",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Māui se transformó en un halcón, el kāhu, y voló tan rápido como pudo.",
+          "en": "So Māui changed himself into a hawk, the kāhu, and flew as fast as his wings could carry him."
+        },
+        {
+          "es": "Pero el fuego lo seguía, y casi lo alcanzaba en el aire.",
+          "en": "But the fire chased him, and almost caught him in the air."
+        },
+        {
+          "es": "Se lanzó a un estanque. Pero el agua estaba casi hirviendo.",
+          "en": "He dived into a pool of water. But even the water was almost boiling."
+        },
+        {
+          "es": "Ardían los bosques. Ardían la tierra y el mar. No había dónde posarse.",
+          "en": "The forests were burning. The land and the sea were burning. There was nowhere to land."
+        },
+        {
+          "es": "¿Tú te habrías detenido después de la primera llama?",
+          "en": "Would you have stopped after the very first flame?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "puna",
+          "x": 1500,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "maui_joven",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "transforma",
+              "en_que": "kahu"
+            },
+            {
+              "en": 0.6,
+              "hace": "vuela",
+              "a": [
+                1100,
+                320
+              ],
+              "dur": 1.2
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1500,
+                700
+              ],
+              "dur": 0.5
+            },
+            {
+              "en": 2.7,
+              "hace": "vuela",
+              "a": [
+                1900,
+                300
+              ],
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.8,
+          "tipo": "fuego",
+          "x": 700,
+          "y": 790,
+          "dur": 4
+        },
+        {
+          "en": 1.2,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 500,
+          "dur": 2
+        },
+        {
+          "en": 2.5,
+          "tipo": "humo",
+          "x": 1500,
+          "y": 640,
+          "dur": 0.8
+        },
+        {
+          "en": 3,
+          "tipo": "fuego",
+          "x": 2000,
+          "y": 790,
+          "dur": 2
+        },
+        {
+          "en": 3.2,
+          "tipo": "humo",
+          "x": 1800,
+          "y": 400,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "KĀHU · HALCÓN",
+            "en": "KĀHU · HAWK"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1.5
+        }
+      ]
+    },
+    {
+      "id": "lluvia",
+      "fondo": "ngahere",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Māui llamó a sus antepasados: Tāwhirimātea, el dios de los vientos, y Whatitiri, el trueno.",
+          "en": "Māui called on his ancestors: Tāwhirimātea, god of the winds, and Whatitiri, the thunder."
+        },
+        {
+          "es": "«¡Denme agua! ¡Agua para apagar este fuego que me persigue!»",
+          "en": "'Give me water! Water to quench this fire that is chasing me!'"
+        },
+        {
+          "es": "Llegaron ráfagas y vendavales, y cayó una lluvia fuerte y larga.",
+          "en": "Squalls and gales came rushing in, and a heavy, lasting rain poured down."
+        },
+        {
+          "es": "El fuego se apagó. Y Mahuika casi muere bajo la lluvia, gritando como antes había gritado Māui.",
+          "en": "The fire went out. And Mahuika almost perished in the rain, shrieking as Māui had shrieked before."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kapua",
+          "x": 700,
+          "y": 260,
+          "s": 1.1,
+          "en": 0.4,
+          "props": {
+            "oscura": true
+          }
+        },
+        {
+          "tipo": "kapua",
+          "x": 1500,
+          "y": 290,
+          "s": 1,
+          "en": 0.6,
+          "props": {
+            "oscura": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "kahu",
+          "x": 500,
+          "y": 420,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                650,
+                380
+              ],
+              "dur": 1
+            },
+            {
+              "en": 3.2,
+              "hace": "vuela",
+              "a": [
+                800,
+                450
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "tawhirimatea",
+          "como": "tawhirimatea",
+          "x": 1150,
+          "y": 430,
+          "escala": 0.85,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.4,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "mahuika",
+          "como": "mahuika",
+          "x": 1650,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "tiembla",
+              "dur": 0.9
+            },
+            {
+              "en": 3.4,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fuego",
+          "x": 1300,
+          "y": 790,
+          "dur": 2.1
+        },
+        {
+          "en": 1.9,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "rayo",
+          "x": 1400,
+          "dur": 0.3
+        },
+        {
+          "en": 2.2,
+          "tipo": "lluvia",
+          "dur": 1.4
+        },
+        {
+          "en": 3.6,
+          "tipo": "humo",
+          "x": 1300,
+          "y": 700,
+          "dur": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "arboles",
+      "fondo": "ngahere",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero antes de que se perdiera todo, Mahuika salvó unas pocas chispas.",
+          "en": "But before it was all lost, Mahuika saved a few sparks."
+        },
+        {
+          "es": "Las arrojó dentro del árbol kaikōmako y de unos pocos árboles más, para protegerlas.",
+          "en": "She threw them into the kaikōmako tree, and into a few other trees, to keep them safe."
+        },
+        {
+          "es": "Otros narradores nombran también al māhoe y al tōtara.",
+          "en": "Other tellers name the māhoe and the tōtara as well."
+        },
+        {
+          "es": "Por eso, dice Grey, la gente todavía usa la madera de esos árboles para hacer fuego.",
+          "en": "That is why, Grey says, people still use the wood of those trees when they need fire."
+        },
+        {
+          "es": "Frotan un palo contra otro… hasta que el fuego escondido despierta.",
+          "en": "They rub one stick against another… until the hidden fire wakes up."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "rakau",
+          "x": 450,
+          "s": 0.9,
+          "props": {
+            "color": "#5E8A46"
+          }
+        },
+        {
+          "tipo": "rakau",
+          "x": 1000,
+          "s": 0.8
+        },
+        {
+          "tipo": "totara",
+          "x": 1550,
+          "s": 0.85
+        },
+        {
+          "tipo": "korakora",
+          "x": 700,
+          "y": 500,
+          "s": 0.7,
+          "hasta": 1.2
+        },
+        {
+          "tipo": "korakora",
+          "x": 1250,
+          "y": 480,
+          "s": 0.6,
+          "en": 0.3,
+          "hasta": 1.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "mahuika",
+          "como": "mahuika",
+          "x": 800,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "lanza"
+            },
+            {
+              "en": 1,
+              "hace": "lanza"
+            },
+            {
+              "en": 1.6,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "kaumatua",
+          "como": "kaumatua",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 1250
+            },
+            {
+              "en": 3.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 4,
+              "hace": "tiembla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "chispas",
+          "x": 460,
+          "y": 500,
+          "dur": 0.5
+        },
+        {
+          "en": 1.2,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 480,
+          "dur": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1550,
+          "y": 520,
+          "dur": 0.6
+        },
+        {
+          "en": 4.5,
+          "tipo": "chispas",
+          "x": 1180,
+          "y": 720,
+          "dur": 0.5
+        },
+        {
+          "en": 4.6,
+          "tipo": "fogata",
+          "x": 1180,
+          "y": 780
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "KAIKŌMAKO",
+            "en": "KAIKŌMAKO"
+          },
+          "x": 460,
+          "y": 240,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "MĀHOE · TŌTARA",
+            "en": "MĀHOE · TŌTARA"
+          },
+          "x": 1300,
+          "y": 240,
+          "hasta": 2.9
+        },
+        {
+          "en": 3.1,
+          "texto": {
+            "es": "POR ESO EL FUEGO VIVE EN LA MADERA",
+            "en": "THAT'S WHY FIRE LIVES IN THE WOOD"
+          },
+          "x": 960,
+          "y": 220,
+          "estilo": "porque",
+          "hasta": 4.4
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "kainga",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Algunos dicen que el kāhu todavía lleva las plumas chamuscadas por aquel fuego.",
+          "en": "Some say the kāhu still carries feathers scorched by that fire."
+        },
+        {
+          "es": "Cuando Māui volvió, sus padres le dijeron: «Te advertimos. Le hiciste trampa a tu antepasada.»",
+          "en": "When Māui came home, his parents said: 'We warned you. You played tricks on your ancestress.'"
+        },
+        {
+          "es": "Pero Māui no pensaba cambiar. Y su padre le advirtió que eso terminaría mal.",
+          "en": "But Māui had no plans to change. And his father warned him that it would end badly."
+        },
+        {
+          "es": "¿Māui fue un héroe o solo un tramposo con suerte? Cuéntanos en los comentarios.",
+          "en": "Was Māui a hero, or just a lucky trickster? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, Māui enfrenta a su antepasada más grande. Es Māui y la diosa de la muerte.",
+          "en": "Next time, Māui faces his greatest ancestress of all. It is Māui and the Goddess of Death."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "whare",
+          "x": 250,
+          "s": 0.7,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "kahu",
+          "como": "kahu",
+          "x": 1700,
+          "y": 300,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                1300,
+                260
+              ],
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "maui",
+          "como": "maui_joven",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 650
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.4,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "makeatutara",
+          "como": "makeatutara",
+          "x": 1000,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            },
+            {
+              "en": 2.4,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "taranga",
+          "como": "taranga",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "niega"
+            },
+            {
+              "en": 4,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 0.9
+        }
+      ],
+      "rotulos": []
+    }
+  ]
+}

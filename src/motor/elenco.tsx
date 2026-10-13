@@ -5,6 +5,9 @@ import { C, Personaje, PersonajeProps, Borde, CalidadHD } from '../comun/vasija'
 import { Cuadrupedo, Serpiente, Ave, Pez, Escorpion, AvePie, Bichito, TipoCuadrupedo } from './bestias';
 import { AnimalNorte, EspecieNorte } from './norteExtra';
 import { ELENCO_AZTECA, NOMBRE_EN_AZTECA, type DibujoProps } from './elencoAzteca';
+import { ELENCO_HINDU, NOMBRE_EN_HINDU } from './elencoHindu';
+import { ELENCO_BALINES, NOMBRE_EN_BALINES } from './elencoBalines';
+import { ELENCO_MAORI, NOMBRE_EN_MAORI } from './elencoMaori';
 
 type Persona = { tipo: 'persona'; p: Partial<PersonajeProps>; griego?: string; extra?: 'minotauro' | 'medusa' | 'ciclope' | 'centauro' | 'alado' };
 type Bestia =
@@ -25,6 +28,9 @@ const m = (p: Partial<PersonajeProps>, griego?: string, extra?: Persona['extra']
 
 export const ELENCO: Record<string, Ficha> = {
   ...ELENCO_AZTECA, // aztecas (tema códice): elencoAzteca.tsx
+  ...ELENCO_HINDU, // hindúes (tema pahari): elencoHindu.tsx
+  ...ELENCO_BALINES, // balinesas (tema kamasan): elencoBalines.tsx
+  ...ELENCO_MAORI, // maoríes (tema kōwhaiwhai): elencoMaori.tsx
   // Olímpicos
   zeus: h({ tocado: 'corona', capa: C.purpura, objeto: 'rayo', barba: true }, 'ΖΕΥΣ'),
   hera: m({ tocado: 'corona', objeto: 'cetro', capa: C.purpura }, 'ΗΡΑ'),
@@ -319,7 +325,7 @@ export const ELENCO: Record<string, Ficha> = {
 };
 
 /** Nombre en pantalla por idioma (por ahora inglés; si falta, el griego). */
-export const NOMBRE_EN: Record<string, string> = {...NOMBRE_EN_AZTECA, "zeus": "ZEUS", "hera": "HERA", "poseidon": "POSEIDON", "hades": "HADES", "demeter": "DEMETER", "hestia": "HESTIA", "atenea": "ATHENA", "apolo": "APOLLO", "artemisa": "ARTEMIS", "ares": "ARES", "afrodita": "APHRODITE", "hefesto": "HEPHAESTUS", "hermes": "HERMES", "dioniso": "DIONYSUS", "persefone": "PERSEPHONE", "eros": "EROS", "helios": "HELIOS", "selene": "SELENE", "eos": "EOS", "nix": "NYX", "cronos": "CRONUS", "rea": "RHEA", "gea": "GAIA", "urano": "URANUS", "metis": "METIS", "temis": "THEMIS", "atlas": "ATLAS", "prometeo": "PROMETHEUS", "epimeteo": "EPIMETHEUS", "oceano": "OCEANUS", "heracles": "HERACLES", "perseo": "PERSEUS", "teseo": "THESEUS", "jason": "JASON", "aquiles": "ACHILLES", "hector": "HECTOR", "agamenon": "AGAMEMNON", "menelao": "MENELAUS", "odiseo": "ODYSSEUS", "paris": "PARIS", "priamo": "PRIAM", "helena": "HELEN", "penelope": "PENELOPE", "andromaca": "ANDROMACHE", "casandra": "CASSANDRA", "medea": "MEDEA", "ariadna": "ARIADNE", "orfeo": "ORPHEUS", "euridice": "EURYDICE", "pandora": "PANDORA", "edipo": "OEDIPUS", "antigona": "ANTIGONE", "dedalo": "DAEDALUS", "icaro": "ICARUS", "minos": "MINOS", "midas": "MIDAS", "narciso": "NARCISSUS", "eco": "ECHO", "psique": "PSYCHE", "aracne": "ARACHNE", "tiresias": "TIRESIAS", "caronte": "CHARON", "ciclope": "CYCLOPS", "minotauro": "MINOTAUR", "medusa": "MEDUSA", "gorgona": "GORGON", "centauro": "CENTAUR", "quiron": "CHIRON", "furia": "FURY", "musa": "MUSE", "pegaso": "PEGASUS", "cerbero": "CERBERUS", "esfinge": "SPHINX", "quimera": "CHIMERA", "piton": "PYTHON", "dragon": "DRAGON", "hidra": "HYDRA", "tifon": "TYPHON", "monstruo_marino": "SEA MONSTER", "arpia": "HARPY", "sirena": "SIREN"};
+export const NOMBRE_EN: Record<string, string> = {...NOMBRE_EN_AZTECA, ...NOMBRE_EN_HINDU, ...NOMBRE_EN_BALINES,...NOMBRE_EN_MAORI, "zeus": "ZEUS", "hera": "HERA", "poseidon": "POSEIDON", "hades": "HADES", "demeter": "DEMETER", "hestia": "HESTIA", "atenea": "ATHENA", "apolo": "APOLLO", "artemisa": "ARTEMIS", "ares": "ARES", "afrodita": "APHRODITE", "hefesto": "HEPHAESTUS", "hermes": "HERMES", "dioniso": "DIONYSUS", "persefone": "PERSEPHONE", "eros": "EROS", "helios": "HELIOS", "selene": "SELENE", "eos": "EOS", "nix": "NYX", "cronos": "CRONUS", "rea": "RHEA", "gea": "GAIA", "urano": "URANUS", "metis": "METIS", "temis": "THEMIS", "atlas": "ATLAS", "prometeo": "PROMETHEUS", "epimeteo": "EPIMETHEUS", "oceano": "OCEANUS", "heracles": "HERACLES", "perseo": "PERSEUS", "teseo": "THESEUS", "jason": "JASON", "aquiles": "ACHILLES", "hector": "HECTOR", "agamenon": "AGAMEMNON", "menelao": "MENELAUS", "odiseo": "ODYSSEUS", "paris": "PARIS", "priamo": "PRIAM", "helena": "HELEN", "penelope": "PENELOPE", "andromaca": "ANDROMACHE", "casandra": "CASSANDRA", "medea": "MEDEA", "ariadna": "ARIADNE", "orfeo": "ORPHEUS", "euridice": "EURYDICE", "pandora": "PANDORA", "edipo": "OEDIPUS", "antigona": "ANTIGONE", "dedalo": "DAEDALUS", "icaro": "ICARUS", "minos": "MINOS", "midas": "MIDAS", "narciso": "NARCISSUS", "eco": "ECHO", "psique": "PSYCHE", "aracne": "ARACHNE", "tiresias": "TIRESIAS", "caronte": "CHARON", "ciclope": "CYCLOPS", "minotauro": "MINOTAUR", "medusa": "MEDUSA", "gorgona": "GORGON", "centauro": "CENTAUR", "quiron": "CHIRON", "furia": "FURY", "musa": "MUSE", "pegaso": "PEGASUS", "cerbero": "CERBERUS", "esfinge": "SPHINX", "quimera": "CHIMERA", "piton": "PYTHON", "dragon": "DRAGON", "hidra": "HYDRA", "tifon": "TYPHON", "monstruo_marino": "SEA MONSTER", "arpia": "HARPY", "sirena": "SIREN"};
 
 export type Estado = {
   x: number; y: number; s: number; voltear: boolean; opacity: number;

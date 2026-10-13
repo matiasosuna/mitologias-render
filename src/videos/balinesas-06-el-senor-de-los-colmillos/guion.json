@@ -1,0 +1,912 @@
+{
+  "id": "balinesas-06-el-senor-de-los-colmillos",
+  "serie": "balinesas",
+  "numero": "06",
+  "titulo": {
+    "es": "El señor de los colmillos de Nusa Penida",
+    "en": "The Fanged Lord of Nusa Penida"
+  },
+  "tituloGriego": "THE FANGED LORD OF NUSA PENIDA",
+  "miniatura": {
+    "heroe": "ratu_gede_mecaling",
+    "rival": "pemangku"
+  },
+  "siguiente": {
+    "es": "La viuda de Girah",
+    "en": "The Widow of Girah"
+  },
+  "escenas": [
+    {
+      "id": "recuerdo",
+      "fondo": "pantai",
+      "camara": {
+        "de": 0,
+        "a": 200,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, un rey y una princesa china quedaron en la memoria como dos muñecos gigantes, Jero Gede y Jero Luh.",
+          "en": "Last time, a king and a Chinese princess were remembered as two giant puppets, Jero Gede and Jero Luh."
+        },
+        {
+          "es": "Ahora mira el mar desde la costa sureste de Bali. Verás otra isla: Nusa Penida.",
+          "en": "Now look out to sea from Bali's southeast coast. You will see another island: Nusa Penida."
+        },
+        {
+          "es": "Está a un viaje corto en bote: una isla seca de acantilados blancos y agua azul profundo.",
+          "en": "It is only a short boat ride away, a dry island of white cliffs and deep blue water."
+        },
+        {
+          "es": "Los balineses dicen que allí vive un señor temible. Se llama Ratu Gede Mecaling.",
+          "en": "The Balinese say a fearsome lord lives there. His name is Ratu Gede Mecaling."
+        },
+        {
+          "es": "Mecaling significa 'el de los colmillos'.",
+          "en": "Mecaling means 'the one with fangs'."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "pescador",
+          "como": "pria_bali",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 3.2,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 4,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "anak_bali",
+          "x": 760,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "mira",
+              "a": 1400
+            },
+            {
+              "en": 4.1,
+              "hace": "abraza"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 1.3,
+          "texto": {
+            "es": "NUSA PENIDA",
+            "en": "NUSA PENIDA"
+          },
+          "x": 1350,
+          "y": 300,
+          "hasta": 2.4
+        }
+      ]
+    },
+    {
+      "id": "retrato",
+      "fondo": "setra",
+      "camara": {
+        "de": 0,
+        "a": 140,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Lo imaginan como un gigante de piel oscura, pelo salvaje y largos colmillos blancos.",
+          "en": "He is pictured as a giant, with dark skin, wild hair and long white fangs."
+        },
+        {
+          "es": "Gobierna a los bhuta kala, espíritus invisibles que traen enfermedad y mala suerte.",
+          "en": "He rules over the bhuta kala, invisible spirits that bring sickness and bad luck."
+        },
+        {
+          "es": "Estos espíritus son fuerzas de la naturaleza. Se vuelven peligrosos cuando tienen hambre o cuando la gente se olvida de ellos.",
+          "en": "These spirits are forces of nature. They become dangerous when they are hungry, or when people forget them."
+        },
+        {
+          "es": "Pero para los balineses no es simplemente malo. Es un señor poderoso, y hay que respetarlo.",
+          "en": "But to the Balinese he is not simply evil. He is a mighty lord, and he must be respected."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "mecaling",
+          "como": "ratu_gede_mecaling",
+          "x": 960,
+          "escala": 0.95,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 0.6,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            },
+            {
+              "en": 3.4,
+              "hace": "mira",
+              "a": 600
+            }
+          ]
+        },
+        {
+          "id": "espiritu1",
+          "como": "raksasa_bali",
+          "x": 450,
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "espiritu2",
+          "como": "raksasa_bali",
+          "x": 1550,
+          "capa": "fondo",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "mes",
+      "fondo": "pantai",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Muchos balineses dicen que su ejército de espíritus cruza el mar en el sexto mes del año balinés, cuando empiezan las lluvias.",
+          "en": "Many Balinese say his spirit army crosses the sea in the sixth month of the Balinese year, when the rains begin."
+        },
+        {
+          "es": "Antes, esa era la estación en que la enfermedad se contagiaba más rápido.",
+          "en": "In the old days, that was the season when sickness spread fastest."
+        },
+        {
+          "es": "Decían que los espíritus llegaban de noche sobre el agua, sin que nadie los viera, como un viento frío.",
+          "en": "People said the spirits came over the water at night, unseen, like a cold wind."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "espiritu1",
+          "como": "raksasa_bali",
+          "x": 1500,
+          "capa": "fondo",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 0.6,
+              "hace": "camina",
+              "a": 900,
+              "dur": 2
+            },
+            {
+              "en": 2.6,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "espiritu2",
+          "como": "raksasa_bali",
+          "x": 1750,
+          "capa": "fondo",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 0.8,
+              "hace": "camina",
+              "a": 1150,
+              "dur": 2
+            },
+            {
+              "en": 2.7,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "nenek_bali",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entristece"
+            },
+            {
+              "en": 2.2,
+              "hace": "tiembla",
+              "dur": 0.5
+            },
+            {
+              "en": 2.6,
+              "hace": "abraza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "lluvia",
+          "dur": 1.5
+        },
+        {
+          "en": 1.5,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "defensa",
+      "fondo": "desa_malam",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces las aldeas se preparaban.",
+          "en": "So the villages prepared."
+        },
+        {
+          "es": "Ponían ofrendas en los cruces de caminos y en las playas: regalos para los espíritus, para que pasaran en paz.",
+          "en": "They placed offerings at crossroads and on the beaches: gifts for the spirits, so they would pass by in peace."
+        },
+        {
+          "es": "Los regalos para los dioses se ponen en alto, en los altares. Los regalos para los espíritus van abajo, en el suelo.",
+          "en": "Gifts for the gods are placed up high, on shrines. Gifts for the spirits go down low, on the ground."
+        },
+        {
+          "es": "Los sacerdotes rociaban agua bendita y tocaban sus campanas.",
+          "en": "Priests sprinkled holy water and rang their bells."
+        },
+        {
+          "es": "Y la gente sacaba a sus protectores.",
+          "en": "And the people brought out their protectors."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "canang",
+          "x": 700,
+          "en": 1.3
+        },
+        {
+          "tipo": "canang",
+          "x": 820,
+          "en": 1.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "wanita_bali",
+          "x": 400,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "camina",
+              "a": 600,
+              "dur": 0.4
+            },
+            {
+              "en": 1.4,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "pemangku",
+          "x": 1200,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 3.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "gede",
+          "como": "jero_gede",
+          "x": 2100,
+          "escala": 0.8,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "entra",
+              "a": 1650,
+              "dur": 0.8
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.1,
+          "tipo": "chispas",
+          "x": 1000,
+          "y": 650,
+          "dur": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "engano",
+      "fondo": "desa",
+      "camara": {
+        "de": 0,
+        "a": 180,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Uno de esos protectores es el Barong Landung, los muñecos altos que conociste la vez pasada.",
+          "en": "One of those protectors is the Barong Landung, the tall puppets you met last time."
+        },
+        {
+          "es": "Un relato dice que el alto y oscuro, Jero Gede, está hecho a imagen del propio Mecaling.",
+          "en": "One telling says the tall dark one, Jero Gede, is made in Mecaling's own likeness."
+        },
+        {
+          "es": "Cuando los espíritus lo ven caminar por la aldea, creen que su señor ya está ahí, y siguen de largo.",
+          "en": "When the spirits see him walking through the village, they think their lord is already there, and they move on."
+        },
+        {
+          "es": "Un muñeco gigante, para engañar a un ejército invisible.",
+          "en": "A giant puppet, to fool an invisible army."
+        },
+        {
+          "es": "En algunas aldeas los dos muñecos hasta se burlan uno del otro y hacen reír a la gente.",
+          "en": "In some villages the two puppets even tease each other, and make the crowd laugh."
+        },
+        {
+          "es": "¿Confiarías en un muñeco para cuidar tu aldea? Cuéntanos en los comentarios.",
+          "en": "Would you trust a puppet to guard your village? Tell us in the comments."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "gede",
+          "como": "jero_gede",
+          "x": 600,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 900,
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "luh",
+          "como": "jero_luh",
+          "x": 300,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "camina",
+              "a": 600,
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "espiritu",
+          "como": "raksasa_bali",
+          "x": 1750,
+          "capa": "medio",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.8,
+              "hace": "gira"
+            },
+            {
+              "en": 3,
+              "hace": "corre",
+              "a": 2400,
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "anak_bali",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 4.3,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "barong",
+      "fondo": "desa",
+      "camara": {
+        "de": 200,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "El Barong Ket, un protector con forma de león, también baila de casa en casa en tiempos difíciles.",
+          "en": "The Barong Ket, a lion-like protector, also dances from house to house in hard times."
+        },
+        {
+          "es": "Su mandíbula que castañetea y sus cascabeles, dicen, espantan a los espíritus dañinos.",
+          "en": "Its clacking jaw and jingling bells are said to chase harmful spirits away."
+        },
+        {
+          "es": "Volveremos a ver al Barong en su gran batalla contra Rangda, la reina bruja.",
+          "en": "We will meet the Barong again, in its great battle against the witch-queen Rangda."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "barong",
+          "como": "barong",
+          "x": 600,
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 1000,
+              "dur": 1
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "wanita_bali",
+          "x": 1550,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "rangda",
+          "como": "rangda",
+          "x": 1900,
+          "capa": "fondo",
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 2.6,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    },
+    {
+      "id": "ped",
+      "fondo": "pura",
+      "camara": {
+        "de": 0,
+        "a": 160,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hoy, miles de peregrinos cruzan el mar hasta Nusa Penida, al templo llamado Pura Dalem Ped.",
+          "en": "Today, thousands of pilgrims cross the sea to Nusa Penida, to the temple called Pura Dalem Ped."
+        },
+        {
+          "es": "No van a pelear contra Ratu Gede Mecaling. Van a pedirle protección.",
+          "en": "They do not go to fight Ratu Gede Mecaling. They go to ask him for protection."
+        },
+        {
+          "es": "Pescadores, viajeros y familias enteras rezan para que sus espíritus los dejen en paz.",
+          "en": "Fishermen, travelers and whole families pray that his spirits will leave them in peace."
+        },
+        {
+          "es": "En Bali, hasta a un poder temible se lo recibe con respeto, no con odio.",
+          "en": "In Bali, even a fearsome power is met with respect, not with hate."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "gebogan",
+          "x": 1000,
+          "en": 1.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "wanita_bali",
+          "x": 400,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "camina",
+              "a": 850,
+              "dur": 0.8
+            },
+            {
+              "en": 1.3,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "pria_bali",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.8,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "mecaling",
+          "como": "ratu_gede_mecaling",
+          "x": 1750,
+          "capa": "fondo",
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "PURA DALEM PED",
+            "en": "PURA DALEM PED"
+          },
+          "x": 960,
+          "y": 220,
+          "hasta": 1.6
+        }
+      ]
+    },
+    {
+      "id": "equilibrio",
+      "fondo": "pura",
+      "camara": {
+        "de": 200,
+        "a": 300,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Esta idea tiene un nombre en Bali: rwa bhineda, los dos que son distintos.",
+          "en": "This idea has a name in Bali: rwa bhineda, the two that are different."
+        },
+        {
+          "es": "El bien y el mal, el día y la noche, los dioses y los demonios: los dos son parte del mundo.",
+          "en": "Good and bad, day and night, gods and demons: both belong to the world."
+        },
+        {
+          "es": "No se puede destruir uno de los lados. Solo se puede mantener a los dos en equilibrio.",
+          "en": "You cannot destroy one side. You can only keep the two in balance."
+        },
+        {
+          "es": "La tela a cuadros blancos y negros llamada poleng, que envuelve los árboles sagrados, es una señal de ese equilibrio.",
+          "en": "The black and white checkered cloth called poleng, wrapped around sacred trees, is a sign of that balance."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "beringin",
+          "x": 1300,
+          "s": 0.95
+        }
+      ],
+      "actores": [
+        {
+          "id": "sacerdote",
+          "como": "pemangku",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "guardia",
+          "como": "pecalang",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "mira",
+              "a": 1300
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": [
+        {
+          "en": 3.3,
+          "texto": {
+            "es": "POR ESO LOS ÁRBOLES SAGRADOS LLEVAN POLENG",
+            "en": "THAT IS WHY SACRED TREES WEAR POLENG"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "setra",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero no todo peligro viene del otro lado del mar. Algunos, dicen las historias, vienen de dentro de la aldea.",
+          "en": "But not every danger comes from across the sea. Some, the stories say, come from inside the village."
+        },
+        {
+          "es": "¿Alguna vez viste un árbol envuelto en tela a cuadros? Cuéntanos dónde en los comentarios.",
+          "en": "Have you ever seen a tree wrapped in checkered cloth? Tell us where in the comments."
+        },
+        {
+          "es": "La próxima vez: la viuda de Girah, la bruja más temida de las historias balinesas.",
+          "en": "Next time: the widow of Girah, the most feared witch in Balinese stories."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "calon",
+          "como": "calon_arang",
+          "x": 1300,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "mira",
+              "a": 600
+            }
+          ]
+        },
+        {
+          "id": "discipula",
+          "como": "murid_leak",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "sombra"
+            }
+          ]
+        }
+      ],
+      "efectos": [],
+      "rotulos": []
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El muñeco gigante que engaña a los espíritus",
+        "en": "The giant puppet that tricks the spirits"
+      },
+      "escena": "engano",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 800
+    },
+    {
+      "gancho": {
+        "es": "El señor de los colmillos al otro lado del mar",
+        "en": "The fanged lord across the sea"
+      },
+      "escena": "retrato",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Por qué los árboles sagrados de Bali llevan tela a cuadros",
+        "en": "Why sacred trees in Bali wear checkered cloth"
+      },
+      "escena": "equilibrio",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    }
+  ]
+}
