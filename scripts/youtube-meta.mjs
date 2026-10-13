@@ -2,6 +2,7 @@
 // Uso: node scripts/youtube-meta.mjs griegas-01-origen  → out/<id>/youtube.json
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { leerTitulos, lineaTemporada, nombreSerie } from './titulos.mjs';
 
 const id = process.argv[2], idioma = 'en';
 const g = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8'));
@@ -14,8 +15,17 @@ const mmss = (fr) => { const s = Math.floor(fr / tl.fps); return `${Math.floor(s
 const propio = join('src/videos', id, 'youtube.json');
 const extra = existsSync(propio) ? JSON.parse(readFileSync(propio, 'utf8')) : meta.episodios[id] ?? {};
 const capitulos = ['0:00 Intro', ...tl.escenas.map((e, i) => `${mmss(e.from)} ${extra.capitulos?.[i] ?? e.id}`)];
-const titulo = g.especial ? `${g.titulo[idioma]} | ${g.especial.nombre[idioma]}${g.especial.parte ? ` · Part ${g.especial.parte}` : ''}` : `${g.titulo[idioma]} | ${nordica ? 'Norse' : egipcia ? 'Egyptian' : hawaiana ? 'Hawaiian' : norteamericana ? 'Native American' : hindu ? 'Hindu' : azteca ? 'Aztec' : balinesa ? 'Balinese' : maori ? 'Māori' : 'Greek'} Mythology Ep. ${ep}`;
-const descripcion = [[].concat(extra.gancho ?? '').join(' '), '', '📜 Chapters', ...capitulos, '', extra.siguiente ? `▶ Next episode: ${extra.siguiente}` : '', '', meta.pie, '', meta.hashtags].join('\n').replace(/\n{3,}/g, '\n\n');
-const salida = { titulo, descripcion, etiquetas: [...meta.etiquetas, ...(extra.etiquetas ?? [])], lista: extra.lista ?? (g.especial ? g.especial.nombre[idioma] : meta.listaPorDefecto), miniatura: `out/${id}/miniatura.jpg`, video: `out/${id}/${id}.en.mp4` };
+const nuevo = leerTitulos()[id]; // título curioso + temporada (src/videos/titulos.json) si existe
+const viejo = g.especial ? `${g.titulo[idioma]} | ${g.especial.nombre[idioma]}${g.especial.parte ? ` · Part ${g.especial.parte}` : ''}` : `${g.titulo[idioma]} | ${nordica ? 'Norse' : egipcia ? 'Egyptian' : hawaiana ? 'Hawaiian' : norteamericana ? 'Native American' : hindu ? 'Hindu' : azteca ? 'Aztec' : balinesa ? 'Balinese' : maori ? 'Māori' : 'Greek'} Mythology Ep. ${ep}`;
+const titulo = nuevo?.titulo ?? viejo;
+const linea = lineaTemporada(nuevo, g.serie);
+const gancho = [].concat(extra.gancho ?? '').join(' ');
+const descripcion = [...(linea && !gancho.includes(linea) ? [linea, ''] : []), gancho, '', '📜 Chapters', ...capitulos, '', extra.siguiente ? `▶ Next episode: ${extra.siguiente}` : '', '', meta.pie, '', meta.hashtags].join('\n').replace(/\n{3,}/g, '\n\n');
+// lista de la temporada ("Norse Mythology · Season 2: …") si ya existe en listas.json
+function listaDeTemporada() {
+  if (!nuevo?.temporada || !existsSync('src/videos/listas.json')) return null;
+  return Object.keys(JSON.parse(readFileSync('src/videos/listas.json', 'utf8'))).find((n) => n.startsWith(`${nombreSerie(g.serie)} · Season ${nuevo.temporada}:`)) ?? null;
+}
+const salida = { titulo, descripcion, etiquetas: [...meta.etiquetas, ...(extra.etiquetas ?? [])], lista: extra.lista ?? (g.especial ? g.especial.nombre[idioma] : listaDeTemporada() ?? meta.listaPorDefecto), miniatura: `out/${id}/miniatura.jpg`, video: `out/${id}/${id}.en.mp4` };
 writeFileSync(join('out', id, 'youtube.json'), JSON.stringify(salida, null, 2));
 console.log(`${titulo} (${titulo.length} car.)\n\n${descripcion}`);

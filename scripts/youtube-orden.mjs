@@ -1,4 +1,4 @@
-// Ordena cada lista de reproducción por número de episodio ("… Ep. N" en el título). Uso: node scripts/youtube-orden.mjs
+// Ordena cada lista de reproducción por temporada/episodio (src/videos/titulos.json; si no, "… Ep. N" del título). Uso: node scripts/youtube-orden.mjs
 import { execFileSync } from 'node:child_process';
 import { readFileSync, writeFileSync } from 'node:fs';
 const env = Object.fromEntries(readFileSync('.env', 'utf8').split('\n').filter((l) => l.includes('=')).map((l) => [l.slice(0, l.indexOf('=')), l.slice(l.indexOf('=') + 1).trim()]));
@@ -10,9 +10,12 @@ if (t.vence < Date.now() + 60000) {
 }
 const api = async (m, ruta, q, json) => { const r = await fetch(`https://www.googleapis.com/youtube/v3${ruta}?${new URLSearchParams(q)}`, { method: m, headers: { authorization: `Bearer ${t.access_token}`, ...(json ? { 'content-type': 'application/json' } : {}) }, body: json ? JSON.stringify(json) : undefined }); const j = await r.json(); if (j.error) throw new Error(j.error.message); return j; };
 const listas = JSON.parse(readFileSync('src/videos/listas.json', 'utf8'));
+const titulos = JSON.parse(readFileSync('src/videos/titulos.json', 'utf8'));
+const porVideo = Object.fromEntries(Object.entries(JSON.parse(readFileSync('src/videos/youtube-ids.json', 'utf8'))).map(([id, v]) => [v, id]));
 for (const [nombre, id] of Object.entries(listas)) {
   const items = (await api('GET', '/playlistItems', { part: 'snippet', playlistId: id, maxResults: '50' })).items;
-  const ep = (it) => Number(it.snippet.title.match(/Ep\. (\d+)/)?.[1] ?? 999);
+  // orden: temporada/episodio de titulos.json (por id de video); si no está, el viejo "Ep. N" del título
+  const ep = (it) => { const t = titulos[porVideo[it.snippet.resourceId.videoId]]; return t ? t.temporada * 1000 + t.episodio : Number(it.snippet.title.match(/Ep\. (\d+)/)?.[1] ?? 99999); };
   const orden = [...items].sort((a, b) => ep(a) - ep(b));
   let movidos = 0;
   for (let i = 0; i < orden.length; i++) {

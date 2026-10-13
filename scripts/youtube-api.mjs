@@ -10,6 +10,7 @@
 import { readFileSync, writeFileSync, existsSync, statSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createServer } from 'node:http';
+import { pathToFileURL } from 'node:url';
 
 const env = Object.fromEntries(readFileSync('.env', 'utf8').split('\n').filter((l) => l.includes('=')).map((l) => [l.slice(0, l.indexOf('=')), l.slice(l.indexOf('=') + 1).trim()]));
 const CLIENT = { id: env.YT_CLIENT_ID, secret: env.YT_CLIENT_SECRET };
@@ -40,7 +41,7 @@ async function autorizar() {
   console.log('token guardado');
 }
 
-async function acceso() {
+export async function acceso() {
   if (!existsSync(TOKEN)) throw new Error('Primero: node scripts/youtube-api.mjs auth');
   const t = JSON.parse(readFileSync(TOKEN, 'utf8'));
   if (t.vence > Date.now() + 60_000) return t.access_token;
@@ -49,14 +50,20 @@ async function acceso() {
   return n.access_token;
 }
 
-async function api(metodo, ruta, { query = {}, json, cuerpo, tipo } = {}) {
+/** Llamada a la API con el token guardado (lo renueva si vence). Los errores traen .status y .razon (p. ej. 'quotaExceeded'). */
+export async function api(metodo, ruta, { query = {}, json, cuerpo, tipo } = {}) {
   const r = await fetch(`${ruta.startsWith('http') ? ruta : API + ruta}?${new URLSearchParams(query)}`, {
     method: metodo,
     headers: { authorization: `Bearer ${await acceso()}`, ...(json ? { 'content-type': 'application/json' } : tipo ? { 'content-type': tipo } : {}) },
     body: json ? JSON.stringify(json) : cuerpo,
   });
   const txt = await r.text();
-  if (!r.ok) throw new Error(`${metodo} ${ruta} → ${r.status} ${txt.slice(0, 400)}`);
+  if (!r.ok) {
+    const e = new Error(`${metodo} ${ruta} → ${r.status} ${txt.slice(0, 400)}`);
+    e.status = r.status;
+    try { e.razon = JSON.parse(txt).error?.errors?.[0]?.reason; } catch {}
+    throw e;
+  }
   return txt ? JSON.parse(txt) : {};
 }
 
@@ -70,8 +77,10 @@ function multipart(meta, datos, tipo) {
   return { cuerpo, tipo: `multipart/related; boundary=${b}` };
 }
 
-const [cmd, ...a] = process.argv.slice(2);
-if (cmd === 'auth') await autorizar();
+// CLI solo si se corre directo (otros scripts importan api/acceso).
+const [cmd, ...a] = import.meta.url === pathToFileURL(process.argv[1] ?? '').href ? process.argv.slice(2) : [null];
+if (cmd === null) { /* importado */ }
+else if (cmd === 'auth') await autorizar();
 else if (cmd === 'videos') {
   const canal = await api('GET', '/channels', { query: { part: 'contentDetails,snippet', mine: 'true' } });
   const subidas = canal.items[0].contentDetails.relatedPlaylists.uploads;
