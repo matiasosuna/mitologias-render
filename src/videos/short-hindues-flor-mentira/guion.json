@@ -1,0 +1,307 @@
+{
+  "id": "short-hindues-flor-mentira",
+  "formato": "short",
+  "serie": "hindues",
+  "numero": "S",
+  "titulo": {
+    "es": "La flor que mintió por un dios",
+    "en": "The flower that lied for a god"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "La flor que mintió por un dios",
+    "en": "The flower that lied for a god"
+  },
+  "cierre": {
+    "es": "Por qué Brahma tiene tan pocos templos: El pilar sin fin — Mitología hindú, ep. 2",
+    "en": "Why Brahma has so few temples: The Pillar With No End — Hindu Mythology Ep. 2"
+  },
+  "episodio": "hindues-02-el-pilar-sin-fin",
+  "escenas": [
+    {
+      "id": "vuelo",
+      "fondo": "cielo_cosmico",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Brahma voló y voló, pero el pilar no terminaba.",
+          "en": "Brahma flew and flew, but the pillar never ended."
+        },
+        {
+          "es": "Se cansó. Temía volver con las manos vacías.",
+          "en": "He grew tired. He feared going back with empty hands."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilar_fuego",
+          "x": 1250
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "estrellas",
+          "dur": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 720,
+          "y": 640,
+          "escala": 0.75,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "transforma",
+              "en_que": "hamsa_vuela"
+            },
+            {
+              "en": 0.3,
+              "hace": "vuela",
+              "a": [
+                800,
+                520
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                900,
+                380
+              ],
+              "dur": 0.8
+            },
+            {
+              "en": 1.6,
+              "hace": "vuela",
+              "a": [
+                960,
+                420
+              ],
+              "dur": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flor",
+      "fondo": "cielo_cosmico",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Entonces pasó cayendo una flor blanca de ketaki, de dulce aroma.",
+          "en": "Then a white ketaki flower fell past him, with a very sweet scent."
+        },
+        {
+          "es": "Dijo que había caído de la cima del pilar, hacía mucho.",
+          "en": "It said it had fallen from the top of the pillar, long ago."
+        },
+        {
+          "es": "A Brahma se le ocurrió algo: «Di que me viste llegar a la cima». La flor aceptó.",
+          "en": "Brahma had an idea: “Say you saw me reach the top.” The flower agreed."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilar_fuego",
+          "x": 1350
+        },
+        {
+          "tipo": "loto",
+          "x": 860,
+          "y": 520,
+          "s": 0.35,
+          "en": 0.2
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "luz",
+          "x": 860,
+          "y": 480,
+          "dur": 0.8
+        },
+        {
+          "en": 2.8,
+          "tipo": "chispas",
+          "x": 860,
+          "y": 500,
+          "dur": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 620,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "mira",
+              "a": 860
+            },
+            {
+              "en": 1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            },
+            {
+              "en": 2.9,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shiva",
+      "fondo": "oceano_cosmico",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Brahma anunció: «¡Encontré la cima! Esta flor es mi testigo».",
+          "en": "Brahma announced, “I found the top! This flower is my witness.”"
+        },
+        {
+          "es": "El pilar se abrió con un rugido, y salió Shiva.",
+          "en": "The pillar split open with a roar, and Shiva stepped out."
+        },
+        {
+          "es": "Shiva lo había visto todo, y la mentira lo enfureció.",
+          "en": "Shiva had seen everything, and the lie made him furious."
+        },
+        {
+          "es": "El Shiva Purana dice que Brahma no sería adorado como los otros dioses.",
+          "en": "The Shiva Purana says Brahma would not be worshipped like the other gods."
+        },
+        {
+          "es": "La tradición dice que por eso la India tiene tan pocos templos de Brahma.",
+          "en": "Tradition says that is why India has so few Brahma temples."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilar_fuego",
+          "x": 1160,
+          "hasta": 1.6
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.6,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.7,
+          "tipo": "temblor",
+          "dur": 0.6
+        },
+        {
+          "en": 1.8,
+          "tipo": "chispas",
+          "x": 1160,
+          "y": 480,
+          "dur": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "brahma",
+          "como": "brahma",
+          "x": 720,
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 0.6,
+              "hace": "senala"
+            },
+            {
+              "en": 1.9,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 3.3,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "shiva",
+          "como": "shiva",
+          "x": 1160,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 2.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "niega"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
