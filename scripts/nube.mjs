@@ -403,5 +403,11 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     else if (cmd === 'adelantar') adelantar(pos[0]);
     else if (cmd === 'sembrar') sembrar(pos[0], max);
     else throw new Error('uso: node scripts/nube.mjs slot|yt|ig|episodio|especial|adelantar|sembrar <lista>');
-  } catch (e) { console.error(String(e.message ?? e).slice(0, 500)); process.exit(1); }
+  } catch (e) {
+    const m = String(e.message ?? e);
+    // sin cuota diaria de la API de YouTube (se renueva a medianoche del Pacífico ≈ 21:00 HST): no es una falla,
+    // el turno queda pendiente y se reintenta en la corrida siguiente (no pone el job en rojo)
+    if (/exceeded your[\s\S]{0,80}quota|quotaExceeded/.test(m)) { console.log(`YouTube: sin cuota de la API por hoy (${cmd}); se reintenta en la próxima corrida`); process.exit(0); }
+    console.error(m.slice(0, 500)); process.exit(1);
+  }
 }
