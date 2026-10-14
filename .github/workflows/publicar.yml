@@ -12,7 +12,9 @@ name: publicar
 on:
   schedule:
     - cron: '0 2,6,10,14,18,22 * * *' # 16, 20, 00, 04, 08 y 12 HST
-    - cron: '17 2,6,10,14,18,22 * * *' # respaldo por si GitHub saltea el anterior (lo ya hecho en el turno no se repite)
+    # GitHub a veces saltea corridas programadas: además corre cada hora; el turno se calcula como el último
+    # de la lista (turnoUTC) y lo ya hecho en el turno no se repite, así un turno salteado se recupera a la hora siguiente.
+    - cron: '37 * * * *'
   workflow_dispatch:
     inputs:
       slot:

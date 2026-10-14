@@ -102,7 +102,7 @@ else if (cmd === 'videos') {
   for (let i = 0; i < ids.length; i += 50) {
     const v = await api('GET', '/videos', { query: { part: 'status', id: ids.slice(i, i + 50).join(',') } });
     for (const it of v.items) {
-      if (it.status.containsSyntheticMedia === false) { console.log(`${it.id} ya estaba`); continue; }
+      if (it.status.containsSyntheticMedia !== true) { console.log(`${it.id} ya estaba`); continue; }
       const { privacyStatus, publishAt, license, embeddable, publicStatsViewable, selfDeclaredMadeForKids } = it.status;
       const status = { privacyStatus, license, embeddable, publicStatsViewable, selfDeclaredMadeForKids: selfDeclaredMadeForKids ?? false, containsSyntheticMedia: false, ...(publishAt && privacyStatus === 'private' && new Date(publishAt) > new Date() ? { publishAt } : {}) };
       try { await api('PUT', '/videos', { query: { part: 'status' }, json: { id: it.id, status } }); } catch (e) { console.log(`${it.id} ERROR ${String(e.message).slice(0, 120)}`); continue; }
