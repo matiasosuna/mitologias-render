@@ -39,6 +39,7 @@ Leé antes de escribir: `BRIEF-SHORTS.md` (Shorts), `BRIEF-GUION.md` (episodios)
 
 ### Shorts nativos (ítems S…)
 Para cada episodio del ítem, **3 Shorts distintos** (momentos o personajes distintos del episodio, no el mismo con otro gancho):
+- **Nunca repetir una historia** (pedido de Matías): antes de escribir, leé `gancho.en`, `titulo.en` y el `episodio` de TODOS los `src/videos/short-*/guion.json` existentes. Un Short nuevo no puede contar la misma anécdota, el mismo momento ni el mismo giro que otro ya hecho (aunque cambie el gancho o la mitología), ni resumir el episodio entero: es una mini historia de UN momento puntual. Si un episodio no da 3 momentos nuevos, hacé menos y anotalo en la cola.
 - Id `short-<serie>-<slug>` (slug corto en español, sin acentos, que no exista ya en `src/videos/`).
 - `guion.json` como `short-hawaianas-hiku`: `formato: "short"`, `serie`, `numero: "S"`, `titulo`/`gancho` {es,en} (gancho ≤ 8 palabras, situación imposible o truco), `tituloGriego: ""`, `episodio: "<id del episodio>"`, `cierre` {es,en} que recomienda el episodio: `"<teaser corto>: <titulo.en del episodio> — <Serie> Mythology Ep. <N>"` (como `short-hawaianas-nanaue`).
 - 3–4 escenas, 9–12 frases en total (~45–60 s narrado): primera frase = conflicto ya (nada de "In X mythology…"), quién/qué quiere/obstáculo/giro/resultado, remate memorable.

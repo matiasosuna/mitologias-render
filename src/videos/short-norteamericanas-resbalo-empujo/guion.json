@@ -1,0 +1,313 @@
+{
+  "id": "short-norteamericanas-resbalo-empujo",
+  "formato": "short",
+  "serie": "norteamericanas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Se resbaló o la empujaron?",
+    "en": "Did she slip, or was she pushed?"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Se resbaló o la empujaron?",
+    "en": "Did she slip, or was she pushed?"
+  },
+  "cierre": {
+    "es": "Then she fell: Sky Woman Falls — Mitología norteamericana, ep. 1",
+    "en": "Then she fell: Sky Woman Falls — Native American Mythology Ep. 1"
+  },
+  "episodio": "norteamericanas-01-la-mujer-del-cielo",
+  "escenas": [
+    {
+      "id": "borde",
+      "fondo": "mundo_cielo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "La Mujer del Cielo estaba al borde de un hoyo en el cielo. Muy abajo solo veía agua.",
+          "en": "Sky Woman stood at the edge of a hole in the sky. Far below, she saw only water."
+        },
+        {
+          "es": "Y cayó.",
+          "en": "Then she fell."
+        },
+        {
+          "es": "Unas versiones dicen que se resbaló. Otras, que su esposo la empujó.",
+          "en": "Some tellings say she slipped. Others say her husband pushed her."
+        },
+        {
+          "es": "Al caer, sus manos agarraron raíces y semillas del Mundo del Cielo.",
+          "en": "As she fell, her hands closed around roots and seeds from the Sky World."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "agujero",
+          "x": 1100,
+          "y": 800,
+          "s": 1
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 1100,
+          "dur": 0.6
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 800,
+          "dur": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "jefe",
+          "como": "jefe_cielo",
+          "x": 760,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "sorprende"
+            },
+            {
+              "en": 2.6,
+              "hace": "senala",
+              "a": 1100
+            },
+            {
+              "en": 3.4,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 0.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "vuela",
+              "a": [
+                1100,
+                1150
+              ],
+              "dur": 0.6
+            },
+            {
+              "en": 1.8,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caida",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Cayó y cayó, entre las nubes y el viento.",
+          "en": "Down she fell, through the clouds and the wind."
+        },
+        {
+          "es": "Abajo no había tierra, ni árboles, ni rocas. Solo el gran mar.",
+          "en": "Below her, there was no earth, no trees, no rocks. Only the great water."
+        },
+        {
+          "es": "Pero el agua no estaba vacía. Había animales nadando y aves volando.",
+          "en": "But the water was not empty. Animals swam in it, and birds flew over it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "nube",
+          "x": 800,
+          "y": 300,
+          "s": 1,
+          "hasta": 1.5
+        },
+        {
+          "tipo": "nube",
+          "x": 1200,
+          "y": 230,
+          "s": 0.8,
+          "hasta": 1.5
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 1.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 960,
+          "y": 100,
+          "props": {
+            "objeto": "semillas"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                980,
+                470
+              ],
+              "dur": 3.4
+            }
+          ]
+        },
+        {
+          "id": "nutria",
+          "como": "nutria",
+          "x": 740,
+          "y": 810,
+          "pasos": [
+            {
+              "en": 1.8,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.9,
+              "hace": "nada",
+              "a": 820,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "colimbo",
+          "como": "colimbo",
+          "x": 1180,
+          "y": 800,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.8,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "miran",
+      "fondo": "agua_primordial",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Y algunos miraron hacia arriba y vieron a una mujer cayendo del cielo.",
+          "en": "And some of them looked up, and saw a woman falling from the sky."
+        },
+        {
+          "es": "¿Se resbaló o la empujaron? ¿Qué creés que pasó ese día?",
+          "en": "Did she slip, or was she pushed? What do you think happened that day?"
+        }
+      ],
+      "elementos": [],
+      "efectos": [],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 960,
+          "y": 250,
+          "rotulo": "",
+          "props": {
+            "objeto": "semillas"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "vuela",
+              "a": [
+                980,
+                420
+              ],
+              "dur": 1.6
+            }
+          ]
+        },
+        {
+          "id": "nutria",
+          "como": "nutria",
+          "x": 780,
+          "y": 810,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "colimbo",
+          "como": "colimbo",
+          "x": 1180,
+          "y": 800,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

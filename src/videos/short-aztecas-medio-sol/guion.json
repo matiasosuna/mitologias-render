@@ -1,0 +1,298 @@
+{
+  "id": "short-aztecas-medio-sol",
+  "formato": "short",
+  "serie": "aztecas",
+  "numero": "S",
+  "titulo": {
+    "es": "El primer sol era solo medio sol",
+    "en": "The first sun was only half a sun"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "El primer sol era solo medio sol",
+    "en": "The first sun was only half a sun"
+  },
+  "cierre": {
+    "es": "Fire came before light: The Four Sons of Ometeotl — Mitología azteca, ep. 1",
+    "en": "Fire came before light: The Four Sons of Ometeotl — Aztec Mythology Ep. 1"
+  },
+  "episodio": "aztecas-01-los-hijos-de-ometeotl",
+  "escenas": [
+    {
+      "id": "fuego",
+      "fondo": "firmamento",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Los dioses querían hacer un mundo. Lo primero que hicieron fue el fuego.",
+          "en": "The gods wanted to make a world. The first thing they made was fire."
+        },
+        {
+          "es": "Luego hicieron un sol. Pero era solo medio sol.",
+          "en": "Then they made a sun. But it was only half a sun."
+        },
+        {
+          "es": "Daba muy poca luz.",
+          "en": "It gave very little light."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hoguera",
+          "x": 960,
+          "s": 0.8,
+          "en": 0.8
+        },
+        {
+          "tipo": "sol_codice",
+          "x": 1180,
+          "y": 300,
+          "s": 1,
+          "en": 1.2,
+          "props": {
+            "medio": true,
+            "luz": 0.35
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.8,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 600,
+          "dur": 1
+        },
+        {
+          "en": 0.9,
+          "tipo": "luz",
+          "x": 960,
+          "y": 560,
+          "dur": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 740,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 0.8,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.6,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "huitzil",
+          "como": "huitzilopochtli",
+          "x": 1180,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "piel": "#E9E0C8",
+            "contorno": true
+          },
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.3,
+              "hace": "niega"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dias",
+      "fondo": "omeyocan",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "rotulos": [
+        {
+          "en": 0.8,
+          "texto": {
+            "es": "20 DÍAS",
+            "en": "20 DAYS"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 1.9
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "18 × 20 = 360",
+            "en": "18 × 20 = 360"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Después hicieron los días.",
+          "en": "Next, they made the days."
+        },
+        {
+          "es": "Los agruparon en meses de veinte días.",
+          "en": "They grouped them into months of twenty days each."
+        },
+        {
+          "es": "Dieciocho de esos meses hacían un año de trescientos sesenta días.",
+          "en": "Eighteen of those months made a year of three hundred and sixty days."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "calendario",
+          "x": 960,
+          "y": 450,
+          "s": 0.9
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 960,
+          "y": 450,
+          "dur": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 740,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "huitzil",
+          "como": "huitzilopochtli",
+          "x": 1180,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "piel": "#E9E0C8",
+            "contorno": true
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orden",
+      "fondo": "omeyocan",
+      "sinAstros": true,
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Primero el fuego, luego medio sol, luego un calendario.",
+          "en": "Fire first, then half a sun, then a calendar."
+        },
+        {
+          "es": "Así el tiempo tuvo orden, y la gente podía contar los días hasta sus fiestas.",
+          "en": "That way, time had order, and people could count the days until their festivals."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol_codice",
+          "x": 1150,
+          "y": 300,
+          "s": 0.8,
+          "props": {
+            "medio": true,
+            "luz": 0.35
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "estrellas",
+          "dur": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "quetzal",
+          "como": "quetzalcoatl",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
