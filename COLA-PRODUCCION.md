@@ -8,7 +8,7 @@ Cada corrida toma el PRIMER ítem `- [ ]` (de arriba hacia abajo), lo hace enter
 Mini-historias de ~60 s que se entienden solas (BRIEF-SHORTS.md), 3 por episodio, cada una con `episodio` = el id de abajo
 y `cierre` que recomienda ese episodio. Cada ítem mezcla mitologías para que el orden de publicación quede intercalado.
 
-- [ ] S01 · Shorts nativos (9): `norteamericanas-01-la-mujer-del-cielo`, `aztecas-01-los-hijos-de-ometeotl`, `hindues-01-el-dios-que-suena-el-mundo`
+- [x] S01 · Shorts nativos (9): `norteamericanas-01-la-mujer-del-cielo`, `aztecas-01-los-hijos-de-ometeotl`, `hindues-01-el-dios-que-suena-el-mundo` — HECHO 2026-10-14: short-norteamericanas-arbol-luz, short-norteamericanas-resbalo-empujo, short-norteamericanas-gansos-tortuga, short-aztecas-dios-huesos, short-aztecas-medio-sol, short-aztecas-granos-maiz, short-hindues-himno-creacion, short-hindues-loto-brahma, short-hindues-dia-brahma
 - [ ] S02 · Shorts nativos (9): `norteamericanas-02-el-lomo-de-la-tortuga`, `aztecas-02-el-monstruo-de-la-tierra`, `hindues-02-el-pilar-sin-fin`
 - [ ] S03 · Shorts nativos (9): `norteamericanas-03-nacen-los-gemelos`, `aztecas-03-el-sol-de-jaguar`, `hindues-03-el-pez-y-el-diluvio`
 - [ ] S04 · Shorts nativos (9): `norteamericanas-04-brote-y-pedernal`, `aztecas-04-el-sol-de-viento`, `hindues-04-la-guirnalda-maldita`

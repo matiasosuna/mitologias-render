@@ -130,7 +130,7 @@ export function subirAsset(ruta, nombre) {
 /** URL pública de un archivo: si el release ya lo tiene se usa ese; si no, se sube. Espera a que responda. */
 export function publicarUrl(ruta, nombre) {
   if (!hayAsset(nombre)) subirAsset(ruta, nombre);
-  for (let i = 0; i < 10 && !hayAsset(nombre); i++) execFileSync('sleep', ['3']);
+  for (let i = 0; i < 40 && !hayAsset(nombre); i++) execFileSync('sleep', ['5']); // un asset recién subido puede tardar ~1–3 min en servirse
   if (!hayAsset(nombre)) throw new Error(`el release no sirve ${nombre}`);
   return urlAsset(nombre);
 }
