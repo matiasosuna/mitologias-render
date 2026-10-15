@@ -137,6 +137,7 @@ export function publicarUrl(ruta, nombre) {
 
 // ── asegurar: dejar el archivo en out/ (bajado del release o renderizado acá y subido)
 const correr = (script, id, ...extra) => execFileSync('node', [script, id, ...extra], { stdio: ['ignore', 'inherit', 'inherit'] });
+// vertical-partes.mjs le pasa a cada parte su cartel gancho (título curioso de titulos.json) por inputProps
 function renderPartes(id) {
   bajar(nombreAsset(id, 'portada-ig'), rutaLocal(id, 'portada-ig')); // misma portada que la Mac, si está
   correr('scripts/vertical-partes.mjs', id);
@@ -382,7 +383,8 @@ function sembrar(lista, max) {
     .sort((a, b) => ORDEN.indexOf(a.split('-')[0]) - ORDEN.indexOf(b.split('-')[0]) || a.localeCompare(b)).slice(0, max);
   for (const id of eps) {
     if (!existsSync(rutaLocal(id, 'partes'))) continue;
-    const { de } = JSON.parse(readFileSync(rutaLocal(id, 'partes'), 'utf8'));
+    const { de, gancho } = JSON.parse(readFileSync(rutaLocal(id, 'partes'), 'utf8'));
+    if (!gancho) continue; // partes renderizadas antes del cartel gancho: que la nube las rehaga
     if (![...Array(de).keys()].every((i) => existsSync(rutaLocal(id, 'parte', i + 1)))) continue;
     for (let n = 1; n <= de; n++) subir(id, 'parte', n);
     subir(id, 'portada-ig'); subir(id, 'partes');

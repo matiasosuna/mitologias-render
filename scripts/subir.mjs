@@ -37,7 +37,7 @@ if (nativo) {
   const S = { nordicas: ['Norse', '#NorseMythology #Vikings'], egipcias: ['Egyptian', '#EgyptianMythology #AncientEgypt'], hawaianas: ['Hawaiian', '#HawaiianMythology #Polynesian'], norteamericanas: ['Native American', '#NativeAmericanMythology'], aztecas: ['Aztec', '#AztecMythology #Mexica'], balinesas: ['Balinese', '#BalineseMythology #Bali'], hindues: ['Hindu', '#HinduMythology #IndianMythology'], maories: ['Māori', '#MaoriMythology #Aotearoa'], griegas: ['Greek', '#GreekMythology #GreekGods'] }[g.serie ?? 'griegas'];
   add('title', `${g.gancho.en} #Shorts`);
   const full = gEp && ids[ep] ? `\n\nThe full story: ${gEp.titulo.en} (${S[0]} Mythology Ep. ${Number(gEp.numero)})\nhttps://youtu.be/${ids[ep]}` : '';
-  const cierre = g.cierre?.en && !/Ep\. \d/.test(g.cierre.en) ? `\n${g.cierre.en}` : '';
+  const cierre = g.cierre?.en && !/Ep\. \d|S\d+E\d+/.test(g.cierre.en) ? `\n${g.cierre.en}` : '';
   add('description', `${g.gancho.en}${cierre}${full}\n\nLearn mythology the easy and fun way: subscribe to Myths on Clay.\n\n${S[1]} #Mythology #Shorts`);
   ['mythology', `${S[0].toLowerCase()} mythology`, 'myths', 'animated mythology', 'myths on clay', 'shorts'].forEach((t) => add('tags[]', t));
 } else if (nShort) {

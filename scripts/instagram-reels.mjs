@@ -11,6 +11,8 @@
 import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'node:fs';
 import { execFileSync, spawn } from 'node:child_process';
 import { join } from 'node:path';
+import { textoReel, esLaMisma, primeraLinea, lineaVieja, FORMATO_CURIOSO } from './instagram-texto.mjs';
+import { ganchoParte, codigoEpisodio, leerTitulos } from './titulos.mjs';
 
 process.chdir(new URL('..', import.meta.url).pathname);
 const nube = process.env.NUBE === '1' ? await import('./nube.mjs') : null;
@@ -54,14 +56,15 @@ const gu = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8')
 const yt = existsSync(join('src/videos', id, 'youtube.json')) ? JSON.parse(readFileSync(join('src/videos', id, 'youtube.json'), 'utf8')) : {};
 if (!yt.gancho) yt.gancho = JSON.parse(readFileSync('src/videos/meta-youtube.json', 'utf8')).episodios?.[id]?.gancho;
 const [nombre, tags] = SERIE[gu.serie];
-const titulo = `${gu.titulo.en} | ${nombre} Mythology Ep. ${Number(gu.numero)}${de > 1 ? ` · Part ${parte}/${de}` : ''} 🏺`;
-const intro = parte > 1 ? `Continued from Part ${parte - 1}: watch it first in our Reels.` : (yt.gancho ?? '');
-const sigue = parte < de ? `\n\nFollow so you don't miss Part ${parte + 1} 👀` : '';
-const texto = `${titulo}\n\n${intro}${sigue}\n\n🇪🇸 ${gu.titulo.es}${de > 1 ? ` · Parte ${parte}/${de}` : ''}\n\nThe whole season, in order, in our Reels and on YouTube (link in bio).\n\n${tags} #mythology #animation #mythsonclay`;
+// 1.ª línea = título curioso + "· Part n/de", salvo en episodios con partes publicadas con la línea vieja (anti-duplicados)
+const titulos = leerTitulos();
+const viejas = hist().filter((h) => h.tipo === 'reel-parte' && h.id === id && h.formato !== FORMATO_CURIOSO).length;
+const datos = { gu, nombre, tags, parte, de, curioso: ganchoParte(id, titulos), codigo: codigoEpisodio(id, titulos), gancho: yt.gancho, yaPublicadas: viejas };
+const texto = textoReel(datos);
 if (args.includes('--probar')) { console.log(id, '\n', texto); process.exit(0); }
 
-const yaEsta = async () => (await g('GET', `/${IG}/media`, { fields: 'id,caption,permalink,media_type', limit: '100' })).data.find((m) => m.media_type === 'VIDEO' && (m.caption ?? '').split('\n')[0] === titulo);
-const anotar = (m) => { const h = hist(); h.push({ id, tipo: 'reel-parte', parte, de, media: m.id, permalink: m.permalink, fecha: new Date().toISOString() }); writeFileSync(reg, JSON.stringify(h, null, 1)); };
+const yaEsta = async () => (await g('GET', `/${IG}/media`, { fields: 'id,caption,permalink,media_type', limit: '100' })).data.find((m) => m.media_type === 'VIDEO' && esLaMisma((m.caption ?? '').split('\n')[0], datos));
+const anotar = (m) => { const h = hist(); h.push({ id, tipo: 'reel-parte', parte, de, ...(primeraLinea(datos) === lineaVieja(datos) ? {} : { formato: FORMATO_CURIOSO }), media: m.id, permalink: m.permalink, fecha: new Date().toISOString() }); writeFileSync(reg, JSON.stringify(h, null, 1)); };
 const previo = await yaEsta();
 if (previo) { anotar(previo); console.log(id, 'ya estaba:', previo.permalink); process.exit(0); }
 

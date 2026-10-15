@@ -37,3 +37,13 @@ export function lineaTemporada(entrada, serie) {
 
 /** Formato válido del título completo (≤100 caracteres). */
 export const FORMATO = /^(?<curioso>[^|<>]+?) \| (?:(?<serie>[A-Za-zā ]+ Mythology) S(?<t>\d+)E(?<e>\d+)|(?<especial>[^|<>]+) Special(?: · Part \d+)?)$/u;
+
+/** Parte curiosa del título (lo de antes de " | "): "Thor Lost His Hammer | Norse Mythology S1E5" → "Thor Lost His Hammer". */
+export const parteCuriosa = (titulo) => (titulo ? String(titulo).split(' | ')[0].trim() : '');
+/** Gancho del cartel inicial de cada parte vertical (Reels): la parte curiosa del título del episodio, o '' si no tiene. */
+export const ganchoParte = (id, titulos = leerTitulos()) => parteCuriosa(titulos[id]?.titulo);
+/** "Norse Mythology S1E5" de un episodio con entrada en titulos.json ('' si no hay o es especial). */
+export function codigoEpisodio(id, titulos = leerTitulos()) {
+  const m = titulos[id]?.titulo?.match(FORMATO);
+  return m?.groups.serie ? `${m.groups.serie} S${m.groups.t}E${m.groups.e}` : '';
+}

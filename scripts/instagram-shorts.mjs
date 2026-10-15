@@ -28,7 +28,7 @@ const gu = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8')
 const [nombre, tags] = SERIE[gu.serie] ?? SERIE.griegas;
 const ep = gu.episodio && existsSync(join('src/videos', gu.episodio, 'guion.json')) ? JSON.parse(readFileSync(join('src/videos', gu.episodio, 'guion.json'), 'utf8')) : null;
 const primera = `${gu.gancho.en} 🏺`;
-const cierre = gu.cierre?.en && !/Ep\. \d/.test(gu.cierre.en) ? `\n\n${gu.cierre.en}` : '';
+const cierre = gu.cierre?.en && !/Ep\. \d|S\d+E\d+/.test(gu.cierre.en) ? `\n\n${gu.cierre.en}` : '';
 const texto = `${primera}${cierre}${gu.gancho.es ? `\n\n🇪🇸 ${gu.gancho.es}` : ''}${ep ? `\n\nThe full story: “${ep.titulo.en}” (${nombre} Mythology Ep. ${Number(ep.numero)}), in our Reels and on YouTube (link in bio).` : ''}\n\n${tags} #mythology #mythsonclay #shorts`;
 if (args.includes('--probar')) { console.log(id, '\n', texto); process.exit(0); }
 

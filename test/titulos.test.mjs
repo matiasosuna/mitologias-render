@@ -101,3 +101,17 @@ test('youtube-titulos: solo episodios con título, tandas de 50 y corte por cuot
   assert.equal(esCuota(Object.assign(new Error('x'), { status: 403, razon: 'quotaExceeded' })), true);
   assert.equal(esCuota(Object.assign(new Error('x'), { status: 403, razon: 'forbidden' })), false);
 });
+
+test('gancho de las partes de Reels y código del episodio', async () => {
+  const { parteCuriosa, ganchoParte, codigoEpisodio } = await import('../scripts/titulos.mjs');
+  assert.equal(parteCuriosa('Thor Lost His Hammer | Norse Mythology S1E5'), 'Thor Lost His Hammer');
+  assert.equal(parteCuriosa('Sin barra'), 'Sin barra');
+  assert.equal(parteCuriosa(undefined), '');
+  const t = { a: { titulo: 'How Isis Tricked Ra | Egyptian Mythology S1E5' }, e: { titulo: 'The Lord of the Dead | Lords of the Dead Special', especial: 'Lords of the Dead' } };
+  assert.equal(ganchoParte('a', t), 'How Isis Tricked Ra');
+  assert.equal(ganchoParte('falta', t), '');
+  assert.equal(codigoEpisodio('a', t), 'Egyptian Mythology S1E5');
+  assert.equal(codigoEpisodio('e', t), '');
+  assert.equal(codigoEpisodio('falta', t), '');
+  assert.equal(codigoEpisodio('nordicas-14-volund', T), 'Norse Mythology S2E1');
+});
