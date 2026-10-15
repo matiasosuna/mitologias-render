@@ -1,0 +1,236 @@
+{
+  "id": "short-aztecas-jaguar-estrellas",
+  "formato": "short",
+  "serie": "aztecas",
+  "numero": "S",
+  "titulo": {
+    "es": "El jaguar que todavía se ve en el cielo",
+    "en": "The jaguar you can still see in the night sky"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "El jaguar que todavía se ve en el cielo",
+    "en": "The jaguar you can still see in the night sky"
+  },
+  "cierre": {
+    "es": "Mirá al norte: El Sol de Jaguar — Mitología azteca, ep. 3",
+    "en": "Mirá al norte: The Jaguar Sun — Aztec Mythology Ep. 3"
+  },
+  "episodio": "aztecas-03-el-sol-de-jaguar",
+  "escenas": [
+    {
+      "id": "osa",
+      "fondo": "firmamento",
+      "rotulos": [
+        {
+          "en": 1.06,
+          "texto": {
+            "es": "POR ESO LA OSA MAYOR BAJA AL AGUA",
+            "en": "THAT'S WHY THE GREAT BEAR DIPS TO THE WATER"
+          },
+          "x": 960,
+          "y": 200,
+          "estilo": "porque"
+        }
+      ],
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Una noche despejada, mirá hacia el norte.",
+          "en": "On a clear night, look north."
+        },
+        {
+          "es": "Los mexicas veían un jaguar en las estrellas de la Osa Mayor.",
+          "en": "The Mexica saw a jaguar in the stars of the Great Bear."
+        },
+        {
+          "es": "Decían que era Tezcatlipoca, el dios que cayó del cielo.",
+          "en": "They said it was Tezcatlipoca, the god who fell from the sky."
+        },
+        {
+          "es": "A veces esas estrellas bajan hasta el agua.",
+          "en": "At times, those stars sink down toward the water."
+        }
+      ],
+      "elementos": [],
+      "efectos": [
+        {
+          "en": 0.0,
+          "tipo": "estrellas",
+          "dur": 1
+        },
+        {
+          "en": 0.31,
+          "tipo": "estrellas",
+          "dur": 1.5
+        },
+        {
+          "en": 0.62,
+          "tipo": "estrellas",
+          "dur": 1.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "abuela",
+          "como": "anciana_mexica",
+          "x": 720,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.06,
+              "hace": "habla",
+              "dur": 0.7
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 1.06,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "mexica",
+          "x": 500,
+          "rotulo": "",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 0.37,
+              "hace": "mira",
+              "a": 1100
+            },
+            {
+              "en": 1.19,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "jaguar_cielo",
+          "como": "ocelotl",
+          "x": 1050,
+          "y": 420,
+          "escala": 0.7,
+          "capa": "fondo",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.75,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.94,
+              "hace": "vuela",
+              "a": [
+                1300,
+                620
+              ],
+              "dur": 1.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tiempo",
+      "fondo": "firmamento",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Los mexicas miraban las estrellas con mucho cuidado.",
+          "en": "The Mexica watched the stars with great care."
+        },
+        {
+          "es": "Las usaban para llevar la cuenta del tiempo.",
+          "en": "They used them to keep track of time."
+        },
+        {
+          "es": "Cincuenta y dos años eran para ellos como un siglo para nosotros.",
+          "en": "Fifty-two years was like a century is for us."
+        },
+        {
+          "es": "Esta noche, mirá al norte: ahí está el jaguar.",
+          "en": "Tonight, look north: there is the jaguar."
+        }
+      ],
+      "elementos": [],
+      "efectos": [
+        {
+          "en": 0.0,
+          "tipo": "estrellas",
+          "dur": 1.5
+        },
+        {
+          "en": 0.62,
+          "tipo": "estrellas",
+          "dur": 1.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "abuela",
+          "como": "anciana_mexica",
+          "x": 760,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.09,
+              "hace": "senala"
+            },
+            {
+              "en": 0.81,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "mexica",
+          "x": 1100,
+          "rotulo": "",
+          "mira": "izq",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 0.31,
+              "hace": "mira",
+              "a": 1000
+            },
+            {
+              "en": 1.06,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

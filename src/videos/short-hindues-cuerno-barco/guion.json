@@ -1,0 +1,281 @@
+{
+  "id": "short-hindues-cuerno-barco",
+  "formato": "short",
+  "serie": "hindues",
+  "numero": "S",
+  "titulo": {
+    "es": "Un barco remolcado por el cuerno de un pez",
+    "en": "A ship pulled through a flood by a fish’s horn"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Un barco remolcado por el cuerno de un pez",
+    "en": "A ship pulled through a flood by a fish’s horn"
+  },
+  "cierre": {
+    "es": "El barco y el pez: El pez y el diluvio — Mitología hindú, ep. 3",
+    "en": "El barco y el pez: The Fish and the Flood — Hindu Mythology Ep. 3"
+  },
+  "episodio": "hindues-03-el-pez-y-el-diluvio",
+  "escenas": [
+    {
+      "id": "lluvia",
+      "fondo": "diluvio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "El cielo se puso negro y la lluvia no paraba.",
+          "en": "The sky turned black, and the rain would not stop."
+        },
+        {
+          "es": "El agua cubrió los campos y las aldeas.",
+          "en": "The water covered the fields and the villages."
+        },
+        {
+          "es": "Luego cubrió los árboles, y luego las colinas.",
+          "en": "Then it covered the trees, and then the hills."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco_manu",
+          "x": 1000,
+          "y": 750,
+          "s": 0.9
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.0,
+          "tipo": "lluvia",
+          "dur": 3.5
+        },
+        {
+          "en": 0.31,
+          "tipo": "rayo",
+          "x": 1200
+        }
+      ],
+      "actores": [
+        {
+          "id": "manu",
+          "como": "manu",
+          "x": 900,
+          "escala": 0.65,
+          "y": 695,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.12,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.75,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "sabio",
+          "como": "sabio",
+          "x": 1100,
+          "escala": 0.65,
+          "y": 695,
+          "rotulo": "",
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.44,
+              "hace": "mira",
+              "a": 1500
+            },
+            {
+              "en": 0.81,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "barco",
+      "fondo": "diluvio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Entonces, entre las olas, apareció el pez. Ahora era gigante y tenía un cuerno.",
+          "en": "Then, among the waves, the fish appeared. Now it was gigantic, with a horn."
+        },
+        {
+          "es": "Manu ató la soga del barco a ese cuerno.",
+          "en": "Manu tied the ship's rope to that horn."
+        },
+        {
+          "es": "Y el pez arrastró el barco por el agua, día tras día.",
+          "en": "And the fish pulled the ship across the water, day after day."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco_manu",
+          "x": 760,
+          "y": 750,
+          "s": 0.9,
+          "props": {
+            "soga": 420
+          }
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.03,
+          "tipo": "destello"
+        },
+        {
+          "en": 0.81,
+          "tipo": "lluvia",
+          "dur": 2.5
+        }
+      ],
+      "actores": [
+        {
+          "id": "pez",
+          "como": "matsya",
+          "x": 1350,
+          "y": 850,
+          "escala": 1,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.94,
+              "hace": "nada",
+              "a": 1600,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "manu",
+          "como": "manu",
+          "x": 700,
+          "escala": 0.65,
+          "y": 695,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.31,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.75,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.25,
+              "hace": "reza"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monte",
+      "fondo": "kailash",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Al final, el pez llevó el barco a una montaña del norte.",
+          "en": "At last, the fish brought the ship to a mountain in the north."
+        },
+        {
+          "es": "«Ata el barco a un árbol y baja despacio, mientras baja el agua».",
+          "en": "\"Tie the ship to a tree, and climb down slowly as the water goes down.\""
+        },
+        {
+          "es": "Por eso, dice el texto, ese lugar se llama «el Descenso de Manu».",
+          "en": "That is why, the text says, that place is called \"Manu's Descent.\""
+        }
+      ],
+      "elementos": [],
+      "efectos": [
+        {
+          "en": 1.19,
+          "tipo": "luz",
+          "x": 960,
+          "y": 500,
+          "dur": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "manu",
+          "como": "manu",
+          "x": 800,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.12,
+              "hace": "mira",
+              "a": 1200
+            },
+            {
+              "en": 0.75,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.12,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "pez",
+          "como": "matsya",
+          "x": 1200,
+          "mira": "izq",
+          "rotulo": "",
+          "escala": 0.9,
+          "y": 850,
+          "pasos": [
+            {
+              "en": 0.37,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

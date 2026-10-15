@@ -1,0 +1,257 @@
+{
+  "id": "short-norteamericanas-dos-flechas",
+  "formato": "short",
+  "serie": "norteamericanas",
+  "numero": "S",
+  "titulo": {
+    "es": "Dos flechas quedaron junto a ella",
+    "en": "Two arrows were left beside her"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Dos flechas quedaron junto a ella",
+    "en": "Two arrows were left beside her"
+  },
+  "cierre": {
+    "es": "Dos flechas, dos hermanos: Los gemelos nacen — Mitología norteamericana, ep. 3",
+    "en": "Dos flechas, dos hermanos: The Twins Are Born — Native American Mythology Ep. 3"
+  },
+  "episodio": "norteamericanas-03-nacen-los-gemelos",
+  "escenas": [
+    {
+      "id": "lago",
+      "fondo": "lago",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "En un relato haudenosaunee, una joven caminaba sola junto a un lago.",
+          "en": "In one Haudenosaunee telling, a young woman walked alone by a lake."
+        },
+        {
+          "es": "De pronto llegó un visitante misterioso.",
+          "en": "Suddenly, a mysterious visitor came."
+        }
+      ],
+      "elementos": [],
+      "efectos": [
+        {
+          "en": 0.44,
+          "tipo": "niebla",
+          "dur": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "hija",
+          "como": "hija_cielo",
+          "x": 820,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.8
+            },
+            {
+              "en": 0.44,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.69,
+              "hace": "mira",
+              "a": 1200
+            }
+          ]
+        },
+        {
+          "id": "visitante",
+          "como": "gente_cielo",
+          "x": 1250,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "capa": "#3A3A44",
+            "objeto": "arco"
+          },
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 0.81,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flechas",
+      "fondo": "lago",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Dejó dos flechas junto a ella.",
+          "en": "He laid two arrows beside her."
+        },
+        {
+          "es": "Una tenía la punta de pedernal afilado. La otra no tenía punta.",
+          "en": "One was tipped with sharp flint. The other had no tip at all."
+        },
+        {
+          "es": "Poco después, ella supo que esperaba gemelos.",
+          "en": "Soon after, she knew she was going to have twins."
+        }
+      ],
+      "elementos": [],
+      "efectos": [
+        {
+          "en": 0.37,
+          "tipo": "chispas",
+          "x": 960,
+          "y": 780,
+          "dur": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "hija",
+          "como": "hija_cielo",
+          "x": 800,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.09,
+              "hace": "mira",
+              "a": 1150
+            },
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.06,
+              "hace": "abraza"
+            },
+            {
+              "en": 1.19,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "visitante",
+          "como": "gente_cielo",
+          "x": 1150,
+          "mira": "izq",
+          "rotulo": "",
+          "props": {
+            "capa": "#3A3A44",
+            "objeto": "arco"
+          },
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 0.37,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "viento",
+      "fondo": "lago",
+      "rotulos": [
+        {
+          "en": 0.06,
+          "texto": {
+            "es": "EL VIENTO DEL OESTE",
+            "en": "THE WEST WIND"
+          },
+          "x": 960,
+          "y": 300,
+          "hasta": 0.5
+        }
+      ],
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Otros relatos dicen que fue el Viento del Oeste.",
+          "en": "Other tellings say it was the West Wind instead."
+        },
+        {
+          "es": "Sus nombres serían Brote y Pedernal.",
+          "en": "Their names would be Sapling and Flint."
+        }
+      ],
+      "elementos": [],
+      "efectos": [
+        {
+          "en": 0.0,
+          "tipo": "niebla",
+          "dur": 1.2
+        },
+        {
+          "en": 0.09,
+          "tipo": "polvo",
+          "x": 900,
+          "dur": 0.8
+        }
+      ],
+      "actores": [
+        {
+          "id": "hija",
+          "como": "hija_cielo",
+          "x": 960,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.06,
+              "hace": "levanta"
+            },
+            {
+              "en": 0.37,
+              "hace": "abraza"
+            },
+            {
+              "en": 0.75,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

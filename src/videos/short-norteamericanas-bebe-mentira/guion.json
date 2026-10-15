@@ -1,0 +1,284 @@
+{
+  "id": "short-norteamericanas-bebe-mentira",
+  "formato": "short",
+  "serie": "norteamericanas",
+  "numero": "S",
+  "titulo": {
+    "es": "Un recién nacido le mintió a su abuela",
+    "en": "A newborn lied to his own grandmother"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "Un recién nacido le mintió a su abuela",
+    "en": "A newborn lied to his own grandmother"
+  },
+  "cierre": {
+    "es": "¿A cuál creerías?: Los gemelos nacen — Mitología norteamericana, ep. 3",
+    "en": "¿A cuál creerías?: The Twins Are Born — Native American Mythology Ep. 3"
+  },
+  "episodio": "norteamericanas-03-nacen-los-gemelos",
+  "escenas": [
+    {
+      "id": "pelea",
+      "fondo": "bosque",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Antes de nacer, los gemelos ya discutían.",
+          "en": "Before they were born, the twins were already arguing."
+        },
+        {
+          "es": "Uno dijo: «Nacerá por el camino de siempre».",
+          "en": "One said, \"I will be born the usual way.\""
+        },
+        {
+          "es": "El otro dijo: «¡Yo veo luz por allá! Saldré por ahí».",
+          "en": "The other said, \"I see light over there. I will go out that way!\""
+        }
+      ],
+      "elementos": [],
+      "efectos": [
+        {
+          "en": 0.37,
+          "tipo": "luz",
+          "x": 880,
+          "y": 620,
+          "dur": 0.7,
+          "intensidad": 0.4
+        },
+        {
+          "en": 0.75,
+          "tipo": "chispas",
+          "x": 900,
+          "y": 620,
+          "dur": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "hija",
+          "como": "hija_cielo",
+          "x": 900,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "abraza"
+            },
+            {
+              "en": 0.19,
+              "hace": "tiembla",
+              "dur": 0.4
+            },
+            {
+              "en": 0.69,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.06,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nacimiento",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "El primero nació con calma. Era amable, y lo llamarían Brote.",
+          "en": "The first twin was born calmly. He was kind, and would be called Sapling."
+        },
+        {
+          "es": "El segundo no quiso esperar y salió por otro camino. Su cuerpo era duro como la piedra: Pedernal.",
+          "en": "The second would not wait. His body was hard as stone: Flint."
+        },
+        {
+          "es": "Su madre no sobrevivió.",
+          "en": "Their mother did not survive."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 1300,
+          "s": 0.8
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.62,
+          "tipo": "destello"
+        },
+        {
+          "en": 1.41,
+          "tipo": "oscurecer",
+          "intensidad": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "brote",
+          "como": "brote",
+          "x": 1050,
+          "props": {
+            "cuerpo": "nino",
+            "capa": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0.12,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "pedernal",
+          "como": "pedernal",
+          "x": 700,
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 0.62,
+              "hace": "aparece",
+              "con": "polvo"
+            },
+            {
+              "en": 0.94,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 1500,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.44,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mentira",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "foco": 960,
+      "frases": [
+        {
+          "es": "La Mujer del Cielo preguntó: «¿Cuál de ustedes hizo esto?».",
+          "en": "Sky Woman asked, \"Which one of you did this?\""
+        },
+        {
+          "es": "Pedernal señaló a su hermano. «Fue él».",
+          "en": "Flint pointed at his brother. \"It was him.\""
+        },
+        {
+          "es": "En muchos relatos ella le creyó, y desde entonces fue fría con Brote.",
+          "en": "In many tellings she believed him, and was cold to Sapling from then on."
+        }
+      ],
+      "elementos": [],
+      "efectos": [],
+      "actores": [
+        {
+          "id": "mujer",
+          "como": "mujer_cielo",
+          "x": 720,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.09,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.06,
+              "hace": "senala",
+              "a": 1100
+            }
+          ]
+        },
+        {
+          "id": "pedernal",
+          "como": "pedernal",
+          "x": 1050,
+          "props": {
+            "cuerpo": "nino",
+            "capa": null
+          },
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "senala",
+              "a": 1350
+            },
+            {
+              "en": 0.69,
+              "hace": "habla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "brote",
+          "como": "brote",
+          "x": 1350,
+          "mira": "izq",
+          "props": {
+            "cuerpo": "nino",
+            "capa": null,
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 0.62,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.38,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
