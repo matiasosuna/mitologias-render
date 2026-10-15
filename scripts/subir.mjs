@@ -10,6 +10,7 @@
 import { readFileSync, existsSync, writeFileSync } from 'node:fs';
 import { join, basename } from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { conGancho, desplazarCapitulos, conPregunta, preguntaDe } from './gancho-horizontal.mjs';
 
 const [id, ...resto] = process.argv.slice(2);
 const opt = (k) => resto.find((a) => a.startsWith(`--${k}=`))?.split('=').slice(1).join('=');
@@ -20,6 +21,7 @@ const g = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8'))
 const ids = JSON.parse(readFileSync('src/videos/youtube-ids.json', 'utf8'));
 const listas = existsSync('src/videos/listas.json') ? JSON.parse(readFileSync('src/videos/listas.json', 'utf8')) : {};
 const nShort = opt('short');
+let srtDe = (l) => join(out, `${id}.${l}.srt`); // con cartel gancho: los .srt corridos de out/<id>/con-gancho/
 
 const esNativo = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8')).formato === 'short';
 if (!nShort && !esNativo) execFileSync('node', ['scripts/youtube-meta.mjs', id], { stdio: 'ignore' });
@@ -51,17 +53,23 @@ if (nativo) {
   add('description', `${sh.gancho.en}. The full story: ${g.titulo.en} (${serie} Mythology Ep. ${Number(g.numero)})${link}\n\n${tag} #Mythology #Shorts`);
 } else {
   archivo = join(out, `${id}.en.mp4`);
+  // cartel gancho de 2 s adelante (scripts/gancho-horizontal.mjs): sin re-renderizar el episodio; si falla, va sin cartel
+  const cg = resto.includes('--probar') || resto.includes('--sin-gancho') ? null
+    : await conGancho(id).catch((e) => { console.log(`cartel gancho: ${String(e.message).slice(0, 200)} (se sube sin cartel)`); return null; });
+  if (cg) { archivo = cg.archivo; srtDe = (l) => cg.srt[l] ?? join(out, `${id}.${l}.srt`); console.log('cartel gancho: ok'); }
   add('title', meta.titulo);
   // "Previous episode" = título del episodio anterior de la misma serie
   const prev = Object.keys(ids).length && (() => { const fs = JSON.parse(execFileSync('ls', ['src/videos']).toString().split('\n').filter(Boolean).map((d) => JSON.stringify(d)).join(',').replace(/^/, '[').replace(/$/, ']')); const d = fs.find((x) => x.startsWith(g.serie + '-' + String(Number(g.numero) - 1).padStart(2, '0'))); return d ? JSON.parse(readFileSync(join('src/videos', d, 'guion.json'), 'utf8')).titulo.en : null; })();
   let desc = meta.descripcion.replace('📜 ', '').replace('▶ ', '');
   if (prev && !g.especial) desc = desc.replace('Next episode:', `Previous episode: ${prev}\nNext episode:`);
+  if (cg) desc = desplazarCapitulos(desc, cg.seg);
+  desc = conPregunta(desc, preguntaDe(g)); // invitar a comentar, justo después del resumen
   add('description', desc);
   [...new Set(meta.etiquetas)].slice(0, 30).forEach((t) => add('tags[]', t));
   const lista = opt('lista') || listas[meta.lista];
   if (lista) add('youtube_playlist_id', lista);
   for (const [n, [l, nombre]] of [['en', 'English'], ['es', 'Español']].entries()) {
-    const srt = join(out, `${id}.${l}.srt`);
+    const srt = srtDe(l);
     if (existsSync(srt)) { campos.push(['-F', `youtube_subtitle_file_${n}=@${srt}`]); add(`youtube_subtitle_language_${n}`, l); add(`youtube_subtitle_name_${n}`, nombre); }
   }
   const mini = join(out, 'miniatura.jpg');
@@ -92,7 +100,7 @@ if (resto.includes('--api')) {
   const lista = val('youtube_playlist_id')[0];
   if (lista) console.log(yt('agregar', lista, vid));
   if (!nShort && !nativo) for (const [l, nombre] of [['en', 'English'], ['es', 'Español']]) {
-    const srt = join(out, `${id}.${l}.srt`);
+    const srt = srtDe(l);
     if (existsSync(srt)) try { console.log(yt('subtitulos', vid, srt, l, nombre)); } catch (e) { console.log(`subtítulos ${l}: ${String(e.message).slice(0, 200)}`); }
   }
   const miniApi = join(out, 'miniatura.jpg');

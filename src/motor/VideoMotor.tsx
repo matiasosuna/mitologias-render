@@ -85,3 +85,26 @@ export const VideoMotor: React.FC<{ guion: GuionVisual; timeline: Timeline; idio
   </CalidadHD.Provider>
   );
 };
+
+/** Cartel gancho (~2 s) que va ADELANTE del episodio largo, renderizado aparte y pegado con ffmpeg
+ *  (scripts/gancho-horizontal.mjs): título curioso grande + "Norse Mythology · Season 1, Episode 13", estilo de la portada. */
+export const GANCHO_HORIZONTAL = 2;
+export const GanchoHorizontal: React.FC<{ serie?: string; gancho: string; linea?: string }> = ({ serie, gancho, linea }) => {
+  aplicarTema(serie as GuionVisual['serie']);
+  const f = useCurrentFrame();
+  const claro = TEMA.nombre !== 'vasija';
+  const tam = gancho.length <= 30 ? 124 : gancho.length <= 48 ? 108 : 92;
+  return (
+    <AbsoluteFill style={{ backgroundColor: C.barro }}>
+      <svg viewBox="0 0 1920 1080" width="100%" height="100%">
+        <defs><radialGradient id="cieloG" cx="50%" cy="45%" r="75%"><stop offset="0%" stopColor={C.barroClaro} /><stop offset="100%" stopColor={C.barroOscuro} /></radialGradient></defs>
+        <rect width={1920} height={1080} fill="url(#cieloG)" />
+        <Guardas desplaz={f * 0.6} />
+      </svg>
+      <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center', paddingBottom: 120, fontFamily: TITULO, color: claro ? C.negro : C.crema, textShadow: claro ? `0 3px 0 ${C.blanco}` : `0 4px 0 ${C.negro}` }}>
+        <div style={{ fontWeight: 700, fontSize: tam, lineHeight: 1.05, margin: '0 170px', opacity: ap(f, 0, 8), transform: `scale(${0.92 + ap(f, 0, 12) * 0.08})` }}>{gancho}</div>
+        {linea && <div style={{ marginTop: 40, fontSize: 40, letterSpacing: 8, opacity: ap(f, 6, 10) }}>{linea.toUpperCase()}</div>}
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};

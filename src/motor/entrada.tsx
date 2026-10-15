@@ -1,7 +1,7 @@
 // Registra una composición por video del guion visual (índice generado por scripts/motor-narrar.mjs).
 import React from 'react';
 import { Composition, registerRoot } from 'remotion';
-import { VideoMotor } from './VideoMotor';
+import { VideoMotor, GanchoHorizontal, GANCHO_HORIZONTAL } from './VideoMotor';
 import { VideoShort, tramoShort } from './Short';
 import { ShortNativo } from './ShortNativo';
 import { VideoVertical, CIERRE_VERTICAL, ParteVertical, CARTEL_PARTE, framesGancho } from './VideoVertical';
@@ -17,6 +17,8 @@ registerRoot(() => (
     <Composition id="demo-actuacion" component={DemoActuacion} durationInFrames={320} fps={30} width={1920} height={1080} />
     <Composition id="demo-brazos" component={DemoBrazos} durationInFrames={150} fps={30} width={1920} height={1080} />
     <Composition id="demo-personajes2" component={DemoPersonajes2} durationInFrames={150} fps={30} width={1920} height={1080} />
+    <Composition id="gancho-horizontal" component={GanchoHorizontal as unknown as React.FC<Record<string, unknown>>} durationInFrames={48} fps={24} width={1920} height={1080} defaultProps={{ serie: 'griegas', gancho: 'An Eagle Ate His Liver Every Day for Centuries', linea: 'Greek Mythology · Season 1, Episode 2', fps: 24 }}
+      calculateMetadata={({ props }) => { const fps = Number((props as { fps?: number }).fps) || 24; return { fps, durationInFrames: Math.round(GANCHO_HORIZONTAL * fps) }; }} />
     <Composition id="demo-calidad" component={DemoCalidad} durationInFrames={150} fps={30} width={1920} height={1080} />
     {VIDEOS.filter(({ guion }) => (guion as GuionVisual).formato === 'short').map(({ guion, timeline }) => (
       <Composition key={(guion as GuionVisual).id} id={(guion as GuionVisual).id} component={ShortNativo as unknown as React.FC<Record<string, unknown>>} durationInFrames={(timeline as Timeline).total} fps={(timeline as Timeline).fps} width={1080} height={1920} defaultProps={{ guion, timeline, idioma: 'en' as Idioma }} />
