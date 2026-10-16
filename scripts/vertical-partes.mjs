@@ -9,6 +9,7 @@ import { execFileSync } from 'node:child_process';
 import { join, resolve } from 'node:path';
 import os from 'node:os';
 import { ganchoParte, leerTitulos } from './titulos.mjs';
+import { masterizar } from '../lib/master.mjs';
 
 const MAX_S = 175; // contenido por parte (+2 s de gancho +2,5 s de cartel → < 3 min)
 const CIERRE_VERTICAL = 3;
@@ -56,6 +57,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       const comp = await selectComposition({ serveUrl, id: `${id}-parte`, inputProps });
       const out = join('out', id, `${id}.parte-${i + 1}.mp4`);
       await renderMedia({ serveUrl, composition: comp, codec: 'h264', outputLocation: out, crf: 21, timeoutInMilliseconds: 180000, concurrency: Number(process.env.RENDER_CONCURRENCY) || Math.max(2, os.cpus().length - 1), inputProps });
+      masterizar(out); // −14 LUFS / −1 dBTP (lib/master.mjs)
       console.log(`listo: ${out} (${(comp.durationInFrames / comp.fps).toFixed(0)} s)`);
     }
     writeFileSync(join('out', id, 'partes.json'), JSON.stringify({ de, partes, gancho: Boolean(gancho) })); // gancho: con cartel inicial (sembrar no sube partes viejas)

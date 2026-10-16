@@ -10,6 +10,7 @@ import { createHash } from 'node:crypto';
 import { join, resolve } from 'node:path';
 import os from 'node:os';
 import { srt } from '../lib/motor-tiempos.mjs';
+import { masterizar } from '../lib/master.mjs';
 
 const id = process.argv[2];
 const arg = (k, d) => (process.argv.find((a) => a.startsWith(`--${k}=`)) ?? `=${d}`).split('=')[1];
@@ -58,8 +59,10 @@ const pistas = idiomas.map((l) => {
   const frases = tl.escenas.flatMap((e) => e.frases.filter((f) => f.audio[l]).map((f) => ({ ruta: join('public', f.audio[l]), ms: Math.round(((e.from + f.from) / tl.fps) * 1000) })));
   const args = ['-y', '-loglevel', 'error', '-i', `public/musica/${g.serie === 'nordicas' ? 'nordica' : g.serie === 'egipcias' ? 'egipcia' : g.serie === 'hawaianas' ? 'hawaiana' : g.serie === 'norteamericanas' ? 'norteamericana' : g.serie === 'aztecas' ? 'azteca' : g.serie === 'balinesas' ? 'balinesa' : g.serie === 'hindues' ? 'hindu' : g.serie === 'maories' ? 'maori' : 'lira-griega'}.wav`, ...frases.flatMap((f) => ['-i', f.ruta])];
   const filtro = [`[0:a]atrim=0:${segTotal},volume=0.2,afade=t=out:st=${segTotal - 3}:d=3[m]`, ...frases.map((f, i) => `[${i + 1}:a]adelay=${f.ms}|${f.ms}[v${i}]`), `[m]${frases.map((_, i) => `[v${i}]`).join('')}amix=inputs=${frases.length + 1}:normalize=0[a]`].join(';');
-  const m4a = join(out, `${id}.${l}.m4a`);
-  execFileSync('ffmpeg', [...args, '-filter_complex', filtro, '-map', '[a]', '-c:a', 'aac', '-b:a', '160k', m4a]);
+  const m4a = join(out, `${id}.${l}.m4a`), mezcla = join(out, `${id}.${l}.mezcla.wav`);
+  execFileSync('ffmpeg', [...args, '-filter_complex', filtro, '-map', '[a]', '-c:a', 'pcm_s16le', mezcla]);
+  masterizar(mezcla, m4a); // master final por pista: −14 LUFS / −1 dBTP, AAC 192k (lib/master.mjs)
+  rmSync(mezcla, { force: true });
   writeFileSync(join(out, `${id}.${l}.srt`), srt(tl, l));
   return { l, m4a };
 });

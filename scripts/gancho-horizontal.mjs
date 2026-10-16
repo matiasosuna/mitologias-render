@@ -8,6 +8,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync, statSync, rmSync } 
 import { execFileSync } from 'node:child_process';
 import { join, resolve } from 'node:path';
 import { parteCuriosa, lineaTemporada, leerTitulos } from './titulos.mjs';
+import { masterizar } from '../lib/master.mjs';
 
 export const SEG_GANCHO = 2;
 export const MUSICA = { griegas: 'lira-griega', nordicas: 'nordica', egipcias: 'egipcia', hawaianas: 'hawaiana', norteamericanas: 'norteamericana', aztecas: 'azteca', balinesas: 'balinesa', hindues: 'hindu', maories: 'maori' };
@@ -69,7 +70,7 @@ export function comandosUnir({ cartel, original, salida, musica, seg = SEG_GANCH
     ['-y', '-loglevel', 'error', '-i', `${soloVideo}.unido.mp4`, '-i', original, '-i', musica,
       ...(filtro ? ['-filter_complex', filtro] : []),
       '-map', '0:v', ...pistas.flatMap((_, i) => ['-map', `[a${i}]`]),
-      '-c:v', 'copy', ...(n ? ['-c:a', 'aac', '-b:a', '160k'] : []),
+      '-c:v', 'copy', ...(n ? ['-c:a', 'aac', '-b:a', '256k'] : []), // intermedio: después va el master (192k)
       ...pistas.flatMap((p, i) => (p.idioma ? [`-metadata:s:a:${i}`, `language=${p.idioma}`] : [])),
       '-movflags', '+faststart', salida],
   ];
@@ -110,7 +111,8 @@ export async function conGancho(id, { original = join('out', id, `${id}.en.mp4`)
   for (const c of cmds) execFileSync('ffmpeg', c, { stdio: ['ignore', 'ignore', 'inherit'] });
   const durO = Number(p.format.duration), durN = Number(sondear(tmp).format.duration);
   if (Math.abs(durN - durO - SEG_GANCHO) > 0.25) throw new Error(`${id}: el video con cartel dura ${durN.toFixed(2)} s (esperado ${(durO + SEG_GANCHO).toFixed(2)})`);
-  execFileSync('mv', [tmp, salida]);
+  masterizar(tmp, salida); // master final de cada pista: −14 LUFS / −1 dBTP (lib/master.mjs)
+  rmSync(tmp, { force: true });
   for (const f of [soloVideo, `${soloVideo}.unido.mp4`, lista]) rmSync(f, { force: true });
   return { archivo: salida, srt, seg: SEG_GANCHO };
 }

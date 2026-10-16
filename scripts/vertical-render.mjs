@@ -8,6 +8,7 @@ import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync, copyFileSyn
 import { execFileSync } from 'node:child_process';
 import { join, resolve } from 'node:path';
 import os from 'node:os';
+import { masterizar } from '../lib/master.mjs';
 
 const ids = process.argv.slice(2);
 if (!ids.length) throw new Error('Falta el id');
@@ -40,5 +41,6 @@ for (const id of ids) {
     execFileSync('npx', ['remotion', 'ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', join(dir, 'lista.txt'), '-i', join(dir, 'audio.aac'), '-map', '0:v', '-map', '1:a', '-c', 'copy', '-movflags', '+faststart', out], { stdio: 'inherit' });
     rmSync(dir, { recursive: true, force: true });
   }
+  masterizar(out); // −14 LUFS / −1 dBTP (lib/master.mjs)
   console.log(`listo: ${out} (${(comp.durationInFrames / comp.fps / 60).toFixed(1)} min)`);
 }
