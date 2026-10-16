@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { hechoPorRegistro, inicioTurno, claveTurno, tocaEspecialYT, proximoEspecialYT, ESPECIALES, turnoUTC, horaHST, tipoIG, tocaShortYT, tocaEpisodioYT, episodiosPendientesYT, proximoEpisodioYT, miniaturasPendientes, nombreAsset, rutaLocal, urlAsset, proximoShortYT, tituloShortYT, buscarTitulo } from '../scripts/nube.mjs';
+import { hechoPorRegistro, inicioTurno, claveTurno, tocaEspecialYT, proximoEspecialYT, ESPECIALES, turnoUTC, horaHST, tipoIG, tocaShortYT, tocaEpisodioYT, episodiosPendientesYT, proximoEpisodioYT, ORDEN_EPISODIOS, STORIES, STORY_UTC, tocaStoryYT, proximaStoryYT, esStory, miniaturasPendientes, nombreAsset, rutaLocal, urlAsset, proximoShortYT, tituloShortYT, buscarTitulo } from '../scripts/nube.mjs';
 
 const utc = (h, m = 0) => new Date(Date.UTC(2026, 9, 14, h, m));
 
@@ -173,4 +173,68 @@ test('turno ya hecho según los registros (corrida manual o anterior a turnos.js
   assert.equal(hechoPorRegistro('instagram', desde, { instagram: [{ fecha: '2026-10-13T22:10:00Z' }] }), true);
   assert.equal(hechoPorRegistro('instagram', desde, { instagram: [{ fecha: '2026-10-13T21:59:00Z' }, {}] }), false);
   assert.equal(hechoPorRegistro('otro', desde, { api }), false);
+});
+
+test('episodios: primero lo que falta de griegas T2, después T1 como antes', () => {
+  const t = {
+    'hawaianas-05-c': { temporada: 1, episodio: 5 }, 'griegas-13-b': { temporada: 2, episodio: 6 }, 'griegas-12-a': { temporada: 2, episodio: 5 },
+    'griegas-11-z': { temporada: 2, episodio: 4 }, 'griegas-07-t1': { temporada: 1, episodio: 7 }, 'nordicas-16-x': { temporada: 2, episodio: 1 },
+    'griegas-80-story': { titulo: 'x | Greek Myth Stories Special', temporada: 0, episodio: 1, especial: 'Greek Myth Stories' },
+  };
+  const ids = { 'griegas-11-z': 'v' };
+  assert.deepEqual(episodiosPendientesYT(t, ids), ['griegas-12-a', 'griegas-13-b', 'hawaianas-05-c']);
+  assert.equal(proximoEpisodioYT(t, ids), 'griegas-12-a');
+  assert.equal(proximoEpisodioYT(t, { ...ids, 'griegas-12-a': 'v', 'griegas-13-b': 'v' }), 'hawaianas-05-c'); // terminada T2, sigue el orden de antes
+  assert.equal(proximoEpisodioYT(t, ids, (id) => id !== 'griegas-12-a'), 'griegas-13-b');
+  assert.deepEqual(ORDEN_EPISODIOS[0], ['griegas', 2]);
+});
+
+test('episodios con los datos reales: los 6 que faltan de griegas T2 van primero, en orden', async () => {
+  const { readFileSync } = await import('node:fs');
+  const raiz = new URL('../', import.meta.url).pathname;
+  const titulos = JSON.parse(readFileSync(raiz + 'src/videos/titulos.json', 'utf8'));
+  const subidos = Object.fromEntries(Object.keys(titulos).filter((id) => /^griegas-(0\d|1[01])-/.test(id)).map((id) => [id, 'v']));
+  const pend = episodiosPendientesYT(titulos, subidos);
+  assert.deepEqual(pend.slice(0, 6).map((id) => titulos[id].episodio), [5, 6, 7, 8, 9, 10]);
+  assert.ok(pend.slice(0, 6).every((id) => id.startsWith('griegas-') && titulos[id].temporada === 2));
+  assert.ok(!pend.slice(6).some((id) => id.startsWith('griegas-')));
+});
+
+test('Stories griegas: 1 por día en su turno (14 UTC), distinto del episodio y del especial', () => {
+  assert.equal(STORY_UTC, 14);
+  assert.deepEqual([2, 6, 10, 14, 18, 22].filter((h) => tocaStoryYT(utc(h, 20))), [14]);
+  for (const h of [2, 6, 10, 14, 18, 22]) assert.ok(!(tocaStoryYT(utc(h)) && (tocaEpisodioYT(utc(h)) || tocaEspecialYT(utc(h)))), `turno ${h}`);
+});
+
+test('Stories griegas: griegas-80…89 a "Greek Myth Stories", la primera lista que falta, sin frenar por las que no están', () => {
+  assert.equal(STORIES.lista, 'Greek Myth Stories');
+  assert.deepEqual(STORIES.ids.map((id) => Number(id.split('-')[1])), [80, 81, 82, 83, 84, 85, 86, 87, 88, 89]);
+  assert.ok(STORIES.ids.every((id) => id.startsWith('griegas-')));
+  const [a, b, c] = STORIES.ids;
+  assert.equal(proximaStoryYT({}, () => false), null); // ninguna carpeta todavía
+  assert.equal(proximaStoryYT({}), a);
+  assert.equal(proximaStoryYT({ [a]: 'v' }), b);
+  assert.equal(proximaStoryYT({}, (id) => id !== a), b); // la 80 sin terminar no frena a la 81
+  assert.equal(proximaStoryYT({ [b]: 'v' }, (id) => id !== a), c);
+  assert.equal(proximaStoryYT(Object.fromEntries(STORIES.ids.map((id) => [id, 'v']))), null);
+  assert.ok(esStory(a) && !esStory('griegas-12-red-de-hefesto'));
+});
+
+test('Stories griegas: la lista está en listas.json y los títulos (si ya existen) dicen "Greek Myth Stories Special"', async () => {
+  const { readFileSync } = await import('node:fs');
+  const raiz = new URL('../', import.meta.url).pathname;
+  const listas = JSON.parse(readFileSync(raiz + 'src/videos/listas.json', 'utf8')), titulos = JSON.parse(readFileSync(raiz + 'src/videos/titulos.json', 'utf8'));
+  assert.ok(listas[STORIES.lista]);
+  assert.ok(listas['Greek Mythology · Season 2: The Olympians']);
+  for (const id of STORIES.ids) if (titulos[id]) assert.match(titulos[id].titulo, / \| Greek Myth Stories Special$/, id);
+});
+
+test('turno ya hecho: una Story no cuenta como episodio ni al revés', () => {
+  const desde = Date.parse('2026-10-16T14:00:00Z');
+  const story = [{ id: STORIES.ids[0], short: null, cuando: 'ya', fecha: '2026-10-16T14:30:00Z' }];
+  const ep = [{ id: 'griegas-12-red-de-hefesto', short: null, cuando: 'ya', fecha: '2026-10-16T14:30:00Z' }];
+  assert.equal(hechoPorRegistro('story', desde, { api: story }), true);
+  assert.equal(hechoPorRegistro('episodio', desde, { api: story }), false);
+  assert.equal(hechoPorRegistro('story', desde, { api: ep }), false);
+  assert.equal(hechoPorRegistro('episodio', desde, { api: ep }), true);
 });

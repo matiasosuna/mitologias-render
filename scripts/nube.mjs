@@ -5,9 +5,10 @@
 //   node scripts/nube.mjs slot                     → qué toca en este turno (Shorts YT, episodio YT, Instagram)
 //   node scripts/nube.mjs yt <lista>               → el próximo Short de la lista a YouTube (si es turno)
 //   node scripts/nube.mjs ig <lista> [ep|short]    → un Reel: episodio (parte) o Short según el turno
-//   node scripts/nube.mjs episodio                 → el próximo episodio largo de T1 a YouTube (turno de las 18 UTC)
+//   node scripts/nube.mjs episodio                 → el próximo episodio largo a YouTube (griegas T2, después T1; 18 UTC)
 //                                                    + reintenta las miniaturas que quedaron pendientes
 //   node scripts/nube.mjs especial                 → el próximo especial, PROGRAMADO (turno de las 22 UTC)
+//   node scripts/nube.mjs story                    → la próxima Story griega, PÚBLICA (turno de las 14 UTC)
 // Cada paso se hace una sola vez por turno (out/turnos.json en el estado): un segundo cron del mismo turno no repite.
 //   node scripts/nube.mjs adelantar <lista>        → deja en el release lo que van a usar los próximos turnos
 //   node scripts/nube.mjs sembrar <lista> [--max=4] → (Mac) sube al release lo ya renderizado de lo próximo de cada cola
@@ -76,11 +77,13 @@ export function proximoShortYT(orden, hist, ids) {
   if (id === 'short-hawaianas-maui-sol' && !ids['hawaianas-11-el-sol-que-corria']) return { id, espera: 'el episodio hawaiano 11 todavía no está en YouTube' };
   return { id };
 }
-/** Episodios largos para YouTube: T1 completas, en este orden de series (T2+ van como estreno, a mano). */
+/** Episodios largos para YouTube, públicos al subir (sin estreno): primero lo que falta de griegas T2 (foco griego,
+ *  2026-10-15), después T1 completas en este orden de series. La lista de la temporada la pone youtube-meta.mjs. */
 export const SERIES_EPISODIOS = ['hawaianas', 'norteamericanas', 'aztecas', 'hindues', 'maories', 'balinesas'];
+export const ORDEN_EPISODIOS = [['griegas', 2], ...SERIES_EPISODIOS.map((s) => [s, 1])];
 export function episodiosPendientesYT(titulos, ids, existe = () => true) {
-  return SERIES_EPISODIOS.flatMap((s) => Object.keys(titulos)
-    .filter((id) => id.startsWith(`${s}-`) && titulos[id].temporada === 1 && !ids[id] && existe(id))
+  return ORDEN_EPISODIOS.flatMap(([s, t]) => Object.keys(titulos)
+    .filter((id) => id.startsWith(`${s}-`) && titulos[id].temporada === t && !ids[id] && existe(id))
     .sort((a, b) => titulos[a].episodio - titulos[b].episodio || a.localeCompare(b)));
 }
 export const proximoEpisodioYT = (titulos, ids, existe) => episodiosPendientesYT(titulos, ids, existe)[0] ?? null;
@@ -94,6 +97,20 @@ export const ESPECIALES = [
   { id: 'griegas-98-odisea-2', fecha: '2026-11-07T10:00:00', lista: 'The Odyssey' },
 ];
 export const proximoEspecialYT = (ids, especiales = ESPECIALES) => especiales.find((e) => !ids[e.id]) ?? null;
+/** Stories griegas ("… | Greek Myth Stories Special", COLA-PRODUCCION H01–H10): PÚBLICAS al subir, a la lista
+ *  "Greek Myth Stories", 1 por día en su propio turno (14 UTC = 10:00 Nueva York), sin tocar el del episodio. */
+export const STORY_UTC = 14;
+export const tocaStoryYT = (fecha) => turnoUTC(fecha) === STORY_UTC;
+export const STORIES = {
+  lista: 'Greek Myth Stories',
+  ids: ['griegas-80-perseo-y-medusa', 'griegas-81-teseo-y-el-minotauro', 'griegas-82-persefone-y-la-granada', 'griegas-83-heracles-trabajos-1',
+    'griegas-84-dedalo-e-icaro', 'griegas-85-el-rey-midas', 'griegas-86-heracles-trabajos-2', 'griegas-87-aracne', 'griegas-88-jason-y-el-vellocino', 'griegas-89-eco-y-narciso'],
+};
+export const esStory = (id) => STORIES.ids.includes(id);
+/** Próxima Story lista (carpeta + narrada + título), en orden; las que todavía no están no frenan a las siguientes. */
+export const proximaStoryYT = (ids, lista = () => true, stories = STORIES.ids) => stories.find((id) => !ids[id] && lista(id)) ?? null;
+/** Carpeta con guion y timeline (narrada) y título en titulos.json. */
+const storyLista = (titulos) => (id) => Boolean(titulos[id]?.titulo) && ['guion.json', 'timeline.json'].every((f) => existsSync(join('src/videos', id, f)));
 /** Miniaturas que YouTube rechazó (límite): registro solo-agregar con estado pendiente | ok, por video. */
 export function miniaturasPendientes(reg) {
   const ok = new Set(reg.filter((r) => r.estado === 'ok').map((r) => r.video));
@@ -315,6 +332,16 @@ function especial(forzar) {
   subirLargo(e.id, titulo, [`--programar=${e.fecha}`, `--lista=${lista}`], e.fecha);
 }
 
+function story(forzar) {
+  if (!forzar && !tocaStoryYT(fechaTurno())) return console.log('YouTube Story: no es turno');
+  const titulos = leerJSON('src/videos/titulos.json', {});
+  const id = proximaStoryYT(leerJSON('src/videos/youtube-ids.json', {}), storyLista(titulos));
+  if (!id) return console.log('YouTube Story: nada lista');
+  const lista = leerJSON('src/videos/listas.json', {})[STORIES.lista];
+  if (!lista) throw new Error(`no está la lista "${STORIES.lista}" en listas.json`);
+  subirLargo(id, titulos[id].titulo, [`--lista=${lista}`]);
+}
+
 // ── una vez por turno
 const TURNOS = 'out/turnos.json';
 /** También cuenta como hecho si los registros muestran una publicación de ese paso desde que empezó el turno
@@ -322,7 +349,8 @@ const TURNOS = 'out/turnos.json';
 export function hechoPorRegistro(paso, desde, { api = [], instagram = [] } = {}) {
   const desdeAhi = (h) => h.fecha && Date.parse(h.fecha) >= desde;
   if (paso === 'shorts') return api.some((h) => h.short === 'nativo' && desdeAhi(h));
-  if (paso === 'episodio') return api.some((h) => h.short == null && h.cuando === 'ya' && desdeAhi(h));
+  if (paso === 'episodio') return api.some((h) => h.short == null && h.cuando === 'ya' && !esStory(h.id) && desdeAhi(h));
+  if (paso === 'story') return api.some((h) => h.short == null && h.cuando === 'ya' && esStory(h.id) && desdeAhi(h));
   if (paso === 'especial') return api.some((h) => h.short == null && h.cuando && h.cuando !== 'ya' && desdeAhi(h));
   if (paso === 'instagram') return instagram.some(desdeAhi);
   return false;
@@ -337,7 +365,8 @@ async function unaVez(paso, fn, forzado = false) {
 
 /** Copia al release los episodios pendientes que están en artefactos de render-nube (vencen a los 7 días). Sin render. */
 function guardarArtefactos(max) {
-  const pend = episodiosPendientesYT(leerJSON('src/videos/titulos.json', {}), leerJSON('src/videos/youtube-ids.json', {}), (x) => existsSync(join('src/videos', x, 'guion.json')));
+  const titulos = leerJSON('src/videos/titulos.json', {}), ids = leerJSON('src/videos/youtube-ids.json', {});
+  const pend = [...episodiosPendientesYT(titulos, ids, (x) => existsSync(join('src/videos', x, 'guion.json'))), ...STORIES.ids.filter((x) => !ids[x] && storyLista(titulos)(x))];
   let n = 0;
   for (const id of pend) {
     if (n >= max) break;
@@ -397,14 +426,15 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const [cmd, ...a] = process.argv.slice(2);
   const pos = a.filter((x) => !x.startsWith('--')), max = Number(a.find((x) => x.startsWith('--max='))?.split('=')[1] ?? 4);
   try {
-    if (cmd === 'slot') { const f = fechaTurno(); console.log(JSON.stringify({ turnoUTC: turnoUTC(f), shortYT: tocaShortYT(f), episodioYT: tocaEpisodioYT(f), especialYT: tocaEspecialYT(f), instagram: pos[0] || tipoIG(f) })); }
+    if (cmd === 'slot') { const f = fechaTurno(); console.log(JSON.stringify({ turnoUTC: turnoUTC(f), shortYT: tocaShortYT(f), episodioYT: tocaEpisodioYT(f), especialYT: tocaEspecialYT(f), storyYT: tocaStoryYT(f), instagram: pos[0] || tipoIG(f) })); }
     else if (cmd === 'episodio') await unaVez('episodio', () => episodio(a.includes('--forzar')), a.includes('--forzar'));
     else if (cmd === 'especial') await unaVez('especial', () => especial(a.includes('--forzar')), a.includes('--forzar'));
+    else if (cmd === 'story') await unaVez('story', () => story(a.includes('--forzar')), a.includes('--forzar'));
     else if (cmd === 'yt') await unaVez('shorts', () => yt(pos[0]));
     else if (cmd === 'ig') await unaVez('instagram', () => ig(pos[0], pos[1]), Boolean(pos[1]));
     else if (cmd === 'adelantar') adelantar(pos[0]);
     else if (cmd === 'sembrar') sembrar(pos[0], max);
-    else throw new Error('uso: node scripts/nube.mjs slot|yt|ig|episodio|especial|adelantar|sembrar <lista>');
+    else throw new Error('uso: node scripts/nube.mjs slot|yt|ig|episodio|especial|story|adelantar|sembrar <lista>');
   } catch (e) {
     const m = String(e.message ?? e);
     // sin cuota diaria de la API de YouTube (se renueva a medianoche del Pacífico ≈ 21:00 HST): no es una falla,
