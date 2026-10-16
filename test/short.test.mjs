@@ -130,3 +130,11 @@ test('cíclope: el ojo va dentro de la cabeza (no flota al arrodillarse)', () =>
   assert.match(leer('src/motor/elenco.tsx'), /ciclope: ficha\.extra === 'ciclope'/);
   assert.match(leer('src/comun/vasija.tsx'), /props\.ciclope \?/);
 });
+
+test('rótulos y brillos cortos (ritmo de Shorts) no rompen interpolate', () => {
+  const e = leer('src/motor/Escena.tsx');
+  assert.match(e, /const fd = Math\.max\(1, Math\.min\(12, \(t1 - t0\) \/ 2 - 0\.5\)\)/);
+  assert.match(e, /Math\.max\(t1, t0 \+ 12\.5\)/);
+  // el fundido achicado siempre deja los 4 puntos en orden estricto
+  for (const largo of [3, 5, 10, 18, 24, 40]) { const fd = Math.max(1, Math.min(12, largo / 2 - 0.5)); assert.ok(0 < fd && fd < largo - fd && largo - fd < largo, String(largo)); }
+});

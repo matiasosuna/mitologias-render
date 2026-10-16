@@ -122,7 +122,7 @@ export function estadoActor(a: Actor, tl: EscenaTL, f: number, ficha: Ficha): { 
       case 'crece': case 'encoge': e.s = e.s + ((p.escala ?? (p.hace === 'crece' ? 1.6 : 0.5)) * ESCALA_CAPA[capa] - e.s) * k; break;
       case 'toma': e.objeto = p.objeto ?? null; break;
       case 'suelta': e.objeto = null; break;
-      case 'brilla': e.brillo = interpolate(f, [t0, t0 + 12, t1, t1 + 12], [0, 0.9, 0.9, 0], cl); break;
+      case 'brilla': e.brillo = interpolate(f, [t0, t0 + 12, Math.max(t1, t0 + 12.5), Math.max(t1, t0 + 12.5) + 12], [0, 0.9, 0.9, 0], cl); break; // brillo corto (Shorts): nunca se cruza
       case 'transforma': {
         if (f > t0 + 8 && p.en_que) como = p.en_que;
         e.brillo = Math.max(e.brillo, interpolate(f, [t0, t0 + 8, t0 + 24], [0, 1, 0], cl));
@@ -309,7 +309,8 @@ export const ContenidoEscena: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Id
           <Efectos ef={efectos} tl={tl} f={f} fase="frente" vert={!!puesta} />
           {!puesta && (esc.rotulos ?? []).map((r, i) => {
             const t0 = momento(tl, r.en), t1 = r.hasta !== undefined ? momento(tl, r.hasta) : dur;
-            const o = interpolate(f, [t0, t0 + 12, t1 - 12, t1], [0, 1, 1, 0], cl);
+            const fd = Math.max(1, Math.min(12, (t1 - t0) / 2 - 0.5)); // rótulos cortos (Shorts): el fundido se achica, nunca se cruza
+            const o = t1 - t0 < 3 ? 0 : interpolate(f, [t0, t0 + fd, t1 - fd, t1], [0, 1, 1, 0], cl);
             const txt = typeof r.texto === 'string' ? r.texto : r.texto[idioma] ?? r.texto.es;
             if (r.estilo === 'porque') return null;
             return o > 0 ? <Rotulo key={i} x={r.x} y={r.y} texto={txt.toUpperCase()} o={o} tam={38} /> : null;
@@ -318,7 +319,8 @@ export const ContenidoEscena: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Id
         <Capa p={0}>
           {!puesta && (esc.rotulos ?? []).filter((r) => r.estilo === 'porque').map((r, i) => {
             const t0 = momento(tl, r.en), t1 = r.hasta !== undefined ? momento(tl, r.hasta) : Math.min(dur, t0 + 110);
-            const o = interpolate(f, [t0, t0 + 10, t1 - 10, t1], [0, 1, 1, 0], cl);
+            const fd = Math.max(1, Math.min(10, (t1 - t0) / 2 - 0.5));
+            const o = t1 - t0 < 3 ? 0 : interpolate(f, [t0, t0 + fd, t1 - fd, t1], [0, 1, 1, 0], cl);
             const txt = (typeof r.texto === 'string' ? r.texto : r.texto[idioma] ?? r.texto.es).toUpperCase();
             return o > 0 ? <Placa key={i} texto={txt} o={o} /> : null;
           })}
