@@ -9,6 +9,8 @@ const lista = (archivo, nombre) => (leer(archivo).match(new RegExp(`export const
 const FONDOS = new Set(lista('src/motor/fondosMaori.tsx', 'FONDOS_MAORI'));
 const ELEMS = new Set(lista('src/motor/fondosMaori.tsx', 'ELEMENTOS_MAORI'));
 const ELENCO = new Set([...leer('src/motor/elencoMaori.tsx').split('export const ELENCO_MAORI')[1].split('export const NOMBRE_EN_MAORI')[0].matchAll(/^\s{2}(\w+): /gm)].map((m) => m[1]));
+// Diseños oficiales (*_oficial) de la serie: también valen en los guiones.
+for (const m of leer('src/motor/elencoMaoriOficial.tsx').matchAll(/^\s{2}(\w+_oficial): /gm)) ELENCO.add(m[1]);
 // Genéricos que el tema maorí dibuja a su manera (elementoMaori).
 const GENERICOS = new Set(['sol', 'luna', 'nube', 'monte', 'arbol', 'olivo', 'palmera', 'pino', 'cipres', 'casa', 'templo', 'roca', 'barco', 'canoa', 'cueva', 'fogata', 'isla', 'muralla', 'estrellas']);
 const guiones = readdirSync('src/videos').filter((d) => d.startsWith('maories-')).map((d) => JSON.parse(leer(`src/videos/${d}/guion.json`)));

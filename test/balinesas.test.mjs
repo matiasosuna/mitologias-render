@@ -11,7 +11,9 @@ const ELEMS = new Set(lista('src/motor/fondosBalines.tsx', 'ELEMENTOS_BALINES'))
 const ELENCO = new Set([...leer('src/motor/elencoBalines.tsx').split('export const ELENCO_BALINES')[1].split('export const NOMBRE_EN_BALINES')[0].matchAll(/^\s{2}(\w+): /gm)].map((m) => m[1]));
 const GENERICOS = new Set(['sol', 'luna', 'nube', 'monte', 'arbol', 'casa', 'templo', 'roca', 'altar', 'barco', 'maiz', 'estrellas', 'fogata', 'palmera', 'puerta', 'muralla', 'pozo']);
 const guiones = readdirSync('src/videos').filter((d) => d.startsWith('balinesas-')).map((d) => JSON.parse(leer(`src/videos/${d}/guion.json`)));
-const persona = (k) => new RegExp(`^\\s{2}${k}: [HM]\\(`, 'm').test(leer('src/motor/elencoBalines.tsx'));
+const persona = (k) => ['elencoBalines', 'elencoBalinesOficial'].some((f) => new RegExp(`^\\s{2}${k}: [HM]\\(`, 'm').test(leer(`src/motor/${f}.tsx`)));
+// Diseños oficiales (*_oficial) de la serie: también valen en los guiones.
+for (const m of leer('src/motor/elencoBalinesOficial.tsx').matchAll(/^\s{2}(\w+_oficial): /gm)) ELENCO.add(m[1]);
 
 test('la temporada 1 balinesa tiene sus 12 episodios con youtube.json y Shorts', () => {
   assert.equal(guiones.filter((g) => Number(g.numero) <= 12).length, 12);

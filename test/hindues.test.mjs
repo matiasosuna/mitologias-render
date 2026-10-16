@@ -11,6 +11,8 @@ const FONDOS = new Set(lista('src/motor/fondosHindu.tsx', 'FONDOS_HINDU'));
 const ELEMS = new Set(lista('src/motor/fondosHindu.tsx', 'ELEMENTOS_HINDU'));
 const cuerpoHindu = leer('src/motor/elencoHindu.tsx').split('export const ELENCO_HINDU')[1].split('export const NOMBRE_EN_HINDU')[0];
 const ELENCO = new Set(claves(cuerpoHindu));
+// Diseños oficiales (*_oficial) de la serie: también valen en los guiones.
+for (const m of leer('src/motor/elencoHinduOficial.tsx').matchAll(/^\s{2}(\w+_oficial): /gm)) ELENCO.add(m[1]);
 // Genéricos que el tema pahari dibuja a su manera (fondosHindu.tsx los atiende).
 const GENERICOS = new Set(['sol', 'luna', 'nube', 'estrellas', 'arbol', 'olivo', 'cipres', 'pino', 'palmera', 'monte', 'roca', 'rio', 'templo', 'casa', 'columna', 'puerta', 'trono', 'altar', 'fogata', 'barco']);
 const ELENCO_GENERAL = new Set(claves(leer('src/motor/elenco.tsx').split('export const ELENCO')[1].split('export type Estado')[0]));
@@ -41,7 +43,7 @@ test('cada guion hindú usa fondos, elementos y elenco conocidos', () => {
       }
       for (const ef of e.efectos ?? []) assert.notEqual(ef.tipo, 'sangre', `${g.id}/${e.id}: sin sangre en pantalla`);
     }
-    for (const k of [g.miniatura.heroe, g.miniatura.rival]) assert.equal(leer('src/motor/elencoHindu.tsx').includes(`  ${k}: H(`) || leer('src/motor/elencoHindu.tsx').includes(`  ${k}: M(`), true, `${g.id}: miniatura con persona ${k}`);
+    for (const k of [g.miniatura.heroe, g.miniatura.rival]) assert.equal(['elencoHindu', 'elencoHinduOficial'].some((f) => leer(`src/motor/${f}.tsx`).includes(`  ${k}: H(`) || leer(`src/motor/${f}.tsx`).includes(`  ${k}: M(`)), true, `${g.id}: miniatura con persona ${k}`);
   }
 });
 
@@ -62,7 +64,7 @@ test('las claves del elenco hindú no chocan con las de otras series', () => {
     const bloques = f === 'elenco.tsx' ? [t.split('export const ELENCO')[1].split('export type Estado')[0]] : [...t.matchAll(/export const ELENCO_\w+[^=]*= \{([\s\S]*?)\n\};/g)].map((m) => m[1]);
     for (const b of bloques) for (const k of claves(b)) otras.set(k, f);
   }
-  const choques = [...ELENCO].filter((k) => otras.has(k)).map((k) => `${k} (${otras.get(k)})`);
+  const choques = claves(cuerpoHindu).filter((k) => otras.has(k)).map((k) => `${k} (${otras.get(k)})`);
   assert.deepEqual(choques, []);
 });
 

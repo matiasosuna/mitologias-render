@@ -280,8 +280,8 @@ export const Guardas: React.FC<{ desplaz: number }> = ({ desplaz }) => TEMA.nomb
 );
 
 // ---------- personajes ----------
-export type Objeto = 'rayo' | 'tridente' | 'lanza' | 'cetro' | 'antorcha' | 'hoz' | 'caduceo' | 'copa' | 'arco' | 'espada' | 'tirso' | 'martillo' | 'lira' | 'cana' | 'mjolnir' | 'hacha' | 'cuerno' | 'manzana' | 'ankh' | 'was' | 'cayado' | 'pluma' | 'anzuelo' | 'hoe' | 'batidor' | 'semillas' | 'maiz' | 'palo' | 'tambor' | 'asta' | null;
-export type Ropa = 'corta' | 'larga' | 'armadura' | 'desnudo';
+export type Objeto = 'rayo' | 'tridente' | 'lanza' | 'cetro' | 'antorcha' | 'hoz' | 'caduceo' | 'copa' | 'arco' | 'espada' | 'tirso' | 'martillo' | 'lira' | 'cana' | 'mjolnir' | 'hacha' | 'cuerno' | 'manzana' | 'ankh' | 'was' | 'cayado' | 'pluma' | 'anzuelo' | 'hoe' | 'batidor' | 'semillas' | 'maiz' | 'palo' | 'tambor' | 'asta' | 'mjolnir_corto' | 'gungnir' | null;
+export type Ropa = 'corta' | 'larga' | 'armadura' | 'desnudo' | 'tunica'; // tunica = túnica recta a media pierna
 export type Tocado = 'cinta' | 'corona' | 'casco' | 'diadema' | 'velo' | 'petaso' | 'laurel' | 'yelmo' | 'yelmoAlas' | 'sombrero'
   | 'doble' | 'blanca' | 'roja' | 'atef' | 'disco' | 'cuernosDisco' | 'trono' | 'pluma' | 'nemes' | 'plumas' | 'peluca' | 'haku' | 'mahiole'
   | 'gustoweh' | 'plumaAtras' | 'cintaTejida' | 'sombreroCesteria' | 'roach' | 'tocadoPlumas' | null;
@@ -358,8 +358,24 @@ export type PersonajeProps = {
    * elenco las arma sin tocar el Personaje. detras = antes de todo; cuerpo = sobre el torso; cabeza = en la
    * cabeza (de perfil, mirando a la derecha); pie = en el tobillo de adelante; mano/manoAtras = en cada mano. */
   adornos?: Adornos;
+  /** Guantes (color): las manos y un puño de metal en la muñeca (Járngreipr, los guantes de hierro de Thor). */
+  guante?: string;
+  /** Pantalón (color) con vendas cruzadas en la canilla: piernas de tela en vez de piel (hombres nórdicos). */
+  pantalon?: string;
+  /** Pelo corto: sin los mechones largos de la nuca, sin las rayas del pelo ni la oreja (el pelo del adorno los tapa). */
+  peloCorto?: boolean;
+  /** Botas (color): pie y caña hasta media canilla. */
+  botas?: string;
+  /** Color del ribete de la túnica (borde de abajo); si no, el rojo del tema. */
+  ribete?: string;
+  /** Le falta la mano de adelante (Týr): el brazo termina en un muñón vendado. */
+  manoCortada?: boolean;
+  /** La cabeza la dibuja entera adornos.cabeza (cabezas de animal oficiales): no se dibuja la humana. */
+  cabezaPropia?: boolean;
+  /** Oreja chica y simple (forma de C en color piel con contorno); por defecto sí desde 2026-10-15. false = el espiral viejo de la vasija. */
+  orejaSimple?: boolean;
 };
-export type Adornos = { detras?: React.ReactNode; cuerpo?: React.ReactNode; cabeza?: React.ReactNode; pie?: React.ReactNode; mano?: React.ReactNode; manoAtras?: React.ReactNode };
+export type Adornos = { detras?: React.ReactNode; cuerpo?: React.ReactNode; cabeza?: React.ReactNode; pie?: React.ReactNode; mano?: React.ReactNode; manoAtras?: React.ReactNode; pieAtras?: React.ReactNode }; // pieAtras = en el tobillo de atrás
 
 /** Activa la calidad mejorada para todos los personajes de adentro (salvo que un personaje diga hd={false}). */
 export const CalidadHD = createContext(false);
@@ -435,7 +451,7 @@ function pierna(cadera: P, fase: number, accion: Accion, ancho: number, pose?: [
   };
 }
 
-const ObjetoMano: React.FC<{ tipo: Objeto; f: number }> = ({ tipo, f }) => {
+const ObjetoMano: React.FC<{ tipo: Objeto; f: number; ang?: number }> = ({ tipo, f, ang = 50 }) => {
   switch (tipo) {
     case 'rayo':
       return (
@@ -544,6 +560,32 @@ const ObjetoMano: React.FC<{ tipo: Objeto; f: number }> = ({ tipo, f }) => {
           <circle cx={0} cy={56} r={6} fill={C.purpura} />
         </g>
       );
+    case 'mjolnir_corto': { // Mjölnir de las Eddas: cabeza ancha de puntas abiertas y mango corto (Brokkr se distrajo por la mosca de Loki)
+      // Sigue al antebrazo: con el brazo abajo cuelga al costado, cabeza al piso; al levantarlo gira hasta quedar arriba.
+      const t = Math.min(1, Math.max(0, (ang - 20) / 100)), giro = 175 * (1 - t * t * (3 - 2 * t));
+      return (
+        <g transform={`rotate(${giro.toFixed(1)}) scale(0.86)`}>
+          <rect x={-6.5} y={-44} width={13} height={66} rx={4} fill="#6B4A2E" stroke={C.negro} strokeWidth={2.5} />
+          {[-36, -28, 10, 18].map((yy) => <path key={yy} d={`M-6 ${yy} l 12 -5`} stroke="#3E2A18" strokeWidth={2} />)}
+          <circle cx={0} cy={26} r={8} fill="#9AA6B2" stroke={C.negro} strokeWidth={2.5} />
+          <path d="M-30 -78 L 30 -78 L 48 -88 Q 54 -62 48 -36 L 30 -46 L -30 -46 L -48 -36 Q -54 -62 -48 -88 Z" fill="#7F8C99" stroke={C.negro} strokeWidth={3.5} strokeLinejoin="round" />
+          <path d="M30 -78 L 48 -88 Q 54 -62 48 -36 L 30 -46 Z M-30 -78 L -48 -88 Q -54 -62 -48 -36 L -30 -46 Z" fill="#5C6875" stroke={C.negro} strokeWidth={2} strokeLinejoin="round" />
+          <path d="M-12 -78 V -46 M12 -78 V -46" stroke="#5C6875" strokeWidth={2.4} />
+          <path d="M-12 -62 L 0 -72 L 12 -62 L 0 -52 Z" fill="none" stroke={C.purpura} strokeWidth={2.4} strokeLinejoin="round" />
+          <path d="M-28 -74 L 28 -74" stroke="#C9D3DC" strokeWidth={2} />
+        </g>
+      );
+    }
+    case 'gungnir': // lanza de Odín: asta de fresno, hoja con runas y collar de oro
+      return (
+        <g>
+          <path d="M0 150 L0 -226" stroke={C.negro} strokeWidth={11} strokeLinecap="round" />
+          <path d="M0 147 L0 -224" stroke="#B88A55" strokeWidth={6} strokeLinecap="round" />
+          <path d="M-7 -226 H 7 V -240 H -7 Z" fill={C.oro} stroke={C.negro} strokeWidth={2.5} />
+          <path d="M0 -322 C 14 -296, 16 -262, 6 -240 H -6 C -16 -262, -14 -296, 0 -322 Z" fill="#D5DEE6" stroke={C.negro} strokeWidth={3} strokeLinejoin="round" />
+          <path d="M0 -306 V -246 M-4 -290 L 3 -284 M-4 -270 L 4 -276 M-3 -258 L 3 -262" stroke={C.purpura} strokeWidth={2.2} />
+        </g>
+      );
     case 'hacha':
       return (
         <g>
@@ -633,7 +675,8 @@ const AlaDiosa: React.FC<{ h: P; c: P; m: P; ang: number; f: number }> = ({ h, c
 /** Mano de muñequito, orientada según el antebrazo (ángulo del motor: 0 = abajo). 2026-10-13: la palma alargada con
  * pulgar se leía fálica (comentarios en IG) → mano abierta, más ancha que larga, con cuatro dedos cortos separados,
  * pulgar hacia afuera y puño de manga en la muñeca. Nunca volver a una forma de tubo con punta redondeada. */
-const Mano: React.FC<{ m: P; ang: number; piel: string; k: number }> = ({ m, ang, piel, k }) => {
+const Mano: React.FC<{ m: P; ang: number; piel: string; k: number; guante?: string }> = ({ m, ang, piel: pielM, k, guante }) => {
+  const piel = guante ?? pielM;
   const borde = piel === C.negro ? 'none' : C.negro;
   const dedos: [number, number][] = [[-6.2, -12], [-2.2, -4], [1.8, 4], [5.8, 12]]; // x de cada dedo y su abanico (grados)
   return (
@@ -644,9 +687,20 @@ const Mano: React.FC<{ m: P; ang: number; piel: string; k: number }> = ({ m, ang
       <path d="M7 1 L 15 4 C 17 5, 16 8, 14 8 L 7 6 Z" fill={piel} stroke={borde} strokeWidth={1.4} strokeLinejoin="round" />
       <rect x={-8.5} y={-3} width={17} height={11} rx={4} fill={piel} stroke={borde} strokeWidth={1.8} />
       <path d="M-8 -3 L 8 -3" stroke={borde === 'none' ? C.crema : borde} strokeWidth={2.4} strokeLinecap="round" />
+      {guante && <><rect x={-11} y={-17} width={22} height={15} rx={3} fill={guante} stroke={C.negro} strokeWidth={1.8} /><path d="M-11 -11 H 11" stroke={C.negro} strokeWidth={1.2} opacity={0.6} />{[-6, 0, 6].map((xx) => <circle key={xx} cx={xx} cy={-6} r={1.4} fill={C.negro} />)}</>}
     </g>
   );
 };
+
+/** Vendas cruzadas (winingas) sobre la canilla del pantalón, de la rodilla al tobillo. */
+const Vendas: React.FC<{ k: P; tob: P }> = ({ k, tob }) => (
+  <g>{[0.25, 0.45, 0.65, 0.85].map((t, i) => { const a = lerp(k, tob, t), b = lerp(k, tob, t + 0.12); return <path key={i} d={`M${f1(a[0] - 9)} ${f1(a[1])} L ${f1(b[0] + 9)} ${f1(b[1])} M${f1(a[0] + 9)} ${f1(a[1])} L ${f1(b[0] - 9)} ${f1(b[1])}`} stroke={C.crema} strokeWidth={1.8} opacity={0.75} />; })}</g>
+);
+
+/** Caña de bota desde media canilla hasta el tobillo. */
+const Bota: React.FC<{ k: P; tob: P; c: string; ancho: number }> = ({ k, tob, c, ancho }) => (
+  <path d={miembro([lerp(k, tob, 0.45), lerp(k, tob, 0.75), tob], [22 * ancho, 18 * ancho, 15 * ancho])} fill={c} stroke={c === C.negro ? 'none' : C.negro} strokeWidth={2} />
+);
 
 /** Brazo: tubo de 3 puntos (clásico) o curva suave con codo redondeado y músculos (brazoSuave). */
 const brazoD = (h: P, c: P, m: P, w: number, suaveB?: boolean) => suaveB
@@ -706,6 +760,8 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
   const torso: P[] = [[-20 * ancho, -300], [18 * ancho, -304], [34 * ancho, -282], [30 * ancho, -248], [22 * ancho, -212], [-22 * ancho, -208], [-30 * ancho, -250], [-30 * ancho, -284]];
   const faldaCorta: P[] = [[-27, -214], [24, -216], [38, -184], [52 + vuelo, -148], [16, -142], [-26, -146 - vuelo], [-46 - vuelo, -158]];
   const faldaLarga: P[] = [[-27, -214], [24, -216], [36, -150], [50 + vuelo, -40], [58 + vuelo, -6], [-44, -6], [-46 - vuelo, -60], [-36, -150]];
+  const faldaTunica: P[] = [[-27, -214], [24, -216], [30, -184], [34 + vuelo * 0.3, -128], [0, -125], [-32 - vuelo * 0.3, -127], [-33, -180]];
+  const tunica = ropa === 'tunica';
   const larga = ropa === 'larga';
   const pelo = props.pelo ?? (canas ? C.blanco : C.negro);
   return (
@@ -736,21 +792,25 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
         {egipcio && alas && <AlaDiosa h={hT} c={cT} m={mT} ang={bTh + bTc + 40} f={fr} />}
         {/* brazo y escudo de atrás */}
         <path d={brazoD(hT, cT, mT, 24 * ancho, props.brazoSuave)} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />
-        {props.brazoSuave ? <Mano m={mT} ang={bTh + bTc + 40} piel={piel} k={0.85} /> : <circle cx={mT[0]} cy={mT[1]} r={8} fill={piel} />}
+        {props.brazoSuave ? <Mano m={mT} ang={bTh + bTc + 40} piel={piel} k={0.85} guante={props.guante} /> : <circle cx={mT[0]} cy={mT[1]} r={8} fill={props.guante ?? piel} />}
         {props.adornos?.manoAtras && <g transform={`translate(${f1(mT[0])} ${f1(mT[1])})`}>{props.adornos.manoAtras}</g>}
         {/* pierna de atrás */}
-        {!larga && <path d={pT.path} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />}
-        <path d={pT.pie} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />
+        {!larga && <path d={pT.path} fill={props.pantalon ?? piel} stroke={(props.pantalon ?? piel) === C.negro ? 'none' : C.negro} strokeWidth={2} />}
+        {!larga && props.pantalon && !props.botas && <Vendas k={pT.k} tob={pT.tob} />}
+        {!larga && props.botas && <Bota k={pT.k} tob={pT.tob} c={props.botas} ancho={ancho} />}
+        <path d={pT.pie} fill={props.botas ?? piel} stroke={(props.botas ?? piel) === C.negro ? 'none' : C.negro} strokeWidth={2} />
+        {props.adornos?.pieAtras && <g transform={`translate(${f1(pT.tob[0])} ${f1(pT.tob[1])})`}>{props.adornos.pieAtras}</g>}
         {alas && !egipcio && <path d={`M${pT.tob[0] - 6} ${pT.tob[1] - 10} l -26 -16 l 6 12 l -14 -4 l 12 12 Z`} fill={C.purpura} stroke={C.negro} strokeWidth={2} />}
         {/* falda / túnica */}
         {ropa !== 'desnudo' && (
           <g transform={larga && baja ? `translate(0 -214) scale(1 ${f1(1 - baja / 208)}) translate(0 214)` : undefined}>
-            <path d={suave(larga ? faldaLarga : faldaCorta, true)} fill={ropaColor} stroke={ropaColor === C.negro ? 'none' : C.negro} strokeWidth={2} opacity={egipcio && larga ? 0.92 : 1} />
+            <path d={suave(larga ? faldaLarga : tunica ? faldaTunica : faldaCorta, true, tunica ? 0.5 : 1)} fill={ropaColor} stroke={ropaColor === C.negro ? 'none' : C.negro} strokeWidth={2} opacity={egipcio && larga ? 0.92 : 1} />
             {(larga
               ? [[-16, -206, -34, -14], [-2, -208, -8, -12], [12, -208, 18, -12], [24, -206, 44, -14]]
+              : tunica ? [[-16, -206, -20, -134], [0, -208, 0, -130], [16, -208, 20, -132]]
               : [[-14, -206, -26, -150], [0, -208, 2, -144], [14, -208, 28, -146], [22, -206, 42, -156]]
             ).map(([a, b, c, d], i) => <Inc key={i} d={suave([[a, b], [(a + c) / 2 + (i - 1.5) * 2, (b + d) / 2], [c + vuelo * 0.5, d]])} w={egipcio ? 1.2 : 1.8} c={linRopa} />)}
-            <Borde d={larga ? suave([[-44 - vuelo, -12], [0, -8], [56 + vuelo, -10]]) : suave([[-44 - vuelo, -160], [-26, -150 - vuelo], [16, -146], [50 + vuelo, -152]])} w={9} />
+            <Borde d={larga ? suave([[-44 - vuelo, -12], [0, -8], [56 + vuelo, -10]]) : tunica ? suave([[-31 - vuelo * 0.3, -131], [0, -129], [33 + vuelo * 0.3, -132]]) : suave([[-44 - vuelo, -160], [-26, -150 - vuelo], [16, -146], [50 + vuelo, -152]])} w={9} color={props.ribete} />
             {larga && <Borde d={suave([[-38, -120], [0, -118], [40, -122]])} w={6} />}
             {nativo && Array.from({ length: 9 }, (_, i) => { const t = i / 8, bx = larga ? -42 - vuelo + t * (98 + vuelo * 2) : -42 - vuelo + t * (90 + vuelo * 2), by = larga ? -10 : -152 + Math.sin(t * Math.PI) * 6; return <path key={`fl${i}`} d={`M${f1(bx)} ${f1(by)} l ${f1(Math.sin(fr / 9 + i) * 2)} 13`} stroke={linRopa === C.crema ? C.crema : C.barroOscuro} strokeWidth={2.4} strokeLinecap="round" />; })}
           </g>
@@ -784,20 +844,22 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
         {/* pierna de adelante */}
         {!larga && (
           <>
-            <path d={pD.path} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />
+            <path d={pD.path} fill={props.pantalon ?? piel} stroke={(props.pantalon ?? piel) === C.negro ? 'none' : C.negro} strokeWidth={2} />
+            {props.pantalon && !props.botas && <Vendas k={pD.k} tob={pD.tob} />}
+            {props.botas && <Bota k={pD.k} tob={pD.tob} c={props.botas} ancho={ancho} />}
             <Inc d={suave([lerp(cadera, pD.k, 0.4), lerp(cadera, pD.k, 0.85)])} w={1.6} c={lin} />
             <Inc d={`M${f1(pD.k[0] - 6)} ${f1(pD.k[1] - 4)} q 8 6 14 0`} w={1.8} c={lin} />
             <Inc d={suave([lerp(pD.k, pD.tob, 0.12), lerp(pD.k, pD.tob, 0.5)])} w={1.6} c={lin} />
           </>
         )}
-        <path d={pD.pie} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />
+        <path d={pD.pie} fill={props.botas ?? piel} stroke={(props.botas ?? piel) === C.negro ? 'none' : C.negro} strokeWidth={2} />
         {props.adornos?.pie && <g transform={`translate(${f1(pD.tob[0])} ${f1(pD.tob[1])})`}>{props.adornos.pie}</g>}
         {alas && !egipcio && <path d={`M${pD.tob[0] - 6} ${pD.tob[1] - 10} l -26 -16 l 6 12 l -14 -4 l 12 12 Z`} fill={C.purpura} stroke={C.negro} strokeWidth={2} />}
         {/* cabeza */}
         <g transform={`translate(${20 * ancho} -334) rotate(${-6 - cabeza + cabeceo + (hd ? -peso * 1.5 : 0)}) scale(${(nino ? 1.4 : 1) * (1 - 0.3 * (props.cabezaGiro ?? 0))} ${nino ? 1.4 : 1})`} filter={hd ? (props.sinSombraBorde ? 'url(#contornoParteHD)' : 'url(#parteHD)') : undefined}>
-          {animal ? <CabezaAnimal tipo={animal} piel={piel} /> : <>
-          {(mujer || !barba) && tocado !== 'casco' && !trenzas && [0, 1, 2].map((i) => <path key={i} d={suave([[-22 + i * 6, 6], [-30 + i * 4, 30 + ondea(i) * 0.3], [-26 + i * 5, 54 + ondea(i + 1) * 0.4], [-32 + i * 6, mujer ? 90 : 70]])} stroke={pelo} strokeWidth={mujer ? 11 : 9} fill="none" strokeLinecap="round" />)}
-          {!mujer && barba && tocado !== 'casco' && [0, 1, 2].map((i) => <path key={i} d={suave([[-22 + i * 6, 6], [-30 + i * 4, 30 + ondea(i) * 0.3], [-26 + i * 5, 54], [-32 + i * 6, 66]])} stroke={pelo} strokeWidth={9} fill="none" strokeLinecap="round" />)}
+          {props.cabezaPropia ? null : animal ? <CabezaAnimal tipo={animal} piel={piel} /> : <>
+          {(mujer || !barba) && tocado !== 'casco' && !trenzas && !props.peloCorto && [0, 1, 2].map((i) => <path key={i} d={suave([[-22 + i * 6, 6], [-30 + i * 4, 30 + ondea(i) * 0.3], [-26 + i * 5, 54 + ondea(i + 1) * 0.4], [-32 + i * 6, mujer ? 90 : 70]])} stroke={pelo} strokeWidth={mujer ? 11 : 9} fill="none" strokeLinecap="round" />)}
+          {!mujer && barba && tocado !== 'casco' && !props.peloCorto && [0, 1, 2].map((i) => <path key={i} d={suave([[-22 + i * 6, 6], [-30 + i * 4, 30 + ondea(i) * 0.3], [-26 + i * 5, 54], [-32 + i * 6, 66]])} stroke={pelo} strokeWidth={9} fill="none" strokeLinecap="round" />)}
           <path d={suave([[-30, 2], [-22, -26], [0, -36], [20, -30], [28, -14], [30, -6], [mujer ? 37 : 41, 6], [32, 10], [34, 15], [boca ? 26 : 31, 20], [26, 26], [8, 32], [4, 46], [-16, 46], [-24, 22]], true, 0.9)} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />
           {/* pelo sobre la cabeza */}
           <path d={suave([[-31, 4], [-26, -24], [-2, -38], [22, -32], [26, -20], [10, -22], [-8, -16], [-16, 0], [-22, 22]], true)} fill={pelo} />
@@ -827,8 +889,8 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
           <Inc d={CEJA[expr]} w={expr === 'neutral' ? 2 : 2.8} c={lin} />
           {BOCA[expr] && !boca && <Inc d={BOCA[expr]} w={2.2} c={lin} />}
           {expr === 'sorpresa' && !boca && <ellipse cx={29} cy={21} rx={3} ry={4} fill={C.negro} stroke={lin} strokeWidth={1.2} />}
-          {!mujer && <Inc d="M-6 -4 C -14 -10, -14 8, -4 6 C 0 4, -2 -2, -6 0" w={1.8} />}
-          {[0, 1, 2].map((i) => <Inc key={i} d={suave([[-22 + i * 5, 10], [-26 + i * 4, 30], [-22 + i * 5, 46]])} w={1.3} c={canas ? C.negro : C.crema} />)}
+          {!mujer && !props.peloCorto && ((props.orejaSimple ?? true) ? <g><path d="M-3 -9 C -13 -11, -16 6, -6 9 C -2 8, -1 -6, -3 -9 Z" fill={piel} stroke={piel === C.negro ? lin : C.negro} strokeWidth={1.6} strokeLinejoin="round" /><path d="M-5 -4 C -10 -4, -11 3, -6 4" stroke={piel === C.negro ? lin : C.negro} strokeWidth={1.1} fill="none" opacity={0.55} /></g> : <Inc d="M-6 -4 C -14 -10, -14 8, -4 6 C 0 4, -2 -2, -6 0" w={1.8} />)}
+          {!props.peloCorto && piel === C.negro && [0, 1, 2].map((i) => <Inc key={i} d={suave([[-22 + i * 5, 10], [-26 + i * 4, 30], [-22 + i * 5, 46]])} w={1.3} c={canas ? C.negro : C.crema} />)}
           {egipcio && !mujer && <path d="M8 -6 L 30 -2" stroke={C.negro} strokeWidth={2.5} />}
           {props.barbaPostiza && <path d="M14 30 L 24 30 L 26 58 L 12 54 Z" fill={C.negro} />}
           {trenzas && [0, 1].map((k) => { const pts: P[] = [[-14 - k * 8, 4], [-12 - k * 6, 40 + ondea(k) * 0.2], [-4 - k * 4, 80], [0 - k * 3, 112]]; return <g key={`tr${k}`} opacity={k ? 0.85 : 1}>
@@ -881,10 +943,10 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
         <Inc d={suave([lerp(hD, cD, 0.3), lerp(hD, cD, 0.8)])} w={1.6} c={lin} />
         </g>
         <g transform={`translate(${mD[0]} ${mD[1]})`}>
-          <ObjetoMano tipo={objeto} f={fr} />
+          <ObjetoMano tipo={objeto} f={fr} ang={bDh + bDc} />
           {props.adornos?.mano}
         </g>
-        {props.brazoSuave ? <Mano m={mD} ang={bDh + bDc} piel={piel} k={1} /> : <circle cx={mD[0]} cy={mD[1]} r={10} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />}
+        {props.manoCortada ? <g transform={`translate(${f1(mD[0])} ${f1(mD[1])}) rotate(${f1(-(bDh + bDc))})`}><path d="M-6.5 -8 L -6.5 -1 Q 0 6 6.5 -1 L 6.5 -8 Z" fill={piel} stroke={C.negro} strokeWidth={1.8} /><rect x={-8.5} y={-17} width={17} height={10} rx={3} fill="#6B4A2E" stroke={C.negro} strokeWidth={1.6} /></g> : props.brazoSuave ? <Mano m={mD} ang={bDh + bDc} piel={piel} k={1} guante={props.guante} /> : <circle cx={mD[0]} cy={mD[1]} r={10} fill={props.guante ?? piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />}
         {escudo && (
           <g transform={`translate(${cT[0] - 10} ${cT[1] + 10})`}>
             <circle r={66} fill={C.negro} stroke={C.purpura} strokeWidth={8} />

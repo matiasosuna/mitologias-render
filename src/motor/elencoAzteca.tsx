@@ -21,7 +21,7 @@ export type DibujoProps = {
 const CARA = (mujer: boolean) => suave([[-30, 2], [-22, -26], [0, -36], [20, -30], [28, -14], [30, -6], [mujer ? 37 : 41, 6], [32, 10], [34, 15], [31, 20], [26, 26], [8, 32], [4, 46], [-16, 46], [-24, 22]], true, 0.9);
 
 /** Franjas horizontales de pintura facial recortadas a la cara (y0–y1 de cada franja). */
-const Franjas: React.FC<{ bandas: [number, number, string][]; mujer?: boolean }> = ({ bandas, mujer = false }) => {
+export const Franjas: React.FC<{ bandas: [number, number, string][]; mujer?: boolean }> = ({ bandas, mujer = false }) => {
   const id = 'cara' + useId().replace(/[^a-zA-Z0-9]/g, '');
   return (
     <g>
@@ -31,23 +31,23 @@ const Franjas: React.FC<{ bandas: [number, number, string][]; mujer?: boolean }>
   );
 };
 /** Orejera redonda de piedra verde (jade/turquesa). */
-const Orejera: React.FC<{ c?: string; r?: number }> = ({ c = K.turquesa, r = 7 }) => <g><circle cx={-8} cy={4} r={r} fill={c} stroke={NEGRO} strokeWidth={1.8} /><circle cx={-8} cy={4} r={r * 0.35} fill={K.blanco} /></g>;
+export const Orejera: React.FC<{ c?: string; r?: number }> = ({ c = K.turquesa, r = 7 }) => <g><circle cx={-8} cy={4} r={r} fill={c} stroke={NEGRO} strokeWidth={1.8} /><circle cx={-8} cy={4} r={r * 0.35} fill={K.blanco} /></g>;
 /** Pluma larga de quetzal (verde, curva). Base en (x,y), ángulo en grados (0 = arriba). */
-const Pluma: React.FC<{ x: number; y: number; ang: number; l?: number; c?: string; c2?: string }> = ({ x, y, ang, l = 90, c = K.jade, c2 = K.jadeClaro }) => (
+export const Pluma: React.FC<{ x: number; y: number; ang: number; l?: number; c?: string; c2?: string }> = ({ x, y, ang, l = 90, c = K.jade, c2 = K.jadeClaro }) => (
   <g transform={`translate(${r1(x)} ${r1(y)}) rotate(${r1(ang)})`}>
     <path d={`M-3 0 C -12 ${-l * 0.35}, -10 ${-l * 0.8}, 4 ${-l} C 10 ${-l * 0.75}, 8 ${-l * 0.35}, 3 0 Z`} fill={c} stroke={NEGRO} strokeWidth={1.6} />
     <path d={`M0 -4 C -4 ${-l * 0.4}, -2 ${-l * 0.75}, 3 ${-l * 0.92}`} stroke={c2} strokeWidth={2} fill="none" />
   </g>
 );
-const mece = (f: number, k = 1) => Math.sin(f / 15 + k) * 3;
+export const mece = (f: number, k = 1) => Math.sin(f / 15 + k) * 3;
 
 /** Abanico de plumas detrás de la cabeza (penacho). */
-const Penacho: React.FC<{ n?: number; l?: number; c?: string; c2?: string; desde?: number; hasta?: number; x?: number; y?: number }> = ({ n = 7, l = 92, c = K.jade, c2 = K.jadeClaro, desde: a0 = -70, hasta: a1 = 10, x = -10, y = -26 }) => {
+export const Penacho: React.FC<{ n?: number; l?: number; c?: string; c2?: string; desde?: number; hasta?: number; x?: number; y?: number }> = ({ n = 7, l = 92, c = K.jade, c2 = K.jadeClaro, desde: a0 = -70, hasta: a1 = 10, x = -10, y = -26 }) => {
   const f = useCurrentFrame();
   return <g>{Array.from({ length: n }, (_, i) => <Pluma key={i} x={x} y={y} ang={a0 + (i * (a1 - a0)) / Math.max(1, n - 1) + mece(f, i) * 0.6} l={l - Math.abs(i - (n - 1) / 2) * 6} c={i % 3 === 1 ? K.azul : c} c2={c2} />)}</g>;
 };
 /** Espejo de obsidiana que humea (Tezcatlipoca): en la sien o en lugar del pie. */
-const Espejo: React.FC<{ x: number; y: number; r?: number; humo?: boolean }> = ({ x, y, r = 11, humo = true }) => {
+export const Espejo: React.FC<{ x: number; y: number; r?: number; humo?: boolean }> = ({ x, y, r = 11, humo = true }) => {
   const f = useCurrentFrame();
   return (
     <g transform={`translate(${x} ${y})`}>
@@ -59,11 +59,11 @@ const Espejo: React.FC<{ x: number; y: number; r?: number; humo?: boolean }> = (
   );
 };
 /** Pelo de mujer mexica: dos mechones como cuernitos sobre la frente (axtlacuilli). */
-const PeloMexica: React.FC = () => <path d="M-4 -34 C -2 -52, 10 -56, 12 -46 C 6 -46, 4 -40, 6 -34 Z M8 -32 C 14 -48, 26 -48, 26 -38 C 20 -40, 16 -34, 16 -30 Z" fill={NEGRO} />;
+export const PeloMexica: React.FC = () => <path d="M-4 -34 C -2 -52, 10 -56, 12 -46 C 6 -46, 4 -40, 6 -34 Z M8 -32 C 14 -48, 26 -48, 26 -38 C 20 -40, 16 -34, 16 -30 Z" fill={NEGRO} />;
 /** Diadema turquesa de punta (xiuhuitzolli), de señores y dioses principales. */
 const Xiuhuitzolli: React.FC = () => <g><path d="M-30 -10 C -22 -30, 4 -40, 26 -30 L 20 -60 L 6 -38 C -8 -36, -20 -28, -30 -10 Z" fill={K.turquesa} stroke={NEGRO} strokeWidth={2} />{[-20, -8, 4].map((x, i) => <circle key={i} cx={x} cy={-26 - i * 4} r={2.5} fill={K.blanco} />)}</g>;
 /** Banda de tela con borde de puntos (tocado simple). */
-const Banda: React.FC<{ c?: string }> = ({ c = K.rojo }) => <g><path d="M-31 0 C -18 -20, 8 -28, 30 -20" stroke={c} strokeWidth={8} fill="none" /><path d="M-31 0 C -18 -20, 8 -28, 30 -20" stroke={K.blanco} strokeWidth={2.4} strokeDasharray="1 7" strokeLinecap="round" fill="none" /></g>;
+export const Banda: React.FC<{ c?: string }> = ({ c = K.rojo }) => <g><path d="M-31 0 C -18 -20, 8 -28, 30 -20" stroke={c} strokeWidth={8} fill="none" /><path d="M-31 0 C -18 -20, 8 -28, 30 -20" stroke={K.blanco} strokeWidth={2.4} strokeDasharray="1 7" strokeLinecap="round" fill="none" /></g>;
 
 // ---------- piezas de cuerpo (coordenadas del cuerpo: hombros y≈-300, cintura -210, pies 0) ----------
 /** Huipil (blusa) de mujer con greca en el borde: cubre el torso. */
@@ -85,7 +85,7 @@ const JoyaViento: React.FC = () => <g transform="translate(8 -262)"><circle r={1
 /** Pectoral redondo (anillo blanco de concha) de Tezcatlipoca. */
 const Anahuatl: React.FC = () => <g transform="translate(8 -262)"><circle r={15} fill="none" stroke={K.blanco} strokeWidth={7} /><circle r={15} fill="none" stroke={NEGRO} strokeWidth={1.4} /><circle r={19} fill="none" stroke={NEGRO} strokeWidth={1.2} /></g>;
 /** Escudo redondo (chimalli) con cinco bolas de plumón y flecos de plumas. */
-const Chimalli: React.FC<{ c?: string; c2?: string }> = ({ c = K.turquesa, c2 = K.amarillo }) => (
+export const Chimalli: React.FC<{ c?: string; c2?: string }> = ({ c = K.turquesa, c2 = K.amarillo }) => (
   <g transform="translate(-6 6)">
     {Array.from({ length: 7 }, (_, i) => <path key={i} d={`M${-30 + i * 10} 40 l -3 26 l 8 0 Z`} fill={i % 2 ? K.rojo : c2} stroke={NEGRO} strokeWidth={1.2} />)}
     <circle r={46} fill={c} stroke={NEGRO} strokeWidth={3} />
@@ -94,7 +94,7 @@ const Chimalli: React.FC<{ c?: string; c2?: string }> = ({ c = K.turquesa, c2 = 
   </g>
 );
 /** Atado de dardos (mitl) en la mano. */
-const Dardos: React.FC = () => <g transform="rotate(-6)">{[-6, 0, 6].map((dx, i) => <g key={i}><path d={`M${dx} 50 L ${dx} -100`} stroke="#6E4A26" strokeWidth={4} /><path d={`M${dx - 4} -100 L ${dx} -116 L ${dx + 4} -100 Z`} fill={K.gris} stroke={NEGRO} strokeWidth={1} /><path d={`M${dx - 4} 44 l 4 -14 l 4 14`} fill={K.rojo} /></g>)}<rect x={-10} y={-8} width={20} height={8} fill={K.rojo} /></g>;
+export const Dardos: React.FC = () => <g transform="rotate(-6)">{[-6, 0, 6].map((dx, i) => <g key={i}><path d={`M${dx} 50 L ${dx} -100`} stroke="#6E4A26" strokeWidth={4} /><path d={`M${dx - 4} -100 L ${dx} -116 L ${dx + 4} -100 Z`} fill={K.gris} stroke={NEGRO} strokeWidth={1} /><path d={`M${dx - 4} 44 l 4 -14 l 4 14`} fill={K.rojo} /></g>)}<rect x={-10} y={-8} width={20} height={8} fill={K.rojo} /></g>;
 /** Bastón de rayo ondulado (Tlaloc). */
 const BastonRayo: React.FC = () => <g><path d="M0 80 L 0 20 L -10 0 L 8 -30 L -8 -60 L 10 -96 L -4 -130 L 8 -150" stroke={NEGRO} strokeWidth={11} fill="none" strokeLinejoin="round" /><path d="M0 80 L 0 20 L -10 0 L 8 -30 L -8 -60 L 10 -96 L -4 -130 L 8 -150" stroke={K.amarillo} strokeWidth={6} fill="none" strokeLinejoin="round" /></g>;
 /** Bastón de mando con plumas (señores). */
@@ -111,7 +111,7 @@ const FaldaSerpientes: React.FC = () => <g>{[-180, -140, -100, -60, -24].map((y,
 const Fardo: React.FC = () => <g transform="translate(-44 -270)"><rect x={-26} y={-20} width={44} height={86} rx={12} fill={K.crema2} stroke={NEGRO} strokeWidth={2.2} />{[0, 22, 44].map((y) => <path key={y} d={`M-26 ${y - 6} h 44`} stroke={K.rojo} strokeWidth={4} />)}<Pluma x={-6} y={-18} ang={-20} l={44} /><Pluma x={2} y={-18} ang={10} l={40} c={K.azul} /></g>;
 
 // ---------- criaturas ----------
-const ojoCodice = (x: number, y: number, r = 6) => <g><circle cx={x} cy={y} r={r + 2} fill={K.rojo} stroke={NEGRO} strokeWidth={1.4} /><circle cx={x} cy={y} r={r} fill={K.blanco} stroke={NEGRO} strokeWidth={1.2} /><circle cx={x + r * 0.2} cy={y + r * 0.1} r={r * 0.45} fill={NEGRO} /></g>;
+export const ojoCodice = (x: number, y: number, r = 6) => <g><circle cx={x} cy={y} r={r + 2} fill={K.rojo} stroke={NEGRO} strokeWidth={1.4} /><circle cx={x} cy={y} r={r} fill={K.blanco} stroke={NEGRO} strokeWidth={1.2} /><circle cx={x + r * 0.2} cy={y + r * 0.1} r={r * 0.45} fill={NEGRO} /></g>;
 const pataAnimada = (fase: number, amp: number, cad: P, ph: number, l1: number, l2: number, del: boolean, anchos: number[]) => {
   const a = Math.sin(fase + ph) * amp;
   const rod = desde(cad, a, l1);

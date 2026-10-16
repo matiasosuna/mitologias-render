@@ -9,6 +9,8 @@ const lista = (archivo, nombre) => (leer(archivo).match(new RegExp(`export const
 const FONDOS = new Set(lista('src/motor/fondosAzteca.tsx', 'FONDOS_AZTECA'));
 const ELEMS = new Set(lista('src/motor/fondosAzteca.tsx', 'ELEMENTOS_AZTECA'));
 const ELENCO = new Set([...leer('src/motor/elencoAzteca.tsx').split('export const ELENCO_AZTECA')[1].split('export const NOMBRE_EN_AZTECA')[0].matchAll(/^\s{2}(\w+): /gm)].map((m) => m[1]));
+// Diseños oficiales (*_oficial) de la serie: también valen en los guiones.
+for (const m of leer('src/motor/elencoAztecaOficial.tsx').matchAll(/^\s{2}(\w+_oficial): /gm)) ELENCO.add(m[1]);
 const GENERICOS = new Set(['sol', 'luna', 'nube', 'monte', 'arbol', 'casa', 'templo', 'roca', 'altar', 'trono', 'barco', 'cueva', 'maiz', 'estrellas', 'fogata']);
 // Animales comunes del elenco general (pez, perro…) también valen.
 const ELENCO_GENERAL = new Set([...leer('src/motor/elenco.tsx').split('export const ELENCO')[1].split('export type Estado')[0].matchAll(/^\s{2}(\w+): /gm)].map((m) => m[1]));

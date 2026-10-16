@@ -514,3 +514,6 @@ export const ELENCO_HINDU: Record<string, Ficha> = {
 
 /** Nombres en pantalla (inglés) cuando difieren de la ficha. */
 export const NOMBRE_EN_HINDU: Record<string, string> = Object.fromEntries(Object.entries(ELENCO_HINDU).filter(([, f]) => f.griego).map(([k, f]) => [k, f.griego as string]));
+
+// Piezas que reusan los diseños oficiales (elencoHinduOficial.tsx).
+export { EnCara, Kohl, Tilak, Kundala, Mukuta, Diadema, Odhni, Jata, TercerOjo, Creciente, Halo, Vanamala, Collar, Cordon, Rudraksha, Patka, RayasTigre, CobraCuello, Shankha, Gada, Padma, Trishula, Pothi, Kamandalu, Vajra, Modakas, Pasha, Parashu, Khadga, Mala, Arco, Elefante };
