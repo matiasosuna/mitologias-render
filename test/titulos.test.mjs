@@ -47,7 +47,7 @@ test('las partes curiosas no se repiten', () => {
   }
 });
 
-test('temporada y episodio únicos por serie, seguidos (1..N) y en el orden de las carpetas', () => {
+test('temporada y episodio únicos por serie, seguidos (1..N) y en el orden de las carpetas (salvo temporada 0)', () => {
   const series = {};
   for (const id of episodios) (series[guion(id).serie] ??= []).push(id);
   for (const [serie, ids] of Object.entries(series)) {
@@ -61,7 +61,8 @@ test('temporada y episodio únicos por serie, seguidos (1..N) y en el orden de l
       vistos.add(k);
       (porTemp[temporada] ??= []).push(episodio);
     }
-    for (const [t, eps] of Object.entries(porTemp)) assert.deepEqual(eps, eps.map((_, i) => i + 1), `${serie} temporada ${t}: episodios seguidos y en orden`);
+    // temporada 0 (especiales y Stories, carpetas 80+ y 97–99): seguidos 1..N, sin importar el orden de las carpetas
+    for (const [t, eps] of Object.entries(porTemp)) { const e = t === '0' ? [...eps].sort((a, b) => a - b) : eps; assert.deepEqual(e, e.map((_, i) => i + 1), `${serie} temporada ${t}: episodios seguidos y en orden`); }
   }
 });
 

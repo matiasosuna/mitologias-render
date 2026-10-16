@@ -1,5 +1,7 @@
 # Mitología hawaiana — plan de videos (dos capas)
 
+> **Stories (2026-10-15):** Kana y los Menehune (63) están en la cola como episodios sueltos "Myth Stories" (`COLA-PRODUCCION.md`, PAUSADO, ítems P-H). Si la serie principal llega ahí, no repetirlos: resumir en 1–2 frases y mandar al Story.
+
 Estilo "kapa": tela de corteza (wauke) con dibujos geométricos en marrón, negro y rojo, petroglifos (kiʻi pōhaku), volcán y lava, océano enorme, canoas de doble casco, capas y cascos de plumas (ʻahu ʻula rojas y amarillas). Música: tambor pahu (piel de tiburón), sonajas ʻulīʻulī y pūʻili, flauta nasal (ʻohe hano ihu), caracola (pū) y canto (oli) en bordón. Nada de ukelele ni guitarra de acero (llegaron después del contacto).
 Serie `hawaianas`, ids `hawaianas-NN-slug` (sin ʻokina ni kahakō en el id; NN corre seguido por todo el plan). Incluye lo polinesio que haga falta, siempre rotulado como tal (Māori, Tahití, Samoa) y nunca mezclado como si fuera hawaiano.
 

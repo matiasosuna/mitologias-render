@@ -7,7 +7,8 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, statSy
 import { createHash } from 'node:crypto';
 import { join, dirname, basename } from 'node:path';
 import { ralentizar, retimear } from './narracion-lenta.mjs';
-import { T_SHORT, timelineMulti } from '../lib/motor-tiempos.mjs';
+import { timelineMulti } from '../lib/motor-tiempos.mjs';
+import { tiemposShort } from '../lib/quien.mjs';
 import { leerEnv, usaChatterbox, binModal, motorDeVoz } from '../lib/voz-config.mjs';
 
 // Inglés: tu voz clonada en ElevenLabs (si hay clave en .env); el resto, voces de macOS gratis.
@@ -97,7 +98,7 @@ for (const esc of g.escenas) escenas.push({
   }),
 });
 
-let tl = timelineMulti(escenas, undefined, g.formato === 'short' ? T_SHORT : undefined);
+let tl = timelineMulti(escenas, undefined, g.formato === 'short' ? tiemposShort(g) : undefined);
 writeFileSync(join(dir, 'timeline.json'), JSON.stringify(tl));
 // Narración más lenta y clara: estira los audios nuevos en inglés y recalcula el timeline.
 if (idiomas.includes('en') && ralentizar(id) > 0) { retimear(id); tl = JSON.parse(readFileSync(join(dir, 'timeline.json'), 'utf8')); }

@@ -1,5 +1,7 @@
 # Mitología griega — plan completo de videos
 
+> **Stories (2026-10-15):** Perseo y Medusa (45), Teseo y el Minotauro (58), Perséfone, los trabajos de Heracles (49–54), Dédalo e Ícaro (59), Midas, Aracne, Jasón (65–68) y Eco y Narciso (27) salen como episodios sueltos "Myth Stories" (`COLA-PRODUCCION.md`, ítems H). Si la serie principal llega ahí, no repetirlos: resumir en 1–2 frases y mandar al Story.
+
 Orden cronológico del mito: del origen del mundo a la vuelta de Ulises. Cada video dura 4–6 min y termina anunciando el siguiente.
 **12 temporadas · 96 videos · ~8 h en total.**
 

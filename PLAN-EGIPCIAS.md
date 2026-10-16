@@ -1,5 +1,7 @@
 # Mitología egipcia — plan de videos
 
+> **Stories (2026-10-15):** el campesino elocuente, la toma de Jope y la Verdad y la Mentira están en la cola como episodios sueltos "Myth Stories" (`COLA-PRODUCCION.md`, PAUSADO, ítems P-H). Si la serie principal llega ahí, no repetirlos: resumir en 1–2 frases y mandar al Story.
+
 Estilo "papiro": pintura de tumba y papiro — figuras de perfil (hombres ocre rojo, mujeres ocre amarillo), lino blanco, collares anchos,
 dioses con cabeza de animal y coronas, frisos de bloques de colores, jeroglíficos y agua en zigzag. Música: arpa, flauta de caña (ney) y pandero (tar) en modo Hijaz.
 Serie `egipcias`, ids `egipcias-NN-slug`. Fuentes: Textos de las Pirámides, Textos de los Sarcófagos, Libro de los Muertos, Libro de la Vaca Celeste,

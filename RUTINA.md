@@ -31,14 +31,33 @@ Empezá cada llamada a Bash con `set -a; . ./.env; set +a;` (desde la raíz del 
 Comprobá que todo está verde **antes** de producir: `npx tsc --noEmit -p . && node --test test/*.test.mjs`. Si ya falla sin tus cambios, anotalo (paso 6) y terminá.
 
 ## 2 · Elegir el ítem
-El primer `- [ ]` de `COLA-PRODUCCION.md`. Si tiene una nota `> BLOQUEADO`, leela y evitá ese problema. Si no queda ninguno, terminá sin cambios.
-Leé antes de escribir: `BRIEF-SHORTS.md` (Shorts), `BRIEF-GUION.md` (episodios), `MOTOR.md` (formato + la sección de la serie), el `PLAN-<SERIE>.md` y 1–2 guiones existentes de la misma serie como ejemplo (para Shorts, también `src/videos/short-hawaianas-hiku/guion.json`).
+El primer `- [ ]` de `COLA-PRODUCCION.md` **que esté antes de `## PAUSADO`**. Nada de la sección PAUSADO se toma nunca (foco desde 2026-10-15:
+solo griegas; en pausa nórdicas, egipcias, hawaianas y todas las demás); si antes de PAUSADO no queda ninguno, terminá sin cambios.
+Si tiene una nota `> BLOQUEADO`, leela y evitá ese problema.
+Leé antes de escribir: `BRIEF-SHORTS.md` (todo Short), `BRIEF-QUIEN.md` (ítems Q), `BRIEF-GUION.md` (ítems H y episodios), `MOTOR.md` (formato + la sección de la serie), el `PLAN-<SERIE>.md` y 1–2 guiones existentes de la misma serie como ejemplo (para Shorts, también `src/videos/short-hawaianas-hiku/guion.json`).
+Tipos de ítem: **Q** = "Who is…?" · **H** = Story (episodio suelto) · **R** y **S** = Shorts nativos · M/C/Y = series nuevas (pausadas).
 
 ## 3 · Producir
 **Reglas de la casa (todo):** inglés simple (frases ≤ 15 palabras en Shorts, ≤ 20 en episodios, una idea por frase, cada nombre raro explicado la primera vez); ganchos de curiosidad; **nada inventado presentado como hecho**: seguí las fuentes del PLAN de la serie y nombrá la versión/pueblo/fuente cuando corresponda ("in one Haudenosaunee telling…"); respetá la sección "Respeto y fidelidad" de cada PLAN (violencia y sacrificio dichos, nunca mostrados; sin contenido sexual). "That's why…" solo si sale de la fuente. Nada de otros proyectos ni datos personales en el contenido.
 
-### Shorts nativos (ítems S…)
-Para cada episodio del ítem, **3 Shorts distintos** (momentos o personajes distintos del episodio, no el mismo con otro gancho):
+### "Who is…?" (ítems Q)
+Un Short por personaje del ítem, según `BRIEF-QUIEN.md`: id `short-<serie>-quien-<clave>` (clave del oficial sin `_oficial`), campo `quien`
+(`nombre`, `subtitulo`, `como` = la clave `*_oficial`), una gran anécdota de las fuentes + 2–3 rasgos, 60–75 s, y cierre al episodio
+sugerido en la cola (solo si de verdad lo muestra; si no, otro de la misma serie con `S<n>E<m>`). Todas las reglas de Shorts de abajo
+valen (nunca repetir una anécdota de otro Short, personajes oficiales, puesta vertical).
+
+### Stories (ítems H)
+Un episodio suelto de 4–6 min que se entiende **sin haber visto nada**, según `BRIEF-GUION.md` con estos cambios:
+- Carpeta y número los de la cola (`<serie>-8N-<slug>`, `numero: "8N"`); `especial: { "nombre": { "es": "Historias de mitología <griega|nórdica|egipcia|hawaiana>", "en": "<Greek|Norse|Egyptian|Hawaiian> Myth Stories" } }`, sin `parte`.
+- 10–12 escenas de 4–6 frases. Sin enganche con el episodio anterior: arranca con el conflicto y presenta a cada personaje la primera vez.
+  Última escena: pregunta al público ligada a la historia; si un episodio de la serie principal sigue de verdad con esos personajes, se puede recomendar.
+- Fuentes: las del ítem (nombralas en `youtube.json` como en `griegas-99-reino-de-hades`). Nunca repetir lo que ya cuenta otro episodio o Short: si un tramo ya está, resumilo en 1–2 frases.
+- `youtube.json` como los episodios; `miniatura`; 2–3 `shorts` de recorte.
+- `src/videos/titulos.json`: `"<id>": { "titulo": "<curioso, ≤ 70 caracteres> | <Serie> Myth Stories Special", "temporada": 0, "episodio": <el siguiente libre de la temporada 0 de esa serie>, "especial": "<Serie> Myth Stories" }` (lo valida `test/titulos.test.mjs`).
+- No tocar `ESPECIALES` de `scripts/nube.mjs` ni `listas.json`: cuándo y en qué lista se publica lo decide Matías.
+
+### Shorts nativos (ítems R y S)
+Para cada episodio del ítem, **hasta 3 Shorts por episodio en total** (ítems R: recontá cuántos `short-*` ya tienen ese `episodio` y hacé los que falten), momentos o personajes distintos del episodio, no el mismo con otro gancho:
 - **Nunca repetir una historia** (pedido de Matías): antes de escribir, leé `gancho.en`, `titulo.en` y el `episodio` de TODOS los `src/videos/short-*/guion.json` existentes. Un Short nuevo no puede contar la misma anécdota, el mismo momento ni el mismo giro que otro ya hecho (aunque cambie el gancho o la mitología), ni resumir el episodio entero: es una mini historia de UN momento puntual. Si un episodio no da 3 momentos nuevos, hacé menos y anotalo en la cola.
 - Id `short-<serie>-<slug>` (slug corto en español, sin acentos, que no exista ya en `src/videos/`).
 - `guion.json` como `short-hawaianas-hiku`: `formato: "short"`, `serie`, `numero: "S"`, `titulo`/`gancho` {es,en} (gancho ≤ 8 palabras, situación imposible o truco), `tituloGriego: ""`, `episodio: "<id del episodio>"`, `cierre` {es,en} = teaser con suspenso + el episodio: `"<teaser cliffhanger> — <Serie> Mythology S<n>E<m>"` (temporada/episodio de la entrada del `episodio` en `src/videos/titulos.json`, formato `SxEy`; en `es`: `"… — Mitología <serie> T<n>E<m>"`). No copies el formato viejo `Ep. <N>` de los Shorts existentes (y no los reescribas).
@@ -75,7 +94,7 @@ git add -A src/videos public/audio src/motor/indice.ts <archivos de código/plan
 git commit -m "<ítem>: <qué se hizo>" -m "Co-Authored-By: Claude <noreply@anthropic.com>"
 git push origin HEAD:main || { git pull --rebase origin main && git push origin HEAD:main; }
 scripts/publicar-render.sh                             # copia al repo público (usa MOC_RENDER_DIR)
-scripts/estado-agregar-shorts.sh <ids de los Shorts nativos nuevos>   # solo ítems S: suma al final del orden, intercalados
+scripts/estado-agregar-shorts.sh <ids de los Shorts nativos nuevos>   # ítems Q, R y S: suma al final del orden, intercalados
 ```
 Después marcá el ítem en `COLA-PRODUCCION.md` → `- [x] S01 · … — HECHO 2026-10-14: short-…, short-…` (todos los ids), commit y push a `main` igual que arriba.
 
@@ -84,5 +103,5 @@ No empujes contenido roto. Descartá lo producido (`git stash -u` o `git checkou
 `> BLOQUEADO <fecha>: <qué falló, en una línea, sin secretos>`, commiteá solo `COLA-PRODUCCION.md`, push a `main` y terminá.
 
 ## Tamaño
-Un ítem por corrida: 6–9 Shorts o 4 episodios. Si un ítem de serie nueva no entra, terminá lo que se pueda validar en verde, empujalo,
+Un ítem por corrida: 1–4 "Who is…?" (Q), 1 Story (H), 6–9 Shorts (R/S) o 4 episodios. Si un ítem de serie nueva no entra, terminá lo que se pueda validar en verde, empujalo,
 y partí el ítem en la cola (lo hecho `[x]`, lo que falta como ítem nuevo `[ ]` justo debajo).

@@ -1,5 +1,7 @@
 # Mitología nórdica — plan de videos (dos capas)
 
+> **Stories (2026-10-15):** Thor pesca la serpiente (45), las manzanas de Iðunn (37) y Thor contra Hrungnir (46) están en la cola como episodios sueltos "Myth Stories" (`COLA-PRODUCCION.md`, PAUSADO, ítems P-H). Si la serie principal llega ahí, no repetirlos: resumir en 1–2 frases y mandar al Story.
+
 Estilo "runas": piedra rúnica helada (azules, celeste, nieve) con rojo de runa, frisos de nudos y runas, música de bordón + tambor + lira de arco.
 Serie `nordicas`, ids `nordicas-NN-slug` (NN corre seguido por todo el plan). Fuentes: Edda poética, Edda prosaica de Snorri, sagas legendarias, Saxo.
 

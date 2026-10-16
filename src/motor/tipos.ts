@@ -118,6 +118,8 @@ export type GuionVisual = {
   cierre?: Texto;
   /** Short nativo: episodio relacionado (id), para el link en la descripción. */
   episodio?: string;
+  /** Short "Who is…?" (BRIEF-QUIEN.md): cartel de apertura de ~2 s con el muñeco oficial (`como`), el nombre y un subtítulo. */
+  quien?: { nombre: Texto; subtitulo: Texto; como: string; fondo?: Escena['fondo']; escala?: number };
 };
 
 export type Short = {

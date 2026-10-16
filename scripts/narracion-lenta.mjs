@@ -4,7 +4,8 @@
 import { readFileSync, writeFileSync, existsSync, readdirSync, renameSync } from 'node:fs';
 import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
-import { timelineMulti, TEMPO_EN, T_SHORT } from '../lib/motor-tiempos.mjs';
+import { timelineMulti, TEMPO_EN } from '../lib/motor-tiempos.mjs';
+import { tiemposShort } from '../lib/quien.mjs';
 
 const dur = (wav) => Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', wav]).toString());
 
@@ -35,7 +36,7 @@ export function retimear(id) {
     frases: e.frases.map((fr) => ({ texto: fr.texto, audio: fr.audio, segundos: Object.fromEntries(Object.entries(fr.audio).map(([l, rel]) => [l, dur(join('public', rel))])) })),
   }));
   const g = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8'));
-  const nuevo = timelineMulti(escenas, undefined, g.formato === 'short' ? T_SHORT : undefined);
+  const nuevo = timelineMulti(escenas, undefined, g.formato === 'short' ? tiemposShort(g) : undefined);
   writeFileSync(p, JSON.stringify(nuevo));
   return { antes: tl.total / tl.fps / 60, ahora: nuevo.total / nuevo.fps / 60 };
 }

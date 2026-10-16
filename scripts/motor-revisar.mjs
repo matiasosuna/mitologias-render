@@ -4,6 +4,7 @@
 import { readFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { erroresQuien } from '../lib/quien.mjs';
 
 const id = process.argv[2];
 const dir = join('src/videos', id);
@@ -48,6 +49,9 @@ const P = { fondo: 0.45, medio: 0.75, frente: 1 };
 
 const avisos = [];
 const av = (esc, msg) => avisos.push(`[${esc}] ${msg}`);
+// Shorts "Who is…?" (BRIEF-QUIEN.md): personaje oficial, nombre y subtítulo del cartel de apertura.
+erroresQuien(g, elenco).forEach((m) => av('quien', m));
+if (g.quien?.fondo && !FONDOS.has(g.quien.fondo)) av('quien', `fondo desconocido "${g.quien.fondo}"`);
 g.escenas.forEach((esc, i) => {
   const n = esc.frases.length, et = tl.escenas[i];
   if (!FONDOS.has(esc.fondo)) av(esc.id, `fondo desconocido "${esc.fondo}"`);
