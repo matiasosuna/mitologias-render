@@ -4,17 +4,17 @@
   "serie": "griegas",
   "numero": "S",
   "titulo": {
-    "es": "¿Quién es Zeus? El dios que liberó a los monstruos",
-    "en": "Who is Zeus? The god who freed the monsters"
+    "es": "¿Quién es Zeus? El bebé que llegó a rey",
+    "en": "Who is Zeus? The baby who became king"
   },
   "tituloGriego": "",
   "gancho": {
-    "es": "¿Quién es Zeus? El dios que liberó a los monstruos",
-    "en": "Who is Zeus? The god who freed the monsters"
+    "es": "¿Quién es Zeus? El bebé que llegó a rey",
+    "en": "Who is Zeus? The baby who became king"
   },
   "cierre": {
-    "es": "Atlas recibió el peor castigo de todos — Mitología griega T1E1",
-    "en": "Atlas got the heaviest punishment of all — Greek Mythology S1E1"
+    "es": "Por qué un titán se tragó a sus hijos — Mitología griega T1E1",
+    "en": "Why a Titan swallowed his own children — Greek Mythology S1E1"
   },
   "episodio": "griegas-01-origen",
   "quien": {
@@ -22,60 +22,142 @@
     "subtitulo": { "es": "Rey de los dioses · señor del rayo", "en": "King of the gods · lord of thunder" },
     "como": "zeus_oficial"
   },
+  "coldOpen": {
+    "fondo": "cueva",
+    "foco": 960,
+    "frases": [
+      { "es": "El rey de los dioses empezó su vida escondido en una cueva.", "en": "The king of the gods started life hiding in a cave." },
+      { "es": "Porque su padre se había tragado a sus hermanos.", "en": "Because his father swallowed his brothers and sisters." }
+    ],
+    "efectos": [
+      { "en": 0, "tipo": "estrellas" },
+      { "en": 0.2, "tipo": "fogata", "x": 820, "dur": 1 },
+      { "en": 1, "tipo": "oscurecer", "intensidad": 0.45, "dur": 1 },
+      { "en": 1.5, "tipo": "temblor", "dur": 0.4 }
+    ],
+    "actores": [
+      { "id": "rea", "x": 700, "escala": 1,
+        "pasos": [ { "en": 0.1, "hace": "abraza" }, { "en": 1.2, "hace": "tiembla", "dur": 0.5 } ] },
+      { "id": "zeus_nino", "como": "nino", "x": 840, "rotulo": "",
+        "pasos": [ { "en": 0, "hace": "aparece", "con": "luz" }, { "en": 0.3, "hace": "brilla", "dur": 0.6 } ] },
+      { "id": "cronos", "como": "cronos_oficial", "x": 1200, "mira": "izq", "escala": 0.9, "rotulo": "",
+        "pasos": [ { "en": 1, "hace": "aparece", "con": "sombra" }, { "en": 1.1, "hace": "enoja" }, { "en": 1.4, "hace": "golpea" } ] }
+    ]
+  },
   "escenas": [
     {
-      "id": "guerra",
-      "fondo": "batalla",
+      "id": "rey",
+      "fondo": "olimpo",
       "foco": 960,
       "frases": [
-        { "es": "Zeus y sus hermanos pelearon diez años contra los titanes, y nadie ganaba.", "en": "For ten years, Zeus and his family fought the Titans, and nobody was winning." },
-        { "es": "Los titanes eran más viejos, más grandes, y habían gobernado el mundo siempre.", "en": "The Titans were older and bigger, and they had ruled the world for ages." }
+        { "es": "Gobierna el cielo y lanza el trueno.", "en": "He rules the sky and throws the thunder." },
+        { "es": "Cuida la justicia y castiga los juramentos rotos.", "en": "He guards justice and punishes broken oaths." }
       ],
       "efectos": [
-        { "en": 0.4, "tipo": "temblor", "dur": 0.4 },
-        { "en": 0.6, "tipo": "polvo", "x": 960 }
+        { "en": 0.3, "tipo": "rayo", "x": 1150 },
+        { "en": 1, "tipo": "luz", "x": 760 }
       ],
       "actores": [
-        { "id": "zeus", "como": "zeus_oficial", "x": 730, "escala": 1.1, "rotulo": "",
-          "pasos": [ { "en": 0.2, "hace": "golpea" }, { "en": 1.2, "hace": "enoja" } ] },
-        { "id": "cronos", "como": "cronos_oficial", "x": 1190, "mira": "izq", "escala": 1.05,
-          "pasos": [ { "en": 0.4, "hace": "golpea" }, { "en": 1.3, "hace": "levanta" } ] }
+        { "id": "zeus", "como": "zeus_oficial", "x": 760, "escala": 1, "rotulo": "",
+          "pasos": [ { "en": 0, "hace": "aparece", "con": "luz" }, { "en": 0.3, "hace": "brilla", "dur": 0.6 }, { "en": 1.1, "hace": "enoja" }, { "en": 1.3, "hace": "senala" } ] },
+        { "id": "aguila", "como": "aguila", "x": 1180, "y": 500, "mira": "izq", "escala": 1,
+          "pasos": [ { "en": 0.4, "hace": "aparece", "con": "luz" }, { "en": 0.5, "hace": "vuela", "a": [1140, 450] } ] }
       ]
     },
     {
-      "id": "consejo",
-      "fondo": "monte",
+      "id": "padre",
+      "fondo": "palacio",
       "foco": 960,
       "frases": [
-        { "es": "Entonces Gea, la Tierra misma, le dijo a Zeus cómo ganar.", "en": "Then Gaia, the Earth herself, told Zeus how to win." },
-        { "es": "Bajo el mundo, en un pozo llamado Tártaro, sus tíos estaban encadenados.", "en": "Deep under the world, in a pit called Tartarus, his uncles sat in chains." },
-        { "es": "Tres cíclopes de un solo ojo y tres gigantes de cien brazos.", "en": "Three Cyclopes with one eye each, and three giants with a hundred arms." }
+        { "es": "El menor de seis hijos de los titanes Cronos y Rea.", "en": "Youngest of six kids of the Titans Cronus and Rhea." },
+        { "es": "Con miedo a perder el trono, Cronos se tragó a los otros:", "en": "Afraid of losing his throne, Cronus swallowed the others:" },
+        { "es": "Hestia, Deméter, Hera, Hades y Poseidón.", "en": "Hestia, Demeter, Hera, Hades and Poseidon." }
+      ],
+      "elementos": [ { "tipo": "trono", "x": 600 } ],
+      "efectos": [
+        { "en": 1, "tipo": "oscurecer", "intensidad": 0.4, "dur": 1.5 },
+        { "en": 1.6, "tipo": "temblor", "dur": 0.4 }
+      ],
+      "rotulos": [
+        { "en": 2, "texto": { "es": "HESTIA · DEMÉTER · HERA", "en": "HESTIA · DEMETER · HERA" }, "x": 960, "y": 190 },
+        { "en": 2.4, "texto": { "es": "HADES · POSEIDÓN", "en": "HADES · POSEIDON" }, "x": 960, "y": 250 }
       ],
       "actores": [
-        { "id": "gea", "x": 740, "escala": 1.15,
-          "pasos": [ { "en": 0, "hace": "aparece", "con": "polvo" }, { "en": 0.3, "hace": "habla", "dur": 0.6 }, { "en": 1.2, "hace": "senala" } ] },
-        { "id": "zeus", "como": "zeus_oficial", "x": 1190, "mira": "izq", "escala": 1.1, "rotulo": "",
-          "pasos": [ { "en": 0.6, "hace": "asiente" }, { "en": 2.2, "hace": "sorprende" } ] }
+        { "id": "cronos", "como": "cronos_oficial", "x": 760, "escala": 0.9,
+          "pasos": [ { "en": 0.4, "hace": "alegra" }, { "en": 1, "hace": "tiembla", "dur": 0.5 }, { "en": 1.6, "hace": "enoja" }, { "en": 1.7, "hace": "golpea" }, { "en": 2.3, "hace": "golpea" } ] },
+        { "id": "rea", "x": 1190, "mira": "izq", "escala": 1,
+          "pasos": [ { "en": 0.2, "hace": "alegra" }, { "en": 1.6, "hace": "sorprende" }, { "en": 2.1, "hace": "lamenta" } ] }
       ]
     },
     {
-      "id": "tartaro",
+      "id": "cueva",
+      "fondo": "cueva",
+      "foco": 960,
+      "frases": [
+        { "es": "Rea salvó al último: Cronos se tragó una piedra en su lugar.", "en": "Rhea saved the last one: Cronus swallowed a stone instead." },
+        { "es": "El bebé Zeus creció escondido en una cueva de Creta.", "en": "Baby Zeus grew up hidden in a cave on Crete." }
+      ],
+      "elementos": [ { "tipo": "roca", "x": 960, "s": 0.35, "en": 0.2, "hasta": 0.8 } ],
+      "efectos": [
+        { "en": 0, "tipo": "estrellas" },
+        { "en": 1, "tipo": "fogata", "x": 1000, "dur": 1 }
+      ],
+      "rotulos": [ { "en": 1.2, "texto": { "es": "CRETA", "en": "CRETE" }, "x": 960, "y": 220 } ],
+      "actores": [
+        { "id": "rea", "x": 700, "escala": 1,
+          "pasos": [ { "en": 0.2, "hace": "ofrece" }, { "en": 1, "hace": "alegra" }, { "en": 1.1, "hace": "abraza" } ] },
+        { "id": "cronos", "como": "cronos_oficial", "x": 1200, "mira": "izq", "escala": 0.9, "rotulo": "",
+          "pasos": [ { "en": 0, "hace": "aparece", "con": "sombra" }, { "en": 0.5, "hace": "habla", "dur": 0.3 }, { "en": 0.9, "hace": "desaparece", "con": "sombra" } ] },
+        { "id": "zeus_nino", "como": "nino", "x": 840, "rotulo": "ZEUS",
+          "pasos": [ { "en": 1, "hace": "aparece", "con": "luz" }, { "en": 1.2, "hace": "brilla", "dur": 0.5 } ] },
+        { "id": "amaltea", "como": "cabra", "x": 1350, "mira": "izq", "rotulo": "",
+          "pasos": [ { "en": 1.2, "hace": "entra", "a": 1130 } ] }
+      ]
+    },
+    {
+      "id": "regreso",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        { "es": "Ya grande, Zeus hizo que Cronos los vomitara a todos.", "en": "Grown up, Zeus made Cronus throw them all up." },
+        { "es": "Salieron cinco dioses, listos para pelear.", "en": "Out came five gods, ready to fight." }
+      ],
+      "efectos": [ { "en": 0.6, "tipo": "temblor", "dur": 0.4 } ],
+      "actores": [
+        { "id": "zeus", "como": "zeus_oficial", "x": 700, "escala": 0.95, "rotulo": "",
+          "pasos": [ { "en": 0.1, "hace": "ofrece" }, { "en": 1, "hace": "alegra" }, { "en": 1.2, "hace": "senala" } ] },
+        { "id": "cronos", "como": "cronos_oficial", "x": 1190, "mira": "izq", "escala": 0.9, "rotulo": "",
+          "pasos": [ { "en": 0.3, "hace": "sorprende" }, { "en": 0.5, "hace": "tiembla", "dur": 0.4 }, { "en": 0.95, "hace": "desaparece", "con": "humo" } ] },
+        { "id": "hestia", "x": 1000, "mira": "izq", "capa": "medio", "escala": 0.85, "rotulo": "",
+          "pasos": [ { "en": 1, "hace": "aparece", "con": "humo" } ] },
+        { "id": "demeter", "x": 1240, "mira": "izq", "capa": "medio", "escala": 0.85, "rotulo": "",
+          "pasos": [ { "en": 1.1, "hace": "aparece", "con": "humo" } ] },
+        { "id": "hera", "como": "hera_oficial", "x": 940, "mira": "izq", "escala": 0.8, "rotulo": "",
+          "pasos": [ { "en": 1.2, "hace": "aparece", "con": "humo" } ] },
+        { "id": "hades", "como": "hades_oficial", "x": 1120, "mira": "izq", "escala": 0.8, "rotulo": "",
+          "pasos": [ { "en": 1.3, "hace": "aparece", "con": "humo" } ] },
+        { "id": "poseidon", "como": "poseidon_oficial", "x": 1300, "mira": "izq", "escala": 0.8, "rotulo": "",
+          "pasos": [ { "en": 1.4, "hace": "aparece", "con": "humo" }, { "en": 1.6, "hace": "alegra" } ] }
+      ]
+    },
+    {
+      "id": "ciclopes",
       "fondo": "inframundo",
       "foco": 960,
       "frases": [
-        { "es": "Así que Zeus bajó a la oscuridad para sacarlos.", "en": "So Zeus climbed down into the dark to break them out." },
-        { "es": "Un escritor antiguo, Apolodoro, cuenta que una guardiana monstruosa, Campe, le cerró el paso.", "en": "One old writer, Apollodorus, says a monster guard named Campe stood in his way." },
-        { "es": "Zeus la venció y rompió todas las cadenas.", "en": "Zeus beat her, and broke every chain." }
+        { "es": "Para vencer a los titanes, Zeus liberó a los cíclopes.", "en": "To beat the Titans, Zeus freed the Cyclopes." },
+        { "es": "Agradecidos, le forjaron el rayo.", "en": "In thanks, they forged him the thunderbolt." }
       ],
       "efectos": [
-        { "en": 2.2, "tipo": "destello", "x": 1000, "y": 450, "dur": 0.3 },
-        { "en": 2.5, "tipo": "chispas", "x": 1180, "y": 520 }
+        { "en": 0.55, "tipo": "destello", "x": 1000, "y": 450, "dur": 0.3 },
+        { "en": 0.6, "tipo": "chispas", "x": 1180, "y": 520 },
+        { "en": 1.4, "tipo": "rayo", "x": 760 }
       ],
       "actores": [
-        { "id": "zeus", "como": "zeus_oficial", "x": 730, "escala": 1.1, "rotulo": "",
-          "pasos": [ { "en": 0, "hace": "aparece", "con": "sombra" }, { "en": 1.3, "hace": "sorprende" }, { "en": 2.1, "hace": "golpea" } ] },
-        { "id": "ciclope", "como": "ciclope", "x": 1190, "mira": "izq", "escala": 1.15,
-          "pasos": [ { "en": 0.6, "hace": "aparece", "con": "sombra" }, { "en": 0.8, "hace": "arrodilla" }, { "en": 2.5, "hace": "levantarse" }, { "en": 2.7, "hace": "alegra" } ] }
+        { "id": "zeus", "como": "zeus_oficial", "x": 730, "escala": 0.95, "rotulo": "",
+          "pasos": [ { "en": 0, "hace": "aparece", "con": "sombra" }, { "en": 0.5, "hace": "golpea" }, { "en": 1.4, "hace": "brilla", "dur": 0.5 }, { "en": 1.5, "hace": "alegra" } ] },
+        { "id": "ciclope", "como": "ciclope", "x": 1190, "mira": "izq", "escala": 1,
+          "pasos": [ { "en": 0, "hace": "arrodilla" }, { "en": 0.7, "hace": "levantarse" }, { "en": 0.85, "hace": "alegra" }, { "en": 1.2, "hace": "ofrece" } ] }
       ]
     },
     {
@@ -83,43 +165,117 @@
       "fondo": "batalla",
       "foco": 960,
       "frases": [
-        { "es": "Los cíclopes eran grandes herreros. Agradecidos, le forjaron un regalo: el rayo.", "en": "The grateful Cyclopes were master smiths. They forged him a gift: the thunderbolt." },
-        { "es": "Los gigantes de cien brazos agarraron trescientas rocas a la vez.", "en": "The hundred-armed giants grabbed three hundred rocks at once." },
-        { "es": "Rayos desde arriba, rocas por todos lados. Los titanes cayeron al Tártaro.", "en": "Lightning from above, rocks from every side. The Titans fell into Tartarus." }
+        { "es": "Con él, aplastó a los titanes.", "en": "With it, he crushed the Titans." }
       ],
       "efectos": [
-        { "en": 0.7, "tipo": "rayo", "x": 1000 },
-        { "en": 2.1, "tipo": "rayo", "x": 1150 },
-        { "en": 2.3, "tipo": "temblor", "dur": 0.5 },
-        { "en": 2.5, "tipo": "polvo", "x": 1150 }
+        { "en": 0.15, "tipo": "rayo", "x": 1150 },
+        { "en": 0.3, "tipo": "temblor", "dur": 0.4 },
+        { "en": 0.5, "tipo": "polvo", "x": 1150 }
       ],
       "actores": [
-        { "id": "zeus", "como": "zeus_oficial", "x": 730, "escala": 1.15, "rotulo": "",
-          "pasos": [ { "en": 0.6, "hace": "levanta" }, { "en": 0.7, "hace": "brilla", "dur": 0.6 }, { "en": 2, "hace": "lanza" } ] },
-        { "id": "hecatonquiro", "como": "hecatonquiro", "x": 960, "capa": "fondo", "escala": 1.1,
-          "pasos": [ { "en": 1, "hace": "aparece", "con": "polvo" }, { "en": 1.4, "hace": "lanza" } ] },
-        { "id": "cronos", "como": "cronos_oficial", "x": 1190, "mira": "izq", "escala": 1.05,
-          "pasos": [ { "en": 2.1, "hace": "sorprende" }, { "en": 2.6, "hace": "cae" }, { "en": 2.9, "hace": "desaparece", "con": "polvo" } ] }
+        { "id": "zeus", "como": "zeus_oficial", "x": 730, "escala": 0.9, "rotulo": "",
+          "pasos": [ { "en": 0, "hace": "enoja" }, { "en": 0.05, "hace": "lanza" } ] },
+        { "id": "cronos", "como": "cronos_oficial", "x": 1190, "mira": "izq", "escala": 0.9, "rotulo": "",
+          "pasos": [ { "en": 0.15, "hace": "sorprende" }, { "en": 0.4, "hace": "cae" }, { "en": 0.75, "hace": "desaparece", "con": "polvo" } ] }
       ]
     },
     {
-      "id": "quien",
+      "id": "suertes",
       "fondo": "olimpo",
       "foco": 960,
       "frases": [
-        { "es": "Ese es Zeus: el hermano menor, el que ganó liberando a los presos.", "en": "That's Zeus: the youngest brother, and the one who won by freeing the prisoners." },
-        { "es": "Homero cuenta que se sorteó el mundo con sus hermanos, y a él le tocó el cielo.", "en": "Homer says he drew lots with his brothers, and he got the sky." },
-        { "es": "Su arma es el rayo, y su ave es el águila.", "en": "His weapon is the thunderbolt, and his bird is the eagle." },
-        { "es": "Para ver la guerra entera contra los titanes, mira la temporada 1, episodio 1.", "en": "To see the whole war against the Titans, watch Season 1, Episode 1." }
+        { "es": "Después, los hermanos se sortearon el mundo.", "en": "Then the brothers drew lots for the world." },
+        { "es": "Poseidón ganó el mar, Hades el inframundo, y Zeus el cielo.", "en": "Poseidon got the sea, Hades the underworld, Zeus the sky." }
       ],
       "efectos": [
-        { "en": 1.2, "tipo": "luz", "x": 960 }
+        { "en": 1.75, "tipo": "rayo", "x": 960 },
+        { "en": 1.8, "tipo": "luz", "x": 960 }
       ],
       "actores": [
-        { "id": "zeus", "como": "zeus_oficial", "x": 760, "escala": 1.2, "rotulo": "",
-          "pasos": [ { "en": 0, "hace": "aparece", "con": "luz" }, { "en": 0.3, "hace": "alegra" }, { "en": 1.3, "hace": "senala" }, { "en": 2.2, "hace": "levanta" } ] },
-        { "id": "aguila", "como": "aguila", "x": 1170, "y": 520, "mira": "izq", "escala": 1.1,
-          "pasos": [ { "en": 2, "hace": "aparece", "con": "luz" }, { "en": 2.1, "hace": "vuela", "a": [1120, 470] } ] }
+        { "id": "poseidon", "como": "poseidon_oficial", "x": 660, "escala": 0.85,
+          "pasos": [ { "en": 0.3, "hace": "asiente" }, { "en": 1.05, "hace": "alegra" } ] },
+        { "id": "zeus", "como": "zeus_oficial", "x": 960, "escala": 0.9, "rotulo": "",
+          "pasos": [ { "en": 0.2, "hace": "ofrece" }, { "en": 1.7, "hace": "brilla", "dur": 0.3 }, { "en": 1.75, "hace": "alegra" } ] },
+        { "id": "hades", "como": "hades_oficial", "x": 1260, "mira": "izq", "escala": 0.85,
+          "pasos": [ { "en": 0.4, "hace": "asiente" }, { "en": 1.35, "hace": "neutral" } ] }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "monte",
+      "foco": 960,
+      "frases": [
+        { "es": "Sus símbolos: el rayo, el águila, el roble…", "en": "His symbols: thunderbolt, eagle, oak…" },
+        { "es": "…y la égida, un escudo que hace huir a ejércitos enteros.", "en": "…and the aegis, a shield that sends armies running." }
+      ],
+      "efectos": [ { "en": 0.1, "tipo": "destello", "x": 860, "y": 420, "dur": 0.3 } ],
+      "rotulos": [
+        { "en": 0.1, "texto": { "es": "RAYO", "en": "THUNDERBOLT" }, "x": 960, "y": 190, "hasta": 0.4 },
+        { "en": 0.4, "texto": { "es": "ÁGUILA", "en": "EAGLE" }, "x": 960, "y": 190, "hasta": 0.7 },
+        { "en": 0.7, "texto": { "es": "ROBLE", "en": "OAK" }, "x": 960, "y": 190, "hasta": 1 },
+        { "en": 1.05, "texto": { "es": "ÉGIDA", "en": "AEGIS" }, "x": 960, "y": 190 }
+      ],
+      "actores": [
+        { "id": "zeus", "como": "zeus_oficial", "x": 760, "escala": 0.95, "rotulo": "", "props": { "escudo": true, "emblema": "gorgona" },
+          "pasos": [ { "en": 0, "hace": "brilla", "dur": 0.4 }, { "en": 1.1, "hace": "enoja" } ] },
+        { "id": "aguila", "como": "aguila", "x": 1180, "y": 480, "mira": "izq",
+          "pasos": [ { "en": 0.4, "hace": "aparece", "con": "luz" }, { "en": 0.45, "hace": "vuela", "a": [1130, 430] } ] },
+        { "id": "guerrero", "como": "guerrero", "x": 1250, "mira": "izq", "escala": 0.85, "rotulo": "",
+          "pasos": [ { "en": 1.2, "hace": "entra", "a": 1200 }, { "en": 1.5, "hace": "sorprende" }, { "en": 1.6, "hace": "corre", "a": 1700 } ] }
+      ]
+    },
+    {
+      "id": "hera",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        { "es": "Su reina es Hera, que además es su hermana.", "en": "His queen is Hera, also his sister." },
+        { "es": "Pero Zeus se enamoraba de otras una y otra vez… y Hera nunca lo olvidaba.", "en": "But Zeus kept falling for others… and Hera never forgot." }
+      ],
+      "actores": [
+        { "id": "zeus", "como": "zeus_oficial", "x": 730, "escala": 0.95, "rotulo": "",
+          "pasos": [ { "en": 0.2, "hace": "alegra" }, { "en": 1.1, "hace": "mira" }, { "en": 1.6, "hace": "sorprende" } ] },
+        { "id": "hera", "como": "hera_oficial", "x": 1190, "mira": "izq", "escala": 1,
+          "pasos": [ { "en": 0, "hace": "aparece", "con": "luz" }, { "en": 0.2, "hace": "alegra" }, { "en": 1.5, "hace": "enoja" }, { "en": 1.6, "hace": "senala" } ] }
+      ]
+    },
+    {
+      "id": "hijos",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        { "es": "Sus hijos: Atenea, Apolo, Ártemis,", "en": "His kids: Athena, Apollo, Artemis," },
+        { "es": "Hermes, Ares, Dioniso,", "en": "Hermes, Ares, Dionysus," },
+        { "es": "Perséfone, y el héroe Heracles.", "en": "Persephone, and the hero Heracles." }
+      ],
+      "actores": [
+        { "id": "atenea", "como": "atenea_oficial", "x": 690, "escala": 0.85, "pasos": [ { "en": 0.25, "hace": "aparece", "con": "luz" }, { "en": 0.97, "hace": "desaparece", "con": "luz" } ] },
+        { "id": "apolo", "como": "apolo_oficial", "x": 960, "escala": 0.85, "pasos": [ { "en": 0.45, "hace": "aparece", "con": "luz" }, { "en": 0.97, "hace": "desaparece", "con": "luz" } ] },
+        { "id": "artemisa", "como": "artemisa_oficial", "x": 1230, "mira": "izq", "escala": 0.85, "pasos": [ { "en": 0.65, "hace": "aparece", "con": "luz" }, { "en": 0.97, "hace": "desaparece", "con": "luz" } ] },
+        { "id": "hermes", "como": "hermes_oficial", "x": 690, "escala": 0.85, "pasos": [ { "en": 1, "hace": "aparece", "con": "luz" }, { "en": 1.97, "hace": "desaparece", "con": "luz" } ] },
+        { "id": "ares", "como": "ares_oficial", "x": 960, "escala": 0.8, "pasos": [ { "en": 1.3, "hace": "aparece", "con": "luz" }, { "en": 1.97, "hace": "desaparece", "con": "luz" } ] },
+        { "id": "dioniso", "como": "dioniso_oficial", "x": 1230, "mira": "izq", "escala": 0.85, "pasos": [ { "en": 1.6, "hace": "aparece", "con": "luz" }, { "en": 1.97, "hace": "desaparece", "con": "luz" } ] },
+        { "id": "persefone", "x": 800, "escala": 0.9, "pasos": [ { "en": 2, "hace": "aparece", "con": "luz" } ] },
+        { "id": "heracles", "x": 1130, "mira": "izq", "escala": 0.9, "pasos": [ { "en": 2.4, "hace": "aparece", "con": "luz" }, { "en": 2.6, "hace": "alegra" } ] }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        { "es": "Orgulloso y poderoso: el bebé escondido llegó a rey de todo.", "en": "Proud and powerful, the hidden baby became king of everything." },
+        { "es": "Mira cómo empezó todo en la temporada 1, episodio 1.", "en": "See how it all began in Season 1, Episode 1." }
+      ],
+      "efectos": [
+        { "en": 0.2, "tipo": "luz", "x": 960 },
+        { "en": 0.75, "tipo": "rayo", "x": 1050 }
+      ],
+      "actores": [
+        { "id": "zeus", "como": "zeus_oficial", "x": 760, "escala": 0.9, "rotulo": "",
+          "pasos": [ { "en": 0, "hace": "aparece", "con": "luz" }, { "en": 0.2, "hace": "alegra" }, { "en": 0.7, "hace": "levanta" }, { "en": 1.3, "hace": "senala" } ] },
+        { "id": "aguila", "como": "aguila", "x": 1170, "y": 520, "mira": "izq",
+          "pasos": [ { "en": 0.4, "hace": "aparece", "con": "luz" }, { "en": 0.5, "hace": "vuela", "a": [1120, 470] } ] }
       ]
     }
   ]

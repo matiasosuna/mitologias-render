@@ -120,6 +120,8 @@ export type GuionVisual = {
   episodio?: string;
   /** Short "Who is…?" (BRIEF-QUIEN.md): cartel de apertura de ~2 s con el muñeco oficial (`como`), el nombre y un subtítulo. */
   quien?: { nombre: Texto; subtitulo: Texto; como: string; fondo?: Escena['fondo']; escala?: number };
+  /** Short nativo: cold open de 1–2 frases sobre el momento más fuerte, ANTES del cartel/la historia (lib/short.mjs). */
+  coldOpen?: Omit<Escena, 'id'> & { id?: string };
 };
 
 export type Short = {
@@ -132,4 +134,4 @@ export type Short = {
 
 export type FraseTL = { from: number; dur: number; audio: Partial<Record<Idioma, string>>; texto: Texto };
 export type EscenaTL = { id: string; from: number; durationInFrames: number; frases: FraseTL[] };
-export type Timeline = { fps: number; introFrames: number; outroFrames: number; total: number; escenas: EscenaTL[] };
+export type Timeline = { fps: number; introFrames: number; outroFrames: number; total: number; escenas: EscenaTL[]; cartelFrom?: number; cartelFrames?: number };

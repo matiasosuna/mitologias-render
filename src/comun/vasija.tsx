@@ -311,6 +311,8 @@ export type PersonajeProps = {
   pelo?: string;
   /** Le falta un ojo (Odín): parche en vez de ojo. */
   tuerto?: boolean;
+  /** Cíclope: un solo ojo grande en medio de la frente (dibujado en la cabeza, la sigue al arrodillarse o girar). */
+  ciclope?: boolean;
   /** Cabeza de animal (dioses egipcios). */
   cabezaAnimal?: 'halcon' | 'chacal' | 'ibis' | 'leona' | 'set' | 'cocodrilo' | 'carnero' | 'vaca';
   /** Barba postiza de faraón/dios. */
@@ -871,7 +873,11 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
           )}
           {boca && <path d="M24 18 L 34 24 L 26 26 Z" fill={C.negro} />}
           {/* ojo, ceja, oreja */}
-          {props.tuerto ? (<><ellipse cx={18} cy={-6} rx={9} ry={7} fill={C.negro} stroke={lin} strokeWidth={1.5} /><Inc d="M-26 -16 L 12 -12" c={lin} w={2} /></>) : expr === 'alegria' ? <Inc d="M9 -4 Q 18 -13 27 -4" c={lin} w={2.6} /> : (ojosCerrados || parpadea) ? <Inc d="M10 -6 Q 18 -2 26 -6" c={lin} w={2.2} /> : (
+          {props.ciclope ? (<g>
+            <ellipse cx={16} cy={-6} rx={11} ry={9} fill={(ojosCerrados || parpadea) ? piel : C.blanco} stroke={C.negro} strokeWidth={2} />
+            {!(ojosCerrados || parpadea) && <><circle cx={19} cy={-6} r={5.5} fill="#3A2312" /><circle cx={19.5} cy={-6} r={3} fill={C.negro} /><circle cx={21} cy={-8} r={1.2} fill={C.blanco} /></>}
+            {(ojosCerrados || parpadea) && <Inc d="M5 -6 Q 16 0 27 -6" c={lin} w={2.4} />}
+          </g>) : props.tuerto ? (<><ellipse cx={18} cy={-6} rx={9} ry={7} fill={C.negro} stroke={lin} strokeWidth={1.5} /><Inc d="M-26 -16 L 12 -12" c={lin} w={2} /></>) : expr === 'alegria' ? <Inc d="M9 -4 Q 18 -13 27 -4" c={lin} w={2.6} /> : (ojosCerrados || parpadea) ? <Inc d="M10 -6 Q 18 -2 26 -6" c={lin} w={2.2} /> : (
             hd ? (
               <g transform={expr === 'sorpresa' ? 'translate(18 -6) scale(1.3) translate(-18 6)' : undefined}>
                 <path d={entornado ? 'M9 -5 Q 18 -9 27 -5 Q 18 -1 9 -5 Z' : 'M9 -6 Q 18 -14 27 -6 Q 18 0 9 -6 Z'} fill={piel === C.negro ? C.crema : C.blanco} stroke={C.negro} strokeWidth={1.6} />

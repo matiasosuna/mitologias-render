@@ -19,7 +19,7 @@ la rutina no toma nada de esa sección.
 - **R** = mini-historias nativas (`BRIEF-SHORTS.md`) hasta 3 Shorts por episodio. Entre paréntesis, cuántos faltaban al armar la cola
   (contando los "Who is…?"); al producir, recontá: 3 − Shorts que ya tienen ese `episodio`. **Solo anécdotas nuevas**: si no hay, hacé menos y anotalo.
 
-- [ ] Q01 · "Who is…?" (4): Zeus `zeus_oficial` → `griegas-01-origen` (Greek S1E1) · Hermes `hermes_oficial` → `griegas-15-hermes-bebe-ladron` (Greek S2E8) · Athena `atenea_oficial` → `griegas-09-atenea` (Greek S2E2) · Poseidon `poseidon_oficial` → `griegas-10-atenea-poseidon` (Greek S2E3)
+- [ ] Q01 · "Who is…?" (3; Zeus ya HECHO 2026-10-15: `short-griegas-quien-zeus`, no rehacer): Hermes `hermes_oficial` → `griegas-15-hermes-bebe-ladron` (Greek S2E8) · Athena `atenea_oficial` → `griegas-09-atenea` (Greek S2E2) · Poseidon `poseidon_oficial` → `griegas-10-atenea-poseidon` (Greek S2E3)
 - [ ] Q02 · "Who is…?" (4): Hades `hades_oficial` → `griegas-01-origen` (Greek S1E1) · Aphrodite `afrodita_oficial` → `griegas-12-red-de-hefesto` (Greek S2E5) · Apollo `apolo_oficial` → `griegas-14-apolo-piton` (Greek S2E7) · Ares `ares_oficial` → `griegas-12-red-de-hefesto` (Greek S2E5)
 - [ ] H01 · Story (Greek): Perseo y Medusa → `griegas-80-perseo-y-medusa` · especial "Greek Myth Stories". Fuentes: Apolodoro, Biblioteca 2.4; Ovidio, Metamorfosis 4–5; Hesíodo, Teogonía
 - [ ] Q03 · "Who is…?" (3): Artemis `artemisa_oficial` → `griegas-13-leto-y-los-gemelos` (Greek S2E6) · Hera `hera_oficial` → `griegas-11-hefesto` (Greek S2E4) · Prometheus `prometeo_oficial` → `griegas-02-prometeo` (Greek S1E2)

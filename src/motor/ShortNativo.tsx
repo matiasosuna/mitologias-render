@@ -1,7 +1,7 @@
 // Short nativo vertical (1080×1920): una mini-historia escrita para Shorts/Reels, con su propio guion,
 // voz y escenas montadas para el centro. Gancho arriba todo el tiempo, subtítulos grandes abajo y cierre
-// con el episodio completo. Guion con "formato": "short" (ver BRIEF-SHORTS.md). Con `quien` (BRIEF-QUIEN.md), abre con
-// el cartel "Who is <nombre>?" de ~2 s.
+// con el episodio completo. Guion con "formato": "short" (ver BRIEF-SHORTS.md). Con `coldOpen`, abre con 1–2 frases
+// sobre el momento más fuerte; con `quien` (BRIEF-QUIEN.md), sigue el cartel "Who is <nombre>?" de ~1,5 s.
 import React from 'react';
 import { AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame, interpolate } from 'remotion';
 import { C, TITULO, TEXTO, ap, cl, Lenguetas, Meandro, FrisoPalmetas, ARRIBA, TEMA, aplicarTema, TextoRunico, Entrelazado, Bloques, Jeroglificos, CalidadHD, FranjaKapa, FranjaCuentas } from '../comun/vasija';
@@ -11,10 +11,11 @@ import { FranjaPahari, CabeceraPahari, DEGRADE_PAHARI, DEGRADE_PAHARI_ARRIBA } f
 import { FranjaKamasan } from '../comun/kamasan';
 import { FranjaMaori } from '../comun/kowhaiwhai';
 import { textosQuien, tamQueEntra, FONDO_QUIEN } from '../../lib/quien.mjs';
+import { escenasDe } from '../../lib/short.mjs';
 import type { GuionVisual, Timeline, Idioma, Escena } from './tipos';
 
 /** Apertura de un Short "Who is…?" (campo `quien`): guarda de la serie arriba con "Who is X?", el muñeco oficial
- *  grande en el medio y el nombre con su subtítulo abajo. Dura timeline.introFrames (~2 s) y corta a la historia. */
+ *  grande en el medio y el nombre con su subtítulo abajo. Dura timeline.cartelFrames (~1,5 s) y corta a la historia. */
 const AperturaQuien: React.FC<{ guion: GuionVisual; dur: number; idioma: Idioma; degradeArriba: string; degradeAbajo: string; guardaArriba: React.ReactNode; guardaAbajo: React.ReactNode }> = ({ guion, dur, idioma, degradeArriba, degradeAbajo, guardaArriba, guardaAbajo }) => {
   const f = useCurrentFrame();
   const q = guion.quien!;
@@ -51,10 +52,16 @@ export const ShortNativo: React.FC<{ guion: GuionVisual; timeline: Timeline; idi
   const oscuro = TEMA.nombre !== 'vasija', papiro = TEMA.nombre === 'papiro', kapa = TEMA.nombre === 'kapa', pintado = TEMA.nombre === 'pintado', codice = TEMA.nombre === 'codice', pahari = TEMA.nombre === 'pahari', kamasan = TEMA.nombre === 'kamasan', maori = TEMA.nombre === 'kowhaiwhai', runas = TEMA.nombre === 'runas';
   const K = 1.25;
   const finHistoria = timeline.total - timeline.outroFrames;
+  const escenasG = escenasDe(guion) as Escena[]; // con cold open, va primero (igual que en timeline.escenas)
   const esc = timeline.escenas.find((e) => f >= e.from && f < e.from + e.durationInFrames);
-  const actual = esc?.frases.find((fr) => f - esc.from >= fr.from && f - esc.from < fr.from + fr.dur + 8);
+  // subtítulo: la frase que suena, y se queda hasta la próxima o hasta que termina la escena (pausas cortas, sin parpadeo)
+  const actual = esc?.frases.find((fr, j) => f - esc.from >= fr.from && f - esc.from < (esc.frases[j + 1]?.from ?? esc.durationInFrames));
   const cierre = f >= finHistoria;
-  const inicio = guion.quien ? timeline.introFrames : 0; // con apertura "Who is…?", el gancho entra después
+  // cartel "Who is…?": timelines nuevos traen cartelFrom/cartelFrames; los viejos, el cartel al principio (introFrames)
+  const cartelFrom = timeline.cartelFrom ?? 0, cartelFrames = timeline.cartelFrames ?? timeline.introFrames;
+  const nFrio = guion.coldOpen ? 1 : 0;
+  // con cold open o cartel, el gancho de arriba entra cuando arranca la historia
+  const inicio = guion.quien || guion.coldOpen ? timeline.escenas[nFrio]?.from ?? 0 : 0;
   const gancho = guion.gancho?.[idioma] ?? guion.gancho?.es ?? guion.titulo[idioma] ?? guion.titulo.es;
   const degradeArriba = pahari ? DEGRADE_PAHARI_ARRIBA : kamasan ? `linear-gradient(#1E1612, #7A2418)` : maori ? `linear-gradient(#15100E, #6E1610)` : codice ? `linear-gradient(#1A1311, #6E2A1A)` : pintado ? `linear-gradient(#1C1612, #5A3820)` : kapa ? `linear-gradient(#1A1410, #4A2C16)` : papiro ? `linear-gradient(#1D1712, #3A2A1C)` : runas ? `linear-gradient(${C.negro}, #22384D)` : `linear-gradient(${C.barroClaro}, ${C.barro})`;
   const degradeAbajo = pahari ? DEGRADE_PAHARI : kamasan ? `linear-gradient(#7A2418, #1E1612)` : maori ? `linear-gradient(#6E1610, #15100E)` : codice ? `linear-gradient(#6E2A1A, #1A1311)` : pintado ? `linear-gradient(#5A3820, #1C1612)` : kapa ? `linear-gradient(#4A2C16, #1A1410)` : papiro ? `linear-gradient(#3A2A1C, #1D1712)` : runas ? `linear-gradient(#22384D, ${C.negro})` : `linear-gradient(${C.barro}, ${C.barroOscuro})`;
@@ -68,8 +75,8 @@ export const ShortNativo: React.FC<{ guion: GuionVisual; timeline: Timeline; idi
           <Sequence key={e.id} from={e.from} durationInFrames={e.durationInFrames + (i === timeline.escenas.length - 1 ? timeline.outroFrames : 0)}>
             {e.frases.map((fr, j) => fr.audio[idioma] ? <Sequence key={j} from={fr.from} durationInFrames={fr.dur + 6}><Audio src={staticFile(fr.audio[idioma]!)} /></Sequence> : null)}
             {/* escena, montada para el centro */}
-            <div style={{ position: 'absolute', left: 540 - (guion.escenas[i].foco ?? 960) * K, top: 420 - ARRIBA * K, width: 1920, height: 1080, overflow: 'hidden', transform: `scale(${K})`, transformOrigin: '0 0' }}>
-              <EscenaMotor esc={guion.escenas[i]} tl={e} idioma={idioma} />
+            <div style={{ position: 'absolute', left: 540 - (escenasG[i].foco ?? 960) * K, top: 420 - ARRIBA * K, width: 1920, height: 1080, overflow: 'hidden', transform: `scale(${K})`, transformOrigin: '0 0' }}>
+              <EscenaMotor esc={escenasG[i]} tl={e} idioma={idioma} />
             </div>
           </Sequence>
         ))}
@@ -84,9 +91,9 @@ export const ShortNativo: React.FC<{ guion: GuionVisual; timeline: Timeline; idi
           <div style={{ position: 'absolute', top: 140, left: 60, right: 60, textAlign: 'center', fontFamily: TEXTO, fontWeight: 500, fontSize: 60, lineHeight: 1.2, color: '#FFF8EA', textShadow: `0 3px 0 ${C.negro}, 0 0 14px rgba(0,0,0,.6)` }}>{!cierre && actual ? actual.texto[idioma] ?? actual.texto.es : ''}</div>
           <div style={{ position: 'absolute', bottom: 120, left: 0, right: 0, textAlign: 'center', fontFamily: TITULO, fontWeight: 700, fontSize: 40, letterSpacing: 4, color: oscuro ? C.crema : C.negro }}>MYTHS ON CLAY</div>
         </div>
-        {guion.quien && f < timeline.introFrames && (
-          <Sequence durationInFrames={timeline.introFrames}>
-            <AperturaQuien guion={guion} dur={timeline.introFrames} idioma={idioma} degradeArriba={degradeArriba} degradeAbajo={degradeAbajo} guardaArriba={guardaArriba} guardaAbajo={guardaAbajo} />
+        {guion.quien && f >= cartelFrom && f < cartelFrom + cartelFrames && (
+          <Sequence from={cartelFrom} durationInFrames={cartelFrames}>
+            <AperturaQuien guion={guion} dur={cartelFrames} idioma={idioma} degradeArriba={degradeArriba} degradeAbajo={degradeAbajo} guardaArriba={guardaArriba} guardaAbajo={guardaAbajo} />
           </Sequence>
         )}
         {cierre && (

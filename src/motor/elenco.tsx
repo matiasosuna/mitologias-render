@@ -364,7 +364,7 @@ export const DibujarActor: React.FC<{ ficha: Ficha; e: Estado; props?: Record<st
   if (ficha.tipo === 'persona') {
     const p = { ...ficha.p, ...props } as Partial<PersonajeProps> & { s?: number };
     const s = e.s * (p.s ?? 1);
-    const pp: PersonajeProps = { ...p, ...base, s, accion: e.accion, boca: e.boca || p.boca, brazo: e.brazo ?? p.brazo, brazoAtras: e.brazoAtras ?? p.brazoAtras, objeto: (e.objeto === undefined ? p.objeto : e.objeto) as PersonajeProps['objeto'], arrodillado: e.arrodillado ?? p.arrodillado, sentado: e.sentado ?? p.sentado, expresion: e.expresion ?? p.expresion, inclinar: (e.inclinar || p.inclinar !== undefined) ? (p.inclinar ?? 0) + (e.inclinar ?? 0) : undefined, cabeza: (e.cabeza || p.cabeza !== undefined) ? (p.cabeza ?? 0) + (e.cabeza ?? 0) : undefined, cabezaGiro: e.cabezaGiro };
+    const pp: PersonajeProps = { ...p, ...base, s, accion: e.accion, boca: e.boca || p.boca, brazo: e.brazo ?? p.brazo, brazoAtras: e.brazoAtras ?? p.brazoAtras, objeto: (e.objeto === undefined ? p.objeto : e.objeto) as PersonajeProps['objeto'], arrodillado: e.arrodillado ?? p.arrodillado, sentado: e.sentado ?? p.sentado, expresion: e.expresion ?? p.expresion, inclinar: (e.inclinar || p.inclinar !== undefined) ? (p.inclinar ?? 0) + (e.inclinar ?? 0) : undefined, cabeza: (e.cabeza || p.cabeza !== undefined) ? (p.cabeza ?? 0) + (e.cabeza ?? 0) : undefined, cabezaGiro: e.cabezaGiro, ciclope: ficha.extra === 'ciclope' || p.ciclope };
     const cab = { x: base.x + (e.voltear ? -1 : 1) * 20 * s * (p.gigante ? 1.35 : 1), y: base.y - 334 * s };
     const k = (e.voltear ? -1 : 1) * s;
     cuerpo = (
@@ -386,12 +386,6 @@ export const DibujarActor: React.FC<{ ficha: Ficha; e: Estado; props?: Record<st
           );
         })() : (
           <Personaje {...pp} />
-        )}
-        {ficha.extra === 'ciclope' && (
-          <g transform={`translate(${cab.x} ${cab.y}) scale(${k} ${s})`} opacity={e.opacity}>
-            <circle cx={14} cy={-8} r={11} fill={C.crema} stroke={C.negro} strokeWidth={2} />
-            <circle cx={17} cy={-8} r={5} fill={C.negro} />
-          </g>
         )}
         {ficha.extra === 'minotauro' && (
           <g transform={`translate(${cab.x} ${cab.y + 10 * s}) scale(${k * 1.3} ${s * 1.3})`} opacity={e.opacity}>

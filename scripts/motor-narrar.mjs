@@ -9,6 +9,7 @@ import { join, dirname, basename } from 'node:path';
 import { ralentizar, retimear } from './narracion-lenta.mjs';
 import { timelineMulti } from '../lib/motor-tiempos.mjs';
 import { tiemposShort } from '../lib/quien.mjs';
+import { escenasDe, procesoAudio } from '../lib/short.mjs';
 import { leerEnv, usaChatterbox, binModal, motorDeVoz } from '../lib/voz-config.mjs';
 
 // Inglés: tu voz clonada en ElevenLabs (si hay clave en .env); el resto, voces de macOS gratis.
@@ -19,7 +20,7 @@ const VOZ = { es: ['Paulina', 168], pt: ['Luciana', 175], en: ['Samantha', 170] 
 // VOZ_EN=chatterbox en .env → inglés con Chatterbox (gratis, GPU de Modal, scripts/modal_voz.py) en vez de ElevenLabs.
 const CHATTER = usaChatterbox(process.env, ENV);
 const vacio = (f) => existsSync(f) && statSync(f).size === 0;
-// Borra un .wav vacío y lo saca del registro de tempo (si no, el nuevo no se estiraría al 90 %).
+// Borra un .wav vacío y lo saca del registro de tempo (si no, el nuevo no se llevaría al tempo de su formato).
 function borrarVacio(wav) {
   rmSync(wav);
   const reg = join(dirname(wav), '.tempo.json');
@@ -46,6 +47,7 @@ if (!id) throw new Error('Falta el id del video');
 const idiomas = lista.split(',');
 const dir = join('src/videos', id);
 const g = JSON.parse(readFileSync(join(dir, 'guion.json'), 'utf8'));
+const ESCENAS = escenasDe(g); // con cold open (Shorts), va primero
 const dur = (wav) => Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', wav]).toString());
 
 // Chatterbox: genera de una vez (una sola máquina con GPU) todas las frases en inglés que todavía no tienen audio.
@@ -55,7 +57,7 @@ if (CHATTER && idiomas.includes('en')) {
   // un .wav de 0 bytes (corte de Modal) cuenta como faltante: se borra y se vuelve a narrar
   if (existsSync(dirEn)) for (const n of readdirSync(dirEn)) if (n.endsWith('.wav') && vacio(join(dirEn, n))) borrarVacio(join(dirEn, n));
   const hechos = existsSync(dirEn) ? readdirSync(dirEn) : [];
-  const faltan = g.escenas.flatMap((e) => e.frases).filter((t) => t.en).map((t) => ({ h: createHash('sha1').update(`${CB[0]}|${CB[1]}|${t.en}`).digest('hex').slice(0, 8), texto: t.en }))
+  const faltan = ESCENAS.flatMap((e) => e.frases).filter((t) => t.en).map((t) => ({ h: createHash('sha1').update(`${CB[0]}|${CB[1]}|${t.en}`).digest('hex').slice(0, 8), texto: t.en }))
     .filter((f, i, a) => a.findIndex((x) => x.h === f.h) === i && !hechos.some((n) => n.endsWith(`-${f.h}.wav`)));
   if (faltan.length) {
     mkdirSync(cbDir, { recursive: true });
@@ -65,7 +67,7 @@ if (CHATTER && idiomas.includes('en')) {
 }
 
 const escenas = [];
-for (const esc of g.escenas) escenas.push({
+for (const esc of ESCENAS) escenas.push({
   id: esc.id,
   frases: await enOrden(esc.frases, async (texto, j) => {
     const audio = {}, segundos = {};
@@ -100,8 +102,18 @@ for (const esc of g.escenas) escenas.push({
 
 let tl = timelineMulti(escenas, undefined, g.formato === 'short' ? tiemposShort(g) : undefined);
 writeFileSync(join(dir, 'timeline.json'), JSON.stringify(tl));
-// Narración más lenta y clara: estira los audios nuevos en inglés y recalcula el timeline.
-if (idiomas.includes('en') && ralentizar(id) > 0) { retimear(id); tl = JSON.parse(readFileSync(join(dir, 'timeline.json'), 'utf8')); }
+// Inglés al tempo de su formato (episodios 0,9× más claros; Shorts 1,1× y sin silencios en las puntas) y timeline de nuevo.
+// .tempo.json sabe qué tiene cada archivo: si el texto no cambió pero el tempo sí, se re-estira solo la diferencia.
+if (idiomas.includes('en') && ralentizar(id, procesoAudio(g)) > 0) { retimear(id); tl = JSON.parse(readFileSync(join(dir, 'timeline.json'), 'utf8')); }
+// Shorts: sacar los audios que ya no usa (texto viejo), así no viajan al render.
+if (g.formato === 'short') for (const l of idiomas) {
+  const dirL = join('public/audio', id, l);
+  if (!existsSync(dirL)) continue;
+  const usados = new Set(tl.escenas.flatMap((e) => e.frases.map((fr) => fr.audio[l])).filter(Boolean).map((r) => basename(r)));
+  const reg = join(dirL, '.tempo.json'), hechos = existsSync(reg) ? JSON.parse(readFileSync(reg, 'utf8')) : null;
+  for (const n of readdirSync(dirL)) if (n.endsWith('.wav') && !usados.has(n)) { rmSync(join(dirL, n)); if (hechos) delete hechos[n]; }
+  if (hechos) writeFileSync(reg, JSON.stringify(hechos, null, 1));
+}
 
 // Índice de videos para el entry point de Remotion
 const ids = readdirSync('src/videos').filter((d) => existsSync(join('src/videos', d, 'timeline.json'))).sort();

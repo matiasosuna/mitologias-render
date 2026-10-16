@@ -4,14 +4,16 @@
 import { readFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { execFileSync } from 'node:child_process';
-import { erroresQuien } from '../lib/quien.mjs';
+import { erroresQuien, tiemposShort } from '../lib/quien.mjs';
+import { escenasDe, erroresColdOpen } from '../lib/short.mjs';
 
 const id = process.argv[2];
 const dir = join('src/videos', id);
 const g = JSON.parse(readFileSync(join(dir, 'guion.json'), 'utf8'));
-// Sin narrar todavía: timeline estimado por largo del texto en inglés (≈2,3 palabras/s), solo para revisar.
+// Sin narrar todavía: timeline estimado por largo del texto en inglés (≈2,3 palabras/s; Shorts ≈3,2 = 190 por minuto).
 const estimado = !existsSync(join(dir, 'timeline.json'));
-const tl = estimado ? (await import('../lib/motor-tiempos.mjs')).timelineMulti(g.escenas.map((e) => ({ id: e.id, frases: e.frases.map((t) => ({ texto: t, audio: {}, segundos: { en: 0.6 + (t.en ?? t.es).split(/\s+/).length / 2.3 } })) }))) : JSON.parse(readFileSync(join(dir, 'timeline.json'), 'utf8'));
+const short = g.formato === 'short', ESCENAS = escenasDe(g);
+const tl = estimado ? (await import('../lib/motor-tiempos.mjs')).timelineMulti(ESCENAS.map((e) => ({ id: e.id, frases: e.frases.map((t) => ({ texto: t, audio: {}, segundos: { en: short ? (t.en ?? t.es).split(/\s+/).length / 3.2 : 0.6 + (t.en ?? t.es).split(/\s+/).length / 2.3 } })) })), undefined, short ? tiemposShort(g) : undefined) : JSON.parse(readFileSync(join(dir, 'timeline.json'), 'utf8'));
 if (estimado) console.log('(sin timeline.json: tiempos estimados por largo del texto)');
 const elenco = new Set([...readFileSync('src/motor/elenco.tsx', 'utf8').split('export const ELENCO')[1].split('export type Estado')[0].matchAll(/^\s{2}(\w+): /gm)].map((m) => m[1]));
 const FONDOS = new Set(['campo', 'olimpo', 'mar', 'costa', 'inframundo', 'cueva', 'palacio', 'templo', 'monte', 'bosque', 'ciudad', 'noche', 'cielo', 'batalla', 'fragua', 'desierto', 'caos', 'nieve', 'fiordo', 'asgard', 'salon', 'yggdrasil', 'ginnungagap', 'hel', 'jotunheim', 'aldea', 'bosque_nevado', 'aurora', 'bifrost', 'nilo', 'nun', 'duat', 'piramides', 'juncal', 'sala_juicio', 'cielo_nut', 'po', 'fondo_marino', 'oceano', 'oceano_abierto', 'playa', 'playa_negra', 'aldea_hale', 'loi', 'valle', 'valle_cascada', 'bosque_lehua', 'volcan', 'crater', 'haleakala', 'mauna_kea', 'cielo_navegante', 'heiau', 'mundo_cielo', 'agua_primordial', 'aldea_casa_larga', 'pradera', 'costa_noroeste', 'rio', 'montanas', 'lago', 'bajo_agua', 'playa_noroeste', 'dentro_monstruo']);
@@ -52,8 +54,15 @@ const av = (esc, msg) => avisos.push(`[${esc}] ${msg}`);
 // Shorts "Who is…?" (BRIEF-QUIEN.md): personaje oficial, nombre y subtítulo del cartel de apertura.
 erroresQuien(g, elenco).forEach((m) => av('quien', m));
 if (g.quien?.fondo && !FONDOS.has(g.quien.fondo)) av('quien', `fondo desconocido "${g.quien.fondo}"`);
-g.escenas.forEach((esc, i) => {
-  const n = esc.frases.length, et = tl.escenas[i];
+erroresColdOpen(g).forEach((m) => av('coldopen', m));
+if (short) { const s = tl.total / tl.fps, max = g.quien ? 75 : 65; if (s < 45 || s > max) av('short', `dura ${s.toFixed(0)} s (meta 45–${max})`); }
+ESCENAS.forEach((esc, i) => {
+  const n = esc.frases.length, et = tl.escenas.find((e) => e.id === esc.id) ?? tl.escenas[i];
+  if (!et) { av(esc.id, 'no está en timeline.json: volver a narrar'); return; }
+  // Shorts: una escena por momento, 2–4 frases y algo nuevo cada ~5–9 s; los brazos arriba no entran con escala > 1.
+  if (short && esc.id !== 'coldopen' && n > 4) av(esc.id, `${n} frases: en Shorts, 2–4 por escena (partirla)`);
+  if (short && et.durationInFrames / tl.fps > 14) av(esc.id, `escena de ${(et.durationInFrames / tl.fps).toFixed(0)} s: en Shorts, una imagen nueva cada ~5–9 s`);
+  if (short) (esc.actores ?? []).forEach((ac) => (ac.escala ?? 1) > 1 && (ac.pasos ?? []).some((p) => ['levanta', 'lanza'].includes(p.hace)) && av(esc.id, `${ac.id}: escala ${ac.escala} con brazo arriba se corta en la guarda de arriba (≤ 1)`));
   if (!FONDOS.has(esc.fondo)) av(esc.id, `fondo desconocido "${esc.fondo}"`);
   (esc.elementos ?? []).forEach((el) => !ELEMS.has(el.tipo) && av(esc.id, `elemento desconocido "${el.tipo}"`));
   (esc.efectos ?? []).forEach((ef) => { if (!EFECTOS.has(ef.tipo)) av(esc.id, `efecto desconocido "${ef.tipo}"`); if (ef.en >= n) av(esc.id, `efecto ${ef.tipo} en frase ${ef.en} (solo hay ${n})`); });

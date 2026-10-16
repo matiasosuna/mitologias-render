@@ -1,4 +1,4 @@
-// Shorts "Who is…?" (BRIEF-QUIEN.md): campo `quien`, 2 s de apertura y los Shorts de siempre sin cambios.
+// Shorts "Who is…?" (BRIEF-QUIEN.md): campo `quien`, cartel de 1,5 s y los Shorts de siempre sin cambios.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
@@ -22,12 +22,13 @@ test('sin `quien` el Short no cambia: mismos tiempos y mismo timeline', () => {
   assert.deepEqual(timelineMulti(escenas, FPS, tiemposShort({ formato: 'short' })), timelineMulti(escenas, FPS, T_SHORT));
 });
 
-test('con `quien` la historia arranca después de 2 s de apertura y el resto se corre igual', () => {
-  assert.equal(INTRO_QUIEN, 2);
+test('con `quien` (sin cold open) el cartel va al principio, 1,5 s, y el resto se corre igual', () => {
+  assert.equal(INTRO_QUIEN, 1.5);
   const con = timelineMulti(escenas, FPS, tiemposShort(ZEUS)), sin = timelineMulti(escenas, FPS, T_SHORT);
-  assert.equal(con.introFrames, 2 * FPS);
-  assert.equal(con.escenas[0].from, 2 * FPS);
-  const extra = con.introFrames - sin.introFrames;
+  assert.equal(con.cartelFrom, 0);
+  assert.equal(con.cartelFrames, 1.5 * FPS);
+  assert.equal(con.escenas[0].from, 1.5 * FPS);
+  const extra = con.escenas[0].from - sin.escenas[0].from;
   assert.equal(con.total - sin.total, extra);
   assert.deepEqual(con.escenas.map((e) => e.from - extra), sin.escenas.map((e) => e.from));
   assert.equal(con.outroFrames, sin.outroFrames);
@@ -70,6 +71,7 @@ test('cableado: narrar, retimear, revisar y ShortNativo usan `quien`', () => {
   for (const f of ['scripts/motor-narrar.mjs', 'scripts/narracion-lenta.mjs']) assert.match(leer(f), /tiemposShort\(g\)/, f);
   assert.match(leer('scripts/motor-revisar.mjs'), /erroresQuien\(g, elenco\)/);
   const sn = leer('src/motor/ShortNativo.tsx');
-  assert.match(sn, /guion\.quien && f < timeline\.introFrames/);
+  assert.match(sn, /guion\.quien && f >= cartelFrom && f < cartelFrom \+ cartelFrames/);
+  assert.match(sn, /timeline\.cartelFrames \?\? timeline\.introFrames/); // timelines viejos: cartel al principio
   assert.match(sn, /<AperturaQuien /);
 });

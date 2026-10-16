@@ -42,9 +42,10 @@ Tipos de ítem: **Q** = "Who is…?" · **H** = Story (episodio suelto) · **R**
 
 ### "Who is…?" (ítems Q)
 Un Short por personaje del ítem, según `BRIEF-QUIEN.md`: id `short-<serie>-quien-<clave>` (clave del oficial sin `_oficial`), campo `quien`
-(`nombre`, `subtitulo`, `como` = la clave `*_oficial`), una gran anécdota de las fuentes + 2–3 rasgos, 60–75 s, y cierre al episodio
-sugerido en la cola (solo si de verdad lo muestra; si no, otro de la misma serie con `S<n>E<m>`). Todas las reglas de Shorts de abajo
-valen (nunca repetir una anécdota de otro Short, personajes oficiales, puesta vertical).
+(`nombre`, `subtitulo`, `como` = la clave `*_oficial`), `coldOpen` con su dato más impactante, y después **quién es** (rol y dominio, de dónde
+viene, cómo llegó, símbolos, familia COMPLETA con nombres, carácter bueno y malo) con una imagen por punto, remate memorable y cierre al
+episodio sugerido en la cola (solo si de verdad lo muestra; si no, otro de la misma serie con `S<n>E<m>`). 45–65 s, hasta ~75 s si hace
+falta para no dejar afuera datos esenciales. Las reglas de Shorts de abajo valen (personajes oficiales, puesta vertical, ritmo).
 
 ### Stories (ítems H)
 Un episodio suelto de 4–6 min que se entiende **sin haber visto nada**, según `BRIEF-GUION.md` con estos cambios:
@@ -61,10 +62,12 @@ Para cada episodio del ítem, **hasta 3 Shorts por episodio en total** (ítems R
 - **Nunca repetir una historia** (pedido de Matías): antes de escribir, leé `gancho.en`, `titulo.en` y el `episodio` de TODOS los `src/videos/short-*/guion.json` existentes. Un Short nuevo no puede contar la misma anécdota, el mismo momento ni el mismo giro que otro ya hecho (aunque cambie el gancho o la mitología), ni resumir el episodio entero: es una mini historia de UN momento puntual. Si un episodio no da 3 momentos nuevos, hacé menos y anotalo en la cola.
 - Id `short-<serie>-<slug>` (slug corto en español, sin acentos, que no exista ya en `src/videos/`).
 - `guion.json` como `short-hawaianas-hiku`: `formato: "short"`, `serie`, `numero: "S"`, `titulo`/`gancho` {es,en} (gancho ≤ 8 palabras, situación imposible o truco), `tituloGriego: ""`, `episodio: "<id del episodio>"`, `cierre` {es,en} = teaser con suspenso + el episodio: `"<teaser cliffhanger> — <Serie> Mythology S<n>E<m>"` (temporada/episodio de la entrada del `episodio` en `src/videos/titulos.json`, formato `SxEy`; en `es`: `"… — Mitología <serie> T<n>E<m>"`). No copies el formato viejo `Ep. <N>` de los Shorts existentes (y no los reescribas).
-- 3–4 escenas, 9–12 frases en total (~45–60 s narrado): primera frase = conflicto ya (nada de "In X mythology…"), quién/qué quiere/obstáculo/giro/resultado.
+- **Todo Short abre con `coldOpen`** (BRIEF-SHORTS.md): 1–2 frases sobre el momento más fuerte ("He freed monsters no god dared to touch… and won the war of the gods.") o "Most people think X. It isn't."; después la historia.
+- **Picos emocionales:** planteo → tensión que sube → giro o golpe → clímax → remate memorable. Frases cortas, algo cambia cada 2–3 s, sin exposición lenta (se recorta exposición, no pasos de la historia).
+- Un momento por escena, 2–4 frases (imagen nueva cada ~5–9 s); **45–65 s en total** (el motor pone voz a 1,1× y pausas cortas; `motor-revisar` avisa si se pasa).
 - **Última frase = final abierto que manda al episodio** (el Short es el gancho, el episodio el producto): "How Isis tricked Ra is only half of it. The full story is Episode 5." (temporada 2+: "…Season 2, Episode 3"). Inglés simple y **nunca falso**: el episodio tiene que seguir de verdad esa historia; si no, elegí otro momento.
 - **Personajes oficiales (desde 2026-10-15):** todo dios/héroe con diseño oficial se usa con su clave `*_oficial` (ver `src/motor/elenco*Oficial.tsx` y `elencoNordico.tsx`; p. ej. `zeus_oficial`, `thor_oficial`, `ra_oficial`). Nunca un muñeco genérico para un personaje que tiene oficial; no repetir el objeto que el diseño ya trae (martillo de Thor, rayo de Zeus, caduceo de Hermes).
-- Puesta: acción entre x 700 y 1220, `foco` 960, `escala` 1.1–1.4, 2–3 actores por escena; solo fondos/elementos/elenco que existen para la serie (MOTOR.md y los archivos `src/motor/fondos<Serie>.tsx` / `elenco<Serie>.tsx`).
+- Puesta: acción entre x 700 y 1220, `foco` 960, `escala` 0.85–1 (con más, el brazo levantado se corta arriba), 2–3 actores por escena; solo fondos/elementos/elenco que existen para la serie (MOTOR.md y los archivos `src/motor/fondos<Serie>.tsx` / `elenco<Serie>.tsx`).
 
 ### Episodios (ítems M/C/Y 02–04)
 Según `BRIEF-GUION.md` y el PLAN: `src/videos/<serie>-NN-<slug>/guion.json` (8–10 escenas, 3–6 frases, `miniatura`, 2–3 `shorts` de recorte, enganche con el anterior y anuncio del siguiente; **la escena final siempre le pregunta algo al público ligado a la historia**, p. ej. "Which god would you trust? Tell us in the comments.", antes de anunciar el siguiente), `youtube.json` (gancho, un capítulo por escena, siguiente, etiquetas) y una entrada en **`src/videos/titulos.json`** con el formato de las demás:
@@ -82,7 +85,7 @@ Hacela igual que `aztecas`/`hindues`/`maories` (commit `259c810` como guía):
 ## 4 · Narrar (solo inglés) y validar
 Por cada id nuevo:
 ```bash
-node scripts/motor-narrar.mjs <id> en                 # Chatterbox en Modal; reusa lo ya narrado
+node scripts/motor-narrar.mjs <id> en                 # Chatterbox en Modal; reusa lo ya narrado; Shorts a 1,1× sin silencios en las puntas
 find public/audio/<id> -name '*.wav' -size 0          # tiene que salir vacío; si no, volvé a correr motor-narrar (borra y re-narra los vacíos)
 node scripts/motor-revisar.mjs <id> --sin-hoja        # tiene que decir exactamente "sin avisos": corregí el guion y re-narrá si cambió texto
 ```

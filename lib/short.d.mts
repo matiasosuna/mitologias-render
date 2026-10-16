@@ -1,0 +1,12 @@
+type Pendiente = { atempo: number | null; recortar: boolean };
+type Objetivo = { tempo: number; recortar: boolean };
+export const TEMPO_SHORT: number;
+export const MANTENER_PREGUNTA: number;
+export const RECORTE: { umbral: string; inicio: number; fin: number };
+export function escenasDe<E>(g: { escenas: E[]; coldOpen?: unknown }): E[];
+export function preguntaFinal(g: unknown): boolean;
+export function procesoAudio(g: unknown): Objetivo;
+export function pendienteAudio(prev: unknown, objetivo: Objetivo): Pendiente | null;
+export function registroAudio(objetivo: Objetivo, prev?: unknown): number | { tempo: number; recorte: true };
+export function filtroAudio(p: Pendiente): string;
+export function erroresColdOpen(g: unknown): string[];
