@@ -24,8 +24,8 @@ test('YouTube Shorts: 4 por día (2, 10, 14 y 22 UTC)', () => {
   assert.equal(tocaShortYT(utc(0, 30)), true); // el de las 22 que llegó tarde
 });
 
-test('YouTube episodio: 1 por día, turno de las 18 UTC (08 HST)', () => {
-  assert.deepEqual([2, 6, 10, 14, 18, 22].filter((h) => tocaEpisodioYT(utc(h, 5))), [18]);
+test('YouTube episodio: 3 por día, turnos de las 18, 02 y 10 UTC (08, 16 y 00 HST)', () => {
+  assert.deepEqual([2, 6, 10, 14, 18, 22].filter((h) => tocaEpisodioYT(utc(h, 5))), [2, 10, 18]);
   assert.equal(tocaEpisodioYT(utc(21, 59)), true);
 });
 

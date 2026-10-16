@@ -23,7 +23,8 @@ export const urlAsset = (nombre) => `https://github.com/${REPO}/releases/downloa
 // ── turnos: cron cada 4 h a las 2, 6, 10, 14, 18 y 22 UTC = 16, 20, 00, 04, 08 y 12 HST (UTC−10)
 const HORAS_UTC = [2, 6, 10, 14, 18, 22];
 export const SHORTS_YT_UTC = [2, 10, 14, 22]; // 4 Shorts por día
-export const EPISODIO_UTC = 18; // 1 episodio largo por día (08 HST)
+export const EPISODIOS_UTC = [18, 2, 10]; // 3 episodios largos por día (08, 16 y 00 HST); pedido 2026-10-15 para avanzar más rápido
+export const EPISODIO_UTC = EPISODIOS_UTC[0];
 export const IG_HST = [0, 8, 16]; // 3 Reels por día
 /** Fecha del turno: la de creación de la corrida (TURNO_FECHA, la pone el workflow) aunque haya esperado en la cola. */
 export const fechaTurno = () => new Date(process.env.TURNO_FECHA || Date.now());
@@ -31,7 +32,7 @@ export const fechaTurno = () => new Date(process.env.TURNO_FECHA || Date.now());
 export const turnoUTC = (fecha) => [...HORAS_UTC].reverse().find((h) => h <= fecha.getUTCHours()) ?? 22;
 export const horaHST = (horaUTC) => (horaUTC + 14) % 24;
 export const tocaShortYT = (fecha) => SHORTS_YT_UTC.includes(turnoUTC(fecha));
-export const tocaEpisodioYT = (fecha) => turnoUTC(fecha) === EPISODIO_UTC;
+export const tocaEpisodioYT = (fecha) => EPISODIOS_UTC.includes(turnoUTC(fecha));
 export const ESPECIAL_UTC = 22; // 1 especial programado por noche
 export const tocaEspecialYT = (fecha) => turnoUTC(fecha) === ESPECIAL_UTC;
 /** Comienzo (ms UTC) del turno al que pertenece una fecha. */
