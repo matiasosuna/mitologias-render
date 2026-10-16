@@ -34,7 +34,6 @@ jobs:
     timeout-minutes: 300
     env:
       NUBE: '1'
-      IG_VIA: buffer # Instagram por Buffer (scripts/buffer.mjs): la clave de Meta quedó invalidada (2026-10-15)
       GH_TOKEN: ${{ github.token }}
       LISTA: out/shorts-orden.txt
     steps:
