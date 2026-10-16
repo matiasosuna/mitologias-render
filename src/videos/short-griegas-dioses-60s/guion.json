@@ -1,0 +1,704 @@
+{
+ "id": "short-griegas-dioses-60s",
+ "formato": "short",
+ "serie": "griegas",
+ "numero": "S",
+ "titulo": {
+  "es": "Conoce a los dioses griegos en 60 segundos",
+  "en": "Meet the Greek gods in 60 seconds"
+ },
+ "tituloGriego": "",
+ "gancho": {
+  "es": "15 dioses griegos en 60 segundos",
+  "en": "15 Greek gods in 60 seconds"
+ },
+ "cierre": {
+  "es": "Doce tronos esperaban en el Olimpo — Mitología griega T2E1",
+  "en": "Twelve thrones waited on Olympus — Greek Mythology S2E1"
+ },
+ "episodio": "griegas-08-doce-olimpicos",
+ "coldOpen": {
+  "fondo": "olimpo",
+  "foco": 960,
+  "frases": [
+   {
+    "es": "¿Cuál es tu favorito? Cuéntanos 👇",
+    "en": "Which one is your favorite? Tell us 👇"
+   }
+  ],
+  "efectos": [
+   {
+    "en": 0.2,
+    "tipo": "luz",
+    "x": 960
+   }
+  ],
+  "actores": [
+   {
+    "id": "zeus",
+    "como": "zeus_oficial",
+    "x": 760,
+    "escala": 0.9,
+    "rotulo": "",
+    "pasos": [
+     {
+      "en": 0,
+      "hace": "aparece",
+      "con": "luz"
+     }
+    ]
+   },
+   {
+    "id": "atenea",
+    "como": "atenea_oficial",
+    "x": 1160,
+    "mira": "izq",
+    "escala": 0.9,
+    "rotulo": "",
+    "pasos": [
+     {
+      "en": 0.2,
+      "hace": "aparece",
+      "con": "luz"
+     }
+    ]
+   }
+  ]
+ },
+ "escenas": [
+  {
+   "id": "zeus",
+   "fondo": "olimpo",
+   "foco": 960,
+   "frases": [
+    {
+     "es": "Zeus. Dios del cielo y del trueno.",
+     "en": "Zeus. God of the sky and thunder."
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.1,
+     "texto": {
+      "es": "ZEUS",
+      "en": "ZEUS"
+     },
+     "x": 960,
+     "y": 190
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "como": "zeus_oficial",
+     "x": 960,
+     "escala": 0.95,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.4,
+       "hace": "senala"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hera",
+   "fondo": "palacio",
+   "foco": 960,
+   "frases": [
+    {
+     "es": "Hera. Reina de los dioses, guardiana del matrimonio.",
+     "en": "Hera. Queen of the gods, guardian of marriage."
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.1,
+     "texto": {
+      "es": "HERA",
+      "en": "HERA"
+     },
+     "x": 960,
+     "y": 190
+    }
+   ],
+   "actores": [
+    {
+     "id": "hera",
+     "como": "hera_oficial",
+     "x": 960,
+     "escala": 0.95,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.4,
+       "hace": "senala"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "poseidon",
+   "fondo": "mar",
+   "foco": 960,
+   "frases": [
+    {
+     "es": "Poseidón. Señor del mar y de los terremotos.",
+     "en": "Poseidon. Lord of the sea and earthquakes."
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.1,
+     "texto": {
+      "es": "POSEIDON",
+      "en": "POSEIDON"
+     },
+     "x": 960,
+     "y": 190
+    }
+   ],
+   "actores": [
+    {
+     "id": "poseidon",
+     "como": "poseidon_oficial",
+     "x": 960,
+     "escala": 0.95,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.4,
+       "hace": "levanta"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hades",
+   "fondo": "inframundo",
+   "foco": 960,
+   "frases": [
+    {
+     "es": "Hades. Rey de los muertos.",
+     "en": "Hades. King of the dead."
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.1,
+     "texto": {
+      "es": "HADES",
+      "en": "HADES"
+     },
+     "x": 960,
+     "y": 190
+    }
+   ],
+   "actores": [
+    {
+     "id": "hades",
+     "como": "hades_oficial",
+     "x": 960,
+     "escala": 0.95,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.4,
+       "hace": "enoja"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "demeter",
+   "fondo": "campo",
+   "foco": 960,
+   "frases": [
+    {
+     "es": "Deméter. Diosa de la cosecha.",
+     "en": "Demeter. Goddess of the harvest."
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.1,
+     "texto": {
+      "es": "DEMETER",
+      "en": "DEMETER"
+     },
+     "x": 960,
+     "y": 190
+    }
+   ],
+   "actores": [
+    {
+     "id": "demeter",
+     "como": "demeter_oficial",
+     "x": 960,
+     "escala": 0.95,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.4,
+       "hace": "ofrece"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hestia",
+   "fondo": "palacio",
+   "foco": 960,
+   "frases": [
+    {
+     "es": "Hestia. Diosa del hogar y del fuego.",
+     "en": "Hestia. Goddess of the hearth and home."
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.1,
+     "texto": {
+      "es": "HESTIA",
+      "en": "HESTIA"
+     },
+     "x": 960,
+     "y": 190
+    }
+   ],
+   "actores": [
+    {
+     "id": "hestia",
+     "como": "hestia_oficial",
+     "x": 960,
+     "escala": 0.95,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.4,
+       "hace": "alegra"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "atenea",
+   "fondo": "templo",
+   "foco": 960,
+   "frases": [
+    {
+     "es": "Atenea. Diosa de la sabiduría y de la guerra inteligente.",
+     "en": "Athena. Goddess of wisdom and smart war."
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.1,
+     "texto": {
+      "es": "ATHENA",
+      "en": "ATHENA"
+     },
+     "x": 960,
+     "y": 190
+    }
+   ],
+   "actores": [
+    {
+     "id": "atenea",
+     "como": "atenea_oficial",
+     "x": 960,
+     "escala": 0.95,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.4,
+       "hace": "senala"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "apolo",
+   "fondo": "olimpo",
+   "foco": 960,
+   "frases": [
+    {
+     "es": "Apolo. Dios de la luz, la música y las profecías.",
+     "en": "Apollo. God of light, music and prophecy."
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.1,
+     "texto": {
+      "es": "APOLLO",
+      "en": "APOLLO"
+     },
+     "x": 960,
+     "y": 190
+    }
+   ],
+   "actores": [
+    {
+     "id": "apolo",
+     "como": "apolo_oficial",
+     "x": 960,
+     "escala": 0.95,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.4,
+       "hace": "alegra"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "artemisa",
+   "fondo": "bosque",
+   "foco": 960,
+   "frases": [
+    {
+     "es": "Ártemis. Diosa de la caza y de la luna.",
+     "en": "Artemis. Goddess of the hunt and the moon."
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.1,
+     "texto": {
+      "es": "ARTEMIS",
+      "en": "ARTEMIS"
+     },
+     "x": 960,
+     "y": 190
+    }
+   ],
+   "actores": [
+    {
+     "id": "artemisa",
+     "como": "artemisa_oficial",
+     "x": 960,
+     "escala": 0.95,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.4,
+       "hace": "senala"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ares",
+   "fondo": "batalla",
+   "foco": 960,
+   "frases": [
+    {
+     "es": "Ares. Dios de la guerra y los gritos de batalla.",
+     "en": "Ares. God of war and battle cries."
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.1,
+     "texto": {
+      "es": "ARES",
+      "en": "ARES"
+     },
+     "x": 960,
+     "y": 190
+    }
+   ],
+   "actores": [
+    {
+     "id": "ares",
+     "como": "ares_oficial",
+     "x": 960,
+     "escala": 0.95,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.4,
+       "hace": "enoja"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "afrodita",
+   "fondo": "costa",
+   "foco": 960,
+   "frases": [
+    {
+     "es": "Afrodita. Diosa del amor y la belleza.",
+     "en": "Aphrodite. Goddess of love and beauty."
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.1,
+     "texto": {
+      "es": "APHRODITE",
+      "en": "APHRODITE"
+     },
+     "x": 960,
+     "y": 190
+    }
+   ],
+   "actores": [
+    {
+     "id": "afrodita",
+     "como": "afrodita_oficial",
+     "x": 960,
+     "escala": 0.95,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.4,
+       "hace": "alegra"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hefesto",
+   "fondo": "fragua",
+   "foco": 960,
+   "frases": [
+    {
+     "es": "Hefesto. Dios del fuego y la fragua.",
+     "en": "Hephaestus. God of fire and the forge."
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.1,
+     "texto": {
+      "es": "HEPHAESTUS",
+      "en": "HEPHAESTUS"
+     },
+     "x": 960,
+     "y": 190
+    }
+   ],
+   "actores": [
+    {
+     "id": "hefesto",
+     "como": "hefesto_oficial",
+     "x": 960,
+     "escala": 0.95,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.4,
+       "hace": "golpea"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hermes",
+   "fondo": "cielo",
+   "foco": 960,
+   "frases": [
+    {
+     "es": "Hermes. Mensajero de los dioses, veloz y astuto.",
+     "en": "Hermes. Messenger of the gods, fast and tricky."
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.1,
+     "texto": {
+      "es": "HERMES",
+      "en": "HERMES"
+     },
+     "x": 960,
+     "y": 190
+    }
+   ],
+   "actores": [
+    {
+     "id": "hermes",
+     "como": "hermes_oficial",
+     "x": 960,
+     "escala": 0.95,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.4,
+       "hace": "senala"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dioniso",
+   "fondo": "campo",
+   "foco": 960,
+   "frases": [
+    {
+     "es": "Dioniso. Dios del vino y de las fiestas.",
+     "en": "Dionysus. God of wine and parties."
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.1,
+     "texto": {
+      "es": "DIONYSUS",
+      "en": "DIONYSUS"
+     },
+     "x": 960,
+     "y": 190
+    }
+   ],
+   "actores": [
+    {
+     "id": "dioniso",
+     "como": "dioniso_oficial",
+     "x": 960,
+     "escala": 0.95,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.4,
+       "hace": "alegra"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "persefone",
+   "fondo": "inframundo",
+   "foco": 960,
+   "frases": [
+    {
+     "es": "Perséfone. Reina del inframundo.",
+     "en": "Persephone. Queen of the underworld."
+    },
+    {
+     "es": "Conoce a los doce olímpicos en la temporada 2, episodio 1.",
+     "en": "Meet the twelve Olympians in Season 2, Episode 1."
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.1,
+     "texto": {
+      "es": "PERSEPHONE",
+      "en": "PERSEPHONE"
+     },
+     "x": 960,
+     "y": 190
+    }
+   ],
+   "actores": [
+    {
+     "id": "persefone",
+     "como": "persefone_oficial",
+     "x": 960,
+     "escala": 0.95,
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.4,
+       "hace": "alegra"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
