@@ -1,10 +1,9 @@
-// Renderiza Shorts nativos (guion con "formato": "short"): node scripts/short-render.mjs <id> [<id>…] → out/<id>/<id>.mp4 (audio masterizado a −14 LUFS)
+// Renderiza Shorts nativos (guion con "formato": "short"): node scripts/short-render.mjs <id> [<id>…] → out/<id>/<id>.mp4
 import { bundle } from '@remotion/bundler';
 import { renderMedia, selectComposition } from '@remotion/renderer';
 import { readFileSync, mkdirSync, rmSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import os from 'node:os';
-import { masterizar } from '../lib/master.mjs';
 
 const ids = process.argv.slice(2);
 if (!ids.length) throw new Error('Falta el id del short');
@@ -19,6 +18,5 @@ for (const id of ids) {
   mkdirSync(join('out', id), { recursive: true });
   const out = join('out', id, `${id}.mp4`);
   await renderMedia({ serveUrl, composition: comp, codec: 'h264', outputLocation: out, crf: 20, timeoutInMilliseconds: 180000, concurrency: Math.max(2, os.cpus().length - 3), inputProps });
-  masterizar(out); // −14 LUFS / −1 dBTP (lib/master.mjs)
   console.log(`listo: ${out} (${(comp.durationInFrames / comp.fps).toFixed(0)} s)`);
 }

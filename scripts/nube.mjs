@@ -16,7 +16,6 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync, renameSync, rmSync,
 import { execFileSync, spawnSync } from 'node:child_process';
 import { join, dirname, basename } from 'node:path';
 import { tmpdir } from 'node:os';
-import { asegurarMaster } from '../lib/master.mjs';
 
 export const REPO = 'matiasosuna/mitologias-render', RELEASE = 'media';
 export const urlAsset = (nombre) => `https://github.com/${REPO}/releases/download/${RELEASE}/${nombre}`;
@@ -154,14 +153,6 @@ export function publicarUrl(ruta, nombre) {
   return urlAsset(nombre);
 }
 
-// Videos con audio hechos antes del master (−14 LUFS, lib/master.mjs): se masterizan y se reemplazan en el release
-// antes de usarlos, así lo que se publica de ahora en adelante sale con la sonoridad de redes.
-const CON_AUDIO = /\.mp4$/;
-function remasterizar(ruta, nombre) {
-  if (!CON_AUDIO.test(nombre)) return;
-  try { if (asegurarMaster(ruta)) subirAsset(ruta, nombre); } catch (e) { console.log(`  master de ${nombre}: ${String(e.message).slice(0, 200)}`); }
-}
-
 // ── asegurar: dejar el archivo en out/ (bajado del release o renderizado acá y subido)
 const correr = (script, id, ...extra) => execFileSync('node', [script, id, ...extra], { stdio: ['ignore', 'inherit', 'inherit'] });
 // vertical-partes.mjs le pasa a cada parte su cartel gancho (título curioso de titulos.json) por inputProps
@@ -184,8 +175,7 @@ const RENDER = {
 /** Devuelve la ruta local del archivo, o null si no se pudo conseguir. */
 export function asegurar(id, c, n) {
   const ruta = rutaLocal(id, c, n);
-  if (existsSync(ruta)) return ruta;
-  if (bajar(nombreAsset(id, c, n), ruta)) { remasterizar(ruta, nombreAsset(id, c, n)); return ruta; }
+  if (existsSync(ruta) || bajar(nombreAsset(id, c, n), ruta)) return ruta;
   if (!RENDER[c]) return null;
   console.log(`  render en la nube: ${id} (${c})`);
   RENDER[c](id);
@@ -231,7 +221,7 @@ export function asegurarEpisodio(id, { render = true } = {}) {
 /** Para Buffer: el mp4 de TikTok (con tapa) del release, o el Short para armarlo. */
 export function asegurarTiktok(id) {
   const tk = rutaLocal(id, 'tiktok');
-  if (bajar(nombreAsset(id, 'tiktok'), tk)) { remasterizar(tk, nombreAsset(id, 'tiktok')); writeFileSync(`${tk}.tapa`, ''); return true; }
+  if (bajar(nombreAsset(id, 'tiktok'), tk)) { writeFileSync(`${tk}.tapa`, ''); return true; }
   return Boolean(asegurar(id, 'short'));
 }
 
@@ -408,12 +398,7 @@ function sembrar(lista, max) {
     ...orden.filter((d) => !igH.some((h) => h.archivo === join('out', d, `${d}.mp4`))).slice(0, max),
     ...orden.filter((d) => !buf.some((h) => h.id === d)).slice(0, max),
   ]);
-  const subir = (id, c, n) => {
-    const r = rutaLocal(id, c, n);
-    if (!existsSync(r) || hayAsset(nombreAsset(id, c, n))) return;
-    if (CON_AUDIO.test(r)) asegurarMaster(r); // renders viejos de la Mac: master antes de subir
-    subirAsset(r, nombreAsset(id, c, n));
-  };
+  const subir = (id, c, n) => { const r = rutaLocal(id, c, n); if (existsSync(r) && !hayAsset(nombreAsset(id, c, n))) subirAsset(r, nombreAsset(id, c, n)); };
   for (const id of shorts) {
     subir(id, 'short'); subir(id, 'portada-short');
     if (existsSync(`${rutaLocal(id, 'tiktok')}.tapa`)) subir(id, 'tiktok');

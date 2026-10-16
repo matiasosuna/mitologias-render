@@ -7,11 +7,10 @@
 //   --probar              → muestra lo que mandaría, sin subir
 // Episodio: título, descripción con capítulos, etiquetas, subtítulos en/es, lista, idioma, categoría Education,
 // no apto para niños, contenido sintético = sí. Short: título "<gancho> #Shorts" y link al episodio.
-import { readFileSync, existsSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, existsSync, writeFileSync } from 'node:fs';
 import { join, basename } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { conGancho, desplazarCapitulos, conPregunta, preguntaDe } from './gancho-horizontal.mjs';
-import { masterizar } from '../lib/master.mjs';
 
 const [id, ...resto] = process.argv.slice(2);
 const opt = (k) => resto.find((a) => a.startsWith(`--${k}=`))?.split('=').slice(1).join('=');
@@ -58,10 +57,6 @@ if (nativo) {
   const cg = resto.includes('--probar') || resto.includes('--sin-gancho') ? null
     : await conGancho(id).catch((e) => { console.log(`cartel gancho: ${String(e.message).slice(0, 200)} (se sube sin cartel)`); return null; });
   if (cg) { archivo = cg.archivo; srtDe = (l) => cg.srt[l] ?? join(out, `${id}.${l}.srt`); console.log('cartel gancho: ok'); }
-  else if (!resto.includes('--probar') && existsSync(archivo)) { // sin cartel: igual sale con el master final (−14 LUFS)
-    const m = join(out, 'master', `${id}.en.mp4`); mkdirSync(join(out, 'master'), { recursive: true });
-    try { masterizar(archivo, m); archivo = m; } catch (e) { console.log(`master: ${String(e.message).slice(0, 200)} (se sube sin master)`); }
-  }
   add('title', meta.titulo);
   // "Previous episode" = título del episodio anterior de la misma serie
   const prev = Object.keys(ids).length && (() => { const fs = JSON.parse(execFileSync('ls', ['src/videos']).toString().split('\n').filter(Boolean).map((d) => JSON.stringify(d)).join(',').replace(/^/, '[').replace(/$/, ']')); const d = fs.find((x) => x.startsWith(g.serie + '-' + String(Number(g.numero) - 1).padStart(2, '0'))); return d ? JSON.parse(readFileSync(join('src/videos', d, 'guion.json'), 'utf8')).titulo.en : null; })();

@@ -3,10 +3,9 @@
 // Con NUBE=1 (GitHub Actions, scripts/nube.mjs): sin wrangler; los videos se bajan/suben al release "media" del repo
 // público y Buffer los toma de ahí (o se renderizan en la misma corrida si faltan).
 // Uso: node scripts/buffer-tiktok.mjs <lista.txt> [--probar]   (llamar 1 vez por día: rellena la cola hasta 10)
-import { readFileSync, writeFileSync, existsSync, mkdirSync, copyFileSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, copyFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { join } from 'node:path';
-import { masterizar } from '../lib/master.mjs';
 
 process.chdir(new URL('..', import.meta.url).pathname);
 const nube = process.env.NUBE === '1' ? await import('./nube.mjs') : null;
@@ -54,7 +53,7 @@ for (let d = new Date(); turnos.length < pendientes.length; d = new Date(d.getTi
 // videos para TikTok (sin perfil ICC: el lector de TikTok falla con el átomo colr 'prof') servidos desde la web
 mkdirSync('sitio/tk', { recursive: true });
 for (const id of pendientes) {
-  const tk = join('out', id, `${id}.tiktok.mp4`), crudo = join('out', id, `${id}.tiktok-crudo.mkv`);
+  const tk = join('out', id, `${id}.tiktok.mp4`);
   // portada diseñada (scripts/portadas-short.mjs) como primer 0,4 s → es la tapa en TikTok (thumbnailOffset 100 ms)
   const tapa = join('out', id, 'portada-short.jpg');
   if (!nube && !existsSync(tapa)) execFileSync('node', ['scripts/portadas-short.mjs', id], { stdio: 'ignore' });
@@ -62,9 +61,7 @@ for (const id of pendientes) {
     if (nube) nube.asegurar(id, 'portada-short');
     execFileSync('nice', ['-n', '15', 'ffmpeg', '-v', 'error', '-y', '-loop', '1', '-t', '0.4', '-framerate', '30', '-i', tapa, '-f', 'lavfi', '-t', '0.4', '-i', 'anullsrc=r=44100:cl=stereo', '-i', join('out', id, `${id}.mp4`),
       '-filter_complex', '[0:v]scale=1080:1920,setsar=1,fps=30,format=yuv420p[t];[2:v]sidedata=mode=delete:type=ICC_PROFILE,scale=1080:1920,setsar=1,fps=30,format=yuv420p[v];[2:a]aresample=44100,aformat=channel_layouts=stereo[a];[t][1:a][v][a]concat=n=2:v=1:a=1[ov][oa]',
-      '-map', '[ov]', '-map', '[oa]', '-c:v', 'libx264', '-preset', 'medium', '-b:v', '1400k', '-maxrate', '1700k', '-bufsize', '3000k', '-c:a', 'pcm_s16le', '-map_metadata', '-1', crudo]);
-    masterizar(crudo, tk, { metadatos: false }); // audio: −14 LUFS / −1 dBTP, AAC 192k (lib/master.mjs)
-    rmSync(crudo, { force: true });
+      '-map', '[ov]', '-map', '[oa]', '-c:v', 'libx264', '-preset', 'medium', '-b:v', '1400k', '-maxrate', '1700k', '-bufsize', '3000k', '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', '-map_metadata', '-1', tk]);
     writeFileSync(tk + '.tapa', '');
   }
   if (nube) nube.publicarUrl(tk, nube.nombreAsset(id, 'tiktok'));
