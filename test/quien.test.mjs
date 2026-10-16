@@ -12,8 +12,8 @@ const escenas = [{ id: 'a', frases: [{ texto: { en: 'x' }, audio: {}, segundos: 
 const oficiales = new Set(['elencoGriegoOficial', 'elencoNordico', 'elencoEgipcioOficial', 'elencoHawaianoOficial']
   .flatMap((f) => [...leer(`src/motor/${f}.tsx`).matchAll(/^\s{2}(\w+_oficial): [hmHM]\(/gm)].map((m) => m[1])));
 
-test('hay 49 personajes oficiales para los "Who is…?" (14 + 12 + 13 + 10)', () => {
-  assert.equal(oficiales.size, 49);
+test('hay 78 personajes oficiales para los "Who is…?" (griegos 14 + 29, y 12 + 13 + 10 de otras series)', () => {
+  assert.equal(oficiales.size, 78);
   for (const k of ['zeus_oficial', 'odin_oficial', 'ra_oficial', 'pele_oficial', 'kamapuaa_oficial', 'njord_oficial']) assert.ok(oficiales.has(k), k);
 });
 

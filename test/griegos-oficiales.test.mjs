@@ -47,3 +47,20 @@ test('piel natural (nunca la silueta negra) y atributos dibujados en el propio a
     assert.ok(/piel: PIEL_/.test(linea) || /^ {2}\w+: m\(/.test(linea), `${d}: piel natural`);
   }
 });
+
+const TANDA_2 = ['rea', 'hestia', 'demeter', 'persefone', 'zeus_nino', 'amaltea', 'titan', 'ciclope', 'gea', 'urano', 'metis', 'maia', 'heracles', 'perseo', 'medusa', 'teseo', 'minotauro', 'ariadna', 'dedalo', 'icaro', 'midas', 'aracne', 'jason', 'eco', 'narciso', 'odiseo', 'pandora', 'epimeteo', 'hecatonquiro', 'tifon'];
+
+test('segunda tanda: todos con ficha y nombre en inglés', () => {
+  for (const d of TANDA_2) {
+    assert.ok(ELENCO.includes(`${d}_oficial`), `${d}_oficial`);
+    assert.ok(NOMBRES.includes(`${d}_oficial`), `nombre de ${d}_oficial`);
+  }
+});
+
+test('el Short "Who is Zeus?" usa solo personajes oficiales (salvo animales)', () => {
+  const g = JSON.parse(leer('src/videos/short-griegas-quien-zeus/guion.json'));
+  const actores = [...g.escenas, g.coldOpen ?? {}].flatMap((e) => e.actores ?? []);
+  const sinOficial = actores.filter((a) => !['aguila'].includes(a.como ?? a.id) && !String(a.como ?? a.id).endsWith('_oficial')).map((a) => a.id);
+  assert.deepEqual(sinOficial, []);
+  for (const a of actores) if (String(a.como).endsWith('_oficial')) assert.ok(ELENCO.includes(a.como), a.como);
+});

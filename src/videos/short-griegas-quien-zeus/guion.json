@@ -36,9 +36,9 @@
       { "en": 1.5, "tipo": "temblor", "dur": 0.4 }
     ],
     "actores": [
-      { "id": "rea", "x": 700, "escala": 1,
+      { "id": "rea", "como": "rea_oficial", "x": 700, "escala": 1,
         "pasos": [ { "en": 0.1, "hace": "abraza" }, { "en": 1.2, "hace": "tiembla", "dur": 0.5 } ] },
-      { "id": "zeus_nino", "como": "nino", "x": 840, "rotulo": "",
+      { "id": "zeus_nino", "como": "zeus_nino_oficial", "x": 840, "rotulo": "",
         "pasos": [ { "en": 0, "hace": "aparece", "con": "luz" }, { "en": 0.3, "hace": "brilla", "dur": 0.6 } ] },
       { "id": "cronos", "como": "cronos_oficial", "x": 1200, "mira": "izq", "escala": 0.9, "rotulo": "",
         "pasos": [ { "en": 1, "hace": "aparece", "con": "sombra" }, { "en": 1.1, "hace": "enoja" }, { "en": 1.4, "hace": "golpea" } ] }
@@ -85,7 +85,7 @@
       "actores": [
         { "id": "cronos", "como": "cronos_oficial", "x": 760, "escala": 0.9,
           "pasos": [ { "en": 0.4, "hace": "alegra" }, { "en": 1, "hace": "tiembla", "dur": 0.5 }, { "en": 1.6, "hace": "enoja" }, { "en": 1.7, "hace": "golpea" }, { "en": 2.3, "hace": "golpea" } ] },
-        { "id": "rea", "x": 1190, "mira": "izq", "escala": 1,
+        { "id": "rea", "como": "rea_oficial", "x": 1190, "mira": "izq", "escala": 1,
           "pasos": [ { "en": 0.2, "hace": "alegra" }, { "en": 1.6, "hace": "sorprende" }, { "en": 2.1, "hace": "lamenta" } ] }
       ]
     },
@@ -104,13 +104,13 @@
       ],
       "rotulos": [ { "en": 1.2, "texto": { "es": "CRETA", "en": "CRETE" }, "x": 960, "y": 220 } ],
       "actores": [
-        { "id": "rea", "x": 700, "escala": 1,
+        { "id": "rea", "como": "rea_oficial", "x": 700, "escala": 1,
           "pasos": [ { "en": 0.2, "hace": "ofrece" }, { "en": 1, "hace": "alegra" }, { "en": 1.1, "hace": "abraza" } ] },
         { "id": "cronos", "como": "cronos_oficial", "x": 1200, "mira": "izq", "escala": 0.9, "rotulo": "",
           "pasos": [ { "en": 0, "hace": "aparece", "con": "sombra" }, { "en": 0.5, "hace": "habla", "dur": 0.3 }, { "en": 0.9, "hace": "desaparece", "con": "sombra" } ] },
-        { "id": "zeus_nino", "como": "nino", "x": 840, "rotulo": "ZEUS",
+        { "id": "zeus_nino", "como": "zeus_nino_oficial", "x": 840, "rotulo": "ZEUS",
           "pasos": [ { "en": 1, "hace": "aparece", "con": "luz" }, { "en": 1.2, "hace": "brilla", "dur": 0.5 } ] },
-        { "id": "amaltea", "como": "cabra", "x": 1350, "mira": "izq", "rotulo": "",
+        { "id": "amaltea", "como": "amaltea_oficial", "x": 1350, "mira": "izq", "rotulo": "",
           "pasos": [ { "en": 1.2, "hace": "entra", "a": 1130 } ] }
       ]
     },
@@ -128,9 +128,9 @@
           "pasos": [ { "en": 0.1, "hace": "ofrece" }, { "en": 1, "hace": "alegra" }, { "en": 1.2, "hace": "senala" } ] },
         { "id": "cronos", "como": "cronos_oficial", "x": 1190, "mira": "izq", "escala": 0.9, "rotulo": "",
           "pasos": [ { "en": 0.3, "hace": "sorprende" }, { "en": 0.5, "hace": "tiembla", "dur": 0.4 }, { "en": 0.95, "hace": "desaparece", "con": "humo" } ] },
-        { "id": "hestia", "x": 1000, "mira": "izq", "capa": "medio", "escala": 0.85, "rotulo": "",
+        { "id": "hestia", "como": "hestia_oficial", "x": 1000, "mira": "izq", "capa": "medio", "escala": 0.85, "rotulo": "",
           "pasos": [ { "en": 1, "hace": "aparece", "con": "humo" } ] },
-        { "id": "demeter", "x": 1240, "mira": "izq", "capa": "medio", "escala": 0.85, "rotulo": "",
+        { "id": "demeter", "como": "demeter_oficial", "x": 1240, "mira": "izq", "capa": "medio", "escala": 0.85, "rotulo": "",
           "pasos": [ { "en": 1.1, "hace": "aparece", "con": "humo" } ] },
         { "id": "hera", "como": "hera_oficial", "x": 940, "mira": "izq", "escala": 0.8, "rotulo": "",
           "pasos": [ { "en": 1.2, "hace": "aparece", "con": "humo" } ] },
@@ -156,7 +156,7 @@
       "actores": [
         { "id": "zeus", "como": "zeus_oficial", "x": 730, "escala": 0.95, "rotulo": "",
           "pasos": [ { "en": 0, "hace": "aparece", "con": "sombra" }, { "en": 0.5, "hace": "golpea" }, { "en": 1.4, "hace": "brilla", "dur": 0.5 }, { "en": 1.5, "hace": "alegra" } ] },
-        { "id": "ciclope", "como": "ciclope", "x": 1190, "mira": "izq", "escala": 1,
+        { "id": "ciclope", "como": "ciclope_oficial", "x": 1190, "mira": "izq", "escala": 1,
           "pasos": [ { "en": 0, "hace": "arrodilla" }, { "en": 0.7, "hace": "levantarse" }, { "en": 0.85, "hace": "alegra" }, { "en": 1.2, "hace": "ofrece" } ] }
       ]
     },
@@ -176,7 +176,9 @@
         { "id": "zeus", "como": "zeus_oficial", "x": 730, "escala": 0.9, "rotulo": "",
           "pasos": [ { "en": 0, "hace": "enoja" }, { "en": 0.05, "hace": "lanza" } ] },
         { "id": "cronos", "como": "cronos_oficial", "x": 1190, "mira": "izq", "escala": 0.9, "rotulo": "",
-          "pasos": [ { "en": 0.15, "hace": "sorprende" }, { "en": 0.4, "hace": "cae" }, { "en": 0.75, "hace": "desaparece", "con": "polvo" } ] }
+          "pasos": [ { "en": 0.15, "hace": "sorprende" }, { "en": 0.4, "hace": "cae" }, { "en": 0.75, "hace": "desaparece", "con": "polvo" } ] },
+        { "id": "titan", "como": "titan_oficial", "x": 1440, "mira": "izq", "escala": 0.85, "rotulo": "",
+          "pasos": [ { "en": 0.15, "hace": "sorprende" }, { "en": 0.45, "hace": "cae" }, { "en": 0.8, "hace": "desaparece", "con": "polvo" } ] }
       ]
     },
     {
@@ -220,7 +222,7 @@
           "pasos": [ { "en": 0, "hace": "brilla", "dur": 0.4 }, { "en": 1.1, "hace": "enoja" } ] },
         { "id": "aguila", "como": "aguila", "x": 1180, "y": 480, "mira": "izq",
           "pasos": [ { "en": 0.4, "hace": "aparece", "con": "luz" }, { "en": 0.45, "hace": "vuela", "a": [1130, 430] } ] },
-        { "id": "guerrero", "como": "guerrero", "x": 1250, "mira": "izq", "escala": 0.85, "rotulo": "",
+        { "id": "guerrero", "como": "titan_oficial", "x": 1250, "mira": "izq", "escala": 0.85, "rotulo": "",
           "pasos": [ { "en": 1.2, "hace": "entra", "a": 1200 }, { "en": 1.5, "hace": "sorprende" }, { "en": 1.6, "hace": "corre", "a": 1700 } ] }
       ]
     },
@@ -255,8 +257,8 @@
         { "id": "hermes", "como": "hermes_oficial", "x": 690, "escala": 0.85, "pasos": [ { "en": 1, "hace": "aparece", "con": "luz" }, { "en": 1.97, "hace": "desaparece", "con": "luz" } ] },
         { "id": "ares", "como": "ares_oficial", "x": 960, "escala": 0.8, "pasos": [ { "en": 1.3, "hace": "aparece", "con": "luz" }, { "en": 1.97, "hace": "desaparece", "con": "luz" } ] },
         { "id": "dioniso", "como": "dioniso_oficial", "x": 1230, "mira": "izq", "escala": 0.85, "pasos": [ { "en": 1.6, "hace": "aparece", "con": "luz" }, { "en": 1.97, "hace": "desaparece", "con": "luz" } ] },
-        { "id": "persefone", "x": 800, "escala": 0.9, "pasos": [ { "en": 2, "hace": "aparece", "con": "luz" } ] },
-        { "id": "heracles", "x": 1130, "mira": "izq", "escala": 0.9, "pasos": [ { "en": 2.4, "hace": "aparece", "con": "luz" }, { "en": 2.6, "hace": "alegra" } ] }
+        { "id": "persefone", "como": "persefone_oficial", "x": 800, "escala": 0.9, "pasos": [ { "en": 2, "hace": "aparece", "con": "luz" } ] },
+        { "id": "heracles", "como": "heracles_oficial", "x": 1130, "mira": "izq", "escala": 0.9, "pasos": [ { "en": 2.4, "hace": "aparece", "con": "luz" }, { "en": 2.6, "hace": "alegra" } ] }
       ]
     },
     {

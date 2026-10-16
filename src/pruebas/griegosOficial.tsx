@@ -17,15 +17,16 @@ const solo = (como: string, fondo: string, x = 960): Escena => ({
 } as Escena);
 
 export const GRIEGOS = ['zeus', 'hera', 'poseidon', 'hades', 'atenea', 'apolo', 'artemisa', 'hermes', 'afrodita', 'ares', 'hefesto', 'dioniso', 'prometeo', 'cronos'];
-const NOMBRE: Record<string, string> = { zeus: 'ZEUS', hera: 'HERA', poseidon: 'POSEIDON', hades: 'HADES', atenea: 'ATHENA', apolo: 'APOLLO', artemisa: 'ARTEMIS', hermes: 'HERMES', afrodita: 'APHRODITE', ares: 'ARES', hefesto: 'HEPHAESTUS', dioniso: 'DIONYSUS', prometeo: 'PROMETHEUS', cronos: 'CRONUS' };
+export const GRIEGOS_2 = ['rea', 'hestia', 'demeter', 'persefone', 'zeus_nino', 'amaltea', 'titan', 'ciclope', 'gea', 'urano', 'metis', 'maia', 'heracles', 'perseo', 'medusa', 'teseo', 'minotauro', 'ariadna', 'dedalo', 'icaro', 'midas', 'aracne', 'jason', 'eco', 'narciso', 'odiseo', 'pandora', 'epimeteo', 'hecatonquiro', 'tifon'];
+const NOMBRE: Record<string, string> = { rea: 'RHEA', hestia: 'HESTIA', demeter: 'DEMETER', persefone: 'PERSEPHONE', zeus_nino: 'BABY ZEUS', amaltea: 'AMALTHEA', titan: 'TITAN', ciclope: 'CYCLOPS', gea: 'GAIA', urano: 'URANUS', metis: 'METIS', maia: 'MAIA', heracles: 'HERACLES', perseo: 'PERSEUS', medusa: 'MEDUSA', teseo: 'THESEUS', minotauro: 'MINOTAUR', ariadna: 'ARIADNE', dedalo: 'DAEDALUS', icaro: 'ICARUS', midas: 'MIDAS', aracne: 'ARACHNE', jason: 'JASON', eco: 'ECHO', narciso: 'NARCISSUS', odiseo: 'ODYSSEUS', pandora: 'PANDORA', epimeteo: 'EPIMETHEUS', hecatonquiro: 'HUNDRED-HANDED', tifon: 'TYPHON', zeus: 'ZEUS', hera: 'HERA', poseidon: 'POSEIDON', hades: 'HADES', atenea: 'ATHENA', apolo: 'APOLLO', artemisa: 'ARTEMIS', hermes: 'HERMES', afrodita: 'APHRODITE', ares: 'ARES', hefesto: 'HEPHAESTUS', dioniso: 'DIONYSUS', prometeo: 'PROMETHEUS', cronos: 'CRONUS' };
 
 /** Celda: un actor solo en su escena, recortado alrededor de él, con su nombre abajo. */
-const Celda: React.FC<{ como: string; left: number; top: number; w: number; h: number; k: number; yMundo: number; nombre?: string; fondo: string; xMundo?: number; dx?: number }> = ({ como, left, top, w, h, k, yMundo, nombre, fondo, xMundo = 960, dx = 0 }) => (
+const Celda: React.FC<{ como: string; left: number; top: number; w: number; h: number; k: number; yMundo: number; nombre?: string; fondo: string; xMundo?: number; dx?: number; letra?: number }> = ({ como, left, top, w, h, k, yMundo, nombre, fondo, xMundo = 960, dx = 0, letra = 25 }) => (
   <div style={{ position: 'absolute', left, top, width: w, height: h, overflow: 'hidden' }}>
     <div style={{ position: 'absolute', left: w / 2 - xMundo * k, top: -yMundo * k, width: 1920, height: 1080, transform: `scale(${k})`, transformOrigin: '0 0' }}>
       <Motor esc={solo(como, fondo, 960 + dx)} />
     </div>
-    {nombre && <div style={{ position: 'absolute', bottom: 8, width: '100%', textAlign: 'center', fontFamily: TITULO, fontWeight: 700, fontSize: 25, letterSpacing: 2, color: C.crema, textShadow: `0 2px 0 ${C.negro}, 0 0 6px ${C.negro}` }}>{nombre}</div>}
+    {nombre && <div style={{ position: 'absolute', bottom: 8, width: '100%', textAlign: 'center', fontFamily: TITULO, fontWeight: 700, fontSize: letra, letterSpacing: letra > 22 ? 2 : 1, color: C.crema, textShadow: `0 2px 0 ${C.negro}, 0 0 6px ${C.negro}` }}>{nombre}</div>}
   </div>
 );
 
@@ -38,6 +39,20 @@ const Hoja: React.FC<{ fondo?: string }> = ({ fondo = 'campo' }) => {
       {GRIEGOS.map((g, i) => {
         const r = Math.floor(i / 7), c = i % 7;
         return <Celda key={g} como={`${g}_oficial`} left={c * W + 2} top={r * H + 2} w={W - 4} h={H - 4} k={k} yMundo={830 + 30 - (H - 4) / k} nombre={NOMBRE[g]} fondo={fondo} dx={g === 'cronos' ? -48 : g === 'hermes' ? -12 : -28} />;
+      })}
+    </AbsoluteFill>
+  );
+};
+
+/** Hoja de la segunda tanda: 3 filas × 10. */
+const Hoja2: React.FC = () => {
+  aplicarTema('griegas');
+  const cols = 10, W = 1920 / cols, H = 360, k = 0.5;
+  return (
+    <AbsoluteFill style={{ backgroundColor: C.negro }}>
+      {GRIEGOS_2.map((g, i) => {
+        const r = Math.floor(i / cols), c = i % cols;
+        return <Celda key={g} como={`${g}_oficial`} left={c * W + 2} top={r * H + 2} w={W - 4} h={H - 4} k={k} yMundo={830 + 40 - (H - 4) / k} nombre={NOMBRE[g]} fondo="campo" letra={20} dx={g === 'hecatonquiro' ? -44 : g === 'tifon' ? -30 : ['icaro', 'dedalo'].includes(g) ? 10 : -20} />;
       })}
     </AbsoluteFill>
   );
@@ -111,6 +126,7 @@ registerRoot(() => (
     <Composition id="g-hoja" component={Hoja} durationInFrames={400} fps={24} width={1920} height={1080} defaultProps={{ fondo: 'campo' }} />
     <Composition id="g-vertical" component={Vertical} durationInFrames={400} fps={24} width={1080} height={1920} defaultProps={{ clave: 'hermes_oficial', fase: 1.2 }} />
     <Composition id="g-escena" component={HermesZeus} durationInFrames={400} fps={24} width={1920} height={1080} defaultProps={{ fase: 1.2 }} />
+    <Composition id="g-hoja2" component={Hoja2} durationInFrames={400} fps={24} width={1920} height={1080} />
     <Composition id="g-cabezas" component={Cabezas} durationInFrames={400} fps={24} width={1920} height={1080} />
     <Composition id="g-fila" component={Fila} durationInFrames={400} fps={24} width={1920} height={1080} defaultProps={{ claves: ['zeus_oficial', 'hera_oficial', 'poseidon_oficial', 'hades_oficial'], escala: 1.3, fondo: 'campo' }} />
   </>
