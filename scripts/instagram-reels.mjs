@@ -7,12 +7,16 @@
 // Portada del Reel (cover_url) = la portada diseñada. Control de duplicados antes y después de publicar.
 // Con NUBE=1 (GitHub Actions, scripts/nube.mjs): sin túnel; los archivos salen del release "media" del repo público
 // (o se renderizan ahí) y Instagram los baja de sus URL públicas.
+// Desde 2026-10-15 publica por Buffer (scripts/buffer.mjs) si IG_VIA=buffer o si la clave de Meta no sirve: el video sale
+// del release "media", la tapa es el cuadro de 1 s (Buffer no acepta portada propia) y el anti-duplicados mira los posts
+// del canal de Instagram en Buffer (incluye lo publicado antes por la Graph API).
 // Uso: node scripts/instagram-reels.mjs [--probar] [--solo=<id>]
 import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'node:fs';
 import { execFileSync, spawn } from 'node:child_process';
 import { join } from 'node:path';
 import { textoReel, esLaMisma, primeraLinea, lineaVieja, FORMATO_CURIOSO } from './instagram-texto.mjs';
 import { ganchoParte, codigoEpisodio, leerTitulos } from './titulos.mjs';
+import { igPorBuffer, cliente, postsDelCanal, buscarPorPrimeraLinea, crear, esperarEnvio, entradaReel } from './buffer.mjs';
 
 process.chdir(new URL('..', import.meta.url).pathname);
 const nube = process.env.NUBE === '1' ? await import('./nube.mjs') : null;
@@ -63,10 +67,24 @@ const datos = { gu, nombre, tags, parte, de, curioso: ganchoParte(id, titulos), 
 const texto = textoReel(datos);
 if (args.includes('--probar')) { console.log(id, '\n', texto); process.exit(0); }
 
-const yaEsta = async () => (await g('GET', `/${IG}/media`, { fields: 'id,caption,permalink,media_type', limit: '100' })).data.find((m) => m.media_type === 'VIDEO' && esLaMisma((m.caption ?? '').split('\n')[0], datos));
-const anotar = (m) => { const h = hist(); h.push({ id, tipo: 'reel-parte', parte, de, ...(primeraLinea(datos) === lineaVieja(datos) ? {} : { formato: FORMATO_CURIOSO }), media: m.id, permalink: m.permalink, fecha: new Date().toISOString() }); writeFileSync(reg, JSON.stringify(h, null, 1)); };
+const porBuffer = await igPorBuffer(env);
+const gql = porBuffer ? cliente(env.BUFFER_API_KEY) : null;
+const yaEsta = porBuffer
+  ? async () => { const p = buscarPorPrimeraLinea(await postsDelCanal(gql), (l) => esLaMisma(l, datos)); return p && { id: p.id, permalink: p.externalLink ?? null }; }
+  : async () => (await g('GET', `/${IG}/media`, { fields: 'id,caption,permalink,media_type', limit: '100' })).data.find((m) => m.media_type === 'VIDEO' && esLaMisma((m.caption ?? '').split('\n')[0], datos));
+const anotar = (m) => { const h = hist(); h.push({ id, tipo: 'reel-parte', parte, de, ...(primeraLinea(datos) === lineaVieja(datos) ? {} : { formato: FORMATO_CURIOSO }), media: m.id, permalink: m.permalink, ...(porBuffer ? { via: 'buffer' } : {}), fecha: new Date().toISOString() }); writeFileSync(reg, JSON.stringify(h, null, 1)); };
 const previo = await yaEsta();
 if (previo) { anotar(previo); console.log(id, 'ya estaba:', previo.permalink); process.exit(0); }
+
+if (porBuffer) {
+  // Buffer baja el video de una URL estable: la del release (también desde la Mac, con gh)
+  const rel = nube ?? await import('./nube.mjs');
+  const videoUrl = rel.publicarUrl(archivoParte, rel.nombreAsset(id, 'parte', parte));
+  const post = await esperarEnvio(gql, await crear(gql, entradaReel({ texto, videoUrl, thumbOffset: 1000, alFeed: true })));
+  anotar({ id: post.id, permalink: post.externalLink ?? null });
+  console.log(id, 'publicado (Buffer):', post.externalLink ?? `enviándose (${post.id})`);
+  process.exit(0);
+}
 
 // 1) armar el video 9:16 y la portada 9:16
 const dir = 'out/.reels'; mkdirSync(dir, { recursive: true });

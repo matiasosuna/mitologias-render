@@ -34,6 +34,7 @@ jobs:
     timeout-minutes: 300
     env:
       NUBE: '1'
+      IG_VIA: buffer # Instagram por Buffer (scripts/buffer.mjs): la clave de Meta quedó invalidada (2026-10-15)
       GH_TOKEN: ${{ github.token }}
       LISTA: out/shorts-orden.txt
     steps:
@@ -57,10 +58,10 @@ jobs:
         run: |
           node -e '
             const fs = require("fs"), e = process.env;
-            const k = ["YT_CLIENT_ID", "YT_CLIENT_SECRET", "MOC_PAGE_TOKEN", "MOC_IG_USER_ID", "BUFFER_API_KEY"];
+            const k = ["YT_CLIENT_ID", "YT_CLIENT_SECRET", "BUFFER_API_KEY"];
             const faltan = k.filter((x) => !e[x]).concat(e.YT_TOKEN_JSON ? [] : ["YT_TOKEN_JSON"]);
             if (faltan.length) { console.error("faltan secretos: " + faltan.join(", ")); process.exit(1); }
-            if (e.GEMINI_API_KEY) k.push("GEMINI_API_KEY"); // opcional
+            for (const x of ["MOC_PAGE_TOKEN", "MOC_IG_USER_ID", "GEMINI_API_KEY"]) if (e[x]) k.push(x); // opcionales (Instagram va por Buffer)
             fs.writeFileSync(".env", k.map((x) => x + "=" + e[x].trim()).join("\n") + "\n", { mode: 0o600 });
             const t = JSON.parse(e.YT_TOKEN_JSON);
             for (const v of [t.refresh_token, t.access_token]) if (v) console.log("::add-mask::" + v);

@@ -2,10 +2,13 @@
 // Publica el próximo de la lista (archivo con un id por línea) que todavía no esté en Instagram.
 // Control de duplicados antes y después (por la 1.ª línea del texto), igual que instagram-reels.mjs.
 // Con NUBE=1 (GitHub Actions): si el video no está en out/, se baja del release "media" (o se renderiza ahí).
+// Desde 2026-10-15 publica por Buffer (scripts/buffer.mjs) si IG_VIA=buffer o si la clave de Meta no sirve (video del
+// release "media", tapa = cuadro de 1,5 s como antes, anti-duplicados contra los posts del canal en Buffer).
 // Uso: node scripts/instagram-shorts.mjs <lista.txt> [--probar]
 import { readFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { join } from 'node:path';
+import { igPorBuffer, cliente, postsDelCanal, buscarPorPrimeraLinea, crear, esperarEnvio, entradaReel } from './buffer.mjs';
 
 process.chdir(new URL('..', import.meta.url).pathname);
 const nube = process.env.NUBE === '1' ? await import('./nube.mjs') : null;
@@ -32,11 +35,25 @@ const cierre = gu.cierre?.en && !/Ep\. \d|S\d+E\d+/.test(gu.cierre.en) ? `\n\n${
 const texto = `${primera}${cierre}${gu.gancho.es ? `\n\n🇪🇸 ${gu.gancho.es}` : ''}${ep ? `\n\nThe full story: “${ep.titulo.en}” (${nombre} Mythology Ep. ${Number(ep.numero)}), in our Reels and on YouTube (link in bio).` : ''}\n\n${tags} #mythology #mythsonclay #shorts`;
 if (args.includes('--probar')) { console.log(id, '\n', texto); process.exit(0); }
 
-const yaEsta = async () => (await g(`/${IG}/media`, { fields: 'caption,permalink,media_type', limit: '100' })).data.find((m) => m.media_type === 'VIDEO' && (m.caption ?? '').split('\n')[0] === primera);
+const porBuffer = await igPorBuffer(env);
+const gql = porBuffer ? cliente(env.BUFFER_API_KEY) : null;
+const yaEsta = porBuffer
+  ? async () => { const p = buscarPorPrimeraLinea(await postsDelCanal(gql), (l) => l === primera); return p && { id: p.id, permalink: p.externalLink ?? null }; }
+  : async () => (await g(`/${IG}/media`, { fields: 'caption,permalink,media_type', limit: '100' })).data.find((m) => m.media_type === 'VIDEO' && (m.caption ?? '').split('\n')[0] === primera);
 const previo = await yaEsta();
 if (previo) {
   const h = JSON.parse(readFileSync(reg, 'utf8')); h.push({ id, tipo: 'reel-short', archivo, permalink: previo.permalink, fecha: new Date().toISOString() });
   (await import('node:fs')).writeFileSync(reg, JSON.stringify(h, null, 1)); console.log(id, 'ya estaba:', previo.permalink); process.exit(0);
+}
+if (porBuffer) {
+  const rel = nube ?? await import('./nube.mjs');
+  const videoUrl = rel.publicarUrl(archivo, rel.nombreAsset(id, 'short'));
+  const post = await esperarEnvio(gql, await crear(gql, entradaReel({ texto, videoUrl, thumbOffset: 1500, alFeed: false })));
+  const h = existsSync(reg) ? JSON.parse(readFileSync(reg, 'utf8')) : [];
+  h.push({ id, tipo: 'reel-short', archivo, media: post.id, permalink: post.externalLink ?? null, via: 'buffer', fecha: new Date().toISOString() });
+  (await import('node:fs')).writeFileSync(reg, JSON.stringify(h, null, 1));
+  console.log(id, 'publicado (Buffer):', post.externalLink ?? `enviándose (${post.id})`);
+  process.exit(0);
 }
 try {
   const s = execFileSync('node', ['scripts/instagram.mjs', `--archivo=${archivo}`, `--texto=${texto}`], { encoding: 'utf8' });

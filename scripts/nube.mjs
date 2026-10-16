@@ -409,9 +409,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     const m = String(e.message ?? e);
     // sin cuota diaria de la API de YouTube (se renueva a medianoche del Pacífico ≈ 21:00 HST): no es una falla,
     // el turno queda pendiente y se reintenta en la corrida siguiente (no pone el job en rojo)
-    // Instagram sin sesión (Facebook invalidó la clave, p. ej. por un bloqueo de la cuenta): no es una falla del job;
-    // el turno queda pendiente y se retoma solo cuando se reconecte (node scripts/instagram-auth.mjs + secreto MOC_PAGE_TOKEN)
-    if (cmd === 'ig' && /Error validating access token|session has been invalidated|"code":\s*190|OAuthException/.test(m)) { console.log('Instagram: pausado, la clave de Meta no es válida (reconectar cuando se pueda)'); process.exit(0); }
     if (/exceeded your[\s\S]{0,80}quota|quotaExceeded/.test(m)) { console.log(`YouTube: sin cuota de la API por hoy (${cmd}); se reintenta en la próxima corrida`); process.exit(0); }
     console.error(m.slice(0, 500)); process.exit(1);
   }
