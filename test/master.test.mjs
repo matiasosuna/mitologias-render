@@ -122,3 +122,11 @@ test('masteriza un mp4 de 2 pistas a −14 LUFS, en lineal y sin tocar el video'
     assert.ok(meta.every((s) => s.codec_name === 'aac'));
   } finally { rmSync(dir, { recursive: true, force: true }); }
 });
+
+test('en objetivo: ±1 LU y pico ≤ −0,5 dBTP', async () => {
+  const { enObjetivo } = await import('../lib/master.mjs');
+  assert.equal(enObjetivo(m({ input_i: -14.3, input_tp: -1.4 })), true);
+  assert.equal(enObjetivo(m({ input_i: -20.5, input_tp: -4.4 })), false); // los Shorts de antes
+  assert.equal(enObjetivo(m({ input_i: -14, input_tp: 0.2 })), false);
+  assert.equal(enObjetivo({ input_i: '-inf' }), true);
+});
