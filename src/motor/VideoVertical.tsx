@@ -80,7 +80,7 @@ export const VideoVertical: React.FC<{ guion: GuionVisual; timeline: Timeline; p
 };
 
 // Episodio vertical en PARTES de menos de 3 min (Instagram casi no recomienda Reels más largos a quien no te sigue).
-// Cada parte abre con ~2 s de cartel GANCHO (el título curioso del episodio, de titulos.json, por inputProps `gancho`),
+// Cada parte abre con ~2 s de cartel GANCHO (el título del capítulo, de titulos.json, por inputProps `gancho`),
 // muestra el tramo [desde, hasta) del vertical completo con "PART n OF de" arriba y, si no es la última parte,
 // termina con 2,5 s de cartel "TO BE CONTINUED · PART n+1" sobre el último cuadro congelado.
 export const CARTEL_PARTE = 2.5;
@@ -93,7 +93,7 @@ const Pastilla: React.FC<{ n: number; de: number }> = ({ n, de }) => (
   <span style={{ display: 'inline-block', padding: '8px 26px', borderRadius: 40, background: 'rgba(10,7,5,.65)', color: '#FFF4E0', fontSize: 30, fontWeight: 700, letterSpacing: 6, fontFamily: TITULO }}>PART {n} OF {de}</span>
 );
 
-/** Cartel gancho: el título curioso grande sobre el degradé del tema, con sus guardas. */
+/** Cartel gancho: el título del capítulo grande sobre el degradé del tema, con sus guardas. */
 const CartelGancho: React.FC<PropsParte & { dur: number }> = ({ n, de, gancho = '', dur }) => {
   const f = useCurrentFrame();
   const t = TEMA.nombre;

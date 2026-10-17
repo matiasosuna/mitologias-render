@@ -1,4 +1,4 @@
-// Títulos de YouTube (src/videos/titulos.json): formato "<curioso> | <Serie> Mythology S<n>E<m>" (o "… | <Nombre> Special"),
+// Títulos de YouTube (src/videos/titulos.json): "<titulo.en del guion> | <Serie> Mythology S<n>E<m>" (o "… | <Nombre> Special"),
 // ≤100 caracteres, una entrada por episodio con guion, y temporada/episodio sin repetir ni saltos dentro de cada serie.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -22,10 +22,9 @@ test('cada título tiene ≤100 caracteres, el formato y la serie correcta', () 
     assert.ok(e.titulo.length <= 100, `${id}: ${e.titulo.length} caracteres`);
     const m = e.titulo.match(FORMATO);
     assert.ok(m, `${id}: formato "${e.titulo}"`);
-    const curioso = m.groups.curioso;
-    assert.ok(curioso.length <= 70, `${id}: parte curiosa de ${curioso.length} caracteres`);
-    assert.ok(!/\b[A-Z]{4,}\b/.test(curioso), `${id}: nada en MAYÚSCULAS`);
-    assert.ok([...curioso.matchAll(/\p{Extended_Pictographic}/gu)].length <= 1, `${id}: como mucho un emoji`);
+    const capitulo = m.groups.curioso;
+    assert.equal(capitulo, g.titulo.en.trim(), `${id}: el título es el del video (guion titulo.en)`);
+    assert.ok(capitulo.length <= 70, `${id}: título de ${capitulo.length} caracteres`);
     if (g.especial) {
       assert.equal(m.groups.especial, g.especial.nombre.en, id);
       assert.equal(e.especial, g.especial.nombre.en, id);
@@ -38,7 +37,7 @@ test('cada título tiene ≤100 caracteres, el formato y la serie correcta', () 
   }
 });
 
-test('las partes curiosas no se repiten', () => {
+test('los títulos no se repiten', () => {
   const vistos = new Map();
   for (const [id, e] of Object.entries(T)) {
     const c = e.titulo.split(' | ')[0].toLowerCase();

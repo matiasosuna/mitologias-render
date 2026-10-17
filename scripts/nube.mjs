@@ -16,6 +16,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync, renameSync, rmSync,
 import { execFileSync, spawnSync } from 'node:child_process';
 import { join, dirname, basename } from 'node:path';
 import { tmpdir } from 'node:os';
+import { ganchoParte } from './titulos.mjs';
 
 export const REPO = 'matiasosuna/mitologias-render', RELEASE = 'media';
 export const urlAsset = (nombre) => `https://github.com/${REPO}/releases/download/${RELEASE}/${nombre}`;
@@ -157,9 +158,10 @@ export function publicarUrl(ruta, nombre) {
 const correr = (script, id, ...extra) => execFileSync('node', [script, id, ...extra], { stdio: ['ignore', 'inherit', 'inherit'] });
 /** ¿Ya hay partes de este episodio publicadas en Instagram? (entonces se termina con el ritmo con que empezó) */
 const empezadoIG = (id) => leerJSON('out/subidas-instagram.json', []).some((h) => h.tipo === 'reel-parte' && h.id === id);
-/** Partes que sirven: las de ritmo rápido (2026-10-17), o cualquiera si el episodio ya empezó a publicarse con ellas. */
-export const partesVigentes = (partes, empezado) => Boolean(partes) && (empezado || partes.ritmo === 'rapido');
-// vertical-partes.mjs le pasa a cada parte su cartel gancho (título curioso de titulos.json) por inputProps
+/** Partes que sirven: las de ritmo rápido (2026-10-17) con el cartel del título actual, o cualquiera si el episodio ya
+ *  empezó a publicarse con ellas (partes.gancho: texto del cartel; las de antes guardaban true y se rehacen). */
+export const partesVigentes = (partes, empezado, gancho) => Boolean(partes) && (empezado || (partes.ritmo === 'rapido' && (gancho === undefined || partes.gancho === gancho)));
+// vertical-partes.mjs le pasa a cada parte su cartel gancho (título del capítulo, de titulos.json) por inputProps
 function renderPartes(id) {
   bajar(nombreAsset(id, 'portada-ig'), rutaLocal(id, 'portada-ig')); // misma portada que la Mac, si está
   correr('scripts/vertical-partes.mjs', id, ...(empezadoIG(id) ? ['--lento'] : [])); // a medio publicar: mismo ritmo y cortes
@@ -181,8 +183,8 @@ export function asegurar(id, c, n) {
   const ruta = rutaLocal(id, c, n);
   if (existsSync(ruta) || bajar(nombreAsset(id, c, n), ruta)) {
     // partes de antes del ritmo rápido (y episodio sin empezar en Instagram): se rehacen y reemplazan en el release
-    if (c !== 'partes' || partesVigentes(leerJSON(ruta, null), empezadoIG(id))) return ruta;
-    console.log(`  partes viejas (ritmo lento) de ${id}: se rehacen`);
+    if (c !== 'partes' || partesVigentes(leerJSON(ruta, null), empezadoIG(id), ganchoParte(id))) return ruta;
+    console.log(`  partes viejas (ritmo lento u otro título) de ${id}: se rehacen`);
     rmSync(ruta, { force: true });
     for (let k = 1; k <= 12; k++) rmSync(rutaLocal(id, 'parte', k), { force: true });
   }
@@ -424,7 +426,7 @@ function sembrar(lista, max) {
   for (const id of eps) {
     if (!existsSync(rutaLocal(id, 'partes'))) continue;
     const { de, gancho, ritmo } = JSON.parse(readFileSync(rutaLocal(id, 'partes'), 'utf8'));
-    if (!gancho || ritmo !== 'rapido') continue; // partes de antes del cartel gancho o del ritmo rápido: que la nube las rehaga
+    if (gancho !== ganchoParte(id) || ritmo !== 'rapido') continue; // partes con otro cartel o de antes del ritmo rápido: que la nube las rehaga
     if (![...Array(de).keys()].every((i) => existsSync(rutaLocal(id, 'parte', i + 1)))) continue;
     for (let n = 1; n <= de; n++) subir(id, 'parte', n);
     subir(id, 'portada-ig'); subir(id, 'partes');

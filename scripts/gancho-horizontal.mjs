@@ -12,7 +12,7 @@ import { parteCuriosa, lineaTemporada, leerTitulos } from './titulos.mjs';
 export const SEG_GANCHO = 2;
 export const MUSICA = { griegas: 'lira-griega', nordicas: 'nordica', egipcias: 'egipcia', hawaianas: 'hawaiana', norteamericanas: 'norteamericana', aztecas: 'azteca', balinesas: 'balinesa', hindues: 'hindu', maories: 'maori' };
 
-/** Textos del cartel: { gancho: título curioso, linea: "Norse Mythology · Season 1, Episode 13" } (null si no hay título). */
+/** Textos del cartel: { gancho: título del capítulo, linea: "Norse Mythology · Season 1, Episode 13" } (null si no hay título). */
 export function textosGancho(id, serie, titulos = leerTitulos()) {
   const e = titulos[id], gancho = parteCuriosa(e?.titulo);
   return gancho ? { gancho, linea: lineaTemporada(e, serie) } : null;

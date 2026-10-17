@@ -15,7 +15,7 @@ const mmss = (fr) => { const s = Math.floor(fr / tl.fps); return `${Math.floor(s
 const propio = join('src/videos', id, 'youtube.json');
 const extra = existsSync(propio) ? JSON.parse(readFileSync(propio, 'utf8')) : meta.episodios[id] ?? {};
 const capitulos = ['0:00 Intro', ...tl.escenas.map((e, i) => `${mmss(e.from)} ${extra.capitulos?.[i] ?? e.id}`)];
-const nuevo = leerTitulos()[id]; // título curioso + temporada (src/videos/titulos.json) si existe
+const nuevo = leerTitulos()[id]; // título del capítulo + temporada (src/videos/titulos.json) si existe
 const viejo = g.especial ? `${g.titulo[idioma]} | ${g.especial.nombre[idioma]}${g.especial.parte ? ` · Part ${g.especial.parte}` : ''}` : `${g.titulo[idioma]} | ${nordica ? 'Norse' : egipcia ? 'Egyptian' : hawaiana ? 'Hawaiian' : norteamericana ? 'Native American' : hindu ? 'Hindu' : azteca ? 'Aztec' : balinesa ? 'Balinese' : maori ? 'Māori' : 'Greek'} Mythology Ep. ${ep}`;
 const titulo = nuevo?.titulo ?? viejo;
 const linea = lineaTemporada(nuevo, g.serie);

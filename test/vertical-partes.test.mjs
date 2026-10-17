@@ -27,7 +27,7 @@ test('los cortes caen al comienzo de una escena o de una frase', () => {
   }
 });
 
-test('cada episodio con partes tiene gancho: la parte curiosa de su título', async () => {
+test('cada episodio con partes tiene gancho: el título del capítulo', async () => {
   const { ganchoParte } = await import('../scripts/titulos.mjs');
   const T = JSON.parse(readFileSync('src/videos/titulos.json', 'utf8'));
   for (const id of ids) {

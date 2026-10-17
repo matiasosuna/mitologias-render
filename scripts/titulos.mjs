@@ -1,5 +1,5 @@
-// Títulos de YouTube con curiosidad + temporada/episodio (src/videos/titulos.json).
-// Formato: "<título curioso> | Norse Mythology S1E10"; especiales: "<título curioso> | Lords of the Dead Special".
+// Títulos de YouTube = el título escrito en el video (guion.json titulo.en) + temporada/episodio (src/videos/titulos.json).
+// Formato: "<titulo.en> | Norse Mythology S1E10"; especiales: "<titulo.en> | Lords of the Dead Special".
 import { readFileSync, existsSync } from 'node:fs';
 
 export const RUTA_TITULOS = 'src/videos/titulos.json';
@@ -38,9 +38,9 @@ export function lineaTemporada(entrada, serie) {
 /** Formato válido del título completo (≤100 caracteres). */
 export const FORMATO = /^(?<curioso>[^|<>]+?) \| (?:(?<serie>[A-Za-zā ]+ Mythology) S(?<t>\d+)E(?<e>\d+)|(?<especial>[^|<>]+) Special(?: · Part \d+)?)$/u;
 
-/** Parte curiosa del título (lo de antes de " | "): "Thor Lost His Hammer | Norse Mythology S1E5" → "Thor Lost His Hammer". */
+/** Título del capítulo (lo de antes de " | "): "Thor Lost His Hammer | Norse Mythology S1E5" → "Thor Lost His Hammer". */
 export const parteCuriosa = (titulo) => (titulo ? String(titulo).split(' | ')[0].trim() : '');
-/** Gancho del cartel inicial de cada parte vertical (Reels): la parte curiosa del título del episodio, o '' si no tiene. */
+/** Cartel inicial de cada parte vertical (Reels): el título del capítulo, o '' si no tiene. */
 export const ganchoParte = (id, titulos = leerTitulos()) => parteCuriosa(titulos[id]?.titulo);
 /** "Norse Mythology S1E5" de un episodio con entrada en titulos.json ('' si no hay o es especial). */
 export function codigoEpisodio(id, titulos = leerTitulos()) {

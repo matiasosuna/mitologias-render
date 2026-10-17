@@ -54,7 +54,7 @@ Un episodio suelto de 4–6 min que se entiende **sin haber visto nada**, según
   Última escena: pregunta al público ligada a la historia; si un episodio de la serie principal sigue de verdad con esos personajes, se puede recomendar.
 - Fuentes: las del ítem (nombralas en `youtube.json` como en `griegas-99-reino-de-hades`). Nunca repetir lo que ya cuenta otro episodio o Short: si un tramo ya está, resumilo en 1–2 frases.
 - `youtube.json` como los episodios; `miniatura`; 2–3 `shorts` de recorte.
-- `src/videos/titulos.json`: `"<id>": { "titulo": "<curioso, ≤ 70 caracteres> | <Serie> Myth Stories Special", "temporada": 0, "episodio": <el siguiente libre de la temporada 0 de esa serie>, "especial": "<Serie> Myth Stories" }` (lo valida `test/titulos.test.mjs`).
+- `src/videos/titulos.json`: `"<id>": { "titulo": "<titulo.en del guion, tal cual> | <Serie> Myth Stories Special", "temporada": 0, "episodio": <el siguiente libre de la temporada 0 de esa serie>, "especial": "<Serie> Myth Stories" }` (lo valida `test/titulos.test.mjs`).
 - No tocar `ESPECIALES` de `scripts/nube.mjs` ni `listas.json`: cuándo y en qué lista se publica lo decide Matías.
 
 ### Shorts nativos (ítems R y S)
@@ -71,7 +71,7 @@ Para cada episodio del ítem, **hasta 3 Shorts por episodio en total** (ítems R
 
 ### Episodios (ítems M/C/Y 02–04)
 Según `BRIEF-GUION.md` y el PLAN: `src/videos/<serie>-NN-<slug>/guion.json` (8–10 escenas, 3–6 frases, `miniatura`, 2–3 `shorts` de recorte, enganche con el anterior y anuncio del siguiente; **la escena final siempre le pregunta algo al público ligado a la historia**, p. ej. "Which god would you trust? Tell us in the comments.", antes de anunciar el siguiente), `youtube.json` (gancho, un capítulo por escena, siguiente, etiquetas) y una entrada en **`src/videos/titulos.json`** con el formato de las demás:
-`"<serie>-NN-<slug>": { "titulo": "<título curioso, ≤ 70 caracteres, sin MAYÚSCULAS enteras> | <Serie> Mythology S1E<N>", "temporada": 1, "episodio": <N> }` (≤ 100 caracteres en total, sin repetir partes curiosas; lo valida `test/titulos.test.mjs`).
+`"<serie>-NN-<slug>": { "titulo": "<titulo.en del guion, tal cual (el que se ve en el video)> | <Serie> Mythology S1E<N>", "temporada": 1, "episodio": <N> }` (título de capítulo: nada de curiosidad ni clickbait; ≤ 100 caracteres en total, sin repetir; lo valida `test/titulos.test.mjs`).
 
 ### Serie nueva (ítems M01/C01/Y01)
 Hacela igual que `aztecas`/`hindues`/`maories` (commit `259c810` como guía):

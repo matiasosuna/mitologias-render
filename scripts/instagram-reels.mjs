@@ -14,7 +14,7 @@
 import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'node:fs';
 import { execFileSync, spawn } from 'node:child_process';
 import { join } from 'node:path';
-import { textoReel, esLaMisma, primeraLinea, lineaVieja, FORMATO_CURIOSO } from './instagram-texto.mjs';
+import { textoReel, esLaMisma, primeraLinea, lineaVieja, curiosoDe, FORMATO_CURIOSO } from './instagram-texto.mjs';
 import { ganchoParte, codigoEpisodio, leerTitulos } from './titulos.mjs';
 import { igPorBuffer, cliente, postsDelCanal, buscarPorPrimeraLinea, crear, esperarEnvio, entradaReel } from './buffer.mjs';
 
@@ -64,10 +64,13 @@ const gu = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8')
 const yt = existsSync(join('src/videos', id, 'youtube.json')) ? JSON.parse(readFileSync(join('src/videos', id, 'youtube.json'), 'utf8')) : {};
 if (!yt.gancho) yt.gancho = JSON.parse(readFileSync('src/videos/meta-youtube.json', 'utf8')).episodios?.[id]?.gancho;
 const [nombre, tags] = SERIE[gu.serie];
-// 1.ª línea = título curioso + "· Part n/de", salvo en episodios con partes publicadas con la línea vieja (anti-duplicados)
+// 1.ª línea = título del capítulo + "· Part n/de", salvo en episodios con partes publicadas con la línea vieja (anti-duplicados)
 const titulos = leerTitulos();
-const viejas = hist().filter((h) => h.tipo === 'reel-parte' && h.id === id && h.formato !== FORMATO_CURIOSO).length;
-const datos = { gu, nombre, tags, parte, de, curioso: ganchoParte(id, titulos), codigo: codigoEpisodio(id, titulos), gancho: yt.gancho, yaPublicadas: viejas };
+const previas = hist().filter((h) => h.tipo === 'reel-parte' && h.id === id);
+const viejas = previas.filter((h) => h.formato !== FORMATO_CURIOSO).length;
+// si ya salió alguna parte con el título de titulos.json, las demás repiten ESE texto aunque el título cambie después
+const curioso = curiosoDe(previas, ganchoParte(id, titulos));
+const datos = { gu, nombre, tags, parte, de, curioso, codigo: codigoEpisodio(id, titulos), gancho: yt.gancho, yaPublicadas: viejas };
 const texto = textoReel(datos);
 if (args.includes('--probar')) { console.log(id, '\n', texto); process.exit(0); }
 
@@ -76,7 +79,7 @@ const gql = porBuffer ? cliente(env.BUFFER_API_KEY) : null;
 const yaEsta = porBuffer
   ? async () => { const p = buscarPorPrimeraLinea(await postsDelCanal(gql), (l) => esLaMisma(l, datos)); return p && { id: p.id, permalink: p.externalLink ?? null }; }
   : async () => (await g('GET', `/${IG}/media`, { fields: 'id,caption,permalink,media_type', limit: '100' })).data.find((m) => m.media_type === 'VIDEO' && esLaMisma((m.caption ?? '').split('\n')[0], datos));
-const anotar = (m) => { const h = hist(); h.push({ id, tipo: 'reel-parte', parte, de, ...(primeraLinea(datos) === lineaVieja(datos) ? {} : { formato: FORMATO_CURIOSO }), media: m.id, permalink: m.permalink, ...(porBuffer ? { via: 'buffer' } : {}), fecha: new Date().toISOString() }); writeFileSync(reg, JSON.stringify(h, null, 1)); };
+const anotar = (m) => { const h = hist(); h.push({ id, tipo: 'reel-parte', parte, de, ...(primeraLinea(datos) === lineaVieja(datos) ? {} : { formato: FORMATO_CURIOSO, curioso }), media: m.id, permalink: m.permalink, ...(porBuffer ? { via: 'buffer' } : {}), fecha: new Date().toISOString() }); writeFileSync(reg, JSON.stringify(h, null, 1)); };
 const previo = await yaEsta();
 if (previo) { anotar(previo); console.log(id, 'ya estaba:', previo.permalink); process.exit(0); }
 

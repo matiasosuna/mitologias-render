@@ -82,4 +82,9 @@ test('nube: partes viejas (ritmo lento) se rehacen, salvo que el episodio ya hay
   assert.equal(partesVigentes({ de: 3, gancho: true }, false), false);
   assert.equal(partesVigentes({ de: 3, gancho: true }, true), true);
   assert.equal(partesVigentes(null, true), false);
+  // con el título actual: solo sirven las del mismo cartel (las de antes guardaban gancho: true)
+  assert.equal(partesVigentes({ de: 2, gancho: 'The Jaguar Sun', ritmo: 'rapido' }, false, 'The Jaguar Sun'), true);
+  assert.equal(partesVigentes({ de: 2, gancho: 'Viejo título', ritmo: 'rapido' }, false, 'The Jaguar Sun'), false);
+  assert.equal(partesVigentes({ de: 2, gancho: true, ritmo: 'rapido' }, false, 'The Jaguar Sun'), false);
+  assert.equal(partesVigentes({ de: 2, gancho: 'Viejo título', ritmo: 'rapido' }, true, 'The Jaguar Sun'), true);
 });

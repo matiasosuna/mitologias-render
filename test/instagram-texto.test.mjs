@@ -1,7 +1,7 @@
 // Caption de las partes de episodio en Reels: 1.ª línea nueva (título curioso) solo donde no rompe el anti-duplicados.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { textoReel, primeraLinea, lineaVieja, lineaNueva, esLaMisma } from '../scripts/instagram-texto.mjs';
+import { textoReel, primeraLinea, lineaVieja, lineaNueva, esLaMisma, curiosoDe } from '../scripts/instagram-texto.mjs';
 
 const base = { gu: { numero: '13', titulo: { en: 'The World Is Reborn', es: 'El mundo renace' } }, nombre: 'Norse', tags: '#norsemythology #vikings', curioso: 'After Ragnarok, Two Humans Hid in a Tree', codigo: 'Norse Mythology S1E13', gancho: 'The gods fell. Something survived.', de: 2 };
 
@@ -41,4 +41,11 @@ test('la 1.ª línea de lo ya publicado sigue igual que antes del cambio', () =>
   // formato exacto de instagram-reels.mjs hasta 2026-10-15
   const viejo = (gu, nombre, parte, de) => `${gu.titulo.en} | ${nombre} Mythology Ep. ${Number(gu.numero)}${de > 1 ? ` · Part ${parte}/${de}` : ''} 🏺`;
   for (const parte of [1, 2]) assert.equal(lineaVieja({ ...base, parte }), viejo(base.gu, base.nombre, parte, base.de));
+});
+
+test('si ya salió una parte con el formato nuevo, las siguientes repiten ese título aunque titulos.json cambie', () => {
+  const previas = [{ tipo: 'reel-parte', id: 'x', parte: 1, formato: 'curioso', curioso: 'Título viejo' }];
+  assert.equal(curiosoDe(previas, 'The World Is Reborn'), 'Título viejo');
+  assert.equal(curiosoDe([{ tipo: 'reel-parte', id: 'x', parte: 1 }], 'The World Is Reborn'), 'The World Is Reborn');
+  assert.equal(curiosoDe([], 'The World Is Reborn'), 'The World Is Reborn');
 });
