@@ -73,7 +73,8 @@ export function ajusteHorizontal(pistas: Pista[], cam: Camara = {}, dur = 0): Re
       const techo = SUELO - lim, arriba = Math.min(...vis.map((m) => m.y)) - alto * k;
       out[p.id] = { k, dy: Math.max(0, techo - arriba) };
     } else {
-      const elev = Math.max(...vis.map((m) => SUELO - m.y));
+      // si sube (escalera al cielo, salto…) es a propósito: el tamaño se elige con lo que está en el suelo
+      const suelo = vis.filter((m) => m.y >= SUELO - 1), elev = suelo.length ? 0 : Math.max(...vis.map((m) => SUELO - m.y));
       out[p.id] = { k: alto + elev > lim ? Math.max(K_AJ_MIN, (lim - elev) / alto) : 1, dy: 0 };
     }
   }
@@ -97,7 +98,8 @@ export function revisarHorizontal(pistas: Pista[], cam: Camara, dur: number, aj:
     const a = aj[p.id] ?? { k: 1, dy: 0 }, vis = p.muestras.filter((m) => m.vis);
     if (!vis.length) continue;
     const cajas = vis.map((m) => cajaPantalla(p, m, a, cam, dur));
-    const top = Math.min(...cajas.map((c) => c[1]));
+    const enSuelo = vis.some((m) => m.y >= SUELO - 1) && !vuela(vis);
+    const top = Math.min(...cajas.filter((_, i) => !enSuelo || vis[i].y >= SUELO - 1).map((c) => c[1]));
     if (top < (p.ajustable ? TECHO_H - 8 : ARRIBA - 10)) av.push({ tipo: 'arriba', ids: [p.id], formato: '16:9', detalle: `llega a y=${fx(top)} (techo ${p.ajustable ? TECHO_H : ARRIBA})` });
     // de costado: solo si está quieto afuera (entrar/salir por el borde es normal)
     const afuera = vis.filter((m, i) => { const c = cajas[i], quieto = Math.abs(m.x - (vis[i + 1]?.x ?? m.x)) < 2; return quieto && (c[0] < -20 || c[2] > 1940) && c[2] > 0 && c[0] < 1920; }).length;

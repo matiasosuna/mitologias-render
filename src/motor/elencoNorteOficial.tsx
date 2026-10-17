@@ -5,6 +5,7 @@
 // fuera de las Llanuras, nada de crestas de clan copiadas. Los animales protagonistas se dibujan acá como personajes.
 // Las claves viejas (mujer_cielo, brote, coyote…) de elenco.tsx quedan intactas; estas terminan en _oficial.
 // Coordenadas: cuerpo con origen en los pies (hombros y≈-300, cintura -210); cabeza con el ojo en (18,-6).
+import { AguilaEpica, CanidoEpico } from './bestiasEpicas'; // animales épicos (mismo dibujo que los griegos)
 import React from 'react';
 import { useCurrentFrame } from 'remotion';
 import { suave, miembro, type P, type PersonajeProps } from '../comun/vasija';
@@ -366,7 +367,7 @@ export const ELENCO_NORTE_OFICIAL: Record<string, Ficha> = {
     mano: <PunadoTierra />,
   } }, 'NANABOZHO'),
   // Costa noroeste (T1 eps. 9–10) y Meseta (eps. 11–12)
-  cuervo_oficial: D(Cuervo, { s: 1 }, 'RAVEN'),
-  coyote_oficial: D(Coyote, { s: 1 }, 'COYOTE'),
+  cuervo_oficial: D(AguilaEpica, { especie: 'aguila', vuela: true, color: '#26242C', cabeza: '#2E2C34', pico: '#3A3842', s: 0.6, alto: 360, izq: 380, der: 380 }, 'RAVEN'),
+  coyote_oficial: D(CanidoEpico, { especie: 'lobo', color: '#A8865A', s: 0.85, alto: 550, izq: 260, der: 240 }, 'COYOTE'),
 };
 export const NOMBRE_EN_NORTE_OFICIAL: Record<string, string> = Object.fromEntries(Object.entries(ELENCO_NORTE_OFICIAL).map(([k, f]) => [k, f.griego as string]));

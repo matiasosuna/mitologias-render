@@ -337,7 +337,7 @@ export const ContenidoEscena: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Id
                   <g key={a.id}>
                     <DibujarActor ficha={ficha} e={ev} props={a.props} f={f} />
                     {ev.aparicion && <Aparicion {...ev.aparicion} f={f} x={ev.x} y={ev.y} s={ev.s} />}
-                    {oR > 0 && <Rotulo x={puesta ? puesta.rotuloX(ev.x, griego!.length * 30 + 20) : ev.x} y={Math.max(160, ev.y - alto * ev.s)} texto={griego!} o={oR} tam={30} />}
+                    {oR > 0 && <Rotulo x={puesta ? puesta.rotuloX(ev.x, griego!.length * 30 + 20) : ev.x} y={ev.y - alto * ev.s} texto={griego!} o={oR} tam={30} />}
                   </g>
                 );
               })}

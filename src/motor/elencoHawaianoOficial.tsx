@@ -2,6 +2,7 @@
 // Mismo muñeco del canal con piel natural, ropa simple de kapa y 2–3 señas que se reconocen de un vistazo.
 // Cultura viva: iconografía tradicional y respetuosa (pāʻū, malo, kīhei, lei, ʻahuʻula, mahiole), sin caricatura.
 // Los pele/hiiaka/maui/… de elenco.tsx quedan intactos; estas son las claves *_oficial.
+import { CanidoEpico, DelfinEpico } from './bestiasEpicas'; // animales épicos (mismo dibujo que los griegos)
 import React from 'react';
 import { useCurrentFrame } from 'remotion';
 import { suave, type P, type PersonajeProps } from '../comun/vasija';
@@ -1425,8 +1426,8 @@ export const ELENCO_HAWAIANO_OFICIAL: Record<string, Ficha> = {
   // — Animales —
   puaa_oficial: D(Puaa, {}, 'PUAʻA'),
   puaa_cria_oficial: D(Puaa, { s: 0.6, cria: true, color: '#5A4234' }, 'PUAʻA'),
-  ilio_oficial: D(Ilio, {}, 'ʻĪLIO'),
-  ilio_rayado_oficial: D(Ilio, { rayas: true, color: '#B07A44' }, 'ʻĪLIO'),
+  ilio_oficial: D(CanidoEpico, { especie: 'perro', color: '#8A6A4A', alto: 340, izq: 220, der: 200 }, 'ʻĪLIO'),
+  ilio_rayado_oficial: D(CanidoEpico, { especie: 'perro', color: '#B07A44', alto: 340, izq: 220, der: 200 }, 'ʻĪLIO'),
   iole_oficial: D(Iole, { s: 0.9 }, 'ʻIOLE'),
   moo_oficial: D(Moo, { s: 0.55 }, 'MOʻO'),
   honu_oficial: D(Honu, {}, 'HONU'),
@@ -1436,7 +1437,7 @@ export const ELENCO_HAWAIANO_OFICIAL: Record<string, Ficha> = {
   uhu_oficial: D(PezArrecife, { forma: 'uhu', s: 1.1 }, 'UHU'),
   mano_oficial: D(Mano, {}, 'MANŌ'),
   mano_alii_oficial: D(Mano, { s: 1.5, color: '#4A5E70', rey: true }),
-  naia_oficial: D(Naia, {}, 'NAIʻA'),
+  naia_oficial: D(DelfinEpico, { vuela: true, alto: 160, izq: 260, der: 260 }, 'NAIʻA'),
   puhi_oficial: D(Puhi, {}, 'PUHI'),
   ilo_oficial: D(Gusano, { tipo: 'larva' }),
   koe_oficial: D(Gusano, { tipo: 'lombriz' }),

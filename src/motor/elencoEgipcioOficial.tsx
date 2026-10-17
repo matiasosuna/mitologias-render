@@ -3,6 +3,7 @@
 // cualquiera reconoce, según la iconografía de los templos y papiros (no la de las películas).
 // Las cabezas de animal se dibujan aquí enteras (prop cabezaPropia): peluca tripartita, cuello y cabeza de perfil
 // con el ojo cerca de (18,-6), igual que la cabeza humana. Los egipcios viejos de elenco.tsx quedan intactos.
+import { AguilaEpica, BovinoEpico, CaballoEpico, CanidoEpico } from './bestiasEpicas'; // animales épicos (mismo dibujo que los griegos)
 import React from 'react';
 import { useCurrentFrame } from 'remotion';
 import { suave, miembro, SUELO, type P, type PersonajeProps } from '../comun/vasija';
@@ -1292,17 +1293,17 @@ export const ELENCO_EGIPCIO_OFICIAL: Record<string, Ficha> = {
   soldado_egipcio_oficial: h({ brazo: [20, 40], adornos: { cabeza: <PelucaRedonda />, cuerpo: <Faja c={ROJO} />, mano: <LanzaCorta />, manoAtras: <EscudoCuero /> } }),
   soldado_egipcio_b_oficial: h({ piel: PIEL_NUBIA, brazo: [30, 10], adornos: { cabeza: <><PelucaRedonda /><PlumaNubia /></>, cuerpo: <Faja c={ROJO} />, mano: <ArcoFlechas flechas={false} /> } }),
   // ===== animales =====
-  halcon_egipcio_oficial: D(Pajaro, { especie: 'halcon' }),
+  halcon_egipcio_oficial: D(AguilaEpica, { especie: 'aguila', vuela: true, color: '#7A5A3A', cabeza: '#3A2E26', s: 0.6, alto: 360, izq: 380, der: 380 }),
   milano_egipcio_oficial: D(Pajaro, { especie: 'milano' }),
   golondrina_egipcia_oficial: D(Pajaro, { especie: 'golondrina' }),
   cobra_egipcia_oficial: D(SerpienteEg, { capucha: true, color: '#8A6A3A', vientre: '#E9D9A6', bandas: '#5A4426', largo: 200, grosor: 22, alto: 120 }),
   serpiente_egipcia_oficial: D(SerpienteEg, { color: '#9A8A4A', vientre: '#EDE2B8', bandas: '#5E5426', largo: 240, grosor: 20, alto: 70 }),
   cocodrilo_egipcio_oficial: D(CocodriloEg, {}),
   hipopotamo_egipcio_oficial: D(HipopotamoEg, {}, 'HIPPOPOTAMUS'),
-  vaca_egipcia_oficial: D(Vacuno, {}),
-  toro_egipcio_oficial: D(Vacuno, { toro: true }),
-  perro_egipcio_oficial: D(PerroEg, {}),
-  caballo_egipcio_oficial: D(CaballoEg, {}),
+  vaca_egipcia_oficial: D(BovinoEpico, { especie: 'vaca', alto: 440, izq: 280, der: 280 }),
+  toro_egipcio_oficial: D(BovinoEpico, { especie: 'toro', alto: 470, izq: 300, der: 300 }),
+  perro_egipcio_oficial: D(CanidoEpico, { especie: 'perro', color: '#C9A06A', alto: 340, izq: 220, der: 200 }),
+  caballo_egipcio_oficial: D(CaballoEpico, { especie: 'caballo', pose: 'paso', color: '#7A4A2A', alto: 560, izq: 260, der: 260 }),
   gacela_oficial: D(Gacela, {}),
   ganso_egipcio_oficial: D(GansoNilo, {}, 'GOOSE'),
   escorpion_egipcio_oficial: D(EscorpionEg, {}, 'SCORPION'),

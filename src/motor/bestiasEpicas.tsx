@@ -565,12 +565,14 @@ export const LeonEpico: React.FC<DibujoProps> = (props) => {
   const { x, y, s, voltear, opacity, f, moviendo, corriendo } = props;
   const c = (props.color as string | undefined) ?? '#D49A48', melena = (props.crin as string | undefined) ?? '#7A4A1E', claro = '#F2DCAA', som = tono(c, 0.84), lej = tono(c, 0.74), mLuz = tono(melena, 1.6);
   const ruge = props.boca !== false;
-  // melena en corona alrededor de la cabeza (centro ≈ cráneo); deja libre solo el hocico (≈ 90°)
-  const centro: P = [40, -4];
+  // melena: masa redonda que enmarca la cara (tapa cuello y pecho) + mechones cortos en todo el borde; va DENTRO
+  // de la cabeza (encima del cuerpo, debajo de la cara). Solo queda libre el hocico (≈ 90°).
+  const centro: P = [6, 12];
   const anillo = (n: number, r: number, a0: number, a1: number) => Array.from({ length: n }, (_, i) => { const a = a0 + ((a1 - a0) * i) / (n - 1), rad = (a * Math.PI) / 180; return { p: [centro[0] + Math.sin(rad) * r, centro[1] + Math.cos(rad) * r] as P, a }; });
   const Melena = <g>
-    {anillo(17, 58, 140, 400).map(({ p, a }, i) => <Mechon key={`m${i}`} x={p[0]} y={p[1]} ang={a + Math.sin(f / 11 + i) * 4} l={104 + (i % 3) * 14} w={62} c={i % 2 ? melena : tono(melena, 0.85)} luz={mLuz} curva={0.25} />)}
-    {anillo(14, 44, 150, 390).map(({ p, a }, i) => <Mechon key={`n${i}`} x={p[0]} y={p[1]} ang={a + 6 + Math.sin(f / 11 + i + 1) * 4} l={78 + (i % 2) * 12} w={52} c={i % 2 ? tono(melena, 1.18) : melena} luz={mLuz} curva={0.3} />)}
+    {anillo(18, 78, 125, 415).map(({ p, a }, i) => <Mechon key={`m${i}`} x={p[0]} y={p[1]} ang={a + Math.sin(f / 11 + i) * 4} l={58 + (i % 3) * 10} w={58} c={i % 2 ? melena : tono(melena, 0.85)} luz={mLuz} curva={0.3} />)}
+    <ellipse cx={centro[0]} cy={centro[1]} rx={88} ry={96} fill={melena} stroke={N} strokeWidth={2.6} />
+    {anillo(14, 58, 135, 405).map(({ p, a }, i) => <Mechon key={`n${i}`} x={p[0]} y={p[1]} ang={a + 6 + Math.sin(f / 11 + i + 1) * 4} l={44 + (i % 2) * 8} w={44} c={i % 2 ? tono(melena, 1.18) : tono(melena, 0.92)} luz={mLuz} curva={0.3} />)}
   </g>;
   const q: Cuad = {
     k: 1.18, c, lej, cPie: c, pie: 'garraUnas',
@@ -578,7 +580,7 @@ export const LeonEpico: React.FC<DibujoProps> = (props) => {
     hombro: [140, -202], cadera: [-142, -214], LD: [50, 74, 48, 14], LT: [66, 64, 58, 14], AD: [84, 42, 28, 22, 22], AT: [104, 44, 26, 22, 22],
     del: [[30, 26, 8, 34], [-6, -2, 4, 22]], tra: [[30, -36, 8, 24], [20, -26, 4, 22]],
     cuello: [[90, -310], [170, -350], [220, -330], [236, -270], [210, -210], [140, -200]], nuca: [196, -330], angCab: 4,
-    cabeza: <CabezaLeon c={c} claro={claro} f={f} ruge={ruge} />, cabezaLejos: Melena,
+    cabeza: <g>{Melena}<CabezaLeon c={c} claro={claro} f={f} ruge={ruge} /></g>,
     cola: <ColaBorla pts={[[-194, -250], [-250, -280 + Math.sin(f / 9) * 8], [-300, -250], [-310, -180]]} c={c} borla={melena} luz={mLuz} w={14} ang={-10} />,
     sombreado: <g>
       <ellipse cx={0} cy={-176} rx={220} ry={26} fill={claro} />
@@ -784,8 +786,10 @@ export const AguilaEpica: React.FC<DibujoProps> = (props) => {
   const { x, y, s, voltear, opacity, f } = props;
   const paloma = props.especie === 'paloma';
   const K = paloma ? 0.5 : 1;
-  const ala = paloma ? { c: '#F4F1EA', c2: '#ECE6DA', c3: '#F8F6F0', punta: '#B9BEC6' } : { c: '#4A321E', c2: '#6A4A2E', c3: '#8A6440', punta: '#24160C' };
-  const cuerpo = paloma ? '#EEEAE2' : '#5A3E26', cabeza = paloma ? '#E6E2DA' : '#C9944A', pico = paloma ? '#C98A8A' : '#E8B93E';
+  // color (plumaje), cabeza y pico opcionales: halcón, cuervo, kāhu… con el mismo dibujo
+  const pc = props.color as string | undefined;
+  const ala = pc ? { c: tono(pc, 0.82), c2: pc, c3: tono(pc, 1.25), punta: tono(pc, 0.45) } : paloma ? { c: '#F4F1EA', c2: '#ECE6DA', c3: '#F8F6F0', punta: '#B9BEC6' } : { c: '#4A321E', c2: '#6A4A2E', c3: '#8A6440', punta: '#24160C' };
+  const cuerpo = pc ? tono(pc, 0.95) : paloma ? '#EEEAE2' : '#5A3E26', cabeza = (props.cabeza as string | undefined) ?? (pc ? tono(pc, 1.1) : paloma ? '#E6E2DA' : '#C9944A'), pico = (props.pico as string | undefined) ?? (paloma ? '#C98A8A' : '#E8B93E');
   const aleteo = Math.sin(f * 0.22), abre = (aleteo + 1) / 2, dy = -aleteo * 8;
   const Ala = ({ der }: { der: boolean }) => (
     <g transform={`translate(${der ? 36 : -36} -50) scale(${der ? -1 : 1} 1) rotate(${r1(14 - aleteo * 10)})`}>

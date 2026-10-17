@@ -24,7 +24,7 @@ import t02 from '../videos/griegas-02-prometeo/timeline.json';
 type G = { escenas: Escena[] }; type T = { escenas: EscenaTL[] };
 /** [guion, timeline, escena, fracción de la escena a mostrar] */
 const CASOS: [G, T, string, number][] = [
-  [g07 as unknown as G, t07 as unknown as T, 'rescate', 0.6],
+  [g07 as unknown as G, t07 as unknown as T, 'rescate', 0.92],
   [g14 as unknown as G, t14 as unknown as T, 'monstruo', 0.6],
   [g99 as unknown as G, t99 as unknown as T, 'cerbero', 0.5],
   [g15 as unknown as G, t15 as unknown as T, 'robo', 0.5],

@@ -20,6 +20,13 @@ export const HOJAS: { cols: number; z: number; items: Item[] }[] = [
     it('pavo_real_griego_oficial', 'PEACOCK'), it('buho_griego_oficial', 'OWL'), it('delfin_griego_oficial', 'DOLPHIN')] },
   { cols: 3, z: 0.62, items: [it('pegaso_oficial', 'PEGASUS', { rotulo: true }), it('cerbero_oficial', 'CERBERUS', { rotulo: true }), it('piton_oficial', 'PYTHON', { rotulo: true }),
     it('licaon_lobo_oficial', 'LYCAON (WOLF)', { rotulo: true }), it('serpiente_griega_oficial', 'SNAKE'), it('delfine_oficial', 'DELPHYNE', { rotulo: true })] },
+  // 5–6: los animales de las otras mitologías con el mismo dibujo épico
+  { cols: 4, z: 0.62, items: [it('fenrir_oficial', 'FENRIR · NORSE'), it('caballo_nordico_oficial', 'HORSE · NORSE'), it('cabra_nordica_2_oficial', 'GOAT · NORSE'), it('cuervo_nordico_oficial', 'RAVEN · NORSE'),
+    it('halcon_egipcio_oficial', 'FALCON · EGYPT'), it('toro_egipcio_oficial', 'BULL · EGYPT'), it('perro_egipcio_oficial', 'DOG · EGYPT'), it('ilio_rayado_oficial', 'ʻĪLIO · HAWAIʻI'),
+    it('kuri_oficial', 'KURĪ · MĀORI'), it('coyote_oficial', 'COYOTE · N. AMERICA'), it('nandi', 'NANDI · HINDU'), it('hamsa_vuela', 'HAMSA · HINDU')] },
+  { cols: 4, z: 0.62, items: [it('suttung_aguila_oficial', 'SUTTUNG · NORSE'), it('lobo_nordico_oficial', 'WOLF · NORSE'), it('ciervo_nordico_oficial', 'DEER · NORSE'), it('serpiente_nordica_oficial', 'SNAKE · NORSE'),
+    it('caballo_egipcio_oficial', 'HORSE · EGYPT'), it('vaca_egipcia_oficial', 'COW · EGYPT'), it('naia_oficial', 'NAIʻA · HAWAIʻI'), it('kahu_vuela_oficial', 'KĀHU · MĀORI'),
+    it('cuervo_oficial', 'RAVEN · N. AMERICA'), it('kamadhenu', 'KAMADHENU · HINDU'), it('aguila_nordica_oficial', 'EAGLE · NORSE'), it('ilio_oficial', 'ʻĪLIO · HAWAIʻI')] },
 ];
 
 const Motor: React.FC<{ esc: Escena }> = ({ esc }) => <CalidadHD.Provider value={true}><EscenaMotor esc={esc} tl={tl} /></CalidadHD.Provider>;

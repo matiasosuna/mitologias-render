@@ -1141,7 +1141,7 @@ export const Rotulo: React.FC<{ x: number; y: number; texto: string; o: number; 
   // teniendo en cuenta el zoom de la cámara (que agranda desde el suelo hacia arriba) y los acentos (ā, ʻ).
   const { z } = useContext(Cam);
   const minPantalla = ARRIBA + tam + 30;
-  const minMundo = SUELO - (SUELO - minPantalla) / Math.max(1, z);
+  const minMundo = SUELO - (SUELO - minPantalla) / Math.max(0.3, z); // con zoom < 1 (cámara alejada) también sube
   return (
   <text x={x} y={Math.max(minMundo, y) + (1 - o) * 10} textAnchor="middle" fontFamily={TITULO} fontWeight={700} fontSize={tam} fill={color} opacity={o} letterSpacing={4} style={{ paintOrder: 'stroke' }} stroke={C.negro} strokeWidth={6}>
     {texto}

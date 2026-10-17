@@ -3,6 +3,7 @@
 // claras por personaje. Cultura viva: sin tā moko (no se copian diseños de personas reales), sin caricatura;
 // Hine-nui-te-pō es digna, no villana. Las claves viejas de elencoMaori.tsx quedan intactas; estas son *_oficial.
 // Māui maorí se distingue del hawaiano: moño tikitiki con pluma de huia, piupiu y el anzuelo de quijada (no el gran anzuelo blanco).
+import { AguilaEpica, CanidoEpico } from './bestiasEpicas'; // animales épicos (mismo dibujo que los griegos)
 import React from 'react';
 import { useCurrentFrame } from 'remotion';
 import { suave, type P, type PersonajeProps } from '../comun/vasija';
@@ -915,8 +916,8 @@ export const ELENCO_MAORI_OFICIAL: Record<string, Ficha> = {
   riroriro_oficial: D(Manu, { k: 0.48, color: '#8A9068', ala: '#6A7048', panza: '#E4E4CC', picoC: '#3A3028', patas: '#8A7A5A', cola: 'corta', ceja: '#F4F2EA' }, 'RIRORIRO'),
   toutouwai_oficial: D(Manu, { k: 0.62, color: '#5A5A60', ala: '#44444A', panza: '#E8E2D0', picoC: '#141010', patas: '#3A2A20', cola: 'corta' }, 'TOUTOUWAI'),
   kahu_oficial: D(Manu, { k: 1.5, color: '#6A4A2E', ala: '#4A3220', panza: '#C9A87A', cabezaC: '#7A5A3A', pico: 'gancho', picoC: '#E8C24A', patas: '#E8C24A', cola: 'larga' }, 'KAHU'),
-  kahu_vuela_oficial: D(Manu, { k: 1.5, vuela: true, color: '#6A4A2E', ala: '#4A3220', panza: '#C9A87A', cabezaC: '#7A5A3A', pico: 'gancho', picoC: '#E8C24A', cola: 'larga' }, 'KAHU'),
-  kuri_oficial: D(Kuri, {}, 'KURĪ'),
+  kahu_vuela_oficial: D(AguilaEpica, { especie: 'aguila', vuela: true, color: '#6A4A2E', cabeza: '#7A5A3A', s: 0.7, alto: 360, izq: 380, der: 380 }, 'KAHU'),
+  kuri_oficial: D(CanidoEpico, { especie: 'perro', color: '#E4D6B8', alto: 340, izq: 220, der: 200 }, 'KURĪ'),
   tuatara_oficial: D(Tuatara, { s: 1 }, 'TUATARA'),
   weta_oficial: D(Weta, { s: 1.1 }, 'WĒTĀ'),
   wheke_oficial: D(Wheke, { s: 0.9 }, 'TE WHEKE'),

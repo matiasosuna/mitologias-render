@@ -7,6 +7,7 @@
 // Los extras y animales llevan "_nordico/_nordica" en la clave para no chocar con las otras series.
 // Coordenadas: cuerpo con origen en los pies (hombros y≈-300, cintura -210); cabeza con el ojo en (18,-6);
 // mano = origen en la mano (el objeto queda derecho). Animales: origen en el piso, mirando a la derecha.
+import { AguilaEpica, CaballoEpico, CanidoEpico, CiervoEpico, OvinoEpico, SerpienteEpica } from './bestiasEpicas'; // animales épicos (mismo dibujo que los griegos)
 import React from 'react';
 import { useCurrentFrame } from 'remotion';
 import { suave, miembro, type P, type PersonajeProps } from '../comun/vasija';
@@ -764,9 +765,9 @@ export const ELENCO_NORDICO_OFICIAL: Record<string, Ficha> = {
   hrym_oficial: H({ piel: '#D9C4B8', pelo: BLANCO_P, gigante: true, s: 1.36, barba: 'tupida', barbaPelo: ['#DCE8F0', '#FFFFFF'], tunica: '#5E7F99', borde: '#DCE8F0', pantalon: '#2E4A5C', botas: '#5E6A76', pelliza: '#EEF2F5', brazo: [30, 40], manoAtras: <Escudo c1="#9DBBD1" c2="#EEF2F5" r={62} /> }, 'HRYM'),
   // —— Animales y criaturas con nombre ——
   fafnir_oficial: D(Fafnir, { s: 1 }, 'FAFNIR'),
-  fenrir_oficial: D(Lobo, { s: 1.75, color: '#4E5660', panza: '#9EA4AA', ojo: '#F2B33A' }, 'FENRIR'),
+  fenrir_oficial: D(CanidoEpico, { especie: 'lobo', color: '#4E5660', s: 1.4, alto: 550, izq: 260, der: 240 }, 'FENRIR'),
   grani_oficial: D(Caballo, { s: 1, color: '#9EA4AA', crin: '#E6E8EA', patasC: '#7E8790', montura: true, manta: ROJO }, 'GRANI'),
-  suttung_aguila_oficial: D(Aguila, { s: 1.2, color: '#6B3A22', ala2: '#4A2616', nuca: '#B5652A' }, 'SUTTUNG'),
+  suttung_aguila_oficial: D(AguilaEpica, { especie: 'aguila', vuela: true, color: '#6B3A22', cabeza: '#B5652A', s: 1.1, alto: 360, izq: 380, der: 380 }, 'SUTTUNG'),
   otr_oficial: D(Nutria, { s: 1.2 }, 'OTR'),
 
   // —— Extras de aldea y de guerra (variantes para que los grupos no se vean clonados) ——
@@ -807,17 +808,17 @@ export const ELENCO_NORDICO_OFICIAL: Record<string, Ficha> = {
   norna_nordica_3_oficial: M({ piel: pl(10), pelo: RUBIO, peinado: 'suelto', vestido: '#E9EEF2', blusa: '#F7F3EA', delantal: null, capa: '#9AA7B2', capaBorde: CREMA, brazo: [40, 30] }, 'NORN'),
   skald_nordico_oficial: H({ piel: pl(7), pelo: CASTANO, peinado: 'melena', barba: 'corta', tunica: '#7A2340', borde: ORO, pantalon: '#3A3F48', capa: '#2F5D80', capaCorta: true, brazo: [40, 80], mano: <Lira /> }, 'SKALD'),
   // —— Animales ——
-  caballo_nordico_oficial: D(Caballo, { s: 1, color: '#8A5A3A', crin: '#2A1C14' }, 'HORSE'),
-  caballo_nordico_2_oficial: D(Caballo, { s: 1, color: '#D9B98A', crin: '#3A2A20', patasC: '#B9986A', hocico: '#8A6A4A' }, 'HORSE'),
-  lobo_nordico_oficial: D(Lobo, { s: 1 }, 'WOLF'),
-  cabra_nordica_oficial: D(Cabra, { s: 1 }, 'GOAT'),
-  cabra_nordica_2_oficial: D(Cabra, { s: 1, color: '#9EA4AA', manchas: '#5E6670' }, 'GOAT'),
-  ciervo_nordico_oficial: D(Ciervo, { s: 1 }, 'DEER'),
+  caballo_nordico_oficial: D(CaballoEpico, { especie: 'caballo', color: '#8A5A3A', crin: '#2A1C14', alto: 700, izq: 260, der: 260 }, 'HORSE'),
+  caballo_nordico_2_oficial: D(CaballoEpico, { especie: 'caballo', pose: 'paso', color: '#D9B98A', crin: '#3A2A20', alto: 560, izq: 260, der: 260 }, 'HORSE'),
+  lobo_nordico_oficial: D(CanidoEpico, { especie: 'lobo', alto: 550, izq: 260, der: 240 }, 'WOLF'),
+  cabra_nordica_oficial: D(OvinoEpico, { especie: 'cabra', alto: 500, izq: 230, der: 260 }, 'GOAT'),
+  cabra_nordica_2_oficial: D(OvinoEpico, { especie: 'cabra', color: '#9EA4AA', alto: 500, izq: 230, der: 260 }, 'GOAT'),
+  ciervo_nordico_oficial: D(CiervoEpico, { s: 0.8, alto: 760, izq: 220, der: 240 }, 'DEER'),
   pez_nordico_oficial: D(Salmon, { s: 1.2 }, 'SALMON'),
-  serpiente_nordica_oficial: D(Vibora, { s: 1.3 }, 'SNAKE'),
-  cuervo_nordico_oficial: D(Ave, { s: 1.3 }, 'RAVEN'),
+  serpiente_nordica_oficial: D(SerpienteEpica, { color: '#5E6A4A', alto: 420, izq: 200, der: 120 }, 'SNAKE'),
+  cuervo_nordico_oficial: D(AguilaEpica, { especie: 'aguila', vuela: true, color: '#26242C', cabeza: '#2E2C34', pico: '#3A3842', s: 0.55, alto: 360, izq: 380, der: 380 }, 'RAVEN'),
   cuco_nordico_oficial: D(Ave, { s: 1.05, color: '#8A8F96', ala2: '#6B6F75', pico: '#C9A26B', brillo: '#B9BEC4', panza: '#D5DAE0', rayado: true }, 'CUCKOO'),
   gaviota_nordica_oficial: D(Ave, { s: 1.3, color: '#F2EEE6', ala2: '#9AA7B2', pico: '#E9C46A', brillo: '#C9D2DA' }, 'SEAGULL'),
-  aguila_nordica_oficial: D(Aguila, { s: 1 }, 'EAGLE'),
+  aguila_nordica_oficial: D(AguilaEpica, { especie: 'aguila', vuela: true, alto: 360, izq: 380, der: 380 }, 'EAGLE'),
 };
 export const NOMBRE_EN_NORDICO_OFICIAL: Record<string, string> = Object.fromEntries(Object.entries(ELENCO_NORDICO_OFICIAL).filter(([, f]) => f.griego).map(([k, f]) => [k, f.griego as string]));

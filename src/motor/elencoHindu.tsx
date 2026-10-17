@@ -5,6 +5,7 @@
 // criaturas propias se dibujan acá (tipo "dibujo"). Colores literales: C cambia con el tema.
 // Claves sin prefijo para los dioses (vishnu, shiva…); los animales con nombre sánscrito (airavata, kurma…) para no
 // chocar con otras series.
+import { BovinoEpico, CisneEpico } from './bestiasEpicas'; // animales épicos (mismo dibujo que los griegos)
 import React, { useId } from 'react';
 import { useCurrentFrame } from 'remotion';
 import { suave, miembro, type P, type PersonajeProps } from '../comun/vasija';
@@ -503,11 +504,11 @@ export const ELENCO_HINDU: Record<string, Ficha> = {
   rahu_cabeza: D(CabezaRahu, { s: 0.9 }, 'RAHU'),
   mayura: D(PavoReal, { s: 0.9 }, 'PEACOCK'),
   mayura_abierto: D(PavoReal, { s: 0.9, abierto: true }, 'PEACOCK'),
-  nandi: { tipo: 'cuadrupedo', animal: 'toro', p: { color: '#F2EEE4', contorno: true }, griego: 'NANDI' },
-  kamadhenu: { tipo: 'cuadrupedo', animal: 'buey', p: { color: '#F6F0E2', contorno: true }, griego: 'KAMADHENU' },
+  nandi: D(BovinoEpico, { especie: 'toro', color: '#F2EEE4', alto: 470, izq: 300, der: 300 }, 'NANDI'),
+  kamadhenu: D(BovinoEpico, { especie: 'vaca', color: '#F6F0E2', alto: 440, izq: 280, der: 280 }, 'KAMADHENU'),
   uchchaihshravas: { tipo: 'cuadrupedo', animal: 'caballo', p: { color: '#F6F2EA', cabezas: 3, contorno: true }, griego: 'UCHCHAIHSHRAVAS' },
   jabali_varaha: { tipo: 'cuadrupedo', animal: 'jabali', p: { color: '#5E7FA8', s: 1.3 }, griego: 'VISHNU AS A BOAR' },
-  hamsa_vuela: { tipo: 'ave', p: { color: '#FBF8F0', ala2: '#E9DCC4', pico: '#E8892B', s: 0.8 }, griego: 'HAMSA' },
+  hamsa_vuela: D(CisneEpico, { vuela: true, s: 0.8, alto: 480, izq: 300, der: 260 }, 'HAMSA'),
   hamsa: { tipo: 'avepie', p: { especie: 'ganso', color: '#FBF8F0', s: 1.3 }, griego: 'HAMSA' },
   mushika: { tipo: 'bichito', p: { especie: 'rata', color: '#8A7A6A', s: 1.2 }, griego: 'MUSHIKA' },
 };
