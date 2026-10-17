@@ -21,6 +21,12 @@ on:
       motor:
         description: 'modal | github'
         default: modal
+      series:
+        description: 'solo estas mitologías (ej. griegas,nordicas,egipcias,hawaianas); vacío = todas'
+        default: ''
+      reusar:
+        description: 'true = no renderizar: bajar de Modal (Volume moc-out) lo que dejó una corrida anterior y subirlo al release'
+        default: 'false'
       simular:
         description: 'true = solo mostrar el plan, costo estimado y omitidos (no renderiza)'
         default: 'false'
@@ -54,7 +60,7 @@ jobs:
       - name: plan
         run: |
           MODAL=0; [ -n "$MODAL_TOKEN_ID" ] && MODAL=1
-          node scripts/prerender.mjs plan --n=99 --episodios=${{ inputs.episodios }} --presupuesto=${{ inputs.presupuesto }} --forzar=${{ inputs.forzar }} --motor=${{ inputs.motor }} --modal=$MODAL
+          node scripts/prerender.mjs plan --n=99 --episodios=${{ inputs.episodios }} --presupuesto=${{ inputs.presupuesto }} --forzar=${{ inputs.forzar }} --series=${{ inputs.series }} --motor=${{ inputs.motor }} --modal=$MODAL
       - name: lotes de GitHub (render-nube)
         if: inputs.simular != 'true'
         run: |
@@ -70,8 +76,9 @@ jobs:
           [ -n "$ITEMS" ] || { echo "nada para Modal"; exit 0; }
           echo "items=$ITEMS" >> "$GITHUB_OUTPUT"
           pip install -q modal
+          sudo apt-get install -y ffmpeg >/dev/null # armado del mp4 de TikTok (tapa + vertical)
           START=$(date +%s)
-          rc=0; MOC_ITEMS="$ITEMS" timeout 6000 modal run scripts/modal_render.py || rc=$?
+          if [ "${{ inputs.reusar }}" = true ]; then rc=0; echo '[]' > out/modal-fallos.json; else rc=0; MOC_ITEMS="$ITEMS" timeout 6000 modal run scripts/modal_render.py || rc=$?; fi
           echo "Modal: $(( $(date +%s) - START )) s (rc=$rc)"
           FALLOS=$(cat out/modal-fallos.json 2>/dev/null | node -e 'try{console.log(JSON.parse(require("fs").readFileSync(0,"utf8")).join(" "))}catch{console.log("TODOS")}')
           [ "$FALLOS" = TODOS ] && FALLOS="$ITEMS"

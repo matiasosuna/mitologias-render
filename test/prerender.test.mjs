@@ -37,3 +37,7 @@ test('motor: Modal por defecto para episodios; github solo si se pide, no hay cl
   assert.ok(lotes(items, 'modal', false).every((l) => l.motor === 'github')); // sin claves de Modal: respaldo en GitHub
   assert.ok(lotes(items, 'github', true).every((l) => l.motor === 'github'));
 });
+test('faltantes: permitir filtra por mitología', () => {
+  const r = faltantes({ ...base, n: 99, permitir: (id) => id === 'griegas-0c' });
+  assert.deepEqual([...new Set(r.map((x) => x.id))], ['griegas-0c']);
+});

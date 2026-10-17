@@ -1,6 +1,6 @@
 // Pre-render: renderiza (sin publicar nada) los próximos ítems de la cola única a los que les faltan archivos en el release "media".
 // Uso (en Actions, con el estado ya traído a out/): node scripts/prerender.mjs plan --n=6 [--motor=auto|github|modal] [--modal=1]
-//   opciones: --forzar=id,id (re-render ignorando el release) --presupuesto=USD --episodios=N --legacy=0 (no omitir personajes viejos)
+//   opciones: --forzar=id,id (re-render ignorando el release) --presupuesto=USD --episodios=N --legacy=0 (no omitir personajes viejos) --series=griegas,nordicas (solo esas mitologías)
 //   imprime y deja en out/lotes.json y $GITHUB_OUTPUT `lotes` = JSON [{tipo, motor, ids}] (los tipos son los de render-nube: horizontal|partes|short)
 //   node scripts/prerender.mjs subir <id:modo…>  → sube al release lo que dejó Modal en out/<id>/ (modo: horizontal|partes|vertical)
 import { readFileSync, existsSync, appendFileSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -22,7 +22,7 @@ export const COSTO = { horizontal: 0.38, vertical: 0.27, partes: 0.3, short: 0 }
 
 /** Los próximos `n` pares (id, tipo) de la cola cuyo archivo falta en el release y no hay un artefacto vigente.
  *  hayAsset(id, clase) y hayArtefacto(id, tipo) son booleanos. */
-export function faltantes({ cola, tiene, listo, hayAsset, hayArtefacto = () => false, n, legacy = () => [], omitidos = [], forzar = [], presupuesto = Infinity, maxEpisodios = Infinity }) {
+export function faltantes({ cola, tiene, listo, hayAsset, hayArtefacto = () => false, n, legacy = () => [], omitidos = [], forzar = [], presupuesto = Infinity, maxEpisodios = Infinity, permitir = () => true }) {
   const out = [], eps = new Set();
   let gasto = 0;
   const poner = (id, tipo) => {
@@ -32,7 +32,7 @@ export function faltantes({ cola, tiene, listo, hayAsset, hayArtefacto = () => f
   for (const id of forzar) for (const [tipo] of NECESITA.episodio) poner(id, tipo); // re-render pedido a mano: ignora lo que haya en el release
   for (const e of cola) {
     if (out.length >= n) break;
-    if (forzar.includes(e.id) || !listo(e.id) || PLATAFORMAS.every((p) => tiene[p].has(e.id))) continue;
+    if (forzar.includes(e.id) || !permitir(e.id) || !listo(e.id) || PLATAFORMAS.every((p) => tiene[p].has(e.id))) continue;
     const faltan = (NECESITA[e.tipo] ?? []).filter(([tipo, clase]) => !hayAsset(e.id, clase) && !hayArtefacto(e.id, tipo));
     if (!faltan.length) continue;
     const viejos = legacy(e.id);
@@ -68,9 +68,10 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     const listo = (id) => ['guion.json', 'timeline.json'].every((f) => existsSync(join('src/videos', id, f))) && (esShort(id) || Boolean(titulos[id]?.titulo));
     const arte = artefactosVigentes();
     const oficiales = clavesOficiales(), omitidos = [];
+    const series = opt('series', '').split(',').filter(Boolean); // p. ej. griegas,nordicas: solo esas mitologías
     const forzar = opt('forzar', '').split(',').filter(Boolean);
     const items = faltantes({ cola: leerJSON('out/cola-unificada.json', []), tiene, listo, n: Number(opt('n', 6)), forzar, omitidos,
-      presupuesto: Number(opt('presupuesto', 'Infinity')), maxEpisodios: Number(opt('episodios', 'Infinity')),
+      permitir: (id) => !series.length || series.some((x) => id.startsWith(`${x}-`) || id.startsWith(`short-${x}-`)), presupuesto: Number(opt('presupuesto', 'Infinity')), maxEpisodios: Number(opt('episodios', 'Infinity')),
       legacy: (id) => (opt('legacy', '1') === '0' ? [] : clavesLegacy(JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8')), oficiales)),
       hayAsset: (id, c) => hayAsset(nombreAsset(id, c)), hayArtefacto: (id, t) => arte.has(`${id}-${t}`) });
     console.log(`estimado Modal: USD ${costoTotal(items).toFixed(2)} · episodios: ${new Set(items.map((i) => i.id)).size}`);
