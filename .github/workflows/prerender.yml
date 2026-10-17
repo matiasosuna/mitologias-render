@@ -4,9 +4,14 @@
 # esos formatos se mandan a render-nube (GitHub). Los Shorts van por render-nube.
 # Elige los próximos ítems de la cola con archivos faltantes en el release, saltando episodios cuyo guion usa personajes viejos
 # (sin _oficial; se listan en el log) y respetando episodios/presupuesto.
+# CRON (cada 3 h, modo ventana): simula los próximos 12 turnos (2 días) de las tres redes y renderiza lo que falte, de a poco
+# (máx. 6 renders por corrida, solo si no hay otro render-nube en curso): en GitHub (gratis); en Modal solo lo que se necesita en < 6 h
+# o si el último render-nube falló. Solo Griegas, Nórdicas, Egipcias y Hawaianas (las demás tienen claves sin diseño oficial). Nunca publica.
 # gh workflow run prerender.yml -R matiasosuna/mitologias-render [-f episodios=8] [-f presupuesto=4] [-f forzar=id,id] [-f motor=modal|github]
 name: prerender
 on:
+  schedule:
+    - cron: '17 */3 * * *' # cada 3 h: mantiene renderizados los próximos 2 días de turnos (modo ventana)
   workflow_dispatch:
     inputs:
       episodios:
@@ -27,6 +32,9 @@ on:
       reusar:
         description: 'true = no renderizar: bajar de Modal (Volume moc-out) lo que dejó una corrida anterior y subirlo al release'
         default: 'false'
+      modo:
+        description: 'cola = próximos de la cola (lote manual) | ventana = lo que piden los próximos turnos (el cron usa este)'
+        default: cola
       simular:
         description: 'true = solo mostrar el plan, costo estimado y omitidos (no renderiza)'
         default: 'false'
@@ -60,12 +68,25 @@ jobs:
       - name: plan
         run: |
           MODAL=0; [ -n "$MODAL_TOKEN_ID" ] && MODAL=1
-          node scripts/prerender.mjs plan --n=99 --episodios=${{ inputs.episodios }} --presupuesto=${{ inputs.presupuesto }} --forzar=${{ inputs.forzar }} --series=${{ inputs.series }} --motor=${{ inputs.motor }} --modal=$MODAL
+          MODO="${{ inputs.modo || 'ventana' }}"
+          if [ "$MODO" = ventana ]; then
+            SERIES="${{ inputs.series || 'griegas,nordicas,egipcias,hawaianas' }}"; N=6; PRES="${{ inputs.presupuesto || '1' }}"; MOTOR="${{ inputs.motor || 'ventana' }}"
+            # GitHub viene fallando si alguno de los últimos 4 render-nube terminados falló (entonces lo no urgente también va a Modal)
+            FALLA=0; gh run list -w render.yml -L 4 --json conclusion -q '.[].conclusion' | grep -qx failure && FALLA=1
+            # ritmo gradual: si hay render-nube en curso, no se suma más trabajo en GitHub
+            EN_CURSO=$(gh run list -w render.yml -L 20 --json status -q '[.[]|select(.status!="completed")]|length')
+            echo "EN_CURSO=$EN_CURSO" >> "$GITHUB_ENV"
+            node scripts/prerender.mjs plan --modo=ventana --n=$N --presupuesto=$PRES --series=$SERIES --motor=$MOTOR --modal=$MODAL --githubfalla=$FALLA
+          else
+            echo "EN_CURSO=0" >> "$GITHUB_ENV"
+            node scripts/prerender.mjs plan --n=99 --episodios=${{ inputs.episodios }} --presupuesto=${{ inputs.presupuesto }} --forzar=${{ inputs.forzar }} --series=${{ inputs.series }} --motor=${{ inputs.motor }} --modal=$MODAL
+          fi
       - name: lotes de GitHub (render-nube)
         if: inputs.simular != 'true'
         run: |
           node -e 'for (const l of JSON.parse(require("fs").readFileSync("out/lotes.json","utf8"))) if (l.motor === "github") console.log(l.tipo + " " + JSON.stringify(l.ids))' | while read -r TIPO IDS; do
-            gh workflow run render.yml -f ids="$IDS" -f tipo="$TIPO" && echo "render-nube disparado: $TIPO $IDS"
+            [ "${EN_CURSO:-0}" = 0 ] || { echo "hay render-nube en curso: se espera ($TIPO $IDS)"; continue; }
+            gh workflow run render.yml -f ids="$IDS" -f tipo="$TIPO" -f release=true && echo "render-nube disparado: $TIPO $IDS"
           done
       - name: episodios en Modal → release media
         id: m
@@ -93,5 +114,5 @@ jobs:
           F="${{ steps.m.outputs.fallos }}"; [ -n "$F" ] || F="${{ steps.m.outputs.items }}"
           for T in horizontal vertical partes; do
             IDS=$(echo "$F" | tr ' ' '\n' | grep ":$T\$" | cut -d: -f1 | node -e 'const a=require("fs").readFileSync(0,"utf8").split("\n").filter(Boolean); if (a.length) console.log(JSON.stringify(a))')
-            [ -z "$IDS" ] || gh workflow run render.yml -f ids="$IDS" -f tipo="$T"
+            [ -z "$IDS" ] || gh workflow run render.yml -f ids="$IDS" -f tipo="$T" -f release=true
           done

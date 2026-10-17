@@ -10,6 +10,11 @@ on:
       tipo:
         description: 'vertical | horizontal | short | partes'
         default: vertical
+      release:
+        description: 'true = además sube el resultado al release media (horizontal, vertical→TikTok, partes); lo usa prerender'
+        default: 'false'
+permissions:
+  contents: write # release media
 jobs:
   render:
     runs-on: ubuntu-latest
@@ -36,6 +41,13 @@ jobs:
             partes) node scripts/vertical-partes.mjs ${{ matrix.id }} ;;
             *) node scripts/motor-render.mjs ${{ matrix.id }} --imagen=en --audio=en && node scripts/miniaturas.mjs ${{ matrix.id }} ;;
           esac
+      - name: subir al release media (prerender)
+        if: inputs.release == 'true' && inputs.tipo != 'short'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          case "${{ inputs.tipo }}" in vertical) M=vertical ;; partes) M=partes ;; *) M=horizontal ;; esac
+          node scripts/prerender.mjs subir ${{ matrix.id }}:$M
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.id }}-${{ inputs.tipo }}

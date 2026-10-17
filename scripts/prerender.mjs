@@ -6,14 +6,14 @@
 import { readFileSync, existsSync, appendFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
-import { esShort, PLATAFORMAS, tieneYouTube, tieneInstagram, tieneTiktok } from './cola.mjs';
+import { esShort, PLATAFORMAS, HORAS_UTC, clase, planTurno, tieneYouTube, tieneInstagram, tieneTiktok } from './cola.mjs';
 import { nombreAsset, hayAsset, subirAsset, rutaLocal, REPO } from './nube.mjs';
 import { clavesOficiales, clavesLegacy } from './legacy.mjs';
 import { publicados } from '../lib/personajes-oficiales.mjs';
 
 /** Qué necesita cada tipo de ítem: [tipo de render-nube, clase de asset que lo prueba]. */
 export const NECESITA = {
-  episodio: [['horizontal', 'horizontal'], ['vertical', 'tiktok'], ['partes', 'partes']], // YouTube · TikTok (vertical completo) · Instagram (partes)
+  episodio: [['horizontal', 'horizontal', 'youtube'], ['vertical', 'tiktok', 'tiktok'], ['partes', 'partes', 'instagram']], // [tipo, asset, red que lo usa]: solo se renderiza si esa red no lo publicó
   short: [['short', 'short']],
 };
 /** Tipos que Modal sabe renderizar (scripts/modal_render.py): el resto va siempre por GitHub. */
@@ -30,11 +30,11 @@ export function faltantes({ cola, tiene, listo, hayAsset, hayArtefacto = () => f
     if (out.length >= n || gasto + (COSTO[tipo] ?? 0) > presupuesto) return false;
     out.push({ id, tipo }); gasto += COSTO[tipo] ?? 0; eps.add(id); return true;
   };
-  for (const id of forzar) for (const [tipo] of NECESITA.episodio) poner(id, tipo); // re-render pedido a mano: ignora lo que haya en el release
+  for (const id of forzar) for (const [tipo] of NECESITA.episodio) poner(id, tipo); // forzar = todos los formatos // re-render pedido a mano: ignora lo que haya en el release
   for (const e of cola) {
     if (out.length >= n) break;
     if (forzar.includes(e.id) || !permitir(e.id) || !listo(e.id) || PLATAFORMAS.every((p) => tiene[p].has(e.id))) continue;
-    const faltan = (NECESITA[e.tipo] ?? []).filter(([tipo, clase]) => !hayAsset(e.id, clase) && !hayArtefacto(e.id, tipo));
+    const faltan = (NECESITA[e.tipo] ?? []).filter(([tipo, clase, red]) => !(red && tiene[red].has(e.id)) && !hayAsset(e.id, clase) && !hayArtefacto(e.id, tipo));
     if (!faltan.length) continue;
     const viejos = legacy(e.id);
     if (viejos.length) { omitidos.push({ id: e.id, viejos }); continue; }
@@ -55,6 +55,58 @@ export function lotes(items, motor, modalOk) {
   return [...g].map(([tipo, ids]) => ({ tipo, ids, motor: m === 'modal' && modalOk && TIPOS_MODAL.includes(tipo) ? 'modal' : 'github' }));
 }
 
+
+// ── ventana: lo que se va a publicar en los próximos turnos (2 días = 12 turnos), simulando el plan de cada turno
+const FORMATO = { youtube: ['horizontal', 'horizontal'], tiktok: ['vertical', 'tiktok'], instagram: ['partes', 'partes'] };
+/** Próximos `turnos` inicios de turno (ms UTC) desde `ahora`: los de HORAS_UTC (cada 4 h). */
+export function iniciosTurno(ahora, turnos) {
+  const t = new Date(ahora); t.setUTCMinutes(0, 0, 0);
+  let ms = t.getTime() < ahora ? t.getTime() + 36e5 : t.getTime();
+  while (!HORAS_UTC.includes(new Date(ms).getUTCHours())) ms += 36e5;
+  return Array.from({ length: turnos }, (_, k) => ms + k * 4 * 36e5);
+}
+/** Qué publicaría cada plataforma en los próximos turnos (cada turno se planea con lo publicado antes de empezar). [{id, plataforma, en}] */
+export function slotsProximos({ cola, tiene, listo, ahora = Date.now(), turnos = 12 }) {
+  const sim = Object.fromEntries(PLATAFORMAS.map((p) => [p, new Map(tiene[p])])), out = [];
+  for (const en of iniciosTurno(ahora, turnos)) {
+    const c = clase(new Date(en).getUTCHours()), hechos = [];
+    for (const plataforma of PLATAFORMAS) for (const id of planTurno({ cola, tiene: sim, plataforma, clase: c, listo }).ids) { out.push({ id, plataforma, en }); hechos.push([plataforma, id]); }
+    for (const [p, id] of hechos) sim[p].set(id, 0);
+  }
+  return out;
+}
+/** Renders que piden esos turnos y faltan: [{id, tipo, en, urgente}] (urgente = se necesita en < 6 h), ordenados por turno. */
+export function faltantesVentana({ slots, ahora = Date.now(), hayAsset, hayArtefacto = () => false, legacy = () => [], omitidos = [], permitir = () => true, n = Infinity, presupuesto = Infinity }) {
+  const pedidos = new Map();
+  for (const { id, plataforma, en } of slots) {
+    if (!permitir(id)) continue;
+    const [tipo, clase] = esShort(id) ? ['short', 'short'] : FORMATO[plataforma];
+    const k = `${id}|${tipo}`;
+    if (!pedidos.has(k) || pedidos.get(k).en > en) pedidos.set(k, { id, tipo, clase, en });
+  }
+  const out = [];
+  let gasto = 0;
+  for (const it of [...pedidos.values()].sort((a, b) => a.en - b.en)) {
+    if (out.length >= n || hayAsset(it.id, it.clase) || hayArtefacto(it.id, it.tipo)) continue;
+    const viejos = legacy(it.id);
+    if (viejos.length) { if (!omitidos.some((o) => o.id === it.id)) omitidos.push({ id: it.id, viejos }); continue; }
+    if (gasto + (COSTO[it.tipo] ?? 0) > presupuesto) continue;
+    gasto += COSTO[it.tipo] ?? 0;
+    out.push({ id: it.id, tipo: it.tipo, en: it.en, urgente: it.en < ahora + 6 * 36e5 });
+  }
+  return out;
+}
+/** Reparto para la ventana: GitHub (gratis) salvo lo urgente (< 6 h) o si GitHub viene fallando; Modal solo los tipos que sabe y con claves. */
+export function repartir(items, { modalOk, githubFalla = false, motor = 'ventana' }) {
+  const g = new Map();
+  for (const { id, tipo, urgente } of items) {
+    const usaModal = modalOk && TIPOS_MODAL.includes(tipo) && (motor === 'modal' || (motor === 'ventana' && (urgente || githubFalla)));
+    const k = `${tipo}|${usaModal ? 'modal' : 'github'}`;
+    g.set(k, [...(g.get(k) ?? []), id]);
+  }
+  return [...g].map(([k, ids]) => { const [tipo, m] = k.split('|'); return { tipo, ids, motor: m }; });
+}
+
 const leerJSON = (f, def) => (existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')) : def);
 function artefactosVigentes() {
   try { return new Set(execFileSync('gh', ['api', '--paginate', `repos/${REPO}/actions/artifacts?per_page=100`, '-q', '.artifacts[] | select(.expired==false) | .name'], { encoding: 'utf8' }).split('\n').filter(Boolean)); } catch { return new Set(); }
@@ -73,13 +125,19 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     const oficiales = clavesOficiales(), omitidos = [], pub = publicados();
     const series = opt('series', '').split(',').filter(Boolean); // p. ej. griegas,nordicas: solo esas mitologías
     const forzar = opt('forzar', '').split(',').filter(Boolean);
-    const items = faltantes({ cola: leerJSON('out/cola-unificada.json', []), tiene, listo, n: Number(opt('n', 6)), forzar, omitidos,
+    const modo = opt('modo', 'cola');
+    const items = modo === 'ventana'
+      ? faltantesVentana({ slots: slotsProximos({ cola: leerJSON('out/cola-unificada.json', []), tiene, listo, turnos: Number(opt('turnos', 12)) }), omitidos, n: Number(opt('n', 6)),
+        permitir: (id) => !series.length || series.some((x) => id.startsWith(`${x}-`) || id.startsWith(`short-${x}-`)), presupuesto: Number(opt('presupuesto', 'Infinity')),
+        legacy: (id) => (pub.has(id) ? [] : clavesLegacy(JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8')), oficiales)),
+        hayAsset: (id, c) => hayAsset(nombreAsset(id, c)), hayArtefacto: (id, t) => arte.has(`${id}-${t}`) })
+      : faltantes({ cola: leerJSON('out/cola-unificada.json', []), tiene, listo, n: Number(opt('n', 6)), forzar, omitidos,
       permitir: (id) => !series.length || series.some((x) => id.startsWith(`${x}-`) || id.startsWith(`short-${x}-`)), presupuesto: Number(opt('presupuesto', 'Infinity')), maxEpisodios: Number(opt('episodios', 'Infinity')),
       legacy: (id) => (opt('legacy', '1') === '0' || pub.has(id) ? [] : clavesLegacy(JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8')), oficiales)),
       hayAsset: (id, c) => hayAsset(nombreAsset(id, c)), hayArtefacto: (id, t) => arte.has(`${id}-${t}`) });
     console.log(`estimado Modal: USD ${costoTotal(items).toFixed(2)} · episodios: ${new Set(items.map((i) => i.id)).size}`);
     console.log(`omitidos por personajes viejos (${omitidos.length}): ${omitidos.map((o) => `${o.id} [${o.viejos.join(',')}]`).join(' | ').slice(0, 3000)}`);
-    const L = lotes(items, opt('motor', 'modal'), opt('modal', '0') === '1');
+    const L = modo === 'ventana' ? repartir(items, { modalOk: opt('modal', '0') === '1', githubFalla: opt('githubfalla', '0') === '1', motor: opt('motor', 'ventana') }) : lotes(items, opt('motor', 'modal'), opt('modal', '0') === '1');
     console.log(`prerender: ${items.length} ítems → ${L.map((l) => `${l.tipo}/${l.motor}: ${l.ids.join(' ')}`).join(' · ') || 'nada que renderizar'}`);
     mkdirSync('out', { recursive: true }); writeFileSync('out/lotes.json', JSON.stringify(L)); // los pasos siguientes del workflow lo leen
     if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, `lotes=${JSON.stringify(L)}\n`);
