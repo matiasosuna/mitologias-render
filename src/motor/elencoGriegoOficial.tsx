@@ -17,6 +17,7 @@ import { useCurrentFrame } from 'remotion';
 import { suave, lerp, desde, miembro, Fuego, type P, type PersonajeProps } from '../comun/vasija';
 import type { Ficha } from './elenco';
 import type { DibujoProps } from './elencoAzteca';
+import { CaballoEpico } from './bestiasEpicas';
 
 const N = '#17110E'; // contorno (el negro de la vasija)
 const r1 = (v: number) => v.toFixed(1);
@@ -1973,7 +1974,7 @@ export const ELENCO_GRIEGO_OFICIAL: Record<string, Ficha> = {
   dioniso_cabrito_oficial: D(Bestia4, { especie: 'cabrito', hiedra: true }, 'ΔΙΟΝΥΣΟΣ'),
   dioniso_leon_oficial: D(Bestia4, { especie: 'leon', hiedra: true }, 'ΔΙΟΝΥΣΟΣ'),
   // ---- animales griegos (sin rótulo) ----
-  caballo_griego_oficial: D(Bestia4, { especie: 'caballo' }),
+  caballo_griego_oficial: D(CaballoEpico, { especie: 'caballo', alto: 640 }),
   mula_griega_oficial: D(Bestia4, { especie: 'mula' }),
   buey_griego_oficial: D(Bestia4, { especie: 'buey' }),
   vaca_griega_oficial: D(Bestia4, { especie: 'vaca' }),

@@ -1,0 +1,37 @@
+# Láminas (PNG) de composiciones de src/pruebas, sin la Mac: se suben al release "revision" (mismo nombre = se pisa).
+# gh workflow run laminas.yml -R matiasosuna/mitologias-render -f ids='g-hoja,m-fondos' [-f frame=60]
+name: laminas
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: 'ids de composición separados por coma (o archivo.tsx:id)'
+        required: true
+      frame:
+        description: 'cuadro del still'
+        default: '60'
+permissions:
+  contents: write # release "revision"
+jobs:
+  laminas:
+    if: github.repository == 'matiasosuna/mitologias-render'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: sudo apt-get update && sudo apt-get install -y libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2t64 fonts-noto-core
+      - run: npx remotion browser ensure
+      - name: renderizar láminas
+        run: node scripts/laminas.mjs render "${{ inputs.ids }}" --frame=${{ inputs.frame }}
+      - name: subir al release revision
+        run: |
+          gh release view revision >/dev/null 2>&1 || gh release create revision --title revision --notes "Láminas de revisión (se pisan)"
+          gh release upload revision out/laminas/*.png --clobber
+          for f in out/laminas/*.png; do echo "https://github.com/${GITHUB_REPOSITORY}/releases/download/revision/$(basename "$f")"; done

@@ -292,7 +292,7 @@ export const ContenidoEscena: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Id
                 const pp = ficha.tipo === 'persona' ? { ...ficha.p, ...(a.props ?? {}) } as Record<string, unknown> : {};
                 const CORONA_ALTA: Record<string, number> = { doble: 110, blanca: 110, atef: 120, trono: 90, plumas: 130, cuernosDisco: 110, disco: 90, pluma: 100, corona: 60, yelmoAlas: 70, casco: 70, roja: 80, gustoweh: 90, tocadoPlumas: 90, roach: 50, plumaAtras: 40, sombreroCesteria: 30 };
                 const extra = Math.max(CORONA_ALTA[pp.tocado as string] ?? 0, ['chacal', 'set'].includes(pp.cabezaAnimal as string) ? 50 : 0);
-                const alto = ficha.tipo === 'persona' ? (400 + extra) * (pp.gigante ? 1.2 : 1) * ((pp.s as number) ?? 1) : ficha.tipo === 'cuadrupedo' ? 260 : 200;
+                const alto = ficha.tipo === 'persona' ? (400 + extra) * (pp.gigante ? 1.2 : 1) * ((pp.s as number) ?? 1) : ficha.tipo === 'cuadrupedo' ? 260 : ficha.tipo === 'dibujo' && typeof ficha.p?.alto === 'number' ? (ficha.p.alto as number) * ((ficha.p.s as number) ?? 1) : 200; // p.alto: alto propio del dibujo (animales épicos)
                 const ev = puesta ? { ...e, x: puesta.x(e.x) } : e;
                 return (
                   <g key={a.id}>

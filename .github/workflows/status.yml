@@ -1,0 +1,56 @@
+# STATUS.md del canal en la rama "estado" (tablas Qué/Estado, temporadas, métricas). Solo lee: no publica nada. Cero uso de Claude.
+# A mano: gh workflow run status.yml -R matiasosuna/mitologias-render
+name: status
+on:
+  schedule:
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+concurrency:
+  group: status
+  cancel-in-progress: false
+permissions:
+  contents: write # push a la rama estado
+  actions: read   # estado y última corrida de publicar
+jobs:
+  status:
+    if: github.repository == 'matiasosuna/mitologias-render'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: claves (.env y .yt-token.json desde los secretos; nunca se imprimen)
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+        run: |
+          node -e '
+            const fs = require("fs"), e = process.env;
+            if (!e.YT_CLIENT_ID || !e.YT_CLIENT_SECRET || !e.YT_TOKEN_JSON) { console.log("sin claves de YouTube: se omiten sus métricas"); fs.writeFileSync(".env", ""); process.exit(0); }
+            fs.writeFileSync(".env", "YT_CLIENT_ID=" + e.YT_CLIENT_ID.trim() + "\nYT_CLIENT_SECRET=" + e.YT_CLIENT_SECRET.trim() + "\n", { mode: 0o600 });
+            const t = JSON.parse(e.YT_TOKEN_JSON);
+            for (const v of [t.refresh_token, t.access_token]) if (v) console.log("::add-mask::" + v);
+            fs.writeFileSync(".yt-token.json", JSON.stringify({ ...t, vence: 0 }), { mode: 0o600 });
+          '
+      - name: generar STATUS.md
+        env:
+          MOC_PAGE_TOKEN: ${{ secrets.MOC_PAGE_TOKEN }}
+          MOC_IG_USER_ID: ${{ secrets.MOC_IG_USER_ID }}
+        run: |
+          git clone -q --depth 1 --branch estado "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" /tmp/estado
+          node scripts/status.mjs /tmp/estado
+      - name: guardar en la rama estado
+        run: |
+          cd /tmp/estado
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add STATUS.md
+          git diff --cached --quiet && { echo "STATUS.md sin cambios"; exit 0; }
+          git commit -qm "STATUS $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do git push -q origin estado && exit 0; git pull -q --rebase origin estado; done
+          exit 1
