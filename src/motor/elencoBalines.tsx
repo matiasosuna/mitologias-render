@@ -523,4 +523,4 @@ export const ELENCO_BALINES: Record<string, Ficha> = {
 export const NOMBRE_EN_BALINES: Record<string, string> = Object.fromEntries(Object.entries(ELENCO_BALINES).filter(([, f]) => f.griego).map(([k, f]) => [k, f.griego as string]));
 
 // Piezas que reusan los diseños oficiales (elencoBalinesOficial.tsx).
-export { Gelungan, Sumping, Flor, Udeng, Rodete, CaraRaksasa, PeloSuelto, Badong, Faja, Poleng, Selendang, KrisEspalda, KrisMano, PanoMano, LontarMano, ojoSalton, pata };
+export { Gelungan, Sumping, Flor, Udeng, Rodete, CaraRaksasa, PeloSuelto, Badong, Faja, Poleng, Selendang, KrisEspalda, KrisMano, PanoMano, LontarMano, ojoSalton, pata, MonoSacerdote, MonoChino, GorroMajapahit, CabezaCerdo, GentaMano, JoyaMano, CanangMano, Naga, BedawangNala, BarongLandung, UlarPoleng, Celeng, Bojog, Manuk, ApiLeak, OgohOgoh, Labu };

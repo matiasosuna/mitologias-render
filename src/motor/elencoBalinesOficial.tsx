@@ -12,7 +12,7 @@ import React, { useId } from 'react';
 import { useCurrentFrame } from 'remotion';
 import { suave, miembro, type P, type PersonajeProps } from '../comun/vasija';
 import { KM } from '../comun/kamasan';
-import { Gelungan, Sumping, Flor, Udeng, Badong, Faja, Poleng, Selendang, KrisEspalda, KrisMano, PanoMano, ojoSalton, pata } from './elencoBalines';
+import { Gelungan, Sumping, Flor, Udeng, Rodete, Badong, Faja, Poleng, Selendang, KrisEspalda, KrisMano, PanoMano, ojoSalton, pata, MonoSacerdote, MonoChino, GorroMajapahit, CabezaCerdo, LontarMano, GentaMano, JoyaMano, CanangMano, Naga, BedawangNala, BarongLandung, UlarPoleng, Celeng, Bojog, Manuk } from './elencoBalines';
 import type { Ficha } from './elenco';
 import type { DibujoProps } from './elencoAzteca';
 
@@ -46,7 +46,7 @@ const PeloLargo: React.FC<{ c?: string }> = ({ c = '#E8E2D4' }) => {
   return <g><path d={suave([[0, -372], [-26, -368], [-40, -340], [-46 + o(1), -296], [-56 + o(2), -250], [-62 + o(3), -206], [-48, -212], [-38 + o(2), -190], [-28, -236], [-18, -290], [-6, -330]], true, 0.8)} fill={c} stroke={N} strokeWidth={1.6} />{[0, 1, 2].map((i) => <path key={i} d={`M${-20 - i * 6} -350 C ${-30 - i * 6} -300, ${-36 - i * 6 + o(i)} -260, ${-42 - i * 5 + o(i + 1)} -220`} stroke="#B8B0A0" strokeWidth={1.6} fill="none" />)}</g>;
 };
 /** Bigote balinés de hombre (Kebo Iwa). */
-const Bigote: React.FC = () => <path d="M22 14 C 28 10, 38 11, 42 17 C 38 16, 34 17, 31 19 C 28 17, 24 17, 22 18 Z" fill={N} />;
+const Bigote: React.FC<{ c?: string }> = ({ c = N }) => <path d="M22 14 C 28 10, 38 11, 42 17 C 38 16, 34 17, 31 19 C 28 17, 24 17, 22 18 Z" fill={c} />;
 
 // ---------- cuerpo ----------
 /** Tela de pecho (kemben) de las diosas: banda con ribete de oro y un dibujito de flores. */
@@ -200,6 +200,65 @@ const PIEL_DIOSA = '#F4E4C4';
 const coronaDiosa = (flor = true) => <><Gelungan alto={0.72} nuca={false} /><Sumping />{flor && <><Flor x={-28} y={-26} /><Flor x={-38} y={-16} r={4} /></>}</>;
 const rodete = <><path d="M-32 6 C -36 -30, 0 -44, 24 -30 C 10 -30, -6 -24, -14 -12 C -20 -2, -24 8, -32 6 Z" fill={N} /><ellipse cx={-38} cy={-14} rx={15} ry={13} fill={N} /></>;
 
+
+// ---------- segunda tanda: secundarios, extras y animales (cuerpo del muñeco + 2–3 atributos) ----------
+/** Cumbre de montaña en la mano (Pasupati trae el Mahameru; Putrajaya y Genijaya, el Agung y el Batur). */
+const Cumbre: React.FC<{ c?: string; c2?: string; doble?: boolean }> = ({ c = KM.tierra, c2 = KM.rojo, doble }) => (
+  <g transform="translate(0 -8)">
+    <path d={doble ? 'M-34 14 L -14 -34 L -2 -14 L 14 -50 L 34 14 Z' : 'M-30 14 L 0 -46 L 30 14 Z'} fill={c} stroke={N} strokeWidth={1.8} strokeLinejoin="round" />
+    <path d={doble ? 'M-14 -34 L -20 -20 L -8 -22 Z M14 -50 L 6 -30 L 20 -30 Z' : 'M0 -46 L -9 -28 L 9 -28 Z'} fill={KM.blanco} stroke={N} strokeWidth={1.2} strokeLinejoin="round" />
+    <path d="M-26 8 Q 0 2 26 8" stroke={c2} strokeWidth={4} fill="none" />
+  </g>
+);
+/** Abanico redondo de seda (Kang Cing Wie). */
+const Kipas: React.FC = () => (
+  <g transform="translate(0 -8)">
+    <path d="M0 16 L 0 -2" stroke={KM.tierra} strokeWidth={4} strokeLinecap="round" />
+    <circle cy={-22} r={21} fill={KM.rojo} stroke={N} strokeWidth={1.8} />
+    <circle cy={-22} r={14} fill="none" stroke={KM.oro} strokeWidth={2.4} />
+    <path d="M0 -36 V -8 M-14 -22 H 14" stroke={KM.oro} strokeWidth={1.6} />
+  </g>
+);
+/** Calabaza de agua (labu) de Nirartha. */
+const Calabaza: React.FC = () => (
+  <g transform="translate(0 8)">
+    <path d="M-8 -28 C -14 -20, -22 -14, -20 0 C -18 14, 20 14, 20 0 C 22 -14, 12 -20, 8 -28 Z" fill="#B88A3E" stroke={N} strokeWidth={1.8} />
+    <path d="M-8 -28 C -8 -40, 8 -40, 8 -28" fill="#B88A3E" stroke={N} strokeWidth={1.8} />
+    <path d="M-12 -10 Q 0 -4 12 -10" stroke={KM.tierra} strokeWidth={2} fill="none" />
+  </g>
+);
+/** Cuenco grande de arroz (Kebo, el niño que siempre tiene hambre). */
+const Cuenco: React.FC = () => (
+  <g transform="translate(0 6)">
+    <path d="M-28 -16 C -26 8, 26 8, 28 -16 Z" fill={KM.tierra} stroke={N} strokeWidth={2} />
+    <path d="M-30 -16 C -22 -44, 22 -44, 30 -16 Z" fill={KM.blanco} stroke={N} strokeWidth={1.8} />
+    <path d="M-26 -8 H 26" stroke={KM.oro} strokeWidth={2.4} />
+  </g>
+);
+/** Vajra dorado de Indra en la mano. */
+const VajraBali: React.FC = () => (
+  <g transform="translate(0 -6)">
+    <path d="M0 14 V -46" stroke={N} strokeWidth={7} strokeLinecap="round" /><path d="M0 14 V -46" stroke={KM.oro} strokeWidth={4} strokeLinecap="round" />
+    {[-1, 1].map((k) => <path key={k} d={`M0 -46 C ${k * 14} -52, ${k * 18} -66, ${k * 8} -80 C ${k * 6} -70, ${k * 3} -64, 0 -60`} fill={KM.oro} stroke={N} strokeWidth={1.4} />)}
+    <path d="M0 -46 L 0 -84" stroke={N} strokeWidth={5} /><path d="M0 -46 L 0 -84" stroke={KM.oro} strokeWidth={2.6} />
+    <circle cy={-16} r={5} fill={KM.rojo} stroke={N} strokeWidth={1.2} />
+  </g>
+);
+/** Palo de caminar de ancianos. */
+const Baston: React.FC = () => <g><path d="M0 100 L 0 -30 C 0 -44, 14 -44, 14 -32" stroke={N} strokeWidth={8} fill="none" strokeLinecap="round" /><path d="M0 100 L 0 -30 C 0 -44, 14 -44, 14 -32" stroke={KM.tierra} strokeWidth={5} fill="none" strokeLinecap="round" /></g>;
+/** Lanza corta de guardia con borla. */
+const Lanza: React.FC<{ c?: string }> = ({ c = KM.rojo }) => (
+  <g transform="translate(0 -4)">
+    <path d="M0 80 L 0 -130" stroke={N} strokeWidth={7} strokeLinecap="round" /><path d="M0 80 L 0 -130" stroke={KM.tierra} strokeWidth={4} strokeLinecap="round" />
+    <path d="M0 -130 L -8 -152 L 0 -180 L 8 -152 Z" fill="#B8B4AE" stroke={N} strokeWidth={1.6} strokeLinejoin="round" />
+    <path d="M-9 -124 q 9 14 18 0 q -4 22 -9 28 q -5 -6 -9 -28 Z" fill={c} stroke={N} strokeWidth={1.2} />
+  </g>
+);
+const PeloOscuro: React.FC = () => <PeloLargo c="#241A1C" />;
+const coronaRey = (alto = 0.9, c = KM.oro, c2 = KM.rojo) => <><Gelungan alto={alto} c={c} c2={c2} /><Sumping c={c} /></>;
+const PIEL_N = '#C8955E', PIEL_F = '#E2BB86', PIEL_REY = '#E8C98E', PIEL_ANC = '#BE8C5A', PIEL_DIOS = '#F1E3C2';
+type Dib = React.FC<DibujoProps>;
+
 export const ELENCO_BALINES_OFICIAL: Record<string, Ficha> = {
   barong_oficial: D(BarongOficial, 'BARONG'),
   rangda_oficial: D(RangdaOficial, 'RANGDA'),
@@ -234,5 +293,83 @@ export const ELENCO_BALINES_OFICIAL: Record<string, Ficha> = {
     cabeza: <><MelenaRaksasa c="#141014" /><CaraRaksasa colmillo={1.7} bigote="#120E10" /><Gelungan alto={0.9} /><Sumping /></>,
     cuerpo: <><Badong /><Poleng /></>,
   } }, 'RATU GEDE MECALING'),
+
+  // ===== segunda tanda =====
+  // dioses
+  bhatara_pasupati_oficial: H({ piel: PIEL_DIOS, barba: true, canas: true, ropa: 'larga', ropaColor: KM.rojo, capa: KM.oro, brazo: [30, 70], adornos: {
+    cabeza: coronaRey(1.2), cuerpo: <><Badong /><Faja c={KM.oro} c2={KM.rojo} /></>, mano: <Cumbre doble />,
+  } }, 'PASUPATI'),
+  bhatara_putrajaya_oficial: H({ piel: PIEL_DIOS, ropa: 'larga', ropaColor: KM.indigo, capa: KM.rojo, brazo: [30, 70], adornos: {
+    cabeza: coronaRey(1), cuerpo: <><Badong /><Faja c={KM.oro} c2={KM.rojo} /></>, mano: <Cumbre c={KM.tierra} c2={KM.rojo} />,
+  } }, 'PUTRAJAYA'),
+  bhatara_genijaya_oficial: H({ piel: PIEL_DIOS, ropa: 'larga', ropaColor: KM.rojo, capa: KM.azulClaro, brazo: [30, 70], adornos: {
+    cabeza: coronaRey(0.85), cuerpo: <><Badong /><Faja c={KM.indigo} c2={KM.oro} /></>, mano: <Cumbre c={KM.indigo} c2={KM.azulClaro} />,
+  } }, 'GENIJAYA'),
+  bhatara_indra_oficial: H({ piel: PIEL_DIOS, ropa: 'corta', ropaColor: KM.indigo, capa: KM.rojo, brazo: [40, 80], adornos: {
+    detras: <KrisEspalda />, cabeza: coronaRey(1.1), cuerpo: <><Badong /><Faja c={KM.oro} c2={KM.rojo} /></>, mano: <VajraBali />,
+  } }, 'INDRA'),
+  bhatari_durga_oficial: M({ piel: '#9A6A4E', ropa: 'larga', ropaColor: KM.rojoOsc, capa: null, brazo: [24, 60], adornos: {
+    detras: <PeloOscuro />, cabeza: <>{coronaRey(0.9)}<path d="M-32 6 C -36 -30, 0 -44, 24 -30 C 8 -30, -10 -24, -20 -12 C -24 -2, -26 8, -32 6 Z" fill="#241A1C" /></>,
+    cuerpo: <><Kemben c={N} borde={KM.oro} /><Badong /><Selendang c={KM.rojo} /></>, mano: <KrisMano />,
+  } }, 'DURGA'),
+  dewa_bali_oficial: H({ piel: PIEL_DIOS, ropa: 'larga', ropaColor: KM.indigo, capa: KM.oro, adornos: { cabeza: coronaRey(0.8), cuerpo: <><Badong /><Faja c={KM.rojo} c2={KM.oro} /></> } }, 'GOD'),
+  dewi_bali_oficial: M({ piel: PIEL_DIOS, ropa: 'larga', ropaColor: KM.rojo, brazo: [24, 60], adornos: { cabeza: <>{rodete}{coronaDiosa()}</>, cuerpo: <><Kemben c={KM.oro} borde={KM.rojo} /><Badong /><Selendang c={KM.blanco} /></> } }, 'GODDESS'),
+  // reyes y corte
+  sri_jaya_pangus_oficial: H({ piel: PIEL_REY, ropa: 'larga', ropaColor: KM.rojo, capa: KM.oro, adornos: { detras: <KrisEspalda />, cabeza: <>{coronaRey(0.85)}<Bigote /></>, cuerpo: <><Badong /><Faja c={KM.indigo} c2={KM.oro} /></> } }, 'SRI JAYA PANGUS'),
+  kang_cing_wie_oficial: M({ piel: '#F6EADA', ropa: 'larga', ropaColor: KM.rojo, brazo: [26, 70], adornos: {
+    cabeza: <MonoChino />, cuerpo: <Kemben c={KM.rojoOsc} borde={KM.oro} />, mano: <Kipas />,
+  } }, 'KANG CING WIE'),
+  prabu_airlangga_oficial: H({ piel: PIEL_REY, ropa: 'larga', ropaColor: KM.indigo, capa: KM.oro, objeto: 'cetro', adornos: { detras: <KrisEspalda />, cabeza: <>{coronaRey(1)}<Bigote /></>, cuerpo: <><Badong /><Faja c={KM.oro} c2={KM.rojo} /></> } }, 'KING AIRLANGGA'),
+  raja_bedahulu_oficial: H({ piel: PIEL_REY, ropa: 'larga', ropaColor: KM.rojo, capa: KM.indigo, adornos: { detras: <KrisEspalda />, cabeza: <>{coronaRey(0.8, KM.oro, KM.indigo)}<Bigote /></>, cuerpo: <><Badong /><Faja c={KM.oro} c2={KM.indigo} /></> } }, 'KING OF BEDAHULU'),
+  raja_bedahulu_babi_oficial: H({ piel: PIEL_REY, ropa: 'larga', ropaColor: KM.rojo, capa: KM.indigo, adornos: { detras: <KrisEspalda />, cabeza: <><CabezaCerdo /><g transform="translate(4 -10) scale(0.9)"><Gelungan alto={0.7} nuca={false} /></g></>, cuerpo: <><Badong /><Faja c={KM.oro} c2={KM.indigo} /></> } }, 'KING OF BEDAHULU'),
+  ratna_manggali_oficial: M({ piel: PIEL_F, ropa: 'larga', ropaColor: KM.rosa, brazo: [24, 60], adornos: { cabeza: <>{rodete}<Flor x={-30} y={-28} /></>, cuerpo: <><Kemben c={KM.blanco} borde={KM.rojo} /><Selendang c={KM.oro} /></> } }, 'RATNA MANGGALI'),
+  gajah_mada_oficial: H({ piel: '#B8844E', ropa: 'corta', ropaColor: KM.indigo, capa: KM.rojo, adornos: { detras: <KrisEspalda />, cabeza: <><GorroMajapahit /><Bigote /></>, cuerpo: <><Badong c={KM.ocreClaro} /><Faja c={KM.rojo} c2={KM.oro} /></>, mano: <Lanza c={KM.indigo} /> } }, 'GAJAH MADA'),
+  bendesa_beraban_oficial: H({ piel: PIEL_ANC, ropa: 'larga', ropaColor: KM.ocre, capa: KM.rojoOsc, adornos: { detras: <KrisEspalda />, cabeza: <><Udeng c={KM.rojo} c2={KM.oro} /><Bigote /></>, cuerpo: <Faja c={KM.rojo} c2={KM.oro} /> } }, 'CHIEF OF BERABAN'),
+  // sacerdotes y héroes
+  nirartha_oficial: H({ piel: PIEL_N, barba: true, canas: true, ropa: 'larga', ropaColor: KM.blanco, capa: KM.oro, adornos: { cabeza: <MonoSacerdote canas />, cuerpo: <Faja c={KM.ocreClaro} c2={KM.oro} />, mano: <GentaMano />, manoAtras: <Calabaza /> } }, 'NIRARTHA'),
+  sidhi_mantra_oficial: H({ piel: PIEL_N, barba: true, canas: true, ropa: 'larga', ropaColor: KM.blanco, capa: KM.ocreClaro, adornos: { cabeza: <MonoSacerdote canas />, mano: <GentaMano /> } }, 'SIDHI MANTRA'),
+  mpu_bharadah_oficial: H({ piel: PIEL_N, barba: true, canas: true, ropa: 'larga', ropaColor: KM.blanco, capa: KM.rojo, adornos: { cabeza: <MonoSacerdote canas />, cuerpo: <Faja c={KM.rojo} c2={KM.oro} />, mano: <GentaMano /> } }, 'MPU BHARADAH'),
+  mpu_bharadah_libro_oficial: H({ piel: PIEL_N, barba: true, canas: true, ropa: 'larga', ropaColor: KM.blanco, capa: KM.rojo, adornos: { cabeza: <MonoSacerdote canas />, cuerpo: <Faja c={KM.rojo} c2={KM.oro} />, mano: <LontarMano /> } }, 'MPU BHARADAH'),
+  mpu_kulputih_oficial: H({ piel: PIEL_ANC, barba: true, canas: true, cuerpo: 'viejo', ropa: 'larga', ropaColor: KM.blanco, capa: KM.crema2, adornos: { cabeza: <MonoSacerdote canas />, mano: <GentaMano /> } }, 'MPU KULPUTIH'),
+  mpu_bahula_oficial: H({ piel: PIEL_N, ropa: 'larga', ropaColor: KM.blanco, capa: KM.ocre, adornos: { cabeza: <MonoSacerdote canas={false} />, cuerpo: <Faja c={KM.ocre} c2={KM.oro} /> } }, 'MPU BAHULA'),
+  mpu_bahula_libro_oficial: H({ piel: PIEL_N, ropa: 'larga', ropaColor: KM.blanco, capa: KM.ocre, adornos: { cabeza: <MonoSacerdote canas={false} />, cuerpo: <Faja c={KM.ocre} c2={KM.oro} />, mano: <LontarMano /> } }, 'MPU BAHULA'),
+  manik_angkeran_oficial: H({ piel: PIEL_N, ropa: 'corta', ropaColor: KM.rojo, adornos: { cabeza: <><Udeng c={KM.ocreClaro} c2={KM.rojo} /><Flor x={-22} y={-10} r={4} /></>, cuerpo: <Faja c={KM.oro} c2={KM.rojo} /> } }, 'MANIK ANGKERAN'),
+  manik_angkeran_genta_oficial: H({ piel: PIEL_N, ropa: 'corta', ropaColor: KM.rojo, adornos: { cabeza: <><Udeng c={KM.ocreClaro} c2={KM.rojo} /><Flor x={-22} y={-10} r={4} /></>, cuerpo: <Faja c={KM.oro} c2={KM.rojo} />, mano: <GentaMano /> } }, 'MANIK ANGKERAN'),
+  manik_angkeran_joya_oficial: H({ piel: PIEL_N, ropa: 'corta', ropaColor: KM.rojo, adornos: { cabeza: <><Udeng c={KM.ocreClaro} c2={KM.rojo} /><Flor x={-22} y={-10} r={4} /></>, cuerpo: <Faja c={KM.oro} c2={KM.rojo} />, mano: <JoyaMano /> } }, 'MANIK ANGKERAN'),
+  kebo_oficial: H({ piel: '#B07A4A', cuerpo: 'nino', gigante: true, ropa: 'corta', ropaColor: KM.indigo, adornos: { cabeza: <Udeng c={KM.rojo} c2={KM.oro} />, cuerpo: <Faja c={KM.rojo} c2={KM.oro} />, mano: <Cuenco /> } }, 'KEBO'),
+  calon_arang_libro_oficial: M({ piel: '#D2A878', cuerpo: 'viejo', canas: true, pelo: '#E8E2D4', ropa: 'larga', ropaColor: '#2A2226', capa: null, brazo: [40, 30], adornos: {
+    detras: <PeloLargo />, cabeza: <path d="M-32 6 C -36 -30, 0 -44, 24 -30 C 8 -30, -10 -24, -20 -12 C -24 -2, -26 8, -32 6 Z" fill="#E8E2D4" />,
+    cuerpo: <><Kemben c={KM.rojoOsc} borde={KM.oro} /><Selendang c={KM.rojo} /></>, mano: <LontarMano />,
+  } }, 'CALON ARANG'),
+  murid_leak_oficial: M({ piel: PIEL_F, ropa: 'larga', ropaColor: KM.blanco, brazo: [30, 70], adornos: { detras: <PeloOscuro />, cabeza: <path d="M-32 6 C -36 -30, 0 -44, 24 -30 C 8 -30, -10 -24, -20 -12 C -24 -2, -26 8, -32 6 Z" fill="#241A1C" />, cuerpo: <Kemben c={KM.rojoOsc} borde={KM.oro} />, mano: <PanoMano /> } }, 'DISCIPLE'),
+  // gente de la isla
+  wanita_bali_oficial: M({ piel: PIEL_F, ropa: 'larga', ropaColor: KM.ocre, brazo: [30, 70], adornos: { cabeza: <Rodete />, cuerpo: <><Kemben c={KM.blanco} borde={KM.rojo} /><Selendang c={KM.rojo} /></>, mano: <CanangMano /> } }, 'WOMAN'),
+  wanita_bali_2_oficial: M({ piel: '#D9AE78', ropa: 'larga', ropaColor: KM.verde, adornos: { cabeza: <Rodete flores={false} />, cuerpo: <><Kemben c={KM.ocreClaro} borde={KM.indigo} /><Faja c={KM.oro} c2={KM.verde} /></> } }, 'WOMAN'),
+  pria_bali_oficial: H({ piel: PIEL_N, ropa: 'corta', ropaColor: KM.ocre, adornos: { cabeza: <><Udeng c={KM.blanco} c2={KM.ocre} /><Flor x={-22} y={-10} r={4} /></>, cuerpo: <Faja c={KM.blanco} c2={KM.ocre} /> } }, 'MAN'),
+  pria_bali_2_oficial: H({ piel: '#B8844E', ropa: 'corta', ropaColor: KM.indigo, adornos: { cabeza: <Udeng c={KM.rojo} c2={KM.oro} />, cuerpo: <Faja c={KM.ocreClaro} c2={KM.indigo} /> } }, 'MAN'),
+  anak_bali_oficial: H({ piel: PIEL_N, cuerpo: 'nino', ropa: 'corta', ropaColor: KM.rojo, adornos: { cabeza: <Udeng c={KM.blanco} c2={KM.rojo} /> } }, 'CHILD'),
+  anak_bali_nina_oficial: M({ piel: PIEL_F, cuerpo: 'nino', ropa: 'larga', ropaColor: KM.rosa, adornos: { cabeza: <Rodete />, cuerpo: <Selendang c={KM.oro} /> } }, 'CHILD'),
+  kakek_bali_oficial: H({ piel: PIEL_ANC, cuerpo: 'viejo', canas: true, ropa: 'corta', ropaColor: KM.indigo, adornos: { cabeza: <><Udeng c={KM.blanco} c2={KM.ocre} /><Bigote c="#E8E2D4" /></>, cuerpo: <Faja c={KM.ocreClaro} c2={KM.indigo} />, mano: <Baston /> } }, 'ELDER'),
+  nenek_bali_oficial: M({ piel: '#D9AE78', cuerpo: 'viejo', canas: true, ropa: 'larga', ropaColor: KM.tierra, adornos: { cabeza: <Rodete flores={false} c="#E8E2D4" />, cuerpo: <><Kemben c={KM.ocreClaro} borde={KM.rojo} /><Selendang c={KM.rojo} /></>, mano: <Baston /> } }, 'ELDER'),
+  pemangku_oficial: H({ piel: PIEL_N, ropa: 'larga', ropaColor: KM.blanco, capa: KM.ocreClaro, adornos: { cabeza: <Udeng c={KM.blanco} c2={KM.crema2} />, cuerpo: <Faja c={KM.ocreClaro} c2={KM.oro} />, mano: <GentaMano /> } }, 'TEMPLE PRIEST'),
+  pecalang_oficial: H({ piel: PIEL_N, ropa: 'corta', ropaColor: N, adornos: { detras: <KrisEspalda />, cabeza: <Udeng c={N} c2={KM.oro} />, cuerpo: <Poleng largo /> } }, 'PECALANG'),
+  prajurit_bali_oficial: H({ piel: PIEL_N, ropa: 'corta', ropaColor: KM.rojo, adornos: { detras: <KrisEspalda />, cabeza: <Udeng c={KM.rojo} c2={KM.oro} />, cuerpo: <Poleng />, mano: <Lanza /> } }, 'WARRIOR'),
+  prajurit_dewa_oficial: H({ piel: PIEL_DIOS, ropa: 'corta', ropaColor: KM.indigo, adornos: { cabeza: <><Gelungan alto={0.6} nuca={false} /><Sumping /></>, cuerpo: <><Badong /><Faja c={KM.oro} c2={KM.rojo} /></>, mano: <Lanza c={KM.oro} /> } }, 'HEAVENLY WARRIOR'),
+  prajurit_jawa_oficial: H({ piel: '#B8844E', ropa: 'corta', ropaColor: KM.indigo, adornos: { cabeza: <GorroMajapahit />, cuerpo: <Faja c={KM.rojo} c2={KM.oro} />, mano: <Lanza c={KM.indigo} /> } }, 'JAVANESE SOLDIER'),
+  penari_kris_oficial: H({ piel: PIEL_N, ropa: 'corta', ropaColor: KM.blanco, brazo: [60, 100], adornos: { cabeza: <Udeng c={KM.blanco} c2={KM.rojo} />, cuerpo: <Poleng />, mano: <KrisMano /> } }, 'KRIS DANCER'),
+  raksasa_bali_oficial: H({ piel: '#4E6A5A', ropa: 'corta', ropaColor: KM.rojo, adornos: { cabeza: <><MelenaRaksasa c="#2A2224" /><CaraRaksasa colmillo={0.9} /></>, cuerpo: <Poleng />, mano: <Lanza /> } }, 'DEMON'),
+  // criaturas
+  naga_besukih_oficial: D(Naga as Dib, 'NAGA BESUKIH', { color: '#3E6A44', joya: true }),
+  naga_besukih_herida_oficial: D(Naga as Dib, 'NAGA BESUKIH', { color: '#3E6A44', sinCola: true }),
+  naga_basuki_oficial: D(Naga as Dib, 'NAGA BASUKI', { color: '#4E7A4A' }),
+  naga_anantaboga_oficial: D(Naga as Dib, 'NAGA ANANTABOGA', { color: '#8A6428' }),
+  bedawang_nala_oficial: D(BedawangNala as Dib, 'BEDAWANG NALA'),
+  jero_gede_oficial: D(BarongLandung as Dib, 'JERO GEDE', { cara: 'gede' }),
+  jero_luh_oficial: D(BarongLandung as Dib, 'JERO LUH', { cara: 'luh' }),
+  bojog_oficial: D(Bojog as Dib, 'MONKEY'),
+  celeng_oficial: D(Celeng as Dib, 'PIG'),
+  manuk_oficial: D(Manuk as Dib, 'ROOSTER'),
+  maya_oficial: D(Manuk as Dib, 'MAYA THE BIRD', { color: KM.indigo }),
+  ular_poleng_oficial: D(UlarPoleng as Dib, 'SEA SNAKE'),
 };
 export const NOMBRE_EN_BALINES_OFICIAL: Record<string, string> = Object.fromEntries(Object.entries(ELENCO_BALINES_OFICIAL).map(([k, f]) => [k, f.griego as string]));

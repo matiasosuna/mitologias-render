@@ -15,7 +15,11 @@ fi
 LISTA=$(mktemp)
 git ls-files | grep -vE '^(lib/voz-matias|pruebas/|revision/|\.github/workflows/voz\.yml)' > $LISTA
 mkdir -p $DEST
-rsync -a --exclude .git --files-from=$LISTA ./ $DEST/
+# copiar lo COMMITEADO (HEAD), no el árbol de trabajo: cambios a medias no rompen el repo público
+TMPC=$(mktemp -d)
+git archive HEAD | tar -x -C $TMPC
+rsync -a --exclude .git --files-from=$LISTA $TMPC/ $DEST/
+rm -rf $TMPC
 cd $DEST
 # indice.ts se regenera al narrar y puede nombrar episodios todavía sin commitear: rehacerlo con lo que sí se copió
 node -e "

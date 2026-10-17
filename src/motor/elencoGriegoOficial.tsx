@@ -17,6 +17,7 @@ import { useCurrentFrame } from 'remotion';
 import { suave, lerp, desde, miembro, Fuego, type P, type PersonajeProps } from '../comun/vasija';
 import type { Ficha } from './elenco';
 import type { DibujoProps } from './elencoAzteca';
+import { CaballoEpico, BovinoEpico, CiervoEpico, CanidoEpico, LeonEpico, OsoEpico, OvinoEpico, TortugaEpica, SerpienteEpica, AguilaEpica, CisneEpico, PavoEpico, BuhoEpico, DelfinEpico } from './bestiasEpicas';
 
 const N = '#17110E'; // contorno (el negro de la vasija)
 const r1 = (v: number) => v.toFixed(1);
@@ -1565,144 +1566,6 @@ const Bestia4: React.FC<DibujoProps> = (props) => {
   );
 };
 
-/** Serpiente de barro (Pitón, culebras): cuerpo con contorno, panza clara y manchas. Origen = suelo, cola a la izquierda. */
-const SerpienteBarro: React.FC<DibujoProps> = (props) => {
-  const { x, y, s, voltear, opacity = 1, boca, f } = props;
-  const largo = (props.largo as number | undefined) ?? 400, grosor = (props.grosor as number | undefined) ?? 30, erguida = (props.erguida as number | undefined) ?? 0.6;
-  const c = (props.color as string | undefined) ?? '#5E7A3A', claro = (props.panza as string | undefined) ?? '#D9C98A', mancha = (props.mancha as string | undefined) ?? tono(c, 0.62);
-  const n = 12;
-  const cuerpo: P[] = Array.from({ length: n }, (_, i) => { const t = i / (n - 1); return [-largo + t * largo, -grosor / 2 - Math.sin(t * Math.PI * 2.2 + f * 0.12) * 18 * (1 - t * 0.5) - (t > 0.8 ? (t - 0.8) * 5 * 120 * erguida : 0)] as P; });
-  const anchos = cuerpo.map((_, i) => { const t = i / (n - 1); return Math.max(6, grosor * Math.max(t > 0.5 ? 0.45 * t : 0, Math.sin(Math.PI * Math.min(1, t * 1.1 + 0.08)))); });
-  const cab = cuerpo[n - 1], kc = Math.max(1, grosor / 40);
-  const panza = cuerpo.map((p, i) => [p[0], p[1] + anchos[i] * 0.3] as P);
-  return (
-    <g transform={`translate(${x} ${y}) scale(${voltear ? -s : s} ${s})`} opacity={opacity}>
-      <path d={miembro(cuerpo, anchos)} fill={c} stroke={N} strokeWidth={2.6} />
-      <path d={suave(panza.slice(1, -1))} stroke={claro} strokeWidth={grosor * 0.22} fill="none" strokeLinecap="round" />
-      {cuerpo.slice(1, -1).map((p, i) => i % 1 === 0 && <ellipse key={i} cx={r1(p[0])} cy={r1(p[1] - anchos[i + 1] * 0.12)} rx={r1(anchos[i + 1] * 0.32)} ry={r1(anchos[i + 1] * 0.2)} fill={mancha} />)}
-      <g transform={`translate(${r1(cab[0])} ${r1(cab[1])}) scale(${kc})`}>
-        <path d={suave([[-14, 8], [-10, -16], [16, -20], [44, -8], boca ? [30, 0] : [44, 4], [18, 12]], true)} fill={c} stroke={N} strokeWidth={2.4} />
-        {boca && <path d="M30 0 L 50 4 L 28 10 Z" fill="#8E2A2A" stroke={N} strokeWidth={1.4} strokeLinejoin="round" />}
-        <path d="M-6 -12 Q 10 -20 26 -14" stroke={mancha} strokeWidth={4} fill="none" strokeLinecap="round" />
-        <Ojo4 x={16} y={-8} r={3.4} />
-        <path d={`M44 2 l ${r1(10 + Math.sin(f / 3) * 3)} -3 m -2 3 l ${r1(10 + Math.sin(f / 3) * 3)} 3`} stroke="#B3352A" strokeWidth={2} strokeLinecap="round" />
-      </g>
-    </g>
-  );
-};
-
-/** Delfín (gris azulado, panza clara). Origen = centro del cuerpo. */
-const DelfinBarro: React.FC<DibujoProps> = ({ x, y, s, voltear, opacity = 1, f, color }) => {
-  const c = (color as string | undefined) ?? '#6E8FA8', id = 'df' + Math.round(x) + Math.round(y), cuerpo = suave([[-90, 0], [-40, -26], [30, -28], [70, -12], [96, -6], [70, 2], [10, 14], [-60, 8]], true);
-  return (
-    <g transform={`translate(${x} ${y}) scale(${voltear ? -s : s} ${s}) rotate(${r1(Math.sin(f / 10) * 4)})`} opacity={opacity}>
-      <defs><clipPath id={id}><path d={cuerpo} /></clipPath></defs>
-      <path d="M0 -24 C 8 -44, 22 -54, 30 -54 C 26 -40, 26 -32, 30 -24 Z" fill={tono(c, 0.8)} stroke={N} strokeWidth={2.2} strokeLinejoin="round" />
-      <path d={`M-84 0 C -100 -10, -112 ${r1(-26 + Math.sin(f / 6) * 4)}, -124 ${r1(-26 + Math.sin(f / 6) * 4)} C -118 -12, -118 10, -124 ${r1(24 + Math.sin(f / 6) * 4)} C -110 22, -98 10, -84 4 Z`} fill={tono(c, 0.8)} stroke={N} strokeWidth={2.2} strokeLinejoin="round" />
-      <path d={cuerpo} fill={c} stroke={N} strokeWidth={2.6} />
-      <g clipPath={`url(#${id})`}><path d={suave([[-80, 8], [-20, 0], [40, -2], [96, -2], [70, 14], [-60, 16]], true)} fill="#E2EAEE" /></g>
-      <path d="M70 -2 Q 82 2 94 -4" stroke={N} strokeWidth={1.8} fill="none" strokeLinecap="round" />
-      <path d="M14 6 C 6 18, -6 24, -14 22 C -6 14, 0 8, 4 4 Z" fill={tono(c, 0.8)} stroke={N} strokeWidth={1.8} strokeLinejoin="round" />
-      <Ojo4 x={56} y={-12} r={3.4} />
-    </g>
-  );
-};
-
-/** Tortuga de tierra (la de la lira de Hermes). Origen = suelo, mirando a la derecha. */
-const TortugaBarro: React.FC<DibujoProps> = ({ x, y, s, voltear, opacity = 1, moviendo, f }) => {
-  const p = moviendo ? Math.sin(f / 5) * 6 : 0, piel = '#8A8A5A', cab = Math.sin(f / 20) * 3;
-  return (
-    <g transform={`translate(${x} ${y}) scale(${voltear ? -s : s} ${s})`} opacity={opacity}>
-      {[[-34, -p], [28, p]].map(([lx, d], i) => <path key={i} d={`M${lx - 8} -16 L ${lx - 10 + d} 0 L ${lx + 8 + d} 0 L ${lx + 8} -16 Z`} fill={tono(piel, 0.8)} stroke={N} strokeWidth={2} strokeLinejoin="round" />)}
-      <g transform={`rotate(${r1(cab)} 50 -20)`}>
-        <path d={suave([[40, -26], [62, -34], [78, -26], [76, -14], [56, -12], [42, -14]], true)} fill={piel} stroke={N} strokeWidth={2.2} />
-        <Ojo4 x={66} y={-26} r={3} />
-        <path d="M68 -16 q 5 0 8 -3" stroke={N} strokeWidth={1.4} fill="none" />
-      </g>
-      <path d="M-62 -14 L -74 -8 L -62 -8 Z" fill={piel} stroke={N} strokeWidth={1.6} />
-      <path d={suave([[-62, -12], [-56, -46], [-20, -66], [24, -66], [56, -44], [62, -12]], true, 0.7)} fill="#7A6A3A" stroke={N} strokeWidth={2.6} />
-      {[[-34, -32], [-4, -40], [26, -34], [-18, -54], [12, -56]].map(([hx, hy], i) => <path key={i} d={`M${hx - 12} ${hy} l 6 -9 h 12 l 6 9 l -6 9 h -12 Z`} fill="#A8945A" stroke={N} strokeWidth={1.6} strokeLinejoin="round" />)}
-      <path d="M-64 -12 H 64" stroke={N} strokeWidth={3} strokeLinecap="round" /><path d="M-62 -14 H 62" stroke="#C9B47A" strokeWidth={3} strokeLinecap="round" />
-      {[[-46, p], [40, -p]].map(([lx, d], i) => <path key={`d${i}`} d={`M${lx - 9} -18 L ${lx - 11 + d} 0 L ${lx + 9 + d} 0 L ${lx + 9} -18 Z`} fill={piel} stroke={N} strokeWidth={2} strokeLinejoin="round" />)}
-    </g>
-  );
-};
-
-type EspAve = 'aguila' | 'paloma' | 'cisne';
-/** Ave en vuelo (águila, paloma, cisne). Origen = centro del cuerpo (como las aves del motor). */
-const AveBarro: React.FC<DibujoProps> = (props) => {
-  const { x, y, s, voltear, opacity = 1, f } = props;
-  const esp = (props.especie as EspAve | undefined) ?? 'aguila';
-  const cfg = ({ aguila: { c: '#6A4A2E', ala: '#5A3E26', cub: '#8A6440', cab: '#B9894A', pico: '#E8B93E', k: 1 }, paloma: { c: '#F2EEE6', ala: '#E6E0D4', cub: '#F8F5EE', cab: '#F2EEE6', pico: '#C98A8A', k: 0.55 }, cisne: { c: '#F6F3EC', ala: '#E9E4D8', cub: '#FBF9F4', cab: '#F6F3EC', pico: '#E07A2A', k: 1.05 } } as const)[esp];
-  const c = (props.color as string | undefined) ?? cfg.c;
-  const a = Math.sin(f * 0.3) * 30;
-  const ALA = suave([[-12, -4], [-26, -44], [-62, -84], [-110, -106], [-148, -108], [-140, -98], [-156, -90], [-140, -82], [-150, -72], [-130, -66], [-134, -54], [-108, -50], [-96, -32], [-60, -18], [-26, 4]], true, 0.5);
-  const COB = suave([[-14, -6], [-30, -44], [-64, -78], [-96, -86], [-90, -62], [-60, -34], [-26, 2]], true, 0.6);
-  const ala = (lejos: boolean) => (
-    <g transform={`rotate(${r1(lejos ? 22 + a * 0.8 : 8 + a)} -6 -6)`}>
-      <path d={ALA} fill={lejos ? tono(cfg.ala, 0.85) : cfg.ala} stroke={N} strokeWidth={2.4} />
-      <path d={COB} fill={lejos ? tono(cfg.cub, 0.85) : cfg.cub} stroke={N} strokeWidth={1.8} />
-      {esp === 'paloma' && <path d="M-118 -104 L -150 -106 L -138 -96 L -152 -88 L -136 -80 L -148 -70 L -128 -66 Z" fill="#9AA0A8" />}
-    </g>
-  );
-  return (
-    <g transform={`translate(${x} ${y}) scale(${(voltear ? -s : s) * cfg.k} ${s * cfg.k})`} opacity={opacity}>
-      {ala(true)}
-      {esp === 'cisne' ? <path d="M-62 4 L -88 -8 L -84 10 Z" fill={c} stroke={N} strokeWidth={2} strokeLinejoin="round" />
-        : esp === 'paloma' ? <path d="M-64 2 C -90 -6, -110 0, -112 10 C -100 20, -84 18, -64 12 Z" fill={tono(c, 0.92)} stroke={N} strokeWidth={2} />
-        : <path d="M-64 0 L -112 -16 L -108 4 L -116 22 L -62 12 Z" fill={tono(c, 0.85)} stroke={N} strokeWidth={2} strokeLinejoin="round" />}
-      <path d={suave([[-70, 6], [-30, -16], [30, -18], [56, -6], [40, 12], [-20, 18]], true)} fill={c} stroke={N} strokeWidth={2.4} />
-      {esp === 'aguila' && <path d="M10 16 l 4 16 m 0 0 l -6 6 m 6 -6 l 6 6 M28 14 l 4 16 m 0 0 l -6 6 m 6 -6 l 6 6" stroke="#E8B93E" strokeWidth={3.4} strokeLinecap="round" />}
-      {esp === 'cisne' ? (
-        <g>
-          <path d="M44 -6 C 70 -14, 92 -22, 116 -22" stroke={N} strokeWidth={17} fill="none" strokeLinecap="round" />
-          <path d="M44 -6 C 70 -14, 92 -22, 116 -22" stroke={c} strokeWidth={12} fill="none" strokeLinecap="round" />
-          <ellipse cx={120} cy={-23} rx={13} ry={9} fill={c} stroke={N} strokeWidth={2} />
-          <path d="M130 -28 L 152 -22 L 130 -16 Z" fill={cfg.pico} stroke={N} strokeWidth={1.6} strokeLinejoin="round" />
-          <path d="M128 -28 Q 132 -22 128 -16" stroke={N} strokeWidth={4} />
-          <Ojo4 x={120} y={-25} r={2.6} />
-        </g>
-      ) : (
-        <g transform="translate(52 -10)">
-          <path d={suave([[-10, 14], [-8, -12], [12, -18], [26, -8], [30, 4], [16, 8], [8, 16]], true)} fill={cfg.cab} stroke={N} strokeWidth={2.2} />
-          {esp === 'aguila'
-            ? <path d="M24 -8 Q 42 -6 38 10 Q 34 4 26 4 Z" fill={cfg.pico} stroke={N} strokeWidth={1.6} strokeLinejoin="round" />
-            : <path d="M28 -4 L 40 0 L 28 4 Z" fill={cfg.pico} stroke={N} strokeWidth={1.4} strokeLinejoin="round" />}
-          <Ojo4 x={14} y={-6} r={2.8} />
-          {esp === 'aguila' && <path d="M4 -6 L 22 -10" stroke={N} strokeWidth={2.4} strokeLinecap="round" />}
-        </g>
-      )}
-      {ala(false)}
-    </g>
-  );
-};
-
-/** Pavo real de Hera, de pie con la cola abierta. Origen = patas. */
-const PavoReal: React.FC<DibujoProps> = ({ x, y, s, voltear, opacity = 1, f, moviendo }) => {
-  const o = Math.sin(f / 16) * 2, cab = moviendo ? Math.sin(f / 4) * 4 : Math.sin(f / 22) * 2;
-  return (
-    <g transform={`translate(${x} ${y}) scale(${voltear ? -s : s} ${s})`} opacity={opacity}>
-      {Array.from({ length: 13 }, (_, i) => { const a = ((168 - i * 12.5) * Math.PI) / 180, L = 150 + (i % 2) * 10, ex = -24 + Math.cos(a) * L, ey = -70 - Math.sin(a) * L + o; return <g key={i}><path d={`M-24 -70 L ${r1(ex)} ${r1(ey)}`} stroke={N} strokeWidth={14} strokeLinecap="round" /><path d={`M-24 -70 L ${r1(ex)} ${r1(ey)}`} stroke={i % 2 ? '#3E7A4A' : '#4E8A52'} strokeWidth={10} strokeLinecap="round" /><OjoPavo x={ex} y={ey} s={1.2} /></g>; })}
-      <path d="M-6 -40 L -10 0 M8 -40 L 10 0" stroke="#8A8478" strokeWidth={4.4} strokeLinecap="round" />
-      <path d="M-18 0 h 12 M4 0 h 14" stroke="#8A8478" strokeWidth={4} strokeLinecap="round" />
-      <path d={suave([[-40, -56], [-20, -88], [14, -84], [26, -60], [10, -38], [-24, -38]], true)} fill="#2E5FA8" stroke={N} strokeWidth={2.4} />
-      <path d={suave([[-30, -60], [-10, -78], [10, -70]])} stroke="#4A8AC8" strokeWidth={2} fill="none" />
-      <g transform={`rotate(${r1(cab)} 10 -80)`}>
-        <path d="M6 -78 C 12 -100, 16 -116, 22 -128" stroke={N} strokeWidth={15} fill="none" strokeLinecap="round" />
-        <path d="M6 -78 C 12 -100, 16 -116, 22 -128" stroke="#2E5FA8" strokeWidth={10} fill="none" strokeLinecap="round" />
-        <ellipse cx={26} cy={-132} rx={11} ry={9} fill="#2E5FA8" stroke={N} strokeWidth={2} />
-        <path d="M35 -134 L 46 -130 L 35 -127 Z" fill="#C9B48A" stroke={N} strokeWidth={1.3} />
-        <path d="M23 -128 Q 30 -126 34 -129" stroke="#F4EEE2" strokeWidth={2} fill="none" />
-        <Ojo4 x={28} y={-134} r={2.4} />
-        {[-6, 0, 6].map((d) => <g key={d}><path d={`M22 -140 L ${22 + d} -156`} stroke={N} strokeWidth={1.4} /><circle cx={22 + d} cy={-157} r={2.8} fill="#2E5FA8" stroke={N} strokeWidth={1} /></g>)}
-      </g>
-    </g>
-  );
-};
-
-/** Lechuza grande como actor (Atenea). Origen = patas. */
-const BuhoBarro: React.FC<DibujoProps> = ({ x, y, s, voltear, opacity = 1 }) => <g transform={`translate(${x} ${y}) scale(${voltear ? -s : s} ${s})`} opacity={opacity}><Lechuza s={2.3} /></g>;
-
 // ---------- fichas ----------
 const h = (p: Partial<PersonajeProps>, griego: string): Ficha => ({ tipo: 'persona', p: { hd: true, barba: false, peloCorto: true, tocado: null, ...p }, griego });
 const m = (p: Partial<PersonajeProps>, griego: string): Ficha => h({ mujer: true, piel: PIEL_M, ...p }, griego);
@@ -1966,34 +1829,34 @@ export const ELENCO_GRIEGO_OFICIAL: Record<string, Ficha> = {
   doncella_oro_oficial: mx({ piel: '#D9A83A', pelo: '#B5832A', ropa: 'larga', ropaColor: '#E8C46A', ribete: ORO_OSC, brazo: [30, 60],
     adornos: { cuerpo: <Quiton a={A_M} c="#E8C46A" borde={ORO_OSC} mujer />, cabeza: <><PeloRecogido c="#B5832A" luz="#F2D27A" /><CintaOro c="#FFF3B0" /></> } }),
   // criaturas con nombre
-  piton_oficial: D(SerpienteBarro, { largo: 700, grosor: 56, color: '#6E6A3A', panza: '#D9C98A', mancha: '#3E3A22', erguida: 0.8 }, 'ΠΥΘΩΝ'),
-  cerbero_oficial: D(Bestia4, { especie: 'perro', color: '#4A3A30', cabezas: 3, colaSerpiente: true, collar: BRONCE, s: 1.6 }, 'ΚΕΡΒΕΡΟΣ'),
-  pegaso_oficial: D(Bestia4, { especie: 'caballo', color: '#F2EEE6', crin: '#CFC6B4', alas: true }, 'ΠΗΓΑΣΟΣ'),
-  licaon_lobo_oficial: D(Bestia4, { especie: 'lobo', capa: '#5A1E1A', s: 1.1 }, 'ΛΥΚΑΩΝ'),
+  piton_oficial: D(SerpienteEpica, { piton: true, alto: 640 }, 'ΠΥΘΩΝ'),
+  cerbero_oficial: D(CanidoEpico, { especie: 'cerbero', alto: 620 }, 'ΚΕΡΒΕΡΟΣ'),
+  pegaso_oficial: D(CaballoEpico, { especie: 'pegaso', alto: 820 }, 'ΠΗΓΑΣΟΣ'),
+  licaon_lobo_oficial: D(CanidoEpico, { especie: 'licaon', alto: 450 }, 'ΛΥΚΑΩΝ'),
   dioniso_cabrito_oficial: D(Bestia4, { especie: 'cabrito', hiedra: true }, 'ΔΙΟΝΥΣΟΣ'),
   dioniso_leon_oficial: D(Bestia4, { especie: 'leon', hiedra: true }, 'ΔΙΟΝΥΣΟΣ'),
   // ---- animales griegos (sin rótulo) ----
-  caballo_griego_oficial: D(Bestia4, { especie: 'caballo' }),
-  mula_griega_oficial: D(Bestia4, { especie: 'mula' }),
-  buey_griego_oficial: D(Bestia4, { especie: 'buey' }),
-  vaca_griega_oficial: D(Bestia4, { especie: 'vaca' }),
-  toro_griego_oficial: D(Bestia4, { especie: 'toro' }),
-  oveja_griega_oficial: D(Bestia4, { especie: 'oveja' }),
-  carnero_griego_oficial: D(Bestia4, { especie: 'carnero' }),
-  cabra_griega_oficial: D(Bestia4, { especie: 'cabra' }),
-  ciervo_griego_oficial: D(Bestia4, { especie: 'ciervo' }),
-  perro_griego_oficial: D(Bestia4, { especie: 'perro', collar: ROJO }),
-  lobo_griego_oficial: D(Bestia4, { especie: 'lobo' }),
-  leon_griego_oficial: D(Bestia4, { especie: 'leon' }),
-  oso_griego_oficial: D(Bestia4, { especie: 'oso' }),
-  tortuga_griega_oficial: D(TortugaBarro, {}),
-  serpiente_griega_oficial: D(SerpienteBarro, { largo: 340, grosor: 26, color: '#4E7A3A', panza: '#C9D98A', mancha: '#2E4E22' }),
-  aguila_griega_oficial: D(AveBarro, { especie: 'aguila' }),
-  paloma_griega_oficial: D(AveBarro, { especie: 'paloma' }),
-  cisne_griego_oficial: D(AveBarro, { especie: 'cisne' }),
-  pavo_real_griego_oficial: D(PavoReal, {}),
-  buho_griego_oficial: D(BuhoBarro, {}),
-  delfin_griego_oficial: D(DelfinBarro, {}),
+  caballo_griego_oficial: D(CaballoEpico, { especie: 'caballo', alto: 700 }),
+  mula_griega_oficial: D(CaballoEpico, { especie: 'mula', pose: 'paso', alto: 520 }),
+  buey_griego_oficial: D(BovinoEpico, { especie: 'buey', alto: 600 }),
+  vaca_griega_oficial: D(BovinoEpico, { especie: 'vaca', alto: 440 }),
+  toro_griego_oficial: D(BovinoEpico, { especie: 'toro', alto: 470 }),
+  oveja_griega_oficial: D(OvinoEpico, { especie: 'oveja', alto: 340 }),
+  carnero_griego_oficial: D(OvinoEpico, { especie: 'carnero', alto: 400 }),
+  cabra_griega_oficial: D(OvinoEpico, { especie: 'cabra', alto: 520 }),
+  ciervo_griego_oficial: D(CiervoEpico, { s: 0.8, alto: 760 }),
+  perro_griego_oficial: D(CanidoEpico, { especie: 'perro', alto: 340 }),
+  lobo_griego_oficial: D(CanidoEpico, { especie: 'lobo', alto: 550 }),
+  leon_griego_oficial: D(LeonEpico, { alto: 560 }),
+  oso_griego_oficial: D(OsoEpico, { alto: 570 }),
+  tortuga_griega_oficial: D(TortugaEpica, { alto: 240 }),
+  serpiente_griega_oficial: D(SerpienteEpica, { alto: 420 }),
+  aguila_griega_oficial: D(AguilaEpica, { especie: 'aguila', vuela: true, alto: 430 }),
+  paloma_griega_oficial: D(AguilaEpica, { especie: 'paloma', vuela: true, alto: 220 }),
+  cisne_griego_oficial: D(CisneEpico, { vuela: true, alto: 480 }),
+  pavo_real_griego_oficial: D(PavoEpico, { alto: 560 }),
+  buho_griego_oficial: D(BuhoEpico, { alto: 450 }),
+  delfin_griego_oficial: D(DelfinEpico, { alto: 160 }),
 };
 export const NOMBRE_EN_GRIEGO_OFICIAL: Record<string, string> = {
   zeus_oficial: 'ZEUS', hera_oficial: 'HERA', poseidon_oficial: 'POSEIDON', hades_oficial: 'HADES', atenea_oficial: 'ATHENA', apolo_oficial: 'APOLLO', artemisa_oficial: 'ARTEMIS',

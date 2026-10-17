@@ -95,3 +95,20 @@ test('tercera tanda: extras y animales sin rótulo (no llevan nombre griego ni i
 test('tercera tanda: animales y criaturas con dibujo de barro propio', () => {
   for (const d of [...ANIMALES, 'piton', 'cerbero', 'pegaso', 'licaon_lobo', 'dioniso_cabrito', 'dioniso_leon']) assert.match(linea(`${d}_oficial`), /: D\(/, d);
 });
+
+// Animales épicos (2026-10-17): dibujos grandes de bestiasEpicas.tsx con alto propio para el rótulo.
+test('animales y criaturas épicos: componente de bestiasEpicas y alto propio', () => {
+  const epicos = leer('src/motor/bestiasEpicas.tsx');
+  for (const d of [...ANIMALES, 'piton', 'cerbero', 'pegaso', 'licaon_lobo']) {
+    const l = linea(`${d}_oficial`);
+    const comp = l.match(/: D\((\w+),/)?.[1];
+    assert.ok(comp && new RegExp(`export const ${comp}\\b`).test(epicos), `${d}: ${comp} en bestiasEpicas.tsx`);
+    assert.match(l, /alto: \d+/, `${d}: alto propio`);
+  }
+});
+
+test('el motor usa p.alto de los dibujos para ubicar el rótulo (sin alto sigue en 200)', () => {
+  const esc = leer('src/motor/Escena.tsx');
+  assert.match(esc, /ficha\.tipo === 'dibujo' && typeof ficha\.p\?\.alto === 'number'/);
+  assert.match(esc, /: 200;/);
+});
