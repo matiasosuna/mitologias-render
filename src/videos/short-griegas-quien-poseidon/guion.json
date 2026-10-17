@@ -1,0 +1,551 @@
+{
+  "id": "short-griegas-quien-poseidon",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Poseidón? El dios del mar y los temblores",
+    "en": "Who is Poseidon? The earth-shaking sea god"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Poseidón? El dios del mar y los temblores",
+    "en": "Who is Poseidon? The earth-shaking sea god"
+  },
+  "cierre": {
+    "es": "Golpeó la roca con su tridente… y el agua salió salada — Mitología griega T2E3",
+    "en": "He struck the rock with his trident… and the water came out salty — Greek Mythology S2E3"
+  },
+  "episodio": "griegas-10-atenea-poseidon",
+  "quien": {
+    "nombre": {
+      "es": "Poseidón",
+      "en": "Poseidon"
+    },
+    "subtitulo": {
+      "es": "Señor del mar · el que sacude la tierra",
+      "en": "Lord of the sea · the earth-shaker"
+    },
+    "como": "poseidon_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "costa",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "Cuando pierde, el mar se levanta.",
+        "en": "When he loses, the sea rises."
+      },
+      {
+        "es": "Una vez inundó una llanura entera por puro enojo.",
+        "en": "Once, he flooded a whole plain out of pure anger."
+      }
+    ],
+    "efectos": [
+      {
+        "en": 0.3,
+        "tipo": "olas-suben"
+      },
+      {
+        "en": 1.2,
+        "tipo": "temblor",
+        "dur": 0.5
+      },
+      {
+        "en": 1.3,
+        "tipo": "oscurecer",
+        "intensidad": 0.35,
+        "dur": 1
+      }
+    ],
+    "actores": [
+      {
+        "id": "poseidon",
+        "como": "poseidon_oficial",
+        "x": 760,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.4,
+            "hace": "enoja"
+          },
+          {
+            "en": 1.2,
+            "hace": "golpea"
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "mar",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Gobierna el mar y hace temblar la tierra.",
+          "en": "He rules the sea and makes the earth shake."
+        },
+        {
+          "es": "Los griegos lo llamaban «el que sacude la tierra». También es el dios de los caballos.",
+          "en": "The Greeks called him \"Earth-shaker\". He is also the god of horses."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "temblor",
+          "dur": 0.4
+        },
+        {
+          "en": 0.6,
+          "tipo": "olas-suben"
+        }
+      ],
+      "actores": [
+        {
+          "id": "poseidon",
+          "como": "poseidon_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "caballo",
+          "como": "caballo",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "entra",
+              "a": 1200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origen",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es hijo de los titanes Cronos y Rea.",
+          "en": "He is a son of the Titans Cronus and Rhea."
+        },
+        {
+          "es": "Cronos se lo tragó de bebé, como a sus hermanos. Zeus lo liberó.",
+          "en": "Cronus swallowed him as a baby, like his siblings. Zeus freed him."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "oscurecer",
+          "intensidad": 0.35,
+          "dur": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 740,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.4,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "rea",
+          "como": "rea_oficial",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 1,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.5,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hermanos",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus hermanos: Zeus y Hades, Hestia, Deméter y Hera.",
+          "en": "His siblings: Zeus and Hades, Hestia, Demeter and Hera."
+        },
+        {
+          "es": "Tras la guerra, los tres hermanos echaron suertes. Poseidón ganó el mar.",
+          "en": "After the war, the three brothers drew lots. Poseidon won the sea."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "HESTIA · DEMÉTER · HERA",
+            "en": "HESTIA · DEMETER · HERA"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "poseidon",
+          "como": "poseidon_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 960,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "familia",
+      "fondo": "mar",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su esposa es Anfitrite, una diosa del mar. Su hijo es Tritón.",
+          "en": "His wife is Amphitrite, a sea goddess. Their son is Triton."
+        },
+        {
+          "es": "Entre sus hijos también están el caballo alado Pegaso y el cíclope Polifemo.",
+          "en": "His children also include the winged horse Pegasus and the Cyclops Polyphemus."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "TRITÓN · PEGASO · POLIFEMO",
+            "en": "TRITON · PEGASUS · POLYPHEMUS"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "poseidon",
+          "como": "poseidon_oficial",
+          "x": 700,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "anfitrite",
+          "como": "reina",
+          "x": 960,
+          "escala": 0.9,
+          "rotulo": "AMPHITRITE",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "pegaso",
+          "como": "pegaso",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "costa",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus símbolos: el tridente, el caballo y el delfín.",
+          "en": "His symbols: the trident, the horse and the dolphin."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "TRIDENTE",
+            "en": "TRIDENT"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.4
+        },
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "CABALLO",
+            "en": "HORSE"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.7
+        },
+        {
+          "en": 0.7,
+          "texto": {
+            "es": "DELFÍN",
+            "en": "DOLPHIN"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "poseidon",
+          "como": "poseidon_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 0.8,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "delfin",
+          "como": "delfin",
+          "x": 1230,
+          "y": 520,
+          "mira": "izq",
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caracter",
+      "fondo": "mar",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es poderoso, y puede ser generoso con los marineros que lo honran.",
+          "en": "He is mighty, and can be generous to sailors who honor him."
+        },
+        {
+          "es": "Pero tiene un genio terrible. Atormentó a Odiseo por cegar a su hijo.",
+          "en": "But his temper is terrible. He tormented Odysseus for blinding his son."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "olas-suben"
+        },
+        {
+          "en": 1.5,
+          "tipo": "temblor",
+          "dur": 0.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "poseidon",
+          "como": "poseidon_oficial",
+          "x": 740,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "como": "odiseo_oficial",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "costa",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Poseidón sacude la tierra y manda en el mar, pero no siempre gana.",
+          "en": "Poseidon shakes the earth and rules the sea, but he does not always win."
+        },
+        {
+          "es": "Mira cómo perdió una ciudad en la temporada 2, episodio 3.",
+          "en": "See how he lost a city in Season 2, Episode 3."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "poseidon",
+          "como": "poseidon_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

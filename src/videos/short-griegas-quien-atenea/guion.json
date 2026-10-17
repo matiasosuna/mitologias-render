@@ -1,0 +1,612 @@
+{
+  "id": "short-griegas-quien-atenea",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Atenea? Nació con armadura",
+    "en": "Who is Athena? Born in full armor"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Atenea? Nació con armadura",
+    "en": "Who is Athena? Born in full armor"
+  },
+  "cierre": {
+    "es": "Zeus se tragó a su esposa, y de su cabeza saltó una diosa armada — Mitología griega T2E2",
+    "en": "Zeus swallowed his wife, then an armed goddess leapt from his head — Greek Mythology S2E2"
+  },
+  "episodio": "griegas-09-atenea",
+  "quien": {
+    "nombre": {
+      "es": "Atenea",
+      "en": "Athena"
+    },
+    "subtitulo": {
+      "es": "Diosa de la sabiduría y la estrategia",
+      "en": "Goddess of wisdom and strategy"
+    },
+    "como": "atenea_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "olimpo",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "Ganó una ciudad entera con un solo árbol.",
+        "en": "She won a whole city with a single tree."
+      },
+      {
+        "es": "Y convirtió a una tejedora en araña.",
+        "en": "And she turned a weaver into a spider."
+      }
+    ],
+    "efectos": [
+      {
+        "en": 0.2,
+        "tipo": "luz",
+        "x": 740
+      }
+    ],
+    "actores": [
+      {
+        "id": "atenea",
+        "como": "atenea_oficial",
+        "x": 740,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.4,
+            "hace": "brilla",
+            "dur": 0.6
+          },
+          {
+            "en": 1.3,
+            "hace": "senala"
+          }
+        ]
+      },
+      {
+        "id": "aracne",
+        "como": "aracne_oficial",
+        "x": 1200,
+        "mira": "izq",
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 1.2,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 1.6,
+            "hace": "sorprende"
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "templo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es la diosa de la sabiduría.",
+          "en": "She is the goddess of wisdom."
+        },
+        {
+          "es": "También de la guerra, pero la gana con estrategia y no con furia.",
+          "en": "Also of war, but she wins with strategy, not fury."
+        }
+      ],
+      "actores": [
+        {
+          "id": "atenea",
+          "como": "atenea_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "ares",
+          "como": "ares_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 1.5,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "padres",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su padre es Zeus. Su madre, la titánide Metis, famosa por su ingenio.",
+          "en": "Her father is Zeus. Her mother is the Titaness Metis, famous for her wit."
+        },
+        {
+          "es": "Una profecía asustó a Zeus, y se tragó a Metis.",
+          "en": "A prophecy scared Zeus, so he swallowed Metis."
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 740,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.5,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "metis",
+          "como": "metis_oficial",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 1,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.6,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nacimiento",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Después, un dolor de cabeza terrible partió la suya.",
+          "en": "Later, a terrible headache split his head open."
+        },
+        {
+          "es": "Y de ella saltó Atenea, ya adulta y con armadura.",
+          "en": "And out leapt Athena, fully grown and in armor."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.9,
+          "tipo": "rayo",
+          "x": 760
+        },
+        {
+          "en": 1.1,
+          "tipo": "temblor",
+          "dur": 0.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 740,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 0.9,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "atenea",
+          "como": "atenea_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "monte",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus símbolos: la lechuza, el olivo, la lanza y la égida.",
+          "en": "Her symbols: the owl, the olive tree, the spear and the aegis."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "olivo",
+          "x": 1220
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "LECHUZA",
+            "en": "OWL"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.4
+        },
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "OLIVO",
+            "en": "OLIVE TREE"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.7
+        },
+        {
+          "en": 0.7,
+          "texto": {
+            "es": "LANZA",
+            "en": "SPEAR"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.95
+        },
+        {
+          "en": 0.95,
+          "texto": {
+            "es": "ÉGIDA",
+            "en": "AEGIS"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "atenea",
+          "como": "atenea_oficial",
+          "x": 780,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 0.5
+            },
+            {
+              "en": 0.9,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dones",
+      "fondo": "ciudad",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Enseñó a las personas a tejer, a construir barcos y a domar caballos.",
+          "en": "She taught people to weave, build ships and tame horses."
+        },
+        {
+          "es": "Es la protectora de Atenas, la ciudad que lleva su nombre.",
+          "en": "She protects Athens, the city that carries her name."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "templo",
+          "x": 1560,
+          "s": 0.7
+        }
+      ],
+      "actores": [
+        {
+          "id": "atenea",
+          "como": "atenea_oficial",
+          "x": 740,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "tejedora",
+          "como": "mujer",
+          "x": 1200,
+          "mira": "izq",
+          "rotulo": "WEAVER",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "entra",
+              "a": 1180
+            },
+            {
+              "en": 0.6,
+              "hace": "habla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "caballo",
+          "como": "caballo",
+          "x": 1380,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "entra",
+              "a": 1360
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heroes",
+      "fondo": "costa",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Ayuda a héroes como Odiseo y Perseo.",
+          "en": "She helps heroes like Odysseus and Perseus."
+        },
+        {
+          "es": "Su hermano Hermes y los demás hijos de Zeus son sus medio hermanos.",
+          "en": "Hermes and the other children of Zeus are her half-siblings."
+        }
+      ],
+      "actores": [
+        {
+          "id": "atenea",
+          "como": "atenea_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "odiseo",
+          "como": "odiseo_oficial",
+          "x": 960,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "perseo",
+          "como": "perseo_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.8,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caracter",
+      "fondo": "noche",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es justa, leal y muy sabia.",
+          "en": "She is fair, loyal and very wise."
+        },
+        {
+          "es": "Pero con orgullo herido es feroz: castigó a la tejedora Aracne, según Ovidio.",
+          "en": "But with wounded pride she is fierce: Ovid says she punished the weaver Arachne."
+        }
+      ],
+      "actores": [
+        {
+          "id": "atenea",
+          "como": "atenea_oficial",
+          "x": 740,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "aracne",
+          "como": "aracne_oficial",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Nacida de una cabeza, ganó una ciudad y se volvió la diosa más sabia.",
+          "en": "Born from a head, she won a city and became the wisest goddess."
+        },
+        {
+          "es": "Mira su increíble nacimiento en la temporada 2, episodio 2.",
+          "en": "See her wild birth in Season 2, Episode 2."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "atenea",
+          "como": "atenea_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

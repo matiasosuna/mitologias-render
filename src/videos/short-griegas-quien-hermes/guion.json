@@ -1,0 +1,790 @@
+{
+  "id": "short-griegas-quien-hermes",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Hermes? El dios más pícaro",
+    "en": "Who is Hermes? The trickster god"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Hermes? El dios más pícaro",
+    "en": "Who is Hermes? The trickster god"
+  },
+  "cierre": {
+    "es": "Un recién nacido, cincuenta vacas robadas y un Apolo furioso — Mitología griega T2E8",
+    "en": "A newborn, fifty stolen cows and one furious Apollo — Greek Mythology S2E8"
+  },
+  "episodio": "griegas-15-hermes-bebe-ladron",
+  "quien": {
+    "nombre": {
+      "es": "Hermes",
+      "en": "Hermes"
+    },
+    "subtitulo": {
+      "es": "Mensajero de los dioses · el pícaro",
+      "en": "Messenger of the gods · the trickster"
+    },
+    "como": "hermes_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "cueva",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "El primer día de su vida, inventó la música.",
+        "en": "On his first day of life, he invented music."
+      },
+      {
+        "es": "Y esa misma tarde, le robó cincuenta vacas a un dios.",
+        "en": "That same evening, he stole fifty cows from a god."
+      }
+    ],
+    "efectos": [
+      {
+        "en": 0.3,
+        "tipo": "destello",
+        "x": 760,
+        "y": 430,
+        "dur": 0.3
+      },
+      {
+        "en": 1.4,
+        "tipo": "oscurecer",
+        "intensidad": 0.3,
+        "dur": 1
+      }
+    ],
+    "actores": [
+      {
+        "id": "hermes",
+        "como": "hermes_oficial",
+        "x": 760,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.4,
+            "hace": "alegra"
+          },
+          {
+            "en": 1.3,
+            "hace": "senala"
+          }
+        ]
+      },
+      {
+        "id": "apolo",
+        "como": "apolo_oficial",
+        "x": 1190,
+        "mira": "izq",
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 1.2,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 1.6,
+            "hace": "enoja"
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "monte",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es el mensajero de los dioses, veloz como el viento.",
+          "en": "He is the messenger of the gods, fast as the wind."
+        },
+        {
+          "es": "También es el dios de los viajeros… y de los ladrones astutos.",
+          "en": "He is also the god of travelers… and of clever thieves."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "VIAJEROS · LADRONES",
+            "en": "TRAVELERS · THIEVES"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "como": "hermes_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.3,
+              "hace": "corre",
+              "a": 840
+            },
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "viajero",
+          "como": "hombre",
+          "x": 1230,
+          "mira": "izq",
+          "rotulo": "TRAVELER",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "entra",
+              "a": 1190
+            },
+            {
+              "en": 0.9,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "familia",
+      "fondo": "cueva",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su padre es Zeus. Su madre, Maia, una ninfa tímida.",
+          "en": "His father is Zeus. His mother is Maia, a shy nymph."
+        },
+        {
+          "es": "Nació en una cueva del monte Cilene.",
+          "en": "He was born in a cave on Mount Cyllene."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.1,
+          "texto": {
+            "es": "MONTE CILENE",
+            "en": "MOUNT CYLLENE"
+          },
+          "x": 960,
+          "y": 200
+        }
+      ],
+      "actores": [
+        {
+          "id": "maia",
+          "como": "maia_oficial",
+          "x": 700,
+          "escala": 1,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.3,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hermes",
+          "como": "hermes_oficial",
+          "x": 960,
+          "escala": 0.6,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.9,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lira",
+      "fondo": "cueva",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Ese mismo día encontró una tortuga.",
+          "en": "That same day, he found a tortoise."
+        },
+        {
+          "es": "Con su caparazón construyó la primera lira.",
+          "en": "With its shell, he built the first lyre."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.3,
+          "tipo": "destello",
+          "x": 800,
+          "y": 480,
+          "dur": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "como": "hermes_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "toma",
+              "objeto": "lira"
+            },
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.4,
+              "hace": "brilla",
+              "dur": 0.5
+            }
+          ]
+        },
+        {
+          "id": "tortuga",
+          "como": "tortuga",
+          "x": 1180,
+          "mira": "izq",
+          "escala": 1.2,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1150
+            },
+            {
+              "en": 0.8,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "robo",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Esa tarde le robó cincuenta vacas a su hermano Apolo.",
+          "en": "That evening, he stole fifty cows from his brother Apollo."
+        },
+        {
+          "es": "Las hizo caminar hacia atrás, para engañar a quien siguiera las huellas.",
+          "en": "He made them walk backwards, to fool anyone following the tracks."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 1100
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "como": "hermes_oficial",
+          "x": 740,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 800
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "vaca1",
+          "como": "toro",
+          "x": 1130,
+          "mira": "der",
+          "escala": 0.9,
+          "rotulo": "COW",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "entra",
+              "a": 1130
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 1060
+            }
+          ]
+        },
+        {
+          "id": "vaca2",
+          "como": "toro",
+          "x": 1300,
+          "mira": "der",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "entra",
+              "a": 1300
+            },
+            {
+              "en": 1.2,
+              "hace": "camina",
+              "a": 1230
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "juicio",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Apolo lo llevó ante Zeus.",
+          "en": "Apollo dragged him before Zeus."
+        },
+        {
+          "es": "«¡Soy un recién nacido!», dijo Hermes. Zeus estalló en risas.",
+          "en": "\"I'm just a newborn!\" said Hermes. Zeus burst out laughing."
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "como": "apolo_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 960,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.6,
+              "hace": "habla",
+              "dur": 0.4
+            }
+          ]
+        },
+        {
+          "id": "hermes",
+          "como": "hermes_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1.4,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trato",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Hermes tocó su lira, y la rabia de Apolo se derritió.",
+          "en": "Hermes played his lyre, and Apollo's anger melted."
+        },
+        {
+          "es": "Apolo le cambió las vacas por la lira, y le regaló un bastón de oro.",
+          "en": "Apollo traded the cows for the lyre, and gave him a golden staff."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "como": "hermes_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "toma",
+              "objeto": "lira"
+            },
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "apolo",
+          "como": "apolo_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.9,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.3,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guia",
+      "fondo": "inframundo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Zeus lo hizo su mensajero.",
+          "en": "Zeus made him his messenger."
+        },
+        {
+          "es": "Y también guía a las almas de los muertos hasta Hades.",
+          "en": "And he guides the souls of the dead down to Hades."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.9,
+          "tipo": "niebla"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "como": "hermes_oficial",
+          "x": 740,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "corre",
+              "a": 800
+            },
+            {
+              "en": 1.1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 1210,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1.5,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "monte",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus símbolos: sandalias aladas, sombrero de viajero y el caduceo.",
+          "en": "His symbols: winged sandals, a traveler's hat and the caduceus."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "SANDALIAS",
+            "en": "SANDALS"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.45
+        },
+        {
+          "en": 0.45,
+          "texto": {
+            "es": "SOMBRERO",
+            "en": "HAT"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.75
+        },
+        {
+          "en": 0.75,
+          "texto": {
+            "es": "CADUCEO",
+            "en": "CADUCEUS"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "como": "hermes_oficial",
+          "x": 830,
+          "escala": 0.95,
+          "rotulo": "",
+          "props": {
+            "objeto": "caduceo"
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.9,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caracter",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es listo, simpático y rapidísimo.",
+          "en": "He is clever, charming and lightning fast."
+        },
+        {
+          "es": "Pero miente, engaña y roba sin pestañear.",
+          "en": "But he lies, cheats and steals without blinking."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "como": "hermes_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "apolo",
+          "como": "apolo_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.1,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "El bebé ladrón creció hasta ser el mensajero del Olimpo.",
+          "en": "The baby thief grew up to be the messenger of Olympus."
+        },
+        {
+          "es": "Mira el gran robo en la temporada 2, episodio 8.",
+          "en": "See the great cow heist in Season 2, Episode 8."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "como": "hermes_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
