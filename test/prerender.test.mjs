@@ -77,3 +77,16 @@ test('repartir: GitHub salvo lo urgente o si GitHub viene fallando', () => {
   assert.ok(repartir(it, { modalOk: true, githubFalla: true }).filter((l) => l.tipo !== 'short').every((l) => l.motor === 'modal'));
   assert.ok(repartir(it, { modalOk: false }).every((l) => l.motor === 'github'));
 });
+
+import { spawnSync } from 'node:child_process';
+import { mkdirSync, writeFileSync, rmSync } from 'node:fs';
+test('subir se niega a subir el render de un guion con claves viejas', () => {
+  const id = 'griegas-96-prueba-guarda', dir = `src/videos/${id}`;
+  mkdirSync(dir, { recursive: true });
+  try {
+    writeFileSync(`${dir}/guion.json`, JSON.stringify({ id, serie: 'griegas', escenas: [{ id: 'e', actores: [{ id: 'zeus', x: 1 }] }] }));
+    const r = spawnSync('node', ['scripts/prerender.mjs', 'subir', `${id}:horizontal`], { encoding: 'utf8' });
+    assert.equal(r.status, 1);
+    assert.match(r.stdout, /no se sube \(horizontal\).*zeus/);
+  } finally { rmSync(dir, { recursive: true, force: true }); }
+});

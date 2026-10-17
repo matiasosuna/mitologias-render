@@ -1,5 +1,6 @@
 // Pasa los guiones NO publicados (cualquier mitología) a los diseños oficiales de personajes con nombre y extras
 // de cada cultura: clave vieja → *_oficial (lib/personajes-oficiales.mjs). Publicados = youtube-ids.json + out/subidas-*.json.
+// --todos incluye los ya publicados.
 // Uso: node scripts/personajes-oficiales.mjs [--aplicar]   (sin --aplicar solo lista; al final, claves sin equivalente)
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdtempSync } from 'node:fs';
 import { join, resolve } from 'node:path';
@@ -16,7 +17,7 @@ const oficiales = clavesOficiales();
 for (const [s, set] of Object.entries(oficiales)) for (const k of set) if (!ELENCO[k]) throw new Error(`${s}: ${k} no está en el elenco`);
 const etiqueta = (k) => NOMBRE_EN[k] ?? ELENCO[k]?.griego ?? '';
 
-const pub = publicados();
+const pub = process.argv.includes('--todos') ? new Set() : publicados(); // --todos: también los ya publicados (lo subido no se toca; lo que falte en cada red sale con los diseños nuevos)
 let n = 0, tocados = 0;
 const sin = new Map();
 for (const d of readdirSync('src/videos').sort()) {
@@ -31,8 +32,10 @@ for (const d of readdirSync('src/videos').sort()) {
   if (!aplicar) continue;
   const fiel = JSON.stringify(JSON.parse(txt), null, sangria) + (txt.endsWith('\n') ? '\n' : '') === txt;
   const nuevo = fiel ? JSON.stringify(g, null, sangria) + (txt.endsWith('\n') ? '\n' : '') : parchear(txt, cambios);
-  if (JSON.stringify(JSON.parse(nuevo)) !== JSON.stringify(g)) throw new Error(`${d}: el parche no da lo mismo`);
-  writeFileSync(f, nuevo);
+  let final = nuevo;
+  try { if (JSON.stringify(JSON.parse(nuevo)) !== JSON.stringify(g)) throw new Error('parche distinto'); }
+  catch { final = JSON.stringify(g, null, sangria) + (txt.endsWith('\n') ? '\n' : ''); console.log(`   (parche de texto no cuadra: ${d} se reescribe entero con su sangría)`); } // guiones ya publicados formateados a mano
+  writeFileSync(f, final);
 }
 console.log('\n== Sin equivalente oficial (clave, guiones) ==');
 for (const [k, ds] of [...sin].sort()) console.log(`${k.replace('|', ': ')}  (${ds.size})`);

@@ -8,8 +8,8 @@ import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { esShort, PLATAFORMAS, HORAS_UTC, clase, planTurno, tieneYouTube, tieneInstagram, tieneTiktok } from './cola.mjs';
 import { nombreAsset, hayAsset, subirAsset, rutaLocal, REPO } from './nube.mjs';
-import { clavesOficiales, clavesLegacy } from './legacy.mjs';
-import { publicados } from '../lib/personajes-oficiales.mjs';
+import { viejosDeArchivo } from './legacy.mjs';
+import { clavesOficiales } from '../lib/personajes-oficiales.mjs';
 
 /** Qué necesita cada tipo de ítem: [tipo de render-nube, clase de asset que lo prueba]. */
 export const NECESITA = {
@@ -120,20 +120,20 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     const tiene = { youtube: tieneYouTube(leerJSON('src/videos/youtube-ids.json', {}), leerJSON('out/subidas-api.json', [])), instagram: tieneInstagram(leerJSON('out/subidas-instagram.json', [])), tiktok: tieneTiktok(leerJSON('out/subidas-buffer.json', [])) };
     const listo = (id) => ['guion.json', 'timeline.json'].every((f) => existsSync(join('src/videos', id, f))) && (esShort(id) || Boolean(titulos[id]?.titulo));
     const arte = artefactosVigentes();
-    // un episodio ya publicado en alguna red conserva sus personajes (scripts/personajes-oficiales.mjs no lo convierte): se renderiza igual
-    // que lo publicado; se omite solo lo NO publicado que todavía tiene claves viejas con diseño oficial
-    const oficiales = clavesOficiales(), omitidos = [], pub = publicados();
+    // todo lo que falte en una red sale con los diseños nuevos: se omite (y se lista) cualquier guion con claves viejas que tengan equivalente
+    const oficiales = clavesOficiales(), omitidos = [];
+    const viejos = (id) => (opt('legacy', '1') === '0' ? [] : viejosDeArchivo(id, oficiales));
     const series = opt('series', '').split(',').filter(Boolean); // p. ej. griegas,nordicas: solo esas mitologías
     const forzar = opt('forzar', '').split(',').filter(Boolean);
     const modo = opt('modo', 'cola');
     const items = modo === 'ventana'
       ? faltantesVentana({ slots: slotsProximos({ cola: leerJSON('out/cola-unificada.json', []), tiene, listo, turnos: Number(opt('turnos', 12)) }), omitidos, n: Number(opt('n', 6)),
         permitir: (id) => !series.length || series.some((x) => id.startsWith(`${x}-`) || id.startsWith(`short-${x}-`)), presupuesto: Number(opt('presupuesto', 'Infinity')),
-        legacy: (id) => (pub.has(id) ? [] : clavesLegacy(JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8')), oficiales)),
+        legacy: viejos,
         hayAsset: (id, c) => hayAsset(nombreAsset(id, c)), hayArtefacto: (id, t) => arte.has(`${id}-${t}`) })
       : faltantes({ cola: leerJSON('out/cola-unificada.json', []), tiene, listo, n: Number(opt('n', 6)), forzar, omitidos,
       permitir: (id) => !series.length || series.some((x) => id.startsWith(`${x}-`) || id.startsWith(`short-${x}-`)), presupuesto: Number(opt('presupuesto', 'Infinity')), maxEpisodios: Number(opt('episodios', 'Infinity')),
-      legacy: (id) => (opt('legacy', '1') === '0' || pub.has(id) ? [] : clavesLegacy(JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8')), oficiales)),
+      legacy: viejos,
       hayAsset: (id, c) => hayAsset(nombreAsset(id, c)), hayArtefacto: (id, t) => arte.has(`${id}-${t}`) });
     console.log(`estimado Modal: USD ${costoTotal(items).toFixed(2)} · episodios: ${new Set(items.map((i) => i.id)).size}`);
     console.log(`omitidos por personajes viejos (${omitidos.length}): ${omitidos.map((o) => `${o.id} [${o.viejos.join(',')}]`).join(' | ').slice(0, 3000)}`);
@@ -145,6 +145,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     // lo que dejó Modal en out/<id>/: <id>:horizontal | <id>:partes | <id>:vertical (este último arma el mp4 de TikTok y lo sube)
     for (const spec of a) {
       const [id, modo] = spec.split(':');
+      const v = viejosDeArchivo(id); // guarda: nunca se sube un render de un guion con diseños viejos (se rehace tras convertirlo)
+      if (v.length) { console.log(`::error::${id}: no se sube (${modo}); el guion tiene ${v.length} claves viejas con diseño nuevo, p. ej. ${v[0]}`); process.exitCode = 1; continue; }
       if (modo === 'horizontal') {
         for (const c of ['horizontal', 'srt-en', 'srt-es', 'miniatura']) if (existsSync(rutaLocal(id, c))) subirAsset(rutaLocal(id, c), nombreAsset(id, c));
         if (!existsSync(rutaLocal(id, 'miniatura'))) console.log(`::error::${id}: Modal no dejó miniatura.jpg (revisar "ERROR miniatura" en el log de Modal)`);
