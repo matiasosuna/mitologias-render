@@ -3,6 +3,7 @@
 //   node scripts/subir.mjs <id>                      → episodio, público ya
 //   node scripts/subir.mjs <id> --programar=2026-10-13T10:00:00 [--tz=America/New_York]
 //   node scripts/subir.mjs <id> --short=2 [--programar=…]
+//   node scripts/subir.mjs <short-…-quien-…> --horizontal --lista=<id>  → versión 16:9 del "Who is…?" (video normal)
 //   --lista=<playlistId>  (si no, la busca por nombre en src/videos/listas.json)
 //   --probar              → muestra lo que mandaría, sin subir
 // Episodio: título, descripción con capítulos, etiquetas, subtítulos en/es, lista, idioma, categoría Education,
@@ -11,6 +12,7 @@ import { readFileSync, existsSync, writeFileSync } from 'node:fs';
 import { join, basename } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { conGancho, desplazarCapitulos, conPregunta, preguntaDe } from './gancho-horizontal.mjs';
+import { metaQuienHorizontal } from './quien-meta.mjs';
 
 const [id, ...resto] = process.argv.slice(2);
 const opt = (k) => resto.find((a) => a.startsWith(`--${k}=`))?.split('=').slice(1).join('=');
@@ -24,6 +26,11 @@ const nShort = opt('short');
 let srtDe = (l) => join(out, `${id}.${l}.srt`); // con cartel gancho: los .srt corridos de out/<id>/con-gancho/
 
 const esNativo = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8')).formato === 'short';
+// --horizontal: la versión 16:9 de un "Who is…?" (scripts/quien-horizontal.mjs): video normal, con .srt y miniatura
+const horizontal = resto.includes('--horizontal');
+if (horizontal && !g.quien) throw new Error(`${id}: --horizontal es solo para Shorts "Who is…?"`);
+/** Clave en youtube-ids.json (el Short ocupa la del id). */
+const claveId = horizontal ? `${id}-horizontal` : id;
 if (!nShort && !esNativo) execFileSync('node', ['scripts/youtube-meta.mjs', id], { stdio: 'ignore' });
 const meta = nShort || esNativo ? null : JSON.parse(readFileSync(join(out, 'youtube.json'), 'utf8'));
 const campos = [];
@@ -31,8 +38,22 @@ const add = (k, v) => campos.push(['-F', `${k}=${v}`]);
 add('user', USER);
 add('platform[]', 'youtube');
 let archivo;
-const nativo = g.formato === 'short';
-if (nativo) {
+const nativo = g.formato === 'short' && !horizontal;
+if (horizontal) {
+  archivo = join(out, `${id}.en.mp4`);
+  const m = metaQuienHorizontal(g, { ids });
+  add('title', m.titulo);
+  add('description', m.descripcion);
+  m.etiquetas.forEach((t) => add('tags[]', t));
+  const lista = opt('lista') || listas[m.lista];
+  if (lista) add('youtube_playlist_id', lista);
+  for (const [n, [l, nombre]] of [['en', 'English'], ['es', 'Español']].entries()) {
+    const srt = srtDe(l);
+    if (existsSync(srt)) { campos.push(['-F', `youtube_subtitle_file_${n}=@${srt}`]); add(`youtube_subtitle_language_${n}`, l); add(`youtube_subtitle_name_${n}`, nombre); }
+  }
+  const mini = join(out, 'miniatura.jpg');
+  if (existsSync(mini) && !resto.includes('--sin-miniatura')) campos.push(['-F', `thumbnail=@${mini}`]);
+} else if (nativo) {
   // Short nativo (historia propia, vertical): link al episodio relacionado y cierre del guion.
   archivo = join(out, `${id}.mp4`);
   const ep = g.episodio, gEp = ep && existsSync(join('src/videos', ep, 'guion.json')) ? JSON.parse(readFileSync(join('src/videos', ep, 'guion.json'), 'utf8')) : null;
@@ -91,7 +112,7 @@ if (cuando) { add('scheduled_date', cuando); add('timezone', opt('tz') || 'Ameri
 if (resto.includes('--api')) {
   const val = (k) => campos.filter((c) => c[1].startsWith(`${k}=`)).map((c) => c[1].slice(k.length + 1));
   const meta = { titulo: val('title')[0], descripcion: val('description')[0], etiquetas: val('tags[]'), ...(cuando ? { publicar: new Date(cuando + (opt('tz') ? '' : '-04:00')).toISOString() } : {}) };
-  const tmp = join(out, `.meta-api-${nShort ?? (nativo ? 'short' : 'ep')}.json`);
+  const tmp = join(out, `.meta-api-${nShort ?? (horizontal ? 'horizontal' : nativo ? 'short' : 'ep')}.json`);
   writeFileSync(tmp, JSON.stringify(meta));
   if (resto.includes('--probar')) { console.log(meta); process.exit(0); }
   const yt = (...x) => execFileSync('node', ['scripts/youtube-api.mjs', ...x], { encoding: 'utf8', maxBuffer: 1 << 24 }).trim();
@@ -105,14 +126,14 @@ if (resto.includes('--api')) {
   }
   const miniApi = join(out, 'miniatura.jpg');
   if (!nShort && !nativo && existsSync(miniApi) && !resto.includes('--sin-miniatura')) try { console.log(yt('miniatura', vid, miniApi)); } catch (e) { console.log(`miniatura: ${String(e.message).slice(0, 200)}`); }
-  if (!nShort) { ids[id] = vid; writeFileSync('src/videos/youtube-ids.json', JSON.stringify(ids, null, 2)); }
+  if (!nShort) { ids[claveId] = vid; writeFileSync('src/videos/youtube-ids.json', JSON.stringify(ids, null, 2)); }
   const reg = 'out/subidas-api.json';
   const hist = existsSync(reg) ? JSON.parse(readFileSync(reg, 'utf8')) : [];
-  hist.push({ id, short: nShort ?? (nativo ? 'nativo' : null), video: vid, cuando: cuando ?? 'ya', fecha: new Date().toISOString() });
+  hist.push({ id: claveId, short: nShort ?? (horizontal ? 'horizontal' : nativo ? 'nativo' : null), video: vid, cuando: cuando ?? 'ya', fecha: new Date().toISOString() });
   writeFileSync(reg, JSON.stringify(hist, null, 1));
   process.exit(0);
 }
-const args = ['-s', '-X', 'POST', 'https://api.upload-post.com/api/upload', '-H', `Authorization: Apikey ${KEY}`, '-H', `Idempotency-Key: ${id}-${nShort ?? "ep"}-${cuando ?? "ya"}${opt("intento") ? "-" + opt("intento") : ""}`, ...campos.flat()];
+const args = ['-s', '-X', 'POST', 'https://api.upload-post.com/api/upload', '-H', `Authorization: Apikey ${KEY}`, '-H', `Idempotency-Key: ${id}-${nShort ?? (horizontal ? "horizontal" : "ep")}-${cuando ?? "ya"}${opt("intento") ? "-" + opt("intento") : ""}`, ...campos.flat()];
 if (resto.includes('--probar')) { console.log(campos.map((c) => c[1].replace(/=@.*\//, '=@…/')).join('\n')); process.exit(0); }
 const r = JSON.parse(execFileSync('curl', args, { encoding: 'utf8', maxBuffer: 1 << 24 }));
 console.log(JSON.stringify(r, null, 1).slice(0, 800));

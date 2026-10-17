@@ -29,7 +29,7 @@ for (const [f, n] of [['elencoHawaianoOficial', 'HAWAIANO_OFICIAL'], ['elencoMao
 // Egipcios oficiales (*_oficial): elencoEgipcioOficial.tsx.
 [...readFileSync('src/motor/elencoEgipcioOficial.tsx', 'utf8').split('export const ELENCO_EGIPCIO_OFICIAL')[1].split('export const NOMBRE_EN_EGIPCIO_OFICIAL')[0].matchAll(/^\s{2}(\w+): /gm)].forEach((m) => elenco.add(m[1]));
 // Aztecas, hindúes, balineses y norteamericanos oficiales (*_oficial): elenco<Serie>Oficial.tsx.
-for (const n of ['Azteca', 'Hindu', 'Balines', 'Norte']) [...readFileSync(`src/motor/elenco${n}Oficial.tsx`, 'utf8').matchAll(/^\s{2}(\w+_oficial): /gm)].forEach((m) => elenco.add(m[1]));
+for (const n of ['Azteca', 'Hindu', 'Balines', 'Norte', 'Nordico']) [...readFileSync(`src/motor/elenco${n}Oficial.tsx`, 'utf8').matchAll(/^\s{2}(\w+_oficial): /gm)].forEach((m) => elenco.add(m[1]));
 // Aztecas (tema códice): fondos, elementos y elenco salen de sus propios archivos.
 const lista = (archivo, nombre) => ((readFileSync(archivo, 'utf8').match(new RegExp(`export const ${nombre} = \\[([^\\]]*)\\]`)) ?? [])[1] ?? '').match(/'(\w+)'/g)?.map((x) => x.slice(1, -1)) ?? [];
 lista('src/motor/fondosAzteca.tsx', 'FONDOS_AZTECA').forEach((x) => FONDOS.add(x));

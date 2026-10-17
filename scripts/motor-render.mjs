@@ -17,6 +17,8 @@ const IMAGEN = arg('imagen', 'en'), AUDIOS = arg('audio', 'en').split(',');
 const dir = join('src/videos', id), out = join('out', id), cache = join('out/.tramos', id);
 mkdirSync(out, { recursive: true }); mkdirSync(cache, { recursive: true });
 const g = JSON.parse(readFileSync(join(dir, 'guion.json'), 'utf8'));
+// Short "Who is…?": su versión horizontal (scripts/quien-horizontal.mjs), con los mismos archivos de salida que un episodio
+if (g.formato === 'short') { await (await import('./quien-horizontal.mjs')).renderHorizontal([id]); process.exit(0); }
 const tl = JSON.parse(readFileSync(join(dir, 'timeline.json'), 'utf8'));
 // Título del próximo episodio para la pantalla final (de youtube.json si el guion no lo trae)
 if (!g.siguiente && existsSync(join(dir, 'youtube.json'))) { const s = JSON.parse(readFileSync(join(dir, 'youtube.json'), 'utf8')).siguiente; if (s) g.siguiente = { es: s, en: s }; }

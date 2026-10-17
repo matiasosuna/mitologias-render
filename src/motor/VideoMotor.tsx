@@ -40,7 +40,7 @@ const Portada: React.FC<{ g: GuionVisual; dur: number; idioma: Idioma }> = ({ g,
 };
 
 /** Pantalla final: marcos para los elementos de YouTube (video siguiente a la izquierda, suscribirse a la derecha). */
-const Final: React.FC<{ dur: number; siguiente?: string }> = ({ dur, siguiente }) => {
+export const Final: React.FC<{ dur: number; siguiente?: string; etiqueta?: string }> = ({ dur, siguiente, etiqueta = 'NEXT EPISODE' }) => {
   const f = useCurrentFrame();
   const o = Math.min(ap(f, 0, 16), interpolate(f, [dur - 16, dur], [1, 0], cl));
   const runas = TEMA.nombre !== 'vasija'; // fondos claros (runas, papiro)
@@ -58,7 +58,7 @@ const Final: React.FC<{ dur: number; siguiente?: string }> = ({ dur, siguiente }
         <circle cx={1450} cy={510} r={176} fill="none" stroke={C.crema} strokeWidth={2} strokeDasharray="3 8" />
       </svg>
       <AbsoluteFill style={{ fontFamily: TITULO, color: runas ? C.negro : C.crema, textShadow: runas ? `0 3px 0 ${C.blanco}` : `0 4px 0 ${C.negro}` }}>
-        <div style={{ position: 'absolute', top: 160, left: 150, width: 880, textAlign: 'center', fontSize: 44, fontWeight: 700, letterSpacing: 6 }}>NEXT EPISODE</div>
+        <div style={{ position: 'absolute', top: 160, left: 150, width: 880, textAlign: 'center', fontSize: 44, fontWeight: 700, letterSpacing: 6 }}>{etiqueta}</div>
         {siguiente && <div style={{ position: 'absolute', top: 480, left: 190, width: 800, textAlign: 'center', fontSize: 50, fontWeight: 700, lineHeight: 1.1, color: C.crema, textShadow: `0 3px 0 ${C.negro}`, opacity: 0.35 }}>{siguiente}</div>}
         <div style={{ position: 'absolute', top: 160, left: 1250, width: 400, textAlign: 'center', fontSize: 44, fontWeight: 700, letterSpacing: 6 }}>SUBSCRIBE</div>
         <div style={{ position: 'absolute', top: 985, left: 0, right: 0, textAlign: 'center', fontSize: 40, letterSpacing: 12, color: C.crema, textShadow: 'none' }}>MYTHS ON CLAY</div>

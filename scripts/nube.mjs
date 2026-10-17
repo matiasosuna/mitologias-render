@@ -19,7 +19,9 @@ import { ganchoParte } from './titulos.mjs';
 import {
   HORAS_UTC, clase, construirCola, actualizarCola, tieneYouTube, tieneInstagram, tieneTiktok, partesHechasIG, partesEstimadas,
   planTurno, estadoCola, limitar, usadas24h, esQuien, esShort, PLATAFORMAS, MAX_ALCANZAR, MAX_TIKTOK_FRENADO, TOPE_24H, TOPE_COLA_BUFFER,
+  horizontalTurno, claveHorizontal,
 } from './cola.mjs';
+import { tituloQuienHorizontal, listaQuien, mitologiaEn } from '../lib/quien.mjs';
 
 export const REPO = 'matiasosuna/mitologias-render', RELEASE = 'media';
 export const urlAsset = (nombre) => `https://github.com/${REPO}/releases/download/${RELEASE}/${nombre}`;
@@ -194,6 +196,8 @@ export function asegurarEpisodio(id, { render = true } = {}) {
 // ── datos de la cola
 const leerJSON = (f, def) => (existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')) : def);
 const guion = (id) => JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8'));
+/** ¿Tiene versión horizontal 16:9? (Short "Who is…?" con `quien`: scripts/quien-horizontal.mjs) */
+const conHorizontal = (id) => esShort(id) && existsSync(join('src/videos', id, 'guion.json')) && guion(id).formato === 'short' && Boolean(guion(id).quien);
 export const COLA = 'out/cola-unificada.json', SHORTS_ORDEN = 'out/shorts-orden.txt', RITMO_TK = 'out/tiktok-ritmo.json';
 const IDS = 'src/videos/youtube-ids.json', API = 'out/subidas-api.json', IG = 'out/subidas-instagram.json', BUF = 'out/subidas-buffer.json';
 /** Listo para publicar: narrado (guion + timeline) y, si es episodio, con título en titulos.json. */
@@ -228,7 +232,8 @@ function planDe(p, d, f = fechaTurno()) {
   const c = clase(turnoUTC(f)), ahora = Date.now();
   const max = p === 'tiktok' && tiktokFrenado(leerJSON(RITMO_TK, null), ahora) ? MAX_TIKTOK_FRENADO : MAX_ALCANZAR[p];
   const plan = planTurno({ cola: d.cola, tiene: d.tiene, plataforma: p, clase: c, listo: d.listo, inicio: inicioTurno(f), max });
-  const [reg, costo] = { youtube: [d.api, () => 1], instagram: [d.igH, (id) => (esShort(id) ? 1 : partesFaltanIG(id, d.igH))], tiktok: [d.buf, () => 1] }[p];
+  // YouTube: un "Who is…?" cuesta 2 (su Short + su horizontal, en el mismo turno)
+  const [reg, costo] = { youtube: [d.api, (id) => (conHorizontal(id) ? 2 : 1)], instagram: [d.igH, (id) => (esShort(id) ? 1 : partesFaltanIG(id, d.igH))], tiktok: [d.buf, () => 1] }[p];
   const ids = limitar(plan.ids, costo, usadas24h(reg, ahora), TOPE_24H[p]);
   if (ids.length < plan.ids.length) console.log(`${p}: tope de ${TOPE_24H[p]} en 24 h → ${ids.length} de ${plan.ids.length}`);
   return { ...plan, clase: c, max, ids };
@@ -287,6 +292,44 @@ function episodioYT(id, titulo, extra = []) {
   if (r.status !== 0 || !video) throw errorYT(id, salida);
   console.log(`YouTube: ${id} https://youtu.be/${video}`);
 }
+/** Id de la lista "<Mitología>: Who's Who": la de listas.json o, la primera vez (justo antes de subir el primer video),
+ *  la crea en YouTube (youtube-api.mjs lista crea o encuentra por título) y la guarda en listas.json (rama estado). */
+function listaQuienId(serie) {
+  const f = 'src/videos/listas.json', listas = leerJSON(f, {}), nombre = listaQuien(serie);
+  if (listas[nombre]) return listas[nombre];
+  const desc = `Who's who in ${mitologiaEn(serie)}: one god or hero per video, explained simply. By Myths on Clay.`;
+  const id = execFileSync('node', ['scripts/youtube-api.mjs', 'lista', nombre, desc], { encoding: 'utf8' }).trim().split('\n').pop().trim();
+  if (!/^PL[\w-]+$/.test(id)) throw new Error(`no se pudo crear la lista "${nombre}": ${id.slice(0, 200)}`);
+  writeFileSync(f, JSON.stringify({ ...leerJSON(f, {}), [nombre]: id }, null, 1));
+  console.log(`lista nueva: ${nombre} → ${id}`);
+  return id;
+}
+/** Versión horizontal de un "Who is…?" (video normal, a su lista), mismo turno que su Short: duplicados por título,
+ *  anota aunque se corte después de subir y deja la miniatura pendiente si YouTube no la aceptó. */
+function horizontalYT(id) {
+  const g = guion(id), clave = claveHorizontal(id), titulo = tituloQuienHorizontal(g);
+  const anotar = (video, nota) => {
+    const ids = leerJSON(IDS, {}), hist = leerJSON(API, []);
+    if (ids[clave] !== video) { ids[clave] = video; writeFileSync(IDS, JSON.stringify(ids, null, 2)); }
+    if (!hist.some((h) => h.id === clave && h.video === video)) { hist.push({ id: clave, short: 'horizontal', video, cuando: 'ya', fecha: new Date().toISOString(), ...(nota ? { nota } : {}) }); writeFileSync(API, JSON.stringify(hist, null, 1)); }
+  };
+  const listado = execFileSync('node', ['scripts/youtube-api.mjs', 'videos'], { encoding: 'utf8', maxBuffer: 1 << 24 });
+  const previo = buscarTitulo(listado, titulo);
+  if (previo) { anotar(previo, 'ya estaba en el canal'); return console.log(`YouTube: ${clave} ya estaba: https://youtu.be/${previo}`); }
+  if (!asegurarEpisodio(id)) throw new Error(`no hay video horizontal de ${id}`);
+  const lista = listaQuienId(g.serie);
+  const r = spawnSync('node', ['scripts/subir.mjs', id, '--api', '--horizontal', `--lista=${lista}`], { encoding: 'utf8', maxBuffer: 1 << 24 });
+  const salida = `${r.stdout}\n${r.stderr}`, video = salida.match(/subido: https:\/\/youtu\.be\/(\S+)/)?.[1];
+  if (video) {
+    anotar(video);
+    if (!/miniatura ok/.test(salida)) {
+      const m = leerJSON(MINIS, []); m.push({ id, video, estado: 'pendiente', fecha: new Date().toISOString() }); writeFileSync(MINIS, JSON.stringify(m, null, 1));
+      console.log(`miniatura pendiente: ${clave} (se reintenta en las próximas corridas)`);
+    }
+  }
+  if (r.status !== 0 || !video) throw errorYT(clave, salida);
+  console.log(`YouTube: ${clave} https://youtu.be/${video}`);
+}
 /** Corre un script de Instagram: primero --probar (prepara los archivos), después publica con 3 intentos (no duplica). */
 function correrIG(args, etiqueta) {
   const prep = spawnSync('node', [...args, '--probar'], { encoding: 'utf8', maxBuffer: 1 << 24, stdio: ['ignore', 'pipe', 'inherit'] });
@@ -315,17 +358,28 @@ function itemIG(id) {
   }
 }
 
+/** "Who is…?" horizontal de este turno de YouTube (o null). Si no viene con su Short en el plan, es un reintento y tiene
+ *  que entrar en el tope de 24 h además de lo del plan. */
+function horizontalDe(d, plan) {
+  const id = horizontalTurno({ cola: d.cola, tieneYT: d.tiene.youtube, ytIds: d.ytIds, ids: plan.ids, clase: plan.clase, conHorizontal });
+  if (!id || plan.ids.includes(id)) return id;
+  const usados = usadas24h(d.api, Date.now()) + plan.ids.reduce((n, x) => n + (conHorizontal(x) ? 2 : 1), 0);
+  return usados + 1 <= TOPE_24H.youtube ? id : null;
+}
+
 // ── un turno de una plataforma
 async function turno(p, probar = false) {
   if (!PLATAFORMAS.includes(p)) throw new Error(`plataforma desconocida: ${p}`);
   if (p === 'youtube' && !probar) reintentarMiniaturas();
   await unaVez(`cola-${p}`, async () => { // clave propia: no choca con los pasos del calendario viejo
     const d = datos(), plan = planDe(p, d);
-    console.log(`${p} · turno ${plan.clase} · ${plan.parejo ? 'parejo' : `alcanzando (punteros ${JSON.stringify(plan.punteros)}, va adelante: ${plan.lider})`} · toca: ${plan.ids.join(' ') || 'nada'}`);
-    if (probar || !plan.ids.length) return;
+    const hz = p === 'youtube' ? horizontalDe(d, plan) : null;
+    console.log(`${p} · turno ${plan.clase} · ${plan.parejo ? 'parejo' : `alcanzando (punteros ${JSON.stringify(plan.punteros)}, va adelante: ${plan.lider})`} · toca: ${plan.ids.join(' ') || 'nada'}${hz ? ` · horizontal: ${hz}` : ''}`);
+    if (probar || (!plan.ids.length && !hz)) return;
     if (p === 'youtube') {
       const listas = leerJSON('src/videos/listas.json', {});
       for (const id of plan.ids) esShort(id) ? shortYT(id) : episodioYT(id, d.titulos[id].titulo, extraYT(d.titulos[id], listas));
+      if (hz) horizontalYT(hz); // el mismo turno (y día) que su Short
     } else if (p === 'instagram') for (const id of plan.ids) itemIG(id);
     else {
       const { publicarTiktok, enCola } = await import('./buffer-tiktok.mjs');
@@ -368,6 +422,8 @@ async function adelantar(minutos = 150) {
     ...proximos(d, 'instagram', 4).map((id) => () => (esShort(id) ? asegurar(id, 'short') : asegurar(id, 'partes'))),
     ...proximos(d, 'tiktok', 4).map((id) => () => prepararTiktok(id)),
     ...proximos(d, 'youtube', 2).map((id) => () => (esShort(id) ? asegurar(id, 'short') : asegurarEpisodio(id, { render: false }))),
+    // "Who is…?" horizontal (~1 min de video): se renderiza acá si no está, así el turno solo sube
+    ...proximos(d, 'youtube', 0).filter((id) => conHorizontal(id) && !d.ytIds[claveHorizontal(id)]).map((id) => () => asegurarEpisodio(id)),
   ];
   for (const t of tareas) {
     if (Date.now() > hasta) { console.log('adelantar: se acabó el tiempo; sigue en la próxima corrida'); break; }
@@ -381,7 +437,11 @@ function sembrar(max) {
   const subir = (id, c, n) => { const r = rutaLocal(id, c, n); if (existsSync(r) && !hayAsset(nombreAsset(id, c, n))) subirAsset(r, nombreAsset(id, c, n)); };
   const ids = new Set(PLATAFORMAS.flatMap((p) => proximos(d, p, max)));
   for (const id of ids) {
-    if (esShort(id)) { subir(id, 'short'); subir(id, 'portada-short'); if (existsSync(`${rutaLocal(id, 'tiktok')}.tapa`)) subir(id, 'tiktok'); continue; }
+    if (esShort(id)) {
+      subir(id, 'short'); subir(id, 'portada-short'); if (existsSync(`${rutaLocal(id, 'tiktok')}.tapa`)) subir(id, 'tiktok');
+      if (conHorizontal(id)) for (const c of ['horizontal', 'srt-en', 'srt-es', 'miniatura']) subir(id, c);
+      continue;
+    }
     if (leerJSON(rutaLocal(id, 'tiktok-meta'), {}).huella === huella(id)) { subir(id, 'tiktok'); subir(id, 'tiktok-meta'); }
     const partes = leerJSON(rutaLocal(id, 'partes'), null);
     if (!partesVigentes(partes, empezadoIG(id), ganchoParte(id), huella(id))) continue; // que la nube las rehaga

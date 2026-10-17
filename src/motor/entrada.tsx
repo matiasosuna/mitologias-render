@@ -4,6 +4,7 @@ import { Composition, registerRoot } from 'remotion';
 import { VideoMotor, GanchoHorizontal, GANCHO_HORIZONTAL } from './VideoMotor';
 import { VideoShort, tramoShort } from './Short';
 import { ShortNativo } from './ShortNativo';
+import { ShortHorizontal, duracionHorizontal } from './ShortHorizontal';
 import { VideoVertical, CIERRE_VERTICAL, ParteVertical, CARTEL_PARTE, framesGancho } from './VideoVertical';
 import { VIDEOS } from './indice';
 import { DemoCalidad } from './DemoCalidad';
@@ -22,6 +23,11 @@ registerRoot(() => (
     <Composition id="demo-calidad" component={DemoCalidad} durationInFrames={150} fps={30} width={1920} height={1080} />
     {VIDEOS.filter(({ guion }) => (guion as GuionVisual).formato === 'short').map(({ guion, timeline }) => (
       <Composition key={(guion as GuionVisual).id} id={(guion as GuionVisual).id} component={ShortNativo as unknown as React.FC<Record<string, unknown>>} durationInFrames={(timeline as Timeline).total} fps={(timeline as Timeline).fps} width={1080} height={1920} defaultProps={{ guion, timeline, idioma: 'en' as Idioma }} />
+    ))}
+    {/* "Who is…?" en 16:9 para YouTube (video normal): src/motor/ShortHorizontal.tsx */}
+    {VIDEOS.filter(({ guion }) => (guion as GuionVisual).formato === 'short' && (guion as GuionVisual).quien).map(({ guion, timeline }) => (
+      <Composition key={`${(guion as GuionVisual).id}-horizontal`} id={`${(guion as GuionVisual).id}-horizontal`} component={ShortHorizontal as unknown as React.FC<Record<string, unknown>>} durationInFrames={duracionHorizontal(timeline as Timeline)} fps={(timeline as Timeline).fps} width={1920} height={1080} defaultProps={{ guion, timeline, idioma: 'en' as Idioma }}
+        calculateMetadata={({ props }) => ({ durationInFrames: duracionHorizontal((props as { timeline: Timeline }).timeline) })} />
     ))}
     {VIDEOS.filter(({ guion }) => (guion as GuionVisual).formato !== 'short').map(({ guion, timeline }) => (
       <Composition key={`${(guion as GuionVisual).id}-vertical`} id={`${(guion as GuionVisual).id}-vertical`} component={VideoVertical as unknown as React.FC<Record<string, unknown>>} durationInFrames={(timeline as Timeline).total - (timeline as Timeline).outroFrames + CIERRE_VERTICAL * (timeline as Timeline).fps} fps={(timeline as Timeline).fps} width={1080} height={1920} defaultProps={{ guion, timeline }}

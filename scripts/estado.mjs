@@ -20,6 +20,7 @@ export const ARCHIVOS = {
   'turnos.json': 'out/turnos.json', // pasos ya hechos en cada turno (un 2.º cron del mismo turno no repite)
   'cola-unificada.json': 'out/cola-unificada.json', // la cola única de YouTube, Instagram y TikTok (scripts/cola.mjs)
   'tiktok-ritmo.json': 'out/tiktok-ritmo.json', // TikTok frenado por la plataforma (2 por turno durante 24 h)
+  'listas.json': 'src/videos/listas.json', // listas de YouTube (las "Who's Who" se crean en la nube con el primer video)
 };
 /** Archivos que no se fusionan por unión: la cola única conserva el orden de la rama y suma lo nuevo al final. */
 const COLA = 'cola-unificada.json';

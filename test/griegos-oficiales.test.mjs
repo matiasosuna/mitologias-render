@@ -64,3 +64,34 @@ test('el Short "Who is Zeus?" usa solo personajes oficiales (salvo animales)', (
   assert.deepEqual(sinOficial, []);
   for (const a of actores) if (String(a.como).endsWith('_oficial')) assert.ok(ELENCO.includes(a.como), a.como);
 });
+
+// Tercera tanda (2026-10-17): todo personaje griego de los videos por publicar con diseño oficial.
+const CON_NOMBRE = ['helios', 'leto', 'temis', 'asteria', 'iris', 'ilitia', 'hebe', 'anfitrite', 'tetis', 'eurinome', 'semele', 'ino', 'beroe', 'muerte', 'hefesto_nino',
+  'cadmo', 'cecrope', 'licaon', 'sisifo', 'sisifo_roca', 'merope', 'aquiles', 'penelope', 'medea', 'talos', 'pitia', 'deucalion', 'pirra', 'homero', 'demodoco', 'maron',
+  'acetes', 'marsias', 'aegipan', 'delfine', 'piton', 'cerbero', 'pegaso', 'licaon_lobo', 'dioniso_cabrito', 'dioniso_leon'];
+const EXTRAS = ['hombre_griego', 'hombre_griego_2', 'hombre_griego_3', 'joven_griego', 'joven_griego_2', 'anciano_griego', 'anciano_griego_2', 'mujer_griega', 'mujer_griega_2', 'mujer_griega_3',
+  'anciana_griega', 'nino_griego', 'nina_griega', 'ninfa', 'ninfa_2', 'ninfa_3', 'gracia', 'hora', 'musa', 'musa_2', 'musa_3', 'guerrero_griego', 'guerrero_griego_2', 'persa',
+  'rey_griego', 'rey_griego_2', 'reina_griega', 'reina_griega_2', 'sacerdote_griego', 'sacerdotisa_griega', 'sacerdotisa_griega_2', 'gigante_griego', 'gigante_griego_2',
+  'pastor_griego', 'pastor_griego_2', 'marinero_griego', 'marinero_griego_2', 'pirata', 'pirata_2', 'doncella_oro', 'lotofago', 'lotofaga'];
+const ANIMALES = ['caballo_griego', 'mula_griega', 'buey_griego', 'vaca_griega', 'toro_griego', 'oveja_griega', 'carnero_griego', 'cabra_griega', 'ciervo_griego', 'perro_griego', 'lobo_griego',
+  'leon_griego', 'oso_griego', 'tortuga_griega', 'serpiente_griega', 'aguila_griega', 'paloma_griega', 'cisne_griego', 'pavo_real_griego', 'buho_griego', 'delfin_griego'];
+const linea = (k) => griego.split('\n').find((l) => l.startsWith(`  ${k}: `)) ?? '';
+
+test('tercera tanda: secundarios con nombre, cada uno con su nombre en inglés', () => {
+  for (const d of CON_NOMBRE) {
+    assert.ok(ELENCO.includes(`${d}_oficial`), `${d}_oficial`);
+    assert.ok(NOMBRES.includes(`${d}_oficial`), `nombre de ${d}_oficial`);
+  }
+});
+
+test('tercera tanda: extras y animales sin rótulo (no llevan nombre griego ni inglés)', () => {
+  for (const d of [...EXTRAS, ...ANIMALES]) {
+    assert.ok(ELENCO.includes(`${d}_oficial`), `${d}_oficial`);
+    assert.ok(!NOMBRES.includes(`${d}_oficial`), `${d}_oficial no lleva nombre`);
+    assert.doesNotMatch(linea(`${d}_oficial`), /, '[^']+'\)/, `${d}_oficial sin nombre griego`);
+  }
+});
+
+test('tercera tanda: animales y criaturas con dibujo de barro propio', () => {
+  for (const d of [...ANIMALES, 'piton', 'cerbero', 'pegaso', 'licaon_lobo', 'dioniso_cabrito', 'dioniso_leon']) assert.match(linea(`${d}_oficial`), /: D\(/, d);
+});

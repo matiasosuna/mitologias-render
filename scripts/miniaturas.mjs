@@ -4,6 +4,7 @@ import { bundle } from '@remotion/bundler';
 import { renderStill, selectComposition } from '@remotion/renderer';
 import { readFileSync, rmSync, mkdirSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { miniaturaQuien } from '../lib/quien.mjs';
 
 const MINIS = {
   'griegas-03-pandora': ['pandora', 'epimeteo'],
@@ -28,8 +29,11 @@ const serveUrl = await bundle({ entryPoint: resolve('src/canal/Canal.tsx') });
 process.on('exit', () => rmSync(serveUrl, { recursive: true, force: true }));
 for (const id of ids) {
   const g = JSON.parse(readFileSync(`src/videos/${id}/guion.json`, 'utf8'));
-  const [heroe, rival] = g.miniatura ? [g.miniatura.heroe, g.miniatura.rival] : MINIS[id];
-  const props = { titulo: g.titulo.en.toUpperCase(), numero: String(Number(g.numero)), heroe, rival, serie: g.serie, ...(g.especial ? { etiqueta: `${g.especial.nombre.en}${g.especial.parte ? ` · PART ${g.especial.parte}` : ''}`.toUpperCase() } : {}) };
+  // "Who is…?" horizontal: el muñeco oficial y el título del cartel ("WHO IS ZEUS?"), etiqueta "GREEK · WHO'S WHO"
+  const props = g.quien ? miniaturaQuien(g) : (() => {
+    const [heroe, rival] = g.miniatura ? [g.miniatura.heroe, g.miniatura.rival] : MINIS[id];
+    return { titulo: g.titulo.en.toUpperCase(), numero: String(Number(g.numero)), heroe, rival, serie: g.serie, ...(g.especial ? { etiqueta: `${g.especial.nombre.en}${g.especial.parte ? ` · PART ${g.especial.parte}` : ''}`.toUpperCase() } : {}) };
+  })();
   const comp = await selectComposition({ serveUrl, id: 'miniatura', inputProps: props });
   mkdirSync(`out/${id}`, { recursive: true });
   await renderStill({ serveUrl, composition: comp, output: `out/${id}/miniatura.jpg`, inputProps: props, imageFormat: 'jpeg', jpegQuality: 90 });

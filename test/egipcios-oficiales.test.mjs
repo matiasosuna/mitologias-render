@@ -10,8 +10,11 @@ const ELENCO = claves(egipcio.split('export const ELENCO_EGIPCIO_OFICIAL')[1].sp
 const general = leer('src/motor/elenco.tsx');
 const DIOSES = ['ra', 'isis', 'osiris', 'set', 'horus', 'anubis', 'thoth', 'hathor', 'sekhmet', 'nut', 'geb', 'bastet', 'ptah'];
 
-test('están los 13 dioses oficiales', () => {
-  assert.deepEqual(ELENCO, DIOSES.map((d) => `${d}_oficial`));
+test('están los 13 dioses oficiales (primero) y los secundarios después', () => {
+  assert.deepEqual(ELENCO.slice(0, DIOSES.length), DIOSES.map((d) => `${d}_oficial`));
+  assert.ok(ELENCO.every((k) => k.endsWith('_oficial')));
+  assert.equal(new Set(ELENCO).size, ELENCO.length);
+  for (const k of ['shu_oficial', 'neftis_oficial', 'bata_oficial', 'setne_oficial', 'faraon_oficial', 'aldeano_egipcio_oficial', 'cocodrilo_egipcio_oficial', 'apofis_oficial']) assert.ok(ELENCO.includes(k), k);
 });
 
 test('los de cabeza de animal la dibujan entera (cabezaPropia)', () => {

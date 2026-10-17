@@ -16,6 +16,7 @@ import React from 'react';
 import { useCurrentFrame } from 'remotion';
 import { suave, lerp, desde, miembro, Fuego, type P, type PersonajeProps } from '../comun/vasija';
 import type { Ficha } from './elenco';
+import type { DibujoProps } from './elencoAzteca';
 
 const N = '#17110E'; // contorno (el negro de la vasija)
 const r1 = (v: number) => v.toFixed(1);
@@ -993,10 +994,724 @@ const PieSerpiente: React.FC = () => <g><ellipse cx={10} cy={4} rx={32} ry={15} 
 /** Escamas sobre la ropa larga (Tifón: de la cintura para abajo es serpiente). */
 const Escamas: React.FC = () => <g>{Array.from({ length: 6 }, (_, fila) => Array.from({ length: 3 + Math.floor(fila / 2) }, (_, k) => <path key={`${fila}-${k}`} d={`M${-24 - fila * 3 + k * 16 + (fila % 2) * 8} ${-190 + fila * 30} q 8 11 16 0`} stroke="#6FA05A" strokeWidth={2.2} fill="none" />))}</g>;
 
+// ---------- tercera tanda (2026-10-17): secundarios con nombre, extras y animales ----------
+// props de mano (origen = mano)
+/** Látigo de auriga de oro (Helios). */
+const Latigo: React.FC = () => {
+  const f = useCurrentFrame(), o = Math.sin(f / 8) * 4;
+  const d = `M6 -44 C 30 ${-86 + o}, 70 ${-84 + o}, 84 ${-46 + o}`;
+  return (
+    <g>
+      <path d={d} stroke={N} strokeWidth={5} fill="none" strokeLinecap="round" /><path d={d} stroke="#8A5A32" strokeWidth={2.4} fill="none" strokeLinecap="round" />
+      <path d="M-2 14 L 7 -46" stroke={N} strokeWidth={10} strokeLinecap="round" /><path d="M-2 14 L 7 -46" stroke={ORO} strokeWidth={6} strokeLinecap="round" />
+      <circle cx={7} cy={-47} r={5} fill={ORO} stroke={N} strokeWidth={1.6} />
+    </g>
+  );
+};
+/** Hoja de palmera (Leto dio a luz abrazada a una palmera en Delos). */
+const RamaPalma: React.FC = () => {
+  const f = useCurrentFrame(), o = Math.sin(f / 15) * 2;
+  const tallo: P[] = [[0, 30], [2, -30], [8, -80], [22 + o, -118]];
+  return (
+    <g>
+      {Array.from({ length: 9 }, (_, i) => { const t = 0.3 + i * 0.08, p = lerp(lerp(tallo[1], tallo[2], Math.min(1, t * 1.4)), tallo[3], Math.max(0, t * 1.4 - 1)); const L = 30 - i * 2; return [-1, 1].map((k) => <path key={`${i}${k}`} d={`M${r1(p[0])} ${r1(p[1])} q ${r1(k * L * 0.6)} ${r1(-L * 0.2)} ${r1(k * L)} ${r1(L * 0.55)}`} stroke={N} strokeWidth={6} fill="none" strokeLinecap="round" />); })}
+      {Array.from({ length: 9 }, (_, i) => { const t = 0.3 + i * 0.08, p = lerp(lerp(tallo[1], tallo[2], Math.min(1, t * 1.4)), tallo[3], Math.max(0, t * 1.4 - 1)); const L = 30 - i * 2; return [-1, 1].map((k) => <path key={`c${i}${k}`} d={`M${r1(p[0])} ${r1(p[1])} q ${r1(k * L * 0.6)} ${r1(-L * 0.2)} ${r1(k * L)} ${r1(L * 0.55)}`} stroke={i % 2 ? HOJA : '#6A9A4A'} strokeWidth={3} fill="none" strokeLinecap="round" />); })}
+      <path d={suave(tallo)} stroke={N} strokeWidth={6} fill="none" strokeLinecap="round" /><path d={suave(tallo)} stroke="#8A7A3A" strokeWidth={3} fill="none" strokeLinecap="round" />
+    </g>
+  );
+};
+/** Balanza de la justicia (Temis), colgando de la mano. */
+const Balanza: React.FC = () => {
+  const f = useCurrentFrame(), a = Math.sin(f / 20) * 3;
+  const plato = (x: number) => (
+    <g key={x}>
+      <path d={`M${x} 2 L ${x - 14} 46 M${x} 2 L ${x + 14} 46`} stroke={ORO_OSC} strokeWidth={1.6} />
+      <path d={`M${x - 20} 46 H ${x + 20} Q ${x} 62 ${x - 20} 46 Z`} fill={ORO} stroke={N} strokeWidth={2} strokeLinejoin="round" />
+    </g>
+  );
+  return (
+    <g transform="translate(2 -4)">
+      <path d="M0 -10 V 12" stroke={N} strokeWidth={6} strokeLinecap="round" /><path d="M0 -10 V 12" stroke={ORO} strokeWidth={3} strokeLinecap="round" />
+      <g transform={`translate(0 12) rotate(${r1(a)})`}>
+        <path d="M-40 0 H 40" stroke={N} strokeWidth={7} strokeLinecap="round" /><path d="M-40 0 H 40" stroke={ORO} strokeWidth={3.6} strokeLinecap="round" />
+        <g transform={`rotate(${r1(-a)} -40 0)`}>{plato(-40)}</g>
+        <g transform={`rotate(${r1(-a)} 40 0)`}>{plato(40)}</g>
+      </g>
+      <circle cx={0} cy={-12} r={4.5} fill={ORO} stroke={N} strokeWidth={1.4} />
+    </g>
+  );
+};
+/** Estrella que brilla en la mano (Asteria). */
+const EstrellaMano: React.FC = () => {
+  const f = useCurrentFrame();
+  return <g transform="translate(6 -30)"><circle r={26} fill="url(#halo)" opacity={0.6 + Math.sin(f / 6) * 0.2} style={{ mixBlendMode: 'screen' }} /><Estrella x={0} y={0} r={15} c="#F6EBC2" /></g>;
+};
+/** Jarra de vino o néctar (oinochoe), tomada por el asa. */
+const Jarra: React.FC<{ c?: string; banda?: string }> = ({ c = ORO, banda = ORO_OSC }) => (
+  <g transform="translate(6 -6)">
+    <path d="M2 -6 C -10 -8, -12 18, 4 26" stroke={N} strokeWidth={7} fill="none" strokeLinecap="round" /><path d="M2 -6 C -10 -8, -12 18, 4 26" stroke={c} strokeWidth={3.4} fill="none" strokeLinecap="round" />
+    <path d={suave([[8, -10], [24, -10], [22, 2], [34, 22], [30, 44], [16, 50], [2, 44], [-2, 24], [10, 4]], true, 0.6)} fill={c} stroke={N} strokeWidth={2.2} />
+    <path d="M6 -12 Q 16 -20 28 -12 L 24 -6 H 10 Z" fill={c} stroke={N} strokeWidth={1.8} strokeLinejoin="round" />
+    <path d="M1 24 Q 16 30 32 24" stroke={banda} strokeWidth={4} fill="none" />
+  </g>
+);
+/** Antorcha apagada y vuelta hacia abajo (Tánatos, el sueño eterno: nada de miedo). */
+const AntorchaAbajo: React.FC = () => {
+  const f = useCurrentFrame(), o = Math.sin(f / 12) * 3;
+  return (
+    <g>
+      <path d="M-6 -24 L -8 48 H 8 L 6 -24 Z" fill={MADERA} stroke={N} strokeWidth={2.2} strokeLinejoin="round" />
+      <path d="M-10 48 H 10 L 8 60 H -8 Z" fill={BRONCE} stroke={N} strokeWidth={2} strokeLinejoin="round" />
+      <path d={`M0 62 C 10 76, ${-8 + o} 86, 4 100`} stroke="#B9B4AA" strokeWidth={3} fill="none" strokeLinecap="round" opacity={0.6} />
+    </g>
+  );
+};
+/** Rollo de papiro (Homero). */
+const Rollo: React.FC = () => (
+  <g transform="translate(4 -6) rotate(-28)">
+    <rect x={-8} y={-30} width={16} height={58} rx={3} fill={CREMA} stroke={N} strokeWidth={2} />
+    <path d="M-4 -20 H 4 M-4 -10 H 4 M-4 0 H 4 M-4 10 H 3" stroke="#8A7A5A" strokeWidth={1.2} />
+    {[-30, 28].map((y) => <rect key={y} x={-11} y={y - 3} width={22} height={6} rx={3} fill={MADERA} stroke={N} strokeWidth={1.6} />)}
+  </g>
+);
+/** Piedra (Deucalión y Pirra). */
+const Piedra: React.FC<{ s?: number }> = ({ s = 1 }) => (
+  <g transform={`translate(8 -12) scale(${s})`}>
+    <path d={suave([[-14, 4], [-12, -10], [2, -16], [14, -8], [16, 6], [4, 14], [-8, 12]], true, 0.8)} fill="#9A958C" stroke={N} strokeWidth={2.2} />
+    <path d="M-6 -8 q 6 -4 12 0" stroke="#C9C4BA" strokeWidth={1.8} fill="none" strokeLinecap="round" />
+  </g>
+);
+/** Timón de espadilla (Acetes, el timonel). */
+const Timon: React.FC = () => (
+  <g transform="rotate(-8)">
+    <Asta y0={120} y1={-150} c={MADERA} w={8} />
+    <path d={suave([[-5, 96], [-14, 130], [-12, 176], [0, 186], [12, 176], [14, 130], [5, 96]], true, 0.6)} fill="#8A5A32" stroke={N} strokeWidth={2.4} />
+    <path d="M0 110 V 176" stroke="#5A3A20" strokeWidth={1.4} />
+    <path d="M-10 -150 H 10" stroke={N} strokeWidth={8} strokeLinecap="round" /><path d="M-9 -150 H 9" stroke="#8A5A32" strokeWidth={4} strokeLinecap="round" />
+  </g>
+);
+/** Rama de olivo (Cécrope votó por Atenea). */
+const RamaOlivo: React.FC = () => (
+  <g transform="rotate(-10)">
+    <path d="M0 10 C 2 -30, -4 -60, 6 -96" stroke={MADERA} strokeWidth={3.4} fill="none" strokeLinecap="round" />
+    {[[-2, -26, -1], [1, -42, 1], [-1, -58, -1], [2, -72, 1], [4, -86, -1], [6, -98, 1]].map(([x, y, k], i) => <ellipse key={i} cx={x + k * 9} cy={y} rx={10} ry={3.6} transform={`rotate(${k * -26} ${x + k * 9} ${y})`} fill="#7E9A6A" stroke={N} strokeWidth={1.2} />)}
+    {[[8, -50], [-7, -66], [10, -80]].map(([x, y], i) => <ellipse key={`o${i}`} cx={x} cy={y} rx={3.4} ry={4.4} fill="#4A3A5A" stroke={N} strokeWidth={1} />)}
+  </g>
+);
+/** Rama de laurel (Pitia, Apolo). */
+const RamaLaurel: React.FC = () => (
+  <g transform="rotate(-6)">
+    <path d="M0 10 C 2 -30, -2 -70, 4 -104" stroke={MADERA} strokeWidth={3} fill="none" strokeLinecap="round" />
+    {Array.from({ length: 8 }, (_, i) => { const y = -20 - i * 11, k = i % 2 ? 1 : -1; return <ellipse key={i} cx={1 + k * 8} cy={y} rx={9} ry={4.4} transform={`rotate(${k * -34} ${1 + k * 8} ${y})`} fill={HOJA} stroke={N} strokeWidth={1.2} />; })}
+  </g>
+);
+/** Rama de coral rojo (Tetis, nereida). */
+const RamaCoral: React.FC = () => {
+  const ramas = ['M0 10 C 0 -20, -2 -40, 2 -62', 'M1 -22 C 10 -30, 16 -40, 14 -54', 'M0 -36 C -10 -44, -16 -52, -14 -66', 'M2 -48 C 8 -56, 6 -66, 10 -76', 'M14 -44 C 20 -48, 24 -52, 24 -60'];
+  return <g transform="translate(4 -4)">{ramas.map((d, i) => <path key={i} d={d} stroke={N} strokeWidth={9 - i * 0.6} fill="none" strokeLinecap="round" />)}{ramas.map((d, i) => <path key={`c${i}`} d={d} stroke="#E0584A" strokeWidth={5.4 - i * 0.6} fill="none" strokeLinecap="round" />)}</g>;
+};
+/** Manojo de hierbas mágicas con flores (Medea). */
+const Hierbas: React.FC = () => (
+  <g transform="translate(4 -4) rotate(-8)">
+    {[-10, -4, 2, 8].map((x, i) => <path key={i} d={`M${x * 0.2} 14 Q ${x * 0.6} -20 ${x * 1.6} -54`} stroke={HOJA_OSC} strokeWidth={2.6} fill="none" strokeLinecap="round" />)}
+    {[[-14, -40], [-2, -50], [10, -44], [-8, -26], [8, -24]].map(([x, y], i) => <ellipse key={i} cx={x} cy={y} rx={6} ry={3} transform={`rotate(${i * 40} ${x} ${y})`} fill={HOJA} stroke={N} strokeWidth={1} />)}
+    {[[-16, -56, '#B98BD0'], [-2, -64, '#F4EEE2'], [13, -58, '#B98BD0']].map(([x, y, c], i) => <g key={`f${i}`} transform={`translate(${x} ${y})`}>{[0, 72, 144, 216, 288].map((a) => <ellipse key={a} cy={-3.4} rx={2.2} ry={3.4} transform={`rotate(${a})`} fill={c as string} stroke={N} strokeWidth={0.8} />)}<circle r={1.6} fill={ORO} /></g>)}
+    <rect x={-6} y={-2} width={12} height={7} rx={2} fill={ORO} stroke={N} strokeWidth={1.4} />
+  </g>
+);
+/** Tela tejida doblada con guarda de meandros (Penélope y su telar). */
+const TelaTejida: React.FC = () => (
+  <g transform="translate(-2 -4)">
+    <path d="M-4 0 H 34 L 36 64 Q 16 70 -2 64 Z" fill={CREMA} stroke={N} strokeWidth={2.2} strokeLinejoin="round" />
+    <path d="M-2 12 H 35 M-1 52 H 35" stroke="#7E2A2A" strokeWidth={5} />
+    {[2, 12, 22].map((x) => <path key={x} d={`M${x} 26 h 6 v 6 h -4 v -2`} stroke={N} strokeWidth={1.6} fill="none" />)}
+    <path d="M6 64 v 8 M16 66 v 8 M26 64 v 8" stroke="#7E2A2A" strokeWidth={2} />
+  </g>
+);
+/** Flor de loto (los lotófagos). */
+const FlorLoto: React.FC<{ tallo?: number }> = ({ tallo = 50 }) => (
+  <g>
+    <path d={`M0 8 C 2 ${-tallo * 0.4}, -2 ${-tallo * 0.8}, 2 ${-tallo}`} stroke={HOJA_OSC} strokeWidth={3} fill="none" strokeLinecap="round" />
+    <g transform={`translate(2 ${-tallo - 2})`}>
+      {[-50, -25, 0, 25, 50].map((a) => <path key={a} d="M0 0 C -6 -8, -5 -18, 0 -24 C 5 -18, 6 -8, 0 0 Z" transform={`rotate(${a})`} fill={a ? '#F2E8F0' : '#F7F2EC'} stroke={N} strokeWidth={1.3} />)}
+      {[-36, 36].map((a) => <path key={`b${a}`} d="M0 0 C -4 -6, -4 -12, 0 -16 C 4 -12, 4 -6, 0 0 Z" transform={`rotate(${a})`} fill="#8FB8D8" stroke={N} strokeWidth={1.1} />)}
+      <circle r={3} fill={ORO} stroke={N} strokeWidth={0.8} />
+    </g>
+  </g>
+);
+/** Cuenco con frutos de loto. */
+const CuencoFrutos: React.FC = () => (
+  <g transform="translate(6 -12)">
+    {[[-12, -12], [-3, -16], [7, -14], [15, -10], [2, -22], [-8, -22]].map(([x, y], i) => <circle key={i} cx={x} cy={y} r={6} fill={i % 2 ? '#C9762E' : '#B5452A'} stroke={N} strokeWidth={1.4} />)}
+    <path d="M-24 -8 H 24 C 22 8, 12 14, 0 14 C -12 14, -22 8, -24 -8 Z" fill="#C9682F" stroke={N} strokeWidth={2.2} strokeLinejoin="round" />
+    <path d="M-20 0 H 20" stroke={N} strokeWidth={2.4} />
+  </g>
+);
+/** Ánfora de vino (Marón), tomada por el asa. */
+const Anfora: React.FC = () => (
+  <g transform="translate(14 -10)">
+    <path d="M-8 -6 C -18 -6, -18 10, -10 14 M8 -6 C 18 -6, 18 10, 10 14" stroke={N} strokeWidth={6} fill="none" strokeLinecap="round" />
+    <path d="M-8 -6 C -18 -6, -18 10, -10 14 M8 -6 C 18 -6, 18 10, 10 14" stroke="#C9682F" strokeWidth={2.8} fill="none" strokeLinecap="round" />
+    <path d={suave([[-7, -12], [7, -12], [8, 4], [18, 20], [16, 50], [0, 74], [-16, 50], [-18, 20], [-8, 4]], true, 0.65)} fill="#C9682F" stroke={N} strokeWidth={2.2} />
+    <path d="M-17 26 Q 0 32 17 26 M-16 40 Q 0 46 16 40" stroke={N} strokeWidth={3} fill="none" />
+    <rect x={-9} y={-16} width={18} height={6} rx={2} fill="#A8552A" stroke={N} strokeWidth={1.6} />
+  </g>
+);
+/** Aulós: la flauta doble de Marsias. */
+const Aulos: React.FC = () => (
+  <g transform="translate(2 -2)">
+    {[[-2, 10, 14, -84], [4, 10, 34, -78]].map(([x0, y0, x1, y1], i) => <g key={i}><path d={`M${x0} ${y0} L ${x1} ${y1}`} stroke={N} strokeWidth={7.5} strokeLinecap="round" /><path d={`M${x0} ${y0} L ${x1} ${y1}`} stroke="#D9B77A" strokeWidth={4} strokeLinecap="round" />{[0.3, 0.5, 0.7].map((t) => <circle key={t} cx={r1(x0 + (x1 - x0) * t)} cy={r1(y0 + (y1 - y0) * t)} r={1.4} fill={N} />)}</g>)}
+    <circle cx={1} cy={12} r={5} fill="#8A5A32" stroke={N} strokeWidth={1.4} />
+  </g>
+);
+/** Siringa: la flauta de Pan (Egipán). */
+const Siringa: React.FC = () => (
+  <g transform="translate(-4 -4) rotate(-8)">
+    {[0, 1, 2, 3, 4, 5].map((i) => <rect key={i} x={i * 7} y={-58} width={7} height={58 - i * 7} rx={2} fill={i % 2 ? '#D9B77A' : '#C9A262'} stroke={N} strokeWidth={1.5} />)}
+    <path d="M-1 -40 H 43 M-1 -24 H 36" stroke="#8A5A32" strokeWidth={3} />
+  </g>
+);
+/** Tridente corto de reina (Anfitrite). */
+const TridenteCorto: React.FC = () => (
+  <g>
+    <Asta y0={150} y1={-118} c={ORO} w={6} />
+    <path d="M-18 -150 C -19 -128, -10 -120, 0 -120 C 10 -120, 19 -128, 18 -150" stroke={N} strokeWidth={8} fill="none" strokeLinecap="round" />
+    <path d="M-18 -150 C -19 -128, -10 -120, 0 -120 C 10 -120, 19 -128, 18 -150" stroke={ORO} strokeWidth={4} fill="none" strokeLinecap="round" />
+    <path d="M0 -158 V -120" stroke={N} strokeWidth={8} strokeLinecap="round" /><path d="M0 -158 V -121" stroke={ORO} strokeWidth={4} strokeLinecap="round" />
+    {[-18, 0, 18].map((x) => <path key={x} d={`M${x - 5} ${x ? -148 : -156} L ${x} ${x ? -164 : -172} L ${x + 5} ${x ? -148 : -156} Z`} fill={ORO} stroke={N} strokeWidth={1.8} strokeLinejoin="round" />)}
+  </g>
+);
+/** Roca grande en la mano (Talos, el gigante de bronce, las tiraba a los barcos). */
+const Roca: React.FC<{ s?: number }> = ({ s = 1 }) => (
+  <g transform={`translate(10 -26) scale(${s})`}>
+    <path d={suave([[-30, 10], [-28, -18], [-8, -34], [18, -30], [32, -8], [28, 18], [6, 30], [-18, 28]], true, 0.8)} fill="#8E8A82" stroke={N} strokeWidth={2.6} />
+    <path d="M-16 -16 q 10 -8 22 -4 M10 6 q 8 2 12 10" stroke="#BDB8AE" strokeWidth={2.4} fill="none" strokeLinecap="round" />
+    <path d="M-6 14 q 6 6 14 4" stroke="#6A665E" strokeWidth={2} fill="none" />
+  </g>
+);
+/** Peñasco de Sísifo, empujado con las dos manos (origen = mano de adelante). */
+const Penasco: React.FC = () => (
+  <g transform="translate(70 -10)">
+    <path d={suave([[-70, 40], [-74, -20], [-46, -72], [4, -84], [52, -58], [74, -10], [66, 44], [30, 84], [-24, 86], [-60, 70]], true, 0.8)} fill="#8E8A82" stroke={N} strokeWidth={3} />
+    <path d="M-40 -46 q 24 -18 52 -10 M24 20 q 18 6 26 22 M-46 30 q 10 16 30 18" stroke="#BDB8AE" strokeWidth={3} fill="none" strokeLinecap="round" />
+    <path d="M-10 -10 q 14 10 30 4" stroke="#6A665E" strokeWidth={2.4} fill="none" />
+  </g>
+);
+/** Martillito del Hefesto bebé. */
+const Martillito: React.FC = () => <g transform="scale(0.55)"><Martillo /></g>;
+/** Bastón de anciano con puño curvo. */
+const Baston: React.FC<{ y0?: number }> = ({ y0 = 172 }) => (
+  <g><Asta y0={y0} y1={-60} c={MADERA} w={7} /><path d="M0 -58 C 0 -78, 22 -80, 22 -62" stroke={N} strokeWidth={11} fill="none" strokeLinecap="round" /><path d="M0 -58 C 0 -78, 22 -80, 22 -62" stroke={MADERA} strokeWidth={7} fill="none" strokeLinecap="round" /></g>
+);
+
+// cabeza
+/** Corona de rayos de sol (Helios): rayos de oro alrededor de la cabeza (van antes que el pelo). */
+const CoronaRayos: React.FC = () => (
+  <g>{Array.from({ length: 9 }, (_, i) => { const a = ((200 - i * 20) * Math.PI) / 180, L = i % 2 ? 20 : 28; const p = (r: number, da = 0): string => `${r1(-2 + Math.cos(a + da) * r)} ${r1(-8 - Math.sin(a + da) * r)}`; return <path key={i} d={`M${p(32, -0.13)} L ${p(32 + L)} L ${p(32, 0.13)} Z`} fill={i % 2 ? '#F6D36A' : ORO} stroke={N} strokeWidth={1.8} strokeLinejoin="round" />; })}</g>
+);
+/** Resplandor de sol detrás de la cabeza (origen = pies). */
+const HaloSol: React.FC = () => { const f = useCurrentFrame(); return <circle cx={18} cy={-342} r={74} fill="url(#halo)" opacity={0.5 + Math.sin(f / 7) * 0.12} style={{ mixBlendMode: 'screen' }} />; };
+/** Cetro de rey: vara de oro con pomo. */
+const CetroRey: React.FC = () => <g><Asta y0={190} y1={-150} c={ORO} w={6} /><circle cx={0} cy={-156} r={8} fill={ORO} stroke={N} strokeWidth={2} /><circle cx={-2} cy={-158} r={2.4} fill="#FFF3B0" /></g>;
+/** Cuernitos de cabra (Egipán). */
+const Cuernitos: React.FC = () => <g>{[[-2, -30, -14, -56, -26, -50], [8, -32, 2, -60, -10, -56]].map(([x0, y0, cx, cy, x1, y1], i) => <g key={i}><path d={`M${x0} ${y0} Q ${cx} ${cy} ${x1} ${y1}`} stroke={N} strokeWidth={9} fill="none" strokeLinecap="round" /><path d={`M${x0} ${y0} Q ${cx} ${cy} ${x1} ${y1}`} stroke={i ? '#D9C9A6' : '#B9A882'} strokeWidth={5} fill="none" strokeLinecap="round" /></g>)}</g>;
+/** Oreja puntiaguda de sátiro (en lugar de la oreja en C). */
+const OrejaSatiro: React.FC<{ piel: string }> = ({ piel }) => (
+  <g transform="rotate(-24 -4 0) scale(0.78)"><path d="M-2 6 C -12 -6, -14 -26, -8 -38 C 0 -26, 6 -10, 4 6 Z" fill={piel} stroke={N} strokeWidth={1.6} strokeLinejoin="round" /><path d="M-3 0 C -8 -10, -9 -20, -7 -28" stroke="#B5705A" strokeWidth={1.6} fill="none" /></g>
+);
+/** Corona de flores de loto. */
+const CoronaLoto: React.FC = () => (
+  <g>
+    <path d={suave([[-30, -14], [-16, -32], [6, -38], [22, -30]])} stroke={HOJA_OSC} strokeWidth={4} fill="none" strokeLinecap="round" />
+    {[[-26, -22, -60], [-10, -35, -20], [8, -38, 10]].map(([x, y, a], i) => <g key={i} transform={`translate(${x} ${y}) rotate(${a})`}>{[-30, 0, 30].map((b) => <path key={b} d="M0 0 C -4 -5, -4 -12, 0 -16 C 4 -12, 4 -5, 0 0 Z" transform={`rotate(${b})`} fill={b ? '#8FB8D8' : '#F7F2EC'} stroke={N} strokeWidth={1.1} />)}</g>)}
+  </g>
+);
+/** Diadema de oro con una piedra al frente. */
+const DiademaJoya: React.FC<{ joya?: string }> = ({ joya = ROJO }) => <g><CintaOro /><circle cx={6} cy={-36} r={4.6} fill={joya} stroke={N} strokeWidth={1.4} /></g>;
+/** Corona de perlas con una concha al frente (Anfitrite). */
+const CoronaPerlas: React.FC = () => (
+  <g>
+    <CintaOro c="#E9E2D6" />
+    {[[-26, -20], [-16, -31], [-4, -37], [10, -36]].map(([x, y], i) => <circle key={i} cx={x} cy={y - 3} r={3.4} fill="#FBF6EE" stroke={N} strokeWidth={1} />)}
+    <Concha x={2} y={-44} s={0.75} rot={-6} />
+  </g>
+);
+
+// cuerpo y espalda
+/** Alas de plumas a la espalda (Iris, Tánatos). */
+const AlasEspalda: React.FC<{ tono: string; tono2: string; s?: number }> = ({ tono, tono2, s = 1 }) => {
+  const f = useCurrentFrame(), a = Math.sin(f / 9) * 3;
+  return (
+    <g transform={`translate(-10 -292) scale(${s})`}>
+      <g transform="translate(18 -6) rotate(24) scale(1.8)"><AlaPlumas tono={tono2} abre={a} /></g>
+      <g transform="rotate(12) scale(2.1)"><AlaPlumas tono={tono} abre={a} /></g>
+    </g>
+  );
+};
+/** Chal arcoíris que flamea detrás (Iris). */
+const ChalArcoiris: React.FC = () => {
+  const f = useCurrentFrame(), o = (k: number) => Math.sin(f / 10 + k) * 4;
+  const cols = ['#D9453A', '#EE8A2E', '#F2CF4A', '#6DAA4E', '#3F7FC0', '#7A5AB0'];
+  const base: P[] = [[8, -298], [-40, -320 + o(0)], [-110, -290 + o(1)], [-150, -220 + o(2)], [-150, -140 + o(3)], [-126, -90 + o(4)]];
+  return <g>{cols.map((c, k) => { const d = suave(base.map(([x, y], i) => [x - k * 7 * (i ? 1 : 0.2), y + k * 6 * (i ? 1 : 0.2)] as P)); return <g key={k}><path d={d} stroke={N} strokeWidth={10} fill="none" strokeLinecap="round" /><path d={d} stroke={c} strokeWidth={7} fill="none" strokeLinecap="round" /></g>; })}</g>;
+};
+/** Cola de caballo de sátiro (detrás, desde la cadera). */
+const ColaCaballo: React.FC<{ c: string; luz: string }> = ({ c, luz }) => {
+  const f = useCurrentFrame(), o = Math.sin(f / 11) * 6;
+  const pts: P[] = [[-24, -200], [-50, -196], [-66 + o, -160], [-70 + o, -110], [-58 + o, -100], [-50, -150], [-30, -184]];
+  return <g><Tela pts={pts} c={c} t={0.6} /><path d={suave([[-34, -194], [-56 + o, -160], [-62 + o, -114]])} stroke={luz} strokeWidth={1.8} fill="none" /></g>;
+};
+/** Colita de cabra (Egipán). */
+const ColaCabra: React.FC<{ c: string }> = ({ c }) => <path d="M-24 -196 C -40 -210, -50 -222, -44 -232 C -34 -222, -28 -214, -20 -206 Z" fill={c} stroke={N} strokeWidth={2} strokeLinejoin="round" />;
+/** Piel de animal (cabra o carnero) al hombro, con mechones. */
+const PielCabra: React.FC<{ a: number; c?: string }> = ({ a, c = '#9A7A52' }) => (
+  <g>
+    <Tela pts={[[-28 * a, -290], [-16 * a, -304], [-2 * a, -304], [14 * a, -276], [30 * a, -238], [20 * a, -224], [2 * a, -248], [-20 * a, -266]]} c={c} t={0.6} />
+    {[[-12, -288], [2, -278], [12, -262], [20, -246]].map(([x, y], i) => <path key={i} d={`M${r1(x * a)} ${y} q 3 6 0 10`} stroke="#6A5236" strokeWidth={1.6} fill="none" />)}
+  </g>
+);
+/** Ropa con guarda en zigzag (Medea, la extranjera de Cólquide). */
+const Zigzag: React.FC<{ y: number; x0: number; x1: number; c: string }> = ({ y, x0, x1, c }) => {
+  const n = Math.round((x1 - x0) / 8), d = Array.from({ length: n + 1 }, (_, i) => `${i ? 'L' : 'M'}${r1(x0 + i * 8)} ${y + (i % 2 ? -4 : 4)}`).join(' ');
+  return <path d={d} stroke={c} strokeWidth={2.6} fill="none" strokeLinejoin="round" />;
+};
+const RopaColquide: React.FC = () => <g>{[-150, -90, -30].map((y, i) => <Zigzag key={y} y={y} x0={-38 - i * 3} x1={42 + i * 4} c={ORO} />)}</g>;
+/** Escamas en la ropa larga, color a elección (Cécrope, Delfine). */
+const EscamasC: React.FC<{ c: string }> = ({ c }) => <g>{Array.from({ length: 6 }, (_, fila) => Array.from({ length: 3 + Math.floor(fila / 2) }, (_, k) => <path key={`${fila}-${k}`} d={`M${-24 - fila * 3 + k * 16 + (fila % 2) * 8} ${-190 + fila * 30} q 8 11 16 0`} stroke={c} strokeWidth={2.2} fill="none" />))}</g>;
+/** Cola de serpiente en el piso detrás, con colores (origen = pies). */
+const ColaSerpienteC: React.FC<{ c: string; luz: string }> = ({ c, luz }) => {
+  const f = useCurrentFrame(), o = Math.sin(f / 12) * 6;
+  const d = suave([[-10, -60], [-60, -10], [-120, -6], [-160, -30], [-156, -66 + o], [-130, -80 + o]]);
+  return (
+    <g>
+      <path d={d} stroke={N} strokeWidth={34} fill="none" strokeLinecap="round" /><path d={d} stroke={c} strokeWidth={29} fill="none" strokeLinecap="round" />
+      <path d={d} stroke={luz} strokeWidth={8} fill="none" strokeDasharray="6 10" strokeLinecap="round" />
+    </g>
+  );
+};
+const PieSerpienteC: React.FC<{ c: string; luz: string }> = ({ c, luz }) => <g><ellipse cx={10} cy={4} rx={32} ry={15} fill={c} stroke={N} strokeWidth={2.4} /><path d="M-12 2 q 8 8 16 0 M6 4 q 8 8 16 0 M24 2 q 6 6 12 0" stroke={luz} strokeWidth={2} fill="none" /></g>;
+/** Tobillera de plata (Tetis, "la de los pies de plata"). */
+const Tobillera: React.FC = () => <path d="M-10 -12 L 12 -6 M-10 -4 L 12 2" stroke={N} strokeWidth={5} strokeLinecap="round" />;
+const TobilleraPlata: React.FC = () => <g><Tobillera /><path d="M-10 -12 L 12 -6 M-10 -4 L 12 2" stroke="#DDE3E8" strokeWidth={2.8} strokeLinecap="round" /></g>;
+/** Remache de bronce en el tobillo (Talos: su única vena se cerraba con un clavo). */
+const Remache: React.FC = () => <g><circle cx={2} cy={-14} r={6} fill={ORO} stroke={N} strokeWidth={1.8} /><circle cx={2} cy={-14} r={2} fill={BRONCE_OSC} /></g>;
+/** Brillos de metal sobre el cuerpo de bronce (Talos). */
+const BrilloBronce: React.FC<{ a: number }> = ({ a }) => <g>{[[-6, -296, 20, -282], [14, -270, 26, -246], [-18, -260, -14, -236]].map(([x0, y0, x1, y1], i) => <path key={i} d={`M${r1(x0 * a)} ${y0} L ${r1(x1 * a)} ${y1}`} stroke="#F2D29A" strokeWidth={3} strokeLinecap="round" opacity={0.8} />)}<circle cx={r1(-10 * a)} cy={-246} r={2.4} fill={BRONCE_OSC} /><circle cx={r1(18 * a)} cy={-226} r={2.4} fill={BRONCE_OSC} /></g>;
+
+// extras griegos
+/** Pétaso de ala ancha de paja (pastores, viajeros). */
+const Petaso: React.FC<{ c?: string }> = ({ c = '#C9A86A' }) => (
+  <g transform="rotate(-6)">
+    <path d="M-24 -26 C -24 -52, 20 -54, 20 -26 Z" fill={tono(c, 0.85)} stroke={N} strokeWidth={2.2} />
+    <path d="M-50 -22 C -34 -32, 36 -34, 52 -22 C 56 -16, 48 -12, 40 -16 C 20 -24, -20 -24, -42 -14 C -52 -10, -56 -16, -50 -22 Z" fill={c} stroke={N} strokeWidth={2.2} strokeLinejoin="round" />
+    <path d="M-24 -29 C -8 -33, 8 -33, 20 -29" stroke={tono(c, 0.6)} strokeWidth={3.4} fill="none" />
+  </g>
+);
+/** Gorro blando persa con orejeras. */
+const TiaraPersa: React.FC = () => (
+  <g>
+    <Tela pts={[[24, -28], [10, -46], [-8, -52], [-24, -44], [-34, -28], [-36, -6], [-32, 20], [-26, 42], [-12, 44], [-12, 24], [-14, 6], [-8, -12], [4, -24], [16, -28]]} c="#C9A24A" t={0.75} />
+    <path d="M-8 -52 C 4 -66, 20 -62, 20 -48 C 12 -50, 4 -50, -2 -46 Z" fill="#C9A24A" stroke={N} strokeWidth={2} strokeLinejoin="round" />
+    <path d="M-30 -20 Q -6 -40 22 -30" stroke="#8E2A2A" strokeWidth={4} fill="none" />
+    <path d="M-28 4 L -14 4 M-26 24 L -14 24" stroke="#8E2A2A" strokeWidth={3} />
+  </g>
+);
+/** Escudo persa de mimbre (rectangular, con cintura). */
+const EscudoMimbre: React.FC = () => (
+  <g transform="translate(30 -40)">
+    <path d="M-26 -70 H 26 L 20 -10 L 26 70 H -26 L -20 -10 Z" fill="#B99A5A" stroke={N} strokeWidth={2.6} strokeLinejoin="round" />
+    {[-56, -40, -24, 8, 24, 40, 56].map((y) => <path key={y} d={`M-22 ${y} H 22`} stroke="#8A6A3A" strokeWidth={2} />)}
+    <path d="M0 -70 V 70" stroke="#8A6A3A" strokeWidth={2} />
+  </g>
+);
+/** Rollo de soga de marinero. */
+const Soga: React.FC = () => (
+  <g transform="translate(4 6)">
+    {[0, 1, 2].map((i) => <ellipse key={i} cx={0} cy={10 + i * 3} rx={20 - i * 2} ry={22 - i * 2} fill="none" stroke={N} strokeWidth={6} />)}
+    {[0, 1, 2].map((i) => <ellipse key={`c${i}`} cx={0} cy={10 + i * 3} rx={20 - i * 2} ry={22 - i * 2} fill="none" stroke="#C9A86A" strokeWidth={3.2} />)}
+    <path d="M14 26 C 20 40, 14 50, 20 60" stroke={N} strokeWidth={6} fill="none" strokeLinecap="round" /><path d="M14 26 C 20 40, 14 50, 20 60" stroke="#C9A86A" strokeWidth={3.2} fill="none" strokeLinecap="round" />
+  </g>
+);
+/** Remo (marineros). */
+const Remo: React.FC = () => (
+  <g transform="rotate(12)">
+    <Asta y0={60} y1={-200} c={MADERA} w={7} />
+    <path d={suave([[-4, -190], [-12, -230], [-10, -270], [0, -280], [10, -270], [12, -230], [4, -190]], true, 0.6)} fill="#8A5A32" stroke={N} strokeWidth={2.2} />
+  </g>
+);
+/** Pelo corto con cinta (vincha) de color. */
+const Vincha: React.FC<{ c: string }> = ({ c }) => { const d = suave([[-32, -14], [-18, -32], [4, -38], [22, -30]]); return <g><path d={d} stroke={N} strokeWidth={9} fill="none" strokeLinecap="round" /><path d={d} stroke={c} strokeWidth={5.5} fill="none" strokeLinecap="round" /><path d="M-30 -14 C -40 -6, -44 6, -46 14 M-30 -12 C -36 0, -36 10, -40 18" stroke={c} strokeWidth={4} fill="none" strokeLinecap="round" /></g>; };
+
+// ---------- animales y criaturas (2026-10-17): de barro, planos, con contorno y colores naturales ----------
+/** Oscurece un color #rrggbb (k < 1) o lo aclara (k > 1). */
+const tono = (hex: string, k: number) => '#' + [1, 3, 5].map((i) => Math.max(0, Math.min(255, Math.round(parseInt(hex.slice(i, i + 2), 16) * k))).toString(16).padStart(2, '0')).join('');
+/** Ojo de animal: oscuro con un brillo (se lee a cualquier tamaño). */
+const Ojo4: React.FC<{ x: number; y: number; r?: number }> = ({ x, y, r = 4.2 }) => <g><circle cx={x} cy={y} r={r} fill={N} /><circle cx={x + r * 0.32} cy={y - r * 0.34} r={r * 0.32} fill="#FFFFFF" /></g>;
+/** Corona de hiedra para los animales de Dioniso (coordenadas de la cabeza del animal). */
+const HiedraAnimal: React.FC<{ x: number; y: number; s?: number }> = ({ x, y, s = 1 }) => (
+  <g transform={`translate(${x} ${y}) scale(${s})`}>
+    <path d="M-26 6 C -18 -14, 10 -20, 26 -6" stroke={HOJA_OSC} strokeWidth={3.4} fill="none" strokeLinecap="round" />
+    {[[-24, 2, -60], [-14, -10, -30], [0, -16, 0], [14, -14, 30], [24, -6, 60]].map(([lx, ly, a], i) => <path key={i} d="M0 0 C -7 -3, -8 -11, -3 -14 L 0 -10 L 3 -14 C 8 -11, 7 -3, 0 0 Z" transform={`translate(${lx} ${ly}) rotate(${a})`} fill={HOJA} stroke={N} strokeWidth={1.2} strokeLinejoin="round" />)}
+    {[[-30, 12], [-26, 18], [-34, 18]].map(([ux, uy], i) => <circle key={`u${i}`} cx={ux} cy={uy} r={4} fill="#5B2A6E" stroke={N} strokeWidth={1.1} />)}
+  </g>
+);
+
+type Esp4 = 'caballo' | 'mula' | 'buey' | 'vaca' | 'toro' | 'oveja' | 'carnero' | 'cabra' | 'cabrito' | 'ciervo' | 'perro' | 'lobo' | 'leon' | 'oso';
+type Cfg4 = { tam: number; c: string; claro: string; pesado?: boolean; lana?: boolean; pezuna?: string; cola: 'crin' | 'borla' | 'corta' | 'fina' | 'peluda' | 'leon'; crin?: string };
+const ESP4: Record<Esp4, Cfg4> = {
+  caballo: { tam: 1.15, c: '#8A5A32', claro: '#B07A4A', pezuna: '#2A2018', cola: 'crin', crin: '#2E2018' },
+  mula: { tam: 1.05, c: '#7E6E5E', claro: '#C2B6A6', pezuna: '#2A2018', cola: 'borla', crin: '#3A3028' },
+  buey: { tam: 1.12, c: '#D9CDB4', claro: '#F2ECDE', pesado: true, pezuna: '#3A3028', cola: 'borla' },
+  vaca: { tam: 1.05, c: '#A8643A', claro: '#F0E6D2', pesado: true, pezuna: '#3A3028', cola: 'borla' },
+  toro: { tam: 1.15, c: '#4A3226', claro: '#7A5A44', pesado: true, pezuna: '#1E1610', cola: 'borla' },
+  oveja: { tam: 0.72, c: '#F1EADB', claro: '#FFFFFF', lana: true, pezuna: '#3A3028', cola: 'corta' },
+  carnero: { tam: 0.8, c: '#E6DCC6', claro: '#FFFFFF', lana: true, pezuna: '#3A3028', cola: 'corta' },
+  cabra: { tam: 0.72, c: '#8A6A4A', claro: '#D2B892', pezuna: '#2A2018', cola: 'corta' },
+  cabrito: { tam: 0.56, c: '#EFE6D2', claro: '#FFFFFF', pezuna: '#5A4A3A', cola: 'corta' },
+  ciervo: { tam: 0.95, c: '#A8683A', claro: '#EFE2C8', pezuna: '#2A2018', cola: 'corta' },
+  perro: { tam: 0.68, c: '#C99A5E', claro: '#EFDDBA', cola: 'fina' },
+  lobo: { tam: 0.82, c: '#8E8A82', claro: '#E2DDD2', cola: 'peluda' },
+  leon: { tam: 1, c: '#D9A552', claro: '#F2DCAA', cola: 'leon', crin: '#8A5A22' },
+  oso: { tam: 1.05, c: '#6A4A32', claro: '#A07C5C', pesado: true, cola: 'corta' },
+};
+const CUERPO4: Record<'esbelto' | 'pesado' | 'can' | 'lana', P[]> = {
+  esbelto: [[-124, -132], [-70, -152], [30, -150], [96, -146], [124, -116], [104, -82], [40, -72], [-60, -74], [-120, -92]],
+  pesado: [[-132, -130], [-84, -164], [30, -168], [100, -160], [134, -122], [114, -72], [40, -60], [-64, -64], [-128, -84]],
+  can: [[-120, -128], [-70, -146], [30, -146], [96, -144], [120, -116], [100, -88], [40, -84], [-56, -90], [-116, -100]],
+  lana: [[-122, -108], [-104, -150], [-44, -168], [40, -168], [100, -152], [126, -110], [106, -76], [40, -66], [-60, -68], [-112, -80]],
+};
+/** Cabeza de cada animal: origen al final del cuello, mirando a la derecha. */
+const Cabeza4: React.FC<{ esp: Esp4; c: string; claro: string; crin?: string; boca?: boolean; hiedra?: boolean }> = ({ esp, c, claro, crin, boca, hiedra }) => {
+  const W = 2.4, osc = tono(c, 0.78);
+  switch (esp) {
+    case 'caballo': case 'mula': {
+      const mula = esp === 'mula';
+      return (
+        <g>
+          <path d={mula ? 'M8 -50 L 0 -92 L 22 -54 Z' : 'M10 -52 L 12 -76 L 26 -54 Z'} fill={c} stroke={N} strokeWidth={W} strokeLinejoin="round" />
+          <path d={suave([[-16, 20], [-8, -30], [16, -56], [36, -48], [70, -10], [66, 6], [44, 4], [10, 20]], true)} fill={c} stroke={N} strokeWidth={W} />
+          <path d={suave([[50, -18], [68, -10], [66, 4], [48, 4]], true)} fill={tono(c, 0.7)} />
+          <path d="M60 -8 q 4 -3 6 1 M50 4 q 8 2 14 -2" stroke={N} strokeWidth={1.8} fill="none" strokeLinecap="round" />
+          <Ojo4 x={30} y={-34} />
+          {mula && <path d="M2 -50 L 6 -82" stroke={tono(c, 0.6)} strokeWidth={2} />}
+        </g>
+      );
+    }
+    case 'buey': case 'vaca': case 'toro': {
+      const cuerno = esp === 'toro' ? 'M4 -32 C -8 -62, 18 -82, 36 -68 C 22 -66, 16 -56, 16 -34 Z' : esp === 'vaca' ? 'M4 -34 C 0 -52, 16 -62, 28 -56 C 18 -52, 14 -46, 14 -34 Z' : 'M2 -32 C -18 -52, -8 -78, 18 -80 C 4 -70, 4 -52, 14 -34 Z';
+      return (
+        <g>
+          <g transform="translate(-10 0)"><path d={cuerno} fill="#E9DFC8" stroke={N} strokeWidth={2} strokeLinejoin="round" /></g>
+          <ellipse cx={-10} cy={-24} rx={14} ry={6} transform="rotate(-24 -10 -24)" fill={c} stroke={N} strokeWidth={2} />
+          <path d={suave([[-20, 16], [-20, -26], [10, -40], [40, -30], [62, -6], [60, 10], [30, 14]], true)} fill={c} stroke={N} strokeWidth={W} />
+          {esp === 'vaca' && <path d={suave([[6, -38], [26, -34], [46, -14], [40, -6], [22, -18], [4, -24]], true)} fill={claro} />}
+          <path d={suave([[44, -14], [60, -8], [62, 8], [50, 12], [40, 4]], true)} fill={esp === 'toro' ? '#8A6A5A' : '#D9A08E'} stroke={N} strokeWidth={1.6} />
+          <circle cx={56} cy={-2} r={2} fill={N} />
+          <path d={cuerno} fill="#F2EADA" stroke={N} strokeWidth={2} strokeLinejoin="round" />
+          <Ojo4 x={26} y={-20} />
+          {esp === 'toro' && <path d="M8 -34 q 6 -6 14 -2 q -4 6 -14 2 Z" fill={osc} />}
+        </g>
+      );
+    }
+    case 'oveja': case 'carnero': {
+      const cara = '#E2D2BC';
+      return (
+        <g>
+          <ellipse cx={-6} cy={-14} rx={14} ry={5.5} transform="rotate(32 -6 -14)" fill={cara} stroke={N} strokeWidth={2} />
+          <path d={suave([[-12, 16], [-8, -24], [12, -38], [30, -30], [50, -10], [46, 4], [24, 12]], true)} fill={cara} stroke={N} strokeWidth={W} />
+          <Rizado pts={[[-16, 4], [-14, -24], [2, -40], [20, -40], [12, -26], [-2, -14]]} r={7} c={c} luz={tono(c, 0.86)} desde={0} hasta={4} />
+          {esp === 'carnero' && <g><path d="M4 -30 C 26 -46, 34 -10, 16 -4 C 4 0, -2 -14, 8 -18" stroke={N} strokeWidth={13} fill="none" strokeLinecap="round" /><path d="M4 -30 C 26 -46, 34 -10, 16 -4 C 4 0, -2 -14, 8 -18" stroke="#C9AE7E" strokeWidth={8.5} fill="none" strokeLinecap="round" /><path d="M12 -34 l 3 5 M22 -30 l -1 6 M24 -18 l -5 2" stroke="#8A7350" strokeWidth={1.4} /></g>}
+          <Ojo4 x={28} y={-20} r={3.6} />
+          <path d="M44 -4 q 4 2 2 6" stroke={N} strokeWidth={2} fill="none" strokeLinecap="round" />
+        </g>
+      );
+    }
+    case 'cabra': case 'cabrito': {
+      const nino = esp === 'cabrito';
+      return (
+        <g>
+          <path d={nino ? 'M8 -36 C 6 -46, 0 -50, -6 -48' : 'M8 -34 C 0 -66, -30 -72, -38 -50'} stroke={N} strokeWidth={nino ? 8 : 11} fill="none" strokeLinecap="round" />
+          <path d={nino ? 'M8 -36 C 6 -46, 0 -50, -6 -48' : 'M8 -34 C 0 -66, -30 -72, -38 -50'} stroke="#C9B48A" strokeWidth={nino ? 4 : 6.5} fill="none" strokeLinecap="round" />
+          <ellipse cx={-6} cy={-22} rx={14} ry={5.5} transform="rotate(10 -6 -22)" fill={c} stroke={N} strokeWidth={2} />
+          <path d={suave([[-12, 16], [-8, -24], [12, -38], [30, -30], [52, -8], [46, 4], [14, 14]], true)} fill={c} stroke={N} strokeWidth={W} />
+          {!nino && <path d="M38 2 L 42 26 L 30 8 Z" fill={tono(c, 0.7)} stroke={N} strokeWidth={1.8} strokeLinejoin="round" />}
+          <Ojo4 x={26} y={-22} r={3.8} />
+          <path d="M47 -6 q 3 2 1 5" stroke={N} strokeWidth={2} fill="none" strokeLinecap="round" />
+          {hiedra && <HiedraAnimal x={8} y={-34} s={0.9} />}
+        </g>
+      );
+    }
+    case 'ciervo':
+      return (
+        <g>
+          {['M8 -42 C 0 -80, -20 -92, -30 -112 M2 -68 L -22 -72 M-8 -88 L -4 -106', 'M18 -42 C 30 -80, 44 -92, 40 -118 M28 -70 L 50 -78 M36 -94 L 56 -102'].map((d, i) => <g key={i}><path d={d} stroke={N} strokeWidth={9} fill="none" strokeLinecap="round" /><path d={d} stroke={i ? '#D9BE8E' : '#B99A6A'} strokeWidth={5} fill="none" strokeLinecap="round" /></g>)}
+          <ellipse cx={0} cy={-36} rx={13} ry={6} transform="rotate(-36 0 -36)" fill={c} stroke={N} strokeWidth={2} />
+          <path d={suave([[-12, 16], [-6, -30], [14, -46], [32, -38], [58, -14], [54, -2], [34, 2], [12, 14]], true)} fill={c} stroke={N} strokeWidth={W} />
+          <path d={suave([[30, -6], [52, -8], [52, 0], [34, 4]], true)} fill={claro} />
+          <ellipse cx={56} cy={-11} rx={3.6} ry={3} fill={N} />
+          <Ojo4 x={28} y={-28} />
+        </g>
+      );
+    case 'perro': case 'lobo':
+      return (
+        <g>
+          <path d="M0 -30 L 6 -64 L 22 -36 Z" fill={c} stroke={N} strokeWidth={W} strokeLinejoin="round" />
+          <path d="M6 -36 L 8 -54 L 16 -38 Z" fill={tono(c, 0.7)} />
+          <path d={suave([[-16, 16], [-14, -24], [8, -38], [30, -30], [62, -14], [60, -4], boca ? [36, 2] : [40, 2], [10, 14]], true)} fill={c} stroke={N} strokeWidth={W} />
+          {boca && <path d="M38 0 L 62 4 L 40 12 Z" fill="#8E2A2A" stroke={N} strokeWidth={1.6} strokeLinejoin="round" />}
+          <path d={suave([[22, -12], [56, -10], [52, -2], [26, 4]], true)} fill={claro} />
+          <ellipse cx={60} cy={-12} rx={4.4} ry={3.4} fill={N} />
+          <Ojo4 x={28} y={-22} r={3.8} />
+        </g>
+      );
+    case 'leon':
+      return (
+        <g>
+          <Rizado pts={[[-36, 34], [-46, -4], [-36, -42], [-8, -62], [22, -60], [36, -42], [26, -24], [8, -14], [-8, 8], [-14, 36]]} r={9} c={crin!} luz={tono(crin!, 1.4)} desde={0} hasta={7} />
+          <circle cx={6} cy={-46} r={8} fill={c} stroke={N} strokeWidth={2} />
+          <path d={suave([[-6, 8], [0, -30], [20, -42], [42, -34], [58, -16], [58, -2], boca ? [38, 2] : [44, 6], [16, 12]], true)} fill={c} stroke={N} strokeWidth={W} />
+          {boca && <path d="M40 2 L 60 6 L 42 14 Z" fill="#8E2A2A" stroke={N} strokeWidth={1.6} strokeLinejoin="round" />}
+          <path d={suave([[34, -8], [56, -6], [52, 2], [38, 2]], true)} fill={claro} />
+          <path d="M52 -20 L 60 -16 L 54 -10 Z" fill="#5A3A2A" stroke={N} strokeWidth={1.2} strokeLinejoin="round" />
+          <Ojo4 x={34} y={-26} r={3.8} />
+          {hiedra && <HiedraAnimal x={0} y={-50} s={1.2} />}
+        </g>
+      );
+    case 'oso':
+      return (
+        <g>
+          <circle cx={-4} cy={-42} r={11} fill={c} stroke={N} strokeWidth={2} /><circle cx={-4} cy={-42} r={5} fill={tono(c, 0.7)} />
+          <path d={suave([[-24, 20], [-26, -24], [0, -46], [30, -40], [56, -14], [52, 4], [20, 18]], true)} fill={c} stroke={N} strokeWidth={W} />
+          <path d={suave([[30, -24], [54, -14], [50, 2], [32, 2]], true)} fill={claro} />
+          <ellipse cx={54} cy={-12} rx={4.6} ry={3.6} fill={N} />
+          <Ojo4 x={24} y={-24} r={3.8} />
+        </g>
+      );
+  }
+};
+
+/** Cuadrúpedo de barro: caballo, buey, oveja, ciervo, perro, león… Origen = patas en el suelo, mirando a la derecha.
+ * Extras: cabezas (Cerbero), colaSerpiente, alas (Pegaso), capa (Licaón lobo), hiedra (Dioniso), collar. */
+const Bestia4: React.FC<DibujoProps> = (props) => {
+  const { x, y, s, voltear, opacity = 1, moviendo, corriendo, boca, f } = props;
+  const esp = props.especie as Esp4, cfg = ESP4[esp];
+  const c = (props.color as string | undefined) ?? cfg.c, osc = tono(c, 0.72), claro = props.color ? tono(c, 1.35) : cfg.claro, crin = (props.crin as string | undefined) ?? cfg.crin ?? tono(c, 0.5);
+  const cabezas = (props.cabezas as number | undefined) ?? 1, alas = !!props.alas, capa = props.capa as string | undefined;
+  const id = 'b4' + String(props.clip ?? esp) + Math.round(x) + Math.round(y);
+  const k = s * cfg.tam;
+  const fase = moviendo || corriendo ? f * (corriendo ? 0.38 : 0.2) : 0, amp = corriendo ? 34 : moviendo ? 20 : 0;
+  const bote = corriendo ? -Math.abs(Math.sin(fase)) * 10 : 0;
+  const pes = !!cfg.pesado, can = esp === 'perro' || esp === 'lobo' || esp === 'leon', pezuna = cfg.pezuna;
+  const cad = pes ? -92 : -98, l1 = pes ? 46 : 52, l2 = pes ? 46 : 50;
+  const anchos = esp === 'oso' ? [44, 30, 24] : pes ? [40, 24, 18] : esp === 'leon' ? [34, 20, 16] : can ? [28, 15, 12] : [30, 14, 10];
+  const pata = (cx: number, ph: number, del: boolean, col: string) => {
+    const a = Math.sin(fase + ph) * amp, o: P = [cx, cad], r = desde(o, a, l1), p = desde(r, a + (del ? -1 : 1) * (14 + Math.max(0, Math.sin(fase + ph + 1.5)) * 30), l2);
+    return (
+      <g key={`${cx}`}>
+        <path d={miembro([o, r, p], anchos)} fill={col} stroke={N} strokeWidth={2.2} />
+        {pezuna ? <path d={`M${r1(p[0] - 6.5)} ${r1(p[1] - 9)} H ${r1(p[0] + 7.5)} L ${r1(p[0] + 9)} ${r1(p[1] + 1)} H ${r1(p[0] - 8)} Z`} fill={pezuna} stroke={N} strokeWidth={1.6} strokeLinejoin="round" /> : <ellipse cx={r1(p[0] + 4)} cy={r1(p[1] - 3)} rx={anchos[2] * 0.62} ry={6} fill={col} stroke={N} strokeWidth={1.8} />}
+      </g>
+    );
+  };
+  const cuerpo = CUERPO4[cfg.lana ? 'lana' : pes ? 'pesado' : can ? 'can' : 'esbelto'];
+  const equino = esp === 'caballo' || esp === 'mula';
+  const cuello: P[] = equino ? [[-34, 34], [-10, -24], [10, -64]] : esp === 'ciervo' ? [[-30, 30], [-8, -20], [8, -50]] : [[-30, 30], [-6, 0], [6, -16]];
+  const anc = equino ? [52, 42, 34] : esp === 'ciervo' ? [40, 30, 26] : pes ? [54, 46, 40] : [40, 32, 28];
+  const cabXY = equino ? 'translate(10 -50)' : esp === 'ciervo' ? 'translate(6 -34)' : undefined;
+  const ala = alas ? Math.sin(f * 0.22) * 14 : 0;
+  const Ala = ({ t, d }: { t: string; d: number }) => <g transform={`translate(${60 + d} ${d ? -128 : -146}) rotate(${r1(-14 - ala)}) scale(2.8)`}><AlaPlumas tono={t} abre={ala * 0.2} /></g>;
+  const cola = (() => {
+    const o = Math.sin(f / 10) * 6;
+    if (props.colaSerpiente) { const d = suave([[-118, -118], [-160, -142 + o], [-190, -118], [-214, -146 + o]]); return <g><path d={d} stroke={N} strokeWidth={18} fill="none" strokeLinecap="round" /><path d={d} stroke="#4E8A3E" strokeWidth={13} fill="none" strokeLinecap="round" /><g transform={`translate(-216 ${r1(-148 + o)}) rotate(-30)`}><ellipse rx={13} ry={9} fill="#4E8A3E" stroke={N} strokeWidth={2} /><circle cx={-4} cy={-3} r={2.2} fill={N} /></g></g>; }
+    switch (cfg.cola) {
+      case 'crin': return <Tela pts={[[-116, -128], [-140, -126], [-160 + o, -80], [-158 + o, -36], [-140 + o, -40], [-138, -86], [-118, -112]]} c={crin} t={0.6} />;
+      case 'borla': { const d = suave([[-122, -120], [-140, -100 + o], [-146, -60]]); return <g><path d={d} stroke={N} strokeWidth={8} fill="none" strokeLinecap="round" /><path d={d} stroke={c} strokeWidth={4.5} fill="none" strokeLinecap="round" /><path d={suave([[-150, -66], [-140, -64], [-142, -40], [-152, -40]], true)} fill={crin} stroke={N} strokeWidth={1.6} /></g>; }
+      case 'leon': { const d = suave([[-118, -118], [-150, -100 + o], [-162, -60], [-150, -46]]); return <g><path d={d} stroke={N} strokeWidth={9} fill="none" strokeLinecap="round" /><path d={d} stroke={c} strokeWidth={5} fill="none" strokeLinecap="round" /><ellipse cx={-148} cy={-44} rx={8} ry={11} fill={crin} stroke={N} strokeWidth={1.8} /></g>; }
+      case 'fina': { const d = suave([[-116, -118], [-146, -136 + o], [-150, -166 + o]]); return <g><path d={d} stroke={N} strokeWidth={10} fill="none" strokeLinecap="round" /><path d={d} stroke={c} strokeWidth={6} fill="none" strokeLinecap="round" /></g>; }
+      case 'peluda': return <Tela pts={[[-114, -126], [-140, -122 + o * 0.5], [-160, -90 + o], [-166, -60 + o], [-150, -64 + o], [-136, -94], [-114, -108]]} c={c} t={0.6} />;
+      default: return <ellipse cx={-124} cy={cfg.lana ? -112 : -128} rx={11} ry={7} transform={`rotate(-30 -124 ${cfg.lana ? -112 : -128})`} fill={esp === 'ciervo' ? claro : c} stroke={N} strokeWidth={2} />;
+    }
+  })();
+  return (
+    <g transform={`translate(${x} ${y + bote}) scale(${voltear ? -k : k} ${k})`} opacity={opacity}>
+      <defs><clipPath id={id}><path d={suave(cuerpo, true)} /></clipPath></defs>
+      {alas && <Ala t="#D9D2C4" d={14} />}
+      {pata(-90, Math.PI, false, osc)}
+      {pata(70, 0, true, osc)}
+      {cola}
+      {pata(-70, 0, false, c)}
+      {pata(92, Math.PI, true, c)}
+      {Array.from({ length: cabezas }, (_, i) => { const dy = (i - (cabezas - 1) / 2) * 46, dx = (i - (cabezas - 1) / 2) * 22; return <g key={`n${i}`} transform={`translate(${116 + dx} ${-150 + dy}) rotate(${(i - (cabezas - 1) / 2) * 22})`}><path d={miembro(cuello, anc)} fill={c} stroke={N} strokeWidth={2.4} /></g>; })}
+      {cfg.lana
+        ? <Rizado pts={cuerpo} r={12} c={c} luz={tono(c, 0.84)} />
+        : <path d={suave(cuerpo, true)} fill={c} stroke={N} strokeWidth={2.6} />}
+      {!cfg.lana && <g clipPath={`url(#${id})`}>
+        {(esp === 'ciervo' || esp === 'lobo' || esp === 'perro' || esp === 'cabra' || esp === 'cabrito' || esp === 'leon' || esp === 'buey') && <ellipse cx={10} cy={-68} rx={110} ry={13} fill={claro} />}
+        {esp === 'vaca' && <><ellipse cx={-50} cy={-128} rx={30} ry={20} fill={claro} /><ellipse cx={30} cy={-100} rx={24} ry={16} fill={claro} /></>}
+        {esp === 'toro' && <path d="M20 -168 Q 70 -150 100 -120" stroke={tono(c, 1.4)} strokeWidth={3} fill="none" />}
+        <path d={suave([[-70, -146], [-40, -116], [-56, -86]])} stroke={tono(c, 0.8)} strokeWidth={2} fill="none" />
+        <path d={suave([[64, -144], [82, -116], [72, -88]])} stroke={tono(c, 0.8)} strokeWidth={2} fill="none" />
+      </g>}
+      {Array.from({ length: cabezas }, (_, i) => { const dy = (i - (cabezas - 1) / 2) * 46, dx = (i - (cabezas - 1) / 2) * 22; return <g key={`c${i}`} transform={`translate(${116 + dx} ${-150 + dy}) rotate(${(i - (cabezas - 1) / 2) * 22 + Math.sin(f / 14 + i) * 2})`}>
+        <path d={miembro(cuello, anc.map((w) => w - 5))} fill={c} />
+        {equino && <Tela pts={[[-52, 30], [-38, -14], [-16, -60], [2, -94], [14, -84], [0, -50], [-20, -12], [-28, 26]]} c={crin} t={0.6} />}
+        {props.collar ? <path d="M-34 14 Q -18 26 -2 2" stroke={N} strokeWidth={9} fill="none" strokeLinecap="round" /> : null}
+        {props.collar ? <path d="M-34 14 Q -18 26 -2 2" stroke={props.collar as string} strokeWidth={5} fill="none" strokeLinecap="round" /> : null}
+        <g transform={cabXY}><Cabeza4 esp={esp} c={c} claro={claro} crin={crin} boca={boca} hiedra={!!props.hiedra} /></g>
+      </g>; })}
+      {capa && <g transform="translate(96 -150)"><Tela pts={[[-6, -20], [26, -16], [20, 8], [-30, 40 + Math.sin(f / 9) * 4], [-46, 26 + Math.sin(f / 9) * 4], [-18, 0]]} c={capa} t={0.5} /><circle cx={16} cy={-8} r={5} fill={ORO} stroke={N} strokeWidth={1.6} /></g>}
+      {alas && <><Ala t={BLANCO} d={0} /><ellipse cx={52} cy={-154} rx={26} ry={19} fill={c} /></>}
+    </g>
+  );
+};
+
+/** Serpiente de barro (Pitón, culebras): cuerpo con contorno, panza clara y manchas. Origen = suelo, cola a la izquierda. */
+const SerpienteBarro: React.FC<DibujoProps> = (props) => {
+  const { x, y, s, voltear, opacity = 1, boca, f } = props;
+  const largo = (props.largo as number | undefined) ?? 400, grosor = (props.grosor as number | undefined) ?? 30, erguida = (props.erguida as number | undefined) ?? 0.6;
+  const c = (props.color as string | undefined) ?? '#5E7A3A', claro = (props.panza as string | undefined) ?? '#D9C98A', mancha = (props.mancha as string | undefined) ?? tono(c, 0.62);
+  const n = 12;
+  const cuerpo: P[] = Array.from({ length: n }, (_, i) => { const t = i / (n - 1); return [-largo + t * largo, -grosor / 2 - Math.sin(t * Math.PI * 2.2 + f * 0.12) * 18 * (1 - t * 0.5) - (t > 0.8 ? (t - 0.8) * 5 * 120 * erguida : 0)] as P; });
+  const anchos = cuerpo.map((_, i) => { const t = i / (n - 1); return Math.max(6, grosor * Math.max(t > 0.5 ? 0.45 * t : 0, Math.sin(Math.PI * Math.min(1, t * 1.1 + 0.08)))); });
+  const cab = cuerpo[n - 1], kc = Math.max(1, grosor / 40);
+  const panza = cuerpo.map((p, i) => [p[0], p[1] + anchos[i] * 0.3] as P);
+  return (
+    <g transform={`translate(${x} ${y}) scale(${voltear ? -s : s} ${s})`} opacity={opacity}>
+      <path d={miembro(cuerpo, anchos)} fill={c} stroke={N} strokeWidth={2.6} />
+      <path d={suave(panza.slice(1, -1))} stroke={claro} strokeWidth={grosor * 0.22} fill="none" strokeLinecap="round" />
+      {cuerpo.slice(1, -1).map((p, i) => i % 1 === 0 && <ellipse key={i} cx={r1(p[0])} cy={r1(p[1] - anchos[i + 1] * 0.12)} rx={r1(anchos[i + 1] * 0.32)} ry={r1(anchos[i + 1] * 0.2)} fill={mancha} />)}
+      <g transform={`translate(${r1(cab[0])} ${r1(cab[1])}) scale(${kc})`}>
+        <path d={suave([[-14, 8], [-10, -16], [16, -20], [44, -8], boca ? [30, 0] : [44, 4], [18, 12]], true)} fill={c} stroke={N} strokeWidth={2.4} />
+        {boca && <path d="M30 0 L 50 4 L 28 10 Z" fill="#8E2A2A" stroke={N} strokeWidth={1.4} strokeLinejoin="round" />}
+        <path d="M-6 -12 Q 10 -20 26 -14" stroke={mancha} strokeWidth={4} fill="none" strokeLinecap="round" />
+        <Ojo4 x={16} y={-8} r={3.4} />
+        <path d={`M44 2 l ${r1(10 + Math.sin(f / 3) * 3)} -3 m -2 3 l ${r1(10 + Math.sin(f / 3) * 3)} 3`} stroke="#B3352A" strokeWidth={2} strokeLinecap="round" />
+      </g>
+    </g>
+  );
+};
+
+/** Delfín (gris azulado, panza clara). Origen = centro del cuerpo. */
+const DelfinBarro: React.FC<DibujoProps> = ({ x, y, s, voltear, opacity = 1, f, color }) => {
+  const c = (color as string | undefined) ?? '#6E8FA8', id = 'df' + Math.round(x) + Math.round(y), cuerpo = suave([[-90, 0], [-40, -26], [30, -28], [70, -12], [96, -6], [70, 2], [10, 14], [-60, 8]], true);
+  return (
+    <g transform={`translate(${x} ${y}) scale(${voltear ? -s : s} ${s}) rotate(${r1(Math.sin(f / 10) * 4)})`} opacity={opacity}>
+      <defs><clipPath id={id}><path d={cuerpo} /></clipPath></defs>
+      <path d="M0 -24 C 8 -44, 22 -54, 30 -54 C 26 -40, 26 -32, 30 -24 Z" fill={tono(c, 0.8)} stroke={N} strokeWidth={2.2} strokeLinejoin="round" />
+      <path d={`M-84 0 C -100 -10, -112 ${r1(-26 + Math.sin(f / 6) * 4)}, -124 ${r1(-26 + Math.sin(f / 6) * 4)} C -118 -12, -118 10, -124 ${r1(24 + Math.sin(f / 6) * 4)} C -110 22, -98 10, -84 4 Z`} fill={tono(c, 0.8)} stroke={N} strokeWidth={2.2} strokeLinejoin="round" />
+      <path d={cuerpo} fill={c} stroke={N} strokeWidth={2.6} />
+      <g clipPath={`url(#${id})`}><path d={suave([[-80, 8], [-20, 0], [40, -2], [96, -2], [70, 14], [-60, 16]], true)} fill="#E2EAEE" /></g>
+      <path d="M70 -2 Q 82 2 94 -4" stroke={N} strokeWidth={1.8} fill="none" strokeLinecap="round" />
+      <path d="M14 6 C 6 18, -6 24, -14 22 C -6 14, 0 8, 4 4 Z" fill={tono(c, 0.8)} stroke={N} strokeWidth={1.8} strokeLinejoin="round" />
+      <Ojo4 x={56} y={-12} r={3.4} />
+    </g>
+  );
+};
+
+/** Tortuga de tierra (la de la lira de Hermes). Origen = suelo, mirando a la derecha. */
+const TortugaBarro: React.FC<DibujoProps> = ({ x, y, s, voltear, opacity = 1, moviendo, f }) => {
+  const p = moviendo ? Math.sin(f / 5) * 6 : 0, piel = '#8A8A5A', cab = Math.sin(f / 20) * 3;
+  return (
+    <g transform={`translate(${x} ${y}) scale(${voltear ? -s : s} ${s})`} opacity={opacity}>
+      {[[-34, -p], [28, p]].map(([lx, d], i) => <path key={i} d={`M${lx - 8} -16 L ${lx - 10 + d} 0 L ${lx + 8 + d} 0 L ${lx + 8} -16 Z`} fill={tono(piel, 0.8)} stroke={N} strokeWidth={2} strokeLinejoin="round" />)}
+      <g transform={`rotate(${r1(cab)} 50 -20)`}>
+        <path d={suave([[40, -26], [62, -34], [78, -26], [76, -14], [56, -12], [42, -14]], true)} fill={piel} stroke={N} strokeWidth={2.2} />
+        <Ojo4 x={66} y={-26} r={3} />
+        <path d="M68 -16 q 5 0 8 -3" stroke={N} strokeWidth={1.4} fill="none" />
+      </g>
+      <path d="M-62 -14 L -74 -8 L -62 -8 Z" fill={piel} stroke={N} strokeWidth={1.6} />
+      <path d={suave([[-62, -12], [-56, -46], [-20, -66], [24, -66], [56, -44], [62, -12]], true, 0.7)} fill="#7A6A3A" stroke={N} strokeWidth={2.6} />
+      {[[-34, -32], [-4, -40], [26, -34], [-18, -54], [12, -56]].map(([hx, hy], i) => <path key={i} d={`M${hx - 12} ${hy} l 6 -9 h 12 l 6 9 l -6 9 h -12 Z`} fill="#A8945A" stroke={N} strokeWidth={1.6} strokeLinejoin="round" />)}
+      <path d="M-64 -12 H 64" stroke={N} strokeWidth={3} strokeLinecap="round" /><path d="M-62 -14 H 62" stroke="#C9B47A" strokeWidth={3} strokeLinecap="round" />
+      {[[-46, p], [40, -p]].map(([lx, d], i) => <path key={`d${i}`} d={`M${lx - 9} -18 L ${lx - 11 + d} 0 L ${lx + 9 + d} 0 L ${lx + 9} -18 Z`} fill={piel} stroke={N} strokeWidth={2} strokeLinejoin="round" />)}
+    </g>
+  );
+};
+
+type EspAve = 'aguila' | 'paloma' | 'cisne';
+/** Ave en vuelo (águila, paloma, cisne). Origen = centro del cuerpo (como las aves del motor). */
+const AveBarro: React.FC<DibujoProps> = (props) => {
+  const { x, y, s, voltear, opacity = 1, f } = props;
+  const esp = (props.especie as EspAve | undefined) ?? 'aguila';
+  const cfg = ({ aguila: { c: '#6A4A2E', ala: '#5A3E26', cub: '#8A6440', cab: '#B9894A', pico: '#E8B93E', k: 1 }, paloma: { c: '#F2EEE6', ala: '#E6E0D4', cub: '#F8F5EE', cab: '#F2EEE6', pico: '#C98A8A', k: 0.55 }, cisne: { c: '#F6F3EC', ala: '#E9E4D8', cub: '#FBF9F4', cab: '#F6F3EC', pico: '#E07A2A', k: 1.05 } } as const)[esp];
+  const c = (props.color as string | undefined) ?? cfg.c;
+  const a = Math.sin(f * 0.3) * 30;
+  const ALA = suave([[-12, -4], [-26, -44], [-62, -84], [-110, -106], [-148, -108], [-140, -98], [-156, -90], [-140, -82], [-150, -72], [-130, -66], [-134, -54], [-108, -50], [-96, -32], [-60, -18], [-26, 4]], true, 0.5);
+  const COB = suave([[-14, -6], [-30, -44], [-64, -78], [-96, -86], [-90, -62], [-60, -34], [-26, 2]], true, 0.6);
+  const ala = (lejos: boolean) => (
+    <g transform={`rotate(${r1(lejos ? 22 + a * 0.8 : 8 + a)} -6 -6)`}>
+      <path d={ALA} fill={lejos ? tono(cfg.ala, 0.85) : cfg.ala} stroke={N} strokeWidth={2.4} />
+      <path d={COB} fill={lejos ? tono(cfg.cub, 0.85) : cfg.cub} stroke={N} strokeWidth={1.8} />
+      {esp === 'paloma' && <path d="M-118 -104 L -150 -106 L -138 -96 L -152 -88 L -136 -80 L -148 -70 L -128 -66 Z" fill="#9AA0A8" />}
+    </g>
+  );
+  return (
+    <g transform={`translate(${x} ${y}) scale(${(voltear ? -s : s) * cfg.k} ${s * cfg.k})`} opacity={opacity}>
+      {ala(true)}
+      {esp === 'cisne' ? <path d="M-62 4 L -88 -8 L -84 10 Z" fill={c} stroke={N} strokeWidth={2} strokeLinejoin="round" />
+        : esp === 'paloma' ? <path d="M-64 2 C -90 -6, -110 0, -112 10 C -100 20, -84 18, -64 12 Z" fill={tono(c, 0.92)} stroke={N} strokeWidth={2} />
+        : <path d="M-64 0 L -112 -16 L -108 4 L -116 22 L -62 12 Z" fill={tono(c, 0.85)} stroke={N} strokeWidth={2} strokeLinejoin="round" />}
+      <path d={suave([[-70, 6], [-30, -16], [30, -18], [56, -6], [40, 12], [-20, 18]], true)} fill={c} stroke={N} strokeWidth={2.4} />
+      {esp === 'aguila' && <path d="M10 16 l 4 16 m 0 0 l -6 6 m 6 -6 l 6 6 M28 14 l 4 16 m 0 0 l -6 6 m 6 -6 l 6 6" stroke="#E8B93E" strokeWidth={3.4} strokeLinecap="round" />}
+      {esp === 'cisne' ? (
+        <g>
+          <path d="M44 -6 C 70 -14, 92 -22, 116 -22" stroke={N} strokeWidth={17} fill="none" strokeLinecap="round" />
+          <path d="M44 -6 C 70 -14, 92 -22, 116 -22" stroke={c} strokeWidth={12} fill="none" strokeLinecap="round" />
+          <ellipse cx={120} cy={-23} rx={13} ry={9} fill={c} stroke={N} strokeWidth={2} />
+          <path d="M130 -28 L 152 -22 L 130 -16 Z" fill={cfg.pico} stroke={N} strokeWidth={1.6} strokeLinejoin="round" />
+          <path d="M128 -28 Q 132 -22 128 -16" stroke={N} strokeWidth={4} />
+          <Ojo4 x={120} y={-25} r={2.6} />
+        </g>
+      ) : (
+        <g transform="translate(52 -10)">
+          <path d={suave([[-10, 14], [-8, -12], [12, -18], [26, -8], [30, 4], [16, 8], [8, 16]], true)} fill={cfg.cab} stroke={N} strokeWidth={2.2} />
+          {esp === 'aguila'
+            ? <path d="M24 -8 Q 42 -6 38 10 Q 34 4 26 4 Z" fill={cfg.pico} stroke={N} strokeWidth={1.6} strokeLinejoin="round" />
+            : <path d="M28 -4 L 40 0 L 28 4 Z" fill={cfg.pico} stroke={N} strokeWidth={1.4} strokeLinejoin="round" />}
+          <Ojo4 x={14} y={-6} r={2.8} />
+          {esp === 'aguila' && <path d="M4 -6 L 22 -10" stroke={N} strokeWidth={2.4} strokeLinecap="round" />}
+        </g>
+      )}
+      {ala(false)}
+    </g>
+  );
+};
+
+/** Pavo real de Hera, de pie con la cola abierta. Origen = patas. */
+const PavoReal: React.FC<DibujoProps> = ({ x, y, s, voltear, opacity = 1, f, moviendo }) => {
+  const o = Math.sin(f / 16) * 2, cab = moviendo ? Math.sin(f / 4) * 4 : Math.sin(f / 22) * 2;
+  return (
+    <g transform={`translate(${x} ${y}) scale(${voltear ? -s : s} ${s})`} opacity={opacity}>
+      {Array.from({ length: 13 }, (_, i) => { const a = ((168 - i * 12.5) * Math.PI) / 180, L = 150 + (i % 2) * 10, ex = -24 + Math.cos(a) * L, ey = -70 - Math.sin(a) * L + o; return <g key={i}><path d={`M-24 -70 L ${r1(ex)} ${r1(ey)}`} stroke={N} strokeWidth={14} strokeLinecap="round" /><path d={`M-24 -70 L ${r1(ex)} ${r1(ey)}`} stroke={i % 2 ? '#3E7A4A' : '#4E8A52'} strokeWidth={10} strokeLinecap="round" /><OjoPavo x={ex} y={ey} s={1.2} /></g>; })}
+      <path d="M-6 -40 L -10 0 M8 -40 L 10 0" stroke="#8A8478" strokeWidth={4.4} strokeLinecap="round" />
+      <path d="M-18 0 h 12 M4 0 h 14" stroke="#8A8478" strokeWidth={4} strokeLinecap="round" />
+      <path d={suave([[-40, -56], [-20, -88], [14, -84], [26, -60], [10, -38], [-24, -38]], true)} fill="#2E5FA8" stroke={N} strokeWidth={2.4} />
+      <path d={suave([[-30, -60], [-10, -78], [10, -70]])} stroke="#4A8AC8" strokeWidth={2} fill="none" />
+      <g transform={`rotate(${r1(cab)} 10 -80)`}>
+        <path d="M6 -78 C 12 -100, 16 -116, 22 -128" stroke={N} strokeWidth={15} fill="none" strokeLinecap="round" />
+        <path d="M6 -78 C 12 -100, 16 -116, 22 -128" stroke="#2E5FA8" strokeWidth={10} fill="none" strokeLinecap="round" />
+        <ellipse cx={26} cy={-132} rx={11} ry={9} fill="#2E5FA8" stroke={N} strokeWidth={2} />
+        <path d="M35 -134 L 46 -130 L 35 -127 Z" fill="#C9B48A" stroke={N} strokeWidth={1.3} />
+        <path d="M23 -128 Q 30 -126 34 -129" stroke="#F4EEE2" strokeWidth={2} fill="none" />
+        <Ojo4 x={28} y={-134} r={2.4} />
+        {[-6, 0, 6].map((d) => <g key={d}><path d={`M22 -140 L ${22 + d} -156`} stroke={N} strokeWidth={1.4} /><circle cx={22 + d} cy={-157} r={2.8} fill="#2E5FA8" stroke={N} strokeWidth={1} /></g>)}
+      </g>
+    </g>
+  );
+};
+
+/** Lechuza grande como actor (Atenea). Origen = patas. */
+const BuhoBarro: React.FC<DibujoProps> = ({ x, y, s, voltear, opacity = 1 }) => <g transform={`translate(${x} ${y}) scale(${voltear ? -s : s} ${s})`} opacity={opacity}><Lechuza s={2.3} /></g>;
+
 // ---------- fichas ----------
 const h = (p: Partial<PersonajeProps>, griego: string): Ficha => ({ tipo: 'persona', p: { hd: true, barba: false, peloCorto: true, tocado: null, ...p }, griego });
 const m = (p: Partial<PersonajeProps>, griego: string): Ficha => h({ mujer: true, piel: PIEL_M, ...p }, griego);
 const A_GIG = 1.35, A_M = 0.92, A_FLACO = 0.8;
+/** Criatura con dibujo propio (animales de barro de la tercera tanda). Sin nombre = animal genérico (no lleva rótulo). */
+const D = (Dibujo: React.FC<DibujoProps>, p: Record<string, unknown>, griego?: string): Ficha => ({ tipo: 'dibujo', Dibujo, p, griego });
+/** Extras griegos (gente común): sin nombre, así no llevan rótulo. */
+const hx = (p: Partial<PersonajeProps>): Ficha => ({ tipo: 'persona', p: { hd: true, barba: false, peloCorto: true, tocado: null, ...p } });
+const mx = (p: Partial<PersonajeProps>): Ficha => hx({ mujer: true, piel: PIEL_M, ...p });
 
 // Colores de pelo
 const GRIS = '#A7A6A2', GRIS_L = '#D6D3CC', AZUL_P = '#1E2E44', AZUL_PL = '#4A6488', NEGRO_P = '#16120F', NEGRO_PL = '#4A4038';
@@ -1093,6 +1808,192 @@ export const ELENCO_GRIEGO_OFICIAL: Record<string, Ficha> = {
     adornos: { detras: <BrazosExtra piel="#B98060" angs={[120, 150, 180, 210, 240]} />, cuerpo: <Cinto a={A_GIG} c={CUERO} />, cabeza: <><PeloRulos c="#2A2420" luz="#5A4E44" largo r={7} /><BarbaLarga c="#2A2420" luz="#5A4E44" L={66} /></> } }, 'ΕΚΑΤΟΓΧΕΙΡ'),
   tifon_oficial: h({ gigante: true, s: 1.26, piel: PIEL_SOL, pelo: '#1E1E22', ropa: 'larga', ropaColor: '#3E6A3A', ribete: '#6FA05A', brazo: [50, 30], brazoAtras: [-30, -20],
     adornos: { detras: <><g transform="translate(-10 -292) rotate(10) scale(2.5)"><AlaPlumas tono="#5A5560" /></g><ColaSerpiente /></>, cuerpo: <Escamas />, pie: <PieSerpiente />, pieAtras: <PieSerpiente />, cabeza: <><PeloRulos c="#1E1E22" luz="#4A4A52" largo r={7.5} /><BarbaLarga c="#1E1E22" luz="#4A4A52" L={70} /><OjoFiero c="#F28A2A" /></> } }, 'ΤΥΦΩΝ'),
+
+  // ---- tercera tanda (2026-10-17): secundarios con nombre ----
+  helios_oficial: h({ s: 1.04, piel: PIEL_H, pelo: RUBIO, ropa: 'corta', ropaColor: '#F2C14E', ribete: ORO, brazo: [40, 70],
+    adornos: { detras: <><HaloSol /><Manto c="#C9502E" borde={ORO} largo={0.75} /></>, cuerpo: <><Quiton a={1} c="#F2C14E" borde={ORO} /><Cinto a={1} c={ORO_OSC} hebilla={ORO} /><Broche x={-8} y={-300} /></>, cabeza: <><CoronaRayos /><PeloRulos c={RUBIO} luz={RUBIO_L} /><Oreja piel={PIEL_H} /><CintaOro /></>, mano: <Latigo />, pie: <Sandalia /> } }, 'ΗΛΙΟΣ'),
+  leto_oficial: m({ pelo: NEGRO_P, ropa: 'larga', ropaColor: '#2E3F6E', ribete: '#C9D3E0', brazo: [30, 64],
+    adornos: { cuerpo: <><Quiton a={A_M} c="#2E3F6E" borde="#C9D3E0" mujer /><Cinto a={A_M} c="#1E2A4A" /></>, cabeza: <><PeloRecogido c={NEGRO_P} luz={NEGRO_PL} /><Velo c="#1E2A4A" borde="#C9D3E0" largo={130} /><CintaOro /></>, mano: <RamaPalma /> } }, 'ΛΗΤΩ'),
+  temis_oficial: m({ s: 1.04, pelo: CASTANO, ropa: 'larga', ropaColor: BLANCO, ribete: ORO, brazo: [34, 56],
+    adornos: { detras: <Manto c="#7A2E3A" borde={ORO} largo={0.95} ancho={0.9} />, cuerpo: <><Quiton a={A_M} c={BLANCO} mujer /><Cinto a={A_M} c={ORO_OSC} /></>, cabeza: <><PeloRecogido c={CASTANO} luz={CASTANO_L} /><DiademaJoya /></>, mano: <Balanza /> } }, 'ΘΕΜΙΣ'),
+  asteria_oficial: m({ pelo: NEGRO_P, ropa: 'larga', ropaColor: '#1E2650', ribete: '#DDE3E8', brazo: [40, 70],
+    adornos: { detras: <Manto c="#2E3A6E" borde="#DDE3E8" largo={0.95} ancho={0.9} />, cuerpo: <><Quiton a={A_M} c="#1E2650" borde="#DDE3E8" mujer /><RopaEstrellada a={A_M} /></>, cabeza: <><PeloLargo c={NEGRO_P} luz={NEGRO_PL} largo={100} /><DiademaEstrellas n={5} c="#F2F4F6" /></>, mano: <EstrellaMano /> } }, 'ΑΣΤΕΡΙΑ'),
+  iris_oficial: m({ pelo: CASTANO, ropa: 'larga', ropaColor: '#B7A3D9', ribete: ORO, brazo: [30, 60],
+    adornos: { detras: <><AlasEspalda tono="#F4EEE2" tono2="#E2C77A" /><ChalArcoiris /></>, cuerpo: <><Quiton a={A_M} c="#B7A3D9" mujer /><Cinto a={A_M} c={ORO} /></>, cabeza: <><PeloRecogido c={CASTANO} luz={CASTANO_L} /><CintaOro /></>, mano: <Jarra /> } }, 'ΙΡΙΣ'),
+  ilitia_oficial: m({ pelo: CASTANO, ropa: 'larga', ropaColor: '#B3352A', ribete: ORO, brazo: [85, 70],
+    adornos: { cuerpo: <Quiton a={A_M} c="#B3352A" mujer />, cabeza: <><PeloRecogido c={CASTANO} luz={CASTANO_L} /><Velo c="#E2A23A" borde={ORO} /></>, mano: <Antorcha /> } }, 'ΕΙΛΕΙΘΥΙΑ'),
+  hebe_oficial: m({ s: 0.96, pelo: '#B98A3E', ropa: 'larga', ropaColor: '#F2B8C0', ribete: ORO, brazo: [40, 60],
+    adornos: { cuerpo: <><Quiton a={A_M} c="#F2B8C0" mujer /><Cinto a={A_M} c={ORO} /></>, cabeza: <><PeloLargo c="#B98A3E" luz="#E2B870" largo={90} /><CoronaFlores colores={['#F4EEE2', '#E8728A']} /></>, mano: <Jarra /> } }, 'ΗΒΗ'),
+  anfitrite_oficial: m({ s: 1.03, pelo: '#3A2A20', ropa: 'larga', ropaColor: '#2E8A8C', ribete: '#E9E2D6', brazo: [30, 60],
+    adornos: { detras: <Manto c="#7FC2C0" borde="#E9E2D6" largo={0.95} ancho={0.9} />, cuerpo: <><Quiton a={A_M} c="#2E8A8C" borde="#E9E2D6" mujer /><Perlas a={A_M} /></>, cabeza: <><PeloLargo c="#3A2A20" luz="#6A5240" largo={100} /><CoronaPerlas /></>, mano: <TridenteCorto /> } }, 'ΑΜΦΙΤΡΙΤΗ'),
+  tetis_oficial: m({ pelo: CAOBA, ropa: 'larga', ropaColor: '#7FB8C9', ribete: '#DDE3E8', brazo: [34, 56],
+    adornos: { cuerpo: <><Quiton a={A_M} c="#7FB8C9" borde="#DDE3E8" mujer /><Perlas a={A_M} /></>, cabeza: <><PeloLargo c={CAOBA} luz={CAOBA_L} largo={96} /><CintaOro c="#DDE3E8" /></>, mano: <RamaCoral /> } }, 'ΘΕΤΙΣ'),
+  eurinome_oficial: m({ s: 1.02, pelo: NEGRO_P, ropa: 'larga', ropaColor: '#1E6E6A', ribete: '#9FD6CF', brazo: [30, 60],
+    adornos: { detras: <Manto c="#2E5E7A" borde="#9FD6CF" largo={0.95} ancho={0.9} />, cuerpo: <Quiton a={A_M} c="#1E6E6A" borde="#9FD6CF" mujer />, cabeza: <><PeloRecogido c={NEGRO_P} luz={NEGRO_PL} /><CintaOro c="#9FD6CF" /></>, mano: <Concha x={8} y={-16} s={1.8} rot={-10} /> } }, 'ΕΥΡΥΝΟΜΗ'),
+  semele_oficial: m({ pelo: NEGRO_P, ropa: 'larga', ropaColor: '#8C3B5E', ribete: ORO, brazo: [26, 50],
+    adornos: { detras: <Manto c="#E9B8C8" borde={ORO} largo={0.9} ancho={0.85} />, cuerpo: <><Quiton a={A_M} c="#8C3B5E" mujer /><Perlas a={A_M} /></>, cabeza: <><PeloLargo c={NEGRO_P} luz={NEGRO_PL} largo={100} /><DiademaJoya /></> } }, 'ΣΕΜΕΛΗ'),
+  ino_oficial: m({ pelo: CAOBA, ropa: 'larga', ropaColor: '#3E7A8E', ribete: ORO, brazo: [30, 60],
+    adornos: { cuerpo: <Quiton a={A_M} c="#3E7A8E" mujer />, cabeza: <><PeloRecogido c={CAOBA} luz={CAOBA_L} /><Velo c={BLANCO} borde="#3E7A8E" largo={130} /><CintaOro /></> } }, 'ΙΝΩ'),
+  beroe_oficial: m({ cuerpo: 'viejo', pelo: GRIS, ropa: 'larga', ropaColor: '#7A6A52', ribete: '#C9B48A', brazo: [20, 30],
+    adornos: { cuerpo: <Quiton a={A_M} c="#7A6A52" borde="#C9B48A" mujer />, cabeza: <><PeloRecogido c={GRIS} luz={GRIS_L} /><Velo c="#5A4632" largo={90} /></>, mano: <Baston y0={190} /> } }, 'ΒΕΡΟΗ'),
+  muerte_oficial: h({ s: 1.04, piel: PIEL_PALIDA, pelo: NEGRO_P, ropa: 'larga', ropaColor: '#2E2A34', ribete: '#8A8494', brazo: [26, 30],
+    adornos: { detras: <AlasEspalda tono="#6E6878" tono2="#4A4554" />, cuerpo: <><Quiton a={1} c="#2E2A34" borde="#8A8494" /><Himation a={1} c="#45404E" borde="#8A8494" /></>, cabeza: <><PeloRulos c={NEGRO_P} luz={NEGRO_PL} r={6} /><Oreja piel={PIEL_PALIDA} /></>, mano: <AntorchaAbajo /> } }, 'ΘΑΝΑΤΟΣ'),
+  hefesto_nino_oficial: h({ cuerpo: 'nino', piel: PIEL_SOL, pelo: CASTANO, ropa: 'corta', ropaColor: '#7D8A96', ribete: '#4E5A66', brazo: [40, 60],
+    adornos: { cuerpo: <Exomis a={1} c="#7D8A96" />, cabeza: <><PeloRulos c={CASTANO} luz={CASTANO_L} /><Oreja piel={PIEL_SOL} /><Pilos /></>, mano: <Martillito /> } }, 'ΗΦΑΙΣΤΟΣ'),
+  cadmo_oficial: h({ s: 1.04, piel: PIEL_SOL, pelo: '#6E6A64', ropa: 'larga', ropaColor: BLANCO, ribete: ORO, brazo: [30, 60],
+    adornos: { detras: <Manto c="#6A2A5A" borde={ORO} />, cuerpo: <><Quiton a={1} c={BLANCO} /><Himation a={1} c="#6A2A5A" /></>, cabeza: <><PeloRulos c="#6E6A64" luz="#A8A49C" /><BarbaRulos c="#6E6A64" luz="#A8A49C" L={56} r={6.5} /><CintaOro /></>, mano: <Lanza y0={236} y1={-250} /> } }, 'ΚΑΔΜΟΣ'),
+  cecrope_oficial: h({ s: 1.04, piel: PIEL_H, pelo: GRIS, ropa: 'larga', ropaColor: '#3E6A4E', ribete: '#7FB07A', brazo: [34, 64],
+    adornos: { detras: <ColaSerpienteC c="#3E6A4E" luz="#7FB07A" />, cuerpo: <><EscamasC c="#7FB07A" /><Quiton a={1} c={BLANCO} borde="#2C4C8C" /><Himation a={1} c="#2C4C8C" /></>, cabeza: <><PeloRulos c={GRIS} luz={GRIS_L} /><BarbaRulos c={GRIS} luz={GRIS_L} L={56} /><CoronaRey /></>, mano: <RamaOlivo />, pie: <PieSerpienteC c="#3E6A4E" luz="#7FB07A" />, pieAtras: <PieSerpienteC c="#3E6A4E" luz="#7FB07A" /> } }, 'ΚΕΚΡΟΨ'),
+  licaon_oficial: h({ s: 1.06, piel: PIEL_SOL, pelo: NEGRO_P, ropa: 'larga', ropaColor: '#5A1E1A', ribete: '#8A8478', brazo: [30, 50],
+    adornos: { detras: <Manto c="#6E6A64" borde="#4A4640" ancho={1.1} />, cuerpo: <><Quiton a={1} c="#5A1E1A" borde="#8A8478" /><Cinto a={1} c={CUERO} hebilla={ORO} /></>, cabeza: <><PeloRulos c={NEGRO_P} luz={NEGRO_PL} largo r={7} /><BarbaLarga c={NEGRO_P} luz={NEGRO_PL} L={70} /><CoronaRey /></> } }, 'ΛΥΚΑΩΝ'),
+  sisifo_oficial: h({ piel: PIEL_H, pelo: CASTANO, ropa: 'larga', ropaColor: '#B07A2E', ribete: '#5A3A22', brazo: [30, 60],
+    adornos: { detras: <Manto c="#6E4526" borde={ORO} />, cuerpo: <><Quiton a={1} c="#B07A2E" borde="#5A3A22" /><Himation a={1} c="#6E4526" /></>, cabeza: <><PeloRulos c={CASTANO} luz={CASTANO_L} /><BarbaRulos c={CASTANO} luz={CASTANO_L} L={46} r={6} /><CoronaRey /></>, mano: <CetroRey /> } }, 'ΣΙΣΥΦΟΣ'),
+  sisifo_roca_oficial: h({ piel: PIEL_H, pelo: CASTANO, ropa: 'corta', ropaColor: '#8A6A4A', ribete: '#5A4632', inclinar: 20, brazo: [80, 10], brazoAtras: [86, 4],
+    adornos: { cuerpo: <><Exomis a={1} c="#8A6A4A" /><Cinto a={1} c={CUERO} /></>, cabeza: <><PeloRulos c={CASTANO} luz={CASTANO_L} /><BarbaRulos c={CASTANO} luz={CASTANO_L} L={46} r={6} /></>, mano: <Penasco /> } }, 'ΣΙΣΥΦΟΣ'),
+  merope_oficial: m({ pelo: CASTANO, ropa: 'larga', ropaColor: '#2E6E78', ribete: ORO, brazo: [26, 50],
+    adornos: { detras: <Manto c="#5A3478" borde={ORO} largo={0.95} ancho={0.85} />, cuerpo: <><Quiton a={A_M} c="#2E6E78" mujer /><Perlas a={A_M} /></>, cabeza: <><PeloRecogido c={CASTANO} luz={CASTANO_L} /><Velo c="#5A3478" borde={ORO} largo={110} /><DiademaEstrellas n={7} /></> } }, 'ΜΕΡΟΠΗ'),
+  aquiles_oficial: h({ s: 1.04, piel: PIEL_H, pelo: RUBIO, ropa: 'corta', ropaColor: '#2C4C8C', ribete: ORO, brazo: [30, 60], brazoAtras: [30, 30], botas: BRONCE,
+    adornos: { detras: <Manto c="#2C4C8C" borde={ORO} largo={0.8} />, cuerpo: <Coraza a={1} />, cabeza: <><PeloRulos c={RUBIO} luz={RUBIO_L} largo r={6.5} /><CascoCorintio cresta={BLANCO} crestaOsc="#B9B4AA" /></>, mano: <Lanza y0={236} y1={-250} />, manoAtras: <Hoplon borde={BRONCE} campo="#1E2A4A" /> } }, 'ΑΧΙΛΛΕΥΣ'),
+  penelope_oficial: m({ pelo: NEGRO_P, ropa: 'larga', ropaColor: '#7E2A2A', ribete: ORO, brazo: [30, 60],
+    adornos: { cuerpo: <><Quiton a={A_M} c="#7E2A2A" mujer /><Cinto a={A_M} c={ORO_OSC} /></>, cabeza: <><PeloRecogido c={NEGRO_P} luz={NEGRO_PL} /><Velo c={CREMA} borde="#7E2A2A" largo={120} /></>, mano: <TelaTejida /> } }, 'ΠΗΝΕΛΟΠΗ'),
+  medea_oficial: m({ s: 1.02, pelo: NEGRO_P, ropa: 'larga', ropaColor: '#3A2A5E', ribete: ORO, brazo: [40, 60],
+    adornos: { detras: <Manto c="#7A1E3A" borde={ORO} largo={0.95} ancho={0.9} />, cuerpo: <><RopaColquide /><Quiton a={A_M} c="#3A2A5E" mujer /><Perlas a={A_M} /></>, cabeza: <><PeloLargo c={NEGRO_P} luz={NEGRO_PL} largo={110} /><DiademaJoya joya="#2E8A6E" /></>, mano: <Hierbas /> } }, 'ΜΗΔΕΙΑ'),
+  talos_oficial: h({ gigante: true, s: 1.16, piel: '#B87333', pelo: '#8A5E26', ropa: 'corta', ropaColor: '#8A5E26', ribete: '#E7C27A', brazo: [60, 40],
+    adornos: { cuerpo: <><BrilloBronce a={A_GIG} /><Cinto a={A_GIG} c="#6A4418" hebilla={ORO} /></>, cabeza: <><PeloRulos c="#8A5E26" luz="#E7C27A" /><Oreja piel="#B87333" /><CintaOro /></>, mano: <Roca />, pie: <Remache /> } }, 'ΤΑΛΩΣ'),
+  pitia_oficial: m({ pelo: CASTANO, ropa: 'larga', ropaColor: BLANCO, ribete: '#6A2A5A', brazo: [30, 60],
+    adornos: { cuerpo: <Quiton a={A_M} c={BLANCO} borde="#6A2A5A" mujer />, cabeza: <><PeloRecogido c={CASTANO} luz={CASTANO_L} /><Velo c={CREMA} borde="#6A2A5A" largo={110} /><Corona c={HOJA} luz={HOJA_OSC} /></>, mano: <RamaLaurel /> } }, 'ΠΥΘΙΑ'),
+  deucalion_oficial: h({ piel: PIEL_SOL, pelo: '#6E5A44', ropa: 'corta', ropaColor: '#8A6A3E', ribete: '#5A3A22', brazo: [50, 60],
+    adornos: { detras: <Manto c="#5A6E4A" borde="#C9A24A" largo={0.8} />, cuerpo: <><Quiton a={1} c="#8A6A3E" borde="#5A3A22" /><Cinto a={1} c={CUERO} /></>, cabeza: <><PeloRulos c="#6E5A44" luz="#9E8A70" /><BarbaRulos c="#6E5A44" luz="#9E8A70" L={52} r={6} /></>, mano: <Piedra />, pie: <Sandalia /> } }, 'ΔΕΥΚΑΛΙΩΝ'),
+  pirra_oficial: m({ pelo: '#B5452A', ropa: 'larga', ropaColor: '#D9A23A', ribete: '#7E2219', brazo: [50, 60],
+    adornos: { cuerpo: <><Quiton a={A_M} c="#D9A23A" borde="#7E2219" mujer /><Cinto a={A_M} c={CUERO} /></>, cabeza: <PeloLargo c="#B5452A" luz="#E07A4A" largo={100} />, mano: <Piedra /> } }, 'ΠΥΡΡΑ'),
+  homero_oficial: h({ cuerpo: 'viejo', piel: PIEL_H, pelo: BLANCO_P, canas: true, ropa: 'larga', ropaColor: '#3F5B73', ribete: BLANCO, ojosCerrados: true, brazo: [20, 40], brazoAtras: [-6, -14],
+    adornos: { cuerpo: <><Quiton a={1} c="#3F5B73" borde={BLANCO} /><Himation a={1} c={BLANCO} borde="#3F5B73" /></>, cabeza: <><PeloCalvo c={BLANCO_P} luz={BLANCO_PL} /><BarbaRulos c={BLANCO_P} luz={BLANCO_PL} L={62} /><Oreja piel={PIEL_H} /><CintaOro c="#DDE3E8" /></>, mano: <Baston y0={190} />, manoAtras: <Rollo /> } }, 'ΟΜΗΡΟΣ'),
+  demodoco_oficial: h({ cuerpo: 'viejo', piel: PIEL_SOL, pelo: BLANCO_P, ropa: 'larga', ropaColor: '#8E3E22', ribete: ORO, ojosCerrados: true, brazo: [40, 70],
+    adornos: { detras: <Manto c="#C9A24A" borde="#8E3E22" largo={0.9} />, cuerpo: <Quiton a={1} c="#8E3E22" />, cabeza: <><PeloRulos c={BLANCO_P} luz={BLANCO_PL} largo r={6.5} /><BarbaLarga c={BLANCO_P} luz={BLANCO_PL} L={84} /><CintaOro /></>, mano: <Lira /> } }, 'ΔΗΜΟΔΟΚΟΣ'),
+  maron_oficial: h({ cuerpo: 'viejo', piel: PIEL_H, pelo: GRIS, ropa: 'larga', ropaColor: BLANCO, ribete: ORO, brazo: [40, 60],
+    adornos: { cuerpo: <><Quiton a={1} c={BLANCO} /><Himation a={1} c="#C9A24A" borde={BLANCO} /></>, cabeza: <><PeloRulos c={GRIS} luz={GRIS_L} /><BarbaRulos c={GRIS} luz={GRIS_L} L={58} /><Corona c={HOJA} luz={HOJA_OSC} /></>, mano: <Anfora /> } }, 'ΜΑΡΩΝ'),
+  acetes_oficial: h({ piel: PIEL_SOL, pelo: CASTANO, ropa: 'corta', ropaColor: '#3F6E8A', ribete: BLANCO, brazo: [30, 50],
+    adornos: { cuerpo: <><Exomis a={1} c="#3F6E8A" /><Cinto a={1} c={CUERO} /></>, cabeza: <><PeloRulos c={CASTANO} luz={CASTANO_L} /><Oreja piel={PIEL_SOL} /><CintaOro c={ROJO} /></>, mano: <Timon />, pie: <Sandalia /> } }, 'ΑΚΟΙΤΗΣ'),
+  lotofago_oficial: hx({ piel: PIEL_SOL, pelo: NEGRO_P, ropa: 'larga', ropaColor: CREMA, ribete: '#3F7FC0', brazo: [30, 60],
+    adornos: { cuerpo: <Quiton a={1} c={CREMA} borde="#3F7FC0" />, cabeza: <><PeloRulos c={NEGRO_P} luz={NEGRO_PL} /><Oreja piel={PIEL_SOL} /><CoronaLoto /></>, mano: <FlorLoto /> } }),
+  lotofaga_oficial: mx({ piel: '#D9A57A', pelo: NEGRO_P, ropa: 'larga', ropaColor: '#9FC3DB', ribete: ORO, brazo: [30, 60],
+    adornos: { cuerpo: <Quiton a={A_M} c="#9FC3DB" mujer />, cabeza: <><PeloLargo c={NEGRO_P} luz={NEGRO_PL} largo={100} /><CoronaLoto /></>, mano: <CuencoFrutos /> } }),
+  marsias_oficial: h({ piel: PIEL_SOL, pelo: '#3A2A20', ropa: 'corta', ropaColor: '#7A5A3A', ribete: '#4A3424', brazo: [60, 70],
+    adornos: { detras: <ColaCaballo c="#3A2A20" luz="#6A5240" />, cuerpo: <><Nebris a={1} /><Cinto a={1} c={CUERO} /></>, cabeza: <><PeloRulos c="#3A2A20" luz="#6A5240" /><BarbaRulos c="#3A2A20" luz="#6A5240" L={50} r={6} /><OrejaSatiro piel={PIEL_SOL} /><Corona c={HOJA} luz={HOJA_OSC} ancha /></>, mano: <Aulos /> } }, 'ΜΑΡΣΥΑΣ'),
+  aegipan_oficial: h({ cuerpo: 'flaco', piel: PIEL_SOL, pelo: '#5A3A22', ropa: 'corta', ropaColor: '#8A6A44', ribete: '#5A4632', pantalon: '#8A6A44', botas: '#3A2A1C', brazo: [40, 60],
+    adornos: { detras: <ColaCabra c="#8A6A44" />, cuerpo: <><PielCabra a={A_FLACO} /><Cinto a={A_FLACO} c={CUERO} /></>, cabeza: <><PeloRulos c="#5A3A22" luz="#8E6440" /><BarbaRulos c="#5A3A22" luz="#8E6440" L={40} r={5.5} /><OrejaSatiro piel={PIEL_SOL} /><Cuernitos /></>, mano: <Siringa /> } }, 'ΑΙΓΙΠΑΝ'),
+  delfine_oficial: m({ s: 1.04, pelo: '#2A3A2A', ropa: 'larga', ropaColor: '#4E3A6E', ribete: '#8A6AB0', brazo: [50, 40], brazoAtras: [40, 30],
+    adornos: { detras: <ColaSerpienteC c="#4E3A6E" luz="#8A6AB0" />, cuerpo: <><EscamasC c="#8A6AB0" /><Quiton a={A_M} c="#2E2A3A" borde="#8A6AB0" mujer /></>, cabeza: <><PeloLargo c="#2A3A2A" luz="#4E6A4E" largo={110} /><OjoFiero /></>, pie: <PieSerpienteC c="#4E3A6E" luz="#8A6AB0" />, pieAtras: <PieSerpienteC c="#4E3A6E" luz="#8A6AB0" /> } }, 'ΔΕΛΦΥΝΗ'),
+  // ---- extras griegos (gente común, sin rótulo; varias variantes para que la multitud no salga clonada) ----
+  hombre_griego_oficial: hx({ piel: PIEL_SOL, pelo: CASTANO, ropa: 'corta', ropaColor: '#9A7A52', ribete: '#6E5232', brazo: [24, 40],
+    adornos: { cuerpo: <><Exomis a={1} c="#9A7A52" /><Cinto a={1} c={CUERO} /></>, cabeza: <><PeloRulos c={CASTANO} luz={CASTANO_L} /><BarbaRulos c={CASTANO} luz={CASTANO_L} L={46} r={6} /></>, pie: <Sandalia /> } }),
+  hombre_griego_2_oficial: hx({ piel: PIEL_H, pelo: NEGRO_P, ropa: 'corta', ropaColor: '#5E7A8E', ribete: '#C9B48A', brazo: [24, 40],
+    adornos: { detras: <Manto c="#8A4A2E" borde="#C9B48A" largo={0.62} />, cuerpo: <><Quiton a={1} c="#5E7A8E" borde="#C9B48A" /><Cinto a={1} c={CUERO} /><Broche x={-8} y={-300} c={BRONCE} /></>, cabeza: <><PeloRulos c={NEGRO_P} luz={NEGRO_PL} /><BarbaRulos c={NEGRO_P} luz={NEGRO_PL} L={40} r={5.5} /></>, pie: <Sandalia /> } }),
+  hombre_griego_3_oficial: hx({ piel: PIEL_H, pelo: GRIS, ropa: 'larga', ropaColor: '#C9A24A', ribete: '#7A4A22', brazo: [24, 40],
+    adornos: { cuerpo: <><Quiton a={1} c="#C9A24A" borde="#7A4A22" /><Himation a={1} c={CREMA} borde="#7A4A22" /></>, cabeza: <><PeloCalvo c={GRIS} luz={GRIS_L} /><BarbaRulos c={GRIS} luz={GRIS_L} L={48} r={6} /><Oreja piel={PIEL_H} /></> } }),
+  joven_griego_oficial: hx({ piel: PIEL_H, pelo: '#7A5232', ropa: 'corta', ropaColor: BLANCO, ribete: ROJO, brazo: [24, 40],
+    adornos: { cuerpo: <><Quiton a={1} c={BLANCO} borde={ROJO} /><Cinto a={1} c={CUERO} /></>, cabeza: <><PeloRulos c="#7A5232" luz="#A87A50" r={6} /><Oreja piel={PIEL_H} /></>, pie: <Sandalia /> } }),
+  joven_griego_2_oficial: hx({ piel: PIEL_SOL, pelo: NEGRO_P, ropa: 'corta', ropaColor: '#6B7A3A', ribete: '#C9A24A', brazo: [24, 40],
+    adornos: { cuerpo: <><Exomis a={1} c="#6B7A3A" /><Cinto a={1} c={CUERO} /></>, cabeza: <><PeloRulos c={NEGRO_P} luz={NEGRO_PL} r={6} /><Oreja piel={PIEL_SOL} /><Vincha c={ROJO} /></>, pie: <Sandalia /> } }),
+  anciano_griego_oficial: hx({ cuerpo: 'viejo', piel: PIEL_H, pelo: BLANCO_P, ropa: 'larga', ropaColor: CREMA, ribete: '#7A5232', brazo: [20, 30],
+    adornos: { cuerpo: <><Quiton a={1} c={CREMA} borde="#7A5232" /><Himation a={1} c="#B9A27A" borde="#7A5232" /></>, cabeza: <><PeloCalvo c={BLANCO_P} luz={BLANCO_PL} /><BarbaLarga c={BLANCO_P} luz={BLANCO_PL} L={84} /><Oreja piel={PIEL_H} /></>, mano: <Baston y0={190} /> } }),
+  anciano_griego_2_oficial: hx({ cuerpo: 'viejo', piel: PIEL_SOL, pelo: GRIS, ropa: 'larga', ropaColor: '#6E5A44', ribete: '#C9B48A', brazo: [20, 30],
+    adornos: { detras: <Manto c="#4E5A44" borde="#C9B48A" largo={0.85} />, cuerpo: <Quiton a={1} c="#6E5A44" borde="#C9B48A" />, cabeza: <><PeloRulos c={GRIS} luz={GRIS_L} /><BarbaRulos c={GRIS} luz={GRIS_L} L={60} /></>, mano: <Baston y0={190} /> } }),
+  mujer_griega_oficial: mx({ pelo: CASTANO, ropa: 'larga', ropaColor: '#B5552E', ribete: '#E9DFC8', brazo: [24, 40],
+    adornos: { cuerpo: <><Quiton a={A_M} c="#B5552E" borde="#E9DFC8" mujer /><Cinto a={A_M} c="#7A3A1E" /></>, cabeza: <><PeloRecogido c={CASTANO} luz={CASTANO_L} /><Vincha c="#E9DFC8" /></> } }),
+  mujer_griega_2_oficial: mx({ pelo: NEGRO_P, ropa: 'larga', ropaColor: '#7A8A4A', ribete: '#E9DFC8', brazo: [24, 40],
+    adornos: { cuerpo: <Quiton a={A_M} c="#7A8A4A" borde="#E9DFC8" mujer />, cabeza: <><PeloRecogido c={NEGRO_P} luz={NEGRO_PL} /><Velo c={CREMA} borde="#7A8A4A" largo={110} /></> } }),
+  mujer_griega_3_oficial: mx({ piel: '#E2B08C', pelo: CAOBA, ropa: 'larga', ropaColor: '#4E6E9A', ribete: '#E9DFC8', brazo: [30, 60],
+    adornos: { cuerpo: <><Quiton a={A_M} c="#4E6E9A" borde="#E9DFC8" mujer /><Cinto a={A_M} c="#2E4466" /></>, cabeza: <PeloLargo c={CAOBA} luz={CAOBA_L} largo={90} />, mano: <Jarra c="#C9682F" banda={N} /> } }),
+  anciana_griega_oficial: mx({ cuerpo: 'viejo', pelo: GRIS, ropa: 'larga', ropaColor: '#5A4E5E', ribete: '#B9B0A0', brazo: [20, 30],
+    adornos: { cuerpo: <Quiton a={A_M} c="#5A4E5E" borde="#B9B0A0" mujer />, cabeza: <><PeloRecogido c={GRIS} luz={GRIS_L} /><Velo c="#3A3238" largo={100} /></>, mano: <Baston y0={190} /> } }),
+  nino_griego_oficial: hx({ cuerpo: 'nino', piel: PIEL_H, pelo: CASTANO, ropa: 'corta', ropaColor: BLANCO, ribete: '#2C4C8C', brazo: [30, 40],
+    adornos: { cuerpo: <><Quiton a={1} c={BLANCO} borde="#2C4C8C" /><Cinto a={1} c={CUERO} /></>, cabeza: <><PeloRulos c={CASTANO} luz={CASTANO_L} /><Oreja piel={PIEL_H} /></> } }),
+  nina_griega_oficial: mx({ cuerpo: 'nino', pelo: '#7A5232', ropa: 'larga', ropaColor: '#E2906A', ribete: '#F4EEE2', brazo: [30, 50],
+    adornos: { cuerpo: <Quiton a={A_M} c="#E2906A" borde="#F4EEE2" mujer />, cabeza: <><PeloLargo c="#7A5232" luz="#A87A50" largo={70} /><CoronaFlores colores={['#F4EEE2']} /></>, mano: <FlorNarciso tallo={30} /> } }),
+  ninfa_oficial: mx({ pelo: '#B98A3E', ropa: 'larga', ropaColor: '#A8C98A', ribete: '#F4EEE2', brazo: [26, 50],
+    adornos: { cuerpo: <Quiton a={A_M} c="#A8C98A" borde="#F4EEE2" mujer />, cabeza: <><PeloLargo c="#B98A3E" luz="#E2B870" largo={104} /><CoronaFlores colores={['#F4EEE2', '#F2C94C']} /></> } }),
+  ninfa_2_oficial: mx({ pelo: NEGRO_P, ropa: 'larga', ropaColor: '#9FC3DB', ribete: '#F4EEE2', brazo: [26, 50],
+    adornos: { cuerpo: <Quiton a={A_M} c="#9FC3DB" borde="#F4EEE2" mujer />, cabeza: <><PeloLargo c={NEGRO_P} luz={NEGRO_PL} largo={104} /><CoronaFlores colores={['#8FB8D8', '#F4EEE2']} /></> } }),
+  ninfa_3_oficial: mx({ pelo: CAOBA, ropa: 'larga', ropaColor: '#5E7A4A', ribete: '#C9D98A', brazo: [30, 60],
+    adornos: { cuerpo: <Quiton a={A_M} c="#5E7A4A" borde="#C9D98A" mujer />, cabeza: <><PeloRecogido c={CAOBA} luz={CAOBA_L} /><Corona c={HOJA} luz={HOJA_OSC} ancha /></>, mano: <RamaBrotes /> } }),
+  gracia_oficial: mx({ pelo: RUBIO, ropa: 'larga', ropaColor: '#F2C9CE', ribete: ORO, brazo: [30, 60],
+    adornos: { cuerpo: <Quiton a={A_M} c="#F2C9CE" mujer />, cabeza: <><PeloRecogido c={RUBIO} luz={RUBIO_L} /><CoronaRosas /></>, mano: <Rosa /> } }),
+  hora_oficial: mx({ pelo: CASTANO, ropa: 'larga', ropaColor: '#E2B04A', ribete: '#7A8A3A', brazo: [30, 60],
+    adornos: { cuerpo: <Quiton a={A_M} c="#E2B04A" borde="#7A8A3A" mujer />, cabeza: <><PeloLargo c={CASTANO} luz={CASTANO_L} largo={96} /><CoronaFlores colores={['#E8728A', '#F4EEE2', '#F2C94C']} /></>, mano: <CuencoFrutos /> } }),
+  musa_oficial: mx({ pelo: CASTANO, ropa: 'larga', ropaColor: BLANCO, ribete: '#6A2A5A', brazo: [40, 70],
+    adornos: { detras: <Manto c="#6A2A5A" borde={ORO} largo={0.9} ancho={0.85} />, cuerpo: <Quiton a={A_M} c={BLANCO} borde="#6A2A5A" mujer />, cabeza: <><PeloRecogido c={CASTANO} luz={CASTANO_L} /><Corona c={HOJA} luz={HOJA_OSC} /></>, mano: <Lira /> } }),
+  musa_2_oficial: mx({ pelo: NEGRO_P, ropa: 'larga', ropaColor: '#E2A23A', ribete: '#2C4C8C', brazo: [30, 60],
+    adornos: { detras: <Manto c="#2C4C8C" borde={ORO} largo={0.9} ancho={0.85} />, cuerpo: <Quiton a={A_M} c="#E2A23A" borde="#2C4C8C" mujer />, cabeza: <><PeloLargo c={NEGRO_P} luz={NEGRO_PL} largo={96} /><Corona c={HOJA} luz={HOJA_OSC} /></>, mano: <Rollo /> } }),
+  musa_3_oficial: mx({ pelo: CAOBA, ropa: 'larga', ropaColor: '#3E7A8E', ribete: ORO, brazo: [60, 70],
+    adornos: { detras: <Manto c="#E9B8C8" borde={ORO} largo={0.9} ancho={0.85} />, cuerpo: <Quiton a={A_M} c="#3E7A8E" mujer />, cabeza: <><PeloRecogido c={CAOBA} luz={CAOBA_L} /><Corona c={HOJA} luz={HOJA_OSC} /></>, mano: <Aulos /> } }),
+  guerrero_griego_oficial: hx({ s: 1.02, piel: PIEL_SOL, pelo: NEGRO_P, ropa: 'corta', ropaColor: ROJO, ribete: BRONCE, brazo: [30, 60], brazoAtras: [30, 30], botas: BRONCE,
+    adornos: { detras: <Manto c={ROJO_OSC} borde={BRONCE} largo={0.7} />, cuerpo: <Coraza a={1} />, cabeza: <><BarbaRulos c={NEGRO_P} luz={NEGRO_PL} L={42} r={5.5} /><CascoCorintio cresta="#2A2420" crestaOsc="#5A4E44" /></>, mano: <Lanza y0={236} y1={-250} />, manoAtras: <Hoplon /> } }),
+  guerrero_griego_2_oficial: hx({ s: 1.02, piel: PIEL_H, pelo: '#7A5232', ropa: 'corta', ropaColor: '#2C4C8C', ribete: BRONCE, brazo: [30, 60], brazoAtras: [30, 30], botas: BRONCE,
+    adornos: { cuerpo: <Coraza a={1} c={CREMA} osc="#B9A27A" luz={BLANCO} />, cabeza: <><BarbaRulos c="#7A5232" luz="#A87A50" L={40} r={5.5} /><CascoCorintio cresta={BLANCO} crestaOsc="#B9B4AA" /></>, mano: <Lanza y0={236} y1={-250} />, manoAtras: <Hoplon campo="#2A2A2A" /> } }),
+  persa_oficial: hx({ piel: PIEL_SOL, pelo: NEGRO_P, ropa: 'corta', ropaColor: '#2E6E9A', ribete: '#C9A24A', pantalon: '#6A4A6E', botas: '#C9A24A', brazo: [30, 60], brazoAtras: [-6, 10],
+    adornos: { cuerpo: <><Quiton a={1} c="#2E6E9A" borde="#C9A24A" /><Cinto a={1} c="#C9A24A" /></>, cabeza: <><BarbaRulos c={NEGRO_P} luz={NEGRO_PL} L={50} r={6} /><TiaraPersa /></>, mano: <Lanza y0={236} y1={-200} />, manoAtras: <EscudoMimbre /> } }),
+  rey_griego_oficial: hx({ s: 1.04, piel: PIEL_H, pelo: '#4A3A2E', ropa: 'larga', ropaColor: BLANCO, ribete: ORO, brazo: [30, 60],
+    adornos: { detras: <Manto c="#6A2A5A" borde={ORO} />, cuerpo: <><Quiton a={1} c={BLANCO} /><Himation a={1} c="#6A2A5A" /></>, cabeza: <><PeloRulos c="#4A3A2E" luz="#7A6250" /><BarbaRulos c="#4A3A2E" luz="#7A6250" L={56} /><CoronaRey /></>, mano: <CetroRey /> } }),
+  rey_griego_2_oficial: hx({ s: 1.04, cuerpo: 'viejo', piel: PIEL_H, pelo: BLANCO_P, ropa: 'larga', ropaColor: '#9A2E26', ribete: ORO, brazo: [30, 60],
+    adornos: { detras: <Manto c="#2C4C8C" borde={ORO} />, cuerpo: <><Quiton a={1} c="#9A2E26" /><Himation a={1} c={BLANCO} borde={ORO} /></>, cabeza: <><PeloRulos c={BLANCO_P} luz={BLANCO_PL} /><BarbaLarga c={BLANCO_P} luz={BLANCO_PL} L={80} /><CintaOro /></>, mano: <CetroRey /> } }),
+  reina_griega_oficial: mx({ s: 1.02, pelo: CASTANO, ropa: 'larga', ropaColor: '#9A2E26', ribete: ORO, brazo: [26, 50],
+    adornos: { detras: <Manto c="#5A3478" borde={ORO} largo={0.95} ancho={0.85} />, cuerpo: <><Quiton a={A_M} c="#9A2E26" mujer /><Perlas a={A_M} /></>, cabeza: <><PeloRecogido c={CASTANO} luz={CASTANO_L} /><Velo c="#5A3478" borde={ORO} largo={110} /><CintaOro /></> } }),
+  reina_griega_2_oficial: mx({ s: 1.02, pelo: NEGRO_P, ropa: 'larga', ropaColor: '#2C4C8C', ribete: ORO, brazo: [26, 50],
+    adornos: { detras: <Manto c={ORO} borde="#2C4C8C" largo={0.95} ancho={0.85} />, cuerpo: <><Quiton a={A_M} c="#2C4C8C" mujer /><Perlas a={A_M} /></>, cabeza: <><PeloLargo c={NEGRO_P} luz={NEGRO_PL} largo={100} /><DiademaJoya /></> } }),
+  sacerdote_griego_oficial: hx({ piel: PIEL_H, pelo: GRIS, ropa: 'larga', ropaColor: BLANCO, ribete: '#6A2A5A', brazo: [30, 60],
+    adornos: { cuerpo: <><Quiton a={1} c={BLANCO} borde="#6A2A5A" /><Himation a={1} c={CREMA} borde="#6A2A5A" /></>, cabeza: <><PeloRulos c={GRIS} luz={GRIS_L} /><BarbaRulos c={GRIS} luz={GRIS_L} L={58} /><Corona c={HOJA} luz={HOJA_OSC} /></>, mano: <RamaLaurel /> } }),
+  sacerdotisa_griega_oficial: mx({ pelo: CASTANO, ropa: 'larga', ropaColor: BLANCO, ribete: ORO, brazo: [30, 60],
+    adornos: { cuerpo: <Quiton a={A_M} c={BLANCO} mujer />, cabeza: <><PeloRecogido c={CASTANO} luz={CASTANO_L} /><Velo c={CREMA} borde={ORO} largo={110} /><Corona c={HOJA} luz={HOJA_OSC} /></>, mano: <Jarra /> } }),
+  sacerdotisa_griega_2_oficial: mx({ pelo: NEGRO_P, ropa: 'larga', ropaColor: '#E2A23A', ribete: '#7E2219', brazo: [85, 70],
+    adornos: { cuerpo: <Quiton a={A_M} c="#E2A23A" borde="#7E2219" mujer />, cabeza: <><PeloLargo c={NEGRO_P} luz={NEGRO_PL} largo={100} /><CoronaFlores colores={['#F4EEE2', '#E8728A']} /></>, mano: <Antorcha /> } }),
+  gigante_griego_oficial: hx({ gigante: true, s: 1.18, piel: PIEL_SOL, pelo: '#3A2A20', ropa: 'corta', ropaColor: '#8A6A44', ribete: '#5A4632', brazo: [60, 40],
+    adornos: { cuerpo: <><PielCabra a={A_GIG} c="#9A7A52" /><Cinto a={A_GIG} c={CUERO} /></>, cabeza: <><PeloRulos c="#3A2A20" luz="#6A5240" largo r={8} /><BarbaLarga c="#3A2A20" luz="#6A5240" L={76} /></>, mano: <Roca /> } }),
+  gigante_griego_2_oficial: hx({ gigante: true, s: 1.18, piel: '#C08A66', pelo: CAOBA, ropa: 'corta', ropaColor: '#6E5A3A', ribete: '#4A3A24', brazo: [40, 70],
+    adornos: { cuerpo: <><PielCabra a={A_GIG} c="#C8913E" /><Cinto a={A_GIG} c={CUERO} /></>, cabeza: <><PeloRulos c={CAOBA} luz={CAOBA_L} largo r={8} /><BarbaRulos c={CAOBA} luz={CAOBA_L} L={62} r={7} /></>, mano: <Clava /> } }),
+  pastor_griego_oficial: hx({ piel: PIEL_SOL, pelo: CASTANO, ropa: 'corta', ropaColor: '#8A7A5A', ribete: '#5A4632', brazo: [24, 40],
+    adornos: { cuerpo: <><Exomis a={1} c="#8A7A5A" /><PielCabra a={1} c="#E9DFC8" /><Cinto a={1} c={CUERO} /></>, cabeza: <><PeloRulos c={CASTANO} luz={CASTANO_L} r={6} /><BarbaRulos c={CASTANO} luz={CASTANO_L} L={36} r={5} /><Petaso /></>, mano: <Baston y0={230} />, pie: <Sandalia /> } }),
+  pastor_griego_2_oficial: hx({ piel: PIEL_SOL, pelo: '#7A5232', ropa: 'corta', ropaColor: '#6E5A3A', ribete: '#C9B48A', brazo: [24, 40],
+    adornos: { cuerpo: <><Exomis a={1} c="#6E5A3A" /><Cinto a={1} c={CUERO} /></>, cabeza: <><PeloRulos c="#7A5232" luz="#A87A50" r={6} /><Oreja piel={PIEL_SOL} /><Pilos /></>, mano: <Baston y0={230} />, pie: <Sandalia /> } }),
+  marinero_griego_oficial: hx({ piel: PIEL_SOL, pelo: '#4A3A2E', ropa: 'corta', ropaColor: '#5E7A8E', ribete: '#2C3E5A', brazo: [24, 40],
+    adornos: { cuerpo: <><Exomis a={1} c="#5E7A8E" /><Cinto a={1} c={CUERO} /></>, cabeza: <><PeloRulos c="#4A3A2E" luz="#7A6250" /><BarbaRulos c="#4A3A2E" luz="#7A6250" L={44} r={5.5} /><PilosViajero /></>, mano: <Soga /> } }),
+  marinero_griego_2_oficial: hx({ piel: PIEL_SOL, pelo: NEGRO_P, ropa: 'corta', ropaColor: CREMA, ribete: '#2C4C8C', brazo: [40, 40],
+    adornos: { cuerpo: <><Exomis a={1} c={CREMA} /><Cinto a={1} c={CUERO} /></>, cabeza: <><PeloRulos c={NEGRO_P} luz={NEGRO_PL} r={6} /><Oreja piel={PIEL_SOL} /><Vincha c="#2C4C8C" /></>, mano: <Remo /> } }),
+  pirata_oficial: hx({ piel: PIEL_SOL, pelo: NEGRO_P, ropa: 'corta', ropaColor: '#7E2219', ribete: '#2A2420', brazo: [40, 60],
+    adornos: { cuerpo: <><Exomis a={1} c="#7E2219" /><Cinto a={1} c="#2A2420" hebilla={BRONCE} /></>, cabeza: <><PeloRulos c={NEGRO_P} luz={NEGRO_PL} /><BarbaRulos c={NEGRO_P} luz={NEGRO_PL} L={50} r={6} /><Vincha c={ROJO} /></>, mano: <Xiphos /> } }),
+  pirata_2_oficial: hx({ piel: PIEL_H, pelo: '#7A3E22', ropa: 'corta', ropaColor: '#5A4632', ribete: '#C9A24A', brazo: [30, 50],
+    adornos: { cuerpo: <><Exomis a={1} c="#5A4632" /><Cinto a={1} c={ROJO_OSC} /></>, cabeza: <><PeloRulos c="#7A3E22" luz="#B0643A" r={6} /><Oreja piel={PIEL_H} /><Panuelo c="#2E3A4A" /></>, mano: <Soga /> } }),
+  doncella_oro_oficial: mx({ piel: '#D9A83A', pelo: '#B5832A', ropa: 'larga', ropaColor: '#E8C46A', ribete: ORO_OSC, brazo: [30, 60],
+    adornos: { cuerpo: <Quiton a={A_M} c="#E8C46A" borde={ORO_OSC} mujer />, cabeza: <><PeloRecogido c="#B5832A" luz="#F2D27A" /><CintaOro c="#FFF3B0" /></> } }),
+  // criaturas con nombre
+  piton_oficial: D(SerpienteBarro, { largo: 700, grosor: 56, color: '#6E6A3A', panza: '#D9C98A', mancha: '#3E3A22', erguida: 0.8 }, 'ΠΥΘΩΝ'),
+  cerbero_oficial: D(Bestia4, { especie: 'perro', color: '#4A3A30', cabezas: 3, colaSerpiente: true, collar: BRONCE, s: 1.6 }, 'ΚΕΡΒΕΡΟΣ'),
+  pegaso_oficial: D(Bestia4, { especie: 'caballo', color: '#F2EEE6', crin: '#CFC6B4', alas: true }, 'ΠΗΓΑΣΟΣ'),
+  licaon_lobo_oficial: D(Bestia4, { especie: 'lobo', capa: '#5A1E1A', s: 1.1 }, 'ΛΥΚΑΩΝ'),
+  dioniso_cabrito_oficial: D(Bestia4, { especie: 'cabrito', hiedra: true }, 'ΔΙΟΝΥΣΟΣ'),
+  dioniso_leon_oficial: D(Bestia4, { especie: 'leon', hiedra: true }, 'ΔΙΟΝΥΣΟΣ'),
+  // ---- animales griegos (sin rótulo) ----
+  caballo_griego_oficial: D(Bestia4, { especie: 'caballo' }),
+  mula_griega_oficial: D(Bestia4, { especie: 'mula' }),
+  buey_griego_oficial: D(Bestia4, { especie: 'buey' }),
+  vaca_griega_oficial: D(Bestia4, { especie: 'vaca' }),
+  toro_griego_oficial: D(Bestia4, { especie: 'toro' }),
+  oveja_griega_oficial: D(Bestia4, { especie: 'oveja' }),
+  carnero_griego_oficial: D(Bestia4, { especie: 'carnero' }),
+  cabra_griega_oficial: D(Bestia4, { especie: 'cabra' }),
+  ciervo_griego_oficial: D(Bestia4, { especie: 'ciervo' }),
+  perro_griego_oficial: D(Bestia4, { especie: 'perro', collar: ROJO }),
+  lobo_griego_oficial: D(Bestia4, { especie: 'lobo' }),
+  leon_griego_oficial: D(Bestia4, { especie: 'leon' }),
+  oso_griego_oficial: D(Bestia4, { especie: 'oso' }),
+  tortuga_griega_oficial: D(TortugaBarro, {}),
+  serpiente_griega_oficial: D(SerpienteBarro, { largo: 340, grosor: 26, color: '#4E7A3A', panza: '#C9D98A', mancha: '#2E4E22' }),
+  aguila_griega_oficial: D(AveBarro, { especie: 'aguila' }),
+  paloma_griega_oficial: D(AveBarro, { especie: 'paloma' }),
+  cisne_griego_oficial: D(AveBarro, { especie: 'cisne' }),
+  pavo_real_griego_oficial: D(PavoReal, {}),
+  buho_griego_oficial: D(BuhoBarro, {}),
+  delfin_griego_oficial: D(DelfinBarro, {}),
 };
 export const NOMBRE_EN_GRIEGO_OFICIAL: Record<string, string> = {
   zeus_oficial: 'ZEUS', hera_oficial: 'HERA', poseidon_oficial: 'POSEIDON', hades_oficial: 'HADES', atenea_oficial: 'ATHENA', apolo_oficial: 'APOLLO', artemisa_oficial: 'ARTEMIS',
@@ -1101,4 +2002,10 @@ export const NOMBRE_EN_GRIEGO_OFICIAL: Record<string, string> = {
   gea_oficial: 'GAIA', urano_oficial: 'URANUS', metis_oficial: 'METIS', maia_oficial: 'MAIA', heracles_oficial: 'HERACLES', perseo_oficial: 'PERSEUS', medusa_oficial: 'MEDUSA', teseo_oficial: 'THESEUS', minotauro_oficial: 'MINOTAUR',
   ariadna_oficial: 'ARIADNE', dedalo_oficial: 'DAEDALUS', icaro_oficial: 'ICARUS', midas_oficial: 'MIDAS', aracne_oficial: 'ARACHNE', jason_oficial: 'JASON', eco_oficial: 'ECHO', narciso_oficial: 'NARCISSUS', odiseo_oficial: 'ODYSSEUS',
   pandora_oficial: 'PANDORA', epimeteo_oficial: 'EPIMETHEUS', hecatonquiro_oficial: 'HECATONCHEIRES', tifon_oficial: 'TYPHON',
+  helios_oficial: 'HELIOS', leto_oficial: 'LETO', temis_oficial: 'THEMIS', asteria_oficial: 'ASTERIA', iris_oficial: 'IRIS', ilitia_oficial: 'EILEITHYIA', hebe_oficial: 'HEBE', anfitrite_oficial: 'AMPHITRITE',
+  tetis_oficial: 'THETIS', eurinome_oficial: 'EURYNOME', semele_oficial: 'SEMELE', ino_oficial: 'INO', beroe_oficial: 'BEROE', muerte_oficial: 'THANATOS', hefesto_nino_oficial: 'HEPHAESTUS',
+  cadmo_oficial: 'CADMUS', cecrope_oficial: 'CECROPS', licaon_oficial: 'LYCAON', sisifo_oficial: 'SISYPHUS', sisifo_roca_oficial: 'SISYPHUS', merope_oficial: 'MEROPE', aquiles_oficial: 'ACHILLES',
+  penelope_oficial: 'PENELOPE', medea_oficial: 'MEDEA', talos_oficial: 'TALOS', pitia_oficial: 'PYTHIA', deucalion_oficial: 'DEUCALION', pirra_oficial: 'PYRRHA', homero_oficial: 'HOMER',
+  demodoco_oficial: 'DEMODOCUS', maron_oficial: 'MARON', acetes_oficial: 'ACOETES', marsias_oficial: 'MARSYAS', aegipan_oficial: 'AEGIPAN', delfine_oficial: 'DELPHYNE',
+  piton_oficial: 'PYTHON', cerbero_oficial: 'CERBERUS', pegaso_oficial: 'PEGASUS', licaon_lobo_oficial: 'LYCAON', dioniso_cabrito_oficial: 'DIONYSUS', dioniso_leon_oficial: 'DIONYSUS',
 };

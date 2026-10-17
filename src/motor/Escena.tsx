@@ -29,7 +29,7 @@ export function estadoActor(a: Actor, tl: EscenaTL, f: number, ficha: Ficha): { 
   // Oculto al principio si su primera entrada/salida es una entrada (aunque antes haya otros pasos).
   const primero = pasos.find((p) => ['aparece', 'entra', 'desaparece', 'sale'].includes(p.hace))?.hace;
   const oculto = a.visible === false || primero === 'aparece' || primero === 'entra';
-  const volador = ficha.tipo === 'ave' || ficha.tipo === 'ojo';
+  const volador = ficha.tipo === 'ave' || ficha.tipo === 'ojo' || (ficha.tipo === 'dibujo' && !!ficha.p?.vuela); // dibujo con p.vuela = ave oficial en vuelo
   const e: Estado = {
     x: a.x, y: a.y ?? (volador ? 360 : SUELO), s: (a.escala ?? 1) * ESCALA_CAPA[capa], voltear: a.mira === 'izq',
     opacity: oculto ? 0 : 1, accion: 'parado', volando: volador, boca: false, rot: 0, brillo: 0, objeto: undefined, temblor: 0,

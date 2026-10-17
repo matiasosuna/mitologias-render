@@ -12,6 +12,8 @@
 //    hasta llegar. Los "Who is…?" salen igual en sus turnos, a las tres juntas.
 //  - PAREJO: por día 1 episodio (turno de las 08) + 2 "Who is…?" (12 y 20), lo mismo en las tres.
 // Todo se decide con lo publicado ANTES de empezar el turno: el orden en que corren las plataformas no cambia el plan.
+// "Who is…?" horizontal (solo YouTube, video normal 16:9 en la lista "<Mitología>: Who's Who"): sale en el MISMO turno que
+// su Short (horizontalTurno). Parejo en YouTube: por día 1 episodio + 2 "Who is…?" Shorts + 2 "Who is…?" horizontales.
 
 export const PLATAFORMAS = ['youtube', 'instagram', 'tiktok'];
 export const FORMATOS = {
@@ -154,6 +156,17 @@ export function planTurno({ cola, tiene, plataforma, clase: c, listo = () => tru
     if (punteros[plataforma] < lider) ids.push(...eps.slice(0, lider).filter((e) => !antes(plataforma)(e.id)).slice(0, max).map((e) => e.id).filter((id) => !ahora(id)));
   } else if (c === 'episodio' && lider < eps.length && !ahora(eps[lider].id)) ids.push(eps[lider].id);
   return { ids, parejo, punteros, lider };
+}
+
+/** Clave de la versión horizontal de un "Who is…?" en youtube-ids.json (el Short ocupa la del id). */
+export const claveHorizontal = (id) => `${id}-horizontal`;
+/** "Who is…?" cuya versión horizontal sube YouTube en este turno (o null): solo en turnos de "Who is…?"; el del Short
+ *  del plan y, si el plan no trae uno, el más viejo de la cola cuyo Short ya está en YouTube y su horizontal no
+ *  (reintento). Uno por turno → 2 por día. conHorizontal(id): el guion tiene versión 16:9 (Short con `quien`). */
+export function horizontalTurno({ cola, tieneYT, ytIds, ids = [], clase: c, conHorizontal }) {
+  if (c !== 'quien') return null;
+  const falta = (id) => esShort(id) && conHorizontal(id) && !ytIds[claveHorizontal(id)];
+  return ids.find(falta) ?? cola.find((e) => tieneYT.has(e.id) && falta(e.id))?.id ?? null;
 }
 
 /** Recorta el plan a lo que entra en el tope de 24 h (en orden; corta en el primero que no entra). */

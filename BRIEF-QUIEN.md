@@ -63,3 +63,13 @@ El cartel no lleva voz; no hace falta decir "Who is Zeus?". Ejemplo completo: `s
 ## Pasos
 Los de RUTINA.md › 4–5: `motor-narrar <id> en`, `motor-revisar <id> --sin-hoja` ("sin avisos"), tests, commit,
 `scripts/estado-agregar-shorts.sh <ids>`.
+
+## Versión horizontal (YouTube, video normal)
+Cada "Who is…?" sale también en 16:9 (`<id>-horizontal`, `src/motor/ShortHorizontal.tsx`): NO es un recorte del vertical;
+las escenas se ven enteras como en los episodios, misma voz y timeline del Short, cartel "Who is Zeus?" de 2 s con el muñeco
+oficial y pantalla final de 12 s. No hay que tocar el guion.
+- Render: `node scripts/quien-horizontal.mjs <id>` (o `motor-render.mjs <id>`, o render-nube `tipo=horizontal`) →
+  `out/<id>/<id>.en.mp4` + `.en.srt`/`.es.srt`; miniatura: `node scripts/miniaturas.mjs <id>`.
+- YouTube: título "Who is Zeus? | Greek Mythology", lista "Greek Mythology: Who's Who" (se crea con el primer video; el id
+  queda en `src/videos/listas.json`). Sale en el mismo turno que su Short (`scripts/nube.mjs`, `horizontalTurno` de
+  `scripts/cola.mjs`): parejo, 1 episodio + 2 Shorts + 2 horizontales por día. Pruebas: `test/quien-horizontal.test.mjs`.
