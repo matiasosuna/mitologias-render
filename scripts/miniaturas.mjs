@@ -7,6 +7,8 @@ import { resolve } from 'node:path';
 import { miniaturaQuien } from '../lib/quien.mjs';
 
 const MINIS = {
+  'griegas-01-origen': ['cronos', 'urano'],
+  'griegas-02-prometeo': ['prometeo', 'zeus'],
   'griegas-03-pandora': ['pandora', 'epimeteo'],
   'griegas-04-edades': ['zeus', 'hombre'],
   'griegas-05-diluvio': [{ barba: true, canas: true, ropa: 'larga' }, { mujer: true, tocado: 'velo' }],
@@ -31,6 +33,7 @@ for (const id of ids) {
   const g = JSON.parse(readFileSync(`src/videos/${id}/guion.json`, 'utf8'));
   // "Who is…?" horizontal: el muñeco oficial y el título del cartel ("WHO IS ZEUS?"), etiqueta "GREEK · WHO'S WHO"
   const props = g.quien ? miniaturaQuien(g) : (() => {
+    if (!g.miniatura && !MINIS[id]) throw new Error(`miniaturas: ${id} no tiene "miniatura" en el guion ni entrada en MINIS (héroe y rival) en scripts/miniaturas.mjs`);
     const [heroe, rival] = g.miniatura ? [g.miniatura.heroe, g.miniatura.rival] : MINIS[id];
     return { titulo: g.titulo.en.toUpperCase(), numero: String(Number(g.numero)), heroe, rival, serie: g.serie, ...(g.especial ? { etiqueta: `${g.especial.nombre.en}${g.especial.parte ? ` · PART ${g.especial.parte}` : ''}`.toUpperCase() } : {}) };
   })();

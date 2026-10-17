@@ -1,18 +1,29 @@
 # Pre-render de lo próximo de la cola única (solo renderiza; NO publica, no toca Buffer).
-# Elige los próximos n ítems a los que les falta archivo en el release "media" (y sin artefacto vigente de render-nube).
-# gh workflow run prerender.yml -R matiasosuna/mitologias-render [-f n=6] [-f motor=auto|github|modal]
-# motor auto: Modal si son más de 3 ítems; modal: siempre que se pueda. Modal solo hace horizontales (scripts/modal_render.py),
-# deja el resultado en el release media; lo demás (partes, shorts) y el respaldo si Modal falla van por render-nube (GitHub).
+# Los episodios se renderizan en MODAL (un contenedor por episodio y formato, en paralelo): horizontal (YouTube),
+# vertical completo (TikTok) y partes (Instagram). Los resultados quedan en el release "media". Si Modal falla (o no hay claves),
+# esos formatos se mandan a render-nube (GitHub). Los Shorts van por render-nube.
+# Elige los próximos ítems de la cola con archivos faltantes en el release, saltando episodios cuyo guion usa personajes viejos
+# (sin _oficial; se listan en el log) y respetando episodios/presupuesto.
+# gh workflow run prerender.yml -R matiasosuna/mitologias-render [-f episodios=8] [-f presupuesto=4] [-f forzar=id,id] [-f motor=modal|github]
 name: prerender
 on:
   workflow_dispatch:
     inputs:
-      n:
-        description: 'cuántos ítems pendientes renderizar'
-        default: '6'
+      episodios:
+        description: 'máximo de episodios a renderizar'
+        default: '8'
+      presupuesto:
+        description: 'tope estimado en USD (Modal)'
+        default: '4'
+      forzar:
+        description: 'ids a re-renderizar aunque ya estén en el release (ignoran el filtro de personajes viejos)'
+        default: ''
       motor:
-        description: 'auto | github | modal'
-        default: auto
+        description: 'modal | github'
+        default: modal
+      simular:
+        description: 'true = solo mostrar el plan, costo estimado y omitidos (no renderiza)'
+        default: 'false'
 permissions:
   contents: write # release media
   actions: write  # dispara render-nube
@@ -43,24 +54,37 @@ jobs:
       - name: plan
         run: |
           MODAL=0; [ -n "$MODAL_TOKEN_ID" ] && MODAL=1
-          node scripts/prerender.mjs plan --n=${{ inputs.n }} --motor=${{ inputs.motor }} --modal=$MODAL
+          node scripts/prerender.mjs plan --n=99 --episodios=${{ inputs.episodios }} --presupuesto=${{ inputs.presupuesto }} --forzar=${{ inputs.forzar }} --motor=${{ inputs.motor }} --modal=$MODAL
       - name: lotes de GitHub (render-nube)
+        if: inputs.simular != 'true'
         run: |
           node -e 'for (const l of JSON.parse(require("fs").readFileSync("out/lotes.json","utf8"))) if (l.motor === "github") console.log(l.tipo + " " + JSON.stringify(l.ids))' | while read -r TIPO IDS; do
             gh workflow run render.yml -f ids="$IDS" -f tipo="$TIPO" && echo "render-nube disparado: $TIPO $IDS"
           done
-      - name: horizontales en Modal → release media
+      - name: episodios en Modal → release media
         id: m
+        if: inputs.simular != 'true'
         continue-on-error: true
         run: |
-          IDS=$(node -e 'const l=JSON.parse(require("fs").readFileSync("out/lotes.json","utf8")).filter(x=>x.motor==="modal"); console.log(l.flatMap(x=>x.ids).join(" "))')
-          [ -n "$IDS" ] || { echo "nada para Modal"; exit 0; }
-          echo "ids=$IDS" >> "$GITHUB_OUTPUT"
+          ITEMS=$(node -e 'const l=JSON.parse(require("fs").readFileSync("out/lotes.json","utf8")).filter(x=>x.motor==="modal"); console.log(l.flatMap(x=>x.ids.map(i=>i+":"+x.tipo)).join(" "))')
+          [ -n "$ITEMS" ] || { echo "nada para Modal"; exit 0; }
+          echo "items=$ITEMS" >> "$GITHUB_OUTPUT"
           pip install -q modal
-          MOC_ID="$IDS" MOC_MODO=horizontal timeout 6000 modal run scripts/modal_render.py
-          for id in $IDS; do modal volume get --force moc-out "$id" out/; done
-          ls out/*/ | head -20
-          node scripts/prerender.mjs subir $IDS
-      - name: respaldo en render-nube si Modal falló
-        if: steps.m.outcome == 'failure' && steps.m.outputs.ids != ''
-        run: gh workflow run render.yml -f ids="$(echo '${{ steps.m.outputs.ids }}' | node -e 'console.log(JSON.stringify(require("fs").readFileSync(0,"utf8").trim().split(" ")))')" -f tipo=horizontal
+          START=$(date +%s)
+          rc=0; MOC_ITEMS="$ITEMS" timeout 6000 modal run scripts/modal_render.py || rc=$?
+          echo "Modal: $(( $(date +%s) - START )) s (rc=$rc)"
+          FALLOS=$(cat out/modal-fallos.json 2>/dev/null | node -e 'try{console.log(JSON.parse(require("fs").readFileSync(0,"utf8")).join(" "))}catch{console.log("TODOS")}')
+          [ "$FALLOS" = TODOS ] && FALLOS="$ITEMS"
+          echo "fallos=$FALLOS" >> "$GITHUB_OUTPUT"
+          OK=""; for it in $ITEMS; do case " $FALLOS " in *" $it "*) ;; *) OK="$OK $it";; esac; done
+          for id in $(echo "$OK" | tr ' ' '\n' | cut -d: -f1 | sort -u); do modal volume get --force moc-out "$id" out/; done
+          node scripts/prerender.mjs subir $OK
+          [ -z "$FALLOS" ] || exit 1
+      - name: respaldo en render-nube de lo que falló en Modal
+        if: inputs.simular != 'true' && steps.m.outcome == 'failure' && steps.m.outputs.items != ''
+        run: |
+          F="${{ steps.m.outputs.fallos }}"; [ -n "$F" ] || F="${{ steps.m.outputs.items }}"
+          for T in horizontal vertical partes; do
+            IDS=$(echo "$F" | tr ' ' '\n' | grep ":$T\$" | cut -d: -f1 | node -e 'const a=require("fs").readFileSync(0,"utf8").split("\n").filter(Boolean); if (a.length) console.log(JSON.stringify(a))')
+            [ -z "$IDS" ] || gh workflow run render.yml -f ids="$IDS" -f tipo="$T"
+          done

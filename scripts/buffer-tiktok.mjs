@@ -60,7 +60,8 @@ export async function prepararTiktok(id) {
     const portada = rel.asegurar(id, 'portada-ig');
     if (!portada) throw new Error(`no hay portada de ${id}`);
     console.log(`  render vertical completo: ${id}`);
-    execFileSync('node', ['scripts/vertical-render.mjs', id], { stdio: ['ignore', 'inherit', 'inherit'] }); // ritmo normal (sin --rapido)
+    // MOC_VERTICAL_LISTO=1: el vertical completo ya lo renderizó Modal (prerender) y está en out/<id>/; no se rehace
+    if (process.env.MOC_VERTICAL_LISTO !== '1' || !existsSync(rel.rutaLocal(id, 'vertical'))) execFileSync('node', ['scripts/vertical-render.mjs', id], { stdio: ['ignore', 'inherit', 'inherit'] }); // ritmo normal (sin --rapido)
     const tapa = join('out', id, 'tapa-tiktok.jpg');
     execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', portada, '-filter_complex', '[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=30:4,eq=brightness=-0.25[bg];[bg][0:v]overlay=0:285', '-frames:v', '1', '-q:v', '2', tapa]);
     ffmpegTiktok(tapa, rel.rutaLocal(id, 'vertical'), tk);

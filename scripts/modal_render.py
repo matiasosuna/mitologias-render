@@ -1,9 +1,10 @@
-# Render de UN episodio vertical en Modal (CPU, se paga por segundo, sale del crédito gratis).
-# Uso: MOC_ID="<id> <id> …" .venv/bin/modal run --detach scripts/modal_render.py   (sigue aunque se corte internet)
-#      cada episodio va en su propio contenedor, todos a la vez (≈ 24 min y ≈ 0,23 USD de crédito por episodio)
-#      después: .venv/bin/modal volume get moc-out <id>.vertical.mp4 out/<id>/
-# Tope: 8 núcleos + 16 GB ≈ 0,50 USD/h y timeout de 45 min → máximo ≈ 0,38 USD por corrida (sale del crédito gratis).
-# El contenedor se apaga solo al terminar o al llegar al timeout. El video queda en el Volume "moc-out".
+# Render de episodios en Modal (CPU, se paga por segundo, sale del crédito gratis). Un contenedor por (episodio, formato), todos a la vez.
+# Formatos (modo): horizontal = YouTube (mp4 con pistas, .srt, miniatura) · vertical = TikTok (vertical completo) · partes = Instagram (Reels + partes.json).
+# Uso: MOC_ITEMS="<id>:horizontal <id>:vertical <id>:partes" .venv/bin/modal run --detach scripts/modal_render.py
+#      (viejo, sigue valiendo: MOC_ID="<id> <id>" MOC_MODO=horizontal|vertical|partes[,…]; por defecto vertical)
+#      Todo queda en el Volume "moc-out", carpeta <id>/ → `modal volume get --force moc-out <id> out/` (lo hace el workflow prerender).
+# Tope: 8 núcleos + 24 GB ≈ 0,57 USD/h y timeout de 60 min por contenedor. Medido: horizontal ≈ 40 min (≈ 0,38 USD), vertical ≈ 24 min (≈ 0,23 USD).
+# Los fallos de un formato no cortan los demás: se listan al final y el proceso sale con error (el workflow los manda a render-nube).
 import json
 import os
 import pathlib
@@ -11,9 +12,21 @@ import subprocess
 
 import modal
 
-IDS = os.environ.get("MOC_ID", "").split()
-MODO = os.environ.get("MOC_MODO", "vertical")  # vertical | horizontal (YouTube: mp4 con pistas, .srt y miniatura)
-RAIZ = pathlib.Path(__file__).resolve().parent.parent
+MODOS = ("horizontal", "vertical", "partes")
+
+
+def _items():
+    crudo = os.environ.get("MOC_ITEMS", "").split()
+    if crudo:
+        return [tuple(x.split(":", 1)) for x in crudo]
+    modos = os.environ.get("MOC_MODO", "vertical").split(",")
+    return [(i, m) for i in os.environ.get("MOC_ID", "").split() for m in modos]
+
+
+ITEMS = _items()
+assert all(m in MODOS for _, m in ITEMS), f"modo inválido en {ITEMS}"
+IDS = sorted({i for i, _ in ITEMS})
+RAIZ = pathlib.Path(__file__).resolve().parent.parent if modal.is_local() else pathlib.Path("/app")
 MUSICA = {"griegas": "lira-griega", "nordicas": "nordica", "egipcias": "egipcia", "hawaianas": "hawaiana", "norteamericanas": "norteamericana", "aztecas": "azteca", "balinesas": "balinesa", "hindues": "hindu", "maories": "maori"}
 
 image = (
@@ -24,7 +37,7 @@ image = (
     .add_local_file(RAIZ / "package-lock.json", "/app/package-lock.json", copy=True)
     .run_commands("cd /app && npm ci --no-audit --no-fund --loglevel=error", "cd /app && npx remotion browser ensure")
 )
-if IDS:
+if modal.is_local() and IDS:
     image = (
         image.add_local_dir(RAIZ / "src", "/app/src")
         .add_local_dir(RAIZ / "scripts", "/app/scripts")
@@ -37,7 +50,7 @@ if IDS:
         image = image.add_local_file(RAIZ / f"public/musica/{MUSICA[serie]}.wav", f"/app/public/musica/{MUSICA[serie]}.wav")
     for i in IDS:
         image = image.add_local_dir(RAIZ / "public/audio" / i / "en", f"/app/public/audio/{i}/en")
-        if (RAIZ / "out" / i / "portada-ig.jpg").exists():  # si no está, vertical-render la genera
+        if (RAIZ / "out" / i / "portada-ig.jpg").exists():  # si no está, vertical-render / vertical-partes la generan
             image = image.add_local_file(RAIZ / "out" / i / "portada-ig.jpg", f"/app/out/{i}/portada-ig.jpg")
 
 app = modal.App("moc-render", image=image)
@@ -49,24 +62,56 @@ def render(id: str, modo: str = "vertical") -> str:
     import shutil, time
     t = time.time()
     env = {**os.environ, "RENDER_CONCURRENCY": "8", "PARTES": "8"}
+    out = pathlib.Path(f"/app/out/{id}")
+    destino = pathlib.Path(f"/vol/{id}")
+    destino.mkdir(parents=True, exist_ok=True)
+    aviso = ""
+
+    def copiar(patrones):
+        for patron in patrones:
+            for f in out.glob(patron):
+                if f.is_file():
+                    shutil.copy(f, destino / f.name)
+
+    def limpiar(patrones):  # lo de una corrida anterior de este mismo formato no se mezcla con lo nuevo
+        for patron in patrones:
+            for f in destino.glob(patron):
+                f.unlink()
+
     if modo == "horizontal":
+        limpiar(["*.mp4", "*.m4a", "*.srt", "miniatura.jpg"])
         subprocess.run(["node", "scripts/motor-render.mjs", id, "--imagen=en", "--audio=en"], cwd="/app", check=True, env=env)
-        subprocess.run(["node", "scripts/miniaturas.mjs", id], cwd="/app", check=False, env=env)
-        destino = pathlib.Path(f"/vol/{id}"); destino.mkdir(parents=True, exist_ok=True)
-        for f in pathlib.Path(f"/app/out/{id}").iterdir():
-            if f.is_file() and f.suffix in (".mp4", ".m4a", ".srt", ".jpg") and f.name != "portada-ig.jpg":
-                shutil.copy(f, destino / f.name)
-    else:
+        mini = subprocess.run(["node", "scripts/miniaturas.mjs", id], cwd="/app", env=env, capture_output=True, text=True)
+        if mini.returncode != 0 or not (out / "miniatura.jpg").exists():  # visible en el log y en el resultado (antes se perdía en silencio)
+            aviso = " · ERROR miniatura"
+            print(f"ERROR miniatura {id}: {(mini.stdout + mini.stderr)[-1500:]}")
+        copiar(["*.mp4", "*.m4a", "*.srt", "miniatura.jpg"])
+    elif modo == "vertical":
+        limpiar([f"{id}.vertical.mp4", "portada-ig.jpg"])
         subprocess.run(["node", "scripts/vertical-render.mjs", id], cwd="/app", check=True, env=env)
-        shutil.copy(f"/app/out/{id}/{id}.vertical.mp4", f"/vol/{id}.vertical.mp4")
+        copiar([f"{id}.vertical.mp4", "portada-ig.jpg"])
+    else:  # partes
+        limpiar([f"{id}.parte-*.mp4", "partes.json", "portada-ig.jpg"])
+        subprocess.run(["node", "scripts/vertical-partes.mjs", id], cwd="/app", check=True, env=env)
+        copiar([f"{id}.parte-*.mp4", "partes.json", "portada-ig.jpg"])
     vol.commit()
-    msg = f"render {modo} {id}: {time.time() - t:.0f} s"
+    msg = f"render {modo} {id}: {time.time() - t:.0f} s{aviso}"
     print(msg)
     return msg
 
 
 @app.local_entrypoint()
 def main():
-    assert IDS, "Falta MOC_ID"
-    for msg in render.map(IDS, kwargs={"modo": MODO}):
-        print(msg)
+    assert ITEMS, "Falta MOC_ITEMS (o MOC_ID)"
+    fallos = []
+    resultados = render.starmap(ITEMS, return_exceptions=True)
+    for (i, m), r in zip(ITEMS, resultados):
+        if isinstance(r, Exception):
+            fallos.append(f"{i}:{m}")
+            print(f"FALLÓ {i}:{m}: {str(r)[:300]}")
+        else:
+            print(r)
+    pathlib.Path("out").mkdir(exist_ok=True)
+    pathlib.Path("out/modal-fallos.json").write_text(json.dumps(fallos))
+    if fallos:
+        raise SystemExit(f"fallaron en Modal: {' '.join(fallos)}")
