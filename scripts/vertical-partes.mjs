@@ -39,7 +39,7 @@ export function cortes(timeline, extra = 0) {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const ids = process.argv.slice(2).filter((a) => !a.startsWith('--')), lento = process.argv.includes('--lento');
+  const ids = process.argv.slice(2).filter((a) => !a.startsWith('--')), lento = !process.argv.includes('--rapido'); // 2026-10-17: Matías prefirió el ritmo de siempre (--rapido = ritmo de Short)
   if (!ids.length) throw new Error('Falta el id');
   mkdirSync('public/portadas', { recursive: true });
   const timelines = {};

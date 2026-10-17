@@ -77,14 +77,11 @@ test('episodios reales a ritmo rápido: más cortos, partes < 3 min sin huecos, 
   }
 });
 
-test('nube: partes viejas (ritmo lento) se rehacen, salvo que el episodio ya haya empezado en Instagram', () => {
-  assert.equal(partesVigentes({ de: 2, gancho: true, ritmo: 'rapido' }, false), true);
-  assert.equal(partesVigentes({ de: 3, gancho: true }, false), false);
-  assert.equal(partesVigentes({ de: 3, gancho: true }, true), true);
+test('nube: valen las partes al ritmo de siempre; las rápidas se rehacen, salvo episodio ya empezado en Instagram', () => {
+  assert.equal(partesVigentes({ de: 2, gancho: true, ritmo: 'lento' }, false), true);
+  assert.equal(partesVigentes({ de: 2, gancho: true, ritmo: 'rapido' }, false), false);
+  assert.equal(partesVigentes({ de: 2, gancho: true, ritmo: 'rapido' }, true), true);
   assert.equal(partesVigentes(null, true), false);
-  // con el título actual: solo sirven las del mismo cartel (las de antes guardaban gancho: true)
-  assert.equal(partesVigentes({ de: 2, gancho: 'The Jaguar Sun', ritmo: 'rapido' }, false, 'The Jaguar Sun'), true);
-  assert.equal(partesVigentes({ de: 2, gancho: 'Viejo título', ritmo: 'rapido' }, false, 'The Jaguar Sun'), false);
-  assert.equal(partesVigentes({ de: 2, gancho: true, ritmo: 'rapido' }, false, 'The Jaguar Sun'), false);
-  assert.equal(partesVigentes({ de: 2, gancho: 'Viejo título', ritmo: 'rapido' }, true, 'The Jaguar Sun'), true);
+  assert.equal(partesVigentes({ de: 2, gancho: 'The Jaguar Sun', ritmo: 'lento' }, false, 'The Jaguar Sun'), true);
+  assert.equal(partesVigentes({ de: 2, gancho: 'Viejo título', ritmo: 'lento' }, false, 'The Jaguar Sun'), false);
 });

@@ -15,7 +15,7 @@ if (!ids.length) throw new Error('Falta el id');
 mkdirSync('public/portadas', { recursive: true });
 const timelines = {};
 for (const id of ids) {
-  timelines[id] = prepararRapido(id); // antes del bundle: el audio rápido tiene que estar en public/
+  timelines[id] = process.argv.includes('--rapido') ? prepararRapido(id) : JSON.parse(readFileSync(join('src/videos', id, 'timeline.json'), 'utf8')); // ritmo de siempre por defecto (2026-10-17)
   if (!existsSync(join('out', id, 'portada-ig.jpg'))) execFileSync('node', ['scripts/portadas-ig.mjs', id], { stdio: 'ignore' });
   copyFileSync(join('out', id, 'portada-ig.jpg'), join('public/portadas', `${id}.jpg`));
 }
