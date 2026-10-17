@@ -1,9 +1,8 @@
 // Episodio vertical partido en Reels de menos de 3 min (Instagram casi no recomienda los más largos a quien no te sigue).
 // Corta en el comienzo de una escena (o de una frase) cerca de la mitad; cada parte abre con ~2 s de cartel gancho (el
 // título del capítulo, de src/videos/titulos.json), lleva "PART n OF de" y, salvo la última, un cartel final "TO BE CONTINUED · PART n+1".
-// Ritmo rápido de Short (lib/vertical-rapido.mjs: voz 1,1× sin silencios, huecos cortos) desde 2026-10-17; `--lento` =
-// timeline del episodio (0,9×), para rehacer un episodio que ya tiene partes publicadas con ese ritmo.
-// Uso: node scripts/vertical-partes.mjs <id> [<id>…] [--lento]
+// Ritmo normal del episodio (timeline.json) por defecto; `--rapido` = ritmo de Short (lib/vertical-rapido.mjs).
+// Uso: node scripts/vertical-partes.mjs <id> [<id>…] [--rapido]
 // → out/<id>/<id>.parte-1.mp4, .parte-2.mp4 … y out/<id>/partes.json
 import { bundle } from '@remotion/bundler';
 import { renderMedia, selectComposition } from '@remotion/renderer';
@@ -13,6 +12,7 @@ import { join, resolve } from 'node:path';
 import os from 'node:os';
 import { ganchoParte, leerTitulos } from './titulos.mjs';
 import { prepararRapido } from './vertical-rapido.mjs';
+import { huella } from './nube.mjs';
 
 const MAX_S = 175; // contenido por parte (+2 s de gancho +2,5 s de cartel → < 3 min)
 const CIERRE_VERTICAL = 3;
@@ -65,6 +65,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       await renderMedia({ serveUrl, composition: comp, codec: 'h264', outputLocation: out, crf: 21, timeoutInMilliseconds: 180000, concurrency: Number(process.env.RENDER_CONCURRENCY) || Math.max(2, os.cpus().length - 1), inputProps });
       console.log(`listo: ${out} (${(comp.durationInFrames / comp.fps).toFixed(0)} s)`);
     }
-    writeFileSync(join('out', id, 'partes.json'), JSON.stringify({ de, partes, gancho: gancho || false, ritmo: lento ? 'lento' : 'rapido' })); // texto del gancho/ritmo: sembrar y la nube no reusan partes viejas ni con otro título
+    writeFileSync(join('out', id, 'partes.json'), JSON.stringify({ de, partes, gancho: gancho || false, ritmo: lento ? 'lento' : 'rapido', huella: huella(id) })); // gancho/ritmo/huella del guion: sembrar y la nube no reusan partes viejas, con otro título ni de otro elenco
   }
 }

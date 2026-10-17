@@ -7,6 +7,7 @@
 export const ORG = '6acc932a96c596c8b8c17194';
 export const CANAL_IG = '6ad1da90778b240e2f266bfc'; // instagram: mythsonclay
 export const CANAL_TIKTOK = '6acc93d8778b240e2fe40471'; // tiktok: mythsonclay (el otro TikTok de la cuenta NO es de este proyecto)
+export const CANALES_AJENOS = ['6ad12860778b240e2f1d9c4e', '6ad3219a778b240e2f368ecb']; // tiktok: matias.osuna2 y hermestarot444 — NUNCA
 /** Estados de Buffer que cuentan como "ya está o va a estar en Instagram" (un borrador o un error no). */
 export const ESTADOS_VIVOS = ['sent', 'sending', 'scheduled', 'needs_approval'];
 
@@ -36,6 +37,16 @@ export function entradaReel({ texto, videoUrl, thumbOffset, alFeed, borrador = f
     metadata: { instagram: { type: 'reel', shouldShareToFeed: Boolean(alFeed) } },
   };
 }
+
+/** Entrada de createPost para TikTok: publica ya, tapa = primer cuadro (la portada va pegada adelante del video).
+ *  Solo el canal de Myths on Clay: cualquier otro (matias.osuna2…) es un error. */
+export function entradaTiktok({ texto, videoUrl, canal = CANAL_TIKTOK, thumbOffset = 100 }) {
+  if (!texto || !videoUrl) throw new Error('falta texto o video');
+  if (canal !== CANAL_TIKTOK || CANALES_AJENOS.includes(canal)) throw new Error(`canal de TikTok inesperado: ${canal}`);
+  return { channelId: canal, text: texto, schedulingType: 'automatic', mode: 'shareNow', assets: [{ video: { url: videoUrl, metadata: { thumbnailOffset: thumbOffset } } }] };
+}
+/** ¿El rechazo es por límite / demasiadas publicaciones? (entonces TikTok frena a 2 por turno) */
+export const esLimite = (mensaje) => /limit|too many|rate|quota|exceed|spam|frequen|daily|maximum/i.test(String(mensaje ?? ''));
 
 const CAMPOS = 'id status text dueAt sentAt externalLink error { message }';
 const CREAR = `mutation($input: CreatePostInput!) { createPost(input: $input) { ... on PostActionSuccess { post { ${CAMPOS} } } ... on MutationError { message } } }`;

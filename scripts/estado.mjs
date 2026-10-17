@@ -18,7 +18,12 @@ export const ARCHIVOS = {
   'youtube-ids.json': 'src/videos/youtube-ids.json',
   'miniaturas-youtube.json': 'out/miniaturas-youtube.json', // miniaturas pendientes por el límite de YouTube
   'turnos.json': 'out/turnos.json', // pasos ya hechos en cada turno (un 2.º cron del mismo turno no repite)
+  'cola-unificada.json': 'out/cola-unificada.json', // la cola única de YouTube, Instagram y TikTok (scripts/cola.mjs)
+  'tiktok-ritmo.json': 'out/tiktok-ritmo.json', // TikTok frenado por la plataforma (2 por turno durante 24 h)
 };
+/** Archivos que no se fusionan por unión: la cola única conserva el orden de la rama y suma lo nuevo al final. */
+const COLA = 'cola-unificada.json';
+export const fusionarCola = (rama, otra) => { if (!rama?.length) return otra ?? rama; const ya = new Set(rama.map((e) => e.id)); return [...rama, ...(otra ?? []).filter((e) => !ya.has(e.id))]; };
 export const LISTA = 'out/shorts-orden.txt';
 
 /** Unión: listas → base + lo que falte de `otro` (sin repetir); objetos → base con `otro` encima. */
@@ -62,7 +67,7 @@ const escribir = (f, datos) => { mkdirSync(dirname(f), { recursive: true }); wri
 export function subir(carpeta, lista = LISTA) {
   for (const [nombre, local] of Object.entries(ARCHIVOS)) {
     const aca = leer(local);
-    if (aca !== undefined) escribir(join(carpeta, nombre), fusionar(leer(join(carpeta, nombre)), aca));
+    if (aca !== undefined) escribir(join(carpeta, nombre), (nombre === COLA ? fusionarCola : fusionar)(leer(join(carpeta, nombre)), aca));
   }
   if (!existsSync(lista)) return;
   const destino = join(carpeta, 'shorts-orden.txt');
@@ -79,7 +84,7 @@ export function agregar(carpeta, ids) {
 export function traer(carpeta) {
   for (const [nombre, local] of Object.entries(ARCHIVOS)) {
     const alla = leer(join(carpeta, nombre));
-    if (alla !== undefined) escribir(local, fusionar(leer(local), alla));
+    if (alla !== undefined) escribir(local, nombre === COLA ? fusionarCola(alla, leer(local)) : fusionar(leer(local), alla));
   }
   if (existsSync(join(carpeta, 'shorts-orden.txt'))) { mkdirSync(dirname(LISTA), { recursive: true }); copyFileSync(join(carpeta, 'shorts-orden.txt'), LISTA); }
 }

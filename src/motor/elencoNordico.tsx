@@ -41,7 +41,7 @@ const MelenaThor: React.FC<{ c?: string; luz?: string }> = ({ c = PELO_THOR, luz
   );
 };
 /** Barba roja tupida de Thor (sale de la mandíbula y baja al pecho), con trenza y aro de hierro opcional. */
-export const BarbaThor: React.FC<{ c?: string; luz?: string; trenza?: boolean }> = ({ c = PELO_THOR, luz = PELO_THOR_CLARO, trenza }) => {
+const BarbaThor: React.FC<{ c?: string; luz?: string; trenza?: boolean }> = ({ c = PELO_THOR, luz = PELO_THOR_CLARO, trenza }) => {
   const f = useCurrentFrame(), o = Math.sin(f / 16) * 1.5;
   const pts: P[] = [[-6, 12], [10, 14], [24, 22], [36, 24], [46, 40], [44, 60 + o], [34, 78 + o], [24, 70], [14, 86 + o], [4, 70], [-8, 62], [-14, 40], [-16, 22]];
   return (
@@ -55,7 +55,7 @@ export const BarbaThor: React.FC<{ c?: string; luz?: string; trenza?: boolean }>
   );
 };
 /** Barba gris larga de Odín (hasta el pecho) y pelo largo por la espalda. */
-export const BarbaOdin: React.FC<{ c?: string; trenza?: boolean }> = ({ c = GRIS_ODIN, trenza }) => {
+const BarbaOdin: React.FC<{ c?: string; trenza?: boolean }> = ({ c = GRIS_ODIN, trenza }) => {
   const f = useCurrentFrame(), o = Math.sin(f / 18) * 2;
   return (
     <g>
@@ -68,14 +68,14 @@ export const BarbaOdin: React.FC<{ c?: string; trenza?: boolean }> = ({ c = GRIS
   );
 };
 /** Parche de Odín con su tira (el ojo que dejó en el pozo de Mímir). claro = tira y borde claros (muñeco oscuro). */
-export const Parche: React.FC<{ claro?: boolean }> = ({ claro }) => (
+const Parche: React.FC<{ claro?: boolean }> = ({ claro }) => (
   <g>
     <path d="M-28 -20 L 9 -12 M27 -12 L 36 -17" stroke={claro ? '#9DBBD1' : NEGRO} strokeWidth={3} strokeLinecap="round" />
     <path d="M8 -14 Q 18 -19 29 -12 Q 28 1 18 4 Q 8 1 8 -14 Z" fill={NEGRO} stroke={claro ? '#9DBBD1' : CREMA} strokeWidth={claro ? 2.2 : 1.2} />
   </g>
 );
 /** Sombrero de viajero de ala ancha y caída (Odín como Grímnir/Gangleri). */
-export const Sombrero: React.FC<{ c?: string; banda?: string }> = ({ c = '#33506B', banda = '#1C2E40' }) => (
+const Sombrero: React.FC<{ c?: string; banda?: string }> = ({ c = '#33506B', banda = '#1C2E40' }) => (
   <g transform="rotate(-4)">
     <path d="M-32 -22 C -34 -50, -18 -62, 2 -62 C 20 -62, 30 -52, 30 -22 Z" fill={c} stroke={N} strokeWidth={2.5} />
     <path d="M-14 -60 C -6 -52, 6 -52, 14 -60" stroke={N} strokeWidth={2} fill="none" />
@@ -106,7 +106,7 @@ const BarbaLoki: React.FC<{ c?: string; luz?: string }> = ({ c = '#141518', luz 
 
 // ---------- cuerpo ----------
 /** Megingjörð: cinturón de fuerza (placas de oro y hebilla redonda con piedra roja). a = ancho del cuerpo. */
-export const Megingjord: React.FC<{ a: number }> = ({ a }) => (
+const Megingjord: React.FC<{ a: number }> = ({ a }) => (
   <g>
     <path d={`M${r1(-31 * a)} -232 L ${r1(28 * a)} -234 L ${r1(28 * a)} -204 L ${r1(-31 * a)} -202 Z`} fill="#5A3A22" stroke={N} strokeWidth={2.2} />
     {[-0.8, -0.45, -0.1, 0.25, 0.6].map((k) => <rect key={k} x={r1(k * 30 * a - 7)} y={-229} width={14} height={22} rx={2} fill={ORO} stroke={N} strokeWidth={1.4} />)}
@@ -116,7 +116,7 @@ export const Megingjord: React.FC<{ a: number }> = ({ a }) => (
   </g>
 );
 /** Cuervo posado (origen = patas, mirando a la derecha). */
-export const Cuervo: React.FC<{ s?: number; brillo?: string; aleteo?: number; claro?: boolean }> = ({ s = 1, brillo = '#5B7A99', aleteo = 0, claro }) => {
+const Cuervo: React.FC<{ s?: number; brillo?: string; aleteo?: number; claro?: boolean }> = ({ s = 1, brillo = '#5B7A99', aleteo = 0, claro }) => {
   const f = useCurrentFrame(), cab = Math.sin(f / 9 + aleteo) * 4;
   const N = claro ? '#9DBBD1' : NN;
   return (
@@ -135,7 +135,7 @@ export const Cuervo: React.FC<{ s?: number; brillo?: string; aleteo?: number; cl
   );
 };
 /** Cuervo en vuelo (alas abiertas que aletean). */
-export const CuervoVuela: React.FC<{ s?: number }> = ({ s = 1 }) => {
+const CuervoVuela: React.FC<{ s?: number }> = ({ s = 1 }) => {
   const f = useCurrentFrame(), a = Math.sin(f / 4) * 16;
   return (
     <g transform={`scale(${s})`}>
@@ -150,7 +150,7 @@ export const CuervoVuela: React.FC<{ s?: number }> = ({ s = 1 }) => {
   );
 };
 /** Túnica de arriba (camisa) que tapa el torso desnudo: color y borde de tela. */
-export const Camisa: React.FC<{ a: number; c: string; borde?: string; mitad?: string; cuadrada?: boolean }> = ({ a, c, borde = ORO, mitad, cuadrada }) => {
+const Camisa: React.FC<{ a: number; c: string; borde?: string; mitad?: string; cuadrada?: boolean }> = ({ a, c, borde = ORO, mitad, cuadrada }) => {
   // cuadrada = hombros rectos y anchos que bajan en V hasta una cadera angosta (silueta de hombre flaco)
   const torso: P[] = cuadrada
     ? [[-33 * a, -306], [-8 * a, -309], [22 * a, -308], [39 * a, -300], [37 * a, -278], [29 * a, -244], [27 * a, -203], [-31 * a, -201], [-34 * a, -246], [-37 * a, -282]]
@@ -166,14 +166,14 @@ export const Camisa: React.FC<{ a: number; c: string; borde?: string; mitad?: st
   );
 };
 /** Manto de piel sobre los hombros (Thor en el invierno de Jötunheim). */
-export const MantoPiel: React.FC<{ a: number; c?: string }> = ({ a, c = '#E9E2D2' }) => (
+const MantoPiel: React.FC<{ a: number; c?: string }> = ({ a, c = '#E9E2D2' }) => (
   <g>
     <path d={suave([[-38 * a, -296], [-20 * a, -314], [10 * a, -316], [34 * a, -300], [30 * a, -278], [16 * a, -286], [0, -282], [-20 * a, -282], [-40 * a, -270]], true, 0.6)} fill={c} stroke={N} strokeWidth={2} />
     {Array.from({ length: 7 }, (_, i) => { const x = -34 * a + i * 10 * a; return <path key={i} d={`M${r1(x)} ${-286 + Math.sin(i) * 3} l 3 ${8 + (i % 2) * 4}`} stroke="#B9AE98" strokeWidth={2} strokeLinecap="round" />; })}
   </g>
 );
 /** Capa larga hasta los tobillos que cae por la espalda (detrás del cuerpo). */
-export const CapaLarga: React.FC<{ c: string; forro?: string; borde?: string; zigzag?: boolean; corta?: boolean; arcoiris?: boolean }> = ({ c, forro, borde = ORO, zigzag, corta, arcoiris }) => {
+const CapaLarga: React.FC<{ c: string; forro?: string; borde?: string; zigzag?: boolean; corta?: boolean; arcoiris?: boolean }> = ({ c, forro, borde = ORO, zigzag, corta, arcoiris }) => {
   const f = useCurrentFrame(), o = (k: number) => Math.sin(f / 16 + k) * (3 + k * 1.5);
   const ruedo: P[] = zigzag
     ? [[-96 + o(4), -14], [-84, -34], [-74 + o(3), -10], [-62, -32], [-50 + o(2), -8], [-38, -30], [-22, -10]]
@@ -189,15 +189,15 @@ export const CapaLarga: React.FC<{ c: string; forro?: string; borde?: string; zi
   );
 };
 /** Broche de la capa (nudo de tres puntas) en el hombro. */
-export const Broche: React.FC<{ x: number; y: number; c?: string }> = ({ x, y, c = ORO }) => (
+const Broche: React.FC<{ x: number; y: number; c?: string }> = ({ x, y, c = ORO }) => (
   <g transform={`translate(${x} ${y})`}><circle r={9} fill={c} stroke={N} strokeWidth={1.8} /><path d="M0 -5 L 4.5 3 L -4.5 3 Z" fill="none" stroke={N} strokeWidth={1.4} /></g>
 );
 
 // ---------- piezas de los demás dioses (oficiales) ----------
 /** Pone piezas en coordenadas de la cabeza desde `detras` (pelo largo que cae por la espalda, halos). */
-export const EnCabeza: React.FC<{ a?: number; children: React.ReactNode }> = ({ a = 1, children }) => <g transform={`translate(${r1(20 * a)} -334) rotate(-6)`}>{children}</g>;
+const EnCabeza: React.FC<{ a?: number; children: React.ReactNode }> = ({ a = 1, children }) => <g transform={`translate(${r1(20 * a)} -334) rotate(-6)`}>{children}</g>;
 /** Melena larga por la espalda (va en `detras`, con EnCabeza). largo = hasta dónde baja (coords de cabeza). */
-export const MelenaLarga: React.FC<{ c: string; luz: string; largo?: number; ancho?: number }> = ({ c, luz, largo = 120, ancho = 1 }) => {
+const MelenaLarga: React.FC<{ c: string; luz: string; largo?: number; ancho?: number }> = ({ c, luz, largo = 120, ancho = 1 }) => {
   const f = useCurrentFrame(), o = (k: number) => Math.sin(f / 18 + k) * (2 + k);
   const pts: P[] = [[-4, -40], [-32, -32], [-46, -4], [-58 * ancho + o(1), largo * 0.3], [-66 * ancho + o(2), largo * 0.62], [-62 * ancho + o(3), largo * 0.9], [-48 * ancho + o(3), largo], [-38 + o(2), largo - 8], [-32 + o(2), largo * 0.6], [-24, largo * 0.3], [-10, 10]];
   return (
@@ -208,14 +208,14 @@ export const MelenaLarga: React.FC<{ c: string; luz: string; largo?: number; anc
   );
 };
 /** Pelo sobre la cabeza (raya y caída detrás de la oreja): tapa el cuero y deja la cara libre. */
-export const CapPelo: React.FC<{ c: string; luz: string; flequillo?: boolean }> = ({ c, luz, flequillo }) => (
+const CapPelo: React.FC<{ c: string; luz: string; flequillo?: boolean }> = ({ c, luz, flequillo }) => (
   <g>
     <path d={suave([[24, -26], [16, -38], [-2, -43], [-22, -38], [-34, -22], [-37, 2], [-33, 26], [-22, 30], [-17, 12], [-12, 0], [-6, -10], [4, -20], [14, flequillo ? -18 : -24]], true, 0.9)} fill={c} stroke={N} strokeWidth={2} strokeLinejoin="round" />
     {[[14, -34, -28, -18], [6, -28, -30, 2]].map(([x0, y0, x1, y1], i) => <path key={i} d={`M${x0} ${y0} Q ${(x0 + x1) / 2} ${Math.min(y0, y1) - 8} ${x1} ${y1}`} stroke={luz} strokeWidth={1.8} fill="none" strokeLinecap="round" />)}
   </g>
 );
 /** Barba corta y prolija (Týr, Freyr, Heimdall, Njörd). */
-export const BarbaCorta: React.FC<{ c: string; luz: string; largo?: number }> = ({ c, luz, largo = 0 }) => (
+const BarbaCorta: React.FC<{ c: string; luz: string; largo?: number }> = ({ c, luz, largo = 0 }) => (
   <g>
     <path d={suave([[-14, 6], [-10, 22], [0, 32 + largo * 0.4], [14, 40 + largo], [26, 36 + largo * 0.7], [34, 26], [30, 22], [22, 26], [10, 22], [0, 12], [-6, 4]], true, 0.8)} fill={c} stroke={N} strokeWidth={1.8} strokeLinejoin="round" />
     <path d="M24 18.5 C 30 15.5, 37 18, 40 24 C 34 22, 28 22.5, 24 23 Z" fill={c} stroke={N} strokeWidth={1.3} />
@@ -223,7 +223,7 @@ export const BarbaCorta: React.FC<{ c: string; luz: string; largo?: number }> = 
   </g>
 );
 /** Vestido de mujer nórdica: delantal (hangerock) sobre el torso con broche ovalado de bronce y sarta de cuentas. */
-export const Delantal: React.FC<{ c: string; borde?: string; cuentas?: string[] }> = ({ c, borde = ORO, cuentas = ['#C9A14A', '#2F6B8A', '#B8452C'] }) => {
+const Delantal: React.FC<{ c: string; borde?: string; cuentas?: string[] }> = ({ c, borde = ORO, cuentas = ['#C9A14A', '#2F6B8A', '#B8452C'] }) => {
   const a = 0.92;
   return (
     <g>
@@ -295,7 +295,7 @@ const Rueca: React.FC = () => {
   );
 };
 /** Llavero de ama de casa colgando del cinturón (Frigg). */
-export const Llaves: React.FC<{ x?: number }> = ({ x = 16 }) => (
+const Llaves: React.FC<{ x?: number }> = ({ x = 16 }) => (
   <g transform={`translate(${x} -212)`}>
     <path d="M0 0 L -2 26 M4 0 L 8 30 M-2 0 L -10 22" stroke="#7A6A50" strokeWidth={1.6} />
     {[[-2, 26], [8, 30], [-10, 22]].map(([kx, ky], i) => <g key={i} transform={`translate(${kx} ${ky})`}><circle r={4} fill="none" stroke="#B9873A" strokeWidth={2.4} /><path d="M0 4 V 16 M0 12 h 4 M0 16 h 5" stroke="#B9873A" strokeWidth={2.4} /></g>)}
@@ -303,7 +303,7 @@ export const Llaves: React.FC<{ x?: number }> = ({ x = 16 }) => (
   </g>
 );
 /** Pañuelo de casada (Frigg): blanco, cubre el pelo y cae por la nuca. */
-export const Panuelo: React.FC = () => (
+const Panuelo: React.FC = () => (
   <g>
     <path d={suave([[26, -24], [18, -40], [-4, -46], [-28, -38], [-40, -12], [-44, 30], [-40, 70], [-22, 64], [-18, 30], [-14, 6], [-4, -12], [8, -22]], true, 0.85)} fill="#F4F1EA" stroke={N} strokeWidth={2} />
     <path d="M24 -26 C 10 -30, -10 -26, -26 -12" stroke="#5C8DB8" strokeWidth={4} fill="none" strokeLinecap="round" />
@@ -311,7 +311,7 @@ export const Panuelo: React.FC = () => (
   </g>
 );
 /** Espada nórdica en la mano (hoja hacia arriba, guarda y pomo). Origen = mano. */
-export const EspadaNordica: React.FC<{ hoja?: string; brillo?: boolean; ang?: number }> = ({ hoja = '#D6DDE3', brillo, ang = 8 }) => (
+const EspadaNordica: React.FC<{ hoja?: string; brillo?: boolean; ang?: number }> = ({ hoja = '#D6DDE3', brillo, ang = 8 }) => (
   <g transform={`rotate(${ang})`}>
     {brillo && <path d="M0 -40 L 0 -170" stroke="#FFF3C4" strokeWidth={22} strokeLinecap="round" opacity={0.35} />}
     <path d="M-6 -16 L -6 -160 L 0 -172 L 6 -160 L 6 -16 Z" fill={hoja} stroke={N} strokeWidth={2} strokeLinejoin="round" />
@@ -322,7 +322,7 @@ export const EspadaNordica: React.FC<{ hoja?: string; brillo?: boolean; ang?: nu
   </g>
 );
 /** Espada envainada colgando de la cadera (Týr). */
-export const Vaina: React.FC = () => (
+const Vaina: React.FC = () => (
   <g transform="translate(-6 -212) rotate(18)">
     <rect x={-6} y={0} width={12} height={130} rx={4} fill="#4A3020" stroke={N} strokeWidth={2} />
     <path d="M-6 118 h 12 v 12 h -12 Z" fill={ORO} stroke={N} strokeWidth={1.4} />
@@ -332,7 +332,7 @@ export const Vaina: React.FC = () => (
   </g>
 );
 /** Escudo redondo vikingo colgado a la espalda (rojo y blanco, umbo de hierro). */
-export const EscudoEspalda: React.FC<{ c1?: string; c2?: string }> = ({ c1 = ROJO, c2 = CREMA }) => (
+const EscudoEspalda: React.FC<{ c1?: string; c2?: string }> = ({ c1 = ROJO, c2 = CREMA }) => (
   <g transform="translate(-34 -250)">
     <circle r={58} fill={c2} stroke={N} strokeWidth={3} />
     {[0, 1, 2, 3].map((i) => <path key={i} d={`M0 0 L ${r1(Math.cos((i * Math.PI) / 2) * 56)} ${r1(Math.sin((i * Math.PI) / 2) * 56)} A 56 56 0 0 1 ${r1(Math.cos(((i + 0.5) * Math.PI) / 2) * 56)} ${r1(Math.sin(((i + 0.5) * Math.PI) / 2) * 56)} Z`} fill={c1} />)}
@@ -364,7 +364,7 @@ const Gjallarhorn: React.FC = () => (
   </g>
 );
 /** Yelmo redondo sencillo con nasal (Heimdall, el guardián). */
-export const YelmoSimple: React.FC = () => (
+const YelmoSimple: React.FC = () => (
   <g>
     <path d="M-34 -2 C -36 -40, -10 -52, 8 -50 C 26 -48, 34 -32, 33 -14 L 26 -14 C 12 -22, -16 -18, -34 -2 Z" fill={HIERRO} stroke={N} strokeWidth={2.2} />
     <path d="M-30 -10 C -10 -26, 14 -28, 33 -16" stroke="#C9D2DA" strokeWidth={6} fill="none" />
@@ -398,7 +398,7 @@ const JabaliOro: React.FC<{ s?: number }> = ({ s = 1 }) => (
   </g>
 );
 /** Red de pescar al hombro (Njörd): bulto de malla que cuelga por la espalda. */
-export const RedHombro: React.FC = () => (
+const RedHombro: React.FC = () => (
   <g>
     <defs><clipPath id="redNjord"><path d={suave([[-10, -306], [-36, -292], [-52, -230], [-46, -170], [-20, -160], [-24, -230], [8, -300]], true, 0.6)} /></clipPath></defs>
     <path d={suave([[-10, -306], [-36, -292], [-52, -230], [-46, -170], [-20, -160], [-24, -230], [8, -300]], true, 0.6)} fill="#CDBF9C" stroke={N} strokeWidth={2} />
@@ -408,7 +408,7 @@ export const RedHombro: React.FC = () => (
   </g>
 );
 /** Pescado colgando de la mano (Njörd). Origen = mano. */
-export const Pescado: React.FC = () => {
+const Pescado: React.FC = () => {
   const f = useCurrentFrame(), g = Math.sin(f / 9) * 5;
   return (
     <g transform={`rotate(${g})`}>

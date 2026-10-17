@@ -77,3 +77,19 @@ test('esperar envío: sigue hasta sent; error → excepción', async () => {
   assert.equal(p.status, 'sent');
   await assert.rejects(esperarEnvio(async () => ({ post: { id: 'p', status: 'error', error: { message: 'no' } } }), { id: 'p', status: 'sending' }, { pausa: 0 }), /no/);
 });
+
+test('TikTok: publica ya en el canal de Myths on Clay; nunca en otro (matias.osuna2…)', async () => {
+  const { entradaTiktok, CANALES_AJENOS } = await import('../scripts/buffer.mjs');
+  const e = entradaTiktok({ texto: 't', videoUrl: URL });
+  assert.equal(e.channelId, CANAL_TIKTOK);
+  assert.equal(e.mode, 'shareNow');
+  assert.equal(e.assets[0].video.metadata.thumbnailOffset, 100);
+  for (const c of [...CANALES_AJENOS, CANAL_IG]) assert.throws(() => entradaTiktok({ texto: 't', videoUrl: URL, canal: c }));
+  assert.ok(CANALES_AJENOS.includes('6ad12860778b240e2f1d9c4e')); // matias.osuna2
+});
+
+test('TikTok: rechazos por límite → frenar (y los demás errores no)', async () => {
+  const { esLimite } = await import('../scripts/buffer.mjs');
+  for (const m of ['Rate limit exceeded', 'Too many posts today', 'Daily posting limit reached']) assert.equal(esLimite(m), true, m);
+  for (const m of ['Video could not be downloaded', 'Invalid video format', undefined]) assert.equal(esLimite(m), false, String(m));
+});

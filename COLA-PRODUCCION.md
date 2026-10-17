@@ -26,11 +26,7 @@ la rutina no toma nada de esa sección.
 - [ ] Q03 · "Who is…?" (3): Artemis `artemisa_oficial` → `griegas-13-leto-y-los-gemelos` (Greek S2E6) · Hera `hera_oficial` → `griegas-11-hefesto` (Greek S2E4) · Prometheus `prometeo_oficial` → `griegas-02-prometeo` (Greek S1E2)
 - [ ] Q04 · "Who is…?" (3): Dionysus `dioniso_oficial` → `griegas-16-dioniso-dos-veces` (Greek S2E9) · Hephaestus `hefesto_oficial` → `griegas-11-hefesto` (Greek S2E4) · Cronus `cronos_oficial` → `griegas-01-origen` (Greek S1E1)
 - [ ] H02 · Story (Greek): Teseo y el Minotauro → `griegas-81-teseo-y-el-minotauro` · especial "Greek Myth Stories". Fuentes: Plutarco, Vida de Teseo; Apolodoro, Epítome 1; Catulo 64
-- [ ] R01 · Shorts que faltan (7): `griegas-02-prometeo` (1), `griegas-03-pandora` (3), `griegas-04-edades` (2), `griegas-05-diluvio` (1)
-- [ ] R02 · Shorts que faltan (6): `griegas-06-gigantomaquia` (2), `griegas-07-tifon` (1), `griegas-08-doce-olimpicos` (2), `griegas-12-red-de-hefesto` (1)
 - [ ] H03 · Story (Greek): Perséfone y la granada (el rapto, Deméter y el invierno) → `griegas-82-persefone-y-la-granada` · especial "Greek Myth Stories". Fuentes: Himno homérico a Deméter; Ovidio, Metamorfosis 5. Hades y Perséfone ya salen en el especial griegas-99: acá el rapto y la granada, no el reino
-- [ ] R03 · Shorts que faltan (8): `griegas-13-leto-y-los-gemelos` (2), `griegas-14-apolo-piton` (2), `griegas-15-hermes-bebe-ladron` (2), `griegas-16-dioniso-dos-veces` (2)
-- [ ] R04 · Shorts que faltan (3): `griegas-17-dioniso-piratas` (3)
 - [ ] H04 · Story (Greek): Los trabajos de Heracles, parte I (león de Nemea, Hidra, cierva, jabalí, establos de Augías, aves del Estínfalo) → `griegas-83-heracles-trabajos-1` · especial "Greek Myth Stories". Fuentes: Apolodoro, Biblioteca 2.4–2.5; se entiende solo, sin la parte II
 - [ ] H05 · Story (Greek): Dédalo e Ícaro → `griegas-84-dedalo-e-icaro` · especial "Greek Myth Stories". Fuentes: Ovidio, Metamorfosis 8; Apolodoro, Epítome 1. Si va después de Teseo, el laberinto en 1–2 frases
 - [ ] H06 · Story (Greek): El rey Midas → `griegas-85-el-rey-midas` · especial "Greek Myth Stories". Fuentes: Ovidio, Metamorfosis 11 (el toque de oro y las orejas de burro)
@@ -40,6 +36,13 @@ la rutina no toma nada de esa sección.
 - [ ] H10 · Story (Greek): Eco y Narciso → `griegas-89-eco-y-narciso` · especial "Greek Myth Stories". Fuentes: Ovidio, Metamorfosis 3
 
 ## PAUSADO (la rutina NO toma nada de acá; solo Matías lo reactiva subiéndolo de sección)
+
+> 2026-10-17 Matías: los Shorts son SOLO "Who is…?"; no más mini historias sacadas de episodios. Ítems R cancelados:
+- [ ] R01 · Shorts que faltan (7): `griegas-02-prometeo` (1), `griegas-03-pandora` (3), `griegas-04-edades` (2), `griegas-05-diluvio` (1)
+- [ ] R02 · Shorts que faltan (6): `griegas-06-gigantomaquia` (2), `griegas-07-tifon` (1), `griegas-08-doce-olimpicos` (2), `griegas-12-red-de-hefesto` (1)
+- [ ] R03 · Shorts que faltan (8): `griegas-13-leto-y-los-gemelos` (2), `griegas-14-apolo-piton` (2), `griegas-15-hermes-bebe-ladron` (2), `griegas-16-dioniso-dos-veces` (2)
+- [ ] R04 · Shorts que faltan (3): `griegas-17-dioniso-piratas` (3)
+
 Nórdicas, egipcias y hawaianas ("Who is…?", Stories y Shorts que faltan, con las mismas reglas que arriba):
 
 - [ ] P-Q01 · "Who is…?" (3): Odin `odin_oficial` → `nordicas-05-sabiduria` (Norse S1E5) · Ra `ra_oficial` → `egipcias-10-viaje-nocturno` (Egyptian S1E10) · Pele `pele_oficial` → `hawaianas-13-pele-deja-kahiki` (Hawaiian S2E1)

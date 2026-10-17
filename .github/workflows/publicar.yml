@@ -1,14 +1,14 @@
-# Colas de publicación en la nube (repo público mitologias-render: minutos gratis), para que la Mac pueda estar cerrada.
-# Corre cada 4 h y cada paso decide si le toca (scripts/nube.mjs):
-#   Shorts a YouTube: 4/día (2, 10, 14, 22 UTC) · Reels a Instagram: 3/día (00, 08, 16 HST), alternando episodio y Short
-#   TikTok (cola de Buffer): en cada corrida · Episodio largo a YouTube (griegas T2, después T1): 1/día (18 UTC = 08 HST) + miniaturas pendientes
-#   Especial PROGRAMADO a YouTube: 1/noche (22 UTC) hasta terminar la lista de scripts/nube.mjs
-#   Story griega PÚBLICA a YouTube ("Greek Myth Stories"): 1/día (14 UTC = 04 HST) cuando haya una lista
-# Cada paso se hace una vez por turno (out/turnos.json en el estado), así el cron de respaldo (:17) no repite nada.
-# Cada paso es independiente; si alguno falla, el job termina en rojo.
-# Estado (registros + orden): rama "estado" (scripts/estado-*.sh). Videos: release "media" (scripts/nube.mjs);
+# Cola ÚNICA de publicación en la nube (repo público mitologias-render: minutos gratis), para que la Mac pueda estar cerrada.
+# Una sola lista ordenada (scripts/cola.mjs → cola-unificada.json en la rama estado) y el MISMO calendario para las tres:
+#   turnos cada 4 h; 08 HST = episodio, 12 y 20 HST = "Who is…?" (a las tres juntas), 00/04/16 HST = solo para alcanzar.
+#   Episodio: YouTube horizontal · Instagram todas sus partes · TikTok (Buffer) un vertical completo. "Who is…?" = Short en las tres.
+#   Mientras una plataforma esté atrasada, la que va adelante no publica episodios y las atrasadas publican hasta 4 por turno.
+#   Parejas: por día 1 episodio + 2 "Who is…?" en las tres.
+# Cada plataforma se hace una vez por turno (out/turnos.json en el estado); el disparador de Cloudflare corre cada hora y
+# un turno que falló se reintenta a la hora siguiente. Si un paso falla, el job termina en rojo.
+# Estado (registros + cola): rama "estado" (scripts/estado-*.sh). Videos: release "media" (scripts/nube.mjs);
 # si falta alguno, se renderiza en la misma corrida. En el repo privado NO corre (sus minutos se pagan).
-# A mano: gh workflow run publicar -R matiasosuna/mitologias-render [-f slot=ep|short]
+# A mano: gh workflow run publicar -R matiasosuna/mitologias-render
 name: publicar
 on:
   schedule:
@@ -17,11 +17,6 @@ on:
     # de la lista (turnoUTC) y lo ya hecho en el turno no se repite, así un turno salteado se recupera a la hora siguiente.
     - cron: '37 * * * *'
   workflow_dispatch:
-    inputs:
-      slot:
-        description: 'Turno de Instagram: ep | short (vacío = según la hora HST)'
-        required: false
-        default: ''
 concurrency:
   group: publicar
   cancel-in-progress: false
@@ -36,7 +31,6 @@ jobs:
     env:
       NUBE: '1'
       GH_TOKEN: ${{ github.token }}
-      LISTA: out/shorts-orden.txt
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -79,72 +73,45 @@ jobs:
       - name: traer estado
         run: scripts/estado-traer.sh
 
+      - name: cola única (suma lo nuevo al final)
+        run: node scripts/nube.mjs cola && node scripts/nube.mjs plan
+
       # cada paso con continue-on-error: si falla uno, los demás siguen; "resultado" pone el job en rojo
-      - name: YouTube (Short)
+      - name: YouTube
         id: yt
         continue-on-error: true
-        run: node scripts/nube.mjs yt "$LISTA"
+        run: node scripts/nube.mjs turno youtube
       - name: guardar estado
         id: e1
         continue-on-error: true
         run: scripts/estado-subir.sh
 
-      - name: Instagram (episodio o Short)
+      - name: Instagram
         id: ig
         continue-on-error: true
-        env:
-          SLOT: ${{ inputs.slot }}
-        run: node scripts/nube.mjs ig "$LISTA" "$SLOT"
+        run: node scripts/nube.mjs turno instagram
       - name: guardar estado
         id: e2
         continue-on-error: true
         run: scripts/estado-subir.sh
 
-      - name: TikTok (cola de Buffer)
+      - name: TikTok (Buffer)
         id: tk
         continue-on-error: true
-        run: node scripts/buffer-tiktok.mjs "$LISTA"
+        run: node scripts/nube.mjs turno tiktok
       - name: guardar estado
         id: e3
         continue-on-error: true
         run: scripts/estado-subir.sh
 
-      # al final: si hay que renderizar el episodio, no atrasa a Instagram ni a TikTok
-      - name: YouTube (episodio largo)
-        id: ep
-        continue-on-error: true
-        run: node scripts/nube.mjs episodio
-      - name: guardar estado
-        id: e4
-        continue-on-error: true
-        run: scripts/estado-subir.sh
-
-      - name: YouTube (especial programado)
-        id: es
-        continue-on-error: true
-        run: node scripts/nube.mjs especial
-      - name: guardar estado
-        id: e5
-        continue-on-error: true
-        run: scripts/estado-subir.sh
-
-      - name: YouTube (Story griega)
-        id: st
-        continue-on-error: true
-        run: node scripts/nube.mjs story
-      - name: guardar estado
-        id: e6
-        continue-on-error: true
-        run: scripts/estado-subir.sh
-
       - name: adelantar renders de los próximos turnos
         continue-on-error: true
-        run: node scripts/nube.mjs adelantar "$LISTA"
+        run: node scripts/nube.mjs adelantar
 
       - name: resultado
         if: always()
         run: |
-          echo "shorts=${{ steps.yt.outcome }} instagram=${{ steps.ig.outcome }} tiktok=${{ steps.tk.outcome }} episodio=${{ steps.ep.outcome }} especial=${{ steps.es.outcome }} story=${{ steps.st.outcome }} estado=${{ steps.e1.outcome }}/${{ steps.e2.outcome }}/${{ steps.e3.outcome }}/${{ steps.e4.outcome }}/${{ steps.e5.outcome }}/${{ steps.e6.outcome }}"
-          for o in "${{ steps.yt.outcome }}" "${{ steps.ig.outcome }}" "${{ steps.tk.outcome }}" "${{ steps.ep.outcome }}" "${{ steps.es.outcome }}" "${{ steps.st.outcome }}" "${{ steps.e1.outcome }}" "${{ steps.e2.outcome }}" "${{ steps.e3.outcome }}" "${{ steps.e4.outcome }}" "${{ steps.e5.outcome }}" "${{ steps.e6.outcome }}"; do
+          echo "youtube=${{ steps.yt.outcome }} instagram=${{ steps.ig.outcome }} tiktok=${{ steps.tk.outcome }} estado=${{ steps.e1.outcome }}/${{ steps.e2.outcome }}/${{ steps.e3.outcome }}"
+          for o in "${{ steps.yt.outcome }}" "${{ steps.ig.outcome }}" "${{ steps.tk.outcome }}" "${{ steps.e1.outcome }}" "${{ steps.e2.outcome }}" "${{ steps.e3.outcome }}"; do
             [ "$o" = success ] || exit 1
           done

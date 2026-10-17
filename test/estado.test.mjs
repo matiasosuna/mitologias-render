@@ -92,3 +92,12 @@ test('agregar (CLI): rechaza ids sin guion y suma los válidos al final', () => 
   execFileSync('node', [ESTADO, 'agregar', est, 'short-aztecas-c'], { cwd: raiz, stdio: 'pipe' });
   assert.equal(readFileSync(join(est, 'shorts-orden.txt'), 'utf8'), 'short-griegas-a\nshort-aztecas-c\n');
 });
+
+test('cola única: la rama manda el orden; lo nuevo de acá va al final (subir y traer)', async () => {
+  const { fusionarCola, ARCHIVOS } = await import('../scripts/estado.mjs');
+  assert.equal(ARCHIVOS['cola-unificada.json'], 'out/cola-unificada.json');
+  const e = (id) => ({ id, tipo: 'episodio' });
+  assert.deepEqual(fusionarCola([e('a'), e('b')], [e('b'), e('a'), e('c')]).map((x) => x.id), ['a', 'b', 'c']);
+  assert.deepEqual(fusionarCola(undefined, [e('x')]).map((x) => x.id), ['x']);
+  assert.deepEqual(fusionarCola([e('a')], undefined).map((x) => x.id), ['a']);
+});

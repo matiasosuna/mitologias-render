@@ -13,7 +13,7 @@ if [ -d "$DEST/.git" ]; then
   git -C "$DEST" merge -q --ff-only origin/main
 fi
 LISTA=$(mktemp)
-git ls-files | grep -vE '^(lib/voz-matias|pruebas/|\.github/workflows/voz\.yml)' > $LISTA
+git ls-files | grep -vE '^(lib/voz-matias|pruebas/|revision/|\.github/workflows/voz\.yml)' > $LISTA
 mkdir -p $DEST
 rsync -a --exclude .git --files-from=$LISTA ./ $DEST/
 cd $DEST

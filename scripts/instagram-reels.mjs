@@ -1,7 +1,7 @@
 // Episodios completos como REELS en @mythsonclay (uno por episodio, en orden, solo temporadas 1).
 // Instagram no acepta Reels largos por subida directa, así que el video se sirve desde la Mac con un túnel
 // temporal de Cloudflare (cloudflared) y Instagram lo descarga de ahí.
-// Reparto: por tandas (TANDAS_IG): T1 griega → T1 nórdica → T1 egipcia → T2 griega; el resto en pausa.
+// En la nube el orden lo pone la cola única (scripts/cola.mjs; nube.mjs llama con --solo=<id>). Sin --solo (Mac): por tandas (TANDAS_IG).
 // Desde 2026-10-10 cada episodio va en PARTES de < 3 min (scripts/vertical-partes.mjs → out/<id>/<id>.parte-N.mp4):
 // Instagram casi no recomienda Reels más largos a quien no te sigue. Se publican en orden: ep. 8 parte 1, parte 2, ep. 9…
 // Portada del Reel (cover_url) = la portada diseñada. Control de duplicados antes y después de publicar.
@@ -70,7 +70,7 @@ const previas = hist().filter((h) => h.tipo === 'reel-parte' && h.id === id);
 const viejas = previas.filter((h) => h.formato !== FORMATO_CURIOSO).length;
 // si ya salió alguna parte con el título de titulos.json, las demás repiten ESE texto aunque el título cambie después
 const curioso = curiosoDe(previas, ganchoParte(id, titulos));
-const datos = { gu, nombre, tags, parte, de, curioso, codigo: codigoEpisodio(id, titulos), gancho: yt.gancho, yaPublicadas: viejas };
+const datos = { gu, nombre, tags, parte, de, curioso, codigo: codigoEpisodio(id, titulos), gancho: Array.isArray(yt.gancho) ? yt.gancho[0] : yt.gancho, yaPublicadas: viejas }; // especiales: [gancho, fuente]
 const texto = textoReel(datos);
 if (args.includes('--probar')) { console.log(id, '\n', texto); process.exit(0); }
 

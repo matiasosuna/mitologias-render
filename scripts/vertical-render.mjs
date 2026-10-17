@@ -1,5 +1,6 @@
 // Versión vertical (Reels) de episodios: node scripts/vertical-render.mjs <id> [<id>…] → out/<id>/<id>.vertical.mp4
-// Reusa voz y escenas del horizontal (no gasta créditos), a ritmo rápido de Short (lib/vertical-rapido.mjs). La portada es out/<id>/portada-ig.jpg.
+// Reusa voz y escenas del horizontal (no gasta créditos), al ritmo normal del episodio (--rapido = ritmo de Short). La portada es out/<id>/portada-ig.jpg.
+// TikTok publica este video completo (scripts/buffer-tiktok.mjs).
 // PARTES=n → parte el video en n tramos con un Chrome propio cada uno, en paralelo (Chrome sólo usa ~2 núcleos
 // por navegador), y después los une con el audio. Sirve en máquinas con muchos núcleos (Modal).
 import { bundle } from '@remotion/bundler';

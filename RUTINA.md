@@ -5,7 +5,9 @@ para que el workflow `publicar` del repo público lo renderice y publique solo. 
 No hay nadie mirando: no hagas preguntas; si algo no se puede resolver, dejá la nota (paso 6) y terminá.
 
 ## Reglas que no se rompen
-- **Nunca publicar** en YouTube, Instagram, TikTok, Buffer ni Pinterest (ni scripts `subir*`, `instagram*`, `tiktok*`, `buffer-*`, `youtube-*`, `nube.mjs yt|ig|episodio|especial`). Eso lo hace el workflow `publicar`.
+
+- **Shorts = solo "Who is…?" (desde 2026-10-17).** No escribir más mini historias sacadas de episodios (ítems R/S): si aparece uno, saltearlo.
+- **Nunca publicar** en YouTube, Instagram, TikTok, Buffer ni Pinterest (ni scripts `subir*`, `instagram*`, `tiktok*`, `buffer-*`, `youtube-*`, `nube.mjs turno`). Eso lo hace el workflow `publicar`.
 - **Nunca renderizar** videos (`motor-render`, `short-render`, `vertical-*`, `modal_render.py`, `gh workflow run`). Hetzner prohibido.
 - **Nunca mostrar secretos**: no `env`, `printenv`, `set`, `cat ~/.modal.toml`, `git remote -v` ni `echo` de URLs de remotes (pueden llevar credenciales). MODAL_TOKEN_ID/SECRET ya están en el entorno: Modal los lee solo.
 - **No tocar** `.github/workflows/*`, secretos, ni los registros (`youtube-ids.json`, `subidas-*.json`, `listas.json`, `pinterest-pines.json`, `meta-youtube*.json` existentes, la rama `estado`) salvo **agregar** ids de Shorts con `scripts/estado-agregar-shorts.sh`. No borrar ni reescribir videos/guiones ya existentes.
@@ -55,7 +57,7 @@ Un episodio suelto de 4–6 min que se entiende **sin haber visto nada**, según
 - Fuentes: las del ítem (nombralas en `youtube.json` como en `griegas-99-reino-de-hades`). Nunca repetir lo que ya cuenta otro episodio o Short: si un tramo ya está, resumilo en 1–2 frases.
 - `youtube.json` como los episodios; `miniatura`; 2–3 `shorts` de recorte.
 - `src/videos/titulos.json`: `"<id>": { "titulo": "<titulo.en del guion, tal cual> | <Serie> Myth Stories Special", "temporada": 0, "episodio": <el siguiente libre de la temporada 0 de esa serie>, "especial": "<Serie> Myth Stories" }` (lo valida `test/titulos.test.mjs`).
-- No tocar `ESPECIALES` de `scripts/nube.mjs` ni `listas.json`: cuándo y en qué lista se publica lo decide Matías.
+- No tocar la cola única (`scripts/cola.mjs`, `cola-unificada.json`) ni `listas.json`: cuándo y en qué lista se publica lo decide Matías.
 
 ### Shorts nativos (ítems R y S)
 Para cada episodio del ítem, **hasta 3 Shorts por episodio en total** (ítems R: recontá cuántos `short-*` ya tienen ese `episodio` y hacé los que falten), momentos o personajes distintos del episodio, no el mismo con otro gancho:
