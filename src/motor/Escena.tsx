@@ -249,7 +249,7 @@ export function pistasDeEscena(esc: EscenaT, tl: EscenaTL): Pista[] {
       const { e } = estadoActor(a, tl, f, ficha);
       muestras.push({ f, x: e.x, y: e.y + dy, s: e.s, vis: e.opacity > 0.3, izq: e.voltear });
     }
-    return { id: a.id, capa, medida, muestras, ajustable: ficha.tipo === 'dibujo' && typeof ficha.p?.alto === 'number' };
+    return { id: a.id, capa, medida, muestras, ajustable: ficha.tipo === 'dibujo' && typeof ficha.p?.alto === 'number', oficial: ficha.tipo === 'persona' && (a.como ?? a.id).endsWith('_oficial') };
   });
 }
 

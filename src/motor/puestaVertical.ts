@@ -28,8 +28,8 @@ export type Capa = 'fondo' | 'medio' | 'frente';
 /** Tamaño de un actor a escala 1 mirando a la derecha: cuánto ocupa hacia atrás (izq), hacia adelante (der) y de alto. */
 export type Medida = { izq: number; der: number; alto: number };
 export type Muestra = { f: number; x: number; y: number; s: number; vis: boolean; izq: boolean };
-/** ajustable: el motor puede achicarlo/bajarlo para que entre (animales con alto propio). */
-export type Pista = { id: string; capa: Capa; medida: Medida; muestras: Muestra[]; ajustable?: boolean };
+/** ajustable: el motor puede achicarlo/bajarlo para que entre (animales con alto propio). oficial: persona con diseño *_oficial (los altos: se achican si se pasan del cartel). */
+export type Pista = { id: string; capa: Capa; medida: Medida; muestras: Muestra[]; ajustable?: boolean; oficial?: boolean };
 /**
  * Encuadre fijo de una escena: escala K y una compresión de x por tramos (xs del mundo → vs virtuales, monótona:
  * los huecos vacíos se achican mucho, los que separan a dos actores cercanos poco); pend = pendiente fuera de los

@@ -27,9 +27,9 @@
         { "tipo": "pilono", "x": 1850, "s": 0.9, "capa": "fondo" }
       ],
       "actores": [
-        { "id": "imhotep", "como": "escriba", "x": 450, "y": 758, "props": { "ropa": "larga", "tocado": "peluca" }, "rotulo": "IMHOTEP", "pasos": [{ "en": 0, "hace": "aparece" }, { "en": 0.4, "hace": "brilla", "dur": 0.5 }, { "en": 1, "hace": "desaparece", "con": "luz" }] },
-        { "id": "khonsu", "como": "ra", "x": 1050, "y": 758, "mira": "izq", "props": { "piel": "#D4A017" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "aparece", "con": "luz" }, { "en": 1.4, "hace": "levanta" }, { "en": 2, "hace": "baja" }] },
-        { "id": "ramses", "como": "faraon", "x": 1450, "y": 758, "mira": "izq", "rotulo": "RAMESSES II", "pasos": [{ "en": 3, "hace": "aparece" }, { "en": 3.4, "hace": "levanta" }] }
+        { "id": "imhotep", "como": "imhotep_oficial", "x": 450, "y": 758, "props": { "ropa": "larga", "tocado": "peluca" }, "rotulo": "IMHOTEP", "pasos": [{ "en": 0, "hace": "aparece" }, { "en": 0.4, "hace": "brilla", "dur": 0.5 }, { "en": 1, "hace": "desaparece", "con": "luz" }] },
+        { "id": "khonsu", "como": "khonsu_oficial", "x": 1050, "y": 758, "mira": "izq", "props": { "piel": "#D4A017" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "aparece", "con": "luz" }, { "en": 1.4, "hace": "levanta" }, { "en": 2, "hace": "baja" }] },
+        { "id": "ramses", "como": "ramses_oficial", "x": 1450, "y": 758, "mira": "izq", "rotulo": "RAMESSES II", "pasos": [{ "en": 3, "hace": "aparece" }, { "en": 3.4, "hace": "levanta" }] }
       ],
       "efectos": [
         { "en": 0, "tipo": "aclarar" },
@@ -59,10 +59,10 @@
         { "tipo": "palmera", "x": 300, "s": 1.3, "capa": "fondo" }
       ],
       "actores": [
-        { "id": "ramses", "como": "faraon", "x": 1750, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0, "hace": "sienta" }, { "en": 4, "hace": "levantarse" }, { "en": 4.3, "hace": "ofrece" }] },
-        { "id": "principe1", "como": "egipcio", "x": 550, "y": 758, "props": { "barba": true, "ropa": "larga" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "entra", "a": 550 }, { "en": 1.6, "hace": "ofrece" }, { "en": 2.5, "hace": "baja" }] },
-        { "id": "bakhtan", "como": "rey", "x": 800, "y": 758, "rotulo": "PRINCE OF BAKHTAN", "pasos": [{ "en": 2, "hace": "entra", "a": 800 }, { "en": 3, "hace": "senala" }, { "en": 4, "hace": "baja" }] },
-        { "id": "hija", "como": "egipcia", "x": 1300, "y": 758, "rotulo": "", "pasos": [{ "en": 3, "hace": "aparece" }, { "en": 4, "hace": "camina", "a": 1450, "dur": 0.4 }, { "en": 4.5, "hace": "transforma", "en_que": "reina_egipcia" }] }
+        { "id": "ramses", "como": "ramses_oficial", "x": 1750, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0, "hace": "sienta" }, { "en": 4, "hace": "levantarse" }, { "en": 4.3, "hace": "ofrece" }] },
+        { "id": "principe1", "como": "aldeano_egipcio_oficial", "x": 550, "y": 758, "props": { "barba": true, "ropa": "larga" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "entra", "a": 550 }, { "en": 1.6, "hace": "ofrece" }, { "en": 2.5, "hace": "baja" }] },
+        { "id": "bakhtan", "como": "bakhtan_oficial", "x": 800, "y": 758, "rotulo": "PRINCE OF BAKHTAN", "pasos": [{ "en": 2, "hace": "entra", "a": 800 }, { "en": 3, "hace": "senala" }, { "en": 4, "hace": "baja" }] },
+        { "id": "hija", "como": "aldeana_egipcia_b_oficial", "x": 1300, "y": 758, "rotulo": "", "pasos": [{ "en": 3, "hace": "aparece" }, { "en": 4, "hace": "camina", "a": 1450, "dur": 0.4 }, { "en": 4.5, "hace": "transforma", "en_que": "reina_egipcia_oficial" }] }
       ],
       "efectos": [
         { "en": 1.5, "tipo": "chispas", "x": 1120, "y": 680, "dur": 0.8 },
@@ -91,10 +91,10 @@
         { "tipo": "anfora", "x": 1000, "s": 0.6, "en": 1.5 }
       ],
       "actores": [
-        { "id": "ramses", "como": "faraon", "x": 1350, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0, "hace": "sienta" }, { "en": 4, "hace": "senala" }] },
-        { "id": "reina", "como": "reina_egipcia", "x": 1650, "y": 758, "mira": "izq", "rotulo": "NEFERURE", "pasos": [{ "en": 2.3, "hace": "lamenta" }, { "en": 3.5, "hace": "baja" }] },
-        { "id": "mensajero", "como": "egipcio", "x": 800, "y": 758, "props": { "barba": true }, "rotulo": "THE MESSENGER", "pasos": [{ "en": 1, "hace": "entra", "a": 800 }, { "en": 1.6, "hace": "arrodilla" }, { "en": 2, "hace": "habla", "dur": 1 }, { "en": 3, "hace": "ofrece" }] },
-        { "id": "djehuty", "como": "escriba", "x": 450, "y": 758, "rotulo": "DJEHUTYEMHEB", "pasos": [{ "en": 4, "hace": "entra", "a": 450 }] }
+        { "id": "ramses", "como": "ramses_oficial", "x": 1350, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0, "hace": "sienta" }, { "en": 4, "hace": "senala" }] },
+        { "id": "reina", "como": "reina_egipcia_b_oficial", "x": 1650, "y": 758, "mira": "izq", "rotulo": "NEFERURE", "pasos": [{ "en": 2.3, "hace": "lamenta" }, { "en": 3.5, "hace": "baja" }] },
+        { "id": "mensajero", "como": "aldeano_egipcio_b_oficial", "x": 800, "y": 758, "props": { "barba": true }, "rotulo": "THE MESSENGER", "pasos": [{ "en": 1, "hace": "entra", "a": 800 }, { "en": 1.6, "hace": "arrodilla" }, { "en": 2, "hace": "habla", "dur": 1 }, { "en": 3, "hace": "ofrece" }] },
+        { "id": "djehuty", "como": "djehuty_oficial", "x": 450, "y": 758, "rotulo": "DJEHUTYEMHEB", "pasos": [{ "en": 4, "hace": "entra", "a": 450 }] }
       ],
       "efectos": [
         { "en": 0, "tipo": "luz", "x": 960, "y": 400, "dur": 1, "intensidad": 0.4 },
@@ -119,10 +119,10 @@
         { "tipo": "palmera", "x": 250, "s": 1.3, "capa": "fondo" }
       ],
       "actores": [
-        { "id": "djehuty", "como": "escriba", "x": 600, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "entra", "a": 600 }, { "en": 2, "hace": "levanta" }, { "en": 2.8, "hace": "baja" }, { "en": 3, "hace": "lamenta" }] },
-        { "id": "bentresh", "como": "egipcia", "x": 1000, "y": 758, "rotulo": "BENTRESH", "pasos": [{ "en": 0.4, "hace": "cae" }, { "en": 2.3, "hace": "tiembla", "dur": 0.6 }] },
-        { "id": "espiritu", "como": "egipcio", "x": 1250, "y": 758, "capa": "medio", "props": { "piel": "#3A2A4E" }, "rotulo": "THE SPIRIT", "pasos": [{ "en": 1, "hace": "aparece", "con": "sombra" }, { "en": 2.5, "hace": "niega" }] },
-        { "id": "bakhtan", "como": "rey", "x": 1650, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 1.2, "hace": "sorprende" }, { "en": 3, "hace": "senala" }] }
+        { "id": "djehuty", "como": "djehuty_oficial", "x": 600, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "entra", "a": 600 }, { "en": 2, "hace": "levanta" }, { "en": 2.8, "hace": "baja" }, { "en": 3, "hace": "lamenta" }] },
+        { "id": "bentresh", "como": "bentresh_oficial", "x": 1000, "y": 758, "rotulo": "BENTRESH", "pasos": [{ "en": 0.4, "hace": "cae" }, { "en": 2.3, "hace": "tiembla", "dur": 0.6 }] },
+        { "id": "espiritu", "como": "aldeano_egipcio_c_oficial", "x": 1250, "y": 758, "capa": "medio", "props": { "piel": "#3A2A4E" }, "rotulo": "THE SPIRIT", "pasos": [{ "en": 1, "hace": "aparece", "con": "sombra" }, { "en": 2.5, "hace": "niega" }] },
+        { "id": "bakhtan", "como": "bakhtan_oficial", "x": 1650, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 1.2, "hace": "sorprende" }, { "en": 3, "hace": "senala" }] }
       ],
       "efectos": [
         { "en": 1, "tipo": "oscurecer", "dur": 1.5, "intensidad": 0.35 },
@@ -150,10 +150,10 @@
         { "tipo": "columna_papiro", "x": 150, "s": 1.3, "capa": "fondo" }
       ],
       "actores": [
-        { "id": "ramses", "como": "faraon", "x": 500, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "entra", "a": 500 }, { "en": 3, "hace": "reza" }, { "en": 4.5, "hace": "baja" }] },
-        { "id": "khonsu1", "como": "ra", "x": 1000, "y": 758, "mira": "izq", "props": { "piel": "#D4A017" }, "rotulo": "KHONSU THE KIND", "pasos": [{ "en": 1, "hace": "aparece", "con": "luz" }, { "en": 4, "hace": "asiente" }, { "en": 4.3, "hace": "senala" }] },
-        { "id": "khonsu2", "como": "ra", "x": 1300, "y": 758, "escala": 0.9, "mira": "izq", "props": { "piel": "#E8C04A" }, "rotulo": "THE PLAN-MAKER", "pasos": [{ "en": 1.4, "hace": "aparece", "con": "luz" }, { "en": 2.3, "hace": "levanta" }, { "en": 3, "hace": "baja" }, { "en": 4.4, "hace": "brilla", "dur": 0.6 }] },
-        { "id": "sacerdote", "como": "sacerdote_egipcio", "x": 1650, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0.5, "hace": "aparece" }, { "en": 1, "hace": "senala" }, { "en": 2, "hace": "baja" }] }
+        { "id": "ramses", "como": "ramses_oficial", "x": 500, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "entra", "a": 500 }, { "en": 3, "hace": "reza" }, { "en": 4.5, "hace": "baja" }] },
+        { "id": "khonsu1", "como": "khonsu_oficial", "x": 1000, "y": 758, "mira": "izq", "props": { "piel": "#D4A017" }, "rotulo": "KHONSU THE KIND", "pasos": [{ "en": 1, "hace": "aparece", "con": "luz" }, { "en": 4, "hace": "asiente" }, { "en": 4.3, "hace": "senala" }] },
+        { "id": "khonsu2", "como": "khonsu_oficial", "x": 1300, "y": 758, "escala": 0.9, "mira": "izq", "props": { "piel": "#E8C04A" }, "rotulo": "THE PLAN-MAKER", "pasos": [{ "en": 1.4, "hace": "aparece", "con": "luz" }, { "en": 2.3, "hace": "levanta" }, { "en": 3, "hace": "baja" }, { "en": 4.4, "hace": "brilla", "dur": 0.6 }] },
+        { "id": "sacerdote", "como": "sacerdote_egipcio_b_oficial", "x": 1650, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0.5, "hace": "aparece" }, { "en": 1, "hace": "senala" }, { "en": 2, "hace": "baja" }] }
       ],
       "efectos": [
         { "en": 0, "tipo": "luz", "x": 1150, "y": 220, "dur": 1, "intensidad": 0.4 },
@@ -181,11 +181,11 @@
         { "tipo": "palmera", "x": 2600, "s": 1.3, "capa": "fondo" }
       ],
       "actores": [
-        { "id": "khonsu", "como": "ra", "x": 550, "y": 758, "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 0.8, "hace": "camina", "a": 1550, "dur": 1.6 }] },
-        { "id": "sacerdote", "como": "sacerdote_egipcio", "x": 330, "y": 758, "rotulo": "", "pasos": [{ "en": 0.8, "hace": "camina", "a": 1350, "dur": 1.6 }] },
+        { "id": "khonsu", "como": "khonsu_oficial", "x": 550, "y": 758, "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 0.8, "hace": "camina", "a": 1550, "dur": 1.6 }] },
+        { "id": "sacerdote", "como": "sacerdote_egipcio_b_oficial", "x": 330, "y": 758, "rotulo": "", "pasos": [{ "en": 0.8, "hace": "camina", "a": 1350, "dur": 1.6 }] },
         { "id": "caballo", "como": "caballo_egipcio_oficial", "x": 100, "rotulo": "", "pasos": [{ "en": 1, "hace": "camina", "a": 1100, "dur": 1.4 }] },
-        { "id": "bakhtan", "como": "rey", "x": 2000, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2, "hace": "entra", "a": 1900 }, { "en": 3, "hace": "arrodilla" }, { "en": 3.4, "hace": "reza" }] },
-        { "id": "soldado", "como": "egipcio", "x": 2250, "y": 758, "mira": "izq", "props": { "barba": true, "objeto": "lanza" }, "rotulo": "", "pasos": [{ "en": 2.2, "hace": "entra", "a": 2200 }] }
+        { "id": "bakhtan", "como": "bakhtan_oficial", "x": 2000, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2, "hace": "entra", "a": 1900 }, { "en": 3, "hace": "arrodilla" }, { "en": 3.4, "hace": "reza" }] },
+        { "id": "soldado", "como": "soldado_egipcio_b_oficial", "x": 2250, "y": 758, "mira": "izq", "props": { "barba": true, "objeto": "lanza" }, "rotulo": "", "pasos": [{ "en": 2.2, "hace": "entra", "a": 2200 }] }
       ],
       "efectos": [
         { "en": 1, "tipo": "polvo", "dur": 1 },
@@ -209,10 +209,10 @@
         { "tipo": "columna_papiro", "x": 150, "s": 1.3, "capa": "fondo" }
       ],
       "actores": [
-        { "id": "khonsu", "como": "ra", "x": 600, "y": 758, "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 0.2, "hace": "levanta" }, { "en": 0.5, "hace": "brilla", "dur": 1 }, { "en": 1.6, "hace": "baja" }] },
-        { "id": "bentresh", "como": "egipcia", "x": 950, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "cae" }, { "en": 1, "hace": "levantarse" }, { "en": 1.3, "hace": "alegra" }] },
-        { "id": "espiritu", "como": "egipcio", "x": 1300, "y": 758, "mira": "izq", "props": { "piel": "#3A2A4E" }, "rotulo": "", "pasos": [{ "en": 1.3, "hace": "aparece", "con": "sombra" }, { "en": 2, "hace": "habla", "dur": 1 }, { "en": 2.2, "hace": "arrodilla" }, { "en": 3, "hace": "levantarse" }, { "en": 3.1, "hace": "habla", "dur": 0.8 }] },
-        { "id": "bakhtan", "como": "rey", "x": 1700, "y": 758, "mira": "izq", "capa": "medio", "rotulo": "", "pasos": [{ "en": 1.4, "hace": "sorprende" }, { "en": 3.6, "hace": "tiembla", "dur": 0.4 }] }
+        { "id": "khonsu", "como": "khonsu_oficial", "x": 600, "y": 758, "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 0.2, "hace": "levanta" }, { "en": 0.5, "hace": "brilla", "dur": 1 }, { "en": 1.6, "hace": "baja" }] },
+        { "id": "bentresh", "como": "bentresh_oficial", "x": 950, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "cae" }, { "en": 1, "hace": "levantarse" }, { "en": 1.3, "hace": "alegra" }] },
+        { "id": "espiritu", "como": "aldeano_egipcio_c_oficial", "x": 1300, "y": 758, "mira": "izq", "props": { "piel": "#3A2A4E" }, "rotulo": "", "pasos": [{ "en": 1.3, "hace": "aparece", "con": "sombra" }, { "en": 2, "hace": "habla", "dur": 1 }, { "en": 2.2, "hace": "arrodilla" }, { "en": 3, "hace": "levantarse" }, { "en": 3.1, "hace": "habla", "dur": 0.8 }] },
+        { "id": "bakhtan", "como": "bakhtan_oficial", "x": 1700, "y": 758, "mira": "izq", "capa": "medio", "rotulo": "", "pasos": [{ "en": 1.4, "hace": "sorprende" }, { "en": 3.6, "hace": "tiembla", "dur": 0.4 }] }
       ],
       "efectos": [
         { "en": 0.4, "tipo": "luz", "x": 950, "y": 600, "dur": 1.2, "intensidad": 0.7 },
@@ -235,11 +235,11 @@
         { "tipo": "columna_papiro", "x": 1950, "s": 1.3, "capa": "fondo" }
       ],
       "actores": [
-        { "id": "sacerdote", "como": "sacerdote_egipcio", "x": 300, "y": 758, "rotulo": "", "pasos": [{ "en": 0.3, "hace": "asiente" }] },
-        { "id": "khonsu", "como": "ra", "x": 600, "y": 758, "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 0, "hace": "mira", "a": 300 }, { "en": 0.1, "hace": "asiente" }, { "en": 0.6, "hace": "mira", "a": 1000 }, { "en": 1, "hace": "ofrece" }, { "en": 2, "hace": "baja" }] },
-        { "id": "espiritu", "como": "egipcio", "x": 900, "y": 758, "props": { "piel": "#3A2A4E" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "ofrece" }, { "en": 2, "hace": "desaparece", "con": "sombra" }] },
-        { "id": "bakhtan", "como": "rey", "x": 1350, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0.4, "hace": "tiembla", "dur": 0.5 }, { "en": 0.8, "hace": "ofrece" }, { "en": 2.4, "hace": "alegra" }, { "en": 2.5, "hace": "levanta" }] },
-        { "id": "bentresh", "como": "egipcia", "x": 1650, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2.5, "hace": "aparece" }, { "en": 2.7, "hace": "salta" }] }
+        { "id": "sacerdote", "como": "sacerdote_egipcio_b_oficial", "x": 300, "y": 758, "rotulo": "", "pasos": [{ "en": 0.3, "hace": "asiente" }] },
+        { "id": "khonsu", "como": "khonsu_oficial", "x": 600, "y": 758, "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 0, "hace": "mira", "a": 300 }, { "en": 0.1, "hace": "asiente" }, { "en": 0.6, "hace": "mira", "a": 1000 }, { "en": 1, "hace": "ofrece" }, { "en": 2, "hace": "baja" }] },
+        { "id": "espiritu", "como": "aldeano_egipcio_c_oficial", "x": 900, "y": 758, "props": { "piel": "#3A2A4E" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "ofrece" }, { "en": 2, "hace": "desaparece", "con": "sombra" }] },
+        { "id": "bakhtan", "como": "bakhtan_oficial", "x": 1350, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0.4, "hace": "tiembla", "dur": 0.5 }, { "en": 0.8, "hace": "ofrece" }, { "en": 2.4, "hace": "alegra" }, { "en": 2.5, "hace": "levanta" }] },
+        { "id": "bentresh", "como": "bentresh_oficial", "x": 1650, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2.5, "hace": "aparece" }, { "en": 2.7, "hace": "salta" }] }
       ],
       "efectos": [
         { "en": 1, "tipo": "fogata", "x": 1140, "y": 790, "dur": 1.5 },
@@ -262,8 +262,8 @@
         { "tipo": "palmera", "x": 300, "s": 1.3, "capa": "fondo" }
       ],
       "actores": [
-        { "id": "bakhtan", "como": "rey", "x": 650, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "habla", "dur": 0.8 }, { "en": 1.5, "hace": "cae" }, { "en": 3.5, "hace": "levantarse" }, { "en": 3.6, "hace": "tiembla", "dur": 0.4 }] },
-        { "id": "khonsu", "como": "ra", "x": 1250, "y": 758, "mira": "izq", "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "brilla", "dur": 0.6 }, { "en": 2.3, "hace": "desaparece", "con": "luz" }] },
+        { "id": "bakhtan", "como": "bakhtan_oficial", "x": 650, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "habla", "dur": 0.8 }, { "en": 1.5, "hace": "cae" }, { "en": 3.5, "hace": "levantarse" }, { "en": 3.6, "hace": "tiembla", "dur": 0.4 }] },
+        { "id": "khonsu", "como": "khonsu_oficial", "x": 1250, "y": 758, "mira": "izq", "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "brilla", "dur": 0.6 }, { "en": 2.3, "hace": "desaparece", "con": "luz" }] },
         { "id": "halcon", "como": "halcon_egipcio_oficial", "x": 1250, "y": 560, "props": { "color": "#D4A017" }, "rotulo": "", "pasos": [{ "en": 2.4, "hace": "aparece", "con": "luz" }, { "en": 2.6, "hace": "vuela", "a": [1400, 380], "dur": 0.4 }, { "en": 3, "hace": "vuela", "a": [2300, 150], "dur": 0.8 }] }
       ],
       "efectos": [
@@ -290,11 +290,11 @@
         { "tipo": "pilono", "x": 1950, "s": 0.9, "capa": "fondo", "en": 2 }
       ],
       "actores": [
-        { "id": "bakhtan", "como": "rey", "x": 400, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "habla", "dur": 1 }, { "en": 1, "hace": "senala" }] },
-        { "id": "sacerdote", "como": "sacerdote_egipcio", "x": 650, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0.8, "hace": "asiente" }] },
-        { "id": "khonsu", "como": "ra", "x": 1050, "y": 758, "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "camina", "a": 1450, "dur": 1 }, { "en": 2.5, "hace": "ofrece" }] },
+        { "id": "bakhtan", "como": "bakhtan_oficial", "x": 400, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "habla", "dur": 1 }, { "en": 1, "hace": "senala" }] },
+        { "id": "sacerdote", "como": "sacerdote_egipcio_b_oficial", "x": 650, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0.8, "hace": "asiente" }] },
+        { "id": "khonsu", "como": "khonsu_oficial", "x": 1050, "y": 758, "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "camina", "a": 1450, "dur": 1 }, { "en": 2.5, "hace": "ofrece" }] },
         { "id": "caballo", "como": "caballo_egipcio_oficial", "x": 850, "rotulo": "", "pasos": [{ "en": 1.2, "hace": "camina", "a": 1200, "dur": 1 }] },
-        { "id": "khonsu1", "como": "ra", "x": 1800, "y": 758, "mira": "izq", "props": { "piel": "#D4A017" }, "rotulo": "", "pasos": [{ "en": 2, "hace": "aparece", "con": "luz" }, { "en": 2.6, "hace": "asiente" }] }
+        { "id": "khonsu1", "como": "khonsu_oficial", "x": 1800, "y": 758, "mira": "izq", "props": { "piel": "#D4A017" }, "rotulo": "", "pasos": [{ "en": 2, "hace": "aparece", "con": "luz" }, { "en": 2.6, "hace": "asiente" }] }
       ],
       "efectos": [
         { "en": 1, "tipo": "polvo", "dur": 1 },
@@ -317,10 +317,10 @@
         { "tipo": "pilono", "x": 1850, "s": 0.9, "capa": "fondo" }
       ],
       "actores": [
-        { "id": "sacerdote", "como": "sacerdote_egipcio", "x": 700, "y": 758, "rotulo": "", "pasos": [{ "en": 0.3, "hace": "mira", "a": 400 }, { "en": 0.4, "hace": "senala" }, { "en": 1, "hace": "mira", "a": 1000 }, { "en": 1.1, "hace": "habla", "dur": 0.8 }] },
-        { "id": "ramses", "como": "faraon", "x": 1050, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2, "hace": "aparece" }, { "en": 2.4, "hace": "ofrece" }, { "en": 3.5, "hace": "baja" }] },
-        { "id": "hitita", "como": "reina_egipcia", "x": 1300, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2.2, "hace": "aparece" }] },
-        { "id": "cocodrilo", "como": "cocodrilo", "x": 1600, "mira": "izq", "rotulo": "", "pasos": [{ "en": 4, "hace": "aparece", "con": "sombra" }] },
+        { "id": "sacerdote", "como": "sacerdote_egipcio_b_oficial", "x": 700, "y": 758, "rotulo": "", "pasos": [{ "en": 0.3, "hace": "mira", "a": 400 }, { "en": 0.4, "hace": "senala" }, { "en": 1, "hace": "mira", "a": 1000 }, { "en": 1.1, "hace": "habla", "dur": 0.8 }] },
+        { "id": "ramses", "como": "ramses_oficial", "x": 1050, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2, "hace": "aparece" }, { "en": 2.4, "hace": "ofrece" }, { "en": 3.5, "hace": "baja" }] },
+        { "id": "hitita", "como": "hitita_oficial", "x": 1300, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2.2, "hace": "aparece" }] },
+        { "id": "cocodrilo", "como": "cocodrilo_egipcio_oficial", "x": 1600, "mira": "izq", "rotulo": "", "pasos": [{ "en": 4, "hace": "aparece", "con": "sombra" }] },
         { "id": "perro", "como": "perro_egipcio_oficial", "x": 1800, "mira": "izq", "rotulo": "", "pasos": [{ "en": 4.3, "hace": "aparece", "con": "sombra" }] }
       ],
       "efectos": [

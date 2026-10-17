@@ -10,6 +10,8 @@ const SUELO = 790, ARRIBA = 126, ANCHO = 1080, SUELO_V = 1390, TECHO = 430;
 
 /** Lo más alto que puede llegar un actor en pantalla: deja un renglón para su rótulo debajo de la guarda. */
 export const TECHO_H = ARRIBA + 64;
+/** Techo de las personas con diseño oficial: justo debajo del cartel de arriba (y=230), para que un gigante no lo tape. */
+export const TECHO_PERSONA = 250;
 /** Lo mínimo que se achica un animal para que entre (más chico deja de ser épico: se avisa). */
 export const K_AJ_MIN = 0.55;
 /** Encimados: fracción del más angosto que se tapan, en más de esta fracción del tiempo que están juntos. */
@@ -67,6 +69,13 @@ export function ajusteHorizontal(pistas: Pista[], cam: Camara = {}, dur = 0): Re
   const out: Record<string, Ajuste> = {};
   for (const p of pistas) {
     const vis = p.muestras.filter((m) => m.vis);
+    if (p.oficial && !p.ajustable && vis.length && !vuela(vis)) {
+      // persona oficial alta (gigantes, jotuns, reyes…): si pasa el cartel de arriba se achica, nunca menos de K_AJ_MIN
+      const suelo = vis.filter((m) => m.y >= SUELO - 1), elev = suelo.length ? 0 : Math.max(...vis.map((m) => SUELO - m.y));
+      const alto = p.medida.alto * Math.max(...vis.map((m) => m.s)), limP = (SUELO - TECHO_PERSONA) / zoomMax(cam);
+      out[p.id] = { k: alto + elev > limP ? Math.max(K_AJ_MIN, (limP - elev) / alto) : 1, dy: 0 };
+      continue;
+    }
     if (!p.ajustable || !vis.length) { out[p.id] = { k: 1, dy: 0 }; continue; }
     const s = Math.max(...vis.map((m) => m.s)), alto = p.medida.alto * s;
     if (vuela(vis)) {

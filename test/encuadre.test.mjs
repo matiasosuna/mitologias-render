@@ -91,3 +91,12 @@ test('animales épicos: mapeo por mitología, el id manda (vaca1 con como toro) 
   assert.deepEqual(JSON.parse(parchear(txt, c)), g);
   assert.equal(aEpicos({ escenas: [{ id: 'e', actores: [{ id: 'caballo', x: 1 }] }] }, 'balinesas').length, 0);
 });
+
+test('una persona oficial gigante se achica para no tapar el cartel de arriba; una común no', () => {
+  const gigante = medidaFicha({ tipo: 'persona', p: { gigante: true } }), cam = { zoom: [1, 1.08] };
+  const ps = [{ ...pista('g', 900, { medida: gigante }), oficial: true }, pista('v', 300, { medida: gigante })];
+  const aj = ajusteHorizontal(ps, cam, 60);
+  const top = Math.min(...ps[0].muestras.map((m) => cajaPantalla(ps[0], m, aj.g, cam, 60)[1]));
+  assert.ok(aj.g.k < 1 && aj.g.k >= K_AJ_MIN && top >= 249, `k ${aj.g.k} top ${top}`);
+  assert.equal(aj.v.k, 1);
+});
