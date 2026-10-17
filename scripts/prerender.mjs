@@ -9,6 +9,7 @@ import { execFileSync } from 'node:child_process';
 import { esShort, PLATAFORMAS, tieneYouTube, tieneInstagram, tieneTiktok } from './cola.mjs';
 import { nombreAsset, hayAsset, subirAsset, rutaLocal, REPO } from './nube.mjs';
 import { clavesOficiales, clavesLegacy } from './legacy.mjs';
+import { publicados } from '../lib/personajes-oficiales.mjs';
 
 /** Qué necesita cada tipo de ítem: [tipo de render-nube, clase de asset que lo prueba]. */
 export const NECESITA = {
@@ -67,12 +68,14 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     const tiene = { youtube: tieneYouTube(leerJSON('src/videos/youtube-ids.json', {}), leerJSON('out/subidas-api.json', [])), instagram: tieneInstagram(leerJSON('out/subidas-instagram.json', [])), tiktok: tieneTiktok(leerJSON('out/subidas-buffer.json', [])) };
     const listo = (id) => ['guion.json', 'timeline.json'].every((f) => existsSync(join('src/videos', id, f))) && (esShort(id) || Boolean(titulos[id]?.titulo));
     const arte = artefactosVigentes();
-    const oficiales = clavesOficiales(), omitidos = [];
+    // un episodio ya publicado en alguna red conserva sus personajes (scripts/personajes-oficiales.mjs no lo convierte): se renderiza igual
+    // que lo publicado; se omite solo lo NO publicado que todavía tiene claves viejas con diseño oficial
+    const oficiales = clavesOficiales(), omitidos = [], pub = publicados();
     const series = opt('series', '').split(',').filter(Boolean); // p. ej. griegas,nordicas: solo esas mitologías
     const forzar = opt('forzar', '').split(',').filter(Boolean);
     const items = faltantes({ cola: leerJSON('out/cola-unificada.json', []), tiene, listo, n: Number(opt('n', 6)), forzar, omitidos,
       permitir: (id) => !series.length || series.some((x) => id.startsWith(`${x}-`) || id.startsWith(`short-${x}-`)), presupuesto: Number(opt('presupuesto', 'Infinity')), maxEpisodios: Number(opt('episodios', 'Infinity')),
-      legacy: (id) => (opt('legacy', '1') === '0' ? [] : clavesLegacy(JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8')), oficiales)),
+      legacy: (id) => (opt('legacy', '1') === '0' || pub.has(id) ? [] : clavesLegacy(JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8')), oficiales)),
       hayAsset: (id, c) => hayAsset(nombreAsset(id, c)), hayArtefacto: (id, t) => arte.has(`${id}-${t}`) });
     console.log(`estimado Modal: USD ${costoTotal(items).toFixed(2)} · episodios: ${new Set(items.map((i) => i.id)).size}`);
     console.log(`omitidos por personajes viejos (${omitidos.length}): ${omitidos.map((o) => `${o.id} [${o.viejos.join(',')}]`).join(' | ').slice(0, 3000)}`);
