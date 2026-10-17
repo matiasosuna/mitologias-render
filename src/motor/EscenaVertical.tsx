@@ -4,32 +4,14 @@
 import React from 'react';
 import { AbsoluteFill, useCurrentFrame, interpolate } from 'remotion';
 import { C, SUELO, TITULO, Escenario, Sol, Luna, Nube, Estrellas, TEMA, azar } from '../comun/vasija';
-import { ContenidoEscena, Efectos, estadoActor, momento, type PuestaVertical } from './Escena';
+import { ContenidoEscena, Efectos, momento, pistasDeEscena, pistasAjustadas, type PuestaVertical } from './Escena';
+export { pistasDeEscena } from './Escena';
 import { ELENCO } from './elenco';
 import { Fondo, CIELO } from './fondos';
-import { PASO, KB, SUELO_V, ANCHO, medidaFicha, medioElemento, encuadreEscena, mapear, ubicarElemento, limitarRotulo, fondoX, partirLineas, type Pista, type Encuadre, type Medida, type Capa } from './puestaVertical';
+import { KB, SUELO_V, ANCHO, medioElemento, encuadreEscena, mapear, ubicarElemento, limitarRotulo, fondoX, partirLineas, type Pista, type Encuadre, type Medida, type Capa } from './puestaVertical';
 import type { Escena as EscenaT, EscenaTL } from './tipos';
 
 const cl = { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' } as const;
-
-/** Recorrido de cada actor en la escena (posición, visibilidad, tamaño y qué hace), muestreado cada PASO cuadros. */
-export function pistasDeEscena(esc: EscenaT, tl: EscenaTL): Pista[] {
-  const dur = tl.durationInFrames;
-  return (esc.actores ?? []).map((a) => {
-    const ficha = ELENCO[a.como ?? a.id] ?? ELENCO.hombre;
-    const capa: Capa = a.capa ?? 'frente';
-    // si se transforma, la caja más grande de las dos
-    const otras = (a.pasos ?? []).filter((p) => p.hace === 'transforma' && p.en_que && ELENCO[p.en_que]).map((p) => medidaFicha(ELENCO[p.en_que!], a.props));
-    const medida = [medidaFicha(ficha, a.props), ...otras].reduce((m: Medida, o) => ({ izq: Math.max(m.izq, o.izq), der: Math.max(m.der, o.der), alto: Math.max(m.alto, o.alto) }));
-    const dy = capa !== 'frente' && a.y === undefined && ficha.tipo !== 'ave' ? (capa === 'fondo' ? -50 : -20) : 0;
-    const muestras = [];
-    for (let f = 0; f < dur; f += PASO) {
-      const { e } = estadoActor(a, tl, f, ficha);
-      muestras.push({ f, x: e.x, y: e.y + dy, s: e.s, vis: e.opacity > 0.3, izq: e.voltear });
-    }
-    return { id: a.id, capa, medida, muestras };
-  });
-}
 
 const cache = new WeakMap<EscenaT, { tl: EscenaTL; enc: Encuadre }>();
 /** Encuadre fijo de la escena (se calcula una vez por escena). */
@@ -37,7 +19,7 @@ export function encuadreDeEscena(esc: EscenaT, tl: EscenaTL): Encuadre {
   const c = cache.get(esc);
   if (c && c.tl.durationInFrames === tl.durationInFrames && c.tl.from === tl.from) return c.enc;
   const cam = esc.camara ?? {}, de = cam.de ?? 0, a = cam.a ?? de;
-  const enc = encuadreEscena(pistasDeEscena(esc, tl), [Math.min(de, a) - 120, Math.max(de, a) + 1920 + 120]);
+  const enc = encuadreEscena(pistasAjustadas(esc, tl), [Math.min(de, a) - 120, Math.max(de, a) + 1920 + 120]);
   cache.set(esc, { tl, enc });
   return enc;
 }

@@ -1,0 +1,30 @@
+# Tests + revisor de encuadre (cajas reales de cada actor en 16:9 y 9:16) en cada push. Sin renders, cero Claude.
+# A mano: gh workflow run tests.yml -R matiasosuna/mitologias-render
+name: tests
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+concurrency:
+  group: tests
+  cancel-in-progress: true
+permissions:
+  contents: read
+jobs:
+  tests:
+    if: github.repository == 'matiasosuna/mitologias-render'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npx tsc --noEmit -p .
+      - run: npm test
+      - name: encuadre de los guiones pendientes (y con los animales épicos)
+        run: |
+          node scripts/revisar-encuadre.mjs >> "$GITHUB_STEP_SUMMARY"
+          node scripts/revisar-encuadre.mjs --epicos --todos | head -150 >> "$GITHUB_STEP_SUMMARY" || true

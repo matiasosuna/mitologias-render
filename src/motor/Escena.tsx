@@ -5,6 +5,8 @@ import { C, SUELO, Escenario, Capa, Fuego, Chispas, Relampago, Rotulo, Estrellas
 import { ELENCO, DibujarActor, Estado, Ficha, NOMBRE_EN } from './elenco';
 import { Fondo, ElementoSVG, CIELO } from './fondos';
 import type { Escena as EscenaT, EscenaTL, Actor, Efecto, Idioma } from './tipos';
+import { PASO, medidaFicha, type Pista, type Medida, type Capa as CapaT } from './puestaVertical';
+import { ajusteHorizontal, type Ajuste } from './encuadreHorizontal';
 
 const cl = { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' } as const;
 const suaveT = (f: number, a: number, b: number) => interpolate(f, [a, Math.max(a + 1, b)], [0, 1], { ...cl, easing: Easing.inOut(Easing.cubic) });
@@ -232,6 +234,41 @@ export type PuestaVertical = {
   rotuloX: (vx: number, ancho: number) => number;
 };
 
+/** Recorrido de cada actor en la escena (posición, visibilidad, tamaño y qué hace), muestreado cada PASO cuadros. */
+export function pistasDeEscena(esc: EscenaT, tl: EscenaTL): Pista[] {
+  const dur = tl.durationInFrames;
+  return (esc.actores ?? []).map((a) => {
+    const ficha = ELENCO[a.como ?? a.id] ?? ELENCO.hombre;
+    const capa: CapaT = a.capa ?? 'frente';
+    // si se transforma, la caja más grande de las dos
+    const otras = (a.pasos ?? []).filter((p) => p.hace === 'transforma' && p.en_que && ELENCO[p.en_que]).map((p) => medidaFicha(ELENCO[p.en_que!], a.props));
+    const medida = [medidaFicha(ficha, a.props), ...otras].reduce((m: Medida, o) => ({ izq: Math.max(m.izq, o.izq), der: Math.max(m.der, o.der), alto: Math.max(m.alto, o.alto) }));
+    const dy = capa !== 'frente' && a.y === undefined && ficha.tipo !== 'ave' ? (capa === 'fondo' ? -50 : -20) : 0;
+    const muestras = [];
+    for (let f = 0; f < dur; f += PASO) {
+      const { e } = estadoActor(a, tl, f, ficha);
+      muestras.push({ f, x: e.x, y: e.y + dy, s: e.s, vis: e.opacity > 0.3, izq: e.voltear });
+    }
+    return { id: a.id, capa, medida, muestras, ajustable: ficha.tipo === 'dibujo' && typeof ficha.p?.alto === 'number' };
+  });
+}
+
+
+const cacheAj = new WeakMap<EscenaT, { dur: number; aj: Record<string, Ajuste> }>();
+/** Regla de encuadre del motor (encuadreHorizontal.ts): cuánto se achica/baja cada animal grande en esta escena. */
+export function ajustesEscena(esc: EscenaT, tl: EscenaTL): Record<string, Ajuste> {
+  const c = cacheAj.get(esc);
+  if (c && c.dur === tl.durationInFrames) return c.aj;
+  const aj = ajusteHorizontal(pistasDeEscena(esc, tl), esc.camara ?? {}, tl.durationInFrames);
+  cacheAj.set(esc, { dur: tl.durationInFrames, aj });
+  return aj;
+}
+/** Pistas con el ajuste aplicado (las usa la puesta vertical, así el animal mide lo mismo en los dos formatos). */
+export function pistasAjustadas(esc: EscenaT, tl: EscenaTL): Pista[] {
+  const aj = ajustesEscena(esc, tl);
+  return pistasDeEscena(esc, tl).map((p) => { const a = aj[p.id]; return a && (a.k !== 1 || a.dy) ? { ...p, muestras: p.muestras.map((m) => ({ ...m, s: m.s * a.k, y: m.y + a.dy })) } : p; });
+}
+
 /** Escena animada a partir del guion visual. */
 export const EscenaMotor: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Idioma }> = ({ esc, tl, idioma = 'en' }) => {
   const dur = tl.durationInFrames;
@@ -260,6 +297,8 @@ export const ContenidoEscena: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Id
     const { e, como } = estadoActor(a, tl, f, fichaBase);
     estados[a.id] = { e, como, ficha: ELENCO[como] ?? fichaBase };
   }
+  const ajustes = ajustesEscena(esc, tl);
+  for (const [id, st] of Object.entries(estados)) { const aj = ajustes[id]; if (aj && (aj.k !== 1 || aj.dy)) { st.e.s *= aj.k; st.e.y += aj.dy; } }
   const efectos = puesta ? (esc.efectos ?? []).map((x) => (x.x !== undefined ? { ...x, x: puesta.x(x.x) } : x)) : esc.efectos ?? [];
   return (
       <g transform={shake ? `translate(${Math.sin(f * 2.1) * shake} ${Math.cos(f * 1.7) * shake * 0.6})` : undefined}>

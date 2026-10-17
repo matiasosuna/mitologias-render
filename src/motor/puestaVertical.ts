@@ -28,7 +28,8 @@ export type Capa = 'fondo' | 'medio' | 'frente';
 /** Tamaño de un actor a escala 1 mirando a la derecha: cuánto ocupa hacia atrás (izq), hacia adelante (der) y de alto. */
 export type Medida = { izq: number; der: number; alto: number };
 export type Muestra = { f: number; x: number; y: number; s: number; vis: boolean; izq: boolean };
-export type Pista = { id: string; capa: Capa; medida: Medida; muestras: Muestra[] };
+/** ajustable: el motor puede achicarlo/bajarlo para que entre (animales con alto propio). */
+export type Pista = { id: string; capa: Capa; medida: Medida; muestras: Muestra[]; ajustable?: boolean };
 /**
  * Encuadre fijo de una escena: escala K y una compresión de x por tramos (xs del mundo → vs virtuales, monótona:
  * los huecos vacíos se achican mucho, los que separan a dos actores cercanos poco); pend = pendiente fuera de los
@@ -62,6 +63,8 @@ export function medidaFicha(fi: FichaLike, props: Record<string, unknown> = {}):
   }
   const s = num(fp.s, 1);
   switch (fi.tipo) {
+    // dibujos con alto propio (animales épicos): alto del origen a la punta y lo que ocupan atrás/adelante (izq/der)
+    case 'dibujo': if (typeof fp.alto === 'number') return { izq: num(fp.izq, fp.alto * 0.5) * s, der: num(fp.der, fp.alto * 0.5) * s, alto: fp.alto * s }; return { izq: 100 * s, der: 100 * s, alto: 200 * s };
     case 'cuadrupedo': { const k = (TAM[fi.animal ?? ''] ?? 1) * s; const alas = !!(fp.alas ?? props.alas); return { izq: (alas ? 210 : 168) * k, der: 192 * k, alto: (alas ? 265 : 218) * k }; }
     case 'serpiente': {
       // Las serpientes largas pueden dejar la cola fuera de cuadro: cuenta la cabeza y el primer tramo del cuerpo.

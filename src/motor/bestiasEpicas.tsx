@@ -565,11 +565,12 @@ export const LeonEpico: React.FC<DibujoProps> = (props) => {
   const { x, y, s, voltear, opacity, f, moviendo, corriendo } = props;
   const c = (props.color as string | undefined) ?? '#D49A48', melena = (props.crin as string | undefined) ?? '#7A4A1E', claro = '#F2DCAA', som = tono(c, 0.84), lej = tono(c, 0.74), mLuz = tono(melena, 1.6);
   const ruge = props.boca !== false;
-  const centro: P = [-6, 4];
+  // melena en corona alrededor de la cabeza (centro ≈ cráneo); deja libre solo el hocico (≈ 90°)
+  const centro: P = [40, -4];
   const anillo = (n: number, r: number, a0: number, a1: number) => Array.from({ length: n }, (_, i) => { const a = a0 + ((a1 - a0) * i) / (n - 1), rad = (a * Math.PI) / 180; return { p: [centro[0] + Math.sin(rad) * r, centro[1] + Math.cos(rad) * r] as P, a }; });
   const Melena = <g>
-    {anillo(13, 46, -180, 10).map(({ p, a }, i) => <Mechon key={`m${i}`} x={p[0]} y={p[1]} ang={a + Math.sin(f / 11 + i) * 4} l={130 + (i % 3) * 16} w={66} c={i % 2 ? melena : tono(melena, 0.85)} luz={mLuz} curva={0.25} />)}
-    {anillo(11, 36, -170, 0).map(({ p, a }, i) => <Mechon key={`n${i}`} x={p[0]} y={p[1]} ang={a + 8 + Math.sin(f / 11 + i + 1) * 4} l={96 + (i % 2) * 14} w={56} c={i % 2 ? tono(melena, 1.18) : melena} luz={mLuz} curva={0.3} />)}
+    {anillo(17, 58, 140, 400).map(({ p, a }, i) => <Mechon key={`m${i}`} x={p[0]} y={p[1]} ang={a + Math.sin(f / 11 + i) * 4} l={104 + (i % 3) * 14} w={62} c={i % 2 ? melena : tono(melena, 0.85)} luz={mLuz} curva={0.25} />)}
+    {anillo(14, 44, 150, 390).map(({ p, a }, i) => <Mechon key={`n${i}`} x={p[0]} y={p[1]} ang={a + 6 + Math.sin(f / 11 + i + 1) * 4} l={78 + (i % 2) * 12} w={52} c={i % 2 ? tono(melena, 1.18) : melena} luz={mLuz} curva={0.3} />)}
   </g>;
   const q: Cuad = {
     k: 1.18, c, lej, cPie: c, pie: 'garraUnas',
@@ -671,7 +672,7 @@ export const OvinoEpico: React.FC<DibujoProps> = (props) => {
       {esp !== 'carnero' && <ellipse cx={-10} cy={4} rx={30} ry={11} transform={`rotate(${esp === 'cabra' ? 40 : 24} -10 4)`} fill={cara} stroke={N} strokeWidth={2.2} />}
     </g>
   );
-  const parada = esp === 'cabra';
+  const parada = false; // cabra firme en cuatro patas (en dos patas se leía rara)
   const q: Cuad = {
     k: esp === 'carnero' ? 1.2 : esp === 'oveja' ? 1.05 : 1.15, c: lana ? patas : c, lej: tono(lana ? patas : c, 0.72), cPie: '#2A2018', pie: 'hendida',
     cuerpo, hombro: [110, -160], cadera: [-120, -164], LD: [40, 60, 44, 14], LT: [50, 54, 52, 14], AD: lana ? [34, 24, 17, 14, 13] : [60, 28, 17, 14, 13], AT: lana ? [40, 26, 17, 14, 13] : [70, 30, 17, 14, 13],
