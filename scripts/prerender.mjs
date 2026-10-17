@@ -17,8 +17,8 @@ export const NECESITA = {
 };
 /** Tipos que Modal sabe renderizar (scripts/modal_render.py): el resto va siempre por GitHub. */
 export const TIPOS_MODAL = ['horizontal', 'vertical', 'partes'];
-/** Costo estimado en USD de un render en Modal (8 núcleos + 24 GB ≈ 0,57 USD/h): horizontal ≈ 40 min medidos; vertical ≈ 24 min (modal_render.py); partes ≈ vertical + cortes. */
-export const COSTO = { horizontal: 0.38, vertical: 0.27, partes: 0.3, short: 0 };
+/** Costo estimado en USD de un render en Modal (8 núcleos + 24 GB ≈ 0,57 USD/h): medido en Modal el 2026-10-17. */
+export const COSTO = { horizontal: 0.25, vertical: 0.1, partes: 0.17, short: 0 }; // medido el 2026-10-17: vertical 5–11 min, partes 17 min, horizontal 18–40 min
 
 /** Los próximos `n` pares (id, tipo) de la cola cuyo archivo falta en el release y no hay un artefacto vigente.
  *  hayAsset(id, clase) y hayArtefacto(id, tipo) son booleanos. */

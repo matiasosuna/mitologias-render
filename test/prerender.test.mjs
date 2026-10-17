@@ -25,9 +25,9 @@ test('faltantes: omite personajes viejos y los lista; forzar los incluye siempre
   assert.ok(!r.some((x, i) => i >= 3 && x.id === 'griegas-0d') && !r.some((x) => x.id === 'griegas-0a'));
 });
 test('faltantes: respeta presupuesto en USD y máximo de episodios', () => {
-  const r = faltantes({ ...base, n: 99, presupuesto: 1, maxEpisodios: 8 });
-  assert.ok(costoTotal(r) <= 1);
-  assert.deepEqual(r.map((x) => x.tipo), ['horizontal', 'vertical', 'partes', 'short']); // 0,38+0,27+0,30 = 0,95 → el siguiente episodio no entra; el short cuesta 0
+  const r = faltantes({ ...base, n: 99, presupuesto: 0.53, maxEpisodios: 8 });
+  assert.ok(costoTotal(r) <= 0.53);
+  assert.deepEqual(r.map((x) => x.tipo), ['horizontal', 'vertical', 'partes', 'short']); // 0,25+0,10+0,17 = 0,52 → nada más entra; el short cuesta 0
   assert.equal(new Set(faltantes({ ...base, n: 99, maxEpisodios: 2 }).map((x) => x.id)).size, 2);
 });
 test('motor: Modal por defecto para episodios; github solo si se pide, no hay claves o el tipo no está en Modal', () => {
