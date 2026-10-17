@@ -17,7 +17,7 @@ export const TAPA = 0.35, TIEMPO = 0.4;
 const P_CAPA = { fondo: 0.45, medio: 0.75, frente: 1 } as const;
 
 export type Camara = { de?: number; a?: number; zoom?: [number, number] };
-export type Ajuste = { k: number; dy: number };
+export type Ajuste = { k: number; dy: number; dx?: number };
 export type Aviso = { tipo: 'arriba' | 'costado' | 'encima' | 'texto'; ids: string[]; formato: '16:9' | '9:16'; detalle: string };
 export type RotuloT = { en: number; hasta?: number; texto: string; x: number; y: number; estilo?: string };
 
@@ -27,11 +27,11 @@ const zoomEn = (cam: Camara, f: number, dur: number) => { const z = cam.zoom ?? 
 
 /** Caja en pantalla [x0, y0, x1, y1] de un actor en una muestra, con su ajuste. */
 export function cajaPantalla(p: Pista, m: Muestra, aj: Ajuste, cam: Camara, dur: number): [number, number, number, number] {
-  const z = zoomEn(cam, m.f, dur), cx = camX(cam, m.f, dur) * P_CAPA[p.capa], s = m.s * aj.k, y = m.y + aj.dy;
+  const z = zoomEn(cam, m.f, dur), cx = camX(cam, m.f, dur) * P_CAPA[p.capa], s = m.s * aj.k, y = m.y + aj.dy, mx = m.x + (aj.dx ?? 0);
   const izq = (m.izq ? p.medida.der : p.medida.izq) * s, der = (m.izq ? p.medida.izq : p.medida.der) * s;
   const X = (x: number) => 960 + (x - cx - 960) * z, Y = (yy: number) => SUELO + (yy - SUELO) * z;
   const abajo = y < SUELO - 1 ? Math.min(SUELO, y + p.medida.alto * s * 0.5) : SUELO;
-  return [X(m.x - izq), Y(y - p.medida.alto * s), X(m.x + der), Y(abajo)];
+  return [X(mx - izq), Y(y - p.medida.alto * s), X(mx + der), Y(abajo)];
 }
 
 /** Qué fracción del más angosto se tapan dos cajas (0 si no se tocan en alto). */
@@ -55,6 +55,8 @@ function tiempoEncima(a: Pista, b: Pista, aa: Ajuste, ab: Ajuste, cam: Camara, d
 
 /** Lo más que se achica un animal solo por tapar a otro (los animales al lado de su dios son a propósito). */
 export const K_SOLAPE_MIN = 0.8;
+/** Lo más que se corre de costado un animal quieto para no tapar a otro. */
+export const DX_MAX = 160;
 /** Los voladores (origen = centro del cuerpo) cuelgan por debajo del origen esta fracción de su alto. */
 export const COLGADO = 0.5;
 const vuela = (vis: Muestra[]) => vis.every((m) => m.y < SUELO - 1);
@@ -85,6 +87,16 @@ export function ajusteHorizontal(pistas: Pista[], cam: Camara = {}, dur = 0): Re
     for (const q of pistas) {
       if (q === p || q.capa !== p.capa) continue;
       while (out[p.id].k > piso + 1e-6 && tiempoEncima(p, q, out[p.id], out[q.id], cam, dur) > TIEMPO) out[p.id] = { ...out[p.id], k: Math.max(piso, out[p.id].k - 0.05) };
+    }
+  }
+  // si todavía tapa y el animal está quieto, se corre de costado (alejándose del otro), como mucho DX_MAX
+  for (const p of pistas) {
+    const vis = p.muestras.filter((m) => m.vis);
+    if (!p.ajustable || !vis.length || Math.max(...vis.map((m) => m.x)) - Math.min(...vis.map((m) => m.x)) > 2) continue;
+    for (const q of pistas) {
+      if (q === p || q.capa !== p.capa || tiempoEncima(p, q, out[p.id], out[q.id], cam, dur) <= TIEMPO) continue;
+      const qx = q.muestras.filter((m) => m.vis).map((m) => m.x), dir = vis[0].x + (out[p.id].dx ?? 0) >= (qx.length ? qx.reduce((a, b) => a + b, 0) / qx.length : vis[0].x) ? 1 : -1;
+      for (let d = 10; d <= DX_MAX && tiempoEncima(p, q, out[p.id], out[q.id], cam, dur) > TIEMPO; d += 10) out[p.id] = { ...out[p.id], dx: (out[p.id].dx ?? 0) + dir * 10 };
     }
   }
   return out;

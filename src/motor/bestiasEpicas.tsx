@@ -279,7 +279,8 @@ export const CaballoEpico: React.FC<DibujoProps> = (props) => {
           {/* crin en dos capas de mechones que caen sobre el cuello */}
           {!mula && crinPts(10).map((q, i) => <Mechon key={`a${i}`} x={q[0] - 4} y={q[1] - 6} ang={-34 + grav - giroCuello * 0.5 + viento * 0.6 + (pose === 'encabritado' ? -26 : 0) + Math.sin(f / 9 + i) * 5} l={(118 - i * 4) * (pose === 'galope' ? 0.85 : 1)} w={44} c={tono(crin, 1.3)} luz={crinLuz} curva={0.28} />)}
           {!mula && crinPts(10).map((q, i) => <Mechon key={`b${i}`} x={q[0] + 6} y={q[1] + 6} ang={-14 + grav - giroCuello * 0.5 + viento * 0.6 + (pose === 'encabritado' ? -20 : 0) + Math.sin(f / 9 + i + 1) * 6} l={(96 - i * 3) * (pose === 'galope' ? 0.85 : 1)} w={40} c={crin} luz={crinLuz} curva={0.34} />)}
-          {mula && <path d={suave([...crinPts(8).map((q) => [q[0] - 8, q[1] - 12] as P), ...crinPts(8).reverse().map((q) => [q[0] + 12, q[1] + 14] as P)], true)} fill={crin} stroke={N} strokeWidth={2.2} />}
+          {/* mula: crin corta y parada, de cepillo */}
+          {mula && crinPts(12).map((q, i) => <Mechon key={`m${i}`} x={q[0] - 2} y={q[1] - 4} ang={-170 + Math.sin(f / 9 + i) * 3} l={30 + (i % 2) * 6} w={18} c={i % 2 ? crin : tono(crin, 1.3)} luz={crinLuz} curva={0.15} trazo={1.8} />)}
           {Cabeza}
           {cfg.alas && <Ala lejos={false} />}
         </g>
@@ -358,7 +359,7 @@ export const BovinoEpico: React.FC<DibujoProps> = (props) => {
   const cuerpo: P[] = [[-262, -318], [-226, -364], [-130, -374], [-20, -364], [70, joroba + 34], [140, joroba], [196, joroba + 18], [236, -350], [262, -284], [256, -214], [222, -176], [150, -162], [60, -160], [-30, -166], [-120, -172], [-180, -182], [-236, -214], [-270, -266]];
   const cuello: P[] = toro ? [[150, joroba + 4], [236, -396], [292, -350], [318, -286], [300, -214], [250, -180], [196, -230]] : [[150, joroba + 4], [236, -420], [292, -424], [322, -360], [306, -280], [262, -200], [206, -230]];
   const nuca: P = toro ? [300, -350] : [298, -420];
-  const cuernoP: P[] = toro ? [[4, -18], [-18, -56], [-2, -100], [44, -122], [86, -112]] : esp === 'buey' ? [[2, -18], [-20, -60], [-4, -112], [36, -136], [64, -128]] : [[2, -18], [-18, -50], [-10, -84], [16, -102]];
+  const cuernoP: P[] = toro ? [[4, -18], [-18, -56], [-2, -100], [44, -122], [86, -112]] : esp === 'buey' ? [[4, -18], [-26, -48], [-24, -98], [14, -132], [62, -138]] : [[2, -18], [-18, -50], [-10, -84], [16, -102]];
   const Cabeza = (lejos: boolean) => lejos ? (
     <g transform="translate(20 -8)"><Cuerno pts={cuernoP} base={toro ? 34 : 28} c={tono(b.cuerno, 0.8)} anillos={2} punta={esp === 'buey' ? ORO_OSC : toro ? '#3A3026' : undefined} /></g>
   ) : (
@@ -386,7 +387,7 @@ export const BovinoEpico: React.FC<DibujoProps> = (props) => {
     LD: [52, 72, 52, 20], LT: [78, 72, 58, 20], AD: [112, 62, 36, 30, 28], AT: [142, 66, 36, 30, 28],
     del: toro ? [[22, 70, -60, -40], [-6, 0, 4, 20]] : esp === 'buey' ? [[-6, 0, 2, 18], [8, 6, 4, 22]] : [[-4, 2, 4, 20], [10, 6, 2, 22]],
     tra: [[22, -28, 6, 22], [14, -22, 2, 22]],
-    cuello, nuca, angCab: toro ? 46 : esp === 'buey' ? 20 : 26, cabeza: Cabeza(false), cabezaLejos: Cabeza(true),
+    cuello, nuca, angCab: toro ? 46 : esp === 'buey' ? 34 : 26, cabeza: Cabeza(false), cabezaLejos: Cabeza(true),
     cola: <ColaBorla pts={toro ? [[-260, -310], [-318, -350 + ond * 8], [-348, -300], [-336, -220]] : [[-262, -310], [-290, -260 + ond * 4], [-292, -170]]} c={c} borla={toro ? '#1E1410' : tono(c, 0.6)} luz={claro} ang={toro ? -10 : 0} />,
     sombreado: <g>
       <ellipse cx={0} cy={-150} rx={280} ry={44} fill={som} />
@@ -396,7 +397,7 @@ export const BovinoEpico: React.FC<DibujoProps> = (props) => {
       <Raya pts={[[150, joroba + 30], [196, -340], [212, -260]]} c={claro} w={6} op={0.5} />
       <Raya pts={[[-200, -340], [-150, -330], [-150, -260]]} c={claro} w={6} op={0.5} />
       {[0, 1, 2].map((i) => <Raya key={i} pts={[[-30 + i * 36, -300], [-14 + i * 36, -250], [-24 + i * 36, -200]]} c={osc} w={3} op={0.45} />)}
-      {esp === 'vaca' && <g fill="#F2E8D4"><ellipse cx={-120} cy={-300} rx={70} ry={46} /><ellipse cx={40} cy={-220} rx={60} ry={40} /><ellipse cx={-10} cy={-360} rx={46} ry={22} /></g>}
+      {esp === 'vaca' && <g fill="#F2E8D4">{/* manchas irregulares */}<path d={suave([[-190, -330], [-140, -352], [-80, -330], [-70, -290], [-110, -262], [-120, -230], [-170, -246], [-196, -290]], true, 0.8)} /><path d={suave([[0, -250], [50, -262], [90, -236], [70, -200], [30, -196], [10, -214]], true, 0.8)} /><path d={suave([[-40, -372], [20, -368], [30, -344], [-10, -336], [-36, -350]], true, 0.8)} /></g>}
       {/* papada */}
       <path d={suave([[230, -260], [270, -230], [256, -170], [222, -170]])} stroke={osc} strokeWidth={3} fill="none" />
     </g>,

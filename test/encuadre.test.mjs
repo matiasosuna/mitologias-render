@@ -66,3 +66,28 @@ test('las constantes copiadas coinciden con puestaVertical.ts', async () => {
   const src = readFileSync('src/motor/encuadreHorizontal.ts', 'utf8');
   assert.match(src, new RegExp(`SUELO = ${pv.SUELO_MUNDO}, ARRIBA = ${pv.ARRIBA_MUNDO}, ANCHO = ${pv.ANCHO}, SUELO_V = ${pv.SUELO_V}, TECHO = ${pv.TECHO};`));
 });
+
+test('si sigue tapando y está quieto, el animal se corre de costado (como mucho DX_MAX)', async () => {
+  const { DX_MAX } = await import('../src/motor/encuadreHorizontal.ts');
+  const toro = medidaFicha({ tipo: 'dibujo', p: { alto: 470, izq: 300, der: 300 } });
+  const ps = [pista('toro', 1000, { medida: toro, ajustable: true }), pista('hombre', 900)];
+  const aj = ajusteHorizontal(ps, { zoom: [1, 1] }, 60);
+  assert.ok(aj.toro.dx > 0 && aj.toro.dx <= DX_MAX, `dx ${aj.toro.dx}`);
+});
+
+test('animales épicos: mapeo por mitología, el id manda (vaca1 con como toro) y el caballo de Troya no se toca', async () => {
+  const { aEpicos, parchear, MAPA } = await import('../lib/animales-epicos.mjs');
+  const g = { escenas: [{ id: 'e', actores: [
+    { id: 'caballo', x: 1 }, { id: 'vaca1', como: 'toro', x: 2 }, { id: 'troya', como: 'caballo', escala: 1.5, x: 3 },
+    { id: 'p', como: 'hombre', x: 4, pasos: [{ en: 1, hace: 'transforma', en_que: 'delfin' }] },
+  ] }] };
+  const txt = JSON.stringify(g, null, 2);
+  const c = aEpicos(g, 'griegas', (k) => (k === 'caballo_griego_oficial' ? 'HORSE' : ''));
+  assert.equal(g.escenas[0].actores[0].como, MAPA.griegas.caballo);
+  assert.equal(g.escenas[0].actores[0].rotulo, ''); // antes no tenía nombre: sigue sin nombre
+  assert.equal(g.escenas[0].actores[1].como, 'vaca_griega_oficial');
+  assert.equal(g.escenas[0].actores[2].como, 'caballo');
+  assert.equal(g.escenas[0].actores[3].pasos[0].en_que, 'delfin_griego_oficial');
+  assert.deepEqual(JSON.parse(parchear(txt, c)), g);
+  assert.equal(aEpicos({ escenas: [{ id: 'e', actores: [{ id: 'caballo', x: 1 }] }] }, 'balinesas').length, 0);
+});

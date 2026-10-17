@@ -5,7 +5,7 @@
 // fuera de las Llanuras, nada de crestas de clan copiadas. Los animales protagonistas se dibujan acá como personajes.
 // Las claves viejas (mujer_cielo, brote, coyote…) de elenco.tsx quedan intactas; estas terminan en _oficial.
 // Coordenadas: cuerpo con origen en los pies (hombros y≈-300, cintura -210); cabeza con el ojo en (18,-6).
-import { AguilaEpica, CanidoEpico } from './bestiasEpicas'; // animales épicos (mismo dibujo que los griegos)
+import { AguilaEpica, BuhoEpico, CanidoEpico, CiervoEpico, OsoEpico, SerpienteEpica, TortugaEpica } from './bestiasEpicas'; // animales épicos (mismo dibujo que los griegos)
 import React from 'react';
 import { useCurrentFrame } from 'remotion';
 import { suave, miembro, type P, type PersonajeProps } from '../comun/vasija';
@@ -369,5 +369,14 @@ export const ELENCO_NORTE_OFICIAL: Record<string, Ficha> = {
   // Costa noroeste (T1 eps. 9–10) y Meseta (eps. 11–12)
   cuervo_oficial: D(AguilaEpica, { especie: 'aguila', vuela: true, color: '#26242C', cabeza: '#2E2C34', pico: '#3A3842', s: 0.6, alto: 360, izq: 380, der: 380 }, 'RAVEN'),
   coyote_oficial: D(CanidoEpico, { especie: 'lobo', color: '#A8865A', s: 0.85, alto: 550, izq: 260, der: 240 }, 'COYOTE'),
+  // animales épicos de uso general (mismo dibujo que los griegos, colores de América del Norte)
+  ciervo_norte_oficial: D(CiervoEpico, { s: 0.8, color: '#8A5A34', alto: 760, izq: 220, der: 240 }, ''),
+  oso_norte_oficial: D(OsoEpico, { color: '#3A2C24', alto: 570, izq: 130, der: 160 }, ''),
+  lobo_norte_oficial: D(CanidoEpico, { especie: 'lobo', color: '#6E6A64', alto: 550, izq: 260, der: 240 }, ''),
+  tortuga_norte_oficial: D(TortugaEpica, { alto: 240, izq: 200, der: 200 }, ''),
+  aguila_norte_oficial: D(AguilaEpica, { especie: 'aguila', vuela: true, alto: 360, izq: 380, der: 380 }, ''),
+  serpiente_norte_oficial: D(SerpienteEpica, { color: '#6A5A3A', alto: 420, izq: 200, der: 120 }, ''),
+  perro_norte_oficial: D(CanidoEpico, { especie: 'perro', color: '#6A5444', alto: 340, izq: 220, der: 200 }, ''),
+  buho_norte_oficial: D(BuhoEpico, { alto: 450, izq: 260, der: 260 }, ''),
 };
 export const NOMBRE_EN_NORTE_OFICIAL: Record<string, string> = Object.fromEntries(Object.entries(ELENCO_NORTE_OFICIAL).map(([k, f]) => [k, f.griego as string]));

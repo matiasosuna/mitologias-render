@@ -1303,6 +1303,7 @@ export const ELENCO_EGIPCIO_OFICIAL: Record<string, Ficha> = {
   vaca_egipcia_oficial: D(BovinoEpico, { especie: 'vaca', alto: 440, izq: 280, der: 280 }),
   toro_egipcio_oficial: D(BovinoEpico, { especie: 'toro', alto: 470, izq: 300, der: 300 }),
   perro_egipcio_oficial: D(CanidoEpico, { especie: 'perro', color: '#C9A06A', alto: 340, izq: 220, der: 200 }),
+  buey_egipcio_oficial: D(BovinoEpico, { especie: 'buey', alto: 600, izq: 290, der: 300 }),
   caballo_egipcio_oficial: D(CaballoEpico, { especie: 'caballo', pose: 'paso', color: '#7A4A2A', alto: 560, izq: 260, der: 260 }),
   gacela_oficial: D(Gacela, {}),
   ganso_egipcio_oficial: D(GansoNilo, {}, 'GOOSE'),

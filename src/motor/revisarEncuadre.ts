@@ -15,7 +15,7 @@ export function revisarEscena(esc: EscenaT, tl: EscenaTL, idioma: 'en' | 'es' = 
   const pa = pistasAjustadas(esc, tl);
   const v = revisarVertical(pa, encuadreEscena(pa, [Math.min(de, a) - 120, Math.max(de, a) + 1920 + 120]));
   const grandes = Object.fromEntries(pistas.filter((p) => p.ajustable).map((p) => [p.id, true as const]));
-  return { grandes, avisos: [...h, ...v], ajustes: Object.fromEntries(Object.entries(aj).filter(([, x]) => x.k !== 1 || x.dy)) };
+  return { grandes, avisos: [...h, ...v], ajustes: Object.fromEntries(Object.entries(aj).filter(([, x]) => x.k !== 1 || x.dy || x.dx)) };
 }
 
 /** Animales viejos de los guiones griegos → su versión épica (para revisar "qué pasaría" con --epicos y en las pruebas). */
@@ -25,3 +25,4 @@ export const EPICO_DE: Record<string, string> = {
   delfin: 'delfin_griego_oficial', serpiente: 'serpiente_griega_oficial',
 };
 export const conEpicos = (esc: EscenaT): EscenaT => ({ ...esc, actores: (esc.actores ?? []).map((a) => (EPICO_DE[a.como ?? a.id] ? { ...a, como: EPICO_DE[a.como ?? a.id] } : a)) });
+export { ELENCO, NOMBRE_EN } from './elenco';

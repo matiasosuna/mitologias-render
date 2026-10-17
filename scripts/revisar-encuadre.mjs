@@ -11,6 +11,7 @@ import { build } from 'esbuild';
 import { escenasDe } from '../lib/short.mjs';
 import { tiemposShort } from '../lib/quien.mjs';
 import { timelineMulti } from '../lib/motor-tiempos.mjs';
+import { publicados } from '../lib/animales-epicos.mjs';
 
 const args = process.argv.slice(2), json = args.includes('--json'), todos = args.includes('--todos'), detalle = args.includes('--detalle'), epicos = args.includes('--epicos'); // --epicos: griegos con los animales épicos
 const pedidos = args.filter((a) => !a.startsWith('--'));
@@ -18,10 +19,10 @@ const out = join(mkdtempSync(join(tmpdir(), 'encuadre-')), 'revisar.mjs');
 await build({ entryPoints: [resolve('src/motor/revisarEncuadre.ts')], bundle: true, platform: 'node', format: 'esm', outfile: out, jsx: 'automatic', logLevel: 'error', loader: { '.png': 'empty', '.jpg': 'empty', '.ttf': 'empty', '.woff2': 'empty' }, define: { 'process.env.NODE_ENV': '"production"' } });
 const { revisarEscena, conEpicos } = await import(pathToFileURL(out).href);
 
-// pendientes: todo lo que no figura como hecho en COLA.json (los griegos se cruzan por número)
-const hechos = new Set(JSON.parse(readFileSync('COLA.json', 'utf8')).filter((x) => x.estado === 'hecho').map((x) => `griegas-${x.n}`));
+// pendientes: lo no publicado (youtube-ids.json + out/subidas-*.json)
+const pub = publicados();
 const dirs = readdirSync('src/videos').filter((d) => existsSync(join('src/videos', d, 'guion.json')))
-  .filter((d) => (pedidos.length ? pedidos.includes(d) : todos || ![...hechos].some((h) => d.startsWith(h + '-'))));
+  .filter((d) => (pedidos.length ? pedidos.includes(d) : todos || !pub.has(d)));
 
 const res = [];
 for (const d of dirs) {
@@ -44,7 +45,7 @@ else {
   console.log(`Encuadre: ${dirs.length} guiones · ${res.filter((r) => Object.keys(r.ajustes).length).length} escenas con animales ajustados · avisos: arriba ${n('arriba')}, costado ${n('costado')}, encima ${n('encima')}, texto ${n('texto')} · sin resolver ${graves.length}`);
   // por defecto solo las escenas con animales grandes (los avisos de personajes viejos: --detalle)
   for (const r of res.filter((x) => detalle || Object.keys(x.grandes).length)) {
-    const aj = Object.entries(r.ajustes).map(([id, a]) => `${id} ×${a.k.toFixed(2)}${a.dy ? ` ↓${Math.round(a.dy)}` : ''}`).join(', ');
+    const aj = Object.entries(r.ajustes).map(([id, a]) => `${id} ×${a.k.toFixed(2)}${a.dy ? ` ↓${Math.round(a.dy)}` : ''}${a.dx ? ` ↔${Math.round(a.dx)}` : ''}`).join(', ');
     console.log(`- ${r.video} / ${r.escena}${aj ? ` [ajuste: ${aj}]` : ''}`);
     for (const a of r.avisos) console.log(`    ${a.formato} ${a.tipo}: ${a.ids.join(' + ')} — ${a.detalle}`);
   }

@@ -266,8 +266,11 @@ export function ajustesEscena(esc: EscenaT, tl: EscenaTL): Record<string, Ajuste
 /** Pistas con el ajuste aplicado (las usa la puesta vertical, así el animal mide lo mismo en los dos formatos). */
 export function pistasAjustadas(esc: EscenaT, tl: EscenaTL): Pista[] {
   const aj = ajustesEscena(esc, tl);
-  return pistasDeEscena(esc, tl).map((p) => { const a = aj[p.id]; return a && (a.k !== 1 || a.dy) ? { ...p, muestras: p.muestras.map((m) => ({ ...m, s: m.s * a.k, y: m.y + a.dy })) } : p; });
+  return pistasDeEscena(esc, tl).map((p) => { const a = aj[p.id]; return a && (a.k !== 1 || a.dy || a.dx) ? { ...p, muestras: p.muestras.map((m) => ({ ...m, s: m.s * a.k, y: m.y + a.dy, x: m.x + (a.dx ?? 0) })) } : p; });
 }
+
+/** Animal con alto propio (animales épicos). */
+const esGrande = (fi: Ficha) => fi.tipo === 'dibujo' && typeof fi.p?.alto === 'number';
 
 /** Escena animada a partir del guion visual. */
 export const EscenaMotor: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Idioma }> = ({ esc, tl, idioma = 'en' }) => {
@@ -298,7 +301,7 @@ export const ContenidoEscena: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Id
     estados[a.id] = { e, como, ficha: ELENCO[como] ?? fichaBase };
   }
   const ajustes = ajustesEscena(esc, tl);
-  for (const [id, st] of Object.entries(estados)) { const aj = ajustes[id]; if (aj && (aj.k !== 1 || aj.dy)) { st.e.s *= aj.k; st.e.y += aj.dy; } }
+  for (const [id, st] of Object.entries(estados)) { const aj = ajustes[id]; if (aj && (aj.k !== 1 || aj.dy || aj.dx)) { st.e.s *= aj.k; st.e.y += aj.dy; st.e.x += aj.dx ?? 0; } }
   const efectos = puesta ? (esc.efectos ?? []).map((x) => (x.x !== undefined ? { ...x, x: puesta.x(x.x) } : x)) : esc.efectos ?? [];
   return (
       <g transform={shake ? `translate(${Math.sin(f * 2.1) * shake} ${Math.cos(f * 1.7) * shake * 0.6})` : undefined}>
@@ -314,7 +317,11 @@ export const ContenidoEscena: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Id
                 const yOff = capa === 'fondo' ? -50 : capa === 'medio' ? -20 : 0;
                 return <g key={i} opacity={o}><ElementoSVG tipo={el.tipo} x={puesta ? puesta.elementoX((esc.elementos ?? []).indexOf(el), el.x) : el.x} y={(el.y !== undefined ? el.y : SUELO + yOff) + dy} s={(el.s ?? 1) * ESCALA_CAPA[capa]} f={f} props={el.props} /></g>;
               })}
-              {(esc.actores ?? []).filter((a) => (a.capa ?? 'frente') === capa && (!puesta || puesta.ver(a.id))).map((a) => {
+              {(esc.actores ?? []).filter((a) => (a.capa ?? 'frente') === capa && (!puesta || puesta.ver(a.id)))
+                // animales grandes (alto propio) detrás de los personajes de su capa: el águila de Zeus o el pavo de Hera
+                // quedan como atributo detrás del dios, no tapándolo
+                .map((a, i) => ({ a, i, atras: esGrande(estados[a.id].ficha) ? 0 : 1 })).sort((p, q) => p.atras - q.atras || p.i - q.i).map(({ a }) => a)
+                .map((a) => {
                 const { e, como, ficha } = estados[a.id];
                 // Escucha: si otro habla, inclina la cabeza hacia él y asiente apenas (sin girarse solo).
                 const habla = Object.entries(estados).find(([id, o]) => id !== a.id && o.e.hablando && o.e.opacity > 0.5);

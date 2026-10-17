@@ -183,7 +183,7 @@
       "actores": [
         { "id": "khonsu", "como": "ra", "x": 550, "y": 758, "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 0.8, "hace": "camina", "a": 1550, "dur": 1.6 }] },
         { "id": "sacerdote", "como": "sacerdote_egipcio", "x": 330, "y": 758, "rotulo": "", "pasos": [{ "en": 0.8, "hace": "camina", "a": 1350, "dur": 1.6 }] },
-        { "id": "caballo", "como": "caballo", "x": 100, "rotulo": "", "pasos": [{ "en": 1, "hace": "camina", "a": 1100, "dur": 1.4 }] },
+        { "id": "caballo", "como": "caballo_egipcio_oficial", "x": 100, "rotulo": "", "pasos": [{ "en": 1, "hace": "camina", "a": 1100, "dur": 1.4 }] },
         { "id": "bakhtan", "como": "rey", "x": 2000, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2, "hace": "entra", "a": 1900 }, { "en": 3, "hace": "arrodilla" }, { "en": 3.4, "hace": "reza" }] },
         { "id": "soldado", "como": "egipcio", "x": 2250, "y": 758, "mira": "izq", "props": { "barba": true, "objeto": "lanza" }, "rotulo": "", "pasos": [{ "en": 2.2, "hace": "entra", "a": 2200 }] }
       ],
@@ -264,7 +264,7 @@
       "actores": [
         { "id": "bakhtan", "como": "rey", "x": 650, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "habla", "dur": 0.8 }, { "en": 1.5, "hace": "cae" }, { "en": 3.5, "hace": "levantarse" }, { "en": 3.6, "hace": "tiembla", "dur": 0.4 }] },
         { "id": "khonsu", "como": "ra", "x": 1250, "y": 758, "mira": "izq", "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "brilla", "dur": 0.6 }, { "en": 2.3, "hace": "desaparece", "con": "luz" }] },
-        { "id": "halcon", "como": "halcon", "x": 1250, "y": 560, "props": { "color": "#D4A017" }, "rotulo": "", "pasos": [{ "en": 2.4, "hace": "aparece", "con": "luz" }, { "en": 2.6, "hace": "vuela", "a": [1400, 380], "dur": 0.4 }, { "en": 3, "hace": "vuela", "a": [2300, 150], "dur": 0.8 }] }
+        { "id": "halcon", "como": "halcon_egipcio_oficial", "x": 1250, "y": 560, "props": { "color": "#D4A017" }, "rotulo": "", "pasos": [{ "en": 2.4, "hace": "aparece", "con": "luz" }, { "en": 2.6, "hace": "vuela", "a": [1400, 380], "dur": 0.4 }, { "en": 3, "hace": "vuela", "a": [2300, 150], "dur": 0.8 }] }
       ],
       "efectos": [
         { "en": 0, "tipo": "estrellas" },
@@ -293,7 +293,7 @@
         { "id": "bakhtan", "como": "rey", "x": 400, "y": 758, "rotulo": "", "pasos": [{ "en": 0, "hace": "habla", "dur": 1 }, { "en": 1, "hace": "senala" }] },
         { "id": "sacerdote", "como": "sacerdote_egipcio", "x": 650, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 0.8, "hace": "asiente" }] },
         { "id": "khonsu", "como": "ra", "x": 1050, "y": 758, "props": { "piel": "#E8C04A" }, "rotulo": "", "pasos": [{ "en": 1, "hace": "camina", "a": 1450, "dur": 1 }, { "en": 2.5, "hace": "ofrece" }] },
-        { "id": "caballo", "como": "caballo", "x": 850, "rotulo": "", "pasos": [{ "en": 1.2, "hace": "camina", "a": 1200, "dur": 1 }] },
+        { "id": "caballo", "como": "caballo_egipcio_oficial", "x": 850, "rotulo": "", "pasos": [{ "en": 1.2, "hace": "camina", "a": 1200, "dur": 1 }] },
         { "id": "khonsu1", "como": "ra", "x": 1800, "y": 758, "mira": "izq", "props": { "piel": "#D4A017" }, "rotulo": "", "pasos": [{ "en": 2, "hace": "aparece", "con": "luz" }, { "en": 2.6, "hace": "asiente" }] }
       ],
       "efectos": [
@@ -321,7 +321,7 @@
         { "id": "ramses", "como": "faraon", "x": 1050, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2, "hace": "aparece" }, { "en": 2.4, "hace": "ofrece" }, { "en": 3.5, "hace": "baja" }] },
         { "id": "hitita", "como": "reina_egipcia", "x": 1300, "y": 758, "mira": "izq", "rotulo": "", "pasos": [{ "en": 2.2, "hace": "aparece" }] },
         { "id": "cocodrilo", "como": "cocodrilo", "x": 1600, "mira": "izq", "rotulo": "", "pasos": [{ "en": 4, "hace": "aparece", "con": "sombra" }] },
-        { "id": "perro", "como": "perro", "x": 1800, "mira": "izq", "rotulo": "", "pasos": [{ "en": 4.3, "hace": "aparece", "con": "sombra" }] }
+        { "id": "perro", "como": "perro_egipcio_oficial", "x": 1800, "mira": "izq", "rotulo": "", "pasos": [{ "en": 4.3, "hace": "aparece", "con": "sombra" }] }
       ],
       "efectos": [
         { "en": 0, "tipo": "luz", "x": 400, "y": 550, "dur": 1, "intensidad": 0.4 },

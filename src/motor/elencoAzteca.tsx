@@ -2,6 +2,7 @@
 // Florentino) y criaturas propias. Las personas son el muñeco de siempre + `adornos` (tocados, pintura de cara,
 // pectorales, escudos); las criaturas se dibujan acá (tipo "dibujo"). Colores literales: C cambia con el tema.
 // Las claves de animales van en náhuatl (ocelotl, ozomatli…) para no chocar con otras series.
+import { CanidoEpico } from './bestiasEpicas'; // animales épicos
 import React, { useId } from 'react';
 import { useCurrentFrame } from 'remotion';
 import { suave, miembro, desde, type P, type PersonajeProps } from '../comun/vasija';
@@ -498,6 +499,7 @@ export const ELENCO_AZTECA: Record<string, Ficha> = {
   ocelotl: D(Jaguar, {}, 'JAGUAR'),
   ozomatli: D(Mono, {}, 'MONKEY'),
   cuauhtli: D(Aguila, {}, 'EAGLE'),
+  perro_azteca_oficial: D(CanidoEpico, { especie: 'perro', color: '#5A5450', alto: 340, izq: 220, der: 200 }), // xoloitzcuintle, dibujo épico
   huitzitzilin: D(Colibri, { s: 0.8 }, 'HUMMINGBIRD'),
   azcatl: D(Hormiga, { s: 1.2 }, 'RED ANT'),
   azcatl_negra: D(Hormiga, { s: 1.2, color: '#1E1A1A' }, 'BLACK ANT'),
