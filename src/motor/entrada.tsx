@@ -24,7 +24,8 @@ registerRoot(() => (
       <Composition key={(guion as GuionVisual).id} id={(guion as GuionVisual).id} component={ShortNativo as unknown as React.FC<Record<string, unknown>>} durationInFrames={(timeline as Timeline).total} fps={(timeline as Timeline).fps} width={1080} height={1920} defaultProps={{ guion, timeline, idioma: 'en' as Idioma }} />
     ))}
     {VIDEOS.filter(({ guion }) => (guion as GuionVisual).formato !== 'short').map(({ guion, timeline }) => (
-      <Composition key={`${(guion as GuionVisual).id}-vertical`} id={`${(guion as GuionVisual).id}-vertical`} component={VideoVertical as unknown as React.FC<Record<string, unknown>>} durationInFrames={(timeline as Timeline).total - (timeline as Timeline).outroFrames + CIERRE_VERTICAL * (timeline as Timeline).fps} fps={(timeline as Timeline).fps} width={1080} height={1920} defaultProps={{ guion, timeline }} />
+      <Composition key={`${(guion as GuionVisual).id}-vertical`} id={`${(guion as GuionVisual).id}-vertical`} component={VideoVertical as unknown as React.FC<Record<string, unknown>>} durationInFrames={(timeline as Timeline).total - (timeline as Timeline).outroFrames + CIERRE_VERTICAL * (timeline as Timeline).fps} fps={(timeline as Timeline).fps} width={1080} height={1920} defaultProps={{ guion, timeline }}
+        calculateMetadata={({ props }) => { const tl = (props as { timeline: Timeline }).timeline; return { durationInFrames: tl.total - tl.outroFrames + CIERRE_VERTICAL * tl.fps }; }} />
     ))}
     {VIDEOS.filter(({ guion }) => (guion as GuionVisual).formato !== 'short').map(({ guion, timeline }) => (
       <Composition key={`${(guion as GuionVisual).id}-parte`} id={`${(guion as GuionVisual).id}-parte`} component={ParteVertical as unknown as React.FC<Record<string, unknown>>} durationInFrames={1} fps={(timeline as Timeline).fps} width={1080} height={1920} defaultProps={{ guion, timeline, desde: 0, hasta: 1, n: 1, de: 1 }}

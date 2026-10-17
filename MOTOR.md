@@ -55,7 +55,8 @@ Cada video es **un solo archivo**: `src/videos/<id>/guion.json` (tipos en `src/m
 ## Episodio vertical (Reels: `<id>-vertical`, `<id>-parte`)
 - No es un recorte ni un zoom del horizontal: `src/motor/puestaVertical.ts` arma cada escena para 9:16 sola (no hay que tocar el guion). Un encuadre FIJO por escena: la cámara no se mueve, sin cortes ni acercamientos.
 - Todos los actores de la escena entran juntos en el cuadro: se acercan entre sí (mismo orden izquierda/derecha y misma mirada, sin encimarse si estaban separados) y la escena tiene una escala única (algo más grandes que en el horizontal si son 1–2, más chicos si son muchos). Entradas, caminatas y salidas pasan por la misma compresión. Los elementos que quedarían afuera entran por el costado sin tapar a nadie. Fondo a escala fija con sol/luna/nubes/estrellas del tema en el cielo alto; carteles de escena arriba, en pantalla.
-- Pruebas: `node --test test/puesta-vertical.test.mjs`.
+- Ritmo de Short (desde 2026-10-17, `lib/vertical-rapido.mjs` + `scripts/vertical-rapido.mjs`): la voz de cada frase a 1,1× sin silencio en las puntas (`public/audio/<id>/en-rapido/`, se arma solo antes del render, no va a git), 0,12 s entre frases, ~0,35 s entre escenas, portada 1 s. El horizontal no cambia. `vertical-partes.mjs --lento` = ritmo viejo (solo para terminar un episodio ya empezado en Instagram; la nube lo decide sola).
+- Pruebas: `node --test test/puesta-vertical.test.mjs test/vertical-rapido.test.mjs`.
 
 ## Egipcias (tema papiro)
 - `props.alas: true` en el tema egipcio = alas de diosa en los brazos (Isis, Neftis, Maat); se abren con los brazos (`brazo`/`brazoAtras`). En los otros temas siguen siendo alas en los pies.

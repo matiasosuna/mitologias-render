@@ -1,5 +1,5 @@
 // Versión vertical (Reels) de episodios: node scripts/vertical-render.mjs <id> [<id>…] → out/<id>/<id>.vertical.mp4
-// Reusa voz, timeline y escenas del horizontal (no gasta créditos). La portada es out/<id>/portada-ig.jpg.
+// Reusa voz y escenas del horizontal (no gasta créditos), a ritmo rápido de Short (lib/vertical-rapido.mjs). La portada es out/<id>/portada-ig.jpg.
 // PARTES=n → parte el video en n tramos con un Chrome propio cada uno, en paralelo (Chrome sólo usa ~2 núcleos
 // por navegador), y después los une con el audio. Sirve en máquinas con muchos núcleos (Modal).
 import { bundle } from '@remotion/bundler';
@@ -8,11 +8,14 @@ import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync, copyFileSyn
 import { execFileSync } from 'node:child_process';
 import { join, resolve } from 'node:path';
 import os from 'node:os';
+import { prepararRapido } from './vertical-rapido.mjs';
 
 const ids = process.argv.slice(2);
 if (!ids.length) throw new Error('Falta el id');
 mkdirSync('public/portadas', { recursive: true });
+const timelines = {};
 for (const id of ids) {
+  timelines[id] = prepararRapido(id); // antes del bundle: el audio rápido tiene que estar en public/
   if (!existsSync(join('out', id, 'portada-ig.jpg'))) execFileSync('node', ['scripts/portadas-ig.mjs', id], { stdio: 'ignore' });
   copyFileSync(join('out', id, 'portada-ig.jpg'), join('public/portadas', `${id}.jpg`));
 }
@@ -20,7 +23,7 @@ const serveUrl = await bundle({ entryPoint: resolve('src/motor/entrada.tsx') });
 process.on('exit', () => rmSync(serveUrl, { recursive: true, force: true }));
 for (const id of ids) {
   const guion = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8'));
-  const timeline = JSON.parse(readFileSync(join('src/videos', id, 'timeline.json'), 'utf8'));
+  const timeline = timelines[id];
   const inputProps = { guion, timeline, portada: `portadas/${id}.jpg` };
   const comp = await selectComposition({ serveUrl, id: `${id}-vertical`, inputProps });
   const out = join('out', id, `${id}.vertical.mp4`);

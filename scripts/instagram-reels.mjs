@@ -1,7 +1,7 @@
 // Episodios completos como REELS en @mythsonclay (uno por episodio, en orden, solo temporadas 1).
 // Instagram no acepta Reels largos por subida directa, así que el video se sirve desde la Mac con un túnel
 // temporal de Cloudflare (cloudflared) y Instagram lo descarga de ahí.
-// Reparto: por tandas — una temporada 1 completa y después la siguiente mitología (griegas → nórdicas → egipcias → hawaianas).
+// Reparto: por tandas (TANDAS_IG): T1 griega → T1 nórdica → T1 egipcia → T2 griega; el resto en pausa.
 // Desde 2026-10-10 cada episodio va en PARTES de < 3 min (scripts/vertical-partes.mjs → out/<id>/<id>.parte-N.mp4):
 // Instagram casi no recomienda Reels más largos a quien no te sigue. Se publican en orden: ep. 8 parte 1, parte 2, ep. 9…
 // Portada del Reel (cover_url) = la portada diseñada. Control de duplicados antes y después de publicar.
@@ -43,8 +43,12 @@ const partesDe = (d) => (existsSync(join('out', d, 'partes.json')) ? JSON.parse(
 const partesHechas = (d) => new Set(hist().filter((h) => h.tipo === 'reel-parte' && h.id === d).map((h) => h.parte));
 const hechos = new Set(hist().filter((h) => ['reel-episodio', 'reel-apaisado-a-archivar'].includes(h.tipo)).map((h) => h.id));
 for (const d of new Set(hist().filter((h) => h.tipo === 'reel-parte').map((h) => h.id))) if (partesDe(d) && partesHechas(d).size >= partesDe(d)) hechos.add(d);
-const pendientes = readdirSync('src/videos').filter((d) => /^[a-z]+-\d\d-/.test(d) && ids[d] && Number(d.split('-')[1]) <= (T1[d.split('-')[0]] ?? 0) && !hechos.has(d))
-  .sort((a, b) => ORDEN.indexOf(a.split('-')[0]) - ORDEN.indexOf(b.split('-')[0]) || a.localeCompare(b));
+// Orden pedido por Matías (2026-10-17): terminar las T1 nórdica y egipcia, después la T2 griega (eps 08–17).
+// El resto queda en pausa (foco griego). [serie, primer ep, último ep]
+export const TANDAS_IG = [['griegas', 1, 7], ['nordicas', 1, 13], ['egipcias', 1, 11], ['griegas', 8, 17]];
+const tanda = (d) => TANDAS_IG.findIndex(([s, a, b]) => d.split('-')[0] === s && Number(d.split('-')[1]) >= a && Number(d.split('-')[1]) <= b);
+const pendientes = readdirSync('src/videos').filter((d) => /^[a-z]+-\d\d-/.test(d) && ids[d] && tanda(d) >= 0 && !hechos.has(d))
+  .sort((a, b) => tanda(a) - tanda(b) || a.localeCompare(b));
 const id = opt('solo') ?? pendientes[0];
 if (!id) { console.log('nada pendiente'); process.exit(0); }
 if (nube) nube.asegurar(id, 'partes');

@@ -1,7 +1,8 @@
-// Versión vertical (1080×1920) de un episodio para Reels: misma voz, subtítulos y tiempos que el horizontal, pero
+// Versión vertical (1080×1920) de un episodio para Reels: misma voz y subtítulos que el horizontal (a ritmo rápido de Short, timeline
+// de lib/vertical-rapido.mjs por inputProps), pero
 // con una puesta en escena PROPIA del formato alto (no un recorte ni un zoom): cada escena tiene un encuadre fijo con
 // todos sus actores juntos dentro del cuadro (ver EscenaVertical.tsx y puestaVertical.ts), subtítulos grandes, la portada vertical al principio y un cierre corto.
-// No gasta créditos: reusa el audio y el timeline.
+// No gasta créditos: reusa el audio de cada frase.
 import React from 'react';
 import { AbsoluteFill, Audio, Freeze, Img, Sequence, staticFile, useCurrentFrame, interpolate } from 'remotion';
 import { C, TITULO, TEXTO, ap, cl, TEMA, aplicarTema, CalidadHD, ModoVertical, FranjaKapa, FranjaCuentas, Bloques, Entrelazado, FrisoPalmetas } from '../comun/vasija';
@@ -26,7 +27,8 @@ export const VideoVertical: React.FC<{ guion: GuionVisual; timeline: Timeline; p
   const t = TEMA.nombre, fps = timeline.fps;
   const finHistoria = timeline.total - timeline.outroFrames, total = finHistoria + CIERRE_VERTICAL * fps;
   const esc = timeline.escenas.find((e) => f >= e.from && f < e.from + e.durationInFrames);
-  const frase = esc?.frases.find((fr) => f - esc.from >= fr.from && f - esc.from < fr.from + fr.dur + 8);
+  // el subtítulo queda 8 cuadros más, salvo que ya arranque la frase siguiente (ritmo rápido: 3 cuadros entre frases)
+  const frase = esc?.frases.find((fr, j) => f - esc.from >= fr.from && f - esc.from < Math.min(fr.from + fr.dur + 8, esc.frases[j + 1]?.from ?? Infinity));
   const enIntro = f < timeline.introFrames, enCierre = f >= finHistoria;
   const fondo = fondoVertical(t);
   const franja = franjaVertical(t, f);

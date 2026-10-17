@@ -1,6 +1,9 @@
 // Episodio vertical partido en Reels de menos de 3 min (Instagram casi no recomienda los más largos a quien no te sigue).
 // Corta en el comienzo de una escena (o de una frase) cerca de la mitad; cada parte abre con ~2 s de cartel gancho (el
-// título curioso de src/videos/titulos.json), lleva "PART n OF de" y, salvo la última, un cartel final "TO BE CONTINUED · PART n+1". Uso: node scripts/vertical-partes.mjs <id> [<id>…]
+// título curioso de src/videos/titulos.json), lleva "PART n OF de" y, salvo la última, un cartel final "TO BE CONTINUED · PART n+1".
+// Ritmo rápido de Short (lib/vertical-rapido.mjs: voz 1,1× sin silencios, huecos cortos) desde 2026-10-17; `--lento` =
+// timeline del episodio (0,9×), para rehacer un episodio que ya tiene partes publicadas con ese ritmo.
+// Uso: node scripts/vertical-partes.mjs <id> [<id>…] [--lento]
 // → out/<id>/<id>.parte-1.mp4, .parte-2.mp4 … y out/<id>/partes.json
 import { bundle } from '@remotion/bundler';
 import { renderMedia, selectComposition } from '@remotion/renderer';
@@ -9,6 +12,7 @@ import { execFileSync } from 'node:child_process';
 import { join, resolve } from 'node:path';
 import os from 'node:os';
 import { ganchoParte, leerTitulos } from './titulos.mjs';
+import { prepararRapido } from './vertical-rapido.mjs';
 
 const MAX_S = 175; // contenido por parte (+2 s de gancho +2,5 s de cartel → < 3 min)
 const CIERRE_VERTICAL = 3;
@@ -35,10 +39,13 @@ export function cortes(timeline, extra = 0) {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const ids = process.argv.slice(2);
+  const ids = process.argv.slice(2).filter((a) => !a.startsWith('--')), lento = process.argv.includes('--lento');
   if (!ids.length) throw new Error('Falta el id');
   mkdirSync('public/portadas', { recursive: true });
+  const timelines = {};
   for (const id of ids) {
+    // antes del bundle: el audio rápido tiene que estar en public/
+    timelines[id] = lento ? JSON.parse(readFileSync(join('src/videos', id, 'timeline.json'), 'utf8')) : prepararRapido(id);
     if (!existsSync(join('out', id, 'portada-ig.jpg'))) execFileSync('node', ['scripts/portadas-ig.mjs', id], { stdio: 'ignore' });
     copyFileSync(join('out', id, 'portada-ig.jpg'), join('public/portadas', `${id}.jpg`));
   }
@@ -48,7 +55,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   for (const id of ids) {
     const gancho = ganchoParte(id, titulos);
     const guion = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8'));
-    const timeline = JSON.parse(readFileSync(join('src/videos', id, 'timeline.json'), 'utf8'));
+    const timeline = timelines[id];
     const { partes } = cortes(timeline);
     const de = partes.length;
     for (const [i, [desde, hasta]] of partes.entries()) {
@@ -58,6 +65,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       await renderMedia({ serveUrl, composition: comp, codec: 'h264', outputLocation: out, crf: 21, timeoutInMilliseconds: 180000, concurrency: Number(process.env.RENDER_CONCURRENCY) || Math.max(2, os.cpus().length - 1), inputProps });
       console.log(`listo: ${out} (${(comp.durationInFrames / comp.fps).toFixed(0)} s)`);
     }
-    writeFileSync(join('out', id, 'partes.json'), JSON.stringify({ de, partes, gancho: Boolean(gancho) })); // gancho: con cartel inicial (sembrar no sube partes viejas)
+    writeFileSync(join('out', id, 'partes.json'), JSON.stringify({ de, partes, gancho: Boolean(gancho), ritmo: lento ? 'lento' : 'rapido' })); // gancho/ritmo: sembrar y la nube no reusan partes viejas
   }
 }
