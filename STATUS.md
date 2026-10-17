@@ -1,5 +1,5 @@
 # Myths on Clay — estado
-_Actualizado 2026-10-17 20:22 UTC_
+_Actualizado 2026-10-17 21:41 UTC_
 
 ## Resumen
 | Qué | Estado |
@@ -36,5 +36,5 @@ _Actualizado 2026-10-17 20:22 UTC_
 | Red | Métricas |
 | --- | --- |
 | YouTube | 21 suscriptores · 5648 vistas · 72 videos |
-| Instagram | 35 seguidores · 264 likes · 13.393 vistas (28 días) |
+| Instagram | 35 seguidores · 267 likes · 13.458 vistas (28 días) |
 | TikTok | sin API |
