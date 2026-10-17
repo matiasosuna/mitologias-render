@@ -2,7 +2,7 @@
 // Uso (en Actions, con el estado ya traído a out/): node scripts/prerender.mjs plan --n=6 [--motor=auto|github|modal] [--modal=1]
 //   imprime y deja en $GITHUB_OUTPUT `lotes` = JSON [{tipo, motor, ids}] (los tipos son los de render-nube: horizontal|partes|short)
 //   node scripts/prerender.mjs subir <id…>  → sube a mano al release lo que dejó Modal en out/<id>/ (horizontal, srt, miniatura)
-import { readFileSync, existsSync, appendFileSync } from 'node:fs';
+import { readFileSync, existsSync, appendFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { esShort, PLATAFORMAS, tieneYouTube, tieneInstagram, tieneTiktok } from './cola.mjs';
@@ -58,6 +58,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       hayAsset: (id, c) => hayAsset(nombreAsset(id, c)), hayArtefacto: (id, t) => arte.has(`${id}-${t}`) });
     const L = lotes(items, opt('motor', 'auto'), opt('modal', '0') === '1');
     console.log(`prerender: ${items.length} ítems → ${L.map((l) => `${l.tipo}/${l.motor}: ${l.ids.join(' ')}`).join(' · ') || 'nada que renderizar'}`);
+    mkdirSync('out', { recursive: true }); writeFileSync('out/lotes.json', JSON.stringify(L)); // los pasos siguientes del workflow lo leen
     if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, `lotes=${JSON.stringify(L)}\n`);
   } else if (cmd === 'subir') {
     for (const id of a) for (const c of ['horizontal', 'srt-en', 'srt-es', 'miniatura']) if (existsSync(rutaLocal(id, c))) subirAsset(rutaLocal(id, c), nombreAsset(id, c));

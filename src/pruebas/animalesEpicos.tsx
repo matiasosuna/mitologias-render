@@ -65,7 +65,7 @@ const Escala: React.FC = () => {
     actores: [
       { id: 'caballo_griego_oficial', x: 330, props: { pose: 'paso' }, rotulo: '' },
       { id: 'hombre_griego_oficial', x: 640, mira: 'izq', rotulo: '' },
-      { id: 'aguila_griega_oficial', x: 980, y: 300, rotulo: '' },
+      { id: 'aguila_griega_oficial', x: 980, y: 330, rotulo: '' },
       { id: 'mujer_griega_oficial', x: 1150, rotulo: '' },
       { id: 'toro_griego_oficial', x: 1560, mira: 'izq', rotulo: '' },
     ],

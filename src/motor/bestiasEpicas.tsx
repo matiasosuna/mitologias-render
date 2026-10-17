@@ -135,18 +135,18 @@ type PoseCab = 'encabritado' | 'paso' | 'galope';
 /** Ala grande de plumas en capas (Pegaso, águila): raíz en (0,0), se abre hacia arriba-atrás. abre 0..1 = aleteo. */
 export const AlaGrande: React.FC<{ largo: number; c: string; c2: string; c3: string; punta?: string; abre?: number; raquis?: string }> = ({ largo: L, c, c2, c3, punta, abre = 0, raquis = '#00000033' }) => {
   // primarias (largas, abanico), secundarias, cobertoras mayores y menores, hombro
-  const prim = Array.from({ length: 9 }, (_, i) => ({ a: -168 + i * (9 + abre * 3) , l: L * (0.62 - Math.abs(i - 2.5) * 0.035), w: L * 0.085 }));
-  const sec = Array.from({ length: 8 }, (_, i) => ({ a: -150 + i * (10 + abre * 2), l: L * (0.42 - i * 0.012), w: L * 0.08 }));
-  const cobM = Array.from({ length: 8 }, (_, i) => ({ a: -150 + i * 11, l: L * 0.26, w: L * 0.07 }));
-  const cobm = Array.from({ length: 6 }, (_, i) => ({ a: -140 + i * 12, l: L * 0.16, w: L * 0.065 }));
+  const prim = Array.from({ length: 9 }, (_, i) => ({ a: 168 + i * (11 + abre * 3), l: L * (0.62 - Math.abs(i - 2.5) * 0.035), w: L * 0.085 }));
+  const sec = Array.from({ length: 8 }, (_, i) => ({ a: 70 + i * (11 + abre * 2), l: L * (0.42 - i * 0.012), w: L * 0.08 }));
+  const cobM = Array.from({ length: 8 }, (_, i) => ({ a: 66 + i * 11, l: L * 0.26, w: L * 0.07 }));
+  const cobm = Array.from({ length: 6 }, (_, i) => ({ a: 60 + i * 12, l: L * 0.16, w: L * 0.065 }));
   // los arranques se escalonan a lo largo del brazo del ala
   const brazo = (t: number): P => [-L * 0.42 * t, -L * 0.3 * t];
   return (
     <g>
       {prim.map((p, i) => { const o = brazo(0.85 + i * 0.02); return <Pluma key={`p${i}`} x={o[0]} y={o[1]} ang={p.a} l={p.l} w={p.w} c={c} punta={punta} raquis={raquis} />; })}
-      {sec.map((p, i) => { const o = brazo(0.25 + i * 0.08); return <Pluma key={`s${i}`} x={o[0]} y={o[1]} ang={p.a + 40} l={p.l} w={p.w} c={c} punta={punta} raquis={raquis} />; }).reverse()}
-      {cobM.map((p, i) => { const o = brazo(0.15 + i * 0.1); return <Pluma key={`m${i}`} x={o[0]} y={o[1]} ang={p.a + 52} l={p.l} w={p.w} c={c2} raquis={raquis} />; }).reverse()}
-      {cobm.map((p, i) => { const o = brazo(0.1 + i * 0.13); return <Pluma key={`n${i}`} x={o[0]} y={o[1]} ang={p.a + 62} l={p.l} w={p.w} c={c3} />; }).reverse()}
+      {sec.map((p, i) => { const o = brazo(0.25 + i * 0.08); return <Pluma key={`s${i}`} x={o[0]} y={o[1]} ang={p.a} l={p.l} w={p.w} c={c} punta={punta} raquis={raquis} />; }).reverse()}
+      {cobM.map((p, i) => { const o = brazo(0.15 + i * 0.1); return <Pluma key={`m${i}`} x={o[0]} y={o[1]} ang={p.a} l={p.l} w={p.w} c={c2} raquis={raquis} />; }).reverse()}
+      {cobm.map((p, i) => { const o = brazo(0.1 + i * 0.13); return <Pluma key={`n${i}`} x={o[0]} y={o[1]} ang={p.a} l={p.l} w={p.w} c={c3} />; }).reverse()}
       <path d={suave([[L * 0.04, L * 0.04], [-L * 0.2, -L * 0.2], [-L * 0.46, -L * 0.34], [-L * 0.4, -L * 0.24], [-L * 0.16, -L * 0.06]], true, 0.8)} fill={c3} stroke={N} strokeWidth={2.4} />
     </g>
   );
@@ -358,7 +358,7 @@ export const BovinoEpico: React.FC<DibujoProps> = (props) => {
   const cuerpo: P[] = [[-262, -318], [-226, -364], [-130, -374], [-20, -364], [70, joroba + 34], [140, joroba], [196, joroba + 18], [236, -350], [262, -284], [256, -214], [222, -176], [150, -162], [60, -160], [-30, -166], [-120, -172], [-180, -182], [-236, -214], [-270, -266]];
   const cuello: P[] = toro ? [[150, joroba + 4], [236, -396], [292, -350], [318, -286], [300, -214], [250, -180], [196, -230]] : [[150, joroba + 4], [236, -420], [292, -424], [322, -360], [306, -280], [262, -200], [206, -230]];
   const nuca: P = toro ? [300, -350] : [298, -420];
-  const cuernoP: P[] = toro ? [[4, -18], [-18, -56], [-2, -100], [44, -122], [86, -112]] : esp === 'buey' ? [[2, -18], [-26, -66], [-22, -130], [10, -176], [44, -190]] : [[2, -18], [-18, -50], [-10, -84], [16, -102]];
+  const cuernoP: P[] = toro ? [[4, -18], [-18, -56], [-2, -100], [44, -122], [86, -112]] : esp === 'buey' ? [[2, -18], [-20, -60], [-4, -112], [36, -136], [64, -128]] : [[2, -18], [-18, -50], [-10, -84], [16, -102]];
   const Cabeza = (lejos: boolean) => lejos ? (
     <g transform="translate(20 -8)"><Cuerno pts={cuernoP} base={toro ? 34 : 28} c={tono(b.cuerno, 0.8)} anillos={2} punta={esp === 'buey' ? ORO_OSC : toro ? '#3A3026' : undefined} /></g>
   ) : (
@@ -524,7 +524,7 @@ export const CanidoEpico: React.FC<DibujoProps> = (props) => {
       <Masa pts={[[-186, -230], [-150, -278], [-90, -270], [-80, -210], [-120, -180], [-170, -196]]} c={som} op={0.85} />
       {[0, 1, 2].map((i) => <Raya key={i} pts={[[-30 + i * 32, -250], [-20 + i * 32, -220], [-28 + i * 32, -194]]} c={tono(c, 0.7)} w={2.6} op={0.5} />)}
     </g>,
-    encima: esp === 'perro' ? undefined : <Gorguera pts={aullido ? [[150, -360], [170, -330], [184, -290], [190, -250], [150, -300], [130, -260], [176, -390]] : [[176, -320], [196, -290], [206, -250], [200, -220], [160, -300], [140, -270], [120, -310]]} c={c} luz={luz} l={esp === 'cerbero' ? 70 : 60} ang={aullido ? -10 : 10} f={f} />,
+    encima: undefined,
     delante: esp === 'licaon' ? <g transform={`translate(170 -300) rotate(${r1(Math.sin(f / 9) * 4)})`}>
       <path d={suave([[-20, -30], [30, -20], [40, 20], [-30, 90], [-110, 120], [-130, 90], [-60, 40]], true, 0.6)} fill={ROJO} stroke={N} strokeWidth={2.6} />
       <path d={suave([[-120, 100], [-60, 60], [0, 20]])} stroke={tono(ROJO, 0.7)} strokeWidth={3} fill="none" />
@@ -532,7 +532,6 @@ export const CanidoEpico: React.FC<DibujoProps> = (props) => {
       <circle cx={18} cy={-8} r={14} fill={ORO} stroke={N} strokeWidth={2.4} /><circle cx={14} cy={-12} r={5} fill={ORO_LUZ} />
     </g> : esp === 'cerbero' ? <g transform={`translate(${r1(nuca[0] + 16)} ${r1(nuca[1] + 96)}) rotate(${r1(30 + Math.sin(f / 20) * 2)})`}>
       <path d={miembro([[-80, -60], [-30, -16], [0, 0]], [90, 76, 60])} fill={c} />
-      <Gorguera pts={[[-50, -46], [-30, -24], [-64, -70]]} c={c} luz={luz} l={60} ang={20} f={f} />
       {cab('grunido', BRONCE)}
     </g> : undefined,
   };
@@ -566,11 +565,11 @@ export const LeonEpico: React.FC<DibujoProps> = (props) => {
   const { x, y, s, voltear, opacity, f, moviendo, corriendo } = props;
   const c = (props.color as string | undefined) ?? '#D49A48', melena = (props.crin as string | undefined) ?? '#7A4A1E', claro = '#F2DCAA', som = tono(c, 0.84), lej = tono(c, 0.74), mLuz = tono(melena, 1.6);
   const ruge = props.boca !== false;
-  const centro: P = [10, 0];
+  const centro: P = [-6, 4];
   const anillo = (n: number, r: number, a0: number, a1: number) => Array.from({ length: n }, (_, i) => { const a = a0 + ((a1 - a0) * i) / (n - 1), rad = (a * Math.PI) / 180; return { p: [centro[0] + Math.sin(rad) * r, centro[1] + Math.cos(rad) * r] as P, a }; });
   const Melena = <g>
-    {anillo(13, 46, 150, -10 - 360 + 360).map(({ p, a }, i) => <Mechon key={`m${i}`} x={p[0]} y={p[1]} ang={a + Math.sin(f / 11 + i) * 4} l={130 + (i % 3) * 16} w={66} c={i % 2 ? melena : tono(melena, 0.85)} luz={mLuz} curva={0.25} />)}
-    {anillo(11, 36, 140, 0).map(({ p, a }, i) => <Mechon key={`n${i}`} x={p[0]} y={p[1]} ang={a + 8 + Math.sin(f / 11 + i + 1) * 4} l={96 + (i % 2) * 14} w={56} c={i % 2 ? tono(melena, 1.18) : melena} luz={mLuz} curva={0.3} />)}
+    {anillo(13, 46, -180, 10).map(({ p, a }, i) => <Mechon key={`m${i}`} x={p[0]} y={p[1]} ang={a + Math.sin(f / 11 + i) * 4} l={130 + (i % 3) * 16} w={66} c={i % 2 ? melena : tono(melena, 0.85)} luz={mLuz} curva={0.25} />)}
+    {anillo(11, 36, -170, 0).map(({ p, a }, i) => <Mechon key={`n${i}`} x={p[0]} y={p[1]} ang={a + 8 + Math.sin(f / 11 + i + 1) * 4} l={96 + (i % 2) * 14} w={56} c={i % 2 ? tono(melena, 1.18) : melena} luz={mLuz} curva={0.3} />)}
   </g>;
   const q: Cuad = {
     k: 1.18, c, lej, cPie: c, pie: 'garraUnas',
@@ -789,7 +788,7 @@ export const AguilaEpica: React.FC<DibujoProps> = (props) => {
   const aleteo = Math.sin(f * 0.22), abre = (aleteo + 1) / 2, dy = -aleteo * 8;
   const Ala = ({ der }: { der: boolean }) => (
     <g transform={`translate(${der ? 36 : -36} -50) scale(${der ? -1 : 1} 1) rotate(${r1(14 - aleteo * 10)})`}>
-      <AlaGrande largo={560} c={ala.c} c2={ala.c2} c3={ala.c3} punta={ala.punta} abre={abre} raquis={paloma ? '#C9C4BA' : '#2A1A10'} />
+      <AlaGrande largo={440} c={ala.c} c2={ala.c2} c3={ala.c3} punta={ala.punta} abre={abre} raquis={paloma ? '#C9C4BA' : '#2A1A10'} />
     </g>
   );
   const cuerpoD = suave([[-56, -60], [-30, -96], [30, -96], [58, -60], [62, 20], [40, 80], [-40, 80], [-62, 20]], true, 0.9);
@@ -881,7 +880,7 @@ export const BuhoEpico: React.FC<DibujoProps> = (props) => {
     <Marco x={x} y={y} s={s * 1.05} voltear={voltear} opacity={opacity}>
       <path d="M-200 0 H 200" stroke={N} strokeWidth={26} strokeLinecap="round" /><path d="M-200 0 H 200" stroke="#7A5232" strokeWidth={20} strokeLinecap="round" />
       {[[-150, -10], [120, -6]].map(([lx, ly], i) => <path key={i} d={`M${lx} ${ly} q 20 -30 50 -20`} stroke="#4E7A3A" strokeWidth={10} fill="none" strokeLinecap="round" />)}
-      {[false, true].map((der) => <g key={String(der)} transform={`translate(${der ? 70 : -70} -200) scale(${der ? -1 : 1} 1) rotate(${r1(-80 + ab * 12)})`}><AlaGrande largo={340} c={c} c2={c2} c3={tono(c2, 1.1)} punta="#5A3E26" abre={ab * 0.5} raquis="#4A321E" /></g>)}
+      {[false, true].map((der) => <g key={String(der)} transform={`translate(${der ? 70 : -70} -200) scale(${der ? -1 : 1} 1) rotate(${r1(-50 + ab * 10)})`}><AlaGrande largo={340} c={c} c2={c2} c3={tono(c2, 1.1)} punta="#5A3E26" abre={ab * 0.5} raquis="#4A321E" /></g>)}
       <path d={cuerpo} fill={c} />
       <Recorte d={cuerpo}>
         <ellipse cx={0} cy={-110} rx={70} ry={100} fill={claro} />

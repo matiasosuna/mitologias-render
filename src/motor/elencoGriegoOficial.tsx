@@ -1851,12 +1851,12 @@ export const ELENCO_GRIEGO_OFICIAL: Record<string, Ficha> = {
   oso_griego_oficial: D(OsoEpico, { alto: 570 }),
   tortuga_griega_oficial: D(TortugaEpica, { alto: 240 }),
   serpiente_griega_oficial: D(SerpienteEpica, { alto: 420 }),
-  aguila_griega_oficial: D(AguilaEpica, { especie: 'aguila', vuela: true, alto: 430 }),
+  aguila_griega_oficial: D(AguilaEpica, { especie: 'aguila', vuela: true, alto: 360 }),
   paloma_griega_oficial: D(AguilaEpica, { especie: 'paloma', vuela: true, alto: 220 }),
   cisne_griego_oficial: D(CisneEpico, { vuela: true, alto: 480 }),
   pavo_real_griego_oficial: D(PavoEpico, { alto: 560 }),
   buho_griego_oficial: D(BuhoEpico, { alto: 450 }),
-  delfin_griego_oficial: D(DelfinEpico, { alto: 160 }),
+  delfin_griego_oficial: D(DelfinEpico, { vuela: true, alto: 160 }),
 };
 export const NOMBRE_EN_GRIEGO_OFICIAL: Record<string, string> = {
   zeus_oficial: 'ZEUS', hera_oficial: 'HERA', poseidon_oficial: 'POSEIDON', hades_oficial: 'HADES', atenea_oficial: 'ATHENA', apolo_oficial: 'APOLLO', artemisa_oficial: 'ARTEMIS',

@@ -1,6 +1,8 @@
-# Pre-render de lo próximo de la cola única (solo renderiza vía render-nube; NO publica, no toca Buffer).
+# Pre-render de lo próximo de la cola única (solo renderiza; NO publica, no toca Buffer).
 # Elige los próximos n ítems a los que les falta archivo en el release "media" (y sin artefacto vigente de render-nube).
-# gh workflow run prerender.yml -R matiasosuna/mitologias-render [-f n=6]
+# gh workflow run prerender.yml -R matiasosuna/mitologias-render [-f n=6] [-f motor=auto|github|modal]
+# motor auto: Modal si son más de 3 ítems; modal: siempre que se pueda. Modal solo hace horizontales (scripts/modal_render.py),
+# deja el resultado en el release media; lo demás (partes, shorts) y el respaldo si Modal falla van por render-nube (GitHub).
 name: prerender
 on:
   workflow_dispatch:
@@ -8,9 +10,12 @@ on:
       n:
         description: 'cuántos ítems pendientes renderizar'
         default: '6'
+      motor:
+        description: 'auto | github | modal'
+        default: auto
 permissions:
-  contents: read
-  actions: write # dispara render-nube
+  contents: write # release media
+  actions: write  # dispara render-nube
 concurrency:
   group: prerender
   cancel-in-progress: false
@@ -18,22 +23,44 @@ jobs:
   prerender:
     if: github.repository == 'matiasosuna/mitologias-render'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 150
     env:
       GH_TOKEN: ${{ github.token }}
+      MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
+      MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - name: traer estado
         run: |
           git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
           scripts/estado-traer.sh
-      - name: plan y render-nube
+      - name: plan
         run: |
-          node scripts/prerender.mjs plan --n=${{ inputs.n }} --motor=github | tee plan.txt
-          LOTES=$(grep -o '^lotes=.*' "$GITHUB_OUTPUT" | cut -d= -f2-)
-          echo "$LOTES" | node -e 'for (const l of JSON.parse(require("fs").readFileSync(0,"utf8"))) console.log(l.tipo + " " + JSON.stringify(l.ids))' | while read -r TIPO IDS; do
+          MODAL=0; [ -n "$MODAL_TOKEN_ID" ] && MODAL=1
+          node scripts/prerender.mjs plan --n=${{ inputs.n }} --motor=${{ inputs.motor }} --modal=$MODAL
+      - name: lotes de GitHub (render-nube)
+        run: |
+          node -e 'for (const l of JSON.parse(require("fs").readFileSync("out/lotes.json","utf8"))) if (l.motor === "github") console.log(l.tipo + " " + JSON.stringify(l.ids))' | while read -r TIPO IDS; do
             gh workflow run render.yml -f ids="$IDS" -f tipo="$TIPO" && echo "render-nube disparado: $TIPO $IDS"
           done
+      - name: horizontales en Modal → release media
+        id: m
+        continue-on-error: true
+        run: |
+          IDS=$(node -e 'const l=JSON.parse(require("fs").readFileSync("out/lotes.json","utf8")).filter(x=>x.motor==="modal"); console.log(l.flatMap(x=>x.ids).join(" "))')
+          [ -n "$IDS" ] || { echo "nada para Modal"; exit 0; }
+          echo "ids=$IDS" >> "$GITHUB_OUTPUT"
+          pip install -q modal
+          MOC_ID="$IDS" MOC_MODO=horizontal timeout 6000 modal run scripts/modal_render.py
+          for id in $IDS; do modal volume get --force moc-out "$id" out/; done
+          ls out/*/ | head -20
+          node scripts/prerender.mjs subir $IDS
+      - name: respaldo en render-nube si Modal falló
+        if: steps.m.outcome == 'failure' && steps.m.outputs.ids != ''
+        run: gh workflow run render.yml -f ids="$(echo '${{ steps.m.outputs.ids }}' | node -e 'console.log(JSON.stringify(require("fs").readFileSync(0,"utf8").trim().split(" ")))')" -f tipo=horizontal
