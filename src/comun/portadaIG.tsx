@@ -56,7 +56,7 @@ export const PortadaIG: React.FC<{ titulo: string; numero: string; temporada: st
         <div style={{ position: 'absolute', top: 278, left: 0, right: 0, fontWeight: 700, fontSize: 82, lineHeight: 1, color: C.crema }}>{numero}</div>
         <div style={{ position: 'absolute', top: conParte ? 1074 : 1082, left: 50, right: 50, height: conParte ? 170 : 210, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: conParte ? (titulo.length > 26 ? 70 : 80) : titulo.length > 26 ? 76 : 90, lineHeight: 1.02, color: tinta, textShadow: claro ? `0 4px 0 ${C.blanco}` : `0 6px 0 ${C.negro}` }}>{titulo}</div>
         <div style={{ position: 'absolute', bottom: conParte ? 14 : 22, left: 0, right: 0, fontWeight: 700, fontSize: 24, letterSpacing: 8, color: tinta, opacity: 0.7 }}>MYTHS ON CLAY</div>
-        {conParte && <div style={{ position: 'absolute', top: 1250, left: 0, right: 0, fontWeight: 700, fontSize: 46, letterSpacing: 6, lineHeight: 1, color: tinta }}>{parte}/{de}</div>}
+        {conParte && <div style={{ position: 'absolute', top: 1250, left: 0, right: 0, fontWeight: 700, fontSize: 50, letterSpacing: 6, lineHeight: 1, color: C.negro }}>{parte}/{de}</div>}
       </AbsoluteFill>
     </AbsoluteFill>
   );
