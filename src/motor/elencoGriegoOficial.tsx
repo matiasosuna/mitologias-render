@@ -1918,7 +1918,7 @@ export const ELENCO_GRIEGO_OFICIAL: Record<string, Ficha> = {
   // cuarta tanda (2026-10-18): los que faltaban
   atlas_oficial: h({ gigante: true, s: 1.14, piel: PIEL_SOL, pelo: '#2A2420', ropa: 'corta', ropaColor: '#5A4A3A', ribete: HIERRO, brazo: [160, 20], brazoAtras: [150, -10], inclinar: 4,
     adornos: { cuerpo: <><PielCabra a={A_GIG} c="#7A6248" /><Cinto a={A_GIG} c={CUERO} /></>, cabeza: <><PeloRulos c="#2A2420" luz="#5A4E44" largo r={7.5} /><BarbaLarga c="#2A2420" luz="#5A4E44" L={70} /></>, mano: <EsferaCeleste />, pie: <Sandalia /> } }, 'ΑΤΛΑΣ'),
-  caronte_oficial: h({ cuerpo: 'viejo', s: 1.04, piel: PIEL_PALIDA, pelo: GRIS, ropa: 'corta', ropaColor: '#3A3640', ribete: '#6E6878', brazo: [150, 30], brazoAtras: [30, 20],
+  caronte_oficial: h({ cuerpo: 'viejo', s: 1.04, piel: PIEL_PALIDA, pelo: GRIS, ropa: 'corta', ropaColor: '#3A3640', ribete: '#6E6878', brazo: [40, 70], brazoAtras: [30, 20],
     adornos: { detras: <Manto c="#2A2630" borde="#6E6878" largo={0.75} />, cuerpo: <><Exomis a={1} c="#3A3640" /><Cinto a={1} c={CUERO} /></>, cabeza: <><PeloRulos c={GRIS} luz={GRIS_L} r={6} /><BarbaLarga c={GRIS} luz={GRIS_L} L={70} puntas={4} /><Pilos /></>, mano: <Pertiga />, manoAtras: <Obolo /> } }, 'ΧΑΡΩΝ'),
   eos_oficial: m({ pelo: CAOBA, ropa: 'larga', ropaColor: '#E8A23A', ribete: '#E79AA6', brazo: [40, 60],
     adornos: { detras: <><AlasEspalda tono="#F7E2E6" tono2="#E79AA6" /><Manto c="#E79AA6" borde={ORO} largo={0.95} ancho={0.85} /></>, cuerpo: <><Quiton a={A_M} c="#E8A23A" borde="#E79AA6" mujer /><Cinto a={A_M} c={ORO} /></>, cabeza: <><PeloRecogido c={CAOBA} luz={CAOBA_L} /><DiademaJoya joya="#E79AA6" /></>, mano: <JarraRocio /> } }, 'ΗΩΣ'),
