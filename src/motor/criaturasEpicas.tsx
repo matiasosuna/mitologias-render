@@ -153,7 +153,7 @@ export const ArpiaEpica: React.FC<DibujoProps> = (props) => {
       {/* gorguera de plumas al cuello */}
       {Array.from({ length: 7 }, (_, i) => <Pluma key={`g${i}`} x={-36 + i * 12} y={-84} ang={70 + (i - 3) * 14} l={46} w={22} c={i % 2 ? ala.c3 : ala.c2} />)}
       {/* cabeza de mujer de perfil, pelo revuelto al viento */}
-      <g transform={`translate(4 -112) rotate(${r1(Math.sin(f / 20) * 4)})`}>
+      <g transform={`translate(6 -130) rotate(${r1(Math.sin(f / 20) * 4)}) scale(1.45)`}>
         {Array.from({ length: 8 }, (_, i) => <Mechon key={i} x={-20 + (i % 3) * 4} y={-30 + i * 7} ang={-130 + i * 8 + ondea(i)} l={70 + (i % 3) * 16} w={26} c={i % 2 ? pelo : '#3E2A26'} luz="#6A4E44" curva={0.4} />)}
         <path d="M-2 26 C 2 40, 0 50, -6 58 L 20 58 C 16 48, 18 38, 22 28 Z" fill={piel} stroke={N} strokeWidth={2.2} strokeLinejoin="round" />
         <path d={suave([[-30, 2], [-22, -26], [0, -36], [20, -30], [28, -14], [30, -6], [37, 6], [32, 10], [34, 15], [31, 20], [26, 26], [8, 32], [4, 40], [-16, 40], [-24, 22]], true, 0.9)} fill={piel} stroke={N} strokeWidth={2.4} />

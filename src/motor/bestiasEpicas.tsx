@@ -610,13 +610,13 @@ const ColaSierpe: React.FC<{ f: number }> = ({ f }) => {
 };
 /** Cuello y cabeza de cabra que salen del medio del lomo (mirando adelante y arriba). */
 const CabraDelLomo: React.FC<{ f: number }> = ({ f }) => {
-  const c = '#8A6A48', o = Math.sin(f / 13) * 3, cuello: P[] = [[-40, -282], [-30, -340], [-6, -392 + o], [20, -420 + o]];
+  const c = '#8A6A48', o = Math.sin(f / 13) * 3, cuello: P[] = [[-50, -282], [-66, -350], [-60, -420 + o], [-40, -470 + o]];
   const cuerno: P[] = [[4, -20], [-14, -74], [-52, -116], [-96, -124]];
   return (
     <g>
       <path d={miembro(cuello, [70, 58, 46, 40])} fill={c} stroke={N} strokeWidth={2.6} />
       {cuello.slice(0, 3).map((q, i) => <Mechon key={i} x={q[0] - 20} y={q[1] - 6} ang={160 - i * 10} l={38} w={22} c={tono(c, 0.75)} trazo={1.6} />)}
-      <g transform={`translate(${r1(cuello[3][0])} ${r1(cuello[3][1])}) rotate(-12)`}>
+      <g transform={`translate(${r1(cuello[3][0])} ${r1(cuello[3][1])}) rotate(-4) scale(1.1)`}>
         <Cuerno pts={cuerno} base={26} c="#8A7A5A" anillos={5} />
         <path d={suave([[-24, 20], [-18, -20], [10, -34], [50, -24], [86, 8], [96, 30], [80, 44], [40, 40], [0, 38]], true, 0.85)} fill={c} stroke={N} strokeWidth={2.6} />
         <path d="M40 38 C 44 70, 52 90, 60 100 C 66 80, 70 60, 66 40 Z" fill={tono(c, 0.6)} stroke={N} strokeWidth={2.2} />

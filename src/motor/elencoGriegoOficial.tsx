@@ -1916,7 +1916,7 @@ export const ELENCO_GRIEGO_OFICIAL: Record<string, Ficha> = {
   doncella_oro_oficial: mx({ piel: '#D9A83A', pelo: '#B5832A', ropa: 'larga', ropaColor: '#E8C46A', ribete: ORO_OSC, brazo: [30, 60],
     adornos: { cuerpo: <Quiton a={A_M} c="#E8C46A" borde={ORO_OSC} mujer />, cabeza: <><PeloRecogido c="#B5832A" luz="#F2D27A" /><CintaOro c="#FFF3B0" /></> } }),
   // cuarta tanda (2026-10-18): los que faltaban
-  atlas_oficial: h({ gigante: true, s: 1.14, piel: PIEL_SOL, pelo: '#2A2420', ropa: 'corta', ropaColor: '#5A4A3A', ribete: HIERRO, brazo: [160, 20], brazoAtras: [150, -10], inclinar: 4,
+  atlas_oficial: h({ gigante: true, s: 1.14, piel: PIEL_SOL, pelo: '#2A2420', ropa: 'corta', ropaColor: '#5A4A3A', ribete: HIERRO, brazo: [150, 50], brazoAtras: [140, 30], inclinar: 10, arrodillado: 1,
     adornos: { cuerpo: <><PielCabra a={A_GIG} c="#7A6248" /><Cinto a={A_GIG} c={CUERO} /></>, cabeza: <><PeloRulos c="#2A2420" luz="#5A4E44" largo r={7.5} /><BarbaLarga c="#2A2420" luz="#5A4E44" L={70} /></>, mano: <EsferaCeleste />, pie: <Sandalia /> } }, 'ΑΤΛΑΣ'),
   caronte_oficial: h({ cuerpo: 'viejo', s: 1.04, piel: PIEL_PALIDA, pelo: GRIS, ropa: 'corta', ropaColor: '#3A3640', ribete: '#6E6878', brazo: [40, 70], brazoAtras: [30, 20],
     adornos: { detras: <Manto c="#2A2630" borde="#6E6878" largo={0.75} />, cuerpo: <><Exomis a={1} c="#3A3640" /><Cinto a={1} c={CUERO} /></>, cabeza: <><PeloRulos c={GRIS} luz={GRIS_L} r={6} /><BarbaLarga c={GRIS} luz={GRIS_L} L={70} puntas={4} /><Pilos /></>, mano: <Pertiga />, manoAtras: <Obolo /> } }, 'ΧΑΡΩΝ'),
