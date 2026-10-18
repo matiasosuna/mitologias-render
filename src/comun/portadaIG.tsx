@@ -25,6 +25,7 @@ export const PortadaIG: React.FC<{ titulo: string; numero: string; temporada: st
   const h = ficha(heroe), r = rival ? ficha(rival) : null;
   const sh = (o: Record<string, unknown>) => Math.min(1.1, (o.s as number) ?? 1);
   const tinta = claro ? C.negro : C.crema, acento = t === 'vasija' ? C.negro : C.purpura;
+  const conParte = !!(parte && de && de > 1);
   return (
     <AbsoluteFill style={{ backgroundColor: C.barro }}>
       <svg viewBox="0 0 1080 1350" width="100%" height="100%">
@@ -53,13 +54,15 @@ export const PortadaIG: React.FC<{ titulo: string; numero: string; temporada: st
         <div style={{ position: 'absolute', top: 182, left: 0, right: 0, fontWeight: 700, fontSize: 30, letterSpacing: 6, color: tinta, opacity: 0.85 }}>{temporada}</div>
         <div style={{ position: 'absolute', top: numero === '' ? 300 : 254, left: 0, right: 0, fontWeight: 700, fontSize: numero === '' ? 30 : 22, letterSpacing: 6, color: numero === '' ? tinta : C.crema }}>{insignia}</div>
         <div style={{ position: 'absolute', top: 278, left: 0, right: 0, fontWeight: 700, fontSize: 82, lineHeight: 1, color: C.crema }}>{numero}</div>
-        <div style={{ position: 'absolute', top: 1082, left: 50, right: 50, height: 210, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: titulo.length > 26 ? 76 : 90, lineHeight: 1.02, color: tinta, textShadow: claro ? `0 4px 0 ${C.blanco}` : `0 6px 0 ${C.negro}` }}>{titulo}</div>
+        <div style={{ position: 'absolute', top: conParte ? 1168 : 1082, left: 50, right: 50, height: conParte ? 140 : 210, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: conParte ? (titulo.length > 26 ? 60 : 68) : titulo.length > 26 ? 76 : 90, lineHeight: 1.02, color: tinta, textShadow: claro ? `0 4px 0 ${C.blanco}` : `0 6px 0 ${C.negro}` }}>{titulo}</div>
         <div style={{ position: 'absolute', bottom: 22, left: 0, right: 0, fontWeight: 700, fontSize: 24, letterSpacing: 8, color: tinta, opacity: 0.7 }}>MYTHS ON CLAY</div>
-        {parte && de && de > 1 && ( // en la franja negra del suelo: no tapa a nadie
-          <div style={{ position: 'absolute', top: 1000, height: 70, left: 0, right: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 26 }}>
-            <div style={{ color: C.crema, fontWeight: 700, fontSize: 46, letterSpacing: 10, lineHeight: 1, paddingTop: 6 }}>PART {parte} OF {de}</div>
-            <div style={{ display: 'flex', gap: 12 }}>
-              {Array.from({ length: de }, (_, i) => <div key={i} style={{ width: 20, height: 20, borderRadius: 10, background: i + 1 === parte ? C.crema : 'transparent', border: `3px solid ${C.crema}` }} />)}
+        {conParte && ( // cartel grande entre el suelo y el título
+          <div style={{ position: 'absolute', top: 1080, left: 0, right: 0, display: 'flex', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 22, background: C.negro, border: `5px solid ${C.oro}`, borderRadius: 50, padding: '10px 40px 8px' }}>
+              <div style={{ color: C.oro, fontWeight: 700, fontSize: 64, letterSpacing: 8, lineHeight: 1, paddingTop: 6 }}>PART {parte}/{de}</div>
+              <div style={{ display: 'flex', gap: 12 }}>
+                {Array.from({ length: de as number }, (_, i) => <div key={i} style={{ width: 24, height: 24, borderRadius: 12, background: i + 1 === parte ? C.oro : 'transparent', border: `4px solid ${C.oro}` }} />)}
+              </div>
             </div>
           </div>
         )}
