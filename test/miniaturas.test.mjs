@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 
 test('cada episodio tiene héroe y rival para su miniatura', () => {
-  const src = readFileSync('scripts/miniaturas.mjs', 'utf8');
+  const src = readFileSync('lib/minis.mjs', 'utf8');
   const minis = new Set([...src.matchAll(/^ {2}'([a-z0-9-]+)': \[/gm)].map((m) => m[1]));
   const sin = [];
   for (const d of readdirSync('src/videos')) {

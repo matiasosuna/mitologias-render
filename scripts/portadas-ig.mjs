@@ -4,6 +4,9 @@ import { bundle } from '@remotion/bundler';
 import { renderStill, selectComposition } from '@remotion/renderer';
 import { readFileSync, readdirSync, rmSync, mkdirSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { MINIS, MINIS_IG } from '../lib/minis.mjs';
+import { parOficial } from '../lib/miniaturas-oficiales.mjs';
+import { clavesOficiales } from '../lib/personajes-oficiales.mjs';
 
 const TEMPORADAS = {
   griegas: [[7, 'SEASON 1 · ORIGINS'], [17, 'SEASON 2 · THE OLYMPIANS']],
@@ -16,17 +19,14 @@ const TEMPORADAS = {
   hindues: [[12, 'SEASON 1 · GODS, THE OCEAN AND THE AVATARS'], [24, 'SEASON 2 · THE RAMAYANA'], [99, 'SEASON 3 · KRISHNA AND THE MAHABHARATA']],
   maories: [[12, 'SEASON 1 · FROM THE DARK TO AOTEAROA'], [24, 'SEASON 2 · CANOES FROM HAWAIKI'], [99, 'SEASON 3 · TANIWHA AND TIPUA']],
 };
-// Personajes de los episodios viejos sin "miniatura" en el guion (los mismos que sus miniaturas de YouTube).
-const src = readFileSync('scripts/miniaturas.mjs', 'utf8');
-const MINIS = Function(`return ${src.slice(src.indexOf('{', src.indexOf('const MINIS')), src.indexOf('};', src.indexOf('const MINIS')) + 1)}`)();
-Object.assign(MINIS, { 'griegas-01-origen': ['zeus', 'cronos'], 'griegas-02-prometeo': ['prometeo', 'zeus'] });
-
+const oficiales = clavesOficiales();
 const ids = process.argv.slice(2).length ? process.argv.slice(2) : readdirSync('src/videos').filter((d) => /^[a-z]+-\d\d-/.test(d));
 const serveUrl = await bundle({ entryPoint: resolve('src/canal/Canal.tsx') });
 process.on('exit', () => rmSync(serveUrl, { recursive: true, force: true }));
 for (const id of ids) {
   const g = JSON.parse(readFileSync(`src/videos/${id}/guion.json`, 'utf8'));
-  const [heroe, rival] = g.miniatura ? [g.miniatura.heroe, g.miniatura.rival] : MINIS[id] ?? ['hombre'];
+  // red de seguridad: claves viejas con diseño oficial se pasan al oficial (también el 'hombre' genérico de reserva)
+  const [heroe, rival] = parOficial(g.miniatura ? [g.miniatura.heroe, g.miniatura.rival] : MINIS_IG[id] ?? MINIS[id] ?? ['hombre'], id, g, oficiales).par;
   const n = Number(g.numero), temporada = (TEMPORADAS[g.serie] ?? TEMPORADAS.griegas).find(([max]) => n <= max)?.[1] ?? '';
   const esp = g.especial;
   const props = esp

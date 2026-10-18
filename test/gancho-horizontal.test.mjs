@@ -64,3 +64,23 @@ test('comandos de ffmpeg: video sin recodificar y una pista de audio con música
   const u = comandosUnir({ original: 'o.mp4', salida: 's.mp4', musica: 'm.wav', pistas: [{ idioma: 'eng' }], lista: 'l.txt', soloVideo: 'v.mp4' })[2];
   assert.ok(!u[u.indexOf('-filter_complex') + 1].includes('asplit'));
 });
+
+test('capítulos: quitar el cartel es la inversa exacta de ponerlo (0:00 intacto)', async () => {
+  const { sinGancho } = await import('../scripts/yt-quitar-gancho-capitulos.mjs');
+  const d = 'Resumen.\n\nChapters\n0:00 Intro\n0:13 The Fire\n1:59 Pandora\n10:58 End\n\nNext episode: X';
+  assert.equal(sinGancho(desplazarCapitulos(d, 2)), d);
+  assert.equal(sinGancho('sin capítulos'), null);
+  assert.equal(sinGancho('0:00 A\n0:01 B'), null);
+});
+
+test('el cartel gancho solo muestra el título real del guion (titulo.en vía titulos.json)', async () => {
+  const { leerTitulos } = await import('../scripts/titulos.mjs');
+  const t = leerTitulos(); let n = 0;
+  for (const [id, e] of Object.entries(t)) {
+    let g; try { g = JSON.parse(readFileSync(`src/videos/${id}/guion.json`, 'utf8')); } catch { continue; }
+    n++; assert.equal(textosGancho(id, g.serie, t).gancho, String(g.titulo.en).trim(), id);
+    assert.equal(e.titulo.split(' | ')[0].trim(), String(g.titulo.en).trim(), id);
+  }
+  assert.ok(n > 100);
+  assert.equal(textosGancho('no-esta', 'griegas', t), null); // sin entrada en titulos.json → sin cartel
+});

@@ -5,26 +5,12 @@ import { renderStill, selectComposition } from '@remotion/renderer';
 import { readFileSync, rmSync, mkdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { miniaturaQuien } from '../lib/quien.mjs';
+import { MINIS } from '../lib/minis.mjs';
+import { parOficial } from '../lib/miniaturas-oficiales.mjs';
+import { clavesOficiales } from '../lib/personajes-oficiales.mjs';
 
-const MINIS = {
-  'griegas-01-origen': ['cronos', 'urano'],
-  'griegas-02-prometeo': ['prometeo', 'zeus'],
-  'griegas-03-pandora': ['pandora', 'epimeteo'],
-  'griegas-04-edades': ['zeus', 'hombre'],
-  'griegas-05-diluvio': [{ barba: true, canas: true, ropa: 'larga' }, { mujer: true, tocado: 'velo' }],
-  'griegas-06-gigantomaquia': ['heracles', { gigante: true, barba: true, ropa: 'desnudo', boca: true }],
-  'griegas-07-tifon': ['zeus', { gigante: true, barba: true, ropa: 'desnudo', boca: true, piel: '#3A1A0C' }],
-  'griegas-08-doce-olimpicos': ['zeus', 'hera'],
-  'griegas-09-atenea': ['atenea', 'zeus'],
-  'griegas-10-atenea-poseidon': ['atenea', 'poseidon'],
-  'nordicas-01-fuego-y-hielo': ['odin', 'ymir'],
-  'nordicas-02-mundo': ['odin', 'embla'],
-  'nordicas-03-yggdrasil': ['heimdall', 'norna'],
-  'nordicas-04-guerra-dioses': ['odin', 'freyja'],
-  'nordicas-05-sabiduria': ['odin', 'mimir'],
-  'nordicas-06-muralla': ['loki', 'jotun'],
-  'nordicas-07-tesoros': ['thor', 'enano'],
-};
+
+const oficiales = clavesOficiales();
 const ids = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(MINIS);
 // Si el guion trae "miniatura", manda el guion (la portada del video usa lo mismo).
 const serveUrl = await bundle({ entryPoint: resolve('src/canal/Canal.tsx') });
@@ -34,7 +20,8 @@ for (const id of ids) {
   // "Who is…?" horizontal: el muñeco oficial y el título del cartel ("WHO IS ZEUS?"), etiqueta "GREEK · WHO'S WHO"
   const props = g.quien ? miniaturaQuien(g) : (() => {
     if (!g.miniatura && !MINIS[id]) throw new Error(`miniaturas: ${id} no tiene "miniatura" en el guion ni entrada en MINIS (héroe y rival) en scripts/miniaturas.mjs`);
-    const [heroe, rival] = g.miniatura ? [g.miniatura.heroe, g.miniatura.rival] : MINIS[id];
+    // red de seguridad: cualquier clave vieja con diseño oficial se pasa al oficial (guion ya convertido: no cambia nada)
+    const [heroe, rival] = parOficial(g.miniatura ? [g.miniatura.heroe, g.miniatura.rival] : MINIS[id], id, g, oficiales).par;
     return { titulo: g.titulo.en.toUpperCase(), numero: String(Number(g.numero)), heroe, rival, serie: g.serie, ...(g.especial ? { etiqueta: `${g.especial.nombre.en}${g.especial.parte ? ` · PART ${g.especial.parte}` : ''}`.toUpperCase() } : {}) };
   })();
   const comp = await selectComposition({ serveUrl, id: 'miniatura', inputProps: props });

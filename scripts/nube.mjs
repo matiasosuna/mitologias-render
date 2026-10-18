@@ -16,6 +16,7 @@ import { createHash } from 'node:crypto';
 import { join, dirname, basename } from 'node:path';
 import { tmpdir } from 'node:os';
 import { ganchoParte } from './titulos.mjs';
+import { viejosDeArchivo } from './legacy.mjs';
 import {
   HORAS_UTC, clase, construirCola, actualizarCola, tieneYouTube, tieneInstagram, tieneTiktok, partesHechasIG, partesEstimadas,
   planTurno, estadoCola, limitar, usadas24h, esQuien, esShort, PLATAFORMAS, MAX_ALCANZAR, MAX_TIKTOK_FRENADO, TOPE_24H, TOPE_COLA_BUFFER,
@@ -88,8 +89,17 @@ export function extraYT(entradaTitulos, listas) {
 }
 
 // ── release
+/** Guarda: ningún video ni portada (video, partes, tiktok, portada-ig/short, tapa-ig, miniatura) se sube ni se baja para publicar
+ *  si el guion de su episodio todavía tiene una clave vieja con diseño oficial (personajes, animales o los de la portada). */
+export function guardaLegacy(nombre, viejos = viejosDeArchivo) {
+  const m = /^([^.]+)\.(?:horizontal\.mp4|vertical\.mp4|tiktok\.mp4|mp4|parte-\d+\.mp4|portada-ig\.jpg|portada-short\.jpg|tapa-ig\.jpg|miniatura\.jpg)$/.exec(basename(nombre));
+  if (!m || !existsSync(join('src/videos', m[1], 'guion.json'))) return;
+  const v = viejos(m[1]);
+  if (v.length) throw new Error(`${nombre}: no se sube/publica; el guion de ${m[1]} tiene ${v.length} claves viejas con diseño nuevo, p. ej. ${v[0]}`);
+}
 /** Baja un asset del release a `destino`. false si no está. */
 export function bajar(nombre, destino) {
+  guardaLegacy(nombre);
   mkdirSync(dirname(destino), { recursive: true });
   const tmp = `${destino}.bajando`;
   try { execFileSync('curl', ['-fsSL', '--retry', '3', '-o', tmp, urlAsset(nombre)], { stdio: 'ignore' }); renameSync(tmp, destino); return true; }
@@ -100,6 +110,7 @@ export function hayAsset(nombre) {
 }
 /** Sube (o reemplaza) un archivo como asset del release y devuelve su URL pública. */
 export function subirAsset(ruta, nombre) {
+  guardaLegacy(nombre);
   const dir = mkdtempSync(join(tmpdir(), 'media-')), f = join(dir, nombre);
   copyFileSync(ruta, f);
   try { execFileSync('gh', ['release', 'upload', RELEASE, f, '--clobber', '-R', REPO], { stdio: ['ignore', 'ignore', 'inherit'] }); }

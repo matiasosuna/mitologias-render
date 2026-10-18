@@ -6,6 +6,9 @@ import { renderStill, selectComposition } from '@remotion/renderer';
 import { readFileSync, rmSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { resolve, join } from 'node:path';
+import { parOficial } from '../lib/miniaturas-oficiales.mjs';
+import { clavesOficiales } from '../lib/personajes-oficiales.mjs';
+const oficiales = clavesOficiales();
 
 const ids = process.argv.slice(2);
 const serveUrl = await bundle({ entryPoint: resolve('src/canal/Canal.tsx') });
@@ -15,7 +18,8 @@ for (const id of ids) {
   const actores = [];
   for (const e of g.escenas) for (const a of e.actores ?? []) if (!actores.some((x) => x.id === a.id)) actores.push(a);
   const [h, r] = actores.slice(0, 2);
-  const props = { titulo: g.gancho.en.toUpperCase(), numero: '', temporada: '', insignia: 'MYTH IN 60 SECONDS', heroe: h ? { __como: h.como, ...(h.props ?? {}) } : 'hombre', rival: r ? { __como: r.como, ...(r.props ?? {}) } : undefined, serie: g.serie };
+  const [heroe, rival] = parOficial([h ? { __como: h.como ?? h.id, ...(h.props ?? {}) } : 'hombre', r ? { __como: r.como ?? r.id, ...(r.props ?? {}) } : undefined], id, g, oficiales).par; // red de seguridad: claves viejas → oficial
+  const props = { titulo: g.gancho.en.toUpperCase(), numero: '', temporada: '', insignia: 'MYTH IN 60 SECONDS', heroe, rival, serie: g.serie };
   const comp = await selectComposition({ serveUrl, id: 'portada-ig', inputProps: props });
   const tmp = join('out', id, 'portada-short-4x5.jpg');
   await renderStill({ serveUrl, composition: comp, output: tmp, inputProps: props, imageFormat: 'jpeg', jpegQuality: 92 });
