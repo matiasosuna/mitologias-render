@@ -18,7 +18,8 @@ const ficha = (x: unknown): Record<string, unknown> => {
 };
 const NOMBRE: Record<string, string> = { vasija: 'GREEK MYTHOLOGY', runas: 'NORSE MYTHOLOGY', papiro: 'EGYPTIAN MYTHOLOGY', kapa: 'HAWAIIAN MYTHOLOGY', pintado: 'NATIVE AMERICAN MYTHOLOGY', codice: 'AZTEC MYTHOLOGY', pahari: 'HINDU MYTHOLOGY', kowhaiwhai: 'MĀORI MYTHOLOGY', kamasan: 'BALINESE MYTHOLOGY' };
 
-export const PortadaIG: React.FC<{ titulo: string; numero: string; temporada: string; heroe: unknown; rival?: unknown; serie?: string; insignia?: string }> = ({ titulo, numero, temporada, heroe, rival, serie, insignia = 'EPISODE' }) => {
+/** parte/de: Reels de un episodio en partes; cada portada lleva su "PART n OF m" y puntitos, para que no parezcan repetidas. */
+export const PortadaIG: React.FC<{ titulo: string; numero: string; temporada: string; heroe: unknown; rival?: unknown; serie?: string; insignia?: string; parte?: number; de?: number }> = ({ titulo, numero, temporada, heroe, rival, serie, insignia = 'EPISODE', parte, de }) => {
   aplicarTema(serie);
   const t = TEMA.nombre, claro = t !== 'vasija';
   const h = ficha(heroe), r = rival ? ficha(rival) : null;
@@ -54,6 +55,14 @@ export const PortadaIG: React.FC<{ titulo: string; numero: string; temporada: st
         <div style={{ position: 'absolute', top: 278, left: 0, right: 0, fontWeight: 700, fontSize: 82, lineHeight: 1, color: C.crema }}>{numero}</div>
         <div style={{ position: 'absolute', top: 1082, left: 50, right: 50, height: 210, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: titulo.length > 26 ? 76 : 90, lineHeight: 1.02, color: tinta, textShadow: claro ? `0 4px 0 ${C.blanco}` : `0 6px 0 ${C.negro}` }}>{titulo}</div>
         <div style={{ position: 'absolute', bottom: 22, left: 0, right: 0, fontWeight: 700, fontSize: 24, letterSpacing: 8, color: tinta, opacity: 0.7 }}>MYTHS ON CLAY</div>
+        {parte && de && de > 1 && (
+          <div style={{ position: 'absolute', top: 432, left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14 }}>
+            <div style={{ background: C.negro, color: C.crema, border: `5px solid ${C.purpura}`, borderRadius: 60, padding: '14px 46px 10px', fontWeight: 700, fontSize: 56, letterSpacing: 8, lineHeight: 1 }}>PART {parte} OF {de}</div>
+            <div style={{ display: 'flex', gap: 16 }}>
+              {Array.from({ length: de }, (_, i) => <div key={i} style={{ width: 22, height: 22, borderRadius: 11, background: i + 1 === parte ? C.negro : 'transparent', border: `4px solid ${C.negro}` }} />)}
+            </div>
+          </div>
+        )}
       </AbsoluteFill>
     </AbsoluteFill>
   );
