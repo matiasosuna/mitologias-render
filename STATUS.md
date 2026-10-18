@@ -1,11 +1,11 @@
 # Myths on Clay — estado
-_Actualizado 2026-10-18 19:58 UTC_
+_Actualizado 2026-10-18 20:28 UTC_
 
 ## Resumen
 | Qué | Estado |
 | --- | --- |
-| publicar | activado |
-| Última corrida de publicar | success · 2026-10-18 19:07 UTC |
+| publicar | desactivado |
+| Última corrida de publicar | success · 2026-10-18 20:07 UTC |
 | Último turno registrado | 2026-10-18T18Z |
 | Próximos de la cola | nordicas-06-muralla<br>nordicas-07-tesoros<br>nordicas-08-hijos-loki<br>nordicas-09-thor-gigantes<br>nordicas-10-muerte-baldr |
 | "Who is…?" listos | 5 (5 sin publicar en alguna red) |
@@ -36,5 +36,5 @@ _Actualizado 2026-10-18 19:58 UTC_
 | Red | Métricas |
 | --- | --- |
 | YouTube | 22 suscriptores · 5883 vistas · 75 videos |
-| Instagram | 44 seguidores · 346 likes · 17.857 vistas (28 días) |
+| Instagram | 44 seguidores · 347 likes · 17.968 vistas (28 días) |
 | TikTok | sin API |
