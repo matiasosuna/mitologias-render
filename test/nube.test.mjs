@@ -105,3 +105,10 @@ test('TikTok frenado por la plataforma: 2 por turno durante 24 h, después vuelv
   assert.equal(tiktokFrenado({ max: 2, desde }, Date.parse('2026-10-19T10:30:00Z')), false);
   assert.equal(tiktokFrenado(null), false);
 });
+
+test('portada y tapa de IG por parte', () => {
+  assert.equal(nombreAsset('griegas-08-a', 'portada-ig-parte', 2), 'griegas-08-a.portada-ig-2.jpg');
+  assert.equal(rutaLocal('griegas-08-a', 'portada-ig-parte', 2), 'out/griegas-08-a/portada-ig-2.jpg');
+  assert.equal(nombreAsset('griegas-08-a', 'tapa-ig', 3), 'griegas-08-a.tapa-ig-3.jpg');
+  assert.equal(nombreAsset('griegas-08-a', 'tapa-ig'), 'griegas-08-a.tapa-ig.jpg');
+});

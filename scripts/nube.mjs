@@ -52,7 +52,8 @@ const ASSETS = {
   vertical: [(id) => `${id}.vertical.mp4`, (id) => `${id}.vertical.mp4`],
   'portada-short': [(id) => `${id}.portada-short.jpg`, () => 'portada-short.jpg'],
   'portada-ig': [(id) => `${id}.portada-ig.jpg`, () => 'portada-ig.jpg'],
-  'tapa-ig': [(id) => `${id}.tapa-ig.jpg`, () => 'tapa-ig.jpg'],
+  'portada-ig-parte': [(id, n) => `${id}.portada-ig-${n}.jpg`, (id, n) => `portada-ig-${n}.jpg`], // con su "n/m" debajo del título
+  'tapa-ig': [(id, n) => (n ? `${id}.tapa-ig-${n}.jpg` : `${id}.tapa-ig.jpg`), (id, n) => (n ? `tapa-ig-${n}.jpg` : 'tapa-ig.jpg')],
   horizontal: [(id) => `${id}.horizontal.mp4`, (id) => `${id}.en.mp4`], // el episodio largo que sube subir.mjs
   'srt-en': [(id) => `${id}.en.srt`, (id) => `${id}.en.srt`],
   'srt-es': [(id) => `${id}.es.srt`, (id) => `${id}.es.srt`],
@@ -92,7 +93,7 @@ export function extraYT(entradaTitulos, listas) {
 /** Guarda: ningún video ni portada (video, partes, tiktok, portada-ig/short, tapa-ig, miniatura) se sube ni se baja para publicar
  *  si el guion de su episodio todavía tiene una clave vieja con diseño oficial (personajes, animales o los de la portada). */
 export function guardaLegacy(nombre, viejos = viejosDeArchivo) {
-  const m = /^([^.]+)\.(?:horizontal\.mp4|vertical\.mp4|tiktok\.mp4|mp4|parte-\d+\.mp4|portada-ig\.jpg|portada-short\.jpg|tapa-ig\.jpg|miniatura\.jpg)$/.exec(basename(nombre));
+  const m = /^([^.]+)\.(?:horizontal\.mp4|vertical\.mp4|tiktok\.mp4|mp4|parte-\d+\.mp4|portada-ig(?:-\d+)?\.jpg|portada-short\.jpg|tapa-ig(?:-\d+)?\.jpg|miniatura\.jpg)$/.exec(basename(nombre));
   if (!m || !existsSync(join('src/videos', m[1], 'guion.json'))) return;
   const v = viejos(m[1]);
   if (v.length) throw new Error(`${nombre}: no se sube/publica; el guion de ${m[1]} tiene ${v.length} claves viejas con diseño nuevo, p. ej. ${v[0]}`);
@@ -149,6 +150,7 @@ const RENDER = {
   parte: renderPartes,
   vertical: (id) => correr('scripts/vertical-render.mjs', id),
   'portada-ig': (id) => correr('scripts/portadas-ig.mjs', id),
+  'portada-ig-parte': (id, n) => correr('scripts/portadas-ig.mjs', id, `--parte=${n}`),
   'portada-short': (id) => correr('scripts/portadas-short.mjs', id),
   miniatura: (id) => correr('scripts/miniaturas.mjs', id),
 };
@@ -164,7 +166,7 @@ export function asegurar(id, c, n) {
   }
   if (!RENDER[c]) return null;
   console.log(`  render en la nube: ${id} (${c})`);
-  RENDER[c](id);
+  RENDER[c](id, n);
   if (c !== 'parte' && c !== 'partes' && c !== 'vertical') subirAsset(ruta, nombreAsset(id, c, n));
   return existsSync(ruta) ? ruta : null;
 }

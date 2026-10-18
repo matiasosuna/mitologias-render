@@ -1,8 +1,9 @@
 // Portadas verticales de Instagram (1080×1350): node scripts/portadas-ig.mjs [id…] → out/<id>/portada-ig.jpg
+// Con --parte=n [--de=m]: la de la parte n, con "n/m" debajo del título → out/<id>/portada-ig-<n>.jpg (m sale de out/<id>/partes.json).
 // Personajes: los de la miniatura del guion (o del mapa de miniaturas.mjs); temporada según el número de episodio.
 import { bundle } from '@remotion/bundler';
 import { renderStill, selectComposition } from '@remotion/renderer';
-import { readFileSync, readdirSync, rmSync, mkdirSync } from 'node:fs';
+import { readFileSync, readdirSync, rmSync, mkdirSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { MINIS, MINIS_IG } from '../lib/minis.mjs';
 import { parOficial } from '../lib/miniaturas-oficiales.mjs';
@@ -20,7 +21,10 @@ const TEMPORADAS = {
   maories: [[12, 'SEASON 1 · FROM THE DARK TO AOTEAROA'], [24, 'SEASON 2 · CANOES FROM HAWAIKI'], [99, 'SEASON 3 · TANIWHA AND TIPUA']],
 };
 const oficiales = clavesOficiales();
-const ids = process.argv.slice(2).length ? process.argv.slice(2) : readdirSync('src/videos').filter((d) => /^[a-z]+-\d\d-/.test(d));
+const opt = (k) => process.argv.find((a) => a.startsWith(`--${k}=`))?.split('=')[1];
+const parte = Number(opt('parte')) || 0;
+const libres = process.argv.slice(2).filter((a) => !a.startsWith('--'));
+const ids = libres.length ? libres : readdirSync('src/videos').filter((d) => /^[a-z]+-\d\d-/.test(d));
 const serveUrl = await bundle({ entryPoint: resolve('src/canal/Canal.tsx') });
 process.on('exit', () => rmSync(serveUrl, { recursive: true, force: true }));
 for (const id of ids) {
@@ -32,8 +36,11 @@ for (const id of ids) {
   const props = esp
     ? { titulo: g.titulo.en.toUpperCase(), numero: esp.parte ? String(esp.parte) : '★', temporada: (esp.nombre.en ?? esp.nombre.es).toUpperCase(), insignia: esp.parte ? 'PART' : 'SPECIAL', heroe, rival, serie: g.serie }
     : { titulo: g.titulo.en.toUpperCase(), numero: String(n), temporada, heroe, rival, serie: g.serie };
+  const de = Number(opt('de')) || Number(process.env.PARTES_DE) || (existsSync(`out/${id}/partes.json`) ? JSON.parse(readFileSync(`out/${id}/partes.json`, 'utf8')).de : 0);
+  if (parte && de > 1) Object.assign(props, { parte, de });
+  const salida = parte ? `out/${id}/portada-ig-${parte}.jpg` : `out/${id}/portada-ig.jpg`;
   const comp = await selectComposition({ serveUrl, id: 'portada-ig', inputProps: props });
   mkdirSync(`out/${id}`, { recursive: true });
-  await renderStill({ serveUrl, composition: comp, output: `out/${id}/portada-ig.jpg`, inputProps: props, imageFormat: 'jpeg', jpegQuality: 92 });
+  await renderStill({ serveUrl, composition: comp, output: salida, inputProps: props, imageFormat: 'jpeg', jpegQuality: 92 });
   console.log('ok', id);
 }

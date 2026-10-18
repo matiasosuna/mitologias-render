@@ -57,7 +57,7 @@ const de = partesDe(id);
 if (!de) { console.log(`esperando render en partes de ${id}`); process.exit(0); }
 const parte = [...Array(de).keys()].map((i) => i + 1).find((n) => !partesHechas(id).has(n));
 const archivoParte = join('out', id, `${id}.parte-${parte}.mp4`);
-if (nube) { nube.asegurar(id, 'parte', parte); nube.asegurar(id, 'portada-ig'); }
+if (nube) { nube.asegurar(id, 'parte', parte); process.env.PARTES_DE = String(de); nube.asegurar(id, 'portada-ig-parte', parte); } // portadas-ig.mjs lee PARTES_DE
 if (!existsSync(archivoParte)) { console.log(`esperando render en partes de ${id}`); process.exit(0); }
 
 const gu = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8'));
@@ -95,9 +95,10 @@ if (porBuffer) {
 
 // 1) armar el video 9:16 y la portada 9:16
 const dir = 'out/.reels'; mkdirSync(dir, { recursive: true });
-if (!nube) execFileSync('node', ['scripts/portadas-ig.mjs', id], { stdio: 'ignore' });
-const port = join('out', id, 'portada-ig.jpg');
-const video = join(dir, `${id}.mp4`), tapa = join(dir, `${id}.jpg`);
+// portada de ESTA parte ("n/m" debajo del título): las partes no se ven repetidas
+if (!nube) execFileSync('node', ['scripts/portadas-ig.mjs', id, `--parte=${parte}`, `--de=${de}`], { stdio: 'ignore' });
+const port = join('out', id, `portada-ig-${parte}.jpg`);
+const video = join(dir, `${id}.mp4`), tapa = join(dir, `${id}-${parte}.jpg`);
 // El video ya es vertical de verdad (scripts/vertical-render.mjs); solo se copia para servirlo.
 execFileSync('cp', [archivoParte, video]);
 execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', port, '-filter_complex', '[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=30:4,eq=brightness=-0.25[bg];[bg][0:v]overlay=0:285', '-frames:v', '1', '-q:v', '2', tapa]);
@@ -106,8 +107,8 @@ execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', port, '-filter_complex
 let videoUrl, coverUrl;
 if (nube) {
   videoUrl = nube.publicarUrl(archivoParte, nube.nombreAsset(id, 'parte', parte));
-  coverUrl = nube.subirAsset(tapa, nube.nombreAsset(id, 'tapa-ig'));
-  for (let i = 0; i < 10 && !nube.hayAsset(nube.nombreAsset(id, 'tapa-ig')); i++) await new Promise((r) => setTimeout(r, 3000));
+  coverUrl = nube.subirAsset(tapa, nube.nombreAsset(id, 'tapa-ig', parte));
+  for (let i = 0; i < 10 && !nube.hayAsset(nube.nombreAsset(id, 'tapa-ig', parte)); i++) await new Promise((r) => setTimeout(r, 3000));
 } else {
 const puerto = 8790 + Math.floor(Math.random() * 100);
 hijos.push(spawn('python3', ['-m', 'http.server', String(puerto), '--bind', '127.0.0.1', '--directory', dir], { stdio: 'ignore' }));
@@ -118,8 +119,8 @@ const base = await new Promise((ok, mal) => {
   const leer = (b) => { const m = String(b).match(/https:\/\/[a-z0-9-]+\.trycloudflare\.com/); if (m) { clearTimeout(t); ok(m[0]); } };
   tunel.stdout.on('data', leer); tunel.stderr.on('data', leer);
 });
-for (let i = 0; i < 30; i++) { try { const r = await fetch(`${base}/${id}.jpg`, { method: 'HEAD' }); if (r.ok) break; } catch { /* aún no */ } await new Promise((r) => setTimeout(r, 3000)); }
-videoUrl = `${base}/${id}.mp4`; coverUrl = `${base}/${id}.jpg`;
+for (let i = 0; i < 30; i++) { try { const r = await fetch(`${base}/${id}-${parte}.jpg`, { method: 'HEAD' }); if (r.ok) break; } catch { /* aún no */ } await new Promise((r) => setTimeout(r, 3000)); }
+videoUrl = `${base}/${id}.mp4`; coverUrl = `${base}/${id}-${parte}.jpg`;
 }
 
 // 3) contenedor, esperar, publicar
