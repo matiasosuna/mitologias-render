@@ -57,7 +57,7 @@ app = modal.App("moc-render", image=image)
 vol = modal.Volume.from_name("moc-out", create_if_missing=True)
 
 
-@app.function(cpu=8, memory=24576, timeout=60 * 60, volumes={"/vol": vol})
+@app.function(cpu=8, memory=24576, timeout=60 * 60, volumes={"/vol": vol}, max_containers=2)
 def render(id: str, modo: str = "vertical") -> str:
     import shutil, time
     t = time.time()

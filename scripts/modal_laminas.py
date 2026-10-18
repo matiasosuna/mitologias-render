@@ -33,7 +33,7 @@ if modal.is_local() and LAMINAS:
 app = modal.App("moc-laminas", image=image)
 
 
-@app.function(cpu=4, memory=8192, timeout=15 * 60)
+@app.function(cpu=4, memory=8192, timeout=15 * 60, max_containers=2)
 def lamina(archivo: str, id: str, frame: str = "60") -> bytes:
     subprocess.run(["npx", "remotion", "still", archivo, id, f"/tmp/{id}.png", f"--frame={frame}"], cwd="/app", check=True)
     return pathlib.Path(f"/tmp/{id}.png").read_bytes()
