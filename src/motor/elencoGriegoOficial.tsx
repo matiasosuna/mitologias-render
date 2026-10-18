@@ -18,6 +18,7 @@ import { suave, lerp, desde, miembro, Fuego, type P, type PersonajeProps } from 
 import type { Ficha } from './elenco';
 import type { DibujoProps } from './elencoAzteca';
 import { CaballoEpico, BovinoEpico, CiervoEpico, CanidoEpico, LeonEpico, OsoEpico, OvinoEpico, TortugaEpica, SerpienteEpica, AguilaEpica, CisneEpico, PavoEpico, BuhoEpico, DelfinEpico } from './bestiasEpicas';
+import { HidraEpica, DragonEpico, PezEpico, ArpiaEpica } from './criaturasEpicas';
 
 const N = '#17110E'; // contorno (el negro de la vasija)
 const r1 = (v: number) => v.toFixed(1);
@@ -1566,6 +1567,92 @@ const Bestia4: React.FC<DibujoProps> = (props) => {
   );
 };
 
+// ---------- cuarta tanda (2026-10-18): los 17 que faltaban ----------
+/** Esfera celeste de Atlas, sostenida en alto (origen = mano): azul noche, banda del zodíaco de oro y estrellas. */
+const EsferaCeleste: React.FC = () => {
+  const f = useCurrentFrame(), g = (f / 3) % 360;
+  return (
+    <g transform="translate(-14 -96)">
+      <circle r={104} fill="#22325E" stroke={N} strokeWidth={3} />
+      <path d="M-100 -26 A 104 34 0 0 0 100 26" transform="rotate(-24)" stroke={N} strokeWidth={16} fill="none" />
+      <path d="M-100 -26 A 104 34 0 0 0 100 26" transform="rotate(-24)" stroke={ORO} strokeWidth={11} fill="none" />
+      <path d="M0 -104 A 40 104 0 0 1 0 104" stroke="#C9D3E0" strokeWidth={2} fill="none" opacity={0.6} transform={`rotate(${r1(Math.sin((g * Math.PI) / 180) * 20)})`} />
+      {[[-46, -50, 6], [30, -64, 5], [56, -10, 4.5], [-60, 20, 5], [8, 50, 6], [-20, -14, 4], [62, 46, 4], [-38, 70, 4.5]].map(([x, y, r], i) => <Estrella key={i} x={x} y={y} r={r} c="#F2E6B8" />)}
+      <path d="M-70 -66 A 96 96 0 0 1 20 -100" stroke="#FFFFFF" strokeWidth={5} fill="none" strokeLinecap="round" opacity={0.22} />
+    </g>
+  );
+};
+/** Pértiga de barquero (Caronte): vara larga de madera con regatón. */
+const Pertiga: React.FC = () => <g><Asta y0={236} y1={-320} c="#6A4A2E" w={8} /><path d="M-6 230 L 0 252 L 6 230 Z" fill={HIERRO} stroke={N} strokeWidth={1.6} /></g>;
+/** Óbolo: la moneda del pasaje. */
+const Obolo: React.FC = () => <g transform="translate(14 -10)"><circle r={9} fill={ORO} stroke={N} strokeWidth={2} /><circle r={4.5} fill="none" stroke={ORO_OSC} strokeWidth={1.6} /></g>;
+/** Espejo de mano de bronce (Helena). */
+const Espejo: React.FC = () => (
+  <g transform="rotate(-8)">
+    <path d="M-4 20 L -5 -30 H 5 L 4 20 Z" fill={BRONCE_OSC} stroke={N} strokeWidth={2} strokeLinejoin="round" />
+    <circle cx={0} cy={-58} r={26} fill={BRONCE} stroke={N} strokeWidth={2.6} />
+    <circle cx={0} cy={-58} r={19} fill="#F2E3B8" stroke={BRONCE_OSC} strokeWidth={2} />
+    <path d="M-10 -66 Q -4 -74 6 -72" stroke="#FFFFFF" strokeWidth={3} fill="none" strokeLinecap="round" opacity={0.7} />
+  </g>
+);
+/** Labrys: el hacha doble de Creta (Minos). */
+const Labrys: React.FC = () => (
+  <g>
+    <Asta y0={150} y1={-150} c={MADERA} w={7} />
+    {[-1, 1].map((k) => <path key={k} d={`M0 -132 C ${k * 20} -150, ${k * 44} -160, ${k * 52} -168 C ${k * 46} -136, ${k * 46} -106, ${k * 52} -78 C ${k * 44} -86, ${k * 20} -96, 0 -112 Z`} fill={BRONCE} stroke={N} strokeWidth={2.4} strokeLinejoin="round" />)}
+    <path d="M-40 -150 C -44 -130, -44 -110, -40 -92 M40 -150 C 44 -130, 44 -110, 40 -92" stroke="#E7C27A" strokeWidth={2.2} fill="none" />
+    <rect x={-7} y={-136} width={14} height={28} rx={3} fill={ORO} stroke={N} strokeWidth={1.8} />
+  </g>
+);
+/** Gorro frigio/tracio (Orfeo): punta caída hacia adelante y orejeras. */
+const GorroFrigio: React.FC<{ c: string; borde?: string }> = ({ c, borde = ORO }) => (
+  <g>
+    <path d="M-34 -6 C -40 -36, -24 -58, 0 -62 C 22 -64, 36 -54, 40 -40 C 42 -28, 36 -22, 30 -24 C 30 -34, 24 -40, 16 -40 C 20 -32, 22 -26, 22 -20 C 0 -28, -18 -22, -26 6 Z" fill={c} stroke={N} strokeWidth={2.4} strokeLinejoin="round" />
+    <path d="M-26 6 C -30 22, -28 36, -22 44 L -14 40 C -18 28, -18 16, -14 4 Z" fill={c} stroke={N} strokeWidth={2} strokeLinejoin="round" />
+    <path d="M-28 -2 Q 0 -30 24 -20" stroke={borde} strokeWidth={4} fill="none" strokeLinecap="round" />
+    <path d="M-8 -50 Q 10 -56 26 -46" stroke={tono(c, 1.35)} strokeWidth={2.4} fill="none" strokeLinecap="round" />
+  </g>
+);
+/** Velo de la Noche que se arquea por encima de la cabeza (velificatio), sembrado de estrellas (origen = pies). */
+const VeloNoche: React.FC = () => {
+  const f = useCurrentFrame(), o = Math.sin(f / 15) * 6;
+  const d = suave([[60, -250], [96 + o, -380], [40, -470 + o], [-60, -480 + o], [-130 - o, -400], [-120, -250], [-90, -200], [-100, -340], [-50, -430], [30, -420], [66, -350], [44, -250]], true, 0.75);
+  return (
+    <g>
+      <path d={d} fill="#1E2650" stroke={N} strokeWidth={2.6} />
+      {[[70, -330], [40, -440], [-20, -455], [-80, -430], [-112, -360], [-108, -280], [80, -280]].map(([x, y], i) => <Estrella key={i} x={x} y={y} r={i % 2 ? 4 : 5.5} c="#F2E6B8" />)}
+    </g>
+  );
+};
+/** Media luna grande detrás de los hombros, cuernos arriba (Selene). Origen = pies. */
+const LunaHombros: React.FC = () => (
+  <g transform="translate(-4 -330)">
+    <path d="M-92 -40 A 96 96 0 0 0 92 -40 A 82 70 0 0 1 -92 -40 Z" fill="#E9EEF2" stroke={N} strokeWidth={2.8} strokeLinejoin="round" />
+    <path d="M-70 -16 A 80 70 0 0 0 70 -16" stroke="#FFFFFF" strokeWidth={4} fill="none" opacity={0.6} />
+  </g>
+);
+/** Culebrita enroscada en el tobillo (Eurídice muere por la mordida de una serpiente). Origen = tobillo. */
+const SerpienteTobillo: React.FC = () => {
+  const f = useCurrentFrame(), o = Math.sin(f / 8) * 3;
+  const d = `M-30 6 C -16 -2, -10 -12, 4 -10 C 18 -8, 18 4, 6 6 C -6 8, -8 -2, 2 -4 C 10 -6, 18 -14, 22 ${-24 + o}`;
+  return (
+    <g>
+      <path d={d} stroke={N} strokeWidth={8} fill="none" strokeLinecap="round" /><path d={d} stroke="#4E8A3E" strokeWidth={5} fill="none" strokeLinecap="round" />
+      <ellipse cx={24} cy={-28 + o} rx={6} ry={4.2} transform={`rotate(-50 24 ${-28 + o})`} fill="#4E8A3E" stroke={N} strokeWidth={1.5} />
+    </g>
+  );
+};
+/** Hidrias de rocío de la Aurora (jarra que se inclina y gotea). */
+const JarraRocio: React.FC = () => {
+  const f = useCurrentFrame();
+  return (
+    <g>
+      <g transform="rotate(-30)"><Jarra c="#E9B8C8" banda={ORO} /></g>
+      {[0, 1, 2].map((i) => { const t = ((f / 20 + i / 3) % 1); return <circle key={i} cx={30 + t * 6} cy={-20 + t * 60} r={3.4} fill="#CFE6EE" stroke={N} strokeWidth={1} opacity={1 - t} />; })}
+    </g>
+  );
+};
+
 // ---------- fichas ----------
 const h = (p: Partial<PersonajeProps>, griego: string): Ficha => ({ tipo: 'persona', p: { hd: true, barba: false, peloCorto: true, tocado: null, ...p }, griego });
 const m = (p: Partial<PersonajeProps>, griego: string): Ficha => h({ mujer: true, piel: PIEL_M, ...p }, griego);
@@ -1828,6 +1915,36 @@ export const ELENCO_GRIEGO_OFICIAL: Record<string, Ficha> = {
     adornos: { cuerpo: <><Exomis a={1} c="#5A4632" /><Cinto a={1} c={ROJO_OSC} /></>, cabeza: <><PeloRulos c="#7A3E22" luz="#B0643A" r={6} /><Oreja piel={PIEL_H} /><Panuelo c="#2E3A4A" /></>, mano: <Soga /> } }),
   doncella_oro_oficial: mx({ piel: '#D9A83A', pelo: '#B5832A', ropa: 'larga', ropaColor: '#E8C46A', ribete: ORO_OSC, brazo: [30, 60],
     adornos: { cuerpo: <Quiton a={A_M} c="#E8C46A" borde={ORO_OSC} mujer />, cabeza: <><PeloRecogido c="#B5832A" luz="#F2D27A" /><CintaOro c="#FFF3B0" /></> } }),
+  // cuarta tanda (2026-10-18): los que faltaban
+  atlas_oficial: h({ gigante: true, s: 1.14, piel: PIEL_SOL, pelo: '#2A2420', ropa: 'corta', ropaColor: '#5A4A3A', ribete: HIERRO, brazo: [160, 20], brazoAtras: [150, -10], inclinar: 4,
+    adornos: { cuerpo: <><PielCabra a={A_GIG} c="#7A6248" /><Cinto a={A_GIG} c={CUERO} /></>, cabeza: <><PeloRulos c="#2A2420" luz="#5A4E44" largo r={7.5} /><BarbaLarga c="#2A2420" luz="#5A4E44" L={70} /></>, mano: <EsferaCeleste />, pie: <Sandalia /> } }, 'ΑΤΛΑΣ'),
+  caronte_oficial: h({ cuerpo: 'viejo', s: 1.04, piel: PIEL_PALIDA, pelo: GRIS, ropa: 'corta', ropaColor: '#3A3640', ribete: '#6E6878', brazo: [150, 30], brazoAtras: [30, 20],
+    adornos: { detras: <Manto c="#2A2630" borde="#6E6878" largo={0.75} />, cuerpo: <><Exomis a={1} c="#3A3640" /><Cinto a={1} c={CUERO} /></>, cabeza: <><PeloRulos c={GRIS} luz={GRIS_L} r={6} /><BarbaLarga c={GRIS} luz={GRIS_L} L={70} puntas={4} /><Pilos /></>, mano: <Pertiga />, manoAtras: <Obolo /> } }, 'ΧΑΡΩΝ'),
+  eos_oficial: m({ pelo: CAOBA, ropa: 'larga', ropaColor: '#E8A23A', ribete: '#E79AA6', brazo: [40, 60],
+    adornos: { detras: <><AlasEspalda tono="#F7E2E6" tono2="#E79AA6" /><Manto c="#E79AA6" borde={ORO} largo={0.95} ancho={0.85} /></>, cuerpo: <><Quiton a={A_M} c="#E8A23A" borde="#E79AA6" mujer /><Cinto a={A_M} c={ORO} /></>, cabeza: <><PeloRecogido c={CAOBA} luz={CAOBA_L} /><DiademaJoya joya="#E79AA6" /></>, mano: <JarraRocio /> } }, 'ΗΩΣ'),
+  eros_oficial: h({ cuerpo: 'flaco', piel: PIEL_M, pelo: RUBIO, ropa: 'corta', ropaColor: BLANCO, ribete: ROJO, brazo: [60, 30],
+    adornos: { detras: <AlasEspalda tono="#FBF6EE" tono2="#F2D27A" s={0.85} />, cuerpo: <><Quiton a={A_FLACO} c={BLANCO} borde={ROJO} /><Cinto a={A_FLACO} c={ROJO} /><Carcaj /></>, cabeza: <><PeloRulos c={RUBIO} luz={RUBIO_L} r={6} /><Oreja piel={PIEL_M} /></>, mano: <Arco c={ORO} s={0.9} />, pie: <Sandalia /> } }, 'ΕΡΩΣ'),
+  euridice_oficial: m({ pelo: CASTANO, ropa: 'larga', ropaColor: BLANCO, ribete: ORO, brazo: [24, 46],
+    adornos: { detras: <Manto c="#C9D98A" borde={ORO} largo={0.95} ancho={0.85} />, cuerpo: <><Quiton a={A_M} c={BLANCO} mujer /><Cinto a={A_M} c={ORO} /></>, cabeza: <><PeloLargo c={CASTANO} luz={CASTANO_L} largo={100} /><Velo c="#F4EEE2" borde={ORO} largo={120} /><CoronaFlores colores={['#F4EEE2', '#F2C9CE']} /></>, pie: <SerpienteTobillo /> } }, 'ΕΥΡΥΔΙΚΗ'),
+  furia_oficial: m({ piel: PIEL_PALIDA, pelo: '#3E6A34', ropa: 'corta', ropaColor: '#2A2230', ribete: ROJO, brazo: [60, 60], brazoAtras: [40, 20], botas: '#3A2A1C',
+    adornos: { detras: <AlasEspalda tono="#4A4554" tono2="#2E2A34" />, cuerpo: <><Quiton a={A_M} c="#2A2230" borde={ROJO} mujer /><Cinto a={A_M} c={ROJO_OSC} /></>, cabeza: <><PeloSerpientes /><OjoFiero c="#F28A2A" /></>, mano: <Antorcha />, manoAtras: <Latigo /> } }, 'ΕΡΙΝΥΣ'),
+  hector_oficial: h({ s: 1.04, piel: PIEL_SOL, pelo: NEGRO_P, ropa: 'corta', ropaColor: '#5A3478', ribete: ORO, brazo: [30, 60], brazoAtras: [30, 30], botas: BRONCE,
+    adornos: { detras: <Manto c="#5A3478" borde={ORO} largo={0.8} />, cuerpo: <Coraza a={1} />, cabeza: <><PeloRulos c={NEGRO_P} luz={NEGRO_PL} r={6} /><BarbaRulos c={NEGRO_P} luz={NEGRO_PL} L={44} r={5.5} /><CascoCorintio cresta="#2A2420" crestaOsc={ORO} /></>, mano: <Lanza y0={236} y1={-250} />, manoAtras: <Hoplon borde={BRONCE} campo="#5A3478" /> } }, 'ΕΚΤΩΡ'),
+  helena_oficial: m({ pelo: RUBIO, ropa: 'larga', ropaColor: '#F4EEE2', ribete: ORO, brazo: [60, 70],
+    adornos: { detras: <Manto c="#C8323A" borde={ORO} largo={0.95} ancho={0.85} />, cuerpo: <><Quiton a={A_M} c="#F4EEE2" mujer /><Perlas a={A_M} /><Cinto a={A_M} c={ORO} /></>, cabeza: <><PeloLargo c={RUBIO} luz={RUBIO_L} largo={110} /><Velo c="#F8F2E6" borde={ORO} largo={100} /><DiademaJoya /></>, mano: <Espejo /> } }, 'ΕΛΕΝΗ'),
+  minos_oficial: h({ s: 1.06, piel: PIEL_H, pelo: '#4A3A2E', ropa: 'larga', ropaColor: '#7A2340', ribete: ORO, brazo: [30, 60],
+    adornos: { detras: <Manto c="#2C4C8C" borde={ORO} />, cuerpo: <><Quiton a={1} c="#7A2340" /><RopaColquide /><Himation a={1} c="#2C4C8C" /></>, cabeza: <><PeloRulos c="#4A3A2E" luz="#7A6250" largo /><BarbaRulos c="#4A3A2E" luz="#7A6250" L={60} /><CoronaRey /></>, mano: <Labrys /> } }, 'ΜΙΝΩΣ'),
+  nix_oficial: m({ s: 1.04, piel: PIEL_PALIDA, pelo: NEGRO_P, ropa: 'larga', ropaColor: '#1E2650', ribete: '#DDE3E8', brazo: [70, 60], brazoAtras: [60, 40],
+    adornos: { detras: <><AlasEspalda tono="#2E3458" tono2="#1A1E36" /><VeloNoche /></>, cuerpo: <><Quiton a={A_M} c="#1E2650" borde="#DDE3E8" mujer /><RopaEstrellada a={A_M} /></>, cabeza: <><PeloLargo c={NEGRO_P} luz={NEGRO_PL} largo={110} /><DiademaEstrellas n={5} c="#F2E6B8" /></> } }, 'ΝΥΞ'),
+  orfeo_oficial: h({ piel: PIEL_H, pelo: CASTANO, ropa: 'larga', ropaColor: '#2E6E78', ribete: ORO, brazo: [26, 50],
+    adornos: { detras: <Manto c="#C9502E" borde={ORO} largo={0.9} />, cuerpo: <><Quiton a={1} c="#2E6E78" /><Cinto a={1} c={ORO} /></>, cabeza: <><PeloRulos c={CASTANO} luz={CASTANO_L} largo r={6} /><GorroFrigio c="#C9502E" /></>, mano: <Lira /> } }, 'ΟΡΦΕΥΣ'),
+  selene_oficial: m({ pelo: NEGRO_P, ropa: 'larga', ropaColor: '#C9D3E0', ribete: '#F4F6F8', brazo: [30, 60],
+    adornos: { detras: <><LunaHombros /><Manto c="#2E3F6E" borde="#DDE3E8" largo={0.95} ancho={0.9} /></>, cuerpo: <><Quiton a={A_M} c="#C9D3E0" borde="#F4F6F8" mujer /><Cinto a={A_M} c="#DDE3E8" /></>, cabeza: <><PeloRecogido c={NEGRO_P} luz={NEGRO_PL} /><CintaOro c="#DDE3E8" /></>, mano: <Antorcha /> } }, 'ΣΕΛΗΝΗ'),
+  arpia_oficial: D(ArpiaEpica, { vuela: true, alto: 380, izq: 330, der: 330 }, 'ΑΡΠΥΙΑ'),
+  hidra_oficial: D(HidraEpica, { alto: 700, izq: 440, der: 380 }, 'ΥΔΡΑ'),
+  quimera_oficial: D(LeonEpico, { quimera: true, alto: 640, izq: 360, der: 540 }, 'ΧΙΜΑΙΡΑ'),
+  dragon_oficial: D(DragonEpico, { alto: 760, izq: 420, der: 360 }, 'ΔΡΑΚΩΝ'),
+  pez_griego_oficial: D(PezEpico, { vuela: true, alto: 200, izq: 240, der: 190 }),
   // criaturas con nombre
   piton_oficial: D(SerpienteEpica, { piton: true, alto: 640, izq: 380, der: 200 }, 'ΠΥΘΩΝ'),
   cerbero_oficial: D(CanidoEpico, { especie: 'cerbero', alto: 620, izq: 380, der: 330 }, 'ΚΕΡΒΕΡΟΣ'),
@@ -1870,5 +1987,7 @@ export const NOMBRE_EN_GRIEGO_OFICIAL: Record<string, string> = {
   cadmo_oficial: 'CADMUS', cecrope_oficial: 'CECROPS', licaon_oficial: 'LYCAON', sisifo_oficial: 'SISYPHUS', sisifo_roca_oficial: 'SISYPHUS', merope_oficial: 'MEROPE', aquiles_oficial: 'ACHILLES',
   penelope_oficial: 'PENELOPE', medea_oficial: 'MEDEA', talos_oficial: 'TALOS', pitia_oficial: 'PYTHIA', deucalion_oficial: 'DEUCALION', pirra_oficial: 'PYRRHA', homero_oficial: 'HOMER',
   demodoco_oficial: 'DEMODOCUS', maron_oficial: 'MARON', acetes_oficial: 'ACOETES', marsias_oficial: 'MARSYAS', aegipan_oficial: 'AEGIPAN', delfine_oficial: 'DELPHYNE',
+  atlas_oficial: 'ATLAS', caronte_oficial: 'CHARON', eos_oficial: 'EOS', eros_oficial: 'EROS', euridice_oficial: 'EURYDICE', furia_oficial: 'FURY', hector_oficial: 'HECTOR',
+  helena_oficial: 'HELEN', minos_oficial: 'MINOS', nix_oficial: 'NYX', orfeo_oficial: 'ORPHEUS', selene_oficial: 'SELENE', arpia_oficial: 'HARPY', hidra_oficial: 'HYDRA', quimera_oficial: 'CHIMERA', dragon_oficial: 'DRAGON',
   piton_oficial: 'PYTHON', cerbero_oficial: 'CERBERUS', pegaso_oficial: 'PEGASUS', licaon_lobo_oficial: 'LYCAON', dioniso_cabrito_oficial: 'DIONYSUS', dioniso_leon_oficial: 'DIONYSUS',
 };

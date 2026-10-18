@@ -14,6 +14,8 @@ export const TECHO_H = ARRIBA + 64;
 export const TECHO_PERSONA = 250;
 /** Lo mínimo que se achica un animal para que entre (más chico deja de ser épico: se avisa). */
 export const K_AJ_MIN = 0.55;
+/** Piso duro para un animal de suelo que a K_AJ_MIN igual pasa el techo (Fenrir gigante con la cámara cerca): entra justo. */
+export const K_AJ_DURO = 0.45;
 /** Encimados: fracción del más angosto que se tapan, en más de esta fracción del tiempo que están juntos. */
 export const TAPA = 0.35, TIEMPO = 0.4;
 const P_CAPA = { fondo: 0.45, medio: 0.75, frente: 1 } as const;
@@ -86,13 +88,14 @@ export function ajusteHorizontal(pistas: Pista[], cam: Camara = {}, dur = 0): Re
     } else {
       // si sube (escalera al cielo, salto…) es a propósito: el tamaño se elige con lo que está en el suelo
       const suelo = vis.filter((m) => m.y >= SUELO - 1), elev = suelo.length ? 0 : Math.max(...vis.map((m) => SUELO - m.y));
-      out[p.id] = { k: alto + elev > lim ? Math.max(K_AJ_MIN, (lim - elev) / alto) : 1, dy: 0 };
+      const kFit = (lim - elev) / alto;
+      out[p.id] = { k: alto + elev > lim ? (kFit >= K_AJ_MIN ? kFit : Math.max(K_AJ_DURO, kFit)) : 1, dy: 0 };
     }
   }
   // si un animal ajustable tapa a otro actor, se achica de a 5% (como mucho hasta K_SOLAPE_MIN de lo que tenía)
   for (const p of pistas) {
     if (!p.ajustable) continue;
-    const piso = Math.max(K_AJ_MIN, out[p.id].k * K_SOLAPE_MIN);
+    const piso = Math.min(out[p.id].k, Math.max(K_AJ_MIN, out[p.id].k * K_SOLAPE_MIN));
     for (const q of pistas) {
       if (q === p || q.capa !== p.capa) continue;
       while (out[p.id].k > piso + 1e-6 && tiempoEncima(p, q, out[p.id], out[q.id], cam, dur) > TIEMPO) out[p.id] = { ...out[p.id], k: Math.max(piso, out[p.id].k - 0.05) };

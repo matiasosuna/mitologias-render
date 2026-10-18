@@ -40,6 +40,12 @@ export const HOJAS: Item[][] = [
     it('sacerdotisa_griega_2_oficial', 'PRIESTESS · B'), it('rey_griego_oficial', 'KING · A'), it('rey_griego_2_oficial', 'KING · B'), it('reina_griega_oficial', 'QUEEN · A'), it('reina_griega_2_oficial', 'QUEEN · B')],
   [it('guerrero_griego_oficial', 'WARRIOR · A'), it('guerrero_griego_2_oficial', 'WARRIOR · B'), it('persa_oficial', 'PERSIAN'), it('gigante_griego_oficial', 'GIANT · A'), it('gigante_griego_2_oficial', 'GIANT · B'),
     it('marinero_griego_oficial', 'SAILOR · A'), it('marinero_griego_2_oficial', 'SAILOR · B'), it('pirata_oficial', 'PIRATE · A'), it('pirata_2_oficial', 'PIRATE · B'), it('doncella_oro_oficial', 'GOLDEN MAIDEN')],
+  // 9–10: los 17 que faltaban (2026-10-18) → griegos-faltantes-1..2
+  [it('atlas_oficial', 'ATLAS', { e: 0.8 }), it('caronte_oficial', 'CHARON'), it('eos_oficial', 'EOS'), it('eros_oficial', 'EROS'), it('euridice_oficial', 'EURYDICE'),
+    it('furia_oficial', 'FURY (ERINYS)'), it('hector_oficial', 'HECTOR'), it('helena_oficial', 'HELEN'), it('minos_oficial', 'MINOS'), it('nix_oficial', 'NYX'),
+    it('orfeo_oficial', 'ORPHEUS'), it('selene_oficial', 'SELENE')],
+  [it('hidra_oficial', 'HYDRA', { dx: 60 }), it('quimera_oficial', 'CHIMERA', { dx: -80 }), it('dragon_oficial', 'DRAGON', { dx: 20 }),
+    it('arpia_oficial', 'HARPY', { y: 560 }), it('pez_griego_oficial', 'FISH', { y: 640, e: 1.4 })],
 ];
 
 const Motor: React.FC<{ esc: Escena }> = ({ esc }) => <CalidadHD.Provider value={true}><EscenaMotor esc={esc} tl={tl} /></CalidadHD.Provider>;
@@ -61,10 +67,10 @@ const Celda: React.FC<{ i: Item; left: number; top: number; w: number; h: number
   );
 };
 
-const Hoja: React.FC<{ n: number; k?: number }> = ({ n, k: k0 }) => {
+const Hoja: React.FC<{ n: number; k?: number; cols?: number }> = ({ n, k: k0, cols = 5 }) => {
   const k = k0 ?? (n === 8 ? 0.52 : 0.6);
   aplicarTema('griegas');
-  const items = HOJAS[n - 1] ?? [], cols = 5, W = 1920 / cols, H = 360;
+  const items = HOJAS[n - 1] ?? [], W = 1920 / cols, H = 1080 / Math.ceil(15 / cols);
   return (
     <AbsoluteFill style={{ backgroundColor: C.negro }}>
       {items.map((i, j) => <Celda key={i.k + j} i={i} left={(j % cols) * W + 2} top={Math.floor(j / cols) * H + 2} w={W - 4} h={H - 4} k={k} />)}
@@ -92,6 +98,8 @@ const Zoom: React.FC<{ claves: string[]; k?: number; y?: number; x?: number; ya?
 registerRoot(() => (
   <>
     <Composition id="gs-hoja" component={Hoja} durationInFrames={400} fps={24} width={1920} height={1080} defaultProps={{ n: 1, k: 0.6 }} />
+    <Composition id="griegos-faltantes-1" component={Hoja} durationInFrames={400} fps={24} width={1920} height={1080} defaultProps={{ n: 9, k: 0.6 }} />
+    <Composition id="griegos-faltantes-2" component={Hoja} durationInFrames={400} fps={24} width={1920} height={1080} defaultProps={{ n: 10, k: 0.5, cols: 3 }} />
     <Composition id="gs-zoom" component={Zoom} durationInFrames={400} fps={24} width={1920} height={1080} defaultProps={{ claves: ['helios_oficial'], k: 1.5, y: 380 }} />
   </>
 ));

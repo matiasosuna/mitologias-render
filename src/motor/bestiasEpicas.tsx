@@ -96,7 +96,7 @@ const Garra: React.FC<{ p: P; ang: number; w: number; c: string; unas?: boolean 
   </g>
 );
 /** Pata con volumen (miembro) + pie. Devuelve el dibujo; `pts` sale de `cadena`. */
-const Pata: React.FC<{ pts: P[]; anchos: number[]; c: string; pie: 'pezuna' | 'hendida' | 'garra' | 'garraUnas'; cPie: string; angPie: number; trazo?: boolean; luz?: string }> = ({ pts, anchos, c, pie, cPie, angPie, trazo = true, luz }) => {
+export const Pata: React.FC<{ pts: P[]; anchos: number[]; c: string; pie: 'pezuna' | 'hendida' | 'garra' | 'garraUnas'; cPie: string; angPie: number; trazo?: boolean; luz?: string }> = ({ pts, anchos, c, pie, cPie, angPie, trazo = true, luz }) => {
   const fin = pts[pts.length - 1], wPie = anchos[anchos.length - 1];
   return (
     <g>
@@ -122,10 +122,10 @@ export const Cuerno: React.FC<{ pts: P[]; base: number; c?: string; anillos?: nu
   );
 };
 /** Sombra/luz de músculo recortada al cuerpo: medialuna de color más oscuro/claro. */
-const Masa: React.FC<{ pts: P[]; c: string; op?: number }> = ({ pts, c, op = 1 }) => <path d={suave(pts, true, 0.9)} fill={c} opacity={op} />;
-const Raya: React.FC<{ pts: P[]; c: string; w?: number; op?: number }> = ({ pts, c, w = 3, op = 1 }) => <path d={suave(pts)} stroke={c} strokeWidth={w} fill="none" strokeLinecap="round" opacity={op} />;
+export const Masa: React.FC<{ pts: P[]; c: string; op?: number }> = ({ pts, c, op = 1 }) => <path d={suave(pts, true, 0.9)} fill={c} opacity={op} />;
+export const Raya: React.FC<{ pts: P[]; c: string; w?: number; op?: number }> = ({ pts, c, w = 3, op = 1 }) => <path d={suave(pts)} stroke={c} strokeWidth={w} fill="none" strokeLinecap="round" opacity={op} />;
 /** Grupo recortado a una silueta (para sombrear adentro). */
-const Recorte: React.FC<{ d: string; children: React.ReactNode }> = ({ d, children }) => {
+export const Recorte: React.FC<{ d: string; children: React.ReactNode }> = ({ d, children }) => {
   const id = 'rc' + idLimpio(useId());
   return <g><defs><clipPath id={id}><path d={d} /></clipPath></defs><g clipPath={`url(#${id})`}>{children}</g></g>;
 };
@@ -566,6 +566,7 @@ export const LeonEpico: React.FC<DibujoProps> = (props) => {
   const { x, y, s, voltear, opacity, f, moviendo, corriendo } = props;
   const c = (props.color as string | undefined) ?? '#D49A48', melena = (props.crin as string | undefined) ?? '#7A4A1E', claro = '#F2DCAA', som = tono(c, 0.84), lej = tono(c, 0.74), mLuz = tono(melena, 1.6);
   const ruge = props.boca !== false;
+  const quimera = !!props.quimera; // Quimera: cabeza de cabra que sale del lomo, cola de sierpe y aliento de fuego
   // melena: masa redonda que enmarca la cara (tapa cuello y pecho) + mechones cortos en todo el borde; va DENTRO
   // de la cabeza (encima del cuerpo, debajo de la cara). Solo queda libre el hocico (≈ 90°).
   const centro: P = [6, 12];
@@ -582,7 +583,9 @@ export const LeonEpico: React.FC<DibujoProps> = (props) => {
     del: [[30, 26, 8, 34], [-6, -2, 4, 22]], tra: [[30, -36, 8, 24], [20, -26, 4, 22]],
     cuello: [[90, -310], [170, -350], [220, -330], [236, -270], [210, -210], [140, -200]], nuca: [196, -330], angCab: 4,
     cabeza: <g>{Melena}<CabezaLeon c={c} claro={claro} f={f} ruge={ruge} /></g>,
-    cola: <ColaBorla pts={[[-194, -250], [-250, -280 + Math.sin(f / 9) * 8], [-300, -250], [-310, -180]]} c={c} borla={melena} luz={mLuz} w={14} ang={-10} />,
+    cola: quimera ? <ColaSierpe f={f} /> : <ColaBorla pts={[[-194, -250], [-250, -280 + Math.sin(f / 9) * 8], [-300, -250], [-310, -180]]} c={c} borla={melena} luz={mLuz} w={14} ang={-10} />,
+    encima: quimera ? <CabraDelLomo f={f} /> : undefined,
+    delante: quimera ? <AlientoFuego f={f} /> : undefined,
     sombreado: <g>
       <ellipse cx={0} cy={-176} rx={220} ry={26} fill={claro} />
       <Masa pts={[[100, -316], [180, -290], [196, -210], [150, -190], [126, -260]]} c={som} />
@@ -592,6 +595,49 @@ export const LeonEpico: React.FC<DibujoProps> = (props) => {
     </g>,
   };
   return <Cuadrupedo q={q} x={x} y={y} s={s} voltear={voltear} opacity={opacity} f={f} moviendo={moviendo} corriendo={corriendo} />;
+};
+
+// ---------- Quimera (piezas que se suman al león) ----------
+/** Cola de sierpe con cabeza (sale de la grupa del león). Coordenadas del cuerpo del león. */
+const ColaSierpe: React.FC<{ f: number }> = ({ f }) => {
+  const o = Math.sin(f / 10) * 8, pts: P[] = [[-190, -244], [-250, -262], [-300, -230 + o], [-320, -290 + o], [-300, -350 + o]];
+  return (
+    <g>
+      <Tubo pts={pts} w={[30, 28, 26, 24, 22]} c="#4E7A3A" panza="#D2DE96" mancha="#2A4A1E" />
+      <g transform={`translate(${r1(pts[4][0])} ${r1(pts[4][1])}) rotate(-40) scale(0.85)`}><CabezaSierpe c="#4E7A3A" panza="#D2DE96" mancha="#2A4A1E" f={f} fase={2} /></g>
+    </g>
+  );
+};
+/** Cuello y cabeza de cabra que salen del medio del lomo (mirando adelante y arriba). */
+const CabraDelLomo: React.FC<{ f: number }> = ({ f }) => {
+  const c = '#8A6A48', o = Math.sin(f / 13) * 3, cuello: P[] = [[-40, -282], [-30, -340], [-6, -392 + o], [20, -420 + o]];
+  const cuerno: P[] = [[4, -20], [-14, -74], [-52, -116], [-96, -124]];
+  return (
+    <g>
+      <path d={miembro(cuello, [70, 58, 46, 40])} fill={c} stroke={N} strokeWidth={2.6} />
+      {cuello.slice(0, 3).map((q, i) => <Mechon key={i} x={q[0] - 20} y={q[1] - 6} ang={160 - i * 10} l={38} w={22} c={tono(c, 0.75)} trazo={1.6} />)}
+      <g transform={`translate(${r1(cuello[3][0])} ${r1(cuello[3][1])}) rotate(-12)`}>
+        <Cuerno pts={cuerno} base={26} c="#8A7A5A" anillos={5} />
+        <path d={suave([[-24, 20], [-18, -20], [10, -34], [50, -24], [86, 8], [96, 30], [80, 44], [40, 40], [0, 38]], true, 0.85)} fill={c} stroke={N} strokeWidth={2.6} />
+        <path d="M40 38 C 44 70, 52 90, 60 100 C 66 80, 70 60, 66 40 Z" fill={tono(c, 0.6)} stroke={N} strokeWidth={2.2} />
+        <path d="M80 18 C 88 16, 92 22, 88 26" stroke={N} strokeWidth={2.4} fill="none" strokeLinecap="round" />
+        <OjoVivo x={36} y={-6} r={7.5} iris="#D9A21E" fiero />
+        <path d="M30 -6 h 12" stroke={N} strokeWidth={3} />
+        <Cuerno pts={[[14, -24], [2, -78], [-36, -122], [-80, -134]]} base={28} c="#A8946A" anillos={6} />
+        <ellipse cx={-10} cy={4} rx={30} ry={11} transform="rotate(40 -10 4)" fill={c} stroke={N} strokeWidth={2.2} />
+      </g>
+    </g>
+  );
+};
+/** Lengua de fuego que sale de las fauces del león (coordenadas del cuerpo). */
+const AlientoFuego: React.FC<{ f: number }> = ({ f }) => {
+  const t = (f / 4) % 1, x0 = 330, y0 = -306;
+  return (
+    <g>
+      {[0, 1, 2, 3, 4].map((i) => { const k = (i + t) / 5, r = 14 + k * 40; return <ellipse key={i} cx={r1(x0 + k * 220)} cy={r1(y0 + Math.sin(f / 5 + i) * 6 - k * 30)} rx={r1(r * 1.3)} ry={r1(r)} fill={i % 2 ? '#F2A23A' : '#E8602A'} opacity={r1(0.95 - k * 0.6)} />; })}
+      <path d={`M${x0 - 10} ${y0} C ${x0 + 60} ${y0 - 30}, ${x0 + 120} ${y0 - 10}, ${x0 + 170} ${y0 - 40} C ${x0 + 120} ${y0 + 10}, ${x0 + 60} ${y0 + 16}, ${x0 - 10} ${y0 + 10} Z`} fill="#FFE38A" stroke={N} strokeWidth={2} strokeLinejoin="round" />
+    </g>
+  );
 };
 
 // ---------- oso (erguido sobre las patas de atrás) ----------
@@ -729,7 +775,7 @@ export const TortugaEpica: React.FC<DibujoProps> = (props) => {
 
 // ---------- serpiente enroscada (culebra, Pitón) ----------
 /** Tubo de serpiente a lo largo de `pts`, con panza clara y escamas. */
-const Tubo: React.FC<{ pts: P[]; w: number[]; c: string; panza: string; mancha: string; diamantes?: boolean }> = ({ pts, w, c, panza, mancha, diamantes }) => {
+export const Tubo: React.FC<{ pts: P[]; w: number[]; c: string; panza: string; mancha: string; diamantes?: boolean }> = ({ pts, w, c, panza, mancha, diamantes }) => {
   const d = miembro(pts, w);
   return (
     <g>
@@ -739,6 +785,36 @@ const Tubo: React.FC<{ pts: P[]; w: number[]; c: string; panza: string; mancha: 
         {pts.slice(1).map((q, i) => i % 1 === 0 && (diamantes ? <path key={i} d={`M${r1(q[0] - w[i + 1] * 0.22)} ${r1(q[1] - w[i + 1] * 0.08)} l ${r1(w[i + 1] * 0.22)} ${r1(-w[i + 1] * 0.2)} l ${r1(w[i + 1] * 0.22)} ${r1(w[i + 1] * 0.2)} l ${r1(-w[i + 1] * 0.22)} ${r1(w[i + 1] * 0.2)} Z`} fill={mancha} /> : <ellipse key={i} cx={r1(q[0])} cy={r1(q[1] - w[i + 1] * 0.12)} rx={r1(w[i + 1] * 0.22)} ry={r1(w[i + 1] * 0.14)} fill={mancha} />))}
         <path d={suave(pts.map((q, i) => [q[0], q[1] - w[i] * 0.3] as P))} stroke={tono(c, 1.35)} strokeWidth={Math.max(...w) * 0.08} fill="none" strokeLinecap="round" opacity={0.6} />
       </Recorte>
+    </g>
+  );
+};
+/**
+ * Cabeza de sierpe épica (Hidra, dragón, cola de la Quimera): fauces abiertas con colmillos, lengua bífida, ojo fiero,
+ * cejas de escamas; `cresta` = púas en la nuca, `barba` = barbillas bajo la quijada, `oro` = corona (cabeza inmortal).
+ * Origen = fin del cuello, mira a la derecha.
+ */
+export const CabezaSierpe: React.FC<{ c: string; panza: string; mancha: string; f: number; fase?: number; abre?: number; cresta?: string; barba?: string; cuernos?: string; oro?: boolean; iris?: string }> = ({ c, panza, mancha, f, fase = 0, abre: ab = 18, cresta, barba, cuernos, oro, iris = '#E8B93E' }) => {
+  const abre = ab + Math.sin(f / 7 + fase) * 4, len = 16 + Math.sin(f / 3 + fase) * 4;
+  return (
+    <g>
+      {cresta && [[-18, -22, -150], [-2, -30, -165], [14, -32, -180]].map(([px, py, a], i) => <Mechon key={i} x={px} y={py} ang={a} l={34 - i * 4} w={18} c={cresta} curva={-0.2} trazo={1.8} />)}
+      {cuernos && <><Cuerno pts={[[-6, -22], [-26, -50], [-54, -62]]} base={14} c={tono(cuernos, 0.85)} anillos={3} /><Cuerno pts={[[4, -24], [-14, -56], [-44, -72]]} base={16} c={cuernos} anillos={4} /></>}
+      {/* quijada (gira para abrir) */}
+      <g transform={`rotate(${r1(abre)} -8 8)`}>
+        <path d={suave([[-18, 4], [28, 10], [64, 12], [70, 20], [56, 28], [10, 28], [-18, 18]], true)} fill={panza} stroke={N} strokeWidth={2.4} />
+        {[24, 38, 52].map((x0) => <path key={x0} d={`M${x0} 12 l 4 -11 l 4 11 Z`} fill="#F6F0E2" stroke={N} strokeWidth={1.2} strokeLinejoin="round" />)}
+        {barba && [0, 14, 28].map((bx, i) => <Mechon key={i} x={bx} y={24} ang={-8 + i * 6} l={30 + i * 4} w={12} c={barba} curva={0.3} trazo={1.6} />)}
+      </g>
+      <path d={`M-4 4 L 66 0 L 64 ${r1(10 + abre * 0.7)} L 0 ${r1(16 + abre * 0.35)} Z`} fill="#6E1E1E" />
+      <path d={`M10 ${r1(8 + abre * 0.2)} q 30 ${r1(4 + abre * 0.2)} ${r1(48 + len)} 0 m -4 0 l 10 -6 m -10 6 l 10 6`} stroke={ROJO} strokeWidth={3} fill="none" strokeLinecap="round" />
+      {/* cráneo */}
+      <path d={suave([[-30, 12], [-26, -20], [0, -32], [44, -24], [74, -8], [78, 4], [60, 8], [20, 8]], true, 0.85)} fill={c} stroke={N} strokeWidth={2.6} />
+      {[30, 46, 62].map((x0) => <path key={x0} d={`M${x0} 6 l 4 13 l 4 -13 Z`} fill="#F6F0E2" stroke={N} strokeWidth={1.2} strokeLinejoin="round" />)}
+      <path d={suave([[-20, -18], [10, -30], [44, -20]])} stroke={mancha} strokeWidth={6} fill="none" strokeLinecap="round" />
+      <path d={suave([[0, -8], [30, -4], [62, 0]])} stroke={tono(c, 1.3)} strokeWidth={4} fill="none" strokeLinecap="round" opacity={0.55} />
+      <circle cx={70} cy={-4} r={2.4} fill={N} />
+      <OjoVivo x={24} y={-14} r={7.5} iris={iris} fiero />
+      {oro && <g transform="translate(-6 -30)">{[-14, 0, 14].map((cx, i) => <path key={i} d={`M${cx - 7} 4 L ${cx} ${-14 - (i === 1 ? 6 : 0)} L ${cx + 7} 4 Z`} fill={ORO} stroke={N} strokeWidth={1.8} strokeLinejoin="round" />)}<path d="M-22 4 H 22" stroke={N} strokeWidth={7} strokeLinecap="round" /><path d="M-21 4 H 21" stroke={ORO} strokeWidth={4} strokeLinecap="round" /></g>}
     </g>
   );
 };

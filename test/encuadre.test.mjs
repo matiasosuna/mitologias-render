@@ -100,3 +100,11 @@ test('una persona oficial gigante se achica para no tapar el cartel de arriba; u
   assert.ok(aj.g.k < 1 && aj.g.k >= K_AJ_MIN && top >= 249, `k ${aj.g.k} top ${top}`);
   assert.equal(aj.v.k, 1);
 });
+
+test('animal de suelo que a K_AJ_MIN igual pasa el techo baja hasta entrar (piso K_AJ_DURO)', async () => {
+  const { K_AJ_DURO } = await import('../src/motor/encuadreHorizontal.ts');
+  const m = (x) => ({ t: 0, x, y: 790, s: 1, vis: true });
+  const aj = ajusteHorizontal([{ id: 'g', capa: 'frente', ajustable: true, medida: { alto: 1150, izq: 200, der: 200 }, muestras: [m(900), m(900)] }], { zoom: [1, 1] });
+  assert.ok(aj.g.k < K_AJ_MIN && aj.g.k >= K_AJ_DURO, `k ${aj.g.k}`);
+  assert.ok(790 - 1150 * aj.g.k >= TECHO_H - 1);
+});
