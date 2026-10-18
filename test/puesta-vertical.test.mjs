@@ -74,7 +74,7 @@ test('un grupo de 4: todos adentro, cómodos, no más grandes que de a dos y nun
   const pistas = [300, 700, 1150, 1600].map((x, i) => pista(`p${i}`, x, dur, { izq: i > 1 }));
   const enc = encuadreEscena(pistas);
   assert.equal(enc.ids.length, 4);
-  assert.ok(enc.K <= dos.K && enc.K >= 0.55 && enc.K <= 0.77, `K=${enc.K}`);
+  assert.ok(enc.K <= dos.K && enc.K >= 0.55 && enc.K <= K_MAX, `K=${enc.K}`);
   todosAdentro(enc, pistas); sinEncimarse(enc, pistas);
 });
 
