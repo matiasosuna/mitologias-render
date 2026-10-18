@@ -55,11 +55,11 @@ export const PortadaIG: React.FC<{ titulo: string; numero: string; temporada: st
         <div style={{ position: 'absolute', top: 278, left: 0, right: 0, fontWeight: 700, fontSize: 82, lineHeight: 1, color: C.crema }}>{numero}</div>
         <div style={{ position: 'absolute', top: 1082, left: 50, right: 50, height: 210, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: titulo.length > 26 ? 76 : 90, lineHeight: 1.02, color: tinta, textShadow: claro ? `0 4px 0 ${C.blanco}` : `0 6px 0 ${C.negro}` }}>{titulo}</div>
         <div style={{ position: 'absolute', bottom: 22, left: 0, right: 0, fontWeight: 700, fontSize: 24, letterSpacing: 8, color: tinta, opacity: 0.7 }}>MYTHS ON CLAY</div>
-        {parte && de && de > 1 && (
-          <div style={{ position: 'absolute', top: 432, left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14 }}>
-            <div style={{ background: C.negro, color: C.crema, border: `5px solid ${C.purpura}`, borderRadius: 60, padding: '14px 46px 10px', fontWeight: 700, fontSize: 56, letterSpacing: 8, lineHeight: 1 }}>PART {parte} OF {de}</div>
-            <div style={{ display: 'flex', gap: 16 }}>
-              {Array.from({ length: de }, (_, i) => <div key={i} style={{ width: 22, height: 22, borderRadius: 11, background: i + 1 === parte ? C.negro : 'transparent', border: `4px solid ${C.negro}` }} />)}
+        {parte && de && de > 1 && ( // en la franja negra del suelo: no tapa a nadie
+          <div style={{ position: 'absolute', top: 1000, height: 70, left: 0, right: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 26 }}>
+            <div style={{ color: C.crema, fontWeight: 700, fontSize: 46, letterSpacing: 10, lineHeight: 1, paddingTop: 6 }}>PART {parte} OF {de}</div>
+            <div style={{ display: 'flex', gap: 12 }}>
+              {Array.from({ length: de }, (_, i) => <div key={i} style={{ width: 20, height: 20, borderRadius: 10, background: i + 1 === parte ? C.crema : 'transparent', border: `3px solid ${C.crema}` }} />)}
             </div>
           </div>
         )}
