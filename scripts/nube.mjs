@@ -22,6 +22,7 @@ import {
   horizontalTurno, claveHorizontal,
 } from './cola.mjs';
 import { tituloQuienHorizontal, listaQuien, mitologiaEn } from '../lib/quien.mjs';
+import * as yo from './nube.mjs'; // este mismo módulo, para pasárselo a buffer-tiktok (ver prepararTiktok)
 
 export const REPO = 'matiasosuna/mitologias-render', RELEASE = 'media';
 export const urlAsset = (nombre) => `https://github.com/${REPO}/releases/download/${RELEASE}/${nombre}`;
@@ -387,7 +388,7 @@ async function turno(p, probar = false) {
       const env = envF(), n = await enCola(cliente(env.BUFFER_API_KEY));
       if (n >= TOPE_COLA_BUFFER) return console.log(`TikTok: la cola de Buffer está llena (${n}); no se publica en este turno`);
       for (const id of plan.ids) {
-        try { await publicarTiktok(id, { env }); }
+        try { await publicarTiktok(id, { env, rel: yo }); }
         catch (e) {
           if (!e.limite) throw e;
           writeFileSync(RITMO_TK, JSON.stringify({ max: MAX_TIKTOK_FRENADO, desde: new Date().toISOString(), motivo: String(e.message).slice(0, 300) }));
@@ -420,7 +421,7 @@ async function adelantar(minutos = 150) {
   const { prepararTiktok } = await import('./buffer-tiktok.mjs');
   const tareas = [
     ...proximos(d, 'instagram', 4).map((id) => () => (esShort(id) ? asegurar(id, 'short') : asegurar(id, 'partes'))),
-    ...proximos(d, 'tiktok', 4).map((id) => () => prepararTiktok(id)),
+    ...proximos(d, 'tiktok', 4).map((id) => () => prepararTiktok(id, yo)),
     ...proximos(d, 'youtube', 2).map((id) => () => (esShort(id) ? asegurar(id, 'short') : asegurarEpisodio(id, { render: false }))),
     // "Who is…?" horizontal (~1 min de video): se renderiza acá si no está, así el turno solo sube
     ...proximos(d, 'youtube', 0).filter((id) => conHorizontal(id) && !d.ytIds[claveHorizontal(id)]).map((id) => () => asegurarEpisodio(id)),

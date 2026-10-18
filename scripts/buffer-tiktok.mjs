@@ -39,8 +39,10 @@ const ffmpegTiktok = (tapa, video, salida) => execFileSync('nice', ['-n', '15', 
   '-map', '[ov]', '-map', '[oa]', '-c:v', 'libx264', '-preset', 'medium', '-b:v', '1400k', '-maxrate', '1700k', '-bufsize', '3000k', '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', '-map_metadata', '-1', salida]);
 
 /** Deja out/<id>/<id>.tiktok.mp4 listo (del release o armado acá) y devuelve su URL pública en el release. */
-export async function prepararTiktok(id) {
-  const rel = await import('./nube.mjs');
+// `rel` = el módulo scripts/nube.mjs. Si quien llama ES nube.mjs (el turno de TikTok) tiene que pasárselo: importarlo desde acá
+// mientras él mismo espera (await de nivel superior) es un import circular que nunca termina ("unsettled top-level await", exit 13).
+export async function prepararTiktok(id, rel) {
+  rel ??= await import('./nube.mjs');
   const tk = rel.rutaLocal(id, 'tiktok');
   mkdirSync(dirname(tk), { recursive: true });
   if (id.startsWith('short-')) {
@@ -76,7 +78,7 @@ export async function prepararTiktok(id) {
 export const enCola = async (gql) => (await postsDelCanal(gql, { canal: CANAL_TIKTOK, estados: ['scheduled'] })).length;
 
 /** Publica YA un ítem en TikTok. Devuelve 'ya estaba' | 'publicado'. Error con .limite = true si TikTok/Buffer lo frenó. */
-export async function publicarTiktok(id, { env, probar = false } = {}) {
+export async function publicarTiktok(id, { env, probar = false, rel } = {}) {
   const hechos = leerJSON(REG, []);
   if (hechos.some((h) => h.id === id)) return 'ya estaba';
   const esEp = !id.startsWith('short-');
@@ -88,7 +90,7 @@ export async function publicarTiktok(id, { env, probar = false } = {}) {
   const anotar = (post, nota) => { const h = leerJSON(REG, []); h.push({ id, tipo: esEp ? 'episodio' : 'short', post, dueAt: new Date().toISOString(), fecha: new Date().toISOString(), ...(nota ? { nota } : {}) }); writeFileSync(REG, JSON.stringify(h, null, 1)); };
   const previo = buscarPorPrimeraLinea(await postsDelCanal(gql, { canal: CANAL_TIKTOK }), (l) => primera(l) === primera(txt));
   if (previo) { anotar(previo.id, 'ya estaba en Buffer'); return 'ya estaba'; }
-  const videoUrl = await prepararTiktok(id);
+  const videoUrl = await prepararTiktok(id, rel);
   let post;
   try { post = await esperarEnvio(gql, await crear(gql, entradaTiktok({ texto: txt, videoUrl }))); }
   catch (e) { if (esLimite(e.message)) e.limite = true; throw e; }
