@@ -18,7 +18,7 @@ const ficha = (x: unknown): Record<string, unknown> => {
 };
 const NOMBRE: Record<string, string> = { vasija: 'GREEK MYTHOLOGY', runas: 'NORSE MYTHOLOGY', papiro: 'EGYPTIAN MYTHOLOGY', kapa: 'HAWAIIAN MYTHOLOGY', pintado: 'NATIVE AMERICAN MYTHOLOGY', codice: 'AZTEC MYTHOLOGY', pahari: 'HINDU MYTHOLOGY', kowhaiwhai: 'MĀORI MYTHOLOGY', kamasan: 'BALINESE MYTHOLOGY' };
 
-/** parte/de: Reels de un episodio en partes; cada portada lleva su "PART n OF m" y puntitos, para que no parezcan repetidas. */
+/** parte/de: Reels de un episodio en partes; cada portada lleva su "n/m" debajo del título, para que no parezcan repetidas. */
 export const PortadaIG: React.FC<{ titulo: string; numero: string; temporada: string; heroe: unknown; rival?: unknown; serie?: string; insignia?: string; parte?: number; de?: number }> = ({ titulo, numero, temporada, heroe, rival, serie, insignia = 'EPISODE', parte, de }) => {
   aplicarTema(serie);
   const t = TEMA.nombre, claro = t !== 'vasija';
@@ -54,18 +54,9 @@ export const PortadaIG: React.FC<{ titulo: string; numero: string; temporada: st
         <div style={{ position: 'absolute', top: 182, left: 0, right: 0, fontWeight: 700, fontSize: 30, letterSpacing: 6, color: tinta, opacity: 0.85 }}>{temporada}</div>
         <div style={{ position: 'absolute', top: numero === '' ? 300 : 254, left: 0, right: 0, fontWeight: 700, fontSize: numero === '' ? 30 : 22, letterSpacing: 6, color: numero === '' ? tinta : C.crema }}>{insignia}</div>
         <div style={{ position: 'absolute', top: 278, left: 0, right: 0, fontWeight: 700, fontSize: 82, lineHeight: 1, color: C.crema }}>{numero}</div>
-        <div style={{ position: 'absolute', top: conParte ? 1168 : 1082, left: 50, right: 50, height: conParte ? 140 : 210, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: conParte ? (titulo.length > 26 ? 60 : 68) : titulo.length > 26 ? 76 : 90, lineHeight: 1.02, color: tinta, textShadow: claro ? `0 4px 0 ${C.blanco}` : `0 6px 0 ${C.negro}` }}>{titulo}</div>
-        <div style={{ position: 'absolute', bottom: 22, left: 0, right: 0, fontWeight: 700, fontSize: 24, letterSpacing: 8, color: tinta, opacity: 0.7 }}>MYTHS ON CLAY</div>
-        {conParte && ( // cartel grande entre el suelo y el título
-          <div style={{ position: 'absolute', top: 1080, left: 0, right: 0, display: 'flex', justifyContent: 'center' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 22, background: C.negro, border: `5px solid ${C.oro}`, borderRadius: 50, padding: '10px 40px 8px' }}>
-              <div style={{ color: C.oro, fontWeight: 700, fontSize: 64, letterSpacing: 8, lineHeight: 1, paddingTop: 6 }}>PART {parte}/{de}</div>
-              <div style={{ display: 'flex', gap: 12 }}>
-                {Array.from({ length: de as number }, (_, i) => <div key={i} style={{ width: 24, height: 24, borderRadius: 12, background: i + 1 === parte ? C.oro : 'transparent', border: `4px solid ${C.oro}` }} />)}
-              </div>
-            </div>
-          </div>
-        )}
+        <div style={{ position: 'absolute', top: conParte ? 1074 : 1082, left: 50, right: 50, height: conParte ? 170 : 210, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: conParte ? (titulo.length > 26 ? 70 : 80) : titulo.length > 26 ? 76 : 90, lineHeight: 1.02, color: tinta, textShadow: claro ? `0 4px 0 ${C.blanco}` : `0 6px 0 ${C.negro}` }}>{titulo}</div>
+        <div style={{ position: 'absolute', bottom: conParte ? 14 : 22, left: 0, right: 0, fontWeight: 700, fontSize: 24, letterSpacing: 8, color: tinta, opacity: 0.7 }}>MYTHS ON CLAY</div>
+        {conParte && <div style={{ position: 'absolute', top: 1250, left: 0, right: 0, fontWeight: 700, fontSize: 46, letterSpacing: 6, lineHeight: 1, color: tinta }}>{parte}/{de}</div>}
       </AbsoluteFill>
     </AbsoluteFill>
   );
