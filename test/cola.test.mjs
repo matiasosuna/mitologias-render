@@ -45,9 +45,9 @@ test('lista: un "Who is…?" detrás de cada episodio que falta; mini historias 
   const quien = ['short-griegas-quien-zeus', 'short-griegas-nadie', 'short-griegas-dioses-60s', 'short-griegas-quien-hermes'];
   const cola = construirCola({ titulos: T, ytIds: YT, quien, stories: [] });
   const ids = cola.map((e) => e.id);
-  assert.ok(!ids.includes('short-griegas-nadie') && !ids.includes('short-griegas-viejo'));
-  assert.deepEqual(ids.slice(8, 14), ['griegas-09-d', 'short-griegas-quien-zeus', 'griegas-97-odisea-1', 'short-griegas-dioses-60s', 'hawaianas-02-h', 'short-griegas-quien-hermes']);
-  assert.ok(esQuien('short-griegas-quien-zeus') && esQuien('short-griegas-dioses-60s') && !esQuien('short-griegas-cerbero'));
+  assert.ok(!ids.includes('short-griegas-nadie') && !ids.includes('short-griegas-viejo') && !ids.includes('short-griegas-dioses-60s'));
+  assert.deepEqual(ids.slice(8, 13), ['griegas-09-d', 'short-griegas-quien-zeus', 'griegas-97-odisea-1', 'short-griegas-quien-hermes', 'hawaianas-02-h']);
+  assert.ok(esQuien('short-griegas-quien-zeus') && !esQuien('short-griegas-dioses-60s') && !esQuien('short-griegas-cerbero'));
 });
 
 test('lista: sobran "Who is…?" → van al final; formato por plataforma', () => {

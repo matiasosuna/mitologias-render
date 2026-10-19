@@ -20,8 +20,8 @@ export const FORMATOS = {
   episodio: { youtube: 'horizontal', instagram: 'partes', tiktok: 'vertical' },
   short: { youtube: 'short', instagram: 'short', tiktok: 'short' },
 };
-/** Shorts que entran a la cola además de los "Who is…?" (pedidos aparte por Matías). */
-export const SHORTS_EXTRA = ['short-griegas-dioses-60s'];
+/** Shorts que entran a la cola además de los "Who is…?". Vacío: el de todos los dioses juntos NO (2026-10-19: un capítulo por dios). */
+export const SHORTS_EXTRA = [];
 export const esShort = (id) => id.startsWith('short-');
 export const esQuien = (id) => /^short-[a-z]+-quien-[a-z0-9-]+$/.test(id) || SHORTS_EXTRA.includes(id);
 export const tipoDe = (id) => (esShort(id) ? 'short' : 'episodio');
