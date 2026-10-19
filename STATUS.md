@@ -1,28 +1,29 @@
 # Myths on Clay — estado
-_Actualizado 2026-10-19 01:50 UTC_
+_Actualizado 2026-10-19 21:58 UTC_
 
 ## Resumen
 | Qué | Estado |
 | --- | --- |
 | publicar | activado |
-| Última corrida de publicar | failure · 2026-10-19 01:07 UTC |
-| Último turno registrado | 2026-10-18T22Z |
-| Próximos de la cola | nordicas-08-hijos-loki<br>nordicas-09-thor-gigantes<br>nordicas-10-muerte-baldr<br>nordicas-11-loki-atado<br>nordicas-12-ragnarok |
-| "Who is…?" listos | 5 (4 sin publicar en alguna red) |
+| Última corrida de publicar | success · 2026-10-19 21:07 UTC |
+| Último turno registrado | 2026-10-19T18Z |
+| Próximos de la cola | egipcias-03-cinco-hijos<br>egipcias-04-ojo-de-ra<br>egipcias-05-nombre-secreto<br>egipcias-06-muerte-de-osiris<br>egipcias-07-catorce-pedazos |
+| "Who is…?" listos | 8 (7 sin publicar en alguna red) |
 
 ## Temporadas
 | Mitología | Temporada | Episodios | YouTube | Instagram |
 | --- | --- | --- | --- | --- |
+| Griegas | Especial Greek Myth Stories | 1 | 0 | 0 |
 | Griegas | Especial Lords of the Dead | 1 | 1 | 1 |
 | Griegas | Especial The Odyssey | 2 | 0 | 0 |
 | Griegas | T1 | 7 | 7 | 7 |
-| Griegas | T2 | 10 | 9 | 5 |
+| Griegas | T2 | 10 | 9 | 9 |
 | Nórdicas | Especial Lords of the Dead | 1 | 1 | 1 |
 | Nórdicas | T1 | 13 | 13 | 13 |
-| Nórdicas | T2 | 8 | 2 | 0 |
+| Nórdicas | T2 | 8 | 2 | 2 |
 | Egipcias | Especial Lords of the Dead | 1 | 1 | 1 |
 | Egipcias | T1 | 11 | 11 | 11 |
-| Egipcias | T2 | 8 | 2 | 0 |
+| Egipcias | T2 | 8 | 2 | 2 |
 | Hawaianas | Especial Lords of the Dead | 1 | 1 | 1 |
 | Hawaianas | T1 | 12 | 5 | 5 |
 | Hawaianas | T2 | 12 | 0 | 0 |
@@ -35,6 +36,6 @@ _Actualizado 2026-10-19 01:50 UTC_
 ## Métricas
 | Red | Métricas |
 | --- | --- |
-| YouTube | 23 suscriptores · 5883 vistas · 75 videos |
-| Instagram | 46 seguidores · 384 likes · 18.974 vistas (28 días) |
+| YouTube | 23 suscriptores · 6124 vistas · 76 videos |
+| Instagram | 55 seguidores · 496 likes · 22.936 vistas (28 días) |
 | TikTok | sin API |
