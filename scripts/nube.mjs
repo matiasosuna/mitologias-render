@@ -239,6 +239,8 @@ function partesFaltanIG(id, igH) {
 }
 /** TikTok frenado (rechazó por límite): 2 por turno durante 24 h; después se vuelve a probar con 4. */
 export const tiktokFrenado = (ritmo, ahora = Date.now()) => Boolean(ritmo?.max && ritmo.desde && ahora - Date.parse(ritmo.desde) < 864e5);
+/** TikTok pidió esperar 24 h: en ese lapso no se intenta nada (reintentar alarga el bloqueo y el turno falla). */
+export const tiktokEnPausa = (ritmo, ahora = Date.now()) => Boolean(ritmo?.pausa && ritmo.desde && ahora - Date.parse(ritmo.desde) < 864e5);
 const envF = () => Object.fromEntries(readFileSync('.env', 'utf8').split('\n').filter((l) => l.includes('=')).map((l) => [l.slice(0, l.indexOf('=')), l.slice(l.indexOf('=') + 1).trim()]));
 
 /** Plan de una plataforma en este turno, ya recortado por sus topes (24 h y, en TikTok, la cola de Buffer). */
@@ -396,15 +398,16 @@ async function turno(p, probar = false) {
       if (hz) horizontalYT(hz); // el mismo turno (y día) que su Short
     } else if (p === 'instagram') for (const id of plan.ids) itemIG(id);
     else {
+      if (tiktokEnPausa(leerJSON(RITMO_TK, null))) return console.log('TikTok: en pausa 24 h (lo pidió TikTok); no se publica en este turno');
       const { publicarTiktok, enCola } = await import('./buffer-tiktok.mjs');
-      const { cliente } = await import('./buffer.mjs');
+      const { cliente, esEspera } = await import('./buffer.mjs');
       const env = envF(), n = await enCola(cliente(env.BUFFER_API_KEY));
       if (n >= TOPE_COLA_BUFFER) return console.log(`TikTok: la cola de Buffer está llena (${n}); no se publica en este turno`);
       for (const id of plan.ids) {
         try { await publicarTiktok(id, { env, rel: yo }); }
         catch (e) {
           if (!e.limite) throw e;
-          writeFileSync(RITMO_TK, JSON.stringify({ max: MAX_TIKTOK_FRENADO, desde: new Date().toISOString(), motivo: String(e.message).slice(0, 300) }));
+          writeFileSync(RITMO_TK, JSON.stringify({ max: MAX_TIKTOK_FRENADO, ...(esEspera(e.message) ? { pausa: true } : {}), desde: new Date().toISOString(), motivo: String(e.message).slice(0, 300) }));
           return console.log(`TikTok: frenado por la plataforma (${String(e.message).slice(0, 160)}): ${MAX_TIKTOK_FRENADO} por turno durante 24 h`);
         }
       }

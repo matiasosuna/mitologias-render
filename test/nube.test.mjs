@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { inicioTurno, claveTurno, turnoUTC, horaHST, miniaturasPendientes, nombreAsset, rutaLocal, urlAsset, tituloShortYT, buscarTitulo, extraYT, partesVigentes, tiktokFrenado } from '../scripts/nube.mjs';
+import { inicioTurno, claveTurno, turnoUTC, horaHST, miniaturasPendientes, nombreAsset, rutaLocal, urlAsset, tituloShortYT, buscarTitulo, extraYT, partesVigentes, tiktokFrenado, tiktokEnPausa } from '../scripts/nube.mjs';
 
 const utc = (h, m = 0) => new Date(Date.UTC(2026, 9, 14, h, m));
 const utcDia = (d, h, m = 0) => new Date(Date.UTC(2026, 9, d, h, m));
@@ -111,4 +111,14 @@ test('portada y tapa de IG por parte', () => {
   assert.equal(rutaLocal('griegas-08-a', 'portada-ig-parte', 2), 'out/griegas-08-a/portada-ig-2.jpg');
   assert.equal(nombreAsset('griegas-08-a', 'tapa-ig', 3), 'griegas-08-a.tapa-ig-3.jpg');
   assert.equal(nombreAsset('griegas-08-a', 'tapa-ig'), 'griegas-08-a.tapa-ig.jpg');
+});
+
+test('TikTok pide esperar 24 h: pausa total y se detecta el mensaje', async () => {
+  const { esLimite, esEspera } = await import('../scripts/buffer.mjs');
+  const msg = 'Buffer no pudo publicar: TikTok has detected a large number of posts published through the API for this channel. Wait 24 hours before trying to publish again.';
+  assert.ok(esLimite(msg) && esEspera(msg) && !esEspera('rate limit'));
+  const desde = '2026-10-19T10:00:00Z';
+  assert.equal(tiktokEnPausa({ pausa: true, max: 2, desde }, Date.parse('2026-10-20T09:00:00Z')), true);
+  assert.equal(tiktokEnPausa({ pausa: true, max: 2, desde }, Date.parse('2026-10-20T10:30:00Z')), false);
+  assert.equal(tiktokEnPausa({ max: 2, desde }, Date.parse('2026-10-19T11:00:00Z')), false);
 });

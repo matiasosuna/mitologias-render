@@ -46,7 +46,9 @@ export function entradaTiktok({ texto, videoUrl, canal = CANAL_TIKTOK, thumbOffs
   return { channelId: canal, text: texto, schedulingType: 'automatic', mode: 'shareNow', assets: [{ video: { url: videoUrl, metadata: { thumbnailOffset: thumbOffset } } }] };
 }
 /** ¿El rechazo es por límite / demasiadas publicaciones? (entonces TikTok frena a 2 por turno) */
-export const esLimite = (mensaje) => /limit|too many|rate|quota|exceed|spam|frequen|daily|maximum/i.test(String(mensaje ?? ''));
+export const esLimite = (mensaje) => /limit|too many|rate|quota|exceed|spam|frequen|daily|maximum|large number of posts|wait \d+ hours/i.test(String(mensaje ?? ''));
+/** TikTok pidió esperar (p. ej. "Wait 24 hours before trying to publish again"): no se reintenta hasta que pase. */
+export const esEspera = (mensaje) => /large number of posts|wait \d+ hours/i.test(String(mensaje ?? ''));
 
 const CAMPOS = 'id status text dueAt sentAt externalLink error { message }';
 const CREAR = `mutation($input: CreatePostInput!) { createPost(input: $input) { ... on PostActionSuccess { post { ${CAMPOS} } } ... on MutationError { message } } }`;
