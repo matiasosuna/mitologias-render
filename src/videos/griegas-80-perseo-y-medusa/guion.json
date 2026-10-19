@@ -1,0 +1,1271 @@
+{
+ "id": "griegas-80-perseo-y-medusa",
+ "serie": "griegas",
+ "numero": "80",
+ "titulo": {
+  "es": "Perseo y Medusa",
+  "en": "Perseus and Medusa"
+ },
+ "tituloGriego": "ΠΕΡΣΕΥΣ",
+ "especial": {
+  "nombre": {
+   "es": "Historias de mitología griega",
+   "en": "Greek Myth Stories"
+  }
+ },
+ "miniatura": {
+  "heroe": "perseo_oficial",
+  "rival": "medusa_oficial"
+ },
+ "escenas": [
+  {
+   "id": "isla",
+   "fondo": "costa",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Hace mucho tiempo, en la isla de Serifos, vivía un joven llamado Perseo.",
+     "en": "Long ago, on the island of Seriphos, there lived a young man named Perseus."
+    },
+    {
+     "es": "Era hijo de Dánae y del dios Zeus. De bebé, el mar los había llevado hasta esa isla en un cofre.",
+     "en": "He was the son of Danaë and the god Zeus. As a baby, the sea had carried them to the island in a chest."
+    },
+    {
+     "es": "El rey de la isla, Polidectes, quería casarse con Dánae. Pero Perseo la protegía.",
+     "en": "The island's king, Polydectes, wanted to marry Danaë. But Perseus kept her safe."
+    },
+    {
+     "es": "Entonces el rey inventó un plan. Pidió un regalo a todos los jóvenes, y a Perseo le pidió algo imposible.",
+     "en": "So the king made a plan. He asked every young man for a gift, and he asked Perseus for something impossible."
+    },
+    {
+     "es": "«Tráeme la cabeza de Medusa», dijo. Casi nadie volvía de ver a Medusa.",
+     "en": "\"Bring me the head of Medusa,\" he said. Almost nobody came back from meeting Medusa."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "cofre",
+     "x": 300,
+     "s": 0.7,
+     "capa": "fondo",
+     "hasta": 2
+    },
+    {
+     "tipo": "palmera",
+     "x": 1800,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "perseo",
+     "como": "perseo_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.2,
+       "hace": "senala"
+      },
+      {
+       "en": 4,
+       "hace": "sorprende"
+      }
+     ]
+    },
+    {
+     "id": "danae",
+     "como": "mujer_griega_oficial",
+     "x": 250,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "lamenta"
+      }
+     ],
+     "rotulo": "DANAË"
+    },
+    {
+     "id": "polidectes",
+     "como": "rey_griego_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.4,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.2,
+       "hace": "habla"
+      },
+      {
+       "en": 4,
+       "hace": "senala"
+      }
+     ],
+     "rotulo": "POLYDECTES"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 4,
+     "tipo": "oscurecer",
+     "intensidad": 0.3,
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "ISLA DE SERIFOS",
+      "en": "ISLAND OF SERIPHOS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "regalos",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Perseo no iba solo. Dos dioses lo ayudaron: Atenea, diosa de la sabiduría, y Hermes, el mensajero.",
+     "en": "Perseus did not go alone. Two gods helped him: Athena, goddess of wisdom, and Hermes, the messenger."
+    },
+    {
+     "es": "Atenea le dio un escudo de bronce tan pulido que brillaba como un espejo.",
+     "en": "Athena gave him a bronze shield, polished so well that it shone like a mirror."
+    },
+    {
+     "es": "Hermes le dio una espada curva, la harpe, capaz de cortar el cuello de un monstruo.",
+     "en": "Hermes gave him a curved sword, the harpe, strong enough to cut a monster's neck."
+    },
+    {
+     "es": "Y le dio un consejo: «Nunca mires a Medusa a los ojos. Su mirada convierte en piedra».",
+     "en": "And he gave advice: \"Never look Medusa in the eyes. Her gaze turns people to stone.\""
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "nube",
+     "x": 400,
+     "y": 200,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "columna",
+     "x": 1750,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "perseo",
+     "como": "perseo_oficial",
+     "x": 900,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.5,
+       "hace": "toma",
+       "objeto": "escudo"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    },
+    {
+     "id": "atenea",
+     "como": "atenea_oficial",
+     "x": 450,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 1,
+       "hace": "ofrece"
+      }
+     ]
+    },
+    {
+     "id": "hermes",
+     "como": "hermes_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 2,
+       "hace": "ofrece"
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1.4,
+     "tipo": "destello",
+     "x": 900
+    },
+    {
+     "en": 2.2,
+     "tipo": "destello",
+     "x": 1300
+    }
+   ],
+   "rotulos": []
+  },
+  {
+   "id": "grayas",
+   "fondo": "cueva",
+   "camara": {
+    "de": 0,
+    "a": 250,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Primero, Perseo debía hallar a las Grayas, tres hermanas ancianas que conocían el camino.",
+     "en": "First, Perseus had to find the Graeae, three old sisters who knew the way."
+    },
+    {
+     "es": "Las tres compartían un solo ojo y un solo diente. Se los pasaban de mano en mano.",
+     "en": "The three of them shared a single eye and a single tooth. They passed them from hand to hand."
+    },
+    {
+     "es": "Cuando una le pasaba el ojo a otra, Perseo lo atrapó en el aire.",
+     "en": "As one sister passed the eye to another, Perseus caught it in mid-air."
+    },
+    {
+     "es": "«Sin ojo no ven nada», pensó. «Díganme dónde viven las Ninfas, y se los devuelvo».",
+     "en": "\"Without the eye, they are blind,\" he thought. \"Tell me where the Nymphs live, and I will give it back.\""
+    },
+    {
+     "es": "Las Grayas gritaron y se quejaron. Al final, le dijeron el camino.",
+     "en": "The Graeae shouted and complained. In the end, they told him the way."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 250,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "roca",
+     "x": 1780,
+     "s": 1.1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "graya1",
+     "como": "anciana_griega_oficial",
+     "x": 1250,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "ofrece"
+      },
+      {
+       "en": 2.3,
+       "hace": "sorprende"
+      },
+      {
+       "en": 3,
+       "hace": "lamenta"
+      }
+     ],
+     "rotulo": "GRAEAE"
+    },
+    {
+     "id": "graya2",
+     "como": "anciana_griega_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1.2,
+       "hace": "levanta"
+      },
+      {
+       "en": 4,
+       "hace": "habla"
+      }
+     ],
+     "rotulo": ""
+    },
+    {
+     "id": "perseo",
+     "como": "perseo_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.5,
+       "hace": "camina",
+       "a": 800,
+       "dur": 0.8
+      },
+      {
+       "en": 2.4,
+       "hace": "levanta"
+      },
+      {
+       "en": 3.2,
+       "hace": "senala"
+      },
+      {
+       "en": 4.4,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "intensidad": 0.3,
+     "dur": 1
+    },
+    {
+     "en": 2.5,
+     "tipo": "destello",
+     "x": 900
+    }
+   ],
+   "rotulos": []
+  },
+  {
+   "id": "ninfas",
+   "fondo": "bosque",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Las Ninfas eran espíritus amables de la naturaleza. Le dieron tres regalos mágicos.",
+     "en": "The Nymphs were kind spirits of nature. They gave him three magic gifts."
+    },
+    {
+     "es": "El primero: unas sandalias con alas, para volar por el cielo.",
+     "en": "The first: winged sandals, so he could fly through the sky."
+    },
+    {
+     "es": "El segundo: una bolsa especial, la kibisis, para guardar la cabeza de Medusa sin mirarla.",
+     "en": "The second: a special bag, the kibisis, to carry Medusa's head without looking at it."
+    },
+    {
+     "es": "El tercero: el casco de Hades, que hacía invisible a quien lo usaba.",
+     "en": "The third: the helmet of Hades, which made its wearer invisible."
+    },
+    {
+     "es": "Con todo eso, Perseo echó a volar hacia el borde del mundo.",
+     "en": "With all of this, Perseus flew off toward the edge of the world."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "olivo",
+     "x": 300,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "olivo",
+     "x": 1750,
+     "s": 1.1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "ninfa1",
+     "como": "ninfa_oficial",
+     "x": 1250,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "ofrece"
+      },
+      {
+       "en": 2,
+       "hace": "ofrece"
+      },
+      {
+       "en": 3,
+       "hace": "ofrece"
+      }
+     ],
+     "rotulo": "NYMPHS"
+    },
+    {
+     "id": "ninfa2",
+     "como": "ninfa_oficial",
+     "x": 1550,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.2,
+       "hace": "ofrece"
+      }
+     ],
+     "rotulo": ""
+    },
+    {
+     "id": "perseo",
+     "como": "perseo_oficial",
+     "x": 600,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.2,
+       "hace": "alegra"
+      },
+      {
+       "en": 3.4,
+       "hace": "desaparece",
+       "con": "humo"
+      },
+      {
+       "en": 3.9,
+       "hace": "aparece",
+       "con": "humo"
+      },
+      {
+       "en": 4.2,
+       "hace": "vuela",
+       "a": [
+        1900,
+        500
+       ],
+       "dur": 1
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3.4,
+     "tipo": "humo",
+     "x": 600,
+     "y": 600,
+     "dur": 1
+    }
+   ],
+   "rotulos": []
+  },
+  {
+   "id": "gorgonas",
+   "fondo": "desierto",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Las Gorgonas vivían en una isla lejana. Eran tres hermanas con serpientes en lugar de pelo.",
+     "en": "The Gorgons lived on a faraway island. They were three sisters with snakes instead of hair."
+    },
+    {
+     "es": "Dos eran inmortales. Solo Medusa, la tercera, podía morir.",
+     "en": "Two of them were immortal. Only Medusa, the third, could die."
+    },
+    {
+     "es": "Algunos poetas, como Ovidio, cuentan que Medusa fue una mujer hermosa, que Atenea transformó como castigo.",
+     "en": "Some poets, like Ovid, say Medusa was once a beautiful woman whom Athena changed as a punishment."
+    },
+    {
+     "es": "Por todo el camino había estatuas de piedra: hombres que se habían atrevido a mirarla.",
+     "en": "All along the path stood stone statues: men who had dared to look at her."
+    },
+    {
+     "es": "Perseo aterrizó en silencio. Giró de espaldas y levantó su escudo.",
+     "en": "Perseus landed quietly. He turned his back and raised his shield."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "estatua",
+     "x": 350,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "estatua",
+     "x": 700,
+     "s": 0.9,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "estatua",
+     "x": 1750,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "medusa",
+     "como": "medusa_oficial",
+     "x": 1350,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.5,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "perseo",
+     "como": "perseo_oficial",
+     "x": 450,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3.8,
+       "hace": "aparece",
+       "con": "polvo"
+      },
+      {
+       "en": 4.3,
+       "hace": "levanta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "intensidad": 0.3,
+     "dur": 1
+    },
+    {
+     "en": 3.8,
+     "tipo": "polvo",
+     "x": 450,
+     "dur": 0.8
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "LAS GORGONAS",
+      "en": "THE GORGONS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "reflejo",
+   "fondo": "cueva",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Medusa dormía. Perseo se acercó mirando solo el reflejo de su escudo.",
+     "en": "Medusa was sleeping. Perseus crept closer, looking only at the reflection in his shield."
+    },
+    {
+     "es": "Atenea guiaba su mano, paso a paso, en la oscuridad.",
+     "en": "Athena guided his hand, step by step, in the dark."
+    },
+    {
+     "es": "Una serpiente siseó. El corazón de Perseo golpeaba fuerte, pero no levantó la vista.",
+     "en": "A snake hissed. Perseus's heart pounded, but he did not look up."
+    },
+    {
+     "es": "De un solo golpe, la harpe cortó el cuello de Medusa.",
+     "en": "With a single blow, the harpe cut through Medusa's neck."
+    },
+    {
+     "es": "¿Tú habrías tenido el valor de acercarte sin mirar? Cuéntalo en los comentarios.",
+     "en": "Would you have had the courage to creep closer without looking? Tell us in the comments."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 250,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "medusa",
+     "como": "medusa_oficial",
+     "x": 1200,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.1,
+       "hace": "cae"
+      }
+     ]
+    },
+    {
+     "id": "perseo",
+     "como": "perseo_oficial",
+     "x": 450,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.3,
+       "hace": "camina",
+       "a": 800,
+       "dur": 3
+      },
+      {
+       "en": 3,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "atenea",
+     "como": "atenea_oficial",
+     "x": 250,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 1.5,
+       "hace": "senala"
+      },
+      {
+       "en": 3.5,
+       "hace": "desaparece",
+       "con": "luz"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "intensidad": 0.4,
+     "dur": 1
+    },
+    {
+     "en": 3.1,
+     "tipo": "destello",
+     "x": 1200
+    },
+    {
+     "en": 3.1,
+     "tipo": "temblor",
+     "dur": 0.5
+    }
+   ],
+   "rotulos": []
+  },
+  {
+   "id": "pegaso",
+   "fondo": "cueva",
+   "camara": {
+    "de": 100,
+    "a": 300,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Del cuello de Medusa saltaron dos seres: el caballo alado Pegaso y el gigante Crisaor.",
+     "en": "From Medusa's neck, two beings leapt out: the winged horse Pegasus and the giant Chrysaor."
+    },
+    {
+     "es": "Según Hesíodo, los hijos de Medusa nacieron de aquel instante.",
+     "en": "In Hesiod's telling, Medusa's children were born at that very moment."
+    },
+    {
+     "es": "Perseo guardó la cabeza en la bolsa, sin mirarla, y se puso el casco invisible.",
+     "en": "Perseus put the head in the bag, without looking, and put on the invisible helmet."
+    },
+    {
+     "es": "Las otras Gorgonas despertaron y lo persiguieron. Pero no podían ver al héroe.",
+     "en": "The other Gorgons woke and chased him. But they could not see the hero."
+    },
+    {
+     "es": "Perseo se perdió en el cielo y se alejó volando.",
+     "en": "Perseus vanished into the sky and flew away."
+    }
+   ],
+   "elementos": [],
+   "actores": [
+    {
+     "id": "pegaso",
+     "como": "pegaso_oficial",
+     "x": 1200,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 3.5,
+       "hace": "vuela",
+       "a": [
+        1900,
+        300
+       ],
+       "dur": 1
+      }
+     ],
+     "rotulo": "PEGASUS"
+    },
+    {
+     "id": "crisaor",
+     "como": "gigante_griego_oficial",
+     "x": 1650,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 1.5,
+       "hace": "levanta"
+      }
+     ],
+     "rotulo": "CHRYSAOR"
+    },
+    {
+     "id": "perseo",
+     "como": "perseo_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "toma",
+       "objeto": "espada"
+      },
+      {
+       "en": 3,
+       "hace": "desaparece",
+       "con": "humo"
+      },
+      {
+       "en": 4,
+       "hace": "vuela",
+       "a": [
+        1900,
+        500
+       ],
+       "dur": 1
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "destello",
+     "x": 1200
+    },
+    {
+     "en": 3,
+     "tipo": "humo",
+     "x": 500,
+     "y": 600,
+     "dur": 1
+    }
+   ],
+   "rotulos": []
+  },
+  {
+   "id": "vuelo",
+   "fondo": "cielo",
+   "camara": {
+    "de": 0,
+    "a": 250,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Perseo voló de vuelta sobre el desierto de Libia, con la cabeza en la bolsa.",
+     "en": "Perseus flew home over the Libyan desert, with the head in his bag."
+    },
+    {
+     "es": "Ovidio cuenta que unas gotas de sangre cayeron en la arena y se volvieron serpientes.",
+     "en": "Ovid says drops of blood fell on the sand and became snakes."
+    },
+    {
+     "es": "Cuando dejó la cabeza sobre unas algas, estas se endurecieron y formaron el coral rojo.",
+     "en": "When he laid the head on some seaweed, it hardened into red coral."
+    },
+    {
+     "es": "Las ninfas del mar se maravillaron. Según Ovidio, así nació el coral.",
+     "en": "The sea nymphs were amazed. In Ovid's telling, that is how coral began."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "nube",
+     "x": 400,
+     "y": 250,
+     "s": 1.2,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "nube",
+     "x": 1500,
+     "y": 350,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "perseo",
+     "como": "perseo_oficial",
+     "x": 300,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.2,
+       "hace": "vuela",
+       "a": [
+        1300,
+        450
+       ],
+       "dur": 2.5
+      },
+      {
+       "en": 3,
+       "hace": "baja"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1.2,
+     "tipo": "sangre",
+     "x": 1000,
+     "dur": 0.6
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2,
+     "texto": {
+      "es": "ASÍ NACIÓ EL CORAL ROJO",
+      "en": "HOW RED CORAL WAS BORN"
+     },
+     "x": 960,
+     "y": 200,
+     "estilo": "porque",
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "banquete",
+   "fondo": "palacio",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "En Serifos, el rey Polidectes se reía de Perseo. Creía que ya había muerto.",
+     "en": "On Seriphos, King Polydectes was laughing about Perseus. He thought he was long dead."
+    },
+    {
+     "es": "Perseo entró en el gran salón con la bolsa en la mano.",
+     "en": "Perseus walked into the great hall with the bag in his hand."
+    },
+    {
+     "es": "«Aquí está tu regalo, rey», dijo. «Cierren los ojos los que quieran vivir».",
+     "en": "\"Here is your gift, king,\" he said. \"Close your eyes, all who wish to live.\""
+    },
+    {
+     "es": "Sacó la cabeza de Medusa. Polidectes y sus hombres se convirtieron en piedra.",
+     "en": "He pulled out Medusa's head. Polydectes and his men turned to stone."
+    },
+    {
+     "es": "Dánae estaba a salvo, por fin. El plan del rey había fallado.",
+     "en": "Danaë was safe at last. The king's plan had failed."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "columna",
+     "x": 300,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "columna",
+     "x": 1800,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "trono",
+     "x": 1450,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "polidectes",
+     "como": "rey_griego_oficial",
+     "x": 1450,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.3,
+       "hace": "alegra"
+      },
+      {
+       "en": 3.3,
+       "hace": "transforma",
+       "en_que": "estatua"
+      }
+     ],
+     "rotulo": "POLYDECTES"
+    },
+    {
+     "id": "perseo",
+     "como": "perseo_oficial",
+     "x": 450,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.3,
+       "hace": "camina",
+       "a": 800,
+       "dur": 0.8
+      },
+      {
+       "en": 2.8,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "danae",
+     "como": "mujer_griega_oficial",
+     "x": 150,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 3.8,
+       "hace": "aparece"
+      },
+      {
+       "en": 4.2,
+       "hace": "alegra"
+      }
+     ],
+     "rotulo": "DANAË"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 900
+    },
+    {
+     "en": 3.3,
+     "tipo": "polvo",
+     "x": 1450,
+     "dur": 0.8
+    }
+   ],
+   "rotulos": []
+  },
+  {
+   "id": "cierre",
+   "fondo": "templo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Perseo devolvió las sandalias, el casco y la espada a Hermes. No las necesitaba más.",
+     "en": "Perseus gave the sandals, the helmet, and the sword back to Hermes. He did not need them anymore."
+    },
+    {
+     "es": "La cabeza de Medusa se la dio a Atenea. Ella la puso en su escudo, y allí sigue.",
+     "en": "He gave Medusa's head to Athena. She set it on her shield, and it stays there still."
+    },
+    {
+     "es": "Por eso se ve la cara de una Gorgona en el escudo de Atenea.",
+     "en": "That is why a Gorgon's face is on Athena's shield."
+    },
+    {
+     "es": "¿Era Medusa un monstruo, o una víctima? Cuéntanos qué piensas en los comentarios.",
+     "en": "Was Medusa a monster, or a victim? Tell us what you think in the comments."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "templo",
+     "x": 1500,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "altar",
+     "x": 900,
+     "s": 1
+    }
+   ],
+   "actores": [
+    {
+     "id": "perseo",
+     "como": "perseo_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.5,
+       "hace": "ofrece"
+      },
+      {
+       "en": 1.5,
+       "hace": "ofrece"
+      },
+      {
+       "en": 3,
+       "hace": "calla"
+      }
+     ]
+    },
+    {
+     "id": "hermes",
+     "como": "hermes_oficial",
+     "x": 1000,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.4,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 0.8,
+       "hace": "asiente"
+      },
+      {
+       "en": 2,
+       "hace": "desaparece",
+       "con": "luz"
+      }
+     ]
+    },
+    {
+     "id": "atenea",
+     "como": "atenea_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1.4,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 1.8,
+       "hace": "toma",
+       "objeto": "escudo"
+      },
+      {
+       "en": 2.6,
+       "hace": "brilla"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2.2,
+     "tipo": "destello",
+     "x": 1400
+    }
+   ],
+   "rotulos": []
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "Tres hermanas, un solo ojo",
+    "en": "Three Sisters, One Eye"
+   },
+   "escena": "grayas",
+   "desde": 1,
+   "hasta": 4,
+   "foco": 1250
+  },
+  {
+   "gancho": {
+    "es": "Mirar a Medusa es morir",
+    "en": "Never Look Medusa in the Eyes"
+   },
+   "escena": "reflejo",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 800
+  },
+  {
+   "gancho": {
+    "es": "De la sangre de Medusa nació un caballo",
+    "en": "The Winged Horse Born From Medusa"
+   },
+   "escena": "pegaso",
+   "desde": 0,
+   "hasta": 2,
+   "foco": 1200
+  }
+ ]
+}
