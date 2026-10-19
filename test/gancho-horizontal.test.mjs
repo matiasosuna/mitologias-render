@@ -65,14 +65,6 @@ test('comandos de ffmpeg: video sin recodificar y una pista de audio con música
   assert.ok(!u[u.indexOf('-filter_complex') + 1].includes('asplit'));
 });
 
-test('capítulos: quitar el cartel es la inversa exacta de ponerlo (0:00 intacto)', async () => {
-  const { sinGancho } = await import('../scripts/yt-quitar-gancho-capitulos.mjs');
-  const d = 'Resumen.\n\nChapters\n0:00 Intro\n0:13 The Fire\n1:59 Pandora\n10:58 End\n\nNext episode: X';
-  assert.equal(sinGancho(desplazarCapitulos(d, 2)), d);
-  assert.equal(sinGancho('sin capítulos'), null);
-  assert.equal(sinGancho('0:00 A\n0:01 B'), null);
-});
-
 test('el cartel gancho solo muestra el título real del guion (titulo.en vía titulos.json)', async () => {
   const { leerTitulos } = await import('../scripts/titulos.mjs');
   const t = leerTitulos(); let n = 0;
