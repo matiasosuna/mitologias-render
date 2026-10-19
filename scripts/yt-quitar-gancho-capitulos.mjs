@@ -1,7 +1,7 @@
 // Puntual (2026-10-18): se recortaron los primeros 2 s (cartel gancho viejo) de 7 videos en Studio; sus capítulos "m:ss Título" estaban +2 s.
 // Lee el snippet (videos.list, 1 u) y actualiza SOLO la descripción (videos.update, 50 u), con los capítulos corridos -2 s (0:00 queda).
 // Uso: node scripts/yt-quitar-gancho-capitulos.mjs --probar   (solo lee y muestra)   |   sin flag: escribe UNA vez.
-import { api } from './youtube-api.mjs';
+const api = (...a) => import('./youtube-api.mjs').then((m) => m.api(...a)); // diferido: los tests importan sin .env
 import { desplazarCapitulos, SEG_GANCHO } from './gancho-horizontal.mjs';
 
 export const VIDEOS = ['v_0_mEqKLFo', 'pNB1WvfaViI', 'rq8rXNz82QM', '78S8YsbcYpE', 'DtjalpWQz0g', 'TnW2UvWFXCY', 'SRzDUafgyYQ'];

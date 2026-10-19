@@ -1,7 +1,7 @@
 // Puntual (2026-10-18): se recortaron en Studio los primeros 4 s (cartel de portada viejo) de 31 videos; sus capítulos "m:ss Título" quedaron +4 s.
 // Lee el snippet (videos.list, 1 u) y actualiza SOLO la descripción (videos.update, 50 u), con los capítulos corridos -4 s (0:00 queda).
 // Uso: node scripts/yt-quitar-portada-capitulos.mjs --probar   (solo lee y muestra)   |   sin flag: escribe UNA vez.
-import { api } from './youtube-api.mjs';
+const api = (...a) => import('./youtube-api.mjs').then((m) => m.api(...a)); // diferido: los tests importan sin .env
 import { desplazarCapitulos } from './gancho-horizontal.mjs';
 
 export const SEG_PORTADA = 4;

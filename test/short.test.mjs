@@ -16,6 +16,8 @@ const COLD = { fondo: 'batalla', frases: [{ es: 'Liberó a los monstruos.', en: 
 const QUIEN = { nombre: { es: 'Zeus', en: 'Zeus' }, subtitulo: { es: 'x', en: 'y' }, como: 'zeus_oficial' };
 const historia = [{ id: 'a', frases: [{ es: 'a', en: 'One.' }, { es: 'b', en: 'Two.' }] }, { id: 'b', frases: [{ es: 'c', en: 'Three.' }] }];
 
+const hayFfmpeg = (() => { try { execFileSync('ffmpeg', ['-version'], { stdio: 'ignore' }); return true; } catch { return false; } })();
+
 test('ritmo de Shorts: 0,12 s entre frases, ~0,35 s entre escenas, cartel final 1,5 s; episodios sin cambios', () => {
   assert.equal(T_SHORT.pausa, 0.12);
   assert.ok(Math.abs(T_SHORT.salida + T_SHORT.entrada - 0.35) < 1e-9);
@@ -49,7 +51,7 @@ test('re-narrar re-estira solo la diferencia (el caché por texto no sabe de tem
   assert.match(filtroAudio({ atempo: null, recortar: true }), /^silenceremove=.*,areverse,silenceremove=.*,areverse$/);
 });
 
-test('ralentizar de verdad (ffmpeg): episodio 0,9 → Short 1,1 sin silencios, y una segunda vez no toca nada', async () => {
+test('ralentizar de verdad (ffmpeg): episodio 0,9 → Short 1,1 sin silencios, y una segunda vez no toca nada', { skip: !hayFfmpeg && 'sin ffmpeg' }, async () => {
   const tmp = mkdtempSync(join(tmpdir(), 'moc-short-'));
   try {
     process.chdir(tmp);
