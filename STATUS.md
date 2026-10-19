@@ -1,14 +1,14 @@
 # Myths on Clay — estado
-_Actualizado 2026-10-18 20:28 UTC_
+_Actualizado 2026-10-19 01:50 UTC_
 
 ## Resumen
 | Qué | Estado |
 | --- | --- |
-| publicar | desactivado |
-| Última corrida de publicar | success · 2026-10-18 20:07 UTC |
-| Último turno registrado | 2026-10-18T18Z |
-| Próximos de la cola | nordicas-06-muralla<br>nordicas-07-tesoros<br>nordicas-08-hijos-loki<br>nordicas-09-thor-gigantes<br>nordicas-10-muerte-baldr |
-| "Who is…?" listos | 5 (5 sin publicar en alguna red) |
+| publicar | activado |
+| Última corrida de publicar | failure · 2026-10-19 01:07 UTC |
+| Último turno registrado | 2026-10-18T22Z |
+| Próximos de la cola | nordicas-08-hijos-loki<br>nordicas-09-thor-gigantes<br>nordicas-10-muerte-baldr<br>nordicas-11-loki-atado<br>nordicas-12-ragnarok |
+| "Who is…?" listos | 5 (4 sin publicar en alguna red) |
 
 ## Temporadas
 | Mitología | Temporada | Episodios | YouTube | Instagram |
@@ -16,7 +16,7 @@ _Actualizado 2026-10-18 20:28 UTC_
 | Griegas | Especial Lords of the Dead | 1 | 1 | 1 |
 | Griegas | Especial The Odyssey | 2 | 0 | 0 |
 | Griegas | T1 | 7 | 7 | 7 |
-| Griegas | T2 | 10 | 9 | 1 |
+| Griegas | T2 | 10 | 9 | 5 |
 | Nórdicas | Especial Lords of the Dead | 1 | 1 | 1 |
 | Nórdicas | T1 | 13 | 13 | 13 |
 | Nórdicas | T2 | 8 | 2 | 0 |
@@ -35,6 +35,6 @@ _Actualizado 2026-10-18 20:28 UTC_
 ## Métricas
 | Red | Métricas |
 | --- | --- |
-| YouTube | 22 suscriptores · 5883 vistas · 75 videos |
-| Instagram | 44 seguidores · 347 likes · 17.968 vistas (28 días) |
+| YouTube | 23 suscriptores · 5883 vistas · 75 videos |
+| Instagram | 46 seguidores · 384 likes · 18.974 vistas (28 días) |
 | TikTok | sin API |
