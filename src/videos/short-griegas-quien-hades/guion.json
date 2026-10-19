@@ -1,0 +1,734 @@
+{
+  "id": "short-griegas-quien-hades",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Hades? El rey de los muertos",
+    "en": "Who is Hades? The king of the dead"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Hades? El rey de los muertos",
+    "en": "Who is Hades? The king of the dead"
+  },
+  "cierre": {
+    "es": "Antes de reinar sobre los muertos, un titán se lo tragó entero — Mitología griega T1E1",
+    "en": "Before he ruled the dead, a Titan swallowed him whole — Greek Mythology S1E1"
+  },
+  "episodio": "griegas-01-origen",
+  "quien": {
+    "nombre": {
+      "es": "Hades",
+      "en": "Hades"
+    },
+    "subtitulo": {
+      "es": "Rey de los muertos · señor del inframundo",
+      "en": "King of the dead · lord of the underworld"
+    },
+    "como": "hades_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "inframundo",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "Gobierna a cada alma que murió alguna vez.",
+        "en": "He rules every soul that ever died."
+      },
+      {
+        "es": "Y tiene un casco que lo vuelve invisible.",
+        "en": "And he owns a helmet that makes him invisible."
+      }
+    ],
+    "efectos": [
+      {
+        "en": 0.3,
+        "tipo": "niebla"
+      },
+      {
+        "en": 1.2,
+        "tipo": "oscurecer",
+        "intensidad": 0.3,
+        "dur": 1
+      }
+    ],
+    "actores": [
+      {
+        "id": "hades",
+        "como": "hades_oficial",
+        "x": 800,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "aparece",
+            "con": "sombra"
+          },
+          {
+            "en": 0.5,
+            "hace": "senala"
+          },
+          {
+            "en": 1.3,
+            "hace": "brilla"
+          }
+        ]
+      },
+      {
+        "id": "cerbero",
+        "como": "cerbero_oficial",
+        "x": 1230,
+        "mira": "izq",
+        "escala": 0.7,
+        "rotulo": "CERBERUS",
+        "pasos": [
+          {
+            "en": 0.2,
+            "hace": "aparece",
+            "con": "sombra"
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "inframundo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Hades es el señor del inframundo, el reino de los muertos.",
+          "en": "Hades is lord of the underworld, the kingdom of the dead."
+        },
+        {
+          "es": "No es la Muerte misma. Es el rey que mantiene el orden allí.",
+          "en": "He is not Death itself. He is the king who keeps order there."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "REY DE LOS MUERTOS",
+            "en": "KING OF THE DEAD"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 0.4,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "muerte",
+          "como": "muerte_oficial",
+          "x": 1210,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "THANATOS",
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "aparece",
+              "con": "sombra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origen",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es hijo de los titanes Cronos y Rea.",
+          "en": "He is a son of the Titans Cronus and Rhea."
+        },
+        {
+          "es": "Su padre se lo tragó al nacer, junto a casi todos sus hermanos.",
+          "en": "His father swallowed him at birth, along with most of his siblings."
+        }
+      ],
+      "actores": [
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 740,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.8,
+              "hace": "senala"
+            },
+            {
+              "en": 1.2,
+              "hace": "toma"
+            }
+          ]
+        },
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "entristece"
+            },
+            {
+              "en": 1.8,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "familia",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus hermanos son Hestia, Deméter, Hera, Poseidón y Zeus.",
+          "en": "His siblings are Hestia, Demeter, Hera, Poseidon and Zeus."
+        },
+        {
+          "es": "Zeus lo liberó, y empezó la guerra contra los titanes.",
+          "en": "Zeus freed him, and the war against the Titans began."
+        }
+      ],
+      "actores": [
+        {
+          "id": "poseidon",
+          "como": "poseidon_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.9,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "casco",
+      "fondo": "batalla",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "En esa guerra, los cíclopes le regalaron un casco de invisibilidad.",
+          "en": "In that war, the Cyclopes gave him a helmet of invisibility."
+        },
+        {
+          "es": "Con él puesto, nadie podía verlo.",
+          "en": "With it on, nobody could see him."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "destello",
+          "x": 760,
+          "y": 430,
+          "dur": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "ciclope",
+          "como": "ciclope_oficial",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "CYCLOPS",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 1200
+            },
+            {
+              "en": 0.6,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 740,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "toma"
+            },
+            {
+              "en": 1.1,
+              "hace": "brilla"
+            },
+            {
+              "en": 1.5,
+              "hace": "desaparece",
+              "con": "sombra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suertes",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Al ganar, los tres hermanos sortearon el mundo.",
+          "en": "After winning, the three brothers drew lots for the world."
+        },
+        {
+          "es": "Zeus ganó el cielo. Poseidón, el mar. Hades, a los muertos.",
+          "en": "Zeus won the sky. Poseidon won the sea. Hades won the dead."
+        }
+      ],
+      "actores": [
+        {
+          "id": "poseidon",
+          "como": "poseidon_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "toma"
+            },
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.5,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reino",
+      "fondo": "inframundo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su reino está muy abajo, con una puerta que cuida Cerbero, un perro de tres cabezas.",
+          "en": "His kingdom lies far below, its gate guarded by Cerberus, a three-headed dog."
+        },
+        {
+          "es": "El perro deja entrar a todas las almas, y no deja salir a ninguna.",
+          "en": "The dog lets every soul in, and none out."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla"
+        },
+        {
+          "en": 1.2,
+          "tipo": "temblor",
+          "dur": 0.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 740,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 1.3,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "cerbero",
+          "como": "cerbero_oficial",
+          "x": 1210,
+          "mira": "izq",
+          "escala": 0.75,
+          "rotulo": "CERBERUS",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 1.2,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reina",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su reina es Perséfone, la hija de Deméter.",
+          "en": "His queen is Persephone, the daughter of Demeter."
+        },
+        {
+          "es": "Gobierna a su lado durante parte de cada año.",
+          "en": "She rules beside him for part of every year."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "luz",
+          "x": 1190
+        }
+      ],
+      "actores": [
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 740,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 0.5,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "persefone",
+          "como": "persefone_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "inframundo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus símbolos: el bidente, el casco, los cipreses y Cerbero.",
+          "en": "His symbols: the bident, the helmet, cypress trees and Cerberus."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cipres",
+          "x": 1180,
+          "s": 1.1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "BIDENTE",
+            "en": "BIDENT"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.45
+        },
+        {
+          "en": 0.45,
+          "texto": {
+            "es": "CASCO",
+            "en": "HELMET"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.72
+        },
+        {
+          "en": 0.72,
+          "texto": {
+            "es": "CERBERO",
+            "en": "CERBERUS"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.9,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caracter",
+      "fondo": "inframundo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es sombrío y justo, y casi nunca sale de su reino.",
+          "en": "He is grim and fair, and he almost never leaves his kingdom."
+        },
+        {
+          "es": "Pero es terco: casi ningún alma se le escapa.",
+          "en": "But he is stubborn: almost no soul ever escapes him."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "neutral"
+            },
+            {
+              "en": 0.5,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.3,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "muerte",
+          "como": "muerte_oficial",
+          "x": 1210,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "THANATOS",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece",
+              "con": "sombra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "El bebé tragado terminó como rey de los muertos.",
+          "en": "The swallowed baby ended up as king of the dead."
+        },
+        {
+          "es": "Mira cómo empezó todo en la temporada 1, episodio 1.",
+          "en": "See how it all began in Season 1, Episode 1."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 0.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

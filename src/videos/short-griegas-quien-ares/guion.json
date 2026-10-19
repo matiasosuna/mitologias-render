@@ -1,0 +1,642 @@
+{
+  "id": "short-griegas-quien-ares",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Ares? El hijo odiado de Zeus",
+    "en": "Who is Ares? Zeus's hated son"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Ares? El hijo odiado de Zeus",
+    "en": "Who is Ares? Zeus's hated son"
+  },
+  "cierre": {
+    "es": "El poderoso dios de la guerra cayó en la red de un herrero — Mitología griega T2E5",
+    "en": "The mighty god of war was caught in a smith's net — Greek Mythology S2E5"
+  },
+  "episodio": "griegas-12-red-de-hefesto",
+  "quien": {
+    "nombre": {
+      "es": "Ares",
+      "en": "Ares"
+    },
+    "subtitulo": {
+      "es": "Dios de la guerra · fiero y violento",
+      "en": "God of war · wild and hot-tempered"
+    },
+    "como": "ares_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "batalla",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "En la Ilíada, Zeus llama a su propio hijo el más odioso de los dioses.",
+        "en": "In the Iliad, Zeus calls his own son the most hateful of the gods."
+      }
+    ],
+    "efectos": [
+      {
+        "en": 0.3,
+        "tipo": "rayo",
+        "x": 1150
+      },
+      {
+        "en": 0.9,
+        "tipo": "oscurecer",
+        "intensidad": 0.3,
+        "dur": 1
+      }
+    ],
+    "actores": [
+      {
+        "id": "ares",
+        "como": "ares_oficial",
+        "x": 740,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "aparece",
+            "con": "fuego"
+          },
+          {
+            "en": 0.4,
+            "hace": "enoja"
+          },
+          {
+            "en": 0.8,
+            "hace": "levanta"
+          }
+        ]
+      },
+      {
+        "id": "zeus",
+        "como": "zeus_oficial",
+        "x": 1200,
+        "mira": "izq",
+        "escala": 0.9,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0.3,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.6,
+            "hace": "enoja"
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "batalla",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Ares es el dios de la guerra: su furia, su ruido y su terror.",
+          "en": "Ares is the god of war: its fury, its noise and its terror."
+        },
+        {
+          "es": "Donde hay batalla, él disfruta.",
+          "en": "Where there is battle, he enjoys it."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "GUERRA",
+            "en": "WAR"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "ares",
+          "como": "ares_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 0.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.2,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "guerrero",
+          "como": "guerrero_griego_oficial",
+          "x": 1220,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "entra",
+              "a": 1190
+            },
+            {
+              "en": 1.3,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "familia",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es hijo de Zeus y de Hera.",
+          "en": "He is the son of Zeus and Hera."
+        },
+        {
+          "es": "Sus hermanas son Hebe y Ilitia, la diosa de los partos.",
+          "en": "His sisters are Hebe and Eileithyia, goddess of childbirth."
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.6,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "como": "hera_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.8,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "ares",
+          "como": "ares_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 1.1,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "amor",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su gran amor es Afrodita, aunque ella está casada con Hefesto.",
+          "en": "His great love is Aphrodite, even though she is married to Hephaestus."
+        },
+        {
+          "es": "Juntos tuvieron a Fobos y Deimos, el Miedo y el Terror.",
+          "en": "Together they had Phobos and Deimos, Fear and Terror."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ares",
+          "como": "ares_oficial",
+          "x": 740,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "afrodita",
+          "como": "afrodita_oficial",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "abraza"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hijos",
+      "fondo": "batalla",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Esos hijos cabalgan a su lado hacia las batallas.",
+          "en": "Those sons ride beside him into battle."
+        },
+        {
+          "es": "Cuando Ares llega, hasta los soldados tiemblan.",
+          "en": "When Ares arrives, even soldiers tremble."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "polvo",
+          "x": 1000
+        },
+        {
+          "en": 1.2,
+          "tipo": "temblor",
+          "dur": 0.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "ares",
+          "como": "ares_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "corre",
+              "a": 860
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "guerrero",
+          "como": "guerrero_griego_2_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "entra",
+              "a": 1200
+            },
+            {
+              "en": 1.2,
+              "hace": "tiembla"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "derrota",
+      "fondo": "batalla",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero es más bravucón que valiente.",
+          "en": "But he is more bully than brave."
+        },
+        {
+          "es": "En Troya, Atenea, la diosa de la estrategia, lo derrotó, y él huyó llorando al Olimpo.",
+          "en": "At Troy, Athena, goddess of strategy, beat him, and he fled crying to Olympus."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ares",
+          "como": "ares_oficial",
+          "x": 740,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.9,
+              "hace": "cae"
+            },
+            {
+              "en": 1.4,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "atenea",
+          "como": "atenea_oficial",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.9,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "red",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "La red de Hefesto lo atrapó con Afrodita, y todos los dioses rieron.",
+          "en": "Hephaestus' net caught him with Aphrodite, and all the gods laughed."
+        },
+        {
+          "es": "Huyó a Tracia, su tierra salvaje de guerreros.",
+          "en": "He ran off to Thrace, his wild land of warriors."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.1,
+          "tipo": "destello",
+          "x": 780,
+          "y": 420,
+          "dur": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "ares",
+          "como": "ares_oficial",
+          "x": 740,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.6,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.3,
+              "hace": "corre",
+              "a": 640
+            }
+          ]
+        },
+        {
+          "id": "hefesto",
+          "como": "hefesto_oficial",
+          "x": 1220,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "batalla",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus símbolos: la lanza, el casco y el escudo de bronce.",
+          "en": "His symbols: the spear, the helmet and the bronze shield."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "LANZA",
+            "en": "SPEAR"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.45
+        },
+        {
+          "en": 0.45,
+          "texto": {
+            "es": "CASCO",
+            "en": "HELMET"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.72
+        },
+        {
+          "en": 0.72,
+          "texto": {
+            "es": "ESCUDO",
+            "en": "SHIELD"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "ares",
+          "como": "ares_oficial",
+          "x": 840,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.9,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caracter",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es fuerte, valiente y no teme a nadie.",
+          "en": "He is strong, brave and fears no one."
+        },
+        {
+          "es": "Pero es cruel, de mal genio y ni sus padres lo quieren.",
+          "en": "But he is cruel, short-tempered, and not even his parents like him."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ares",
+          "como": "ares_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "como": "hera_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "niega"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "El dios más temido de la guerra perdió contra una red de herrero.",
+          "en": "The most feared god of war lost to a smith's net."
+        },
+        {
+          "es": "Mira cómo en la temporada 2, episodio 5.",
+          "en": "See how in Season 2, Episode 5."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "ares",
+          "como": "ares_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 0.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

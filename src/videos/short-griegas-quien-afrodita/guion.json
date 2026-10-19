@@ -1,0 +1,607 @@
+{
+  "id": "short-griegas-quien-afrodita",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Afrodita? Nació de la espuma",
+    "en": "Who is Aphrodite? Born from sea foam"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Afrodita? Nació de la espuma",
+    "en": "Who is Aphrodite? Born from sea foam"
+  },
+  "cierre": {
+    "es": "Una red invisible, una diosa atrapada y un Olimpo entero riendo — Mitología griega T2E5",
+    "en": "A hidden net, a trapped goddess and a whole Olympus laughing — Greek Mythology S2E5"
+  },
+  "episodio": "griegas-12-red-de-hefesto",
+  "quien": {
+    "nombre": {
+      "es": "Afrodita",
+      "en": "Aphrodite"
+    },
+    "subtitulo": {
+      "es": "Diosa del amor · nacida de la espuma",
+      "en": "Goddess of love · born of the sea foam"
+    },
+    "como": "afrodita_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "costa",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "No nació como los demás dioses.",
+        "en": "She was not born like the other gods."
+      },
+      {
+        "es": "Salió del mar, hecha de espuma, ya adulta.",
+        "en": "She rose from the sea, made of foam, already grown."
+      }
+    ],
+    "efectos": [
+      {
+        "en": 0.2,
+        "tipo": "olas-suben"
+      },
+      {
+        "en": 1.2,
+        "tipo": "destello",
+        "x": 800,
+        "y": 430,
+        "dur": 0.4
+      }
+    ],
+    "actores": [
+      {
+        "id": "afrodita",
+        "como": "afrodita_oficial",
+        "x": 840,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.6,
+            "hace": "alegra"
+          },
+          {
+            "en": 1.3,
+            "hace": "brilla"
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "costa",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es la diosa del amor y de la belleza.",
+          "en": "She is the goddess of love and beauty."
+        },
+        {
+          "es": "Hasta dioses y mortales caen bajo su encanto.",
+          "en": "Even gods and mortals fall under her charm."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "AMOR · BELLEZA",
+            "en": "LOVE · BEAUTY"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "afrodita",
+          "como": "afrodita_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "joven",
+          "como": "joven_griego_oficial",
+          "x": 1220,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "entra",
+              "a": 1190
+            },
+            {
+              "en": 1.3,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origen",
+      "fondo": "mar",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Hesíodo dice que surgió de la espuma, cerca de Chipre.",
+          "en": "Hesiod says she rose from the foam, near Cyprus."
+        },
+        {
+          "es": "Homero cuenta otra: la hija de Zeus y de la diosa Dione.",
+          "en": "Homer tells another: the daughter of Zeus and the goddess Dione."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "olas-suben"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "VERSIÓN DE HOMERO",
+            "en": "HOMER'S VERSION"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "afrodita",
+          "como": "afrodita_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "agua"
+            },
+            {
+              "en": 0.5,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "marido",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su esposo es Hefesto, el dios herrero.",
+          "en": "Her husband is Hephaestus, the smith god."
+        },
+        {
+          "es": "Pero su corazón es de Ares, el dios de la guerra.",
+          "en": "But her heart belongs to Ares, the god of war."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "como": "hefesto_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.8,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "afrodita",
+          "como": "afrodita_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "neutral"
+            },
+            {
+              "en": 1.1,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "ares",
+          "como": "ares_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hijos",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Con Ares tuvo a Fobos y Deimos, el Miedo y el Terror, y a Armonía.",
+          "en": "With Ares she had Phobos and Deimos, Fear and Terror, and Harmonia."
+        },
+        {
+          "es": "Poetas posteriores llaman a Eros, el dios alado del amor, su hijo.",
+          "en": "Later poets call Eros, the winged god of love, her son."
+        }
+      ],
+      "actores": [
+        {
+          "id": "afrodita",
+          "como": "afrodita_oficial",
+          "x": 740,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "abraza"
+            },
+            {
+              "en": 1.1,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "eros",
+          "como": "eros_oficial",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "red",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Una vez, Hefesto los atrapó a los dos con una red irrompible.",
+          "en": "Once, Hephaestus trapped the two of them in an unbreakable net."
+        },
+        {
+          "es": "Todos los dioses se rieron, y ella huyó a su templo en Pafos.",
+          "en": "All the gods laughed, and she fled to her temple in Paphos."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "destello",
+          "x": 830,
+          "y": 420,
+          "dur": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "afrodita",
+          "como": "afrodita_oficial",
+          "x": 700,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.5,
+              "hace": "tiembla"
+            },
+            {
+              "en": 1.3,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "ares",
+          "como": "ares_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.6,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "hefesto",
+          "como": "hefesto_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "costa",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus símbolos: la paloma, la rosa, la concha y un cinturón dorado mágico.",
+          "en": "Her symbols: the dove, the rose, the shell and a magic golden belt."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "PALOMA",
+            "en": "DOVE"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.45
+        },
+        {
+          "en": 0.45,
+          "texto": {
+            "es": "ROSA",
+            "en": "ROSE"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.72
+        },
+        {
+          "en": 0.72,
+          "texto": {
+            "es": "CONCHA",
+            "en": "SHELL"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "afrodita",
+          "como": "afrodita_oficial",
+          "x": 780,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.9,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "paloma",
+          "como": "paloma_griega_oficial",
+          "x": 1180,
+          "mira": "izq",
+          "escala": 1,
+          "rotulo": "DOVE",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caracter",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es encantadora y ayuda a los enamorados a encontrarse.",
+          "en": "She is charming and helps lovers find each other."
+        },
+        {
+          "es": "Pero es vanidosa y celosa, y castiga a quien la insulta.",
+          "en": "But she is vain and jealous, and punishes anyone who insults her."
+        }
+      ],
+      "actores": [
+        {
+          "id": "afrodita",
+          "como": "afrodita_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.9,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.3,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "ninfa",
+          "como": "ninfa_oficial",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "La diosa nacida de la espuma encanta a todos… menos a un herrero astuto.",
+          "en": "The foam-born goddess charms everyone… except one clever smith."
+        },
+        {
+          "es": "Mira la red en la temporada 2, episodio 5.",
+          "en": "See the net trap in Season 2, Episode 5."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "afrodita",
+          "como": "afrodita_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

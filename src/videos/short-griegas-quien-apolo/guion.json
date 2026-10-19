@@ -1,0 +1,678 @@
+{
+  "id": "short-griegas-quien-apolo",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Apolo? El arquero dorado",
+    "en": "Who is Apollo? The golden archer"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Apolo? El arquero dorado",
+    "en": "Who is Apollo? The golden archer"
+  },
+  "cierre": {
+    "es": "Una serpiente gigante guardaba el monte — y Apolo llegó con su arco — Mitología griega T2E7",
+    "en": "A giant serpent guarded the mountain — and Apollo came with his bow — Greek Mythology S2E7"
+  },
+  "episodio": "griegas-14-apolo-piton",
+  "quien": {
+    "nombre": {
+      "es": "Apolo",
+      "en": "Apollo"
+    },
+    "subtitulo": {
+      "es": "Dios de la música, la profecía y la curación",
+      "en": "God of music, prophecy and healing"
+    },
+    "como": "apolo_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "monte",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "Disparó mil flechas contra una serpiente gigante.",
+        "en": "He shot a thousand arrows at a giant serpent."
+      },
+      {
+        "es": "Después levantó el oráculo más famoso del mundo.",
+        "en": "Then he built the most famous oracle in the world."
+      }
+    ],
+    "efectos": [
+      {
+        "en": 0.3,
+        "tipo": "destello",
+        "x": 1000,
+        "y": 400,
+        "dur": 0.3
+      },
+      {
+        "en": 1.3,
+        "tipo": "luz",
+        "x": 960
+      }
+    ],
+    "actores": [
+      {
+        "id": "apolo",
+        "como": "apolo_oficial",
+        "x": 740,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.3,
+            "hace": "senala"
+          },
+          {
+            "en": 1.3,
+            "hace": "alegra"
+          }
+        ]
+      },
+      {
+        "id": "piton",
+        "como": "piton_oficial",
+        "x": 1200,
+        "mira": "izq",
+        "escala": 0.7,
+        "rotulo": "PYTHON",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "aparece",
+            "con": "humo"
+          },
+          {
+            "en": 0.8,
+            "hace": "desaparece",
+            "con": "humo"
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "templo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es el dios de la música, la poesía, la profecía, la curación y el arco.",
+          "en": "He is the god of music, poetry, prophecy, healing and archery."
+        },
+        {
+          "es": "Su lira llena de calma hasta a los dioses.",
+          "en": "His lyre calms even the gods."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "MÚSICA · PROFECÍA",
+            "en": "MUSIC · PROPHECY"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "como": "apolo_oficial",
+          "x": 800,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.4,
+              "hace": "toma",
+              "objeto": "lira"
+            },
+            {
+              "en": 1.1,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "musa",
+          "como": "musa_oficial",
+          "x": 1220,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "familia",
+      "fondo": "costa",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es hijo de Zeus y de la titánide Leto.",
+          "en": "He is the son of Zeus and the Titan goddess Leto."
+        },
+        {
+          "es": "Nació en la isla flotante de Delos, junto a su hermana gemela Artemisa.",
+          "en": "He was born on the floating island of Delos, with his twin sister Artemis."
+        }
+      ],
+      "actores": [
+        {
+          "id": "leto",
+          "como": "leto_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "apolo",
+          "como": "apolo_oficial",
+          "x": 960,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "artemisa",
+          "como": "artemisa_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arco",
+      "fondo": "costa",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Creció en un instante y dijo: «La lira y el arco serán míos».",
+          "en": "He grew up in an instant and said: \"The lyre and the bow will be mine.\""
+        },
+        {
+          "es": "Así nació un joven dios, listo para todo.",
+          "en": "So a young god was born, ready for anything."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.8,
+          "tipo": "destello",
+          "x": 820,
+          "y": 430,
+          "dur": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "como": "apolo_oficial",
+          "x": 800,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.4,
+              "hace": "habla",
+              "dur": 0.5
+            },
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 1.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "piton",
+      "fondo": "monte",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "En el monte Parnaso, la serpiente Pitón guardaba una fuente.",
+          "en": "On Mount Parnassus, the serpent Python guarded a spring."
+        },
+        {
+          "es": "Apolo la derrotó con sus flechas y construyó allí su templo.",
+          "en": "Apollo beat it with his arrows and built his temple there."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.9,
+          "tipo": "destello",
+          "x": 1000,
+          "y": 430,
+          "dur": 0.3
+        }
+      ],
+      "actores": [
+        {
+          "id": "piton",
+          "como": "piton_oficial",
+          "x": 1150,
+          "mira": "izq",
+          "escala": 0.7,
+          "rotulo": "PYTHON",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "humo"
+            },
+            {
+              "en": 0.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.4,
+              "hace": "desaparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "apolo",
+          "como": "apolo_oficial",
+          "x": 740,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "senala"
+            },
+            {
+              "en": 0.9,
+              "hace": "lanza",
+              "objeto": "arco"
+            },
+            {
+              "en": 1.6,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delfos",
+      "fondo": "templo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Ese lugar es Delfos.",
+          "en": "That place is Delphi."
+        },
+        {
+          "es": "Allí, la Pitia respondía en nombre del dios a reyes y a campesinos.",
+          "en": "There, the Pythia answered in the god's name, for kings and farmers alike."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "DELFOS",
+            "en": "DELPHI"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "pitia",
+          "como": "pitia_oficial",
+          "x": 740,
+          "escala": 0.95,
+          "rotulo": "PYTHIA",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.8,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "como": "rey_griego_oficial",
+          "x": 1220,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "entra",
+              "a": 1190
+            },
+            {
+              "en": 1.3,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hijo",
+      "fondo": "templo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su hijo Asclepio se volvió un sanador tan grande que revivía muertos.",
+          "en": "His son Asclepius became a healer so great he could raise the dead."
+        },
+        {
+          "es": "Zeus no lo permitió.",
+          "en": "Zeus did not allow it."
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "como": "apolo_oficial",
+          "x": 740,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.8,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 1210,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "niega"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "bosque",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus símbolos: la lira, el arco de plata, el laurel y el delfín.",
+          "en": "His symbols: the lyre, the silver bow, the laurel and the dolphin."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "LIRA",
+            "en": "LYRE"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.4
+        },
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "ARCO",
+            "en": "BOW"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.6
+        },
+        {
+          "en": 0.6,
+          "texto": {
+            "es": "LAUREL",
+            "en": "LAUREL"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.8
+        },
+        {
+          "en": 0.8,
+          "texto": {
+            "es": "DELFÍN",
+            "en": "DOLPHIN"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "como": "apolo_oficial",
+          "x": 800,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.9,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "delfin",
+          "como": "delfin_griego_oficial",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "DOLPHIN",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "agua"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caracter",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es brillante, hermoso y trae luz, música y curación.",
+          "en": "He is brilliant, beautiful and brings light, music and healing."
+        },
+        {
+          "es": "Pero es orgulloso, y castiga a quien lo ofende.",
+          "en": "But he is proud, and he punishes anyone who offends him."
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "como": "apolo_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.1,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.8,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.3,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "hombre_griego_oficial",
+          "x": 1210,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "monte",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "El dios recién nacido con una lira se volvió la voz de Delfos.",
+          "en": "The newborn god with a lyre became the voice of Delphi."
+        },
+        {
+          "es": "Mira cómo venció a la serpiente en la temporada 2, episodio 7.",
+          "en": "See how he beat the serpent in Season 2, Episode 7."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "apolo",
+          "como": "apolo_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
