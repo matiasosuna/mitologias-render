@@ -16,6 +16,8 @@
 // su Short (horizontalTurno). Parejo en YouTube: por día 1 episodio + 2 "Who is…?" Shorts + 2 "Who is…?" horizontales.
 
 export const PLATAFORMAS = ['youtube', 'instagram', 'tiktok'];
+/** Las que marcan el ritmo; TikTok las sigue sin frenarlas. */
+export const PRINCIPALES = ['youtube', 'instagram'];
 export const FORMATOS = {
   episodio: { youtube: 'horizontal', instagram: 'partes', tiktok: 'vertical' },
   short: { youtube: 'short', instagram: 'short', tiktok: 'short' },
@@ -39,8 +41,8 @@ export function clase(horaUTC) {
 }
 
 // Tope por turno mientras alcanzan (episodios) y topes por 24 h (publicaciones; en Instagram cuenta cada parte).
-export const MAX_ALCANZAR = { youtube: 2, instagram: 4, tiktok: 4 };
-export const MAX_TIKTOK_FRENADO = 2; // si TikTok/Buffer rechaza o limita: 2 por turno (24 h, después se vuelve a probar 4)
+export const MAX_ALCANZAR = { youtube: 2, instagram: 4, tiktok: 1 }; // TikTok de a 1: con 4 por turno TikTok frenó la cuenta 24 h (2026-10-19)
+export const MAX_TIKTOK_FRENADO = 1; // si TikTok/Buffer rechaza o limita: 1 por turno
 export const TOPE_24H = { youtube: 9, instagram: 90, tiktok: 30 }; // IG: content_publishing_limit = 100
 export const TOPE_COLA_BUFFER = 10;
 
@@ -151,10 +153,13 @@ export function planTurno({ cola, tiene, plataforma, clase: c, listo = () => tru
     const q = cola.find((e) => e.tipo === 'short' && listo(e.id) && PLATAFORMAS.some((p) => !antes(p)(e.id)));
     if (q && !ahora(q.id)) ids.push(q.id);
   }
-  if (!parejo) {
+  // YouTube e Instagram marcan el ritmo entre ellas; TikTok alcanza por su cuenta y nunca las frena (2026-10-20)
+  const grupo = plataforma === 'tiktok' ? PLATAFORMAS : PRINCIPALES;
+  const liderG = Math.max(...grupo.map((p) => punteros[p])), parejoG = grupo.every((p) => punteros[p] === liderG);
+  if (!parejoG) {
     // alcanzar: solo las atrasadas, hasta `max` de lo que les falta antes del puntero de la que va adelante
-    if (punteros[plataforma] < lider) ids.push(...eps.slice(0, lider).filter((e) => !antes(plataforma)(e.id)).slice(0, max).map((e) => e.id).filter((id) => !ahora(id)));
-  } else if (c === 'episodio' && lider < eps.length && !ahora(eps[lider].id)) ids.push(eps[lider].id);
+    if (punteros[plataforma] < liderG) ids.push(...eps.slice(0, liderG).filter((e) => !antes(plataforma)(e.id)).slice(0, max).map((e) => e.id).filter((id) => !ahora(id)));
+  } else if (c === 'episodio' && liderG < eps.length && !ahora(eps[liderG].id)) ids.push(eps[liderG].id);
   return { ids, parejo, punteros, lider };
 }
 

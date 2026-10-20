@@ -133,23 +133,23 @@ test('puntero por plataforma y la que va adelante', () => {
   assert.equal(estadoCola({ cola: COLA, tiene: { ...tiene, instagram: mapa(['e1', 'e3']) }, inicio: INICIO }).punteros.instagram, 1);
 });
 
-test('alcanzar: YouTube (adelante) NO publica episodios; IG y TikTok hasta 4 por turno, en orden, sin pasarse', () => {
+test('alcanzar: YouTube (adelante) NO publica episodios; IG hasta 4 por turno, TikTok de a 1, en orden, sin pasarse', () => {
   const tiene = { youtube: mapa(['e1', 'e2', 'e3', 'e4', 'e5', 'e6']), instagram: mapa(['e1', 'e2', 'e3']), tiktok: mapa([]) };
   for (const c of ['alcanzar', 'episodio']) {
     assert.deepEqual(plan(tiene, 'youtube', c), []);
     assert.deepEqual(plan(tiene, 'instagram', c), ['e4', 'e5', 'e6']); // le faltan 3: no se adelanta a YouTube
-    assert.deepEqual(plan(tiene, 'tiktok', c), ['e1', 'e2', 'e3', 'e4']);
+    assert.deepEqual(plan(tiene, 'tiktok', c), ['e1']);
   }
   assert.deepEqual(plan(tiene, 'tiktok', 'alcanzar', { max: 2 }), ['e1', 'e2']); // TikTok frenado
   assert.equal(MAX_ALCANZAR.instagram, 4);
-  assert.equal(MAX_ALCANZAR.tiktok, 4);
+  assert.equal(MAX_ALCANZAR.tiktok, 1);
 });
 
 test('alcanzar: los "Who is…?" salen igual, a las tres juntas, antes que los episodios', () => {
   const tiene = { youtube: mapa(['e1', 'e2', 'e3', 'e4', 'e5', 'e6']), instagram: mapa(['e1']), tiktok: mapa([]) };
   assert.deepEqual(plan(tiene, 'youtube', 'quien'), ['short-q1']);
   assert.deepEqual(plan(tiene, 'instagram', 'quien'), ['short-q1', 'e2', 'e3', 'e4', 'e5']);
-  assert.deepEqual(plan(tiene, 'tiktok', 'quien'), ['short-q1', 'e1', 'e2', 'e3', 'e4']);
+  assert.deepEqual(plan(tiene, 'tiktok', 'quien'), ['short-q1', 'e1']);
 });
 
 test('parejo: 1 episodio el mismo a las tres en el turno de las 08; "Who is…?" a las 12 y 20; nada en los demás', () => {
@@ -190,11 +190,18 @@ test('lo que no está listo no frena: se salta', () => {
   assert.deepEqual(planTurno({ cola: COLA, tiene, plataforma: 'tiktok', clase: 'quien', inicio: INICIO, listo: (id) => id !== 'short-q1' }).ids, ['short-q2']);
 });
 
-test('una plataforma que falló un turno queda atrás y alcanza; las demás esperan', () => {
+test('TikTok atrasado alcanza solo y NO frena a YouTube e Instagram (siguen con su episodio)', () => {
   const tiene = { youtube: mapa(['e1', 'e2']), instagram: mapa(['e1', 'e2']), tiktok: mapa(['e1']) };
-  assert.deepEqual(plan(tiene, 'youtube', 'episodio'), []);
-  assert.deepEqual(plan(tiene, 'instagram', 'episodio'), []);
+  assert.deepEqual(plan(tiene, 'youtube', 'episodio'), ['e3']);
+  assert.deepEqual(plan(tiene, 'instagram', 'episodio'), ['e3']);
+  assert.deepEqual(plan(tiene, 'youtube', 'alcanzar'), []);
   assert.deepEqual(plan(tiene, 'tiktok', 'alcanzar'), ['e2']);
+});
+
+test('YouTube o Instagram atrasada: la otra espera (entre ellas sí van parejas)', () => {
+  const tiene = { youtube: mapa(['e1', 'e2']), instagram: mapa(['e1']), tiktok: mapa([]) };
+  assert.deepEqual(plan(tiene, 'youtube', 'episodio'), []);
+  assert.deepEqual(plan(tiene, 'instagram', 'episodio'), ['e2']);
 });
 
 // ── topes
