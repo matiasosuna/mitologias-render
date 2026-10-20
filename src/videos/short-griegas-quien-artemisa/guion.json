@@ -1,0 +1,668 @@
+{
+  "id": "short-griegas-quien-artemisa",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Artemisa? La señora de lo salvaje",
+    "en": "Who is Artemis? Lady of the wild"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Artemisa? La señora de lo salvaje",
+    "en": "Who is Artemis? Lady of the wild"
+  },
+  "cierre": {
+    "es": "Nació primero y ayudó a nacer a su gemelo — Mitología griega T2E6",
+    "en": "She was born first, then helped her twin arrive — Greek Mythology S2E6"
+  },
+  "episodio": "griegas-13-leto-y-los-gemelos",
+  "quien": {
+    "nombre": {
+      "es": "Artemisa",
+      "en": "Artemis"
+    },
+    "subtitulo": {
+      "es": "Diosa de la caza · señora de lo salvaje",
+      "en": "Goddess of the hunt · lady of the wild"
+    },
+    "como": "artemisa_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "bosque",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "Apenas nació, ayudó a su propia madre a traer al mundo a su hermano gemelo.",
+        "en": "Right after she was born, she helped her mother deliver her own twin brother."
+      }
+    ],
+    "efectos": [
+      {
+        "en": 0.3,
+        "tipo": "luz",
+        "x": 960
+      }
+    ],
+    "actores": [
+      {
+        "id": "artemisa",
+        "como": "artemisa_oficial",
+        "x": 760,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.5,
+            "hace": "alegra"
+          }
+        ]
+      },
+      {
+        "id": "leto",
+        "como": "leto_oficial",
+        "x": 1190,
+        "mira": "izq",
+        "escala": 0.9,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0.3,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.8,
+            "hace": "sorprende"
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "bosque",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Artemisa es la diosa de la caza y de los animales salvajes.",
+          "en": "Artemis is the goddess of the hunt and of wild animals."
+        },
+        {
+          "es": "También protege a las niñas y a las jóvenes.",
+          "en": "She also watches over young girls."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "CAZA",
+            "en": "HUNT"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "artemisa",
+          "como": "artemisa_oficial",
+          "x": 820,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "ciervo",
+          "como": "ciervo_griego_oficial",
+          "x": 1220,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "entra",
+              "a": 1190
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "padres",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su padre es Zeus. Su madre es Leto, una Titán dulce y amable.",
+          "en": "Her father is Zeus. Her mother is Leto, a gentle Titan goddess."
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.51,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "artemisa",
+          "como": "artemisa_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.17,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "leto",
+          "como": "leto_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.34,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.85,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gemelo",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su gemelo es Apolo, el arquero dorado.",
+          "en": "Her twin is Apollo, the golden archer."
+        },
+        {
+          "es": "Y tiene muchos medios hermanos: Atenea, Hermes, Ares y más.",
+          "en": "She has many half-siblings too: Athena, Hermes, Ares and more."
+        }
+      ],
+      "actores": [
+        {
+          "id": "artemisa",
+          "como": "artemisa_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "apolo",
+          "como": "apolo_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "regalos",
+      "fondo": "bosque",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "De niña se sentó en las rodillas de Zeus y le pidió regalos, cuenta el poeta Calímaco.",
+          "en": "As a little girl she sat on Zeus’s knee and asked for gifts, says the poet Callimachus."
+        },
+        {
+          "es": "Un arco de plata, una túnica de caza y la promesa de no casarse jamás.",
+          "en": "A silver bow, a hunting tunic and a promise never to marry."
+        }
+      ],
+      "actores": [
+        {
+          "id": "artemisa",
+          "como": "artemisa_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 1210,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "asiente"
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ninfas",
+      "fondo": "bosque",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "La acompañan las ninfas, espíritus de los bosques y los ríos.",
+          "en": "Nymphs follow her, spirits of the woods and streams."
+        },
+        {
+          "es": "Cazan juntas por las montañas, con perros veloces.",
+          "en": "They hunt together over the mountains, with swift dogs."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ninfa",
+          "como": "ninfa_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.8,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "artemisa",
+          "como": "artemisa_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "corre",
+              "a": 990
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "perro",
+          "como": "perro_griego_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "entra",
+              "a": 1200
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "noche",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus símbolos: el arco de plata, las flechas y el ciervo.",
+          "en": "Her symbols: the silver bow, the arrows and the deer."
+        },
+        {
+          "es": "Más tarde, muchos griegos la unieron con la luna.",
+          "en": "Later, many Greeks linked her with the moon."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "ARCO",
+            "en": "BOW"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.4
+        },
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "FLECHAS",
+            "en": "ARROWS"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.7
+        },
+        {
+          "en": 0.7,
+          "texto": {
+            "es": "CIERVO",
+            "en": "DEER"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "artemisa",
+          "como": "artemisa_oficial",
+          "x": 800,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "ciervo",
+          "como": "ciervo_griego_oficial",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "templo",
+      "fondo": "templo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su gran templo en Éfeso fue una de las siete maravillas del mundo antiguo.",
+          "en": "Her great temple at Ephesus was one of the Seven Wonders of the ancient world."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "artemisa",
+          "como": "artemisa_oficial",
+          "x": 900,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.43,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.85,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bueno",
+      "fondo": "bosque",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es leal con sus amigas y cuida cada criatura del bosque.",
+          "en": "She is loyal to her friends and guards every creature of the forest."
+        }
+      ],
+      "actores": [
+        {
+          "id": "artemisa",
+          "como": "artemisa_oficial",
+          "x": 780,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.71,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "ciervo",
+          "como": "ciervo_griego_oficial",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.28,
+              "hace": "entra",
+              "a": 1170
+            },
+            {
+              "en": 0.85,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "malo",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero tiene un genio terrible. Cuando Níobe presumió de ser mejor madre que Leto, Artemisa y Apolo se lo hicieron pagar.",
+          "en": "But her temper is fierce. When Niobe bragged she was a better mother than Leto, Artemis and Apollo made her pay."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "artemisa",
+          "como": "artemisa_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.85,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "apolo",
+          "como": "apolo_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.23,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "bosque",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "La niña que ayudó a nacer a su hermano se volvió la reina de lo salvaje.",
+          "en": "The girl who helped her brother be born became queen of the wild."
+        },
+        {
+          "es": "Mira su nacimiento en la isla de Delos en la temporada 2, episodio 6.",
+          "en": "See her birth on the island of Delos in Season 2, Episode 6."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "artemisa",
+          "como": "artemisa_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

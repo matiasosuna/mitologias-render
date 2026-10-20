@@ -1,0 +1,612 @@
+{
+  "id": "short-griegas-quien-hera",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Hera? La reina de los dioses",
+    "en": "Who is Hera? Queen of the gods"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Hera? La reina de los dioses",
+    "en": "Who is Hera? Queen of the gods"
+  },
+  "cierre": {
+    "es": "La reina de los dioses cayó en la trampa de su propio hijo — Mitología griega T2E4",
+    "en": "The queen of the gods fell into her own son’s trap — Greek Mythology S2E4"
+  },
+  "episodio": "griegas-11-hefesto",
+  "quien": {
+    "nombre": {
+      "es": "Hera",
+      "en": "Hera"
+    },
+    "subtitulo": {
+      "es": "Reina de los dioses · guardiana del matrimonio",
+      "en": "Queen of the gods · guardian of marriage"
+    },
+    "como": "hera_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "olimpo",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "Era la reina de todos los dioses. Y su propio hijo la atrapó con un trono de oro.",
+        "en": "She was queen of all the gods. And her own son trapped her with a golden throne."
+      }
+    ],
+    "efectos": [
+      {
+        "en": 0.5,
+        "tipo": "destello",
+        "x": 740,
+        "y": 420,
+        "dur": 0.3
+      }
+    ],
+    "actores": [
+      {
+        "id": "hera",
+        "como": "hera_oficial",
+        "x": 740,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.43,
+            "hace": "sorprende"
+          },
+          {
+            "en": 0.85,
+            "hace": "enoja"
+          }
+        ]
+      },
+      {
+        "id": "hefesto",
+        "como": "hefesto_oficial",
+        "x": 1200,
+        "mira": "izq",
+        "escala": 0.85,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0.28,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.71,
+            "hace": "alegra"
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Hera es la reina de los dioses y la diosa del matrimonio.",
+          "en": "Hera is queen of the gods and goddess of marriage."
+        },
+        {
+          "es": "Protege a las esposas, a las madres y a las familias.",
+          "en": "She guards wives, mothers and families."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "REINA",
+            "en": "QUEEN"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "hera",
+          "como": "hera_oficial",
+          "x": 900,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origen",
+      "fondo": "cueva",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es hija de los Titanes Cronos y Rea.",
+          "en": "She is a daughter of the Titans Cronus and Rhea."
+        },
+        {
+          "es": "Como sus hermanos, su padre se la tragó, y Zeus la liberó.",
+          "en": "Like her siblings, her father swallowed her, and Zeus set her free."
+        }
+      ],
+      "actores": [
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 730,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 0.8,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "como": "hera_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hermanos",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus hermanos son Hestia, Deméter, Hades y Poseidón.",
+          "en": "Her siblings are Hestia, Demeter, Hades and Poseidon."
+        },
+        {
+          "es": "Y Zeus, su hermano menor, es también su esposo.",
+          "en": "And Zeus, her younger brother, is also her husband."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hestia",
+          "como": "hestia_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.8,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "como": "hera_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.4,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hijos",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus hijos con Zeus son Ares, Hebe e Ilitia.",
+          "en": "Her children with Zeus are Ares, Hebe and Eileithyia."
+        },
+        {
+          "es": "A Hefesto, dice Hesíodo, lo tuvo ella sola.",
+          "en": "Hephaestus, says Hesiod, she had all alone."
+        }
+      ],
+      "actores": [
+        {
+          "id": "ares",
+          "como": "ares_oficial",
+          "x": 690,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 1,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "como": "hera_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hebe",
+          "como": "hebe_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.1,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus símbolos: la corona, el pavo real y la granada.",
+          "en": "Her symbols: the crown, the peacock and the pomegranate."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "CORONA",
+            "en": "CROWN"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.4
+        },
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "PAVO REAL",
+            "en": "PEACOCK"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.7
+        },
+        {
+          "en": 0.7,
+          "texto": {
+            "es": "GRANADA",
+            "en": "POMEGRANATE"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "hera",
+          "como": "hera_oficial",
+          "x": 800,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla"
+            },
+            {
+              "en": 0.68,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "pavo_real",
+          "como": "pavo_real_griego_oficial",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.34,
+              "hace": "entra",
+              "a": 1180
+            },
+            {
+              "en": 0.85,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "celos",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es orgullosa y muy celosa. Castigó a las mujeres que amó Zeus.",
+          "en": "She is proud and very jealous. She punished the women Zeus loved."
+        },
+        {
+          "es": "Hasta Leto tuvo que huir de ella.",
+          "en": "Even Leto had to run from her."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "hera",
+          "como": "hera_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "leto",
+          "como": "leto_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "tiembla"
+            },
+            {
+              "en": 1.4,
+              "hace": "corre",
+              "a": 1260
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hefesto",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Una vez arrojó del Olimpo a su propio bebé, Hefesto.",
+          "en": "Once she threw her own baby, Hephaestus, from Olympus."
+        },
+        {
+          "es": "Años después, él la atrapó con un trono de oro.",
+          "en": "Years later, he trapped her with a golden throne."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hera",
+          "como": "hera_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.8,
+              "hace": "senala"
+            },
+            {
+              "en": 1.6,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "hefesto",
+          "como": "hefesto_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caracter",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es leal y feroz con su matrimonio, y cumple su palabra.",
+          "en": "She is loyal, fierce about marriage vows, and keeps her word."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hera",
+          "como": "hera_oficial",
+          "x": 800,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.57,
+              "hace": "asiente"
+            },
+            {
+              "en": 0.85,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "La poderosa reina cayó en una trampa hecha por su propio hijo.",
+          "en": "The mighty queen fell into a trap made by her own son."
+        },
+        {
+          "es": "Míralo en la temporada 2, episodio 4.",
+          "en": "See it in Season 2, Episode 4."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "hera",
+          "como": "hera_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

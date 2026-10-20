@@ -1,0 +1,598 @@
+{
+  "id": "short-griegas-quien-prometeo",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Prometeo? El ladrón del fuego",
+    "en": "Who is Prometheus? The fire thief"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Prometeo? El ladrón del fuego",
+    "en": "Who is Prometheus? The fire thief"
+  },
+  "cierre": {
+    "es": "Robó el fuego de los dioses para los humanos — Mitología griega T1E2",
+    "en": "He stole the gods’ fire for humankind — Greek Mythology S1E2"
+  },
+  "episodio": "griegas-02-prometeo",
+  "quien": {
+    "nombre": {
+      "es": "Prometeo",
+      "en": "Prometheus"
+    },
+    "subtitulo": {
+      "es": "Titán que robó el fuego · amigo de los humanos",
+      "en": "Titan who stole fire · friend of humans"
+    },
+    "como": "prometeo_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "monte",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "Les dio fuego a los humanos. Y por eso, un águila le comió el hígado cada día.",
+        "en": "He gave fire to humans. For that, an eagle ate his liver every single day."
+      }
+    ],
+    "efectos": [
+      {
+        "en": 0.4,
+        "tipo": "oscurecer",
+        "intensidad": 0.35,
+        "dur": 1
+      }
+    ],
+    "actores": [
+      {
+        "id": "prometeo",
+        "como": "prometeo_oficial",
+        "x": 740,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "lamenta"
+          },
+          {
+            "en": 0.8,
+            "hace": "entristece"
+          }
+        ]
+      },
+      {
+        "id": "aguila",
+        "como": "aguila_griega_oficial",
+        "x": 1200,
+        "mira": "izq",
+        "escala": 0.9,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0.2,
+            "hace": "vuela",
+            "a": 1150
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Prometeo es un Titán, un dios de la generación antigua.",
+          "en": "Prometheus is a Titan, a god of the older generation."
+        },
+        {
+          "es": "Su nombre significa «el que piensa antes».",
+          "en": "His name means “the one who thinks ahead.”"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "PIENSA ANTES",
+            "en": "THINKS AHEAD"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "prometeo",
+          "como": "prometeo_oficial",
+          "x": 820,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.6,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "familia",
+      "fondo": "monte",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su padre es el Titán Jápeto, y su madre, Clímene, hija del Océano.",
+          "en": "His father is the Titan Iapetus, and his mother is Clymene, a daughter of Ocean."
+        },
+        {
+          "es": "Sus hermanos son Atlas, Menecio y Epimeteo.",
+          "en": "His brothers are Atlas, Menoetius and Epimetheus."
+        }
+      ],
+      "actores": [
+        {
+          "id": "atlas",
+          "como": "atlas_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.8,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "prometeo",
+          "como": "prometeo_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "epimeteo",
+          "como": "epimeteo_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arcilla",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "En los mitos, modeló a los primeros humanos con arcilla.",
+          "en": "In the old stories, he shaped the first humans from clay."
+        },
+        {
+          "es": "Atenea sopló sobre ellos, y despertaron.",
+          "en": "Athena breathed on them, and they woke up."
+        }
+      ],
+      "actores": [
+        {
+          "id": "prometeo",
+          "como": "prometeo_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "toma"
+            },
+            {
+              "en": 0.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "atenea",
+          "como": "atenea_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "hombre_griego_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.8,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engano",
+      "fondo": "templo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "En un gran banquete, engañó a Zeus para que eligiera los huesos.",
+          "en": "At a great feast, he tricked Zeus into choosing the bones."
+        }
+      ],
+      "actores": [
+        {
+          "id": "prometeo",
+          "como": "prometeo_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "ofrece"
+            },
+            {
+              "en": 0.71,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.35,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.85,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fuego",
+      "fondo": "monte",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Zeus, furioso, les quitó el fuego a los humanos.",
+          "en": "Furious, Zeus took fire away from humans."
+        },
+        {
+          "es": "Prometeo lo robó de nuevo, escondido en una caña de hinojo.",
+          "en": "Prometheus stole it back, hidden in a fennel stalk."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.8,
+          "tipo": "chispas",
+          "x": 900
+        },
+        {
+          "en": 1.2,
+          "tipo": "fogata",
+          "x": 1180
+        }
+      ],
+      "actores": [
+        {
+          "id": "prometeo",
+          "como": "prometeo_oficial",
+          "x": 800,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "entra",
+              "a": 820
+            },
+            {
+              "en": 0.9,
+              "hace": "toma"
+            },
+            {
+              "en": 1.6,
+              "hace": "corre",
+              "a": 900
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus símbolos: el fuego, el hinojo y la arcilla.",
+          "en": "His symbols: fire, the fennel stalk and clay."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "FUEGO",
+            "en": "FIRE"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.4
+        },
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "HINOJO",
+            "en": "FENNEL"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.7
+        },
+        {
+          "en": 0.7,
+          "texto": {
+            "es": "ARCILLA",
+            "en": "CLAY"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "fogata",
+          "x": 1180
+        }
+      ],
+      "actores": [
+        {
+          "id": "prometeo",
+          "como": "prometeo_oficial",
+          "x": 820,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla"
+            },
+            {
+              "en": 0.8,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "castigo",
+      "fondo": "monte",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Zeus lo encadenó a una roca. Cada noche el hígado le volvía a crecer.",
+          "en": "Zeus chained him to a rock. Each night his liver grew back."
+        },
+        {
+          "es": "Muchos años después, Heracles rompió sus cadenas.",
+          "en": "Many years later, Heracles broke his chains."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.4,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "prometeo",
+          "como": "prometeo_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.2,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "aguila",
+          "como": "aguila_griega_oficial",
+          "x": 1200,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "vuela",
+              "a": 1160
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caracter",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es listo, valiente y amigo de los humanos.",
+          "en": "He is clever, brave and a friend to humans."
+        },
+        {
+          "es": "Pero es terco, y nunca le pide perdón a Zeus.",
+          "en": "But he is stubborn, and never says sorry to Zeus."
+        }
+      ],
+      "actores": [
+        {
+          "id": "prometeo",
+          "como": "prometeo_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.1,
+              "hace": "niega"
+            }
+          ]
+        },
+        {
+          "id": "hombre",
+          "como": "hombre_griego_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.9,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "monte",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "El Titán que dio fuego a los humanos nunca se rindió.",
+          "en": "The Titan who gave humans fire never gave in."
+        },
+        {
+          "es": "Mira cómo lo robó en la temporada 1, episodio 2.",
+          "en": "See how he stole it in Season 1, Episode 2."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "fogata",
+          "x": 1200
+        }
+      ],
+      "actores": [
+        {
+          "id": "prometeo",
+          "como": "prometeo_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
