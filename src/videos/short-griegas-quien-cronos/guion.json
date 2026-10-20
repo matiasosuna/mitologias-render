@@ -1,0 +1,787 @@
+{
+  "id": "short-griegas-quien-cronos",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Cronos? El rey que se tragó a sus hijos",
+    "en": "Who is Cronus? The king who swallowed"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Cronos? El rey que se tragó a sus hijos",
+    "en": "Who is Cronus? The king who swallowed"
+  },
+  "cierre": {
+    "es": "Su propio hijo le quitó el trono — Mitología griega T1E1",
+    "en": "His own son took his throne — Greek Mythology S1E1"
+  },
+  "episodio": "griegas-01-origen",
+  "quien": {
+    "nombre": {
+      "es": "Cronos",
+      "en": "Cronus"
+    },
+    "subtitulo": {
+      "es": "Rey de los Titanes · señor de la cosecha",
+      "en": "King of the Titans · lord of the harvest"
+    },
+    "como": "cronos_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "palacio",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "Se tragó a sus propios hijos para que nadie le quitara el trono. No funcionó.",
+        "en": "He swallowed his own children, so none could take his throne. It did not work."
+      }
+    ],
+    "actores": [
+      {
+        "id": "cronos",
+        "como": "cronos_oficial",
+        "x": 760,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.5,
+            "hace": "enoja"
+          }
+        ]
+      },
+      {
+        "id": "rea",
+        "como": "rea_oficial",
+        "x": 1190,
+        "mira": "izq",
+        "escala": 0.9,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0.3,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.8,
+            "hace": "entristece"
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "cielo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Cronos es un Titán, uno de los primeros dioses, más viejo que Zeus.",
+          "en": "Cronus is a Titan, one of the first gods, older than Zeus."
+        },
+        {
+          "es": "Gobernó el mundo antes que los olímpicos.",
+          "en": "He ruled the world before the Olympians."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "REY",
+            "en": "KING"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 900,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "padres",
+      "fondo": "noche",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus padres son Gea, la Tierra, y Urano, el Cielo.",
+          "en": "His parents are Gaia, the Earth, and Uranus, the Sky."
+        }
+      ],
+      "actores": [
+        {
+          "id": "gea",
+          "como": "gea_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "urano",
+          "como": "urano_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.85,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hermanos",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Tiene once hermanos Titanes. Cinco varones: Océano, Ceo, Crío, Hiperión y Jápeto.",
+          "en": "He has eleven Titan siblings. Five brothers: Oceanus, Coeus, Crius, Hyperion and Iapetus."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "OCÉANO",
+            "en": "OCEANUS"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.5
+        },
+        {
+          "en": 0.5,
+          "texto": {
+            "es": "CEO",
+            "en": "COEUS"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.6
+        },
+        {
+          "en": 0.6,
+          "texto": {
+            "es": "CRÍO",
+            "en": "CRIUS"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.7
+        },
+        {
+          "en": 0.7,
+          "texto": {
+            "es": "HIPERIÓN",
+            "en": "HYPERION"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.82
+        },
+        {
+          "en": 0.82,
+          "texto": {
+            "es": "JÁPETO",
+            "en": "IAPETUS"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "titan",
+          "como": "titan_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.9,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hermanas",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Seis hermanas: Tea, Temis, Mnemósine, Febe, Tetis y Rea.",
+          "en": "Six sisters: Theia, Themis, Mnemosyne, Phoebe, Tethys and Rhea."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.05,
+          "texto": {
+            "es": "TEA",
+            "en": "THEIA"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.2
+        },
+        {
+          "en": 0.2,
+          "texto": {
+            "es": "TEMIS",
+            "en": "THEMIS"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.35
+        },
+        {
+          "en": 0.35,
+          "texto": {
+            "es": "MNEMÓSINE",
+            "en": "MNEMOSYNE"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.52
+        },
+        {
+          "en": 0.52,
+          "texto": {
+            "es": "FEBE",
+            "en": "PHOEBE"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.67
+        },
+        {
+          "en": 0.67,
+          "texto": {
+            "es": "TETIS",
+            "en": "TETHYS"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.8
+        },
+        {
+          "en": 0.8,
+          "texto": {
+            "es": "REA",
+            "en": "RHEA"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "temis",
+          "como": "temis_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.8,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoz",
+      "fondo": "fragua",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su símbolo es la hoz, una herramienta de la cosecha.",
+          "en": "His symbol is the sickle, a harvest tool."
+        },
+        {
+          "es": "Gea se la dio, y la usó para derrocar a su padre.",
+          "en": "Gaia gave it to him, and he used it to overthrow his father."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.05,
+          "texto": {
+            "es": "HOZ",
+            "en": "SICKLE"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "gea",
+          "como": "gea_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "toma"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hijos",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Se casó con su hermana Rea. Sus hijos: Hestia, Deméter, Hera, Hades, Poseidón y Zeus.",
+          "en": "He married his sister Rhea. Their children: Hestia, Demeter, Hera, Hades, Poseidon and Zeus."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hestia",
+          "como": "hestia_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.5,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "demeter",
+          "como": "demeter_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.15,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.4,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.5,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "como": "hera_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.45,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.5,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.55,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.9,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "poseidon",
+          "como": "poseidon_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.95,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.85,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.95,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bueno",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Hesíodo dice que la gente vivía feliz en su época.",
+          "en": "Hesiod says people lived happily in his age."
+        }
+      ],
+      "actores": [
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.8,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "malo",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero una profecía decía que un hijo le quitaría el trono.",
+          "en": "But a prophecy said one child would take his throne."
+        },
+        {
+          "es": "Así que se tragó a cada bebé entero.",
+          "en": "So he swallowed each baby whole."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "rea",
+          "como": "rea_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.9,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caida",
+      "fondo": "batalla",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Rea escondió al bebé Zeus y le dio una piedra a Cronos.",
+          "en": "Rhea hid baby Zeus and fed Cronus a stone."
+        },
+        {
+          "es": "Ya grande, Zeus liberó a sus hermanos y venció a los Titanes.",
+          "en": "Grown, Zeus freed his siblings and defeated the Titans."
+        }
+      ],
+      "actores": [
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.2,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Temía que su hijo le quitara el trono. Su miedo lo hizo realidad.",
+          "en": "He feared his son would take his throne. His fear made it happen."
+        },
+        {
+          "es": "Mira cómo empezó en la temporada 1, episodio 1.",
+          "en": "See how it began in Season 1, Episode 1."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

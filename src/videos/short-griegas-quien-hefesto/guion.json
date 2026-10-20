@@ -1,0 +1,702 @@
+{
+  "id": "short-griegas-quien-hefesto",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Hefesto? El dios expulsado",
+    "en": "Who is Hephaestus? The god thrown out"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Hefesto? El dios expulsado",
+    "en": "Who is Hephaestus? The god thrown out"
+  },
+  "cierre": {
+    "es": "Cayó del Olimpo — y le tendió una trampa a su madre — Mitología griega T2E4",
+    "en": "He fell from Olympus — and built a trap for his mother — Greek Mythology S2E4"
+  },
+  "episodio": "griegas-11-hefesto",
+  "quien": {
+    "nombre": {
+      "es": "Hefesto",
+      "en": "Hephaestus"
+    },
+    "subtitulo": {
+      "es": "Dios del fuego · herrero de los dioses",
+      "en": "God of fire · smith of the gods"
+    },
+    "como": "hefesto_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "olimpo",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "Su propia madre lo arrojó del Olimpo. Creció para construir los hogares de los dioses.",
+        "en": "His own mother threw him off Olympus. He grew up to build the gods’ homes."
+      }
+    ],
+    "actores": [
+      {
+        "id": "hefesto",
+        "como": "hefesto_oficial",
+        "x": 760,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.5,
+            "hace": "alegra"
+          }
+        ]
+      },
+      {
+        "id": "hera",
+        "como": "hera_oficial",
+        "x": 1190,
+        "mira": "izq",
+        "escala": 0.9,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0.3,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.8,
+            "hace": "sorprende"
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "fragua",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Hefesto es el dios del fuego, la metalurgia y los artesanos.",
+          "en": "Hephaestus is the god of fire, metalwork and craftsmen."
+        },
+        {
+          "es": "Es el herrero de los dioses.",
+          "en": "He is the smith of the gods."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.1,
+          "texto": {
+            "es": "FUEGO",
+            "en": "FIRE"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "como": "hefesto_oficial",
+          "x": 900,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "padres",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su madre es Hera. Hesíodo dice que lo tuvo sin Zeus, por enojo.",
+          "en": "His mother is Hera. Hesiod says she had him without Zeus, out of anger."
+        },
+        {
+          "es": "Otros relatos nombran a Zeus como su padre.",
+          "en": "Other tellings name Zeus as his father."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hera",
+          "como": "hera_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "hefesto",
+          "como": "hefesto_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hermanos",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su hermano es Ares, el dios de la guerra.",
+          "en": "His brother is Ares, the god of war."
+        },
+        {
+          "es": "Sus hermanas son Hebe e Ilitía.",
+          "en": "His sisters are Hebe and Eileithyia."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "como": "hefesto_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "ares",
+          "como": "ares_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.35,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.45,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "hebe",
+          "como": "hebe_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.9,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "ilitia",
+          "como": "ilitia_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caida",
+      "fondo": "mar",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Hera se avergonzó de sus piernas torcidas. Arrojó al bebé del Olimpo.",
+          "en": "Hera was ashamed of his twisted legs. She threw the baby from Olympus."
+        },
+        {
+          "es": "Las diosas del mar Tetis y Eurínome lo salvaron.",
+          "en": "The sea goddesses Thetis and Eurynome saved him."
+        }
+      ],
+      "actores": [
+        {
+          "id": "tetis",
+          "como": "tetis_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.6,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hefesto",
+          "como": "hefesto_nino_oficial",
+          "x": 960,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.8,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "eurinome",
+          "como": "eurinome_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.9,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "fragua",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus símbolos: el martillo, el yunque y las tenazas.",
+          "en": "His symbols: the hammer, the anvil and the tongs."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.05,
+          "texto": {
+            "es": "MARTILLO",
+            "en": "HAMMER"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.35
+        },
+        {
+          "en": 0.35,
+          "texto": {
+            "es": "YUNQUE",
+            "en": "ANVIL"
+          },
+          "x": 960,
+          "y": 190,
+          "hasta": 0.65
+        },
+        {
+          "en": 0.65,
+          "texto": {
+            "es": "TENAZAS",
+            "en": "TONGS"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "como": "hefesto_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "brilla"
+            },
+            {
+              "en": 0.7,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "obras",
+      "fondo": "fragua",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Construyó los palacios de bronce de los dioses.",
+          "en": "He built the bronze palaces of the gods."
+        },
+        {
+          "es": "Para el héroe Aquiles, forjó una armadura brillante.",
+          "en": "For the hero Achilles, he forged shining armor."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "como": "hefesto_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "golpea"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "aquiles",
+          "como": "aquiles_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esposa",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su esposa es Afrodita, la diosa del amor.",
+          "en": "His wife is Aphrodite, the goddess of love."
+        },
+        {
+          "es": "Pero ella amaba a Ares.",
+          "en": "But she loved Ares instead."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "como": "hefesto_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 1,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "afrodita",
+          "como": "afrodita_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.7,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "ares",
+          "como": "ares_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.9,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bueno",
+      "fondo": "fragua",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es un constructor brillante e incansable, y nunca olvida un favor.",
+          "en": "He is a tireless, brilliant builder, and he never forgets a kindness."
+        },
+        {
+          "es": "En la Ilíada, forja armas para el hijo de Tetis, que una vez lo salvó.",
+          "en": "In the Iliad, he forges armor for the son of Thetis, who once saved him."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "como": "hefesto_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.3,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "tetis",
+          "como": "tetis_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "malo",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero puede ser rencoroso. Para su madre construyó un trono de oro con cadenas ocultas.",
+          "en": "But he can be bitter. For his mother, he built a golden throne with hidden chains."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "oscurecer",
+          "intensidad": 0.3,
+          "dur": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "como": "hefesto_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.8,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "como": "hera_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.8,
+              "hace": "sorprende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "fragua",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "El bebé arrojado del Olimpo se volvió el gran constructor de los dioses.",
+          "en": "The baby thrown from Olympus became the master builder of the gods."
+        },
+        {
+          "es": "Mira su caída y su venganza en la temporada 2, episodio 4.",
+          "en": "See his fall and his revenge in Season 2, Episode 4."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "hefesto",
+          "como": "hefesto_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
