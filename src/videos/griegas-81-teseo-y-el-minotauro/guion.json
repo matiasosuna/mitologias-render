@@ -1,0 +1,1220 @@
+{
+ "id": "griegas-81-teseo-y-el-minotauro",
+ "serie": "griegas",
+ "numero": "81",
+ "titulo": {
+  "es": "Teseo y el Minotauro",
+  "en": "Theseus and the Minotaur"
+ },
+ "tituloGriego": "ΘΗΣΕΥΣ",
+ "especial": {
+  "nombre": {
+   "es": "Historias de mitología griega",
+   "en": "Greek Myth Stories"
+  }
+ },
+ "miniatura": {
+  "heroe": "teseo_oficial",
+  "rival": "minotauro_oficial"
+ },
+ "escenas": [
+  {
+   "id": "tributo",
+   "fondo": "ciudad",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Cada nueve años, un barco salía de Atenas con catorce jóvenes. Ninguno volvía.",
+     "en": "Every nine years, a ship left Athens with fourteen young people. None of them came back."
+    },
+    {
+     "es": "Atenas debía ese precio a Minos, el poderoso rey de Creta.",
+     "en": "Athens owed this price to Minos, the mighty king of Crete."
+    },
+    {
+     "es": "El hijo de Minos había muerto cerca de Atenas, y el rey exigió esta pena.",
+     "en": "The son of Minos had died near Athens, and the king demanded this payment."
+    },
+    {
+     "es": "Los jóvenes eran llevados a un laberinto, una casa de pasillos sin salida.",
+     "en": "The young people were taken to a Labyrinth, a house of endless twisting halls."
+    },
+    {
+     "es": "Allí vivía un monstruo mitad hombre y mitad toro: el Minotauro.",
+     "en": "A monster lived there, half man and half bull: the Minotaur."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "muralla",
+     "x": 1700,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "columna",
+     "x": 300,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "egeo",
+     "como": "rey_griego_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.5,
+       "hace": "lamenta"
+      },
+      {
+       "en": 3,
+       "hace": "entristece"
+      }
+     ],
+     "rotulo": "AEGEUS"
+    },
+    {
+     "id": "madre",
+     "como": "mujer_griega_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.4,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "lamenta"
+      }
+     ],
+     "rotulo": ""
+    },
+    {
+     "id": "joven",
+     "como": "joven_griego_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.6,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.2,
+       "hace": "tiembla"
+      }
+     ],
+     "rotulo": ""
+    },
+    {
+     "id": "minotauro",
+     "como": "minotauro_oficial",
+     "x": 1750,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3.6,
+       "hace": "aparece",
+       "con": "sombra"
+      },
+      {
+       "en": 4.2,
+       "hace": "enoja"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "intensidad": 0.3,
+     "dur": 1
+    },
+    {
+     "en": 3.6,
+     "tipo": "destello",
+     "x": 1750
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "ATENAS",
+      "en": "ATHENS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "voluntario",
+   "fondo": "palacio",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Entre los jóvenes de Atenas estaba Teseo, hijo del rey Egeo.",
+     "en": "Among the young people of Athens was Theseus, the son of King Aegeus."
+    },
+    {
+     "es": "Había crecido lejos y acababa de llegar a la ciudad. Era fuerte y valiente.",
+     "en": "He had grown up far away and had just come to the city. He was strong and brave."
+    },
+    {
+     "es": "Cuando llegó el día del tributo, Teseo dio un paso al frente.",
+     "en": "When the day of the tribute came, Theseus stepped forward."
+    },
+    {
+     "es": "«Iré yo», dijo. «Mataré al Minotauro y traeré a todos de vuelta».",
+     "en": "\"I will go,\" he said. \"I will kill the Minotaur and bring everyone home.\""
+    },
+    {
+     "es": "Egeo temblaba de miedo, porque Teseo era su único hijo.",
+     "en": "Aegeus shook with fear, because Theseus was his only son."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "columna",
+     "x": 250,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "trono",
+     "x": 1650,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "teseo",
+     "como": "teseo_oficial",
+     "x": 700,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "camina",
+       "a": 900,
+       "dur": 0.8
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      },
+      {
+       "en": 3.6,
+       "hace": "alegra"
+      }
+     ]
+    },
+    {
+     "id": "egeo",
+     "como": "rey_griego_oficial",
+     "x": 1450,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.2,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "habla"
+      },
+      {
+       "en": 4,
+       "hace": "entristece"
+      }
+     ],
+     "rotulo": "AEGEUS"
+    },
+    {
+     "id": "pueblo",
+     "como": "joven_griego_oficial",
+     "x": 350,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.5,
+       "hace": "sorprende"
+      }
+     ],
+     "rotulo": ""
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 900
+    }
+   ],
+   "rotulos": []
+  },
+  {
+   "id": "vela",
+   "fondo": "costa",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Antes de zarpar, Egeo le pidió una cosa: «Si vuelves vivo, cambia la vela negra por una blanca».",
+     "en": "Before sailing, Aegeus asked one thing: \"If you live, change the black sail for a white one.\""
+    },
+    {
+     "es": "«Así lo sabré desde lejos», dijo, «y dejaré de sufrir».",
+     "en": "\"That way I will know from far away,\" he said, \"and my pain will end.\""
+    },
+    {
+     "es": "Teseo prometió hacerlo. El barco partió con su vela negra, la vela del luto.",
+     "en": "Theseus promised. The ship sailed with its black sail, the sail of mourning."
+    },
+    {
+     "es": "Egeo se quedó en la orilla, mirando el mar hasta que el barco desapareció.",
+     "en": "Aegeus stayed on the shore, watching the sea until the ship was gone."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "barco",
+     "x": 1300,
+     "s": 0.9,
+     "capa": "medio",
+     "props": {
+      "vela": true
+     }
+    },
+    {
+     "tipo": "palmera",
+     "x": 150,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "egeo",
+     "como": "rey_griego_oficial",
+     "x": 600,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.5,
+       "hace": "habla"
+      },
+      {
+       "en": 1.5,
+       "hace": "lamenta"
+      },
+      {
+       "en": 3,
+       "hace": "mira",
+       "a": 1400
+      }
+     ],
+     "rotulo": ""
+    },
+    {
+     "id": "teseo",
+     "como": "teseo_oficial",
+     "x": 950,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.8,
+       "hace": "asiente"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      },
+      {
+       "en": 2.8,
+       "hace": "camina",
+       "a": 1300,
+       "dur": 0.5
+      },
+      {
+       "en": 3.1,
+       "hace": "desaparece"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2.5,
+     "tipo": "olas-suben",
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "EL JURAMENTO",
+      "en": "THE PROMISE"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "ariadna",
+   "fondo": "palacio",
+   "camara": {
+    "de": 0,
+    "a": 250,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "En Creta, Minos recibió a los jóvenes en su palacio.",
+     "en": "In Crete, Minos received the young people in his palace."
+    },
+    {
+     "es": "Su hija Ariadna vio a Teseo y sintió admiración por su valor.",
+     "en": "His daughter Ariadne saw Theseus and admired his courage."
+    },
+    {
+     "es": "Ariadna sabía que nadie salía vivo del Laberinto. Quería ayudarlo.",
+     "en": "Ariadne knew that no one left the Labyrinth alive. She wanted to help him."
+    },
+    {
+     "es": "Esa noche le dio un ovillo de hilo.",
+     "en": "That night she gave him a ball of thread."
+    },
+    {
+     "es": "«Ata la punta a la entrada y desenrolla el hilo al caminar».",
+     "en": "\"Tie the end at the door and unroll it as you walk.\""
+    },
+    {
+     "es": "«Cuando termines, solo tendrás que seguir el hilo de vuelta».",
+     "en": "\"When you finish, you only need to follow the thread back.\""
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 1700,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "columna",
+     "x": 150,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "minos",
+     "como": "minos_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.6,
+       "hace": "habla"
+      }
+     ],
+     "rotulo": "MINOS"
+    },
+    {
+     "id": "ariadna",
+     "como": "ariadna_oficial",
+     "x": 900,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.2,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "ofrece"
+      }
+     ],
+     "rotulo": "ARIADNE"
+    },
+    {
+     "id": "teseo",
+     "como": "teseo_oficial",
+     "x": 450,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.2,
+       "hace": "asiente"
+      },
+      {
+       "en": 4.2,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 900
+    }
+   ],
+   "rotulos": []
+  },
+  {
+   "id": "laberinto",
+   "fondo": "cueva",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Al amanecer, Teseo entró en el Laberinto. Dédalo, un gran inventor, lo había construido.",
+     "en": "At dawn, Theseus entered the Labyrinth. Daedalus, a great inventor, had built it."
+    },
+    {
+     "es": "Sus pasillos giraban y se cruzaban. Quien entraba se perdía para siempre.",
+     "en": "Its halls twisted and crossed. Whoever went in was lost forever."
+    },
+    {
+     "es": "Teseo ató el hilo en la puerta y caminó hacia adentro, desenrollándolo.",
+     "en": "Theseus tied the thread at the door and walked inside, unrolling it."
+    },
+    {
+     "es": "Cada vuelta lo llevaba más hondo. Se oían pasos pesados en la oscuridad.",
+     "en": "Every turn took him deeper. Heavy steps echoed in the dark."
+    },
+    {
+     "es": "¿Tú habrías entrado? Cuéntanos en los comentarios.",
+     "en": "Would you have gone in? Tell us in the comments."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "puerta",
+     "x": 250,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "muralla",
+     "x": 1000,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "muralla",
+     "x": 1700,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "teseo",
+     "como": "teseo_oficial",
+     "x": 400,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.5,
+       "hace": "mira",
+       "a": 1000
+      },
+      {
+       "en": 2.2,
+       "hace": "camina",
+       "a": 1000,
+       "dur": 1.8
+      },
+      {
+       "en": 4,
+       "hace": "sorprende"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "intensidad": 0.5,
+     "dur": 3
+    },
+    {
+     "en": 3,
+     "tipo": "humo",
+     "x": 1500
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "EL LABERINTO",
+      "en": "THE LABYRINTH"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "minotauro",
+   "fondo": "cueva",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "En el centro esperaba el Minotauro. Era enorme, con cabeza de toro y brazos de hombre.",
+     "en": "At the center waited the Minotaur. He was huge, with a bull's head and a man's arms."
+    },
+    {
+     "es": "Rugió y se lanzó contra Teseo.",
+     "en": "He roared and charged at Theseus."
+    },
+    {
+     "es": "Teseo esquivó el golpe. La lucha fue larga y dura.",
+     "en": "Theseus dodged the blow. The fight was long and hard."
+    },
+    {
+     "es": "Por fin, Teseo reunió todas sus fuerzas y venció al monstruo.",
+     "en": "At last, Theseus gathered all his strength and beat the monster."
+    },
+    {
+     "es": "El Minotauro cayó, y el Laberinto quedó en silencio.",
+     "en": "The Minotaur fell, and the Labyrinth went silent."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "muralla",
+     "x": 250,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "muralla",
+     "x": 1850,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "minotauro",
+     "como": "minotauro_oficial",
+     "x": 1350,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "enoja"
+      },
+      {
+       "en": 1.5,
+       "hace": "corre",
+       "a": 1000,
+       "dur": 0.5
+      },
+      {
+       "en": 2.5,
+       "hace": "golpea"
+      },
+      {
+       "en": 3.2,
+       "hace": "tiembla"
+      },
+      {
+       "en": 4,
+       "hace": "cae"
+      }
+     ]
+    },
+    {
+     "id": "teseo",
+     "como": "teseo_oficial",
+     "x": 600,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.5,
+       "hace": "sorprende"
+      },
+      {
+       "en": 2,
+       "hace": "salta"
+      },
+      {
+       "en": 3,
+       "hace": "golpea"
+      },
+      {
+       "en": 4.2,
+       "hace": "calla"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1.5,
+     "tipo": "temblor",
+     "dur": 1
+    },
+    {
+     "en": 3.2,
+     "tipo": "destello",
+     "x": 1100
+    },
+    {
+     "en": 4,
+     "tipo": "humo",
+     "x": 1200
+    }
+   ],
+   "rotulos": []
+  },
+  {
+   "id": "salida",
+   "fondo": "cueva",
+   "camara": {
+    "de": 0,
+    "a": 250,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Teseo siguió el hilo, vuelta tras vuelta, hasta la puerta.",
+     "en": "Theseus followed the thread, turn after turn, to the door."
+    },
+    {
+     "es": "Afuera lo esperaba Ariadna, y también los otros jóvenes de Atenas.",
+     "en": "Outside, Ariadne was waiting, along with the other young people of Athens."
+    },
+    {
+     "es": "Estaban todos vivos. Nadie había salido jamás del Laberinto, y Teseo lo había logrado.",
+     "en": "They were all alive. No one had ever left the Labyrinth, and Theseus had done it."
+    },
+    {
+     "es": "Esa misma noche corrieron al barco y zarparon en secreto.",
+     "en": "That same night they ran to the ship and sailed away in secret."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "puerta",
+     "x": 1300,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "luna",
+     "x": 300,
+     "s": 0.8,
+     "y": 250,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "teseo",
+     "como": "teseo_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.5,
+       "hace": "camina",
+       "a": 1000,
+       "dur": 1
+      },
+      {
+       "en": 2,
+       "hace": "alegra"
+      },
+      {
+       "en": 3,
+       "hace": "corre",
+       "a": 1700,
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "ariadna",
+     "como": "ariadna_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "abraza"
+      },
+      {
+       "en": 3,
+       "hace": "corre",
+       "a": 1750,
+       "dur": 0.8
+      }
+     ],
+     "rotulo": ""
+    },
+    {
+     "id": "joven",
+     "como": "joven_griego_oficial",
+     "x": 1600,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1.2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.2,
+       "hace": "salta"
+      }
+     ],
+     "rotulo": ""
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "destello",
+     "x": 1000
+    }
+   ],
+   "rotulos": []
+  },
+  {
+   "id": "naxos",
+   "fondo": "costa",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Los barcos pararon en la isla de Naxos. Aquí las historias cambian.",
+     "en": "The ship stopped on the island of Naxos. Here, the stories change."
+    },
+    {
+     "es": "En una versión, Teseo dejó allí a Ariadna dormida y siguió su camino.",
+     "en": "In one version, Theseus left Ariadne asleep there and sailed on."
+    },
+    {
+     "es": "En otra, el dios Dioniso la encontró, la amó y se casó con ella.",
+     "en": "In another, the god Dionysus found her, loved her, and married her."
+    },
+    {
+     "es": "Se dice que, por la pena, Teseo olvidó cambiar la vela negra por la blanca.",
+     "en": "It is said that in his sorrow, Theseus forgot to change the black sail for the white one."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "barco",
+     "x": 1500,
+     "s": 0.9,
+     "capa": "medio"
+    },
+    {
+     "tipo": "roca",
+     "x": 200,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "ariadna",
+     "como": "ariadna_oficial",
+     "x": 700,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "sienta"
+      },
+      {
+       "en": 2,
+       "hace": "levantarse"
+      },
+      {
+       "en": 3,
+       "hace": "entristece"
+      }
+     ],
+     "rotulo": ""
+    },
+    {
+     "id": "dioniso",
+     "como": "dioniso_oficial",
+     "x": 1100,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 2.8,
+       "hace": "ofrece"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "destello",
+     "x": 1100
+    },
+    {
+     "en": 0,
+     "tipo": "olas-bajan",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "ISLA DE NAXOS",
+      "en": "ISLAND OF NAXOS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "vela_negra",
+   "fondo": "costa",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Egeo subió a una roca alta sobre el mar y esperó cada día.",
+     "en": "Aegeus climbed a high rock above the sea and waited every day."
+    },
+    {
+     "es": "Por fin vio un barco. Su vela era negra.",
+     "en": "At last he saw a ship. Its sail was black."
+    },
+    {
+     "es": "Pensó que su hijo había muerto. Lleno de dolor, se arrojó al mar.",
+     "en": "He thought his son was dead. Full of grief, he threw himself into the sea."
+    },
+    {
+     "es": "Por eso ese mar se llama Egeo.",
+     "en": "That is why that sea is called the Aegean."
+    },
+    {
+     "es": "Al llegar a puerto, Teseo supo lo que había pasado y lloró.",
+     "en": "When he reached the harbor, Theseus learned what had happened, and he wept."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 500,
+     "s": 1.2,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "barco",
+     "x": 1700,
+     "s": 0.8,
+     "capa": "fondo",
+     "en": 1
+    }
+   ],
+   "actores": [
+    {
+     "id": "egeo",
+     "como": "rey_griego_oficial",
+     "x": 600,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "sorprende"
+      },
+      {
+       "en": 2.6,
+       "hace": "cae"
+      }
+     ],
+     "rotulo": ""
+    },
+    {
+     "id": "teseo",
+     "como": "teseo_oficial",
+     "x": 1200,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 4,
+       "hace": "aparece"
+      },
+      {
+       "en": 4.4,
+       "hace": "entristece"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2.6,
+     "tipo": "destello",
+     "x": 600
+    },
+    {
+     "en": 2.8,
+     "tipo": "olas-suben",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 3,
+     "texto": {
+      "es": "POR ESO EL MAR SE LLAMA EGEO",
+      "en": "THAT'S WHY IT'S THE AEGEAN SEA"
+     },
+     "x": 960,
+     "y": 200,
+     "estilo": "porque",
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "templo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Teseo se convirtió en rey de Atenas, y la ciudad lo recordó como uno de sus grandes héroes.",
+     "en": "Theseus became king of Athens, and the city remembered him as one of its great heroes."
+    },
+    {
+     "es": "Pero su victoria costó cara: ganó contra el monstruo, y perdió a su padre.",
+     "en": "But his victory cost a lot: he beat the monster, and he lost his father."
+    },
+    {
+     "es": "¿Fue olvido, o fue culpa de Teseo? Cuéntanos qué piensas en los comentarios.",
+     "en": "Was it forgetfulness, or was it Theseus's fault? Tell us what you think in the comments."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "templo",
+     "x": 1500,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "altar",
+     "x": 900,
+     "s": 1
+    }
+   ],
+   "actores": [
+    {
+     "id": "teseo",
+     "como": "teseo_oficial",
+     "x": 700,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "entristece"
+      },
+      {
+       "en": 2,
+       "hace": "calla"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": []
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "El hilo que salvó a un héroe",
+    "en": "The Thread That Saved a Hero"
+   },
+   "escena": "ariadna",
+   "desde": 3,
+   "hasta": 6,
+   "foco": 700
+  },
+  {
+   "gancho": {
+    "es": "Nadie salía vivo del Laberinto",
+    "en": "No One Ever Left the Labyrinth"
+   },
+   "escena": "minotauro",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1000
+  },
+  {
+   "gancho": {
+    "es": "Una vela negra mató a un rey",
+    "en": "A Black Sail Killed a King"
+   },
+   "escena": "vela_negra",
+   "desde": 0,
+   "hasta": 4,
+   "foco": 600
+  }
+ ]
+}
