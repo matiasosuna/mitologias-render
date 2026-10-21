@@ -4,6 +4,7 @@ import React from 'react';
 import { AbsoluteFill } from 'remotion';
 import { C, TITULO, Personaje, Lenguetas, Meandro, aplicarTema, TEMA, TextoRunico, Entrelazado, Bloques, Jeroglificos, FranjaKapa, FranjaCuentas } from './vasija';
 import { ELENCO } from '../motor/elenco';
+import { FiguraPortada } from './figuraPortada';
 import { FranjaCodice } from './codice';
 import { FranjaPahari } from './pahari';
 import { FranjaKamasan } from './kamasan';
@@ -45,8 +46,8 @@ export const PortadaIG: React.FC<{ titulo: string; numero: string; temporada: st
         {numero !== '' && <circle cx={540} cy={312} r={71} fill="none" stroke={C.crema} strokeWidth={2.5} strokeDasharray="3 9" />}
         {/* suelo y personajes */}
         <rect x={0} y={1000} width={1080} height={70} fill={C.negro} />
-        <Personaje {...(h as object)} x={rival ? 360 : 540} y={1010} s={1.38 * sh(h)} accion="parado" />
-        {r && <Personaje {...(r as object)} x={740} y={1010} s={1.18 * sh(r)} voltear accion="parado" />}
+        <FiguraPortada quien={heroe} props={h} x={rival ? 360 : 540} y={1010} s={1.38 * sh(h)} />
+        {r && <FiguraPortada quien={rival} props={r} x={740} y={1010} s={1.18 * sh(r)} voltear />}
       </svg>
       {/* textos */}
       <AbsoluteFill style={{ fontFamily: TITULO, textAlign: 'center' }}>
