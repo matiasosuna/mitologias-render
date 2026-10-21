@@ -1,21 +1,21 @@
 # Myths on Clay — estado
-_Actualizado 2026-10-20 21:10 UTC_
+_Actualizado 2026-10-21 21:08 UTC_
 
 ## Resumen
 | Qué | Estado |
 | --- | --- |
 | publicar | activado |
-| Última corrida de publicar | success · 2026-10-20 21:07 UTC |
-| Último turno registrado | 2026-10-20T18Z |
-| Próximos de la cola | egipcias-04-ojo-de-ra<br>egipcias-05-nombre-secreto<br>egipcias-06-muerte-de-osiris<br>egipcias-07-catorce-pedazos<br>egipcias-08-horus-en-los-juncos |
-| "Who is…?" listos | 14 (13 sin publicar en alguna red) |
+| Última corrida de publicar | en curso · 2026-10-21 21:07 UTC |
+| Último turno registrado | 2026-10-21T18Z |
+| Próximos de la cola | egipcias-10-viaje-nocturno<br>egipcias-11-pesada-del-corazon<br>griegas-99-reino-de-hades<br>nordicas-99-hel<br>egipcias-99-anubis-y-la-duat |
+| "Who is…?" listos | 14 (11 sin publicar en alguna red) |
 
 ## Temporadas
 | Mitología | Temporada | Episodios | YouTube | Instagram |
 | --- | --- | --- | --- | --- |
-| Griegas | Especial Greek Myth Stories | 1 | 0 | 0 |
+| Griegas | Especial Greek Myth Stories | 3 | 0 | 0 |
 | Griegas | Especial Lords of the Dead | 1 | 1 | 1 |
-| Griegas | Especial The Odyssey | 2 | 0 | 0 |
+| Griegas | Especial The Odyssey | 2 | 1 | 1 |
 | Griegas | T1 | 7 | 7 | 7 |
 | Griegas | T2 | 10 | 10 | 10 |
 | Nórdicas | Especial Lords of the Dead | 1 | 1 | 1 |
@@ -36,6 +36,6 @@ _Actualizado 2026-10-20 21:10 UTC_
 ## Métricas
 | Red | Métricas |
 | --- | --- |
-| YouTube | 23 suscriptores · 6294 vistas · 79 videos |
-| Instagram | 59 seguidores · 524 likes · 23.717 vistas (28 días) |
+| YouTube | 24 suscriptores · 6426 vistas · 82 videos |
+| Instagram | 62 seguidores · 535 likes · 24.247 vistas (28 días) |
 | TikTok | sin API |
