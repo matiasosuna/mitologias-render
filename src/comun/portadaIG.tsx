@@ -47,7 +47,7 @@ export const PortadaIG: React.FC<{ titulo: string; numero: string; temporada: st
         {/* suelo y personajes */}
         <rect x={0} y={1000} width={1080} height={70} fill={C.negro} />
         <FiguraPortada quien={heroe} props={h} x={rival ? 360 : 540} y={1010} s={1.38 * sh(h)} />
-        {r && <FiguraPortada quien={rival} props={r} x={740} y={1010} s={1.18 * sh(r)} voltear />}
+        {r && <FiguraPortada quien={rival} props={r} x={740} y={1010} s={1.18 * sh(r)} voltear caja={{ arriba: numero !== '' ? 410 : 130, x0: 470, x1: 1060 }} />}
       </svg>
       {/* textos */}
       <AbsoluteFill style={{ fontFamily: TITULO, textAlign: 'center' }}>
