@@ -6,11 +6,12 @@ No hay nadie mirando: no hagas preguntas; si algo no se puede resolver, dejá la
 
 ## Reglas que no se rompen
 
+- **Solo "Who is…?" de a un dios, por grupo (Matías 2026-10-22). Nada de especiales ni Stories (ítems H): no se toman nunca.** Nada entra a la cola de publicación sin el OK de Matías: NO correr `scripts/estado-agregar-shorts.sh`.
 - **Shorts = solo "Who is…?" (desde 2026-10-17).** No escribir más mini historias sacadas de episodios (ítems R/S): si aparece uno, saltearlo.
 - **Nunca publicar** en YouTube, Instagram, TikTok, Buffer ni Pinterest (ni scripts `subir*`, `instagram*`, `tiktok*`, `buffer-*`, `youtube-*`, `nube.mjs turno`). Eso lo hace el workflow `publicar`.
 - **Nunca renderizar** videos (`motor-render`, `short-render`, `vertical-*`, `modal_render.py`, `gh workflow run`). Hetzner prohibido.
 - **Nunca mostrar secretos**: no `env`, `printenv`, `set`, `cat ~/.modal.toml`, `git remote -v` ni `echo` de URLs de remotes (pueden llevar credenciales). MODAL_TOKEN_ID/SECRET ya están en el entorno: Modal los lee solo.
-- **No tocar** `.github/workflows/*`, secretos, ni los registros (`youtube-ids.json`, `subidas-*.json`, `listas.json`, `pinterest-pines.json`, `meta-youtube*.json` existentes, la rama `estado`) salvo **agregar** ids de Shorts con `scripts/estado-agregar-shorts.sh`. No borrar ni reescribir videos/guiones ya existentes.
+- **No tocar** `.github/workflows/*`, secretos, ni los registros (`youtube-ids.json`, `subidas-*.json`, `listas.json`, `pinterest-pines.json`, `meta-youtube*.json` existentes, la rama `estado`). No borrar ni reescribir videos/guiones ya existentes.
 - La única IA es esta sesión: **no** llamar a la API de Anthropic, Gemini ni ElevenLabs. Voz = Chatterbox en Modal (crédito gratis; cada narración es corta).
 - Contenido **solo en inglés** narrado (el `es` del guion se escribe como texto para subtítulos, no se narra).
 - Si la validación falla y no la podés arreglar: **no** empujes contenido roto (paso 6).
@@ -99,7 +100,7 @@ git add -A src/videos public/audio src/motor/indice.ts <archivos de código/plan
 git commit -m "<ítem>: <qué se hizo>" -m "Co-Authored-By: Claude <noreply@anthropic.com>"
 git push origin HEAD:main || { git pull --rebase origin main && git push origin HEAD:main; }
 scripts/publicar-render.sh                             # copia al repo público (usa MOC_RENDER_DIR)
-scripts/estado-agregar-shorts.sh <ids de los Shorts nativos nuevos>   # ítems Q, R y S: suma al final del orden, intercalados
+# NO agregar a la cola (estado-agregar-shorts.sh): Matías aprueba primero y lo suma la sesión local
 ```
 Después marcá el ítem en `COLA-PRODUCCION.md` → `- [x] S01 · … — HECHO 2026-10-14: short-…, short-…` (todos los ids), commit y push a `main` igual que arriba.
 

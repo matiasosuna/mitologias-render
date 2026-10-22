@@ -28,6 +28,13 @@ la rutina no toma nada de esa sección.
 - [x] H02 · Story (Greek): Teseo y el Minotauro → `griegas-81-teseo-y-el-minotauro` · especial "Greek Myth Stories". Fuentes: Plutarco, Vida de Teseo; Apolodoro, Epítome 1; Catulo 64 — HECHO 2026-10-21: griegas-81-teseo-y-el-minotauro
 - [x] H03 · Story (Greek): Perséfone y la granada (el rapto, Deméter y el invierno) → `griegas-82-persefone-y-la-granada` · especial "Greek Myth Stories". Fuentes: Himno homérico a Deméter; Ovidio, Metamorfosis 5. Hades y Perséfone ya salen en el especial griegas-99: acá el rapto y la granada, no el reino — HECHO 2026-10-21: griegas-82-persefone-y-la-granada
 - [x] H04 · Story (Greek): Los trabajos de Heracles, parte I (león de Nemea, Hidra, cierva, jabalí, establos de Augías, aves del Estínfalo) → `griegas-83-heracles-trabajos-1` · especial "Greek Myth Stories". Fuentes: Apolodoro, Biblioteca 2.4–2.5; se entiende solo, sin la parte II — HECHO 2026-10-22: griegas-83-heracles-trabajos-1
+- [x] Q05 · "Who is…?" (2, cierre de olímpicos): Deméter, Hestia — HECHO 2026-10-22 (sesión local): short-griegas-quien-demeter, short-griegas-quien-hestia
+- [ ] Q06 · "Who is…?" grupo INFRAMUNDO (4): Persephone `persefone_oficial` · Hecate · Hypnos · Thanatos. Los que no tienen `*_oficial` todavía: diseñarlos primero en `src/motor/elencoGriegoOficial.tsx` con el mismo estilo (registrar como los demás).
+- [ ] Q07 · "Who is…?" grupo TITANES (4): Rhea `rea_oficial` · Atlas `atlas_oficial` · Helios `helios_oficial` · Selene `selene_oficial`
+- [ ] Q08 · "Who is…?" grupo PRIMORDIALES (4): Gaia `gea_oficial` · Uranus `urano_oficial` · Nyx `nix_oficial` · Eros `eros_oficial`
+- [ ] Q09 · "Who is…?" grupo OTROS DIOSES (3): Pan · Nike · Nemesis (diseñar los `*_oficial` que falten, como en Q06)
+
+## CANCELADO (Matías 2026-10-22: no más especiales ni Stories; no tomar nunca)
 - [ ] H05 · Story (Greek): Dédalo e Ícaro → `griegas-84-dedalo-e-icaro` · especial "Greek Myth Stories". Fuentes: Ovidio, Metamorfosis 8; Apolodoro, Epítome 1. Si va después de Teseo, el laberinto en 1–2 frases
 - [ ] H06 · Story (Greek): El rey Midas → `griegas-85-el-rey-midas` · especial "Greek Myth Stories". Fuentes: Ovidio, Metamorfosis 11 (el toque de oro y las orejas de burro)
 - [ ] H07 · Story (Greek): Los trabajos de Heracles, parte II (toro de Creta, yeguas de Diomedes, cinturón de Hipólita, bueyes de Gerión, manzanas de las Hespérides, Cerbero) → `griegas-86-heracles-trabajos-2` · especial "Greek Myth Stories". Fuentes: Apolodoro, Biblioteca 2.5; se entiende solo, sin la parte I; Cerbero en 1–2 frases (ya está en el especial y en un Short)
