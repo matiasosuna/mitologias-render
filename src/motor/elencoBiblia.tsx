@@ -111,6 +111,7 @@ export const ELENCO_BIBLIA: Record<string, Ficha> = {
   delfin_biblia: D(DelfinEpico, { vuela: true, alto: 160, izq: 260, der: 260 }),
   pez_biblia: D(PezEpico, { vuela: true, alto: 200, izq: 240, der: 190 }),
   ballena_biblia: D(BallenaNatural, { vuela: true, alto: 230, izq: 470, der: 350 }),
+  serpiente_biblia: { tipo: 'serpiente', p: { largo: 520, grosor: 30, color: '#5E6B3A', manchas: true, erguida: 0.7, s: 0.9 } },
   pajaro_biblia: { tipo: 'ave', p: { color: '#7A6A5A', ala2: '#B8A890', pico: '#D9A040', s: 0.7 } },
 };
 export const NOMBRE_EN_BIBLIA: Record<string, string> = Object.fromEntries(Object.entries(ELENCO_BIBLIA).filter(([, f]) => f.griego).map(([k, f]) => [k, f.griego as string]));
