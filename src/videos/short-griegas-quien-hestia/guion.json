@@ -1,0 +1,737 @@
+{
+  "id": "short-griegas-quien-hestia",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Hestia? La diosa que cedió su trono",
+    "en": "Who is Hestia? The goddess who gave up her throne"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Hestia? La diosa que cedió su trono",
+    "en": "Who is Hestia? The goddess who gave up her throne"
+  },
+  "cierre": {
+    "es": "Hestia cede su trono entre los doce dioses — Mitología griega T2E1",
+    "en": "Hestia yields her throne among the twelve — Greek Mythology S2E1"
+  },
+  "episodio": "griegas-08-doce-olimpicos",
+  "quien": {
+    "nombre": {
+      "es": "Hestia",
+      "en": "Hestia"
+    },
+    "subtitulo": {
+      "es": "Diosa del hogar · guardiana de la llama",
+      "en": "Goddess of the hearth · keeper of the flame"
+    },
+    "como": "hestia_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "olimpo",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "Fue la mayor de los dioses. Y cedió su trono para mantener la paz.",
+        "en": "She was the eldest of the gods. And she gave up her throne to keep the peace."
+      }
+    ],
+    "actores": [
+      {
+        "id": "hestia",
+        "como": "hestia_oficial",
+        "x": 760,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0.0,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.14,
+            "hace": "alegra"
+          }
+        ]
+      },
+      {
+        "id": "dioniso",
+        "como": "dioniso_oficial",
+        "x": 1190,
+        "mira": "izq",
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0.11,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.26,
+            "hace": "alegra"
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Hestia es la diosa del hogar y del fuego sagrado.",
+          "en": "Hestia is the goddess of the hearth and its sacred fire."
+        },
+        {
+          "es": "Cuida cada casa desde el centro.",
+          "en": "She watches over every home from its center."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "HOGAR",
+            "en": "HEARTH"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.06,
+          "tipo": "fogata",
+          "x": 1180,
+          "dur": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "hestia",
+          "como": "hestia_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.46,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "padres",
+      "fondo": "cueva",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es hija de Cronos y Rea.",
+          "en": "She is the daughter of Cronus and Rhea."
+        },
+        {
+          "es": "Fue la primera en ser tragada, y la última en salir.",
+          "en": "She was the first one swallowed, and the last to come out."
+        }
+      ],
+      "actores": [
+        {
+          "id": "rea",
+          "como": "rea_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hestia",
+          "como": "hestia_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.09,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.23,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.14,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 0.57,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hermanos",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus hermanos son Deméter, Hera, Hades, Poseidón y Zeus.",
+          "en": "Her siblings are Demeter, Hera, Hades, Poseidon and Zeus."
+        }
+      ],
+      "actores": [
+        {
+          "id": "demeter",
+          "como": "demeter_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.63,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "como": "hera_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.11,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.26,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.63,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.23,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.37,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.63,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "poseidon",
+          "como": "poseidon_oficial",
+          "x": 760,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.71,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.86,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 1180,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.94,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "juramento",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Poseidón y Apolo quisieron casarse con ella.",
+          "en": "Poseidon and Apollo both wanted to marry her."
+        },
+        {
+          "es": "Hestia juró no casarse jamás. Zeus la honró por ello.",
+          "en": "Hestia swore never to marry. Zeus honored her for it."
+        }
+      ],
+      "actores": [
+        {
+          "id": "poseidon",
+          "como": "poseidon_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "hestia",
+          "como": "hestia_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.06,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.51,
+              "hace": "niega"
+            },
+            {
+              "en": 0.86,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "apolo",
+          "como": "apolo_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.11,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.26,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus símbolos son el fuego del hogar y la llama que nunca se apaga.",
+          "en": "Her symbols are the hearth fire and the flame that never goes out."
+        },
+        {
+          "es": "Es la que recibe la primera ofrenda en cada banquete.",
+          "en": "She receives the first offering at every feast."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "LLAMA",
+            "en": "FLAME"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.0,
+          "tipo": "fogata",
+          "x": 1180,
+          "dur": 4
+        },
+        {
+          "en": 0.09,
+          "tipo": "chispas",
+          "x": 1180
+        }
+      ],
+      "actores": [
+        {
+          "id": "hestia",
+          "como": "hestia_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.11,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.63,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "roma",
+      "fondo": "ciudad",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Los romanos la llamaron Vesta.",
+          "en": "The Romans called her Vesta."
+        },
+        {
+          "es": "Sus sacerdotisas cuidaron su llama durante siglos.",
+          "en": "Her priestesses tended her flame for centuries."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "VESTA",
+            "en": "VESTA"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.06,
+          "tipo": "fogata",
+          "x": 1180,
+          "dur": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "hestia",
+          "como": "hestia_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.46,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dioniso",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Cuando llegó Dioniso, los doce tronos ya estaban ocupados.",
+          "en": "When Dionysus arrived, the twelve thrones were already full."
+        },
+        {
+          "es": "Según algunos relatos, Hestia le cedió el suyo, para que no hubiera discordia.",
+          "en": "In some tellings, Hestia gave him hers so there would be no quarrel."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.86,
+          "texto": {
+            "es": "SU TRONO",
+            "en": "HER THRONE"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "hestia",
+          "como": "hestia_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.86,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "dioniso",
+          "como": "dioniso_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.14,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.29,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.0,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bueno",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es amable y serena, y nunca entró en una pelea.",
+          "en": "She is gentle and calm, and never joined a fight."
+        },
+        {
+          "es": "Donde ella está, hay calor y hay paz.",
+          "en": "Where she is, there is warmth and peace."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.06,
+          "tipo": "fogata",
+          "x": 1180,
+          "dur": 3
+        }
+      ],
+      "actores": [
+        {
+          "id": "hestia",
+          "como": "hestia_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.46,
+              "hace": "abraza"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "malo",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su defecto es que casi no aparece en los mitos.",
+          "en": "Her flaw is that she hardly appears in the myths."
+        },
+        {
+          "es": "Siempre elige ceder, y el mundo la olvida.",
+          "en": "She always chooses to yield, and the world forgets her."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hestia",
+          "como": "hestia_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "entristece"
+            },
+            {
+              "en": 0.57,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "La más antigua de los dioses eligió la paz sobre el poder.",
+          "en": "The eldest of the gods chose peace over power."
+        },
+        {
+          "es": "Mira cómo cedió su trono en la temporada 2, episodio 1.",
+          "en": "See her give up her throne in Season 2, Episode 1."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.09,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "hestia",
+          "como": "hestia_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.43,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

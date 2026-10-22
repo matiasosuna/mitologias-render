@@ -1,0 +1,847 @@
+{
+  "id": "short-griegas-quien-demeter",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Deméter? La diosa que detuvo la cosecha",
+    "en": "Who is Demeter? The goddess who stopped the harvest"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Deméter? La diosa que detuvo la cosecha",
+    "en": "Who is Demeter? The goddess who stopped the harvest"
+  },
+  "cierre": {
+    "es": "Los doce dioses olímpicos reunidos — Mitología griega T2E1",
+    "en": "The twelve Olympians gathered — Greek Mythology S2E1"
+  },
+  "episodio": "griegas-08-doce-olimpicos",
+  "quien": {
+    "nombre": {
+      "es": "Deméter",
+      "en": "Demeter"
+    },
+    "subtitulo": {
+      "es": "Diosa de la cosecha · guardiana del grano",
+      "en": "Goddess of the harvest · keeper of grain"
+    },
+    "como": "demeter_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "campo",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "Una diosa detuvo todas las cosechas de la Tierra. Porque alguien se llevó a su hija.",
+        "en": "A goddess stopped every harvest on Earth. Because someone took her daughter."
+      }
+    ],
+    "actores": [
+      {
+        "id": "demeter",
+        "como": "demeter_oficial",
+        "x": 760,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0.0,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.14,
+            "hace": "lamenta"
+          }
+        ]
+      },
+      {
+        "id": "persefone",
+        "como": "persefone_oficial",
+        "x": 1190,
+        "mira": "izq",
+        "escala": 0.9,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0.09,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.23,
+            "hace": "alegra"
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Deméter es la diosa de la cosecha, el grano y la agricultura.",
+          "en": "Demeter is the goddess of the harvest, grain and farming."
+        },
+        {
+          "es": "Sin ella, nada crece.",
+          "en": "Without her, nothing grows."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "TRIGO",
+            "en": "GRAIN"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "demeter",
+          "como": "demeter_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.43,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "padres",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es hija de Cronos y Rea.",
+          "en": "She is the daughter of Cronus and Rhea."
+        },
+        {
+          "es": "Su padre se la tragó al nacer. Zeus la liberó.",
+          "en": "Her father swallowed her at birth. Zeus set her free."
+        }
+      ],
+      "actores": [
+        {
+          "id": "rea",
+          "como": "rea_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "demeter",
+          "como": "demeter_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.09,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.23,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.14,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 0.57,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hermanos",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus hermanos son Hestia, Hera, Hades, Poseidón y Zeus.",
+          "en": "Her siblings are Hestia, Hera, Hades, Poseidon and Zeus."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hestia",
+          "como": "hestia_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.63,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "hera",
+          "como": "hera_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.11,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.26,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.63,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 1230,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.23,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.37,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.63,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "poseidon",
+          "como": "poseidon_oficial",
+          "x": 760,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.71,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.86,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 1180,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.94,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus símbolos son las espigas de trigo, la antorcha y la cornucopia.",
+          "en": "Her symbols are the ears of wheat, the torch and the cornucopia."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "ESPIGAS",
+            "en": "WHEAT"
+          },
+          "x": 960,
+          "y": 190
+        },
+        {
+          "en": 0.69,
+          "texto": {
+            "es": "ANTORCHA",
+            "en": "TORCH"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.69,
+          "tipo": "fogata",
+          "x": 1200,
+          "dur": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "demeter",
+          "como": "demeter_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.11,
+              "hace": "brilla",
+              "dur": 0.6
+            },
+            {
+              "en": 0.57,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hija",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su hija Perséfone, con Zeus, era toda su alegría.",
+          "en": "Her daughter Persephone, with Zeus, was her whole joy."
+        }
+      ],
+      "actores": [
+        {
+          "id": "demeter",
+          "como": "demeter_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "persefone",
+          "como": "persefone_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.09,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.23,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.51,
+              "hace": "abraza"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rapto",
+      "fondo": "inframundo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Un día, Hades se la llevó al inframundo.",
+          "en": "One day, Hades carried her off to the underworld."
+        },
+        {
+          "es": "Zeus lo había permitido. Deméter no sabía nada.",
+          "en": "Zeus had allowed it. Demeter knew nothing."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.0,
+          "tipo": "temblor",
+          "dur": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 0.17,
+              "hace": "toma"
+            }
+          ]
+        },
+        {
+          "id": "persefone",
+          "como": "persefone_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.09,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.23,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.57,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "busqueda",
+      "fondo": "noche",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Deméter la buscó nueve días y nueve noches.",
+          "en": "Demeter searched for nine days and nights."
+        },
+        {
+          "es": "El Sol, que lo ve todo, le dijo la verdad.",
+          "en": "The Sun, who sees everything, told her the truth."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.0,
+          "tipo": "fogata",
+          "x": 1150,
+          "dur": 3
+        },
+        {
+          "en": 0.86,
+          "tipo": "destello"
+        }
+      ],
+      "actores": [
+        {
+          "id": "demeter",
+          "como": "demeter_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "camina"
+            },
+            {
+              "en": 0.66,
+              "hace": "sorprende"
+            },
+            {
+              "en": 0.91,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hambre",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Furiosa, Deméter dejó la tierra sin frutos.",
+          "en": "Furious, Demeter left the earth without a harvest."
+        },
+        {
+          "es": "La gente pasó hambre. Zeus tuvo que actuar.",
+          "en": "People went hungry. Zeus had to act."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.06,
+          "tipo": "oscurecer",
+          "dur": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "demeter",
+          "como": "demeter_oficial",
+          "x": 760,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.43,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "hermes",
+          "como": "hermes_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.63,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.8,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "estaciones",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Perséfone había comido semillas de granada, y eso la ataba al inframundo.",
+          "en": "Persephone had eaten pomegranate seeds, and that bound her to the underworld."
+        },
+        {
+          "es": "Por eso pasa parte del año abajo. Cuando vuelve, es primavera. Cuando se va, es invierno.",
+          "en": "So she spends part of each year below. When she returns, it is spring. When she leaves, winter."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.03,
+          "texto": {
+            "es": "PRIMAVERA",
+            "en": "SPRING"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.14,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "demeter",
+          "como": "demeter_oficial",
+          "x": 730,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "lamenta"
+            },
+            {
+              "en": 1.0,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.29,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "persefone",
+          "como": "persefone_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.09,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.29,
+              "hace": "toma"
+            },
+            {
+              "en": 1.0,
+              "hace": "alegra"
+            },
+            {
+              "en": 1.29,
+              "hace": "abraza"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bueno",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es generosa. Enseñó a sembrar a la humanidad.",
+          "en": "She is generous. She taught humans to farm."
+        },
+        {
+          "es": "Sus ritos secretos en Eleusis duraron siglos.",
+          "en": "Her secret rites at Eleusis lasted centuries."
+        }
+      ],
+      "actores": [
+        {
+          "id": "demeter",
+          "como": "demeter_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.43,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "malo",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero un amor herido la vuelve implacable.",
+          "en": "But a wounded love makes her relentless."
+        },
+        {
+          "es": "Por su hija, estuvo dispuesta a dejar al mundo sin pan.",
+          "en": "For her daughter, she was willing to leave the world without bread."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.51,
+          "tipo": "temblor",
+          "dur": 0.6
+        }
+      ],
+      "actores": [
+        {
+          "id": "demeter",
+          "como": "demeter_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.51,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "La madre que detuvo las cosechas es la razón de que existan las estaciones.",
+          "en": "The mother who stopped the harvest is the reason the seasons exist."
+        },
+        {
+          "es": "Mira a los doce dioses reunidos en la temporada 2, episodio 1.",
+          "en": "Meet the twelve gods together in Season 2, Episode 1."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.09,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "demeter",
+          "como": "demeter_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.43,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
