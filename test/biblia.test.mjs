@@ -69,9 +69,9 @@ test('las claves del elenco bíblico no chocan con las de otras series', () => {
 test('la serie está cableada: tema, marca, música y render', () => {
   const vasija = leer('src/comun/vasija.tsx');
   assert.match(vasija, /serie === 'biblia' \? 'natural'/);
-  assert.match(vasija, /natural: \{ en: 'Learn Bible 777'/);
+  assert.match(vasija, /natural: \{ en: 'The Bible'/);
   assert.match(vasija, /musica: 'musica\/biblia\.wav'/);
-  assert.match(vasija, /TEMA\.nombre === 'natural' \? 'LEARN BIBLE 777' : 'MYTHS ON CLAY'/);
+  assert.match(vasija, /marcaCanal = \(\) => 'MYTHS ON CLAY'/); // la Biblia es una serie de Myths on Clay
   assert.match(leer('src/motor/fondos.tsx'), /fondoBiblia\(/);
   assert.match(leer('src/motor/elenco.tsx'), /\.\.\.ELENCO_BIBLIA/);
   assert.match(leer('scripts/motor-render.mjs'), /'biblia' \? 'biblia'/);

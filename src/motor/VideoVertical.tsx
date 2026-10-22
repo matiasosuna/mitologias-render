@@ -68,7 +68,7 @@ export const VideoVertical: React.FC<{ guion: GuionVisual; timeline: Timeline; p
           {enIntro && (
             <AbsoluteFill style={{ background: fondo, opacity: interpolate(f, [timeline.introFrames - 10, timeline.introFrames], [1, 0], cl) }}>
               {/* Learn Bible: nunca la portada de Myths; la de pergamino */}
-              {t === 'natural' ? <PortadaBiblia guion={guion} n={1} de={1} dur={timeline.introFrames} musica={false} /> : portada && <Img src={staticFile(portada)} style={{ position: 'absolute', top: 285, left: 0, width: 1080, height: 1350 }} />}
+              {t === 'natural' && guion.reels?.ganchos ? <PortadaBiblia guion={guion} n={1} de={1} dur={timeline.introFrames} musica={false} /> : portada && <Img src={staticFile(portada)} style={{ position: 'absolute', top: 285, left: 0, width: 1080, height: 1350 }} />}
             </AbsoluteFill>
           )}
           {/* cierre corto */}

@@ -32,7 +32,7 @@ export function ralentizar(id, base = procesoAudio(guionDe(id))) {
       const obj = { tempo: base.tempo * marco.tempo, compactar: marco.compactar }, af = filtroMarco(hechos[f], obj, silenciosDe(log));
       if (!af) continue;
       const tmp = wav.replace(/\.wav$/, '.tmp.wav');
-      execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', wav, '-af', af, '-ar', '48000', '-ac', '1', tmp]);
+      execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', wav, '-filter_complex', af, '-ar', '48000', '-ac', '1', tmp]);
       renameSync(tmp, wav);
       hechos[f] = obj; n++;
       continue;

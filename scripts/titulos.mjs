@@ -3,8 +3,9 @@
 import { readFileSync, existsSync } from 'node:fs';
 
 export const RUTA_TITULOS = 'src/videos/titulos.json';
-export const NOMBRES = { griegas: 'Greek', nordicas: 'Norse', egipcias: 'Egyptian', hawaianas: 'Hawaiian', norteamericanas: 'Native American', hindues: 'Hindu', aztecas: 'Aztec', balinesas: 'Balinese', maories: 'Māori' };
-export const nombreSerie = (serie) => `${NOMBRES[serie ?? 'griegas']} Mythology`;
+export const NOMBRES = { griegas: 'Greek', nordicas: 'Norse', egipcias: 'Egyptian', hawaianas: 'Hawaiian', norteamericanas: 'Native American', hindues: 'Hindu', aztecas: 'Aztec', balinesas: 'Balinese', maories: 'Māori', biblia: 'The Bible' };
+/** "Norse Mythology"; la Biblia no es mitología: "The Bible". */
+export const nombreSerie = (serie) => (serie === 'biblia' ? NOMBRES.biblia : `${NOMBRES[serie ?? 'griegas']} Mythology`);
 
 /** Último número de episodio (el de la carpeta) de cada temporada; lo mismo que usan las portadas de IG y los planes. */
 export const TEMPORADAS = {
@@ -17,6 +18,7 @@ export const TEMPORADAS = {
   balinesas: [12, 24, 96],
   hindues: [12, 24, 96],
   maories: [12, 24, 96],
+  biblia: [50], // un libro = una temporada: Génesis (50 capítulos) = Season 1
 };
 /** { temporada, episodio } de un episodio de la serie principal según su número de carpeta. */
 export function temporadaDe(serie, numero) {
@@ -36,7 +38,7 @@ export function lineaTemporada(entrada, serie) {
 }
 
 /** Formato válido del título completo (≤100 caracteres). */
-export const FORMATO = /^(?<curioso>[^|<>]+?) \| (?:(?<serie>[A-Za-zā ]+ Mythology) S(?<t>\d+)E(?<e>\d+)|(?<especial>[^|<>]+) Special(?: · Part \d+)?)$/u;
+export const FORMATO = /^(?<curioso>[^|<>]+?) \| (?:(?<serie>[A-Za-zā ]+ Mythology|The Bible) S(?<t>\d+)E(?<e>\d+)|(?<especial>[^|<>]+) Special(?: · Part \d+)?)$/u;
 
 /** Título del capítulo (lo de antes de " | "): "Thor Lost His Hammer | Norse Mythology S1E5" → "Thor Lost His Hammer". */
 export const parteCuriosa = (titulo) => (titulo ? String(titulo).split(' | ')[0].trim() : '');

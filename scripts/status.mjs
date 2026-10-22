@@ -7,7 +7,7 @@ import { execFileSync } from 'node:child_process';
 import { tieneYouTube, tieneInstagram, tieneTiktok, esShort, esQuien, PLATAFORMAS } from './cola.mjs';
 
 const REPO = 'matiasosuna/mitologias-render';
-const NOMBRES = { griegas: 'Griegas', nordicas: 'Nórdicas', egipcias: 'Egipcias', hawaianas: 'Hawaianas', norteamericanas: 'Norteamericanas', aztecas: 'Aztecas', hindues: 'Hindúes', maories: 'Maoríes', balinesas: 'Balinesas' };
+const NOMBRES = { griegas: 'Griegas', nordicas: 'Nórdicas', egipcias: 'Egipcias', hawaianas: 'Hawaianas', norteamericanas: 'Norteamericanas', aztecas: 'Aztecas', hindues: 'Hindúes', maories: 'Maoríes', biblia: 'Biblia', balinesas: 'Balinesas' };
 const fmt = (n) => (n == null ? '—' : Number(n).toLocaleString('es'));
 const tabla = (cab, filas) => [`| ${cab.join(' | ')} |`, `| ${cab.map(() => '---').join(' | ')} |`, ...filas.map((f) => `| ${f.join(' | ')} |`)].join('\n');
 

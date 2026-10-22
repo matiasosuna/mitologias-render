@@ -24,8 +24,8 @@ const CIERRE_VERTICAL = 3;
 /** Puntos de corte (cuadros) del vertical completo: comienzos de escena o, si no alcanza, de frase.
  *  `sobra(i)` = cuadros que se le suman a la parte i (marco de Learn Bible: gancho + invitación + final, lib/marco.mjs);
  *  esa parte lleva menos episodio para seguir < 3 min. */
-export function cortes(timeline, extra = 0, sobra = null) {
-  if (sobra) return cortesConMarco(timeline, sobra);
+export function cortes(timeline, extra = 0, sobra = null, conPortada = false) {
+  if (sobra) return cortesConMarco(timeline, sobra, conPortada);
   const fps = timeline.fps, total = timeline.total - timeline.outroFrames + CIERRE_VERTICAL * fps, max = MAX_S * fps;
   const n = Math.ceil(total / max) + extra;
   if (n <= 1) return { total, partes: [[0, total]] };
@@ -48,14 +48,15 @@ export function cortes(timeline, extra = 0, sobra = null) {
 /** Cortes con marco (Learn Bible): cada parte i lleva `sobra(i)` cuadros más (gancho + invitación + final) y reemplaza al
  *  cartel gancho de 2 s. Busca la combinación con menos partes, cortes en comienzo de escena (o, si no entra, de una
  *  frase que empieza oración: la anterior termina en punto) y partes parejas. */
-export function cortesConMarco(timeline, sobra) {
+export function cortesConMarco(timeline, sobra, conPortada = false) {
   const fps = timeline.fps, total = timeline.total - timeline.outroFrames + CIERRE_VERTICAL * fps;
-  const max = (i) => (MAX_S + 2) * fps - sobra(i); // + los 2 s del cartel gancho, que con marco no va
+  const max = (i) => (MAX_S + (conPortada ? 0 : 2)) * fps - sobra(i); // + los 2 s del cartel gancho, que con gancho narrado no va
   const cand = new Map(timeline.escenas.map((e) => [e.from, 0]));
   const frases = timeline.escenas.flatMap((e) => e.frases.map((f, j) => ({ x: e.from + f.from, primera: j === 0, texto: f.texto?.en ?? '' })));
   frases.forEach((f, k) => { if (!f.primera && !cand.has(f.x)) cand.set(f.x, /[.!?]["']?\s*$/.test(frases[k - 1].texto) ? 1 : 3); });
   // con marco la parte 1 abre con la portada de pergamino: no lleva la portada vieja del episodio (introFrames)
-  const puntos = [timeline.introFrames, ...[...cand.keys()].filter((x) => x > timeline.introFrames && x < total).sort((a, b) => a - b), total];
+  const ini = conPortada ? 0 : timeline.introFrames; // solo final (sin gancho narrado): la parte 1 abre con la portada de Myths
+  const puntos = [ini, ...[...cand.keys()].filter((x) => x > ini && x < total).sort((a, b) => a - b), total];
   const peor = (a, b) => (a[0] !== b[0] ? a[0] > b[0] : a[1] > b[1]);
   let n = 1;
   for (let cabe = max(0); cabe < total; cabe += max(n++));
@@ -86,7 +87,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   for (const id of ids) {
     // antes del bundle: el audio rápido tiene que estar en public/
     timelines[id] = lento ? JSON.parse(readFileSync(join('src/videos', id, 'timeline.json'), 'utf8')) : prepararRapido(id);
-    if (JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8')).reels) continue; // Learn Bible: la tapa es la portada de pergamino (abajo)
+    if (JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8')).reels?.ganchos) continue; // con ganchos (marco al inicio): la tapa es la portada de pergamino (abajo)
     if (!existsSync(join('out', id, 'portada-ig.jpg'))) execFileSync('node', ['scripts/portadas-ig.mjs', id], { stdio: 'ignore' });
     copyFileSync(join('out', id, 'portada-ig.jpg'), join('public/portadas', `${id}.jpg`));
   }
@@ -99,7 +100,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     const timeline = timelines[id];
     // marco de Learn Bible (lib/marco.mjs): del timeline.json (el ritmo rápido no lo trae)
     const conMarco = { ...timeline, marco: timeline.marco ?? JSON.parse(readFileSync(join('src/videos', id, 'timeline.json'), 'utf8')).marco };
-    const { partes } = cortes(timeline, 0, guion.reels && conMarco.marco ? sobraParte(guion, conMarco) : null); // sin marco: el corte de siempre
+    const { partes } = cortes(timeline, 0, guion.reels && conMarco.marco ? sobraParte(guion, conMarco) : null, !guion.reels?.ganchos); // sin marco: el corte de siempre; solo final: portada y cartel gancho como Myths
     const de = partes.length;
     // Las partes a la vez y cada una en trozos (RENDER_PARALELO Chromes en total; uno solo aprovecha ~2 núcleos).
     const nucleos = Number(process.env.RENDER_CONCURRENCY) || Math.max(2, os.cpus().length - 1);
@@ -119,6 +120,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
         if (i === 0) copyFileSync(jpg, join('out', id, 'portada-ig.jpg'));
       }
     }));
-    writeFileSync(join('out', id, 'partes.json'), JSON.stringify({ de, partes, ...(guion.reels ? { portadas: partes.map((_, i) => `portada-ig-${i + 1}.jpg`), portadaCuadro: ENTRADA_PORTADA, caption: guion.reels.caption ?? null, descripcion: guion.youtube?.descripcion ?? null } : {}), gancho: gancho || false, ritmo: lento ? 'lento' : 'rapido', huella: huella(id) })); // gancho/ritmo/huella del guion: sembrar y la nube no reusan partes viejas, con otro título ni de otro elenco
+    writeFileSync(join('out', id, 'partes.json'), JSON.stringify({ de, partes, ...(guion.reels?.ganchos ? { portadas: partes.map((_, i) => `portada-ig-${i + 1}.jpg`), portadaCuadro: ENTRADA_PORTADA } : {}), gancho: gancho || false, ritmo: lento ? 'lento' : 'rapido', huella: huella(id) })); // gancho/ritmo/huella del guion: sembrar y la nube no reusan partes viejas, con otro título ni de otro elenco
   }
 }

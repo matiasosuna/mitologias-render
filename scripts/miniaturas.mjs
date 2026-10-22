@@ -14,19 +14,8 @@ const oficiales = clavesOficiales();
 const ids = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(MINIS);
 // Si el guion trae "miniatura", manda el guion (la portada del video usa lo mismo).
 const guiones = Object.fromEntries(ids.map((id) => [id, JSON.parse(readFileSync(`src/videos/${id}/guion.json`, 'utf8'))]));
-// Biblia (sin héroe/rival: Dios es solo luz): la miniatura es la portada del propio episodio (título del capítulo), a 1280×720.
-const biblia = ids.filter((id) => guiones[id].serie === 'biblia');
-if (biblia.length) {
-  const url = await bundle({ entryPoint: resolve('src/motor/entrada.tsx') });
-  process.on('exit', () => rmSync(url, { recursive: true, force: true }));
-  for (const id of biblia) {
-    const inputProps = { guion: guiones[id], timeline: JSON.parse(readFileSync(`src/videos/${id}/timeline.json`, 'utf8')), idioma: null, imagen: 'en' };
-    const comp = await selectComposition({ serveUrl: url, id, inputProps });
-    mkdirSync(`out/${id}`, { recursive: true });
-    await renderStill({ serveUrl: url, composition: comp, output: `out/${id}/miniatura.jpg`, inputProps, frame: Math.min(60, inputProps.timeline.introFrames - 1), scale: 1280 / comp.width, imageFormat: 'jpeg', jpegQuality: 90 });
-    console.log('ok', id);
-  }
-}
+// Biblia: como Myths (Miniatura con héroe/rival del guion: hombre_biblia y mujer_biblia; Dios nunca es una figura).
+const biblia = [];
 const resto = ids.filter((id) => !biblia.includes(id));
 const serveUrl = resto.length ? await bundle({ entryPoint: resolve('src/canal/Canal.tsx') }) : null;
 if (serveUrl) process.on('exit', () => rmSync(serveUrl, { recursive: true, force: true }));

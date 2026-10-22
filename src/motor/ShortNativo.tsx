@@ -100,7 +100,7 @@ export const ShortNativo: React.FC<{ guion: GuionVisual; timeline: Timeline; idi
         {cierre && (
           <AbsoluteFill style={{ backgroundColor: `rgba(15,11,9,${interpolate(f, [finHistoria, finHistoria + 10], [0, 0.85], cl)})`, justifyContent: 'center', alignItems: 'center' }}>
             <div style={{ fontFamily: TITULO, fontWeight: 700, fontSize: 66, color: C.crema, textAlign: 'center', lineHeight: 1.2, padding: 60, opacity: ap(f, finHistoria + 4, 10) }}>
-              {guion.cierre?.[idioma] ?? guion.cierre?.es ?? guion.titulo[idioma] ?? guion.titulo.es}<br /><span style={{ fontSize: 44 }}>Full story on {natural ? 'Learn Bible 777' : 'Myths on Clay'}</span>
+              {guion.cierre?.[idioma] ?? guion.cierre?.es ?? guion.titulo[idioma] ?? guion.titulo.es}<br /><span style={{ fontSize: 44 }}>Full story on Myths on Clay</span>
             </div>
           </AbsoluteFill>
         )}

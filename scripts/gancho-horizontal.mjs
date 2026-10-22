@@ -10,7 +10,7 @@ import { join, resolve } from 'node:path';
 import { parteCuriosa, lineaTemporada, leerTitulos } from './titulos.mjs';
 
 export const SEG_GANCHO = 2;
-export const MUSICA = { griegas: 'lira-griega', nordicas: 'nordica', egipcias: 'egipcia', hawaianas: 'hawaiana', norteamericanas: 'norteamericana', aztecas: 'azteca', balinesas: 'balinesa', hindues: 'hindu', maories: 'maori' };
+export const MUSICA = { griegas: 'lira-griega', nordicas: 'nordica', egipcias: 'egipcia', hawaianas: 'hawaiana', norteamericanas: 'norteamericana', aztecas: 'azteca', balinesas: 'balinesa', hindues: 'hindu', maories: 'maori', biblia: 'biblia' };
 
 /** Textos del cartel: { gancho: título del capítulo, linea: "Norse Mythology · Season 1, Episode 13" } (null si no hay título). */
 export function textosGancho(id, serie, titulos = leerTitulos()) {
@@ -41,6 +41,7 @@ const PREGUNTAS = {
   balinesas: 'Which moment of this story stayed with you? Tell us in the comments 👇',
   hindues: 'Which moment of this story stayed with you? Tell us in the comments 👇',
   maories: 'Which moment of this story stayed with you? Tell us in the comments 👇',
+  biblia: 'Which verse of this chapter stayed with you? Tell us in the comments 👇',
 };
 export const preguntaDe = (g) => (typeof g.pregunta === 'string' ? g.pregunta : g.pregunta?.en) || PREGUNTAS[g.serie ?? 'griegas'] || PREGUNTAS.griegas;
 /** Pone la pregunta justo después del resumen (antes de "Chapters"); si no hay capítulos, al final del primer párrafo. */

@@ -25,5 +25,5 @@ export function textoReel(o) {
   const serie = titulo !== lineaVieja(o) && codigo ? `\n${codigo}` : ''; // la línea vieja ya nombra la serie
   const intro = parte > 1 ? `Continued from Part ${parte - 1}: watch it first in our Reels.` : (gancho ?? '');
   const sigue = parte < de ? `\n\nFollow so you don't miss Part ${parte + 1} 👀` : '';
-  return `${titulo}${serie}\n\n${intro}${sigue}\n\n🇪🇸 ${gu.titulo.es}${de > 1 ? ` · Parte ${parte}/${de}` : ''}\n\nThe whole season, in order, in our Reels and on YouTube (link in bio).\n\n${tags} #mythology #animation #mythsonclay`;
+  return `${titulo}${serie}\n\n${intro}${sigue}\n\n🇪🇸 ${gu.titulo.es}${de > 1 ? ` · Parte ${parte}/${de}` : ''}\n\nThe whole season, in order, in our Reels and on YouTube (link in bio).\n\n${tags} ${gu.serie === 'biblia' ? '' : '#mythology '}#animation #mythsonclay`;
 }

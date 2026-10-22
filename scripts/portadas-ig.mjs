@@ -19,6 +19,7 @@ const TEMPORADAS = {
   balinesas: [[12, 'SEASON 1 · GODS, DEMONS AND THE ISLAND'], [24, 'SEASON 2 · PRIESTS, KINGS AND LOVERS'], [99, 'SEASON 3 · SPIRITS OF THE ISLAND']],
   hindues: [[12, 'SEASON 1 · GODS, THE OCEAN AND THE AVATARS'], [24, 'SEASON 2 · THE RAMAYANA'], [99, 'SEASON 3 · KRISHNA AND THE MAHABHARATA']],
   maories: [[12, 'SEASON 1 · FROM THE DARK TO AOTEAROA'], [24, 'SEASON 2 · CANOES FROM HAWAIKI'], [99, 'SEASON 3 · TANIWHA AND TIPUA']],
+  biblia: [[50, 'SEASON 1 · GENESIS']],
 };
 const oficiales = clavesOficiales();
 const opt = (k) => process.argv.find((a) => a.startsWith(`--${k}=`))?.split('=')[1];
