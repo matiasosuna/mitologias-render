@@ -1,21 +1,21 @@
 # Myths on Clay — estado
-_Actualizado 2026-10-21 21:08 UTC_
+_Actualizado 2026-10-22 21:08 UTC_
 
 ## Resumen
 | Qué | Estado |
 | --- | --- |
 | publicar | activado |
-| Última corrida de publicar | en curso · 2026-10-21 21:07 UTC |
-| Último turno registrado | 2026-10-21T18Z |
-| Próximos de la cola | egipcias-10-viaje-nocturno<br>egipcias-11-pesada-del-corazon<br>griegas-99-reino-de-hades<br>nordicas-99-hel<br>egipcias-99-anubis-y-la-duat |
-| "Who is…?" listos | 14 (11 sin publicar en alguna red) |
+| Última corrida de publicar | en curso · 2026-10-22 21:07 UTC |
+| Último turno registrado | 2026-10-22T22Z |
+| Próximos de la cola | hawaianas-01-canto-de-la-noche<br>hawaianas-02-nacidos-del-mar<br>hawaianas-03-la-tierra-despierta<br>hawaianas-04-hechos-de-tierra-roja<br>hawaianas-05-la-calabaza-de-wakea |
+| "Who is…?" listos | 17 (13 sin publicar en alguna red) |
 
 ## Temporadas
 | Mitología | Temporada | Episodios | YouTube | Instagram |
 | --- | --- | --- | --- | --- |
-| Griegas | Especial Greek Myth Stories | 3 | 0 | 0 |
+| Griegas | Especial Greek Myth Stories | 4 | 0 | 0 |
 | Griegas | Especial Lords of the Dead | 1 | 1 | 1 |
-| Griegas | Especial The Odyssey | 2 | 1 | 1 |
+| Griegas | Especial The Odyssey | 2 | 2 | 2 |
 | Griegas | T1 | 7 | 7 | 7 |
 | Griegas | T2 | 10 | 10 | 10 |
 | Nórdicas | Especial Lords of the Dead | 1 | 1 | 1 |
@@ -31,11 +31,12 @@ _Actualizado 2026-10-21 21:08 UTC_
 | Aztecas | T1 | 12 | 0 | 0 |
 | Hindúes | T1 | 12 | 0 | 0 |
 | Maoríes | T1 | 12 | 0 | 0 |
+| Biblia | T1 | 4 | 1 | 1 |
 | Balinesas | T1 | 12 | 0 | 0 |
 
 ## Métricas
 | Red | Métricas |
 | --- | --- |
-| YouTube | 24 suscriptores · 6426 vistas · 82 videos |
-| Instagram | 62 seguidores · 535 likes · 24.247 vistas (28 días) |
+| YouTube | 24 suscriptores · 6955 vistas · 87 videos |
+| Instagram | 67 seguidores · 567 likes · 25.559 vistas (28 días) |
 | TikTok | sin API |
