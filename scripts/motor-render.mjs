@@ -10,6 +10,7 @@ import { createHash } from 'node:crypto';
 import { join, resolve, basename } from 'node:path';
 import os from 'node:os';
 import { srt } from '../lib/motor-tiempos.mjs';
+import { horizontalConMarco } from '../lib/marco.mjs';
 
 const id = process.argv[2];
 const arg = (k, d) => (process.argv.find((a) => a.startsWith(`--${k}=`)) ?? `=${d}`).split('=')[1];
@@ -17,12 +18,14 @@ const IMAGEN = arg('imagen', 'en'), AUDIOS = arg('audio', 'en').split(',');
 // TRAMOS_DIR: dónde vive el caché de tramos (en Modal, el Volume, así sobrevive entre corridas).
 const dir = join('src/videos', id), out = join('out', id), cache = join(process.env.TRAMOS_DIR || 'out/.tramos', id);
 mkdirSync(out, { recursive: true }); mkdirSync(cache, { recursive: true });
-const g = JSON.parse(readFileSync(join(dir, 'guion.json'), 'utf8'));
+let g = JSON.parse(readFileSync(join(dir, 'guion.json'), 'utf8'));
 // Short "Who is…?": su versión horizontal (scripts/quien-horizontal.mjs), con los mismos archivos de salida que un episodio
 if (g.formato === 'short') { await (await import('./quien-horizontal.mjs')).renderHorizontal([id]); process.exit(0); }
-const tl = JSON.parse(readFileSync(join(dir, 'timeline.json'), 'utf8'));
+let tl = JSON.parse(readFileSync(join(dir, 'timeline.json'), 'utf8'));
 // Título del próximo episodio para la pantalla final (de youtube.json si el guion no lo trae)
 if (!g.siguiente && existsSync(join(dir, 'youtube.json'))) { const s = JSON.parse(readFileSync(join(dir, 'youtube.json'), 'utf8')).siguiente; if (s) g.siguiente = { es: s, en: s }; }
+// Learn Bible 777: gancho + invitación después de la portada y la invitación final antes de la pantalla final (lib/marco.mjs)
+({ guion: g, timeline: tl } = horizontalConMarco(g, tl));
 
 // Huella del código del motor: si cambia, se re-renderiza todo
 const fuentes = ['src/motor', 'src/comun'].flatMap((d) => readdirSync(d).filter((f) => /\.tsx?$/.test(f) && f !== 'indice.ts').map((f) => join(d, f)));

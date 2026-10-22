@@ -8,7 +8,7 @@ import { homedir } from 'node:os';
 const leer = (p) => Object.fromEntries(readFileSync(p, 'utf8').split('\n').filter((l) => l.includes('=')).map((l) => [l.slice(0, l.indexOf('=')), l.slice(l.indexOf('=') + 1).trim()]));
 const viajes = leer(`${homedir()}/Projects/viajes/.env`);
 const APP = viajes.META_APP_ID, SECRET = viajes.META_APP_SECRET, V = 'v21.0';
-const puerto = 8777, redirect = `http://localhost:${puerto}/`;
+const puerto = 8777, redirect = `https://localhost:${puerto}/`; // la app está publicada: Meta solo acepta https (el navegador no carga; se le pasa el code a mano a http://localhost:8777/?code=…)
 const scope = 'pages_show_list,pages_read_engagement,instagram_basic,instagram_content_publish,instagram_manage_insights,business_management';
 const url = `https://www.facebook.com/${V}/dialog/oauth?${new URLSearchParams({ client_id: APP, redirect_uri: redirect, scope, response_type: 'code', auth_type: 'rerequest' })}`;
 const g = async (ruta, q) => { const r = await fetch(`https://graph.facebook.com/${V}${ruta}?${new URLSearchParams(q)}`); const j = await r.json(); if (j.error) throw new Error(`${ruta}: ${j.error.message}`); return j; };

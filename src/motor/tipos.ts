@@ -3,6 +3,8 @@
 
 export type Idioma = 'es' | 'pt' | 'en';
 export type Texto = Partial<Record<Idioma, string>> & { es: string };
+/** Texto que puede venir solo en inglés (marco de Learn Bible). */
+export type TextoLibre = Partial<Record<Idioma, string>>;
 
 export type Paso = {
   /** Momento (índice de frase; decimales = fracción de esa frase). */
@@ -125,6 +127,10 @@ export type GuionVisual = {
   quien?: { nombre: Texto; subtitulo: Texto; como: string; fondo?: Escena['fondo']; escala?: number };
   /** Short nativo: cold open de 1–2 frases sobre el momento más fuerte, ANTES del cartel/la historia (lib/short.mjs). */
   coldOpen?: Omit<Escena, 'id'> & { id?: string };
+  /** Learn Bible 777 (lib/marco.mjs): Reels = gancho propio de cada parte + invitación al principio, invitación final al terminar. */
+  reels?: { ganchos?: TextoLibre[]; invitacion?: TextoLibre; final?: TextoLibre };
+  /** Learn Bible 777 (lib/marco.mjs): horizontal = gancho (por defecto reels.ganchos[0]) + invitación antes del capítulo; final antes de la pantalla final. */
+  youtube?: { gancho?: TextoLibre; invitacion?: TextoLibre; final?: TextoLibre };
 };
 
 export type Short = {
@@ -137,4 +143,8 @@ export type Short = {
 
 export type FraseTL = { from: number; dur: number; audio: Partial<Record<Idioma, string>>; texto: Texto };
 export type EscenaTL = { id: string; from: number; durationInFrames: number; frases: FraseTL[] };
-export type Timeline = { fps: number; introFrames: number; outroFrames: number; total: number; escenas: EscenaTL[]; cartelFrom?: number; cartelFrames?: number };
+export type Timeline = { fps: number; introFrames: number; outroFrames: number; total: number; escenas: EscenaTL[]; cartelFrom?: number; cartelFrames?: number; marco?: Record<string, PiezaMarco> };
+/** Pieza narrada del marco de Learn Bible (gancho, invitación, final): lib/marco.mjs. */
+export type PiezaMarco = { texto: TextoLibre; audio: Partial<Record<Idioma, string>>; dur: number };
+/** Tramo del marco ya armado (frases con `from` relativo al tramo). */
+export type TramoMarco = { durationInFrames: number; frases: (Omit<FraseTL, 'texto'> & { texto: TextoLibre })[] };

@@ -62,7 +62,7 @@ jobs:
           mkdir -p out subir
           for id in $IDS; do
             modal volume get --force moc-out "$id" out/ || { echo "::error::$id: nada en moc-out"; continue; }
-            for f in out/$id/*.mp4 out/$id/*.srt out/$id/partes.json out/$id/miniatura.jpg; do
+            for f in out/$id/*.mp4 out/$id/*.srt out/$id/partes.json out/$id/miniatura.jpg out/$id/portada-ig*.jpg; do
               [ -f "$f" ] || continue
               n=$(basename "$f"); case "$n" in "$id".*) ;; *) n="$id.$n" ;; esac
               cp "$f" "subir/$n"

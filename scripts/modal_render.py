@@ -94,9 +94,9 @@ def render(id: str, modo: str = "vertical") -> str:
         subprocess.run(["node", "scripts/vertical-render.mjs", id], cwd="/app", check=True, env=env)
         copiar([f"{id}.vertical.mp4", "portada-ig.jpg"])
     else:  # partes
-        limpiar([f"{id}.parte-*.mp4", "partes.json", "portada-ig.jpg"])
+        limpiar([f"{id}.parte-*.mp4", "partes.json", "portada-ig.jpg", "portada-ig-*.jpg"])
         subprocess.run(["node", "scripts/vertical-partes.mjs", id], cwd="/app", check=True, env=env)
-        copiar([f"{id}.parte-*.mp4", "partes.json", "portada-ig.jpg"])
+        copiar([f"{id}.parte-*.mp4", "partes.json", "portada-ig.jpg", "portada-ig-*.jpg"])  # portada-ig-N: Learn Bible (pergamino por parte)
     vol.commit()
     pico = pathlib.Path("/sys/fs/cgroup/memory.peak")
     ram = f" · pico RAM {int(pico.read_text()) / 2**30:.1f} GB" if pico.exists() else ""

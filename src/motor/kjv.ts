@@ -10,3 +10,13 @@ export const KJV: Record<string, Verso[]> = {
 export const KJV_LIBRO: Record<string, string> = {
   'biblia-genesis-01': gen01.verses[0].book_name,
 };
+/** Capítulo (del mismo kjv.json). */
+export const capituloDe = (id: string) => KJV[id]?.[0]?.chapter ?? 1;
+/** Encabezado de la KJV sobre el nombre del libro (portada de pergamino). Sin mapeo: solo el nombre del libro. */
+export const ENCABEZADO_KJV: Record<string, string> = {
+  Genesis: 'The First Book of Moses, called',
+  Exodus: 'The Second Book of Moses, called',
+  Leviticus: 'The Third Book of Moses, called',
+  Numbers: 'The Fourth Book of Moses, called',
+  Deuteronomy: 'The Fifth Book of Moses, called',
+};

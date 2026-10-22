@@ -7,6 +7,7 @@ import { readFileSync, writeFileSync, existsSync, readdirSync, renameSync } from
 import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { timelineMulti } from '../lib/motor-tiempos.mjs';
+import { marcoTimeline } from '../lib/marco.mjs';
 import { tiemposShort } from '../lib/quien.mjs';
 import { procesoAudio, pendienteAudio, filtroAudio, registroAudio } from '../lib/short.mjs';
 
@@ -44,6 +45,8 @@ export function retimear(id) {
   }));
   const g = guionDe(id);
   const nuevo = timelineMulti(escenas, undefined, g.formato === 'short' ? tiemposShort(g) : undefined);
+  // marco de Learn Bible (lib/marco.mjs): las piezas también se re-miden
+  if (tl.marco) nuevo.marco = marcoTimeline(Object.entries(tl.marco).map(([id, p]) => ({ id, frases: [{ texto: p.texto, audio: p.audio, segundos: Object.fromEntries(Object.entries(p.audio).map(([l, rel]) => [l, dur(join('public', rel))])) }] })), nuevo.fps);
   writeFileSync(p, JSON.stringify(nuevo));
   return { antes: tl.total / tl.fps / 60, ahora: nuevo.total / nuevo.fps / 60 };
 }

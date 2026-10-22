@@ -11,6 +11,7 @@ import { timelineMulti } from '../lib/motor-tiempos.mjs';
 import { tiemposShort } from '../lib/quien.mjs';
 import { escenasDe, procesoAudio } from '../lib/short.mjs';
 import { leerEnv, usaChatterbox, binModal, motorDeVoz } from '../lib/voz-config.mjs';
+import { piezasMarco, marcoTimeline } from '../lib/marco.mjs';
 
 // Inglés: tu voz clonada en ElevenLabs (si hay clave en .env); el resto, voces de macOS gratis.
 // En la nube no hay .env: las variables del entorno mandan (VOZ_EN, MODAL_BIN).
@@ -48,6 +49,7 @@ const idiomas = lista.split(',');
 const dir = join('src/videos', id);
 const g = JSON.parse(readFileSync(join(dir, 'guion.json'), 'utf8'));
 const ESCENAS = escenasDe(g); // con cold open (Shorts), va primero
+const MARCO = piezasMarco(g); // Learn Bible: gancho, invitación y final (lib/marco.mjs); se narran igual pero van aparte en el timeline
 const dur = (wav) => Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', wav]).toString());
 
 // Chatterbox: genera de una vez (una sola máquina con GPU) todas las frases en inglés que todavía no tienen audio.
@@ -57,7 +59,7 @@ if (CHATTER && idiomas.includes('en')) {
   // un .wav de 0 bytes (corte de Modal) cuenta como faltante: se borra y se vuelve a narrar
   if (existsSync(dirEn)) for (const n of readdirSync(dirEn)) if (n.endsWith('.wav') && vacio(join(dirEn, n))) borrarVacio(join(dirEn, n));
   const hechos = existsSync(dirEn) ? readdirSync(dirEn) : [];
-  const faltan = ESCENAS.flatMap((e) => e.frases).filter((t) => t.en).map((t) => ({ h: createHash('sha1').update(`${CB[0]}|${CB[1]}|${t.en}`).digest('hex').slice(0, 8), texto: t.en }))
+  const faltan = [...ESCENAS, ...MARCO].flatMap((e) => e.frases).filter((t) => t.en).map((t) => ({ h: createHash('sha1').update(`${CB[0]}|${CB[1]}|${t.en}`).digest('hex').slice(0, 8), texto: t.en }))
     .filter((f, i, a) => a.findIndex((x) => x.h === f.h) === i && !hechos.some((n) => n.endsWith(`-${f.h}.wav`)));
   if (faltan.length) {
     mkdirSync(cbDir, { recursive: true });
@@ -67,7 +69,7 @@ if (CHATTER && idiomas.includes('en')) {
 }
 
 const escenas = [];
-for (const esc of ESCENAS) escenas.push({
+for (const esc of [...ESCENAS, ...MARCO]) escenas.push({
   id: esc.id,
   frases: await enOrden(esc.frases, async (texto, j) => {
     const audio = {}, segundos = {};
@@ -100,7 +102,9 @@ for (const esc of ESCENAS) escenas.push({
   }),
 });
 
+const narradasMarco = escenas.splice(ESCENAS.length);
 let tl = timelineMulti(escenas, undefined, g.formato === 'short' ? tiemposShort(g) : undefined);
+if (narradasMarco.length) tl.marco = marcoTimeline(narradasMarco, tl.fps);
 writeFileSync(join(dir, 'timeline.json'), JSON.stringify(tl));
 // Inglés al tempo de su formato (episodios 0,9× más claros; Shorts 1,1× y sin silencios en las puntas) y timeline de nuevo.
 // .tempo.json sabe qué tiene cada archivo: si el texto no cambió pero el tempo sí, se re-estira solo la diferencia.

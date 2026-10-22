@@ -34,6 +34,7 @@ jobs:
     timeout-minutes: 300
     env:
       NUBE: '1'
+      IG_VIA: graph # Instagram solo por la API de Meta, nunca Buffer (Matías 2026-10-22)
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
@@ -59,7 +60,7 @@ jobs:
             const k = ["YT_CLIENT_ID", "YT_CLIENT_SECRET", "BUFFER_API_KEY"];
             const faltan = k.filter((x) => !e[x]).concat(e.YT_TOKEN_JSON ? [] : ["YT_TOKEN_JSON"]);
             if (faltan.length) { console.error("faltan secretos: " + faltan.join(", ")); process.exit(1); }
-            for (const x of ["MOC_PAGE_TOKEN", "MOC_IG_USER_ID", "GEMINI_API_KEY"]) if (e[x]) k.push(x); // opcionales (Instagram va por Buffer)
+            for (const x of ["MOC_PAGE_TOKEN", "MOC_IG_USER_ID", "GEMINI_API_KEY"]) if (e[x]) k.push(x); // opcionales (Instagram va por la API de Meta)
             fs.writeFileSync(".env", k.map((x) => x + "=" + e[x].trim()).join("\n") + "\n", { mode: 0o600 });
             const t = JSON.parse(e.YT_TOKEN_JSON);
             for (const v of [t.refresh_token, t.access_token]) if (v) console.log("::add-mask::" + v);

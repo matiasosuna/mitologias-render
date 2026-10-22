@@ -5,8 +5,9 @@ import { VideoMotor, GanchoHorizontal, GANCHO_HORIZONTAL } from './VideoMotor';
 import { VideoShort, tramoShort } from './Short';
 import { ShortNativo } from './ShortNativo';
 import { ShortHorizontal, duracionHorizontal } from './ShortHorizontal';
-import { VideoVertical, CIERRE_VERTICAL, ParteVertical, CARTEL_PARTE, framesGancho } from './VideoVertical';
+import { VideoVertical, CIERRE_VERTICAL, ParteVertical, duracionParte } from './VideoVertical';
 import { VIDEOS } from './indice';
+import { horizontalConMarco } from '../../lib/marco.mjs';
 import { DemoCalidad } from './DemoCalidad';
 import { DemoPersonajes2 } from './DemoPersonajes2';
 import { DemoBrazos } from './DemoBrazos';
@@ -35,9 +36,10 @@ registerRoot(() => (
     ))}
     {VIDEOS.filter(({ guion }) => (guion as GuionVisual).formato !== 'short').map(({ guion, timeline }) => (
       <Composition key={`${(guion as GuionVisual).id}-parte`} id={`${(guion as GuionVisual).id}-parte`} component={ParteVertical as unknown as React.FC<Record<string, unknown>>} durationInFrames={1} fps={(timeline as Timeline).fps} width={1080} height={1920} defaultProps={{ guion, timeline, desde: 0, hasta: 1, n: 1, de: 1 }}
-        calculateMetadata={({ props }) => { const p = props as { desde: number; hasta: number; n: number; de: number; gancho?: string }; const fps = (timeline as Timeline).fps; return { durationInFrames: framesGancho(fps, p.gancho) + p.hasta - p.desde + (p.n < p.de ? Math.round(CARTEL_PARTE * fps) : 0) }; }} />
+        calculateMetadata={({ props }) => ({ durationInFrames: duracionParte((timeline as Timeline).fps, props as Parameters<typeof duracionParte>[1]) })} />
     ))}
-    {VIDEOS.filter(({ guion }) => (guion as GuionVisual).formato !== 'short').map(({ guion, timeline }) => (
+    {/* Learn Bible 777: el horizontal lleva el marco (gancho + invitación, final): lib/marco.mjs */}
+    {VIDEOS.filter(({ guion }) => (guion as GuionVisual).formato !== 'short').map(({ guion: g0, timeline: t0 }) => horizontalConMarco(g0, t0)).map(({ guion, timeline }) => (
       <Composition
         key={(guion as GuionVisual).id}
         id={(guion as GuionVisual).id}
@@ -47,6 +49,7 @@ registerRoot(() => (
         width={1920}
         height={1080}
         defaultProps={{ guion, timeline, idioma: null as Idioma | null }}
+        calculateMetadata={({ props }) => ({ durationInFrames: (props as { timeline: Timeline }).timeline.total })}
       />
     ))}
     {VIDEOS.flatMap(({ guion, timeline }) => ((guion as GuionVisual).shorts ?? []).map((_, n) => (
