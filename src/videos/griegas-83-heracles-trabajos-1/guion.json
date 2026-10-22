@@ -1,0 +1,1283 @@
+{
+ "id": "griegas-83-heracles-trabajos-1",
+ "serie": "griegas",
+ "numero": "83",
+ "titulo": {
+  "es": "Los trabajos de Heracles, parte I",
+  "en": "The Labors of Heracles, Part I"
+ },
+ "tituloGriego": "ΗΡΑΚΛΗΣ",
+ "especial": {
+  "nombre": {
+   "es": "Historias de mitología griega",
+   "en": "Greek Myth Stories"
+  }
+ },
+ "miniatura": {
+  "heroe": "heracles_oficial",
+  "rival": "hidra_oficial"
+ },
+ "shorts": [
+  {
+   "gancho": {
+    "es": "Ninguna arma podía cortar su piel",
+    "en": "No Weapon Could Cut Its Skin"
+   },
+   "escena": "leon",
+   "desde": 1,
+   "hasta": 4,
+   "foco": 1100
+  },
+  {
+   "gancho": {
+    "es": "Cortó una cabeza y crecieron dos",
+    "en": "Cut One Head, Two Grew Back"
+   },
+   "escena": "hidra",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1100
+  },
+  {
+   "gancho": {
+    "es": "Un rey se escondió en una vasija",
+    "en": "The King Who Hid in a Jar"
+   },
+   "escena": "tinaja",
+   "desde": 0,
+   "hasta": 2,
+   "foco": 1050
+  }
+ ],
+ "escenas": [
+  {
+   "id": "locura",
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Heracles era el hombre más fuerte del mundo. Su padre era Zeus, y su madre, una mujer mortal.",
+     "en": "Heracles was the strongest man in the world. His father was Zeus, and his mother was a mortal woman."
+    },
+    {
+     "es": "Hera, la esposa de Zeus, lo odiaba desde que nació.",
+     "en": "Hera, the wife of Zeus, hated him from the day he was born."
+    },
+    {
+     "es": "Un día, ella le mandó un ataque de locura, y Heracles lastimó a su propia familia.",
+     "en": "One day she sent a fit of madness on him, and Heracles hurt his own family."
+    },
+    {
+     "es": "Cuando despertó, no podía creer lo que había hecho. Su dolor era enorme.",
+     "en": "When he woke up, he could not believe what he had done. His grief was huge."
+    }
+   ],
+   "elementos": [],
+   "actores": [
+    {
+     "id": "heracles",
+     "como": "heracles_oficial",
+     "x": 1000,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.5,
+       "hace": "enoja"
+      },
+      {
+       "en": 2,
+       "hace": "tiembla"
+      },
+      {
+       "en": 3,
+       "hace": "lamenta"
+      }
+     ],
+     "rotulo": "HERACLES"
+    },
+    {
+     "id": "hera",
+     "como": "hera_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      }
+     ],
+     "rotulo": "HERA"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "oscurecer",
+     "dur": 1.2
+    },
+    {
+     "en": 3.2,
+     "tipo": "aclarar",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "UN HÉROE CON UN SECRETO TRISTE",
+      "en": "A HERO WITH A SAD PAST"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "oraculo",
+   "fondo": "templo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Para limpiar su culpa, Heracles viajó a Delfos, donde vivía una sacerdotisa llamada la Pitia.",
+     "en": "To wash away his guilt, Heracles traveled to Delphi, where a priestess called the Pythia lived."
+    },
+    {
+     "es": "Se decía que el dios Apolo le hablaba a través de ella.",
+     "en": "People said the god Apollo spoke through her."
+    },
+    {
+     "es": "La Pitia le dio una orden: debía servir al rey Euristeo durante doce años.",
+     "en": "The Pythia gave him an order: he must serve King Eurystheus for twelve years."
+    },
+    {
+     "es": "Debía hacer todo lo que el rey le pidiera. Si lo lograba, se volvería inmortal.",
+     "en": "He must do whatever the king asked. If he succeeded, he would become immortal."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "templo",
+     "x": 1600,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "altar",
+     "x": 1000,
+     "s": 1
+    }
+   ],
+   "actores": [
+    {
+     "id": "pitia",
+     "como": "pitia_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "brilla"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      }
+     ],
+     "rotulo": "THE PYTHIA"
+    },
+    {
+     "id": "heracles",
+     "como": "heracles_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.5,
+       "hace": "asiente"
+      }
+     ],
+     "rotulo": "HERACLES"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "luz",
+     "x": 1300
+    },
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 800
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "DELFOS",
+      "en": "DELPHI"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "leon",
+   "fondo": "cueva",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Euristeo era el rey de Tirinto, y tenía miedo de Heracles. Su primer pedido parecía imposible.",
+     "en": "Eurystheus was the king of Tiryns, and he feared Heracles. His first order seemed impossible."
+    },
+    {
+     "es": "Debía matar al león de Nemea, una bestia cuya piel ninguna arma podía cortar.",
+     "en": "Heracles must kill the Nemean Lion, a beast whose skin no weapon could cut."
+    },
+    {
+     "es": "Las flechas rebotaron en el cuerpo del león. Heracles lo siguió hasta una cueva con dos entradas.",
+     "en": "His arrows bounced off the lion. Heracles chased it to a cave with two entrances."
+    },
+    {
+     "es": "Cerró una entrada, entró por la otra, y lo ahogó con sus brazos.",
+     "en": "He blocked one entrance, went in through the other, and choked it with his bare arms."
+    },
+    {
+     "es": "Luego usó las garras del mismo león para cortar su piel. Desde ese día, la vistió como armadura.",
+     "en": "Then he used the lion’s own claws to cut its skin. From that day, he wore it as armor."
+    }
+   ],
+   "elementos": [],
+   "actores": [
+    {
+     "id": "leon",
+     "como": "leon_griego_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "golpea"
+      },
+      {
+       "en": 3,
+       "hace": "cae"
+      }
+     ],
+     "rotulo": "NEMEAN LION"
+    },
+    {
+     "id": "heracles",
+     "como": "heracles_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "lanza"
+      },
+      {
+       "en": 3,
+       "hace": "abraza"
+      },
+      {
+       "en": 4,
+       "hace": "alegra"
+      }
+     ],
+     "rotulo": "HERACLES"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2.2,
+     "tipo": "destello",
+     "x": 1300
+    },
+    {
+     "en": 3,
+     "tipo": "polvo",
+     "x": 1150
+    },
+    {
+     "en": 3.5,
+     "tipo": "temblor"
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "PRIMER TRABAJO",
+      "en": "FIRST LABOR"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "tinaja",
+   "fondo": "palacio",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Heracles cargó al león muerto hasta el palacio de Euristeo.",
+     "en": "Heracles carried the dead lion to Eurystheus’s palace."
+    },
+    {
+     "es": "El rey se asustó tanto que corrió a esconderse en una gran vasija de bronce enterrada.",
+     "en": "The king was so scared that he ran and hid in a big bronze jar buried in the ground."
+    },
+    {
+     "es": "Desde entonces, Euristeo mandó sus órdenes por medio de un mensajero, sin mirar a Heracles.",
+     "en": "From then on, Eurystheus sent his orders through a messenger, never facing Heracles."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "anfora",
+     "x": 1300,
+     "s": 1
+    },
+    {
+     "tipo": "columna",
+     "x": 200,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "euristeo",
+     "como": "rey_griego_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.8,
+       "hace": "sorprende"
+      },
+      {
+       "en": 1.2,
+       "hace": "desaparece"
+      }
+     ],
+     "rotulo": "EURYSTHEUS"
+    },
+    {
+     "id": "heracles",
+     "como": "heracles_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "ofrece"
+      }
+     ],
+     "rotulo": "HERACLES"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1.2,
+     "tipo": "polvo",
+     "x": 1300
+    }
+   ],
+   "rotulos": []
+  },
+  {
+   "id": "hidra",
+   "fondo": "costa",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "El segundo trabajo fue peor. En los pantanos de Lerna vivía la Hidra, un monstruo con nueve cabezas de serpiente.",
+     "en": "The second labor was worse. In the swamps of Lerna lived the Hydra, a monster with nine snake heads."
+    },
+    {
+     "es": "Su aliento era veneno, y una de sus cabezas no podía morir.",
+     "en": "Its breath was poison, and one of its heads could never die."
+    },
+    {
+     "es": "Heracles cortó una cabeza con su espada. Pero crecieron dos en su lugar.",
+     "en": "Heracles cut off one head with his sword. But two grew back in its place."
+    },
+    {
+     "es": "Cuanto más peleaba, más cabezas aparecían.",
+     "en": "The more he fought, the more heads appeared."
+    }
+   ],
+   "elementos": [],
+   "actores": [
+    {
+     "id": "hidra",
+     "como": "hidra_oficial",
+     "x": 1450,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "golpea"
+      },
+      {
+       "en": 3,
+       "hace": "tiembla"
+      }
+     ],
+     "rotulo": "HYDRA"
+    },
+    {
+     "id": "heracles",
+     "como": "heracles_oficial",
+     "x": 700,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "golpea"
+      },
+      {
+       "en": 3,
+       "hace": "sorprende"
+      }
+     ],
+     "rotulo": "HERACLES"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "destello",
+     "x": 1000
+    },
+    {
+     "en": 3,
+     "tipo": "humo",
+     "x": 1450
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "SEGUNDO TRABAJO",
+      "en": "SECOND LABOR"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "iolao",
+   "fondo": "costa",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Heracles llamó a su sobrino Yolao. Cada vez que Heracles cortaba una cabeza, Yolao quemaba la herida con una antorcha.",
+     "en": "Heracles called his nephew Iolaus. Each time Heracles cut a head, Iolaus burned the stump with a torch."
+    },
+    {
+     "es": "Así no crecía nada. Al final, solo quedó la cabeza inmortal.",
+     "en": "This way, nothing grew back. In the end, only the deathless head was left."
+    },
+    {
+     "es": "Heracles la cortó y la enterró bajo una roca enorme. Luego mojó sus flechas en la sangre venenosa de la Hidra.",
+     "en": "Heracles cut it off and buried it under a huge rock. Then he dipped his arrows in the Hydra’s poisonous blood."
+    },
+    {
+     "es": "Pero Euristeo dijo que este trabajo no valía, porque Heracles había tenido ayuda. ¿Te parece justo?",
+     "en": "But Eurystheus said this labor did not count, because Heracles had help. Does that seem fair to you?"
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 1700,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "hidra",
+     "como": "hidra_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "cae"
+      }
+     ],
+     "rotulo": "HYDRA"
+    },
+    {
+     "id": "heracles",
+     "como": "heracles_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "enoja"
+      }
+     ],
+     "rotulo": "HERACLES"
+    },
+    {
+     "id": "yolao",
+     "como": "joven_griego_oficial",
+     "x": 1150,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.8,
+       "hace": "golpea"
+      },
+      {
+       "en": 2,
+       "hace": "alegra"
+      }
+     ],
+     "rotulo": "IOLAUS"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.8,
+     "tipo": "fuego",
+     "x": 1250
+    },
+    {
+     "en": 2,
+     "tipo": "polvo",
+     "x": 1500
+    },
+    {
+     "en": 2.6,
+     "tipo": "destello",
+     "x": 1500
+    }
+   ],
+   "rotulos": []
+  },
+  {
+   "id": "cierva",
+   "fondo": "bosque",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "El tercer trabajo fue traer viva a la cierva de Cerinea. Tenía cuernos de oro y era más veloz que una flecha.",
+     "en": "The third labor was to bring back the Ceryneian Hind alive. She had golden horns and ran faster than an arrow."
+    },
+    {
+     "es": "Pertenecía a la diosa Artemisa, así que Heracles no podía lastimarla.",
+     "en": "She belonged to the goddess Artemis, so Heracles could not hurt her."
+    },
+    {
+     "es": "La siguió durante un año entero, por montes y bosques.",
+     "en": "He chased her for a whole year, over hills and through forests."
+    },
+    {
+     "es": "Al fin, ella se cansó. Heracles la atrapó con cuidado y la cargó sobre sus hombros.",
+     "en": "At last, she grew tired. Heracles caught her gently and carried her on his shoulders."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "olivo",
+     "x": 250,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "cipres",
+     "x": 1700,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "cierva",
+     "como": "ciervo_griego_oficial",
+     "x": 1500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.5,
+       "hace": "corre",
+       "a": 1900,
+       "dur": 1
+      },
+      {
+       "en": 3,
+       "hace": "cae"
+      }
+     ],
+     "rotulo": "CERYNEIAN HIND"
+    },
+    {
+     "id": "heracles",
+     "como": "heracles_oficial",
+     "x": 700,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "corre",
+       "a": 1300,
+       "dur": 1
+      },
+      {
+       "en": 3,
+       "hace": "abraza"
+      }
+     ],
+     "rotulo": "HERACLES"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "destello",
+     "x": 1500
+    },
+    {
+     "en": 3,
+     "tipo": "aclarar",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "TERCER TRABAJO",
+      "en": "THIRD LABOR"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "jabali",
+   "fondo": "monte",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "El cuarto trabajo fue atrapar al jabalí de Erimanto, un animal enorme y feroz.",
+     "en": "The fourth labor was to catch the Erymanthian Boar, a huge and fierce animal."
+    },
+    {
+     "es": "Heracles lo gritó y lo asustó hasta sacarlo de su guarida. El jabalí huyó montaña arriba.",
+     "en": "Heracles shouted and scared it out of its den. The boar ran up the mountain."
+    },
+    {
+     "es": "En lo alto había nieve profunda. El jabalí se hundió, y Heracles lo ató con una red.",
+     "en": "High up, the snow was deep. The boar sank into it, and Heracles tied it up in a net."
+    },
+    {
+     "es": "Cuando Euristeo vio al jabalí vivo, volvió a meterse en su vasija.",
+     "en": "When Eurystheus saw the live boar, he jumped back into his jar."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "monte",
+     "x": 300,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "jabali",
+     "como": "jabali",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "corre",
+       "a": 1700,
+       "dur": 1
+      },
+      {
+       "en": 2.5,
+       "hace": "cae"
+      }
+     ],
+     "rotulo": "ERYMANTHIAN BOAR"
+    },
+    {
+     "id": "heracles",
+     "como": "heracles_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "corre",
+       "a": 1200,
+       "dur": 1
+      },
+      {
+       "en": 3,
+       "hace": "alegra"
+      }
+     ],
+     "rotulo": "HERACLES"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "nieve"
+    },
+    {
+     "en": 2.6,
+     "tipo": "polvo",
+     "x": 1650
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "CUARTO TRABAJO",
+      "en": "FOURTH LABOR"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "establos",
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Para el quinto trabajo, Euristeo quiso humillarlo. Heracles debía limpiar los establos del rey Augías en un solo día.",
+     "en": "For the fifth labor, Eurystheus wanted to shame him. Heracles must clean King Augeas’s stables in one day."
+    },
+    {
+     "es": "Augías tenía miles de vacas, y nadie había limpiado el lugar en años. Olía horrible.",
+     "en": "Augeas had thousands of cattle, and nobody had cleaned the place in years. It smelled awful."
+    },
+    {
+     "es": "Heracles hizo un trato con Augías: a cambio de limpiarlos, recibiría una décima parte del ganado.",
+     "en": "Heracles made a deal with Augeas: if he cleaned them, he would get one tenth of the cattle."
+    },
+    {
+     "es": "Luego abrió un canal y desvió dos ríos, el Alfeo y el Peneo, para que lavaran todo.",
+     "en": "Then he dug a channel and turned two rivers, the Alpheus and the Peneus, to wash it all away."
+    },
+    {
+     "es": "Los establos quedaron limpios antes del anochecer. Pero Augías rompió su promesa y no le pagó nada.",
+     "en": "The stables were clean by nightfall. But Augeas broke his promise and paid him nothing."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "casa",
+     "x": 300,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "rio",
+     "x": 1000,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "augias",
+     "como": "anciano_griego_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.2,
+       "hace": "habla"
+      },
+      {
+       "en": 4,
+       "hace": "niega"
+      }
+     ],
+     "rotulo": "AUGEAS"
+    },
+    {
+     "id": "heracles",
+     "como": "heracles_oficial",
+     "x": 750,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "golpea"
+      },
+      {
+       "en": 4,
+       "hace": "enoja"
+      }
+     ],
+     "rotulo": "HERACLES"
+    },
+    {
+     "id": "vaca",
+     "como": "vaca_griega_oficial",
+     "x": 1100,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "aparece"
+      }
+     ],
+     "rotulo": ""
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "olas-suben",
+     "dur": 1
+    },
+    {
+     "en": 3.5,
+     "tipo": "destello",
+     "x": 950
+    },
+    {
+     "en": 4,
+     "tipo": "aclarar",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "QUINTO TRABAJO",
+      "en": "FIFTH LABOR"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "aves",
+   "fondo": "rio",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "El sexto trabajo llevó a Heracles a un lago llamado Estínfalo. Allí vivían miles de aves con picos y plumas de bronce.",
+     "en": "The sixth labor took Heracles to a lake called Stymphalus. Thousands of birds with bronze beaks and feathers lived there."
+    },
+    {
+     "es": "Eran tantas que no podía flechar a todas. Y el suelo era un pantano que no lo sostenía.",
+     "en": "There were too many to shoot, and the ground was a swamp that could not hold him."
+    },
+    {
+     "es": "La diosa Atenea lo ayudó. Le dio una matraca de bronce, hecha por el dios Hefesto.",
+     "en": "The goddess Athena helped him. She gave him a bronze rattle, made by the god Hephaestus."
+    },
+    {
+     "es": "Heracles la agitó con fuerza. El ruido asustó a las aves, que echaron a volar.",
+     "en": "Heracles shook it hard. The noise scared the birds, and they flew up into the air."
+    },
+    {
+     "es": "Entonces él las derribó una por una con sus flechas.",
+     "en": "Then he shot them down, one by one, with his arrows."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "palmera",
+     "x": 250,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "atenea",
+     "como": "atenea_oficial",
+     "x": 1450,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 2,
+       "hace": "ofrece"
+      }
+     ],
+     "rotulo": "ATHENA"
+    },
+    {
+     "id": "heracles",
+     "como": "heracles_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 3,
+       "hace": "levanta"
+      },
+      {
+       "en": 4,
+       "hace": "lanza"
+      }
+     ],
+     "rotulo": "HERACLES"
+    },
+    {
+     "id": "ave1",
+     "como": "aguila_griega_oficial",
+     "x": 1000,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "aparece"
+      },
+      {
+       "en": 3,
+       "hace": "vuela",
+       "a": [
+        1000,
+        600
+       ]
+      }
+     ],
+     "rotulo": ""
+    },
+    {
+     "id": "ave2",
+     "como": "aguila_griega_oficial",
+     "x": 1250,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.8,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.2,
+       "hace": "vuela",
+       "a": [
+        1250,
+        650
+       ]
+      }
+     ],
+     "rotulo": ""
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 900
+    },
+    {
+     "en": 4,
+     "tipo": "chispas",
+     "x": 1100
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "SEXTO TRABAJO",
+      "en": "SIXTH LABOR"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "palacio",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Seis trabajos estaban hechos. Pero Euristeo no los dio por terminados.",
+     "en": "Six labors were done. But Eurystheus was not finished with him."
+    },
+    {
+     "es": "Se negó a contar dos de ellos: el de la Hidra, porque hubo ayuda, y el de los establos, porque hubo pago.",
+     "en": "He refused to count two of them: the Hydra, because Heracles had help, and the stables, because he had asked for pay."
+    },
+    {
+     "es": "Así que el rey pidió seis trabajos más, cada vez más peligrosos.",
+     "en": "So the king demanded six more labors, each one more dangerous."
+    },
+    {
+     "es": "¿Cuál de estos seis trabajos te habría dado más miedo? Cuéntanos en los comentarios.",
+     "en": "Which of these six labors would have scared you the most? Tell us in the comments."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 1500,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "columna",
+     "x": 250,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "euristeo",
+     "como": "rey_griego_oficial",
+     "x": 1350,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.2,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      }
+     ],
+     "rotulo": "EURYSTHEUS"
+    },
+    {
+     "id": "heracles",
+     "como": "heracles_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.5,
+       "hace": "enoja"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ],
+     "rotulo": "HERACLES"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "oscurecer",
+     "dur": 1.5
+    }
+   ],
+   "rotulos": []
+  }
+ ]
+}
