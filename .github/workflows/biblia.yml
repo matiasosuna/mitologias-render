@@ -1,0 +1,73 @@
+# Learn Bible 777: narra (Chatterbox en GPU de Modal) y renderiza (Modal: horizontal + partes) capítulos de la serie biblia,
+# 100% en la nube. Resultado → release "biblia" (mp4, srt, partes.json, miniatura.jpg, con el id adelante). NUNCA publica en redes.
+# gh workflow run biblia.yml -R matiasosuna/mitologias-render -f ids="biblia-genesis-01 biblia-genesis-02"
+# Requiere (una vez) la muestra de voz en el Volume privado de Modal: modal volume put moc-voz lib/voz-matias-ref.wav ref.wav
+name: biblia
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: 'ids separados por espacio (ej. biblia-genesis-01 biblia-genesis-02)'
+        required: true
+permissions:
+  contents: write # release biblia
+concurrency:
+  group: biblia
+  cancel-in-progress: false
+jobs:
+  biblia:
+    if: github.repository == 'matiasosuna/mitologias-render'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      GH_TOKEN: ${{ github.token }}
+      MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
+      MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
+      IDS: ${{ inputs.ids }}
+      VOZ_EN: chatterbox
+    steps:
+      - uses: actions/checkout@v4
+      - name: validar ids
+        run: |
+          for id in $IDS; do
+            case "$id" in biblia-*) ;; *) echo "::error::$id no es de la serie biblia"; exit 1 ;; esac
+            [ -f "src/videos/$id/guion.json" ] || { echo "::error::falta src/videos/$id/guion.json"; exit 1; }
+          done
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q modal
+      - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+      - run: npm ci
+      # audios ya narrados en corridas anteriores (el motor solo narra las frases que faltan)
+      - uses: actions/cache@v4
+        with:
+          path: public/audio/biblia-*
+          key: biblia-voz-${{ github.run_id }}
+          restore-keys: biblia-voz-
+      - name: narrar (Chatterbox en Modal)
+        run: for id in $IDS; do node scripts/motor-narrar.mjs "$id" en; done
+      - name: render (Modal, horizontal + partes)
+        run: |
+          ITEMS=$(for id in $IDS; do printf '%s:horizontal %s:partes ' "$id" "$id"; done)
+          rc=0; MOC_ITEMS="$ITEMS" timeout 9000 modal run scripts/modal_render.py || rc=$?
+          echo "RC_RENDER=$rc" >> "$GITHUB_ENV"
+      - name: bajar del Volume y subir al release biblia
+        run: |
+          gh release view biblia >/dev/null 2>&1 || gh release create biblia --title "Learn Bible 777" --notes "Renders de la serie biblia (workflow biblia.yml). No se publica nada en redes desde acá."
+          mkdir -p out subir
+          for id in $IDS; do
+            modal volume get --force moc-out "$id" out/ || { echo "::error::$id: nada en moc-out"; continue; }
+            for f in out/$id/*.mp4 out/$id/*.srt out/$id/partes.json out/$id/miniatura.jpg; do
+              [ -f "$f" ] || continue
+              n=$(basename "$f"); case "$n" in "$id".*) ;; *) n="$id.$n" ;; esac
+              cp "$f" "subir/$n"
+            done
+          done
+          ls -la subir
+          [ -n "$(ls subir)" ] && gh release upload biblia subir/* --clobber
+          [ "$RC_RENDER" = 0 ] || { echo "::error::falló algún render en Modal (ver log del paso render)"; exit 1; }

@@ -5,7 +5,7 @@
 // Uso: node scripts/vertical-partes.mjs <id> [<id>…] [--rapido]
 // → out/<id>/<id>.parte-1.mp4, .parte-2.mp4 … y out/<id>/partes.json
 import { bundle } from '@remotion/bundler';
-import { renderMedia, selectComposition } from '@remotion/renderer';
+import { selectComposition } from '@remotion/renderer';
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync, copyFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { join, resolve } from 'node:path';
@@ -13,6 +13,7 @@ import os from 'node:os';
 import { ganchoParte, leerTitulos } from './titulos.mjs';
 import { prepararRapido } from './vertical-rapido.mjs';
 import { huella } from './nube.mjs';
+import { renderPartido } from './render-partido.mjs';
 
 const MAX_S = 175; // contenido por parte (+2 s de gancho +2,5 s de cartel → < 3 min)
 const CIERRE_VERTICAL = 3;
@@ -58,13 +59,14 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     const timeline = timelines[id];
     const { partes } = cortes(timeline);
     const de = partes.length;
-    // Las partes a la vez, cada una con su parte de los núcleos (un Chrome solo aprovecha ~2).
+    // Las partes a la vez y cada una en trozos (RENDER_PARALELO Chromes en total; uno solo aprovecha ~2 núcleos).
     const nucleos = Number(process.env.RENDER_CONCURRENCY) || Math.max(2, os.cpus().length - 1);
+    const trozos = Math.max(1, Math.ceil((Number(process.env.RENDER_PARALELO) || 1) / de));
     await Promise.all(partes.map(async ([desde, hasta], i) => {
       const inputProps = { guion, timeline, portada: `portadas/${id}.jpg`, desde, hasta, n: i + 1, de, gancho };
       const comp = await selectComposition({ serveUrl, id: `${id}-parte`, inputProps });
       const out = join('out', id, `${id}.parte-${i + 1}.mp4`);
-      await renderMedia({ serveUrl, composition: comp, codec: 'h264', outputLocation: out, crf: 21, timeoutInMilliseconds: 180000, concurrency: Math.max(1, Math.floor(nucleos / de)), inputProps });
+      await renderPartido({ serveUrl, composition: comp, inputProps, out, trozos, crf: 21, concurrency: Math.max(1, Math.floor(nucleos / (de * trozos))) });
       console.log(`listo: ${out} (${(comp.durationInFrames / comp.fps).toFixed(0)} s)`);
     }));
     writeFileSync(join('out', id, 'partes.json'), JSON.stringify({ de, partes, gancho: gancho || false, ritmo: lento ? 'lento' : 'rapido', huella: huella(id) })); // gancho/ritmo/huella del guion: sembrar y la nube no reusan partes viejas, con otro título ni de otro elenco
