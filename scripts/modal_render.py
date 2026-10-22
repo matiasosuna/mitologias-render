@@ -3,7 +3,7 @@
 # Uso: MOC_ITEMS="<id>:horizontal <id>:vertical <id>:partes" .venv/bin/modal run --detach scripts/modal_render.py
 #      (viejo, sigue valiendo: MOC_ID="<id> <id>" MOC_MODO=horizontal|vertical|partes[,…]; por defecto vertical)
 #      Todo queda en el Volume "moc-out", carpeta <id>/ → `modal volume get --force moc-out <id> out/` (lo hace el workflow prerender).
-# Tope: 8 núcleos + 24 GB ≈ 0,57 USD/h y timeout de 60 min por contenedor. Medido: horizontal ≈ 40 min (≈ 0,38 USD), vertical ≈ 24 min (≈ 0,23 USD).
+# Antes (8 núcleos + 24 GB, tramos de a uno): horizontal ≈ 40 min (≈ 0,38 USD), vertical ≈ 24 min (≈ 0,23 USD).
 # Los fallos de un formato no cortan los demás: se listan al final y el proceso sale con error (el workflow los manda a render-nube).
 import json
 import os
@@ -57,11 +57,14 @@ app = modal.App("moc-render", image=image)
 vol = modal.Volume.from_name("moc-out", create_if_missing=True)
 
 
-@app.function(cpu=8, memory=24576, timeout=60 * 60, volumes={"/vol": vol}, max_containers=2)
+# 16 núcleos con 8 tramos/partes a la vez (un Chrome aprovecha ~2): sin núcleos ociosos, mismo costo por trabajo y ~4× más rápido.
+# Memoria: es lo mínimo reservado (se paga max(reservado, usado)); el pico real queda en el log ("pico RAM").
+@app.function(cpu=16, memory=8192, timeout=60 * 60, volumes={"/vol": vol}, max_containers=4)
 def render(id: str, modo: str = "vertical") -> str:
     import shutil, time
     t = time.time()
-    env = {**os.environ, "RENDER_CONCURRENCY": "8", "PARTES": "8"}
+    # TRAMOS_DIR en el Volume: el caché de tramos sobrevive entre corridas (un arreglo re-renderiza solo lo que cambió)
+    env = {**os.environ, "RENDER_CONCURRENCY": "16", "PARTES": "8", "RENDER_PARALELO": "8", "TRAMOS_DIR": "/vol/.tramos"}
     out = pathlib.Path(f"/app/out/{id}")
     destino = pathlib.Path(f"/vol/{id}")
     destino.mkdir(parents=True, exist_ok=True)
@@ -95,7 +98,9 @@ def render(id: str, modo: str = "vertical") -> str:
         subprocess.run(["node", "scripts/vertical-partes.mjs", id], cwd="/app", check=True, env=env)
         copiar([f"{id}.parte-*.mp4", "partes.json", "portada-ig.jpg"])
     vol.commit()
-    msg = f"render {modo} {id}: {time.time() - t:.0f} s{aviso}"
+    pico = pathlib.Path("/sys/fs/cgroup/memory.peak")
+    ram = f" · pico RAM {int(pico.read_text()) / 2**30:.1f} GB" if pico.exists() else ""
+    msg = f"render {modo} {id}: {time.time() - t:.0f} s{ram}{aviso}"
     print(msg)
     return msg
 

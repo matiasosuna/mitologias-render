@@ -5,16 +5,17 @@
 import { bundle } from '@remotion/bundler';
 import { renderMedia, selectComposition } from '@remotion/renderer';
 import { execFileSync } from 'node:child_process';
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, statSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, statSync, rmSync, renameSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { join, resolve } from 'node:path';
+import { join, resolve, basename } from 'node:path';
 import os from 'node:os';
 import { srt } from '../lib/motor-tiempos.mjs';
 
 const id = process.argv[2];
 const arg = (k, d) => (process.argv.find((a) => a.startsWith(`--${k}=`)) ?? `=${d}`).split('=')[1];
 const IMAGEN = arg('imagen', 'en'), AUDIOS = arg('audio', 'en').split(',');
-const dir = join('src/videos', id), out = join('out', id), cache = join('out/.tramos', id);
+// TRAMOS_DIR: dónde vive el caché de tramos (en Modal, el Volume, así sobrevive entre corridas).
+const dir = join('src/videos', id), out = join('out', id), cache = join(process.env.TRAMOS_DIR || 'out/.tramos', id);
 mkdirSync(out, { recursive: true }); mkdirSync(cache, { recursive: true });
 const g = JSON.parse(readFileSync(join(dir, 'guion.json'), 'utf8'));
 // Short "Who is…?": su versión horizontal (scripts/quien-horizontal.mjs), con los mismos archivos de salida que un episodio
@@ -39,11 +40,23 @@ if (faltan.length) {
   const serveUrl = await bundle({ entryPoint: resolve('src/motor/entrada.tsx') });
   process.on('exit', () => rmSync(serveUrl, { recursive: true, force: true })); // los bundles pesan ~600 MB
   const comp = await selectComposition({ serveUrl, id, inputProps: { guion: g, timeline: tl, idioma: null, imagen: IMAGEN } });
-  for (const t of faltan) {
-    const t0 = Date.now();
-    await renderMedia({ serveUrl, composition: comp, codec: 'h264', outputLocation: t.archivo, frameRange: [t.desde, t.hasta], muted: true, crf: 20, timeoutInMilliseconds: 180000, concurrency: Number(process.env.RENDER_CONCURRENCY) || Math.max(2, os.cpus().length - 2), inputProps: { guion: g, timeline: tl, idioma: null, imagen: IMAGEN } });
-    console.log(`  ${t.nombre}: ${((Date.now() - t0) / 1000).toFixed(0)} s`);
-  }
+  // RENDER_PARALELO=n: n tramos a la vez, cada uno con su parte de los núcleos (un Chrome solo aprovecha ~2).
+  const nucleos = Number(process.env.RENDER_CONCURRENCY) || Math.max(2, os.cpus().length - 2);
+  const paralelo = Math.max(1, Math.min(faltan.length, Number(process.env.RENDER_PARALELO) || 1));
+  const cola = [...faltan];
+  await Promise.all(Array.from({ length: paralelo }, async () => {
+    for (let t; (t = cola.shift()); ) {
+      const t0 = Date.now(), tmp = `${t.archivo}.tmp.mp4`; // a medio hacer no cuenta como caché
+      await renderMedia({ serveUrl, composition: comp, codec: 'h264', outputLocation: tmp, frameRange: [t.desde, t.hasta], muted: true, crf: 20, timeoutInMilliseconds: 180000, concurrency: Math.max(1, Math.floor(nucleos / paralelo)), inputProps: { guion: g, timeline: tl, idioma: null, imagen: IMAGEN } });
+      renameSync(tmp, t.archivo);
+      console.log(`  ${t.nombre}: ${((Date.now() - t0) / 1000).toFixed(0)} s`);
+    }
+  }));
+}
+// Caché en el Volume (siempre --imagen=en): solo quedan los tramos de esta versión, así no crece sin fin
+if (process.env.TRAMOS_DIR) {
+const vigentes = new Set(tramos.map((t) => basename(t.archivo)));
+for (const f of readdirSync(cache)) if (f.endsWith('.mp4') && !vigentes.has(f)) rmSync(join(cache, f));
 }
 
 // Unir tramos (sin recodificar)

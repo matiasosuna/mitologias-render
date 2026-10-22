@@ -58,13 +58,15 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     const timeline = timelines[id];
     const { partes } = cortes(timeline);
     const de = partes.length;
-    for (const [i, [desde, hasta]] of partes.entries()) {
+    // Las partes a la vez, cada una con su parte de los núcleos (un Chrome solo aprovecha ~2).
+    const nucleos = Number(process.env.RENDER_CONCURRENCY) || Math.max(2, os.cpus().length - 1);
+    await Promise.all(partes.map(async ([desde, hasta], i) => {
       const inputProps = { guion, timeline, portada: `portadas/${id}.jpg`, desde, hasta, n: i + 1, de, gancho };
       const comp = await selectComposition({ serveUrl, id: `${id}-parte`, inputProps });
       const out = join('out', id, `${id}.parte-${i + 1}.mp4`);
-      await renderMedia({ serveUrl, composition: comp, codec: 'h264', outputLocation: out, crf: 21, timeoutInMilliseconds: 180000, concurrency: Number(process.env.RENDER_CONCURRENCY) || Math.max(2, os.cpus().length - 1), inputProps });
+      await renderMedia({ serveUrl, composition: comp, codec: 'h264', outputLocation: out, crf: 21, timeoutInMilliseconds: 180000, concurrency: Math.max(1, Math.floor(nucleos / de)), inputProps });
       console.log(`listo: ${out} (${(comp.durationInFrames / comp.fps).toFixed(0)} s)`);
-    }
+    }));
     writeFileSync(join('out', id, 'partes.json'), JSON.stringify({ de, partes, gancho: gancho || false, ritmo: lento ? 'lento' : 'rapido', huella: huella(id) })); // gancho/ritmo/huella del guion: sembrar y la nube no reusan partes viejas, con otro título ni de otro elenco
   }
 }
