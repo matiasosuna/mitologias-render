@@ -112,6 +112,15 @@ Cada video es **un solo archivo**: `src/videos/<id>/guion.json` (tipos en `src/m
 - Coronas, halos y brazos extra van en el elenco (no se tocan desde el guion). Los nombres salen solos al entrar (`"rotulo": ""` para extras).
 - Stills de prueba: `npx remotion still src/pruebas/hindu.tsx <id> out.png --frame=60` (`h-fondos`, `h-dioses`, `h-otros`, `h-bestias`, y cuadrículas `h-eps-1-4`, `h-eps-5-8`, `h-eps-9-12`).
 
+## Learn Bible 777 (serie `biblia`, tema "natural"; canal aparte, NO Myths on Clay)
+- `serie: "biblia"` activa la piel sola: colores suaves naturales, paisajes de Oriente Medio, sin vitrales; guardas de lino (src/comun/natural.tsx); música `biblia.wav` (cuerdas + arpa + campana lejana, `scripts/musica-biblia.mjs`). `marcaCanal()` pone "LEARN BIBLE 777" en portada, final, Shorts y vertical.
+- **Dios nunca es una persona**: solo luz (`luz_divina`), resplandor o rayos. Fuente: KJV; parte 1 cuenta el capítulo en inglés simple con 2–4 líneas KJV textuales; parte 2 "What does it mean?" neutral, sin denominación.
+- **fondos** (`FONDOS_BIBLIA`, src/motor/fondosBiblia.tsx): abismo aguas_luz firmamento_agua tierra_seca mar_tierra jardin cielo_noche amanecer mar_vida (bajo el agua desde y≈400) llanura desierto colinas.
+- **elementos**: luz_divina(props.rayos) soplo bruma cupula tierra(sube) sol_natural luna_natural estrellas_natural nube_natural olivo_natural palmera_natural arbol_fruta acacia arbusto hierba flores roca_natural cardumen(props.n, dir, color) bandada algas tabla_dias(props.filas 1|2, con fondo oscuro propio) ritmo_dias. También atiende sol luna estrellas nube olivo arbol palmera roca monte.
+- **elenco** (src/motor/elencoBiblia.tsx, sufijo `_biblia`): hombre mujer (figuras griegas oficiales sin objetos) buey vaca oveja cabra ciervo caballo leon tortuga aguila paloma delfin pez ballena pajaro. Sin rótulos.
+- Scripts de publicación (youtube-meta, subir, instagram*, buffer-tiktok, portadas-ig) todavía NO cableados: van a otro canal.
+- Stills de prueba: `npx remotion still src/pruebas/biblia.tsx <id> out.png` — `b-fondos`, `b-elenco`, `b-piezas` y `b-video` (portada) con `--frame=60`; tomas del ep. 1 (`b-luz`, `b-mar`…, ver TOMAS_BIBLIA) con `--frame=0`.
+
 ## Balinesas (serie `balinesas`, tema "kamasan"; plan en PLAN-BALINESAS.md)
 - `serie: "balinesas"` activa la piel sola (pintura wayang de Kamasan: tela crema, rojo, ocre, índigo; nubes en voluta, llamas y tela poleng; música `balinesa.wav`, de `scripts/musica-balinesa.mjs`). Decir "en Bali" y nombrar la fuente (lontar, babad, cuento oral). Nada de Ramayana/Mahabharata (eso es la serie hindú).
 - **fondos** (`FONDOS_BALINES`, src/motor/fondosBalines.tsx): kahyangan segara dasar_segara gunung_agung danau_batur sawah pura pura_malam puri desa desa_malam setra alas pantai (con Nusa Penida enfrente) tanah_lot tirta_empul selat (Java a la izquierda, Bali a la derecha).

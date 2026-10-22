@@ -5,7 +5,8 @@
 // No gasta créditos: reusa el audio de cada frase.
 import React from 'react';
 import { AbsoluteFill, Audio, Freeze, Img, Sequence, staticFile, useCurrentFrame, interpolate } from 'remotion';
-import { C, TITULO, TEXTO, ap, cl, TEMA, aplicarTema, CalidadHD, ModoVertical, FranjaKapa, FranjaCuentas, Bloques, Entrelazado, FrisoPalmetas } from '../comun/vasija';
+import { C, TITULO, TEXTO, ap, cl, TEMA, aplicarTema, CalidadHD, ModoVertical, FranjaKapa, FranjaCuentas, Bloques, Entrelazado, FrisoPalmetas, marcaCanal } from '../comun/vasija';
+import { FranjaNatural, DEGRADE_NATURAL } from '../comun/natural';
 import { EscenaVerticalNativa } from './EscenaVertical';
 import { FranjaCodice } from '../comun/codice';
 import { FranjaPahari, DEGRADE_PAHARI } from '../comun/pahari';
@@ -13,13 +14,13 @@ import { FranjaKamasan } from '../comun/kamasan';
 import { FranjaMaori } from '../comun/kowhaiwhai';
 import type { GuionVisual, Timeline } from './tipos';
 
-const NOMBRE: Record<string, string> = { vasija: 'GREEK MYTHOLOGY', runas: 'NORSE MYTHOLOGY', papiro: 'EGYPTIAN MYTHOLOGY', kapa: 'HAWAIIAN MYTHOLOGY', pintado: 'NATIVE AMERICAN MYTHOLOGY', codice: 'AZTEC MYTHOLOGY', pahari: 'HINDU MYTHOLOGY', kowhaiwhai: 'MĀORI MYTHOLOGY', kamasan: 'BALINESE MYTHOLOGY' };
+const NOMBRE: Record<string, string> = { vasija: 'GREEK MYTHOLOGY', runas: 'NORSE MYTHOLOGY', papiro: 'EGYPTIAN MYTHOLOGY', kapa: 'HAWAIIAN MYTHOLOGY', pintado: 'NATIVE AMERICAN MYTHOLOGY', codice: 'AZTEC MYTHOLOGY', pahari: 'HINDU MYTHOLOGY', kowhaiwhai: 'MĀORI MYTHOLOGY', kamasan: 'BALINESE MYTHOLOGY', natural: 'THE BIBLE' };
 /** Guarda decorativa del tema (svg de 1080×80), animada con `f`. */
-export const franjaVertical = (t: string, f: number) => t === 'pahari' ? <FranjaPahari y={8} alto={44} desplaz={f} tipo="flores" ancho={1080} /> : t === 'kamasan' ? <FranjaKamasan y={6} alto={52} desplaz={f} tipo="awan" ancho={1080} /> : t === 'kowhaiwhai' ? <FranjaMaori y={6} alto={52} desplaz={f} tipo="koru" ancho={1080} /> : t === 'codice' ? <FranjaCodice y={8} alto={44} desplaz={f} tipo="xical" ancho={1080} /> : t === 'pintado' ? <FranjaCuentas y={10} alto={40} desplaz={f} tipo="escalones" /> : t === 'kapa' ? <FranjaKapa y={10} alto={36} desplaz={f} tipo="rombos" /> : t === 'papiro' ? <Bloques y={10} alto={30} desplaz={f} /> : t === 'runas' ? <Entrelazado y={6} alto={60} desplaz={f} paso={150} /> : <FrisoPalmetas y={6} desplaz={f} />;
+export const franjaVertical = (t: string, f: number) => t === 'natural' ? <FranjaNatural y={10} alto={30} ancho={1080} /> : t === 'pahari' ? <FranjaPahari y={8} alto={44} desplaz={f} tipo="flores" ancho={1080} /> : t === 'kamasan' ? <FranjaKamasan y={6} alto={52} desplaz={f} tipo="awan" ancho={1080} /> : t === 'kowhaiwhai' ? <FranjaMaori y={6} alto={52} desplaz={f} tipo="koru" ancho={1080} /> : t === 'codice' ? <FranjaCodice y={8} alto={44} desplaz={f} tipo="xical" ancho={1080} /> : t === 'pintado' ? <FranjaCuentas y={10} alto={40} desplaz={f} tipo="escalones" /> : t === 'kapa' ? <FranjaKapa y={10} alto={36} desplaz={f} tipo="rombos" /> : t === 'papiro' ? <Bloques y={10} alto={30} desplaz={f} /> : t === 'runas' ? <Entrelazado y={6} alto={60} desplaz={f} paso={150} /> : <FrisoPalmetas y={6} desplaz={f} />;
 export const CIERRE_VERTICAL = 3; // segundos del cierre (en lugar de los 12 s de pantalla final de YouTube)
 const SUBS = 1470;
 /** Degradé de fondo del formato vertical según el tema. */
-export const fondoVertical = (t: string) => t === 'pahari' ? DEGRADE_PAHARI : t === 'kamasan' ? 'linear-gradient(#7A2418, #1E1612)' : t === 'kowhaiwhai' ? 'linear-gradient(#6E1610, #15100E)' : t === 'codice' ? 'linear-gradient(#6E2A1A, #1A1311)' : t === 'pintado' ? 'linear-gradient(#5A3820, #1C1612)' : t === 'kapa' ? 'linear-gradient(#4A2C16, #1A1410)' : t === 'papiro' ? 'linear-gradient(#3A2A1C, #1D1712)' : t === 'runas' ? `linear-gradient(#22384D, ${C.negro})` : `linear-gradient(${C.barro}, ${C.barroOscuro})`;
+export const fondoVertical = (t: string) => t === 'natural' ? DEGRADE_NATURAL : t === 'pahari' ? DEGRADE_PAHARI : t === 'kamasan' ? 'linear-gradient(#7A2418, #1E1612)' : t === 'kowhaiwhai' ? 'linear-gradient(#6E1610, #15100E)' : t === 'codice' ? 'linear-gradient(#6E2A1A, #1A1311)' : t === 'pintado' ? 'linear-gradient(#5A3820, #1C1612)' : t === 'kapa' ? 'linear-gradient(#4A2C16, #1A1410)' : t === 'papiro' ? 'linear-gradient(#3A2A1C, #1D1712)' : t === 'runas' ? `linear-gradient(#22384D, ${C.negro})` : `linear-gradient(${C.barro}, ${C.barroOscuro})`;
 
 export const VideoVertical: React.FC<{ guion: GuionVisual; timeline: Timeline; portada?: string }> = ({ guion, timeline, portada }) => {
   aplicarTema(guion.serie);
@@ -55,7 +56,7 @@ export const VideoVertical: React.FC<{ guion: GuionVisual; timeline: Timeline; p
             <div style={{ position: 'absolute', left: 0, right: 0, top: SUBS, bottom: 0, background: fondo }}>
               <svg width={1080} height={80} viewBox="0 0 1080 80" style={{ position: 'absolute', top: 0 }}>{franja}</svg>
               <div style={{ position: 'absolute', top: 100, left: 56, right: 56, textAlign: 'center', fontFamily: TEXTO, fontWeight: 500, fontSize: 56, lineHeight: 1.22, color: '#FFF8EA', textShadow: `0 3px 0 ${C.negro}, 0 0 14px rgba(0,0,0,.6)` }}>{frase?.texto.en ?? ''}</div>
-              <div style={{ position: 'absolute', bottom: 40, left: 0, right: 0, textAlign: 'center', fontFamily: TITULO, fontWeight: 700, fontSize: 30, letterSpacing: 8, color: '#FFF4E0', opacity: 0.7 }}>MYTHS ON CLAY</div>
+              <div style={{ position: 'absolute', bottom: 40, left: 0, right: 0, textAlign: 'center', fontFamily: TITULO, fontWeight: 700, fontSize: 30, letterSpacing: 8, color: '#FFF4E0', opacity: 0.7 }}>{marcaCanal()}</div>
             </div>
           )}
           {/* portada al principio */}

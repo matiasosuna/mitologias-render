@@ -25,7 +25,7 @@ export function encuadreDeEscena(esc: EscenaT, tl: EscenaTL): Encuadre {
 }
 
 // Lugares sin cielo abierto: no llevan sol, luna ni nubes agregadas.
-const INTERIOR = new Set(['salon', 'palacio', 'templo', 'cueva', 'fragua', 'sala_juicio', 'bajo_agua', 'fondo_marino', 'caos', 'nun', 'duat', 'po', 'ginnungagap', 'hel', 'inframundo', 'cielo', 'cielo_nut', 'whare_dentro', 'te_po', 'rarohenga']);
+const INTERIOR = new Set(['abismo', 'aguas_luz', 'salon', 'palacio', 'templo', 'cueva', 'fragua', 'sala_juicio', 'bajo_agua', 'fondo_marino', 'caos', 'nun', 'duat', 'po', 'ginnungagap', 'hel', 'inframundo', 'cielo', 'cielo_nut', 'whare_dentro', 'te_po', 'rarohenga']);
 
 /**
  * Cielo del formato alto (en coordenadas de pantalla): degradé de arriba al horizonte y los elementos propios

@@ -35,9 +35,9 @@ test('lista: lo publicado en el orden de YouTube por grupos (T1 griega, nórdica
   assert.equal(ids[7], 'griegas-08-c');
 });
 
-test('lista: después lo que falta, griego primero (T2, Odisea, Stories), luego el resto de las T1; sin T2 pausadas', () => {
+test('lista: después solo temporadas (T2 griega, luego las T1); sin Odisea, Stories ni T2 pausadas', () => {
   const ids = construirCola({ titulos: T, ytIds: YT, stories: ['griegas-80-s'] }).map((e) => e.id);
-  assert.deepEqual(ids.slice(8), ['griegas-09-d', 'griegas-97-odisea-1', 'griegas-80-s', 'hawaianas-02-h', 'aztecas-01-i']);
+  assert.deepEqual(ids.slice(8), ['griegas-09-d', 'hawaianas-02-h', 'aztecas-01-i']);
   assert.ok(!ids.includes('nordicas-16-x'));
 });
 
@@ -46,7 +46,7 @@ test('lista: un "Who is…?" detrás de cada episodio que falta; mini historias 
   const cola = construirCola({ titulos: T, ytIds: YT, quien, stories: [] });
   const ids = cola.map((e) => e.id);
   assert.ok(!ids.includes('short-griegas-nadie') && !ids.includes('short-griegas-viejo') && !ids.includes('short-griegas-dioses-60s'));
-  assert.deepEqual(ids.slice(8, 13), ['griegas-09-d', 'short-griegas-quien-zeus', 'griegas-97-odisea-1', 'short-griegas-quien-hermes', 'hawaianas-02-h']);
+  assert.deepEqual(ids.slice(8, 13), ['griegas-09-d', 'short-griegas-quien-zeus', 'hawaianas-02-h', 'short-griegas-quien-hermes', 'aztecas-01-i']);
   assert.ok(esQuien('short-griegas-quien-zeus') && !esQuien('short-griegas-dioses-60s') && !esQuien('short-griegas-cerbero'));
 });
 
@@ -65,7 +65,7 @@ test('lista guardada: no se reordena; lo nuevo va al final', () => {
   assert.deepEqual(actualizarCola(null, n), n);
 });
 
-test('lista con los datos reales: empieza por la T1 griega y trae la T2 griega 10 y los "Who is…?"', () => {
+test('lista con los datos reales: empieza por la T1 griega y trae la T2 griega 10 y los "Who is…?" (sin Stories ni Odisea pendientes)', () => {
   const titulos = J('src/videos/titulos.json');
   const ytIds = Object.fromEntries(Object.keys(titulos).filter((id) => /^(griegas-(0\d|1[0-6])|nordicas-(0\d|1[0-5])|egipcias-(0\d|1[0-3])|hawaianas-0[1-5])-|-99-/.test(id)).map((id) => [id, 'v']));
   const cola = construirCola({ titulos, ytIds, quien: ['short-griegas-quien-zeus'] });
@@ -73,7 +73,7 @@ test('lista con los datos reales: empieza por la T1 griega y trae la T2 griega 1
   const i = cola.findIndex((e) => e.id === 'griegas-17-dioniso-piratas');
   assert.equal(cola[i + 1].id, 'short-griegas-quien-zeus');
   assert.ok(cola.slice(0, i).every((e) => ytIds[e.id]));
-  assert.ok(STORIES_GRIEGAS.every((id) => cola.some((e) => e.id === id)));
+  assert.ok(!cola.some((e) => STORIES_GRIEGAS.includes(e.id) || /odisea/.test(e.id) && !ytIds[e.id]));
 });
 
 // ── turnos

@@ -9,7 +9,7 @@ test('cada episodio tiene héroe y rival para su miniatura', () => {
   const sin = [];
   for (const d of readdirSync('src/videos')) {
     const f = `src/videos/${d}/guion.json`;
-    if (d.startsWith('short-') || !existsSync(f)) continue;
+    if (d.startsWith('short-') || d.startsWith('biblia-') || !existsSync(f)) continue; // biblia-*: otro canal, portada propia
     const g = JSON.parse(readFileSync(f, 'utf8'));
     if (!g.miniatura && !g.quien && !minis.has(d)) sin.push(d);
   }

@@ -27,7 +27,7 @@ ITEMS = _items()
 assert all(m in MODOS for _, m in ITEMS), f"modo inválido en {ITEMS}"
 IDS = sorted({i for i, _ in ITEMS})
 RAIZ = pathlib.Path(__file__).resolve().parent.parent if modal.is_local() else pathlib.Path("/app")
-MUSICA = {"griegas": "lira-griega", "nordicas": "nordica", "egipcias": "egipcia", "hawaianas": "hawaiana", "norteamericanas": "norteamericana", "aztecas": "azteca", "balinesas": "balinesa", "hindues": "hindu", "maories": "maori"}
+MUSICA = {"griegas": "lira-griega", "nordicas": "nordica", "egipcias": "egipcia", "hawaianas": "hawaiana", "norteamericanas": "norteamericana", "aztecas": "azteca", "balinesas": "balinesa", "hindues": "hindu", "maories": "maori", "biblia": "biblia"}
 
 image = (
     modal.Image.from_registry("node:22-bookworm-slim", add_python="3.12")

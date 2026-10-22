@@ -47,6 +47,10 @@ lista('src/motor/fondosBalines.tsx', 'ELEMENTOS_BALINES').forEach((x) => ELEMS.a
 lista('src/motor/fondosMaori.tsx', 'FONDOS_MAORI').forEach((x) => FONDOS.add(x));
 lista('src/motor/fondosMaori.tsx', 'ELEMENTOS_MAORI').forEach((x) => ELEMS.add(x));
 [...readFileSync('src/motor/elencoMaori.tsx', 'utf8').split('export const ELENCO_MAORI')[1].split('export const NOMBRE_EN_MAORI')[0].matchAll(/^\s{2}(\w+): /gm)].forEach((m) => elenco.add(m[1]));
+// Learn Bible 777 (tema natural): igual, de fondosBiblia.tsx y elencoBiblia.tsx.
+lista('src/motor/fondosBiblia.tsx', 'FONDOS_BIBLIA').forEach((x) => FONDOS.add(x));
+lista('src/motor/fondosBiblia.tsx', 'ELEMENTOS_BIBLIA').forEach((x) => ELEMS.add(x));
+[...readFileSync('src/motor/elencoBiblia.tsx', 'utf8').split('export const ELENCO_BIBLIA')[1].split('export const NOMBRE_EN_BIBLIA')[0].matchAll(/^\s{2}(\w+): /gm)].forEach((m) => elenco.add(m[1]));
 const P = { fondo: 0.45, medio: 0.75, frente: 1 };
 
 const avisos = [];

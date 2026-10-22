@@ -17,6 +17,10 @@ on:
     # de la lista (turnoUTC) y lo ya hecho en el turno no se repite, así un turno salteado se recupera a la hora siguiente.
     - cron: '37 * * * *'
   workflow_dispatch:
+    inputs:
+      turno:
+        description: 'Fecha ISO del turno a correr ya (p. ej. el de episodio, 18 UTC); vacío = el de ahora'
+        required: false
 concurrency:
   group: publicar
   cancel-in-progress: false
@@ -61,9 +65,11 @@ jobs:
             for (const v of [t.refresh_token, t.access_token]) if (v) console.log("::add-mask::" + v);
             fs.writeFileSync(".yt-token.json", JSON.stringify({ ...t, vence: 0 }), { mode: 0o600 }); // se renueva en la corrida
           '
-      - name: turno (hora de creación de la corrida, aunque haya esperado en la cola)
+      - name: turno (hora de creación de la corrida, aunque haya esperado en la cola; o el pedido a mano)
+        env:
+          TURNO_PEDIDO: ${{ inputs.turno }}
         run: |
-          echo "TURNO_FECHA=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" -q .created_at)" >> "$GITHUB_ENV"
+          echo "TURNO_FECHA=${TURNO_PEDIDO:-$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" -q .created_at)}" >> "$GITHUB_ENV"
       - name: git
         run: |
           git config --global user.name "github-actions[bot]"

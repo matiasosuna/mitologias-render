@@ -7,7 +7,8 @@ import { FORMATO, nombreSerie, lineaTemporada, temporadaDe } from '../scripts/ti
 import { snippetConTitulo, pendientes, tandas, esCuota } from '../scripts/youtube-titulos.mjs';
 
 const T = JSON.parse(readFileSync('src/videos/titulos.json', 'utf8'));
-const episodios = readdirSync('src/videos').filter((d) => !d.startsWith('short-') && existsSync(`src/videos/${d}/guion.json`));
+// biblia-*: Learn Bible 777 es otro canal (sin títulos de Myths on Clay).
+const episodios = readdirSync('src/videos').filter((d) => !d.startsWith('short-') && !d.startsWith('biblia-') && existsSync(`src/videos/${d}/guion.json`));
 const guion = (id) => JSON.parse(readFileSync(`src/videos/${id}/guion.json`, 'utf8'));
 
 test('cada episodio con guion.json tiene título (y no sobra ninguno)', () => {

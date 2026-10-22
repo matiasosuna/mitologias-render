@@ -2,7 +2,8 @@
 // la voz y los subtítulos van aparte (pistas de audio y .srt por idioma).
 import React from 'react';
 import { AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame, interpolate } from 'remotion';
-import { C, TITULO, ap, cl, Guardas, TEMA, aplicarTema, TextoRunico, Jeroglificos, CalidadHD } from '../comun/vasija';
+import { C, TITULO, ap, cl, Guardas, TEMA, aplicarTema, TextoRunico, Jeroglificos, CalidadHD, marcaCanal } from '../comun/vasija';
+import { Fondo, ElementoSVG } from './fondos';
 import { EscenaMotor } from './Escena';
 import { Miniatura } from '../comun/miniatura';
 import type { GuionVisual, Timeline, Idioma } from './tipos';
@@ -17,6 +18,24 @@ const Portada: React.FC<{ g: GuionVisual; dur: number; idioma: Idioma }> = ({ g,
         <div style={{ width: 1280, height: 720, transform: 'scale(1.5)', transformOrigin: '0 0', position: 'relative' }}>
           <Miniatura titulo={(g.titulo.en ?? g.titulo.es).toUpperCase()} numero={String(Number(g.numero))} heroe={g.miniatura.heroe} rival={g.miniatura.rival} serie={g.serie} etiqueta={g.especial ? `${g.especial.nombre.en ?? g.especial.nombre.es}${g.especial.parte ? ` · PART ${g.especial.parte}` : ''}`.toUpperCase() : undefined} />
         </div>
+      </AbsoluteFill>
+    );
+  }
+  if ((TEMA.nombre as string) === 'natural') {
+    // Learn Bible 777: paisaje real al amanecer con la luz de Dios arriba (nunca una figura), título claro.
+    return (
+      <AbsoluteFill style={{ opacity: o, backgroundColor: C.negro }}>
+        <svg viewBox="0 0 1920 1080" width="100%" height="100%">
+          <Fondo tipo="amanecer" f={f} astros={false} />
+          <ElementoSVG tipo="luz_divina" x={960} y={170} s={1.1} f={f} props={{ intensidad: 0.9, largo: 760 }} />
+          <rect x={0} y={0} width={1920} height={1080} fill={C.negro} opacity={0.18} />
+          <Guardas desplaz={f * 0.6} />
+        </svg>
+        <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center', color: C.blanco, paddingBottom: 140, textShadow: '0 3px 14px rgba(20,16,12,0.75), 0 2px 0 rgba(20,16,12,0.6)' }}>
+          <div style={{ fontFamily: TITULO, fontSize: 44, letterSpacing: 12, opacity: ap(f, 4, 16) }}>{g.tituloGriego}</div>
+          <div style={{ fontFamily: TITULO, fontWeight: 700, fontSize: 124, lineHeight: 1.05, margin: '18px 80px', transform: `scale(${0.94 + ap(f, 8, 24) * 0.06})`, opacity: ap(f, 8, 20) }}>{g.titulo[idioma] ?? g.titulo.es}</div>
+        </AbsoluteFill>
+        <div style={{ position: 'absolute', top: 985, left: 0, right: 0, textAlign: 'center', fontFamily: TITULO, fontSize: 40, letterSpacing: 12, color: C.crema, opacity: ap(f, 10, 16) }}>{marcaCanal()}</div>
       </AbsoluteFill>
     );
   }
@@ -61,7 +80,7 @@ export const Final: React.FC<{ dur: number; siguiente?: string; etiqueta?: strin
         <div style={{ position: 'absolute', top: 160, left: 150, width: 880, textAlign: 'center', fontSize: 44, fontWeight: 700, letterSpacing: 6 }}>{etiqueta}</div>
         {siguiente && <div style={{ position: 'absolute', top: 480, left: 190, width: 800, textAlign: 'center', fontSize: 50, fontWeight: 700, lineHeight: 1.1, color: C.crema, textShadow: `0 3px 0 ${C.negro}`, opacity: 0.35 }}>{siguiente}</div>}
         <div style={{ position: 'absolute', top: 160, left: 1250, width: 400, textAlign: 'center', fontSize: 44, fontWeight: 700, letterSpacing: 6 }}>SUBSCRIBE</div>
-        <div style={{ position: 'absolute', top: 985, left: 0, right: 0, textAlign: 'center', fontSize: 40, letterSpacing: 12, color: C.crema, textShadow: 'none' }}>MYTHS ON CLAY</div>
+        <div style={{ position: 'absolute', top: 985, left: 0, right: 0, textAlign: 'center', fontSize: 40, letterSpacing: 12, color: C.crema, textShadow: 'none' }}>{marcaCanal()}</div>
       </AbsoluteFill>
     </AbsoluteFill>
   );

@@ -8,6 +8,7 @@ import { GuardasCodice, SueloCodice } from './codice';
 import { GuardasPahari, SueloPahari } from './pahari';
 import { GuardasKamasan, SueloKamasan } from './kamasan';
 import { GuardasMaori, SueloMaori } from './kowhaiwhai';
+import { GuardasNatural, SueloNatural } from './natural';
 
 export const { fontFamily: TEXTO } = cargarGaramond('normal', { weights: ['500'], subsets: ['latin'] });
 export const { fontFamily: TITULO } = cargarCinzel('normal', { weights: ['400', '700'], subsets: ['latin'] });
@@ -23,7 +24,7 @@ export const C = {
 // ---------- temas por mitología ----------
 // Cada mitología tiene la "piel" de su arte: griega = vasija de figuras negras; nórdica = piedra rúnica
 // helada (azules, nieve y rojo de runa). El motor es el mismo; cambian paleta, cielos, guardas y suelo.
-export type NombreTema = 'pahari' | 'vasija' | 'runas' | 'papiro' | 'kapa' | 'pintado' | 'codice' | 'kowhaiwhai' | 'kamasan';
+export type NombreTema = 'natural' | 'pahari' | 'vasija' | 'runas' | 'papiro' | 'kapa' | 'pintado' | 'codice' | 'kowhaiwhai' | 'kamasan';
 type Cielos = Record<'barro' | 'noche' | 'mar' | 'inframundo', [string, string, string]>;
 const TEMAS: Record<NombreTema, { C: typeof C; cielos: Cielos; musica: string; ropa?: string; pielH?: string; pielM?: string }> = {
   vasija: {
@@ -89,11 +90,21 @@ const TEMAS: Record<NombreTema, { C: typeof C; cielos: Cielos; musica: string; r
     musica: 'musica/balinesa.wav',
     ropa: '#EFE0BE', pielH: '#C8955E', pielM: '#E2BB86',
   },
+  // Natural (serie `biblia`, canal Learn Bible 777): colores suaves y casi reales — arena, lino, olivo, cielo y mar;
+  // sin vitral ni guardas pesadas. Guardas y suelo en ./natural.tsx; fondos en motor/fondosBiblia.tsx.
+  natural: {
+    C: { barro: '#E6D8BC', barroClaro: '#F7F0E2', barroOscuro: '#A88B64', negro: '#2A2420', crema: '#F4EBDA', purpura: '#9A7A4A', blanco: '#FFFBF2', oro: '#E3B85C', noche: '#1A2238', mar: '#4F86A8' },
+    cielos: { barro: ['#F7EEDC', '#D6E5EE', '#9EC3DE'], noche: ['#3A4A70', '#1E2848', '#0C1226'], mar: ['#EEF4F4', '#BFD9E6', '#7FAFCB'], inframundo: ['#2A2E3A', '#15171E', '#08090C'] },
+    musica: 'musica/biblia.wav',
+    ropa: '#E9E0CC', pielH: '#B98A62', pielM: '#D2A57E',
+  },
 };
 export const TEMA = { nombre: 'vasija' as NombreTema, cielos: TEMAS.vasija.cielos, musica: TEMAS.vasija.musica, ropa: undefined as string | undefined, pielH: undefined as string | undefined, pielM: undefined as string | undefined };
-export const temaDeSerie = (serie?: string): NombreTema => (serie === 'nordicas' ? 'runas' : serie === 'egipcias' ? 'papiro' : serie === 'hawaianas' ? 'kapa' : serie === 'norteamericanas' ? 'pintado' : serie === 'aztecas' ? 'codice' : serie === 'hindues' ? 'pahari' : serie === 'maories' ? 'kowhaiwhai' : serie === 'balinesas' ? 'kamasan' : 'vasija');
+export const temaDeSerie = (serie?: string): NombreTema => (serie === 'nordicas' ? 'runas' : serie === 'egipcias' ? 'papiro' : serie === 'hawaianas' ? 'kapa' : serie === 'norteamericanas' ? 'pintado' : serie === 'aztecas' ? 'codice' : serie === 'hindues' ? 'pahari' : serie === 'maories' ? 'kowhaiwhai' : serie === 'balinesas' ? 'kamasan' : serie === 'biblia' ? 'natural' : 'vasija');
 /** Nombre de la serie en pantalla (inglés) y en español, por tema. */
-export const NOMBRE_SERIE: Record<NombreTema, { en: string; es: string }> = { vasija: { en: 'Greek Mythology', es: 'Mitología griega' }, runas: { en: 'Norse Mythology', es: 'Mitología nórdica' }, papiro: { en: 'Egyptian Mythology', es: 'Mitología egipcia' }, kapa: { en: 'Hawaiian Mythology', es: 'Mitología hawaiana' }, pintado: { en: 'Native American Mythology', es: 'Mitología Norteamericana' }, codice: { en: 'Aztec Mythology', es: 'Mitología Azteca' }, pahari: { en: 'Hindu Mythology', es: 'Mitología Hindú' }, kamasan: { en: 'Balinese Mythology', es: 'Mitología Balinesa' },kowhaiwhai: { en: 'Māori Mythology', es: 'Mitología maorí' } };
+export const NOMBRE_SERIE: Record<NombreTema, { en: string; es: string }> = { vasija: { en: 'Greek Mythology', es: 'Mitología griega' }, runas: { en: 'Norse Mythology', es: 'Mitología nórdica' }, papiro: { en: 'Egyptian Mythology', es: 'Mitología egipcia' }, kapa: { en: 'Hawaiian Mythology', es: 'Mitología hawaiana' }, pintado: { en: 'Native American Mythology', es: 'Mitología Norteamericana' }, codice: { en: 'Aztec Mythology', es: 'Mitología Azteca' }, pahari: { en: 'Hindu Mythology', es: 'Mitología Hindú' }, kamasan: { en: 'Balinese Mythology', es: 'Mitología Balinesa' },kowhaiwhai: { en: 'Māori Mythology', es: 'Mitología maorí' }, natural: { en: 'Learn Bible 777', es: 'Aprende la Biblia 777' } };
+/** Nombre del canal que sale en pantalla (pantalla final, verticales, portadas): Learn Bible 777 en la serie biblia. */
+export const marcaCanal = () => (TEMA.nombre === 'natural' ? 'LEARN BIBLE 777' : 'MYTHS ON CLAY');
 /** Cambia la paleta y la piel antes de dibujar (cada render corre en su propia pestaña). */
 export function aplicarTema(serie?: string) {
   const n = temaDeSerie(serie);
@@ -177,6 +188,8 @@ export const Escenario: React.FC<{ dur: number; camara?: [number, number, number
   const fade = Math.min(ap(f, 0, 10), interpolate(f, [dur - 8, dur], [1, 0], cl));
   const fondos = TEMA.cielos[cielo];
   const vert = useContext(ModoVertical);
+  // Learn Bible 777 (tema natural): escenas a pantalla completa, sin guardas ni franja (las guardas quedan solo en portada/final).
+  const lleno = TEMA.nombre === 'natural' && !vert && !vista;
   return (
     <AbsoluteFill style={transparente ? { opacity: fade } : { backgroundColor: C.negro, opacity: fade }}>
       <svg viewBox={vista ? vista.join(' ') : vert ? `0 ${-VERT_ARRIBA} 1920 ${1080 + VERT_ARRIBA}` : '0 0 1920 1080'} width="100%" height="100%">
@@ -196,18 +209,18 @@ export const Escenario: React.FC<{ dur: number; camara?: [number, number, number
             <stop offset="100%" stopColor="#FFF6DD" stopOpacity={0} />
           </radialGradient>
           <clipPath id="ventana">
-            {vista ? <rect x={-6000} y={-6000} width={14000} height={14000} /> : vert ? <rect x={-2000} y={-VERT_ARRIBA} width={6000} height={1080 + VERT_ARRIBA} /> : <rect x={0} y={ARRIBA - 4} width={1920} height={ABAJO - ARRIBA + 4} />}
+            {vista ? <rect x={-6000} y={-6000} width={14000} height={14000} /> : vert ? <rect x={-2000} y={-VERT_ARRIBA} width={6000} height={1080 + VERT_ARRIBA} /> : lleno ? <rect x={0} y={0} width={1920} height={1080} /> : <rect x={0} y={ARRIBA - 4} width={1920} height={ABAJO - ARRIBA + 4} />}
           </clipPath>
         </defs>
         <FiltrosHD />
         <g clipPath={vista ? undefined : 'url(#ventana)'}>
           {transparente ? null : vista ? <rect x={vista[0] - 10} y={vista[1] - 10} width={vista[2] + 20} height={vista[3] + 20} fill="url(#cielo)" /> : vert ? <rect x={-2000} y={-VERT_ARRIBA} width={6000} height={1080 + VERT_ARRIBA} fill="url(#cielo)" /> : <rect width={1920} height={1080} fill="url(#cielo)" />}
           {!transparente && TEMA.nombre === 'runas' && cielo === 'noche' && <Aurora f={f} />}
-          <g transform={`translate(960 ${SUELO}) scale(${z}) translate(-960 ${-SUELO})`}>
+          <g transform={`${lleno ? 'translate(0 110) ' : ''}translate(960 ${SUELO}) scale(${z}) translate(-960 ${-SUELO})`}>
             <Cam.Provider value={{ x, y: 0, z }}>{children}</Cam.Provider>
           </g>
         </g>
-        {guardas && !vert && <Guardas desplaz={x * 0.2} />}
+        {guardas && !vert && !lleno && <Guardas desplaz={x * 0.2} />}
       </svg>
       {!transparente && <Img src={staticFile('texturas/manchas.png')} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', mixBlendMode: 'multiply', opacity: 0.35 }} />}
       {!transparente && <Img src={staticFile('texturas/grano.png')} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', mixBlendMode: 'multiply', opacity: 0.22 }} />}
@@ -266,7 +279,7 @@ export const FrisoPalmetas: React.FC<{ y: number; desplaz: number }> = ({ y, des
 );
 
 /** Guardas fijas del marco: lengüetas + meandro arriba, palmetas abajo y franja negra de subtítulos. */
-export const Guardas: React.FC<{ desplaz: number }> = ({ desplaz }) => TEMA.nombre === 'kamasan' ? <GuardasKamasan desplaz={desplaz} /> : TEMA.nombre ==='kowhaiwhai' ? <GuardasMaori desplaz={desplaz} /> : TEMA.nombre === 'pahari' ? <GuardasPahari desplaz={desplaz} /> : TEMA.nombre === 'codice' ? <GuardasCodice desplaz={desplaz} /> : TEMA.nombre === 'runas' ? <GuardasRunas desplaz={desplaz} /> : TEMA.nombre === 'papiro' ? <GuardasPapiro desplaz={desplaz} /> : TEMA.nombre === 'kapa' ? <GuardasKapa desplaz={desplaz} /> : TEMA.nombre === 'pintado' ? <GuardasPintado desplaz={desplaz} /> : (
+export const Guardas: React.FC<{ desplaz: number }> = ({ desplaz }) => TEMA.nombre === 'natural' ? <GuardasNatural desplaz={desplaz} /> : TEMA.nombre === 'kamasan' ? <GuardasKamasan desplaz={desplaz} /> : TEMA.nombre ==='kowhaiwhai' ? <GuardasMaori desplaz={desplaz} /> : TEMA.nombre === 'pahari' ? <GuardasPahari desplaz={desplaz} /> : TEMA.nombre === 'codice' ? <GuardasCodice desplaz={desplaz} /> : TEMA.nombre === 'runas' ? <GuardasRunas desplaz={desplaz} /> : TEMA.nombre === 'papiro' ? <GuardasPapiro desplaz={desplaz} /> : TEMA.nombre === 'kapa' ? <GuardasKapa desplaz={desplaz} /> : TEMA.nombre === 'pintado' ? <GuardasPintado desplaz={desplaz} /> : (
   <>
     <rect x={0} y={0} width={1920} height={ARRIBA} fill={C.barro} />
     <Lenguetas y={0} desplaz={desplaz} />
@@ -370,6 +383,8 @@ export type PersonajeProps = {
   botas?: string;
   /** Color del ribete de la túnica (borde de abajo); si no, el rojo del tema. */
   ribete?: string;
+  /** Tela lisa sin estilo griego (Learn Bible 777): sin ribetes de puntos, sin pliegues marcados ni banda de cintura. */
+  lisa?: boolean;
   /** Le falta la mano de adelante (Týr): el brazo termina en un muñón vendado. */
   manoCortada?: boolean;
   /** La cabeza la dibuja entera adornos.cabeza (cabezas de animal oficiales): no se dibuja la humana. */
@@ -811,9 +826,9 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
               ? [[-16, -206, -34, -14], [-2, -208, -8, -12], [12, -208, 18, -12], [24, -206, 44, -14]]
               : tunica ? [[-16, -206, -20, -134], [0, -208, 0, -130], [16, -208, 20, -132]]
               : [[-14, -206, -26, -150], [0, -208, 2, -144], [14, -208, 28, -146], [22, -206, 42, -156]]
-            ).map(([a, b, c, d], i) => <Inc key={i} d={suave([[a, b], [(a + c) / 2 + (i - 1.5) * 2, (b + d) / 2], [c + vuelo * 0.5, d]])} w={egipcio ? 1.2 : 1.8} c={linRopa} />)}
-            <Borde d={larga ? suave([[-44 - vuelo, -12], [0, -8], [56 + vuelo, -10]]) : tunica ? suave([[-31 - vuelo * 0.3, -131], [0, -129], [33 + vuelo * 0.3, -132]]) : suave([[-44 - vuelo, -160], [-26, -150 - vuelo], [16, -146], [50 + vuelo, -152]])} w={9} color={props.ribete} />
-            {larga && <Borde d={suave([[-38, -120], [0, -118], [40, -122]])} w={6} />}
+            ).filter(() => !props.lisa).map(([a, b, c, d], i) => <Inc key={i} d={suave([[a, b], [(a + c) / 2 + (i - 1.5) * 2, (b + d) / 2], [c + vuelo * 0.5, d]])} w={egipcio ? 1.2 : 1.8} c={linRopa} />)}
+            {!props.lisa && <Borde d={larga ? suave([[-44 - vuelo, -12], [0, -8], [56 + vuelo, -10]]) : tunica ? suave([[-31 - vuelo * 0.3, -131], [0, -129], [33 + vuelo * 0.3, -132]]) : suave([[-44 - vuelo, -160], [-26, -150 - vuelo], [16, -146], [50 + vuelo, -152]])} w={9} color={props.ribete} />}
+            {larga && !props.lisa && <Borde d={suave([[-38, -120], [0, -118], [40, -122]])} w={6} />}
             {nativo && Array.from({ length: 9 }, (_, i) => { const t = i / 8, bx = larga ? -42 - vuelo + t * (98 + vuelo * 2) : -42 - vuelo + t * (90 + vuelo * 2), by = larga ? -10 : -152 + Math.sin(t * Math.PI) * 6; return <path key={`fl${i}`} d={`M${f1(bx)} ${f1(by)} l ${f1(Math.sin(fr / 9 + i) * 2)} 13`} stroke={linRopa === C.crema ? C.crema : C.barroOscuro} strokeWidth={2.4} strokeLinecap="round" />; })}
           </g>
         )}
@@ -821,7 +836,7 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
         {ropa === 'desnudo' && <path d={suave([[-27 * ancho, -216], [24 * ancho, -218], [30 * ancho, -180], [4, -160], [-30 * ancho, -172]], true)} fill={piel} />}
         {/* torso */}
         <path d={suave(torso, true)} fill={ropa === 'desnudo' ? piel : ropa === 'armadura' ? C.negro : vestido ? ropaColor : piel} stroke={piel !== C.negro && ropa !== 'armadura' ? C.negro : 'none'} strokeWidth={2} />
-        {vestido && <><Borde d={suave([[-26, -286], [4, -270], [32, -280]])} w={7} /><path d="M-28 -278 L -40 -262 M34 -276 L 44 -262" stroke={C.barroOscuro} strokeWidth={2} /></>}
+        {vestido && <>{!props.lisa && <Borde d={suave([[-26, -286], [4, -270], [32, -280]])} w={7} />}<path d="M-28 -278 L -40 -262 M34 -276 L 44 -262" stroke={C.barroOscuro} strokeWidth={2} /></>}
         {cuerpoT === 'gordo' && <ellipse cx={22} cy={-236} rx={30} ry={34} fill={ropa === 'armadura' ? C.negro : piel} stroke={piel !== C.negro ? C.negro : 'none'} strokeWidth={2} />}
         {ropa === 'armadura' ? (
           <>
@@ -837,7 +852,7 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
             {mujer && !vestido && <Inc d={suave([[6, -270], [22, -262], [26, -250]])} c={lin} w={1.6} />}
           </>
         )}
-        {ropa !== 'desnudo' && <Borde d="M-28 -216 L 26 -218" w={8} />}
+        {ropa !== 'desnudo' && !props.lisa && <Borde d="M-28 -216 L 26 -218" w={8} />}
         {props.estrellado && Array.from({ length: 14 }, (_, i) => <path key={i} d={`M${-24 + (i * 37) % 50} ${-296 + (i * 53) % 280} l2 5 5 0 -4 3 2 5 -5 -3 -5 3 2 -5 -4 -3 5 0 Z`} fill={C.oro} />)}
         {hawaiano && (props.collar ?? true) && ropa !== 'armadura' && Array.from({ length: 9 }, (_, i) => { const t = i / 8, cx = -24 + t * 58, cy = -300 + Math.sin(t * Math.PI) * 22; return <g key={`lei${i}`}><circle cx={cx} cy={cy} r={6.5} fill={['#E8724B', C.oro, '#F7EEDB', '#C2185B'][i % 4]} stroke={C.negro} strokeWidth={1.5} /><circle cx={cx} cy={cy} r={2} fill={C.purpura} /></g>; })}
         {nativo && (props.collar ?? true) && ropa !== 'armadura' && Array.from({ length: 7 }, (_, i) => { const t = i / 6, cx = -18 + t * 44, cy = -298 + Math.sin(t * Math.PI) * 10; return <circle key={`cu${i}`} cx={cx} cy={cy} r={3.6} fill={['#2F5D8A', C.blanco, C.purpura, C.oro][i % 4]} stroke={C.negro} strokeWidth={1} />; })}
@@ -1103,7 +1118,7 @@ export const Relampago: React.FC<{ a: P; b: P; f: number; desde: number; dur?: n
 };
 
 /** Suelo de la escena: franja negra con puntitos y piedras (en el tema nórdico, con nieve encima). */
-export const Suelo: React.FC<{ desde?: number; hasta?: number; color?: string }> = ({ desde: x0 = -400, hasta = 5000, color = C.negro }) => TEMA.nombre === 'kamasan' ? <SueloKamasan desde={x0} hasta={hasta} color={color} /> : TEMA.nombre ==='kowhaiwhai' ? <SueloMaori desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'pahari' ? <SueloPahari desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'codice' ? <SueloCodice desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'pintado' ? (
+export const Suelo: React.FC<{ desde?: number; hasta?: number; color?: string }> = ({ desde: x0 = -400, hasta = 5000, color = C.negro }) => TEMA.nombre === 'natural' ? <SueloNatural desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'kamasan' ? <SueloKamasan desde={x0} hasta={hasta} color={color} /> : TEMA.nombre ==='kowhaiwhai' ? <SueloMaori desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'pahari' ? <SueloPahari desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'codice' ? <SueloCodice desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'pintado' ? (
   <g>
     <rect x={x0} y={SUELO} width={hasta - x0} height={200} fill="#8A5A34" />
     <rect x={x0} y={SUELO} width={hasta - x0} height={6} fill={C.negro} />
