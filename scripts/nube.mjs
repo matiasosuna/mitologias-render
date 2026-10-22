@@ -20,7 +20,7 @@ import { viejosDeArchivo } from './legacy.mjs';
 import {
   HORAS_UTC, clase, construirCola, actualizarCola, tieneYouTube, tieneInstagram, tieneTiktok, partesHechasIG, partesEstimadas,
   planTurno, estadoCola, limitar, usadas24h, esQuien, esShort, PLATAFORMAS, MAX_ALCANZAR, MAX_TIKTOK_FRENADO, TOPE_24H, TOPE_COLA_BUFFER,
-  horizontalTurno, claveHorizontal,
+  horizontalTurno, claveHorizontal, esBiblia,
 } from './cola.mjs';
 import { tituloQuienHorizontal, listaQuien, mitologiaEn } from '../lib/quien.mjs';
 import * as yo from './nube.mjs'; // este mismo módulo, para pasárselo a buffer-tiktok (ver prepararTiktok)
@@ -215,7 +215,8 @@ const conHorizontal = (id) => esShort(id) && existsSync(join('src/videos', id, '
 export const COLA = 'out/cola-unificada.json', SHORTS_ORDEN = 'out/shorts-orden.txt', RITMO_TK = 'out/tiktok-ritmo.json';
 const IDS = 'src/videos/youtube-ids.json', API = 'out/subidas-api.json', IG = 'out/subidas-instagram.json', BUF = 'out/subidas-buffer.json';
 /** Listo para publicar: narrado (guion + timeline) y, si es episodio, con título en titulos.json. */
-const listoCon = (titulos) => (id) => ['guion.json', 'timeline.json'].every((f) => existsSync(join('src/videos', id, f))) && (esShort(id) || Boolean(titulos[id]?.titulo));
+/** Biblia: además, la marca VERIFICADO que deja su sesión cuando el capítulo está revisado (no sale nada a medio hacer). */
+const listoCon = (titulos) => (id) => ['guion.json', 'timeline.json', ...(esBiblia(id) ? ['VERIFICADO'] : [])].every((f) => existsSync(join('src/videos', id, f))) && (esShort(id) || Boolean(titulos[id]?.titulo));
 /** "Who is…?" en orden: los del orden de Shorts de la rama estado, después las carpetas nuevas. */
 const quienes = () => [...leerLista(SHORTS_ORDEN), ...readdirSync('src/videos').sort()].filter(esQuien);
 function datos() {

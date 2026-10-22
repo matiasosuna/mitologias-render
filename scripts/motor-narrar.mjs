@@ -104,7 +104,7 @@ for (const esc of [...ESCENAS, ...MARCO]) escenas.push({
 
 const narradasMarco = escenas.splice(ESCENAS.length);
 let tl = timelineMulti(escenas, undefined, g.formato === 'short' ? tiemposShort(g) : undefined);
-if (narradasMarco.length) tl.marco = marcoTimeline(narradasMarco, tl.fps);
+if (narradasMarco.length) tl.marco = marcoTimeline(narradasMarco.map((n, i) => ({ ...n, pausas: MARCO[i].pausas, pausaFinal: MARCO[i].pausaFinal })), tl.fps);
 writeFileSync(join(dir, 'timeline.json'), JSON.stringify(tl));
 // Inglés al tempo de su formato (episodios 0,9× más claros; Shorts 1,1× y sin silencios en las puntas) y timeline de nuevo.
 // .tempo.json sabe qué tiene cada archivo: si el texto no cambió pero el tempo sí, se re-estira solo la diferencia.

@@ -119,6 +119,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
         if (i === 0) copyFileSync(jpg, join('out', id, 'portada-ig.jpg'));
       }
     }));
-    writeFileSync(join('out', id, 'partes.json'), JSON.stringify({ de, partes, ...(guion.reels ? { portadas: partes.map((_, i) => `portada-ig-${i + 1}.jpg`), portadaCuadro: ENTRADA_PORTADA } : {}), gancho: gancho || false, ritmo: lento ? 'lento' : 'rapido', huella: huella(id) })); // gancho/ritmo/huella del guion: sembrar y la nube no reusan partes viejas, con otro título ni de otro elenco
+    writeFileSync(join('out', id, 'partes.json'), JSON.stringify({ de, partes, ...(guion.reels ? { portadas: partes.map((_, i) => `portada-ig-${i + 1}.jpg`), portadaCuadro: ENTRADA_PORTADA, caption: guion.reels.caption ?? null, descripcion: guion.youtube?.descripcion ?? null } : {}), gancho: gancho || false, ritmo: lento ? 'lento' : 'rapido', huella: huella(id) })); // gancho/ritmo/huella del guion: sembrar y la nube no reusan partes viejas, con otro título ni de otro elenco
   }
 }

@@ -1,0 +1,716 @@
+{
+  "id": "short-griegas-quien-persefone",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Perséfone? La reina de dos mundos",
+    "en": "Who is Persephone? The queen of two worlds"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Perséfone? La reina de dos mundos",
+    "en": "Who is Persephone? The queen of two worlds"
+  },
+  "cierre": {
+    "es": "Su madre y su esposo entre los doce dioses — Mitología griega T2E1",
+    "en": "Her mother and her husband among the gods — Greek Mythology S2E1"
+  },
+  "episodio": "griegas-08-doce-olimpicos",
+  "quien": {
+    "nombre": {
+      "es": "Perséfone",
+      "en": "Persephone"
+    },
+    "subtitulo": {
+      "es": "Reina del inframundo · diosa de la primavera",
+      "en": "Queen of the underworld · goddess of spring"
+    },
+    "como": "persefone_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "inframundo",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "Fue una chica de las flores. Y hoy es la reina de los muertos.",
+        "en": "She was a girl of the flowers. Now she is queen of the dead."
+      }
+    ],
+    "actores": [
+      {
+        "id": "persefone",
+        "como": "persefone_oficial",
+        "x": 960,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.14,
+            "hace": "alegra"
+          },
+          {
+            "en": 0.5,
+            "hace": "brilla",
+            "dur": 0.6
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "inframundo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Perséfone es la reina del inframundo.",
+          "en": "Persephone is the queen of the underworld."
+        },
+        {
+          "es": "Y es también la diosa de la primavera.",
+          "en": "She is also the goddess of spring."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "REINA DE LOS MUERTOS",
+            "en": "QUEEN OF THE DEAD"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "persefone",
+          "como": "persefone_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.46,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "padres",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es hija de Deméter y de Zeus.",
+          "en": "She is the daughter of Demeter and Zeus."
+        },
+        {
+          "es": "De niña la llamaban Core, que significa \"la doncella\".",
+          "en": "As a girl she was called Kore, which means \"the maiden\"."
+        }
+      ],
+      "actores": [
+        {
+          "id": "demeter",
+          "como": "demeter_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "persefone",
+          "como": "persefone_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.09,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.23,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.14,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.28,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rapto",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Un día recogía flores en un prado.",
+          "en": "One day she was picking flowers in a meadow."
+        },
+        {
+          "es": "De pronto la tierra se abrió.",
+          "en": "Suddenly the earth split open."
+        },
+        {
+          "es": "Hades salió en su carro y se la llevó.",
+          "en": "Hades rose in his chariot and carried her off."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.33,
+          "tipo": "temblor",
+          "dur": 1.5
+        },
+        {
+          "en": 0.4,
+          "tipo": "oscurecer"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "EL RAPTO",
+            "en": "THE ABDUCTION"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "persefone",
+          "como": "persefone_oficial",
+          "x": 760,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.35,
+              "hace": "sorprende"
+            }
+          ]
+        },
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 1190,
+          "mira": "izq",
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 0.64,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "madre",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Zeus lo había permitido, y Deméter no sabía nada.",
+          "en": "Zeus had allowed it, and Demeter knew nothing."
+        },
+        {
+          "es": "Deméter la buscó nueve días y dejó la tierra sin cosecha.",
+          "en": "Demeter searched for nine days and left the earth without a harvest."
+        }
+      ],
+      "actores": [
+        {
+          "id": "demeter",
+          "como": "demeter_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "entristece"
+            },
+            {
+              "en": 0.6,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "granada",
+      "fondo": "inframundo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Zeus mandó a Hermes a traerla de vuelta.",
+          "en": "Zeus sent Hermes to bring her back."
+        },
+        {
+          "es": "Pero ella ya había comido semillas de granada.",
+          "en": "But she had already eaten pomegranate seeds."
+        },
+        {
+          "es": "Eso la ataba al inframundo.",
+          "en": "That bound her to the underworld."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.4,
+          "texto": {
+            "es": "GRANADA",
+            "en": "POMEGRANATE"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "como": "hermes_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "persefone",
+          "como": "persefone_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.14,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.28,
+              "hace": "toma"
+            }
+          ]
+        },
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.34,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "estaciones",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Así que pasa parte del año abajo, con su esposo.",
+          "en": "So she spends part of each year below, with her husband."
+        },
+        {
+          "es": "Cuando vuelve, es primavera. Cuando se va, es invierno.",
+          "en": "When she returns, it is spring. When she leaves, winter."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "PRIMAVERA",
+            "en": "SPRING"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.1,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "persefone",
+          "como": "persefone_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.5,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "familia",
+      "fondo": "inframundo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su esposo es Hades, y su madre es Deméter.",
+          "en": "Her husband is Hades, and her mother is Demeter."
+        },
+        {
+          "es": "Por Zeus tiene muchos medio hermanos, como Atenea, Apolo y Artemisa.",
+          "en": "Through Zeus she has many half-siblings, like Athena, Apollo and Artemis."
+        }
+      ],
+      "actores": [
+        {
+          "id": "persefone",
+          "como": "persefone_oficial",
+          "x": 960,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hades",
+          "como": "hades_oficial",
+          "x": 690,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.09,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.23,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "demeter",
+          "como": "demeter_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.14,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.28,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "inframundo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus símbolos son la granada, la antorcha y las flores.",
+          "en": "Her symbols are the pomegranate, the torch and flowers."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "GRANADA",
+            "en": "POMEGRANATE"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.1,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "persefone",
+          "como": "persefone_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "ofrece"
+            },
+            {
+              "en": 0.5,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bueno",
+      "fondo": "inframundo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es amable con quien sufre por amor.",
+          "en": "She is kind to those who suffer for love."
+        },
+        {
+          "es": "En un mito, la música de Orfeo la conmovió.",
+          "en": "In one myth, the music of Orpheus moved her."
+        }
+      ],
+      "actores": [
+        {
+          "id": "persefone",
+          "como": "persefone_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.5,
+              "hace": "abraza"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "malo",
+      "fondo": "inframundo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero como reina de los muertos puede ser dura.",
+          "en": "But as queen of the dead, she can be stern."
+        },
+        {
+          "es": "Ella decide quién vuelve y quién se queda.",
+          "en": "She helps decide who may go back and who must stay."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.06,
+          "tipo": "niebla"
+        }
+      ],
+      "actores": [
+        {
+          "id": "persefone",
+          "como": "persefone_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "neutral"
+            },
+            {
+              "en": 0.57,
+              "hace": "niega"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "inframundo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "La chica de las flores se volvió reina de dos mundos.",
+          "en": "The girl of the flowers became queen of two worlds."
+        },
+        {
+          "es": "Conoce a su madre y a su esposo en la temporada 2, episodio 1.",
+          "en": "Meet her mother and her husband in Season 2, Episode 1."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.09,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "persefone",
+          "como": "persefone_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.43,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

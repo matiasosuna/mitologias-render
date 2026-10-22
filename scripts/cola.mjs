@@ -6,7 +6,7 @@
 // orden de series de siempre) con un "Who is…?" detrás de cada episodio. Las mini historias viejas NO entran.
 // Formato por plataforma: episodio → YouTube horizontal · Instagram en partes · TikTok vertical completo; Short → Short.
 //
-// Turnos (cada 4 h; HST): 08 = episodio · 12 y 20 = "Who is…?" · 00, 04 y 16 = solo para alcanzar.
+// Turnos (cada 4 h; HST): 08 = episodio · 12, 16 y 20 = Biblia (Who-is en pausa desde 2026-10-22) · 00 y 04 = solo para alcanzar.
 //  - ALCANZAR (alguna plataforma tiene menos episodios de la lista que la que va adelante, hoy YouTube): la que va
 //    adelante NO publica episodios; las atrasadas publican hasta 4 episodios por turno (los que les faltan, en orden)
 //    hasta llegar. Los "Who is…?" salen igual en sus turnos, a las tres juntas.
@@ -32,12 +32,15 @@ export const entrada = (id) => ({ id, tipo: tipoDe(id), formato: FORMATOS[tipoDe
 // ── turnos: 6 por día, a las 2, 6, 10, 14, 18 y 22 UTC = 16, 20, 00, 04, 08 y 12 HST (UTC−10)
 export const HORAS_UTC = [2, 6, 10, 14, 18, 22];
 export const EPISODIO_HST = 8;
-export const QUIEN_HST = [12, 20];
+// Matías 2026-10-22: Who-is EN PAUSA; esos turnos (y el de las 16) son para la temporada de la Biblia, 3 capítulos por día.
+export const QUIEN_HST = [];
+export const BIBLIA_HST = [12, 16, 20];
+export const esBiblia = (id) => id.startsWith('biblia-');
 export const horaHST = (horaUTC) => (horaUTC + 14) % 24;
-/** 'episodio' | 'quien' | 'alcanzar' (turno que solo usan las plataformas atrasadas). */
+/** 'episodio' | 'quien' | 'biblia' | 'alcanzar' (turno que solo usan las plataformas atrasadas). */
 export function clase(horaUTC) {
   const h = horaHST(horaUTC);
-  return h === EPISODIO_HST ? 'episodio' : QUIEN_HST.includes(h) ? 'quien' : 'alcanzar';
+  return h === EPISODIO_HST ? 'episodio' : QUIEN_HST.includes(h) ? 'quien' : BIBLIA_HST.includes(h) ? 'biblia' : 'alcanzar';
 }
 
 // Tope por turno mientras alcanzan (episodios) y topes por 24 h (publicaciones; en Instagram cuenta cada parte).
@@ -53,7 +56,7 @@ export const STORIES_GRIEGAS = ['griegas-80-perseo-y-medusa', 'griegas-81-teseo-
   'griegas-84-dedalo-e-icaro', 'griegas-85-el-rey-midas', 'griegas-86-heracles-trabajos-2', 'griegas-87-aracne', 'griegas-88-jason-y-el-vellocino', 'griegas-89-eco-y-narciso'];
 /** Lo que sigue (no está en YouTube): foco griego primero, después el resto de las T1 como antes. */
 // Solo temporadas (Matías 2026-10-22: nada de la Odisea ni Greek Myth Stories; especiales nuevos solo con su OK).
-export const CONTINUACION = [['griegas', 2], ...['hawaianas', 'norteamericanas', 'aztecas', 'hindues', 'maories', 'balinesas'].map((s) => [s, 1])];
+export const CONTINUACION = [['griegas', 2], ...['hawaianas', 'norteamericanas', 'aztecas', 'hindues', 'maories', 'balinesas'].map((s) => [s, 1]), ['biblia', 1]];
 
 const grupoDe = (id, t) => (t?.especial ? 'especial' : `${id.split('-')[0]}-${t?.temporada}`);
 const porEpisodio = (titulos) => (a, b) => (titulos[a]?.episodio ?? 0) - (titulos[b]?.episodio ?? 0) || a.localeCompare(b);
@@ -137,7 +140,7 @@ export const puntero = (eps, tiene) => { const i = eps.findIndex((e) => !tiene(e
 /** Estado de la cola al empezar el turno: punteros de episodios por plataforma, la que va adelante y si están parejas. */
 export function estadoCola({ cola, tiene, listo = () => true, inicio = Infinity }) {
   const antes = (p) => (id) => tiene[p].has(id) && tiene[p].get(id) < inicio;
-  const eps = cola.filter((e) => e.tipo === 'episodio' && listo(e.id));
+  const eps = cola.filter((e) => e.tipo === 'episodio' && !esBiblia(e.id) && listo(e.id)); // la Biblia va por sus turnos
   const punteros = Object.fromEntries(PLATAFORMAS.map((p) => [p, puntero(eps, antes(p))]));
   const lider = Math.max(...Object.values(punteros));
   return { eps, punteros, lider, parejo: PLATAFORMAS.every((p) => punteros[p] === lider), antes };
@@ -153,6 +156,11 @@ export function planTurno({ cola, tiene, plataforma, clase: c, listo = () => tru
     // el próximo "Who is…?" que le falta a alguna, a las tres juntas
     const q = cola.find((e) => e.tipo === 'short' && listo(e.id) && PLATAFORMAS.some((p) => !antes(p)(e.id)));
     if (q && !ahora(q.id)) ids.push(q.id);
+  }
+  if (c === 'biblia') {
+    // el próximo capítulo de la Biblia que le falta a esta plataforma (cada una a su ritmo, de a uno por turno)
+    const b = cola.find((e) => esBiblia(e.id) && listo(e.id) && !antes(plataforma)(e.id));
+    if (b && !ahora(b.id)) ids.push(b.id);
   }
   // YouTube e Instagram marcan el ritmo entre ellas; TikTok alcanza por su cuenta y nunca las frena (2026-10-20)
   const grupo = plataforma === 'tiktok' ? PLATAFORMAS : PRINCIPALES;

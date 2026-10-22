@@ -79,7 +79,7 @@ test('lista con los datos reales: empieza por la T1 griega y trae la T2 griega 1
 // ── turnos
 test('turnos: 08 HST episodio, 12 y 20 HST "Who is…?", el resto solo para alcanzar', () => {
   assert.deepEqual(HORAS_UTC.map(horaHST), [16, 20, 0, 4, 8, 12]);
-  assert.deepEqual(Object.fromEntries(HORAS_UTC.map((h) => [horaHST(h), clase(h)])), { 16: 'alcanzar', 20: 'quien', 0: 'alcanzar', 4: 'alcanzar', 8: 'episodio', 12: 'quien' });
+  assert.deepEqual(Object.fromEntries(HORAS_UTC.map((h) => [horaHST(h), clase(h)])), { 16: 'biblia', 20: 'biblia', 0: 'alcanzar', 4: 'alcanzar', 8: 'episodio', 12: 'biblia' });
 });
 
 // ── qué tiene cada plataforma
@@ -229,4 +229,23 @@ test('datos reales: cada especial de la lista tiene su lista de YouTube (Odisea,
   const titulos = J('src/videos/titulos.json'), listas = J('src/videos/listas.json');
   const cola = construirCola({ titulos, ytIds: {} });
   for (const e of cola) if (titulos[e.id]?.especial) assert.ok(listas[titulos[e.id].especial], e.id);
+});
+
+test('Biblia (2026-10-22): 3 capítulos por día en 12/16/20 HST, en orden, sin mover el episodio de Myths de las 08', () => {
+  const cola = [...COLA, entrada('biblia-genesis-01'), entrada('biblia-genesis-02'), entrada('biblia-genesis-03'), entrada('biblia-genesis-04')];
+  const todos = ['e1', 'e2', 'e3'];
+  const tiene = { youtube: mapa(todos), instagram: mapa(todos), tiktok: mapa(todos) };
+  for (const p of ['youtube', 'instagram', 'tiktok']) {
+    assert.deepEqual(planTurno({ cola, tiene, plataforma: p, clase: 'biblia', inicio: INICIO }).ids, ['biblia-genesis-01']);
+    assert.deepEqual(planTurno({ cola, tiene, plataforma: p, clase: 'episodio', inicio: INICIO }).ids, ['e4'], 'la Biblia no cuenta como episodio de Myths');
+  }
+  const dia = ['biblia', 'biblia', 'alcanzar', 'alcanzar', 'episodio', 'biblia']; // 16, 20, 00, 04, 08, 12 HST
+  let t = INICIO;
+  for (const c of dia) {
+    const planes = Object.fromEntries(['youtube', 'instagram', 'tiktok'].map((p) => [p, planTurno({ cola, tiene, plataforma: p, clase: c, inicio: t }).ids]));
+    for (const [p, ids] of Object.entries(planes)) for (const id of ids) tiene[p].set(id, t + 1);
+    t += 4 * 3600e3;
+  }
+  for (const p of ['youtube', 'instagram', 'tiktok']) assert.deepEqual([...tiene[p].keys()].slice(3), ['biblia-genesis-01', 'biblia-genesis-02', 'e4', 'biblia-genesis-03']);
+  assert.deepEqual(planTurno({ cola, tiene: { youtube: mapa([]), instagram: mapa([]), tiktok: mapa([]) }, plataforma: 'youtube', clase: 'biblia', inicio: INICIO, listo: (id) => id !== 'biblia-genesis-01' }).ids, ['biblia-genesis-02'], 'lo no verificado se salta');
 });

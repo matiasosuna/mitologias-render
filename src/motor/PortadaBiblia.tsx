@@ -17,7 +17,7 @@ import type { GuionVisual, TramoMarco } from './tipos';
 const { fontFamily: CINZEL } = cargarCinzel('normal', { weights: ['500', '700', '900'], subsets: ['latin'] });
 const { fontFamily: CINZEL_DEC } = cargarCinzelDec('normal', { weights: ['700'], subsets: ['latin'] });
 const { fontFamily: GARAMOND } = cargarGaramond('normal', { weights: ['500', '600'], subsets: ['latin'] });
-const { fontFamily: GARAMOND_IT } = cargarGaramond('italic', { weights: ['500'], subsets: ['latin'] });
+const { fontFamily: GARAMOND_IT } = cargarGaramond('italic', { weights: ['500', '600'], subsets: ['latin'] });
 
 /** Cuadros hasta que todo entró (la tapa de IG con thumbOffset de 1 s ya la ve completa). */
 export const ENTRADA_PORTADA = 22;
@@ -61,7 +61,7 @@ export const PortadaBiblia: React.FC<{ guion: GuionVisual; n: number; de: number
         <div style={{ ...el(6), fontSize: 56, color: ORO, margin: '6px 0 14px' }}>❦</div>
         <div style={{ ...el(9), fontSize: 92, fontWeight: 900, letterSpacing: 10 }}>CHAPTER {capituloDe(guion.id)}</div>
         <div style={{ ...el(12), fontFamily: GARAMOND_IT, fontStyle: 'italic', fontWeight: 500, fontSize: 72, marginTop: 22 }}>{guion.titulo.en ?? guion.titulo.es}</div>
-        {de > 1 && <div style={{ ...el(14), fontSize: 60, fontWeight: 700, letterSpacing: 8, marginTop: 56, color: ROJO, borderTop: `3px solid ${ORO}`, borderBottom: `3px solid ${ORO}`, padding: '14px 26px', textShadow: resplandor(14) }}>PART {n} OF {de}</div>}
+        {de > 1 && <div style={{ ...el(14), fontFamily: GARAMOND_IT, fontStyle: 'italic', fontSize: 60, fontWeight: 600, letterSpacing: 0, marginTop: 56, color: ROJO, borderTop: `3px solid ${ORO}`, borderBottom: `3px solid ${ORO}`, padding: '14px 26px', textShadow: resplandor(14) }}>Part {n} of {de}</div>}
       </div>
       {/* gancho + invitación en karaoke: tinta oscura, la palabra que suena en rojo; sin brillo detrás */}
       {pag && (
