@@ -1,6 +1,7 @@
 // Video completo desde el guion visual. Las imágenes son neutras al idioma (rótulos en griego);
 // la voz y los subtítulos van aparte (pistas de audio y .srt por idioma).
 import React from 'react';
+import { LeyendaBiblia } from './Leyenda';
 import { AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame, interpolate } from 'remotion';
 import { C, TITULO, ap, cl, Guardas, TEMA, aplicarTema, TextoRunico, Jeroglificos, CalidadHD, marcaCanal } from '../comun/vasija';
 import { Fondo, ElementoSVG } from './fondos';
@@ -99,6 +100,7 @@ export const VideoMotor: React.FC<{ guion: GuionVisual; timeline: Timeline; idio
         {idioma && tl.frases.map((fr, j) => fr.audio[idioma] ? <Sequence key={j} from={fr.from} durationInFrames={fr.dur + 6}><Audio src={staticFile(fr.audio[idioma]!)} /></Sequence> : null)}
       </Sequence>
     ))}
+    {TEMA.nombre === 'natural' && <LeyendaBiblia guion={guion} timeline={timeline} idioma={imagen} />}
     <Sequence from={timeline.total - timeline.outroFrames}><Final dur={timeline.outroFrames} siguiente={guion.siguiente?.[imagen] ?? guion.siguiente?.es} /></Sequence>
   </AbsoluteFill>
   </CalidadHD.Provider>

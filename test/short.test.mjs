@@ -35,6 +35,7 @@ test('ritmo de Shorts: 0,12 s entre frases, ~0,35 s entre escenas, cartel final 
 test('proceso de la voz: Shorts 1,1× recortados; episodios 0,9× como siempre', () => {
   assert.deepEqual(procesoAudio({ formato: 'short' }), { tempo: 1.1, recortar: true });
   assert.deepEqual(procesoAudio({}), { tempo: 0.9, recortar: false });
+  assert.deepEqual(procesoAudio({ tempo: 1 }), { tempo: 1, recortar: false });
 });
 
 test('re-narrar re-estira solo la diferencia (el caché por texto no sabe de tempo; .tempo.json sí)', () => {

@@ -354,7 +354,7 @@ function correrIG(args, etiqueta) {
     const r = spawnSync('node', args, { encoding: 'utf8', timeout: 1500e3, maxBuffer: 1 << 24 });
     const salida = `${r.stdout ?? ''}\n${r.stderr ?? ''}`;
     const linea = salida.split('\n').find((l) => /publicado|ya estaba|esperando|nada pendiente|ya hay una cola/.test(l));
-    console.log(`Instagram ${etiqueta} intento ${intento}: ${linea ?? salida.trim().slice(-400)}`);
+    console.log(`Instagram ${etiqueta} intento ${intento}: ${linea ?? (salida.split('\n').filter((l) => /Error|error:/.test(l)).slice(0, 3).join(' | ') || salida.trim().slice(-400))}`);
     if (r.status === 0 && linea && !/esperando|ya hay una cola/.test(linea)) return;
     if (intento < 3) execFileSync('sleep', ['300']);
   }

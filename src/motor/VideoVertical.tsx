@@ -12,6 +12,7 @@ import { FranjaCodice } from '../comun/codice';
 import { FranjaPahari, DEGRADE_PAHARI } from '../comun/pahari';
 import { FranjaKamasan } from '../comun/kamasan';
 import { FranjaMaori } from '../comun/kowhaiwhai';
+import { useFraseBiblia, NumeroVersiculo } from './Leyenda';
 import type { GuionVisual, Timeline } from './tipos';
 
 const NOMBRE: Record<string, string> = { vasija: 'GREEK MYTHOLOGY', runas: 'NORSE MYTHOLOGY', papiro: 'EGYPTIAN MYTHOLOGY', kapa: 'HAWAIIAN MYTHOLOGY', pintado: 'NATIVE AMERICAN MYTHOLOGY', codice: 'AZTEC MYTHOLOGY', pahari: 'HINDU MYTHOLOGY', kowhaiwhai: 'MĀORI MYTHOLOGY', kamasan: 'BALINESE MYTHOLOGY', natural: 'THE BIBLE' };
@@ -30,6 +31,7 @@ export const VideoVertical: React.FC<{ guion: GuionVisual; timeline: Timeline; p
   const esc = timeline.escenas.find((e) => f >= e.from && f < e.from + e.durationInFrames);
   // el subtítulo queda 8 cuadros más, salvo que ya arranque la frase siguiente (ritmo rápido: 3 cuadros entre frases)
   const frase = esc?.frases.find((fr, j) => f - esc.from >= fr.from && f - esc.from < Math.min(fr.from + fr.dur + 8, esc.frases[j + 1]?.from ?? Infinity));
+  const biblia = useFraseBiblia(guion, timeline); // Learn Bible 777: número de versículo antes de la frase
   const enIntro = f < timeline.introFrames, enCierre = f >= finHistoria;
   const fondo = fondoVertical(t);
   const franja = franjaVertical(t, f);
@@ -55,7 +57,7 @@ export const VideoVertical: React.FC<{ guion: GuionVisual; timeline: Timeline; p
           {!enIntro && !enCierre && (
             <div style={{ position: 'absolute', left: 0, right: 0, top: SUBS, bottom: 0, background: fondo }}>
               <svg width={1080} height={80} viewBox="0 0 1080 80" style={{ position: 'absolute', top: 0 }}>{franja}</svg>
-              <div style={{ position: 'absolute', top: 100, left: 56, right: 56, textAlign: 'center', fontFamily: TEXTO, fontWeight: 500, fontSize: 56, lineHeight: 1.22, color: '#FFF8EA', textShadow: `0 3px 0 ${C.negro}, 0 0 14px rgba(0,0,0,.6)` }}>{frase?.texto.en ?? ''}</div>
+              <div style={{ position: 'absolute', top: 100, left: 56, right: 56, textAlign: 'center', fontFamily: TEXTO, fontWeight: 500, fontSize: 56, lineHeight: 1.22, color: '#FFF8EA', textShadow: `0 3px 0 ${C.negro}, 0 0 14px rgba(0,0,0,.6)` }}>{t === 'natural' && <NumeroVersiculo r={biblia?.ref ?? null} size={56} />}{frase?.texto.en ?? ''}</div>
               <div style={{ position: 'absolute', bottom: 40, left: 0, right: 0, textAlign: 'center', fontFamily: TITULO, fontWeight: 700, fontSize: 30, letterSpacing: 8, color: '#FFF4E0', opacity: 0.7 }}>{marcaCanal()}</div>
             </div>
           )}

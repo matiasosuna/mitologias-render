@@ -92,6 +92,8 @@ export type Escena = {
   rotulos?: { en: number; texto: string | Texto; x: number; y: number; hasta?: number; estilo?: 'porque' }[];
   /** Short nativo: x del mundo que queda en el centro del vertical (por defecto 960). */
   foco?: number;
+  /** Learn Bible 777: dónde va el texto del versículo en el horizontal (por defecto, la zona libre: lib/versiculos.mjs). */
+  versiculo?: 'arriba' | 'abajo';
 };
 
 export type GuionVisual = {
