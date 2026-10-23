@@ -7,12 +7,18 @@ import { ShortNativo } from './ShortNativo';
 import { ShortHorizontal, duracionHorizontal } from './ShortHorizontal';
 import { VideoVertical, CIERRE_VERTICAL, ParteVertical, duracionParte } from './VideoVertical';
 import { VIDEOS } from './indice';
-import { horizontalConMarco } from '../../lib/marco.mjs';
+import { horizontalConMarco, verticalConGancho } from '../../lib/marco.mjs';
 import { DemoCalidad } from './DemoCalidad';
 import { DemoPersonajes2 } from './DemoPersonajes2';
 import { DemoBrazos } from './DemoBrazos';
 import { DemoActuacion } from './DemoActuacion';
 import type { GuionVisual, Timeline, Idioma } from './tipos';
+
+/** Vertical completo (TikTok): con gancho (lib/marco.mjs) la voz arranca en el cuadro 0, en lugar de la portada. */
+const VideoVerticalCompleto: React.FC<{ guion: GuionVisual; timeline: Timeline; portada?: string }> = ({ guion, timeline, portada }) => {
+  const r = verticalConGancho(guion, timeline);
+  return <VideoVertical guion={r.guion} timeline={r.timeline} portada={portada} />;
+};
 
 registerRoot(() => (
   <>
@@ -31,8 +37,8 @@ registerRoot(() => (
         calculateMetadata={({ props }) => ({ durationInFrames: duracionHorizontal((props as { timeline: Timeline }).timeline) })} />
     ))}
     {VIDEOS.filter(({ guion }) => (guion as GuionVisual).formato !== 'short').map(({ guion, timeline }) => (
-      <Composition key={`${(guion as GuionVisual).id}-vertical`} id={`${(guion as GuionVisual).id}-vertical`} component={VideoVertical as unknown as React.FC<Record<string, unknown>>} durationInFrames={(timeline as Timeline).total - (timeline as Timeline).outroFrames + CIERRE_VERTICAL * (timeline as Timeline).fps} fps={(timeline as Timeline).fps} width={1080} height={1920} defaultProps={{ guion, timeline }}
-        calculateMetadata={({ props }) => { const tl = (props as { timeline: Timeline }).timeline; return { durationInFrames: tl.total - tl.outroFrames + CIERRE_VERTICAL * tl.fps }; }} />
+      <Composition key={`${(guion as GuionVisual).id}-vertical`} id={`${(guion as GuionVisual).id}-vertical`} component={VideoVerticalCompleto as unknown as React.FC<Record<string, unknown>>} durationInFrames={(timeline as Timeline).total - (timeline as Timeline).outroFrames + CIERRE_VERTICAL * (timeline as Timeline).fps} fps={(timeline as Timeline).fps} width={1080} height={1920} defaultProps={{ guion, timeline }}
+        calculateMetadata={({ props }) => { const p = props as { guion: GuionVisual; timeline: Timeline }; const tl = verticalConGancho(p.guion, p.timeline).timeline; return { durationInFrames: tl.total - tl.outroFrames + CIERRE_VERTICAL * tl.fps }; }} />
     ))}
     {VIDEOS.filter(({ guion }) => (guion as GuionVisual).formato !== 'short').map(({ guion, timeline }) => (
       <Composition key={`${(guion as GuionVisual).id}-parte`} id={`${(guion as GuionVisual).id}-parte`} component={ParteVertical as unknown as React.FC<Record<string, unknown>>} durationInFrames={1} fps={(timeline as Timeline).fps} width={1080} height={1920} defaultProps={{ guion, timeline, desde: 0, hasta: 1, n: 1, de: 1 }}

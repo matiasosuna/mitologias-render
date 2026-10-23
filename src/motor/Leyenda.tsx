@@ -14,7 +14,7 @@ export const useFraseBiblia = (guion: GuionVisual, timeline: Timeline, idioma: I
   const f = useCurrentFrame();
   const refs = useMemo(() => (KJV[guion.id] ? versiculosDeGuion(guion, KJV[guion.id], idioma) : null), [guion, idioma]);
   const i = timeline.escenas.findIndex((e) => f >= e.from && f < e.from + e.durationInFrames);
-  if (i < 0) return null;
+  if (i < 0 || timeline.escenas[i].gancho) return null; // el gancho tiene su propio texto (Gancho.tsx)
   const esc = timeline.escenas[i];
   const j = esc.frases.findIndex((fr, k) => f - esc.from >= fr.from && f - esc.from < Math.min(fr.from + fr.dur + 8, esc.frases[k + 1]?.from ?? Infinity));
   if (j < 0) return null;

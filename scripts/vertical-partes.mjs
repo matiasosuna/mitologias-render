@@ -5,7 +5,7 @@
 // Uso: node scripts/vertical-partes.mjs <id> [<id>…] [--rapido]
 // → out/<id>/<id>.parte-1.mp4, .parte-2.mp4 … y out/<id>/partes.json
 import { bundle } from '@remotion/bundler';
-import { selectComposition, renderStill } from '@remotion/renderer';
+import { selectComposition } from '@remotion/renderer';
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync, copyFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { join, resolve } from 'node:path';
@@ -15,8 +15,6 @@ import { prepararRapido } from './vertical-rapido.mjs';
 import { huella } from './nube.mjs';
 import { renderPartido } from './render-partido.mjs';
 import { marcoParte, sobraParte } from '../lib/marco.mjs';
-
-const ENTRADA_PORTADA = 22; // = src/motor/PortadaBiblia.tsx: cuadro en que la portada de pergamino ya está completa
 
 export const MAX_S = 175; // contenido por parte (+2 s de gancho +2,5 s de cartel → < 3 min; el marco de Learn Bible se descuenta)
 const CIERRE_VERTICAL = 3;
@@ -54,7 +52,7 @@ export function cortesConMarco(timeline, sobra, conPortada = false) {
   const cand = new Map(timeline.escenas.map((e) => [e.from, 0]));
   const frases = timeline.escenas.flatMap((e) => e.frases.map((f, j) => ({ x: e.from + f.from, primera: j === 0, texto: f.texto?.en ?? '' })));
   frases.forEach((f, k) => { if (!f.primera && !cand.has(f.x)) cand.set(f.x, /[.!?]["']?\s*$/.test(frases[k - 1].texto) ? 1 : 3); });
-  // con marco la parte 1 abre con la portada de pergamino: no lleva la portada vieja del episodio (introFrames)
+  // con gancho narrado la parte 1 abre con el gancho (voz desde el cuadro 0): no lleva la portada del episodio (introFrames)
   const ini = conPortada ? 0 : timeline.introFrames; // solo final (sin gancho narrado): la parte 1 abre con la portada de Myths
   const puntos = [ini, ...[...cand.keys()].filter((x) => x > ini && x < total).sort((a, b) => a - b), total];
   const peor = (a, b) => (a[0] !== b[0] ? a[0] > b[0] : a[1] > b[1]);
@@ -87,7 +85,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   for (const id of ids) {
     // antes del bundle: el audio rápido tiene que estar en public/
     timelines[id] = lento ? JSON.parse(readFileSync(join('src/videos', id, 'timeline.json'), 'utf8')) : prepararRapido(id);
-    if (JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8')).reels?.ganchos) continue; // con ganchos (marco al inicio): la tapa es la portada de pergamino (abajo)
+    if (JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8')).reels?.ganchos) continue; // con gancho narrado: la parte arranca en la 1.ª escena (sin la portada del video); la tapa de IG va aparte
     if (!existsSync(join('out', id, 'portada-ig.jpg'))) execFileSync('node', ['scripts/portadas-ig.mjs', id], { stdio: 'ignore' });
     copyFileSync(join('out', id, 'portada-ig.jpg'), join('public/portadas', `${id}.jpg`));
   }
@@ -112,14 +110,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       const out = join('out', id, `${id}.parte-${i + 1}.mp4`);
       await renderPartido({ serveUrl, composition: comp, inputProps, out, trozos, crf: 21, concurrency: Math.max(1, Math.floor(nucleos / (de * trozos))) });
       console.log(`listo: ${out} (${(comp.durationInFrames / comp.fps).toFixed(0)} s)`);
-      // Learn Bible: tapa de IG = la portada de pergamino ya completa (portada-ig-N.jpg; la de la parte 1 también portada-ig.jpg)
-      if (marco.apertura) {
-        const png = join('out', id, `portada-ig-${i + 1}.png`), jpg = png.replace(/\.png$/, '.jpg');
-        await renderStill({ serveUrl, composition: comp, inputProps, frame: ENTRADA_PORTADA, output: png });
-        execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', png, '-q:v', '2', jpg]); rmSync(png);
-        if (i === 0) copyFileSync(jpg, join('out', id, 'portada-ig.jpg'));
-      }
+      // la tapa de IG es la portada de Myths (portadas-ig.mjs --parte); el gancho va adentro del video desde el cuadro 0
     }));
-    writeFileSync(join('out', id, 'partes.json'), JSON.stringify({ de, partes, ...(guion.reels?.ganchos ? { portadas: partes.map((_, i) => `portada-ig-${i + 1}.jpg`), portadaCuadro: ENTRADA_PORTADA } : {}), gancho: gancho || false, ritmo: lento ? 'lento' : 'rapido', huella: huella(id) })); // gancho/ritmo/huella del guion: sembrar y la nube no reusan partes viejas, con otro título ni de otro elenco
+    writeFileSync(join('out', id, 'partes.json'), JSON.stringify({ de, partes, gancho: gancho || false, ritmo: lento ? 'lento' : 'rapido', huella: huella(id) })); // gancho/ritmo/huella del guion: sembrar y la nube no reusan partes viejas, con otro título ni de otro elenco
   }
 }

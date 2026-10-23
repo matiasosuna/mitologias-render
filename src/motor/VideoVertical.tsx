@@ -15,7 +15,7 @@ import { FranjaMaori } from '../comun/kowhaiwhai';
 import { useFraseBiblia, NumeroVersiculo, TextoLeyenda, Karaoke, CREMA, DORADO } from './Leyenda';
 import { palabras, palabraEn } from '../../lib/karaoke.mjs';
 import { KJV_LIBRO, capituloDe } from './kjv';
-import { PortadaBiblia } from './PortadaBiblia';
+import { TextoGancho, TextoGanchoSeq, ZoomLento, VeloGancho } from './Gancho';
 import type { GuionVisual, Timeline, TramoMarco } from './tipos';
 
 const NOMBRE: Record<string, string> = { vasija: 'GREEK MYTHOLOGY', runas: 'NORSE MYTHOLOGY', papiro: 'EGYPTIAN MYTHOLOGY', kapa: 'HAWAIIAN MYTHOLOGY', pintado: 'NATIVE AMERICAN MYTHOLOGY', codice: 'AZTEC MYTHOLOGY', pahari: 'HINDU MYTHOLOGY', kowhaiwhai: 'MĀORI MYTHOLOGY', kamasan: 'BALINESE MYTHOLOGY', natural: 'THE BIBLE' };
@@ -23,6 +23,7 @@ const NOMBRE: Record<string, string> = { vasija: 'GREEK MYTHOLOGY', runas: 'NORS
 export const franjaVertical = (t: string, f: number) => t === 'natural' ? <FranjaNatural y={10} alto={30} ancho={1080} /> : t === 'pahari' ? <FranjaPahari y={8} alto={44} desplaz={f} tipo="flores" ancho={1080} /> : t === 'kamasan' ? <FranjaKamasan y={6} alto={52} desplaz={f} tipo="awan" ancho={1080} /> : t === 'kowhaiwhai' ? <FranjaMaori y={6} alto={52} desplaz={f} tipo="koru" ancho={1080} /> : t === 'codice' ? <FranjaCodice y={8} alto={44} desplaz={f} tipo="xical" ancho={1080} /> : t === 'pintado' ? <FranjaCuentas y={10} alto={40} desplaz={f} tipo="escalones" /> : t === 'kapa' ? <FranjaKapa y={10} alto={36} desplaz={f} tipo="rombos" /> : t === 'papiro' ? <Bloques y={10} alto={30} desplaz={f} /> : t === 'runas' ? <Entrelazado y={6} alto={60} desplaz={f} paso={150} /> : <FrisoPalmetas y={6} desplaz={f} />;
 export const CIERRE_VERTICAL = 3; // segundos del cierre (en lugar de los 12 s de pantalla final de YouTube)
 const SUBS = 1470;
+const GANCHO_TOP = 470; // texto del gancho: arriba del medio, debajo de la pastilla de parte
 /** Degradé de fondo del formato vertical según el tema. */
 export const fondoVertical = (t: string) => t === 'natural' ? DEGRADE_NATURAL : t === 'pahari' ? DEGRADE_PAHARI : t === 'kamasan' ? 'linear-gradient(#7A2418, #1E1612)' : t === 'kowhaiwhai' ? 'linear-gradient(#6E1610, #15100E)' : t === 'codice' ? 'linear-gradient(#6E2A1A, #1A1311)' : t === 'pintado' ? 'linear-gradient(#5A3820, #1C1612)' : t === 'kapa' ? 'linear-gradient(#4A2C16, #1A1410)' : t === 'papiro' ? 'linear-gradient(#3A2A1C, #1D1712)' : t === 'runas' ? `linear-gradient(#22384D, ${C.negro})` : `linear-gradient(${C.barro}, ${C.barroOscuro})`;
 
@@ -35,20 +36,28 @@ export const VideoVertical: React.FC<{ guion: GuionVisual; timeline: Timeline; p
   // el subtítulo queda 8 cuadros más, salvo que ya arranque la frase siguiente (ritmo rápido: 3 cuadros entre frases)
   const frase = esc?.frases.find((fr, j) => f - esc.from >= fr.from && f - esc.from < Math.min(fr.from + fr.dur + 8, esc.frases[j + 1]?.from ?? Infinity));
   const biblia = useFraseBiblia(guion, timeline); // Learn Bible 777: número de versículo antes de la frase
-  const enIntro = f < timeline.introFrames, enCierre = f >= finHistoria;
+  const gancho = timeline.escenas[0]?.gancho ? timeline.escenas[0] : null; // gancho en el cuadro 0 (lib/marco.mjs verticalConGancho)
+  const enGancho = !!gancho && f < gancho.durationInFrames;
+  const enIntro = f < timeline.introFrames || enGancho, enCierre = f >= finHistoria;
   const fondo = fondoVertical(t);
   const franja = franjaVertical(t, f);
   return (
     <CalidadHD.Provider value={guion.hd !== false}>
       <ModoVertical.Provider value={true}>
         <AbsoluteFill style={{ backgroundColor: C.negro }}>
-          <Audio src={staticFile(TEMA.musica)} volume={(fr) => interpolate(fr, [0, timeline.introFrames, total - 30, total], [0.45, 0.18, 0.18, 0], cl)} />
+          <Audio src={staticFile(TEMA.musica)} volume={(fr) => (gancho ? interpolate(fr, [0, gancho.durationInFrames, total - 30, total], [0.1, 0.18, 0.18, 0], cl) : interpolate(fr, [0, timeline.introFrames, total - 30, total], [0.45, 0.18, 0.18, 0], cl))} />
           {timeline.escenas.map((e, i) => (
             <Sequence key={e.id} from={e.from} durationInFrames={e.durationInFrames}>
               {e.frases.map((fr, j) => fr.audio.en ? <Sequence key={j} from={fr.from} durationInFrames={fr.dur + 6}><Audio src={staticFile(fr.audio.en!)} /></Sequence> : null)}
-              <EscenaVerticalNativa esc={guion.escenas[i]} tl={e} />
+              {e.gancho ? <ZoomLento dur={e.durationInFrames}><EscenaVerticalNativa esc={guion.escenas[i]} tl={e} /></ZoomLento> : <EscenaVerticalNativa esc={guion.escenas[i]} tl={e} />}
             </Sequence>
           ))}
+          {gancho && (
+            <Sequence durationInFrames={gancho.durationInFrames}>
+              <VeloGancho vertical />
+              <TextoGanchoSeq frases={gancho.frases} top={GANCHO_TOP} ancho={960} size={92} chars={18} renglones={4} fin={gancho.durationInFrames} />
+            </Sequence>
+          )}
           {/* cabecera chica: mitología y episodio */}
           {!enIntro && !enCierre && (
             <div style={{ position: 'absolute', left: 0, right: 0, top: 0, height: 230, background: 'linear-gradient(rgba(10,7,5,.75), rgba(10,7,5,0))', textAlign: 'center', fontFamily: TITULO, color: '#FFF4E0' }}>
@@ -65,10 +74,10 @@ export const VideoVertical: React.FC<{ guion: GuionVisual; timeline: Timeline; p
             </div>
           )}
           {/* portada al principio */}
-          {enIntro && (
+          {enIntro && !enGancho && (
             <AbsoluteFill style={{ background: fondo, opacity: interpolate(f, [timeline.introFrames - 10, timeline.introFrames], [1, 0], cl) }}>
               {/* Learn Bible: nunca la portada de Myths; la de pergamino */}
-              {t === 'natural' && guion.reels?.ganchos ? <PortadaBiblia guion={guion} n={1} de={1} dur={timeline.introFrames} musica={false} /> : portada && <Img src={staticFile(portada)} style={{ position: 'absolute', top: 285, left: 0, width: 1080, height: 1350 }} />}
+              {portada && <Img src={staticFile(portada)} style={{ position: 'absolute', top: 285, left: 0, width: 1080, height: 1350 }} />}
             </AbsoluteFill>
           )}
           {/* cierre corto */}
@@ -160,6 +169,30 @@ const MarcoVertical: React.FC<{ guion: GuionVisual; timeline: Timeline; tramo: T
   );
 };
 
+/** Gancho narrado al principio de la parte (lib/marco.mjs): voz desde el cuadro 0, la escena donde arranca la parte con
+ *  zoom lento, el texto grande (Gancho.tsx) y la música baja. Reemplaza al cartel gancho; sin pergamino. */
+const GanchoParte: React.FC<PropsParte & { tramo: TramoMarco; dur: number }> = ({ guion, timeline, desde, n, de, tramo, dur }) => {
+  const f = useCurrentFrame();
+  // un cuadro donde la escena ya está armada: el final de su 2.ª frase (o desde, si la parte arranca más adelante)
+  const e = timeline.escenas.find((x) => desde >= x.from && desde < x.from + x.durationInFrames);
+  const fr2 = e?.frases[Math.min(1, (e?.frases.length ?? 1) - 1)];
+  const cuadro = e && fr2 ? Math.max(desde, e.from + fr2.from + fr2.dur) : desde;
+  return (
+    <CalidadHD.Provider value={guion.hd !== false}>
+      <ModoVertical.Provider value={true}>
+        <AbsoluteFill style={{ background: '#0a0705', opacity: interpolate(f, [dur - 5, dur], [1, 0.6], cl) }}>
+          <ZoomLento dur={dur}><EscenaQuietaVertical guion={guion} timeline={timeline} cuadro={cuadro} /></ZoomLento>
+          <VeloGancho vertical />
+          {de > 1 && <div style={{ position: 'absolute', top: 178, left: 0, right: 0, textAlign: 'center' }}><Pastilla n={n} de={de} /></div>}
+          <TextoGancho frases={tramo.frases} f={f} top={GANCHO_TOP} ancho={960} size={92} chars={18} renglones={4} fin={dur} />
+          {tramo.frases.map((x, k) => x.audio.en ? <Sequence key={k} from={x.from} durationInFrames={x.dur + 6}><Audio src={staticFile(x.audio.en)} /></Sequence> : null)}
+          <Audio src={staticFile(TEMA.musica)} trimBefore={desde} volume={(q) => interpolate(q, [0, dur], [0.1, 0.18], cl)} />
+        </AbsoluteFill>
+      </ModoVertical.Provider>
+    </CalidadHD.Provider>
+  );
+};
+
 /** El tramo del episodio (sin el gancho), con la pastilla de parte y el cartel final. */
 const TramoParte: React.FC<PropsParte> = ({ guion, timeline, portada, desde, hasta, n, de, marco }) => {
   const f = useCurrentFrame();
@@ -202,7 +235,7 @@ export const ParteVertical: React.FC<PropsParte> = (props) => {
       <Sequence from={g0}><TramoParte {...props} /></Sequence>
       {ap0 && (
         <Sequence durationInFrames={g0}>
-          <PortadaBiblia guion={props.guion} n={props.n} de={props.de} tramo={ap0} dur={g0} />
+          <GanchoParte {...props} tramo={ap0} dur={g0} />
         </Sequence>
       )}
       {!ap0 && g0 > 0 && (

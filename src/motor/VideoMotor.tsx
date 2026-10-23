@@ -2,6 +2,7 @@
 // la voz y los subtítulos van aparte (pistas de audio y .srt por idioma).
 import React from 'react';
 import { LeyendaBiblia } from './Leyenda';
+import { TextoGanchoSeq, VeloGancho } from './Gancho';
 import { AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame, interpolate } from 'remotion';
 import { C, TITULO, ap, cl, Guardas, TEMA, aplicarTema, TextoRunico, Jeroglificos, CalidadHD, marcaCanal } from '../comun/vasija';
 import { Fondo, ElementoSVG } from './fondos';
@@ -89,17 +90,25 @@ export const Final: React.FC<{ dur: number; siguiente?: string; etiqueta?: strin
 
 export const VideoMotor: React.FC<{ guion: GuionVisual; timeline: Timeline; idioma?: Idioma | null; imagen?: Idioma }> = ({ guion, timeline, idioma = null, imagen = 'en' }) => {
   aplicarTema(guion.serie);
+  const gancho = timeline.escenas[0]?.gancho ? timeline.escenas[0] : null;
   return (
   <CalidadHD.Provider value={guion.hd !== false}>
   <AbsoluteFill style={{ backgroundColor: C.negro }}>
-    {idioma && <Audio src={staticFile(TEMA.musica)} volume={(fr) => interpolate(fr, [0, timeline.introFrames, timeline.total - 48, timeline.total], [0.45, 0.18, 0.18, 0], cl)} />}
-    <Sequence durationInFrames={timeline.introFrames}><Portada g={guion} dur={timeline.introFrames} idioma={imagen} /></Sequence>
+    {/* con gancho (lib/marco.mjs) no hay portada: la voz arranca en el cuadro 0 y la música entra baja con ella */}
+    {idioma && <Audio src={staticFile(TEMA.musica)} volume={(fr) => (gancho ? interpolate(fr, [0, gancho.durationInFrames, timeline.total - 48, timeline.total], [0.1, 0.18, 0.18, 0], cl) : interpolate(fr, [0, timeline.introFrames, timeline.total - 48, timeline.total], [0.45, 0.18, 0.18, 0], cl))} />}
+    {timeline.introFrames > 0 && <Sequence durationInFrames={timeline.introFrames}><Portada g={guion} dur={timeline.introFrames} idioma={imagen} /></Sequence>}
     {timeline.escenas.map((tl, i) => (
       <Sequence key={tl.id} from={tl.from} durationInFrames={tl.durationInFrames}>
         <EscenaMotor esc={guion.escenas[i]} tl={tl} idioma={imagen} />
         {idioma && tl.frases.map((fr, j) => fr.audio[idioma] ? <Sequence key={j} from={fr.from} durationInFrames={fr.dur + 6}><Audio src={staticFile(fr.audio[idioma]!)} /></Sequence> : null)}
       </Sequence>
     ))}
+    {gancho && (
+      <Sequence durationInFrames={gancho.durationInFrames}>
+        <VeloGancho />
+        <TextoGanchoSeq frases={gancho.frases} top={230} ancho={1640} size={86} chars={24} fin={gancho.durationInFrames} />
+      </Sequence>
+    )}
     {TEMA.nombre === 'natural' && <LeyendaBiblia guion={guion} timeline={timeline} idioma={imagen} />}
     <Sequence from={timeline.total - timeline.outroFrames}><Final dur={timeline.outroFrames} siguiente={guion.siguiente?.[imagen] ?? guion.siguiente?.es} /></Sequence>
   </AbsoluteFill>

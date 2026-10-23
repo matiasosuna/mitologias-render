@@ -131,13 +131,13 @@ export const EscenaVerticalNativa: React.FC<{ esc: EscenaT; tl: EscenaTL }> = ({
   return (
     <AbsoluteFill>
       {/* fondo: escala fija y quieto toda la escena */}
-      <Escenario dur={dur} cielo={cielo} camara={[[0, bx, 1]]} vista={vista(KB)} guardas={false}>
+      <Escenario dur={dur} entra={!esc.sinEntrada} cielo={cielo} camara={[[0, bx, 1]]} vista={vista(KB)} guardas={false}>
         <CieloVertical esc={esc} f={f} bx={bx} />
         <Efectos ef={esc.efectos ?? []} tl={tl} f={f} fase="fondo" />
         <Fondo tipo={esc.fondo} f={f} astros={false} />
       </Escenario>
       {/* escenario: todos los actores juntos, cámara quieta */}
-      <Escenario dur={dur} cielo={cielo} vista={vista(K)} transparente guardas={false}>
+      <Escenario dur={dur} entra={!esc.sinEntrada} cielo={cielo} vista={vista(K)} transparente guardas={false}>
         <ContenidoEscena esc={esc} tl={tl} idioma="en" puesta={puesta} />
       </Escenario>
       <CartelesPantalla esc={esc} tl={tl} f={f} />

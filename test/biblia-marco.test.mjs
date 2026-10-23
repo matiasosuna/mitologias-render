@@ -84,10 +84,11 @@ test('partes como Myths (portada + cartel gancho) con la pregunta final: < 3 min
   assert.ok(MAX_S > 0);
 });
 
-test('biblia sin gancho narrado usa la portada de Myths (portada-ig); el pergamino queda solo para guiones con ganchos', () => {
+test('sin pergamino: el gancho narrado va adentro del video (Gancho.tsx); la tapa sigue siendo la portada de Myths', () => {
   const vp = readFileSync('scripts/vertical-partes.mjs', 'utf8'), vv = readFileSync('src/motor/VideoVertical.tsx', 'utf8');
   assert.match(vp, /\.reels\?\.ganchos\) continue;/);
-  assert.match(vv, /t === 'natural' && guion\.reels\?\.ganchos \? <PortadaBiblia/);
+  assert.doesNotMatch(vv, /PortadaBiblia/);
+  assert.doesNotMatch(vp, /renderStill|portadaCuadro/);
   assert.ok(!/LEARN BIBLE|Learn Bible 777'/.test(readFileSync('src/comun/vasija.tsx', 'utf8')));
 });
 

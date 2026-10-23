@@ -85,6 +85,8 @@ export type Escena = {
     | 'abismo' | 'aguas_luz' | 'firmamento_agua' | 'tierra_seca' | 'mar_tierra' | 'jardin' | 'cielo_noche' | 'amanecer' | 'mar_vida' | 'llanura' | 'colinas';
   /** Sin el sol/luna propios del fondo (para animarlos con elementos, p. ej. cuando los tragan los lobos). */
   sinAstros?: boolean;
+  /** Sin fundido de entrada (escena del gancho, lib/marco.mjs). */
+  sinEntrada?: boolean;
   /** Cámara: x inicial y final, zoom inicial y final. */
   camara?: { de?: number; a?: number; zoom?: [number, number] };
   elementos?: Elemento[];
@@ -142,7 +144,7 @@ export type Short = {
 };
 
 export type FraseTL = { from: number; dur: number; audio: Partial<Record<Idioma, string>>; texto: Texto };
-export type EscenaTL = { id: string; from: number; durationInFrames: number; frases: FraseTL[] };
+export type EscenaTL = { id: string; from: number; durationInFrames: number; frases: FraseTL[]; gancho?: boolean };
 export type Timeline = { fps: number; introFrames: number; outroFrames: number; total: number; escenas: EscenaTL[]; cartelFrom?: number; cartelFrames?: number; marco?: Record<string, PiezaMarco> };
 /** Pieza narrada del marco de Learn Bible (gancho, invitación, final): lib/marco.mjs. */
 export type PiezaMarco = { texto: TextoLibre; audio: Partial<Record<Idioma, string>>; dur: number };

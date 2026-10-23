@@ -279,7 +279,7 @@ export const EscenaMotor: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Idioma
   const cam = esc.camara ?? {};
   const z = cam.zoom ?? [1, 1.05];
   return (
-    <Escenario dur={dur} cielo={CIELO[esc.fondo] ?? 'barro'} camara={[[0, cam.de ?? 0, z[0]], [dur, cam.a ?? cam.de ?? 0, z[1]]]}>
+    <Escenario dur={dur} entra={!esc.sinEntrada} cielo={CIELO[esc.fondo] ?? 'barro'} camara={[[0, cam.de ?? 0, z[0]], [dur, cam.a ?? cam.de ?? 0, z[1]]]}>
       <ContenidoEscena esc={esc} tl={tl} idioma={idioma} />
     </Escenario>
   );

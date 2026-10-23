@@ -180,12 +180,12 @@ export const ABAJO = SUELO + 40; // inicio del friso inferior
  */
 export const Escenario: React.FC<{ dur: number; camara?: [number, number, number][]; cielo?: 'barro' | 'noche' | 'mar' | 'inframundo'; children: React.ReactNode; guardas?: boolean;
   /** Solo puesta vertical nativa: viewBox propio [x, y, ancho, alto] y capa transparente (sin cielo ni texturas). */
-  vista?: [number, number, number, number]; transparente?: boolean }> = ({ dur, camara = [[0, 0, 1]], cielo = 'barro', children, guardas = true, vista, transparente }) => {
+  vista?: [number, number, number, number]; transparente?: boolean; /** false: sin fundido de entrada (gancho: imagen desde el cuadro 0) */ entra?: boolean }> = ({ dur, camara = [[0, 0, 1]], cielo = 'barro', children, guardas = true, vista, transparente, entra = true }) => {
   const f = useCurrentFrame();
   const ks = camara.map((c) => c[0]);
   const x = camara.length > 1 ? interpolate(f, ks, camara.map((c) => c[1]), { ...cl, easing: Easing.inOut(Easing.sin) }) : camara[0][1];
   const z = camara.length > 1 ? interpolate(f, ks, camara.map((c) => c[2]), { ...cl, easing: Easing.inOut(Easing.sin) }) : camara[0][2];
-  const fade = Math.min(ap(f, 0, 10), interpolate(f, [dur - 8, dur], [1, 0], cl));
+  const fade = Math.min(entra ? ap(f, 0, 10) : 1, interpolate(f, [dur - 8, dur], [1, 0], cl));
   const fondos = TEMA.cielos[cielo];
   const vert = useContext(ModoVertical);
   // Learn Bible 777 (tema natural): escenas a pantalla completa, sin guardas ni franja (las guardas quedan solo en portada/final).

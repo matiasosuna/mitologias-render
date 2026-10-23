@@ -13,6 +13,7 @@ import { join, basename } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { conGancho, desplazarCapitulos, conPregunta, preguntaDe } from './gancho-horizontal.mjs';
 import { metaQuienHorizontal } from './quien-meta.mjs';
+import { tieneGancho } from '../lib/marco.mjs';
 
 const [id, ...resto] = process.argv.slice(2);
 const opt = (k) => resto.find((a) => a.startsWith(`--${k}=`))?.split('=').slice(1).join('=');
@@ -75,7 +76,8 @@ if (horizontal) {
 } else {
   archivo = join(out, `${id}.en.mp4`);
   // cartel gancho de 2 s adelante (scripts/gancho-horizontal.mjs): sin re-renderizar el episodio; si falla, va sin cartel
-  const cg = resto.includes('--probar') || resto.includes('--sin-gancho') ? null
+  // con gancho narrado (lib/marco.mjs) la voz ya arranca en el cuadro 0: sin cartel adelante
+  const cg = resto.includes('--probar') || resto.includes('--sin-gancho') || tieneGancho(g) ? null
     : await conGancho(id).catch((e) => { console.log(`cartel gancho: ${String(e.message).slice(0, 200)} (se sube sin cartel)`); return null; });
   if (cg) { archivo = cg.archivo; srtDe = (l) => cg.srt[l] ?? join(out, `${id}.${l}.srt`); console.log('cartel gancho: ok'); }
   add('title', meta.titulo);

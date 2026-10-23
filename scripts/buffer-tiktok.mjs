@@ -11,6 +11,7 @@ import { execFileSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { cliente, postsDelCanal, buscarPorPrimeraLinea, crear, esperarEnvio, entradaTiktok, esLimite, CANAL_TIKTOK } from './buffer.mjs';
 import { primeraLinea } from './instagram-texto.mjs';
+import { tieneGancho } from '../lib/marco.mjs';
 import { ganchoParte, codigoEpisodio, leerTitulos, NOMBRES } from './titulos.mjs';
 
 export const REG = 'out/subidas-buffer.json';
@@ -34,7 +35,10 @@ export function textoEpisodio(id, { gu = guion(id), titulos = leerTitulos(), gan
 }
 const primera = (t) => t.split('\n')[0].split(' 🏺')[0];
 
-const ffmpegTiktok = (tapa, video, salida) => execFileSync('nice', ['-n', '15', 'ffmpeg', '-v', 'error', '-y', '-loop', '1', '-t', '0.4', '-framerate', '30', '-i', tapa, '-f', 'lavfi', '-t', '0.4', '-i', 'anullsrc=r=44100:cl=stereo', '-i', video,
+const ffmpegTiktok = (tapa, video, salida) => (tapa ? ffmpegTiktokConTapa(tapa, video, salida) : execFileSync('nice', ['-n', '15', 'ffmpeg', '-v', 'error', '-y', '-i', video,
+  '-vf', 'sidedata=mode=delete:type=ICC_PROFILE,scale=1080:1920,setsar=1,fps=30,format=yuv420p', '-af', 'aresample=44100,aformat=channel_layouts=stereo',
+  '-c:v', 'libx264', '-preset', 'medium', '-b:v', '1400k', '-maxrate', '1700k', '-bufsize', '3000k', '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', '-map_metadata', '-1', salida]));
+const ffmpegTiktokConTapa = (tapa, video, salida) => execFileSync('nice', ['-n', '15', 'ffmpeg', '-v', 'error', '-y', '-loop', '1', '-t', '0.4', '-framerate', '30', '-i', tapa, '-f', 'lavfi', '-t', '0.4', '-i', 'anullsrc=r=44100:cl=stereo', '-i', video,
   '-filter_complex', '[0:v]scale=1080:1920,setsar=1,fps=30,format=yuv420p[t];[2:v]sidedata=mode=delete:type=ICC_PROFILE,scale=1080:1920,setsar=1,fps=30,format=yuv420p[v];[2:a]aresample=44100,aformat=channel_layouts=stereo[a];[t][1:a][v][a]concat=n=2:v=1:a=1[ov][oa]',
   '-map', '[ov]', '-map', '[oa]', '-c:v', 'libx264', '-preset', 'medium', '-b:v', '1400k', '-maxrate', '1700k', '-bufsize', '3000k', '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', '-map_metadata', '-1', salida]);
 
@@ -66,7 +70,8 @@ export async function prepararTiktok(id, rel) {
     if (process.env.MOC_VERTICAL_LISTO !== '1' || !existsSync(rel.rutaLocal(id, 'vertical'))) execFileSync('node', ['scripts/vertical-render.mjs', id], { stdio: ['ignore', 'inherit', 'inherit'] }); // ritmo normal (sin --rapido)
     const tapa = join('out', id, 'tapa-tiktok.jpg');
     execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', portada, '-filter_complex', '[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=30:4,eq=brightness=-0.25[bg];[bg][0:v]overlay=0:285', '-frames:v', '1', '-q:v', '2', tapa]);
-    ffmpegTiktok(tapa, rel.rutaLocal(id, 'vertical'), tk);
+    // con gancho narrado: sin los 0,4 s de tapa adelante (la voz arranca en el cuadro 0; la tapa de TikTok = el primer cuadro)
+    if (tieneGancho(guion(id))) ffmpegTiktok(null, rel.rutaLocal(id, 'vertical'), tk); else ffmpegTiktok(tapa, rel.rutaLocal(id, 'vertical'), tk);
     writeFileSync(meta, JSON.stringify({ huella, ritmo: 'normal', fecha: new Date().toISOString() }));
     rel.subirAsset(tk, rel.nombreAsset(id, 'tiktok'));
     rel.subirAsset(meta, rel.nombreAsset(id, 'tiktok-meta')); // al final: marca que el mp4 es de este guion

@@ -28,8 +28,8 @@ export function ralentizar(id, base = procesoAudio(guionDe(id))) {
     const marco = procesoMarco(g, f); // marco de Learn Bible: más rápido y sin silencios largos (lib/marco.mjs)
     if (marco) {
       const wav = join(dir, f);
-      const log = spawnSync('ffmpeg', ['-i', wav, '-af', `silencedetect=n=-42dB:d=${marco.compactar}`, '-f', 'null', '-']).stderr.toString();
-      const obj = { tempo: base.tempo * marco.tempo, compactar: marco.compactar }, af = filtroMarco(hechos[f], obj, silenciosDe(log));
+      const log = spawnSync('ffmpeg', ['-i', wav, '-af', `silencedetect=n=-42dB:d=${marco.inicio != null ? 0.03 : marco.compactar}`, '-f', 'null', '-']).stderr.toString();
+      const obj = { tempo: base.tempo * marco.tempo, compactar: marco.compactar, ...(marco.inicio != null ? { inicio: marco.inicio } : {}), ...(marco.fin != null ? { fin: marco.fin } : {}) }, af = filtroMarco(hechos[f], obj, silenciosDe(log), dur(wav));
       if (!af) continue;
       const tmp = wav.replace(/\.wav$/, '.tmp.wav');
       execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', wav, '-filter_complex', af, '-ar', '48000', '-ac', '1', tmp]);
