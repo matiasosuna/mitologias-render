@@ -16,7 +16,7 @@ export const CIELO_BIBLIA: Record<string, Cielo> = {
   cielo_noche: 'noche', amanecer: 'barro', mar_vida: 'mar', llanura: 'barro', desierto: 'barro', colinas: 'barro',
 };
 export const FONDOS_BIBLIA = ['abismo', 'aguas_luz', 'firmamento_agua', 'tierra_seca', 'mar_tierra', 'jardin', 'cielo_noche', 'amanecer', 'mar_vida', 'llanura', 'desierto', 'colinas'];
-export const ELEMENTOS_BIBLIA = ['luz_divina', 'soplo', 'bruma', 'cupula', 'tierra', 'sol_natural', 'luna_natural', 'estrellas_natural', 'nube_natural', 'olivo_natural', 'palmera_natural', 'arbol_fruta', 'acacia', 'arbusto', 'hierba', 'flores', 'roca_natural', 'cardumen', 'bandada', 'algas', 'tabla_dias', 'ritmo_dias', 'arca', 'lluvia'];
+export const ELEMENTOS_BIBLIA = ['luz_divina', 'soplo', 'bruma', 'cupula', 'tierra', 'sol_natural', 'luna_natural', 'estrellas_natural', 'nube_natural', 'olivo_natural', 'palmera_natural', 'arbol_fruta', 'acacia', 'arbusto', 'hierba', 'flores', 'roca_natural', 'cardumen', 'bandada', 'algas', 'tabla_dias', 'ritmo_dias', 'arca', 'lluvia', 'arcoiris', 'altar_piedra', 'tienda'];
 
 // ---------- degradés ----------
 const Degrades: React.FC = () => (
@@ -173,6 +173,29 @@ const Roca: React.FC<{ x: number; y?: number; s?: number }> = ({ x, y = SUELO, s
   </g>
 );
 /** Arca de Noé (Génesis 6–8): casco de madera de gopher, tres pisos con una ventana arriba y la puerta de costado. `y` = línea de flotación. */
+const Arcoiris: React.FC<{ x: number; y: number; s: number; o: number }> = ({ x, y, s, o }) => (
+  <g transform={`translate(${r1(x)} ${r1(y)}) scale(${s})`} opacity={o} fill="none" strokeWidth={16}>
+    {['#C8685A', '#E0A25A', '#E6D27A', '#8DB67A', '#7AA8C8', '#9A86B8'].map((c, i) => <path key={i} d={`M${-520 + i * 16} 0 A ${520 - i * 16} ${420 - i * 16} 0 0 1 ${520 - i * 16} 0`} stroke={c} />)}
+  </g>
+);
+
+const AltarPiedra: React.FC<{ x: number; y: number; s: number; f: number; fuego: boolean }> = ({ x, y, s, f, fuego }) => (
+  <g transform={`translate(${r1(x)} ${r1(y)}) scale(${s})`}>
+    <path d="M-130 0 L -110 -70 L 110 -70 L 130 0 Z" fill="#9C9078" />
+    <path d="M-100 -70 L -90 -120 L 90 -120 L 100 -70 Z" fill="#B3A78C" />
+    <rect x={-110} y={-126} width={220} height={14} rx={5} fill="#C8BDA2" />
+    {fuego && <path d={`M-34 -126 C -40 -170, -10 -190, ${r1(Math.sin(f / 5) * 8)} -230 C 18 -190, 44 -166, 34 -126 Z`} fill="#E89A3C" opacity={0.92} />}
+  </g>
+);
+
+const Tienda: React.FC<{ x: number; y: number; s: number }> = ({ x, y, s }) => (
+  <g transform={`translate(${r1(x)} ${r1(y)}) scale(${s})`}>
+    <path d="M-260 0 L 0 -260 L 260 0 Z" fill="#8A6A4C" />
+    <path d="M-260 0 L 0 -260 L -40 0 Z" fill="#7A5C40" />
+    <path d="M-60 0 L 0 -150 L 60 0 Z" fill="#3E2E22" />
+  </g>
+);
+
 const Arca: React.FC<{ x: number; y?: number; s?: number; f?: number; mece?: boolean }> = ({ x, y = SUELO - 40, s = 1, f = 0, mece }) => (
   <g transform={`translate(${r1(x)} ${r1(y + (mece ? Math.sin(f / 18) * 5 : 0))}) rotate(${mece ? r1(Math.sin(f / 26) * 1.6) : 0}) scale(${s})`}>
     <path d="M-330 -60 L 330 -60 C 310 10, 230 40, 150 40 L -150 40 C -230 40, -310 10, -330 -60 Z" fill={NT.tierraOsc} />
@@ -514,6 +537,9 @@ export function elementoBiblia(tipo: string, x: number, y: number | undefined, s
     case 'ritmo_dias': return <>{def}<RitmoDias x={x} y={y ?? 420} s={s} f={f} n={n('n', 6)} septimo={props.septimo === true} /></>;
     case 'arca': return <Arca x={x} y={y ?? SUELO - 40} s={s} f={f} mece={props.mece === true} />;
     case 'lluvia': return <Lluvia x={x} y={y ?? 120} f={f} n={n('n', 70)} ancho={n('ancho', 2000)} largo={n('largo', 640)} />;
+    case 'arcoiris': return <Arcoiris x={x} y={y ?? 520} s={s} o={n('o', 0.85)} />;
+    case 'altar_piedra': return <AltarPiedra x={x} y={yy} s={s} f={f} fuego={props.fuego !== false} />;
+    case 'tienda': return <Tienda x={x} y={yy} s={s} />;
     default: return null;
   }
 }

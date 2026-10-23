@@ -118,6 +118,7 @@ Cada video es **un solo archivo**: `src/videos/<id>/guion.json` (tipos en `src/m
 - **fondos** (`FONDOS_BIBLIA`, src/motor/fondosBiblia.tsx): abismo aguas_luz firmamento_agua tierra_seca mar_tierra jardin cielo_noche amanecer mar_vida (bajo el agua desde y≈400) llanura desierto colinas.
 - **elementos**: luz_divina(props.rayos) soplo bruma cupula tierra(sube) sol_natural luna_natural estrellas_natural nube_natural olivo_natural palmera_natural arbol_fruta acacia arbusto hierba flores roca_natural cardumen(props.n, dir, color) bandada algas tabla_dias(props.filas 1|2, con fondo oscuro propio) ritmo_dias arca(props.mece; y = línea de flotación) lluvia(props.n, ancho, largo). También atiende sol luna estrellas nube olivo arbol palmera roca monte.
 - **elenco** (src/motor/elencoBiblia.tsx, sufijo `_biblia`): hombre mujer (figuras griegas oficiales sin objetos) buey vaca oveja cabra ciervo caballo leon tortuga aguila paloma delfin pez ballena pajaro serpiente. Sin rótulos.
+- Elementos sumados en Génesis 8–10: arcoiris(props.o), altar_piedra(props.fuego, false = apagado), tienda.
 - Publicación cableada como las demás series (turnos `biblia` 12/16/20 HST); un capítulo sale solo si tiene `VERIFICADO`.
 - Stills de prueba: `npx remotion still src/pruebas/biblia.tsx <id> out.png` — `b-fondos`, `b-elenco`, `b-piezas` y `b-video` (portada) con `--frame=60`; tomas del ep. 1 (`b-luz`, `b-mar`…, ver TOMAS_BIBLIA) con `--frame=0`.
 
