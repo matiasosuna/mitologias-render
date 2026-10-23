@@ -31,7 +31,7 @@ la rutina no toma nada de esa sección.
 - [x] Q05 · "Who is…?" (2, cierre de olímpicos): Deméter, Hestia — HECHO 2026-10-22 (sesión local): short-griegas-quien-demeter, short-griegas-quien-hestia
 - [x] Q06 · "Who is…?" grupo INFRAMUNDO (4): Persephone `persefone_oficial` · Hecate · Hypnos · Thanatos. Los que no tienen `*_oficial` todavía: diseñarlos primero en `src/motor/elencoGriegoOficial.tsx` con el mismo estilo (registrar como los demás). — HECHO 2026-10-22 (un dios por grupo, regla de Matías): short-griegas-quien-persefone (Hecate, Hypnos y Thanatos no se hacen)
 - [x] Q07 · "Who is…?" grupo TITANES (4): Rhea `rea_oficial` · Atlas `atlas_oficial` · Helios `helios_oficial` · Selene `selene_oficial` — HECHO 2026-10-23 (un dios por grupo): short-griegas-quien-rea (Atlas, Helios y Selene no se hacen)
-- [ ] Q08 · "Who is…?" grupo PRIMORDIALES (4): Gaia `gea_oficial` · Uranus `urano_oficial` · Nyx `nix_oficial` · Eros `eros_oficial`
+- [x] Q08 · "Who is…?" grupo PRIMORDIALES (4): Gaia `gea_oficial` · Uranus `urano_oficial` · Nyx `nix_oficial` · Eros `eros_oficial` — HECHO 2026-10-23 (un dios por grupo): short-griegas-quien-gea (Urano, Nix y Eros no se hacen)
 - [ ] Q09 · "Who is…?" grupo OTROS DIOSES (3): Pan · Nike · Nemesis (diseñar los `*_oficial` que falten, como en Q06)
 
 ## CANCELADO (Matías 2026-10-22: no más especiales ni Stories; no tomar nunca)

@@ -1,0 +1,649 @@
+{
+  "id": "short-griegas-quien-gea",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Gea? La Tierra que parió a los dioses",
+    "en": "Who is Gaia? The Earth who birthed the gods"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Gea? La Tierra que parió a los dioses",
+    "en": "Who is Gaia? The Earth who birthed the gods"
+  },
+  "cierre": {
+    "es": "La Tierra se cansó de callar — Mitología griega T1E1",
+    "en": "The Earth got tired of staying silent — Greek Mythology S1E1"
+  },
+  "episodio": "griegas-01-origen",
+  "quien": {
+    "nombre": {
+      "es": "Gea",
+      "en": "Gaia"
+    },
+    "subtitulo": {
+      "es": "La Tierra · madre de todo",
+      "en": "The Earth · mother of all"
+    },
+    "como": "gea_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "campo",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "Ella es el suelo bajo tus pies. Y parió el cielo, el mar y a los dioses.",
+        "en": "She is the ground under your feet. She gave birth to the sky, the sea and the gods."
+      }
+    ],
+    "actores": [
+      {
+        "id": "gea",
+        "como": "gea_oficial",
+        "x": 960,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.14,
+            "hace": "alegra"
+          },
+          {
+            "en": 0.5,
+            "hace": "brilla",
+            "dur": 0.6
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Gea es la Tierra misma, una diosa primordial.",
+          "en": "Gaia is the Earth itself, a primordial goddess."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "LA TIERRA",
+            "en": "THE EARTH"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "gea",
+          "como": "gea_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.46,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origen",
+      "fondo": "caos",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Primero solo existía el Caos, un vacío oscuro.",
+          "en": "First there was only Chaos, a dark void."
+        },
+        {
+          "es": "Según Hesíodo, de allí salió Gea, sólida y fértil.",
+          "en": "Hesiod says Gaia came out of it, solid and fertile."
+        }
+      ],
+      "actores": [
+        {
+          "id": "gea",
+          "como": "gea_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hijos",
+      "fondo": "noche",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sola, Gea parió a Urano, el cielo, y a Ponto, el mar.",
+          "en": "Alone, Gaia gave birth to Uranus, the sky, and Pontus, the sea."
+        }
+      ],
+      "actores": [
+        {
+          "id": "gea",
+          "como": "gea_oficial",
+          "x": 730,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "urano",
+          "como": "urano_oficial",
+          "x": 1190,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "neutral"
+            }
+          ],
+          "mira": "izq"
+        }
+      ]
+    },
+    {
+      "id": "titanes",
+      "fondo": "noche",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Con Urano tuvo doce titanes, tres cíclopes y tres gigantes de cien brazos.",
+          "en": "With Uranus she had twelve Titans, three Cyclopes and three hundred-armed giants."
+        }
+      ],
+      "actores": [
+        {
+          "id": "gea",
+          "como": "gea_oficial",
+          "x": 730,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "urano",
+          "como": "urano_oficial",
+          "x": 1190,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "enoja"
+            }
+          ],
+          "mira": "izq"
+        }
+      ]
+    },
+    {
+      "id": "encierro",
+      "fondo": "noche",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero Urano odiaba a sus hijos y los encerró dentro de ella.",
+          "en": "But Uranus hated his children and shut them inside her."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "oscurecer"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "ENCERRADOS",
+            "en": "TRAPPED"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "gea",
+          "como": "gea_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "entristece"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoz",
+      "fondo": "fragua",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Entonces forjó una hoz y pidió ayuda a los titanes.",
+          "en": "So she forged a sickle and asked the Titans for help."
+        },
+        {
+          "es": "Solo Cronos se animó, y derribó a Urano.",
+          "en": "Only Cronus dared, and he struck Uranus down."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "LA HOZ",
+            "en": "THE SICKLE"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "gea",
+          "como": "gea_oficial",
+          "x": 730,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 1190,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "enoja"
+            }
+          ],
+          "mira": "izq"
+        }
+      ]
+    },
+    {
+      "id": "profecia",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Después le advirtió a Cronos: un hijo tuyo tomará tu trono.",
+          "en": "Later she warned Cronus: one of your children will take your throne."
+        },
+        {
+          "es": "Y ayudó a Rea a esconder a Zeus en Creta.",
+          "en": "And she helped Rhea hide baby Zeus on Crete."
+        }
+      ],
+      "actores": [
+        {
+          "id": "gea",
+          "como": "gea_oficial",
+          "x": 730,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "rea",
+          "como": "rea_oficial",
+          "x": 1190,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            }
+          ],
+          "mira": "izq"
+        }
+      ]
+    },
+    {
+      "id": "rabia",
+      "fondo": "batalla",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero Gea tiene un lado terrible.",
+          "en": "But Gaia has a terrible side."
+        },
+        {
+          "es": "Furiosa por sus hijos los titanes, mandó a los Gigantes contra el Olimpo.",
+          "en": "Furious for her Titan children, she sent the Giants against Olympus."
+        },
+        {
+          "es": "Y con Tártaro parió a Tifón, el monstruo más grande.",
+          "en": "And with Tartarus she bore Typhon, the biggest monster of all."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.06,
+          "tipo": "niebla"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "SU IRA",
+            "en": "HER RAGE"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "gea",
+          "como": "gea_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "enoja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "campo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "La pintaban con flores, hojas y frutos.",
+          "en": "She was shown with flowers, leaves and fruit."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.1,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "FLORES Y FRUTOS",
+            "en": "FLOWERS AND FRUIT"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "gea",
+          "como": "gea_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "ofrece"
+            },
+            {
+              "en": 0.5,
+              "hace": "brilla"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bueno",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es generosa: da alimento a todos y protege a sus hijos.",
+          "en": "She is generous: she feeds everyone and protects her children."
+        }
+      ],
+      "actores": [
+        {
+          "id": "gea",
+          "como": "gea_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.5,
+              "hace": "abraza"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "malo",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero guarda rencor y no perdona.",
+          "en": "But she holds grudges and does not forgive."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.06,
+          "tipo": "niebla"
+        }
+      ],
+      "actores": [
+        {
+          "id": "gea",
+          "como": "gea_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "neutral"
+            },
+            {
+              "en": 0.57,
+              "hace": "niega"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sin Gea no habría cielo, mar ni dioses.",
+          "en": "Without Gaia there would be no sky, no sea and no gods."
+        },
+        {
+          "es": "Mira cómo empezó todo en la temporada 1, episodio 1.",
+          "en": "See how it all began in Season 1, Episode 1."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.09,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "gea",
+          "como": "gea_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.43,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
