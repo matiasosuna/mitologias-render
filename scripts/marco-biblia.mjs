@@ -13,8 +13,8 @@ export const FRASES_GANCHO_BIBLIA = [
   'No interpretation.',
 ];
 export const GANCHO_BIBLIA = FRASES_GANCHO_BIBLIA.join(' ');
-/** Tempo extra del gancho (atempo, mismo tono): con 1,2 dura ~11 s (medido en Génesis 2–4). */
-export const TEMPO_GANCHO_BIBLIA = 1.2;
+/** Tempo extra del gancho (atempo, mismo tono): con 1,25 dura 10,4–11,2 s (medido en Génesis 2–4). */
+export const TEMPO_GANCHO_BIBLIA = 1.25;
 const PAUSA = 0.1; // s entre frases del gancho (cada frase se narra aparte: el texto en pantalla va justo con la voz)
 
 /** "Genesis 2: The Garden of Eden" → { cap: "Genesis 2", corto: "The Garden of Eden" }. */

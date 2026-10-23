@@ -11,7 +11,7 @@ const leer = (f) => JSON.parse(readFileSync(f, 'utf8'));
 const TEXTO = 'Ever wanted to know what the Bible actually says? Without anyone telling you what to believe? I tell it as simple stories, with the exact words, as it was written. No interpretation.';
 // Ya estaban hechos y con VERIFICADO antes del gancho (2026-10-22): sumarles el gancho queda pendiente de OK de Matías.
 // Cuando lo tengan, sacarlos de acá (el test falla si uno de esta lista ya tiene el gancho).
-const PENDIENTES = ['biblia-genesis-05', 'biblia-genesis-06', 'biblia-genesis-07'];
+const PENDIENTES = [];
 const todos = readdirSync('src/videos').filter((d) => d.startsWith('biblia-') && d !== 'biblia-genesis-01' && existsSync(`src/videos/${d}/guion.json`));
 const capitulos = todos.filter((d) => !PENDIENTES.includes(d));
 
@@ -80,9 +80,9 @@ test('cualquier serie: con reels.ganchos el gancho va al cuadro 0; sin ganchos n
 });
 
 test('audio del gancho: silencio de las puntas recortado (voz desde el cuadro 0), idempotente', () => {
-  const g = { reels: { ganchos: [{ en: 'x' }], tempos: { gancho: 1.2 } } };
+  const g = { reels: { ganchos: [{ en: 'x' }], tempos: { gancho: 1.25 } } };
   const p = procesoMarco(g, 'reels-gancho-1-0-abc.wav');
-  assert.deepEqual(p, { tempo: 1.2, compactar: 0.3, inicio: 0.04, fin: 0.06 });
+  assert.deepEqual(p, { tempo: 1.25, compactar: 0.3, inicio: 0.04, fin: 0.06 });
   assert.equal(procesoMarco(g, 'reels-final-0-abc.wav').inicio, undefined);
   const obj = { tempo: 1.2, compactar: 0.3, inicio: 0.04, fin: 0.06 };
   assert.equal(filtroMarco(null, obj, [[0, 0.2], [2.0, 2.3]], 2.3), '[0:a]atrim=start=0.1600:end=2.0600,asetpts=PTS-STARTPTS,atempo=1.2');
