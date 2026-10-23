@@ -1,6 +1,7 @@
 // Anima una escena del guion visual: fondo, elementos, actores con sus pasos, efectos y rótulos.
 import React from 'react';
 import { useCurrentFrame, interpolate, Easing } from 'remotion';
+import { rangoFundido } from '../../lib/fundido.mjs';
 import { C, SUELO, Escenario, Capa, Fuego, Chispas, Relampago, Rotulo, Estrellas, azar, TITULO } from '../comun/vasija';
 import { ELENCO, DibujarActor, Estado, Ficha, NOMBRE_EN } from './elenco';
 import { Fondo, ElementoSVG, CIELO } from './fondos';
@@ -355,8 +356,8 @@ export const ContenidoEscena: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Id
           <Efectos ef={efectos} tl={tl} f={f} fase="frente" vert={!!puesta} />
           {!puesta && (esc.rotulos ?? []).map((r, i) => {
             const t0 = momento(tl, r.en), t1 = r.hasta !== undefined ? momento(tl, r.hasta) : dur;
-            const fd = Math.max(1, Math.min(12, (t1 - t0) / 2 - 0.5)); // rótulos cortos (Shorts): el fundido se achica, nunca se cruza
-            const o = t1 - t0 < 3 ? 0 : interpolate(f, [t0, t0 + fd, t1 - fd, t1], [0, 1, 1, 0], cl);
+            const rango = rangoFundido(t0, t1, 12); // rótulos cortos (Shorts): el fundido se achica, nunca se cruza
+            const o = rango ? interpolate(f, rango, [0, 1, 1, 0], cl) : 0;
             const txt = typeof r.texto === 'string' ? r.texto : r.texto[idioma] ?? r.texto.es;
             if (r.estilo === 'porque') return null;
             return o > 0 ? <Rotulo key={i} x={r.x} y={r.y} texto={txt.toUpperCase()} o={o} tam={38} /> : null;
@@ -365,8 +366,8 @@ export const ContenidoEscena: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Id
         <Capa p={0}>
           {!puesta && (esc.rotulos ?? []).filter((r) => r.estilo === 'porque').map((r, i) => {
             const t0 = momento(tl, r.en), t1 = r.hasta !== undefined ? momento(tl, r.hasta) : Math.min(dur, t0 + 110);
-            const fd = Math.max(1, Math.min(10, (t1 - t0) / 2 - 0.5));
-            const o = t1 - t0 < 3 ? 0 : interpolate(f, [t0, t0 + fd, t1 - fd, t1], [0, 1, 1, 0], cl);
+            const rango = rangoFundido(t0, t1, 10);
+            const o = rango ? interpolate(f, rango, [0, 1, 1, 0], cl) : 0;
             const txt = (typeof r.texto === 'string' ? r.texto : r.texto[idioma] ?? r.texto.es).toUpperCase();
             return o > 0 ? <Placa key={i} texto={txt} o={o} /> : null;
           })}

@@ -3,6 +3,7 @@
 // alto y carteles en pantalla. La lógica del encuadre está en puestaVertical.ts.
 import React from 'react';
 import { AbsoluteFill, useCurrentFrame, interpolate } from 'remotion';
+import { rangoFundido } from '../../lib/fundido.mjs';
 import { C, SUELO, TITULO, Escenario, Sol, Luna, Nube, Estrellas, TEMA, azar } from '../comun/vasija';
 import { ContenidoEscena, Efectos, momento, pistasDeEscena, pistasAjustadas, type PuestaVertical } from './Escena';
 export { pistasDeEscena } from './Escena';
@@ -75,7 +76,8 @@ const CartelesPantalla: React.FC<{ esc: EscenaT; tl: EscenaTL; f: number }> = ({
     const porque = r.estilo === 'porque';
     const t1 = r.hasta !== undefined ? momento(tl, r.hasta) : porque ? Math.min(dur, t0 + 110) : dur;
     const e = porque ? 10 : 12;
-    const o = interpolate(f, [t0, t0 + e, t1 - e, t1], [0, 1, 1, 0], cl);
+    const rango = rangoFundido(t0, t1, e); // nunca se cruza (rótulo más allá del final de la escena → no va)
+    const o = rango ? interpolate(f, rango, [0, 1, 1, 0], cl) : 0;
     const txt = (typeof r.texto === 'string' ? r.texto : r.texto.en ?? r.texto.es).toUpperCase();
     return { porque, o, lineas: partirLineas(txt, porque ? 26 : 22) };
   }).filter((r) => r.o > 0).sort((a, b) => Number(b.porque) - Number(a.porque));
