@@ -1,0 +1,659 @@
+{
+  "id": "short-griegas-quien-rea",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Rea? La madre que engañó a un rey",
+    "en": "Who is Rhea? The mother who tricked a king"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Rea? La madre que engañó a un rey",
+    "en": "Who is Rhea? The mother who tricked a king"
+  },
+  "cierre": {
+    "es": "La piedra que salvó a Zeus — Mitología griega T1E1",
+    "en": "The stone that saved Zeus — Greek Mythology S1E1"
+  },
+  "episodio": "griegas-01-origen",
+  "quien": {
+    "nombre": {
+      "es": "Rea",
+      "en": "Rhea"
+    },
+    "subtitulo": {
+      "es": "Madre de los dioses · titánide",
+      "en": "Mother of the gods · Titaness"
+    },
+    "como": "rea_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "palacio",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "Su esposo se tragó a sus hijos. Ella lo engañó con una piedra.",
+        "en": "Her husband swallowed their children. She tricked him with a stone."
+      }
+    ],
+    "actores": [
+      {
+        "id": "rea",
+        "como": "rea_oficial",
+        "x": 960,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.14,
+            "hace": "enoja"
+          },
+          {
+            "en": 0.5,
+            "hace": "brilla",
+            "dur": 0.6
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Rea es una titánide, la madre de los dioses olímpicos.",
+          "en": "Rhea is a Titaness, the mother of the Olympian gods."
+        },
+        {
+          "es": "Es diosa de la maternidad.",
+          "en": "She is a goddess of motherhood."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "MADRE DE LOS DIOSES",
+            "en": "MOTHER OF THE GODS"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "rea",
+          "como": "rea_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.46,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "padres",
+      "fondo": "cielo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es hija de Gea, la Tierra, y de Urano, el cielo.",
+          "en": "She is the daughter of Gaia, the Earth, and Uranus, the sky."
+        },
+        {
+          "es": "Sus hermanos son los titanes, como Océano e Jápeto.",
+          "en": "Her brothers and sisters are the Titans, like Oceanus and Iapetus."
+        }
+      ],
+      "actores": [
+        {
+          "id": "rea",
+          "como": "rea_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cronos",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Se casó con su hermano Cronos, el rey de los titanes.",
+          "en": "She married her brother Cronus, king of the Titans."
+        },
+        {
+          "es": "Tuvieron seis hijos: Hestia, Deméter, Hera, Hades, Poseidón y Zeus.",
+          "en": "They had six children: Hestia, Demeter, Hera, Hades, Poseidon and Zeus."
+        }
+      ],
+      "actores": [
+        {
+          "id": "rea",
+          "como": "rea_oficial",
+          "x": 730,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 1190,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "neutral"
+            }
+          ],
+          "mira": "izq"
+        }
+      ]
+    },
+    {
+      "id": "tragados",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero había una profecía: un hijo le quitaría el trono a Cronos.",
+          "en": "But a prophecy said one child would take the throne from Cronus."
+        },
+        {
+          "es": "Por miedo, Cronos se tragaba a cada bebé al nacer.",
+          "en": "In fear, Cronus swallowed each baby at birth."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "oscurecer"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "LA PROFECÍA",
+            "en": "THE PROPHECY"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "rea",
+          "como": "rea_oficial",
+          "x": 730,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "entristece"
+            }
+          ]
+        },
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 1190,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "enoja"
+            }
+          ],
+          "mira": "izq"
+        }
+      ]
+    },
+    {
+      "id": "engano",
+      "fondo": "cueva",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Cuando nació Zeus, Rea no soportó más.",
+          "en": "When Zeus was born, Rhea had had enough."
+        },
+        {
+          "es": "Lo escondió en una cueva de Creta.",
+          "en": "She hid him in a cave on Crete."
+        },
+        {
+          "es": "Y le dio a Cronos una piedra envuelta en mantas.",
+          "en": "And she gave Cronus a stone wrapped in a blanket."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "EL ENGAÑO",
+            "en": "THE TRICK"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "rea",
+          "como": "rea_oficial",
+          "x": 730,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_nino_oficial",
+          "x": 1190,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.2,
+              "hace": "alegra"
+            }
+          ],
+          "mira": "izq"
+        }
+      ]
+    },
+    {
+      "id": "piedra",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Cronos se tragó la piedra sin mirar.",
+          "en": "Cronus swallowed the stone without looking."
+        },
+        {
+          "es": "Así Zeus se salvó.",
+          "en": "That is how Zeus was saved."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "LA PIEDRA",
+            "en": "THE STONE"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "rea",
+          "como": "rea_oficial",
+          "x": 730,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.5,
+              "hace": "brilla"
+            }
+          ]
+        },
+        {
+          "id": "cronos",
+          "como": "cronos_oficial",
+          "x": 1190,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "sorprende"
+            }
+          ],
+          "mira": "izq"
+        }
+      ]
+    },
+    {
+      "id": "crianza",
+      "fondo": "cueva",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Una cabra, Amaltea, alimentó al bebé con su leche.",
+          "en": "A goat, Amalthea, fed the baby with her milk."
+        },
+        {
+          "es": "Zeus creció en secreto y volvió a liberar a sus hermanos.",
+          "en": "Zeus grew up in secret and came back to free his siblings."
+        }
+      ],
+      "actores": [
+        {
+          "id": "amaltea",
+          "como": "amaltea_oficial",
+          "x": 730,
+          "escala": 0.85,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "zeus",
+          "como": "zeus_nino_oficial",
+          "x": 1190,
+          "escala": 0.8,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.2,
+              "hace": "alegra"
+            }
+          ],
+          "mira": "izq"
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Los artistas la pintaban con leones.",
+          "en": "Artists often showed her with lions."
+        },
+        {
+          "es": "Se la veía como la madre de los dioses.",
+          "en": "She was seen as the mother of the gods."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.1,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "LEONES",
+            "en": "LIONS"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "rea",
+          "como": "rea_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "ofrece"
+            },
+            {
+              "en": 0.5,
+              "hace": "brilla"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bueno",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Es valiente y protege a sus hijos.",
+          "en": "She is brave and protects her children."
+        },
+        {
+          "es": "Fue la primera en desafiar a Cronos.",
+          "en": "She was the first to stand up to Cronus."
+        }
+      ],
+      "actores": [
+        {
+          "id": "rea",
+          "como": "rea_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.5,
+              "hace": "abraza"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "malo",
+      "fondo": "palacio",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pero guarda secretos y sabe engañar.",
+          "en": "But she keeps secrets and knows how to deceive."
+        },
+        {
+          "es": "Primero fue esposa leal, y luego, la gran rival de Cronos.",
+          "en": "She was a loyal wife first, then Cronus's greatest rival."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.06,
+          "tipo": "niebla"
+        }
+      ],
+      "actores": [
+        {
+          "id": "rea",
+          "como": "rea_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "neutral"
+            },
+            {
+              "en": 0.57,
+              "hace": "niega"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "La madre que engañó a un rey salvó a todos los dioses.",
+          "en": "The mother who tricked a king saved all the gods."
+        },
+        {
+          "es": "Mira cómo lo hizo en la temporada 1, episodio 1.",
+          "en": "See how she did it in Season 1, Episode 1."
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.09,
+          "tipo": "luz",
+          "x": 960
+        }
+      ],
+      "actores": [
+        {
+          "id": "rea",
+          "como": "rea_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.43,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
