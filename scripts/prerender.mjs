@@ -153,7 +153,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       } else if (modo === 'partes') {
         const { de } = JSON.parse(readFileSync(rutaLocal(id, 'partes'), 'utf8'));
         for (let n = 1; n <= de; n++) subirAsset(rutaLocal(id, 'parte', n), nombreAsset(id, 'parte', n));
-        subirAsset(rutaLocal(id, 'portada-ig'), nombreAsset(id, 'portada-ig'));
+        if (existsSync(rutaLocal(id, 'portada-ig'))) subirAsset(rutaLocal(id, 'portada-ig'), nombreAsset(id, 'portada-ig')); // con gancho narrado no hay portada
         subirAsset(rutaLocal(id, 'partes'), nombreAsset(id, 'partes')); // al final: marca que el juego de partes está completo
       } else if (modo === 'vertical') {
         process.env.MOC_VERTICAL_LISTO = '1';
