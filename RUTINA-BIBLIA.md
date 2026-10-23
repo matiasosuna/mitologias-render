@@ -46,7 +46,7 @@ find public/audio/<id> -name '*.wav' -size 0          # vacío
 node scripts/motor-revisar.mjs <id> --sin-hoja        # exactamente "sin avisos"
 npx tsc --noEmit -p . && node --test test/*.test.mjs
 ```
-Solo si TODO está en verde: `touch src/videos/<id>/VERIFICADO` (sin esto el capítulo no sale; con esto sale solo).
+Solo si TODO está en verde: `node scripts/verificado.mjs <id>` (guarda la huella de guion+timeline; un VERIFICADO vacío o de un guion viejo no sirve; si después tocás guion o timeline, volvé a correrlo). Los capítulos salen estrictamente en orden: uno sin verificar frena a los siguientes.
 
 ## 5 · Guardar
 ```bash
