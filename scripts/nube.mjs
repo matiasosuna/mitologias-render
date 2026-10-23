@@ -55,6 +55,7 @@ const ASSETS = {
   'portada-ig-parte': [(id, n) => `${id}.portada-ig-${n}.jpg`, (id, n) => `portada-ig-${n}.jpg`], // con su "n/m" debajo del título
   'tapa-ig': [(id, n) => (n ? `${id}.tapa-ig-${n}.jpg` : `${id}.tapa-ig.jpg`), (id, n) => (n ? `tapa-ig-${n}.jpg` : 'tapa-ig.jpg')],
   horizontal: [(id) => `${id}.horizontal.mp4`, (id) => `${id}.en.mp4`], // el episodio largo que sube subir.mjs
+  'horizontal-meta': [(id) => `${id}.horizontal.json`, () => 'horizontal.json'], // huella del guion del horizontal (episodios con gancho)
   'srt-en': [(id) => `${id}.en.srt`, (id) => `${id}.en.srt`],
   'srt-es': [(id) => `${id}.es.srt`, (id) => `${id}.es.srt`],
   miniatura: [(id) => `${id}.miniatura.jpg`, () => 'miniatura.jpg'],
@@ -193,7 +194,28 @@ function desdeArtefacto(id, clases) {
   } catch { return false; } finally { rmSync(dir, { recursive: true, force: true }); }
 }
 /** Episodio largo en out/: release → artefacto de render-nube → render acá (si `render`). Lo nuevo se sube al release. */
+/** Con gancho (guion.youtube.gancho): el horizontal y sus subtítulos sirven solo si son de la huella actual del guion; si no,
+ *  se tiran y se renderizan de nuevo (los pre-renders de antes del gancho no lo tienen). Sin gancho: como siempre. */
+// La Biblia no: sus horizontales los hace su sesión ya con gancho.
+const conGancho = (id) => !esBiblia(id) && Boolean(existsSync(join('src/videos', id, 'guion.json')) && guion(id).youtube?.gancho);
+export function horizontalVigente(id) {
+  if (!conGancho(id)) return true;
+  const meta = rutaLocal(id, 'horizontal-meta');
+  if (!existsSync(meta)) bajar(nombreAsset(id, 'horizontal-meta'), meta);
+  return leerJSON(meta, {}).huella === huella(id);
+}
 export function asegurarEpisodio(id, { render = true } = {}) {
+  if (!horizontalVigente(id)) {
+    console.log(`  ${id}: horizontal de un guion viejo (sin gancho): se renderiza de nuevo`);
+    for (const c of ['horizontal', 'srt-en', 'srt-es', 'horizontal-meta']) rmSync(rutaLocal(id, c), { force: true });
+    if (!render) return false;
+    mkdirSync(join('out', id), { recursive: true });
+    correr('scripts/motor-render.mjs', id, '--imagen=en', '--audio=en');
+    if (!existsSync(rutaLocal(id, 'miniatura'))) correr('scripts/miniaturas.mjs', id);
+    writeFileSync(rutaLocal(id, 'horizontal-meta'), JSON.stringify({ huella: huella(id) }));
+    for (const c of [...EPISODIO, 'horizontal-meta']) if (existsSync(rutaLocal(id, c))) subirAsset(rutaLocal(id, c), nombreAsset(id, c));
+    return existsSync(rutaLocal(id, 'horizontal'));
+  }
   const faltan = () => EPISODIO.filter((c) => !existsSync(rutaLocal(id, c)));
   let f = EPISODIO.filter((c) => !existsSync(rutaLocal(id, c)) && !bajar(nombreAsset(id, c), rutaLocal(id, c)));
   const subirNuevos = (antes) => { for (const c of antes) if (existsSync(rutaLocal(id, c))) subirAsset(rutaLocal(id, c), nombreAsset(id, c)); };
@@ -202,6 +224,7 @@ export function asegurarEpisodio(id, { render = true } = {}) {
     console.log(`  render en la nube: ${id} (horizontal)`);
     if (!existsSync(rutaLocal(id, 'horizontal'))) correr('scripts/motor-render.mjs', id, '--imagen=en', '--audio=en');
     if (!existsSync(rutaLocal(id, 'miniatura'))) correr('scripts/miniaturas.mjs', id);
+    if (conGancho(id)) { writeFileSync(rutaLocal(id, 'horizontal-meta'), JSON.stringify({ huella: huella(id) })); f.push('horizontal-meta'); }
     subirNuevos(f); f = faltan();
   }
   return existsSync(rutaLocal(id, 'horizontal'));

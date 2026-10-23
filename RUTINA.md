@@ -88,6 +88,7 @@ Hacela igual que `aztecas`/`hindues`/`maories` (commit `259c810` como guía):
 ## 4 · Narrar (solo inglés) y validar
 Por cada id nuevo:
 ```bash
+node scripts/marco-myths.mjs <id>                     # SOLO episodios (no Shorts): gancho fijo de Myths al inicio + "Follow…" al final; necesita su título en titulos.json
 node scripts/motor-narrar.mjs <id> en                 # Chatterbox en Modal; reusa lo ya narrado; Shorts a 1,1× sin silencios en las puntas
 find public/audio/<id> -name '*.wav' -size 0          # tiene que salir vacío; si no, volvé a correr motor-narrar (borra y re-narra los vacíos)
 node scripts/motor-revisar.mjs <id> --sin-hoja        # tiene que decir exactamente "sin avisos": corregí el guion y re-narrá si cambió texto

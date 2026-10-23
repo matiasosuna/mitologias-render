@@ -58,6 +58,7 @@ test('horizontal: sin apertura; la pregunta final antes de la pantalla final', (
 test('sin campos de marco (Myths) nada cambia', () => {
   for (const d of readdirSync('src/videos').filter((x) => !x.startsWith('biblia-') && existsSync(`src/videos/${x}/timeline.json`))) {
     const gg = leer(`src/videos/${d}/guion.json`), tt = leer(`src/videos/${d}/timeline.json`);
+    if (gg.reels?.ganchos || gg.youtube?.gancho) continue; // con el gancho de Myths (scripts/marco-myths.mjs)
     assert.equal(piezasMarco(gg).length, 0, d);
     const r = horizontalConMarco(gg, tt);
     assert.equal(r.guion, gg, d); assert.equal(r.timeline, tt, d);

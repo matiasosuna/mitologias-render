@@ -1,1220 +1,1252 @@
 {
- "id": "hawaianas-10-maui-empuja-el-cielo",
- "serie": "hawaianas",
- "numero": "10",
- "titulo": {
-  "es": "Māui empuja el cielo",
-  "en": "Māui Pushes Up the Sky"
- },
- "tituloGriego": "MĀUI PUSHES UP THE SKY",
- "miniatura": {
-  "heroe": "maui_oficial",
-  "rival": "hawaiana_oficial"
- },
- "siguiente": {
-  "es": "El sol que corría demasiado",
-  "en": "The Sun Who Ran Too Fast"
- },
- "escenas": [
-  {
-   "id": "marco",
-   "fondo": "aldea",
-   "camara": {
-    "de": 0,
-    "a": 100,
-    "zoom": [
-     1,
-     1.05
-    ]
-   },
-   "frases": [
-    {
-     "es": "La última vez, Māui sacó islas del mar con su anzuelo mágico.",
-     "en": "Last time, Māui pulled islands up from the sea with his magic hook."
-    },
-    {
-     "es": "Ahora la gente podía vivir en ellas. Pero había un problema, justo sobre sus cabezas.",
-     "en": "Now people could live on them. But there was a problem, right above their heads."
-    },
-    {
-     "es": "El cielo colgaba muy bajo. Casi tocaba el suelo.",
-     "en": "The sky hung very low. It pressed down almost to the ground."
-    },
-    {
-     "es": "Había oscuridad en el pequeño espacio de abajo, y la gente tenía que mantenerse agachada.",
-     "en": "It was dark in the small space below, and people had to stay low."
-    },
-    {
-     "es": "Esta es la historia de cómo Māui lo arregló.",
-     "en": "This is the story of how Māui fixed it."
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "hale",
-     "x": 330,
-     "s": 0.8,
-     "capa": "fondo"
-    },
-    {
-     "tipo": "nube",
-     "x": 300,
-     "y": 330,
-     "s": 2.6,
-     "capa": "frente"
-    },
-    {
-     "tipo": "nube",
-     "x": 900,
-     "y": 360,
-     "s": 2.8,
-     "capa": "frente"
-    },
-    {
-     "tipo": "nube",
-     "x": 1500,
-     "y": 330,
-     "s": 2.6,
-     "capa": "frente"
-    },
-    {
-     "tipo": "nube",
-     "x": 2000,
-     "y": 350,
-     "s": 2.6,
-     "capa": "frente"
-    }
-   ],
-   "actores": [
-    {
-     "id": "v1",
-     "como": "hawaiano_oficial",
-     "x": 600,
-     "rotulo": "",
-     "props": {
-      "inclinar": 16,
-      "cabeza": -6
-     },
-     "pasos": [
-      {
-       "en": 1.2,
-       "hace": "aparece"
-      },
-      {
-       "en": 2,
-       "hace": "arrodilla"
-      }
-     ]
-    },
-    {
-     "id": "v2",
-     "como": "hawaiana_b_oficial",
-     "x": 900,
-     "rotulo": "",
-     "props": {
-      "inclinar": 16,
-      "cabeza": -6
-     },
-     "pasos": [
-      {
-       "en": 1.4,
-       "hace": "aparece"
-      },
-      {
-       "en": 3,
-       "hace": "lamenta"
-      }
-     ]
-    },
-    {
-     "id": "v3",
-     "como": "hawaiano_b_oficial",
-     "x": 1250,
-     "rotulo": "",
-     "escala": 0.7,
-     "props": {
-      "inclinar": 16,
-      "cabeza": -6
-     },
-     "pasos": [
-      {
-       "en": 1.6,
-       "hace": "aparece"
-      },
-      {
-       "en": 2.5,
-       "hace": "camina",
-       "a": 1450,
-       "dur": 1
-      }
-     ]
-    },
-    {
-     "id": "maui",
-     "como": "maui_oficial",
-     "x": 1650,
-     "escala": 0.85,
-     "props": {
-      "objeto": null
-     },
-     "pasos": [
-      {
-       "en": 4,
-       "hace": "aparece",
-       "con": "luz"
-      },
-      {
-       "en": 4.4,
-       "hace": "levanta"
-      }
-     ]
-    }
-   ],
-   "efectos": [
-    {
-     "en": 1,
-     "tipo": "oscurecer",
-     "dur": 3,
-     "intensidad": 0.45
-    }
-   ]
+  "id": "hawaianas-10-maui-empuja-el-cielo",
+  "serie": "hawaianas",
+  "numero": "10",
+  "titulo": {
+    "es": "Māui empuja el cielo",
+    "en": "Māui Pushes Up the Sky"
   },
-  {
-   "id": "plantas",
-   "fondo": "valle",
-   "camara": {
-    "de": 0,
-    "a": 100,
-    "zoom": [
-     1,
-     1.05
-    ]
-   },
-   "frases": [
-    {
-     "es": "Una historia antigua dice que las plantas fueron las primeras en empujar.",
-     "en": "One old story says the plants were the first to push."
-    },
-    {
-     "es": "Abrieron sus hojas planas y se apoyaron contra las nubes.",
-     "en": "They spread their leaves flat, and leaned against the clouds."
-    },
-    {
-     "es": "Centímetro a centímetro, levantaron el cielo, hasta que la gente pudo arrastrarse entre cielo y tierra.",
-     "en": "Inch by inch, they lifted the sky, until people could crawl between sky and earth."
-    },
-    {
-     "es": "Pero arrastrarse no es caminar. La gente quería ponerse de pie y ver lejos.",
-     "en": "But crawling is not walking. People wanted to stand tall and see far."
-    },
-    {
-     "es": "Entonces, dicen las historias hawaianas, llegó un hombre. Se dice que era Māui.",
-     "en": "Then, the Hawaiian stories say, a man came along. He is said to be Māui."
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "kalo",
-     "x": 400,
-     "s": 1.5
-    },
-    {
-     "tipo": "kalo",
-     "x": 900,
-     "s": 1.7
-    },
-    {
-     "tipo": "kalo",
-     "x": 1450,
-     "s": 1.5
-    },
-    {
-     "tipo": "nube",
-     "x": 700,
-     "y": 340,
-     "s": 2.8,
-     "capa": "frente"
-    },
-    {
-     "tipo": "nube",
-     "x": 1300,
-     "y": 330,
-     "s": 2.6,
-     "capa": "frente"
-    }
-   ],
-   "actores": [
-    {
-     "id": "v1",
-     "como": "hawaiano_oficial",
-     "x": 1150,
-     "rotulo": "",
-     "props": {
-      "inclinar": 16,
-      "cabeza": -6
-     },
-     "pasos": [
-      {
-       "en": 2.2,
-       "hace": "aparece"
-      },
-      {
-       "en": 3,
-       "hace": "lamenta"
-      }
-     ]
-    },
-    {
-     "id": "v2",
-     "como": "hawaiana_b_oficial",
-     "x": 1700,
-     "rotulo": "",
-     "props": {
-      "inclinar": 16,
-      "cabeza": -6
-     },
-     "pasos": [
-      {
-       "en": 3,
-       "hace": "aparece"
-      },
-      {
-       "en": 3.3,
-       "hace": "levanta"
-      }
-     ]
-    },
-    {
-     "id": "maui",
-     "como": "maui_oficial",
-     "x": 1900,
-     "escala": 0.85,
-     "props": {
-      "objeto": null
-     },
-     "pasos": [
-      {
-       "en": 4,
-       "hace": "aparece"
-      },
-      {
-       "en": 4,
-       "hace": "camina",
-       "a": 1500,
-       "dur": 0.9
-      }
-     ]
-    }
-   ],
-   "efectos": [
-    {
-     "en": 1,
-     "tipo": "temblor",
-     "dur": 1.5,
-     "intensidad": 0.2
-    }
-   ]
+  "tituloGriego": "MĀUI PUSHES UP THE SKY",
+  "miniatura": {
+    "heroe": "maui_oficial",
+    "rival": "hawaiana_oficial"
   },
-  {
-   "id": "calabaza",
-   "fondo": "aldea",
-   "camara": {
-    "de": 0,
-    "a": 120,
-    "zoom": [
-     1,
-     1.05
-    ]
-   },
-   "frases": [
-    {
-     "es": "Se encontró con una mujer que sostenía una calabaza llena de agua.",
-     "en": "He met a woman who was holding a gourd full of water."
-    },
-    {
-     "es": "«Dame un trago de tu calabaza», dijo, «y empujaré los cielos más arriba».",
-     "en": "“Give me a drink from your gourd,” he said, “and I will push the heavens higher.”"
-    },
-    {
-     "es": "La mujer le pasó la calabaza. Māui bebió largamente.",
-     "en": "The woman handed him the gourd. Māui drank deeply."
-    },
-    {
-     "es": "Luego se apoyó contra las nubes.",
-     "en": "Then he braced himself against the clouds."
-    },
-    {
-     "es": "Él era pequeño y el cielo era enorme. ¿Se movería?",
-     "en": "He was small, and the sky was huge. Would it move?"
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "hale",
-     "x": 320,
-     "s": 0.9,
-     "capa": "fondo"
-    },
-    {
-     "tipo": "ipu",
-     "x": 1450,
-     "s": 0.55
-    },
-    {
-     "tipo": "nube",
-     "x": 800,
-     "y": 300,
-     "s": 2.8,
-     "capa": "frente"
-    },
-    {
-     "tipo": "nube",
-     "x": 1500,
-     "y": 310,
-     "s": 2.8,
-     "capa": "frente"
-    }
-   ],
-   "actores": [
-    {
-     "id": "maui",
-     "como": "maui_oficial",
-     "x": 650,
-     "escala": 0.9,
-     "props": {
-      "objeto": null
-     },
-     "pasos": [
-      {
-       "en": 0,
-       "hace": "camina",
-       "a": 900,
-       "dur": 0.8
-      },
-      {
-       "en": 1,
-       "hace": "habla",
-       "dur": 1
-      },
-      {
-       "en": 2.4,
-       "hace": "baja"
-      },
-      {
-       "en": 3,
-       "hace": "levanta"
-      }
-     ]
-    },
-    {
-     "id": "mujer",
-     "como": "hawaiana_c_oficial",
-     "x": 1180,
-     "rotulo": "",
-     "pasos": [
-      {
-       "en": 0,
-       "hace": "aparece"
-      },
-      {
-       "en": 1.8,
-       "hace": "ofrece"
-      },
-      {
-       "en": 3,
-       "hace": "asiente"
-      }
-     ]
-    }
-   ]
+  "siguiente": {
+    "es": "El sol que corría demasiado",
+    "en": "The Sun Who Ran Too Fast"
   },
-  {
-   "id": "empuje",
-   "fondo": "valle",
-   "camara": {
-    "de": 0,
-    "a": 0,
-    "zoom": [
-     1,
-     1.12
-    ]
-   },
-   "frases": [
+  "escenas": [
     {
-     "es": "Māui empujó con todas sus fuerzas. Las nubes temblaron.",
-     "en": "Māui pushed with all his strength. The clouds shook."
+      "id": "marco",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Māui sacó islas del mar con su anzuelo mágico.",
+          "en": "Last time, Māui pulled islands up from the sea with his magic hook."
+        },
+        {
+          "es": "Ahora la gente podía vivir en ellas. Pero había un problema, justo sobre sus cabezas.",
+          "en": "Now people could live on them. But there was a problem, right above their heads."
+        },
+        {
+          "es": "El cielo colgaba muy bajo. Casi tocaba el suelo.",
+          "en": "The sky hung very low. It pressed down almost to the ground."
+        },
+        {
+          "es": "Había oscuridad en el pequeño espacio de abajo, y la gente tenía que mantenerse agachada.",
+          "en": "It was dark in the small space below, and people had to stay low."
+        },
+        {
+          "es": "Esta es la historia de cómo Māui lo arregló.",
+          "en": "This is the story of how Māui fixed it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 330,
+          "s": 0.8,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "nube",
+          "x": 300,
+          "y": 330,
+          "s": 2.6,
+          "capa": "frente"
+        },
+        {
+          "tipo": "nube",
+          "x": 900,
+          "y": 360,
+          "s": 2.8,
+          "capa": "frente"
+        },
+        {
+          "tipo": "nube",
+          "x": 1500,
+          "y": 330,
+          "s": 2.6,
+          "capa": "frente"
+        },
+        {
+          "tipo": "nube",
+          "x": 2000,
+          "y": 350,
+          "s": 2.6,
+          "capa": "frente"
+        }
+      ],
+      "actores": [
+        {
+          "id": "v1",
+          "como": "hawaiano_oficial",
+          "x": 600,
+          "rotulo": "",
+          "props": {
+            "inclinar": 16,
+            "cabeza": -6
+          },
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "v2",
+          "como": "hawaiana_b_oficial",
+          "x": 900,
+          "rotulo": "",
+          "props": {
+            "inclinar": 16,
+            "cabeza": -6
+          },
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "v3",
+          "como": "hawaiano_b_oficial",
+          "x": 1250,
+          "rotulo": "",
+          "escala": 0.7,
+          "props": {
+            "inclinar": 16,
+            "cabeza": -6
+          },
+          "pasos": [
+            {
+              "en": 1.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "camina",
+              "a": 1450,
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "maui",
+          "como": "maui_oficial",
+          "x": 1650,
+          "escala": 0.85,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.4,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 3,
+          "intensidad": 0.45
+        }
+      ]
     },
     {
-     "es": "El cielo subió hasta la altura de los árboles.",
-     "en": "The sky rose to the height of the trees."
+      "id": "plantas",
+      "fondo": "valle",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Una historia antigua dice que las plantas fueron las primeras en empujar.",
+          "en": "One old story says the plants were the first to push."
+        },
+        {
+          "es": "Abrieron sus hojas planas y se apoyaron contra las nubes.",
+          "en": "They spread their leaves flat, and leaned against the clouds."
+        },
+        {
+          "es": "Centímetro a centímetro, levantaron el cielo, hasta que la gente pudo arrastrarse entre cielo y tierra.",
+          "en": "Inch by inch, they lifted the sky, until people could crawl between sky and earth."
+        },
+        {
+          "es": "Pero arrastrarse no es caminar. La gente quería ponerse de pie y ver lejos.",
+          "en": "But crawling is not walking. People wanted to stand tall and see far."
+        },
+        {
+          "es": "Entonces, dicen las historias hawaianas, llegó un hombre. Se dice que era Māui.",
+          "en": "Then, the Hawaiian stories say, a man came along. He is said to be Māui."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kalo",
+          "x": 400,
+          "s": 1.5
+        },
+        {
+          "tipo": "kalo",
+          "x": 900,
+          "s": 1.7
+        },
+        {
+          "tipo": "kalo",
+          "x": 1450,
+          "s": 1.5
+        },
+        {
+          "tipo": "nube",
+          "x": 700,
+          "y": 340,
+          "s": 2.8,
+          "capa": "frente"
+        },
+        {
+          "tipo": "nube",
+          "x": 1300,
+          "y": 330,
+          "s": 2.6,
+          "capa": "frente"
+        }
+      ],
+      "actores": [
+        {
+          "id": "v1",
+          "como": "hawaiano_oficial",
+          "x": 1150,
+          "rotulo": "",
+          "props": {
+            "inclinar": 16,
+            "cabeza": -6
+          },
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "v2",
+          "como": "hawaiana_b_oficial",
+          "x": 1700,
+          "rotulo": "",
+          "props": {
+            "inclinar": 16,
+            "cabeza": -6
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "maui",
+          "como": "maui_oficial",
+          "x": 1900,
+          "escala": 0.85,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 1.5,
+          "intensidad": 0.2
+        }
+      ]
     },
     {
-     "es": "Empujó otra vez y subió hasta las cimas de las montañas.",
-     "en": "He pushed again, and it climbed to the tops of the mountains."
+      "id": "calabaza",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Se encontró con una mujer que sostenía una calabaza llena de agua.",
+          "en": "He met a woman who was holding a gourd full of water."
+        },
+        {
+          "es": "«Dame un trago de tu calabaza», dijo, «y empujaré los cielos más arriba».",
+          "en": "“Give me a drink from your gourd,” he said, “and I will push the heavens higher.”"
+        },
+        {
+          "es": "La mujer le pasó la calabaza. Māui bebió largamente.",
+          "en": "The woman handed him the gourd. Māui drank deeply."
+        },
+        {
+          "es": "Luego se apoyó contra las nubes.",
+          "en": "Then he braced himself against the clouds."
+        },
+        {
+          "es": "Él era pequeño y el cielo era enorme. ¿Se movería?",
+          "en": "He was small, and the sky was huge. Would it move?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 320,
+          "s": 0.9,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "ipu",
+          "x": 1450,
+          "s": 0.55
+        },
+        {
+          "tipo": "nube",
+          "x": 800,
+          "y": 300,
+          "s": 2.8,
+          "capa": "frente"
+        },
+        {
+          "tipo": "nube",
+          "x": 1500,
+          "y": 310,
+          "s": 2.8,
+          "capa": "frente"
+        }
+      ],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "maui_oficial",
+          "x": 650,
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 900,
+              "dur": 0.8
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 1
+            },
+            {
+              "en": 2.4,
+              "hace": "baja"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "hawaiana_c_oficial",
+          "x": 1180,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.8,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ]
     },
     {
-     "es": "Una vez más, con un empujón enorme, lo llevó hasta donde está hoy.",
-     "en": "Once more, with a mighty heave, he pressed it up to where it is today."
+      "id": "empuje",
+      "fondo": "valle",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.12
+        ]
+      },
+      "frases": [
+        {
+          "es": "Māui empujó con todas sus fuerzas. Las nubes temblaron.",
+          "en": "Māui pushed with all his strength. The clouds shook."
+        },
+        {
+          "es": "El cielo subió hasta la altura de los árboles.",
+          "en": "The sky rose to the height of the trees."
+        },
+        {
+          "es": "Empujó otra vez y subió hasta las cimas de las montañas.",
+          "en": "He pushed again, and it climbed to the tops of the mountains."
+        },
+        {
+          "es": "Una vez más, con un empujón enorme, lo llevó hasta donde está hoy.",
+          "en": "Once more, with a mighty heave, he pressed it up to where it is today."
+        },
+        {
+          "es": "¿Le habrías dado tu agua a un extraño que prometía levantar el cielo?",
+          "en": "Would you have given your water to a stranger who promised to lift the sky?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "niu",
+          "x": 350,
+          "s": 1.2
+        },
+        {
+          "tipo": "niu",
+          "x": 1650,
+          "s": 1.2
+        },
+        {
+          "tipo": "nube",
+          "x": 700,
+          "y": 520,
+          "s": 2.6,
+          "capa": "frente"
+        },
+        {
+          "tipo": "nube",
+          "x": 1300,
+          "y": 540,
+          "s": 2.4,
+          "capa": "frente"
+        },
+        {
+          "tipo": "nube",
+          "x": 950,
+          "y": 330,
+          "s": 2.4,
+          "capa": "fondo",
+          "en": 2
+        },
+        {
+          "tipo": "nube",
+          "x": 450,
+          "y": 220,
+          "s": 2.2,
+          "capa": "fondo",
+          "en": 3.2
+        },
+        {
+          "tipo": "nube",
+          "x": 1500,
+          "y": 200,
+          "s": 2,
+          "capa": "fondo",
+          "en": 3.4
+        }
+      ],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "maui_oficial",
+          "x": 960,
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.8,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "crece",
+              "escala": 1.5
+            },
+            {
+              "en": 3.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.3,
+              "hace": "encoge",
+              "escala": 0.95
+            },
+            {
+              "en": 4.4,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "v1",
+          "como": "hawaiano_oficial",
+          "x": 520,
+          "rotulo": "",
+          "props": {
+            "inclinar": 16,
+            "cabeza": -6
+          },
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "v2",
+          "como": "hawaiana_b_oficial",
+          "x": 1400,
+          "rotulo": "",
+          "props": {
+            "inclinar": 16,
+            "cabeza": -6
+          },
+          "pasos": [
+            {
+              "en": 1.7,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.4,
+              "hace": "levantarse"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "temblor",
+          "dur": 4,
+          "intensidad": 0.6
+        },
+        {
+          "en": 3.1,
+          "tipo": "destello",
+          "dur": 0.4
+        },
+        {
+          "en": 3.4,
+          "tipo": "aclarar",
+          "dur": 1.5
+        }
+      ]
     },
     {
-     "es": "¿Le habrías dado tu agua a un extraño que prometía levantar el cielo?",
-     "en": "Would you have given your water to a stranger who promised to lift the sky?"
+      "id": "burla",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un hombre estaba mirando y se burló de Māui por intentarlo siquiera.",
+          "en": "A man had been watching, and he laughed at Māui for even trying."
+        },
+        {
+          "es": "Cuando las nubes descansaron sobre las cimas, Māui se volvió para castigarlo.",
+          "en": "When the clouds rested on the mountaintops, Māui turned to punish him."
+        },
+        {
+          "es": "El hombre corrió hacia el otro lado de la isla. Māui corrió tras él.",
+          "en": "The man ran to the other side of the island. Māui ran after him."
+        },
+        {
+          "es": "Lo alcanzó en la costa, a pocas millas al norte de la actual Lahaina.",
+          "en": "He caught him on the coast, a few miles north of today’s Lahaina."
+        },
+        {
+          "es": "Allí, tras un breve forcejeo, el hombre se convirtió en una gran roca negra.",
+          "en": "There, after a short struggle, the man turned into a great black rock."
+        },
+        {
+          "es": "Se dice que la roca sigue allí.",
+          "en": "People say the rock is still there."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "niu",
+          "x": 250,
+          "s": 1.1
+        },
+        {
+          "tipo": "roca",
+          "x": 1500,
+          "s": 2.4,
+          "en": 4
+        }
+      ],
+      "actores": [
+        {
+          "id": "burlon",
+          "como": "hawaiano_c_oficial",
+          "x": 650,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.2,
+              "hace": "senala"
+            },
+            {
+              "en": 1.4,
+              "hace": "sorprende"
+            },
+            {
+              "en": 1.8,
+              "hace": "corre",
+              "a": 1500,
+              "dur": 1.4
+            },
+            {
+              "en": 4,
+              "hace": "desaparece",
+              "con": "polvo"
+            }
+          ]
+        },
+        {
+          "id": "maui",
+          "como": "maui_oficial",
+          "x": 300,
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "enoja"
+            },
+            {
+              "en": 1.9,
+              "hace": "corre",
+              "a": 1300,
+              "dur": 1.5
+            },
+            {
+              "en": 3.8,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "AL NORTE DE LAHAINA",
+            "en": "NORTH OF LAHAINA"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "haleakala",
+      "fondo": "haleakala",
+      "camara": {
+        "de": 0,
+        "a": 80,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Aun hoy, nubes oscuras bajan a veces por las laderas de Haleakalā, la gran montaña de Māui.",
+          "en": "Even now, dark clouds sometimes sink low on the slopes of Haleakalā, Māui’s great mountain."
+        },
+        {
+          "es": "Traen lluvia fuerte a una colina llamada Kauiki.",
+          "en": "They bring heavy rain to a hill called Kauiki."
+        },
+        {
+          "es": "Pero la historia dice que nunca se atreven a quedarse. Temen que Māui venga y las arroje lejos.",
+          "en": "But the old story says they never dare to stay. They fear Māui will come and hurl them away."
+        },
+        {
+          "es": "Haleakalā significa «casa del sol». Recuerda ese nombre.",
+          "en": "Haleakalā means “house of the sun.” Remember that name."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "nube",
+          "x": 700,
+          "y": 420,
+          "s": 2.4,
+          "capa": "frente"
+        },
+        {
+          "tipo": "nube",
+          "x": 1200,
+          "y": 460,
+          "s": 2,
+          "capa": "frente"
+        }
+      ],
+      "actores": [
+        {
+          "id": "maui",
+          "como": "maui_oficial",
+          "x": 1450,
+          "escala": 1,
+          "pasos": [
+            {
+              "en": 2.1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "lanza"
+            },
+            {
+              "en": 3.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "lluvia",
+          "dur": 1.5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2.6,
+          "tipo": "aclarar",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "POR ESO LAS NUBES NO SE QUEDAN",
+            "en": "THAT’S WHY THE CLOUDS DON’T STAY LONG"
+          },
+          "x": 960,
+          "y": 230,
+          "hasta": 4,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "otras",
+      "fondo": "cielo_navegante",
+      "camara": {
+        "de": 0,
+        "a": 250,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Māui es conocido en todo el Pacífico, y cada isla cuenta a su manera la historia del cielo.",
+          "en": "Māui is known all across the Pacific, and every island tells the sky story its own way."
+        },
+        {
+          "es": "En Samoa lo llaman Tiʻitiʻi. Dicen que apoyó los pies contra las rocas y empujó.",
+          "en": "In Samoa, he is called Tiʻitiʻi. People say he braced his feet against rocks and pushed."
+        },
+        {
+          "es": "En otro relato de Samoa, una mujer premia al que levanta el cielo con un trago de su cáscara de coco.",
+          "en": "In another Samoan story, a woman rewards the man who lifts the sky with a drink from her coconut shell."
+        },
+        {
+          "es": "En Manihiki, en las islas Cook, Māui y su padre Ru empujan el cielo desde dos lados.",
+          "en": "On Manihiki, in the Cook Islands, Māui and his father Ru push the sky from two sides."
+        },
+        {
+          "es": "Luego lo alisan con hachas de piedra, hasta dejarlo como una cúpula azul y limpia.",
+          "en": "Then they smooth it with stone adzes, until it is a clean blue dome."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "petroglifo",
+          "x": 520,
+          "s": 1,
+          "props": {
+            "figura": "persona"
+          }
+        },
+        {
+          "tipo": "petroglifo",
+          "x": 1500,
+          "s": 1,
+          "props": {
+            "figura": "persona"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "tiiti",
+          "como": "maui_oficial",
+          "x": 700,
+          "rotulo": "TIʻITIʻI · SAMOA",
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "ru",
+          "como": "ru_oficial",
+          "x": 1380,
+          "rotulo": "RU · MANIHIKI",
+          "escala": 1,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "maui2",
+          "como": "maui_oficial",
+          "x": 1020,
+          "rotulo": "MĀUI · MANIHIKI",
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.4,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.2,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "mujer",
+          "como": "hawaiana_c_oficial",
+          "x": 1000,
+          "rotulo": "SAMOA",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.9,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "POLINESIA",
+            "en": "POLYNESIA"
+          },
+          "x": 960,
+          "y": 200,
+          "hasta": 1
+        }
+      ]
+    },
+    {
+      "id": "alto",
+      "fondo": "valle",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ahora el cielo estaba alto y el mundo podía respirar.",
+          "en": "Now the sky was high, and the world could breathe."
+        },
+        {
+          "es": "La gente caminaba erguida. La luz inundó los valles.",
+          "en": "People walked upright. Light flooded the valleys."
+        },
+        {
+          "es": "Las plantas podían crecer altas y las nubes flotaban muy por encima de las montañas.",
+          "en": "Plants could grow tall, and the clouds drifted far above the mountains."
+        },
+        {
+          "es": "Pero un cielo alto también dejó un camino abierto por los cielos. Y alguien estaba por correr por él.",
+          "en": "But a high sky also left a wide-open road across the heavens. And someone was about to race along it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "kalo",
+          "x": 500,
+          "s": 1.6
+        },
+        {
+          "tipo": "niu",
+          "x": 1500,
+          "s": 1.2
+        },
+        {
+          "tipo": "hale",
+          "x": 800,
+          "s": 0.9,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "nube",
+          "x": 700,
+          "y": 160,
+          "s": 1.6,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "v1",
+          "como": "hawaiano_oficial",
+          "x": 1000,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.8,
+              "hace": "camina",
+              "a": 1130,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "v2",
+          "como": "hawaiana_b_oficial",
+          "x": 1370,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "nino",
+          "como": "nino_hawaiano_oficial",
+          "x": 1560,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.8,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "dur": 3
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 100,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mientras tanto, Hina trabajaba haciendo kapa, la tela que usaba su familia.",
+          "en": "Meanwhile, Hina was hard at work making kapa, the cloth her family wore."
+        },
+        {
+          "es": "La extendió al sol para que se secara.",
+          "en": "She spread it out in the sun to dry."
+        },
+        {
+          "es": "Pero el sol corría por el nuevo cielo alto, y la tela seguía mojada.",
+          "en": "But the sun raced across the new, high sky, and the cloth stayed wet."
+        },
+        {
+          "es": "¿Cuál historia del cielo es tu favorita: la hawaiana, la samoana o la de Manihiki? Cuéntanos en los comentarios.",
+          "en": "Which sky story is your favorite: Hawaiian, Samoan or Manihiki? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez, Māui va a atrapar al sol. Es El sol que corría demasiado.",
+          "en": "Next time, Māui goes to catch the sun. It is The Sun Who Ran Too Fast."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "niu",
+          "x": 300,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "hina",
+          "como": "hina_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "golpea"
+            },
+            {
+              "en": 1.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "maui",
+          "como": "maui_oficial",
+          "x": 1250,
+          "escala": 0.9,
+          "props": {
+            "objeto": null
+          },
+          "pasos": [
+            {
+              "en": 2.8,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 1.2
+        }
+      ]
     }
-   ],
-   "elementos": [
+  ],
+  "shorts": [
     {
-     "tipo": "niu",
-     "x": 350,
-     "s": 1.2
+      "gancho": {
+        "es": "Un trago de agua para levantar el cielo",
+        "en": "One drink of water to lift the sky"
+      },
+      "escena": "calabaza",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1000
     },
     {
-     "tipo": "niu",
-     "x": 1650,
-     "s": 1.2
+      "gancho": {
+        "es": "Māui empuja el cielo hasta las montañas",
+        "en": "Māui pushes the sky up past the mountains"
+      },
+      "escena": "empuje",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 960
     },
     {
-     "tipo": "nube",
-     "x": 700,
-     "y": 520,
-     "s": 2.6,
-     "capa": "frente"
-    },
-    {
-     "tipo": "nube",
-     "x": 1300,
-     "y": 540,
-     "s": 2.4,
-     "capa": "frente"
-    },
-    {
-     "tipo": "nube",
-     "x": 950,
-     "y": 330,
-     "s": 2.4,
-     "capa": "fondo",
-     "en": 2
-    },
-    {
-     "tipo": "nube",
-     "x": 450,
-     "y": 220,
-     "s": 2.2,
-     "capa": "fondo",
-     "en": 3.2
-    },
-    {
-     "tipo": "nube",
-     "x": 1500,
-     "y": 200,
-     "s": 2,
-     "capa": "fondo",
-     "en": 3.4
+      "gancho": {
+        "es": "El hombre que se rio de Māui y se volvió roca",
+        "en": "The man who laughed at Māui and turned to stone"
+      },
+      "escena": "burla",
+      "desde": 0,
+      "hasta": 5,
+      "foco": 900
     }
-   ],
-   "actores": [
-    {
-     "id": "maui",
-     "como": "maui_oficial",
-     "x": 960,
-     "escala": 0.9,
-     "props": {
-      "objeto": null
-     },
-     "pasos": [
+  ],
+  "reels": {
+    "ganchos": [
       {
-       "en": 0,
-       "hace": "levanta"
+        "en": "Ever wanted to know the myths of the ancient world? I tell them as simple stories, so you can remember them without having to study books. Follow for a new myth every day. Today: Māui Pushes Up the Sky."
       },
       {
-       "en": 1.8,
-       "hace": "levanta"
+        "en": "Māui Pushes Up the Sky, part 2."
       },
       {
-       "en": 3,
-       "hace": "crece",
-       "escala": 1.5
-      },
-      {
-       "en": 3.2,
-       "hace": "levanta"
-      },
-      {
-       "en": 4.3,
-       "hace": "encoge",
-       "escala": 0.95
-      },
-      {
-       "en": 4.4,
-       "hace": "alegra"
+        "en": "Māui Pushes Up the Sky, part 3."
       }
-     ]
+    ],
+    "pausas": {
+      "Ever wanted to know the myths of the ancient world?": 0.1,
+      "I tell them as simple stories, so you can remember them without having to study books.": 0.1,
+      "Follow for a new myth every day.": 0.1
     },
-    {
-     "id": "v1",
-     "como": "hawaiano_oficial",
-     "x": 520,
-     "rotulo": "",
-     "props": {
-      "inclinar": 16,
-      "cabeza": -6
-     },
-     "pasos": [
-      {
-       "en": 1.5,
-       "hace": "aparece"
-      },
-      {
-       "en": 3.2,
-       "hace": "levantarse"
-      }
-     ]
+    "tempos": {
+      "gancho": 1.25
     },
-    {
-     "id": "v2",
-     "como": "hawaiana_b_oficial",
-     "x": 1400,
-     "rotulo": "",
-     "props": {
-      "inclinar": 16,
-      "cabeza": -6
-     },
-     "pasos": [
-      {
-       "en": 1.7,
-       "hace": "aparece"
-      },
-      {
-       "en": 3.4,
-       "hace": "levantarse"
-      }
-     ]
+    "final": {
+      "en": "Follow for a new myth every day."
     }
-   ],
-   "efectos": [
-    {
-     "en": 0,
-     "tipo": "temblor",
-     "dur": 4,
-     "intensidad": 0.6
-    },
-    {
-     "en": 3.1,
-     "tipo": "destello",
-     "dur": 0.4
-    },
-    {
-     "en": 3.4,
-     "tipo": "aclarar",
-     "dur": 1.5
-    }
-   ]
   },
-  {
-   "id": "burla",
-   "fondo": "costa",
-   "camara": {
-    "de": 0,
-    "a": 500,
-    "zoom": [
-     1,
-     1.05
-    ]
-   },
-   "frases": [
-    {
-     "es": "Un hombre estaba mirando y se burló de Māui por intentarlo siquiera.",
-     "en": "A man had been watching, and he laughed at Māui for even trying."
+  "youtube": {
+    "gancho": {
+      "en": "Ever wanted to know the myths of the ancient world? I tell them as simple stories, so you can remember them without having to study books. Follow for a new myth every day. Today: Māui Pushes Up the Sky."
     },
-    {
-     "es": "Cuando las nubes descansaron sobre las cimas, Māui se volvió para castigarlo.",
-     "en": "When the clouds rested on the mountaintops, Māui turned to punish him."
-    },
-    {
-     "es": "El hombre corrió hacia el otro lado de la isla. Māui corrió tras él.",
-     "en": "The man ran to the other side of the island. Māui ran after him."
-    },
-    {
-     "es": "Lo alcanzó en la costa, a pocas millas al norte de la actual Lahaina.",
-     "en": "He caught him on the coast, a few miles north of today’s Lahaina."
-    },
-    {
-     "es": "Allí, tras un breve forcejeo, el hombre se convirtió en una gran roca negra.",
-     "en": "There, after a short struggle, the man turned into a great black rock."
-    },
-    {
-     "es": "Se dice que la roca sigue allí.",
-     "en": "People say the rock is still there."
+    "final": {
+      "en": "Follow for a new myth every day."
     }
-   ],
-   "elementos": [
-    {
-     "tipo": "niu",
-     "x": 250,
-     "s": 1.1
-    },
-    {
-     "tipo": "roca",
-     "x": 1500,
-     "s": 2.4,
-     "en": 4
-    }
-   ],
-   "actores": [
-    {
-     "id": "burlon",
-     "como": "hawaiano_c_oficial",
-     "x": 650,
-     "rotulo": "",
-     "pasos": [
-      {
-       "en": 0,
-       "hace": "alegra"
-      },
-      {
-       "en": 0.2,
-       "hace": "senala"
-      },
-      {
-       "en": 1.4,
-       "hace": "sorprende"
-      },
-      {
-       "en": 1.8,
-       "hace": "corre",
-       "a": 1500,
-       "dur": 1.4
-      },
-      {
-       "en": 4,
-       "hace": "desaparece",
-       "con": "polvo"
-      }
-     ]
-    },
-    {
-     "id": "maui",
-     "como": "maui_oficial",
-     "x": 300,
-     "escala": 0.9,
-     "props": {
-      "objeto": null
-     },
-     "pasos": [
-      {
-       "en": 1,
-       "hace": "enoja"
-      },
-      {
-       "en": 1.9,
-       "hace": "corre",
-       "a": 1300,
-       "dur": 1.5
-      },
-      {
-       "en": 3.8,
-       "hace": "golpea"
-      }
-     ]
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 3,
-     "texto": {
-      "es": "AL NORTE DE LAHAINA",
-      "en": "NORTH OF LAHAINA"
-     },
-     "x": 960,
-     "y": 230,
-     "hasta": 4
-    }
-   ]
-  },
-  {
-   "id": "haleakala",
-   "fondo": "haleakala",
-   "camara": {
-    "de": 0,
-    "a": 80,
-    "zoom": [
-     1,
-     1.05
-    ]
-   },
-   "frases": [
-    {
-     "es": "Aun hoy, nubes oscuras bajan a veces por las laderas de Haleakalā, la gran montaña de Māui.",
-     "en": "Even now, dark clouds sometimes sink low on the slopes of Haleakalā, Māui’s great mountain."
-    },
-    {
-     "es": "Traen lluvia fuerte a una colina llamada Kauiki.",
-     "en": "They bring heavy rain to a hill called Kauiki."
-    },
-    {
-     "es": "Pero la historia dice que nunca se atreven a quedarse. Temen que Māui venga y las arroje lejos.",
-     "en": "But the old story says they never dare to stay. They fear Māui will come and hurl them away."
-    },
-    {
-     "es": "Haleakalā significa «casa del sol». Recuerda ese nombre.",
-     "en": "Haleakalā means “house of the sun.” Remember that name."
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "nube",
-     "x": 700,
-     "y": 420,
-     "s": 2.4,
-     "capa": "frente"
-    },
-    {
-     "tipo": "nube",
-     "x": 1200,
-     "y": 460,
-     "s": 2,
-     "capa": "frente"
-    }
-   ],
-   "actores": [
-    {
-     "id": "maui",
-     "como": "maui_oficial",
-     "x": 1450,
-     "escala": 1,
-     "pasos": [
-      {
-       "en": 2.1,
-       "hace": "aparece",
-       "con": "luz"
-      },
-      {
-       "en": 2.5,
-       "hace": "lanza"
-      },
-      {
-       "en": 3.3,
-       "hace": "senala"
-      }
-     ]
-    }
-   ],
-   "efectos": [
-    {
-     "en": 1,
-     "tipo": "lluvia",
-     "dur": 1.5,
-     "intensidad": 0.5
-    },
-    {
-     "en": 2.6,
-     "tipo": "aclarar",
-     "dur": 1
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 2,
-     "texto": {
-      "es": "POR ESO LAS NUBES NO SE QUEDAN",
-      "en": "THAT’S WHY THE CLOUDS DON’T STAY LONG"
-     },
-     "x": 960,
-     "y": 230,
-     "hasta": 4,
-     "estilo": "porque"
-    }
-   ]
-  },
-  {
-   "id": "otras",
-   "fondo": "cielo_navegante",
-   "camara": {
-    "de": 0,
-    "a": 250,
-    "zoom": [
-     1,
-     1.05
-    ]
-   },
-   "frases": [
-    {
-     "es": "Māui es conocido en todo el Pacífico, y cada isla cuenta a su manera la historia del cielo.",
-     "en": "Māui is known all across the Pacific, and every island tells the sky story its own way."
-    },
-    {
-     "es": "En Samoa lo llaman Tiʻitiʻi. Dicen que apoyó los pies contra las rocas y empujó.",
-     "en": "In Samoa, he is called Tiʻitiʻi. People say he braced his feet against rocks and pushed."
-    },
-    {
-     "es": "En otro relato de Samoa, una mujer premia al que levanta el cielo con un trago de su cáscara de coco.",
-     "en": "In another Samoan story, a woman rewards the man who lifts the sky with a drink from her coconut shell."
-    },
-    {
-     "es": "En Manihiki, en las islas Cook, Māui y su padre Ru empujan el cielo desde dos lados.",
-     "en": "On Manihiki, in the Cook Islands, Māui and his father Ru push the sky from two sides."
-    },
-    {
-     "es": "Luego lo alisan con hachas de piedra, hasta dejarlo como una cúpula azul y limpia.",
-     "en": "Then they smooth it with stone adzes, until it is a clean blue dome."
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "petroglifo",
-     "x": 520,
-     "s": 1,
-     "props": {
-      "figura": "persona"
-     }
-    },
-    {
-     "tipo": "petroglifo",
-     "x": 1500,
-     "s": 1,
-     "props": {
-      "figura": "persona"
-     }
-    }
-   ],
-   "actores": [
-    {
-     "id": "tiiti",
-     "como": "maui_oficial",
-     "x": 700,
-     "rotulo": "TIʻITIʻI · SAMOA",
-     "escala": 0.9,
-     "props": {
-      "objeto": null
-     },
-     "pasos": [
-      {
-       "en": 1,
-       "hace": "aparece"
-      },
-      {
-       "en": 1.5,
-       "hace": "levanta"
-      },
-      {
-       "en": 3,
-       "hace": "desaparece"
-      }
-     ]
-    },
-    {
-     "id": "ru",
-     "como": "ru_oficial",
-     "x": 1380,
-     "rotulo": "RU · MANIHIKI",
-     "escala": 1,
-     "pasos": [
-      {
-       "en": 3,
-       "hace": "aparece"
-      },
-      {
-       "en": 3.4,
-       "hace": "levanta"
-      }
-     ]
-    },
-    {
-     "id": "maui2",
-     "como": "maui_oficial",
-     "x": 1020,
-     "rotulo": "MĀUI · MANIHIKI",
-     "escala": 0.9,
-     "props": {
-      "objeto": null
-     },
-     "pasos": [
-      {
-       "en": 3,
-       "hace": "aparece"
-      },
-      {
-       "en": 3.4,
-       "hace": "levanta"
-      },
-      {
-       "en": 4.2,
-       "hace": "golpea"
-      }
-     ]
-    },
-    {
-     "id": "mujer",
-     "como": "hawaiana_c_oficial",
-     "x": 1000,
-     "rotulo": "SAMOA",
-     "pasos": [
-      {
-       "en": 2,
-       "hace": "aparece"
-      },
-      {
-       "en": 2.4,
-       "hace": "ofrece"
-      },
-      {
-       "en": 2.9,
-       "hace": "desaparece"
-      }
-     ]
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 0.3,
-     "texto": {
-      "es": "POLINESIA",
-      "en": "POLYNESIA"
-     },
-     "x": 960,
-     "y": 200,
-     "hasta": 1
-    }
-   ]
-  },
-  {
-   "id": "alto",
-   "fondo": "valle",
-   "camara": {
-    "de": 0,
-    "a": 150,
-    "zoom": [
-     1,
-     1.05
-    ]
-   },
-   "frases": [
-    {
-     "es": "Ahora el cielo estaba alto y el mundo podía respirar.",
-     "en": "Now the sky was high, and the world could breathe."
-    },
-    {
-     "es": "La gente caminaba erguida. La luz inundó los valles.",
-     "en": "People walked upright. Light flooded the valleys."
-    },
-    {
-     "es": "Las plantas podían crecer altas y las nubes flotaban muy por encima de las montañas.",
-     "en": "Plants could grow tall, and the clouds drifted far above the mountains."
-    },
-    {
-     "es": "Pero un cielo alto también dejó un camino abierto por los cielos. Y alguien estaba por correr por él.",
-     "en": "But a high sky also left a wide-open road across the heavens. And someone was about to race along it."
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "kalo",
-     "x": 500,
-     "s": 1.6
-    },
-    {
-     "tipo": "niu",
-     "x": 1500,
-     "s": 1.2
-    },
-    {
-     "tipo": "hale",
-     "x": 800,
-     "s": 0.9,
-     "capa": "fondo"
-    },
-    {
-     "tipo": "nube",
-     "x": 700,
-     "y": 160,
-     "s": 1.6,
-     "capa": "fondo"
-    }
-   ],
-   "actores": [
-    {
-     "id": "v1",
-     "como": "hawaiano_oficial",
-     "x": 1000,
-     "rotulo": "",
-     "pasos": [
-      {
-       "en": 0.4,
-       "hace": "aparece"
-      },
-      {
-       "en": 0.8,
-       "hace": "camina",
-       "a": 1130,
-       "dur": 1.5
-      }
-     ]
-    },
-    {
-     "id": "v2",
-     "como": "hawaiana_b_oficial",
-     "x": 1370,
-     "rotulo": "",
-     "pasos": [
-      {
-       "en": 0.6,
-       "hace": "aparece"
-      },
-      {
-       "en": 1.2,
-       "hace": "alegra"
-      }
-     ]
-    },
-    {
-     "id": "nino",
-     "como": "nino_hawaiano_oficial",
-     "x": 1560,
-     "rotulo": "",
-     "pasos": [
-      {
-       "en": 1,
-       "hace": "aparece"
-      },
-      {
-       "en": 1.8,
-       "hace": "salta"
-      }
-     ]
-    }
-   ],
-   "efectos": [
-    {
-     "en": 0,
-     "tipo": "luz",
-     "dur": 3
-    }
-   ]
-  },
-  {
-   "id": "cierre",
-   "fondo": "costa",
-   "camara": {
-    "de": 0,
-    "a": 100,
-    "zoom": [
-     1,
-     1.05
-    ]
-   },
-   "frases": [
-    {
-     "es": "Mientras tanto, Hina trabajaba haciendo kapa, la tela que usaba su familia.",
-     "en": "Meanwhile, Hina was hard at work making kapa, the cloth her family wore."
-    },
-    {
-     "es": "La extendió al sol para que se secara.",
-     "en": "She spread it out in the sun to dry."
-    },
-    {
-     "es": "Pero el sol corría por el nuevo cielo alto, y la tela seguía mojada.",
-     "en": "But the sun raced across the new, high sky, and the cloth stayed wet."
-    },
-    {
-     "es": "¿Cuál historia del cielo es tu favorita: la hawaiana, la samoana o la de Manihiki? Cuéntanos en los comentarios.",
-     "en": "Which sky story is your favorite: Hawaiian, Samoan or Manihiki? Tell us in the comments."
-    },
-    {
-     "es": "La próxima vez, Māui va a atrapar al sol. Es El sol que corría demasiado.",
-     "en": "Next time, Māui goes to catch the sun. It is The Sun Who Ran Too Fast."
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "hale",
-     "x": 1650,
-     "s": 1,
-     "capa": "fondo"
-    },
-    {
-     "tipo": "niu",
-     "x": 300,
-     "s": 1.1
-    }
-   ],
-   "actores": [
-    {
-     "id": "hina",
-     "como": "hina_oficial",
-     "x": 900,
-     "pasos": [
-      {
-       "en": 0,
-       "hace": "golpea"
-      },
-      {
-       "en": 1.2,
-       "hace": "levanta"
-      },
-      {
-       "en": 2.3,
-       "hace": "lamenta"
-      }
-     ]
-    },
-    {
-     "id": "maui",
-     "como": "maui_oficial",
-     "x": 1250,
-     "escala": 0.9,
-     "props": {
-      "objeto": null
-     },
-     "pasos": [
-      {
-       "en": 2.8,
-       "hace": "aparece"
-      },
-      {
-       "en": 4,
-       "hace": "senala"
-      }
-     ]
-    }
-   ],
-   "efectos": [
-    {
-     "en": 2,
-     "tipo": "luz",
-     "dur": 1.2
-    }
-   ]
   }
- ],
- "shorts": [
-  {
-   "gancho": {
-    "es": "Un trago de agua para levantar el cielo",
-    "en": "One drink of water to lift the sky"
-   },
-   "escena": "calabaza",
-   "desde": 0,
-   "hasta": 4,
-   "foco": 1000
-  },
-  {
-   "gancho": {
-    "es": "Māui empuja el cielo hasta las montañas",
-    "en": "Māui pushes the sky up past the mountains"
-   },
-   "escena": "empuje",
-   "desde": 0,
-   "hasta": 4,
-   "foco": 960
-  },
-  {
-   "gancho": {
-    "es": "El hombre que se rio de Māui y se volvió roca",
-    "en": "The man who laughed at Māui and turned to stone"
-   },
-   "escena": "burla",
-   "desde": 0,
-   "hasta": 5,
-   "foco": 900
-  }
- ]
 }

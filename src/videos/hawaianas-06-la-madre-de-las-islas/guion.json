@@ -1,968 +1,1000 @@
 {
- "id": "hawaianas-06-la-madre-de-las-islas",
- "serie": "hawaianas",
- "numero": "06",
- "titulo": {
-  "es": "La madre de las islas",
-  "en": "The Mother of the Islands"
- },
- "tituloGriego": "THE MOTHER OF THE ISLANDS",
- "miniatura": {
-  "heroe": "papa_oficial",
-  "rival": "wakea_oficial"
- },
- "siguiente": {
-  "es": "El niño estrella y el taro",
-  "en": "The Star Child and the Taro"
- },
- "escenas": [
-  {
-   "id": "gancho",
-   "fondo": "oceano",
-   "camara": {
-    "de": 0,
-    "a": 0,
-    "zoom": [
-     1,
-     1.08
-    ]
-   },
-   "frases": [
-    {
-     "es": "La última vez, Wākea hizo el cielo, el sol, la luna y el mar con una gran calabaza.",
-     "en": "Last time, Wākea made the sky, the sun, the moon and the sea out of one great calabash."
-    },
-    {
-     "es": "Pero el océano estaba vacío. No había ni una sola isla.",
-     "en": "But the ocean was empty. There was not a single island in it."
-    },
-    {
-     "es": "Junto al mar estaban Papa, la Madre Tierra, y Wākea, el Padre Cielo.",
-     "en": "Beside the sea stood Papa, the Earth Mother, and Wākea, the Sky Father."
-    },
-    {
-     "es": "Los cantos antiguos dicen que de ellos nacieron las islas, una tras otra, como hijos.",
-     "en": "The old chants say that islands were born from them, one after another, like children."
-    },
-    {
-     "es": "Este relato viene de Pakui, un sacerdote de Molokaʻi que vivió en tiempos de Kamehameha.",
-     "en": "This telling comes from Pakui, a priest of Molokaʻi who lived in the time of Kamehameha."
-    }
-   ],
-   "actores": [
-    {
-     "id": "wakea",
-     "x": 660,
-     "mira": "der",
-     "pasos": [
-      {
-       "en": 0,
-       "hace": "aparece",
-       "con": "luz"
-      },
-      {
-       "en": 2,
-       "hace": "habla"
-      }
-     ],
-     "como": "wakea_oficial"
-    },
-    {
-     "id": "papa",
-     "x": 1260,
-     "mira": "izq",
-     "rotulo": "PAPA",
-     "pasos": [
-      {
-       "en": 0.3,
-       "hace": "aparece",
-       "con": "luz"
-      },
-      {
-       "en": 3,
-       "hace": "abraza"
-      }
-     ],
-     "como": "papa_oficial"
-    }
-   ],
-   "efectos": [
-    {
-     "en": 1,
-     "tipo": "oscurecer",
-     "dur": 1.5,
-     "intensidad": 0.2
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 4,
-     "texto": {
-      "es": "CANTO DE PAKUI",
-      "en": "CHANT OF PAKUI"
-     },
-     "x": 960,
-     "y": 250
-    }
-   ]
+  "id": "hawaianas-06-la-madre-de-las-islas",
+  "serie": "hawaianas",
+  "numero": "06",
+  "titulo": {
+    "es": "La madre de las islas",
+    "en": "The Mother of the Islands"
   },
-  {
-   "id": "hawaii",
-   "fondo": "volcan",
-   "camara": {
-    "de": 0,
-    "a": 120,
-    "zoom": [
-     1,
-     1.06
-    ]
-   },
-   "frases": [
-    {
-     "es": "En este canto, el primer hijo fue Hawaiʻi. Hoy lo llamamos la Isla Grande.",
-     "en": "In this chant, the first child was Hawaiʻi. Today we call it the Big Island."
-    },
-    {
-     "es": "Salió del mar, enorme y fuerte. Sigue siendo la isla más grande de todo el archipiélago.",
-     "en": "It rose from the sea, huge and strong. It is still the largest island in the chain."
-    },
-    {
-     "es": "El fuego aún arde dentro de sus montañas, y todavía se forma tierra nueva allí.",
-     "en": "Fire still burns inside its mountains, and new land is still being made there."
-    },
-    {
-     "es": "Con el tiempo, su nombre se usó para todo el grupo de islas.",
-     "en": "In time, its name was used for the whole group of islands."
-    }
-   ],
-   "actores": [
-    {
-     "id": "papa",
-     "x": 620,
-     "mira": "der",
-     "rotulo": "PAPA",
-     "pasos": [
-      {
-       "en": 0,
-       "hace": "aparece"
-      },
-      {
-       "en": 0.4,
-       "hace": "abraza"
-      },
-      {
-       "en": 1.5,
-       "hace": "alegra"
-      }
-     ],
-     "como": "papa_oficial"
-    },
-    {
-     "id": "wakea",
-     "x": 1000,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 0.2,
-       "hace": "aparece"
-      },
-      {
-       "en": 1,
-       "hace": "asiente"
-      }
-     ],
-     "como": "wakea_oficial"
-    }
-   ],
-   "efectos": [
-    {
-     "en": 0.3,
-     "tipo": "temblor",
-     "dur": 1.2
-    },
-    {
-     "en": 0.3,
-     "tipo": "polvo",
-     "x": 1400,
-     "dur": 1.5
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 0.5,
-     "texto": {
-      "es": "HAWAIʻI",
-      "en": "HAWAIʻI"
-     },
-     "x": 1400,
-     "y": 250,
-     "hasta": 3
-    }
-   ]
+  "tituloGriego": "THE MOTHER OF THE ISLANDS",
+  "miniatura": {
+    "heroe": "papa_oficial",
+    "rival": "wakea_oficial"
   },
-  {
-   "id": "maui",
-   "fondo": "haleakala",
-   "camara": {
-    "de": 0,
-    "a": 120,
-    "zoom": [
-     1,
-     1.06
-    ]
-   },
-   "frases": [
-    {
-     "es": "Después Papa dio a luz a Maui, la segunda isla.",
-     "en": "Next, Papa gave birth to Maui, the second island."
-    },
-    {
-     "es": "Tiene una enorme montaña llamada Haleakalā, la Casa del Sol.",
-     "en": "It has a huge mountain called Haleakalā, the House of the Sun."
-    },
-    {
-     "es": "Luego vino Kahoʻolawe, una isla pequeña y seca. Fue un parto difícil para Papa.",
-     "en": "Then came Kahoʻolawe, a small, dry island. It was a hard birth for Papa."
-    }
-   ],
-   "actores": [
-    {
-     "id": "papa",
-     "x": 700,
-     "mira": "der",
-     "rotulo": "PAPA",
-     "pasos": [
-      {
-       "en": 0,
-       "hace": "aparece"
-      },
-      {
-       "en": 0.4,
-       "hace": "abraza"
-      },
-      {
-       "en": 2,
-       "hace": "lamenta"
-      }
-     ],
-     "como": "papa_oficial"
-    },
-    {
-     "id": "wakea",
-     "x": 1060,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 0.2,
-       "hace": "aparece"
-      },
-      {
-       "en": 2,
-       "hace": "entristece"
-      }
-     ],
-     "como": "wakea_oficial"
-    }
-   ],
-   "efectos": [
-    {
-     "en": 0.2,
-     "tipo": "temblor",
-     "dur": 1
-    },
-    {
-     "en": 2,
-     "tipo": "temblor",
-     "dur": 1.2,
-     "intensidad": 0.6
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 0.5,
-     "texto": {
-      "es": "MAUI",
-      "en": "MAUI"
-     },
-     "x": 1400,
-     "y": 250,
-     "hasta": 2
-    },
-    {
-     "en": 2,
-     "texto": {
-      "es": "KAHOʻOLAWE",
-      "en": "KAHOʻOLAWE"
-     },
-     "x": 1400,
-     "y": 250,
-     "hasta": 3
-    }
-   ]
+  "siguiente": {
+    "es": "El niño estrella y el taro",
+    "en": "The Star Child and the Taro"
   },
-  {
-   "id": "papa-se-va",
-   "fondo": "costa",
-   "camara": {
-    "de": 0,
-    "a": 150,
-    "zoom": [
-     1,
-     1.05
-    ]
-   },
-   "frases": [
+  "escenas": [
     {
-     "es": "Entonces Papa se fue a Kahiki, su lejana tierra natal al otro lado del mar.",
-     "en": "Then Papa went away to Kahiki, her far-off homeland across the sea."
+      "id": "gancho",
+      "fondo": "oceano",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "La última vez, Wākea hizo el cielo, el sol, la luna y el mar con una gran calabaza.",
+          "en": "Last time, Wākea made the sky, the sun, the moon and the sea out of one great calabash."
+        },
+        {
+          "es": "Pero el océano estaba vacío. No había ni una sola isla.",
+          "en": "But the ocean was empty. There was not a single island in it."
+        },
+        {
+          "es": "Junto al mar estaban Papa, la Madre Tierra, y Wākea, el Padre Cielo.",
+          "en": "Beside the sea stood Papa, the Earth Mother, and Wākea, the Sky Father."
+        },
+        {
+          "es": "Los cantos antiguos dicen que de ellos nacieron las islas, una tras otra, como hijos.",
+          "en": "The old chants say that islands were born from them, one after another, like children."
+        },
+        {
+          "es": "Este relato viene de Pakui, un sacerdote de Molokaʻi que vivió en tiempos de Kamehameha.",
+          "en": "This telling comes from Pakui, a priest of Molokaʻi who lived in the time of Kamehameha."
+        }
+      ],
+      "actores": [
+        {
+          "id": "wakea",
+          "x": 660,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "habla"
+            }
+          ],
+          "como": "wakea_oficial"
+        },
+        {
+          "id": "papa",
+          "x": 1260,
+          "mira": "izq",
+          "rotulo": "PAPA",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "abraza"
+            }
+          ],
+          "como": "papa_oficial"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "dur": 1.5,
+          "intensidad": 0.2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "CANTO DE PAKUI",
+            "en": "CHANT OF PAKUI"
+          },
+          "x": 960,
+          "y": 250
+        }
+      ]
     },
     {
-     "es": "Mientras estaba ausente, Wākea tomó por esposa a Kaʻula. Su hijo fue Lānaʻi.",
-     "en": "While she was gone, Wākea took a wife named Kaʻula. Their child was Lānaʻi."
+      "id": "hawaii",
+      "fondo": "volcan",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "En este canto, el primer hijo fue Hawaiʻi. Hoy lo llamamos la Isla Grande.",
+          "en": "In this chant, the first child was Hawaiʻi. Today we call it the Big Island."
+        },
+        {
+          "es": "Salió del mar, enorme y fuerte. Sigue siendo la isla más grande de todo el archipiélago.",
+          "en": "It rose from the sea, huge and strong. It is still the largest island in the chain."
+        },
+        {
+          "es": "El fuego aún arde dentro de sus montañas, y todavía se forma tierra nueva allí.",
+          "en": "Fire still burns inside its mountains, and new land is still being made there."
+        },
+        {
+          "es": "Con el tiempo, su nombre se usó para todo el grupo de islas.",
+          "en": "In time, its name was used for the whole group of islands."
+        }
+      ],
+      "actores": [
+        {
+          "id": "papa",
+          "x": 620,
+          "mira": "der",
+          "rotulo": "PAPA",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.4,
+              "hace": "abraza"
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            }
+          ],
+          "como": "papa_oficial"
+        },
+        {
+          "id": "wakea",
+          "x": 1000,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "asiente"
+            }
+          ],
+          "como": "wakea_oficial"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.3,
+          "tipo": "temblor",
+          "dur": 1.2
+        },
+        {
+          "en": 0.3,
+          "tipo": "polvo",
+          "x": 1400,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.5,
+          "texto": {
+            "es": "HAWAIʻI",
+            "en": "HAWAIʻI"
+          },
+          "x": 1400,
+          "y": 250,
+          "hasta": 3
+        }
+      ]
     },
     {
-     "es": "Tomó otra esposa, llamada Hina. Su hijo fue Molokaʻi.",
-     "en": "He took another wife, named Hina. Their child was Molokaʻi."
+      "id": "maui",
+      "fondo": "haleakala",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Después Papa dio a luz a Maui, la segunda isla.",
+          "en": "Next, Papa gave birth to Maui, the second island."
+        },
+        {
+          "es": "Tiene una enorme montaña llamada Haleakalā, la Casa del Sol.",
+          "en": "It has a huge mountain called Haleakalā, the House of the Sun."
+        },
+        {
+          "es": "Luego vino Kahoʻolawe, una isla pequeña y seca. Fue un parto difícil para Papa.",
+          "en": "Then came Kahoʻolawe, a small, dry island. It was a hard birth for Papa."
+        }
+      ],
+      "actores": [
+        {
+          "id": "papa",
+          "x": 700,
+          "mira": "der",
+          "rotulo": "PAPA",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.4,
+              "hace": "abraza"
+            },
+            {
+              "en": 2,
+              "hace": "lamenta"
+            }
+          ],
+          "como": "papa_oficial"
+        },
+        {
+          "id": "wakea",
+          "x": 1060,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "entristece"
+            }
+          ],
+          "como": "wakea_oficial"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.2,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "temblor",
+          "dur": 1.2,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.5,
+          "texto": {
+            "es": "MAUI",
+            "en": "MAUI"
+          },
+          "x": 1400,
+          "y": 250,
+          "hasta": 2
+        },
+        {
+          "en": 2,
+          "texto": {
+            "es": "KAHOʻOLAWE",
+            "en": "KAHOʻOLAWE"
+          },
+          "x": 1400,
+          "y": 250,
+          "hasta": 3
+        }
+      ]
     },
     {
-     "es": "Cuando Papa volvió y se enteró, sintió celos y dolor.",
-     "en": "When Papa came home and heard the news, she felt hurt and jealous."
+      "id": "papa-se-va",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 150,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Papa se fue a Kahiki, su lejana tierra natal al otro lado del mar.",
+          "en": "Then Papa went away to Kahiki, her far-off homeland across the sea."
+        },
+        {
+          "es": "Mientras estaba ausente, Wākea tomó por esposa a Kaʻula. Su hijo fue Lānaʻi.",
+          "en": "While she was gone, Wākea took a wife named Kaʻula. Their child was Lānaʻi."
+        },
+        {
+          "es": "Tomó otra esposa, llamada Hina. Su hijo fue Molokaʻi.",
+          "en": "He took another wife, named Hina. Their child was Molokaʻi."
+        },
+        {
+          "es": "Cuando Papa volvió y se enteró, sintió celos y dolor.",
+          "en": "When Papa came home and heard the news, she felt hurt and jealous."
+        }
+      ],
+      "actores": [
+        {
+          "id": "papa",
+          "x": 500,
+          "mira": "der",
+          "rotulo": "PAPA",
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "sale"
+            },
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 420
+            },
+            {
+              "en": 3.5,
+              "hace": "lamenta"
+            }
+          ],
+          "como": "papa_oficial"
+        },
+        {
+          "id": "wakea",
+          "x": 1000,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "habla"
+            }
+          ],
+          "como": "wakea_oficial"
+        },
+        {
+          "id": "kaula",
+          "x": 1300,
+          "mira": "izq",
+          "como": "kaula_oficial",
+          "rotulo": "KAʻULA",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "hina",
+          "x": 1600,
+          "mira": "izq",
+          "como": "hina_oficial",
+          "rotulo": "HINA",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": []
+    },
+    {
+      "id": "oahu",
+      "fondo": "valle",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Papa estaba herida y enojada. Así que tomó un nuevo esposo, un hombre llamado Lua.",
+          "en": "Papa was hurt and angry. So she took a new husband, a man named Lua."
+        },
+        {
+          "es": "Su hijo fue Oʻahu, la isla donde hoy se alza la ciudad de Honolulu.",
+          "en": "Their child was Oʻahu, the island where the city of Honolulu stands today."
+        },
+        {
+          "es": "Si fueras Papa, ¿habrías perdonado a Wākea? Cuéntanos en los comentarios.",
+          "en": "If you were Papa, would you have forgiven Wākea? Tell us in the comments."
+        },
+        {
+          "es": "Pero Papa y Wākea no se quedaron separados para siempre.",
+          "en": "But Papa and Wākea did not stay apart forever."
+        }
+      ],
+      "actores": [
+        {
+          "id": "papa",
+          "x": 700,
+          "mira": "der",
+          "rotulo": "PAPA",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "enoja"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            }
+          ],
+          "como": "papa_oficial"
+        },
+        {
+          "id": "hawaiano",
+          "x": 1050,
+          "mira": "izq",
+          "rotulo": "LUA",
+          "pasos": [
+            {
+              "en": 0.7,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "habla"
+            }
+          ],
+          "como": "hawaiano_c_oficial"
+        },
+        {
+          "id": "wakea",
+          "x": 1600,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "entristece"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1400
+            }
+          ],
+          "como": "wakea_oficial"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 1,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "OʻAHU",
+            "en": "OʻAHU"
+          },
+          "x": 1050,
+          "y": 200,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "kauai",
+      "fondo": "valle_cascada",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por fin, Papa y Wākea volvieron a vivir juntos.",
+          "en": "At last, Papa and Wākea lived together again."
+        },
+        {
+          "es": "Su hijo fue Kauaʻi, la isla verde en el extremo de la cadena.",
+          "en": "Their child was Kauaʻi, the green island at the far end of the chain."
+        },
+        {
+          "es": "Luego vino la pequeña Niʻihau. El canto la llama la placenta de Kauaʻi.",
+          "en": "Then came little Niʻihau. The chant calls it the afterbirth of Kauaʻi."
+        },
+        {
+          "es": "La diminuta roca de Lehua marca su límite. Papa había llenado el mar vacío con sus hijos.",
+          "en": "The tiny rock of Lehua marks its border. Now Papa had filled the empty sea with her children."
+        }
+      ],
+      "actores": [
+        {
+          "id": "papa",
+          "x": 760,
+          "mira": "der",
+          "rotulo": "PAPA",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "abraza"
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            }
+          ],
+          "como": "papa_oficial"
+        },
+        {
+          "id": "wakea",
+          "x": 1100,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "abraza"
+            },
+            {
+              "en": 3,
+              "hace": "asiente"
+            }
+          ],
+          "como": "wakea_oficial"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "temblor",
+          "dur": 1,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "destello",
+          "x": 1500,
+          "y": 420,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "KAUAʻI",
+            "en": "KAUAʻI"
+          },
+          "x": 1500,
+          "y": 200,
+          "hasta": 3
+        },
+        {
+          "en": 2.2,
+          "texto": {
+            "es": "NIʻIHAU",
+            "en": "NIʻIHAU"
+          },
+          "x": 1500,
+          "y": 200,
+          "hasta": 4
+        }
+      ]
+    },
+    {
+      "id": "versiones",
+      "fondo": "aldea",
+      "camara": {
+        "de": 0,
+        "a": 120,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los cantos no coinciden del todo. Cada uno cuenta el nacimiento de las islas un poco distinto.",
+          "en": "The chants do not all agree. Each one tells the birth of the islands a little differently."
+        },
+        {
+          "es": "Otro canto, también de Molokaʻi, nombra otros padres y otros jefes para las islas.",
+          "en": "Another chant, also from Molokaʻi, names other parents and chiefs for the islands."
+        },
+        {
+          "es": "Uno sigue a Papa y sus sentimientos. El otro sigue a los jefes que gobernaron cada isla.",
+          "en": "One follows Papa and her feelings. The other follows the chiefs who ruled each island."
+        },
+        {
+          "es": "Kamakau agrega que las islas tenían nombres más antiguos.",
+          "en": "Kamakau adds that the islands had older names too."
+        },
+        {
+          "es": "Hawaiʻi se llamó Lono-nui-ākea, y Kauaʻi se llamó Kamawaelualani.",
+          "en": "Hawaiʻi was once called Lono-nui-ākea, and Kauaʻi was called Kamawaelualani."
+        },
+        {
+          "es": "Los cantores hawaianos conservaron las dos versiones.",
+          "en": "Hawaiian chanters kept both versions alive."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "hale",
+          "x": 1680,
+          "s": 1
+        },
+        {
+          "tipo": "petroglifo",
+          "x": 380,
+          "s": 0.6,
+          "props": {
+            "figura": "persona"
+          },
+          "en": 1
+        },
+        {
+          "tipo": "petroglifo",
+          "x": 1380,
+          "s": 0.55,
+          "props": {
+            "figura": "espiral"
+          },
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "kahuna",
+          "x": 880,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.4,
+              "hace": "habla"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ],
+          "como": "kahuna_oficial",
+          "rotulo": "KAHUNA"
+        },
+        {
+          "id": "hawaiana",
+          "x": 1160,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 5,
+              "hace": "asiente"
+            }
+          ],
+          "como": "hawaiana_b_oficial"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1.2,
+          "texto": {
+            "es": "OTRA VERSIÓN",
+            "en": "ANOTHER VERSION"
+          },
+          "x": 880,
+          "y": 250,
+          "hasta": 3
+        }
+      ]
+    },
+    {
+      "id": "nombre",
+      "fondo": "oceano",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por eso Papa tiene un segundo nombre: Papahānaumoku.",
+          "en": "That is why Papa has a second name, Papahānaumoku."
+        },
+        {
+          "es": "Significa Papa, de quien nacen las tierras.",
+          "en": "It means Papa, from whom lands are born."
+        },
+        {
+          "es": "Hoy sabemos que las islas realmente se alzaron del fondo del mar, construidas por volcanes.",
+          "en": "Today we know the islands really did rise from the deep sea floor, built by volcanoes."
+        },
+        {
+          "es": "Para los hawaianos, el cielo, el mar y las islas forman una sola familia.",
+          "en": "For Hawaiians, the sky, the sea and the islands belong to one family."
+        }
+      ],
+      "actores": [
+        {
+          "id": "papa",
+          "x": 960,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "brilla",
+              "dur": 1.5
+            },
+            {
+              "en": 3,
+              "hace": "abraza"
+            }
+          ],
+          "como": "papa_oficial",
+          "rotulo": "PAPAHĀNAUMOKU"
+        },
+        {
+          "id": "wakea",
+          "x": 1360,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "asiente"
+            }
+          ],
+          "como": "wakea_oficial"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0.5,
+          "tipo": "destello",
+          "x": 960,
+          "y": 480,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "POR ESO SE LLAMA PAPAHĀNAUMOKU",
+            "en": "THAT'S WHY SHE IS CALLED PAPAHĀNAUMOKU"
+          },
+          "x": 960,
+          "y": 250,
+          "hasta": 2,
+          "estilo": "porque"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "cielo_navegante",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Papa y Wākea tuvieron un hijo más, una hija.",
+          "en": "Papa and Wākea had one more child, a daughter."
+        },
+        {
+          "es": "Se llamaba Hoʻohōkūkalani. Significa la que hace las estrellas en el cielo.",
+          "en": "Her name was Hoʻohōkūkalani. It means the one who makes stars in the sky."
+        },
+        {
+          "es": "Su historia es triste y difícil, y cambió a toda la familia.",
+          "en": "Her story is a sad and difficult one, and it changed the whole family."
+        },
+        {
+          "es": "¿Por qué crees que los cantores recordaban las islas como una gran familia? Cuéntanos en los comentarios.",
+          "en": "Why do you think the old chanters remembered the islands as one big family? Tell us in the comments."
+        },
+        {
+          "es": "La próxima vez conocemos a Hoʻohōkūkalani y al niño de cuya tumba brotó el primer taro. Es El niño estrella y el taro.",
+          "en": "Next time, we meet Hoʻohōkūkalani and the child whose grave grew the first taro. It is The Star Child and the Taro."
+        }
+      ],
+      "actores": [
+        {
+          "id": "wakea",
+          "x": 660,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1300
+            },
+            {
+              "en": 2.5,
+              "hace": "entristece"
+            }
+          ],
+          "como": "wakea_oficial"
+        },
+        {
+          "id": "hoohokukalani",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.8,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "brilla",
+              "dur": 1.5
+            }
+          ],
+          "como": "hoohokukalani_oficial"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 1.2,
+          "tipo": "chispas",
+          "x": 1300,
+          "y": 330,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "PRÓXIMO: EL NIÑO ESTRELLA Y EL TARO",
+            "en": "NEXT: THE STAR CHILD AND THE TARO"
+          },
+          "x": 960,
+          "y": 250
+        }
+      ]
     }
-   ],
-   "actores": [
+  ],
+  "shorts": [
     {
-     "id": "papa",
-     "x": 500,
-     "mira": "der",
-     "rotulo": "PAPA",
-     "pasos": [
-      {
-       "en": 0.6,
-       "hace": "sale"
+      "gancho": {
+        "es": "La primera isla nació de una diosa",
+        "en": "The first island was born from a goddess"
       },
-      {
-       "en": 3,
-       "hace": "entra",
-       "a": 420
-      },
-      {
-       "en": 3.5,
-       "hace": "lamenta"
-      }
-     ],
-     "como": "papa_oficial"
+      "escena": "hawaii",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 850
     },
     {
-     "id": "wakea",
-     "x": 1000,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 0,
-       "hace": "aparece"
+      "gancho": {
+        "es": "¿Habrías perdonado a Wākea?",
+        "en": "Would you have forgiven Wākea?"
       },
-      {
-       "en": 1,
-       "hace": "habla"
-      }
-     ],
-     "como": "wakea_oficial"
+      "escena": "oahu",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
     },
     {
-     "id": "kaula",
-     "x": 1300,
-     "mira": "izq",
-     "como": "kaula_oficial",
-     "rotulo": "KAʻULA",
-     "pasos": [
-      {
-       "en": 1,
-       "hace": "aparece"
+      "gancho": {
+        "es": "Papa llenó el mar vacío con sus hijos",
+        "en": "Papa filled the empty sea with her children"
       },
-      {
-       "en": 1.5,
-       "hace": "alegra"
-      }
-     ]
-    },
-    {
-     "id": "hina",
-     "x": 1600,
-     "mira": "izq",
-     "como": "hina_oficial",
-     "rotulo": "HINA",
-     "pasos": [
-      {
-       "en": 2,
-       "hace": "aparece"
-      },
-      {
-       "en": 2.5,
-       "hace": "alegra"
-      }
-     ]
+      "escena": "kauai",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
     }
-   ],
-   "efectos": []
+  ],
+  "reels": {
+    "ganchos": [
+      {
+        "en": "Ever wanted to know the myths of the ancient world? I tell them as simple stories, so you can remember them without having to study books. Follow for a new myth every day. Today: The Mother of the Islands."
+      },
+      {
+        "en": "The Mother of the Islands, part 2."
+      },
+      {
+        "en": "The Mother of the Islands, part 3."
+      }
+    ],
+    "pausas": {
+      "Ever wanted to know the myths of the ancient world?": 0.1,
+      "I tell them as simple stories, so you can remember them without having to study books.": 0.1,
+      "Follow for a new myth every day.": 0.1
+    },
+    "tempos": {
+      "gancho": 1.25
+    },
+    "final": {
+      "en": "Follow for a new myth every day."
+    }
   },
-  {
-   "id": "oahu",
-   "fondo": "valle",
-   "camara": {
-    "de": 0,
-    "a": 120,
-    "zoom": [
-     1,
-     1.05
-    ]
-   },
-   "frases": [
-    {
-     "es": "Papa estaba herida y enojada. Así que tomó un nuevo esposo, un hombre llamado Lua.",
-     "en": "Papa was hurt and angry. So she took a new husband, a man named Lua."
+  "youtube": {
+    "gancho": {
+      "en": "Ever wanted to know the myths of the ancient world? I tell them as simple stories, so you can remember them without having to study books. Follow for a new myth every day. Today: The Mother of the Islands."
     },
-    {
-     "es": "Su hijo fue Oʻahu, la isla donde hoy se alza la ciudad de Honolulu.",
-     "en": "Their child was Oʻahu, the island where the city of Honolulu stands today."
-    },
-    {
-     "es": "Si fueras Papa, ¿habrías perdonado a Wākea? Cuéntanos en los comentarios.",
-     "en": "If you were Papa, would you have forgiven Wākea? Tell us in the comments."
-    },
-    {
-     "es": "Pero Papa y Wākea no se quedaron separados para siempre.",
-     "en": "But Papa and Wākea did not stay apart forever."
+    "final": {
+      "en": "Follow for a new myth every day."
     }
-   ],
-   "actores": [
-    {
-     "id": "papa",
-     "x": 700,
-     "mira": "der",
-     "rotulo": "PAPA",
-     "pasos": [
-      {
-       "en": 0,
-       "hace": "aparece"
-      },
-      {
-       "en": 0.3,
-       "hace": "enoja"
-      },
-      {
-       "en": 1,
-       "hace": "alegra"
-      }
-     ],
-     "como": "papa_oficial"
-    },
-    {
-     "id": "hawaiano",
-     "x": 1050,
-     "mira": "izq",
-     "rotulo": "LUA",
-     "pasos": [
-      {
-       "en": 0.7,
-       "hace": "aparece"
-      },
-      {
-       "en": 1,
-       "hace": "habla"
-      }
-     ],
-     "como": "hawaiano_c_oficial"
-    },
-    {
-     "id": "wakea",
-     "x": 1600,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 1.5,
-       "hace": "aparece"
-      },
-      {
-       "en": 2,
-       "hace": "entristece"
-      },
-      {
-       "en": 3,
-       "hace": "camina",
-       "a": 1400
-      }
-     ],
-     "como": "wakea_oficial"
-    }
-   ],
-   "efectos": [
-    {
-     "en": 1,
-     "tipo": "temblor",
-     "dur": 1,
-     "intensidad": 0.6
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 1.2,
-     "texto": {
-      "es": "OʻAHU",
-      "en": "OʻAHU"
-     },
-     "x": 1050,
-     "y": 200,
-     "hasta": 3
-    }
-   ]
-  },
-  {
-   "id": "kauai",
-   "fondo": "valle_cascada",
-   "camara": {
-    "de": 0,
-    "a": 120,
-    "zoom": [
-     1,
-     1.05
-    ]
-   },
-   "frases": [
-    {
-     "es": "Por fin, Papa y Wākea volvieron a vivir juntos.",
-     "en": "At last, Papa and Wākea lived together again."
-    },
-    {
-     "es": "Su hijo fue Kauaʻi, la isla verde en el extremo de la cadena.",
-     "en": "Their child was Kauaʻi, the green island at the far end of the chain."
-    },
-    {
-     "es": "Luego vino la pequeña Niʻihau. El canto la llama la placenta de Kauaʻi.",
-     "en": "Then came little Niʻihau. The chant calls it the afterbirth of Kauaʻi."
-    },
-    {
-     "es": "La diminuta roca de Lehua marca su límite. Papa había llenado el mar vacío con sus hijos.",
-     "en": "The tiny rock of Lehua marks its border. Now Papa had filled the empty sea with her children."
-    }
-   ],
-   "actores": [
-    {
-     "id": "papa",
-     "x": 760,
-     "mira": "der",
-     "rotulo": "PAPA",
-     "pasos": [
-      {
-       "en": 0,
-       "hace": "aparece"
-      },
-      {
-       "en": 0.5,
-       "hace": "abraza"
-      },
-      {
-       "en": 3,
-       "hace": "alegra"
-      }
-     ],
-     "como": "papa_oficial"
-    },
-    {
-     "id": "wakea",
-     "x": 1100,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 0,
-       "hace": "aparece"
-      },
-      {
-       "en": 0.5,
-       "hace": "abraza"
-      },
-      {
-       "en": 3,
-       "hace": "asiente"
-      }
-     ],
-     "como": "wakea_oficial"
-    }
-   ],
-   "efectos": [
-    {
-     "en": 1,
-     "tipo": "temblor",
-     "dur": 1,
-     "intensidad": 0.5
-    },
-    {
-     "en": 2,
-     "tipo": "destello",
-     "x": 1500,
-     "y": 420,
-     "dur": 1
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 1.2,
-     "texto": {
-      "es": "KAUAʻI",
-      "en": "KAUAʻI"
-     },
-     "x": 1500,
-     "y": 200,
-     "hasta": 3
-    },
-    {
-     "en": 2.2,
-     "texto": {
-      "es": "NIʻIHAU",
-      "en": "NIʻIHAU"
-     },
-     "x": 1500,
-     "y": 200,
-     "hasta": 4
-    }
-   ]
-  },
-  {
-   "id": "versiones",
-   "fondo": "aldea",
-   "camara": {
-    "de": 0,
-    "a": 120,
-    "zoom": [
-     1,
-     1.05
-    ]
-   },
-   "frases": [
-    {
-     "es": "Los cantos no coinciden del todo. Cada uno cuenta el nacimiento de las islas un poco distinto.",
-     "en": "The chants do not all agree. Each one tells the birth of the islands a little differently."
-    },
-    {
-     "es": "Otro canto, también de Molokaʻi, nombra otros padres y otros jefes para las islas.",
-     "en": "Another chant, also from Molokaʻi, names other parents and chiefs for the islands."
-    },
-    {
-     "es": "Uno sigue a Papa y sus sentimientos. El otro sigue a los jefes que gobernaron cada isla.",
-     "en": "One follows Papa and her feelings. The other follows the chiefs who ruled each island."
-    },
-    {
-     "es": "Kamakau agrega que las islas tenían nombres más antiguos.",
-     "en": "Kamakau adds that the islands had older names too."
-    },
-    {
-     "es": "Hawaiʻi se llamó Lono-nui-ākea, y Kauaʻi se llamó Kamawaelualani.",
-     "en": "Hawaiʻi was once called Lono-nui-ākea, and Kauaʻi was called Kamawaelualani."
-    },
-    {
-     "es": "Los cantores hawaianos conservaron las dos versiones.",
-     "en": "Hawaiian chanters kept both versions alive."
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "hale",
-     "x": 1680,
-     "s": 1
-    },
-    {
-     "tipo": "petroglifo",
-     "x": 380,
-     "s": 0.6,
-     "props": {
-      "figura": "persona"
-     },
-     "en": 1
-    },
-    {
-     "tipo": "petroglifo",
-     "x": 1380,
-     "s": 0.55,
-     "props": {
-      "figura": "espiral"
-     },
-     "en": 2
-    }
-   ],
-   "actores": [
-    {
-     "id": "kahuna",
-     "x": 880,
-     "mira": "der",
-     "pasos": [
-      {
-       "en": 0,
-       "hace": "aparece"
-      },
-      {
-       "en": 0.4,
-       "hace": "habla"
-      },
-      {
-       "en": 2,
-       "hace": "senala"
-      }
-     ],
-     "como": "kahuna_oficial",
-     "rotulo": "KAHUNA"
-    },
-    {
-     "id": "hawaiana",
-     "x": 1160,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 0.5,
-       "hace": "aparece"
-      },
-      {
-       "en": 5,
-       "hace": "asiente"
-      }
-     ],
-     "como": "hawaiana_b_oficial"
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 1.2,
-     "texto": {
-      "es": "OTRA VERSIÓN",
-      "en": "ANOTHER VERSION"
-     },
-     "x": 880,
-     "y": 250,
-     "hasta": 3
-    }
-   ]
-  },
-  {
-   "id": "nombre",
-   "fondo": "oceano",
-   "camara": {
-    "de": 0,
-    "a": 0,
-    "zoom": [
-     1,
-     1.08
-    ]
-   },
-   "frases": [
-    {
-     "es": "Por eso Papa tiene un segundo nombre: Papahānaumoku.",
-     "en": "That is why Papa has a second name, Papahānaumoku."
-    },
-    {
-     "es": "Significa Papa, de quien nacen las tierras.",
-     "en": "It means Papa, from whom lands are born."
-    },
-    {
-     "es": "Hoy sabemos que las islas realmente se alzaron del fondo del mar, construidas por volcanes.",
-     "en": "Today we know the islands really did rise from the deep sea floor, built by volcanoes."
-    },
-    {
-     "es": "Para los hawaianos, el cielo, el mar y las islas forman una sola familia.",
-     "en": "For Hawaiians, the sky, the sea and the islands belong to one family."
-    }
-   ],
-   "actores": [
-    {
-     "id": "papa",
-     "x": 960,
-     "mira": "der",
-     "pasos": [
-      {
-       "en": 0,
-       "hace": "aparece",
-       "con": "luz"
-      },
-      {
-       "en": 0.5,
-       "hace": "brilla",
-       "dur": 1.5
-      },
-      {
-       "en": 3,
-       "hace": "abraza"
-      }
-     ],
-     "como": "papa_oficial",
-     "rotulo": "PAPAHĀNAUMOKU"
-    },
-    {
-     "id": "wakea",
-     "x": 1360,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 0.3,
-       "hace": "aparece"
-      },
-      {
-       "en": 3,
-       "hace": "asiente"
-      }
-     ],
-     "como": "wakea_oficial"
-    }
-   ],
-   "efectos": [
-    {
-     "en": 0.5,
-     "tipo": "destello",
-     "x": 960,
-     "y": 480,
-     "dur": 1
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 0,
-     "texto": {
-      "es": "POR ESO SE LLAMA PAPAHĀNAUMOKU",
-      "en": "THAT'S WHY SHE IS CALLED PAPAHĀNAUMOKU"
-     },
-     "x": 960,
-     "y": 250,
-     "hasta": 2,
-     "estilo": "porque"
-    }
-   ]
-  },
-  {
-   "id": "cierre",
-   "fondo": "cielo_navegante",
-   "camara": {
-    "de": 0,
-    "a": 0,
-    "zoom": [
-     1,
-     1.08
-    ]
-   },
-   "frases": [
-    {
-     "es": "Papa y Wākea tuvieron un hijo más, una hija.",
-     "en": "Papa and Wākea had one more child, a daughter."
-    },
-    {
-     "es": "Se llamaba Hoʻohōkūkalani. Significa la que hace las estrellas en el cielo.",
-     "en": "Her name was Hoʻohōkūkalani. It means the one who makes stars in the sky."
-    },
-    {
-     "es": "Su historia es triste y difícil, y cambió a toda la familia.",
-     "en": "Her story is a sad and difficult one, and it changed the whole family."
-    },
-    {
-     "es": "¿Por qué crees que los cantores recordaban las islas como una gran familia? Cuéntanos en los comentarios.",
-     "en": "Why do you think the old chanters remembered the islands as one big family? Tell us in the comments."
-    },
-    {
-     "es": "La próxima vez conocemos a Hoʻohōkūkalani y al niño de cuya tumba brotó el primer taro. Es El niño estrella y el taro.",
-     "en": "Next time, we meet Hoʻohōkūkalani and the child whose grave grew the first taro. It is The Star Child and the Taro."
-    }
-   ],
-   "actores": [
-    {
-     "id": "wakea",
-     "x": 660,
-     "mira": "der",
-     "pasos": [
-      {
-       "en": 0,
-       "hace": "aparece"
-      },
-      {
-       "en": 2,
-       "hace": "mira",
-       "a": 1300
-      },
-      {
-       "en": 2.5,
-       "hace": "entristece"
-      }
-     ],
-     "como": "wakea_oficial"
-    },
-    {
-     "id": "hoohokukalani",
-     "x": 1300,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 0.8,
-       "hace": "aparece",
-       "con": "luz"
-      },
-      {
-       "en": 1.5,
-       "hace": "brilla",
-       "dur": 1.5
-      }
-     ],
-     "como": "hoohokukalani_oficial"
-    }
-   ],
-   "efectos": [
-    {
-     "en": 1,
-     "tipo": "estrellas"
-    },
-    {
-     "en": 1.2,
-     "tipo": "chispas",
-     "x": 1300,
-     "y": 330,
-     "dur": 1.5
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 4,
-     "texto": {
-      "es": "PRÓXIMO: EL NIÑO ESTRELLA Y EL TARO",
-      "en": "NEXT: THE STAR CHILD AND THE TARO"
-     },
-     "x": 960,
-     "y": 250
-    }
-   ]
   }
- ],
- "shorts": [
-  {
-   "gancho": {
-    "es": "La primera isla nació de una diosa",
-    "en": "The first island was born from a goddess"
-   },
-   "escena": "hawaii",
-   "desde": 0,
-   "hasta": 3,
-   "foco": 850
-  },
-  {
-   "gancho": {
-    "es": "¿Habrías perdonado a Wākea?",
-    "en": "Would you have forgiven Wākea?"
-   },
-   "escena": "oahu",
-   "desde": 0,
-   "hasta": 3,
-   "foco": 900
-  },
-  {
-   "gancho": {
-    "es": "Papa llenó el mar vacío con sus hijos",
-    "en": "Papa filled the empty sea with her children"
-   },
-   "escena": "kauai",
-   "desde": 0,
-   "hasta": 3,
-   "foco": 960
-  }
- ]
 }
