@@ -31,7 +31,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: sudo apt-get update && sudo apt-get install -y libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2t64 fonts-noto-core ffmpeg
+      - run: for i in 1 2 3; do timeout 300 sudo apt-get update -q && timeout 600 sudo apt-get install -o DPkg::Lock::Timeout=60 -y -q libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2t64 fonts-noto-core ffmpeg && exit 0; echo "apt intento $i colgado"; done; exit 1 # un mirror colgado trababa la cola 40+ min (2026-10-23)
       - run: npx remotion browser ensure
       - name: render
         run: |
