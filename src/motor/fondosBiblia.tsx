@@ -16,7 +16,7 @@ export const CIELO_BIBLIA: Record<string, Cielo> = {
   cielo_noche: 'noche', amanecer: 'barro', mar_vida: 'mar', llanura: 'barro', desierto: 'barro', colinas: 'barro',
 };
 export const FONDOS_BIBLIA = ['abismo', 'aguas_luz', 'firmamento_agua', 'tierra_seca', 'mar_tierra', 'jardin', 'cielo_noche', 'amanecer', 'mar_vida', 'llanura', 'desierto', 'colinas'];
-export const ELEMENTOS_BIBLIA = ['luz_divina', 'soplo', 'bruma', 'cupula', 'tierra', 'sol_natural', 'luna_natural', 'estrellas_natural', 'nube_natural', 'olivo_natural', 'palmera_natural', 'arbol_fruta', 'acacia', 'arbusto', 'hierba', 'flores', 'roca_natural', 'cardumen', 'bandada', 'algas', 'tabla_dias', 'ritmo_dias'];
+export const ELEMENTOS_BIBLIA = ['luz_divina', 'soplo', 'bruma', 'cupula', 'tierra', 'sol_natural', 'luna_natural', 'estrellas_natural', 'nube_natural', 'olivo_natural', 'palmera_natural', 'arbol_fruta', 'acacia', 'arbusto', 'hierba', 'flores', 'roca_natural', 'cardumen', 'bandada', 'algas', 'tabla_dias', 'ritmo_dias', 'arca', 'lluvia'];
 
 // ---------- degradés ----------
 const Degrades: React.FC = () => (
@@ -170,6 +170,32 @@ const Roca: React.FC<{ x: number; y?: number; s?: number }> = ({ x, y = SUELO, s
   <g transform={`translate(${r1(x)} ${r1(y)}) scale(${s})`}>
     <path d="M-80 4 L -66 -40 L -24 -70 L 26 -64 L 70 -30 L 84 4 Z" fill={NT.piedraOsc} />
     <path d="M-66 -40 L -24 -70 L 26 -64 L 10 -30 L -40 -20 Z" fill={NT.piedra} />
+  </g>
+);
+/** Arca de Noé (Génesis 6–8): casco de madera de gopher, tres pisos con una ventana arriba y la puerta de costado. `y` = línea de flotación. */
+const Arca: React.FC<{ x: number; y?: number; s?: number; f?: number; mece?: boolean }> = ({ x, y = SUELO - 40, s = 1, f = 0, mece }) => (
+  <g transform={`translate(${r1(x)} ${r1(y + (mece ? Math.sin(f / 18) * 5 : 0))}) rotate(${mece ? r1(Math.sin(f / 26) * 1.6) : 0}) scale(${s})`}>
+    <path d="M-330 -60 L 330 -60 C 310 10, 230 40, 150 40 L -150 40 C -230 40, -310 10, -330 -60 Z" fill={NT.tierraOsc} />
+    <path d="M-330 -60 L 330 -60 L 318 -40 L -318 -40 Z" fill={NT.tierra} />
+    <rect x={-270} y={-140} width={540} height={82} fill={NT.tierra} />
+    <rect x={-270} y={-140} width={540} height={10} fill={NT.tierraOsc} />
+    {[-210, -140, -70, 0, 70, 140, 210].map((px, i) => <rect key={i} x={px - 1.5} y={-140} width={3} height={82} fill={NT.tierraOsc} opacity={0.55} />)}
+    <rect x={-210} y={-218} width={420} height={80} fill={NT.arenaOsc} />
+    <rect x={-210} y={-218} width={420} height={10} fill={NT.tierraOsc} />
+    <path d="M-250 -218 L -190 -262 L 190 -262 L 250 -218 Z" fill={NT.tierraOsc} />
+    <rect x={-40} y={-196} width={80} height={14} rx={3} fill={NT.noche} opacity={0.75} />
+    <rect x={110} y={-124} width={46} height={64} rx={4} fill={NT.noche} opacity={0.7} />
+    <path d="M-330 -60 C -300 -50, -260 -42, -150 -40 L 150 -40 C 260 -42, 300 -50, 330 -60" stroke={NT.tierraOsc} strokeWidth={4} fill="none" />
+  </g>
+);
+/** Lluvia: rayitas inclinadas que caen sin parar; `n` = cantidad, `largo` = alto de la cortina. */
+const Lluvia: React.FC<{ x: number; y?: number; f?: number; n?: number; ancho?: number; largo?: number }> = ({ x, y = 120, f = 0, n = 70, ancho = 2000, largo = 640 }) => (
+  <g opacity={0.7}>
+    {Array.from({ length: n }, (_, i) => {
+      const px = x - ancho / 2 + azar(i * 3 + 1) * ancho, v = 0.6 + azar(i * 7 + 2) * 0.6;
+      const py = y + ((f * 22 * v + azar(i * 5 + 3) * largo) % largo);
+      return <path key={i} d={`M${r1(px - py * 0.12)} ${r1(py)} l -9 28`} stroke="#DCE8F2" strokeWidth={2.4} strokeLinecap="round" opacity={0.45 + azar(i + 9) * 0.45} />;
+    })}
   </g>
 );
 /** Sol: resplandor amplio y disco claro, sin cara. */
@@ -486,6 +512,8 @@ export function elementoBiblia(tipo: string, x: number, y: number | undefined, s
     case 'algas': return <Algas x={x} y={yy} s={s} f={f} />;
     case 'tabla_dias': return <>{def}<TablaDias x={x} y={y ?? 430} s={s} f={f} filas={n('filas', 2)} /></>;
     case 'ritmo_dias': return <>{def}<RitmoDias x={x} y={y ?? 420} s={s} f={f} n={n('n', 6)} septimo={props.septimo === true} /></>;
+    case 'arca': return <Arca x={x} y={y ?? SUELO - 40} s={s} f={f} mece={props.mece === true} />;
+    case 'lluvia': return <Lluvia x={x} y={y ?? 120} f={f} n={n('n', 70)} ancho={n('ancho', 2000)} largo={n('largo', 640)} />;
     default: return null;
   }
 }

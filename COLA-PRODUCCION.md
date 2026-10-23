@@ -30,7 +30,7 @@ la rutina no toma nada de esa sección.
 - [x] H04 · Story (Greek): Los trabajos de Heracles, parte I (león de Nemea, Hidra, cierva, jabalí, establos de Augías, aves del Estínfalo) → `griegas-83-heracles-trabajos-1` · especial "Greek Myth Stories". Fuentes: Apolodoro, Biblioteca 2.4–2.5; se entiende solo, sin la parte II — HECHO 2026-10-22: griegas-83-heracles-trabajos-1
 - [x] Q05 · "Who is…?" (2, cierre de olímpicos): Deméter, Hestia — HECHO 2026-10-22 (sesión local): short-griegas-quien-demeter, short-griegas-quien-hestia
 - [x] Q06 · "Who is…?" grupo INFRAMUNDO (4): Persephone `persefone_oficial` · Hecate · Hypnos · Thanatos. Los que no tienen `*_oficial` todavía: diseñarlos primero en `src/motor/elencoGriegoOficial.tsx` con el mismo estilo (registrar como los demás). — HECHO 2026-10-22 (un dios por grupo, regla de Matías): short-griegas-quien-persefone (Hecate, Hypnos y Thanatos no se hacen)
-- [ ] Q07 · "Who is…?" grupo TITANES (4): Rhea `rea_oficial` · Atlas `atlas_oficial` · Helios `helios_oficial` · Selene `selene_oficial`
+- [x] Q07 · "Who is…?" grupo TITANES (4): Rhea `rea_oficial` · Atlas `atlas_oficial` · Helios `helios_oficial` · Selene `selene_oficial` — HECHO 2026-10-23 (un dios por grupo): short-griegas-quien-rea (Atlas, Helios y Selene no se hacen)
 - [ ] Q08 · "Who is…?" grupo PRIMORDIALES (4): Gaia `gea_oficial` · Uranus `urano_oficial` · Nyx `nix_oficial` · Eros `eros_oficial`
 - [ ] Q09 · "Who is…?" grupo OTROS DIOSES (3): Pan · Nike · Nemesis (diseñar los `*_oficial` que falten, como en Q06)
 
