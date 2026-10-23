@@ -35,7 +35,8 @@ const tramos = [
   { nombre: '00-portada', desde: 0, hasta: tl.introFrames - 1, datos: [g.numero, g.tituloGriego] },
   ...tl.escenas.map((e, i) => ({ nombre: `${String(i + 1).padStart(2, '0')}-${e.id}`, desde: e.from, hasta: e.from + e.durationInFrames - 1, datos: [g.escenas[i], e.durationInFrames, e.frases.map((f) => [f.from, f.dur])] })),
   { nombre: '99-cierre', desde: tl.total - tl.outroFrames, hasta: tl.total - 1, datos: ['cierre'] },
-].map((t) => ({ ...t, archivo: join(cache, `${t.nombre}-${createHash('sha1').update(huellaMotor + IMAGEN + JSON.stringify(t.datos)).digest('hex').slice(0, 10)}.mp4`) }));
+].filter((t) => t.hasta >= t.desde) // con gancho al principio (lib/marco.mjs) la portada dura 0 cuadros: sin tramo
+  .map((t) => ({ ...t, archivo: join(cache, `${t.nombre}-${createHash('sha1').update(huellaMotor + IMAGEN + JSON.stringify(t.datos)).digest('hex').slice(0, 10)}.mp4`) }));
 
 const faltan = tramos.filter((t) => !existsSync(t.archivo));
 console.log(`${id}: ${tramos.length - faltan.length}/${tramos.length} tramos en caché`);
