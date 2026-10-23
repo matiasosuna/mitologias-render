@@ -98,7 +98,10 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     const timeline = timelines[id];
     // marco de Learn Bible (lib/marco.mjs): del timeline.json (el ritmo rápido no lo trae)
     const conMarco = { ...timeline, marco: timeline.marco ?? JSON.parse(readFileSync(join('src/videos', id, 'timeline.json'), 'utf8')).marco };
-    const { partes } = cortes(timeline, 0, guion.reels && conMarco.marco ? sobraParte(guion, conMarco) : null, !guion.reels?.ganchos); // sin marco: el corte de siempre; solo final: portada y cartel gancho como Myths
+    // cortes-fijos.json: los cortes de un episodio que ya empezó a salir en IG (rehacer una parte sin mover las demás)
+    const fijos = join('src/videos', id, 'cortes-fijos.json');
+    const { partes } = existsSync(fijos) ? { partes: JSON.parse(readFileSync(fijos, 'utf8')) }
+      : cortes(timeline, 0, guion.reels && conMarco.marco ? sobraParte(guion, conMarco) : null, !guion.reels?.ganchos); // sin marco: el corte de siempre; solo final: portada y cartel gancho como Myths
     const de = partes.length;
     // Las partes a la vez y cada una en trozos (RENDER_PARALELO Chromes en total; uno solo aprovecha ~2 núcleos).
     const nucleos = Number(process.env.RENDER_CONCURRENCY) || Math.max(2, os.cpus().length - 1);
