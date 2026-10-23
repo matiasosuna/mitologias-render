@@ -8,5 +8,5 @@ test('lo borrado de la plataforma sale de los registros; una resubida (id nuevo)
   assert.deepEqual(sinBorrados('youtube-ids.json', { 'biblia-genesis-05': 'YT_nuevo' }, b), { 'biblia-genesis-05': 'YT_nuevo' });
   assert.deepEqual(sinBorrados('subidas-api.json', [{ id: 'biblia-genesis-05', video: 'YT_viejo' }, { id: 'x', video: 'Z' }], b), [{ id: 'x', video: 'Z' }]);
   assert.deepEqual(sinBorrados('subidas-instagram.json', [{ id: 'biblia-genesis-05', media: '111' }, { id: 'biblia-genesis-05', media: '222' }], b), [{ id: 'biblia-genesis-05', media: '222' }]);
-  assert.deepEqual(sinBorrados('turnos.json', { a: 1 }, b), { a: 1 });
+  assert.deepEqual(sinBorrados('turnos.json', ['a'], b), ['a'], 'los turnos no se tocan (liberarlos haría repetir el turno)');
 });
