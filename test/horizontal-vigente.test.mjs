@@ -19,7 +19,8 @@ test('horizontal con gancho: sirve solo si su huella es la del guion actual; sin
     meta('con-gancho', 'vieja');
     assert.equal(horizontalVigente('con-gancho'), false);
     guion('biblia-genesis-09', { youtube: { gancho: { en: 'Ever wanted…' } } });
-    assert.equal(horizontalVigente('biblia-genesis-09'), true);
+    meta('biblia-genesis-09', 'vieja');
+    assert.equal(horizontalVigente('biblia-genesis-09'), false, 'la Biblia también: sin huella se renderiza de nuevo');
   } finally { process.chdir(antes); }
 });
 

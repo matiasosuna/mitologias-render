@@ -21,7 +21,18 @@ export const ARCHIVOS = {
   'cola-unificada.json': 'out/cola-unificada.json', // la cola única de YouTube, Instagram y TikTok (scripts/cola.mjs)
   'tiktok-ritmo.json': 'out/tiktok-ritmo.json', // TikTok frenado por la plataforma (2 por turno durante 24 h)
   'listas.json': 'src/videos/listas.json', // listas de YouTube (las "Who's Who" se crean en la nube con el primer video)
+  'borrados.json': 'out/borrados.json', // ids de YouTube / media de Instagram que Matías mandó borrar: sus registros se quitan
 };
+/** Saca de los registros lo que se borró de la plataforma (por id del video/media, así una resubida nueva queda). La unión
+ *  sola los volvería a traer desde cualquier copia vieja; esto corre en cada traer/subir. */
+export function sinBorrados(nombre, datos, borrados) {
+  if (!borrados?.length || datos === undefined) return datos;
+  const b = new Set(borrados);
+  if (nombre === 'youtube-ids.json') return Object.fromEntries(Object.entries(datos).filter(([, v]) => !b.has(v)));
+  if (nombre === 'subidas-api.json') return datos.filter((r) => !b.has(r.video));
+  if (nombre === 'subidas-instagram.json') return datos.filter((r) => !b.has(r.media) && !b.has(r.permalink));
+  return datos;
+}
 /** Archivos que no se fusionan por unión: la cola única conserva el orden de la rama y suma lo nuevo al final. */
 const COLA = 'cola-unificada.json';
 export const fusionarCola = (rama, otra) => { if (!rama?.length) return otra ?? rama; const ya = new Set(rama.map((e) => e.id)); return [...rama, ...(otra ?? []).filter((e) => !ya.has(e.id))]; };
@@ -66,9 +77,10 @@ const leer = (f) => (existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')) : undef
 const escribir = (f, datos) => { mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, JSON.stringify(datos, null, f.endsWith('youtube-ids.json') ? 2 : 1)); };
 
 export function subir(carpeta, lista = LISTA) {
+  const borrados = fusionar(leer(join(carpeta, 'borrados.json')), leer('out/borrados.json'));
   for (const [nombre, local] of Object.entries(ARCHIVOS)) {
     const aca = leer(local);
-    if (aca !== undefined) escribir(join(carpeta, nombre), (nombre === COLA ? fusionarCola : fusionar)(leer(join(carpeta, nombre)), aca));
+    if (aca !== undefined) escribir(join(carpeta, nombre), sinBorrados(nombre, (nombre === COLA ? fusionarCola : fusionar)(leer(join(carpeta, nombre)), aca), borrados));
   }
   if (!existsSync(lista)) return;
   const destino = join(carpeta, 'shorts-orden.txt');
@@ -83,9 +95,10 @@ export function agregar(carpeta, ids) {
 }
 
 export function traer(carpeta) {
+  const borrados = fusionar(leer(join(carpeta, 'borrados.json')), leer('out/borrados.json'));
   for (const [nombre, local] of Object.entries(ARCHIVOS)) {
     const alla = leer(join(carpeta, nombre));
-    if (alla !== undefined) escribir(local, nombre === COLA ? fusionarCola(alla, leer(local)) : fusionar(leer(local), alla));
+    if (alla !== undefined) escribir(local, sinBorrados(nombre, nombre === COLA ? fusionarCola(alla, leer(local)) : fusionar(leer(local), alla), borrados));
   }
   if (existsSync(join(carpeta, 'shorts-orden.txt'))) { mkdirSync(dirname(LISTA), { recursive: true }); copyFileSync(join(carpeta, 'shorts-orden.txt'), LISTA); }
 }

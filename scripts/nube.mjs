@@ -196,8 +196,7 @@ function desdeArtefacto(id, clases) {
 /** Episodio largo en out/: release → artefacto de render-nube → render acá (si `render`). Lo nuevo se sube al release. */
 /** Con gancho (guion.youtube.gancho): el horizontal y sus subtítulos sirven solo si son de la huella actual del guion; si no,
  *  se tiran y se renderizan de nuevo (los pre-renders de antes del gancho no lo tienen). Sin gancho: como siempre. */
-// La Biblia no: sus horizontales los hace su sesión ya con gancho.
-const conGancho = (id) => !esBiblia(id) && Boolean(existsSync(join('src/videos', id, 'guion.json')) && guion(id).youtube?.gancho);
+const conGancho = (id) => Boolean(existsSync(join('src/videos', id, 'guion.json')) && guion(id).youtube?.gancho);
 export function horizontalVigente(id) {
   if (!conGancho(id)) return true;
   const meta = rutaLocal(id, 'horizontal-meta');
