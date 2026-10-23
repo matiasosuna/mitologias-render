@@ -247,5 +247,5 @@ test('Biblia (2026-10-22): 3 capítulos por día en 12/16/20 HST, en orden, sin 
     t += 4 * 3600e3;
   }
   for (const p of ['youtube', 'instagram', 'tiktok']) assert.deepEqual([...tiene[p].keys()].slice(3), ['biblia-genesis-01', 'biblia-genesis-02', 'e4', 'biblia-genesis-03']);
-  assert.deepEqual(planTurno({ cola, tiene: { youtube: mapa([]), instagram: mapa([]), tiktok: mapa([]) }, plataforma: 'youtube', clase: 'biblia', inicio: INICIO, listo: (id) => id !== 'biblia-genesis-01' }).ids, ['biblia-genesis-02'], 'lo no verificado se salta');
+  assert.deepEqual(planTurno({ cola, tiene: { youtube: mapa([]), instagram: mapa([]), tiktok: mapa([]) }, plataforma: 'youtube', clase: 'biblia', inicio: INICIO, listo: (id) => id !== 'biblia-genesis-01' }).ids, [], 'si el próximo no está verificado se espera: nunca se saltea a uno posterior');
 });

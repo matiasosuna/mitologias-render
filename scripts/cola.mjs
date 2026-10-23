@@ -158,9 +158,10 @@ export function planTurno({ cola, tiene, plataforma, clase: c, listo = () => tru
     if (q && !ahora(q.id)) ids.push(q.id);
   }
   if (c === 'biblia') {
-    // el próximo capítulo de la Biblia que le falta a esta plataforma (cada una a su ritmo, de a uno por turno)
-    const b = cola.find((e) => esBiblia(e.id) && listo(e.id) && !antes(plataforma)(e.id));
-    if (b && !ahora(b.id)) ids.push(b.id);
+    // el próximo capítulo de la Biblia que le falta a esta plataforma, ESTRICTO en orden: si no está listo, se espera
+    // (nunca se saltea a uno posterior; 2026-10-23 salió Génesis 5 antes que el 3 y el 4)
+    const b = cola.find((e) => esBiblia(e.id) && !antes(plataforma)(e.id));
+    if (b && listo(b.id) && !ahora(b.id)) ids.push(b.id);
   }
   // YouTube e Instagram marcan el ritmo entre ellas; TikTok alcanza por su cuenta y nunca las frena (2026-10-20)
   const grupo = plataforma === 'tiktok' ? PLATAFORMAS : PRINCIPALES;

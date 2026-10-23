@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
-import { horizontalVigente, huella } from '../scripts/nube.mjs';
+import { horizontalVigente, huella, verificadoVigente } from '../scripts/nube.mjs';
 
 test('horizontal con gancho: sirve solo si su huella es la del guion actual; sin gancho, como siempre', () => {
   const antes = process.cwd(), dir = mkdtempSync(join(tmpdir(), 'hv-'));
@@ -20,5 +20,21 @@ test('horizontal con gancho: sirve solo si su huella es la del guion actual; sin
     assert.equal(horizontalVigente('con-gancho'), false);
     guion('biblia-genesis-09', { youtube: { gancho: { en: 'Ever wanted…' } } });
     assert.equal(horizontalVigente('biblia-genesis-09'), true);
+  } finally { process.chdir(antes); }
+});
+
+test('VERIFICADO de la Biblia vale solo con la huella del guion revisado', () => {
+  const antes = process.cwd(), dir = mkdtempSync(join(tmpdir(), 'vv-'));
+  process.chdir(dir);
+  try {
+    const d = join('src/videos', 'biblia-genesis-09'); mkdirSync(d, { recursive: true });
+    writeFileSync(join(d, 'guion.json'), '{"a":1}');
+    assert.equal(verificadoVigente('biblia-genesis-09'), false, 'sin marca');
+    writeFileSync(join(d, 'VERIFICADO'), '');
+    assert.equal(verificadoVigente('biblia-genesis-09'), false, 'marca vacía (vieja)');
+    writeFileSync(join(d, 'VERIFICADO'), huella('biblia-genesis-09') + '\n');
+    assert.equal(verificadoVigente('biblia-genesis-09'), true);
+    writeFileSync(join(d, 'guion.json'), '{"a":2}');
+    assert.equal(verificadoVigente('biblia-genesis-09'), false, 'el guion cambió después de revisar');
   } finally { process.chdir(antes); }
 });
