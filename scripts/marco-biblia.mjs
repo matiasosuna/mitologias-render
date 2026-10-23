@@ -24,12 +24,13 @@ export function partesTitulo(titulo) {
   return { cap: m[1].trim(), corto: m[2].trim() };
 }
 
-/** Campos del marco: gancho completo + "Today: Genesis N, <título corto>." (parte 1 y YouTube); "Genesis N, part n." en las demás. */
+/** Campos del marco: gancho completo + "Today: Genesis N, <título corto>." en YouTube y en TODAS las partes (Matías 2026-10-23:
+ *  la parte 2 sin intro no); de la 2 en adelante termina en ", part n.". */
 export function marcoBiblia(g, partes = 3) {
   const { cap, corto } = partesTitulo(g.titulo?.en);
   const gancho = { en: `${GANCHO_BIBLIA} Today: ${cap}, ${corto}.` };
   const ganchos = [gancho];
-  for (let n = 2; n <= Math.max(2, partes); n++) ganchos.push({ en: `${cap}, part ${n}.` });
+  for (let n = 2; n <= Math.max(2, partes); n++) ganchos.push({ en: `${GANCHO_BIBLIA} Today: ${cap}, ${corto}, part ${n}.` });
   return {
     reels: { ...g.reels, ganchos, pausas: Object.fromEntries(FRASES_GANCHO_BIBLIA.map((f) => [f, PAUSA])), tempos: { ...g.reels?.tempos, gancho: TEMPO_GANCHO_BIBLIA } },
     youtube: { ...g.youtube, gancho },
@@ -41,7 +42,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     if (!id.startsWith('biblia-') || id === 'biblia-genesis-01') { console.log(`${id}: se salta`); continue; }
     const dir = join('src/videos', id), g = JSON.parse(readFileSync(join(dir, 'guion.json'), 'utf8'));
     const tl = existsSync(join(dir, 'timeline.json')) ? JSON.parse(readFileSync(join(dir, 'timeline.json'), 'utf8')) : null;
-    const m = marcoBiblia(g, partesEstimadas(tl) + 1); // +1: el gancho alarga la parte 1 y puede sumar una parte
+    const m = marcoBiblia(g, partesEstimadas(tl) + 2); // +2: el gancho alarga cada parte y puede sumar partes
     writeFileSync(join(dir, 'guion.json'), JSON.stringify({ ...g, ...m }, null, 2) + '\n');
     console.log(`${id}: gancho + ${m.reels.ganchos.length - 1} línea(s) de parte`);
   }

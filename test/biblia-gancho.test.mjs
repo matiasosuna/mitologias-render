@@ -1,5 +1,5 @@
 // Gancho de intro (Matías 2026-10-22): todos los capítulos de la Biblia menos Génesis 1, en YouTube, partes de IG y TikTok.
-// Voz desde el cuadro 0, texto en pantalla, ≤ ~11 s; partes 2+ solo "Genesis N, part n.". El mecanismo sirve para cualquier serie.
+// Voz desde el cuadro 0, texto en pantalla, ≤ ~11 s; el gancho completo en TODAS las partes (2026-10-23), las 2+ con ", part n.". El mecanismo sirve para cualquier serie.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
@@ -24,7 +24,7 @@ test('el texto del gancho es el aprobado, palabra por palabra', () => {
   assert.deepEqual(partesTitulo('Genesis 2: The Garden of Eden'), { cap: 'Genesis 2', corto: 'The Garden of Eden' });
   const m = marcoBiblia({ titulo: { en: 'Genesis 2: The Garden of Eden' }, reels: { final: { en: 'Q?' } } }, 3);
   assert.equal(m.reels.ganchos[0].en, `${TEXTO} Today: Genesis 2, The Garden of Eden.`);
-  assert.deepEqual(m.reels.ganchos.slice(1).map((x) => x.en), ['Genesis 2, part 2.', 'Genesis 2, part 3.']);
+  assert.deepEqual(m.reels.ganchos.slice(1).map((x) => x.en), [`${TEXTO} Today: Genesis 2, The Garden of Eden, part 2.`, `${TEXTO} Today: Genesis 2, The Garden of Eden, part 3.`]);
   assert.equal(m.reels.final.en, 'Q?');
 });
 
@@ -35,7 +35,7 @@ test('todo capítulo de la Biblia (menos Génesis 1) trae el gancho en todos los
     const gancho = `${TEXTO} Today: ${cap}, ${corto}.`;
     assert.equal(g.reels?.ganchos?.[0]?.en, gancho, `${id}: reels.ganchos[0]`);
     assert.equal(g.youtube?.gancho?.en, gancho, `${id}: youtube.gancho`);
-    g.reels.ganchos.slice(1).forEach((x, k) => assert.equal(x.en, `${cap}, part ${k + 2}.`, `${id}: parte ${k + 2}`));
+    g.reels.ganchos.slice(1).forEach((x, k) => assert.equal(x.en, `${gancho.slice(0, -1)}, part ${k + 2}.`, `${id}: parte ${k + 2}`));
     assert.ok(g.reels.ganchos.length >= 2, `${id}: falta la línea de la parte 2`);
   }
   // Génesis 1 ya salió: sin gancho

@@ -18,11 +18,11 @@ export const FINAL_MYTHS = 'Follow for a new myth every day.';
 /** "The Mother of the Islands | Hawaiian Mythology S1E6" → "The Mother of the Islands". */
 export const tituloCorto = (t) => String(t ?? '').split(' | ')[0].trim();
 
-/** Campos del marco para un episodio: parte 1 y YouTube con el gancho completo; las demás partes, "<título>, part n.". */
+/** Campos del marco para un episodio: YouTube y TODAS las partes con el gancho completo (Matías 2026-10-23); de la 2 en adelante "…, part n.". */
 export function marcoMyths(titulo, partes) {
   const hoy = `Today: ${tituloCorto(titulo)}.`;
   const ganchos = [{ en: `${GANCHO_MYTHS} ${hoy}` }];
-  for (let n = 2; n <= partes; n++) ganchos.push({ en: `${tituloCorto(titulo)}, part ${n}.` });
+  for (let n = 2; n <= partes; n++) ganchos.push({ en: `${GANCHO_MYTHS} Today: ${tituloCorto(titulo)}, part ${n}.` });
   return {
     reels: { ganchos, pausas: Object.fromEntries(FRASES_GANCHO_MYTHS.map((f) => [f, PAUSA])), tempos: { gancho: TEMPO_GANCHO_MYTHS }, final: { en: FINAL_MYTHS } },
     youtube: { gancho: { en: `${GANCHO_MYTHS} ${hoy}` }, final: { en: FINAL_MYTHS } },
@@ -36,7 +36,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     if (id.startsWith('biblia-') || id.startsWith('short-')) { console.log(`${id}: no es un episodio de Myths, se salta`); continue; }
     if (!titulos[id]?.titulo) { console.log(`${id}: sin título en titulos.json, se salta`); continue; }
     const tl = existsSync(join(dir, 'timeline.json')) ? JSON.parse(readFileSync(join(dir, 'timeline.json'), 'utf8')) : null;
-    const m = marcoMyths(titulos[id].titulo, partesEstimadas(tl) + 1); // +1: el gancho alarga la parte 1 y puede sumar una parte
+    const m = marcoMyths(titulos[id].titulo, partesEstimadas(tl) + 2); // +2: el gancho alarga cada parte y puede sumar partes
     writeFileSync(join(dir, 'guion.json'), JSON.stringify({ ...g, reels: { ...g.reels, ...m.reels, tempos: { ...g.reels?.tempos, ...m.reels.tempos } }, youtube: { ...g.youtube, ...m.youtube } }, null, 2) + '\n');
     console.log(`${id}: marco con ${m.reels.ganchos.length} parte(s)`);
   }
