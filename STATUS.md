@@ -1,14 +1,14 @@
 # Myths on Clay — estado
-_Actualizado 2026-10-23 20:55 UTC_
+_Actualizado 2026-10-24 20:07 UTC_
 
 ## Resumen
 | Qué | Estado |
 | --- | --- |
 | publicar | activado |
-| Última corrida de publicar | failure · 2026-10-23 20:07 UTC |
-| Último turno registrado | 2026-10-23T22Z |
-| Próximos de la cola | griegas-08-doce-olimpicos<br>griegas-09-atenea<br>griegas-10-atenea-poseidon<br>griegas-11-hefesto<br>griegas-12-red-de-hefesto |
-| "Who is…?" listos | 19 (15 sin publicar en alguna red) |
+| Última corrida de publicar | en curso · 2026-10-24 20:07 UTC |
+| Último turno registrado | 2026-10-24T18Z |
+| Próximos de la cola | griegas-14-apolo-piton<br>griegas-15-hermes-bebe-ladron<br>griegas-16-dioniso-dos-veces<br>nordicas-14-volund<br>nordicas-15-oro-de-andvari |
+| "Who is…?" listos | 20 (16 sin publicar en alguna red) |
 
 ## Temporadas
 | Mitología | Temporada | Episodios | YouTube | Instagram |
@@ -25,18 +25,18 @@ _Actualizado 2026-10-23 20:55 UTC_
 | Egipcias | T1 | 11 | 11 | 11 |
 | Egipcias | T2 | 8 | 2 | 2 |
 | Hawaianas | Especial Lords of the Dead | 1 | 1 | 1 |
-| Hawaianas | T1 | 12 | 6 | 5 |
+| Hawaianas | T1 | 12 | 7 | 7 |
 | Hawaianas | T2 | 12 | 0 | 0 |
 | Norteamericanas | T1 | 12 | 0 | 0 |
 | Aztecas | T1 | 12 | 0 | 0 |
 | Hindúes | T1 | 12 | 0 | 0 |
 | Maoríes | T1 | 12 | 0 | 0 |
-| Biblia | T1 | 10 | 2 | 2 |
+| Biblia | T1 | 13 | 5 | 5 |
 | Balinesas | T1 | 12 | 0 | 0 |
 
 ## Métricas
 | Red | Métricas |
 | --- | --- |
-| YouTube | 25 suscriptores · 7102 vistas · 89 videos |
-| Instagram | 75 seguidores · 597 likes · 26.549 vistas (28 días) |
+| YouTube | 26 suscriptores · 7246 vistas · 93 videos |
+| Instagram | 81 seguidores · 642 likes · 27.780 vistas (28 días) |
 | TikTok | sin API |
