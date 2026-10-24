@@ -32,9 +32,11 @@ export const entrada = (id) => ({ id, tipo: tipoDe(id), formato: FORMATOS[tipoDe
 // ── turnos: 6 por día, a las 2, 6, 10, 14, 18 y 22 UTC = 16, 20, 00, 04, 08 y 12 HST (UTC−10)
 export const HORAS_UTC = [2, 6, 10, 14, 18, 22];
 export const EPISODIO_HST = 8;
-// Matías 2026-10-22: Who-is EN PAUSA; esos turnos (y el de las 16) son para la temporada de la Biblia, 3 capítulos por día.
+// Matías 2026-10-22: Who-is EN PAUSA. 2026-10-24: la Biblia baja a 1 por día ("3 es demasiado"), a las 12 HST.
 export const QUIEN_HST = [];
-export const BIBLIA_HST = [12, 16, 20];
+export const BIBLIA_HST = [12];
+/** Capítulos que no salen (2026-10-24: "ya va bastante de Génesis", se corta en el 5). */
+export const BIBLIA_FUERA = ['biblia-genesis-06', 'biblia-genesis-07', 'biblia-genesis-08', 'biblia-genesis-09', 'biblia-genesis-10'];
 export const esBiblia = (id) => id.startsWith('biblia-');
 export const horaHST = (horaUTC) => (horaUTC + 14) % 24;
 /** 'episodio' | 'quien' | 'biblia' | 'alcanzar' (turno que solo usan las plataformas atrasadas). */
@@ -160,7 +162,7 @@ export function planTurno({ cola, tiene, plataforma, clase: c, listo = () => tru
   if (c === 'biblia') {
     // el próximo capítulo de la Biblia que le falta a esta plataforma, ESTRICTO en orden: si no está listo, se espera
     // (nunca se saltea a uno posterior; 2026-10-23 salió Génesis 5 antes que el 3 y el 4)
-    const b = cola.find((e) => esBiblia(e.id) && !antes(plataforma)(e.id));
+    const b = cola.find((e) => esBiblia(e.id) && !BIBLIA_FUERA.includes(e.id) && !antes(plataforma)(e.id));
     if (b && listo(b.id) && !ahora(b.id)) ids.push(b.id);
   }
   // YouTube e Instagram marcan el ritmo entre ellas; TikTok alcanza por su cuenta y nunca las frena (2026-10-20)
