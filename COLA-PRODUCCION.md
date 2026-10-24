@@ -32,7 +32,7 @@ la rutina no toma nada de esa sección.
 - [x] Q06 · "Who is…?" grupo INFRAMUNDO (4): Persephone `persefone_oficial` · Hecate · Hypnos · Thanatos. Los que no tienen `*_oficial` todavía: diseñarlos primero en `src/motor/elencoGriegoOficial.tsx` con el mismo estilo (registrar como los demás). — HECHO 2026-10-22 (un dios por grupo, regla de Matías): short-griegas-quien-persefone (Hecate, Hypnos y Thanatos no se hacen)
 - [x] Q07 · "Who is…?" grupo TITANES (4): Rhea `rea_oficial` · Atlas `atlas_oficial` · Helios `helios_oficial` · Selene `selene_oficial` — HECHO 2026-10-23 (un dios por grupo): short-griegas-quien-rea (Atlas, Helios y Selene no se hacen)
 - [x] Q08 · "Who is…?" grupo PRIMORDIALES (4): Gaia `gea_oficial` · Uranus `urano_oficial` · Nyx `nix_oficial` · Eros `eros_oficial` — HECHO 2026-10-23 (un dios por grupo): short-griegas-quien-gea (Urano, Nix y Eros no se hacen)
-- [x] Q09 · "Who is…?" grupo OTROS DIOSES (3): Pan · Nike · Nemesis (diseñar los `*_oficial` que falten, como en Q06) — HECHO 2026-10-24 (un dios por grupo): short-griegas-quien-pan (Nike y Nemesis no se hacen)
+- [ ] Q09 · "Who is…?" grupo OTROS DIOSES (3): Pan · Nike · Nemesis (diseñar los `*_oficial` que falten, como en Q06)
 
 ## CANCELADO (Matías 2026-10-22: no más especiales ni Stories; no tomar nunca)
 - [ ] H05 · Story (Greek): Dédalo e Ícaro → `griegas-84-dedalo-e-icaro` · especial "Greek Myth Stories". Fuentes: Ovidio, Metamorfosis 8; Apolodoro, Epítome 1. Si va después de Teseo, el laberinto en 1–2 frases

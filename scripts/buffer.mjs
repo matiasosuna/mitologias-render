@@ -11,10 +11,16 @@ export const CANALES_AJENOS = ['6ad12860778b240e2f1d9c4e', '6ad3219a778b240e2f36
 /** Estados de Buffer que cuentan como "ya está o va a estar en Instagram" (un borrador o un error no). */
 export const ESTADOS_VIVOS = ['sent', 'sending', 'scheduled', 'needs_approval'];
 
-export function cliente(clave, fetchFn = fetch) {
+export function cliente(clave, fetchFn = fetch, { pausa = 5000 } = {}) {
   if (!clave) throw new Error('falta BUFFER_API_KEY');
   return async (query, variables) => {
-    const r = await fetchFn('https://api.buffer.com', { method: 'POST', headers: { Authorization: `Bearer ${clave}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ query, variables }) });
+    const pedir = () => fetchFn('https://api.buffer.com', { method: 'POST', headers: { Authorization: `Bearer ${clave}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ query, variables }) });
+    // Un corte de red ("fetch failed") hacía fallar la corrida entera; las lecturas se reintentan. Las mutaciones no (podría duplicar el post).
+    const lectura = !/^\s*mutation\b/.test(query);
+    let r;
+    for (let i = 1; ; i++) {
+      try { r = await pedir(); break; } catch (e) { if (!lectura || i >= 4) throw e; await new Promise((ok) => setTimeout(ok, pausa)); }
+    }
     const j = await r.json();
     if (j.errors) throw new Error(`Buffer: ${JSON.stringify(j.errors).slice(0, 300)}`);
     return j.data;

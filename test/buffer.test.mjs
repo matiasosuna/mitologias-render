@@ -1,7 +1,7 @@
 // Instagram por Buffer: la entrada de createPost, el anti-duplicados por 1.ª línea y la elección de la vía.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { entradaReel, buscarPorPrimeraLinea, postsDelCanal, igPorBuffer, esperarEnvio, CANAL_IG, CANAL_TIKTOK, ORG } from '../scripts/buffer.mjs';
+import { cliente as clienteBuffer, entradaReel, buscarPorPrimeraLinea, postsDelCanal, igPorBuffer, esperarEnvio, CANAL_IG, CANAL_TIKTOK, ORG } from '../scripts/buffer.mjs';
 
 const URL = 'https://github.com/matiasosuna/mitologias-render/releases/download/media/x.parte-1.mp4';
 
@@ -92,4 +92,13 @@ test('TikTok: rechazos por límite → frenar (y los demás errores no)', async 
   const { esLimite } = await import('../scripts/buffer.mjs');
   for (const m of ['Rate limit exceeded', 'Too many posts today', 'Daily posting limit reached']) assert.equal(esLimite(m), true, m);
   for (const m of ['Video could not be downloaded', 'Invalid video format', undefined]) assert.equal(esLimite(m), false, String(m));
+});
+
+test('cliente: un corte de red se reintenta en lecturas, nunca en mutaciones (duplicaría el post)', async () => {
+  let n = 0;
+  const cortaUnaVez = async () => { if (n++ === 0) throw new TypeError('fetch failed'); return { json: async () => ({ data: { ok: 1 } }) }; };
+  assert.deepEqual(await clienteBuffer('k', cortaUnaVez, { pausa: 0 })('query { x }'), { ok: 1 });
+  n = 0;
+  await assert.rejects(clienteBuffer('k', cortaUnaVez, { pausa: 0 })('mutation($i: X) { y }'), /fetch failed/);
+  assert.equal(n, 1, 'la mutación se intentó una sola vez');
 });
