@@ -1,0 +1,592 @@
+{
+  "id": "short-griegas-quien-pan",
+  "formato": "short",
+  "serie": "griegas",
+  "numero": "S",
+  "titulo": {
+    "es": "¿Quién es Pan? El dios de lo salvaje",
+    "en": "Who is Pan? The god of the wild"
+  },
+  "tituloGriego": "",
+  "gancho": {
+    "es": "¿Quién es Pan? El dios de lo salvaje",
+    "en": "Who is Pan? The god of the wild"
+  },
+  "cierre": {
+    "es": "Un ayudante con patas de cabra contra el último monstruo — Mitología griega T1E7",
+    "en": "A goat-legged helper against the last monster — Greek Mythology S1E7"
+  },
+  "episodio": "griegas-07-tifon",
+  "quien": {
+    "nombre": {
+      "es": "Pan",
+      "en": "Pan"
+    },
+    "subtitulo": {
+      "es": "Dios de lo salvaje · señor de los rebaños",
+      "en": "God of the wild · lord of the flocks"
+    },
+    "como": "pan_oficial"
+  },
+  "coldOpen": {
+    "id": "cold",
+    "fondo": "bosque",
+    "foco": 960,
+    "frases": [
+      {
+        "es": "Su propia niñera huyó al ver su cara. Hoy su nombre nos dio la palabra pánico.",
+        "en": "His own nurse ran away when she saw his face. Today his name gives us the word panic."
+      }
+    ],
+    "actores": [
+      {
+        "id": "pan",
+        "como": "pan_oficial",
+        "x": 960,
+        "escala": 0.95,
+        "rotulo": "",
+        "pasos": [
+          {
+            "en": 0,
+            "hace": "aparece",
+            "con": "luz"
+          },
+          {
+            "en": 0.14,
+            "hace": "alegra"
+          },
+          {
+            "en": 0.5,
+            "hace": "brilla",
+            "dur": 0.6
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "id": "rol",
+      "fondo": "bosque",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pan es el dios griego de lo salvaje.",
+          "en": "Pan is the Greek god of the wild."
+        },
+        {
+          "es": "Cuida a los pastores, a los rebaños y a las montañas.",
+          "en": "He guards shepherds, flocks and wild mountains."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "DIOS DE LO SALVAJE",
+            "en": "GOD OF THE WILD"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "pan",
+          "como": "pan_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.46,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aspecto",
+      "fondo": "monte",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Tiene cuernos y patas de cabra.",
+          "en": "He has the horns and legs of a goat."
+        },
+        {
+          "es": "Vive en Arcadia, una tierra de montañas altas.",
+          "en": "He lives in Arcadia, a land of high mountains."
+        }
+      ],
+      "actores": [
+        {
+          "id": "pan",
+          "como": "pan_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "padres",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Su padre es Hermes, el dios mensajero.",
+          "en": "His father is Hermes, the messenger god."
+        },
+        {
+          "es": "Su madre fue una ninfa, un espíritu de la naturaleza.",
+          "en": "His mother was a nymph, a nature spirit."
+        },
+        {
+          "es": "El Himno homérico la llama Dríope.",
+          "en": "The Homeric Hymn calls her Dryope."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "HIJO DE HERMES",
+            "en": "SON OF HERMES"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "como": "hermes_oficial",
+          "x": 730,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "pan",
+          "como": "pan_oficial",
+          "x": 1190,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.55,
+              "hace": "alegra"
+            }
+          ],
+          "mira": "izq"
+        }
+      ]
+    },
+    {
+      "id": "bebe",
+      "fondo": "olimpo",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Hermes lo envolvió en pieles de liebre y lo llevó al Olimpo.",
+          "en": "Hermes wrapped him in hare skins and carried him to Olympus."
+        },
+        {
+          "es": "Los dioses se rieron de alegría. Su nombre, Pan, significa \"todo\".",
+          "en": "The gods laughed with joy. His name, Pan, is said to mean \"all\"."
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "como": "hermes_oficial",
+          "x": 730,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "pan",
+          "como": "pan_oficial",
+          "x": 1190,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            }
+          ],
+          "mira": "izq"
+        }
+      ]
+    },
+    {
+      "id": "siringa",
+      "fondo": "bosque",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Una ninfa llamada Siringa huyó de Pan.",
+          "en": "A nymph named Syrinx once ran from Pan."
+        },
+        {
+          "es": "Pidió ayuda a las ninfas del río y la convirtieron en cañas.",
+          "en": "She begged the river nymphs for help, and they turned her into reeds."
+        },
+        {
+          "es": "Pan cortó las cañas e hizo la primera flauta de Pan.",
+          "en": "Pan cut the reeds and made the first panpipes."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "LA FLAUTA",
+            "en": "THE PIPES"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "pan",
+          "como": "pan_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.4,
+              "hace": "entristece"
+            },
+            {
+              "en": 0.7,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simbolos",
+      "fondo": "monte",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Sus símbolos son la flauta de Pan, la cabra y el pino.",
+          "en": "His symbols are the panpipes, the goat and the pine tree."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "SUS SÍMBOLOS",
+            "en": "HIS SYMBOLS"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "pan",
+          "como": "pan_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.5,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maraton",
+      "fondo": "monte",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Antes de Maratón, un corredor dijo que Pan le habló y prometió ayudar a Atenas.",
+          "en": "Before Marathon, a runner said Pan spoke to him and promised to help Athens."
+        },
+        {
+          "es": "Atenas ganó y le construyó un santuario.",
+          "en": "Athens won, and built him a shrine."
+        },
+        {
+          "es": "El miedo repentino en lugares solitarios se llamó pánico, por Pan.",
+          "en": "Sudden fear in lonely places was called panic, after Pan."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "EL ORIGEN DEL PÁNICO",
+            "en": "WHERE PANIC COMES FROM"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "pan",
+          "como": "pan_oficial",
+          "x": 730,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "corredor",
+          "como": "hombre_griego_oficial",
+          "x": 1190,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "sorprende"
+            }
+          ],
+          "mira": "izq"
+        }
+      ]
+    },
+    {
+      "id": "caracter",
+      "fondo": "bosque",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Pan es alegre, ama la música y cuida los rebaños.",
+          "en": "Pan is playful, loves music and guards the flocks."
+        },
+        {
+          "es": "Pero nunca lo despiertes al mediodía. Se enoja muchísimo.",
+          "en": "But never wake him at noon. He gets very angry."
+        },
+        {
+          "es": "Aquel bebé que asustó a su niñera se volvió el dios de lo salvaje.",
+          "en": "The baby who scared his nurse became the god of the wild."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "BUENO Y TEMIBLE",
+            "en": "KIND AND FEARSOME"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "pan",
+          "como": "pan_oficial",
+          "x": 960,
+          "escala": 0.95,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            },
+            {
+              "en": 0.4,
+              "hace": "enoja"
+            },
+            {
+              "en": 0.8,
+              "hace": "brilla",
+              "dur": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tifon",
+      "fondo": "cueva",
+      "foco": 960,
+      "frases": [
+        {
+          "es": "Un pariente suyo con patas de cabra, Egipán, ayudó a Zeus contra el monstruo Tifón.",
+          "en": "A goat-legged kin of his, Aegipan, helped Zeus against the monster Typhon."
+        },
+        {
+          "es": "Algunos dicen que era el propio Pan.",
+          "en": "Some say it was Pan himself."
+        },
+        {
+          "es": "Para ver esa pelea, mira la Temporada 1, Episodio 7.",
+          "en": "To see that fight, watch Season 1, Episode 7."
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.03,
+          "texto": {
+            "es": "EGIPÁN Y TIFÓN",
+            "en": "AEGIPAN AND TYPHON"
+          },
+          "x": 960,
+          "y": 190
+        }
+      ],
+      "actores": [
+        {
+          "id": "hermes",
+          "como": "hermes_oficial",
+          "x": 730,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.14,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "aegipan",
+          "como": "aegipan_oficial",
+          "x": 1190,
+          "escala": 0.9,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 0.5,
+              "hace": "levanta"
+            }
+          ],
+          "mira": "izq"
+        }
+      ]
+    }
+  ]
+}
