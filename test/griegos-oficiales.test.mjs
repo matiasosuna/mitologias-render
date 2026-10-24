@@ -68,7 +68,7 @@ test('el Short "Who is Zeus?" usa solo personajes oficiales (salvo animales)', (
 // Tercera tanda (2026-10-17): todo personaje griego de los videos por publicar con diseño oficial.
 const CON_NOMBRE = ['helios', 'leto', 'temis', 'asteria', 'iris', 'ilitia', 'hebe', 'anfitrite', 'tetis', 'eurinome', 'semele', 'ino', 'beroe', 'muerte', 'hefesto_nino',
   'cadmo', 'cecrope', 'licaon', 'sisifo', 'sisifo_roca', 'merope', 'aquiles', 'penelope', 'medea', 'talos', 'pitia', 'deucalion', 'pirra', 'homero', 'demodoco', 'maron',
-  'acetes', 'marsias', 'aegipan', 'delfine', 'piton', 'cerbero', 'pegaso', 'licaon_lobo', 'dioniso_cabrito', 'dioniso_leon'];
+  'acetes', 'marsias', 'aegipan', 'pan', 'delfine', 'piton', 'cerbero', 'pegaso', 'licaon_lobo', 'dioniso_cabrito', 'dioniso_leon'];
 const EXTRAS = ['hombre_griego', 'hombre_griego_2', 'hombre_griego_3', 'joven_griego', 'joven_griego_2', 'anciano_griego', 'anciano_griego_2', 'mujer_griega', 'mujer_griega_2', 'mujer_griega_3',
   'anciana_griega', 'nino_griego', 'nina_griega', 'ninfa', 'ninfa_2', 'ninfa_3', 'gracia', 'hora', 'musa', 'musa_2', 'musa_3', 'guerrero_griego', 'guerrero_griego_2', 'persa',
   'rey_griego', 'rey_griego_2', 'reina_griega', 'reina_griega_2', 'sacerdote_griego', 'sacerdotisa_griega', 'sacerdotisa_griega_2', 'gigante_griego', 'gigante_griego_2',
