@@ -202,6 +202,13 @@ export function horizontalVigente(id) {
   const h = leerJSON(meta, {}).huella;
   return h === undefined || h === huella(id);
 }
+/** Prerender: el asset del release sirve solo si es de este guion (horizontal y vertical de episodio miran su huella, como el turno). */
+export function assetVigente(id, c) {
+  if (!hayAsset(nombreAsset(id, c))) return false;
+  if (c === 'horizontal') return horizontalVigente(id);
+  if (c === 'tiktok' && !esShort(id)) { const meta = rutaLocal(id, 'tiktok-meta'); return bajar(nombreAsset(id, 'tiktok-meta'), meta) && leerJSON(meta, {}).huella === huella(id); }
+  return true;
+}
 export function asegurarEpisodio(id, { render = true } = {}) {
   if (!horizontalVigente(id)) {
     console.log(`  ${id}: horizontal de un guion viejo (otra huella): se renderiza de nuevo`);

@@ -7,7 +7,7 @@ import { readFileSync, existsSync, appendFileSync, writeFileSync, mkdirSync } fr
 import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { esShort, PLATAFORMAS, HORAS_UTC, clase, planTurno, tieneYouTube, tieneInstagram, tieneTiktok } from './cola.mjs';
-import { nombreAsset, hayAsset, subirAsset, rutaLocal, REPO } from './nube.mjs';
+import { nombreAsset, hayAsset, assetVigente, subirAsset, rutaLocal, REPO } from './nube.mjs';
 import { viejosDeArchivo } from './legacy.mjs';
 import { clavesOficiales } from '../lib/personajes-oficiales.mjs';
 
@@ -130,11 +130,11 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       ? faltantesVentana({ slots: slotsProximos({ cola: leerJSON('out/cola-unificada.json', []), tiene, listo, rota: (id) => !titulos[id]?.especial, turnos: Number(opt('turnos', 12)) }), omitidos, n: Number(opt('n', 6)),
         permitir: (id) => !series.length || series.some((x) => id.startsWith(`${x}-`) || id.startsWith(`short-${x}-`)), presupuesto: Number(opt('presupuesto', 'Infinity')),
         legacy: viejos,
-        hayAsset: (id, c) => hayAsset(nombreAsset(id, c)), hayArtefacto: (id, t) => arte.has(`${id}-${t}`) })
+        hayAsset: assetVigente, hayArtefacto: (id, t) => arte.has(`${id}-${t}`) })
       : faltantes({ cola: leerJSON('out/cola-unificada.json', []), tiene, listo, n: Number(opt('n', 6)), forzar, omitidos,
       permitir: (id) => !series.length || series.some((x) => id.startsWith(`${x}-`) || id.startsWith(`short-${x}-`)), presupuesto: Number(opt('presupuesto', 'Infinity')), maxEpisodios: Number(opt('episodios', 'Infinity')),
       legacy: viejos,
-      hayAsset: (id, c) => hayAsset(nombreAsset(id, c)), hayArtefacto: (id, t) => arte.has(`${id}-${t}`) });
+      hayAsset: assetVigente, hayArtefacto: (id, t) => arte.has(`${id}-${t}`) });
     console.log(`estimado Modal: USD ${costoTotal(items).toFixed(2)} · episodios: ${new Set(items.map((i) => i.id)).size}`);
     console.log(`omitidos por personajes viejos (${omitidos.length}): ${omitidos.map((o) => `${o.id} [${o.viejos.join(',')}]`).join(' | ').slice(0, 3000)}`);
     const L = modo === 'ventana' ? repartir(items, { modalOk: opt('modal', '0') === '1', githubFalla: opt('githubfalla', '0') === '1', motor: opt('motor', 'ventana') }) : lotes(items, opt('motor', 'modal'), opt('modal', '0') === '1');
