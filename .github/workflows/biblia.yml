@@ -1,5 +1,6 @@
-# Learn Bible 777: narra (Chatterbox en la CPU de GitHub, workflow voz-cpu) y renderiza (en este runner: horizontal + vertical)
-# capítulos de la serie biblia, 100% en GitHub (repo público, gratis; SIN Modal, Matías 2026-10-25).
+# Learn Bible 777: narra (workflow voz-cpu → Chatterbox en GPU de Modal) y renderiza en Modal (horizontal + vertical) capítulos
+# de la serie biblia. Modal = cuenta "familia" (secretos MODAL_TOKEN_*), tope USD 30/mes: si el mes pasa USD 25, no renderiza.
+# Respaldo gratis 100% GitHub: biblia-github.yml (apagado).
 # Resultado → release "biblia" (mp4, srt, miniatura.jpg + audio/timeline en zip, con el id adelante). NUNCA publica en redes.
 # gh workflow run biblia.yml -R matiasosuna/mitologias-render -f ids="biblia-genesis-01 biblia-genesis-02"
 name: biblia
@@ -26,6 +27,8 @@ jobs:
       VOZ_EN: chatterbox
       VOZ_MOTOR: github
       VOZ_TRANSPORTE: gh
+      MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
+      MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
     steps:
       - uses: actions/checkout@v4
       - name: validar ids
@@ -39,8 +42,14 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: for i in 1 2 3; do timeout 300 sudo apt-get update -q && timeout 600 sudo apt-get install -o DPkg::Lock::Timeout=60 -y -q libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2t64 fonts-noto-core ffmpeg && exit 0; echo "apt intento $i colgado"; done; exit 1
-      - run: npx remotion browser ensure
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q modal && sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+      - name: tope de gasto (familia, USD 25)
+        run: |
+          G=$(python scripts/modal-gasto.py); echo "Modal este mes: USD $G"
+          python -c "import sys; sys.exit(float('$G') >= 25)" || { echo "::error::Modal pasó USD 25 este mes: no se renderiza (tarjeta de la mamá de Matías)"; exit 1; }
       # audios ya narrados en corridas anteriores (el motor solo narra las frases que faltan)
       - uses: actions/cache@v4
         with:
@@ -49,12 +58,12 @@ jobs:
           restore-keys: biblia-voz-
       - name: narrar (Chatterbox en la CPU de GitHub, voz-cpu)
         run: for id in $IDS; do node scripts/motor-narrar.mjs "$id" en; done
-      - name: render (horizontal + vertical, en este runner)
+      - name: render (Modal, horizontal + vertical)
         run: |
-          for id in $IDS; do
-            node scripts/motor-render.mjs "$id" --imagen=en --audio=en && node scripts/miniaturas.mjs "$id"
-            node scripts/vertical-render.mjs "$id"
-          done
+          ITEMS=$(for id in $IDS; do printf '%s:horizontal %s:vertical ' "$id" "$id"; done)
+          rc=0; MOC_ITEMS="$ITEMS" timeout 9000 modal run scripts/modal_render.py || rc=$?
+          echo "RC_RENDER=$rc" >> "$GITHUB_ENV"
+          for id in $IDS; do modal volume get --force moc-out "$id" out/ || echo "::error::$id: nada en moc-out"; done
       - name: subir al release biblia
         run: |
           gh release view biblia >/dev/null 2>&1 || gh release create biblia --title "Learn Bible 777" --notes "Renders de la serie biblia (workflow biblia.yml). No se publica nada en redes desde acá."
@@ -69,3 +78,4 @@ jobs:
           done
           ls -la subir
           [ -n "$(ls subir)" ] && gh release upload biblia subir/* --clobber
+          [ "$RC_RENDER" = 0 ] || { echo "::error::falló algún render en Modal (ver log del paso render)"; exit 1; }

@@ -1,6 +1,8 @@
 # Voz (Chatterbox Turbo) en la CPU de GitHub: gratis en el repo público, sin Modal. Lo usa scripts/voz-github.mjs
 # (motor-narrar, por defecto). Dos entradas: workflow_dispatch (con gh) o un pedido pedidos/<clave>.json empujado a la rama
 # "voz" (sin gh: la rutina de la nube). Salida: artefactos voz-<clave>-<n> y el zip voz-<clave>.zip en el release "voz".
+# MOTOR (variable del repo VOZ_MOTOR): modal = GPU de Modal, cuenta "familia" (secretos MODAL_TOKEN_*; Matías 2026-10-25, tope USD 30/mes)
+# | cpu = CPU de GitHub (gratis, más lento; queda apagado de respaldo).
 # La muestra de voz va cifrada (lib/voz-ref.enc, AES-256, clave en el secreto VOZ_CLAVE): nunca en claro en este repo.
 name: voz-cpu
 run-name: voz ${{ inputs.clave || 'pedido' }}
@@ -22,6 +24,7 @@ jobs:
     outputs:
       matriz: ${{ steps.p.outputs.matriz }}
       claves: ${{ steps.p.outputs.claves }}
+      motor: ${{ vars.VOZ_MOTOR == 'modal' && 'modal' || 'cpu' }}
     steps:
       - uses: actions/checkout@v4 # la rama "voz" = main + un solo commit con el pedido (voz-github.mjs la pisa cada vez)
         if: github.event_name == 'push'
@@ -43,9 +46,46 @@ jobs:
           name: pedidos-${{ github.run_id }}
           path: ${{ runner.temp }}/pedidos/*.json
           retention-days: 1
+  voz-modal:
+    needs: plan
+    if: needs.plan.outputs.claves != '[]' && needs.plan.outputs.motor == 'modal'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      matrix:
+        clave: ${{ fromJSON(needs.plan.outputs.claves) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts/modal_voz.py
+            lib/voz-ref.enc
+          sparse-checkout-cone-mode: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: pedidos-${{ github.run_id }}
+          path: pedidos
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q modal
+      - name: narrar en Modal (familia)
+        env:
+          VOZ_CLAVE: ${{ secrets.VOZ_CLAVE }}
+          MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
+          MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
+        run: |
+          openssl enc -d -aes-256-cbc -pbkdf2 -pass env:VOZ_CLAVE -in lib/voz-ref.enc -out lib/voz-matias-ref.wav # modal_voz.py la monta si existe
+          VOZ_ENTRADA="pedidos/${{ matrix.clave }}.json" VOZ_SALIDA=salida timeout 1800 modal run scripts/modal_voz.py
+          rm -f lib/voz-matias-ref.wav
+      - uses: actions/upload-artifact@v4
+        with:
+          name: voz-${{ matrix.clave }}-0
+          path: salida/*.wav
+          retention-days: 3
   voz:
     needs: plan
-    if: needs.plan.outputs.claves != '[]'
+    if: needs.plan.outputs.claves != '[]' && needs.plan.outputs.motor == 'cpu'
     runs-on: ubuntu-latest
     timeout-minutes: 300
     strategy:
@@ -88,7 +128,8 @@ jobs:
           if-no-files-found: ignore
           retention-days: 3
   juntar:
-    needs: [plan, voz]
+    needs: [plan, voz, voz-modal]
+    if: ${{ !cancelled() && needs.plan.outputs.claves != '[]' && !contains(needs.*.result, 'failure') }}
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}

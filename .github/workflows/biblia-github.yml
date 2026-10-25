@@ -1,0 +1,72 @@
+# Learn Bible 777: narra (Chatterbox en la CPU de GitHub, workflow voz-cpu) y renderiza (en este runner: horizontal + vertical)
+# capítulos de la serie biblia, 100% en GitHub (repo público, gratis; SIN Modal, Matías 2026-10-25).
+# Resultado → release "biblia" (mp4, srt, miniatura.jpg + audio/timeline en zip, con el id adelante). NUNCA publica en redes.
+# APAGADO (respaldo gratis, Matías 2026-10-25: Myths usa Modal familia). Prender: gh workflow enable biblia-github.yml
+# gh workflow run biblia-github.yml -R matiasosuna/mitologias-render -f ids="biblia-genesis-01 biblia-genesis-02"
+name: biblia-github
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: 'ids separados por espacio (ej. biblia-genesis-01 biblia-genesis-02)'
+        required: true
+permissions:
+  contents: write # release biblia
+  actions: write # dispara voz-cpu y baja sus artefactos
+concurrency:
+  group: biblia-github
+  cancel-in-progress: false
+jobs:
+  biblia:
+    if: github.repository == 'matiasosuna/mitologias-render'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      GH_TOKEN: ${{ github.token }}
+      IDS: ${{ inputs.ids }}
+      VOZ_EN: chatterbox
+      VOZ_MOTOR: github
+      VOZ_TRANSPORTE: gh
+    steps:
+      - uses: actions/checkout@v4
+      - name: validar ids
+        run: |
+          for id in $IDS; do
+            case "$id" in biblia-*) ;; *) echo "::error::$id no es de la serie biblia"; exit 1 ;; esac
+            [ -f "src/videos/$id/guion.json" ] || { echo "::error::falta src/videos/$id/guion.json"; exit 1; }
+          done
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: for i in 1 2 3; do timeout 300 sudo apt-get update -q && timeout 600 sudo apt-get install -o DPkg::Lock::Timeout=60 -y -q libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2t64 fonts-noto-core ffmpeg && exit 0; echo "apt intento $i colgado"; done; exit 1
+      - run: npx remotion browser ensure
+      # audios ya narrados en corridas anteriores (el motor solo narra las frases que faltan)
+      - uses: actions/cache@v4
+        with:
+          path: public/audio/biblia-*
+          key: biblia-voz-${{ github.run_id }}
+          restore-keys: biblia-voz-
+      - name: narrar (Chatterbox en la CPU de GitHub, voz-cpu)
+        run: for id in $IDS; do node scripts/motor-narrar.mjs "$id" en; done
+      - name: render (horizontal + vertical, en este runner)
+        run: |
+          for id in $IDS; do
+            node scripts/motor-render.mjs "$id" --imagen=en --audio=en && node scripts/miniaturas.mjs "$id"
+            node scripts/vertical-render.mjs "$id"
+          done
+      - name: subir al release biblia
+        run: |
+          gh release view biblia >/dev/null 2>&1 || gh release create biblia --title "Learn Bible 777" --notes "Renders de la serie biblia (workflow biblia.yml). No se publica nada en redes desde acá."
+          mkdir -p subir
+          for id in $IDS; do
+            for f in out/$id/*.mp4 out/$id/*.srt out/$id/miniatura.jpg out/$id/portada-ig*.jpg; do
+              [ -f "$f" ] || continue
+              n=$(basename "$f"); case "$n" in "$id".*) ;; *) n="$id.$n" ;; esac
+              cp "$f" "subir/$n"
+            done
+            zip -qr "subir/$id.voz.zip" "public/audio/$id" "src/videos/$id/timeline.json" # para traerlo al repo privado
+          done
+          ls -la subir
+          [ -n "$(ls subir)" ] && gh release upload biblia subir/* --clobber

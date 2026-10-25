@@ -12,7 +12,7 @@ No hay nadie mirando: no hagas preguntas; si algo no se puede resolver, dejá la
 - **Nunca renderizar** videos (`motor-render`, `short-render`, `vertical-*`, `modal_render.py`, `gh workflow run`). Hetzner prohibido.
 - **Nunca mostrar secretos**: no `env`, `printenv`, `set`, `cat ~/.modal.toml`, `git remote -v` ni `echo` de URLs de remotes (pueden llevar credenciales). MODAL_TOKEN_ID/SECRET ya están en el entorno: Modal los lee solo.
 - **No tocar** `.github/workflows/*`, secretos, ni los registros (`youtube-ids.json`, `subidas-*.json`, `listas.json`, `pinterest-pines.json`, `meta-youtube*.json` existentes, la rama `estado`). No borrar ni reescribir videos/guiones ya existentes.
-- La única IA es esta sesión: **no** llamar a la API de Anthropic, Gemini ni ElevenLabs. Voz = Chatterbox en la CPU de GitHub (gratis; `motor-narrar` lo dispara solo y espera ~10–20 min). Modal NO (sin crédito).
+- La única IA es esta sesión: **no** llamar a la API de Anthropic, Gemini ni ElevenLabs. Voz = Chatterbox vía el workflow voz-cpu de GitHub, que corre en Modal (cuenta familia); `motor-narrar` lo dispara solo y espera unos minutos. Nunca correr `modal` directo.
 - Contenido **solo en inglés** narrado (el `es` del guion se escribe como texto para subtítulos, no se narra).
 - Si la validación falla y no la podés arreglar: **no** empujes contenido roto (paso 6).
 

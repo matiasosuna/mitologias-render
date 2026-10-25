@@ -14,7 +14,7 @@ Vos no renderizás ni publicás. No hay nadie mirando: no hagas preguntas; si al
 - Violencia y sexo: dichos con el texto KJV, nunca mostrados.
 - **Nunca publicar** (subir*, instagram*, tiktok*, buffer-*, youtube-*, nube.mjs turno) ni **renderizar** (motor-render, vertical-*, modal_render.py, gh workflow run).
 - **Nunca mostrar secretos** (env, printenv, ~/.modal.toml, URLs de remotes). **No tocar** `.github/workflows/*`, `scripts/cola.mjs`, la rama `estado`, registros (`youtube-ids.json`, `subidas-*.json`, `listas.json`), ni nada de las otras series.
-- No reescribir capítulos ya hechos. La única IA es esta sesión; voz = Chatterbox en la CPU de GitHub (motor-narrar lo dispara solo; Modal NO).
+- No reescribir capítulos ya hechos. La única IA es esta sesión; voz = Chatterbox vía el workflow voz-cpu de GitHub, que corre en Modal (cuenta familia); `motor-narrar` lo dispara solo. Nunca correr `modal` directo.
 
 ## 1 · Preparar
 Igual que el paso 1 de `RUTINA.md` (repo privado, `scripts/nube-setup.sh`, repo público, `.env`). Empezá cada llamada a Bash con `set -a; . ./.env; set +a;`.
