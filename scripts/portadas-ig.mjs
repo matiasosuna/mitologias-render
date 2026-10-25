@@ -10,16 +10,16 @@ import { parOficial } from '../lib/miniaturas-oficiales.mjs';
 import { clavesOficiales } from '../lib/personajes-oficiales.mjs';
 
 const TEMPORADAS = {
-  griegas: [[7, 'SEASON 1 · ORIGINS'], [17, 'SEASON 2 · THE OLYMPIANS']],
-  nordicas: [[13, 'SEASON 1 · THE SAGA'], [99, 'SEASON 2 · HEROES OF THE NORTH']],
-  egipcias: [[11, 'SEASON 1 · ORIGINS'], [99, 'SEASON 2 · KINGS, MAGICIANS & TRAVELERS']],
+  griegas: [[7, 'SEASON 1 · ORIGINS'], [17, 'SEASON 2 · THE OLYMPIANS'], [23, 'SEASON 3 · PERSEPHONE AND THE UNDERWORLD']],
+  nordicas: [[13, 'SEASON 1 · THE SAGA'], [21, 'SEASON 2 · HEROES OF THE NORTH'], [30, 'SEASON 3 · ODIN']],
+  egipcias: [[11, 'SEASON 1 · ORIGINS'], [19, 'SEASON 2 · KINGS, MAGICIANS & TRAVELERS'], [30, 'SEASON 3 · THE GODS UP CLOSE']],
   hawaianas: [[12, 'SEASON 1 · ORIGINS'], [24, 'SEASON 2 · PELE AND HIʻIAKA']],
   norteamericanas: [[12, 'SEASON 1 · THE MAKING OF THE WORLD'], [24, 'SEASON 2 · TRICKSTERS AND HEROES'], [36, 'SEASON 3 · SKY AND STARS'], [99, 'SEASON 4 · GUARDIANS AND GIANTS']],
   aztecas: [[12, 'SEASON 1 · THE FIVE SUNS'], [24, 'SEASON 2 · QUETZALCOATL AND TOLLAN'], [36, 'SEASON 3 · GODS, DAYS AND MICTLAN'], [99, 'SEASON 4 · LEGENDS OF TENOCHTITLAN']],
   balinesas: [[12, 'SEASON 1 · GODS, DEMONS AND THE ISLAND'], [24, 'SEASON 2 · PRIESTS, KINGS AND LOVERS'], [99, 'SEASON 3 · SPIRITS OF THE ISLAND']],
   hindues: [[12, 'SEASON 1 · GODS, THE OCEAN AND THE AVATARS'], [24, 'SEASON 2 · THE RAMAYANA'], [99, 'SEASON 3 · KRISHNA AND THE MAHABHARATA']],
   maories: [[12, 'SEASON 1 · FROM THE DARK TO AOTEAROA'], [24, 'SEASON 2 · CANOES FROM HAWAIKI'], [99, 'SEASON 3 · TANIWHA AND TIPUA']],
-  biblia: [[50, 'SEASON 1 · GENESIS']],
+  biblia: [[5, 'SEASON 1 · GENESIS'], [50, 'SEASON 2 · GENESIS']], // Matías 2026-10-24: Génesis 1–5 = S1
 };
 const oficiales = clavesOficiales();
 const opt = (k) => process.argv.find((a) => a.startsWith(`--${k}=`))?.split('=')[1];
