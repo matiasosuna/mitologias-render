@@ -18,7 +18,7 @@ import { tmpdir } from 'node:os';
 import { ganchoParte } from './titulos.mjs';
 import { viejosDeArchivo } from './legacy.mjs';
 import {
-  HORAS_UTC, clase, construirCola, actualizarCola, tieneYouTube, tieneInstagram, tieneTiktok, partesHechasIG, partesEstimadas,
+  HORAS_UTC, clase, construirCola, actualizarCola, tieneYouTube, tieneInstagram, tieneTiktok,
   planTurno, estadoCola, limitar, usadas24h, esQuien, esShort, PLATAFORMAS, MAX_ALCANZAR, MAX_TIKTOK_FRENADO, TOPE_24H, TOPE_COLA_BUFFER,
   horizontalTurno, claveHorizontal, esBiblia,
 } from './cola.mjs';
@@ -194,18 +194,17 @@ function desdeArtefacto(id, clases) {
   } catch { return false; } finally { rmSync(dir, { recursive: true, force: true }); }
 }
 /** Episodio largo en out/: release → artefacto de render-nube → render acá (si `render`). Lo nuevo se sube al release. */
-/** Con gancho (guion.youtube.gancho): el horizontal y sus subtítulos sirven solo si son de la huella actual del guion; si no,
- *  se tiran y se renderizan de nuevo (los pre-renders de antes del gancho no lo tienen). Sin gancho: como siempre. */
-const conGancho = (id) => Boolean(existsSync(join('src/videos', id, 'guion.json')) && guion(id).youtube?.gancho);
+/** El horizontal anota la huella del guion con que se hizo (<id>.horizontal.json): si hay huella y no es la actual (p. ej. se
+ *  le sacó el gancho, 2026-10-24) se tira y se renderiza de nuevo. Sin huella (horizontales de antes del gancho): sirve. */
 export function horizontalVigente(id) {
-  if (!conGancho(id)) return true;
   const meta = rutaLocal(id, 'horizontal-meta');
   if (!existsSync(meta)) bajar(nombreAsset(id, 'horizontal-meta'), meta);
-  return leerJSON(meta, {}).huella === huella(id);
+  const h = leerJSON(meta, {}).huella;
+  return h === undefined || h === huella(id);
 }
 export function asegurarEpisodio(id, { render = true } = {}) {
   if (!horizontalVigente(id)) {
-    console.log(`  ${id}: horizontal de un guion viejo (sin gancho): se renderiza de nuevo`);
+    console.log(`  ${id}: horizontal de un guion viejo (otra huella): se renderiza de nuevo`);
     for (const c of ['horizontal', 'srt-en', 'srt-es', 'horizontal-meta']) rmSync(rutaLocal(id, c), { force: true });
     if (!render) return false;
     mkdirSync(join('out', id), { recursive: true });
@@ -223,7 +222,7 @@ export function asegurarEpisodio(id, { render = true } = {}) {
     console.log(`  render en la nube: ${id} (horizontal)`);
     if (!existsSync(rutaLocal(id, 'horizontal'))) correr('scripts/motor-render.mjs', id, '--imagen=en', '--audio=en');
     if (!existsSync(rutaLocal(id, 'miniatura'))) correr('scripts/miniaturas.mjs', id);
-    if (conGancho(id)) { writeFileSync(rutaLocal(id, 'horizontal-meta'), JSON.stringify({ huella: huella(id) })); f.push('horizontal-meta'); }
+    writeFileSync(rutaLocal(id, 'horizontal-meta'), JSON.stringify({ huella: huella(id) })); f.push('horizontal-meta');
     subirNuevos(f); f = faltan();
   }
   return existsSync(rutaLocal(id, 'horizontal'));
@@ -239,6 +238,8 @@ const IDS = 'src/videos/youtube-ids.json', API = 'out/subidas-api.json', IG = 'o
 /** Listo para publicar: narrado (guion + timeline) y, si es episodio, con título en titulos.json. */
 /** Biblia: además, la marca VERIFICADO que deja su sesión cuando el capítulo está revisado (no sale nada a medio hacer). */
 const listoCon = (titulos) => (id) => ['guion.json', 'timeline.json'].every((f) => existsSync(join('src/videos', id, f))) && (!esBiblia(id) || verificadoVigente(id)) && (esShort(id) || Boolean(titulos[id]?.titulo));
+/** En la rotación de series: temporadas sí, especiales no (Odisea, Stories, Lords of the Dead). */
+export const rotaCon = (titulos) => (id) => !titulos[id]?.especial;
 /** VERIFICADO guarda la huella del guion+timeline revisados (scripts/verificado.mjs): si el guion cambió después, no vale. */
 export const verificadoVigente = (id) => { const f = join('src/videos', id, 'VERIFICADO'); return existsSync(f) && readFileSync(f, 'utf8').trim() === huella(id); };
 /** "Who is…?" en orden: los del orden de Shorts de la rama estado, después las carpetas nuevas. */
@@ -256,12 +257,6 @@ function actualizar() {
   mkdirSync('out', { recursive: true }); writeFileSync(COLA, JSON.stringify(cola, null, 1));
   console.log(`cola única: ${cola.length} ítems (${cola.length - antes.length} nuevos)`);
 }
-/** Partes que le faltan a un episodio en Instagram (registro → partes.json local → estimado por la duración). */
-function partesFaltanIG(id, igH) {
-  const de = igH.find((h) => h.tipo === 'reel-parte' && h.id === id && h.de)?.de ?? leerJSON(rutaLocal(id, 'partes'), null)?.de
-    ?? partesEstimadas(leerJSON(join('src/videos', id, 'timeline.json'), null));
-  return Math.max(0, de - partesHechasIG(igH, id).size);
-}
 /** TikTok frenado (rechazó por límite): 2 por turno durante 24 h; después se vuelve a probar con 4. */
 export const tiktokFrenado = (ritmo, ahora = Date.now()) => Boolean(ritmo?.max && ritmo.desde && ahora - Date.parse(ritmo.desde) < 864e5);
 /** TikTok pidió esperar 24 h: en ese lapso no se intenta nada (reintentar alarga el bloqueo y el turno falla). */
@@ -272,9 +267,9 @@ const envF = () => Object.fromEntries(readFileSync('.env', 'utf8').split('\n').f
 function planDe(p, d, f = fechaTurno()) {
   const c = clase(turnoUTC(f)), ahora = Date.now();
   const max = p === 'tiktok' && tiktokFrenado(leerJSON(RITMO_TK, null), ahora) ? MAX_TIKTOK_FRENADO : MAX_ALCANZAR[p];
-  const plan = planTurno({ cola: d.cola, tiene: d.tiene, plataforma: p, clase: c, listo: d.listo, inicio: inicioTurno(f), max });
+  const plan = planTurno({ cola: d.cola, tiene: d.tiene, plataforma: p, clase: c, listo: d.listo, inicio: inicioTurno(f), max, rota: rotaCon(d.titulos) });
   // YouTube: un "Who is…?" cuesta 2 (su Short + su horizontal, en el mismo turno)
-  const [reg, costo] = { youtube: [d.api, (id) => (conHorizontal(id) ? 2 : 1)], instagram: [d.igH, (id) => (esShort(id) ? 1 : partesFaltanIG(id, d.igH))], tiktok: [d.buf, () => 1] }[p];
+  const [reg, costo] = { youtube: [d.api, (id) => (conHorizontal(id) ? 2 : 1)], instagram: [d.igH, () => 1], tiktok: [d.buf, () => 1] }[p];
   const ids = limitar(plan.ids, costo, usadas24h(reg, ahora), TOPE_24H[p]);
   if (ids.length < plan.ids.length) console.log(`${p}: tope de ${TOPE_24H[p]} en 24 h → ${ids.length} de ${plan.ids.length}`);
   return { ...plan, clase: c, max, ids };
@@ -391,12 +386,10 @@ function itemIG(id) {
     try { correrIG(['scripts/instagram-shorts.mjs', lista], id); } finally { rmSync(lista, { force: true }); }
     return;
   }
-  // episodio: TODAS sus partes en este turno, en orden (instagram-reels.mjs publica la próxima que falta)
-  for (let i = 0; i < 12 && partesFaltanIG(id, leerJSON(IG, [])) > 0; i++) {
-    const antes = partesHechasIG(leerJSON(IG, []), id).size;
-    correrIG(['scripts/instagram-reels.mjs', `--solo=${id}`], `${id}`);
-    if (partesHechasIG(leerJSON(IG, []), id).size <= antes) throw new Error(`Instagram ${id}: la parte no quedó anotada`);
-  }
+  // episodio (desde 2026-10-24): ENTERO en un solo Reel largo (antes iba en partes)
+  if (tieneInstagram(leerJSON(IG, [])).has(id)) return console.log(`Instagram ${id}: ya estaba`);
+  correrIG(['scripts/instagram-reels.mjs', `--solo=${id}`, '--entero'], `${id}`);
+  if (!tieneInstagram(leerJSON(IG, [])).has(id)) throw new Error(`Instagram ${id}: el Reel no quedó anotado`);
 }
 
 /** "Who is…?" horizontal de este turno de YouTube (o null). Si no viene con su Short en el plan, es un reintento y tiene
@@ -461,7 +454,7 @@ async function adelantar(minutos = 150) {
   const d = datos(), hasta = Date.now() + minutos * 60e3;
   const { prepararTiktok } = await import('./buffer-tiktok.mjs');
   const tareas = [
-    ...proximos(d, 'instagram', 4).map((id) => () => (esShort(id) ? asegurar(id, 'short') : asegurar(id, 'partes'))),
+    ...proximos(d, 'instagram', 4).map((id) => () => (esShort(id) ? asegurar(id, 'short') : prepararTiktok(id, yo))), // IG usa el mismo vertical entero que TikTok
     ...proximos(d, 'tiktok', 4).map((id) => () => prepararTiktok(id, yo)),
     ...proximos(d, 'youtube', 2).map((id) => () => (esShort(id) ? asegurar(id, 'short') : asegurarEpisodio(id, { render: false }))),
     // "Who is…?" horizontal (~1 min de video): se renderiza acá si no está, así el turno solo sube

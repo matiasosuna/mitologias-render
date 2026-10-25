@@ -86,9 +86,9 @@ Hacela igual que `aztecas`/`hindues`/`maories` (commit `259c810` como guía):
 - Si `npx remotion still` funciona en la máquina, mirá un cuadro del elenco/fondos con Read; si no, seguí (no es obligatorio).
 
 ## 4 · Narrar (solo inglés) y validar
+Sin gancho ni marco (Matías 2026-10-24): cada episodio es un solo video largo en las tres redes; nunca correr `marco-myths.mjs`.
 Por cada id nuevo:
 ```bash
-node scripts/marco-myths.mjs <id>                     # SOLO episodios (no Shorts): gancho fijo de Myths al inicio + "Follow…" al final; necesita su título en titulos.json
 node scripts/motor-narrar.mjs <id> en                 # Chatterbox en Modal; reusa lo ya narrado; Shorts a 1,1× sin silencios en las puntas
 find public/audio/<id> -name '*.wav' -size 0          # tiene que salir vacío; si no, volvé a correr motor-narrar (borra y re-narra los vacíos)
 node scripts/motor-revisar.mjs <id> --sin-hoja        # tiene que decir exactamente "sin avisos": corregí el guion y re-narrá si cambió texto

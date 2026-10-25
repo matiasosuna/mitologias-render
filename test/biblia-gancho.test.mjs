@@ -1,11 +1,9 @@
-// Gancho de intro (Matías 2026-10-22): todos los capítulos de la Biblia menos Génesis 1, en YouTube, partes de IG y TikTok.
-// Voz desde el cuadro 0, texto en pantalla, ≤ ~11 s; el gancho completo en TODAS las partes (2026-10-23), las 2+ con ", part n.". El mecanismo sirve para cualquier serie.
+// Gancho de intro (2026-10-22) SACADO el 2026-10-24: ningún capítulo lo trae. El mecanismo sirve para cualquier serie.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { GANCHO_BIBLIA, marcoBiblia, partesTitulo } from '../scripts/marco-biblia.mjs';
-import { marcoParte, sobraParte, horizontalConMarco, verticalConGancho, conGanchoAlPrincipio, tieneGancho, filtroMarco, procesoMarco, piezasMarco } from '../lib/marco.mjs';
-import { cortes } from '../scripts/vertical-partes.mjs';
+import { verticalConGancho, conGanchoAlPrincipio, tieneGancho, filtroMarco, procesoMarco, piezasMarco } from '../lib/marco.mjs';
 
 const leer = (f) => JSON.parse(readFileSync(f, 'utf8'));
 const TEXTO = 'Ever wanted to know what the Bible actually says? Without anyone telling you what to believe? I tell it as simple stories, with the exact words, as it was written. No interpretation.';
@@ -28,38 +26,15 @@ test('el texto del gancho es el aprobado, palabra por palabra', () => {
   assert.equal(m.reels.final.en, 'Q?');
 });
 
-test('todo capítulo de la Biblia (menos Génesis 1) trae el gancho en todos los formatos', () => {
+// Matías 2026-10-24: "saquemos el tema del gancho" — ningún capítulo lo trae (el mecanismo queda para cualquier serie).
+test('sin gancho: ningún capítulo de la Biblia lo trae, ni en guion ni narrado', () => {
   assert.ok(capitulos.length >= 3);
-  for (const id of capitulos) {
-    const g = leer(`src/videos/${id}/guion.json`), { cap, corto } = partesTitulo(g.titulo.en);
-    const gancho = `${TEXTO} Today: ${cap}, ${corto}.`;
-    assert.equal(g.reels?.ganchos?.[0]?.en, gancho, `${id}: reels.ganchos[0]`);
-    assert.equal(g.youtube?.gancho?.en, gancho, `${id}: youtube.gancho`);
-    g.reels.ganchos.slice(1).forEach((x, k) => assert.equal(x.en, `${gancho.slice(0, -1)}, part ${k + 2}.`, `${id}: parte ${k + 2}`));
-    assert.ok(g.reels.ganchos.length >= 2, `${id}: falta la línea de la parte 2`);
-  }
-  // Génesis 1 ya salió: sin gancho
-  assert.equal(tieneGancho(leer('src/videos/biblia-genesis-01/guion.json')), false);
-});
-
-test('narrado: voz desde el cuadro 0, ≤ 11,5 s, una línea por cada parte, en YouTube, IG y TikTok', () => {
-  for (const id of capitulos.filter((d) => existsSync(`src/videos/${d}/timeline.json`))) {
-    const g = leer(`src/videos/${id}/guion.json`), tl = leer(`src/videos/${id}/timeline.json`);
-    assert.ok(tl.marco?.['reels-gancho-1'] && tl.marco?.['youtube-gancho'], `${id}: gancho sin narrar`);
-    const { partes } = cortes(tl, 0, sobraParte(g, tl), false);
-    assert.ok(g.reels.ganchos.length >= partes.length, `${id}: ${partes.length} partes y ${g.reels.ganchos.length} ganchos`);
-    partes.forEach(([a, b], i) => {
-      const ap = marcoParte(g, tl, i).apertura;
-      assert.ok(ap, `${id} parte ${i + 1}: sin gancho`);
-      assert.equal(ap.frases[0].from, 0, `${id} parte ${i + 1}: la voz no arranca en el cuadro 0`);
-      if (i === 0) assert.ok(ap.durationInFrames / tl.fps <= 11.5, `${id}: gancho de ${(ap.durationInFrames / tl.fps).toFixed(1)} s`);
-      assert.ok(2 + (b - a + ap.durationInFrames + marcoParte(g, tl, i).final.durationInFrames) / tl.fps + (i < partes.length - 1 ? 2.5 : 0) < 180, `${id} parte ${i + 1} ≥ 3 min`);
-    });
-    for (const { timeline: t } of [horizontalConMarco(g, tl), verticalConGancho(g, tl)]) {
-      assert.equal(t.introFrames, 0, `${id}: la portada no puede ir antes de la voz`);
-      assert.equal(t.escenas[0].id, 'gancho'); assert.equal(t.escenas[0].from, 0); assert.equal(t.escenas[0].frases[0].from, 0);
-      assert.equal(t.escenas[1].from, t.escenas[0].durationInFrames);
-    }
+  for (const id of [...capitulos, 'biblia-genesis-01']) {
+    const g = leer(`src/videos/${id}/guion.json`);
+    assert.equal(tieneGancho(g), false, `${id}: tiene gancho`);
+    assert.equal(g.youtube?.gancho, undefined, `${id}: youtube.gancho`);
+    const ft = `src/videos/${id}/timeline.json`;
+    if (existsSync(ft)) assert.ok(!Object.keys(leer(ft).marco ?? {}).some((k) => /gancho/.test(k)), `${id}: gancho narrado`);
   }
 });
 

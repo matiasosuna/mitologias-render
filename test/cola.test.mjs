@@ -35,10 +35,9 @@ test('lista: lo publicado en el orden de YouTube por grupos (T1 griega, nórdica
   assert.equal(ids[7], 'griegas-08-c');
 });
 
-test('lista: después solo temporadas (T2 griega, luego las T1); sin Odisea, Stories ni T2 pausadas', () => {
+test('lista: después solo temporadas (T2 griega, nórdica, egipcia, después las T1); sin Odisea ni Stories', () => {
   const ids = construirCola({ titulos: T, ytIds: YT, stories: ['griegas-80-s'] }).map((e) => e.id);
-  assert.deepEqual(ids.slice(8), ['griegas-09-d', 'hawaianas-02-h', 'aztecas-01-i']);
-  assert.ok(!ids.includes('nordicas-16-x'));
+  assert.deepEqual(ids.slice(8), ['griegas-09-d', 'nordicas-16-x', 'hawaianas-02-h', 'aztecas-01-i']);
 });
 
 test('lista: un "Who is…?" detrás de cada episodio que falta; mini historias viejas afuera', () => {
@@ -46,14 +45,14 @@ test('lista: un "Who is…?" detrás de cada episodio que falta; mini historias 
   const cola = construirCola({ titulos: T, ytIds: YT, quien, stories: [] });
   const ids = cola.map((e) => e.id);
   assert.ok(!ids.includes('short-griegas-nadie') && !ids.includes('short-griegas-viejo') && !ids.includes('short-griegas-dioses-60s'));
-  assert.deepEqual(ids.slice(8, 13), ['griegas-09-d', 'short-griegas-quien-zeus', 'hawaianas-02-h', 'short-griegas-quien-hermes', 'aztecas-01-i']);
+  assert.deepEqual(ids.slice(8, 13), ['griegas-09-d', 'short-griegas-quien-zeus', 'nordicas-16-x', 'short-griegas-quien-hermes', 'hawaianas-02-h']);
   assert.ok(esQuien('short-griegas-quien-zeus') && !esQuien('short-griegas-dioses-60s') && !esQuien('short-griegas-cerbero'));
 });
 
 test('lista: sobran "Who is…?" → van al final; formato por plataforma', () => {
   const cola = construirCola({ titulos: { 'griegas-01-a': T['griegas-01-a'] }, ytIds: { 'griegas-01-a': 'v' }, quien: ['short-griegas-quien-a', 'short-griegas-quien-b'], stories: [] });
   assert.deepEqual(cola.map((e) => e.id), ['griegas-01-a', 'short-griegas-quien-a', 'short-griegas-quien-b']);
-  assert.deepEqual(cola[0].formato, { youtube: 'horizontal', instagram: 'partes', tiktok: 'vertical' });
+  assert.deepEqual(cola[0].formato, { youtube: 'horizontal', instagram: 'vertical', tiktok: 'vertical' });
   assert.deepEqual(cola[1].formato, { youtube: 'short', instagram: 'short', tiktok: 'short' });
   assert.deepEqual(entrada('short-x-quien-y').formato, FORMATOS.short);
 });
@@ -77,9 +76,25 @@ test('lista con los datos reales: empieza por la T1 griega y trae la T2 griega 1
 });
 
 // ── turnos
-test('turnos: 08 HST episodio, 12 y 20 HST "Who is…?", el resto solo para alcanzar', () => {
+test('turnos: 5 por día, uno de cada serie (04 Biblia, 08 griego, 12 nórdico, 16 egipcio, 20 hawaiano); 00 HST nada', () => {
   assert.deepEqual(HORAS_UTC.map(horaHST), [16, 20, 0, 4, 8, 12]);
-  assert.deepEqual(Object.fromEntries(HORAS_UTC.map((h) => [horaHST(h), clase(h)])), { 16: 'alcanzar', 20: 'alcanzar', 0: 'alcanzar', 4: 'alcanzar', 8: 'episodio', 12: 'alcanzar' });
+  assert.deepEqual(Object.fromEntries(HORAS_UTC.map((h) => [horaHST(h), clase(h)])),
+    { 4: 'serie:biblia', 8: 'serie:griegas', 12: 'serie:nordicas', 16: 'serie:egipcias', 20: 'serie:hawaianas', 0: 'nada' });
+});
+
+test('turno de serie: el próximo de ESA serie que le falta a cada red, estricto en orden; especiales afuera', () => {
+  const c = [ep('griegas-01'), ep('nordicas-01'), ep('griegas-02'), ep('griegas-03'), ep('nordicas-02'), sh('short-q1')];
+  const tiene = { youtube: mapa(['griegas-01', 'nordicas-01']), instagram: mapa(['griegas-01']), tiktok: mapa([]) };
+  const p = (pl, s, extra = {}) => planTurno({ cola: c, tiene, plataforma: pl, clase: `serie:${s}`, inicio: INICIO, ...extra }).ids;
+  assert.deepEqual(p('youtube', 'griegas'), ['griegas-02']);
+  assert.deepEqual(p('instagram', 'griegas'), ['griegas-02']);
+  assert.deepEqual(p('tiktok', 'griegas'), ['griegas-01']); // cada red sigue su propio orden
+  assert.deepEqual(p('instagram', 'nordicas'), ['nordicas-01']);
+  assert.deepEqual(p('youtube', 'nordicas'), ['nordicas-02']);
+  assert.deepEqual(p('youtube', 'biblia'), []); // sin episodios de esa serie
+  assert.deepEqual(p('youtube', 'griegas', { listo: (id) => id !== 'griegas-02' }), []); // no listo: espera, no salta al 03
+  assert.deepEqual(p('youtube', 'griegas', { rota: (id) => id !== 'griegas-02' }), ['griegas-03']); // especial: fuera de la rotación
+  assert.deepEqual(planTurno({ cola: c, tiene, plataforma: 'youtube', clase: 'nada', inicio: INICIO }).ids, []);
 });
 
 // ── qué tiene cada plataforma

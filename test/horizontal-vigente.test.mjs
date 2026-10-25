@@ -5,7 +5,7 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { horizontalVigente, huella, verificadoVigente } from '../scripts/nube.mjs';
 
-test('horizontal con gancho: sirve solo si su huella es la del guion actual; sin gancho, como siempre', () => {
+test('horizontal: con huella anotada sirve solo si es la del guion actual; sin huella (de antes del gancho), sirve', () => {
   const antes = process.cwd(), dir = mkdtempSync(join(tmpdir(), 'hv-'));
   process.chdir(dir);
   try {
@@ -21,6 +21,9 @@ test('horizontal con gancho: sirve solo si su huella es la del guion actual; sin
     guion('biblia-genesis-09', { youtube: { gancho: { en: 'Ever wanted…' } } });
     meta('biblia-genesis-09', 'vieja');
     assert.equal(horizontalVigente('biblia-genesis-09'), false, 'la Biblia también: sin huella se renderiza de nuevo');
+    guion('le-sacaron-el-gancho', { titulo: 'x' });
+    meta('le-sacaron-el-gancho', 'la-del-guion-con-gancho');
+    assert.equal(horizontalVigente('le-sacaron-el-gancho'), false, '2026-10-24: sin gancho ahora, pero el horizontal se hizo con gancho');
   } finally { process.chdir(antes); }
 });
 

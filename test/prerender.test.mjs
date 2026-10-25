@@ -10,7 +10,7 @@ const base = { cola, tiene: nada, listo: () => true, hayAsset: () => false };
 test('faltantes: salta publicados en las tres, no listos y lo que ya está en el release', () => {
   const tiene = { youtube: m('griegas-0a'), instagram: m('griegas-0a'), tiktok: m('griegas-0a') };
   const r = faltantes({ ...base, tiene, listo: (id) => id !== 'griegas-0b', n: 4, hayAsset: (id, c) => id === 'griegas-0c' && c === 'horizontal' });
-  assert.deepEqual(r, [{ id: 'griegas-0c', tipo: 'vertical' }, { id: 'griegas-0c', tipo: 'partes' }, { id: 'griegas-0d', tipo: 'horizontal' }, { id: 'griegas-0d', tipo: 'vertical' }]);
+  assert.deepEqual(r, [{ id: 'griegas-0c', tipo: 'vertical' }, { id: 'griegas-0d', tipo: 'horizontal' }, { id: 'griegas-0d', tipo: 'vertical' }, { id: 'short-griegas-quien-z', tipo: 'short' }]); // IG usa el vertical entero (2026-10-24)
 });
 test('faltantes: un artefacto vigente cuenta como hecho; el short pide solo "short"', () => {
   const r = faltantes({ ...base, cola: [cola[0], cola[4]], n: 9, hayArtefacto: (id, t) => t === 'vertical' || t === 'partes' });
@@ -20,14 +20,14 @@ test('faltantes: omite personajes viejos y los lista; forzar los incluye siempre
   const omitidos = [];
   const r = faltantes({ ...base, n: 9, omitidos, legacy: (id) => (id === 'griegas-0a' ? ['zeus'] : []), forzar: ['griegas-0d'], hayAsset: (id) => id === 'griegas-0d' });
   assert.deepEqual(omitidos, [{ id: 'griegas-0a', viejos: ['zeus'] }]);
-  assert.deepEqual(r.slice(0, 3).map((x) => x.tipo), ['horizontal', 'vertical', 'partes']); // forzado, aunque el release lo tenga
+  assert.deepEqual(r.slice(0, 2).map((x) => x.tipo), ['horizontal', 'vertical']); // forzado, aunque el release lo tenga
   assert.equal(r[0].id, 'griegas-0d');
-  assert.ok(!r.some((x, i) => i >= 3 && x.id === 'griegas-0d') && !r.some((x) => x.id === 'griegas-0a'));
+  assert.ok(!r.some((x, i) => i >= 2 && x.id === 'griegas-0d') && !r.some((x) => x.id === 'griegas-0a'));
 });
 test('faltantes: respeta presupuesto en USD y máximo de episodios', () => {
   const r = faltantes({ ...base, n: 99, presupuesto: 0.53, maxEpisodios: 8 });
   assert.ok(costoTotal(r) <= 0.53);
-  assert.deepEqual(r.map((x) => x.tipo), ['horizontal', 'vertical', 'partes', 'short']); // 0,25+0,10+0,17 = 0,52 → nada más entra; el short cuesta 0
+  assert.deepEqual(r.map((x) => x.tipo), ['horizontal', 'vertical', 'vertical', 'short']); // 0,25+0,10 (+0,25 no entra) +0,10 = 0,45; el short cuesta 0
   assert.equal(new Set(faltantes({ ...base, n: 99, maxEpisodios: 2 }).map((x) => x.id)).size, 2);
 });
 test('motor: Modal por defecto para episodios; github solo si se pide, no hay claves o el tipo no está en Modal', () => {
@@ -44,7 +44,7 @@ test('faltantes: permitir filtra por mitología', () => {
 test('faltantes: no renderiza el formato de una red donde ya está publicado', () => {
   const tiene = { youtube: m('griegas-0a'), instagram: m(), tiktok: m('griegas-0a') };
   const r = faltantes({ ...base, cola: [cola[0]], tiene, n: 9 });
-  assert.deepEqual(r, [{ id: 'griegas-0a', tipo: 'partes' }]);
+  assert.deepEqual(r, []); // IG usa el mismo vertical que TikTok, ya hecho
 });
 
 import { iniciosTurno, slotsProximos, faltantesVentana, repartir } from '../scripts/prerender.mjs';
@@ -66,7 +66,7 @@ test('faltantesVentana: formato por red, lo urgente (< 6 h) y los filtros', () =
   const slots = [{ id: 'griegas-0a', plataforma: 'instagram', en: T0 + 36e5 }, { id: 'griegas-0a', plataforma: 'tiktok', en: T0 + 20 * 36e5 }, { id: 'griegas-0b', plataforma: 'youtube', en: T0 + 8 * 36e5 }, { id: 'nordicas-0x', plataforma: 'youtube', en: T0 }];
   const omitidos = [];
   const r = faltantesVentana({ slots, ahora: T0, hayAsset: (id, c) => id === 'griegas-0b' && c === 'horizontal', permitir: (id) => id !== 'nordicas-0x', omitidos });
-  assert.deepEqual(r.map((x) => [x.id, x.tipo, x.urgente]), [['griegas-0a', 'partes', true], ['griegas-0a', 'vertical', false]]);
+  assert.deepEqual(r.map((x) => [x.id, x.tipo, x.urgente]), [['griegas-0a', 'vertical', true]]);
   const v = faltantesVentana({ slots, ahora: T0, hayAsset: () => false, legacy: (id) => (id === 'griegas-0a' ? ['zeus'] : []), omitidos });
   assert.deepEqual(omitidos.map((o) => o.id), ['griegas-0a']);
   assert.ok(v.every((x) => x.id !== 'griegas-0a'));

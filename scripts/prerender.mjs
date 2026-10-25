@@ -13,7 +13,7 @@ import { clavesOficiales } from '../lib/personajes-oficiales.mjs';
 
 /** Qué necesita cada tipo de ítem: [tipo de render-nube, clase de asset que lo prueba]. */
 export const NECESITA = {
-  episodio: [['horizontal', 'horizontal', 'youtube'], ['vertical', 'tiktok', 'tiktok'], ['partes', 'partes', 'instagram']], // [tipo, asset, red que lo usa]: solo se renderiza si esa red no lo publicó
+  episodio: [['horizontal', 'horizontal', 'youtube'], ['vertical', 'tiktok', 'tiktok']], // IG usa el mismo vertical entero que TikTok (2026-10-24) // [tipo, asset, red que lo usa]: solo se renderiza si esa red no lo publicó
   short: [['short', 'short']],
 };
 /** Tipos que Modal sabe renderizar (scripts/modal_render.py): el resto va siempre por GitHub. */
@@ -57,7 +57,7 @@ export function lotes(items, motor, modalOk) {
 
 
 // ── ventana: lo que se va a publicar en los próximos turnos (2 días = 12 turnos), simulando el plan de cada turno
-const FORMATO = { youtube: ['horizontal', 'horizontal'], tiktok: ['vertical', 'tiktok'], instagram: ['partes', 'partes'] };
+const FORMATO = { youtube: ['horizontal', 'horizontal'], tiktok: ['vertical', 'tiktok'], instagram: ['vertical', 'tiktok'] };
 /** Próximos `turnos` inicios de turno (ms UTC) desde `ahora`: los de HORAS_UTC (cada 4 h). */
 export function iniciosTurno(ahora, turnos) {
   const t = new Date(ahora); t.setUTCMinutes(0, 0, 0);
@@ -66,11 +66,11 @@ export function iniciosTurno(ahora, turnos) {
   return Array.from({ length: turnos }, (_, k) => ms + k * 4 * 36e5);
 }
 /** Qué publicaría cada plataforma en los próximos turnos (cada turno se planea con lo publicado antes de empezar). [{id, plataforma, en}] */
-export function slotsProximos({ cola, tiene, listo, ahora = Date.now(), turnos = 12 }) {
+export function slotsProximos({ cola, tiene, listo, rota, ahora = Date.now(), turnos = 12 }) {
   const sim = Object.fromEntries(PLATAFORMAS.map((p) => [p, new Map(tiene[p])])), out = [];
   for (const en of iniciosTurno(ahora, turnos)) {
     const c = clase(new Date(en).getUTCHours()), hechos = [];
-    for (const plataforma of PLATAFORMAS) for (const id of planTurno({ cola, tiene: sim, plataforma, clase: c, listo }).ids) { out.push({ id, plataforma, en }); hechos.push([plataforma, id]); }
+    for (const plataforma of PLATAFORMAS) for (const id of planTurno({ cola, tiene: sim, plataforma, clase: c, listo, rota }).ids) { out.push({ id, plataforma, en }); hechos.push([plataforma, id]); }
     for (const [p, id] of hechos) sim[p].set(id, 0);
   }
   return out;
@@ -127,7 +127,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     const forzar = opt('forzar', '').split(',').filter(Boolean);
     const modo = opt('modo', 'cola');
     const items = modo === 'ventana'
-      ? faltantesVentana({ slots: slotsProximos({ cola: leerJSON('out/cola-unificada.json', []), tiene, listo, turnos: Number(opt('turnos', 12)) }), omitidos, n: Number(opt('n', 6)),
+      ? faltantesVentana({ slots: slotsProximos({ cola: leerJSON('out/cola-unificada.json', []), tiene, listo, rota: (id) => !titulos[id]?.especial, turnos: Number(opt('turnos', 12)) }), omitidos, n: Number(opt('n', 6)),
         permitir: (id) => !series.length || series.some((x) => id.startsWith(`${x}-`) || id.startsWith(`short-${x}-`)), presupuesto: Number(opt('presupuesto', 'Infinity')),
         legacy: viejos,
         hayAsset: (id, c) => hayAsset(nombreAsset(id, c)), hayArtefacto: (id, t) => arte.has(`${id}-${t}`) })

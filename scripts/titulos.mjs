@@ -18,7 +18,7 @@ export const TEMPORADAS = {
   balinesas: [12, 24, 96],
   hindues: [12, 24, 96],
   maories: [12, 24, 96],
-  biblia: [50], // un libro = una temporada: Génesis (50 capítulos) = Season 1
+  biblia: [5, 50], // Matías 2026-10-24: Génesis 1–5 fue la temporada 1; desde Génesis 6, temporada 2
 };
 /** { temporada, episodio } de un episodio de la serie principal según su número de carpeta. */
 export function temporadaDe(serie, numero) {

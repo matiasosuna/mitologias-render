@@ -10,7 +10,9 @@
 // Desde 2026-10-15 publica por Buffer (scripts/buffer.mjs) si IG_VIA=buffer o si la clave de Meta no sirve: el video sale
 // del release "media", la tapa es el cuadro de 1 s (Buffer no acepta portada propia) y el anti-duplicados mira los posts
 // del canal de Instagram en Buffer (incluye lo publicado antes por la Graph API).
-// Uso: node scripts/instagram-reels.mjs [--probar] [--solo=<id>]
+// Desde 2026-10-24 (--entero, lo usa la nube): el episodio ENTERO en un solo Reel largo, sin gancho ("un capítulo largo"):
+// el mismo vertical completo de TikTok (<id>.tiktok.mp4, scripts/buffer-tiktok.mjs) y la portada de Instagram como tapa.
+// Uso: node scripts/instagram-reels.mjs [--probar] [--solo=<id>] [--entero]
 import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'node:fs';
 import { execFileSync, spawn } from 'node:child_process';
 import { join } from 'node:path';
@@ -51,14 +53,26 @@ const pendientes = readdirSync('src/videos').filter((d) => /^[a-z]+-\d\d-/.test(
   .sort((a, b) => tanda(a) - tanda(b) || a.localeCompare(b));
 const id = opt('solo') ?? pendientes[0];
 if (!id) { console.log('nada pendiente'); process.exit(0); }
+const entero = args.includes('--entero');
+let de, parte, archivoParte, nombreVideo, portadaEntero;
+if (entero) {
+  // un solo Reel: el vertical completo (el de TikTok, del release o renderizado en la nube) + la portada de Instagram
+  const rel = nube ?? await import('./nube.mjs');
+  const { prepararTiktok } = await import('./buffer-tiktok.mjs');
+  await prepararTiktok(id, rel);
+  de = 1; parte = 1; archivoParte = rel.rutaLocal(id, 'tiktok'); nombreVideo = rel.nombreAsset(id, 'tiktok');
+  portadaEntero = rel.asegurar(id, 'portada-ig');
+  if (!existsSync(archivoParte) || !portadaEntero) { console.log(`esperando render vertical de ${id}`); process.exit(0); }
+} else {
 if (nube) nube.asegurar(id, 'partes');
 // En orden estricto: si el próximo todavía no tiene su versión vertical, esperar (no saltear).
-const de = partesDe(id);
+de = partesDe(id);
 if (!de) { console.log(`esperando render en partes de ${id}`); process.exit(0); }
-const parte = [...Array(de).keys()].map((i) => i + 1).find((n) => !partesHechas(id).has(n));
-const archivoParte = join('out', id, `${id}.parte-${parte}.mp4`);
+parte = [...Array(de).keys()].map((i) => i + 1).find((n) => !partesHechas(id).has(n));
+archivoParte = join('out', id, `${id}.parte-${parte}.mp4`);
 if (nube) { nube.asegurar(id, 'parte', parte); process.env.PARTES_DE = String(de); nube.asegurar(id, 'portada-ig-parte', parte); } // portadas-ig.mjs lee PARTES_DE
 if (!existsSync(archivoParte)) { console.log(`esperando render en partes de ${id}`); process.exit(0); }
+}
 
 const gu = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8'));
 const yt = existsSync(join('src/videos', id, 'youtube.json')) ? JSON.parse(readFileSync(join('src/videos', id, 'youtube.json'), 'utf8')) : {};
@@ -79,14 +93,14 @@ const gql = porBuffer ? cliente(env.BUFFER_API_KEY) : null;
 const yaEsta = porBuffer
   ? async () => { const p = buscarPorPrimeraLinea(await postsDelCanal(gql), (l) => esLaMisma(l, datos)); return p && { id: p.id, permalink: p.externalLink ?? null }; }
   : async () => (await g('GET', `/${IG}/media`, { fields: 'id,caption,permalink,media_type', limit: '100' })).data.find((m) => m.media_type === 'VIDEO' && esLaMisma((m.caption ?? '').split('\n')[0], datos));
-const anotar = (m) => { const h = hist(); h.push({ id, tipo: 'reel-parte', parte, de, ...(primeraLinea(datos) === lineaVieja(datos) ? {} : { formato: FORMATO_CURIOSO, curioso }), media: m.id, permalink: m.permalink, ...(porBuffer ? { via: 'buffer' } : {}), fecha: new Date().toISOString() }); writeFileSync(reg, JSON.stringify(h, null, 1)); };
+const anotar = (m) => { const h = hist(); h.push({ id, tipo: entero ? 'reel-episodio' : 'reel-parte', parte, de, ...(primeraLinea(datos) === lineaVieja(datos) ? {} : { formato: FORMATO_CURIOSO, curioso }), media: m.id, permalink: m.permalink, ...(porBuffer ? { via: 'buffer' } : {}), fecha: new Date().toISOString() }); writeFileSync(reg, JSON.stringify(h, null, 1)); };
 const previo = await yaEsta();
 if (previo) { anotar(previo); console.log(id, 'ya estaba:', previo.permalink); process.exit(0); }
 
 if (porBuffer) {
   // Buffer baja el video de una URL estable: la del release (también desde la Mac, con gh)
   const rel = nube ?? await import('./nube.mjs');
-  const videoUrl = rel.publicarUrl(archivoParte, rel.nombreAsset(id, 'parte', parte));
+  const videoUrl = rel.publicarUrl(archivoParte, entero ? nombreVideo : rel.nombreAsset(id, 'parte', parte));
   const post = await esperarEnvio(gql, await crear(gql, entradaReel({ texto, videoUrl, thumbOffset: 1000, alFeed: true })));
   anotar({ id: post.id, permalink: post.externalLink ?? null });
   console.log(id, 'publicado (Buffer):', post.externalLink ?? `enviándose (${post.id})`);
@@ -96,8 +110,8 @@ if (porBuffer) {
 // 1) armar el video 9:16 y la portada 9:16
 const dir = 'out/.reels'; mkdirSync(dir, { recursive: true });
 // portada de ESTA parte ("n/m" debajo del título): las partes no se ven repetidas
-if (!nube) execFileSync('node', ['scripts/portadas-ig.mjs', id, `--parte=${parte}`, `--de=${de}`], { stdio: 'ignore' });
-const port = join('out', id, `portada-ig-${parte}.jpg`);
+if (!nube && !entero) execFileSync('node', ['scripts/portadas-ig.mjs', id, `--parte=${parte}`, `--de=${de}`], { stdio: 'ignore' });
+const port = entero ? portadaEntero : join('out', id, `portada-ig-${parte}.jpg`);
 const video = join(dir, `${id}.mp4`), tapa = join(dir, `${id}-${parte}.jpg`);
 // El video ya es vertical de verdad (scripts/vertical-render.mjs); solo se copia para servirlo.
 execFileSync('cp', [archivoParte, video]);
@@ -106,7 +120,7 @@ execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', port, '-filter_complex
 // 2) servir la carpeta con un túnel temporal (en la nube: URL del release)
 let videoUrl, coverUrl;
 if (nube) {
-  videoUrl = nube.publicarUrl(archivoParte, nube.nombreAsset(id, 'parte', parte));
+  videoUrl = nube.publicarUrl(archivoParte, entero ? nombreVideo : nube.nombreAsset(id, 'parte', parte));
   coverUrl = nube.subirAsset(tapa, nube.nombreAsset(id, 'tapa-ig', parte));
   for (let i = 0; i < 10 && !nube.hayAsset(nube.nombreAsset(id, 'tapa-ig', parte)); i++) await new Promise((r) => setTimeout(r, 3000));
 } else {

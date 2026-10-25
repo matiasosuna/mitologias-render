@@ -19,7 +19,7 @@ export const PLATAFORMAS = ['youtube', 'instagram', 'tiktok'];
 /** Las que marcan el ritmo; TikTok las sigue sin frenarlas. */
 export const PRINCIPALES = ['youtube', 'instagram'];
 export const FORMATOS = {
-  episodio: { youtube: 'horizontal', instagram: 'partes', tiktok: 'vertical' },
+  episodio: { youtube: 'horizontal', instagram: 'vertical', tiktok: 'vertical' }, // IG: un solo Reel largo desde 2026-10-24 (antes 'partes')
   short: { youtube: 'short', instagram: 'short', tiktok: 'short' },
 };
 /** Shorts que entran a la cola además de los "Who is…?". Vacío: el de todos los dioses juntos NO (2026-10-19: un capítulo por dios). */
@@ -32,16 +32,20 @@ export const entrada = (id) => ({ id, tipo: tipoDe(id), formato: FORMATOS[tipoDe
 // ── turnos: 6 por día, a las 2, 6, 10, 14, 18 y 22 UTC = 16, 20, 00, 04, 08 y 12 HST (UTC−10)
 export const HORAS_UTC = [2, 6, 10, 14, 18, 22];
 export const EPISODIO_HST = 8;
-// Matías 2026-10-22: Who-is EN PAUSA. 2026-10-24: Biblia EN PAUSA — Génesis 1–5 fue la temporada 1; ahora otras mitologías.
-// Cuando vuelva: seguir en orden desde Génesis 6, máximo 1 por día (BIBLIA_HST = [12]), y la explicación solo en YouTube.
+// Matías 2026-10-22: Who-is EN PAUSA. 2026-10-24: Biblia por su turno de serie (abajo), no por BIBLIA_HST.
 export const QUIEN_HST = [];
 export const BIBLIA_HST = [];
+// Matías 2026-10-24: 5 episodios por día, UNO DE CADA serie, cada uno en su turno, igual en las tres redes; cada episodio entero
+// (un solo video largo, sin gancho). 00 HST: nada. Cada red sigue cada serie en orden por su cuenta (sin "alcanzar").
+export const SERIE_HST = { 4: 'biblia', 8: 'griegas', 12: 'nordicas', 16: 'egipcias', 20: 'hawaianas' };
+export const serieDe = (id) => id.split('-')[0];
 export const esBiblia = (id) => id.startsWith('biblia-');
 export const horaHST = (horaUTC) => (horaUTC + 14) % 24;
-/** 'episodio' | 'quien' | 'biblia' | 'alcanzar' (turno que solo usan las plataformas atrasadas). */
+/** 'serie:<serie>' (turno de una serie, SERIE_HST) | 'nada'. Las clases viejas ('episodio' | 'quien' | 'biblia' | 'alcanzar')
+ *  siguen en planTurno pero ya no salen de acá. */
 export function clase(horaUTC) {
-  const h = horaHST(horaUTC);
-  return h === EPISODIO_HST ? 'episodio' : QUIEN_HST.includes(h) ? 'quien' : BIBLIA_HST.includes(h) ? 'biblia' : 'alcanzar';
+  const s = SERIE_HST[horaHST(horaUTC)];
+  return s ? `serie:${s}` : 'nada';
 }
 
 // Tope por turno mientras alcanzan (episodios) y topes por 24 h (publicaciones; en Instagram cuenta cada parte).
@@ -57,7 +61,7 @@ export const STORIES_GRIEGAS = ['griegas-80-perseo-y-medusa', 'griegas-81-teseo-
   'griegas-84-dedalo-e-icaro', 'griegas-85-el-rey-midas', 'griegas-86-heracles-trabajos-2', 'griegas-87-aracne', 'griegas-88-jason-y-el-vellocino', 'griegas-89-eco-y-narciso'];
 /** Lo que sigue (no está en YouTube): foco griego primero, después el resto de las T1 como antes. */
 // Solo temporadas (Matías 2026-10-22: nada de la Odisea ni Greek Myth Stories; especiales nuevos solo con su OK).
-export const CONTINUACION = [['griegas', 2], ...['hawaianas', 'norteamericanas', 'aztecas', 'hindues', 'maories', 'balinesas'].map((s) => [s, 1]), ['biblia', 1]];
+export const CONTINUACION = [['griegas', 2], ['nordicas', 2], ['egipcias', 2], ['hawaianas', 1], ['hawaianas', 2], ...['norteamericanas', 'aztecas', 'hindues', 'maories', 'balinesas'].map((s) => [s, 1]), ['biblia', 1], ['biblia', 2]];
 
 const grupoDe = (id, t) => (t?.especial ? 'especial' : `${id.split('-')[0]}-${t?.temporada}`);
 const porEpisodio = (titulos) => (a, b) => (titulos[a]?.episodio ?? 0) - (titulos[b]?.episodio ?? 0) || a.localeCompare(b);
@@ -149,10 +153,19 @@ export function estadoCola({ cola, tiene, listo = () => true, inicio = Infinity 
 
 /** Qué publica `plataforma` en este turno (ids en orden: primero el "Who is…?", después los episodios).
  *  max: tope de episodios por turno mientras alcanza. */
-export function planTurno({ cola, tiene, plataforma, clase: c, listo = () => true, inicio = Infinity, max = MAX_ALCANZAR[plataforma] }) {
+export function planTurno({ cola, tiene, plataforma, clase: c, listo = () => true, inicio = Infinity, max = MAX_ALCANZAR[plataforma], rota = () => true }) {
   const { eps, punteros, lider, parejo, antes } = estadoCola({ cola, tiene, listo, inicio });
   const ahora = (id) => tiene[plataforma].has(id);
   const ids = [];
+  if (c === 'nada') return { ids, parejo, punteros, lider };
+  if (c.startsWith('serie:')) {
+    // el próximo episodio de ESA serie que le falta a esta red, ESTRICTO en orden (si no está listo, se espera; nunca se
+    // saltea a uno posterior). rota(id): entra en la rotación (nube.mjs deja afuera los especiales).
+    const s = c.slice('serie:'.length);
+    const e = cola.find((x) => x.tipo === 'episodio' && serieDe(x.id) === s && rota(x.id) && !antes(plataforma)(x.id));
+    if (e && listo(e.id) && !ahora(e.id)) ids.push(e.id);
+    return { ids, parejo, punteros, lider };
+  }
   if (c === 'quien') {
     // el próximo "Who is…?" que le falta a alguna, a las tres juntas
     const q = cola.find((e) => e.tipo === 'short' && listo(e.id) && PLATAFORMAS.some((p) => !antes(p)(e.id)));
