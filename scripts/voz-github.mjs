@@ -16,7 +16,8 @@ const esperar = (ms) => Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0
 export const tandas = (frases, n = 60) => Array.from({ length: Math.ceil(frases.length / n) }, (_, i) => frases.slice(i * n, i * n + n));
 export const empaquetar = (frases) => gzipSync(JSON.stringify(frases)).toString('base64');
 
-const conGh = () => { if (process.env.VOZ_TRANSPORTE === 'git') return false; try { gh(['auth', 'status'], { stdio: 'ignore' }); return true; } catch { return false; } };
+const conGh = () => { if (process.env.VOZ_TRANSPORTE === 'git') return false; if (process.env.VOZ_TRANSPORTE === 'gh') return true; // biblia.yml: GH_TOKEN del workflow
+  try { gh(['auth', 'status'], { stdio: 'ignore' }); return true; } catch { return false; } };
 
 /** Sin gh: commit (main + pedidos/<clave>.json) empujado a la rama "voz"; el workflow sube voz-<clave>.zip al release "voz". */
 function porGit(frases, salida) {

@@ -1,6 +1,6 @@
 // Narra un guion visual en varios idiomas (voces de macOS, gratis) y genera su timeline.
 // Uso: node scripts/motor-narrar.mjs griegas-02-prometeo [es,pt,en]
-// Nube (Linux, sin `say`): VOZ_EN=chatterbox node scripts/motor-narrar.mjs <id> en   (Modal: MODAL_BIN o `modal` del PATH)
+// Nube (Linux, sin `say`): VOZ_EN=chatterbox node scripts/motor-narrar.mjs <id> en   (voz en la CPU de GitHub: scripts/voz-github.mjs; antes Modal: MODAL_BIN o `modal` del PATH)
 // Reutiliza los audios ya generados si el texto no cambió.
 import { execFileSync } from 'node:child_process';
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, statSync, rmSync } from 'node:fs';
@@ -10,7 +10,7 @@ import { ralentizar, retimear } from './narracion-lenta.mjs';
 import { timelineMulti } from '../lib/motor-tiempos.mjs';
 import { tiemposShort } from '../lib/quien.mjs';
 import { escenasDe, procesoAudio } from '../lib/short.mjs';
-import { leerEnv, usaChatterbox, binModal, motorDeVoz, dondeChatterbox } from '../lib/voz-config.mjs';
+import { leerEnv, usaChatterbox, motorDeVoz } from '../lib/voz-config.mjs';
 import { narrarEnGithub } from './voz-github.mjs';
 import { piezasMarco, marcoTimeline } from '../lib/marco.mjs';
 
@@ -19,7 +19,7 @@ import { piezasMarco, marcoTimeline } from '../lib/marco.mjs';
 const ENV = leerEnv(existsSync('.env') ? readFileSync('.env', 'utf8') : '');
 const ELEVEN = ENV.ELEVENLABS_API_KEY && ENV.ELEVENLABS_VOICE_ID ? { key: ENV.ELEVENLABS_API_KEY, voz: ENV.ELEVENLABS_VOICE_ID, modelo: ENV.ELEVENLABS_MODEL ?? 'eleven_flash_v2_5', velocidad: Number(ENV.ELEVENLABS_SPEED ?? 1) } : null;
 const VOZ = { es: ['Paulina', 168], pt: ['Luciana', 175], en: ['Samantha', 170] };
-// VOZ_EN=chatterbox en .env → inglés con Chatterbox (gratis, GPU de Modal, scripts/modal_voz.py) en vez de ElevenLabs.
+// VOZ_EN=chatterbox en .env → inglés con Chatterbox (gratis, CPU de GitHub, scripts/voz-github.mjs) en vez de ElevenLabs.
 const CHATTER = usaChatterbox(process.env, ENV);
 const vacio = (f) => existsSync(f) && statSync(f).size === 0;
 // Borra un .wav vacío y lo saca del registro de tempo (si no, el nuevo no se llevaría al tempo de su formato).
@@ -65,8 +65,7 @@ if (CHATTER && idiomas.includes('en')) {
   if (faltan.length) {
     mkdirSync(cbDir, { recursive: true });
     writeFileSync(join(cbDir, 'entrada.json'), JSON.stringify(faltan));
-    if (dondeChatterbox(process.env, ENV) === 'github') narrarEnGithub(join(cbDir, 'entrada.json'), cbDir); // gratis (CPU de GitHub)
-    else execFileSync(binModal({ ...ENV, ...process.env }, existsSync), ['run', 'scripts/modal_voz.py'], { timeout: 20 * 60 * 1000, killSignal: 'SIGINT', stdio: 'inherit', env: { ...process.env, VOZ_ENTRADA: join(cbDir, 'entrada.json'), VOZ_SALIDA: cbDir } });
+    narrarEnGithub(join(cbDir, 'entrada.json'), cbDir); // gratis (CPU de GitHub); sin Modal desde 2026-10-25
   }
 }
 

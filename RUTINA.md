@@ -12,7 +12,7 @@ No hay nadie mirando: no hagas preguntas; si algo no se puede resolver, dejá la
 - **Nunca renderizar** videos (`motor-render`, `short-render`, `vertical-*`, `modal_render.py`, `gh workflow run`). Hetzner prohibido.
 - **Nunca mostrar secretos**: no `env`, `printenv`, `set`, `cat ~/.modal.toml`, `git remote -v` ni `echo` de URLs de remotes (pueden llevar credenciales). MODAL_TOKEN_ID/SECRET ya están en el entorno: Modal los lee solo.
 - **No tocar** `.github/workflows/*`, secretos, ni los registros (`youtube-ids.json`, `subidas-*.json`, `listas.json`, `pinterest-pines.json`, `meta-youtube*.json` existentes, la rama `estado`). No borrar ni reescribir videos/guiones ya existentes.
-- La única IA es esta sesión: **no** llamar a la API de Anthropic, Gemini ni ElevenLabs. Voz = Chatterbox en Modal (crédito gratis; cada narración es corta).
+- La única IA es esta sesión: **no** llamar a la API de Anthropic, Gemini ni ElevenLabs. Voz = Chatterbox en la CPU de GitHub (gratis; `motor-narrar` lo dispara solo y espera ~10–20 min). Modal NO (sin crédito).
 - Contenido **solo en inglés** narrado (el `es` del guion se escribe como texto para subtítulos, no se narra).
 - Si la validación falla y no la podés arreglar: **no** empujes contenido roto (paso 6).
 
@@ -89,11 +89,11 @@ Hacela igual que `aztecas`/`hindues`/`maories` (commit `259c810` como guía):
 Sin gancho ni marco (Matías 2026-10-24): cada episodio es un solo video largo en las tres redes; nunca correr `marco-myths.mjs`.
 Por cada id nuevo:
 ```bash
-node scripts/motor-narrar.mjs <id> en                 # Chatterbox en Modal; reusa lo ya narrado; Shorts a 1,1× sin silencios en las puntas
+node scripts/motor-narrar.mjs <id> en                 # Chatterbox en GitHub (voz-cpu); reusa lo ya narrado; Shorts a 1,1× sin silencios en las puntas
 find public/audio/<id> -name '*.wav' -size 0          # tiene que salir vacío; si no, volvé a correr motor-narrar (borra y re-narra los vacíos)
 node scripts/motor-revisar.mjs <id> --sin-hoja        # tiene que decir exactamente "sin avisos": corregí el guion y re-narrá si cambió texto
 ```
-Al final, todo junto: `npx tsc --noEmit -p . && node --test test/*.test.mjs`. Si Modal falla dos veces seguidas, o algo no queda en verde → paso 6.
+Al final, todo junto: `npx tsc --noEmit -p . && node --test test/*.test.mjs`. Si la voz de GitHub falla dos veces seguidas, o algo no queda en verde → paso 6.
 
 ## 5 · Guardar y entregar
 ```bash

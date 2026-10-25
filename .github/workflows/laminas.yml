@@ -1,6 +1,6 @@
 # Láminas (PNG) de composiciones de src/pruebas, sin la Mac: se suben al release "revision" (mismo nombre = se pisa).
-# gh workflow run laminas.yml -R matiasosuna/mitologias-render -f ids='g-hoja,m-fondos' [-f frame=60] [-f motor=github|modal]
-# motor github (por defecto) | modal (scripts/modal_laminas.py, sale del crédito de Modal; si falla, respaldo en GitHub).
+# gh workflow run laminas.yml -R matiasosuna/mitologias-render -f ids='g-hoja,m-fondos' [-f frame=60]
+# Solo en GitHub (sin Modal, Matías 2026-10-25).
 name: laminas
 on:
   workflow_dispatch:
@@ -11,9 +11,6 @@ on:
       frame:
         description: 'cuadro del still'
         default: '60'
-      motor:
-        description: 'github | modal'
-        default: github
 permissions:
   contents: write # release "revision"
 jobs:
@@ -23,29 +20,13 @@ jobs:
     timeout-minutes: 60
     env:
       GH_TOKEN: ${{ github.token }}
-      MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
-      MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-      - uses: actions/setup-python@v5
-        if: inputs.motor == 'modal'
-        with:
-          python-version: '3.12'
-      - name: láminas en Modal
-        id: modal
-        if: inputs.motor == 'modal'
-        continue-on-error: true
-        run: |
-          [ -n "$MODAL_TOKEN_ID" ] || { echo "sin claves de Modal"; exit 1; }
-          pip install -q modal
-          L=$(node scripts/laminas.mjs resolver "${{ inputs.ids }}")
-          MOC_LAMINAS="$L" MOC_FRAME='${{ inputs.frame }}' timeout 1500 modal run scripts/modal_laminas.py
-      - name: láminas en GitHub (elegido o respaldo de Modal)
-        if: inputs.motor != 'modal' || steps.modal.outcome == 'failure'
+      - name: láminas en GitHub
         run: |
           npm ci
           sudo apt-get update && sudo apt-get install -y libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2t64 fonts-noto-core

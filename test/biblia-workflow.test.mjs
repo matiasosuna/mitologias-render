@@ -9,12 +9,13 @@ test('biblia.yml: solo en mitologias-render, release biblia, sin publicar en red
   assert.match(yml, /if: github\.repository == 'matiasosuna\/mitologias-render'/);
   assert.match(yml, /gh release upload biblia .*--clobber/);
   assert.match(yml, /VOZ_EN: chatterbox/);
-  assert.match(yml, /modal run scripts\/modal_render\.py/);
+  assert.match(yml, /VOZ_TRANSPORTE: gh/); // voz por voz-cpu (GitHub), render en el runner
+  assert.match(yml, /actions: write/);
+  assert.doesNotMatch(yml, /modal run|MODAL_TOKEN|pip install -q modal/); // sin Modal (2026-10-25)
   assert.doesNotMatch(yml, /publicar|buffer|youtube-subir|instagram|tiktok/i);
 });
 
-test('modal_voz.py: en la nube la muestra de voz sale del Volume privado moc-voz', () => {
-  const py = readFileSync('scripts/modal_voz.py', 'utf8');
-  assert.match(py, /Volume\.from_name\("moc-voz"/);
-  assert.match(py, /if modal\.is_local\(\) and REF\.exists\(\)/);
+test('ningún workflow usa Modal', () => {
+  for (const w of ['biblia', 'laminas', 'prerender', 'voz-cpu', 'render']) assert.doesNotMatch(readFileSync(`.github/workflows/${w}.yml`, 'utf8'), /MODAL_TOKEN|modal run scripts\/modal_(voz|laminas)/, w);
+  assert.match(readFileSync('.github/workflows/prerender.yml', 'utf8'), /^ +MODAL=0 /m);
 });
