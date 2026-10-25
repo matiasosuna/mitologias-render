@@ -1,0 +1,54 @@
+# Voz (Chatterbox Turbo) en la CPU de GitHub: gratis en el repo público, sin Modal. Lo dispara scripts/voz-github.mjs
+# (motor-narrar con VOZ_MOTOR=github, el de siempre) y baja los .wav de los artefactos voz-<clave>-<n>.
+# La muestra de voz va cifrada (lib/voz-ref.enc, AES-256, clave en el secreto VOZ_CLAVE): nunca en claro en este repo.
+name: voz-cpu
+run-name: voz ${{ inputs.clave }}
+on:
+  workflow_dispatch:
+    inputs:
+      clave: { description: 'id único de la tanda (lo pone voz-github.mjs)', required: true }
+      frases: { description: 'JSON [{h, texto}] en gzip+base64', required: true }
+permissions:
+  contents: read
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      matrix:
+        parte: [0, 1, 2, 3, 4, 5]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts/voz_cpu.py
+            lib/voz-ref.enc
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.cache/huggingface
+          key: chatterbox-cpu-v1
+      - name: instalar Chatterbox (torch CPU)
+        run: for i in 1 2 3; do timeout 900 pip install -q --extra-index-url https://download.pytorch.org/whl/cpu chatterbox-tts && exit 0; done; exit 1
+      - name: narrar
+        env:
+          VOZ_CLAVE: ${{ secrets.VOZ_CLAVE }}
+          FRASES: ${{ inputs.frases }}
+          PARTE: ${{ matrix.parte }}
+          PARTES: 6
+        run: |
+          openssl enc -d -aes-256-cbc -pbkdf2 -pass env:VOZ_CLAVE -in lib/voz-ref.enc -out "$RUNNER_TEMP/ref.wav"
+          printf '%s' "$FRASES" | base64 -d | gunzip > "$RUNNER_TEMP/frases.json"
+          VOZ_ENTRADA="$RUNNER_TEMP/frases.json" VOZ_SALIDA=salida VOZ_REF="$RUNNER_TEMP/ref.wav" python scripts/voz_cpu.py
+          rm -f "$RUNNER_TEMP/ref.wav"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: voz-${{ inputs.clave }}-${{ matrix.parte }}
+          path: salida/*.wav
+          if-no-files-found: ignore
+          retention-days: 3

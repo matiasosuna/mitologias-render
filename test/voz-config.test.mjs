@@ -1,7 +1,7 @@
 // Voz de motor-narrar en la Mac y en la nube (Linux): sin `say`, Modal sin .venv, VOZ_EN desde el entorno.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { leerEnv, usaChatterbox, binModal, motorDeVoz } from '../lib/voz-config.mjs';
+import { leerEnv, usaChatterbox, binModal, motorDeVoz, dondeChatterbox } from '../lib/voz-config.mjs';
 
 test('leerEnv: clave=valor, ignora comentarios y conserva los = del valor', () => {
   assert.deepEqual(leerEnv('A=1\n# B=2\nC = x=y \n\nmal'), { A: '1', C: 'x=y' });
@@ -26,4 +26,10 @@ test('motorDeVoz: inglés con Chatterbox en Linux; say solo en macOS', () => {
   assert.equal(motorDeVoz('es', { chatter: true, eleven: false, plataforma: 'darwin' }), 'say');
   assert.throws(() => motorDeVoz('es', { chatter: true, eleven: false, plataforma: 'linux' }), /VOZ_EN=chatterbox/);
   assert.throws(() => motorDeVoz('en', { chatter: false, eleven: false, plataforma: 'linux' }), /say/);
+});
+
+test('Chatterbox corre en GitHub (gratis) salvo VOZ_MOTOR=modal', () => {
+  assert.equal(dondeChatterbox({}, {}), 'github');
+  assert.equal(dondeChatterbox({}, { VOZ_MOTOR: 'modal' }), 'modal');
+  assert.equal(dondeChatterbox({ VOZ_MOTOR: 'github' }, { VOZ_MOTOR: 'modal' }), 'github');
 });

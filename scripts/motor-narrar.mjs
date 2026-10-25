@@ -10,7 +10,8 @@ import { ralentizar, retimear } from './narracion-lenta.mjs';
 import { timelineMulti } from '../lib/motor-tiempos.mjs';
 import { tiemposShort } from '../lib/quien.mjs';
 import { escenasDe, procesoAudio } from '../lib/short.mjs';
-import { leerEnv, usaChatterbox, binModal, motorDeVoz } from '../lib/voz-config.mjs';
+import { leerEnv, usaChatterbox, binModal, motorDeVoz, dondeChatterbox } from '../lib/voz-config.mjs';
+import { narrarEnGithub } from './voz-github.mjs';
 import { piezasMarco, marcoTimeline } from '../lib/marco.mjs';
 
 // Inglés: tu voz clonada en ElevenLabs (si hay clave en .env); el resto, voces de macOS gratis.
@@ -64,7 +65,8 @@ if (CHATTER && idiomas.includes('en')) {
   if (faltan.length) {
     mkdirSync(cbDir, { recursive: true });
     writeFileSync(join(cbDir, 'entrada.json'), JSON.stringify(faltan));
-    execFileSync(binModal({ ...ENV, ...process.env }, existsSync), ['run', 'scripts/modal_voz.py'], { timeout: 20 * 60 * 1000, killSignal: 'SIGINT', stdio: 'inherit', env: { ...process.env, VOZ_ENTRADA: join(cbDir, 'entrada.json'), VOZ_SALIDA: cbDir } });
+    if (dondeChatterbox(process.env, ENV) === 'github') narrarEnGithub(join(cbDir, 'entrada.json'), cbDir); // gratis (CPU de GitHub)
+    else execFileSync(binModal({ ...ENV, ...process.env }, existsSync), ['run', 'scripts/modal_voz.py'], { timeout: 20 * 60 * 1000, killSignal: 'SIGINT', stdio: 'inherit', env: { ...process.env, VOZ_ENTRADA: join(cbDir, 'entrada.json'), VOZ_SALIDA: cbDir } });
   }
 }
 
