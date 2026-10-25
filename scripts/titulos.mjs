@@ -9,9 +9,9 @@ export const nombreSerie = (serie) => (serie === 'biblia' ? NOMBRES.biblia : `${
 
 /** Último número de episodio (el de la carpeta) de cada temporada; lo mismo que usan las portadas de IG y los planes. */
 export const TEMPORADAS = {
-  griegas: [7, 17],
-  nordicas: [13, 96],
-  egipcias: [11, 96],
+  griegas: [7, 17, 23],
+  nordicas: [13, 21, 30, 96],
+  egipcias: [11, 19, 30, 96],
   hawaianas: [12, 24],
   norteamericanas: [12, 24, 36, 96],
   aztecas: [12, 24, 36, 96],

@@ -4,8 +4,7 @@ Cada corrida toma el PRIMER ítem `- [ ]` (de arriba hacia abajo), lo hace enter
 `- [x] … — HECHO AAAA-MM-DD: <ids>`. Si se traba: el ítem queda `- [ ]` con una línea `> BLOQUEADO AAAA-MM-DD: <qué falló>` debajo
 (la próxima corrida lo retoma leyendo la nota). No reordenar ni borrar ítems; Matías puede editar esta lista.
 
-**Foco (2026-10-15): solo mitología GRIEGA.** Todo lo demás (nórdicas, egipcias y hawaianas incluidas) está en **PAUSADO** (al final):
-la rutina no toma nada de esa sección.
+**Desde 2026-10-24: temporadas de griegas, nórdicas y egipcias** (sección "Temporadas nuevas"); lo de **PAUSADO** (al final) no se toma.
 
 ## Hecho (historial)
 - [x] S01 · Shorts nativos (9): `norteamericanas-01-la-mujer-del-cielo`, `aztecas-01-los-hijos-de-ometeotl`, `hindues-01-el-dios-que-suena-el-mundo` — HECHO 2026-10-14: short-norteamericanas-arbol-luz, short-norteamericanas-resbalo-empujo, short-norteamericanas-gansos-tortuga, short-aztecas-dios-huesos, short-aztecas-medio-sol, short-aztecas-granos-maiz, short-hindues-himno-creacion, short-hindues-loto-brahma, short-hindues-dia-brahma
@@ -33,6 +32,18 @@ la rutina no toma nada de esa sección.
 - [x] Q07 · "Who is…?" grupo TITANES (4): Rhea `rea_oficial` · Atlas `atlas_oficial` · Helios `helios_oficial` · Selene `selene_oficial` — HECHO 2026-10-23 (un dios por grupo): short-griegas-quien-rea (Atlas, Helios y Selene no se hacen)
 - [x] Q08 · "Who is…?" grupo PRIMORDIALES (4): Gaia `gea_oficial` · Uranus `urano_oficial` · Nyx `nix_oficial` · Eros `eros_oficial` — HECHO 2026-10-23 (un dios por grupo): short-griegas-quien-gea (Urano, Nix y Eros no se hacen)
 - [x] Q09 · "Who is…?" grupo OTROS DIOSES (3): Pan · Nike · Nemesis (diseñar los `*_oficial` que falten, como en Q06) — HECHO 2026-10-24 (un dios por grupo): short-griegas-quien-pan (Nike y Nemesis no se hacen)
+
+## Temporadas nuevas (Matías 2026-10-24: 5 episodios por día, uno de cada mitología; cada uno un solo video largo, SIN gancho)
+- **T** = episodios de temporada (como "Episodios" en RUTINA.md), hasta 4 por ítem. Título en titulos.json: `<titulo.en> | <Serie> Mythology S3E<n>`,
+  `temporada: 3`. Ya hay T3 en `scripts/titulos.mjs` (griegas 18–23, nordicas 22–30, egipcias 20–30). Nunca `marco-myths.mjs`.
+  Si un tramo ya lo cuenta un episodio anterior, resumilo en 1–2 frases y profundizá lo nuevo.
+- [ ] T01 · Greek S3 "Persephone and the Underworld" (PLAN-GRIEGAS T3): `griegas-18` El rapto de Perséfone · `griegas-19` Las semillas de granada · `griegas-20` Viaje al inframundo · `griegas-21` Los condenados del Tártaro
+- [ ] T02 · Norse S3 "Odin" (PLAN-NORDICAS P2, en la serie principal): `nordicas-22` Who Is Odin? · `nordicas-23` The Head of Mímir · `nordicas-24` The Hanged God and the Runes · `nordicas-25` Kvasir and the Murderous Dwarves
+- [ ] T03 · Egyptian S3 "The Gods Up Close" (PLAN-EGIPCIAS Profundidades): `egipcias-20` Ra · `egipcias-21` Osiris · `egipcias-22` Isis · `egipcias-23` Set
+- [ ] T04 · Greek S3: `griegas-22` Orfeo y Eurídice · `griegas-23` Asclepio, el médico que resucitaba
+- [ ] T05 · Norse S3: `nordicas-26` Odin, Suttung and Gunnlöd · `nordicas-27` The Riddle Duel with Vafþrúðnir · `nordicas-28` Odin Between Two Fires · `nordicas-29` The Ferryman Who Mocked Thor
+- [ ] T06 · Egyptian S3: `egipcias-24` Thoth · `egipcias-25` Anubis · `egipcias-26` Hathor and Sekhmet · `egipcias-27` Ptah of Memphis
+- [ ] T07 · Egyptian S3: `egipcias-28` Amun of Thebes · `egipcias-29` The Duat, Hour by Hour · `egipcias-30` The Sacred Animals · Norse S3: `nordicas-30` Odin's Eye
 
 ## CANCELADO (Matías 2026-10-22: no más especiales ni Stories; no tomar nunca)
 - [ ] H05 · Story (Greek): Dédalo e Ícaro → `griegas-84-dedalo-e-icaro` · especial "Greek Myth Stories". Fuentes: Ovidio, Metamorfosis 8; Apolodoro, Epítome 1. Si va después de Teseo, el laberinto en 1–2 frases

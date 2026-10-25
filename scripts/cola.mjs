@@ -61,7 +61,7 @@ export const STORIES_GRIEGAS = ['griegas-80-perseo-y-medusa', 'griegas-81-teseo-
   'griegas-84-dedalo-e-icaro', 'griegas-85-el-rey-midas', 'griegas-86-heracles-trabajos-2', 'griegas-87-aracne', 'griegas-88-jason-y-el-vellocino', 'griegas-89-eco-y-narciso'];
 /** Lo que sigue (no está en YouTube): foco griego primero, después el resto de las T1 como antes. */
 // Solo temporadas (Matías 2026-10-22: nada de la Odisea ni Greek Myth Stories; especiales nuevos solo con su OK).
-export const CONTINUACION = [['griegas', 2], ['nordicas', 2], ['egipcias', 2], ['hawaianas', 1], ['hawaianas', 2], ...['norteamericanas', 'aztecas', 'hindues', 'maories', 'balinesas'].map((s) => [s, 1]), ['biblia', 1], ['biblia', 2]];
+export const CONTINUACION = [['griegas', 2], ['nordicas', 2], ['egipcias', 2], ['hawaianas', 1], ['hawaianas', 2], ['griegas', 3], ['nordicas', 3], ['egipcias', 3], ...['norteamericanas', 'aztecas', 'hindues', 'maories', 'balinesas'].map((s) => [s, 1]), ['biblia', 1], ['biblia', 2]];
 
 const grupoDe = (id, t) => (t?.especial ? 'especial' : `${id.split('-')[0]}-${t?.temporada}`);
 const porEpisodio = (titulos) => (a, b) => (titulos[a]?.episodio ?? 0) - (titulos[b]?.episodio ?? 0) || a.localeCompare(b);

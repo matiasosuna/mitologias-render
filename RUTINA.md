@@ -34,11 +34,11 @@ Empezá cada llamada a Bash con `set -a; . ./.env; set +a;` (desde la raíz del 
 Comprobá que todo está verde **antes** de producir: `npx tsc --noEmit -p . && node --test test/*.test.mjs`. Si ya falla sin tus cambios, anotalo (paso 6) y terminá.
 
 ## 2 · Elegir el ítem
-El primer `- [ ]` de `COLA-PRODUCCION.md` **que esté antes de `## PAUSADO`**. Nada de la sección PAUSADO se toma nunca (foco desde 2026-10-15:
-solo griegas; en pausa nórdicas, egipcias, hawaianas y todas las demás); si antes de PAUSADO no queda ninguno, terminá sin cambios.
+El primer `- [ ]` de `COLA-PRODUCCION.md` **que esté antes de `## PAUSADO`**. Nada de la sección PAUSADO se toma nunca (desde 2026-10-24:
+temporadas de griegas, nórdicas y egipcias, ítems T); si antes de PAUSADO no queda ninguno, terminá sin cambios.
 Si tiene una nota `> BLOQUEADO`, leela y evitá ese problema.
 Leé antes de escribir: `BRIEF-SHORTS.md` (todo Short), `BRIEF-QUIEN.md` (ítems Q), `BRIEF-GUION.md` (ítems H y episodios), `MOTOR.md` (formato + la sección de la serie), el `PLAN-<SERIE>.md` y 1–2 guiones existentes de la misma serie como ejemplo (para Shorts, también `src/videos/short-hawaianas-hiku/guion.json`).
-Tipos de ítem: **Q** = "Who is…?" · **H** = Story (episodio suelto) · **R** y **S** = Shorts nativos · M/C/Y = series nuevas (pausadas).
+Tipos de ítem: **Q** = "Who is…?" · **H** = Story (episodio suelto) · **R** y **S** = Shorts nativos · M/C/Y = series nuevas (pausadas) · **T** = episodios de temporada (como "Episodios", con la temporada del ítem).
 
 ## 3 · Producir
 **Reglas de la casa (todo):** inglés simple (frases ≤ 15 palabras en Shorts, ≤ 20 en episodios, una idea por frase, cada nombre raro explicado la primera vez); ganchos de curiosidad; **nada inventado presentado como hecho**: seguí las fuentes del PLAN de la serie y nombrá la versión/pueblo/fuente cuando corresponda ("in one Haudenosaunee telling…"); respetá la sección "Respeto y fidelidad" de cada PLAN (violencia y sacrificio dichos, nunca mostrados; sin contenido sexual). "That's why…" solo si sale de la fuente. Nada de otros proyectos ni datos personales en el contenido.
