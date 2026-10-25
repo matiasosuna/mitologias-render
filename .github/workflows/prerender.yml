@@ -68,8 +68,8 @@ jobs:
       - name: plan
         run: |
           MODAL=0; [ -n "$MODAL_TOKEN_ID" ] && [ "${{ vars.MODAL_PAUSA }}" != "1" ] && MODAL=1 # MODAL_PAUSA=1: sin crédito, todo a GitHub
-          # cuenta "familia" (tarjeta de la mamá de Matías): con el mes en USD 25 o más, nada a Modal
-          if [ $MODAL = 1 ]; then pip install -q modal; G=$(python scripts/modal-gasto.py || echo 99); echo "Modal este mes: USD $G"; python -c "import sys; sys.exit(float('$G') >= 25)" || { MODAL=0; echo "::warning::Modal ≥ USD 25 este mes: todo a GitHub"; }; fi
+          # cuenta "familia" (tarjeta de la mamá de Matías): con el mes en USD 29 o más, nada a Modal
+          if [ $MODAL = 1 ]; then pip install -q modal; G=$(python scripts/modal-gasto.py || echo 99); echo "Modal este mes: USD $G"; python -c "import sys; sys.exit(float('$G') >= 29)" || { MODAL=0; echo "::warning::Modal ≥ USD 29 este mes: todo a GitHub"; }; fi
           MODO="${{ inputs.modo || 'ventana' }}"
           if [ "$MODO" = ventana ]; then
             SERIES="${{ inputs.series || 'griegas,nordicas,egipcias,hawaianas,biblia' }}"; N=6; PRES="${{ inputs.presupuesto || '1' }}"; MOTOR="${{ inputs.motor || vars.RENDER_MOTOR || 'ventana' }}" # RENDER_MOTOR=modal: todo a Modal (Matías 2026-10-25)

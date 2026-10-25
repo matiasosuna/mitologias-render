@@ -1,5 +1,5 @@
 # Learn Bible 777: narra (workflow voz-cpu → Chatterbox en GPU de Modal) y renderiza en Modal (horizontal + vertical) capítulos
-# de la serie biblia. Modal = cuenta "familia" (secretos MODAL_TOKEN_*), tope USD 30/mes: si el mes pasa USD 25, no renderiza.
+# de la serie biblia. Modal = cuenta "familia" (secretos MODAL_TOKEN_*), tope USD 30/mes: si el mes pasa USD 29, no renderiza.
 # Respaldo gratis 100% GitHub: biblia-github.yml (apagado).
 # Resultado → release "biblia" (mp4, srt, miniatura.jpg + audio/timeline en zip, con el id adelante). NUNCA publica en redes.
 # gh workflow run biblia.yml -R matiasosuna/mitologias-render -f ids="biblia-genesis-01 biblia-genesis-02"
@@ -46,10 +46,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -q modal && sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
-      - name: tope de gasto (familia, USD 25)
+      - name: tope de gasto (familia, USD 29)
         run: |
           G=$(python scripts/modal-gasto.py); echo "Modal este mes: USD $G"
-          python -c "import sys; sys.exit(float('$G') >= 25)" || { echo "::error::Modal pasó USD 25 este mes: no se renderiza (tarjeta de la mamá de Matías)"; exit 1; }
+          python -c "import sys; sys.exit(float('$G') >= 29)" || { echo "::error::Modal pasó USD 29 este mes: no se renderiza (tarjeta de la mamá de Matías)"; exit 1; }
       # audios ya narrados en corridas anteriores (el motor solo narra las frases que faltan)
       - uses: actions/cache@v4
         with:

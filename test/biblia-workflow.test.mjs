@@ -12,7 +12,7 @@ test('biblia.yml: solo en mitologias-render, release biblia, sin publicar en red
   assert.match(yml, /VOZ_TRANSPORTE: gh/); // voz por voz-cpu (que usa Modal familia)
   assert.match(yml, /actions: write/);
   assert.match(yml, /modal run scripts\/modal_render\.py/);
-  assert.match(yml, /modal-gasto\.py/); // tope USD 25 (tarjeta de la mamá de Matías)
+  assert.match(yml, /modal-gasto\.py/); // tope USD 29 (tarjeta de la mamá de Matías)
   assert.doesNotMatch(yml, /publicar|buffer|youtube-subir|instagram|tiktok/i);
 });
 
@@ -31,10 +31,10 @@ test('voz-cpu.yml: VOZ_MOTOR=modal → Modal (familia) con la muestra descifrada
   assert.match(v, /name: voz-\$\{\{ matrix\.clave \}\}-0/); // voz-github.mjs baja voz-<clave>-*
 });
 
-test('prerender: tope de gasto de Modal en USD 25', () => {
+test('prerender: tope de gasto de Modal en USD 29', () => {
   const p = readFileSync('.github/workflows/prerender.yml', 'utf8');
   assert.match(p, /modal-gasto\.py/);
-  assert.match(p, />= 25/);
+  assert.match(p, />= 29/);
 });
 
 test('modal_voz.py: muestra local montada si existe; si no, Volume moc-voz', () => {
