@@ -1,13 +1,13 @@
 # Myths on Clay — estado
-_Actualizado 2026-10-24 20:07 UTC_
+_Actualizado 2026-10-25 20:19 UTC_
 
 ## Resumen
 | Qué | Estado |
 | --- | --- |
 | publicar | activado |
-| Última corrida de publicar | en curso · 2026-10-24 20:07 UTC |
-| Último turno registrado | 2026-10-24T18Z |
-| Próximos de la cola | griegas-14-apolo-piton<br>griegas-15-hermes-bebe-ladron<br>griegas-16-dioniso-dos-veces<br>nordicas-14-volund<br>nordicas-15-oro-de-andvari |
+| Última corrida de publicar | success · 2026-10-25 20:07 UTC |
+| Último turno registrado | 2026-10-25T18Z |
+| Próximos de la cola | nordicas-14-volund<br>nordicas-15-oro-de-andvari<br>egipcias-12-keops-y-los-magos<br>egipcias-13-naufrago<br>griegas-17-dioniso-piratas |
 | "Who is…?" listos | 20 (16 sin publicar en alguna red) |
 
 ## Temporadas
@@ -25,18 +25,19 @@ _Actualizado 2026-10-24 20:07 UTC_
 | Egipcias | T1 | 11 | 11 | 11 |
 | Egipcias | T2 | 8 | 2 | 2 |
 | Hawaianas | Especial Lords of the Dead | 1 | 1 | 1 |
-| Hawaianas | T1 | 12 | 7 | 7 |
+| Hawaianas | T1 | 12 | 8 | 8 |
 | Hawaianas | T2 | 12 | 0 | 0 |
 | Norteamericanas | T1 | 12 | 0 | 0 |
 | Aztecas | T1 | 12 | 0 | 0 |
 | Hindúes | T1 | 12 | 0 | 0 |
 | Maoríes | T1 | 12 | 0 | 0 |
-| Biblia | T1 | 13 | 5 | 5 |
+| Biblia | T1 | 5 | 5 | 1 |
+| Biblia | T2 | 8 | 1 | 0 |
 | Balinesas | T1 | 12 | 0 | 0 |
 
 ## Métricas
 | Red | Métricas |
 | --- | --- |
-| YouTube | 26 suscriptores · 7246 vistas · 93 videos |
-| Instagram | 81 seguidores · 642 likes · 27.780 vistas (28 días) |
+| YouTube | 25 suscriptores · 7246 vistas · 95 videos |
+| Instagram | 82 seguidores · 661 likes · 28.172 vistas (28 días) |
 | TikTok | sin API |
