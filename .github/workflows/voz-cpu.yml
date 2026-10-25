@@ -1,22 +1,56 @@
-# Voz (Chatterbox Turbo) en la CPU de GitHub: gratis en el repo público, sin Modal. Lo dispara scripts/voz-github.mjs
-# (motor-narrar con VOZ_MOTOR=github, el de siempre) y baja los .wav de los artefactos voz-<clave>-<n>.
+# Voz (Chatterbox Turbo) en la CPU de GitHub: gratis en el repo público, sin Modal. Lo usa scripts/voz-github.mjs
+# (motor-narrar, por defecto). Dos entradas: workflow_dispatch (con gh) o un pedido pedidos/<clave>.json empujado a la rama
+# "voz" (sin gh: la rutina de la nube). Salida: artefactos voz-<clave>-<n> y el zip voz-<clave>.zip en el release "voz".
 # La muestra de voz va cifrada (lib/voz-ref.enc, AES-256, clave en el secreto VOZ_CLAVE): nunca en claro en este repo.
 name: voz-cpu
-run-name: voz ${{ inputs.clave }}
+run-name: voz ${{ inputs.clave || 'pedido' }}
 on:
   workflow_dispatch:
     inputs:
       clave: { description: 'id único de la tanda (lo pone voz-github.mjs)', required: true }
       frases: { description: 'JSON [{h, texto}] en gzip+base64', required: true }
+  push:
+    branches: [voz]
+    paths: ['pedidos/**']
 permissions:
-  contents: read
+  contents: write # release "voz"
+env:
+  PARTES: 6
 jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matriz: ${{ steps.p.outputs.matriz }}
+      claves: ${{ steps.p.outputs.claves }}
+    steps:
+      - uses: actions/checkout@v4 # la rama "voz" = main + un solo commit con el pedido (voz-github.mjs la pisa cada vez)
+        if: github.event_name == 'push'
+      - id: p
+        env:
+          CLAVE: ${{ inputs.clave }}
+          FRASES: ${{ inputs.frases }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/pedidos"
+          if [ -n "$CLAVE" ]; then printf '%s' "$FRASES" | base64 -d | gunzip > "$RUNNER_TEMP/pedidos/$CLAVE.json"
+          else
+            for f in $(git ls-files 'pedidos/*.json'); do cp "$f" "$RUNNER_TEMP/pedidos/"; done
+          fi
+          CLAVES=$(ls "$RUNNER_TEMP/pedidos" | sed 's/\.json$//' | node -e 'console.log(JSON.stringify(require("fs").readFileSync(0,"utf8").split("\n").filter(Boolean)))')
+          echo "claves=$CLAVES" >> "$GITHUB_OUTPUT"
+          echo "matriz=$(node -e 'const c=JSON.parse(process.argv[1]); console.log(JSON.stringify(c.flatMap((clave)=>Array.from({length:+process.env.PARTES},(_,parte)=>({clave,parte})))))' "$CLAVES")" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pedidos-${{ github.run_id }}
+          path: ${{ runner.temp }}/pedidos/*.json
+          retention-days: 1
   voz:
+    needs: plan
+    if: needs.plan.outputs.claves != '[]'
     runs-on: ubuntu-latest
     timeout-minutes: 300
     strategy:
       matrix:
-        parte: [0, 1, 2, 3, 4, 5]
+        include: ${{ fromJSON(needs.plan.outputs.matriz) }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -24,6 +58,10 @@ jobs:
             scripts/voz_cpu.py
             lib/voz-ref.enc
           sparse-checkout-cone-mode: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: pedidos-${{ github.run_id }}
+          path: pedidos
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -38,17 +76,34 @@ jobs:
       - name: narrar
         env:
           VOZ_CLAVE: ${{ secrets.VOZ_CLAVE }}
-          FRASES: ${{ inputs.frases }}
           PARTE: ${{ matrix.parte }}
-          PARTES: 6
         run: |
           openssl enc -d -aes-256-cbc -pbkdf2 -pass env:VOZ_CLAVE -in lib/voz-ref.enc -out "$RUNNER_TEMP/ref.wav"
-          printf '%s' "$FRASES" | base64 -d | gunzip > "$RUNNER_TEMP/frases.json"
-          VOZ_ENTRADA="$RUNNER_TEMP/frases.json" VOZ_SALIDA=salida VOZ_REF="$RUNNER_TEMP/ref.wav" python scripts/voz_cpu.py
+          VOZ_ENTRADA="pedidos/${{ matrix.clave }}.json" VOZ_SALIDA=salida VOZ_REF="$RUNNER_TEMP/ref.wav" python scripts/voz_cpu.py
           rm -f "$RUNNER_TEMP/ref.wav"
       - uses: actions/upload-artifact@v4
         with:
-          name: voz-${{ inputs.clave }}-${{ matrix.parte }}
+          name: voz-${{ matrix.clave }}-${{ matrix.parte }}
           path: salida/*.wav
           if-no-files-found: ignore
           retention-days: 3
+  juntar:
+    needs: [plan, voz]
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: voz-*
+          path: a
+      - name: zip por tanda → release "voz"
+        run: |
+          gh release view voz -R "$GITHUB_REPOSITORY" >/dev/null 2>&1 || gh release create voz -R "$GITHUB_REPOSITORY" --title voz --notes "Narraciones de voz-cpu (temporales)" --prerelease
+          for c in $(echo '${{ needs.plan.outputs.claves }}' | node -e 'JSON.parse(require("fs").readFileSync(0,"utf8")).forEach((c)=>console.log(c))'); do
+            mkdir -p "z/$c"; cp a/voz-$c-*/*.wav "z/$c/" 2>/dev/null || true
+            (cd "z/$c" && zip -q -r "../../voz-$c.zip" .)
+            gh release upload voz "voz-$c.zip" -R "$GITHUB_REPOSITORY" --clobber
+          done
+          # limpieza: zips de más de 3 días
+          gh api "repos/$GITHUB_REPOSITORY/releases/tags/voz" -q '.assets[] | select((now - (.created_at | fromdate)) > 259200) | .name' | while read -r n; do gh release delete-asset voz "$n" -R "$GITHUB_REPOSITORY" -y; done
