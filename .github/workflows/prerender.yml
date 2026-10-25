@@ -67,7 +67,7 @@ jobs:
           scripts/estado-traer.sh
       - name: plan
         run: |
-          MODAL=0; [ -n "$MODAL_TOKEN_ID" ] && MODAL=1
+          MODAL=0; [ -n "$MODAL_TOKEN_ID" ] && [ "${{ vars.MODAL_PAUSA }}" != "1" ] && MODAL=1 # MODAL_PAUSA=1: sin crédito, todo a GitHub
           MODO="${{ inputs.modo || 'ventana' }}"
           if [ "$MODO" = ventana ]; then
             SERIES="${{ inputs.series || 'griegas,nordicas,egipcias,hawaianas,biblia' }}"; N=6; PRES="${{ inputs.presupuesto || '1' }}"; MOTOR="${{ inputs.motor || 'ventana' }}"
