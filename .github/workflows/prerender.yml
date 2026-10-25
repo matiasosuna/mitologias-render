@@ -70,7 +70,7 @@ jobs:
           MODAL=0; [ -n "$MODAL_TOKEN_ID" ] && MODAL=1
           MODO="${{ inputs.modo || 'ventana' }}"
           if [ "$MODO" = ventana ]; then
-            SERIES="${{ inputs.series || 'griegas,nordicas,egipcias,hawaianas' }}"; N=6; PRES="${{ inputs.presupuesto || '1' }}"; MOTOR="${{ inputs.motor || 'ventana' }}"
+            SERIES="${{ inputs.series || 'griegas,nordicas,egipcias,hawaianas,biblia' }}"; N=6; PRES="${{ inputs.presupuesto || '1' }}"; MOTOR="${{ inputs.motor || 'ventana' }}"
             # GitHub viene fallando si alguno de los últimos 4 render-nube terminados falló (entonces lo no urgente también va a Modal)
             FALLA=0; gh run list -w render.yml -L 4 --json conclusion -q '.[].conclusion' | grep -qx failure && FALLA=1
             # ritmo gradual: si hay render-nube en curso, no se suma más trabajo en GitHub
