@@ -1,0 +1,766 @@
+{
+ "id": "nordicas-23-la-cabeza-de-mimir",
+ "serie": "nordicas",
+ "numero": "23",
+ "titulo": {
+  "es": "La cabeza de Mímir",
+  "en": "The Head of Mímir"
+ },
+ "tituloGriego": "THE HEAD OF MÍMIR",
+ "miniatura": {
+  "heroe": "odin_oficial",
+  "rival": "mimir_oficial"
+ },
+ "siguiente": {
+  "es": "El dios colgado y las runas",
+  "en": "The Hanged God and the Runes"
+ },
+ "escenas": [
+  {
+   "id": "enganche",
+   "fondo": "asgard",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Odín tiene muchos ayudantes, pero uno de ellos es muy extraño.",
+     "en": "Odin has many helpers, but one of them is very strange."
+    },
+    {
+     "es": "Es una cabeza sin cuerpo. Y aun así le da consejos.",
+     "en": "It is a head, and it has no body. And it still gives him advice."
+    },
+    {
+     "es": "Para saber de dónde vino, volvemos a una guerra entre dos familias de dioses.",
+     "en": "To learn where it came from, we go back to a war between two families of gods."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 960,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "UNA CABEZA QUE HABLA",
+      "en": "A HEAD THAT SPEAKS"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "guerra",
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Los Æsir vivían en Asgard. Odín, Thor y Frigg eran Æsir.",
+     "en": "The Æsir lived in Asgard. Odin, Thor, and Frigg were Æsir."
+    },
+    {
+     "es": "Los Vanir eran otra familia de dioses, ligados a la tierra y a lo que crece.",
+     "en": "The Vanir were another family of gods, linked to the earth and to growing things."
+    },
+    {
+     "es": "El poema Völuspá dice que estalló la guerra cuando una bruja vanir, Gullveig, llegó al salón de Odín.",
+     "en": "The poem Völuspá says war broke out when a Vanir witch, Gullveig, came to Odin's hall."
+    },
+    {
+     "es": "Los Æsir la quemaron tres veces y ella siguió viva. Entonces Odín lanzó su lanza y empezó la guerra.",
+     "en": "The Æsir burned her three times, yet she lived. Then Odin threw his spear, and the war began."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 400,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "lanza"
+      }
+     ]
+    },
+    {
+     "id": "njord",
+     "como": "njord_oficial",
+     "x": 1450,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 3,
+       "hace": "sorprende"
+      }
+     ]
+    },
+    {
+     "id": "freyr",
+     "como": "freyr_oficial",
+     "x": 1700,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1.2,
+       "hace": "aparece",
+       "con": "luz"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 1000
+    },
+    {
+     "en": 3.3,
+     "tipo": "temblor",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "ÆSIR CONTRA VANIR",
+      "en": "ÆSIR VERSUS VANIR"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "tregua",
+   "fondo": "salon",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Ningún bando podía ganar. Los dos estaban cansados de pelear.",
+     "en": "Neither side could win. Both were tired of fighting."
+    },
+    {
+     "es": "Entonces hicieron las paces y, para mantenerlas, intercambiaron rehenes.",
+     "en": "So they made peace, and to keep it they swapped hostages."
+    },
+    {
+     "es": "Los Vanir enviaron a Njord y a su hijo Freyr a vivir en Asgard.",
+     "en": "The Vanir sent Njord and his son Freyr to live in Asgard."
+    },
+    {
+     "es": "Los Æsir enviaron a dos de los suyos: el apuesto Hœnir y el sabio Mímir.",
+     "en": "The Æsir sent two of their own: handsome Hœnir, and wise Mímir."
+    }
+   ],
+   "actores": [
+    {
+     "id": "njord",
+     "como": "njord_oficial",
+     "x": 450,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "camina",
+       "a": 650
+      }
+     ]
+    },
+    {
+     "id": "freyr",
+     "como": "freyr_oficial",
+     "x": 250,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 2.2,
+       "hace": "camina",
+       "a": 450
+      }
+     ]
+    },
+    {
+     "id": "hoenir",
+     "como": "joven_nordico_oficial",
+     "x": 1450,
+     "mira": "izq",
+     "rotulo": "HŒNIR",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "aparece",
+       "con": "luz"
+      }
+     ]
+    },
+    {
+     "id": "mimir",
+     "como": "mimir_oficial",
+     "x": 1700,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3.3,
+       "hace": "aparece",
+       "con": "luz"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "destello",
+     "x": 960
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1,
+     "texto": {
+      "es": "UN INTERCAMBIO DE REHENES",
+      "en": "A SWAP OF HOSTAGES"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "engano",
+   "fondo": "salon",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Los Vanir hicieron jefe a Hœnir. Parecía un líder nato.",
+     "en": "The Vanir made Hœnir their chief. He looked like a born leader."
+    },
+    {
+     "es": "Pero cuando Mímir estaba a su lado, Hœnir daba buenas respuestas.",
+     "en": "But when Mímir stood beside him, Hœnir gave good answers."
+    },
+    {
+     "es": "Cuando Mímir no estaba, Hœnir solo decía: \"Que decidan otros\".",
+     "en": "When Mímir was away, Hœnir only said, \"Let others decide.\""
+    },
+    {
+     "es": "Los Vanir se sintieron engañados. Pensaron que los Æsir les habían mandado a un tonto.",
+     "en": "The Vanir felt cheated. They thought the Æsir had sent them a fool."
+    }
+   ],
+   "actores": [
+    {
+     "id": "hoenir",
+     "como": "joven_nordico_oficial",
+     "x": 1000,
+     "mira": "der",
+     "rotulo": "HŒNIR",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "habla"
+      },
+      {
+       "en": 2,
+       "hace": "niega"
+      },
+      {
+       "en": 3,
+       "hace": "calla"
+      }
+     ]
+    },
+    {
+     "id": "mimir",
+     "como": "mimir_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "sale"
+      }
+     ]
+    },
+    {
+     "id": "njord",
+     "como": "njord_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "enoja"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "oscurecer",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2,
+     "texto": {
+      "es": "QUE DECIDAN OTROS",
+      "en": "LET OTHERS DECIDE"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3.5
+    }
+   ]
+  },
+  {
+   "id": "cabeza",
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Con furia, los Vanir le cortaron la cabeza a Mímir.",
+     "en": "In anger, the Vanir cut off Mímir's head."
+    },
+    {
+     "es": "Se la devolvieron a los Æsir como un mensaje.",
+     "en": "They sent it back to the Æsir as a message."
+    },
+    {
+     "es": "Fue un acto cruel y los antiguos poetas no lo ocultaron.",
+     "en": "It was a cruel act, and the old poets did not hide it."
+    }
+   ],
+   "actores": [
+    {
+     "id": "njord",
+     "como": "njord_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "golpea"
+      },
+      {
+       "en": 1,
+       "hace": "ofrece"
+      }
+     ]
+    },
+    {
+     "id": "mimir",
+     "como": "mimir_oficial",
+     "x": 600,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "tiembla"
+      },
+      {
+       "en": 1,
+       "hace": "desaparece",
+       "con": "luz"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.5,
+     "tipo": "destello",
+     "x": 600
+    },
+    {
+     "en": 1,
+     "tipo": "oscurecer",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "LA CABEZA DE MÍMIR",
+      "en": "MÍMIR'S HEAD"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "hierbas",
+   "fondo": "salon",
+   "camara": {
+    "de": 0,
+    "a": 120,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Odín tomó la cabeza y no dejó que se pudriera.",
+     "en": "Odin took the head and did not let it rot."
+    },
+    {
+     "es": "La frotó con hierbas y le cantó hechizos.",
+     "en": "He rubbed it with herbs and sang spells over it."
+    },
+    {
+     "es": "La cabeza volvió a vivir y podía hablar.",
+     "en": "The head came back to life, and it could talk."
+    },
+    {
+     "es": "Susurraba secretos de cada rincón del mundo.",
+     "en": "It whispered secrets from every corner of the world."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "toma"
+      },
+      {
+       "en": 1,
+       "hace": "habla"
+      },
+      {
+       "en": 2,
+       "hace": "brilla"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    },
+    {
+     "id": "mimir",
+     "como": "mimir_oficial",
+     "x": 1250,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1.5,
+     "tipo": "chispas",
+     "x": 800,
+     "y": 600
+    },
+    {
+     "en": 2,
+     "tipo": "destello",
+     "x": 1250
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1,
+     "texto": {
+      "es": "HIERBAS Y HECHIZOS",
+      "en": "HERBS AND SPELLS"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "pozo",
+   "fondo": "jotunheim",
+   "camara": {
+    "de": 0,
+    "a": 100,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Otros poemas cuentan que Mímir también cuidaba un pozo de sabiduría.",
+     "en": "Other poems tell us that Mímir was also the keeper of a well of wisdom."
+    },
+    {
+     "es": "Snorri dice que Odín dio un ojo por beber de él.",
+     "en": "Snorri says Odin gave an eye for a drink from it."
+    },
+    {
+     "es": "Los poemas no coinciden en los detalles, pero sí en esto: Mímir es sabio y Odín lo escucha.",
+     "en": "The poems do not agree on the details, but they agree on this: Mímir is wise, and Odin listens."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "cueva",
+     "x": 1500,
+     "s": 0.5,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 700,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "ofrece"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      }
+     ]
+    },
+    {
+     "id": "mimir",
+     "como": "mimir_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "niebla",
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "EL POZO DE LA SABIDURÍA",
+      "en": "THE WELL OF WISDOM"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "asgard",
+   "camara": {
+    "de": 0,
+    "a": 100,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "El Völuspá nos cuenta una última cosa sobre la cabeza.",
+     "en": "The Völuspá tells us one last thing about the head."
+    },
+    {
+     "es": "Cuando llegue el fin del mundo, Odín hablará una vez más con la cabeza de Mímir.",
+     "en": "When the end of the world comes, Odin will once more speak with the head of Mímir."
+    },
+    {
+     "es": "Si pudieras hacerle una pregunta a la cabeza, ¿qué le preguntarías? Cuéntanos en los comentarios.",
+     "en": "If you could ask the head one question, what would you ask? Tell us in the comments."
+    },
+    {
+     "es": "La próxima vez, Odín se cuelga de un árbol: El dios colgado y las runas.",
+     "en": "Next time, Odin hangs himself from a tree: The Hanged God and the Runes."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "asiente"
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "mimir",
+     "como": "mimir_oficial",
+     "x": 1250,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "aparece"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 3,
+     "texto": {
+      "es": "EL DIOS COLGADO",
+      "en": "THE HANGED GOD"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "Le cortaron la cabeza... y siguió dando consejos",
+    "en": "They cut off his head... and he kept giving advice"
+   },
+   "escena": "hierbas",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1000
+  },
+  {
+   "gancho": {
+    "es": "El rehén que parecía un tonto",
+    "en": "The hostage who looked like a fool"
+   },
+   "escena": "engano",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1000
+  },
+  {
+   "gancho": {
+    "es": "Odín lanzó su lanza, y empezó una guerra",
+    "en": "Odin threw his spear, and a war began"
+   },
+   "escena": "guerra",
+   "desde": 2,
+   "hasta": 3,
+   "foco": 900
+  }
+ ]
+}

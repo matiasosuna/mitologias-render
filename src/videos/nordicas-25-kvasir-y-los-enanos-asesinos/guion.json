@@ -1,0 +1,831 @@
+{
+ "id": "nordicas-25-kvasir-y-los-enanos-asesinos",
+ "serie": "nordicas",
+ "numero": "25",
+ "titulo": {
+  "es": "Kvasir y los enanos asesinos",
+  "en": "Kvasir and the Murderous Dwarves"
+ },
+ "tituloGriego": "KVASIR AND THE MURDEROUS DWARVES",
+ "miniatura": {
+  "heroe": "enano_nordico_oficial",
+  "rival": "jotun_nordico_oficial"
+ },
+ "siguiente": {
+  "es": "Odín, Suttung y Gunnlöd",
+  "en": "Odin, Suttung and Gunnlöd"
+ },
+ "escenas": [
+  {
+   "id": "enganche",
+   "fondo": "salon",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Los nórdicos tenían un dicho: la poesía es la sangre de un hombre asesinado.",
+     "en": "The Norse had a saying: poetry is the blood of a murdered man."
+    },
+    {
+     "es": "Suena a acertijo, pero es una historia real de la Edda de Snorri.",
+     "en": "It sounds like a riddle, but it is a real story from Snorri's Prose Edda."
+    },
+    {
+     "es": "Empieza al final de la guerra que vimos antes, entre los Æsir y los Vanir.",
+     "en": "It begins at the end of the war you saw last time, between the Æsir and the Vanir."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 960,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "LA SANGRE DE LA POESÍA",
+      "en": "THE BLOOD OF POETRY"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "vasija",
+   "fondo": "salon",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Cuando los Æsir y los Vanir hicieron las paces, cada bando escupió en una gran vasija.",
+     "en": "When the Æsir and the Vanir made peace, each side spat into a big vat."
+    },
+    {
+     "es": "Era una señal de la tregua. Los dioses no querían tirarla.",
+     "en": "It was a sign of the truce. The gods did not want to throw it away."
+    },
+    {
+     "es": "Así que de la saliva hicieron a un hombre. Se llamaba Kvasir.",
+     "en": "So from the spit, they made a man. His name was Kvasir."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "cofre",
+     "x": 960,
+     "s": 0.5,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "senala"
+      },
+      {
+       "en": 1,
+       "hace": "ofrece"
+      }
+     ]
+    },
+    {
+     "id": "njord",
+     "como": "njord_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "kvasir",
+     "como": "hombre_nordico_oficial",
+     "x": 960,
+     "mira": "der",
+     "rotulo": "KVASIR",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 2.5,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "destello",
+     "x": 960
+    },
+    {
+     "en": 2,
+     "tipo": "chispas",
+     "x": 960,
+     "y": 500
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "LA VASIJA DE LA TREGUA",
+      "en": "THE VAT OF THE TRUCE"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "sabio",
+   "fondo": "aldea",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Kvasir era tan sabio que nadie podía hacerle una pregunta sin respuesta.",
+     "en": "Kvasir was so wise that no one could ask him a question he could not answer."
+    },
+    {
+     "es": "Caminaba de granja en granja, enseñando lo que sabía.",
+     "en": "He walked from farm to farm, teaching people what he knew."
+    },
+    {
+     "es": "Lo recibían en todas partes. En cada casa se alegraban de escucharlo.",
+     "en": "People welcomed him everywhere. Every home was glad to hear him."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "casa_larga",
+     "x": 1550,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "kvasir",
+     "como": "hombre_nordico_oficial",
+     "x": 700,
+     "mira": "der",
+     "rotulo": "KVASIR",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "camina",
+       "a": 1000
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "aldeano",
+     "como": "anciano_nordico_oficial",
+     "x": 1450,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "asiente"
+      },
+      {
+       "en": 2,
+       "hace": "alegra"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "EL MÁS SABIO",
+      "en": "THE WISEST"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "enanos",
+   "fondo": "cueva",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Entonces Kvasir conoció a dos enanos, Fjalar y Galar.",
+     "en": "Then Kvasir met two dwarves, Fjalar and Galar."
+    },
+    {
+     "es": "Lo invitaron a hablar en privado. Kvasir fue, y no volvió.",
+     "en": "They invited him to talk in private. Kvasir went, and he did not come back."
+    },
+    {
+     "es": "Los enanos lo mataron y dejaron correr su sangre en dos vasijas y un caldero.",
+     "en": "The dwarves killed him and let his blood run into two vats and a kettle."
+    },
+    {
+     "es": "El caldero se llamaba Óðrerir y las vasijas, Són y Boðn.",
+     "en": "The kettle was called Óðrerir, and the vats were Són and Boðn."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "cueva",
+     "x": 1000,
+     "s": 0.5,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "fjalar",
+     "como": "enano_nordico_oficial",
+     "x": 600,
+     "mira": "der",
+     "rotulo": "FJALAR",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "ofrece"
+      },
+      {
+       "en": 2,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "galar",
+     "como": "enano_nordico_oficial",
+     "x": 1450,
+     "mira": "izq",
+     "rotulo": "GALAR",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "kvasir",
+     "como": "hombre_nordico_oficial",
+     "x": 1000,
+     "mira": "der",
+     "rotulo": "KVASIR",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "camina",
+       "a": 1000
+      },
+      {
+       "en": 2,
+       "hace": "desaparece",
+       "con": "sombra"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "oscurecer",
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "FJALAR Y GALAR",
+      "en": "FJALAR AND GALAR"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "hidromiel",
+   "fondo": "cueva",
+   "camara": {
+    "de": 0,
+    "a": 100,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Los enanos mezclaron la sangre con miel. Se convirtió en un hidromiel mágico.",
+     "en": "The dwarves mixed the blood with honey. It became a magic mead."
+    },
+    {
+     "es": "Quien lo bebe se vuelve poeta o sabio.",
+     "en": "Whoever drinks it becomes a poet or a scholar."
+    },
+    {
+     "es": "Los enanos le dijeron a los dioses que Kvasir se había ahogado en su propia sabiduría.",
+     "en": "The dwarves told the gods that Kvasir had choked on his own wisdom."
+    },
+    {
+     "es": "\"Nadie era lo bastante sabio\", dijeron, \"para hacerle suficientes preguntas\".",
+     "en": "\"No one was wise enough,\" they said, \"to ask him enough questions.\""
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "fogata",
+     "x": 960,
+     "s": 0.8,
+     "capa": "medio"
+    }
+   ],
+   "actores": [
+    {
+     "id": "fjalar",
+     "como": "enano_nordico_oficial",
+     "x": 600,
+     "mira": "der",
+     "rotulo": "FJALAR",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "toma"
+      },
+      {
+       "en": 1,
+       "hace": "ofrece"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      }
+     ]
+    },
+    {
+     "id": "galar",
+     "como": "enano_nordico_oficial",
+     "x": 1350,
+     "mira": "izq",
+     "rotulo": "GALAR",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "toma"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "chispas",
+     "x": 960,
+     "y": 500
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1,
+     "texto": {
+      "es": "EL HIDROMIEL",
+      "en": "THE MEAD"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "gilling",
+   "fondo": "costa",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Los enanos no pararon ahí. Invitaron a un gigante llamado Gilling a salir a remar.",
+     "en": "The dwarves did not stop there. They invited a giant named Gilling to go rowing."
+    },
+    {
+     "es": "Chocaron el bote contra una roca y Gilling, que no sabía nadar, se ahogó.",
+     "en": "They steered the boat onto a rock, and Gilling, who could not swim, drowned."
+    },
+    {
+     "es": "Cuando su esposa lloró, también la mataron.",
+     "en": "When his wife wept, they killed her too."
+    },
+    {
+     "es": "Gilling y su esposa tenían un hijo. Se llamaba Suttung.",
+     "en": "Gilling and his wife had a son. His name was Suttung."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "drakkar",
+     "x": 700,
+     "s": 0.7,
+     "capa": "medio"
+    }
+   ],
+   "actores": [
+    {
+     "id": "gilling",
+     "como": "jotun_nordico_oficial",
+     "x": 800,
+     "mira": "der",
+     "rotulo": "GILLING",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "cae"
+      },
+      {
+       "en": 1.5,
+       "hace": "desaparece",
+       "con": "agua"
+      }
+     ]
+    },
+    {
+     "id": "fjalar",
+     "como": "enano_nordico_oficial",
+     "x": 500,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "suttung",
+     "como": "jotun_nordico_oficial",
+     "x": 1600,
+     "mira": "izq",
+     "rotulo": "SUTTUNG",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "aparece",
+       "con": "humo"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "olas-suben",
+     "dur": 1
+    },
+    {
+     "en": 1.2,
+     "tipo": "olas-bajan",
+     "dur": 1
+    },
+    {
+     "en": 2,
+     "tipo": "oscurecer",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "EL GIGANTE GILLING",
+      "en": "THE GIANT GILLING"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "venganza",
+   "fondo": "costa",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Suttung atrapó a los enanos y los llevó a una roca en el mar.",
+     "en": "Suttung caught the dwarves and rowed them out to a rock in the sea."
+    },
+    {
+     "es": "La roca desaparecía bajo el agua con la marea alta. Se ahogarían.",
+     "en": "The rock vanished under the water at high tide. They would drown."
+    },
+    {
+     "es": "Los enanos rogaron y ofrecieron lo único que tenían: el hidromiel.",
+     "en": "The dwarves begged, and offered the only thing they had: the mead."
+    },
+    {
+     "es": "Suttung aceptó y escondió el hidromiel en una montaña. Su hija Gunnlöd lo vigilaba.",
+     "en": "Suttung accepted, and hid the mead in a mountain. His daughter Gunnlöd guarded it."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "piedra_runica",
+     "x": 700,
+     "s": 0.8,
+     "capa": "medio",
+     "props": {
+      "texto": "ᚨ"
+     }
+    }
+   ],
+   "actores": [
+    {
+     "id": "suttung",
+     "como": "jotun_nordico_oficial",
+     "x": 1450,
+     "mira": "izq",
+     "rotulo": "SUTTUNG",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "fjalar",
+     "como": "enano_nordico_oficial",
+     "x": 600,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "lamenta"
+      },
+      {
+       "en": 2,
+       "hace": "reza"
+      }
+     ]
+    },
+    {
+     "id": "galar",
+     "como": "enano_nordico_oficial",
+     "x": 800,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1.2,
+       "hace": "lamenta"
+      },
+      {
+       "en": 2,
+       "hace": "reza"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "olas-suben",
+     "dur": 1.5
+    },
+    {
+     "en": 3,
+     "tipo": "oscurecer",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1,
+     "texto": {
+      "es": "LA MAREA SUBE",
+      "en": "THE TIDE RISES"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 2.5
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "asgard",
+   "camara": {
+    "de": 0,
+    "a": 100,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Por eso los poetas del Norte llamaban a la poesía \"la sangre de Kvasir\" y \"el trago de los enanos\".",
+     "en": "That is why poets in the North called poetry \"Kvasir's blood\" and \"the dwarves' drink.\""
+    },
+    {
+     "es": "Los dioses querían ese hidromiel de vuelta y Odín estaba decidido a conseguirlo.",
+     "en": "The gods wanted that mead back, and Odin was determined to get it."
+    },
+    {
+     "es": "¿Fue suficiente el castigo de los enanos? Cuéntanos en los comentarios.",
+     "en": "Were the dwarves punished enough? Tell us in the comments."
+    },
+    {
+     "es": "La próxima vez, Odín va tras el hidromiel: Odín, Suttung y Gunnlöd.",
+     "en": "Next time, Odin goes after the mead: Odin, Suttung and Gunnlöd."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 960,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      },
+      {
+       "en": 3,
+       "hace": "ofrece"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 3,
+     "texto": {
+      "es": "ODÍN, SUTTUNG Y GUNNLÖD",
+      "en": "ODIN, SUTTUNG AND GUNNLÖD"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "La poesía nació de la sangre de un hombre",
+    "en": "Poetry was born from a murdered man's blood"
+   },
+   "escena": "hidromiel",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  },
+  {
+   "gancho": {
+    "es": "Un hombre hecho con saliva de dioses",
+    "en": "A man made from the gods' spit"
+   },
+   "escena": "vasija",
+   "desde": 0,
+   "hasta": 2,
+   "foco": 900
+  },
+  {
+   "gancho": {
+    "es": "Atados a una roca mientras sube la marea",
+    "en": "Left on a rock as the tide rose"
+   },
+   "escena": "venganza",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  }
+ ]
+}

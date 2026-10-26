@@ -1,0 +1,812 @@
+{
+ "id": "nordicas-22-quien-es-odin",
+ "serie": "nordicas",
+ "numero": "22",
+ "titulo": {
+  "es": "¿Quién es Odín?",
+  "en": "Who Is Odin?"
+ },
+ "tituloGriego": "WHO IS ODIN?",
+ "miniatura": {
+  "heroe": "odin_oficial",
+  "rival": "cuervo_nordico_oficial"
+ },
+ "siguiente": {
+  "es": "La cabeza de Mímir",
+  "en": "The Head of Mímir"
+ },
+ "escenas": [
+  {
+   "id": "enganche",
+   "fondo": "asgard",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "En la temporada pasada, un anciano con un solo ojo aparecía en las historias.",
+     "en": "In the last season, an old man with one eye kept turning up in the stories."
+    },
+    {
+     "es": "Daba regalos. Daba consejos. Y a veces daba mala suerte.",
+     "en": "He gave gifts. He gave advice. And sometimes he gave bad luck."
+    },
+    {
+     "es": "Era Odín, el soberano de los dioses del Norte.",
+     "en": "That was Odin, the ruler of the gods of the North."
+    },
+    {
+     "es": "Esta temporada trata de él. Entonces, ¿quién es Odín de verdad?",
+     "en": "This season is about him. So who is Odin, really?"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 1000,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "aclarar",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "ODÍN",
+      "en": "ODIN"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "familia",
+   "fondo": "asgard",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Odín era hijo de Bor y de una giganta llamada Bestla.",
+     "en": "Odin was the son of Bor and a giantess named Bestla."
+    },
+    {
+     "es": "Con sus hermanos Vili y Vé mató al primer gigante, Ymir.",
+     "en": "With his brothers Vili and Vé, he killed the first giant, Ymir."
+    },
+    {
+     "es": "Con el cuerpo de Ymir los tres hermanos construyeron el mundo.",
+     "en": "From Ymir's body the three brothers built the world."
+    },
+    {
+     "es": "Más tarde Odín se casó con Frigg y tuvieron a Baldr. Thor también era su hijo.",
+     "en": "Later Odin married Frigg, and they had a son, Baldr. Thor was his son too."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "frigg",
+     "como": "frigg_oficial",
+     "x": 1050,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 3.5,
+       "hace": "asiente"
+      }
+     ]
+    },
+    {
+     "id": "baldr",
+     "como": "baldr_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3.2,
+       "hace": "aparece",
+       "con": "luz"
+      }
+     ]
+    },
+    {
+     "id": "thor",
+     "como": "thor_oficial",
+     "x": 1700,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3.6,
+       "hace": "aparece",
+       "con": "luz"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1.5,
+     "tipo": "destello",
+     "x": 500
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "EL ALLFATHER",
+      "en": "THE ALLFATHER"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "trono",
+   "fondo": "salon",
+   "camara": {
+    "de": 0,
+    "a": 120,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "En Asgard había un alto asiento llamado Hliðskjálf.",
+     "en": "In Asgard stood a high seat called Hliðskjálf."
+    },
+    {
+     "es": "Cuando Odín se sentaba allí, podía mirar los nueve mundos.",
+     "en": "When Odin sat there, he could look out over all the nine worlds."
+    },
+    {
+     "es": "También llevaba a Gungnir, una lanza que nunca fallaba.",
+     "en": "He also carried Gungnir, a spear that never missed its target."
+    },
+    {
+     "es": "Y usaba a Draupnir, un anillo de oro. Cada novena noche soltaba ocho anillos nuevos.",
+     "en": "And he wore Draupnir, a gold ring. Every ninth night, it dropped eight new rings."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 960,
+     "s": 1.1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 960,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "sienta"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "brilla"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "destello",
+     "x": 1100
+    },
+    {
+     "en": 3,
+     "tipo": "chispas",
+     "x": 1000,
+     "y": 500
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.5,
+     "texto": {
+      "es": "HLIÐSKJÁLF",
+      "en": "HLIÐSKJÁLF"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 1.5
+    }
+   ]
+  },
+  {
+   "id": "nombres",
+   "fondo": "bosque_nevado",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Pero Odín rara vez se quedaba en su trono. Le gustaba recorrer el mundo disfrazado.",
+     "en": "But Odin rarely stayed on his throne. He loved to walk the world in disguise."
+    },
+    {
+     "es": "Usaba capucha y un sombrero ancho, y escondía el rostro.",
+     "en": "He wore a hood and a wide hat, and he hid his face."
+    },
+    {
+     "es": "Se daba nombres nuevos: Grímnir, el Encapuchado, y Gangleri, el Caminante.",
+     "en": "He gave himself new names: Grímnir, the Hooded One, and Gangleri, the Wanderer."
+    },
+    {
+     "es": "Los poemas antiguos le dan más de cien nombres.",
+     "en": "The old poems list more than a hundred names for him."
+    },
+    {
+     "es": "Un dios con tantos nombres es difícil de atrapar.",
+     "en": "A god with so many names is hard to pin down."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "pino",
+     "x": 250,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "pino",
+     "x": 1700,
+     "s": 1.1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 400,
+     "mira": "der",
+     "props": {
+      "tocado": "sombrero",
+      "tuerto": true
+     },
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "camina",
+       "a": 900
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 4,
+       "hace": "calla"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "nieve",
+     "dur": 5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2,
+     "texto": {
+      "es": "MÁS DE CIEN NOMBRES",
+      "en": "OVER A HUNDRED NAMES"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "cuervos",
+   "fondo": "asgard",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Cada mañana, dos cuervos salían volando de los hombros de Odín.",
+     "en": "Every morning, two ravens flew out from Odin's shoulders."
+    },
+    {
+     "es": "Se llamaban Huginn, que significa Pensamiento, y Muninn, que significa Memoria.",
+     "en": "Their names were Huginn, which means Thought, and Muninn, which means Memory."
+    },
+    {
+     "es": "Volaban por todos los mundos y volvían a la cena a susurrarle las noticias.",
+     "en": "They flew over all the worlds and came back at dinner to whisper the news."
+    },
+    {
+     "es": "En un poema, Odín teme que Huginn no vuelva. Y teme aún más por Muninn.",
+     "en": "In one poem, Odin says he fears Huginn will not return. He fears even more for Muninn."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "levanta"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      },
+      {
+       "en": 3,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "huginn",
+     "como": "cuervo_nordico_oficial",
+     "x": 1100,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.8,
+       "hace": "vuela",
+       "a": [
+        1700,
+        250
+       ]
+      },
+      {
+       "en": 2.2,
+       "hace": "vuela",
+       "a": [
+        1000,
+        380
+       ]
+      }
+     ]
+    },
+    {
+     "id": "muninn",
+     "como": "cuervo_nordico_oficial",
+     "x": 1000,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.4,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "vuela",
+       "a": [
+        1500,
+        150
+       ]
+      },
+      {
+       "en": 2.4,
+       "hace": "vuela",
+       "a": [
+        900,
+        420
+       ]
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 1.5,
+     "texto": {
+      "es": "HUGINN Y MUNINN",
+      "en": "HUGINN AND MUNINN"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "lobos",
+   "fondo": "salon",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Odín también tenía dos lobos, Geri y Freki. Ambos nombres significan Voraz.",
+     "en": "Odin had two wolves too, named Geri and Freki. Both names mean Greedy."
+    },
+    {
+     "es": "En los banquetes les daba toda su comida. Él solo bebía vino.",
+     "en": "At feasts, he gave them all his own food. He himself drank only wine."
+    },
+    {
+     "es": "Para los viajes largos montaba a Sleipnir, el caballo gris de ocho patas.",
+     "en": "For long trips, he rode Sleipnir, the grey horse with eight legs."
+    },
+    {
+     "es": "Ningún caballo era más rápido. Hasta podía entrar al reino de los muertos.",
+     "en": "No horse in the world was faster. It could even ride into the land of the dead."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 900,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "ofrece"
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "geri",
+     "como": "lobo_nordico_oficial",
+     "x": 450,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "aparece"
+      }
+     ]
+    },
+    {
+     "id": "freki",
+     "como": "lobo_nordico_oficial",
+     "x": 650,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "aparece"
+      }
+     ]
+    },
+    {
+     "id": "sleipnir",
+     "como": "caballo_nordico_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 3,
+       "hace": "corre",
+       "a": 1250
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "destello",
+     "x": 1500
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2,
+     "texto": {
+      "es": "SLEIPNIR",
+      "en": "SLEIPNIR"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3.5
+    }
+   ]
+  },
+  {
+   "id": "dominios",
+   "fondo": "aurora",
+   "camara": {
+    "de": 0,
+    "a": 100,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Odín era el dios de muchas cosas: la guerra, la poesía, la magia, la sabiduría y la muerte.",
+     "en": "Odin was the god of many things: war, poetry, magic, wisdom, and death."
+    },
+    {
+     "es": "No era un abuelo amable. Los poetas decían que daba la victoria, y luego la quitaba.",
+     "en": "He was no gentle grandfather. Poets said he could grant victory, and then take it away."
+    },
+    {
+     "es": "Quería a los guerreros más valientes a su lado en el Valhalla, su gran salón.",
+     "en": "He wanted the bravest fighters at his side in Valhalla, his great hall."
+    },
+    {
+     "es": "¿Por qué? Porque sabía que se acercaba una batalla final y necesitaba un ejército.",
+     "en": "Why? Because he knew a final battle was coming, and he needed an army."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "casa_larga",
+     "x": 1500,
+     "s": 1.2,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 960,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "levanta"
+      },
+      {
+       "en": 1,
+       "hace": "niega"
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "aclarar",
+     "dur": 1
+    },
+    {
+     "en": 3,
+     "tipo": "oscurecer",
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2.2,
+     "texto": {
+      "es": "VALHALLA",
+      "en": "VALHALLA"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "asgard",
+   "camara": {
+    "de": 0,
+    "a": 100,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Odín gobierna a los dioses y aun así siempre busca más conocimiento.",
+     "en": "Odin rules the gods, and still he is always searching for more knowledge."
+    },
+    {
+     "es": "Sabe que el final se acerca y hará casi cualquier cosa para prepararse.",
+     "en": "He knows the end is coming, and he will do almost anything to prepare."
+    },
+    {
+     "es": "¿Confiarías en un dios que esconde su propio nombre? Cuéntanos en los comentarios.",
+     "en": "Would you trust a god who hides his own name? Tell us in the comments."
+    },
+    {
+     "es": "La próxima vez conocemos a su consejero más extraño: La cabeza de Mímir.",
+     "en": "Next time, we meet his strangest advisor: The Head of Mímir."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 960,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "ofrece"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 3,
+     "texto": {
+      "es": "LA CABEZA DE MÍMIR",
+      "en": "THE HEAD OF MÍMIR"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "El dios que le da su comida a los lobos",
+    "en": "The god who feeds his food to wolves"
+   },
+   "escena": "lobos",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  },
+  {
+   "gancho": {
+    "es": "Los cuervos que espían todos los mundos",
+    "en": "The ravens that spy on every world"
+   },
+   "escena": "cuervos",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 950
+  },
+  {
+   "gancho": {
+    "es": "Más de cien nombres para un solo dios",
+    "en": "One god with over a hundred names"
+   },
+   "escena": "nombres",
+   "desde": 0,
+   "hasta": 4,
+   "foco": 700
+  }
+ ]
+}
