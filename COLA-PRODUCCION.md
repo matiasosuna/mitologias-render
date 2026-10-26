@@ -37,8 +37,7 @@ Cada corrida toma el PRIMER ítem `- [ ]` (de arriba hacia abajo), lo hace enter
 - **T** = episodios de temporada (como "Episodios" en RUTINA.md), hasta 4 por ítem. Título en titulos.json: `<titulo.en> | <Serie> Mythology S3E<n>`,
   `temporada: 3`. Ya hay T3 en `scripts/titulos.mjs` (griegas 18–23, nordicas 22–30, egipcias 20–30). Nunca `marco-myths.mjs`.
   Si un tramo ya lo cuenta un episodio anterior, resumilo en 1–2 frases y profundizá lo nuevo.
-- [ ] T01 · Greek S3 "Persephone and the Underworld" (PLAN-GRIEGAS T3): `griegas-18` El rapto de Perséfone · `griegas-19` Las semillas de granada · `griegas-20` Viaje al inframundo · `griegas-21` Los condenados del Tártaro
-> BLOQUEADO 2026-10-25: Modal rechaza la narración ("Workspace has exceeded its spend limit", falló 2 veces en motor-narrar); no se empujó nada. Hay que subir el límite de gasto del workspace de Modal y reintentar.
+- [x] T01 · Greek S3 "Persephone and the Underworld" (PLAN-GRIEGAS T3): `griegas-18` El rapto de Perséfone · `griegas-19` Las semillas de granada · `griegas-20` Viaje al inframundo · `griegas-21` Los condenados del Tártaro — HECHO 2026-10-26: griegas-18-el-rapto-de-persefone, griegas-19-las-semillas-de-granada, griegas-20-viaje-al-inframundo, griegas-21-los-condenados-del-tartaro
 - [ ] T02 · Norse S3 "Odin" (PLAN-NORDICAS P2, en la serie principal): `nordicas-22` Who Is Odin? · `nordicas-23` The Head of Mímir · `nordicas-24` The Hanged God and the Runes · `nordicas-25` Kvasir and the Murderous Dwarves
 - [ ] T03 · Egyptian S3 "The Gods Up Close" (PLAN-EGIPCIAS Profundidades): `egipcias-20` Ra · `egipcias-21` Osiris · `egipcias-22` Isis · `egipcias-23` Set
 - [ ] T04 · Greek S3: `griegas-22` Orfeo y Eurídice · `griegas-23` Asclepio, el médico que resucitaba

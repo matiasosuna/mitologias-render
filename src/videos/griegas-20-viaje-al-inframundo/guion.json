@@ -1,0 +1,908 @@
+{
+ "id": "griegas-20-viaje-al-inframundo",
+ "serie": "griegas",
+ "numero": "20",
+ "titulo": {
+  "es": "Viaje al inframundo",
+  "en": "Journey to the Underworld"
+ },
+ "tituloGriego": "ΑΔΗΣ",
+ "miniatura": {
+  "heroe": "hades_oficial",
+  "rival": "cerbero_oficial"
+ },
+ "siguiente": {
+  "es": "Los condenados del Tártaro",
+  "en": "The Damned of Tartarus"
+ },
+ "escenas": [
+  {
+   "id": "ultimo",
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "La vez pasada, Perséfone supo que debe visitar a los muertos cada año. ¿Pero cómo llegan allí los muertos?",
+     "en": "Last time, Persephone learned she must visit the dead every year. But how do the dead get there?"
+    },
+    {
+     "es": "Cuando un griego moría, el alma dejaba el cuerpo como un soplo de humo.",
+     "en": "When a Greek died, the soul left the body like a breath of smoke."
+    },
+    {
+     "es": "Hermes, el dios mensajero, venía a guiarla. Los griegos llamaban a este trabajo psicopompo, guía de almas.",
+     "en": "Hermes, the messenger god, came to guide it. The Greeks called this job psychopomp, guide of souls."
+    },
+    {
+     "es": "Juntos caminaron por un camino largo y oscuro.",
+     "en": "Together they walked down a long, dark road."
+    }
+   ],
+   "actores": [
+    {
+     "id": "hermes",
+     "como": "hermes_oficial",
+     "x": 1100,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "camina",
+       "a": 1500
+      }
+     ]
+    },
+    {
+     "id": "alma",
+     "como": "anciano_griego_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece",
+       "con": "humo"
+      },
+      {
+       "en": 3,
+       "hace": "camina",
+       "a": 1300
+      }
+     ],
+     "rotulo": "Soul"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "aclarar",
+     "dur": 1
+    },
+    {
+     "en": 3,
+     "tipo": "oscurecer",
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "EL VIAJE DE UN ALMA",
+      "en": "A SOUL'S JOURNEY"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2.5
+    }
+   ]
+  },
+  {
+   "id": "rios",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "El inframundo estaba rodeado de ríos. Los griegos nombraron cinco.",
+     "en": "The underworld was cut off by rivers. The Greeks named five of them."
+    },
+    {
+     "es": "El Aqueronte era el río del dolor, y el Cocito el río de los lamentos.",
+     "en": "Acheron was the river of woe, and Cocytus the river of wailing."
+    },
+    {
+     "es": "El Flegetonte corría con fuego, y el Leteo hacía olvidar.",
+     "en": "Phlegethon ran with fire, and Lethe made you forget."
+    },
+    {
+     "es": "El quinto era el Estigia, el río del odio. Hasta los dioses hacían sus juramentos más serios por él.",
+     "en": "The fifth was the Styx, the river of hate. Even the gods swore their most serious oaths by it."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "rio",
+     "x": 1400,
+     "s": 1.2,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "hermes",
+     "como": "hermes_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "alma",
+     "como": "anciano_griego_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      }
+     ],
+     "rotulo": "Soul"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "fuego",
+     "x": 1700,
+     "y": 700,
+     "dur": 1.5
+    },
+    {
+     "en": 0,
+     "tipo": "niebla",
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "CINCO RÍOS",
+      "en": "FIVE RIVERS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2.5
+    }
+   ]
+  },
+  {
+   "id": "caronte",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "En la orilla del Aqueronte esperaba Caronte, el viejo y sombrío barquero.",
+     "en": "At the bank of the Acheron waited Charon, the grim old ferryman."
+    },
+    {
+     "es": "Empujaba su barca por el agua oscura, pero solo para quienes podían pagar.",
+     "en": "He poled his boat across the dark water, but only for those who could pay."
+    },
+    {
+     "es": "Las familias ponían una moneda en la boca del muerto. Era una costumbre funeraria, que no aparece en los poemas más antiguos.",
+     "en": "Families put a coin in the mouth of the dead for this. That was a burial custom, not found in the oldest poems."
+    },
+    {
+     "es": "Las almas sin entierro vagaban por la orilla cien años. Por eso los griegos tomaban muy en serio el entierro.",
+     "en": "Souls with no burial had to wander the shore for a hundred years. So the Greeks took burial very seriously."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "barco",
+     "x": 1400,
+     "s": 1
+    },
+    {
+     "tipo": "rio",
+     "x": 900,
+     "s": 1.2,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "caronte",
+     "como": "caronte_oficial",
+     "x": 1200,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "baja"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      }
+     ]
+    },
+    {
+     "id": "alma",
+     "como": "anciano_griego_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 3,
+       "hace": "lamenta"
+      }
+     ],
+     "rotulo": "Soul"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "chispas",
+     "x": 1100,
+     "y": 600,
+     "dur": 1
+    }
+   ]
+  },
+  {
+   "id": "cerbero",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "En la orilla lejana estaba la puerta de Hades, y delante de ella, Cerbero.",
+     "en": "On the far shore stood the gate of Hades, and in front of it, Cerberus."
+    },
+    {
+     "es": "Cerbero era un perro enorme con tres cabezas y una serpiente por cola.",
+     "en": "Cerberus was a huge dog with three heads and a snake for a tail."
+    },
+    {
+     "es": "Hesíodo dice que mueve la cola ante quienes entran.",
+     "en": "Hesiod says he wags his tail at those who come in."
+    },
+    {
+     "es": "Pero devora a cualquiera que intente salir. Los muertos entran; ninguno sale.",
+     "en": "But he eats anyone who tries to leave. The dead go in; none go out."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "puerta",
+     "x": 1500,
+     "s": 1.3,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "cerbero",
+     "como": "cerbero_oficial",
+     "x": 1200,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "gira"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "alma",
+     "como": "anciano_griego_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "sorprende"
+      }
+     ],
+     "rotulo": "Soul"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "temblor",
+     "dur": 1
+    }
+   ]
+  },
+  {
+   "id": "jueces",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Dentro, tres jueces estaban sentados en un prado donde se separaban los caminos. Eran Minos, Radamantis y Éaco.",
+     "en": "Inside, three judges sat in a meadow where the roads split. They were Minos, Rhadamanthus, and Aeacus."
+    },
+    {
+     "es": "En vida, fueron reyes humanos sabios. Tras su muerte, Zeus los hizo jueces de las almas.",
+     "en": "In life, they were wise human kings. After death, Zeus made them judges of souls."
+    },
+    {
+     "es": "Platón lo cuenta así: cada alma se presentaba sin su cuerpo, y cada cicatriz de su vida se veía.",
+     "en": "Plato tells it this way: each soul stood naked of its body, and every scar of its life showed."
+    },
+    {
+     "es": "Entonces los jueces la enviaban a la izquierda o a la derecha.",
+     "en": "Then the judges sent it left or right."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 1100,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "trono",
+     "x": 1450,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "minos",
+     "como": "minos_oficial",
+     "x": 1100,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "radamantis",
+     "como": "rey_griego_2_oficial",
+     "x": 1450,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.5,
+       "hace": "asiente"
+      }
+     ],
+     "rotulo": "Rhadamanthus"
+    },
+    {
+     "id": "alma",
+     "como": "anciano_griego_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 3,
+       "hace": "camina",
+       "a": 650
+      }
+     ],
+     "rotulo": "Soul"
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "LOS TRES JUECES",
+      "en": "THE THREE JUDGES"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2.5
+    }
+   ]
+  },
+  {
+   "id": "asfodelos",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "La mayoría de las almas iba al Prado de Asfódelo, un campo gris de flores pálidas.",
+     "en": "Most souls went to the Meadow of Asphodel, a gray field of pale flowers."
+    },
+    {
+     "es": "Homero las pinta como sombras delgadas y calladas. Chillan como murciélagos y no pueden hablar sin sangre.",
+     "en": "Homer paints them as thin, quiet shadows. They squeak like bats and cannot speak without blood."
+    },
+    {
+     "es": "Cuando Odiseo visitó, encontró al héroe Aquiles. Aquiles dijo: preferiría ser un pobre jornalero vivo que rey de todos los muertos.",
+     "en": "When Odysseus visited, he met the hero Achilles. Achilles said: I would rather be a poor farmhand alive than king of all the dead."
+    },
+    {
+     "es": "¿Estarías de acuerdo? Cuéntanos en los comentarios.",
+     "en": "Would you agree? Tell us in the comments."
+    }
+   ],
+   "actores": [
+    {
+     "id": "aquiles",
+     "como": "aquiles_oficial",
+     "x": 1100,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "sombra"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 2.5,
+       "hace": "entristece"
+      }
+     ]
+    },
+    {
+     "id": "odiseo",
+     "como": "hombre_griego_oficial",
+     "x": 600,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ],
+     "rotulo": "Odysseus"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "niebla",
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "PRADO DE ASFÓDELO",
+      "en": "MEADOW OF ASPHODEL"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "elisios",
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Unas pocas almas afortunadas iban a otro lugar: los Campos Elíseos, también llamados Islas de los Bienaventurados.",
+     "en": "A few lucky souls went somewhere else: the Elysian Fields, also called the Islands of the Blessed."
+    },
+    {
+     "es": "Era una tierra sin nieve ni tormentas. Un viento suave del oeste soplaba todo el año.",
+     "en": "It was a land with no snow and no storms. A soft west wind blew all year."
+    },
+    {
+     "es": "Héroes, buenos reyes y personas de vida pura vivían allí en paz.",
+     "en": "Heroes, good kings and people with pure lives lived there in peace."
+    },
+    {
+     "es": "Algunos relatos decían que las almas que vivían bien tres veces podían quedarse para siempre.",
+     "en": "Some stories said that souls who lived well three times could stay forever."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "olivo",
+     "x": 300,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "olivo",
+     "x": 1650,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "heroe",
+     "como": "heracles_oficial",
+     "x": 700,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 2,
+       "hace": "alegra"
+      }
+     ]
+    },
+    {
+     "id": "mujer",
+     "como": "mujer_griega_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.5,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 3,
+       "hace": "alegra"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "aclarar",
+     "dur": 1.5
+    },
+    {
+     "en": 1,
+     "tipo": "luz",
+     "x": 1000,
+     "y": 300,
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "CAMPOS ELÍSEOS",
+      "en": "ELYSIAN FIELDS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2.5
+    }
+   ]
+  },
+  {
+   "id": "leteo",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Algunos relatos agregan un paso más: el río Leteo.",
+     "en": "Some stories add one more step: the river Lethe."
+    },
+    {
+     "es": "Las almas que iban a nacer de nuevo bebían su agua y olvidaban sus vidas pasadas.",
+     "en": "Souls who were to be born again drank its water and forgot their past lives."
+    },
+    {
+     "es": "Platón cuenta de un soldado llamado Er que vio esto y volvió a la vida para contarlo.",
+     "en": "Plato tells of a soldier named Er who watched this, and came back to life to tell it."
+    },
+    {
+     "es": "¿Beberías, y olvidarías todo, para empezar de nuevo?",
+     "en": "Would you drink, and forget everything, to start again?"
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "rio",
+     "x": 1050,
+     "s": 1.2,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "alma",
+     "como": "joven_griego_oficial",
+     "x": 700,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 2,
+       "hace": "baja"
+      },
+      {
+       "en": 3,
+       "hace": "alegra"
+      }
+     ],
+     "rotulo": "Soul"
+    },
+    {
+     "id": "er",
+     "como": "guerrero_griego_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ],
+     "rotulo": "Er"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "niebla",
+     "dur": 1.5
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Pero había un lugar más, muy por debajo de los demás, más oscuro que la noche.",
+     "en": "But there was one more place, far below the rest, darker than night."
+    },
+    {
+     "es": "El propio Hades rara vez iba allí. Era una prisión para quienes desafiaron a los dioses.",
+     "en": "Hades himself rarely went there. It was a prison for those who had defied the gods."
+    },
+    {
+     "es": "¿Qué parte de este viaje te asusta más? Cuéntanos en los comentarios.",
+     "en": "Which part of this journey scares you the most? Tell us in the comments."
+    },
+    {
+     "es": "En el próximo episodio: los condenados del Tártaro.",
+     "en": "Next time: the damned of Tartarus."
+    }
+   ],
+   "actores": [
+    {
+     "id": "hades",
+     "como": "hades_oficial",
+     "x": 1200,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "sombra"
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "persefone",
+     "como": "persefone_oficial",
+     "x": 700,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 3,
+     "texto": {
+      "es": "LOS CONDENADOS DEL TÁRTARO",
+      "en": "THE DAMNED OF TARTARUS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 5
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "El barquero que no remaba gratis",
+    "en": "The Boatman Who Wouldn't Row for Free"
+   },
+   "escena": "caronte",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1000
+  },
+  {
+   "gancho": {
+    "es": "Aquiles: mejor un pobre granjero vivo",
+    "en": "Achilles: Better a Poor Farmer Alive"
+   },
+   "escena": "asfodelos",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1000
+  },
+  {
+   "gancho": {
+    "es": "El río que borra tu memoria",
+    "en": "The River That Erases Your Memory"
+   },
+   "escena": "leteo",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1000
+  }
+ ]
+}

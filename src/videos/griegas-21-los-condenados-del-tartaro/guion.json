@@ -1,0 +1,748 @@
+{
+ "id": "griegas-21-los-condenados-del-tartaro",
+ "serie": "griegas",
+ "numero": "21",
+ "titulo": {
+  "es": "Los condenados del Tártaro",
+  "en": "The Damned of Tartarus"
+ },
+ "tituloGriego": "ΤΑΡΤΑΡΟΣ",
+ "miniatura": {
+  "heroe": "sisifo_oficial",
+  "rival": "hades_oficial"
+ },
+ "siguiente": {
+  "es": "Orfeo y Eurídice",
+  "en": "Orpheus and Eurydice"
+ },
+ "escenas": [
+  {
+   "id": "abismo",
+   "fondo": "caos",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "La vez pasada cruzamos el inframundo. Ahora vamos más abajo, a un lugar que Hades rara vez visita.",
+     "en": "Last time, we crossed the underworld. Now we go lower, to a place Hades rarely visits."
+    },
+    {
+     "es": "Hesíodo describe el Tártaro como un abismo tan por debajo de la tierra como el cielo está por encima.",
+     "en": "Hesiod describes Tartarus as a pit as far below the earth as the sky is above it."
+    },
+    {
+     "es": "Un yunque de bronce lanzado del cielo tarda nueve días en llegar a la tierra, y nueve más en llegar al Tártaro.",
+     "en": "A bronze anvil dropped from the sky takes nine days to reach the earth, and nine more to reach Tartarus."
+    },
+    {
+     "es": "Aquí encerró Zeus a los Titanes. Y aquí, con el tiempo, llegaron unos pocos mortales que ofendieron a los dioses.",
+     "en": "Here Zeus locked the Titans. And here, in time, came a few mortals who offended the gods."
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "como": "zeus_oficial",
+     "x": 1100,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "dur": 2
+    },
+    {
+     "en": 1,
+     "tipo": "temblor",
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "EL TÁRTARO",
+      "en": "TARTARUS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2.5
+    }
+   ]
+  },
+  {
+   "id": "tantalo",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "El primer prisionero fue Tántalo, un rey que una vez comió en la mesa de los dioses.",
+     "en": "The first prisoner was Tantalus, a king who once ate at the table of the gods."
+    },
+    {
+     "es": "Las fuentes no coinciden en su crimen. Unos dicen que robó su comida. Otros, que intentó engañarlos.",
+     "en": "Sources disagree on his crime. Some say he stole their food. Others say he tried to trick them."
+    },
+    {
+     "es": "En Homero, está en una laguna, con agua hasta el mentón, y frutas colgando sobre su cabeza.",
+     "en": "In Homer, he stands in a pool, up to his chin in water, with fruit hanging above his head."
+    },
+    {
+     "es": "Cuando se agacha a beber, el agua se escurre. Cuando estira la mano a la fruta, el viento la aleja.",
+     "en": "When he bends to drink, the water drains away. When he reaches for fruit, the wind blows it off."
+    },
+    {
+     "es": "De ahí viene la palabra tentar con algo inalcanzable: en inglés, tantalize.",
+     "en": "That is where we get the word tantalize."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "rio",
+     "x": 1000,
+     "s": 1.2,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "olivo",
+     "x": 1500,
+     "s": 1
+    }
+   ],
+   "actores": [
+    {
+     "id": "tantalo",
+     "como": "rey_griego_oficial",
+     "x": 1000,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "lamenta"
+      },
+      {
+       "en": 3,
+       "hace": "baja"
+      },
+      {
+       "en": 4,
+       "hace": "levanta"
+      }
+     ],
+     "rotulo": "Tantalus"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "olas-bajan",
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "TÁNTALO",
+      "en": "TANTALUS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "sisifo",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Luego estaba Sísifo, el más listo y astuto de los mortales.",
+     "en": "Next was Sisyphus, the cleverest and most cunning of mortals."
+    },
+    {
+     "es": "Engañó a los dioses, y en algunos relatos hasta burló a la Muerte dos veces.",
+     "en": "He tricked the gods, and in some tellings he even cheated Death twice."
+    },
+    {
+     "es": "Al final los dioses lo atraparon. Su tarea era subir una enorme roca hasta lo alto de una colina.",
+     "en": "In the end the gods caught him. His task was to roll a huge boulder to the top of a hill."
+    },
+    {
+     "es": "Justo antes de la cima, la roca siempre rodaba hacia abajo, y él empezaba de nuevo.",
+     "en": "Just before the top, the boulder always rolled back down, and he began again."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "monte",
+     "x": 1400,
+     "s": 1.2,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "sisifo",
+     "como": "sisifo_roca_oficial",
+     "x": 900,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "habla"
+      },
+      {
+       "en": 2,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "cae"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "polvo",
+     "x": 1000,
+     "y": 700,
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "SÍSIFO",
+      "en": "SISYPHUS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "ixion",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Después vino Ixión, un rey al que el propio Zeus había recibido en el Olimpo.",
+     "en": "Then came Ixion, a king whom Zeus himself had welcomed to Olympus."
+    },
+    {
+     "es": "Pagó esa bondad intentando conquistar a Hera, la esposa de Zeus.",
+     "en": "He repaid that kindness by trying to win Hera, the wife of Zeus, for himself."
+    },
+    {
+     "es": "Zeus lo puso a prueba con una nube con la forma de Hera. Ixión cayó en el truco.",
+     "en": "Zeus tested him with a cloud shaped like Hera. Ixion fell for the trick."
+    },
+    {
+     "es": "Su castigo fue una rueda en llamas que gira para siempre.",
+     "en": "His punishment was a burning wheel that spins forever."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "nube",
+     "x": 1500,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "ixion",
+     "como": "hombre_griego_2_oficial",
+     "x": 1000,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "enoja"
+      },
+      {
+       "en": 3,
+       "hace": "tiembla"
+      }
+     ],
+     "rotulo": "Ixion"
+    },
+    {
+     "id": "zeus",
+     "como": "zeus_oficial",
+     "x": 450,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 1.5,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "fuego",
+     "x": 1000,
+     "y": 650,
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "IXIÓN",
+      "en": "IXION"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "danaides",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Las Danaides eran cincuenta hermanas, hijas del rey Danao.",
+     "en": "The Danaids were fifty sisters, the daughters of King Danaus."
+    },
+    {
+     "es": "En su noche de bodas, cuarenta y nueve mataron a sus nuevos esposos. Solo Hipermnestra salvó al suyo.",
+     "en": "On their wedding night, forty-nine of them killed their new husbands. Only Hypermnestra spared hers."
+    },
+    {
+     "es": "En versiones posteriores, las cuarenta y nueve debían llevar agua en cántaros agujereados para llenar una pileta.",
+     "en": "In later versions, the forty-nine had to carry water in leaking jars to fill a bathing pool."
+    },
+    {
+     "es": "Los cántaros nunca se llenaban. La tarea nunca terminaba.",
+     "en": "The jars never filled. The task never ended."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "anfora",
+     "x": 900,
+     "s": 1
+    },
+    {
+     "tipo": "pithos",
+     "x": 1250,
+     "s": 1
+    }
+   ],
+   "actores": [
+    {
+     "id": "danaide1",
+     "como": "mujer_griega_oficial",
+     "x": 700,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "baja"
+      }
+     ],
+     "rotulo": "Danaids"
+    },
+    {
+     "id": "danaide2",
+     "como": "mujer_griega_2_oficial",
+     "x": 1050,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "baja"
+      }
+     ],
+     "rotulo": ""
+    },
+    {
+     "id": "danaide3",
+     "como": "mujer_griega_3_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.6,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "baja"
+      }
+     ],
+     "rotulo": ""
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "olas-bajan",
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "LAS DANAIDES",
+      "en": "THE DANAIDS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2.5
+    }
+   ]
+  },
+  {
+   "id": "titio",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Un prisionero gigante más yacía tendido en el suelo: Ticio.",
+     "en": "One more giant prisoner lay stretched out on the ground: Tityos, a giant."
+    },
+    {
+     "es": "Había atacado a Leto, la madre de Apolo y Artemisa. Los gemelos lo castigaron.",
+     "en": "He had attacked Leto, the mother of Apollo and Artemis. The twins punished him."
+    },
+    {
+     "es": "En Homero, cubre nueve acres de tierra, mientras dos buitres picotean su hígado.",
+     "en": "In Homer, he covers nine acres of land, while two vultures peck at his liver."
+    },
+    {
+     "es": "Cada noche vuelve a crecer, igual que el hígado de Prometeo mucho antes.",
+     "en": "Each night it grows back, just like Prometheus's liver long before."
+    }
+   ],
+   "actores": [
+    {
+     "id": "titio",
+     "como": "gigante_griego_oficial",
+     "x": 1000,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "enoja"
+      },
+      {
+       "en": 3,
+       "hace": "lamenta"
+      }
+     ],
+     "rotulo": "Tityos"
+    },
+    {
+     "id": "buitre",
+     "como": "aguila_griega_oficial",
+     "x": 1100,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "vuela",
+       "a": 1100
+      }
+     ],
+     "rotulo": ""
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "TICIO",
+      "en": "TITYOS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "leccion",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Mira de cerca, y estos castigos comparten un patrón.",
+     "en": "Look closely, and these punishments share a pattern."
+    },
+    {
+     "es": "Cada uno se repite sin fin: alcanzar, subir, girar, llenar, nunca terminar.",
+     "en": "Each one repeats forever: reaching, climbing, spinning, filling, never finishing."
+    },
+    {
+     "es": "Los griegos los usaban para advertir contra el orgullo, romper las leyes de la hospitalidad y engañar a los dioses.",
+     "en": "The Greeks used them to warn against pride, breaking the laws of hospitality, and fooling the gods."
+    },
+    {
+     "es": "Para ellos, el peor destino no era el dolor, sino una tarea sin final.",
+     "en": "For them, the worst fate was not pain, but a task with no end."
+    }
+   ],
+   "actores": [
+    {
+     "id": "hades",
+     "como": "hades_oficial",
+     "x": 1000,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "sombra"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "dur": 2
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "¿Cuál de estos castigos te parece el más cruel? Cuéntanos en los comentarios.",
+     "en": "Which of these punishments seems the cruelest to you? Tell us in the comments."
+    },
+    {
+     "es": "Pero en la próxima historia, un hombre vivo entra en este lugar, armado solo con una canción.",
+     "en": "Yet in the next story, a living man walks into this place, armed only with a song."
+    },
+    {
+     "es": "Quiere traer de vuelta a la mujer que ama, y hasta los guardianes callan.",
+     "en": "He wants to bring back the woman he loves, and even the guards fall silent."
+    },
+    {
+     "es": "En el próximo episodio: Orfeo y Eurídice.",
+     "en": "Next time: Orpheus and Eurydice."
+    }
+   ],
+   "actores": [
+    {
+     "id": "hades",
+     "como": "hades_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "sombra"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "luz",
+     "x": 700,
+     "y": 300,
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 3,
+     "texto": {
+      "es": "ORFEO Y EURÍDICE",
+      "en": "ORPHEUS AND EURYDICE"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 5
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "El hombre que nunca pudo beber",
+    "en": "The Man Who Could Never Drink"
+   },
+   "escena": "tantalo",
+   "desde": 0,
+   "hasta": 4,
+   "foco": 1000
+  },
+  {
+   "gancho": {
+    "es": "Una roca que nunca llega a la cima",
+    "en": "A Boulder That Never Reaches the Top"
+   },
+   "escena": "sisifo",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  },
+  {
+   "gancho": {
+    "es": "Una rueda de fuego que nunca se detiene",
+    "en": "A Fire Wheel That Never Stops"
+   },
+   "escena": "ixion",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1000
+  }
+ ]
+}

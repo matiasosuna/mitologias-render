@@ -1,0 +1,1019 @@
+{
+ "id": "griegas-19-las-semillas-de-granada",
+ "serie": "griegas",
+ "numero": "19",
+ "titulo": {
+  "es": "Las semillas de granada",
+  "en": "The Pomegranate Seeds"
+ },
+ "tituloGriego": "ΡΟΙΑ",
+ "miniatura": {
+  "heroe": "persefone_oficial",
+  "rival": "demeter_oficial"
+ },
+ "siguiente": {
+  "es": "Viaje al inframundo",
+  "en": "Journey to the Underworld"
+ },
+ "escenas": [
+  {
+   "id": "templo",
+   "fondo": "templo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "La vez pasada, un bebé gritó en el fuego y Deméter dejó caer su disfraz.",
+     "en": "Last time, a baby screamed in the fire, and Demeter dropped her disguise."
+    },
+    {
+     "es": "Se hizo alta, la luz brotó de ella y toda la casa olió a flores.",
+     "en": "She grew tall, light poured from her, and the whole house smelled of flowers."
+    },
+    {
+     "es": "Soy Deméter, dijo. Constrúyanme un gran templo y un altar en la colina.",
+     "en": "I am Demeter, she said. Build me a great temple and an altar on the hill."
+    },
+    {
+     "es": "La gente de Eleusis obedeció de inmediato, y Deméter se instaló allí a esperar a su hija.",
+     "en": "The people of Eleusis obeyed at once, and Demeter moved in to wait for her daughter."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "templo",
+     "x": 300,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "altar",
+     "x": 1300,
+     "s": 0.8
+    }
+   ],
+   "actores": [
+    {
+     "id": "demeter",
+     "como": "demeter_oficial",
+     "x": 900,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "brilla"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "celeo",
+     "como": "rey_griego_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.5,
+       "hace": "arrodilla"
+      }
+     ],
+     "rotulo": "Celeus"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "luz",
+     "x": 900,
+     "y": 400,
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.2,
+     "texto": {
+      "es": "ELEUSIS",
+      "en": "ELEUSIS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "hambre",
+   "fondo": "desierto",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Pero Deméter no perdonó. Se sentó en su templo, envuelta en dolor.",
+     "en": "But Demeter would not forgive. She sat in her temple, wrapped in grief."
+    },
+    {
+     "es": "Ese año fue el más cruel de la historia. La tierra se negó a dar una sola semilla.",
+     "en": "That year was the cruelest in history. The earth refused to give a single seed."
+    },
+    {
+     "es": "Los bueyes tiraban los arados en vano. La cebada caía en el polvo seco y no crecía.",
+     "en": "Oxen pulled plows in vain. Barley fell on dry dust and never grew."
+    },
+    {
+     "es": "Toda la raza humana estaba a punto de morir de hambre.",
+     "en": "The whole human race was close to dying of hunger."
+    }
+   ],
+   "actores": [
+    {
+     "id": "demeter",
+     "como": "demeter_oficial",
+     "x": 900,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "lamenta"
+      },
+      {
+       "en": 3,
+       "hace": "arrodilla"
+      }
+     ]
+    },
+    {
+     "id": "agricultor",
+     "como": "agricultor_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "lamenta"
+      },
+      {
+       "en": 3,
+       "hace": "cae"
+      }
+     ],
+     "rotulo": ""
+    },
+    {
+     "id": "buey",
+     "como": "buey_griego_oficial",
+     "x": 1200,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1.2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "camina",
+       "a": 1300
+      }
+     ],
+     "rotulo": ""
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "dur": 2
+    },
+    {
+     "en": 2,
+     "tipo": "polvo",
+     "x": 1400,
+     "y": 700,
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1,
+     "texto": {
+      "es": "EL AÑO MÁS LARGO",
+      "en": "THE LONGEST YEAR"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "olimpo",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Zeus vio el peligro. Si los humanos morían, nadie daría ofrendas ni plegarias a los dioses.",
+     "en": "Zeus saw the danger. If humans died, no one would give the gods gifts or prayers."
+    },
+    {
+     "es": "Envió a Iris, la mensajera del arcoíris, a rogarle a Deméter. Ella dijo que no.",
+     "en": "He sent Iris, the rainbow messenger, to beg Demeter. She said no."
+    },
+    {
+     "es": "Uno por uno, los dioses fueron con ricos regalos. Deméter los rechazó a todos.",
+     "en": "One by one, the gods came with rich gifts. Demeter refused them all."
+    },
+    {
+     "es": "No dejaría crecer ni una brizna de hierba hasta ver el rostro de su hija.",
+     "en": "She would not let one blade of grass grow until she saw her daughter's face."
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "como": "zeus_oficial",
+     "x": 1000,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "enoja"
+      }
+     ]
+    },
+    {
+     "id": "hermes",
+     "como": "hermes_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "luz",
+     "x": 1000,
+     "y": 300,
+     "dur": 1
+    }
+   ]
+  },
+  {
+   "id": "hermes",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Entonces Zeus envió a Hermes, su veloz mensajero, hacia la oscuridad.",
+     "en": "So Zeus sent Hermes, his fast messenger, down into the darkness."
+    },
+    {
+     "es": "Hermes encontró a Hades sentado en un diván, con Perséfone a su lado, triste y callada.",
+     "en": "Hermes found Hades sitting on a couch, with Persephone beside him, sad and silent."
+    },
+    {
+     "es": "Zeus lo ordena, dijo Hermes. Que Perséfone vuelva con su madre, a la luz.",
+     "en": "Zeus commands it, said Hermes. Let Persephone go back to her mother, into the light."
+    },
+    {
+     "es": "Perséfone se levantó de un salto, llena de alegría. Quería volver a ver el sol.",
+     "en": "Persephone jumped up with joy. She wanted to see the sun again."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 1400,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "hades",
+     "como": "hades_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      }
+     ]
+    },
+    {
+     "id": "persefone",
+     "como": "persefone_oficial",
+     "x": 1000,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "entristece"
+      },
+      {
+       "en": 3,
+       "hace": "alegra"
+      },
+      {
+       "en": 3,
+       "hace": "salta"
+      }
+     ]
+    },
+    {
+     "id": "hermes",
+     "como": "hermes_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "entra",
+       "a": 600
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 2.5,
+       "hace": "senala"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "dur": 1.5
+    }
+   ]
+  },
+  {
+   "id": "granada",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Hades no discutió. Dijo: ve, y no estés triste. No soy un mal esposo para ti.",
+     "en": "Hades did not argue. He said: go, and do not be sad. I am not a bad husband for you."
+    },
+    {
+     "es": "Pero antes de que se fuera, le dio un pequeño regalo: una dulce semilla de granada.",
+     "en": "But before she left, he gave her one small gift: a sweet pomegranate seed."
+    },
+    {
+     "es": "En el Himno, Hades se la hace comer en secreto. En Ovidio, ella toma la fruta y come siete semillas.",
+     "en": "In the Hymn, Hades makes her eat it in secret. In Ovid, she picks the fruit herself and eats seven seeds."
+    },
+    {
+     "es": "Ella no lo sabía, pero quien come la comida de los muertos pertenece a los muertos.",
+     "en": "She did not know it, but whoever eats the food of the dead belongs to the dead."
+    }
+   ],
+   "actores": [
+    {
+     "id": "hades",
+     "como": "hades_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "ofrece"
+      }
+     ]
+    },
+    {
+     "id": "persefone",
+     "como": "persefone_oficial",
+     "x": 1000,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "toma"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      },
+      {
+       "en": 3,
+       "hace": "sorprende"
+      }
+     ],
+     "props": {}
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "chispas",
+     "x": 1200,
+     "y": 600,
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 3,
+     "texto": {
+      "es": "LA COMIDA DE LOS MUERTOS",
+      "en": "THE FOOD OF THE DEAD"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 4.5
+    }
+   ]
+  },
+  {
+   "id": "buho",
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "En Ovidio, un testigo lo vio todo: Ascáfalo, el jardinero del inframundo.",
+     "en": "In Ovid, one witness saw everything: Ascalaphus, the gardener of the underworld."
+    },
+    {
+     "es": "Les contó a todos que Perséfone había comido las semillas.",
+     "en": "He told everyone that Persephone had eaten the seeds."
+    },
+    {
+     "es": "Deméter se enojó con él. Lo convirtió en un pequeño búho, un ave de malas noticias.",
+     "en": "Demeter was furious at him. She turned him into a small owl, a bird of bad news."
+    },
+    {
+     "es": "Por eso, en los relatos antiguos, un búho que chilla de noche era mala señal.",
+     "en": "That is why, in the old stories, a screech owl calling at night was a bad sign."
+    }
+   ],
+   "actores": [
+    {
+     "id": "ascalafo",
+     "como": "anciano_griego_oficial",
+     "x": 700,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "habla"
+      },
+      {
+       "en": 2,
+       "hace": "sorprende"
+      },
+      {
+       "en": 2.5,
+       "hace": "desaparece",
+       "con": "humo"
+      }
+     ]
+    },
+    {
+     "id": "demeter",
+     "como": "demeter_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1.5,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "enoja"
+      },
+      {
+       "en": 2.5,
+       "hace": "senala"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2.5,
+     "tipo": "humo",
+     "x": 700,
+     "y": 650,
+     "dur": 1
+    }
+   ]
+  },
+  {
+   "id": "reencuentro",
+   "fondo": "templo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "El carro dorado llegó a Eleusis. Deméter lo vio y bajó corriendo la colina como un ciervo salvaje.",
+     "en": "The golden chariot reached Eleusis. Demeter saw it and ran down the hill like a wild deer."
+    },
+    {
+     "es": "Madre e hija se abrazaron, y por primera vez en un año, Deméter sonrió.",
+     "en": "Mother and daughter held each other, and for the first time in a year, Demeter smiled."
+    },
+    {
+     "es": "Luego preguntó: hija, ¿comiste algo allá abajo? Si lo hiciste, tendrás que volver.",
+     "en": "Then she asked: child, did you eat anything below? If you did, you must go back."
+    },
+    {
+     "es": "Perséfone le contó de la semilla, y a Deméter se le hundió el corazón.",
+     "en": "Persephone told her about the seed, and Demeter's heart sank."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "templo",
+     "x": 250,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "demeter",
+     "como": "demeter_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "corre",
+       "a": 800
+      },
+      {
+       "en": 1,
+       "hace": "abraza"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "persefone",
+     "como": "persefone_oficial",
+     "x": 1200,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "abraza"
+      },
+      {
+       "en": 3,
+       "hace": "entristece"
+      }
+     ]
+    },
+    {
+     "id": "hermes",
+     "como": "hermes_oficial",
+     "x": 1700,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      }
+     ],
+     "rotulo": ""
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "luz",
+     "x": 1000,
+     "y": 400,
+     "dur": 1.5
+    }
+   ]
+  },
+  {
+   "id": "pacto",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Zeus envió una nueva mensajera: Rea, la madre de Deméter. Llegó con una oferta.",
+     "en": "Zeus sent a new messenger: Rhea, Demeter's own mother. She came with an offer."
+    },
+    {
+     "es": "Perséfone pasará un tercio del año abajo. El Himno dice un tercio, pero Ovidio dice la mitad.",
+     "en": "Persephone will spend one third of the year below. The Hymn says a third, but Ovid says half."
+    },
+    {
+     "es": "El resto del año, vivirá con su madre y los dioses en la luz.",
+     "en": "The rest of the year, she will live with her mother and the gods in the light."
+    },
+    {
+     "es": "Deméter aceptó. Hizo brotar los tallos verdes, y los campos se llenaron de hojas y flores.",
+     "en": "Demeter accepted. She sent up green shoots, and the fields filled with leaves and flowers."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "nube",
+     "x": 400,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "rea",
+     "como": "reina_griega_oficial",
+     "x": 700,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 1,
+       "hace": "habla"
+      }
+     ],
+     "rotulo": "Rhea"
+    },
+    {
+     "id": "demeter",
+     "como": "demeter_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "asiente"
+      },
+      {
+       "en": 3,
+       "hace": "levanta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "luz",
+     "x": 1300,
+     "y": 400,
+     "dur": 1.5
+    },
+    {
+     "en": 3,
+     "tipo": "aclarar",
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 1,
+     "texto": {
+      "es": "UN TERCIO DEL AÑO",
+      "en": "A THIRD OF THE YEAR"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "misterios",
+   "fondo": "templo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Antes de volver al Olimpo, Deméter hizo una última cosa por la gente de Eleusis.",
+     "en": "Before returning to Olympus, Demeter did one last thing for the people of Eleusis."
+    },
+    {
+     "es": "Enseñó a sus reyes sus ritos secretos, los Misterios de Eleusis.",
+     "en": "She taught their kings her secret rites, the Eleusinian Mysteries."
+    },
+    {
+     "es": "También le dio a Triptólemo, un joven príncipe, el primer grano y un arado para compartir con el mundo.",
+     "en": "She also gave Triptolemus, a young prince, the first grain and a plow to share with the world."
+    },
+    {
+     "es": "Durante más de mil años, los griegos fueron a Eleusis a conocer estos secretos. Nadie los escribió jamás.",
+     "en": "For well over a thousand years, Greeks came to Eleusis to learn these secrets. No one ever wrote them down."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "altar",
+     "x": 1700,
+     "s": 0.8
+    }
+   ],
+   "actores": [
+    {
+     "id": "demeter",
+     "como": "demeter_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 2,
+       "hace": "ofrece"
+      }
+     ]
+    },
+    {
+     "id": "triptolemo",
+     "como": "joven_griego_2_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.5,
+       "hace": "toma"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ],
+     "rotulo": "Triptolemus"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "chispas",
+     "x": 1100,
+     "y": 600,
+     "dur": 1.5
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Perséfone se volvió dos cosas a la vez: la reina de los muertos y la joven que trae la primavera.",
+     "en": "Persephone became two things at once: the queen of the dead, and the girl who brings the spring."
+    },
+    {
+     "es": "¿Fue la granada una trampa o una elección suya? Cuéntanos qué piensas en los comentarios.",
+     "en": "Was the pomegranate a trap, or her own choice? Tell us what you think in the comments."
+    },
+    {
+     "es": "Cada año, ella baja otra vez. ¿Qué ve allá abajo?",
+     "en": "Every year, she goes down again. What does she see below?"
+    },
+    {
+     "es": "En el próximo episodio: el viaje por el inframundo.",
+     "en": "Next time: the journey through the underworld."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "olivo",
+     "x": 300,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "olivo",
+     "x": 1650,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "persefone",
+     "como": "persefone_oficial",
+     "x": 950,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "brilla"
+      },
+      {
+       "en": 1,
+       "hace": "alegra"
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "aclarar",
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 3,
+     "texto": {
+      "es": "VIAJE AL INFRAMUNDO",
+      "en": "JOURNEY TO THE UNDERWORLD"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 5
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "Una semilla la ató a los muertos",
+    "en": "One Seed Bound Her to the Dead"
+   },
+   "escena": "granada",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1000
+  },
+  {
+   "gancho": {
+    "es": "Una diosa dejó morir de hambre al mundo",
+    "en": "A Goddess Starved the World"
+   },
+   "escena": "hambre",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 950
+  },
+  {
+   "gancho": {
+    "es": "El jardinero que se volvió búho",
+    "en": "The Gardener Who Became an Owl"
+   },
+   "escena": "buho",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1000
+  }
+ ]
+}

@@ -1,0 +1,993 @@
+{
+ "id": "griegas-18-el-rapto-de-persefone",
+ "serie": "griegas",
+ "numero": "18",
+ "titulo": {
+  "es": "El rapto de Perséfone",
+  "en": "The Abduction of Persephone"
+ },
+ "tituloGriego": "ΑΡΠΑΓΗ",
+ "miniatura": {
+  "heroe": "persefone_oficial",
+  "rival": "hades_oficial"
+ },
+ "siguiente": {
+  "es": "Las semillas de granada",
+  "en": "The Pomegranate Seeds"
+ },
+ "escenas": [
+  {
+   "id": "enganche",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "La vez pasada vimos a los dioses instalarse en el Olimpo. Ahora bajamos muy por debajo de ellos.",
+     "en": "Last time, we saw the gods settle on Olympus. Now we go far below them."
+    },
+    {
+     "es": "Aquí abajo vive Hades, el hermano de Zeus y rey de los muertos.",
+     "en": "Down here lives Hades, the brother of Zeus and the king of the dead."
+    },
+    {
+     "es": "Esta es la historia de una joven, una flor y una grieta en la tierra.",
+     "en": "This is the story of a girl, a flower, and a crack in the earth."
+    },
+    {
+     "es": "Cambió el mundo para siempre. Por eso existe el invierno.",
+     "en": "It changed the world forever. It is why we have winter."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 1100,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "hades",
+     "como": "hades_oficial",
+     "x": 1100,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "sombra"
+      },
+      {
+       "en": 1,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "EL INFRAMUNDO",
+      "en": "THE UNDERWORLD"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "deseo",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Hades gobernaba a los muertos, pero su palacio era silencioso y frío.",
+     "en": "Hades ruled the dead, but his palace was silent and cold."
+    },
+    {
+     "es": "Quería una reina. Eligió a Perséfone, la joven hija de Zeus y Deméter.",
+     "en": "He wanted a queen. He chose Persephone, the young daughter of Zeus and Demeter."
+    },
+    {
+     "es": "No le preguntó a ella ni a su madre. Le preguntó a Zeus.",
+     "en": "He did not ask her, or her mother. He asked Zeus."
+    },
+    {
+     "es": "En el Himno homérico, Zeus aceptó en secreto. A Deméter no le dijeron nada.",
+     "en": "In the Homeric Hymn, Zeus agreed in secret. Demeter was told nothing."
+    }
+   ],
+   "actores": [
+    {
+     "id": "hades",
+     "como": "hades_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      }
+     ]
+    },
+    {
+     "id": "zeus",
+     "como": "zeus_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1.5,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1.5,
+     "tipo": "luz",
+     "x": 1400,
+     "y": 400,
+     "dur": 1
+    }
+   ]
+  },
+  {
+   "id": "prado",
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Mientras tanto, Perséfone jugaba en un prado, lejos de su madre.",
+     "en": "Meanwhile, Persephone played in a meadow, far from her mother."
+    },
+    {
+     "es": "Juntaba rosas, violetas y azafranes con las hijas de Océano, las ninfas del mar.",
+     "en": "She picked roses, violets, and crocuses with the daughters of Oceanus, the sea nymphs."
+    },
+    {
+     "es": "Entonces vio una flor de cien capullos. Olía tan dulce que todo el cielo sonreía.",
+     "en": "Then she saw a flower with a hundred blooms. It smelled so sweet that the whole sky laughed."
+    },
+    {
+     "es": "Gea, la tierra, la había hecho crecer como trampa. Zeus lo había planeado con Hades.",
+     "en": "Gaia, the earth, had grown it as a trap. Zeus had planned it with Hades."
+    },
+    {
+     "es": "Perséfone estiró la mano para cortarla.",
+     "en": "Persephone reached out to pick it."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "olivo",
+     "x": 250,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "roca",
+     "x": 1700,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "persefone",
+     "como": "persefone_oficial",
+     "x": 900,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "alegra"
+      },
+      {
+       "en": 3,
+       "hace": "camina",
+       "a": 1050
+      },
+      {
+       "en": 4,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "ninfa1",
+     "como": "ninfa_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "aparece"
+      }
+     ],
+     "rotulo": ""
+    },
+    {
+     "id": "ninfa2",
+     "como": "ninfa_2_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.6,
+       "hace": "aparece"
+      },
+      {
+       "en": 3,
+       "hace": "sorprende"
+      }
+     ],
+     "rotulo": ""
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 1250
+    }
+   ]
+  },
+  {
+   "id": "grieta",
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "El suelo se abrió con un rugido, y Hades surgió de la oscuridad en un carro dorado.",
+     "en": "The ground split open with a roar, and Hades rose from the dark in a golden chariot."
+    },
+    {
+     "es": "La tomó y se la llevó hacia abajo. Ella gritó llamando a su padre.",
+     "en": "He caught Persephone and carried her down. She screamed for her father."
+    },
+    {
+     "es": "Pero Zeus no vino. En esta versión, ya había dicho que sí.",
+     "en": "But Zeus did not come. In this telling, he had already said yes."
+    },
+    {
+     "es": "La tierra se cerró detrás de ellos, y el prado volvió a quedar en silencio.",
+     "en": "The earth closed behind them, and the meadow was quiet again."
+    }
+   ],
+   "actores": [
+    {
+     "id": "hades",
+     "como": "hades_oficial",
+     "x": 1100,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "sombra"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 2.5,
+       "hace": "desaparece",
+       "con": "sombra"
+      }
+     ]
+    },
+    {
+     "id": "persefone",
+     "como": "persefone_oficial",
+     "x": 1000,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "lamenta"
+      },
+      {
+       "en": 2.5,
+       "hace": "desaparece",
+       "con": "sombra"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "temblor",
+     "dur": 1.5
+    },
+    {
+     "en": 0,
+     "tipo": "humo",
+     "x": 1100,
+     "y": 700,
+     "dur": 1
+    },
+    {
+     "en": 2.5,
+     "tipo": "oscurecer",
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "LA TIERRA SE ABRE",
+      "en": "THE GROUND OPENS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2.5
+    }
+   ]
+  },
+  {
+   "id": "hecate",
+   "fondo": "noche",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Solo dos oyeron su grito. La primera fue Hécate, una diosa que vivía en una cueva oscura.",
+     "en": "Only two heard her cry. The first was Hecate, a goddess who lived in a dark cave."
+    },
+    {
+     "es": "El segundo fue Helios, el sol, que lo ve todo desde el cielo.",
+     "en": "The second was Helios, the sun, who sees everything from the sky."
+    },
+    {
+     "es": "Muy lejos, Deméter oyó el eco sobre las montañas y el mar.",
+     "en": "Far away, Demeter heard the echo over the mountains and the sea."
+    },
+    {
+     "es": "Se arrancó el velo y salió como un ave, buscando.",
+     "en": "She tore off her veil and rushed out like a bird, searching."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "cueva",
+     "x": 450,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "hecate",
+     "como": "mujer_griega_2_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      }
+     ],
+     "rotulo": "Hecate"
+    },
+    {
+     "id": "demeter",
+     "como": "demeter_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 3,
+       "hace": "corre",
+       "a": 900
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "niebla",
+     "dur": 1
+    }
+   ]
+  },
+  {
+   "id": "busqueda",
+   "fondo": "monte",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Durante nueve días, Deméter recorrió la tierra con antorchas encendidas.",
+     "en": "For nine days, Demeter wandered the earth with burning torches."
+    },
+    {
+     "es": "No comió, no bebió ni se lavó. Solo hacía una pregunta: ¿dónde está mi hija?",
+     "en": "She did not eat, drink, or wash. She only asked one question: where is my daughter?"
+    },
+    {
+     "es": "Ningún dios ni humano pudo decírselo. No habían oído nada.",
+     "en": "No god and no human could tell her. They had heard nothing."
+    },
+    {
+     "es": "El décimo día, Hécate la encontró con una antorcha y le dijo: oí, pero no vi.",
+     "en": "On the tenth day, Hecate met her, holding a torch, and said: I heard, but I did not see."
+    }
+   ],
+   "actores": [
+    {
+     "id": "demeter",
+     "como": "demeter_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "lamenta"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      }
+     ],
+     "props": {
+      "objeto": "antorcha"
+     }
+    },
+    {
+     "id": "hecate",
+     "como": "mujer_griega_2_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.5,
+       "hace": "habla"
+      }
+     ],
+     "rotulo": "Hecate",
+     "props": {
+      "objeto": "antorcha"
+     }
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "fuego",
+     "x": 800,
+     "y": 600,
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "NUEVE DÍAS",
+      "en": "NINE DAYS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "helios",
+   "fondo": "cielo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Juntas le preguntaron a Helios. Detuvo su carro del sol y dijo la verdad.",
+     "en": "Together they asked Helios. He stopped his sun chariot and told the truth."
+    },
+    {
+     "es": "Hades se la llevó, y Zeus lo permitió. Helios hasta dijo: Hades es un esposo digno.",
+     "en": "Hades took her, and Zeus allowed it. Helios even said: Hades is a worthy husband."
+    },
+    {
+     "es": "Deméter supo que su propio cuñado estaba detrás. Su dolor se volvió furia.",
+     "en": "Demeter heard that her own brother-in-law was behind this. Her grief became anger."
+    },
+    {
+     "es": "Dejó el Olimpo y caminó entre los humanos, disfrazada de anciana.",
+     "en": "She left Olympus and walked among humans, hiding as an old woman."
+    }
+   ],
+   "actores": [
+    {
+     "id": "helios",
+     "como": "helios_oficial",
+     "x": 500,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 1,
+       "hace": "habla"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      }
+     ]
+    },
+    {
+     "id": "demeter",
+     "como": "demeter_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "enoja"
+      },
+      {
+       "en": 3,
+       "hace": "desaparece",
+       "con": "luz"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "luz",
+     "x": 500,
+     "y": 300,
+     "dur": 2
+    }
+   ]
+  },
+  {
+   "id": "eleusis",
+   "fondo": "ciudad",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Ahora parecía una anciana cansada. Se sentó junto a un pozo en Eleusis, un pueblo cerca de Atenas.",
+     "en": "Now she looked like a tired old woman. She sat by a well in Eleusis, a town near Athens."
+    },
+    {
+     "es": "Cuatro hijas del rey Celeo vinieron por agua y sintieron lástima de ella.",
+     "en": "Four daughters of King Celeus came for water and felt sorry for her."
+    },
+    {
+     "es": "Deméter les contó una historia falsa: unos piratas la habían raptado y ella escapó.",
+     "en": "Demeter told them a false story: pirates had carried her off, and she had escaped."
+    },
+    {
+     "es": "La llevaron a casa. La reina le dio un trabajo: cuidar al pequeño Demofonte, su hijo bebé.",
+     "en": "They took her home. The queen gave her a job: nursing little Demophon, her baby son."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "pithos",
+     "x": 1100,
+     "s": 0.9
+    },
+    {
+     "tipo": "casa",
+     "x": 250,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "demeter",
+     "como": "demeter_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "reza"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      }
+     ],
+     "rotulo": "Old woman",
+     "props": {
+      "cuerpo": "viejo"
+     }
+    },
+    {
+     "id": "hija1",
+     "como": "joven_griego_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      }
+     ],
+     "rotulo": ""
+    },
+    {
+     "id": "hija2",
+     "como": "nina_griega_oficial",
+     "x": 1600,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1.2,
+       "hace": "aparece"
+      }
+     ],
+     "rotulo": ""
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "ELEUSIS",
+      "en": "ELEUSIS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "demofonte",
+   "fondo": "palacio",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "El bebé crecía como un dios. Deméter lo alimentaba con ambrosía, la comida de los dioses.",
+     "en": "The baby grew like a god. Demeter fed him ambrosia, the food of the gods."
+    },
+    {
+     "es": "De noche lo ponía en el fuego para quemar su parte mortal. Quería que viviera para siempre.",
+     "en": "At night, she laid him in the fire to burn away his mortal side. She wanted him to live forever."
+    },
+    {
+     "es": "Pero una noche, su madre Metanira espió, y gritó aterrada.",
+     "en": "But one night, his mother Metaneira peeked in, and she screamed in terror."
+    },
+    {
+     "es": "La obra de Deméter se arruinó. Dejó al bebé y su disfraz cayó.",
+     "en": "Demeter's work was spoiled. She dropped the baby, and her disguise fell away."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "fogata",
+     "x": 1100,
+     "s": 1
+    },
+    {
+     "tipo": "columna",
+     "x": 300,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "demeter",
+     "como": "demeter_oficial",
+     "x": 900,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "enoja"
+      },
+      {
+       "en": 3.2,
+       "hace": "brilla"
+      }
+     ]
+    },
+    {
+     "id": "metanira",
+     "como": "reina_griega_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.5,
+       "hace": "sorprende"
+      },
+      {
+       "en": 3,
+       "hace": "lamenta"
+      }
+     ],
+     "rotulo": "Metaneira"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "fuego",
+     "x": 1100,
+     "y": 700,
+     "dur": 2
+    },
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 900,
+     "y": 500,
+     "dur": 1
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Deméter se alzó alta y radiante, ya no era una anciana. La casa tembló con su poder.",
+     "en": "Demeter stood tall and shining, no longer an old woman. The house shook with her power."
+    },
+    {
+     "es": "Zeus había dejado que una madre perdiera a su hija. ¿Fue justo, o fue solo política?",
+     "en": "Zeus had let a mother lose her child. Was that fair, or was it only politics?"
+    },
+    {
+     "es": "Cuéntanos qué piensas en los comentarios.",
+     "en": "Tell us what you think in the comments."
+    },
+    {
+     "es": "En el próximo episodio: el mundo pasa hambre y una semilla de granada decide las estaciones.",
+     "en": "Next time: the world starves, and a pomegranate seed decides the seasons."
+    }
+   ],
+   "actores": [
+    {
+     "id": "demeter",
+     "como": "demeter_oficial",
+     "x": 900,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "brilla"
+      },
+      {
+       "en": 0.5,
+       "hace": "levanta"
+      },
+      {
+       "en": 1,
+       "hace": "enoja"
+      }
+     ]
+    },
+    {
+     "id": "zeus",
+     "como": "zeus_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "temblor",
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 3,
+     "texto": {
+      "es": "LAS SEMILLAS DE GRANADA",
+      "en": "THE POMEGRANATE SEEDS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 5
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "El suelo se abrió bajo sus pies",
+    "en": "The Ground Opened Beneath Her"
+   },
+   "escena": "grieta",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1050
+  },
+  {
+   "gancho": {
+    "es": "Nueve días con antorchas encendidas",
+    "en": "Nine Days With Burning Torches"
+   },
+   "escena": "busqueda",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  },
+  {
+   "gancho": {
+    "es": "La diosa que le mintió a una reina",
+    "en": "The Goddess Who Lied to a Queen"
+   },
+   "escena": "eleusis",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1000
+  }
+ ]
+}
