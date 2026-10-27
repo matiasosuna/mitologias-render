@@ -1,0 +1,769 @@
+{
+ "id": "griegas-23-asclepio-el-medico-que-resucitaba",
+ "serie": "griegas",
+ "numero": "23",
+ "titulo": {
+  "es": "Asclepio, el médico que resucitaba",
+  "en": "Asclepius, the Doctor Who Raised the Dead"
+ },
+ "tituloGriego": "ΑΣΚΛΗΠΙΟΣ",
+ "miniatura": {
+  "heroe": "asclepio_imhotep_oficial",
+  "rival": "zeus_oficial"
+ },
+ "siguiente": {
+  "es": "Eros y Psique",
+  "en": "Eros and Psyche"
+ },
+ "escenas": [
+  {
+   "id": "gancho",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "La vez pasada, Orfeo no logró traer de vuelta ni a una sola persona. Pero otro hombre lo hacía casi a diario.",
+     "en": "Last time, Orpheus could not bring back even one person. But another man did it almost every day."
+    },
+    {
+     "es": "Se llamaba Asclepio. Era el mejor médico de toda Grecia, y los muertos empezaron a volver a la vida.",
+     "en": "His name was Asclepius. He was the best doctor in all of Greece, and the dead began returning to life."
+    },
+    {
+     "es": "Hades se dio cuenta de que su reino se estaba quedando vacío. Y fue a quejarse con Zeus.",
+     "en": "Hades noticed that his kingdom was growing empty. And he went to complain to Zeus."
+    }
+   ],
+   "actores": [
+    {
+     "id": "hades",
+     "como": "hades_oficial",
+     "x": 1200,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.5,
+       "hace": "enoja"
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      }
+     ],
+     "rotulo": "Hades"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "ASCLEPIO",
+      "en": "ASCLEPIUS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2.5
+    }
+   ]
+  },
+  {
+   "id": "nacimiento",
+   "fondo": "noche",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Para entender cómo llegó a ser tan poderoso, hay que empezar por su nacimiento. Su padre era Apolo, el dios de la medicina.",
+     "en": "To see how he became so powerful, we start with his birth. His father was Apollo, god of medicine."
+    },
+    {
+     "es": "Su madre era Corónide, una mortal. Según Píndaro, ella se enamoró de otro hombre, y Apolo se enteró.",
+     "en": "His mother was Coronis, a mortal. According to Pindar, she fell for another man, and Apollo found out."
+    },
+    {
+     "es": "Corónide murió por ese castigo. Pero cuando su cuerpo ya ardía en la pira, Apolo salvó al bebé que llevaba.",
+     "en": "Coronis died because of that punishment. But as her body burned on the pyre, Apollo saved the baby she carried."
+    },
+    {
+     "es": "Era Asclepio, y Apolo se lo entregó a Quirón, un sabio centauro que vivía en una cueva del monte Pelión.",
+     "en": "It was Asclepius, and Apollo gave him to Chiron, a wise centaur who lived in a cave on Mount Pelion."
+    }
+   ],
+   "actores": [
+    {
+     "id": "apolo",
+     "como": "apolo_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 2,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "ofrece"
+      }
+     ],
+     "rotulo": "Apollo"
+    },
+    {
+     "id": "quiron",
+     "como": "anciano_griego_oficial",
+     "x": 1350,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.5,
+       "hace": "asiente"
+      }
+     ],
+     "rotulo": "Chiron"
+    },
+    {
+     "id": "coronide",
+     "como": "mujer_griega_oficial",
+     "x": 1700,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "cae"
+      }
+     ],
+     "rotulo": "Coronis",
+     "capa": "fondo"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "fuego",
+     "x": 1700,
+     "y": 650,
+     "dur": 1.5
+    }
+   ]
+  },
+  {
+   "id": "aprendiz",
+   "fondo": "cueva",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Quirón le enseñó todo lo que sabía sobre las plantas y las medicinas. El niño aprendía muy rápido.",
+     "en": "Chiron taught him everything he knew about plants and medicine. The boy learned very fast."
+    },
+    {
+     "es": "Pronto, Asclepio superó a su maestro. Curaba fiebres, heridas y enfermedades que nadie entendía.",
+     "en": "Soon Asclepius surpassed his teacher. He cured fevers, wounds and illnesses no one understood."
+    },
+    {
+     "es": "En un relato antiguo, vio una serpiente traer una hierba a otra serpiente muerta, y la revivió. Él aprendió el secreto.",
+     "en": "In one old tale, he saw a snake bring a herb to a dead snake and revive it. He learned the secret."
+    },
+    {
+     "es": "Por eso su símbolo es un bastón con una serpiente enroscada. Aún hoy lo usan los médicos.",
+     "en": "That is why his symbol is a staff with a snake wrapped around it. Doctors still use it today."
+    }
+   ],
+   "actores": [
+    {
+     "id": "asclepio",
+     "como": "asclepio_imhotep_oficial",
+     "x": 1000,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "brilla"
+      }
+     ],
+     "rotulo": "Asclepius"
+    },
+    {
+     "id": "quiron",
+     "como": "anciano_griego_oficial",
+     "x": 650,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.5,
+       "hace": "habla"
+      }
+     ],
+     "rotulo": "Chiron",
+     "capa": "fondo"
+    },
+    {
+     "id": "serpiente",
+     "como": "serpiente_griega_oficial",
+     "x": 1450,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.5,
+       "hace": "levanta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2.5,
+     "tipo": "chispas",
+     "x": 1450,
+     "y": 550,
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 3,
+     "texto": {
+      "es": "EL BASTÓN DE ASCLEPIO",
+      "en": "THE STAFF OF ASCLEPIUS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "sangre",
+   "fondo": "templo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Atenea, la diosa de la sabiduría, también lo ayudó. Le dio dos frascos con sangre de la Gorgona Medusa.",
+     "en": "Athena, goddess of wisdom, helped him too. She gave him two vials of blood from the Gorgon Medusa."
+    },
+    {
+     "es": "Según Apolodoro, la sangre del lado izquierdo mataba. La del lado derecho curaba, e incluso podía devolver la vida.",
+     "en": "According to Apollodorus, the blood from the left side killed. The blood from the right side healed, and could even restore life."
+    },
+    {
+     "es": "Con ese don, Asclepio dejó de curar solo a los enfermos. Empezó a resucitar a los muertos.",
+     "en": "With that gift, Asclepius no longer healed only the sick. He began to raise the dead."
+    },
+    {
+     "es": "Los relatos nombran a varios que volvieron a la vida, entre ellos Hipólito, un joven príncipe de Atenas.",
+     "en": "The tales name several who returned to life, among them Hippolytus, a young prince of Athens."
+    }
+   ],
+   "actores": [
+    {
+     "id": "atenea",
+     "como": "atenea_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 1,
+       "hace": "ofrece"
+      }
+     ],
+     "rotulo": "Athena"
+    },
+    {
+     "id": "asclepio",
+     "como": "asclepio_imhotep_oficial",
+     "x": 1250,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.5,
+       "hace": "toma"
+      },
+      {
+       "en": 2,
+       "hace": "levanta"
+      }
+     ],
+     "rotulo": "Asclepius"
+    },
+    {
+     "id": "joven",
+     "como": "joven_griego_oficial",
+     "x": 1650,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 3.5,
+       "hace": "alegra"
+      }
+     ],
+     "rotulo": "Hippolytus"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 1650,
+     "y": 500
+    }
+   ]
+  },
+  {
+   "id": "zeus",
+   "fondo": "olimpo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Zeus no estaba contento. Si los hombres podían escapar de la muerte, el orden del mundo se rompía.",
+     "en": "Zeus was not pleased. If humans could escape death, the order of the world would break."
+    },
+    {
+     "es": "En una versión de Píndaro, Asclepio aceptó oro a cambio de revivir a un hombre. Eso fue el límite.",
+     "en": "In one version by Pindar, Asclepius took gold in exchange for reviving a man. That was the limit."
+    },
+    {
+     "es": "Zeus lanzó un rayo desde el cielo. Asclepio cayó muerto en el acto.",
+     "en": "Zeus hurled a thunderbolt from the sky. Asclepius fell dead on the spot."
+    },
+    {
+     "es": "Era un castigo duro, pero Zeus decía que nadie, ni siquiera un dios, podía cambiar las reglas de la vida y la muerte.",
+     "en": "It was a harsh punishment, but Zeus held that no one, not even a god, could change the rules of life and death."
+    }
+   ],
+   "actores": [
+    {
+     "id": "zeus",
+     "como": "zeus_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "enoja"
+      },
+      {
+       "en": 2,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      }
+     ],
+     "rotulo": "Zeus"
+    },
+    {
+     "id": "asclepio",
+     "como": "asclepio_imhotep_oficial",
+     "x": 750,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.2,
+       "hace": "cae"
+      }
+     ],
+     "rotulo": "Asclepius"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "dur": 2
+    },
+    {
+     "en": 2,
+     "tipo": "destello",
+     "x": 750,
+     "y": 500
+    },
+    {
+     "en": 2,
+     "tipo": "temblor",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2,
+     "texto": {
+      "es": "EL RAYO DE ZEUS",
+      "en": "ZEUS'S THUNDERBOLT"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 3.5
+    }
+   ]
+  },
+  {
+   "id": "apolo",
+   "fondo": "cielo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Apolo se llenó de dolor y de rabia por la muerte de su hijo. Mató a los Cíclopes, que habían forjado el rayo.",
+     "en": "Apollo was filled with grief and rage at his son’s death. He killed the Cyclopes, who had forged the thunderbolt."
+    },
+    {
+     "es": "Zeus lo castigó: Apolo tuvo que servir un año como pastor del rey Admeto, en Tesalia.",
+     "en": "Zeus punished him: Apollo had to serve a year as a shepherd for King Admetus in Thessaly."
+    },
+    {
+     "es": "Después Zeus se ablandó. Puso a Asclepio entre las estrellas, en la constelación del Serpentario.",
+     "en": "Later Zeus softened. He placed Asclepius among the stars, in the constellation Ophiuchus, the serpent bearer."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "estrellas",
+     "x": 960,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "apolo",
+     "como": "apolo_oficial",
+     "x": 1000,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.5,
+       "hace": "entristece"
+      },
+      {
+       "en": 1,
+       "hace": "enoja"
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      }
+     ],
+     "rotulo": "Apollo"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "estrellas",
+     "dur": 3
+    }
+   ]
+  },
+  {
+   "id": "templos",
+   "fondo": "templo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Asclepio murió, pero su obra siguió. Los griegos construyeron templos de curación por todas partes. El más famoso estaba en Epidauro.",
+     "en": "Asclepius died, but his work went on. The Greeks built healing temples everywhere. The most famous was at Epidaurus."
+    },
+    {
+     "es": "Los enfermos dormían allí una noche. Soñaban con el dios, y al despertar, muchos decían estar curados.",
+     "en": "The sick slept there for a night. They dreamed of the god, and when they woke, many said they were healed."
+    },
+    {
+     "es": "Sus hijas fueron Higía, diosa de la salud, y Panacea, diosa de la cura. De sus nombres vienen las palabras higiene y panacea.",
+     "en": "His daughters were Hygieia, goddess of health, and Panacea, goddess of the cure. From their names we get the words hygiene and panacea."
+    },
+    {
+     "es": "Se cuenta que Sócrates, antes de morir, dijo que le debían un gallo a Asclepio. Era una ofrenda de gratitud.",
+     "en": "It is told that Socrates, just before dying, said they owed a rooster to Asclepius. It was an offering of thanks."
+    }
+   ],
+   "actores": [
+    {
+     "id": "asclepio",
+     "como": "asclepio_imhotep_oficial",
+     "x": 1050,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "brilla"
+      }
+     ],
+     "rotulo": "Asclepius"
+    },
+    {
+     "id": "enfermo",
+     "como": "anciano_griego_oficial",
+     "x": 650,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 1.5,
+       "hace": "sienta"
+      },
+      {
+       "en": 2,
+       "hace": "levantarse"
+      }
+     ]
+    },
+    {
+     "id": "higia",
+     "como": "mujer_griega_2_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.5,
+       "hace": "habla"
+      }
+     ],
+     "rotulo": "Hygieia"
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0.5,
+     "texto": {
+      "es": "EPIDAURO",
+      "en": "EPIDAURUS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2.5
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "templo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "¿Crees que Zeus hizo bien en detener a Asclepio? Cuéntanos en los comentarios.",
+     "en": "Do you think Zeus was right to stop Asclepius? Tell us in the comments."
+    },
+    {
+     "es": "En el próximo episodio, el amor llega al mundo de los mortales, y una joven tiene que superar cuatro pruebas imposibles.",
+     "en": "In the next episode, love enters the mortal world, and a young woman must pass four impossible trials."
+    },
+    {
+     "es": "En el próximo episodio: Eros y Psique.",
+     "en": "Next time: Eros and Psyche."
+    }
+   ],
+   "actores": [
+    {
+     "id": "asclepio",
+     "como": "asclepio_imhotep_oficial",
+     "x": 1100,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.5,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      }
+     ],
+     "rotulo": "Asclepius"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "luz",
+     "x": 1100,
+     "y": 300,
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 2,
+     "texto": {
+      "es": "EROS Y PSIQUE",
+      "en": "EROS AND PSYCHE"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 4
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "El médico que vencía a la muerte",
+    "en": "The Doctor Who Beat Death"
+   },
+   "escena": "sangre",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1100
+  },
+  {
+   "gancho": {
+    "es": "Zeus no soportó que los muertos volvieran",
+    "en": "Zeus Could Not Allow the Dead to Return"
+   },
+   "escena": "zeus",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1000
+  },
+  {
+   "gancho": {
+    "es": "El símbolo que usan los médicos hoy",
+    "en": "The Symbol Doctors Still Use"
+   },
+   "escena": "aprendiz",
+   "desde": 2,
+   "hasta": 3,
+   "foco": 1200
+  }
+ ]
+}

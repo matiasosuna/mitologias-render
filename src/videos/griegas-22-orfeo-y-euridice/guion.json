@@ -1,0 +1,894 @@
+{
+ "id": "griegas-22-orfeo-y-euridice",
+ "serie": "griegas",
+ "numero": "22",
+ "titulo": {
+  "es": "Orfeo y Eurídice",
+  "en": "Orpheus and Eurydice"
+ },
+ "tituloGriego": "ΟΡΦΕΥΣ",
+ "miniatura": {
+  "heroe": "orfeo_oficial",
+  "rival": "hades_oficial"
+ },
+ "siguiente": {
+  "es": "Asclepio, el médico que resucitaba",
+  "en": "Asclepius, the Doctor Who Raised the Dead"
+ },
+ "escenas": [
+  {
+   "id": "cancion",
+   "fondo": "bosque",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "La vez pasada vimos los castigos del Tártaro. Ahora un hombre vivo baja a ese mundo, armado solo con una canción.",
+     "en": "Last time we saw the punishments of Tartarus. Now a living man goes down to that world, armed only with a song."
+    },
+    {
+     "es": "Se llamaba Orfeo, y era hijo de la musa Caliope. Vivía en Tracia, en el norte de Grecia.",
+     "en": "His name was Orpheus, and he was the son of Calliope, a Muse. He lived in Thrace, in northern Greece."
+    },
+    {
+     "es": "Tocaba la lira con tanta belleza que los animales salvajes se acercaban a escucharlo.",
+     "en": "He played the lyre so beautifully that wild animals came close to listen."
+    },
+    {
+     "es": "Según los poetas, hasta los árboles se inclinaban y los ríos se detenían para oírlo.",
+     "en": "The poets say even the trees leaned in, and the rivers stopped to hear him."
+    }
+   ],
+   "actores": [
+    {
+     "id": "orfeo",
+     "como": "orfeo_oficial",
+     "x": 1000,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "brilla"
+      }
+     ],
+     "rotulo": "Orpheus"
+    },
+    {
+     "id": "ciervo",
+     "como": "ciervo_griego_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 1.5,
+       "hace": "entra",
+       "a": 1400
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      }
+     ]
+    },
+    {
+     "id": "lobo",
+     "como": "lobo_griego_oficial",
+     "x": 650,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 1.5,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.5,
+       "hace": "calla"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "chispas",
+     "x": 1000,
+     "y": 450,
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "ORFEO",
+      "en": "ORPHEUS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2.5
+    }
+   ]
+  },
+  {
+   "id": "boda",
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Orfeo se enamoró de Eurídice, una ninfa de los bosques. Se casaron con una gran fiesta.",
+     "en": "Orpheus fell in love with Eurydice, a nymph of the forest. They married with a great celebration."
+    },
+    {
+     "es": "Pero los poetas cuentan que la antorcha de la boda solo echó humo. Era una mala señal.",
+     "en": "But the poets say the wedding torch gave only smoke. It was a bad sign."
+    },
+    {
+     "es": "Poco después, Eurídice paseaba por un prado con sus amigas ninfas.",
+     "en": "Soon after, Eurydice was walking in a meadow with her nymph friends."
+    },
+    {
+     "es": "Pisó una serpiente escondida en la hierba. La serpiente la mordió, y Eurídice murió allí mismo.",
+     "en": "She stepped on a snake hidden in the grass. It bit her, and Eurydice died on the spot."
+    }
+   ],
+   "actores": [
+    {
+     "id": "euridice",
+     "como": "euridice_oficial",
+     "x": 1000,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "alegra"
+      },
+      {
+       "en": 3,
+       "hace": "cae"
+      }
+     ],
+     "rotulo": "Eurydice"
+    },
+    {
+     "id": "orfeo",
+     "como": "orfeo_oficial",
+     "x": 750,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "alegra"
+      },
+      {
+       "en": 3,
+       "hace": "sorprende"
+      }
+     ]
+    },
+    {
+     "id": "serpiente",
+     "como": "serpiente_griega_oficial",
+     "x": 1250,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2.5,
+       "hace": "aparece"
+      },
+      {
+       "en": 3,
+       "hace": "golpea"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "humo",
+     "x": 850,
+     "y": 500,
+     "dur": 1.5
+    },
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 1050,
+     "y": 650
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "LA BODA",
+      "en": "THE WEDDING"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 1.8
+    }
+   ]
+  },
+  {
+   "id": "duelo",
+   "fondo": "noche",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Orfeo lloró por ella. Su música, antes tan alegre, se volvió un lamento que conmovía a todos.",
+     "en": "Orpheus wept for her. His music, once so joyful, became a lament that moved everyone."
+    },
+    {
+     "es": "No podía aceptar que se había ido para siempre. Y tomó una decisión que nadie había tomado.",
+     "en": "He could not accept that she was gone forever. And he made a choice no one had ever made."
+    },
+    {
+     "es": "Bajaría al mundo de los muertos y le pediría a Hades que le devolviera a su esposa.",
+     "en": "He would go down to the world of the dead and ask Hades to give his wife back."
+    },
+    {
+     "es": "Según Virgilio, entró por una cueva profunda en el cabo Ténaro, en el sur de Grecia.",
+     "en": "According to Virgil, he went in through a deep cave at Cape Taenarum, in southern Greece."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "luna",
+     "x": 1500,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "cueva",
+     "x": 1600,
+     "s": 1.1,
+     "capa": "medio"
+    }
+   ],
+   "actores": [
+    {
+     "id": "orfeo",
+     "como": "orfeo_oficial",
+     "x": 1000,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.5,
+       "hace": "lamenta"
+      },
+      {
+       "en": 2,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "camina",
+       "a": 1500
+      }
+     ],
+     "rotulo": "Orpheus"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "oscurecer",
+     "dur": 2
+    }
+   ]
+  },
+  {
+   "id": "descenso",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "En el inframundo, las sombras de los muertos lo miraban pasar. Nunca habían oído una música así.",
+     "en": "In the underworld, the shades of the dead watched him pass. They had never heard music like this."
+    },
+    {
+     "es": "Orfeo tocó su lira y cantó. Pidió una sola cosa: que le dejaran llevarse a Eurídice.",
+     "en": "Orpheus played his lyre and sang. He asked for one thing only: to take Eurydice home."
+    },
+    {
+     "es": "Cerbero, el perro de tres cabezas, dejó de ladrar. Las Furias, que nunca lloran, lloraron.",
+     "en": "Cerberus, the three-headed dog, stopped barking. The Furies, who never cry, began to cry."
+    },
+    {
+     "es": "En el Tártaro, Tántalo dejó de buscar el agua y Sísifo se sentó en su roca. Por un momento, todo el castigo se detuvo.",
+     "en": "In Tartarus, Tantalus stopped reaching for the water and Sisyphus sat on his boulder. For a moment, all punishment stopped."
+    }
+   ],
+   "actores": [
+    {
+     "id": "orfeo",
+     "como": "orfeo_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "brilla"
+      }
+     ],
+     "rotulo": "Orpheus"
+    },
+    {
+     "id": "cerbero",
+     "como": "cerbero_oficial",
+     "x": 1450,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "calla"
+      }
+     ],
+     "rotulo": "Cerberus"
+    },
+    {
+     "id": "furia",
+     "como": "furia_oficial",
+     "x": 1850,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.5,
+       "hace": "entristece"
+      }
+     ],
+     "rotulo": "Fury",
+     "capa": "fondo"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "niebla",
+     "dur": 3
+    },
+    {
+     "en": 3,
+     "tipo": "luz",
+     "x": 800,
+     "y": 350,
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "EL INFRAMUNDO",
+      "en": "THE UNDERWORLD"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2
+    }
+   ]
+  },
+  {
+   "id": "trono",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Al final llegó ante Hades y Perséfone, los reyes de los muertos. Hades es un dios serio y nada fácil de convencer.",
+     "en": "At last he stood before Hades and Persephone, the rulers of the dead. Hades is a stern god, not easy to move."
+    },
+    {
+     "es": "Pero Orfeo cantó sobre el amor, y sobre el hecho de que tarde o temprano todos pertenecen a este reino.",
+     "en": "But Orpheus sang of love, and of how everyone belongs to this kingdom sooner or later."
+    },
+    {
+     "es": "Le pidió solo un poco más de tiempo para ella. Perséfone, que sabía lo que era que la apartaran de su hogar, también se conmovió.",
+     "en": "He asked only for a little more time for her. Persephone, who knew what it was to be taken from home, was moved too."
+    },
+    {
+     "es": "Hades aceptó. Eurídice vendría tras él. Pero había una condición.",
+     "en": "Hades agreed. Eurydice would follow him. But there was one condition."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 1450,
+     "s": 1.1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "hades",
+     "como": "hades_oficial",
+     "x": 1250,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.5,
+       "hace": "asiente"
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      }
+     ],
+     "rotulo": "Hades"
+    },
+    {
+     "id": "persefone",
+     "como": "persefone_oficial",
+     "x": 1650,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      }
+     ],
+     "rotulo": "Persephone"
+    },
+    {
+     "id": "orfeo",
+     "como": "orfeo_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 3,
+       "hace": "arrodilla"
+      }
+     ]
+    }
+   ],
+   "efectos": []
+  },
+  {
+   "id": "condicion",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Orfeo no podía mirar atrás hasta que los dos hubieran salido a la luz del sol.",
+     "en": "Orpheus must not look back until both of them had stepped into the light of the sun."
+    },
+    {
+     "es": "Si se daba vuelta antes, perdería a Eurídice para siempre. Orfeo prometió que no lo haría.",
+     "en": "If he turned around before then, he would lose Eurydice forever. Orpheus promised he would not."
+    },
+    {
+     "es": "Empezaron a subir por un sendero oscuro y silencioso. Eurídice caminaba detrás de él, cojeando por la herida.",
+     "en": "They began to climb a dark, silent path. Eurydice walked behind him, limping from her wound."
+    },
+    {
+     "es": "Orfeo no escuchaba sus pasos. ¿Y si Hades lo había engañado?",
+     "en": "Orpheus could not hear her footsteps. What if Hades had tricked him?"
+    },
+    {
+     "es": "Ya veía la luz de la salida. Estaba casi afuera.",
+     "en": "He could see the light of the exit. He was almost out."
+    }
+   ],
+   "actores": [
+    {
+     "id": "orfeo",
+     "como": "orfeo_oficial",
+     "x": 1300,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "camina",
+       "a": 1500,
+       "dur": 2
+      },
+      {
+       "en": 3.5,
+       "hace": "tiembla"
+      }
+     ],
+     "rotulo": "Orpheus"
+    },
+    {
+     "id": "euridice",
+     "como": "euridice_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 1.5,
+       "hace": "aparece",
+       "con": "sombra"
+      },
+      {
+       "en": 2,
+       "hace": "camina",
+       "a": 1000,
+       "dur": 2
+      }
+     ],
+     "rotulo": "Eurydice"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "oscurecer",
+     "dur": 2
+    },
+    {
+     "en": 4,
+     "tipo": "luz",
+     "x": 1600,
+     "y": 300,
+     "dur": 1.5
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0,
+     "texto": {
+      "es": "NO MIRES ATRÁS",
+      "en": "DON'T LOOK BACK"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 2.2
+    }
+   ]
+  },
+  {
+   "id": "mirada",
+   "fondo": "inframundo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Justo antes del último paso, Orfeo no pudo más. Se dio vuelta para ver si ella seguía ahí.",
+     "en": "Just before the last step, Orpheus could bear it no longer. He turned to see if she was still there."
+    },
+    {
+     "es": "Alcanzó a verla un instante. Eurídice tendió los brazos hacia él.",
+     "en": "He saw her for one moment. Eurydice reached out her arms to him."
+    },
+    {
+     "es": "Ella le dijo adiós, sin enojo, y se desvaneció entre las sombras. La había perdido por segunda vez.",
+     "en": "She said goodbye, without anger, and faded into the shadows. He had lost her a second time."
+    },
+    {
+     "es": "Corrió a buscarla, pero el barquero ya no lo dejó cruzar. Nadie baja dos veces.",
+     "en": "He ran back to find her, but the ferryman would not let him cross. No one goes down twice."
+    },
+    {
+     "es": "¿Tú habrías mirado atrás? Cuéntanos en los comentarios.",
+     "en": "Would you have looked back? Tell us in the comments."
+    }
+   ],
+   "actores": [
+    {
+     "id": "orfeo",
+     "como": "orfeo_oficial",
+     "x": 1250,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.5,
+       "hace": "gira"
+      },
+      {
+       "en": 2.5,
+       "hace": "cae"
+      },
+      {
+       "en": 3,
+       "hace": "lamenta"
+      }
+     ],
+     "rotulo": "Orpheus"
+    },
+    {
+     "id": "euridice",
+     "como": "euridice_oficial",
+     "x": 800,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "levanta"
+      },
+      {
+       "en": 2,
+       "hace": "desaparece",
+       "con": "sombra"
+      }
+     ]
+    },
+    {
+     "id": "caronte",
+     "como": "caronte_oficial",
+     "x": 1700,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "aparece"
+      },
+      {
+       "en": 3.5,
+       "hace": "niega"
+      }
+     ],
+     "rotulo": "Charon"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0.5,
+     "tipo": "destello",
+     "x": 1000,
+     "y": 500
+    },
+    {
+     "en": 2,
+     "tipo": "oscurecer",
+     "dur": 2
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "bosque",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.05
+    ]
+   },
+   "frases": [
+    {
+     "es": "Orfeo volvió a la superficie solo. Durante años tocó una música tan triste que nadie podía escucharla sin llorar.",
+     "en": "Orpheus returned to the surface alone. For years he played music so sad that no one could hear it without weeping."
+    },
+    {
+     "es": "Según Ovidio, un día un grupo de mujeres de Tracia, seguidoras de Dioniso, lo atacó en un arrebato de furia.",
+     "en": "According to Ovid, one day a group of Thracian women, followers of Dionysus, attacked him in a fit of rage."
+    },
+    {
+     "es": "Así murió Orfeo. Su cabeza, todavía cantando, flotó por el río hasta el mar.",
+     "en": "That is how Orpheus died. His head, still singing, floated down the river to the sea."
+    },
+    {
+     "es": "Las Musas enterraron sus restos, y Zeus puso su lira en el cielo como una constelación: Lira.",
+     "en": "The Muses buried his remains, and Zeus placed his lyre in the sky as a constellation: Lyra."
+    },
+    {
+     "es": "¿Fue el amor o la duda lo que lo hizo mirar atrás? Cuéntanos qué piensas en los comentarios.",
+     "en": "Was it love or doubt that made him look back? Tell us what you think in the comments."
+    },
+    {
+     "es": "En el próximo episodio: Asclepio, el médico que resucitaba muertos.",
+     "en": "Next time: Asclepius, the doctor who raised the dead."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "estrellas",
+     "x": 960,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "orfeo",
+     "como": "orfeo_oficial",
+     "x": 1000,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "entristece"
+      },
+      {
+       "en": 3,
+       "hace": "levanta"
+      },
+      {
+       "en": 4,
+       "hace": "brilla"
+      }
+     ],
+     "rotulo": "Orpheus"
+    },
+    {
+     "id": "musa",
+     "como": "musa_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 3.5,
+       "hace": "senala"
+      }
+     ],
+     "rotulo": "Muse"
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "estrellas",
+     "dur": 3
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 5,
+     "texto": {
+      "es": "ASCLEPIO",
+      "en": "ASCLEPIUS"
+     },
+     "x": 960,
+     "y": 200,
+     "hasta": 7
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "Bajó al inframundo con una canción",
+    "en": "He Went to the Underworld With a Song"
+   },
+   "escena": "descenso",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1000
+  },
+  {
+   "gancho": {
+    "es": "Una condición: no mirar atrás",
+    "en": "One Rule: Never Look Back"
+   },
+   "escena": "condicion",
+   "desde": 0,
+   "hasta": 4,
+   "foco": 1100
+  },
+  {
+   "gancho": {
+    "es": "Un último paso para perderla",
+    "en": "One Last Step to Lose Her"
+   },
+   "escena": "mirada",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 1050
+  }
+ ]
+}
