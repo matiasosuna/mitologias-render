@@ -411,7 +411,13 @@ function horizontalDe(d, plan) {
 // ── un turno de una plataforma
 async function turno(p, probar = false) {
   if (!PLATAFORMAS.includes(p)) throw new Error(`plataforma desconocida: ${p}`);
-  if (p === 'youtube' && !probar) reintentarMiniaturas();
+  if (p === 'youtube' && !probar) {
+    // borrar todo el canal (pedido de Matías 2026-10-27): mientras quede algo viejo, no se sube nada a YouTube
+    const { pendiente, borrarCanal } = await import('./youtube-borrar-todo.mjs');
+    const antes = pendiente();
+    if (antes && (await borrarCanal(antes))) return console.log('YouTube: el borrado del canal sigue en la próxima corrida; no se sube nada en este turno');
+    reintentarMiniaturas();
+  }
   await unaVez(`cola-${p}`, async () => { // clave propia: no choca con los pasos del calendario viejo
     const d = datos(), plan = planDe(p, d);
     const hz = p === 'youtube' ? horizontalDe(d, plan) : null;
