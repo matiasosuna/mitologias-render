@@ -1,0 +1,1086 @@
+{
+  "id": "egipcias-20-ra-rey-de-los-dioses",
+  "serie": "egipcias",
+  "numero": "20",
+  "titulo": {
+    "es": "Ra, el rey de los dioses",
+    "en": "Ra, King of the Gods"
+  },
+  "tituloGriego": "RA, KING OF THE GODS",
+  "miniatura": {
+    "heroe": "ra_oficial",
+    "rival": "apofis_oficial"
+  },
+  "siguiente": {
+    "es": "Osiris, señor de los muertos",
+    "en": "Osiris, Lord of the Dead"
+  },
+  "escenas": [
+    {
+      "id": "amanecer",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cada mañana, Egipto despertaba con el mismo milagro. El sol salía y la oscuridad se iba.",
+          "en": "Every morning, Egypt woke to the same miracle. The sun rose, and the dark was gone."
+        },
+        {
+          "es": "Los egipcios no veían una bola de fuego. Veían a un dios, y se llamaba Ra.",
+          "en": "The Egyptians did not see a ball of fire. They saw a god, and his name was Ra."
+        },
+        {
+          "es": "Ya lo conociste en muchas historias. Ahora vamos a mirarlo de cerca.",
+          "en": "You have met him in many stories already. Now let us look at him up close."
+        },
+        {
+          "es": "¿De dónde venía? ¿Y por qué todo Egipto lo necesitaba?",
+          "en": "Where did he come from? And why did all of Egypt need him?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 300,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "sol",
+          "x": 1500,
+          "s": 1.2,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "aldeano",
+          "como": "aldeano_egipcio_oficial",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "aldeana",
+          "como": "aldeana_egipcia_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.5
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 400,
+          "dur": 2,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "heliopolis",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "El hogar de Ra era Heliópolis, una ciudad santa que los egipcios llamaban Iunu, la ciudad de los pilares.",
+          "en": "Ra's home was Heliopolis, a holy city that the Egyptians called Iunu, the city of pillars."
+        },
+        {
+          "es": "Sus sacerdotes eran de los más sabios de Egipto. Enseñaban que Ra se creó a sí mismo.",
+          "en": "Its priests were very learned. They taught that Ra made himself."
+        },
+        {
+          "es": "Antes de que existiera nada, solo estaba el agua oscura del Nun. De ella surgió Ra.",
+          "en": "Before anything existed, there was only the dark water of Nun. Out of it, Ra rose."
+        },
+        {
+          "es": "Entonces creó a los otros dioses, el cielo, la tierra y a las personas.",
+          "en": "Then he made the other gods, the sky, the earth and the people."
+        },
+        {
+          "es": "Para él, los sacerdotes levantaron agujas de piedra llamadas obeliscos. Sus puntas solían cubrirse de metal brillante.",
+          "en": "For him, priests raised tall stone needles called obelisks. Their tips were often covered in shining metal."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "obelisco",
+          "x": 1500,
+          "s": 1.3,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pilono",
+          "x": 400,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio_oficial",
+          "x": 750,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "camina",
+              "a": 950,
+              "dur": 1.5
+            },
+            {
+              "en": 2,
+              "hace": "habla"
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "sacerdote2",
+          "como": "sacerdote_egipcio_b_oficial",
+          "x": 1050,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 1.2
+        },
+        {
+          "en": 2.5,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 4,
+          "tipo": "destello",
+          "x": 1500,
+          "y": 200,
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "HELIÓPOLIS · CIUDAD DE LOS PILARES",
+            "en": "HELIOPOLIS · CITY OF PILLARS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "tres_caras",
+      "fondo": "cielo_nut",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ra cambiaba durante el día, igual que el sol.",
+          "en": "Ra changed during the day, like the sun itself."
+        },
+        {
+          "es": "Al amanecer era Khepri, un escarabajo. Su nombre significa el que llega a ser.",
+          "en": "At dawn he was Khepri, a scarab beetle. His name means the one who comes into being."
+        },
+        {
+          "es": "¿Por qué un escarabajo? Los escarabajos ruedan bolitas por el suelo. Los egipcios imaginaban al sol rodando por el cielo de la misma manera.",
+          "en": "Why a beetle? Dung beetles roll little balls along the ground. The Egyptians pictured the sun rolled across the sky the same way."
+        },
+        {
+          "es": "Al mediodía era Ra, un hombre fuerte con cabeza de halcón y el disco del sol encima.",
+          "en": "At noon he was Ra, a strong man with a falcon's head and the sun disk on top."
+        },
+        {
+          "es": "Al atardecer era Atum, un anciano cansado que caminaba despacio hacia el oeste.",
+          "en": "At sunset he was Atum, a tired old man who walked slowly into the west."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "khepri",
+          "como": "khepri_oficial",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.2,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "atum",
+          "como": "atum_oficial",
+          "x": 1420,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.5,
+              "hace": "camina",
+              "a": 1500,
+              "dur": 1.2
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 500,
+          "y": 500,
+          "dur": 1.5,
+          "intensidad": 0.5
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "x": 960,
+          "y": 300,
+          "dur": 1.5,
+          "intensidad": 0.8
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "AMANECER · MEDIODÍA · ATARDECER",
+            "en": "DAWN · NOON · SUNSET"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "barcas",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Para cruzar el cielo, Ra necesitaba un barco. De hecho, tenía dos.",
+          "en": "To cross the sky, Ra needed a boat. In fact, he had two."
+        },
+        {
+          "es": "El barco del día se llamaba Mandjet. El barco de la noche se llamaba Mesektet.",
+          "en": "The day boat was called Mandjet. The night boat was called Mesektet."
+        },
+        {
+          "es": "No navegaba solo. A bordo estaba Thoth, el dios de la sabiduría.",
+          "en": "He did not sail alone. Thoth, the god of wisdom, was on board."
+        },
+        {
+          "es": "También estaba Sia, el espíritu de la comprensión. Juntos ayudaban a Ra a guiar el barco.",
+          "en": "So was Sia, the spirit of understanding. Together they helped Ra steer."
+        },
+        {
+          "es": "Cada día el barco cruzaba el cielo. Cada noche se hundía en la tierra de los muertos, y Ra debía abrirse paso hasta el amanecer.",
+          "en": "By day the boat crossed the sky. By night it sank into the land of the dead, and Ra had to fight his way back to the dawn."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 960,
+          "s": 1.2,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 960,
+          "capa": "frente",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "como": "thoth_oficial",
+          "x": 760,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "habla"
+            }
+          ]
+        },
+        {
+          "id": "sia",
+          "como": "sia_oficial",
+          "x": 1160,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 960,
+          "y": 250,
+          "dur": 2,
+          "intensidad": 0.5
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "MANDJET · MESEKTET",
+            "en": "MANDJET · MESEKTET"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "gato",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ra tenía enemigos. El peor era Apep, la serpiente gigante del caos.",
+          "en": "Ra had enemies. The worst was Apep, the giant serpent of chaos."
+        },
+        {
+          "es": "El Libro de los Muertos habla de un gran gato que luchó contra Apep bajo un árbol sagrado de Heliópolis.",
+          "en": "The Book of the Dead tells of a great cat who fought Apep under a sacred tree in Heliopolis."
+        },
+        {
+          "es": "Ese gato era el mismo Ra. Con un cuchillo, cortó a la serpiente en pedazos.",
+          "en": "That cat was Ra himself. With a knife, he cut the serpent into pieces."
+        },
+        {
+          "es": "¿Querrías tener a un gato así de tu lado?",
+          "en": "Would you want a cat like that on your side?"
+        },
+        {
+          "es": "Recuérdalo la próxima vez que un gato te mire de noche. Los egipcios amaban a los gatos, y ahora sabes una razón más.",
+          "en": "Remember it the next time a cat stares at you at night. The Egyptians loved cats, and now you know one more reason."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 700,
+          "s": 1.2,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 1000,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.5,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "apep",
+          "como": "apofis_oficial",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "cae"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 2.3,
+          "tipo": "destello",
+          "x": 1250,
+          "y": 500,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA GRAN GATA DE HELIÓPOLIS",
+            "en": "THE GREAT CAT OF HELIOPOLIS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "hijo",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ra era también el padre de los reyes. Hace más de cuatro mil años, los faraones empezaron a llamarse Hijo de Ra.",
+          "en": "Ra was also the father of kings. More than four thousand years ago, pharaohs began to call themselves Son of Ra."
+        },
+        {
+          "es": "La idea era simple. Si Ra gobernaba el cielo, su hijo gobernaba Egipto.",
+          "en": "The idea was simple. If Ra ruled the sky, his son ruled Egypt."
+        },
+        {
+          "es": "Algunos reyes construyeron templos enteros para el sol, abiertos al cielo, con un obelisco enorme en el centro.",
+          "en": "Some kings built whole temples for the sun, open to the sky, with a huge obelisk in the middle."
+        },
+        {
+          "es": "Muchos nombres reales llevaban al dios adentro. Ramsés, por ejemplo, significa nacido de Ra.",
+          "en": "Many royal names carried the god inside them. Ramesses, for example, means born of Ra."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1250,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "obelisco",
+          "x": 330,
+          "s": 1.1,
+          "capa": "fondo",
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "faraon",
+          "como": "faraon_oficial",
+          "x": 1250,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 1650,
+          "mira": "izq",
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "escriba",
+          "como": "escriba_oficial",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "habla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 1650,
+          "y": 300,
+          "dur": 2,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "HIJO DE RA",
+            "en": "SON OF RA"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "letania",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Dentro de las tumbas reales, los escribas pintaban un texto llamado la Letanía de Ra.",
+          "en": "Inside royal tombs, scribes painted a text called the Litany of Ra."
+        },
+        {
+          "es": "Enumera setenta y cinco formas del dios del sol, una tras otra.",
+          "en": "It lists seventy-five forms of the sun god, one after another."
+        },
+        {
+          "es": "Los egipcios creían que un nombre tenía poder. Conocer todos sus nombres era comprenderlo.",
+          "en": "The Egyptians believed that a name held power. To know all his names was to understand him."
+        },
+        {
+          "es": "El rey muerto los pronunciaba todos, y Ra lo recibía como uno de los suyos.",
+          "en": "The dead king spoke them all, and Ra welcomed him as one of his own."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sarcofago",
+          "x": 1350,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "estela",
+          "x": 400,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "escriba",
+          "como": "escriba_b_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "senala"
+            },
+            {
+              "en": 1.5,
+              "hace": "habla"
+            }
+          ]
+        },
+        {
+          "id": "momia",
+          "como": "momia_oficial",
+          "x": 1100,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.4,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 400,
+          "y": 450,
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LETANÍA DE RA · 75 FORMAS",
+            "en": "LITANY OF RA · 75 FORMS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "fusion",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ra se volvió tan grande que otros dioses se unieron a él.",
+          "en": "Ra grew so great that other gods joined him."
+        },
+        {
+          "es": "Amón de Tebas se volvió Amón-Ra, el rey de los dioses. El dios cocodrilo Sobek se volvió Sobek-Ra.",
+          "en": "Amun of Thebes became Amun-Ra, the king of the gods. The crocodile god Sobek became Sobek-Ra."
+        },
+        {
+          "es": "Hasta Horus participó. Como Ra-Horakhty, era Ra y Horus juntos, el señor de ambos horizontes.",
+          "en": "Even Horus took part. As Ra-Horakhty, he was Ra and Horus together, the lord of both horizons."
+        },
+        {
+          "es": "Para los egipcios esto no era un problema. El dios del sol podía tener muchos rostros y seguir siendo una sola luz.",
+          "en": "To the Egyptians this was not a problem. The sun god could wear many faces and still be one light."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilono",
+          "x": 960,
+          "s": 1.2,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "horus",
+          "como": "horus_oficial",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "sobek",
+          "como": "cocodrilo_egipcio_oficial",
+          "x": 1340,
+          "mira": "izq",
+          "rotulo": "Sobek",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 960,
+          "y": 300,
+          "dur": 2,
+          "intensidad": 0.6
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "RA-HORAKHTY",
+            "en": "RA-HORAKHTY"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cada amanecer, los egipcios le agradecían a Ra por haber ganado una noche más.",
+          "en": "Every sunrise, the Egyptians thanked Ra for winning one more night."
+        },
+        {
+          "es": "¿Qué forma de Ra te gusta más: el escarabajo, el rey halcón o el anciano? Cuéntanos en los comentarios.",
+          "en": "Which form of Ra do you like best: the beetle, the falcon king, or the old man? Tell us in the comments."
+        },
+        {
+          "es": "Pero los muertos también necesitaban un dios, y no era dorado como el sol. Era verde como los campos.",
+          "en": "But the dead needed a god too, and he was not golden like the sun. He was green like the fields."
+        },
+        {
+          "es": "Esa es la historia del próximo episodio: Osiris, señor de los muertos.",
+          "en": "That is the story of the next episode: Osiris, lord of the dead."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 320,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "tumba",
+          "x": 1560,
+          "s": 1,
+          "capa": "fondo",
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "aldeano",
+          "como": "aldeano_egipcio_b_oficial",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "aldeana",
+          "como": "aldeana_egipcia_b_oficial",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.7,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "osiris",
+          "como": "osiris_oficial",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.2,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1300,
+          "y": 400,
+          "dur": 2,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "PRÓXIMO: OSIRIS, SEÑOR DE LOS MUERTOS",
+            "en": "NEXT: OSIRIS, LORD OF THE DEAD"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El dios del sol que cambiaba tres veces al día",
+        "en": "The sun god who changed three times a day"
+      },
+      "escena": "tres_caras",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "El gato que mató a una serpiente gigante",
+        "en": "The cat that killed a giant serpent"
+      },
+      "escena": "gato",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 1200
+    },
+    {
+      "gancho": {
+        "es": "Por qué los faraones se llamaban hijos de Ra",
+        "en": "Why pharaohs called themselves sons of Ra"
+      },
+      "escena": "hijo",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1250
+    }
+  ]
+}

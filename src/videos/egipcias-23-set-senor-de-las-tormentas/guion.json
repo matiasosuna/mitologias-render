@@ -1,0 +1,896 @@
+{
+  "id": "egipcias-23-set-senor-de-las-tormentas",
+  "serie": "egipcias",
+  "numero": "23",
+  "titulo": {
+    "es": "Set, señor de las tormentas",
+    "en": "Set, Lord of Storms"
+  },
+  "tituloGriego": "SET, LORD OF STORMS",
+  "miniatura": {
+    "heroe": "set_oficial",
+    "rival": "apofis_oficial"
+  },
+  "siguiente": {
+    "es": "Thoth, señor de las palabras",
+    "en": "Thoth, Lord of Words"
+  },
+  "escenas": [
+    {
+      "id": "tormenta",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Isis tenía un hermano que mató a su esposo, y todo egipcio conocía su nombre: Set.",
+          "en": "Isis had a brother who killed her husband, and every Egyptian knew his name: Set."
+        },
+        {
+          "es": "Pero Set no era solo un villano. Era el dios del desierto, de las tormentas y de los extranjeros de tierras lejanas.",
+          "en": "But Set was not only a villain. He was the god of the desert, of storms, and of strangers from far away."
+        },
+        {
+          "es": "Cuando el trueno retumbaba sobre las dunas, los egipcios decían que era la voz de Set.",
+          "en": "When thunder rolled over the dunes, the Egyptians said it was the voice of Set."
+        },
+        {
+          "es": "Hoy lo miramos de cerca. ¿Era solo un monstruo?",
+          "en": "Today we look at him up close. Was he only a monster?"
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 350,
+          "s": 1.2,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "set",
+          "como": "set_oficial",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "viajero",
+          "como": "aldeano_egipcio_oficial",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "tiembla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "rayo",
+          "x": 1100,
+          "y": 250,
+          "dur": 0.6
+        },
+        {
+          "en": 2.2,
+          "tipo": "temblor",
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "x": 900,
+          "y": 700,
+          "dur": 3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "SET · SEÑOR DE LAS TORMENTAS",
+            "en": "SET · LORD OF STORMS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "animal",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Mira su cabeza. Tiene un hocico largo y curvo, orejas de punta cuadrada y una cola en forma de horquilla.",
+          "en": "Look at his head. He has a long curved snout, square-tipped ears and a forked tail."
+        },
+        {
+          "es": "Nadie sabe qué animal es. Los expertos han pensado en un cerdo hormiguero, un burro y un chacal.",
+          "en": "Nobody knows what animal this is. Experts have guessed an aardvark, a donkey and a jackal."
+        },
+        {
+          "es": "Quizá los egipcios ni siquiera querían decir un animal real. Quizá era la forma de algo salvaje y extraño.",
+          "en": "Maybe the Egyptians did not mean a real animal at all. Maybe it was the shape of something wild and strange."
+        },
+        {
+          "es": "Y eso le queda bien a Set. Pertenece a los lugares salvajes que ningún campesino podía domar.",
+          "en": "And that fits Set. He belongs to the wild places that no farmer could tame."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "set",
+          "como": "set_oficial",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "mira",
+              "a": 1400
+            }
+          ]
+        },
+        {
+          "id": "escriba",
+          "como": "escriba_b_oficial",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "habla"
+            },
+            {
+              "en": 2,
+              "hace": "niega"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "polvo",
+          "x": 900,
+          "y": 700,
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "¿QUÉ ANIMAL ES?",
+            "en": "WHAT ANIMAL IS IT?"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "ombos",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Set era uno de los dioses más antiguos de Egipto. Su primer hogar fue Nubt, en el sur, que los griegos llamaban Ombos.",
+          "en": "Set was one of the oldest gods in Egypt. His first home was Nubt, in the south, which the Greeks called Ombos."
+        },
+        {
+          "es": "Los egipcios llamaban a sus tierras de cultivo la Tierra Negra, por su barro oscuro. El desierto era la Tierra Roja.",
+          "en": "Egyptians called their farmland the Black Land, because of its dark mud. The desert was the Red Land."
+        },
+        {
+          "es": "El rojo era el color de Set. Se decía que tenía el pelo rojo, y gobernaba la Tierra Roja.",
+          "en": "Red was Set's color. He was said to have red hair, and he ruled the Red Land."
+        },
+        {
+          "es": "En los oasis lejanos del desierto occidental, donde nada más protegía al viajero, él era el señor al que se rezaba.",
+          "en": "In the far oases of the western desert, where nothing else could protect the traveler, he was the lord people prayed to."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 1500,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 350,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "set",
+          "como": "set_oficial",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "viajero",
+          "como": "aldeano_egipcio_b_oficial",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "fuego",
+          "x": 1000,
+          "y": 500,
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "TIERRA NEGRA · TIERRA ROJA",
+            "en": "BLACK LAND · RED LAND"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "rey",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los reyes honraron a Set desde el principio. Hace unos cuatro mil ochocientos años, un rey llamado Peribsen escribió el nombre de Set sobre el suyo, en lugar del de Horus.",
+          "en": "Kings honored Set from the very start. Around four thousand eight hundred years ago, a king named Peribsen wrote the name of Set above his own, instead of Horus."
+        },
+        {
+          "es": "En los textos reales más antiguos, Horus y Set son los dos señores que elevan al rey al cielo.",
+          "en": "In the oldest royal texts, Horus and Set are the two lords who lift the king up to heaven."
+        },
+        {
+          "es": "En las estatuas, atan juntas dos plantas, el loto y el papiro, para mostrar que el Alto y el Bajo Egipto son una sola tierra.",
+          "en": "In statues, they tie two plants together, the lotus and the papyrus, to show that Upper and Lower Egypt are one land."
+        },
+        {
+          "es": "Los dos dioses que lucharon en el juicio más largo ahora mantienen unido a Egipto.",
+          "en": "The two gods who fought in the longest trial now hold Egypt together."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "loto",
+          "x": 600,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "papiro",
+          "x": 1320,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "horus",
+          "como": "horus_oficial",
+          "x": 780,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "como": "set_oficial",
+          "x": 1140,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "faraon",
+          "como": "faraon_oficial",
+          "x": 1650,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 960,
+          "y": 450,
+          "dur": 2,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "EL NUDO DE LAS DOS TIERRAS",
+            "en": "THE KNOT OF THE TWO LANDS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "barca",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En el barco nocturno de Ra, Set estaba en la proa con una lanza.",
+          "en": "In the night boat of Ra, Set stood at the prow with a spear."
+        },
+        {
+          "es": "Apep, la serpiente del caos, surgía del agua oscura para tragarse al sol.",
+          "en": "Apep, the serpent of chaos, rose from the dark water to swallow the sun."
+        },
+        {
+          "es": "Solo el dios más fuerte de Egipto podía detenerlo, y ese dios era Set.",
+          "en": "Only the strongest god in Egypt could stop him, and that god was Set."
+        },
+        {
+          "es": "Así, el dios del caos era quien defendía el orden.",
+          "en": "So the god of chaos was the one who defended order."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 960,
+          "s": 1.1,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "set",
+          "como": "set_oficial",
+          "x": 1100,
+          "mira": "der",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "lanza"
+            },
+            {
+              "en": 2.5,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "apep",
+          "como": "apofis_oficial",
+          "x": 1600,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.7,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 760,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 2.6,
+          "tipo": "destello",
+          "x": 1400,
+          "y": 500,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "extranjeros",
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hace unos tres mil seiscientos años, gobernantes extranjeros llamados hicsos tomaron el Delta de Egipto.",
+          "en": "About three thousand six hundred years ago, foreign rulers called the Hyksos took the Delta of Egypt."
+        },
+        {
+          "es": "Venían de las tierras del noreste, y su capital era Avaris. Adoraban a su propio dios de la tormenta.",
+          "en": "They came from the lands to the northeast, and their capital was Avaris. They worshiped their own storm god."
+        },
+        {
+          "es": "Los egipcios vieron que su propio dios de la tormenta se parecía a él, y en Avaris Set se volvió el señor local.",
+          "en": "The Egyptians saw that their own storm god looked like him, and in Avaris Set became the local lord."
+        },
+        {
+          "es": "Más tarde, un faraón llamado Seti, que significa hombre de Set, gobernó Egipto. Su hijo fue Ramsés el Grande.",
+          "en": "Later, a pharaoh named Seti, which means man of Set, ruled Egypt. His son was Ramesses the Great."
+        },
+        {
+          "es": "Ramsés levantó una piedra para recordar cuatrocientos años de culto a Set.",
+          "en": "Ramesses set up a stone to remember four hundred years of the worship of Set."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "estela",
+          "x": 1450,
+          "s": 1.2,
+          "capa": "fondo",
+          "en": 4
+        },
+        {
+          "tipo": "casa",
+          "x": 420,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hicso",
+          "como": "rey_extranjero_oficial",
+          "x": 620,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "como": "set_oficial",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "ramses",
+          "como": "ramses_oficial",
+          "x": 1550,
+          "mira": "izq",
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "polvo",
+          "x": 700,
+          "y": 700,
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "SETI · «HOMBRE DE SET»",
+            "en": "SETI · MAN OF SET"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "caida",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero la suerte de Set no duró. Los extranjeros seguían invadiendo Egipto, desde Asiria y luego Persia.",
+          "en": "But Set's luck did not last. Foreigners kept invading Egypt, from Assyria and then Persia."
+        },
+        {
+          "es": "Un dios de los extranjeros empezó a parecer un enemigo del país.",
+          "en": "A god of strangers began to look like an enemy of the land."
+        },
+        {
+          "es": "Los sacerdotes rasparon su nombre de viejos muros y estatuas, o lo cambiaron por otra palabra.",
+          "en": "Priests scratched his name off old walls and statues, or changed it into another word."
+        },
+        {
+          "es": "Los griegos, que más tarde gobernaron Egipto, ligaron a Set con Tifón, un monstruo de los suyos.",
+          "en": "The Greeks, who later ruled Egypt, linked Set with Typhon, a monster of their own."
+        },
+        {
+          "es": "El dios que alguna vez habló en el trueno fue borrado poco a poco, pero nunca del todo.",
+          "en": "The god who once spoke in thunder was slowly erased, but never completely."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "estatua",
+          "x": 1450,
+          "s": 1.2,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pilono",
+          "x": 400,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio_b_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "como": "set_oficial",
+          "x": 1450,
+          "mira": "izq",
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1300,
+          "y": 500,
+          "dur": 1.5
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "NOMBRE BORRADO",
+            "en": "NAME ERASED"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces, ¿qué piensas: Set era un villano, un héroe o ambas cosas? Cuéntanos en los comentarios.",
+          "en": "So what do you think: was Set a villain, a hero, or both? Tell us in the comments."
+        },
+        {
+          "es": "Los egipcios sabían que el mundo necesita un poco de tormenta, o nada cambiaría jamás.",
+          "en": "The Egyptians knew that the world needs a little storm, or nothing would ever change."
+        },
+        {
+          "es": "Cuando Horus y Set discutían ante los dioses, alguien tenía que escribir cada palabra del juicio.",
+          "en": "When Horus and Set argued before the gods, someone had to write down every word of the trial."
+        },
+        {
+          "es": "Esa es la historia del próximo episodio: Thoth, señor de las palabras.",
+          "en": "That is the story of the next episode: Thoth, lord of words."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 350,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "set",
+          "como": "set_oficial",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "como": "thoth_oficial",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1350,
+          "y": 400,
+          "dur": 2,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "PRÓXIMO: THOTH, SEÑOR DE LAS PALABRAS",
+            "en": "NEXT: THOTH, LORD OF WORDS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El dios cuyo animal nadie puede identificar",
+        "en": "The god whose animal nobody can identify"
+      },
+      "escena": "animal",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "El dios del caos que defendía el sol",
+        "en": "The god of chaos who defended the sun"
+      },
+      "escena": "barca",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "El dios al que borraron de los muros",
+        "en": "The god erased from the walls"
+      },
+      "escena": "caida",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1450
+    }
+  ]
+}

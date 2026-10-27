@@ -1,0 +1,896 @@
+{
+  "id": "egipcias-22-isis-reina-de-la-magia",
+  "serie": "egipcias",
+  "numero": "22",
+  "titulo": {
+    "es": "Isis, reina de la magia",
+    "en": "Isis, Queen of Magic"
+  },
+  "tituloGriego": "ISIS, QUEEN OF MAGIC",
+  "miniatura": {
+    "heroe": "isis_oficial",
+    "rival": "set_oficial"
+  },
+  "siguiente": {
+    "es": "Set, señor de las tormentas",
+    "en": "Set, Lord of Storms"
+  },
+  "escenas": [
+    {
+      "id": "trono",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Osiris tenía una reina que nunca se apartó de su lado. Su nombre egipcio era Aset, y nosotros la llamamos Isis.",
+          "en": "Osiris had a queen who never left his side. Her Egyptian name was Aset, and we call her Isis."
+        },
+        {
+          "es": "Su nombre se escribe con el signo de un trono, y muchos expertos creen que significa trono.",
+          "en": "Her name is written with the sign of a throne, and many experts think it means throne."
+        },
+        {
+          "es": "Por eso lleva un pequeño trono en la cabeza.",
+          "en": "That is why she wears a little throne on her head."
+        },
+        {
+          "es": "También dice lo que significaba. Todo faraón se sentaba en un trono, y ese trono era su regazo.",
+          "en": "It also tells you what she meant. Every pharaoh sat on a throne, and the throne was her lap."
+        },
+        {
+          "es": "Así, cuando un rey gobernaba, era como Horus, el hijo de Isis.",
+          "en": "So when a king ruled, he was like Horus, the son of Isis."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1350,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "como": "isis_oficial",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.3,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "faraon",
+          "como": "faraon_b_oficial",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "sienta"
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "como": "horus_nino_oficial",
+          "x": 650,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 1000,
+          "y": 400,
+          "dur": 2,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "ASET · EL TRONO",
+            "en": "ASET · THE THRONE"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "magia",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "A Isis la llamaban la Grande en Magia.",
+          "en": "Isis was called Great of Magic."
+        },
+        {
+          "es": "Ya viste por qué. Engañó a Ra para que le dijera su nombre secreto.",
+          "en": "You have seen why. She tricked Ra into telling her his secret name."
+        },
+        {
+          "es": "También curó a su propio hijo después de que lo picara un escorpión.",
+          "en": "She also healed her own son after a scorpion stung him."
+        },
+        {
+          "es": "Los sanadores egipcios siguieron usando su nombre. Ante una picadura decían: Yo soy Isis, y mis palabras se cumplen.",
+          "en": "Egyptian healers kept using her name. For a sting, they said: I am Isis, and my words come true."
+        },
+        {
+          "es": "Su magia no servía para hacer daño. Servía para palabras que salvan.",
+          "en": "Her magic was not about hurting anyone. It was about words that save."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "altar",
+          "x": 1450,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pilono",
+          "x": 450,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "como": "isis_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 4,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "sanador",
+          "como": "sacerdote_egipcio_oficial",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "habla"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "paciente",
+          "como": "aldeano_egipcio_c_oficial",
+          "x": 1650,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "lamenta"
+            },
+            {
+              "en": 4,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 900,
+          "y": 350,
+          "dur": 1.5
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1650,
+          "y": 500,
+          "dur": 1.5,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "GRANDE EN MAGIA",
+            "en": "GREAT OF MAGIC"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "alas",
+      "fondo": "sala_juicio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Isis también era protectora de los muertos.",
+          "en": "Isis was a protector of the dead, too."
+        },
+        {
+          "es": "En los ataúdes y santuarios, se la pinta con los brazos extendidos y las alas abiertas, para cuidar lo que hay dentro.",
+          "en": "On coffins and shrines, she is painted with her arms spread wide and her wings open, to guard what is inside."
+        },
+        {
+          "es": "En la tumba de Tutankamón, un santuario dorado tenía a Isis de guardia en un lado, y a Neftis, Neit y Selket en los otros tres.",
+          "en": "In the tomb of Tutankhamun, a golden shrine had Isis standing guard on one side, with Nephthys, Neith and Selket on the other three."
+        },
+        {
+          "es": "En los funerales, dos mujeres podían representar a Isis y a Neftis, llorando y cantando por el muerto como las dos hermanas lloraron por Osiris.",
+          "en": "At funerals, two women could play Isis and Nephthys, weeping and singing for the dead like the two sisters wept for Osiris."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sarcofago",
+          "x": 960,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "como": "isis_oficial",
+          "x": 760,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "neftis",
+          "como": "neftis_oficial",
+          "x": 1160,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "x": 760,
+          "y": 350,
+          "dur": 1.5,
+          "intensidad": 0.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "EL SANTUARIO DE TUTANKAMÓN",
+            "en": "TUTANKHAMUN'S SHRINE"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "madre",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Por encima de todo, Isis era una madre.",
+          "en": "Above all, Isis was a mother."
+        },
+        {
+          "es": "Se hicieron durante miles de años estatuas que la mostraban con el pequeño Horus en el regazo.",
+          "en": "Statues showing her with baby Horus on her lap were made for thousands of years."
+        },
+        {
+          "es": "Las madres le rezaban por sus hijos, y los marineros le rezaban para volver sanos a casa.",
+          "en": "Mothers prayed to her for their children, and sailors prayed to her for safe trips home."
+        },
+        {
+          "es": "Una diosa que protege a los débiles siempre encuentra nuevos seguidores.",
+          "en": "A goddess who protects the weak will always find new followers."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "papiro",
+          "x": 350,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "loto",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "como": "isis_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "como": "horus_nino_oficial",
+          "x": 1100,
+          "mira": "izq",
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "madre",
+          "como": "aldeana_egipcia_b_oficial",
+          "x": 450,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "luz",
+          "x": 950,
+          "y": 450,
+          "dur": 2,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": []
+    },
+    {
+      "id": "filae",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Su templo más grande está en la isla de File, en el sur, cerca de los primeros rápidos del Nilo.",
+          "en": "Her greatest temple stands on the island of Philae, in the south, near the first rapids of the Nile."
+        },
+        {
+          "es": "Se construyó sobre todo hace unos dos mil trescientos años, cuando reyes griegos gobernaban Egipto.",
+          "en": "It was built mostly about two thousand three hundred years ago, when Greek kings ruled Egypt."
+        },
+        {
+          "es": "Los peregrinos navegaban hasta allí cada año para pedirle ayuda a Isis.",
+          "en": "Pilgrims sailed to it every year to ask Isis for help."
+        },
+        {
+          "es": "Cuando otros templos cerraron, File siguió abierto. Los últimos jeroglíficos grabados se tallaron allí, en el año 394.",
+          "en": "When other temples closed, Philae stayed open. The last hieroglyphs ever carved were cut there, in the year 394."
+        },
+        {
+          "es": "Solo hacia el año 537 cerraron el templo. Isis había sido honrada allí durante unos novecientos años.",
+          "en": "Only around the year 537, about fifteen hundred years ago, was the temple closed. Isis had been honored there for about nine hundred years."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilono",
+          "x": 1350,
+          "s": 1.4,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "barco",
+          "x": 450,
+          "s": 1,
+          "capa": "medio"
+        }
+      ],
+      "actores": [
+        {
+          "id": "peregrino",
+          "como": "aldeano_egipcio_b_oficial",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "arrodilla"
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "como": "isis_oficial",
+          "x": 1650,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "olas-suben",
+          "dur": 1
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "FILE · TEMPLO DE ISIS",
+            "en": "PHILAE · TEMPLE OF ISIS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "mar",
+      "fondo": "costa",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los griegos y los romanos también se enamoraron de Isis.",
+          "en": "Greeks and Romans fell in love with Isis too."
+        },
+        {
+          "es": "La llamaban la diosa de los marineros. Cada primavera, en las ciudades romanas, una fiesta bendecía un barco para abrir la temporada de navegación.",
+          "en": "They called her the goddess of sailors. Every spring, in Roman cities, a festival blessed a ship to open the sailing season."
+        },
+        {
+          "es": "Un escritor romano llamado Apuleyo describió este desfile, con flores, música y gente vestida de blanco.",
+          "en": "A Roman writer named Apuleius described this parade, with flowers, music and people in white."
+        },
+        {
+          "es": "Había templos de Isis en Pompeya, en Roma y en muchas otras ciudades del imperio.",
+          "en": "There were temples of Isis in Pompeii, in Rome, and in many other cities of the empire."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1300,
+          "s": 1.3,
+          "capa": "medio"
+        },
+        {
+          "tipo": "palmera",
+          "x": 350,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "sacerdotisa",
+          "como": "aldeana_egipcia_oficial",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "marinero",
+          "como": "aldeano_egipcio_c_oficial",
+          "x": 950,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "como": "isis_oficial",
+          "x": 1650,
+          "mira": "izq",
+          "escala": 0.85,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA FIESTA DEL BARCO DE ISIS",
+            "en": "THE SHIP FESTIVAL OF ISIS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "londres",
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "El culto de Isis llegó hasta el borde del mundo romano.",
+          "en": "The cult of Isis reached even the edge of the Roman world."
+        },
+        {
+          "es": "En Londres, unos obreros encontraron una jarra pequeña de casi dos mil años.",
+          "en": "In London, workers found a small jug nearly two thousand years old."
+        },
+        {
+          "es": "Alguien había rayado unas palabras en ella: Londini ad fanum Isidis. En Londres, en el templo de Isis.",
+          "en": "Someone had scratched words into it: Londini ad fanum Isidis. In London, at the temple of Isis."
+        },
+        {
+          "es": "Una diosa nacida junto al Nilo era adorada junto al Támesis.",
+          "en": "A goddess born by the Nile was being worshiped beside the Thames."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 420,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "anfora",
+          "x": 1000,
+          "s": 1.4,
+          "capa": "medio",
+          "en": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "romano",
+          "como": "aldeano_egipcio_b_oficial",
+          "x": 750,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "como": "isis_oficial",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 3
+        },
+        {
+          "en": 2,
+          "tipo": "destello",
+          "x": 1000,
+          "y": 520,
+          "dur": 0.8
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "LONDINI AD FANUM ISIDIS",
+            "en": "LONDINI AD FANUM ISIDIS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Si pudieras tomar una sola cosa de Isis, ¿cuál sería: su magia, sus alas o su valentía? Cuéntanos en los comentarios.",
+          "en": "If you could borrow one thing from Isis, what would it be: her magic, her wings, or her courage? Tell us in the comments."
+        },
+        {
+          "es": "Isis siempre tuvo un enemigo, y era su propio hermano.",
+          "en": "Isis always had one enemy, and he was her own brother."
+        },
+        {
+          "es": "Pero los egipcios no lo veían solo como un villano. En algunas historias, era quien salvaba al sol.",
+          "en": "But the Egyptians did not see him only as a villain. In some stories, he was the one who saved the sun."
+        },
+        {
+          "es": "Esa es la historia del próximo episodio: Set, señor de las tormentas.",
+          "en": "That is the story of the next episode: Set, lord of storms."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "luna",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "como": "isis_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 1.5,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "como": "set_oficial",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 3
+        },
+        {
+          "en": 1.2,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "PRÓXIMO: SET, SEÑOR DE LAS TORMENTAS",
+            "en": "NEXT: SET, LORD OF STORMS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La diosa cuyo nombre significa trono",
+        "en": "The goddess whose name means throne"
+      },
+      "escena": "trono",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "La jarra de Londres que nombra a Isis",
+        "en": "The London jug that names Isis"
+      },
+      "escena": "londres",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Los últimos jeroglíficos de la historia",
+        "en": "The last hieroglyphs ever carved"
+      },
+      "escena": "filae",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1350
+    }
+  ]
+}
