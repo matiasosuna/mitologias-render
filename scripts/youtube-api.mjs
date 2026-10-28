@@ -109,6 +109,19 @@ else if (cmd === 'videos') {
       console.log(`${it.id} sin etiqueta (${privacyStatus}${publishAt ? ' ' + publishAt : ''})`);
     }
   }
+} else if (cmd === 'publicos') {
+  // Pasa a público los videos dados que quedaron privados sin fecha programada (p. ej. si el PUT de "subir" falló después de
+  // subir el archivo: la corrida siguiente lo encuentra por título y lo anota, pero quedaba privado; 2026-10-28 Génesis 1).
+  for (let i = 0; i < a.length; i += 50) {
+    const v = await api('GET', '/videos', { query: { part: 'status', id: a.slice(i, i + 50).join(',') } });
+    for (const it of v.items) {
+      if (it.status.privacyStatus !== 'private' || it.status.publishAt || it.status.uploadStatus !== 'processed') continue;
+      const st = { ...it.status, privacyStatus: 'public' };
+      delete st.uploadStatus; delete st.failureReason; delete st.rejectionReason; delete st.publishAt;
+      try { await api('PUT', '/videos', { query: { part: 'status' }, json: { id: it.id, status: st } }); console.log(`${it.id} ahora público`); }
+      catch (e) { console.log(`${it.id} ERROR ${String(e.message).slice(0, 300)}`); }
+    }
+  }
 } else if (cmd === 'canal') {
   const s = (await api('GET', '/channels', { query: { part: 'statistics', mine: 'true' } })).items[0].statistics;
   console.log(`suscriptores ${s.subscriberCount} · vistas ${s.viewCount} · videos ${s.videoCount}`);

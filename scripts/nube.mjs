@@ -284,6 +284,14 @@ function planDe(p, d, f = fechaTurno()) {
 
 // ── publicar un ítem
 const MINIS = 'out/miniaturas-youtube.json';
+/** Lo anotado en youtube-ids que haya quedado privado sin fecha (falló el paso a público después de subir) pasa a público.
+ *  Cuesta 1 unidad cada 50 ids + 50 por arreglo. Si falla, no frena el turno. */
+function publicarPrivados() {
+  const ids = [...new Set(Object.values(leerJSON(IDS, {})).filter(Boolean))];
+  if (!ids.length) return;
+  try { const s = execFileSync('node', ['scripts/youtube-api.mjs', 'publicos', ...ids], { encoding: 'utf8', maxBuffer: 1 << 24 }).trim(); if (s) console.log(`YouTube privados: ${s}`); }
+  catch (e) { console.log(`YouTube privados: no se pudo revisar (${String(e.message).slice(0, 200)})`); }
+}
 function reintentarMiniaturas() {
   const reg = leerJSON(MINIS, []);
   for (const p of miniaturasPendientes(reg)) {
@@ -417,6 +425,7 @@ async function turno(p, probar = false) {
     const antes = pendiente();
     if (antes && (await borrarCanal(antes))) return console.log('YouTube: el borrado del canal sigue en la próxima corrida; no se sube nada en este turno');
     reintentarMiniaturas();
+    publicarPrivados();
   }
   await unaVez(`cola-${p}`, async () => { // clave propia: no choca con los pasos del calendario viejo
     const d = datos(), plan = planDe(p, d);
