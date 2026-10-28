@@ -1,0 +1,878 @@
+{
+ "id": "nordicas-28-odin-entre-dos-fuegos",
+ "serie": "nordicas",
+ "numero": "28",
+ "titulo": {
+  "es": "Odín entre dos fuegos",
+  "en": "Odin Between Two Fires"
+ },
+ "tituloGriego": "ODIN BETWEEN TWO FIRES",
+ "miniatura": {
+  "heroe": "odin_oficial",
+  "rival": "rey_nordico_oficial"
+ },
+ "siguiente": {
+  "es": "El barquero que se burló de Thor",
+  "en": "The Ferryman Who Mocked Thor"
+ },
+ "escenas": [
+  {
+   "id": "enganche",
+   "fondo": "salon",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Odín engañó a gigantes, enanos y reyes. Pero esta vez es él quien pasa la prueba.",
+     "en": "Odin has tricked giants, dwarves and kings. But this time, he is tested himself."
+    },
+    {
+     "es": "Una historia de dos hermanos, un barco y una promesa rota.",
+     "en": "It is a story of two brothers, a boat and a broken promise."
+    },
+    {
+     "es": "Viene del poema Grímnismál, en la Edda poética.",
+     "en": "It comes from the poem Grímnismál, in the Poetic Edda."
+    },
+    {
+     "es": "Y termina con un hombre colgado entre dos fuegos.",
+     "en": "And it ends with a man held between two fires."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 960,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      },
+      {
+       "en": 3,
+       "hace": "calla"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "ENTRE DOS FUEGOS",
+      "en": "BETWEEN TWO FIRES"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "hermanos",
+   "fondo": "fiordo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "El rey Hrauðungr tenía dos hijos: Agnarr, de diez años, y Geirröðr, de ocho.",
+     "en": "King Hrauðungr had two sons: Agnarr, who was ten, and Geirröðr, who was eight."
+    },
+    {
+     "es": "Un día salieron en un bote a pescar.",
+     "en": "One day they rowed out in a boat to fish."
+    },
+    {
+     "es": "Una tormenta los empujó mar adentro, y el viento los llevó hasta una orilla lejana.",
+     "en": "A storm pushed them out to sea, and the wind carried them to a distant shore."
+    },
+    {
+     "es": "Allí encontraron una cabaña, y un matrimonio de ancianos los recibió.",
+     "en": "There they found a small farm, and an old couple took them in."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "drakkar",
+     "x": 800,
+     "s": 0.7,
+     "capa": "medio"
+    }
+   ],
+   "actores": [
+    {
+     "id": "agnarr",
+     "como": "nino_nordico_oficial",
+     "x": 700,
+     "mira": "der",
+     "rotulo": "AGNARR",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "tiembla"
+      }
+     ]
+    },
+    {
+     "id": "geirrod",
+     "como": "nino_nordico_oficial",
+     "x": 950,
+     "mira": "der",
+     "rotulo": "GEIRRÖÐR",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "tiembla"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "olas-suben",
+     "dur": 1
+    },
+    {
+     "en": 2,
+     "tipo": "lluvia",
+     "dur": 2
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "DOS HERMANOS",
+      "en": "TWO BROTHERS"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "cabana",
+   "fondo": "aldea",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Los ancianos eran Odín y Frigg, disfrazados.",
+     "en": "The old couple were Odin and Frigg in disguise."
+    },
+    {
+     "es": "Pasaron el invierno cuidando a los niños. Frigg crió a Agnarr, y Odín crió a Geirröðr.",
+     "en": "They spent the winter caring for the boys. Frigg raised Agnarr, and Odin raised Geirröðr."
+    },
+    {
+     "es": "Cuando llegó la primavera, Odín les dio un barco.",
+     "en": "When spring came, Odin gave them a ship."
+    },
+    {
+     "es": "Antes de partir, habló en secreto con Geirröðr, en la orilla.",
+     "en": "Before they left, he spoke to Geirröðr alone, on the shore."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "casa_larga",
+     "x": 1650,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 1200,
+     "mira": "izq",
+     "rotulo": "ANCIANO",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "ofrece"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      }
+     ]
+    },
+    {
+     "id": "frigg",
+     "como": "frigg_oficial",
+     "x": 700,
+     "mira": "der",
+     "rotulo": "FRIGG",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "abraza"
+      }
+     ]
+    },
+    {
+     "id": "geirrod",
+     "como": "nino_nordico_oficial",
+     "x": 1000,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "niebla"
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "EL INVIERNO",
+      "en": "THE WINTER"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "traicion",
+   "fondo": "fiordo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "El viento los llevó de vuelta a su reino. Geirröðr iba en la proa.",
+     "en": "The wind carried them back to their kingdom. Geirröðr stood at the front."
+    },
+    {
+     "es": "Al llegar, saltó a la orilla y empujó el bote mar adentro, con su hermano dentro.",
+     "en": "As they landed, he leaped ashore and shoved the boat back out to sea, with his brother still inside."
+    },
+    {
+     "es": "\"¡Ve adonde los espíritus malos te lleven!\", gritó.",
+     "en": "\"Go where evil spirits take you!\" he shouted."
+    },
+    {
+     "es": "Geirröðr entró en el pueblo. Su padre había muerto, y lo nombraron rey.",
+     "en": "Geirröðr walked into town. His father had died, and they made him king."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "drakkar",
+     "x": 800,
+     "s": 0.7,
+     "capa": "medio"
+    }
+   ],
+   "actores": [
+    {
+     "id": "agnarr",
+     "como": "nino_nordico_oficial",
+     "x": 700,
+     "mira": "der",
+     "rotulo": "AGNARR",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "cae"
+      },
+      {
+       "en": 2,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "geirrod",
+     "como": "nino_nordico_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "rotulo": "GEIRRÖÐR",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "golpea"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "camina",
+       "a": 1500
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "olas-suben",
+     "dur": 1.5
+    },
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 1500
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "LA TRAICIÓN",
+      "en": "THE BETRAYAL"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "apuesta",
+   "fondo": "asgard",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Pasaron los años. Odín y Frigg se sentaron en Hliðskjálf, el trono desde donde Odín mira todos los mundos.",
+     "en": "Years passed. Odin and Frigg sat on Hliðskjálf, the high seat from which Odin sees all the worlds."
+    },
+    {
+     "es": "\"¿Ves a Agnarr, tu hijo adoptivo?\", dijo Odín. \"Vive en una cueva con una giganta\".",
+     "en": "\"Do you see Agnarr, your foster son?\" said Odin. \"He lives in a cave with a giantess.\""
+    },
+    {
+     "es": "\"Y mi Geirröðr es un rey\".",
+     "en": "\"My Geirröðr is a king.\""
+    },
+    {
+     "es": "Frigg respondió: \"Es un avaro. Tortura a sus invitados si cree que llegan demasiados\".",
+     "en": "Frigg answered: \"He is a miser. He tortures guests if he thinks too many have come.\""
+    },
+    {
+     "es": "Odín dijo que era mentira, y apostaron. Frigg envió a su doncella a avisar a Geirröðr.",
+     "en": "Odin said that was a lie, and they made a bet. Frigg sent her maid to warn Geirröðr."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 960,
+     "s": 0.9,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 700,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "senala"
+      },
+      {
+       "en": 1,
+       "hace": "habla"
+      },
+      {
+       "en": 2,
+       "hace": "ofrece"
+      },
+      {
+       "en": 3,
+       "hace": "calla"
+      }
+     ]
+    },
+    {
+     "id": "frigg",
+     "como": "frigg_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "rotulo": "FRIGG",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "habla"
+      },
+      {
+       "en": 4,
+       "hace": "senala"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "LA APUESTA",
+      "en": "THE BET"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "fuegos",
+   "fondo": "salon",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "El aviso decía: \"Un mago peligroso viene a tu reino\".",
+     "en": "The warning said: \"A dangerous wizard is coming to your kingdom.\""
+    },
+    {
+     "es": "Odín llegó con una capa azul y dijo llamarse Grímnir, \"el encapuchado\".",
+     "en": "Odin arrived in a blue cloak and called himself Grímnir, \"the hooded one.\""
+    },
+    {
+     "es": "Los hombres del rey lo atraparon. Geirröðr lo ató entre dos fogatas ardientes.",
+     "en": "The king's men seized him. Geirröðr had him tied between two blazing fires."
+    },
+    {
+     "es": "Allí pasó ocho noches, sin comida ni bebida. La capa empezó a arder.",
+     "en": "He sat there for eight nights, with no food or drink. His cloak began to burn."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "fogata",
+     "x": 640,
+     "s": 1,
+     "capa": "medio"
+    },
+    {
+     "tipo": "fogata",
+     "x": 1280,
+     "s": 1,
+     "capa": "medio"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 960,
+     "mira": "der",
+     "rotulo": "GRÍMNIR",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "habla"
+      },
+      {
+       "en": 2,
+       "hace": "lamenta"
+      },
+      {
+       "en": 3,
+       "hace": "tiembla"
+      }
+     ]
+    },
+    {
+     "id": "geirrod",
+     "como": "rey_nordico_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "rotulo": "GEIRRÖÐR",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "senala"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "fuego",
+     "x": 640
+    },
+    {
+     "en": 2,
+     "tipo": "fuego",
+     "x": 1280
+    },
+    {
+     "en": 3,
+     "tipo": "humo",
+     "x": 960
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "ENTRE DOS FUEGOS",
+      "en": "BETWEEN TWO FIRES"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "cuerno",
+   "fondo": "salon",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Entonces el joven hijo de Geirröðr, también llamado Agnarr, se acercó.",
+     "en": "Then Geirröðr's young son, also named Agnarr, came forward."
+    },
+    {
+     "es": "Pensó que su padre se equivocaba y le llevó un cuerno lleno de bebida.",
+     "en": "He thought his father was wrong, and he brought the prisoner a horn full of drink."
+    },
+    {
+     "es": "Grímnir bebió y empezó a hablar. Describió los grandes salones de Asgard, y Valhalla con sus 540 puertas.",
+     "en": "Grímnir drank and began to speak. He described the great halls of Asgard, and Valhalla with its 540 doors."
+    },
+    {
+     "es": "Habló del árbol Yggdrasil y de los nombres de Odín, uno tras otro.",
+     "en": "He spoke of the tree Yggdrasil and of the many names of Odin, one after another."
+    },
+    {
+     "es": "Y al final dijo: \"Ahora sabes quién soy\".",
+     "en": "And at the end he said: \"Now you know who I am.\""
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "fogata",
+     "x": 500,
+     "s": 1,
+     "capa": "medio"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 700,
+     "mira": "der",
+     "rotulo": "GRÍMNIR",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "toma"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      },
+      {
+       "en": 4,
+       "hace": "brilla"
+      }
+     ]
+    },
+    {
+     "id": "agnarr",
+     "como": "joven_nordico_oficial",
+     "x": 1250,
+     "mira": "izq",
+     "rotulo": "AGNARR",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "ofrece"
+      }
+     ]
+    },
+    {
+     "id": "geirrod",
+     "como": "rey_nordico_oficial",
+     "x": 1650,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 3,
+       "hace": "tiembla"
+      },
+      {
+       "en": 4,
+       "hace": "arrodilla"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "luz",
+     "x": 700
+    },
+    {
+     "en": 4,
+     "tipo": "destello",
+     "x": 700
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "\"SOY ODÍN\"",
+      "en": "\"I AM ODIN\""
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "salon",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Geirröðr se levantó asustado para sacar a Odín del fuego. La espada se le escapó de la mano.",
+     "en": "Geirröðr rose in fear to pull Odin from the fire. His sword slipped from his hand."
+    },
+    {
+     "es": "Cayó sobre la espada y murió.",
+     "en": "He fell on his sword and died."
+    },
+    {
+     "es": "Odín desapareció, y el joven Agnarr se convirtió en rey.",
+     "en": "Odin vanished, and young Agnarr became king."
+    },
+    {
+     "es": "¿Crees que Geirröðr tuvo el final que merecía? Cuéntanos en los comentarios.",
+     "en": "Do you think Geirröðr got the ending he deserved? Tell us in the comments."
+    },
+    {
+     "es": "La próxima vez, un barquero se burla de Thor: el barquero que se burló de Thor.",
+     "en": "Next time, a ferryman mocks Thor himself: The Ferryman Who Mocked Thor."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 700,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "desaparece",
+       "con": "humo"
+      },
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      },
+      {
+       "en": 4,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "geirrod",
+     "como": "rey_nordico_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "levantarse"
+      },
+      {
+       "en": 1,
+       "hace": "cae"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "oscurecer",
+     "dur": 1
+    },
+    {
+     "en": 2,
+     "tipo": "aclarar"
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "LA CAÍDA DEL REY",
+      "en": "THE KING FALLS"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "Un hombre atado entre dos fuegos",
+    "en": "A god tied between two fires"
+   },
+   "escena": "fuegos",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  },
+  {
+   "gancho": {
+    "es": "Empujó el bote con su hermano adentro",
+    "en": "He shoved the boat out with his brother inside"
+   },
+   "escena": "traicion",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  },
+  {
+   "gancho": {
+    "es": "Odín apostó contra su propia esposa",
+    "en": "Odin bet against his own wife"
+   },
+   "escena": "apuesta",
+   "desde": 0,
+   "hasta": 4,
+   "foco": 900
+  }
+ ]
+}

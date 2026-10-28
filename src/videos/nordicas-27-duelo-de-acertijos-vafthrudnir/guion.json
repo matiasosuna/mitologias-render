@@ -1,0 +1,827 @@
+{
+ "id": "nordicas-27-duelo-de-acertijos-vafthrudnir",
+ "serie": "nordicas",
+ "numero": "27",
+ "titulo": {
+  "es": "El duelo de acertijos con Vafþrúðnir",
+  "en": "The Riddle Duel with Vafþrúðnir"
+ },
+ "tituloGriego": "THE RIDDLE DUEL WITH VAFÞRÚÐNIR",
+ "miniatura": {
+  "heroe": "odin_oficial",
+  "rival": "jotun_nordico_oficial"
+ },
+ "siguiente": {
+  "es": "Odín entre dos fuegos",
+  "en": "Odin Between Two Fires"
+ },
+ "escenas": [
+  {
+   "id": "enganche",
+   "fondo": "salon",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Odín ya había robado el hidromiel de la poesía. Ahora quería probar su sabiduría contra la de otro.",
+     "en": "Odin had stolen the mead of poetry. Now he wanted to test his wisdom against someone else's."
+    },
+    {
+     "es": "Y el rival que eligió era un gigante.",
+     "en": "The rival he chose was a giant."
+    },
+    {
+     "es": "Se llamaba Vafþrúðnir, y se decía que sabía más que nadie en todos los mundos.",
+     "en": "His name was Vafþrúðnir, and he was said to know more than anyone in all the worlds."
+    },
+    {
+     "es": "La apuesta era terrible: el que perdiera, perdería la cabeza.",
+     "en": "The bet was terrible: whoever lost would lose his head."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 960,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      },
+      {
+       "en": 3,
+       "hace": "calla"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "LA CABEZA EN JUEGO",
+      "en": "HEAD FOR HEAD"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "frigg",
+   "fondo": "asgard",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "En el poema llamado Vafþrúðnismál, Odín le cuenta su plan a Frigg, su esposa.",
+     "en": "In the poem Vafþrúðnismál, Odin tells his wife Frigg about his plan."
+    },
+    {
+     "es": "Le dice que quiere visitar al gigante y ver su salón.",
+     "en": "He says he wants to visit the giant and see his hall."
+    },
+    {
+     "es": "Frigg intenta detenerlo: ningún gigante, dice, es tan fuerte como Vafþrúðnir.",
+     "en": "Frigg tries to stop him: no giant, she says, is as strong as Vafþrúðnir."
+    },
+    {
+     "es": "Pero Odín ya ha viajado mucho y ha puesto a prueba a muchos poderes.",
+     "en": "But Odin has traveled far and tested many powers."
+    },
+    {
+     "es": "Frigg lo deja ir. Le desea un buen viaje y una mente muy aguda.",
+     "en": "Frigg lets him go. She wishes him a safe trip and a sharp mind."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 960,
+     "s": 0.9,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 700,
+     "mira": "der",
+     "rotulo": "ODIN",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    },
+    {
+     "id": "frigg",
+     "como": "frigg_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "rotulo": "FRIGG",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "lamenta"
+      },
+      {
+       "en": 4,
+       "hace": "ofrece"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "¿VAS A IR?",
+      "en": "WILL YOU GO?"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "llegada",
+   "fondo": "jotunheim",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Odín viajó disfrazado, y dijo llamarse Gagnráðr, \"el que gana con consejo\".",
+     "en": "Odin traveled in disguise and called himself Gagnráðr, \"the one who wins by counsel.\""
+    },
+    {
+     "es": "Llegó al salón de Vafþrúðnir y pidió hospitalidad.",
+     "en": "He reached Vafþrúðnir's hall and asked for hospitality."
+    },
+    {
+     "es": "El gigante dijo que solo saldría vivo de allí si era más sabio que él.",
+     "en": "The giant said he would only leave alive if he was wiser than the giant."
+    },
+    {
+     "es": "Gagnráðr aceptó. Dijo que era pobre, pero muy sabio.",
+     "en": "Gagnráðr agreed. He said he was poor, but very wise."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "casa_larga",
+     "x": 1500,
+     "s": 1.1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 600,
+     "mira": "der",
+     "rotulo": "GAGNRÁÐR",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "camina",
+       "a": 800
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      }
+     ]
+    },
+    {
+     "id": "vaf",
+     "como": "jotun_nordico_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "rotulo": "VAFÞRÚÐNIR",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "niebla"
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "EL DISFRAZ",
+      "en": "THE DISGUISE"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "gigante",
+   "fondo": "salon",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Primero preguntó el gigante. \"¿Cómo se llama el caballo que arrastra el día sobre la tierra?\"",
+     "en": "The giant asked first. \"What is the horse that pulls the day across the earth?\""
+    },
+    {
+     "es": "\"Skinfaxi, de crin brillante\", respondió Odín. \"Y Hrímfaxi arrastra la noche\".",
+     "en": "\"Skinfaxi, with the shining mane,\" Odin answered. \"And Hrímfaxi pulls the night.\""
+    },
+    {
+     "es": "\"¿Qué río separa a los gigantes de los dioses?\" \"El Ífing, que nunca se congela\".",
+     "en": "\"Which river divides the giants from the gods?\" \"The Ífing, which never freezes.\""
+    },
+    {
+     "es": "\"¿Y cómo se llama la llanura donde los dioses pelearán la última batalla?\" \"Vígríðr\", dijo Odín.",
+     "en": "\"And the plain where the gods will fight the last battle?\" \"Vígríðr,\" said Odin."
+    },
+    {
+     "es": "Las tres respuestas eran correctas. Vafþrúðnir lo invitó a sentarse.",
+     "en": "All three answers were right. Vafþrúðnir told him to sit down."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 1400,
+     "s": 0.9,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "vaf",
+     "como": "jotun_nordico_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "rotulo": "VAFÞRÚÐNIR",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      },
+      {
+       "en": 4,
+       "hace": "ofrece"
+      }
+     ]
+    },
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 600,
+     "mira": "der",
+     "rotulo": "GAGNRÁÐR",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "habla"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      },
+      {
+       "en": 4,
+       "hace": "sienta"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "TRES PREGUNTAS",
+      "en": "THREE QUESTIONS"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "preguntas",
+   "fondo": "jotunheim",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Ahora le tocaba a Odín preguntar. \"¿De dónde salió la tierra?\"",
+     "en": "Now it was Odin's turn. \"Where did the earth come from?\""
+    },
+    {
+     "es": "\"De la carne de Ymir\", dijo el gigante. \"El cielo vino de su cráneo y el mar de su sangre\".",
+     "en": "\"From the flesh of Ymir,\" said the giant. \"The sky came from his skull, and the sea from his blood.\""
+    },
+    {
+     "es": "\"¿De dónde vinieron la luna y el sol?\" \"De un hombre llamado Mundilfari, padre de ambos\".",
+     "en": "\"Where did the moon and sun come from?\" \"From a man named Mundilfari, father of them both.\""
+    },
+    {
+     "es": "\"¿Qué gigante escapó cuando la sangre de Ymir ahogó a su pueblo?\" \"Bergelmir, en un bote\".",
+     "en": "\"Which giant escaped when Ymir's blood drowned his people?\" \"Bergelmir, in a boat.\""
+    },
+    {
+     "es": "Cada respuesta era correcta. El gigante empezaba a sospechar.",
+     "en": "Every answer was right. The giant was starting to wonder who his guest was."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "pino",
+     "x": 1750,
+     "s": 0.9,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 600,
+     "mira": "der",
+     "rotulo": "GAGNRÁÐR",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "asiente"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      }
+     ]
+    },
+    {
+     "id": "vaf",
+     "como": "jotun_nordico_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "rotulo": "VAFÞRÚÐNIR",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "habla"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      },
+      {
+       "en": 4,
+       "hace": "tiembla"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "sangre",
+     "x": 1100
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "EL PRINCIPIO",
+      "en": "THE BEGINNING"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "fin",
+   "fondo": "fiordo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Entonces Odín preguntó por el futuro: \"¿Qué pasará en el fin del mundo, en el Ragnarök?\"",
+     "en": "Then Odin asked about the future: \"What will happen at the end of the world, at Ragnarök?\""
+    },
+    {
+     "es": "\"El lobo Fenrir se tragará a Odín\", dijo el gigante. \"Pero Víðarr, su hijo, lo vengará\".",
+     "en": "\"The wolf Fenrir will swallow Odin,\" said the giant. \"But his son Víðarr will avenge him.\""
+    },
+    {
+     "es": "\"Dos humanos, Líf y Lífþrasir, se esconderán en un bosque y poblarán el mundo nuevo\".",
+     "en": "\"Two humans, Líf and Lífþrasir, will hide in a forest and fill the new world.\""
+    },
+    {
+     "es": "\"Y los hijos de Thor, Móði y Magni, tendrán el martillo de su padre\".",
+     "en": "\"And Thor's sons, Móði and Magni, will carry their father's hammer.\""
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "monte_nevado",
+     "x": 1700,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 600,
+     "mira": "der",
+     "rotulo": "GAGNRÁÐR",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    },
+    {
+     "id": "vaf",
+     "como": "jotun_nordico_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "rotulo": "VAFÞRÚÐNIR",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "habla"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      }
+     ]
+    },
+    {
+     "id": "fenrir",
+     "como": "lobo_nordico_oficial",
+     "x": 1000,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "oscurecer",
+     "dur": 1
+    },
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 1400
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "EL RAGNARÖK",
+      "en": "RAGNARÖK"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "salon",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Odín hizo una última pregunta, la que solo él podía contestar.",
+     "en": "Odin asked one last question, the one only he could answer."
+    },
+    {
+     "es": "\"¿Qué le susurró Odín al oído de su hijo Baldr, antes de que ardiera en la pira?\"",
+     "en": "\"What did Odin whisper in his son Baldr's ear, before Baldr burned on the pyre?\""
+    },
+    {
+     "es": "El gigante quedó en silencio. Nadie en el mundo lo sabía, salvo uno.",
+     "en": "The giant fell silent. No one in the world knew, except one."
+    },
+    {
+     "es": "\"Nadie sabe lo que dijiste en el oído de tu hijo\", susurró. \"Eres Odín. Eres siempre el más sabio\".",
+     "en": "\"No one knows what you said in your son's ear,\" he whispered. \"You are Odin. You are always the wisest.\""
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "trono",
+     "x": 1400,
+     "s": 0.9,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 600,
+     "mira": "der",
+     "rotulo": "ODIN",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "brilla"
+      }
+     ]
+    },
+    {
+     "id": "vaf",
+     "como": "jotun_nordico_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "rotulo": "VAFÞRÚÐNIR",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "calla"
+      },
+      {
+       "en": 3,
+       "hace": "arrodilla"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "oscurecer",
+     "dur": 1
+    },
+    {
+     "en": 3,
+     "tipo": "luz",
+     "x": 600
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "LA ÚLTIMA PREGUNTA",
+      "en": "THE LAST QUESTION"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "asgard",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Los versos terminan ahí, con el gigante vencido. Odín ganó el duelo sin usar una sola arma.",
+     "en": "The verses end there, with the giant beaten. Odin won the duel without using a single weapon."
+    },
+    {
+     "es": "Y su arma más fuerte fue una pregunta que nadie más podía responder.",
+     "en": "His strongest weapon was a question no one else could answer."
+    },
+    {
+     "es": "¿Tú habrías aceptado apostar tu cabeza por saber más? Cuéntanos en los comentarios.",
+     "en": "Would you have bet your head to prove you knew more? Tell us in the comments."
+    },
+    {
+     "es": "La próxima vez, Odín vuelve a viajar disfrazado, pero esta vez lo atrapan: Odín entre dos fuegos.",
+     "en": "Next time, Odin travels in disguise again, but this time he is caught: Odin Between Two Fires."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 960,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      },
+      {
+       "en": 3,
+       "hace": "ofrece"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "ODÍN ENTRE DOS FUEGOS",
+      "en": "ODIN BETWEEN TWO FIRES"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "Una apuesta: la cabeza del perdedor",
+    "en": "A bet: the loser loses his head"
+   },
+   "escena": "enganche",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  },
+  {
+   "gancho": {
+    "es": "La pregunta que solo Odín podía contestar",
+    "en": "The one question only Odin could answer"
+   },
+   "escena": "final",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  },
+  {
+   "gancho": {
+    "es": "El gigante que sabía el fin del mundo",
+    "en": "The giant who knew how the world ends"
+   },
+   "escena": "fin",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  }
+ ]
+}

@@ -1,0 +1,825 @@
+{
+ "id": "nordicas-29-el-barquero-que-se-burlo-de-thor",
+ "serie": "nordicas",
+ "numero": "29",
+ "titulo": {
+  "es": "El barquero que se burló de Thor",
+  "en": "The Ferryman Who Mocked Thor"
+ },
+ "tituloGriego": "THE FERRYMAN WHO MOCKED THOR",
+ "miniatura": {
+  "heroe": "thor_oficial",
+  "rival": "anciano_nordico_oficial"
+ },
+ "siguiente": {
+  "es": "El ojo de Odín",
+  "en": "Odin's Eye"
+ },
+ "escenas": [
+  {
+   "id": "enganche",
+   "fondo": "salon",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Odín ya había puesto a prueba a un gigante. En esta historia pone a prueba a su propio hijo.",
+     "en": "Odin had tested a giant. In this story, he tests his own son."
+    },
+    {
+     "es": "Lo hace de la forma más extraña: insultándolo, sin que Thor sepa quién es.",
+     "en": "He does it in the strangest way: by insulting him, while Thor has no idea who he is."
+    },
+    {
+     "es": "Es el poema Hárbarðsljóð, y es casi una comedia.",
+     "en": "It is the poem Hárbarðsljóð, and it is almost a comedy."
+    },
+    {
+     "es": "Un dios del trueno, un río y un barquero con muy mala lengua.",
+     "en": "A thunder god, a river and a ferryman with a very sharp tongue."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 960,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      },
+      {
+       "en": 3,
+       "hace": "ofrece"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "UNA DISCUSIÓN",
+      "en": "A QUARREL"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "orilla",
+   "fondo": "fiordo",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Thor volvía de pelear contra gigantes en el este.",
+     "en": "Thor was coming home from fighting giants in the east."
+    },
+    {
+     "es": "Llegó a la orilla de un ancho río y vio a un barquero al otro lado.",
+     "en": "He reached the shore of a wide river and saw a ferryman on the other side."
+    },
+    {
+     "es": "\"¿Quién es ese campesino que grita desde la orilla?\", preguntó el barquero.",
+     "en": "\"Who is that peasant shouting on the shore?\" asked the ferryman."
+    },
+    {
+     "es": "\"Soy Thor, hijo de Odín\", respondió el dios. \"Llévame al otro lado\".",
+     "en": "\"I am Thor, son of Odin,\" the god replied. \"Take me across.\""
+    },
+    {
+     "es": "\"Yo soy Hárbarðr\", dijo el barquero, \"Barba Gris\". Y no se movió.",
+     "en": "\"I am Hárbarðr,\" said the ferryman, \"Grayboard.\" And he did not move."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "drakkar",
+     "x": 1450,
+     "s": 0.6,
+     "capa": "medio"
+    }
+   ],
+   "actores": [
+    {
+     "id": "thor",
+     "como": "thor_oficial",
+     "x": 500,
+     "mira": "der",
+     "rotulo": "THOR",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      },
+      {
+       "en": 4,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "harbardr",
+     "como": "anciano_nordico_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "rotulo": "HÁRBARÐR",
+     "props": {
+      "capa": "#4a5a78",
+      "tocado": "sombrero"
+     },
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 4,
+       "hace": "habla"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "niebla"
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "EL BARQUERO",
+      "en": "THE FERRYMAN"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "insultos",
+   "fondo": "fiordo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Hárbarðr se burló de la ropa de Thor. \"Pareces un mendigo\", dijo.",
+     "en": "Hárbarðr mocked Thor's clothes. \"You look like a beggar,\" he said."
+    },
+    {
+     "es": "Thor presumió de sus hazañas: había matado gigantes y al temible Hrungnir.",
+     "en": "Thor boasted of his deeds: he had killed giants, even the fearsome Hrungnir."
+    },
+    {
+     "es": "Hárbarðr presumió más fuerte. Dijo que él, en cambio, había engañado a reyes y los había puesto a pelear.",
+     "en": "Hárbarðr boasted louder. He said he had tricked kings and set them to fighting."
+    },
+    {
+     "es": "\"Odín tiene a los nobles que caen en la batalla\", dijo, \"y Thor tiene a los esclavos\".",
+     "en": "\"Odin gets the nobles who fall in battle,\" he said, \"and Thor gets the slaves.\""
+    },
+    {
+     "es": "Era un insulto cruel. Thor casi no podía hablar de la rabia.",
+     "en": "It was a cruel insult. Thor could barely speak with rage."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 1700,
+     "s": 0.7,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "thor",
+     "como": "thor_oficial",
+     "x": 500,
+     "mira": "der",
+     "rotulo": "THOR",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "lamenta"
+      },
+      {
+       "en": 4,
+       "hace": "tiembla"
+      }
+     ]
+    },
+    {
+     "id": "harbardr",
+     "como": "anciano_nordico_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "rotulo": "HÁRBARÐR",
+     "props": {
+      "capa": "#4a5a78",
+      "tocado": "sombrero"
+     },
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      },
+      {
+       "en": 4,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 4,
+     "tipo": "temblor",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "PRESUMIDOS",
+      "en": "BRAGGING"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "guante",
+   "fondo": "fiordo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Hárbarðr recordó otra historia. Thor había estado en el salón de Útgarða-Loki.",
+     "en": "Hárbarðr remembered another story. Thor had been in the hall of Útgarða-Loki."
+    },
+    {
+     "es": "\"Te escondiste dentro de un guante\", dijo, \"tan asustado que ni estornudar te atrevías\".",
+     "en": "\"You hid inside a glove,\" he said, \"so scared that you dared not even sneeze.\""
+    },
+    {
+     "es": "Thor gritó que, si cruzaba el agua, le rompería la espalda.",
+     "en": "Thor shouted that if he crossed the water, he would break the ferryman's back."
+    },
+    {
+     "es": "\"¿Para qué cruzar?\", dijo Hárbarðr. \"Qué lástima que no pueda ayudarte\".",
+     "en": "\"Why cross?\" said Hárbarðr. \"What a pity I cannot help you.\""
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 1700,
+     "s": 0.7,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "thor",
+     "como": "thor_oficial",
+     "x": 500,
+     "mira": "der",
+     "rotulo": "THOR",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "tiembla"
+      },
+      {
+       "en": 2,
+       "hace": "golpea"
+      },
+      {
+       "en": 3,
+       "hace": "lamenta"
+      }
+     ]
+    },
+    {
+     "id": "harbardr",
+     "como": "anciano_nordico_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "rotulo": "HÁRBARÐR",
+     "props": {
+      "capa": "#4a5a78",
+      "tocado": "sombrero"
+     },
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "rayo",
+     "x": 500
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "EL GUANTE",
+      "en": "THE GLOVE"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "sif",
+   "fondo": "fiordo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Entonces Hárbarðr dio el golpe más bajo: dijo que Sif, la esposa de Thor, tenía otro amante en casa.",
+     "en": "Then Hárbarðr struck lowest: he said Thor's wife Sif had a lover at home."
+    },
+    {
+     "es": "\"Mejor te ocuparías de eso\", dijo, \"que de pelear con gigantes\".",
+     "en": "\"You should deal with that,\" he said, \"instead of fighting giants.\""
+    },
+    {
+     "es": "Thor no estaba para bromas. \"¡Esa lengua tuya te traerá problemas!\", gritó.",
+     "en": "Thor was in no mood for jokes. \"That tongue of yours will get you in trouble!\" he shouted."
+    },
+    {
+     "es": "El barquero seguía riendo, y Thor seguía en la orilla.",
+     "en": "The ferryman kept laughing, and Thor was still stuck on the shore."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 1700,
+     "s": 0.7,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "thor",
+     "como": "thor_oficial",
+     "x": 500,
+     "mira": "der",
+     "rotulo": "THOR",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "lamenta"
+      },
+      {
+       "en": 2,
+       "hace": "golpea"
+      },
+      {
+       "en": 3,
+       "hace": "tiembla"
+      }
+     ]
+    },
+    {
+     "id": "harbardr",
+     "como": "anciano_nordico_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "rotulo": "HÁRBARÐR",
+     "props": {
+      "capa": "#4a5a78",
+      "tocado": "sombrero"
+     },
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 3,
+       "hace": "habla"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "temblor",
+     "dur": 1
+    },
+    {
+     "en": 2,
+     "tipo": "rayo",
+     "x": 500
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "EL GOLPE BAJO",
+      "en": "THE LOW BLOW"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "camino",
+   "fondo": "fiordo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Al final, Hárbarðr dijo que no lo cruzaría. \"El camino es largo\", dijo, \"da la vuelta por tierra\".",
+     "en": "In the end, Hárbarðr said he would not ferry him. \"It's a long road,\" he said, \"go around by land.\""
+    },
+    {
+     "es": "Thor preguntó cuánto tardaría. \"Quizá hasta el atardecer\", se rió el barquero.",
+     "en": "Thor asked how long it would take. \"Maybe until sunset,\" the ferryman laughed."
+    },
+    {
+     "es": "\"Te lo cobraré algún día\", prometió Thor.",
+     "en": "\"I will pay you back someday,\" Thor promised."
+    },
+    {
+     "es": "\"Anda\", dijo Hárbarðr, \"adonde los espíritus malos te lleven\".",
+     "en": "\"Get going,\" said Hárbarðr, \"to wherever evil spirits take you.\""
+    },
+    {
+     "es": "Y Thor tuvo que caminar hasta casa, dando toda la vuelta.",
+     "en": "And Thor had to walk home, the whole long way around."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 1700,
+     "s": 0.7,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "thor",
+     "como": "thor_oficial",
+     "x": 500,
+     "mira": "der",
+     "rotulo": "THOR",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "golpea"
+      },
+      {
+       "en": 4,
+       "hace": "camina",
+       "a": 100
+      }
+     ]
+    },
+    {
+     "id": "harbardr",
+     "como": "anciano_nordico_oficial",
+     "x": 1500,
+     "mira": "izq",
+     "rotulo": "HÁRBARÐR",
+     "props": {
+      "capa": "#4a5a78",
+      "tocado": "sombrero"
+     },
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "senala"
+      },
+      {
+       "en": 4,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 1500
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "EL CAMINO LARGO",
+      "en": "THE LONG WAY"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "quien",
+   "fondo": "asgard",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "El poema nunca lo dice, pero casi todos creen que Hárbarðr era Odín.",
+     "en": "The poem never says it, but nearly everyone believes Hárbarðr was Odin."
+    },
+    {
+     "es": "Hárbarðr es, de hecho, uno de los nombres de Odín en el Grímnismál.",
+     "en": "Hárbarðr is, in fact, one of Odin's names in the Grímnismál."
+    },
+    {
+     "es": "Algunos ven una comedia sobre el ingenio contra la fuerza. Otros ven una pelea entre nobles y campesinos.",
+     "en": "Some see a comedy of wit against strength. Others see a clash between nobles and farmers."
+    },
+    {
+     "es": "Lo que se sabe es que Thor, el más fuerte de los dioses, perdió una discusión.",
+     "en": "What we know is that Thor, the strongest of the gods, lost an argument."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 960,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "ofrece"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "¿QUIÉN ERA?",
+      "en": "WHO WAS HE?"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "asgard",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Odín tiene el ingenio, y Thor tiene la fuerza.",
+     "en": "Odin has the cunning, and Thor has the strength."
+    },
+    {
+     "es": "Los nórdicos sabían que un reino necesita las dos cosas.",
+     "en": "The Norse knew a world needs both."
+    },
+    {
+     "es": "¿Quién habría ganado esa discusión, Thor o Odín? Cuéntanos en los comentarios.",
+     "en": "Who would have won that argument, Thor or Odin? Tell us in the comments."
+    },
+    {
+     "es": "La próxima vez volvemos al origen del sacrificio más famoso de Odín: el ojo de Odín.",
+     "en": "Next time we return to Odin's most famous sacrifice: Odin's Eye."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 600,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      },
+      {
+       "en": 3,
+       "hace": "ofrece"
+      }
+     ]
+    },
+    {
+     "id": "thor",
+     "como": "thor_oficial",
+     "x": 1350,
+     "mira": "izq",
+     "rotulo": "THOR",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "asiente"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "EL OJO DE ODÍN",
+      "en": "ODIN'S EYE"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "Thor no pudo cruzar un río",
+    "en": "Thor could not cross a simple river"
+   },
+   "escena": "orilla",
+   "desde": 0,
+   "hasta": 4,
+   "foco": 900
+  },
+  {
+   "gancho": {
+    "es": "Se escondió en un guante, dijo el barquero",
+    "en": "\"You hid in a glove,\" said the ferryman"
+   },
+   "escena": "guante",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  },
+  {
+   "gancho": {
+    "es": "El barquero era Odín disfrazado",
+    "en": "The ferryman was Odin in disguise"
+   },
+   "escena": "quien",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  }
+ ]
+}

@@ -1,0 +1,964 @@
+{
+ "id": "nordicas-26-odin-suttung-y-gunnlod",
+ "serie": "nordicas",
+ "numero": "26",
+ "titulo": {
+  "es": "Odín, Suttung y Gunnlöd",
+  "en": "Odin, Suttung and Gunnlöd"
+ },
+ "tituloGriego": "ODIN, SUTTUNG AND GUNNLÖD",
+ "miniatura": {
+  "heroe": "odin_oficial",
+  "rival": "jotun_nordico_oficial"
+ },
+ "siguiente": {
+  "es": "El duelo de acertijos con Vafþrúðnir",
+  "en": "The Riddle Duel with Vafþrúðnir"
+ },
+ "escenas": [
+  {
+   "id": "enganche",
+   "fondo": "salon",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "La última vez, dos enanos convirtieron la sangre de un hombre asesinado en un hidromiel mágico.",
+     "en": "Last time, two dwarves turned a murdered man's blood into a magic mead."
+    },
+    {
+     "es": "Ahora ese hidromiel está escondido dentro de una montaña.",
+     "en": "Now that mead is hidden deep inside a mountain."
+    },
+    {
+     "es": "Odín lo quiere de vuelta, y no piensa pedirlo con buenos modales.",
+     "en": "Odin wants it back, and he is not going to ask politely."
+    },
+    {
+     "es": "Esta es la historia del mayor robo de la mitología nórdica.",
+     "en": "This is the story of the greatest theft in Norse myth."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 960,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "asiente"
+      },
+      {
+       "en": 3,
+       "hace": "ofrece"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "EL GRAN ROBO",
+      "en": "THE GREAT THEFT"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "montana",
+   "fondo": "jotunheim",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "El gigante Suttung guardó el hidromiel en una montaña llamada Hnitbjörg.",
+     "en": "The giant Suttung stored the mead inside a mountain called Hnitbjörg."
+    },
+    {
+     "es": "Puso a su hija Gunnlöd a vigilarlo.",
+     "en": "He put his daughter Gunnlöd on guard."
+    },
+    {
+     "es": "El hidromiel estaba en tres recipientes: Óðrerir, Són y Boðn.",
+     "en": "The mead sat in three vessels: Óðrerir, Són and Boðn."
+    },
+    {
+     "es": "Ningún dios podía entrar por la fuerza. Odín tendría que usar la astucia.",
+     "en": "No god could force his way in. Odin would have to use cunning."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "monte_nevado",
+     "x": 960,
+     "s": 1,
+     "capa": "fondo"
+    },
+    {
+     "tipo": "cofre",
+     "x": 960,
+     "s": 0.6,
+     "capa": "medio"
+    }
+   ],
+   "actores": [
+    {
+     "id": "suttung",
+     "como": "jotun_nordico_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "rotulo": "SUTTUNG",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "senala"
+      },
+      {
+       "en": 1,
+       "hace": "habla"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    },
+    {
+     "id": "gunnlod",
+     "como": "mujer",
+     "x": 650,
+     "mira": "der",
+     "rotulo": "GUNNLÖD",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "ofrece"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 2,
+     "tipo": "destello",
+     "x": 650
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "HNITBJÖRG",
+      "en": "HNITBJÖRG"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "segadores",
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Odín se disfrazó de viajero y dijo llamarse Bölverk, que significa \"el que hace daño\".",
+     "en": "Odin disguised himself as a traveler and called himself Bölverk, which means \"worker of woe.\""
+    },
+    {
+     "es": "Llegó a un campo donde nueve hombres segaban heno con guadañas sin filo.",
+     "en": "He came to a field where nine men were cutting hay with dull scythes."
+    },
+    {
+     "es": "Los hombres trabajaban para Baugi, el hermano de Suttung.",
+     "en": "The men worked for Baugi, the brother of Suttung."
+    },
+    {
+     "es": "Odín sacó una piedra de afilar y les ofreció afilar las guadañas.",
+     "en": "Odin took out a whetstone and offered to sharpen their scythes."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 1700,
+     "s": 0.8,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "rotulo": "BÖLVERK",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "camina",
+       "a": 1100
+      },
+      {
+       "en": 3,
+       "hace": "ofrece"
+      }
+     ]
+    },
+    {
+     "id": "s1",
+     "como": "hombre_nordico_oficial",
+     "x": 600,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "lamenta"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "como": "hombre_nordico_oficial",
+     "x": 850,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "lamenta"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "BÖLVERK",
+      "en": "BÖLVERK"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "piedra",
+   "fondo": "campo",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Las guadañas afiladas cortaban mucho mejor, y los nueve hombres quisieron la piedra.",
+     "en": "The sharp scythes cut far better, and all nine men wanted the stone."
+    },
+    {
+     "es": "Odín dijo que la daría a quien la pidiera, y la lanzó por el aire.",
+     "en": "Odin said he would give it to whoever asked, and tossed it into the air."
+    },
+    {
+     "es": "Los nueve se lanzaron a atraparla y, en la pelea, se cortaron el cuello unos a otros.",
+     "en": "All nine lunged for it, and in the struggle they cut each other's throats."
+    },
+    {
+     "es": "Así, de golpe, Baugi se quedó sin trabajadores.",
+     "en": "In a single moment, Baugi was left with no workers."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 1700,
+     "s": 0.8,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 1400,
+     "mira": "izq",
+     "rotulo": "BÖLVERK",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "levanta"
+      },
+      {
+       "en": 1,
+       "hace": "lanza"
+      },
+      {
+       "en": 3,
+       "hace": "calla"
+      }
+     ]
+    },
+    {
+     "id": "s1",
+     "como": "hombre_nordico_oficial",
+     "x": 600,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "golpea"
+      },
+      {
+       "en": 2.5,
+       "hace": "cae"
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "como": "hombre_nordico_oficial",
+     "x": 850,
+     "mira": "izq",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "golpea"
+      },
+      {
+       "en": 2.6,
+       "hace": "cae"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1.5,
+     "tipo": "destello",
+     "x": 960
+    },
+    {
+     "en": 2.5,
+     "tipo": "oscurecer",
+     "dur": 1
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "LA PIEDRA DE AFILAR",
+      "en": "THE WHETSTONE"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  },
+  {
+   "id": "baugi",
+   "fondo": "aldea",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Esa noche Odín pidió posada en casa de Baugi, que estaba desesperado.",
+     "en": "That night Odin asked for shelter at Baugi's farm, and Baugi was desperate."
+    },
+    {
+     "es": "Odín se ofreció a hacer el trabajo de nueve hombres durante todo el verano.",
+     "en": "Odin offered to do the work of nine men for the whole summer."
+    },
+    {
+     "es": "Su pago sería un solo trago del hidromiel de Suttung.",
+     "en": "His price was a single drink of Suttung's mead."
+    },
+    {
+     "es": "Baugi dijo que el hidromiel no era suyo, pero que iría con Suttung.",
+     "en": "Baugi said the mead was not his, but he would ask Suttung."
+    },
+    {
+     "es": "Suttung se negó. No daría ni una gota, dijo, ni a su hermano ni a nadie.",
+     "en": "Suttung refused. He would not give a single drop, he said, not even to his brother."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "casa_larga",
+     "x": 1600,
+     "s": 1,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 700,
+     "mira": "der",
+     "rotulo": "BÖLVERK",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "ofrece"
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      }
+     ]
+    },
+    {
+     "id": "baugi",
+     "como": "jotun_nordico_oficial",
+     "x": 1300,
+     "mira": "izq",
+     "rotulo": "BAUGI",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "lamenta"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      },
+      {
+       "en": 4,
+       "hace": "calla"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "UN TRATO",
+      "en": "A BARGAIN"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "taladro",
+   "fondo": "jotunheim",
+   "camara": {
+    "de": 0,
+    "a": 200,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Al llegar el invierno, Odín le dijo a Baugi: \"Vamos a conseguir ese hidromiel por nuestra cuenta\".",
+     "en": "When winter came, Odin told Baugi: \"We will get that mead ourselves.\""
+    },
+    {
+     "es": "Baugi taladró la montaña con una barrena llamada Rati.",
+     "en": "Baugi drilled into the mountain with an auger called Rati."
+    },
+    {
+     "es": "Odín sopló en el agujero, y las astillas volaron de vuelta hacia él. Baugi lo estaba engañando.",
+     "en": "Odin blew into the hole, and the chips flew back at him. Baugi was cheating."
+    },
+    {
+     "es": "Lo hizo seguir taladrando hasta que el soplido atravesó la roca.",
+     "en": "He made Baugi keep drilling until Odin's breath went all the way through."
+    },
+    {
+     "es": "Entonces Odín se volvió una serpiente y se deslizó por el agujero. Baugi intentó clavarle la barrena, pero falló.",
+     "en": "Then Odin turned into a snake and slid in. Baugi stabbed at him with the auger and missed."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "monte_nevado",
+     "x": 1000,
+     "s": 1.2,
+     "capa": "fondo"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 700,
+     "mira": "der",
+     "rotulo": "BÖLVERK",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "senala"
+      },
+      {
+       "en": 2,
+       "hace": "habla"
+      },
+      {
+       "en": 4,
+       "hace": "transforma"
+      }
+     ]
+    },
+    {
+     "id": "baugi",
+     "como": "jotun_nordico_oficial",
+     "x": 1250,
+     "mira": "izq",
+     "rotulo": "BAUGI",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "golpea"
+      },
+      {
+       "en": 3,
+       "hace": "golpea"
+      },
+      {
+       "en": 4,
+       "hace": "golpea"
+      }
+     ]
+    },
+    {
+     "id": "serpiente",
+     "como": "serpiente",
+     "x": 950,
+     "mira": "der",
+     "rotulo": "",
+     "pasos": [
+      {
+       "en": 4,
+       "hace": "aparece"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 1,
+     "tipo": "polvo",
+     "x": 1000
+    },
+    {
+     "en": 2,
+     "tipo": "humo",
+     "x": 900
+    },
+    {
+     "en": 4,
+     "tipo": "destello",
+     "x": 900
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "LA BARRENA",
+      "en": "THE AUGER"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "gunnlod",
+   "fondo": "cueva",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Dentro de la montaña, Odín encontró a Gunnlöd, que cuidaba los tres recipientes.",
+     "en": "Inside the mountain, Odin found Gunnlöd, who guarded the three vessels."
+    },
+    {
+     "es": "Se quedó con ella tres noches.",
+     "en": "He stayed with her for three nights."
+    },
+    {
+     "es": "Ella le permitió beber tres tragos, uno de cada recipiente.",
+     "en": "She let him drink three sips, one from each vessel."
+    },
+    {
+     "es": "Pero cada trago de Odín fue tan grande que vació el recipiente entero.",
+     "en": "But each of Odin's sips was so huge that it emptied the whole vessel."
+    },
+    {
+     "es": "Cuando terminó, no quedaba una gota de hidromiel.",
+     "en": "When he was done, not one drop of mead was left."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "cofre",
+     "x": 1000,
+     "s": 0.6,
+     "capa": "medio"
+    },
+    {
+     "tipo": "cofre",
+     "x": 1150,
+     "s": 0.5,
+     "capa": "medio"
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 700,
+     "mira": "der",
+     "rotulo": "ODIN",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "toma"
+      },
+      {
+       "en": 3,
+       "hace": "toma"
+      },
+      {
+       "en": 4,
+       "hace": "brilla"
+      }
+     ]
+    },
+    {
+     "id": "gunnlod",
+     "como": "mujer",
+     "x": 1250,
+     "mira": "izq",
+     "rotulo": "GUNNLÖD",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "ofrece"
+      },
+      {
+       "en": 2,
+       "hace": "ofrece"
+      },
+      {
+       "en": 3,
+       "hace": "lamenta"
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 3,
+     "tipo": "luz",
+     "x": 700
+    },
+    {
+     "en": 4,
+     "tipo": "destello",
+     "x": 700
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "TRES TRAGOS",
+      "en": "THREE SIPS"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "vuelo",
+   "fondo": "nieve",
+   "camara": {
+    "de": 0,
+    "a": 300,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "Odín se volvió un águila y salió volando de la montaña a toda velocidad.",
+     "en": "Odin turned into an eagle and shot out of the mountain."
+    },
+    {
+     "es": "Suttung vio la fuga, se volvió otra águila y salió tras él.",
+     "en": "Suttung saw him escape, turned into an eagle too, and gave chase."
+    },
+    {
+     "es": "Los dioses vieron venir al águila de Odín y pusieron grandes vasijas en el patio de Asgard.",
+     "en": "The gods saw Odin's eagle coming and set out big vats in the yard of Asgard."
+    },
+    {
+     "es": "Odín escupió el hidromiel dentro de las vasijas, justo antes de que Suttung lo alcanzara.",
+     "en": "Odin spat the mead into the vats, just before Suttung could catch him."
+    },
+    {
+     "es": "Un poco se derramó por detrás. Según Snorri, cualquiera puede tomar esa parte: es la de los malos poetas.",
+     "en": "A little spilled out behind. In Snorri's telling, anyone can have that part: it is the share of bad poets."
+    }
+   ],
+   "actores": [
+    {
+     "id": "aguila_odin",
+     "como": "aguila",
+     "x": 600,
+     "mira": "der",
+     "rotulo": "ODIN",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "aparece"
+      },
+      {
+       "en": 2,
+       "hace": "vuela",
+       "a": 1200
+      }
+     ]
+    },
+    {
+     "id": "aguila_suttung",
+     "como": "aguila",
+     "x": 300,
+     "mira": "der",
+     "rotulo": "SUTTUNG",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 3,
+       "hace": "vuela",
+       "a": 1100
+      }
+     ]
+    }
+   ],
+   "efectos": [
+    {
+     "en": 0,
+     "tipo": "nieve",
+     "dur": 5
+    },
+    {
+     "en": 3,
+     "tipo": "destello",
+     "x": 1500
+    }
+   ],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "DOS ÁGUILAS",
+      "en": "TWO EAGLES"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 4
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": "asgard",
+   "camara": {
+    "de": 0,
+    "a": 150,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "frases": [
+    {
+     "es": "El resto, Odín lo entregó a los dioses y a los poetas con talento. Por eso los poetas llaman a la poesía \"el botín de Odín\".",
+     "en": "Odin gave the rest to the gods and to gifted poets. That is why poets call poetry \"Odin's catch.\""
+    },
+    {
+     "es": "Pero en el Hávamál, el propio Odín admite que rompió su promesa y que dejó llorando a Gunnlöd.",
+     "en": "But in the Hávamál, Odin himself admits he broke his word and left Gunnlöd weeping."
+    },
+    {
+     "es": "¿Fue un robo justificado, o solo un engaño más? Cuéntanos en los comentarios.",
+     "en": "Was it a justified theft, or just one more trick? Tell us in the comments."
+    },
+    {
+     "es": "La próxima vez, Odín arriesga su cabeza en un duelo de acertijos: el duelo con Vafþrúðnir.",
+     "en": "Next time, Odin bets his head in a battle of riddles: The Riddle Duel with Vafþrúðnir."
+    }
+   ],
+   "actores": [
+    {
+     "id": "odin",
+     "como": "odin_oficial",
+     "x": 960,
+     "mira": "der",
+     "pasos": [
+      {
+       "en": 0,
+       "hace": "habla"
+      },
+      {
+       "en": 1,
+       "hace": "lamenta"
+      },
+      {
+       "en": 2,
+       "hace": "senala"
+      },
+      {
+       "en": 3,
+       "hace": "asiente"
+      }
+     ]
+    }
+   ],
+   "efectos": [],
+   "rotulos": [
+    {
+     "en": 0.3,
+     "texto": {
+      "es": "EL DUELO DE ACERTIJOS",
+      "en": "THE RIDDLE DUEL"
+     },
+     "x": 960,
+     "y": 210,
+     "hasta": 3
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "gancho": {
+    "es": "Nueve hombres, una piedra, un solo trato",
+    "en": "Nine men, one stone, and one deal"
+   },
+   "escena": "segadores",
+   "desde": 0,
+   "hasta": 3,
+   "foco": 900
+  },
+  {
+   "gancho": {
+    "es": "Una serpiente dentro de una montaña",
+    "en": "A snake slipped inside a mountain"
+   },
+   "escena": "taladro",
+   "desde": 0,
+   "hasta": 4,
+   "foco": 900
+  },
+  {
+   "gancho": {
+    "es": "Odín vació tres recipientes de un trago",
+    "en": "Odin emptied three vessels in one sip"
+   },
+   "escena": "gunnlod",
+   "desde": 0,
+   "hasta": 4,
+   "foco": 900
+  }
+ ]
+}
