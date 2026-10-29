@@ -1,0 +1,849 @@
+{
+  "id": "egipcias-27-ptah-de-menfis",
+  "serie": "egipcias",
+  "numero": "27",
+  "titulo": {
+    "es": "Ptah de Menfis",
+    "en": "Ptah of Memphis"
+  },
+  "tituloGriego": "PTAH OF MEMPHIS",
+  "miniatura": {
+    "heroe": "ptah_oficial",
+    "rival": "sekhmet_oficial"
+  },
+  "siguiente": {
+    "es": "Amón de Tebas",
+    "en": "Amun of Thebes"
+  },
+  "escenas": [
+    {
+      "id": "menfis",
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Sekhmet tenía un esposo en la ciudad de Menfis. Era Ptah.",
+          "en": "Sekhmet had a husband in the city of Memphis. His name was Ptah."
+        },
+        {
+          "es": "Se lo dibuja envuelto como una momia, con un gorro ajustado, y un cetro en las manos.",
+          "en": "He is drawn wrapped like a mummy, with a tight cap, holding a staff."
+        },
+        {
+          "es": "Según la tradición, Menfis la fundó el primer rey que unió todo Egipto.",
+          "en": "By tradition, Memphis was founded by the first king who united all of Egypt."
+        },
+        {
+          "es": "Su nombre antiguo era Hut-ka-Ptah, 'la casa del ka de Ptah'. Los griegos lo dijeron 'Aigyptos', y de ahí viene la palabra Egipto.",
+          "en": "Its old name was Hut-ka-Ptah, 'house of the spirit of Ptah'. The Greeks said 'Aigyptos', and that is where 'Egypt' comes from."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilono",
+          "x": 1600,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "obelisco",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ptah",
+          "como": "ptah_oficial",
+          "x": 950,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 1.2
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.5
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 950,
+          "y": 450,
+          "intensidad": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "PTAH DE MENFIS",
+            "en": "PTAH OF MEMPHIS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "artesano",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ptah era el dios de los artesanos: escultores, carpinteros y orfebres.",
+          "en": "Ptah was the god of craftsmen: sculptors, carpenters, and goldsmiths."
+        },
+        {
+          "es": "Su gran sacerdote tenía un título: 'El Mayor de los que dirigen a los artesanos'.",
+          "en": "His high priest had a title: 'Greatest of the Directors of Craftsmen'."
+        },
+        {
+          "es": "Los griegos lo compararon con Hefesto, su dios herrero.",
+          "en": "The Greeks compared him to Hephaestus, their god of the forge."
+        },
+        {
+          "es": "Para los egipcios, hacer una estatua era casi un acto sagrado.",
+          "en": "For the Egyptians, making a statue was almost a sacred act."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "estatua",
+          "x": 1500,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ptah",
+          "como": "ptah_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "artesano",
+          "como": "aldeano_egipcio_c_oficial",
+          "x": 480,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "dur": 2,
+          "x": 500,
+          "y": 600
+        },
+        {
+          "en": 2,
+          "tipo": "polvo",
+          "dur": 2,
+          "x": 500,
+          "y": 700
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "EL DIOS DE LOS ARTESANOS",
+            "en": "THE GOD OF CRAFTSMEN"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "palabra",
+      "fondo": "nun",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero Ptah hizo algo más grande: creó el mundo. Los sacerdotes de Menfis tenían su propia versión.",
+          "en": "But Ptah did something greater: he made the world. The priests of Memphis told their own version."
+        },
+        {
+          "es": "Primero, Ptah pensó con su corazón. Los egipcios creían que el corazón era el lugar de los pensamientos.",
+          "en": "First, Ptah thought with his heart. The Egyptians believed the heart was where thoughts lived."
+        },
+        {
+          "es": "Después habló con su lengua. Y todo lo que nombraba, existía.",
+          "en": "Then he spoke with his tongue. And everything he named came to be."
+        },
+        {
+          "es": "Según este texto, así nacieron los dioses. Hasta Atum, que en otras versiones se crea solo.",
+          "en": "In this text, that is how the gods were born. Even Atum, who makes himself in other versions."
+        }
+      ],
+      "elementos": [],
+      "actores": [
+        {
+          "id": "ptah",
+          "como": "ptah_oficial",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "asiente"
+            },
+            {
+              "en": 2,
+              "hace": "habla"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "atum",
+          "como": "atum_oficial",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 960,
+          "y": 400,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2.5,
+          "tipo": "chispas",
+          "dur": 3,
+          "x": 960,
+          "y": 400
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "EL CORAZÓN Y LA LENGUA",
+            "en": "THE HEART AND THE TONGUE"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "piedra",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Conocemos esta historia por una piedra negra: la Piedra de Shabaka.",
+          "en": "We know this story from a black stone: the Shabaka Stone."
+        },
+        {
+          "es": "Shabaka, rey de Nubia que gobernó Egipto, la hizo grabar hacia el año 700 antes de Cristo.",
+          "en": "Shabaka, a king from Nubia who ruled Egypt, had it carved around the year 700 BC."
+        },
+        {
+          "es": "Dijo que copió un papiro muy viejo, comido por los gusanos, y que no quería que se perdiera.",
+          "en": "He said he copied a very old papyrus, eaten by worms, and did not want it lost."
+        },
+        {
+          "es": "Siglos después, alguien usó la piedra como rueda de molino para moler grano. Aún se ven los círculos.",
+          "en": "Centuries later, someone used the stone as a millstone to grind grain. The rings are still visible."
+        },
+        {
+          "es": "Hoy está en el Museo Británico, en Londres.",
+          "en": "Today it sits in the British Museum in London."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "estela",
+          "x": 1300,
+          "s": 1.2,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "papiro",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "rey",
+          "como": "faraon_b_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "escriba",
+          "como": "escriba_oficial",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "lamenta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "polvo",
+          "dur": 3,
+          "x": 1300,
+          "y": 650
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LA PIEDRA DE SHABAKA",
+            "en": "THE SHABAKA STONE"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "familia",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ptah tenía una familia. Su esposa era Sekhmet, la leona del episodio anterior.",
+          "en": "Ptah had a family. His wife was Sekhmet, the lioness from the last episode."
+        },
+        {
+          "es": "Su hijo era Nefertem, el dios del loto azul, la flor de la que nació el sol.",
+          "en": "His son was Nefertem, god of the blue lotus, the flower from which the sun was born."
+        },
+        {
+          "es": "Juntos formaban la familia divina de Menfis.",
+          "en": "Together they made the divine family of Memphis."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "loto",
+          "x": 1000,
+          "s": 1.2
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ptah",
+          "como": "ptah_oficial",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "abraza"
+            }
+          ]
+        },
+        {
+          "id": "sekhmet",
+          "como": "sekhmet_oficial",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 1000,
+          "y": 400,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA FAMILIA DE MENFIS",
+            "en": "THE FAMILY OF MEMPHIS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "apis",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En Menfis vivía un toro sagrado: Apis.",
+          "en": "In Memphis lived a sacred bull: Apis."
+        },
+        {
+          "es": "Los sacerdotes buscaban un ternero negro con marcas blancas especiales, como un triángulo en la frente.",
+          "en": "Priests searched for a black calf with special white marks, like a triangle on its forehead."
+        },
+        {
+          "es": "Lo cuidaban en un templo como a un rey. Era una señal viva de Ptah.",
+          "en": "They cared for him in a temple like a king. He was a living sign of Ptah."
+        },
+        {
+          "es": "Cuando moría, lo momificaban y lo enterraban en enormes sarcófagos de piedra en Saqqara.",
+          "en": "When he died, he was mummified and buried in huge stone coffins at Saqqara."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "altar",
+          "x": 1550,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "apis",
+          "como": "toro_egipcio_oficial",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 800,
+          "y": 550,
+          "intensidad": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "EL TORO APIS",
+            "en": "THE APIS BULL"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "imhotep",
+      "fondo": "piramides",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ptah también tuvo un 'hijo' humano: Imhotep, el arquitecto de la pirámide escalonada.",
+          "en": "Ptah also had a human 'son': Imhotep, the architect of the Step Pyramid."
+        },
+        {
+          "es": "Siglos después de su muerte, los egipcios lo adoraron como dios sanador.",
+          "en": "Centuries after his death, the Egyptians worshiped him as a healing god."
+        },
+        {
+          "es": "Decían que su padre era Ptah. Era justo: Ptah era el dios que hace cosas con las manos y con la mente.",
+          "en": "They said his father was Ptah. It fit: Ptah was the god who made things with hands and mind."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piramide",
+          "x": 1500,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "imhotep",
+          "como": "imhotep_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "ptah",
+          "como": "ptah_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 700,
+          "y": 450,
+          "intensidad": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "IMHOTEP · HIJO DE PTAH",
+            "en": "IMHOTEP · SON OF PTAH"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hoy casi nada queda de Menfis: palmeras, y una gran estatua caída del rey Ramsés II.",
+          "en": "Today little is left of Memphis: palm trees, and a great fallen statue of King Ramesses II."
+        },
+        {
+          "es": "Pero la idea de Ptah sigue viva: un pensamiento y una palabra pueden crear un mundo.",
+          "en": "But Ptah's idea lives on: a thought and a word can make a world."
+        },
+        {
+          "es": "Si pudieras crear algo solo con pensar y hablar, ¿qué sería? Cuéntanos en los comentarios.",
+          "en": "If you could make anything with just a thought and a word, what would it be? Tell us in the comments."
+        },
+        {
+          "es": "En Tebas reinaba otro dios, cuyo nombre significa 'el oculto'. Ese es el próximo episodio: Amón de Tebas.",
+          "en": "In Thebes reigned another god, whose name means 'the hidden one'. That is the next episode: Amun of Thebes."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "palmera",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ptah",
+          "como": "ptah_oficial",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "ramses",
+          "como": "ramses_oficial",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 1500,
+          "y": 400,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "PRÓXIMO: AMÓN DE TEBAS",
+            "en": "NEXT: AMUN OF THEBES"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El dios que creó el mundo con una palabra",
+        "en": "The god who made the world with a word"
+      },
+      "escena": "palabra",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "La piedra sagrada que se usó para moler grano",
+        "en": "The sacred stone used to grind grain"
+      },
+      "escena": "piedra",
+      "desde": 0,
+      "hasta": 4,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "El toro negro que era una señal viva de un dios",
+        "en": "The black bull that was a living sign of a god"
+      },
+      "escena": "apis",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 900
+    }
+  ]
+}

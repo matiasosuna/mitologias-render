@@ -1,0 +1,1019 @@
+{
+  "id": "egipcias-24-thoth-senor-de-las-palabras",
+  "serie": "egipcias",
+  "numero": "24",
+  "titulo": {
+    "es": "Thoth, señor de las palabras",
+    "en": "Thoth, Lord of Words"
+  },
+  "tituloGriego": "THOTH, LORD OF WORDS",
+  "miniatura": {
+    "heroe": "thoth_oficial",
+    "rival": "set_oficial"
+  },
+  "siguiente": {
+    "es": "Anubis, guardián de los muertos",
+    "en": "Anubis, Guardian of the Dead"
+  },
+  "escenas": [
+    {
+      "id": "escriba",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuando Horus y Set discutían ante los dioses, un dios con cabeza de pájaro anotaba cada palabra.",
+          "en": "When Horus and Set argued before the gods, a god with a bird's head wrote down every word."
+        },
+        {
+          "es": "Era Thoth, el escriba de los dioses.",
+          "en": "This was Thoth, the scribe of the gods."
+        },
+        {
+          "es": "Los egipcios lo llamaban Djehuty y lo dibujaban con cabeza de ibis, un ave de pico largo y curvo.",
+          "en": "The Egyptians called him Djehuty, and drew him with the head of an ibis, a bird with a long, curved beak."
+        },
+        {
+          "es": "A veces era un babuino, un mono de cara larga que grita al amanecer, como saludando al sol.",
+          "en": "Sometimes he was a baboon, a long-faced monkey that shouts at sunrise, as if greeting the sun."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "papiro",
+          "x": 350,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 1600,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "como": "thoth_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "habla"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        },
+        {
+          "id": "escriba",
+          "como": "escriba_oficial",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.5
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 900,
+          "y": 400,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "THOTH · ESCRIBA DE LOS DIOSES",
+            "en": "THOTH · SCRIBE OF THE GODS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "ciudad",
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Su ciudad sagrada se llamaba Khemenu, 'la ciudad de los ocho'. Los griegos la llamaron Hermópolis.",
+          "en": "His holy city was Khemenu, 'town of the eight'. The Greeks later called it Hermopolis."
+        },
+        {
+          "es": "Los ocho eran dioses muy antiguos que, según los sacerdotes de allí, existían antes del mundo.",
+          "en": "The eight were very old gods who, the priests there said, existed before the world."
+        },
+        {
+          "es": "Cerca de la ciudad hay galerías subterráneas llenas de ibis momificados.",
+          "en": "Near the city there are underground galleries filled with mummified ibises."
+        },
+        {
+          "es": "Los peregrinos compraban esas aves como ofrenda para Thoth.",
+          "en": "Pilgrims bought these birds as offerings to Thoth."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilono",
+          "x": 1500,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 380,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "anfora",
+          "x": 1050,
+          "s": 0.9
+        }
+      ],
+      "actores": [
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "como": "thoth_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 1250,
+          "y": 420,
+          "intensidad": 0.3
+        },
+        {
+          "en": 2,
+          "tipo": "niebla",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "KHEMENU · LA CIUDAD DE LOS OCHO",
+            "en": "KHEMENU · TOWN OF THE EIGHT"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "escritura",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los egipcios creían que Thoth inventó la escritura. Llamaban a los jeroglíficos 'las palabras del dios'.",
+          "en": "The Egyptians believed Thoth invented writing. They called hieroglyphs 'the words of the god'."
+        },
+        {
+          "es": "Un escriba usaba una paleta, una pluma de caña y tinta negra y roja.",
+          "en": "A scribe used a palette, a reed pen, and black and red ink."
+        },
+        {
+          "es": "Los griegos contaron otra versión. Platón escribió que un dios, Theuth, ofreció la escritura a un rey.",
+          "en": "The Greeks told another version. Plato wrote that a god, Theuth, offered writing to a king."
+        },
+        {
+          "es": "El rey dijo que no. Según Platón, la gente dejaría de ejercitar la memoria y olvidaría más.",
+          "en": "The king refused. In Plato's story, people would stop training their memory and forget more."
+        },
+        {
+          "es": "¿Tenía razón el rey? Tú lo sabes mejor que nadie: estás leyendo esto en una pantalla.",
+          "en": "Was the king right? You may know the answer better than anyone: you are reading this on a screen."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1500,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "papiro",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "escriba",
+          "como": "escriba_b_oficial",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "como": "thoth_oficial",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "como": "faraon_oficial",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "niega"
+            },
+            {
+              "en": 4,
+              "hace": "habla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 1000,
+          "y": 420,
+          "intensidad": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LAS PALABRAS DEL DIOS",
+            "en": "THE WORDS OF THE GOD"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "luna",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Thoth también era dios de la luna. A menudo lleva la luna sobre la cabeza.",
+          "en": "Thoth was also a god of the moon. He is often shown wearing the moon on his head."
+        },
+        {
+          "es": "Plutarco cuenta que jugó a un juego de mesa con la luna y le ganó cinco días de luz.",
+          "en": "Plutarch tells that he played a board game with the moon and won five days of her light."
+        },
+        {
+          "es": "Con esos días extra, el año quedó en 365 días.",
+          "en": "With those extra days, the year came to 365 days."
+        },
+        {
+          "es": "Por eso Thoth era el señor del tiempo: contaba los meses, los años y los reinados.",
+          "en": "That is why Thoth was lord of time. He counted the months, the years, and the reigns of kings."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "luna",
+          "x": 1500,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "palmera",
+          "x": 300,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "como": "thoth_oficial",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "habla"
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 2
+        },
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 4
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 1500,
+          "y": 250,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "SEÑOR DEL TIEMPO",
+            "en": "LORD OF TIME"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "juicio",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En el juicio de Horus y Set, los dioses discutieron durante años sin ponerse de acuerdo.",
+          "en": "At the trial of Horus and Set, the gods argued for years without agreeing."
+        },
+        {
+          "es": "Fue Thoth quien escribió la carta a la diosa Neit, pidiéndole su consejo.",
+          "en": "It was Thoth who wrote the letter to the goddess Neith, asking for her advice."
+        },
+        {
+          "es": "Cuando Set le arrancó el ojo a Horus, en algunos textos es Thoth quien lo cura.",
+          "en": "When Set tore out the eye of Horus, some texts say Thoth healed it."
+        },
+        {
+          "es": "Ese ojo sano se llamó wedjat, 'el completo'. Los egipcios lo usaban como amuleto de protección.",
+          "en": "That healed eye was called wedjat, 'the whole one'. Egyptians wore it as a charm of protection."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1560,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "horus",
+          "como": "horus_oficial",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "sorprende"
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "set",
+          "como": "set_oficial",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "como": "thoth_oficial",
+          "x": 930,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.5,
+              "hace": "brilla",
+              "dur": 1.2
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.4,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 560,
+          "y": 420,
+          "intensidad": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "destello",
+          "dur": 0.5,
+          "x": 560,
+          "y": 420
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "EL OJO SANO · WEDJAT",
+            "en": "THE HEALED EYE · WEDJAT"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "escorpion",
+      "fondo": "juncal",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Horus era un niño escondido en los juncos de los pantanos. Un día, un escorpión lo picó.",
+          "en": "Horus was a child hiding in the marsh reeds. One day, a scorpion stung him."
+        },
+        {
+          "es": "Isis gritó pidiendo ayuda, y su voz subió hasta el cielo.",
+          "en": "Isis cried out for help, and her voice rose all the way to the sky."
+        },
+        {
+          "es": "La barca del sol se detuvo. Ra mandó a Thoth a ayudar al niño.",
+          "en": "The sun's boat stopped. Ra sent Thoth down to help the child."
+        },
+        {
+          "es": "Thoth dijo un hechizo para sacar el veneno. El niño se curó, y la barca siguió su camino.",
+          "en": "Thoth spoke a spell to drive out the poison. The boy healed, and the boat sailed on."
+        },
+        {
+          "es": "Los egipcios grababan estos hechizos en piedra. Echaban agua sobre ellos y la bebían contra las picaduras.",
+          "en": "Egyptians carved these spells in stone. They poured water over them, then drank it against stings."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "papiro",
+          "x": 300,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "barca_solar",
+          "x": 1500,
+          "s": 0.6,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "isis",
+          "como": "isis_oficial",
+          "x": 640,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "como": "horus_nino_oficial",
+          "x": 1050,
+          "escala": 0.8,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "cae"
+            },
+            {
+              "en": 3,
+              "hace": "levantarse"
+            }
+          ]
+        },
+        {
+          "id": "escorpion",
+          "como": "escorpion_egipcio_oficial",
+          "x": 1300,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "como": "thoth_oficial",
+          "x": 1500,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "habla"
+            },
+            {
+              "en": 3.5,
+              "hace": "brilla",
+              "dur": 1.2
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 1500,
+          "y": 300,
+          "intensidad": 0.5
+        },
+        {
+          "en": 3.4,
+          "tipo": "chispas",
+          "dur": 2,
+          "x": 1050,
+          "y": 600
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "EL VENENO",
+            "en": "THE POISON"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "balanza",
+      "fondo": "sala_juicio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al final de la vida, Thoth tenía otro trabajo.",
+          "en": "At the end of life, Thoth had another job."
+        },
+        {
+          "es": "En la sala del juicio, el corazón del muerto se pesaba contra la pluma de Maat.",
+          "en": "In the hall of judgment, the heart of the dead was weighed against the feather of Maat."
+        },
+        {
+          "es": "Thoth estaba junto a la balanza, con su pluma de caña, y escribía el resultado.",
+          "en": "Thoth stood by the scale with his reed pen and wrote down the result."
+        },
+        {
+          "es": "Si el corazón era ligero, Osiris dejaba pasar al muerto. Si pesaba, lo devoraba Ammit.",
+          "en": "If the heart was light, Osiris let the dead pass. If it was heavy, Ammit devoured it."
+        },
+        {
+          "es": "Nadie podía discutir lo que Thoth escribía. Su registro era la última palabra.",
+          "en": "Nobody could argue with what Thoth wrote. His record had the last word."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "balanza",
+          "x": 960,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "como": "thoth_oficial",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "habla"
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "como": "anubis_oficial",
+          "x": 620,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "ammit",
+          "como": "ammit_oficial",
+          "x": 1700,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 1350,
+          "y": 400,
+          "intensidad": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "THOTH ANOTA EL VEREDICTO",
+            "en": "THOTH RECORDS THE VERDICT"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hay cuentos sobre un Libro de Thoth, con hechizos para entender a los animales y ver a los dioses.",
+          "en": "Some tales speak of a Book of Thoth, with spells to understand animals and see the gods."
+        },
+        {
+          "es": "Ya vimos a Setne, que lo robó y pagó un precio muy alto.",
+          "en": "We already met Setne, who stole it and paid a heavy price."
+        },
+        {
+          "es": "Cuando los griegos llegaron a Egipto, vieron a Thoth y pensaron en Hermes. Así nació Hermes Trismegisto, 'tres veces grande'.",
+          "en": "When the Greeks came to Egypt, they saw Thoth and thought of Hermes. This became Hermes Trismegistus, 'thrice great'."
+        },
+        {
+          "es": "¿Por qué crees que los egipcios confiaban en un dios escriba? Cuéntanos en los comentarios.",
+          "en": "Why do you think Egyptians trusted a god who was a scribe? Tell us in the comments."
+        },
+        {
+          "es": "Al final del camino, un dios chacal esperaba. Ese es el próximo episodio: Anubis, guardián de los muertos.",
+          "en": "At the end of the road, a jackal-headed god waited. That is the next episode: Anubis, Guardian of the Dead."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "estela",
+          "x": 360,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "como": "thoth_oficial",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "habla"
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "como": "anubis_oficial",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.5,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 1400,
+          "y": 400,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4,
+          "texto": {
+            "es": "PRÓXIMO: ANUBIS, GUARDIÁN DE LOS MUERTOS",
+            "en": "NEXT: ANUBIS, GUARDIAN OF THE DEAD"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El dios que inventó la escritura",
+        "en": "The god who invented writing"
+      },
+      "escena": "escritura",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 960
+    },
+    {
+      "gancho": {
+        "es": "Ganó cinco días a la luna",
+        "en": "He won five days from the moon"
+      },
+      "escena": "luna",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "El dios que detuvo el sol para curar a un niño",
+        "en": "The god who stopped the sun to heal a child"
+      },
+      "escena": "escorpion",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1200
+    }
+  ]
+}

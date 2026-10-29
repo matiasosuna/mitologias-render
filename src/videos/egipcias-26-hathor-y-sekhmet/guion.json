@@ -1,0 +1,1022 @@
+{
+  "id": "egipcias-26-hathor-y-sekhmet",
+  "serie": "egipcias",
+  "numero": "26",
+  "titulo": {
+    "es": "Hathor y Sekhmet",
+    "en": "Hathor and Sekhmet"
+  },
+  "tituloGriego": "HATHOR AND SEKHMET",
+  "miniatura": {
+    "heroe": "hathor_oficial",
+    "rival": "sekhmet_oficial"
+  },
+  "siguiente": {
+    "es": "Ptah de Menfis",
+    "en": "Ptah of Memphis"
+  },
+  "escenas": [
+    {
+      "id": "dos",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Dos diosas protegían a los vivos: una con amor, y la otra con furia.",
+          "en": "Two goddesses protected the living: one with love, and one with fury."
+        },
+        {
+          "es": "Hathor era la diosa de la música, la alegría y las madres. Se la dibuja con orejas de vaca.",
+          "en": "Hathor was the goddess of music, joy, and mothers. She is drawn with the ears of a cow."
+        },
+        {
+          "es": "Sekhmet, 'la Poderosa', tenía cabeza de leona. Traía la guerra y las plagas, pero también curaba.",
+          "en": "Sekhmet, 'the Powerful One', had a lioness's head. She brought war and plague, but she also healed."
+        },
+        {
+          "es": "En un mito famoso, eran dos caras de la misma diosa: el Ojo de Ra.",
+          "en": "In one famous myth, they were two faces of the same goddess: the Eye of Ra."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "columna_papiro",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 1600,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hathor",
+          "como": "hathor_oficial",
+          "x": 640,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "sekhmet",
+          "como": "sekhmet_oficial",
+          "x": 1280,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 2.5,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "ojo",
+          "como": "ojo_ra_oficial",
+          "x": 960,
+          "escala": 0.7,
+          "y": 470,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "brilla",
+              "dur": 1.2
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.5
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 960,
+          "y": 470,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "HATHOR Y SEKHMET",
+            "en": "HATHOR AND SEKHMET"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "hathor",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hathor significa 'la casa de Horus'. El rey era Horus en la tierra, y ella era su madre divina.",
+          "en": "Hathor means 'House of Horus'. The king was Horus on earth, and she was his divine mother."
+        },
+        {
+          "es": "La llamaban 'la Dorada'. Llevaba un sistro, un instrumento de sonajas, y un espejo.",
+          "en": "They called her 'the Golden One'. She held a sistrum, a jingling rattle, and a mirror."
+        },
+        {
+          "es": "Su templo de Dendera sigue en pie. Tiene columnas con su rostro de orejas de vaca.",
+          "en": "Her temple at Dendera still stands. It has columns carved with her cow-eared face."
+        },
+        {
+          "es": "En el desierto del Sinaí, los mineros la llamaban 'Señora de la turquesa'.",
+          "en": "In the Sinai desert, miners called her 'Lady of Turquoise'."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "columna_papiro",
+          "x": 380,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pilono",
+          "x": 1600,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hathor",
+          "como": "hathor_oficial",
+          "x": 950,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "minero",
+          "como": "aldeano_egipcio_c_oficial",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.5
+        },
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "dur": 2,
+          "x": 950,
+          "y": 450
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "LA CASA DE HORUS",
+            "en": "THE HOUSE OF HORUS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "risa",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Un día, Ra se sintió ofendido y se negó a hablar con nadie.",
+          "en": "One day, Ra felt insulted and refused to speak to anyone."
+        },
+        {
+          "es": "Los dioses no sabían qué hacer. Entonces llegó Hathor.",
+          "en": "The gods did not know what to do. Then Hathor arrived."
+        },
+        {
+          "es": "Se paró frente a Ra y lo hizo reír tanto que se levantó.",
+          "en": "She stood before Ra and made him laugh so hard that he got up."
+        },
+        {
+          "es": "Ra volvió a su trono y siguió gobernando. Los egipcios decían que Hathor curaba la tristeza con alegría.",
+          "en": "Ra went back to his throne and ruled again. Egyptians said Hathor could cure sadness with joy."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1600,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "sienta"
+            },
+            {
+              "en": 0.5,
+              "hace": "entristece"
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.5,
+              "hace": "levantarse"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1500
+            }
+          ]
+        },
+        {
+          "id": "shu",
+          "como": "shu_oficial",
+          "x": 380,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "lamenta"
+            }
+          ]
+        },
+        {
+          "id": "hathor",
+          "como": "hathor_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2,
+              "hace": "salta"
+            },
+            {
+              "en": 2.5,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "aclarar",
+          "dur": 1.5
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "dur": 2,
+          "x": 1250,
+          "y": 500
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "RA SE RÍE",
+            "en": "RA LAUGHS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "ojo",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ya contamos cómo Ra mandó su Ojo contra los humanos, y el Ojo se volvió Sekhmet.",
+          "en": "We already told how Ra sent his Eye against humans, and the Eye became Sekhmet."
+        },
+        {
+          "es": "En otro cuento, mucho más tardío, el Ojo se enojó con Ra y huyó al sur, a Nubia.",
+          "en": "In another, much later tale, the Eye got angry with Ra and fled south, to Nubia."
+        },
+        {
+          "es": "Sin su Ojo, Ra se debilitó y Egipto sufrió. Ra mandó a Thoth y a Shu a buscarla.",
+          "en": "Without his Eye, Ra grew weak and Egypt suffered. Ra sent Thoth and Shu to find her."
+        },
+        {
+          "es": "Thoth le contó fábulas para calmarla. Ella volvió a Egipto con música, danza y vino.",
+          "en": "Thoth told her fables to calm her. She returned to Egypt with music, dance, and wine."
+        },
+        {
+          "es": "Al volver, la leona furiosa se tranquilizó y se volvió la dulce Hathor.",
+          "en": "Once home, the furious lioness grew calm and became gentle Hathor."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 330,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "sekhmet",
+          "como": "sekhmet_oficial",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "enoja"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1000
+            },
+            {
+              "en": 4,
+              "hace": "desaparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "como": "thoth_oficial",
+          "x": 620,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3,
+              "hace": "habla"
+            }
+          ]
+        },
+        {
+          "id": "hathor",
+          "como": "hathor_oficial",
+          "x": 1000,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 4.5,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "polvo",
+          "dur": 3,
+          "x": 1450,
+          "y": 700
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 1000,
+          "y": 450,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "EL OJO EN NUBIA",
+            "en": "THE EYE IN NUBIA"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "cerveza",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Para detener a Sekhmet, Ra hizo cerveza teñida de rojo y la derramó por los campos.",
+          "en": "To stop Sekhmet, Ra had beer dyed red and poured over the fields."
+        },
+        {
+          "es": "Sekhmet creyó que era sangre, la bebió y se durmió. Los humanos se salvaron.",
+          "en": "Sekhmet thought it was blood, drank it, and fell asleep. The humans were saved."
+        },
+        {
+          "es": "Cada año, los egipcios lo recordaban en la fiesta de la Ebriedad, con música, baile y cerveza roja.",
+          "en": "Every year, Egyptians remembered this at the Festival of Drunkenness, with music, dance, and red beer."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "anfora",
+          "x": 1100,
+          "s": 1
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0.5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "sekhmet",
+          "como": "sekhmet_oficial",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.8,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "aldeana",
+          "como": "aldeana_egipcia_oficial",
+          "x": 1050,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "alegra"
+            },
+            {
+              "en": 2.8,
+              "hace": "salta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "olas-suben",
+          "dur": 2,
+          "color": "rojo"
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "dur": 2,
+          "x": 1050,
+          "y": 500
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "LA FIESTA DE LA EBRIEDAD",
+            "en": "THE FESTIVAL OF DRUNKENNESS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "medicos",
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los egipcios creían que las enfermedades eran 'mensajeras de Sekhmet'.",
+          "en": "Egyptians believed that diseases were 'messengers of Sekhmet'."
+        },
+        {
+          "es": "Por eso rezaban a ella para que los librara de las plagas.",
+          "en": "So they prayed to her to spare them from plagues."
+        },
+        {
+          "es": "Sus sacerdotes eran también médicos, y curaban con hierbas y hechizos.",
+          "en": "Her priests were also doctors, and they healed with herbs and spells."
+        },
+        {
+          "es": "El faraón Amenhotep III hizo tallar cientos de estatuas de Sekhmet para su templo de Tebas.",
+          "en": "Pharaoh Amenhotep III had hundreds of statues of Sekhmet carved for his temple in Thebes."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "estatua",
+          "x": 1550,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pilono",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "sekhmet",
+          "como": "sekhmet_oficial",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "fuego"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio_oficial",
+          "x": 560,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.5,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "enfermo",
+          "como": "aldeano_egipcio_b_oficial",
+          "x": 1380,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.7,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 960,
+          "y": 450,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "MENSAJERAS DE SEKHMET",
+            "en": "MESSENGERS OF SEKHMET"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "oeste",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hathor no abandonaba a los muertos. Se la llamaba 'la Señora del Oeste', la tierra de los muertos.",
+          "en": "Hathor did not leave the dead alone. She was 'Mistress of the West', the land of the dead."
+        },
+        {
+          "es": "En los dibujos de las tumbas, sale como una vaca desde la montaña para recibir al difunto.",
+          "en": "In tomb paintings, she steps out of the mountain as a cow to welcome the dead."
+        },
+        {
+          "es": "También era un sicomoro, un árbol que daba agua fresca a los recién llegados.",
+          "en": "She was also a sycamore tree that gave fresh water to the newly arrived."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "luna",
+          "x": 1550,
+          "s": 0.9,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "palmera",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "vaca",
+          "como": "vaca_egipcia_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 1.5,
+              "hace": "brilla",
+              "dur": 1.2
+            }
+          ]
+        },
+        {
+          "id": "muerto",
+          "como": "aldeano_egipcio_oficial",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 700
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 2
+        },
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 4
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 900,
+          "y": 480,
+          "intensidad": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA SEÑORA DEL OESTE",
+            "en": "MISTRESS OF THE WEST"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hathor y Sekhmet enseñan algo: el mismo poder puede proteger o destruir.",
+          "en": "Hathor and Sekhmet teach something: the same power can protect or destroy."
+        },
+        {
+          "es": "¿Qué cara de la diosa querrías de tu lado: la que ríe o la que ruge? Cuéntanos en los comentarios.",
+          "en": "Which face would you want on your side: the one who laughs, or the one who roars? Tell us in the comments."
+        },
+        {
+          "es": "Sekhmet tenía un esposo, un dios que hizo el mundo solo con pensar y hablar. Ese es el próximo episodio: Ptah de Menfis.",
+          "en": "Sekhmet had a husband who made the world by thinking and speaking. That is the next episode: Ptah of Memphis."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "columna_papiro",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hathor",
+          "como": "hathor_oficial",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "sekhmet",
+          "como": "sekhmet_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "enoja"
+            }
+          ]
+        },
+        {
+          "id": "ptah",
+          "como": "ptah_oficial",
+          "x": 1650,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "brilla",
+              "dur": 1.2
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 1650,
+          "y": 450,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "PRÓXIMO: PTAH DE MENFIS",
+            "en": "NEXT: PTAH OF MEMPHIS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "La diosa que hizo reír al rey de los dioses",
+        "en": "The goddess who made the king of the gods laugh"
+      },
+      "escena": "risa",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "La leona que huyó del sol",
+        "en": "The lioness who ran away from the sun"
+      },
+      "escena": "ojo",
+      "desde": 1,
+      "hasta": 4,
+      "foco": 1300
+    },
+    {
+      "gancho": {
+        "es": "La cerveza roja que salvó a la humanidad",
+        "en": "The red beer that saved humanity"
+      },
+      "escena": "cerveza",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 1000
+    }
+  ]
+}

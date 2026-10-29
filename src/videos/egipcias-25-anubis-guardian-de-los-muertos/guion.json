@@ -1,0 +1,946 @@
+{
+  "id": "egipcias-25-anubis-guardian-de-los-muertos",
+  "serie": "egipcias",
+  "numero": "25",
+  "titulo": {
+    "es": "Anubis, guardián de los muertos",
+    "en": "Anubis, Guardian of the Dead"
+  },
+  "tituloGriego": "ANUBIS, GUARDIAN OF THE DEAD",
+  "miniatura": {
+    "heroe": "anubis_oficial",
+    "rival": "ammit_oficial"
+  },
+  "siguiente": {
+    "es": "Hathor y Sekhmet",
+    "en": "Hathor and Sekhmet"
+  },
+  "escenas": [
+    {
+      "id": "chacal",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Thoth escribía el veredicto de los muertos, pero alguien tenía que llevarlos hasta la sala del juicio.",
+          "en": "Thoth wrote down the verdict of the dead, but someone had to lead them to the hall of judgment."
+        },
+        {
+          "es": "Ese guía tenía cabeza de chacal, un animal salvaje parecido a un perro que vive en el desierto.",
+          "en": "That guide had the head of a jackal, a wild, dog-like animal of the desert."
+        },
+        {
+          "es": "Era Anubis. Su nombre egipcio era Inpu.",
+          "en": "He was Anubis. His Egyptian name was Inpu."
+        },
+        {
+          "es": "Hoy preguntamos por qué un chacal, y por qué negro.",
+          "en": "Today we ask why a jackal, and why black."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 330,
+          "s": 1.1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "anubis",
+          "como": "anubis_oficial",
+          "x": 960,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece",
+              "con": "sombra"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "habla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 960,
+          "y": 400,
+          "intensidad": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "ANUBIS · INPU",
+            "en": "ANUBIS · INPU"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "negro",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los chacales rondaban el borde del desierto, donde se enterraba a los muertos en la arena.",
+          "en": "Jackals roamed the edge of the desert, where the dead were buried in the sand."
+        },
+        {
+          "es": "Muchos estudiosos creen que los egipcios pusieron como guardián al animal que amenazaba las tumbas.",
+          "en": "Many scholars think the Egyptians made the animal that threatened the tombs into their guardian."
+        },
+        {
+          "es": "Anubis era negro. Pero el negro no era el color de la muerte.",
+          "en": "Anubis was black. But black was not the color of death."
+        },
+        {
+          "es": "Era el color de la tierra fértil que deja el Nilo, y de la vida que vuelve a nacer.",
+          "en": "It was the color of the rich soil the Nile leaves behind, and of life being born again."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tumba",
+          "x": 1550,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 300,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "perro",
+          "como": "perro_egipcio_oficial",
+          "x": 620,
+          "escala": 0.9,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "como": "anubis_oficial",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 1.2
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 1000,
+          "y": 450,
+          "intensidad": 0.3
+        },
+        {
+          "en": 0,
+          "tipo": "polvo",
+          "dur": 3,
+          "x": 700,
+          "y": 700
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "NEGRO = VIDA QUE RENACE",
+            "en": "BLACK = LIFE REBORN"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "momia",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Anubis era el dios de los embalsamadores, los que preparaban las momias.",
+          "en": "Anubis was the god of the embalmers, the people who prepared mummies."
+        },
+        {
+          "es": "Ya vimos cómo hizo la primera momia con el cuerpo de Osiris.",
+          "en": "We already saw how he made the first mummy from the body of Osiris."
+        },
+        {
+          "es": "Desde entonces, cada embalsamador trabajaba en su nombre. Algunos creen que un sacerdote usaba una máscara de chacal.",
+          "en": "Since then, every embalmer worked in his name. Some historians think a priest wore a jackal mask."
+        },
+        {
+          "es": "Sus títulos incluían 'El que está sobre su montaña' y 'Señor de la tierra sagrada'.",
+          "en": "His titles included 'He Who Is Upon His Mountain' and 'Lord of the Sacred Land'."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sarcofago",
+          "x": 1450,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "anubis",
+          "como": "anubis_oficial",
+          "x": 860,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "habla"
+            }
+          ]
+        },
+        {
+          "id": "momia",
+          "como": "momia_oficial",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece",
+              "con": "humo"
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio_oficial",
+          "x": 1150,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "humo",
+          "dur": 2,
+          "x": 1450,
+          "y": 650
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "EL DIOS DE LOS EMBALSAMADORES",
+            "en": "GOD OF THE EMBALMERS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "boca",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuando la momia estaba lista, había que despertar los sentidos del muerto.",
+          "en": "When the mummy was ready, the senses of the dead person had to be awakened."
+        },
+        {
+          "es": "Los sacerdotes tocaban la boca, los ojos y los oídos con herramientas especiales.",
+          "en": "Priests touched the mouth, eyes, and ears with special tools."
+        },
+        {
+          "es": "Este rito se llamaba la apertura de la boca. Así el muerto podía respirar, hablar y comer de nuevo.",
+          "en": "This ritual was called the Opening of the Mouth. It let the dead breathe, speak, and eat again."
+        },
+        {
+          "es": "En las pinturas de las tumbas, Anubis se inclina sobre la momia para protegerla.",
+          "en": "In tomb paintings, Anubis often bends over the mummy to protect it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sarcofago",
+          "x": 1100,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "estela",
+          "x": 1700,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio_b_oficial",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "momia",
+          "como": "momia_oficial",
+          "x": 1100,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "como": "anubis_oficial",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 3.5,
+              "hace": "abraza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 1100,
+          "y": 500,
+          "intensidad": 0.4
+        },
+        {
+          "en": 2.2,
+          "tipo": "chispas",
+          "dur": 2,
+          "x": 1100,
+          "y": 500
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "LA APERTURA DE LA BOCA",
+            "en": "OPENING OF THE MOUTH"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "caminos",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Otro dios chacal, Wepwawet, se llamaba 'el que abre los caminos'. Con el tiempo, la gente los mezcló.",
+          "en": "Another jackal god, Wepwawet, was called 'Opener of the Ways'. In time, people mixed the two."
+        },
+        {
+          "es": "Después de morir, la persona cruzaba un desierto oscuro y peligroso.",
+          "en": "After death, the person crossed a dark and dangerous desert."
+        },
+        {
+          "es": "Anubis la tomaba de la mano y la guiaba entre las sombras.",
+          "en": "Anubis took the person by the hand and guided them through the shadows."
+        },
+        {
+          "es": "El camino terminaba en la sala de las Dos Verdades.",
+          "en": "The road ended at the Hall of the Two Truths."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "luna",
+          "x": 1550,
+          "s": 0.9,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 350,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "muerto",
+          "como": "aldeano_egipcio_oficial",
+          "x": 620,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.5,
+              "hace": "camina",
+              "a": 900
+            },
+            {
+              "en": 2.5,
+              "hace": "camina",
+              "a": 1250
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "como": "anubis_oficial",
+          "x": 1150,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece",
+              "con": "luz"
+            },
+            {
+              "en": 2.5,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 2
+        },
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 4
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 1150,
+          "y": 450,
+          "intensidad": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 2,
+          "texto": {
+            "es": "EL QUE ABRE LOS CAMINOS",
+            "en": "THE ONE WHO OPENS THE WAYS"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "balanza",
+      "fondo": "sala_juicio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En la sala del juicio, Anubis cuidaba la balanza.",
+          "en": "In the hall of judgment, Anubis looked after the scale."
+        },
+        {
+          "es": "Ponía el corazón del muerto en un plato y la pluma de Maat en el otro.",
+          "en": "He placed the heart of the dead in one pan and the feather of Maat in the other."
+        },
+        {
+          "es": "Revisaba que la balanza estuviera bien ajustada. Nadie podía hacer trampa.",
+          "en": "He checked that the scale was set right. Nobody could cheat."
+        },
+        {
+          "es": "Si el corazón pesaba más que la pluma, la monstruosa Ammit se lo comía.",
+          "en": "If the heart weighed more than the feather, the monster Ammit ate it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "balanza",
+          "x": 960,
+          "s": 1.1
+        }
+      ],
+      "actores": [
+        {
+          "id": "anubis",
+          "como": "anubis_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "como": "thoth_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "habla"
+            }
+          ]
+        },
+        {
+          "id": "ammit",
+          "como": "ammit_oficial",
+          "x": 1650,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.5
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 960,
+          "y": 400,
+          "intensidad": 0.3
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0,
+          "texto": {
+            "es": "ANUBIS Y LA BALANZA",
+            "en": "ANUBIS AND THE SCALE"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "tumba",
+      "fondo": "piramides",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Anubis también guardaba las tumbas de los reyes.",
+          "en": "Anubis also guarded the tombs of kings."
+        },
+        {
+          "es": "En la tumba de Tutankamón, una estatua de un chacal negro vigilaba la puerta de la sala del tesoro.",
+          "en": "In the tomb of Tutankhamun, a statue of a black jackal watched over the door of the treasury room."
+        },
+        {
+          "es": "Estaba sobre un santuario dorado, con orejas de oro.",
+          "en": "He lay on a golden shrine, with ears of gold."
+        },
+        {
+          "es": "Allí montó guardia durante más de tres mil años.",
+          "en": "There he stood guard for more than three thousand years."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "piramide",
+          "x": 1550,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "estatua",
+          "x": 560,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "anubis",
+          "como": "anubis_oficial",
+          "x": 980,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "faraon",
+          "como": "faraon_oficial",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 980,
+          "y": 450,
+          "intensidad": 0.4
+        },
+        {
+          "en": 0,
+          "tipo": "polvo",
+          "dur": 3,
+          "x": 800,
+          "y": 700
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 1,
+          "texto": {
+            "es": "LA TUMBA DE TUTANKAMÓN",
+            "en": "THE TOMB OF TUTANKHAMUN"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "En la época romana, los griegos lo unieron a Hermes y lo llamaron Hermanubis.",
+          "en": "In Roman times, the Greeks joined him with Hermes and called him Hermanubis."
+        },
+        {
+          "es": "Anubis no era un dios para temer. Era un protector para quien hacía su último viaje.",
+          "en": "Anubis was not a god to fear. He was a protector for those on their last journey."
+        },
+        {
+          "es": "¿Por qué crees que los egipcios confiaron a un chacal el cuidado de sus muertos? Cuéntanos en los comentarios.",
+          "en": "Why do you think the Egyptians trusted a jackal with their dead? Tell us in the comments."
+        },
+        {
+          "es": "Otras dos diosas protegían a los vivos: una con amor, otra con furia. Ese es el próximo episodio: Hathor y Sekhmet.",
+          "en": "Two goddesses protected the living: one with love, one with fury. That is the next episode: Hathor and Sekhmet."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 330,
+          "s": 1.1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "anubis",
+          "como": "anubis_oficial",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "asiente"
+            }
+          ]
+        },
+        {
+          "id": "hathor",
+          "como": "hathor_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "luz"
+            }
+          ]
+        },
+        {
+          "id": "sekhmet",
+          "como": "sekhmet_oficial",
+          "x": 1600,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece",
+              "con": "fuego"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "dur": 2,
+          "x": 1400,
+          "y": 400,
+          "intensidad": 0.4
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3,
+          "texto": {
+            "es": "PRÓXIMO: HATHOR Y SEKHMET",
+            "en": "NEXT: HATHOR AND SEKHMET"
+          },
+          "x": 960,
+          "y": 260
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "¿Por qué el dios de los muertos era un chacal negro?",
+        "en": "Why was the god of the dead a black jackal?"
+      },
+      "escena": "negro",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "El rito que despertaba a los muertos",
+        "en": "The ritual that woke the dead"
+      },
+      "escena": "boca",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 1100
+    },
+    {
+      "gancho": {
+        "es": "El chacal que vigiló a Tutankamón durante 3,000 años",
+        "en": "The jackal that guarded Tutankhamun for 3,000 years"
+      },
+      "escena": "tumba",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 980
+    }
+  ]
+}
