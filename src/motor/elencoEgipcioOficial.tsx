@@ -156,6 +156,16 @@ const Atef: React.FC = () => (
     <Ureo x={26} y={-40} />
   </g>
 );
+/** Corona de Amón: gorro ceñido con dos plumas altas, una roja y una azul. */
+const PlumasAmon: React.FC = () => (
+  <g>
+    <path d="M-20 -36 C -26 -70, -24 -120, -14 -150 C -4 -120, -2 -70, 0 -36 Z" fill={ROJO} stroke={N} strokeWidth={2} />
+    <path d="M2 -36 C 4 -70, 6 -120, 16 -150 C 26 -120, 28 -70, 22 -36 Z" fill={AZUL} stroke={N} strokeWidth={2} />
+    {[-120, -96, -72, -52].map((y) => <path key={y} d={`M-22 ${y} L -3 ${y + 3} M4 ${y + 3} L 24 ${y}`} stroke={ORO} strokeWidth={1.6} />)}
+    <Gorro />
+    <Ureo x={26} y={-40} />
+  </g>
+);
 /** Trono sobre la cabeza (Isis: su nombre es el jeroglífico del trono). */
 const Trono: React.FC = () => (
   <g>
@@ -1200,6 +1210,7 @@ const BRAZO_VARA: [number, number] = [20, 60]; // mano adelante a media altura, 
 export const ELENCO_EGIPCIO_OFICIAL: Record<string, Ficha> = {
   ra_oficial: h({ s: 1.04, cabezaPropia: true, brazo: BRAZO_VARA, adornos: { cabeza: <>{animal('halcon')}<DiscoSolar /></>, cuerpo: <><Usekh bandas={[ROJO, ORO, AZUL, ORO]} /><Delantal c1={ORO} c2={ROJO} /></>, mano: <Was /> } }, 'RA'),
   isis_oficial: m({ ropaColor: ROJO, alas: true, brazo: [38, 4], brazoAtras: [48, -8], adornos: { cabeza: <><PelucaDiosa /><Trono /></>, cuerpo: <><Vestido c={ROJO} /><Usekh a={0.92} /></> } }, 'ISIS'),
+  amun_oficial: h({ s: 1.04, piel: '#4C86C2', ropa: 'larga', ropaColor: LINO, brazo: [10, 80], adornos: { cabeza: <><PlumasAmon /><BarbaDios recta /></>, cuerpo: <><Vendas c="#E9F0E6" /><Usekh bandas={[ROJO, ORO, AZUL, ORO]} /></>, mano: <Was /> } }, 'AMUN'),
   osiris_oficial: h({ s: 1.04, piel: VERDE, ropa: 'larga', ropaColor: LINO, brazo: [0, 110], brazoAtras: [0, 70], adornos: { cabeza: <><BarbaDios /><Atef /></>, cuerpo: <><Vendas /><Usekh /></>, mano: <CayadoMayal /> } }, 'OSIRIS'),
   set_oficial: h({ s: 1.04, cabezaPropia: true, brazo: BRAZO_VARA, ropaColor: LINO, adornos: { cabeza: animal('set'), cuerpo: <><Usekh bandas={[ROJO, ORO, '#6E2A1A', ORO]} /><Delantal c1={ROJO} c2={ORO} /></>, mano: <Lanza /> } }, 'SET'),
   horus_oficial: h({ s: 1.04, cabezaPropia: true, objeto: 'ankh', brazo: [24, 40], adornos: { cabeza: <>{animal('halcon')}<DobleCorona /></>, cuerpo: <><Usekh /><Delantal c1={AZUL} c2={ORO} /></> } }, 'HORUS'),

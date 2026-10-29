@@ -1,0 +1,803 @@
+{
+  "id": "nordicas-30-el-ojo-de-odin",
+  "serie": "nordicas",
+  "numero": "30",
+  "titulo": {
+    "es": "El ojo de Odín",
+    "en": "Odin's Eye"
+  },
+  "tituloGriego": "ODIN'S EYE",
+  "miniatura": {
+    "heroe": "odin_oficial",
+    "rival": "mimir_oficial"
+  },
+  "siguiente": {
+    "es": "Nuevas historias del norte",
+    "en": "More Tales from the North"
+  },
+  "escenas": [
+    {
+      "id": "enganche",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Odín, el rey de los dioses, tiene un solo ojo. ¿Qué le pasó al otro?",
+          "en": "Odin, king of the gods, has only one eye. What happened to the other?"
+        },
+        {
+          "es": "No lo perdió en una pelea. Los poemas nórdicos cuentan otra cosa.",
+          "en": "He did not lose it in a fight. The Norse poems tell something different."
+        },
+        {
+          "es": "Dicen que él mismo lo entregó, a cambio de sabiduría.",
+          "en": "They say he gave it away himself, in exchange for wisdom."
+        },
+        {
+          "es": "Es el precio más famoso que pagó un dios.",
+          "en": "It is the most famous price any god ever paid."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1500,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "como": "odin_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "mira"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "EL OJO DE ODÍN",
+            "en": "ODIN'S EYE"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "yggdrasil",
+      "fondo": "yggdrasil",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "El árbol del mundo, Yggdrasil, tiene tres raíces enormes.",
+          "en": "The world tree, Yggdrasil, has three enormous roots."
+        },
+        {
+          "es": "Bajo una de ellas, en la tierra de los gigantes, hay un pozo.",
+          "en": "Under one of them, in the land of the giants, lies a well."
+        },
+        {
+          "es": "Es el pozo de Mímir. Quien bebe de sus aguas se vuelve sabio.",
+          "en": "It is Mímir's well. Whoever drinks its water becomes wise."
+        },
+        {
+          "es": "Según Snorri, un poeta e historiador islandés, el pozo guarda sabiduría y saber oculto.",
+          "en": "According to Snorri, an Icelandic poet and historian, the well holds wisdom and hidden knowledge."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yggdrasil",
+          "x": 960,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "mimir",
+          "como": "mimir_oficial",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "guardian",
+      "fondo": "yggdrasil",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "El pozo tiene un guardián: Mímir, un ser muy sabio.",
+          "en": "The well has a guardian: Mímir, a being of great wisdom."
+        },
+        {
+          "es": "Según la Völuspá, Mímir bebe hidromiel cada mañana, y por eso sabe tanto.",
+          "en": "According to the Völuspá, Mímir drinks mead every morning, and that is why he knows so much."
+        },
+        {
+          "es": "Es el mismo Mímir cuya cabeza aconseja a Odín. Ya contamos cómo la perdió.",
+          "en": "He is the same Mímir whose head advises Odin. We already told how he lost it."
+        },
+        {
+          "es": "Mímir no regalaba su agua. Cada sorbo tenía un precio.",
+          "en": "Mímir did not give his water away. Every sip had a price."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yggdrasil",
+          "x": 1500,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "mimir",
+          "como": "mimir_oficial",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "toma"
+            },
+            {
+              "en": 3,
+              "hace": "niega"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 1,
+          "tipo": "niebla",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "viaje",
+      "fondo": "jotunheim",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Odín quería saber todo: lo que fue, lo que es y lo que será.",
+          "en": "Odin wanted to know everything: what was, what is, and what will be."
+        },
+        {
+          "es": "Sabía que el fin del mundo, el Ragnarök, se acercaba, y quería estar listo.",
+          "en": "He knew the end of the world, Ragnarök, was coming, and he wanted to be ready."
+        },
+        {
+          "es": "Así que viajó solo hasta el pozo, tapado con su capa y su sombrero.",
+          "en": "So he traveled alone to the well, wrapped in his cloak and hat."
+        },
+        {
+          "es": "Pidió un trago. Mímir le dijo cuál era el precio.",
+          "en": "He asked for a drink. Mímir told him the price."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pino",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "como": "odin_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "camina"
+            },
+            {
+              "en": 3,
+              "hace": "habla"
+            }
+          ]
+        },
+        {
+          "id": "mimir",
+          "como": "mimir_oficial",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "habla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "nieve",
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "niebla",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "precio",
+      "fondo": "yggdrasil",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "El precio era un ojo. Odín no dudó.",
+          "en": "The price was an eye. Odin did not hesitate."
+        },
+        {
+          "es": "El poema Völuspá lo dice: 'Sé, Odín, dónde escondiste tu ojo, en el pozo de Mímir'.",
+          "en": "The poem Völuspá says: 'I know, Odin, where you hid your eye, in Mímir's famous well.'"
+        },
+        {
+          "es": "Dejó el ojo en el fondo del agua, como una prenda por su sabiduría.",
+          "en": "He left the eye at the bottom of the water, as a pledge for his wisdom."
+        },
+        {
+          "es": "Bebió del pozo, y el mundo se abrió ante su mente.",
+          "en": "He drank from the well, and the world opened before his mind."
+        },
+        {
+          "es": "Desde ese día vio el futuro, aunque eso no le trajo paz.",
+          "en": "From that day he saw the future, though it brought him no peace."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yggdrasil",
+          "x": 960,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "como": "odin_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "habla"
+            },
+            {
+              "en": 2,
+              "hace": "entristece"
+            },
+            {
+              "en": 3,
+              "hace": "toma"
+            }
+          ]
+        },
+        {
+          "id": "mimir",
+          "como": "mimir_oficial",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "destello",
+          "dur": 1.2
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "EL PRECIO",
+            "en": "THE PRICE"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "miedo",
+      "fondo": "salon",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Para los nórdicos, era un precio enorme, y aun así valía la pena.",
+          "en": "For the Norse, it was an enormous price, and still worth paying."
+        },
+        {
+          "es": "Odín pagó un ojo, pero ganó una mirada más profunda.",
+          "en": "Odin paid one eye but gained a deeper sight."
+        },
+        {
+          "es": "Por eso en el arte se lo ve con un parche, o con un ala de sombrero sobre la cara.",
+          "en": "That is why in art he wears a patch, or a hat brim over his face."
+        },
+        {
+          "es": "Sus cuervos Hugin y Munin le cuentan lo que ven, y así ve más que cualquier dios.",
+          "en": "His ravens Huginn and Muninn tell him what they see, so he sees more than any god."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "como": "odin_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "habla"
+            }
+          ]
+        },
+        {
+          "id": "cuervo",
+          "como": "cuervo_nordico_oficial",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "vuela"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "mirada",
+      "fondo": "yggdrasil",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los poemas dejan un detalle misterioso: el ojo de Odín sigue en el pozo.",
+          "en": "The poems leave a mysterious detail: Odin's eye is still in the well."
+        },
+        {
+          "es": "Snorri escribe que Odín dejó su ojo allí como prenda a cambio del trago.",
+          "en": "Snorri writes that Odin left his eye there as a pledge for the drink."
+        },
+        {
+          "es": "La Völuspá dice que Mímir bebe cada mañana 'de la prenda del Padre de los muertos'.",
+          "en": "The Völuspá says Mímir drinks each morning 'from the pledge of the Father of the Slain'."
+        },
+        {
+          "es": "Muchos lectores creen que esa prenda es el ojo, pero los poemas no lo explican.",
+          "en": "Many readers think that pledge is the eye, but the poems do not explain it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "yggdrasil",
+          "x": 960,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "mimir",
+          "como": "mimir_oficial",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "brilla"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.2
+        },
+        {
+          "en": 1,
+          "tipo": "destello",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "ragnarok",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuando llegue el Ragnarök, la Völuspá dice que Odín volverá a hablar con la cabeza de Mímir.",
+          "en": "When Ragnarök comes, the Völuspá says Odin will speak once more with Mímir's head."
+        },
+        {
+          "es": "Sabrá lo que le espera, y aun así peleará.",
+          "en": "He will know what awaits him, and still he will fight."
+        },
+        {
+          "es": "Esa es la grandeza de Odín: saber el final y no rendirse.",
+          "en": "That is Odin's greatness: knowing the end and never giving up."
+        },
+        {
+          "es": "Todo empezó con un ojo dejado en un pozo, una tarde cualquiera.",
+          "en": "It all began with an eye left in a well, on an ordinary day."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1500,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "como": "odin_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2
+        },
+        {
+          "en": 3,
+          "tipo": "rayo",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "asgard",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Odín dio una parte de sí para ver más lejos. Los nórdicos admiraban a quien sabía sacrificarse.",
+          "en": "Odin gave up part of himself to see further. The Norse admired those who could sacrifice."
+        },
+        {
+          "es": "Y la sabiduría, en esos poemas, siempre cuesta algo.",
+          "en": "And in those poems, wisdom always costs something."
+        },
+        {
+          "es": "¿Qué darías tú a cambio de saberlo todo? Cuéntanos en los comentarios.",
+          "en": "What would you give in exchange for knowing everything? Tell us in the comments."
+        },
+        {
+          "es": "Con este episodio terminamos este viaje por la vida de Odín. Pronto habrá más historias del norte.",
+          "en": "With this episode we end this journey through Odin's life. More tales from the North are coming soon."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pino",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "odin",
+          "como": "odin_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "habla"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Odín pagó un ojo por saber todo",
+        "en": "Odin paid an eye to know everything"
+      },
+      "escena": "precio",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "El pozo que daba sabiduría",
+        "en": "The well that gave wisdom"
+      },
+      "escena": "yggdrasil",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "El ojo que sigue en el pozo",
+        "en": "The eye that is still in the well"
+      },
+      "escena": "mirada",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 950
+    }
+  ]
+}

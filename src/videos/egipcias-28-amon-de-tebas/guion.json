@@ -1,0 +1,1006 @@
+{
+  "id": "egipcias-28-amon-de-tebas",
+  "serie": "egipcias",
+  "numero": "28",
+  "titulo": {
+    "es": "Amón de Tebas",
+    "en": "Amun of Thebes"
+  },
+  "tituloGriego": "AMUN OF THEBES",
+  "miniatura": {
+    "heroe": "amun_oficial",
+    "rival": "ra_oficial"
+  },
+  "siguiente": {
+    "es": "El Duat, hora por hora",
+    "en": "The Duat, Hour by Hour"
+  },
+  "escenas": [
+    {
+      "id": "oculto",
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Tebas fue una gran ciudad del sur de Egipto, junto al Nilo. Allí reinaba Amón.",
+          "en": "Thebes was a great city in the south of Egypt, on the Nile. There, Amun was king of the gods."
+        },
+        {
+          "es": "Su nombre significa 'el oculto'. Nadie podía ver su verdadera forma.",
+          "en": "His name means 'the hidden one'. No one could see his true form."
+        },
+        {
+          "es": "Se lo dibuja con piel azul y una corona de dos plumas altas.",
+          "en": "He is drawn with blue skin and a crown of two tall feathers."
+        },
+        {
+          "es": "El azul era el color del cielo y del aire, que no se pueden tocar.",
+          "en": "Blue was the color of the sky and the air, which no one can touch."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "obelisco",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pilono",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "amun",
+          "como": "amun_oficial",
+          "x": 950,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "brilla"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "AMÓN DE TEBAS",
+            "en": "AMUN OF THEBES"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "viento",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Amón era el dios del aire, el viento invisible que se siente pero no se ve.",
+          "en": "Amun was the god of the air, the wind you feel but cannot see."
+        },
+        {
+          "es": "En un himno antiguo se dice que es más oculto que los demás dioses.",
+          "en": "An old hymn says he is more hidden than the other gods."
+        },
+        {
+          "es": "Los egipcios creían que podía estar en todas partes a la vez.",
+          "en": "The Egyptians believed he could be everywhere at once."
+        },
+        {
+          "es": "Por eso rezaban a él los pobres y también los reyes.",
+          "en": "So both poor people and kings prayed to him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 1600,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "amun",
+          "como": "amun_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "brilla"
+            }
+          ]
+        },
+        {
+          "id": "aldeano",
+          "como": "aldeano_egipcio_oficial",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "niebla",
+          "dur": 2
+        },
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "ascenso",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al principio, Tebas era una ciudad pequeña, y Amón un dios local.",
+          "en": "At first, Thebes was a small city, and Amun a local god."
+        },
+        {
+          "es": "Pero hace unos 4000 años, reyes de Tebas gobernaron todo Egipto.",
+          "en": "But about 4,000 years ago, kings from Thebes ruled all of Egypt."
+        },
+        {
+          "es": "Sus nombres llevaban el de Amón, como Amenemhat, 'Amón está al frente'.",
+          "en": "Their names carried his name, like Amenemhat, 'Amun is at the front'."
+        },
+        {
+          "es": "Cuando la ciudad creció, creció también su dios.",
+          "en": "As the city grew, so did its god."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1500,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "rey",
+          "como": "faraon_oficial",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "amun",
+          "como": "amun_oficial",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "brilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "amonra",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hace unos 3500 años, los reyes de Tebas expulsaron a los extranjeros hicsos.",
+          "en": "About 3,500 years ago, the kings of Thebes drove out the foreign Hyksos."
+        },
+        {
+          "es": "Para agradecer la victoria, honraron a Amón por encima de todos.",
+          "en": "To give thanks for the victory, they honored Amun above all others."
+        },
+        {
+          "es": "Lo unieron con Ra, el sol, y nació un dios nuevo: Amón-Ra.",
+          "en": "They joined him with Ra, the sun, and a new god was born: Amun-Ra."
+        },
+        {
+          "es": "Amón-Ra era 'rey de los dioses': el aire oculto y el sol que se ve.",
+          "en": "Amun-Ra was 'king of the gods': the hidden air and the visible sun."
+        },
+        {
+          "es": "Los reyes decían que ganaban sus guerras gracias a él.",
+          "en": "The kings said they won their wars thanks to him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 1600,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pilono",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "amunra",
+          "como": "amun_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "brilla"
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "brilla"
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "como": "faraon_oficial",
+          "x": 1650,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "destello",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "karnak",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Su casa fue Karnak, el templo más grande que construyó Egipto.",
+          "en": "His home was Karnak, the biggest temple Egypt ever built."
+        },
+        {
+          "es": "Durante unos 2000 años, muchos reyes le fueron sumando salas, torres y obeliscos.",
+          "en": "For about 2,000 years, many kings kept adding halls, gateways, and obelisks."
+        },
+        {
+          "es": "Tiene una sala de 134 columnas gigantes, tan anchas que no las rodean diez personas.",
+          "en": "It has a hall of 134 giant columns, so wide that ten people could not circle one."
+        },
+        {
+          "es": "Amón no vivía solo. Con él estaban su esposa Mut y su hijo Jonsú, dios de la luna.",
+          "en": "Amun did not live alone. With him were his wife Mut and their son Khonsu, the moon god."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "columna_papiro",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "obelisco",
+          "x": 1100,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "amun",
+          "como": "amun_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "khonsu",
+          "como": "khonsu_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "KARNAK",
+            "en": "KARNAK"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "opet",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Una vez al año, en la fiesta de Opet, la estatua de Amón salía de Karnak.",
+          "en": "Once a year, at the Opet Festival, Amun's statue left Karnak."
+        },
+        {
+          "es": "Los sacerdotes la llevaban en una barca sagrada, tapada con telas.",
+          "en": "Priests carried it in a sacred boat, covered with cloth."
+        },
+        {
+          "es": "Cruzaban Tebas hacia el templo de Luxor, y la gente bailaba y cantaba.",
+          "en": "They crossed Thebes toward Luxor Temple while people danced and sang."
+        },
+        {
+          "es": "El pueblo podía acercarse a su dios, aunque no lo viera.",
+          "en": "For a moment, the people could come close to their god, even if they could not see him."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barco",
+          "x": 1250,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "palmera",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "aldeana",
+          "como": "aldeana_egipcia_oficial",
+          "x": 1650,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "alegra"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "LA FIESTA DE OPET",
+            "en": "THE OPET FESTIVAL"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "hijo",
+      "fondo": "palacio",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "La reina Hatshepsut decía que Amón era su verdadero padre.",
+          "en": "Queen Hatshepsut said Amun was her true father."
+        },
+        {
+          "es": "Contaba que el dios había visitado a su madre y le había dado una hija.",
+          "en": "She told how the god visited her mother and gave her a daughter."
+        },
+        {
+          "es": "Con esa historia, una mujer pudo reinar como faraón.",
+          "en": "With that story, a woman could rule as pharaoh."
+        },
+        {
+          "es": "Siglos después, Alejandro Magno visitó el oráculo de Amón en el oasis de Siwa.",
+          "en": "Centuries later, Alexander the Great visited Amun's oracle at the Siwa oasis."
+        },
+        {
+          "es": "Los sacerdotes lo saludaron como hijo del dios. Los griegos llamaron a ese dios Zeus-Amón.",
+          "en": "The priests greeted him as the god's son. The Greeks called that god Zeus-Ammon."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 1500,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "estatua",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "hatshepsut",
+          "como": "reina_egipcia_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "amun",
+          "como": "amun_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "brilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "aton",
+      "fondo": "piramides",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero un rey se atrevió a desafiar a Amón. Se llamaba Amenhotep IV.",
+          "en": "But one king dared to challenge Amun. His name was Amenhotep IV."
+        },
+        {
+          "es": "Dijo que solo existía un dios, el Atón, el disco del sol, y cambió su nombre a Ajenatón.",
+          "en": "He said only one god existed, the Aten, the sun's disk, and changed his name to Akhenaten."
+        },
+        {
+          "es": "Cerró los templos de Amón y mandó borrar su nombre de las piedras.",
+          "en": "He closed Amun's temples and had his name chiseled from the stones."
+        },
+        {
+          "es": "Fundó una ciudad nueva, lejos de Tebas, para su dios.",
+          "en": "He founded a new city for his god, far from Thebes."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 960,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "obelisco",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "akhenaten",
+          "como": "faraon_b_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.2
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "polvo",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "vuelta",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Cuando murió, el pueblo no lo siguió. Su hijo Tutankamón volvió a honrar a Amón.",
+          "en": "When he died, the people did not follow him. His son Tutankhamun honored Amun again."
+        },
+        {
+          "es": "Tutankamón significa 'imagen viva de Amón'. De niño se había llamado Tutanjatón.",
+          "en": "Tutankhamun means 'living image of Amun'. As a child he had been named Tutankhaten."
+        },
+        {
+          "es": "Los templos se abrieron de nuevo y Amón regresó a su casa.",
+          "en": "The temples opened again, and Amun came home."
+        },
+        {
+          "es": "Siglos después, los grandes sacerdotes de Amón llegaron a mandar casi como reyes en el sur.",
+          "en": "Centuries later, Amun's high priests ruled the south almost like kings."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "pilono",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "obelisco",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "tut",
+          "como": "faraon_oficial",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "alegra"
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio_b_oficial",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Hoy Karnak sigue en pie, con sus columnas inmensas junto al Nilo.",
+          "en": "Today Karnak still stands, with its huge columns beside the Nile."
+        },
+        {
+          "es": "Un dios que nadie podía ver terminó siendo el dios más poderoso de Egipto.",
+          "en": "A god no one could see became the most powerful god in Egypt."
+        },
+        {
+          "es": "¿Tú confiarías más en un dios que se ve o en uno oculto? Cuéntanos en los comentarios.",
+          "en": "Would you trust a god you can see, or one who stays hidden? Tell us in the comments."
+        },
+        {
+          "es": "En el próximo episodio seguimos la barca de Ra por el Duat, hora por hora.",
+          "en": "In the next episode, we follow Ra's boat through the Duat, hour by hour."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "pilono",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "amun",
+          "como": "amun_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "brilla"
+            },
+            {
+              "en": 2,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "PRÓXIMO: EL DUAT, HORA POR HORA",
+            "en": "NEXT: THE DUAT, HOUR BY HOUR"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "El dios que nadie podía ver",
+        "en": "The god no one could see"
+      },
+      "escena": "oculto",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "Una reina dijo que su padre era un dios",
+        "en": "A queen said a god was her father"
+      },
+      "escena": "hijo",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "El faraón que borró a un dios",
+        "en": "The pharaoh who erased a god"
+      },
+      "escena": "aton",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 950
+    }
+  ]
+}

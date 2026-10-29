@@ -1,0 +1,934 @@
+{
+  "id": "egipcias-29-el-duat-hora-por-hora",
+  "serie": "egipcias",
+  "numero": "29",
+  "titulo": {
+    "es": "El Duat, hora por hora",
+    "en": "The Duat, Hour by Hour"
+  },
+  "tituloGriego": "THE DUAT, HOUR BY HOUR",
+  "miniatura": {
+    "heroe": "ra_oficial",
+    "rival": "apofis_oficial"
+  },
+  "siguiente": {
+    "es": "Los animales sagrados",
+    "en": "The Sacred Animals"
+  },
+  "escenas": [
+    {
+      "id": "libros",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los egipcios no dejaron un mapa del mundo de los muertos. Dejaron libros enteros.",
+          "en": "The Egyptians left no map of the world of the dead. They left whole books."
+        },
+        {
+          "es": "Los más famosos son el Amduat, 'lo que hay en el Duat', y el Libro de las Puertas.",
+          "en": "The most famous are the Amduat, 'what is in the Duat', and the Book of Gates."
+        },
+        {
+          "es": "Los pintaron en las paredes de las tumbas de los reyes, en el Valle de los Reyes.",
+          "en": "They were painted on the walls of the kings' tombs, in the Valley of the Kings."
+        },
+        {
+          "es": "Cuenta el viaje del sol por la noche. Hoy lo seguimos hora por hora.",
+          "en": "They tell the sun's journey through the night. Today we follow it hour by hour."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tumba",
+          "x": 1600,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "sarcofago",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "brilla"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "EL DUAT, HORA POR HORA",
+            "en": "THE DUAT, HOUR BY HOUR"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "pared",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "En la tumba del rey Tutmosis III, el Amduat cubre las paredes como un papiro desenrollado.",
+          "en": "In the tomb of King Thutmose III, the Amduat covers the walls like an unrolled papyrus."
+        },
+        {
+          "es": "Las figuras parecen dibujadas con pincel, como un borrador.",
+          "en": "The figures look brushed on, like a rough draft."
+        },
+        {
+          "es": "Está dividido en tres filas. En la fila de en medio navega la barca de Ra.",
+          "en": "It is split into three rows. In the middle row sails Ra's boat."
+        },
+        {
+          "es": "Arriba y abajo van los dioses y los muertos que Ra encuentra en el camino.",
+          "en": "Above and below are the gods and the dead that Ra meets on the way."
+        },
+        {
+          "es": "Cada una de las doce horas es una región con su propia puerta.",
+          "en": "Each of the twelve hours is a region with its own gate."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "estela",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "papiro",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "escriba",
+          "como": "escriba_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "rey",
+          "como": "faraon_oficial",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "mira"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "puertas",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "En la primera hora, la barca llega a una gran puerta. Doce babuinos cantan para el sol.",
+          "en": "In the first hour, the boat reaches a great gate. Twelve baboons sing for the sun."
+        },
+        {
+          "es": "En el Libro de las Puertas, cada puerta tiene una serpiente guardiana.",
+          "en": "In the Book of Gates, every gate has a serpent guardian."
+        },
+        {
+          "es": "Para pasar, Ra dice el nombre de la puerta y el nombre de su guardiana.",
+          "en": "To pass, Ra says the name of the gate and the name of its guardian."
+        },
+        {
+          "es": "Los egipcios creían que saber los nombres daba poder. Los muertos también los aprendían.",
+          "en": "The Egyptians believed names held power. The dead learned them too."
+        },
+        {
+          "es": "En la segunda hora, el río cruza una tierra verde, Wernes. Allí Ra reparte campos a los muertos.",
+          "en": "In the second hour, the river crosses a green land, Wernes. There Ra hands out fields to the dead."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "puerta",
+          "x": 1250,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "papiro",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "habla"
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "serpiente",
+          "como": "serpiente_egipcia_oficial",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "tiembla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "destello",
+          "dur": 1.2
+        }
+      ]
+    },
+    {
+      "id": "arena",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "En la cuarta hora, el río se acaba. Solo hay arena y un camino secreto, Rosetau.",
+          "en": "In the fourth hour, the river runs out. There is only sand and a secret road, Rosetau."
+        },
+        {
+          "es": "La barca se vuelve una serpiente, y los dioses la arrastran en la oscuridad.",
+          "en": "The boat becomes a serpent, and the gods drag it through the dark."
+        },
+        {
+          "es": "En la quinta hora está la cueva de Sokar, el dios halcón de los muertos.",
+          "en": "In the fifth hour lies the cave of Sokar, the falcon god of the dead."
+        },
+        {
+          "es": "Ra no entra. Desde la barca les habla a los que viven en la cueva.",
+          "en": "Ra does not enter. From the boat he speaks to those who live in the cave."
+        },
+        {
+          "es": "Es la parte más difícil del viaje: ni el sol puede ver el camino.",
+          "en": "It is the hardest part of the journey: even the sun cannot see the road."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cueva",
+          "x": 1500,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "habla"
+            },
+            {
+              "en": 4,
+              "hace": "baja"
+            }
+          ]
+        },
+        {
+          "id": "sokar",
+          "como": "sokar_oficial",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "mira"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.2
+        },
+        {
+          "en": 1,
+          "tipo": "polvo",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "medianoche",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "La sexta hora es la medianoche, el punto más hondo del Duat.",
+          "en": "The sixth hour is midnight, the deepest point of the Duat."
+        },
+        {
+          "es": "Allí duerme Osiris, el rey de los muertos. Ra se acerca a él.",
+          "en": "There sleeps Osiris, king of the dead. Ra comes close to him."
+        },
+        {
+          "es": "Por un momento, los dos se vuelven uno. El sol y el muerto descansan juntos.",
+          "en": "For a moment, the two become one. The sun and the dead king rest together."
+        },
+        {
+          "es": "Los egipcios veían ahí el secreto de la vida: para renacer, primero hay que pasar por la muerte.",
+          "en": "The Egyptians saw the secret of life here: to be reborn, you must first pass through death."
+        },
+        {
+          "es": "¿Qué te parece esa idea? Es una de las más antiguas del mundo.",
+          "en": "What do you think of that idea? It is one of the oldest in the world."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sarcofago",
+          "x": 1450,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "loto",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "camina"
+            },
+            {
+              "en": 2,
+              "hace": "brilla"
+            }
+          ]
+        },
+        {
+          "id": "osiris",
+          "como": "osiris_oficial",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "brilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "oscurecer",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "LA MEDIANOCHE",
+            "en": "MIDNIGHT"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "apofis",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "En la séptima hora aparece el peligro: Apofis, la serpiente gigante de la oscuridad.",
+          "en": "In the seventh hour comes the danger: Apep, the giant serpent of darkness."
+        },
+        {
+          "es": "Quiere detener la barca y apagar el sol para siempre.",
+          "en": "It wants to stop the boat and put out the sun forever."
+        },
+        {
+          "es": "Isis lo ata con sus palabras mágicas. Set, en la proa, lo atraviesa con su lanza.",
+          "en": "Isis binds it with her magic words. Set, at the prow, drives his spear into it."
+        },
+        {
+          "es": "Apofis no muere del todo. Vuelve cada noche, y los dioses lo vencen otra vez.",
+          "en": "Apep never dies for good. It returns each night, and the gods beat it again."
+        },
+        {
+          "es": "Por eso, para los egipcios, cada amanecer era una victoria.",
+          "en": "So for the Egyptians, every dawn was a victory."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 1050,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "set",
+          "como": "set_oficial",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "lanza"
+            },
+            {
+              "en": 3,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "apofis",
+          "como": "apofis_oficial",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "crece"
+            },
+            {
+              "en": 2,
+              "hace": "tiembla"
+            },
+            {
+              "en": 3,
+              "hace": "cae"
+            }
+          ]
+        },
+        {
+          "id": "isis",
+          "como": "isis_oficial",
+          "x": 1050,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "temblor",
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "rayo",
+          "dur": 2
+        },
+        {
+          "en": 3,
+          "tipo": "polvo",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "ultimas",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "En las horas siguientes la oscuridad se hace más fina.",
+          "en": "In the next hours, the darkness grows thinner."
+        },
+        {
+          "es": "Ra da lino a los muertos, y los dioses ayudan a los que se ahogaron.",
+          "en": "Ra gives linen to the dead, and gods help those who drowned."
+        },
+        {
+          "es": "Los enemigos del sol caen en pozos de fuego y desaparecen para siempre.",
+          "en": "The enemies of the sun fall into fire pits and vanish forever."
+        },
+        {
+          "es": "En la hora doce, la barca atraviesa el cuerpo de una serpiente enorme, como un nuevo nacimiento.",
+          "en": "In the twelfth hour, the boat passes through the body of an enormous serpent, like a new birth."
+        },
+        {
+          "es": "Sale por su boca como Jepri, el escarabajo: el sol recién nacido.",
+          "en": "It leaves through its mouth as Khepri, the scarab: the newborn sun."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "barca_solar",
+          "x": 1100,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "fogata",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "khepri",
+          "como": "khepri_oficial",
+          "x": 950,
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 4,
+              "hace": "brilla"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 500,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 3,
+          "tipo": "fuego",
+          "dur": 2
+        },
+        {
+          "en": 4,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "alba",
+      "fondo": "cielo_nut",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Entonces Shu, el aire, levanta el sol hasta el cielo, y llega el amanecer.",
+          "en": "Then Shu, the air, lifts the sun into the sky, and dawn arrives."
+        },
+        {
+          "es": "En todo Egipto, la gente saludaba la luz sabiendo que Ra había ganado otra noche.",
+          "en": "All over Egypt, people greeted the light knowing Ra had won another night."
+        },
+        {
+          "es": "Los muertos esperaban lo mismo: salir de su tumba cada mañana junto al sol.",
+          "en": "The dead hoped for the same: to leave their tomb each morning beside the sun."
+        },
+        {
+          "es": "Por eso los muertos eran enterrados con textos que los guiaban por esas puertas.",
+          "en": "That is why the dead were buried with texts to guide them through those gates."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 960,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "nut_arco",
+          "x": 960,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "shu",
+          "como": "shu_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 0,
+              "hace": "levanta"
+            },
+            {
+              "en": 2,
+              "hace": "brilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "dur": 2
+        },
+        {
+          "en": 3,
+          "tipo": "chispas",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "duat",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "El Duat no era solo un lugar de miedo. Era un camino con reglas, nombres y ayudantes.",
+          "en": "The Duat was not only a place of fear. It was a road with rules, names, and helpers."
+        },
+        {
+          "es": "Si conocías el camino, podías llegar a la luz.",
+          "en": "If you knew the way, you could reach the light."
+        },
+        {
+          "es": "Si tuvieras que atravesar el Duat, ¿qué hora te daría más miedo? Cuéntanos en los comentarios.",
+          "en": "If you had to cross the Duat, which hour would scare you most? Tell us in the comments."
+        },
+        {
+          "es": "En el próximo episodio, los animales sagrados de Egipto: gatos, toros, cocodrilos y más.",
+          "en": "In the next episode, the sacred animals of Egypt: cats, bulls, crocodiles, and more."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "tumba",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "puerta",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "ra",
+          "como": "ra_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 2,
+              "hace": "habla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "PRÓXIMO: LOS ANIMALES SAGRADOS",
+            "en": "NEXT: THE SACRED ANIMALS"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Doce horas para renacer",
+        "en": "Twelve hours to be reborn"
+      },
+      "escena": "medianoche",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "La serpiente que quería apagar el sol",
+        "en": "The serpent that wanted to put out the sun"
+      },
+      "escena": "apofis",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "Un libro pintado en la tumba de un rey",
+        "en": "A book painted in a king's tomb"
+      },
+      "escena": "pared",
+      "desde": 0,
+      "hasta": 2,
+      "foco": 950
+    }
+  ]
+}

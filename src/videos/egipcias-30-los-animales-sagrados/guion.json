@@ -1,0 +1,849 @@
+{
+  "id": "egipcias-30-los-animales-sagrados",
+  "serie": "egipcias",
+  "numero": "30",
+  "titulo": {
+    "es": "Los animales sagrados",
+    "en": "The Sacred Animals"
+  },
+  "tituloGriego": "THE SACRED ANIMALS",
+  "miniatura": {
+    "heroe": "bastet_oficial",
+    "rival": "cocodrilo_egipcio_oficial"
+  },
+  "siguiente": {
+    "es": "Nuevas historias de Egipto",
+    "en": "More Tales from Egypt"
+  },
+  "escenas": [
+    {
+      "id": "animales",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Los dioses egipcios tienen cabezas de halcón, de chacal, de vaca, de ibis.",
+          "en": "Egyptian gods have the heads of falcons, jackals, cows, and ibises."
+        },
+        {
+          "es": "¿Los egipcios adoraban a los animales? No exactamente.",
+          "en": "Did the Egyptians worship animals? Not exactly."
+        },
+        {
+          "es": "Veían en cada animal una fuerza que admiraban: la vista del halcón, el olfato del chacal.",
+          "en": "They saw in each animal a power they admired: the falcon's eyes, the jackal's nose."
+        },
+        {
+          "es": "Un animal sagrado era como una casa, o un mensajero, para un dios.",
+          "en": "A sacred animal was like a home, or a messenger, for a god."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "horus",
+          "como": "halcon_egipcio_oficial",
+          "x": 700,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "vuela"
+            }
+          ]
+        },
+        {
+          "id": "anubis",
+          "como": "perro_egipcio_oficial",
+          "x": 1050,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "mira"
+            }
+          ]
+        },
+        {
+          "id": "vaca",
+          "como": "vaca_egipcia_oficial",
+          "x": 1400,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "LOS ANIMALES SAGRADOS",
+            "en": "THE SACRED ANIMALS"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "gato",
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "El animal más querido era el gato. Su diosa era Bastet, de la ciudad de Bubastis.",
+          "en": "The best-loved animal was the cat. Its goddess was Bastet, of the city of Bubastis."
+        },
+        {
+          "es": "Bastet protegía los hogares y a las madres. Se la dibuja como una gata o con cabeza de gata.",
+          "en": "Bastet protected homes and mothers. She is drawn as a cat or with a cat's head."
+        },
+        {
+          "es": "El escritor griego Heródoto contó que, si moría un gato de la casa, la familia se afeitaba las cejas.",
+          "en": "The Greek writer Herodotus said that when a house cat died, the family shaved off their eyebrows."
+        },
+        {
+          "es": "Los gatos eran momificados y enterrados con respeto.",
+          "en": "Cats were mummified and buried with respect."
+        },
+        {
+          "es": "Otro escritor griego, Diodoro, cuenta que una multitud mató a un romano que mató un gato por accidente.",
+          "en": "Another Greek writer, Diodorus, tells how a crowd killed a Roman who accidentally killed a cat."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "casa",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "palmera",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "bastet",
+          "como": "bastet_oficial",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "brilla"
+            },
+            {
+              "en": 3,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio_oficial",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "BASTET, LA GATA",
+            "en": "BASTET, THE CAT"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "ibis",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Al dios Thoth, el escriba, se lo representaba como un ibis, un ave de pico largo.",
+          "en": "Thoth, the scribe god, was shown as an ibis, a bird with a long beak."
+        },
+        {
+          "es": "Los fieles llevaban a su templo un ibis momificado como ofrenda.",
+          "en": "Worshippers brought a mummified ibis to his temple as an offering."
+        },
+        {
+          "es": "En Saqqara se encontraron galerías enteras con millones de ibis momificados.",
+          "en": "At Saqqara, whole galleries were found holding millions of mummified ibises."
+        },
+        {
+          "es": "También eran sagrados los babuinos, que saludan al sol cuando sale.",
+          "en": "Baboons were sacred too, because they seem to greet the sun when it rises."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "estatua",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "thoth",
+          "como": "thoth_oficial",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio_oficial",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "reza"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 0.3,
+          "texto": {
+            "es": "EL IBIS DE THOTH",
+            "en": "THOTH'S IBIS"
+          },
+          "x": 960,
+          "y": 230
+        }
+      ]
+    },
+    {
+      "id": "cocodrilo",
+      "fondo": "nilo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "El Nilo traía vida, pero también cocodrilos. Los egipcios los respetaban y los temían.",
+          "en": "The Nile brought life, but also crocodiles. The Egyptians respected and feared them."
+        },
+        {
+          "es": "Sobek, el dios con cabeza de cocodrilo, vivía en el agua y cuidaba el río.",
+          "en": "Sobek, the crocodile-headed god, lived in the water and watched over the river."
+        },
+        {
+          "es": "En el Fayum había una ciudad con un cocodrilo sagrado en un estanque del templo.",
+          "en": "In the Faiyum there was a city with a sacred crocodile in a temple pond."
+        },
+        {
+          "es": "Los sacerdotes lo alimentaban y le ponían joyas. Cuando moría, lo momificaban.",
+          "en": "Priests fed it and dressed it in jewels. When it died, they mummified it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "rio",
+          "x": 1250,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "palmera",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "cocodrilo",
+          "como": "cocodrilo_egipcio_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "mira"
+            },
+            {
+              "en": 3,
+              "hace": "sienta"
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio_b_oficial",
+          "x": 600,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "ofrece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 1,
+          "tipo": "olas-suben",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "toro",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Ya conocimos a Apis, el toro negro de Menfis, signo vivo de Ptah.",
+          "en": "We have met Apis, the black bull of Memphis, a living sign of Ptah."
+        },
+        {
+          "es": "Pero había más toros. En Heliópolis vivía Mnevis, el toro de Ra.",
+          "en": "But there were more bulls. In Heliopolis lived Mnevis, the bull of Ra."
+        },
+        {
+          "es": "Y la vaca era Hathor, la diosa del amor y la música, que cuidaba a los vivos como a sus crías.",
+          "en": "And the cow was Hathor, goddess of love and music, who cared for the living like her calves."
+        },
+        {
+          "es": "Los toros y las vacas eran símbolo de fuerza y de leche, de poder y de cuidado.",
+          "en": "Bulls and cows stood for strength and milk, for power and care."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "estatua",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "altar",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "toro",
+          "como": "toro_egipcio_oficial",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "camina"
+            }
+          ]
+        },
+        {
+          "id": "hathor",
+          "como": "hathor_oficial",
+          "x": 1350,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "brilla"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "escarabajo",
+      "fondo": "desierto",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "El escarabajo rueda su bola de estiércol por el suelo, como el sol rueda por el cielo.",
+          "en": "The scarab beetle rolls its ball of dung along the ground, as the sun rolls across the sky."
+        },
+        {
+          "es": "Por eso los egipcios lo vieron como Jepri, el sol que renace.",
+          "en": "So the Egyptians saw it as Khepri, the sun being reborn."
+        },
+        {
+          "es": "Los escarabajos de piedra se usaban como amuletos de buena suerte y protección.",
+          "en": "Stone scarabs were used as lucky charms and for protection."
+        },
+        {
+          "es": "El hipopótamo hembra Tauret protegía a las mujeres embarazadas y a los bebés.",
+          "en": "The female hippo Taweret protected pregnant women and babies."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "sol",
+          "x": 1500,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "roca",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "khepri",
+          "como": "khepri_oficial",
+          "x": 900,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "brilla"
+            },
+            {
+              "en": 2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "hipo",
+          "como": "hipopotamo_egipcio_oficial",
+          "x": 1450,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 1,
+          "tipo": "luz",
+          "dur": 2
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "ofrendas",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Muchos fieles compraban una momia de animal en el templo y la dejaban como ofrenda.",
+          "en": "Many worshippers bought an animal mummy at the temple and left it as an offering."
+        },
+        {
+          "es": "Era como una carta: el animal llevaba su ruego hasta el dios.",
+          "en": "It was like a letter: the animal carried the prayer to the god."
+        },
+        {
+          "es": "Los expertos hoy han abierto o escaneado muchas de esas momias.",
+          "en": "Experts today have opened or scanned many of those mummies."
+        },
+        {
+          "es": "Algunas tienen dentro un animal entero. Otras, solo un puñado de vendas.",
+          "en": "Some hold a whole animal. Others hold only a bundle of linen."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "altar",
+          "x": 1250,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "columna_papiro",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "aldeano",
+          "como": "aldeano_egipcio_oficial",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "reza"
+            }
+          ]
+        },
+        {
+          "id": "sacerdote",
+          "como": "sacerdote_egipcio_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 0,
+        "zoom": [
+          1,
+          1.07
+        ]
+      },
+      "frases": [
+        {
+          "es": "Así veía el mundo el antiguo Egipto: los dioses vivían muy cerca, en los animales de cada día.",
+          "en": "This is how ancient Egypt saw the world: the gods lived close by, in everyday animals."
+        },
+        {
+          "es": "El mundo natural era un lugar sagrado, y cuidarlo era una forma de rezar.",
+          "en": "The natural world was a sacred place, and caring for it was a way of praying."
+        },
+        {
+          "es": "¿Qué animal sería sagrado para ti, y a qué dios o diosa lo unirías? Cuéntanos en los comentarios.",
+          "en": "Which animal would be sacred to you, and which god or goddess would you link it to? Tell us in the comments."
+        },
+        {
+          "es": "Con este episodio cerramos nuestra mirada de cerca a los dioses de Egipto. Pronto habrá más historias del Nilo.",
+          "en": "With this episode we close our close-up look at the gods of Egypt. More stories from the Nile are coming soon."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "palmera",
+          "x": 330,
+          "s": 1,
+          "capa": "fondo"
+        },
+        {
+          "tipo": "palmera",
+          "x": 1650,
+          "s": 1,
+          "capa": "fondo"
+        }
+      ],
+      "actores": [
+        {
+          "id": "bastet",
+          "como": "bastet_oficial",
+          "x": 650,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            },
+            {
+              "en": 2,
+              "hace": "brilla"
+            }
+          ]
+        },
+        {
+          "id": "horus",
+          "como": "halcon_egipcio_oficial",
+          "x": 950,
+          "pasos": [
+            {
+              "en": 0,
+              "hace": "aparece"
+            }
+          ]
+        },
+        {
+          "id": "thoth",
+          "como": "thoth_oficial",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "asiente"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "aclarar",
+          "dur": 1.2
+        },
+        {
+          "en": 3,
+          "tipo": "luz",
+          "dur": 2
+        }
+      ]
+    }
+  ],
+  "shorts": [
+    {
+      "gancho": {
+        "es": "Por qué los egipcios momificaban gatos",
+        "en": "Why the Egyptians mummified cats"
+      },
+      "escena": "gato",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "Millones de aves momificadas",
+        "en": "Millions of mummified birds"
+      },
+      "escena": "ibis",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 950
+    },
+    {
+      "gancho": {
+        "es": "El cocodrilo con joyas",
+        "en": "The crocodile dressed in jewels"
+      },
+      "escena": "cocodrilo",
+      "desde": 0,
+      "hasta": 3,
+      "foco": 950
+    }
+  ]
+}
