@@ -128,10 +128,13 @@ export function tieneInstagram(hist = []) {
 }
 /** Partes de un episodio ya publicadas en Instagram. */
 export const partesHechasIG = (hist, id) => new Set(hist.filter((h) => h.tipo === 'reel-parte' && h.id === id).map((h) => h.parte));
-/** TikTok (Buffer): todo lo anotado en subidas-buffer.json (Shorts viejos programados, episodios y Shorts nuevos). */
-export function tieneTiktok(buf = []) {
-  const m = new Map();
-  for (const h of buf) poner(m, h.id, ms(h.fecha ?? h.dueAt));
+/** TikTok desde cero (Matías 2026-10-29): los 114 videos viejos quedaron en «Solo yo» y la cola vuelve a E1 de cada serie.
+ *  Lo anotado en subidas-buffer.json antes de esta fecha no cuenta como publicado (el registro queda como historia). */
+export const TIKTOK_DESDE = '2026-10-29T21:00:00Z';
+/** TikTok (Buffer): lo anotado en subidas-buffer.json desde `desde` (null = todo). */
+export function tieneTiktok(buf = [], desde = TIKTOK_DESDE) {
+  const m = new Map(), corte = desde ? ms(desde) : 0;
+  for (const h of buf) { const f = ms(h.fecha ?? h.dueAt); if (f >= corte) poner(m, h.id, f); }
   return m;
 }
 

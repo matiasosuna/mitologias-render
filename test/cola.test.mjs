@@ -3,7 +3,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import {
-  construirCola, actualizarCola, entrada, esQuien, clase, horaHST, HORAS_UTC, tieneYouTube, tieneInstagram, tieneTiktok, partesHechasIG,
+  construirCola, actualizarCola, entrada, esQuien, clase, horaHST, HORAS_UTC, tieneYouTube, tieneInstagram, tieneTiktok, TIKTOK_DESDE, partesHechasIG,
   partesEstimadas, planTurno, estadoCola, limitar, usadas24h, MAX_ALCANZAR, TOPE_24H, FORMATOS, STORIES_GRIEGAS,
 } from '../scripts/cola.mjs';
 
@@ -119,9 +119,22 @@ test('Instagram: episodio = todas sus partes (o Reel entero/apaisado de antes); 
 });
 
 test('TikTok: lo anotado en subidas-buffer (fecha o dueAt)', () => {
-  const m = tieneTiktok([{ id: 'short-a', dueAt: '2026-10-12T14:00:00Z' }, { id: 'g1', tipo: 'episodio', fecha: '2026-10-18T00:00:00Z' }]);
+  const m = tieneTiktok([{ id: 'short-a', dueAt: '2026-10-12T14:00:00Z' }, { id: 'g1', tipo: 'episodio', fecha: '2026-10-18T00:00:00Z' }], null);
   assert.equal(m.get('short-a'), Date.parse('2026-10-12T14:00:00Z'));
   assert.ok(m.has('g1'));
+});
+
+test('TikTok desde cero (2026-10-29): lo anterior a TIKTOK_DESDE no cuenta y la serie vuelve a E1', () => {
+  const buf = [{ id: 'griegas-01-origen', fecha: '2026-10-18T00:00:00Z' }, { id: 'griegas-02-prometeo', fecha: '2026-10-29T18:15:00Z' },
+    { id: 'griegas-01-origen', fecha: '2026-10-29T22:15:00Z' }];
+  const m = tieneTiktok(buf);
+  assert.equal(TIKTOK_DESDE, '2026-10-29T21:00:00Z');
+  assert.ok(!m.has('griegas-02-prometeo'));
+  assert.equal(m.get('griegas-01-origen'), Date.parse('2026-10-29T22:15:00Z'));
+  const cola = ['griegas-01-origen', 'griegas-02-prometeo', 'griegas-03-pandora'].map(entrada);
+  const viejo = tieneTiktok(buf.slice(0, 2));
+  const plan = planTurno({ cola, tiene: { youtube: new Map(), instagram: new Map(), tiktok: viejo }, plataforma: 'tiktok', clase: 'serie:griegas' });
+  assert.deepEqual(plan.ids, ['griegas-01-origen']);
 });
 
 test('partes estimadas: < 175 s de contenido por parte (como vertical-partes.mjs)', () => {
