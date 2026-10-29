@@ -6,7 +6,7 @@ import { spawnSync } from 'node:child_process';
 import { mkdtempSync, writeFileSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { prepararTiktok } from '../scripts/buffer-tiktok.mjs';
+import { prepararTiktok, postsDesde } from '../scripts/buffer-tiktok.mjs';
 
 test('un import circular del módulo principal cuelga el await (exit 13): por eso hay que pasar `rel`', () => {
   const d = mkdtempSync(join(tmpdir(), 'circ-'));
@@ -32,4 +32,11 @@ test('nube.mjs le pasa su propio módulo a buffer-tiktok en el turno y en adelan
   const src = readFileSync(new URL('../scripts/nube.mjs', import.meta.url), 'utf8');
   assert.match(src, /publicarTiktok\(id, \{ env, rel: yo \}\)/);
   assert.match(src, /prepararTiktok\(id, yo\)/);
+});
+
+test('TikTok desde cero: los posts viejos de Buffer no frenan la re-publicación', () => {
+  const posts = [{ id: 'viejo', sentAt: '2026-10-20T10:00:00Z' }, { id: 'nuevo', sentAt: '2026-10-30T02:15:00Z' }, { id: 'en-cola', dueAt: null }];
+  assert.deepEqual(postsDesde(posts, '2026-10-29T21:00:00Z').map((p) => p.id), ['nuevo', 'en-cola']);
+  const src = readFileSync('scripts/buffer-tiktok.mjs', 'utf8');
+  assert.match(src, /tieneTiktok\(hechos\)\.has\(id\)/); // el registro viejo tampoco cuenta
 });

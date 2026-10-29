@@ -12,6 +12,7 @@ import { join, dirname } from 'node:path';
 import { cliente, postsDelCanal, buscarPorPrimeraLinea, crear, esperarEnvio, entradaTiktok, esLimite, CANAL_TIKTOK } from './buffer.mjs';
 import { primeraLinea } from './instagram-texto.mjs';
 import { tieneGancho } from '../lib/marco.mjs';
+import { tieneTiktok, TIKTOK_DESDE } from './cola.mjs';
 import { ganchoParte, codigoEpisodio, leerTitulos, NOMBRES } from './titulos.mjs';
 
 export const REG = 'out/subidas-buffer.json';
@@ -83,9 +84,12 @@ export async function prepararTiktok(id, rel) {
 export const enCola = async (gql) => (await postsDelCanal(gql, { canal: CANAL_TIKTOK, estados: ['scheduled'] })).length;
 
 /** Publica YA un ítem en TikTok. Devuelve 'ya estaba' | 'publicado'. Error con .limite = true si TikTok/Buffer lo frenó. */
+/** Posts de Buffer que cuentan como publicados: los de antes de TIKTOK_DESDE (los videos viejos, ya en «Solo yo») no. */
+export const postsDesde = (posts, desde = TIKTOK_DESDE) => posts.filter((p) => { const f = Date.parse(p.sentAt ?? p.dueAt ?? ''); return !Number.isFinite(f) || f >= Date.parse(desde); });
+
 export async function publicarTiktok(id, { env, probar = false, rel } = {}) {
   const hechos = leerJSON(REG, []);
-  if (hechos.some((h) => h.id === id)) return 'ya estaba';
+  if (tieneTiktok(hechos).has(id)) return 'ya estaba'; // lo de antes de TIKTOK_DESDE no cuenta
   const esEp = !id.startsWith('short-');
   const g0 = esEp ? (leerJSON(join('src/videos', id, 'youtube.json'), {}).gancho ?? leerJSON('src/videos/meta-youtube.json', {}).episodios?.[id]?.gancho) : null;
   const gancho = Array.isArray(g0) ? g0[0] : g0; // especiales: [gancho, fuente]
@@ -93,7 +97,7 @@ export async function publicarTiktok(id, { env, probar = false, rel } = {}) {
   if (probar) { console.log(id, '\n ', txt); return 'probar'; }
   const gql = cliente(env.BUFFER_API_KEY);
   const anotar = (post, nota) => { const h = leerJSON(REG, []); h.push({ id, tipo: esEp ? 'episodio' : 'short', post, dueAt: new Date().toISOString(), fecha: new Date().toISOString(), ...(nota ? { nota } : {}) }); writeFileSync(REG, JSON.stringify(h, null, 1)); };
-  const previo = buscarPorPrimeraLinea(await postsDelCanal(gql, { canal: CANAL_TIKTOK }), (l) => primera(l) === primera(txt));
+  const previo = buscarPorPrimeraLinea(postsDesde(await postsDelCanal(gql, { canal: CANAL_TIKTOK })), (l) => primera(l) === primera(txt));
   if (previo) { anotar(previo.id, 'ya estaba en Buffer'); return 'ya estaba'; }
   const videoUrl = await prepararTiktok(id, rel);
   let post;
