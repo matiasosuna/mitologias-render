@@ -2,12 +2,20 @@
 # Copia al repo PÚBLICO matiasosuna/mitologias-render solo lo necesario para renderizar en GitHub Actions
 # (gratis e ilimitado en repos públicos). NO incluye muestras de voz (lib/voz-matias-*), pruebas/, ni nada fuera de git.
 # Uso: scripts/publicar-render.sh   → después: gh workflow run render-nube -R matiasosuna/mitologias-render -f ids='[...]' -f tipo=vertical
-# Destino: ~/Projects/mitologias-render, o MOC_RENDER_DIR=<clon del repo público> (la rutina de la nube).
+# Destino: MOC_RENDER_DIR=<clon del repo público> (la rutina de la nube), o ~/Projects/mitologias-render si existe.
+# Sin ninguno de los dos (la Mac, desde 2026-10-31): usa un clon TEMPORAL liviano (sin bajar archivos) y lo borra al final,
+# así la Mac no guarda otra copia de 8 GB del repo público.
 set -e
 cd "$(dirname "$0")/.."
 DEST=${MOC_RENDER_DIR:-$HOME/Projects/mitologias-render}
-# ponerse al día con main del repo público antes de copiar (si alguien más empujó, el push no choca)
-if [ -d "$DEST/.git" ]; then
+TEMPORAL=
+if [ -z "$MOC_RENDER_DIR" ] && [ ! -d "$DEST/.git" ]; then
+  DEST=$(mktemp -d); TEMPORAL=1
+  trap 'cd /; rm -rf "$DEST"' EXIT # se borra aunque algo falle a mitad de camino
+  git clone -q --filter=blob:none --no-checkout https://github.com/matiasosuna/mitologias-render.git "$DEST"
+  git -C "$DEST" reset -q # índice = main del público, sin bajar ningún archivo
+elif [ -d "$DEST/.git" ]; then
+  # ponerse al día con main del repo público antes de copiar (si alguien más empujó, el push no choca)
   git -C "$DEST" fetch -q origin main
   git -C "$DEST" checkout -q main 2>/dev/null || git -C "$DEST" checkout -q -b main origin/main
   git -C "$DEST" merge -q --ff-only origin/main
