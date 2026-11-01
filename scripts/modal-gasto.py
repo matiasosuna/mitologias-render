@@ -1,4 +1,4 @@
-# Gasto de Modal del mes en la cuenta de los secretos (Myths = "familia", tarjeta de la mamá de Matías: tope USD 30/mes).
+# Gasto de Modal del mes en la cuenta de las claves MODAL_TOKEN_* (Myths: "familia" = renders, "osuna-devs" = voz; tope propio USD 29 c/u).
 # Imprime el gasto en USD. Uso (Actions): python scripts/modal-gasto.py  → "12.34"
 import datetime as d
 

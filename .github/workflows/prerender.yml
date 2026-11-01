@@ -53,6 +53,8 @@ jobs:
       GH_TOKEN: ${{ github.token }}
       MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
       MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
+      MODAL2_TOKEN_ID: ${{ secrets.MODAL2_TOKEN_ID }} # cuenta "osuna-devs" (Matías 2026-11-01): respaldo si familia llega al tope
+      MODAL2_TOKEN_SECRET: ${{ secrets.MODAL2_TOKEN_SECRET }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -69,7 +71,13 @@ jobs:
         run: |
           MODAL=0; [ -n "$MODAL_TOKEN_ID" ] && [ "${{ vars.MODAL_PAUSA }}" != "1" ] && MODAL=1 # MODAL_PAUSA=1: sin crédito, todo a GitHub
           # cuenta "familia" (tarjeta de la mamá de Matías): con el mes en USD 29 o más, nada a Modal
-          if [ $MODAL = 1 ]; then pip install -q modal; G=$(python scripts/modal-gasto.py || echo 99); echo "Modal este mes: USD $G"; python -c "import sys; sys.exit(float('$G') >= 29)" || { MODAL=0; echo "::warning::Modal ≥ USD 29 este mes: todo a GitHub"; }; fi
+          if [ $MODAL = 1 ]; then pip install -q modal; G=$(python scripts/modal-gasto.py || echo 99); echo "Modal este mes: USD $G"; python -c "import sys; sys.exit(float('$G') >= 29)" || MODAL=0; fi
+          # familia en el tope → osuna-devs (si tiene claves y está por debajo de USD 29); si no, todo a GitHub
+          if [ $MODAL = 0 ] && [ -n "$G" ] && [ -n "$MODAL2_TOKEN_ID" ] && [ "${{ vars.MODAL_PAUSA }}" != "1" ]; then
+            G2=$(MODAL_TOKEN_ID=$MODAL2_TOKEN_ID MODAL_TOKEN_SECRET=$MODAL2_TOKEN_SECRET python scripts/modal-gasto.py || echo 99); echo "Modal osuna-devs este mes: USD $G2"
+            python -c "import sys; sys.exit(float('$G2') >= 29)" && { MODAL=1; echo "MODAL_CUENTA=osuna-devs" >> "$GITHUB_ENV"; echo "::notice::familia en el tope: renders en osuna-devs"; }
+          fi
+          [ $MODAL = 1 ] || [ -z "$G" ] || echo "::warning::Modal ≥ USD 29 en las dos cuentas: todo a GitHub"
           MODO="${{ inputs.modo || 'ventana' }}"
           if [ "$MODO" = ventana ]; then
             SERIES="${{ inputs.series || 'griegas,nordicas,egipcias,hawaianas,biblia' }}"; N=6; PRES="${{ inputs.presupuesto || '1' }}"; MOTOR="${{ inputs.motor || vars.RENDER_MOTOR || 'ventana' }}" # RENDER_MOTOR=modal: todo a Modal (Matías 2026-10-25)
@@ -99,6 +107,7 @@ jobs:
           [ -n "$ITEMS" ] || { echo "nada para Modal"; exit 0; }
           echo "items=$ITEMS" >> "$GITHUB_OUTPUT"
           pip install -q modal
+          [ "$MODAL_CUENTA" = osuna-devs ] && { export MODAL_TOKEN_ID=$MODAL2_TOKEN_ID MODAL_TOKEN_SECRET=$MODAL2_TOKEN_SECRET; echo "cuenta Modal: osuna-devs"; }
           sudo apt-get install -y ffmpeg >/dev/null # armado del mp4 de TikTok (tapa + vertical)
           START=$(date +%s)
           if [ "${{ inputs.reusar }}" = true ]; then rc=0; echo '[]' > out/modal-fallos.json; else rc=0; MOC_ITEMS="$ITEMS" timeout 6000 modal run scripts/modal_render.py || rc=$?; fi

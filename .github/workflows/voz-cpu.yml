@@ -1,7 +1,8 @@
 # Voz (Chatterbox Turbo) en la CPU de GitHub: gratis en el repo público, sin Modal. Lo usa scripts/voz-github.mjs
 # (motor-narrar, por defecto). Dos entradas: workflow_dispatch (con gh) o un pedido pedidos/<clave>.json empujado a la rama
 # "voz" (sin gh: la rutina de la nube). Salida: artefactos voz-<clave>-<n> y el zip voz-<clave>.zip en el release "voz".
-# MOTOR (variable del repo VOZ_MOTOR): modal = GPU de Modal, cuenta "familia" (secretos MODAL_TOKEN_*; Matías 2026-10-25, tope USD 30/mes)
+# MOTOR (variable del repo VOZ_MOTOR): modal = GPU de Modal, cuenta "osuna-devs" (secretos MODAL2_TOKEN_*; Matías 2026-11-01, tope USD 30/mes;
+# si no están o pasa USD 29, usa "familia", secretos MODAL_TOKEN_*). Los renders van por familia (prerender).
 # | cpu = CPU de GitHub (gratis, más lento; queda apagado de respaldo).
 # La muestra de voz va cifrada (lib/voz-ref.enc, AES-256, clave en el secreto VOZ_CLAVE): nunca en claro en este repo.
 name: voz-cpu
@@ -59,6 +60,7 @@ jobs:
         with:
           sparse-checkout: |
             scripts/modal_voz.py
+            scripts/modal-gasto.py
             lib/voz-ref.enc
           sparse-checkout-cone-mode: false
       - uses: actions/download-artifact@v4
@@ -69,12 +71,18 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -q modal
-      - name: narrar en Modal (familia)
+      - name: narrar en Modal (osuna-devs; respaldo familia)
         env:
           VOZ_CLAVE: ${{ secrets.VOZ_CLAVE }}
           MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
           MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
+          MODAL2_TOKEN_ID: ${{ secrets.MODAL2_TOKEN_ID }}
+          MODAL2_TOKEN_SECRET: ${{ secrets.MODAL2_TOKEN_SECRET }}
         run: |
+          if [ -n "$MODAL2_TOKEN_ID" ]; then
+            G2=$(MODAL_TOKEN_ID=$MODAL2_TOKEN_ID MODAL_TOKEN_SECRET=$MODAL2_TOKEN_SECRET python scripts/modal-gasto.py || echo 99); echo "Modal osuna-devs este mes: USD $G2"
+            python -c "import sys; sys.exit(float('$G2') >= 29)" && { export MODAL_TOKEN_ID=$MODAL2_TOKEN_ID MODAL_TOKEN_SECRET=$MODAL2_TOKEN_SECRET; echo "cuenta Modal: osuna-devs"; } || echo "osuna-devs en el tope: familia"
+          fi
           openssl enc -d -aes-256-cbc -pbkdf2 -pass env:VOZ_CLAVE -in lib/voz-ref.enc -out lib/voz-matias-ref.wav # modal_voz.py la monta si existe
           VOZ_ENTRADA="pedidos/${{ matrix.clave }}.json" VOZ_SALIDA=salida timeout 1800 modal run scripts/modal_voz.py
           rm -f lib/voz-matias-ref.wav
