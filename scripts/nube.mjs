@@ -26,7 +26,32 @@ import { tituloQuienHorizontal, listaQuien, mitologiaEn } from '../lib/quien.mjs
 import * as yo from './nube.mjs'; // este mismo módulo, para pasárselo a buffer-tiktok (ver prepararTiktok)
 
 export const REPO = 'matiasosuna/mitologias-render', RELEASE = 'media';
-export const urlAsset = (nombre) => `https://github.com/${REPO}/releases/download/${RELEASE}/${nombre}`;
+// GitHub acepta hasta 1000 assets por release: cuando "media" se llena se sigue en "media-2", "media-3"… (2026-11-05)
+export const TOPE_ASSETS = 980; // margen para subidas en paralelo
+export const urlAsset = (nombre, release = RELEASE) => `https://github.com/${REPO}/releases/download/${release}/${nombre}`;
+/** Releases de videos con su cantidad de assets, en orden (media, media-2, …). */
+export const releasesMedia = (filas) => filas.filter((r) => /^media(-\d+)?$/.test(r.tag)).sort((a, b) => (+a.tag.split('-')[1] || 1) - (+b.tag.split('-')[1] || 1));
+/** Dónde subir un asset nuevo: el primer release con lugar, o el nombre del próximo a crear. */
+export function releaseConLugar(filas, tope = TOPE_ASSETS) {
+  const rs = releasesMedia(filas);
+  const libre = rs.find((r) => r.n < tope);
+  return libre ? { tag: libre.tag, crear: false } : { tag: `media-${rs.length ? (+rs.at(-1).tag.split('-')[1] || 1) + 1 : 1}`.replace(/^media-1$/, 'media'), crear: true };
+}
+export function leerReleases() {
+  const out = execFileSync('gh', ['api', `repos/${REPO}/releases`, '--paginate', '-q', '.[]|"\\(.tag_name) \\(.assets|length)"'], { encoding: 'utf8' });
+  return out.split('\n').filter(Boolean).map((l) => { const [tag, n] = l.split(' '); return { tag, n: +n }; });
+}
+let tagsCache;
+const tagsMedia = () => { try { tagsCache ??= releasesMedia(leerReleases()).map((r) => r.tag); } catch { tagsCache = [RELEASE]; } return tagsCache.length ? tagsCache : [RELEASE]; };
+const dondeCache = new Map();
+/** Release que tiene el asset (o null): prueba media, media-2, … */
+export function dondeAsset(nombre) {
+  if (dondeCache.has(nombre)) return dondeCache.get(nombre);
+  for (const tag of tagsMedia()) {
+    try { execFileSync('curl', ['-fsIL', '--retry', '2', '-o', '/dev/null', urlAsset(nombre, tag)], { stdio: 'ignore' }); dondeCache.set(nombre, tag); return tag; } catch {}
+  }
+  return null;
+}
 
 // ── turnos: cron cada 4 h a las 2, 6, 10, 14, 18 y 22 UTC = 16, 20, 00, 04, 08 y 12 HST (UTC−10)
 /** Fecha del turno: la de creación de la corrida (TURNO_FECHA, la pone el workflow) aunque haya esperado en la cola. */
@@ -104,28 +129,43 @@ export function bajar(nombre, destino) {
   guardaLegacy(nombre);
   mkdirSync(dirname(destino), { recursive: true });
   const tmp = `${destino}.bajando`;
-  try { execFileSync('curl', ['-fsSL', '--retry', '3', '-o', tmp, urlAsset(nombre)], { stdio: 'ignore' }); renameSync(tmp, destino); return true; }
+  const tag = dondeAsset(nombre);
+  if (!tag) return false;
+  try { execFileSync('curl', ['-fsSL', '--retry', '3', '-o', tmp, urlAsset(nombre, tag)], { stdio: 'ignore' }); renameSync(tmp, destino); return true; }
   catch { rmSync(tmp, { force: true }); return false; }
 }
-export function hayAsset(nombre) {
-  try { execFileSync('curl', ['-fsIL', '--retry', '2', '-o', '/dev/null', urlAsset(nombre)], { stdio: 'ignore' }); return true; } catch { return false; }
+export const hayAsset = (nombre) => Boolean(dondeAsset(nombre));
+/** Release donde subir `nombre`: donde ya está (se pisa) o el primero con lugar (lo crea si están todos llenos). */
+function destinoSubida(nombre) {
+  const ya = dondeAsset(nombre);
+  if (ya) return ya;
+  const { tag, crear } = releaseConLugar(leerReleases());
+  if (crear) {
+    try { execFileSync('gh', ['release', 'create', tag, '-R', REPO, '--title', tag, '--notes', 'Videos y portadas (sigue de "media": GitHub permite 1000 archivos por release)'], { stdio: 'ignore' }); console.log(`  release nuevo: ${tag}`); }
+    catch {} // otro job lo creó al mismo tiempo
+    tagsCache = undefined;
+  }
+  return tag;
 }
 /** Sube (o reemplaza) un archivo como asset del release y devuelve su URL pública. */
 export function subirAsset(ruta, nombre) {
   guardaLegacy(nombre);
   const dir = mkdtempSync(join(tmpdir(), 'media-')), f = join(dir, nombre);
   copyFileSync(ruta, f);
-  try { execFileSync('gh', ['release', 'upload', RELEASE, f, '--clobber', '-R', REPO], { stdio: ['ignore', 'ignore', 'inherit'] }); }
+  const tag = destinoSubida(nombre);
+  try { execFileSync('gh', ['release', 'upload', tag, f, '--clobber', '-R', REPO], { stdio: ['ignore', 'ignore', 'inherit'] }); }
   finally { rmSync(dir, { recursive: true, force: true }); }
-  console.log(`  ↑ release: ${nombre}`);
-  return urlAsset(nombre);
+  dondeCache.set(nombre, tag);
+  console.log(`  ↑ release ${tag}: ${nombre}`);
+  return urlAsset(nombre, tag);
 }
 /** URL pública de un archivo: si el release ya lo tiene se usa ese; si no, se sube. Espera a que responda. */
 export function publicarUrl(ruta, nombre) {
-  if (!hayAsset(nombre)) subirAsset(ruta, nombre);
-  for (let i = 0; i < 40 && !hayAsset(nombre); i++) execFileSync('sleep', ['5']); // un asset recién subido puede tardar ~1–3 min en servirse
-  if (!hayAsset(nombre)) throw new Error(`el release no sirve ${nombre}`);
-  return urlAsset(nombre);
+  const url = hayAsset(nombre) ? urlAsset(nombre, dondeAsset(nombre)) : subirAsset(ruta, nombre);
+  const sirve = () => { try { execFileSync('curl', ['-fsIL', '--retry', '2', '-o', '/dev/null', url], { stdio: 'ignore' }); return true; } catch { return false; } };
+  for (let i = 0; i < 40 && !sirve(); i++) execFileSync('sleep', ['5']); // un asset recién subido puede tardar ~1–3 min en servirse
+  if (!sirve()) throw new Error(`el release no sirve ${nombre}`);
+  return url;
 }
 
 // ── asegurar: dejar el archivo en out/ (bajado del release o renderizado acá y subido)

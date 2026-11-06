@@ -1,5 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { releasesMedia, releaseConLugar } from '../scripts/nube.mjs';
 import { inicioTurno, claveTurno, turnoUTC, horaHST, miniaturasPendientes, nombreAsset, rutaLocal, urlAsset, tituloShortYT, buscarTitulo, extraYT, partesVigentes, tiktokFrenado, tiktokEnPausa } from '../scripts/nube.mjs';
 
 const utc = (h, m = 0) => new Date(Date.UTC(2026, 9, 14, h, m));
@@ -121,4 +122,14 @@ test('TikTok pide esperar 24 h: pausa total y se detecta el mensaje', async () =
   assert.equal(tiktokEnPausa({ pausa: true, max: 2, desde }, Date.parse('2026-10-20T09:00:00Z')), true);
   assert.equal(tiktokEnPausa({ pausa: true, max: 2, desde }, Date.parse('2026-10-20T10:30:00Z')), false);
   assert.equal(tiktokEnPausa({ max: 2, desde }, Date.parse('2026-10-19T11:00:00Z')), false);
+});
+
+test('release lleno (GitHub: 1000 assets): se sigue en media-2, media-3…', () => {
+  assert.equal(urlAsset('a.mp4', 'media-2'), 'https://github.com/matiasosuna/mitologias-render/releases/download/media-2/a.mp4');
+  const filas = [{ tag: 'voz', n: 3 }, { tag: 'media-2', n: 10 }, { tag: 'media', n: 1000 }];
+  assert.deepEqual(releasesMedia(filas).map((r) => r.tag), ['media', 'media-2']);
+  assert.deepEqual(releaseConLugar(filas), { tag: 'media-2', crear: false });
+  assert.deepEqual(releaseConLugar([{ tag: 'media', n: 1000 }]), { tag: 'media-2', crear: true });
+  assert.deepEqual(releaseConLugar([{ tag: 'media', n: 1000 }, { tag: 'media-2', n: 990 }]), { tag: 'media-3', crear: true });
+  assert.deepEqual(releaseConLugar([{ tag: 'media', n: 5 }]), { tag: 'media', crear: false });
 });
