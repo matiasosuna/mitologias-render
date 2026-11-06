@@ -115,6 +115,10 @@ jobs:
         continue-on-error: true
         run: node scripts/nube.mjs adelantar
 
+      - name: borrar del release lo ya publicado en las 3 redes (hace 3+ días)
+        continue-on-error: true
+        run: node scripts/limpiar-media.mjs --borrar
+
       - name: resultado
         if: always()
         run: |
