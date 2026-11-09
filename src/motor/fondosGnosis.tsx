@@ -26,7 +26,7 @@ const Degrades: React.FC = () => (
   <defs>
     <linearGradient id="gnPleroma" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#04050F" /><stop offset="45%" stopColor="#11143A" /><stop offset="80%" stopColor="#262A66" /><stop offset="100%" stopColor="#3E3C7E" /></linearGradient>
     <linearGradient id="gnAbajo" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#030604" /><stop offset="55%" stopColor="#0C1A12" /><stop offset="100%" stopColor="#1C3426" /></linearGradient>
-    <linearGradient id="gnMateria" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#020302" /><stop offset="60%" stopColor="#14140E" /><stop offset="100%" stopColor="#2A2618" /></linearGradient>
+    <linearGradient id="gnMateria" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#0A0B08" /><stop offset="60%" stopColor="#24241A" /><stop offset="100%" stopColor="#3E3824" /></linearGradient>
     <linearGradient id="gnParaiso" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#123A34" /><stop offset="55%" stopColor="#5E8A5E" /><stop offset="88%" stopColor="#C8C27A" /><stop offset="100%" stopColor="#D9B868" /></linearGradient>
     <linearGradient id="gnTarde" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#2E2A4E" /><stop offset="45%" stopColor="#8A5E6A" /><stop offset="80%" stopColor="#D99A6A" /><stop offset="100%" stopColor="#F2CE8A" /></linearGradient>
     <linearGradient id="gnDia" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#8FA6B0" /><stop offset="60%" stopColor="#D2D0B4" /><stop offset="100%" stopColor="#EADFC0" /></linearGradient>
@@ -397,7 +397,7 @@ export function fondoGnosis(tipo: string, f: number, astros = true): React.React
         <Degrades />
         <Capa p={0}><CieloG id="gnPleroma" /></Capa>
         <Capa p={0.04}><EstrellasOro f={f} n={44} area={[-400, 140, 2800, 560]} />{astros && <LuzPleroma x={960} y={380} r={360} f={f} />}</Capa>
-        <Capa p={0.3}><Bulto circ={Array.from({ length: 22 }, (_, i) => [-1200 + i * 260, SUELO - 70 + Math.sin(i * 2.1) * 20, 70 + (i % 3) * 18] as [number, number, number])} fill="#E9DDB6" borde={GN.oro} w={2} o={0.55} /></Capa>
+        <Capa p={0.3}><Bulto circ={Array.from({ length: 22 }, (_, i) => [-1200 + i * 260, SUELO - 70 + Math.sin(i * 2.1) * 20, 70 + (i % 3) * 18] as [number, number, number])} fill="#2E3270" borde="#4A4C90" w={3} /></Capa>
         <Capa p={1}><SueloLuz f={f} /></Capa>
       </>
     );
@@ -464,10 +464,10 @@ export function fondoGnosis(tipo: string, f: number, astros = true): React.React
       <>
         <Degrades />
         <Capa p={0}><CieloG id="gnMateria" /></Capa>
-        <Capa p={0.15}><Brasas f={f} n={5} y={620} seed={2} />{Array.from({ length: 8 }, (_, i) => <RocaPesada key={i} x={-600 + i * 520} y={110} w={460} h={170 + (i % 3) * 50} arriba c="#1A1A12" seed={i} />)}</Capa>
-        <Capa p={0.4}>{[-200, 700, 1500, 2300].map((x, i) => <Cadena key={i} x={x} y={120} largo={260 + (i % 2) * 120} f={f} />)}{Array.from({ length: 6 }, (_, i) => <RocaPesada key={`b${i}`} x={-400 + i * 700} y={SUELO} w={520} h={160 + (i % 2) * 70} c="#22201A" seed={i + 4} />)}</Capa>
+        <Capa p={0.15}><Brasas f={f} n={5} y={620} seed={2} />{Array.from({ length: 8 }, (_, i) => <RocaPesada key={i} x={-600 + i * 520} y={110} w={460} h={170 + (i % 3) * 50} arriba c="#2A281C" seed={i} />)}</Capa>
+        <Capa p={0.4}>{[-200, 700, 1500, 2300].map((x, i) => <Cadena key={i} x={x} y={120} largo={260 + (i % 2) * 120} f={f} />)}{Array.from({ length: 6 }, (_, i) => <RocaPesada key={`b${i}`} x={-400 + i * 700} y={SUELO} w={520} h={160 + (i % 2) * 70} c="#34301F" seed={i + 4} />)}</Capa>
         <Capa p={0.7}><Niebla x={960} y={SUELO - 40} f={f} s={1.3} c="url(#gnNiebla)" /></Capa>
-        <Capa p={1}><SueloOscuro c="#16140E" /></Capa>
+        <Capa p={1}><SueloOscuro c="#262218" /></Capa>
       </>
     );
     // El paraíso de los gobernantes: hermoso pero inquietante — cielo verde enfermo, árboles espesos de fruta roja, niebla.
@@ -489,7 +489,7 @@ export function fondoGnosis(tipo: string, f: number, astros = true): React.React
         <Capa p={0.06}>{astros && <circle cx={300} cy={560} r={70} fill="#F8DCA0" opacity={0.85} />}</Capa>
         <Capa p={0.2}><Muralla x={960} y={SUELO - 120} w={4400} h={110} c="#B8A07A" />{[-400, 200, 2100, 2700].map((x, i) => <Casa key={i} x={x} y={SUELO - 120} s={0.6} c="#C9B48A" />)}</Capa>
         <Capa p={0.5}><TemploJerusalen x={1100} y={SUELO - 40} s={0.95} f={f} /></Capa>
-        <Capa p={0.8}>{Array.from({ length: 14 }, (_, i) => i < 5 || i > 9 ? <ColumnaTemplo key={i} x={-500 + i * 300} y={SUELO} s={0.9} /> : null)}<path d="M-700 360 H 900 M1700 360 H 3600" stroke={GN.piedraOsc} strokeWidth={36} /></Capa>
+        <Capa p={0.8}>{Array.from({ length: 14 }, (_, i) => i < 5 || i > 9 ? <ColumnaTemplo key={i} x={-500 + i * 300} y={SUELO} s={0.9} /> : null)}</Capa>
         <Capa p={1}><SueloPiedra /></Capa>
       </>
     );

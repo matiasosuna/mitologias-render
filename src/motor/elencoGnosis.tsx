@@ -31,13 +31,14 @@ const L = (pts: P[], c: string, w = 1.5) => <path d={suave(pts)} stroke={c} stro
 // ---------- luz (formas nítidas) ----------
 /** Nimbo de disco detrás de la cabeza (va en adornos.detras; la cabeza está en 20,-334). rayos = puntas de luz. */
 const Nimbo: React.FC<{ c?: string; aro?: string; r?: number; rayos?: number; cx?: number; cy?: number }> = ({ c = GN.oroClaro, aro = GN.oro, r = 62, rayos = 0, cx = 20, cy = -334 }) => {
-  const f = useCurrentFrame(), g = (f / 3) % 360;
+  // puntas quietas y nunca hacia la cara (a la derecha, ángulo 0): si no, parecen una nariz negra larga.
+  const angs = Array.from({ length: rayos }, (_, i) => (i / rayos) * Math.PI * 2 + Math.PI / rayos).filter((a) => Math.abs(Math.atan2(Math.sin(a), Math.cos(a))) > 0.75);
   return (
     <g>
-      {rayos > 0 && <g transform={`rotate(${r1(g * 0.1)} ${cx} ${cy})`}>{Array.from({ length: rayos }, (_, i) => {
-        const a = (i / rayos) * Math.PI * 2, L0 = r * 0.9, L1 = r * (i % 2 ? 1.45 : 1.7), w = 0.09;
+      {angs.map((a, i) => {
+        const L0 = r * 0.9, L1 = r * (i % 2 ? 1.35 : 1.55), w = 0.09;
         return <path key={i} d={`M${r1(cx + Math.cos(a - w) * L0)} ${r1(cy + Math.sin(a - w) * L0)} L ${r1(cx + Math.cos(a) * L1)} ${r1(cy + Math.sin(a) * L1)} L ${r1(cx + Math.cos(a + w) * L0)} ${r1(cy + Math.sin(a + w) * L0)} Z`} fill={c} stroke={N} strokeWidth={1.6} strokeLinejoin="round" />;
-      })}</g>}
+      })}
       <circle cx={cx} cy={cy} r={r} fill={c} stroke={N} strokeWidth={2.4} />
       <circle cx={cx} cy={cy} r={r - 9} fill="none" stroke={aro} strokeWidth={3} />
       <circle cx={cx} cy={cy} r={r - 16} fill="none" stroke={GN.blanco} strokeWidth={1.6} strokeDasharray="2 6" />
@@ -45,19 +46,14 @@ const Nimbo: React.FC<{ c?: string; aro?: string; r?: number; rayos?: number; cx
   );
 };
 /** Mandorla: almendra de luz alrededor del cuerpo entero (el Salvador). */
-const Mandorla: React.FC<{ c?: string; c2?: string; alto?: number; ancho?: number }> = ({ c = '#FBEFC8', c2 = GN.blanco, alto = 470, ancho = 150 }) => {
-  const f = useCurrentFrame(), y0 = 20, y1 = -alto, ym = (y0 + y1) / 2;
+const Mandorla: React.FC<{ c?: string; c2?: string; alto?: number; ancho?: number }> = ({ c = GN.oro, c2 = '#F6DC94', alto = 470, ancho = 150 }) => {
+  const y0 = 20, y1 = -alto, ym = (y0 + y1) / 2;
   const almendra = (k: number) => `M0 ${r1(ym - (ym - y1) * k)} C ${r1(ancho * k * 1.2)} ${r1(ym - (ym - y1) * k * 0.7)}, ${r1(ancho * k * 1.2)} ${r1(ym + (y0 - ym) * k * 0.7)}, 0 ${r1(ym + (y0 - ym) * k)} C ${r1(-ancho * k * 1.2)} ${r1(ym + (y0 - ym) * k * 0.7)}, ${r1(-ancho * k * 1.2)} ${r1(ym - (ym - y1) * k * 0.7)}, 0 ${r1(ym - (ym - y1) * k)} Z`;
   return (
     <g>
-      {Array.from({ length: 16 }, (_, i) => {
-        const a = (i / 16) * Math.PI * 2 + f / 400, R = 1.08 + (i % 2) * 0.1;
-        const px = Math.cos(a) * ancho * 1.05, py = ym + Math.sin(a) * (y0 - y1) * 0.55;
-        return <path key={i} d={`M${r1(px * 0.86)} ${r1(ym + (py - ym) * 0.86 - 6)} L ${r1(px * R)} ${r1(ym + (py - ym) * R)} L ${r1(px * 0.86)} ${r1(ym + (py - ym) * 0.86 + 6)} Z`} fill={GN.oroClaro} stroke={N} strokeWidth={1.4} />;
-      })}
       <path d={almendra(1)} fill={c} stroke={N} strokeWidth={2.6} />
-      <path d={almendra(0.86)} fill={c2} stroke={GN.oro} strokeWidth={2.4} />
-      <path d={almendra(0.7)} fill="none" stroke={GN.oroClaro} strokeWidth={1.6} strokeDasharray="3 8" />
+      <path d={almendra(0.88)} fill={c2} stroke={GN.oroOsc} strokeWidth={2} />
+      <path d={almendra(0.74)} fill="none" stroke={GN.blanco} strokeWidth={1.8} strokeDasharray="3 8" />
     </g>
   );
 };
@@ -66,7 +62,7 @@ const CabezaLuz: React.FC<{ nimbo?: boolean }> = ({ nimbo = true }) => {
   const f = useCurrentFrame(), late = 1 + Math.sin(f / 14) * 0.04;
   return (
     <g>
-      {nimbo && <><g transform={`translate(4 2) rotate(${r1(f * 0.2)})`}>{Array.from({ length: 12 }, (_, i) => { const a = (i / 12) * Math.PI * 2; return <path key={i} d={`M${r1(Math.cos(a - 0.1) * 56)} ${r1(Math.sin(a - 0.1) * 56)} L ${r1(Math.cos(a) * (i % 2 ? 80 : 92))} ${r1(Math.sin(a) * (i % 2 ? 80 : 92))} L ${r1(Math.cos(a + 0.1) * 56)} ${r1(Math.sin(a + 0.1) * 56)} Z`} fill={GN.oroClaro} stroke={N} strokeWidth={1.4} />; })}</g>
+      {nimbo && <><g transform="translate(4 2)">{Array.from({ length: 12 }, (_, i) => (i / 12) * Math.PI * 2 + Math.PI / 12).filter((a) => Math.abs(Math.atan2(Math.sin(a), Math.cos(a))) > 0.75).map((a, i) => <path key={i} d={`M${r1(Math.cos(a - 0.1) * 56)} ${r1(Math.sin(a - 0.1) * 56)} L ${r1(Math.cos(a) * (i % 2 ? 78 : 88))} ${r1(Math.sin(a) * (i % 2 ? 78 : 88))} L ${r1(Math.cos(a + 0.1) * 56)} ${r1(Math.sin(a + 0.1) * 56)} Z`} fill={GN.oroClaro} stroke={N} strokeWidth={1.4} />)}</g>
         <circle cx={4} cy={2} r={62} fill={GN.oroClaro} stroke={N} strokeWidth={2.4} /><circle cx={4} cy={2} r={53} fill="none" stroke={GN.oro} strokeWidth={3} /></>}
       {F([[-14, 18], [6, 16], [8, 46], [-16, 46]], '#FFF1CF', 0.5, 2)}
       {F([[-30, 4], [-25, -24], [-2, -38], [22, -32], [36, -10], [37, 12], [26, 30], [8, 36], [-12, 34], [-26, 22]], GN.blanco, 0.85, 2.2)}
