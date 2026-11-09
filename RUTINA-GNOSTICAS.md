@@ -20,6 +20,7 @@ Igual que el paso 1 de `RUTINA.md` (repo privado, `scripts/nube-setup.sh`, repo 
 Verde antes de producir: `npx tsc --noEmit -p . && node --test test/*.test.mjs`. Si ya falla sin tus cambios → paso 6.
 
 ## 2 · Cuántos y cuáles
+- Si falta `public/musica/gnosis.wav`: `node scripts/musica-gnosis.mjs` y sumalo al commit (`git add public/musica/gnosis.wav`).
 - Primero, cualquier `src/videos/gnosticas-*` que tenga `guion.json` pero no `timeline.json` o no `VERIFICADO` vigente: narrarlo y validarlo (paso 4) antes de escribir nada nuevo.
 - Contá los episodios con `VERIFICADO` que todavía no salieron (no están en `youtube-ids.json`). **Meta: 2 por delante** (sale 1 por día; Matías: "solo lo del día, no trabajar al pedo"). Si ya hay 2 o más, terminá sin cambios.
 - Hacé **1 episodio por corrida**, el siguiente de la lista del PLAN. Id: `gnosticas-NN-<slug en español>` (NN con 2 dígitos).
