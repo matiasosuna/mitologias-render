@@ -146,7 +146,7 @@ registerRoot(() => (
     <Composition id="gn-gobernantes" component={() => <Prueba esc={escGobernantes} />} durationInFrames={200} fps={24} width={1920} height={1080} />
     <Composition id="gn-humanos" component={() => <Prueba esc={escHumanos} />} durationInFrames={200} fps={24} width={1920} height={1080} />
     <Composition id="gn-escena" component={() => <Prueba esc={escEjemplo} />} durationInFrames={200} fps={24} width={1920} height={1080} />
-    <Composition id="gn-caras" component={Caras} durationInFrames={10} fps={24} width={1920} height={1080} />
-    <Composition id="gn-piezas" component={Piezas} durationInFrames={10} fps={24} width={1920} height={1080} />
+    <Composition id="gn-caras" component={Caras} durationInFrames={120} fps={24} width={1920} height={1080} />
+    <Composition id="gn-piezas" component={Piezas} durationInFrames={120} fps={24} width={1920} height={1080} />
   </>
 ));
