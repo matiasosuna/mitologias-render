@@ -16,7 +16,7 @@ import { tieneTiktok, TIKTOK_DESDE } from './cola.mjs';
 import { ganchoParte, codigoEpisodio, leerTitulos, NOMBRES } from './titulos.mjs';
 
 export const REG = 'out/subidas-buffer.json';
-const T = { griegas: '#greekmythology #greekgods', nordicas: '#norsemythology #vikings', egipcias: '#egyptianmythology #ancientegypt', hawaianas: '#hawaiianmythology #polynesian', norteamericanas: '#nativeamericanmythology', aztecas: '#aztecmythology #mexica', balinesas: '#balinesemythology #bali', hindues: '#hindumythology #indianmythology', maories: '#maorimythology #aotearoa', biblia: '#bible #kjv #genesis' };
+const T = { griegas: '#greekmythology #greekgods', nordicas: '#norsemythology #vikings', egipcias: '#egyptianmythology #ancientegypt', hawaianas: '#hawaiianmythology #polynesian', norteamericanas: '#nativeamericanmythology', aztecas: '#aztecmythology #mexica', balinesas: '#balinesemythology #bali', hindues: '#hindumythology #indianmythology', maories: '#maorimythology #aotearoa', biblia: '#bible #kjv #genesis', gnosticas: '#gnosis #gnostic #naghammadi' };
 const leerJSON = (f, def) => (existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')) : def);
 const guion = (id) => JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8'));
 
@@ -32,7 +32,7 @@ export function textoEpisodio(id, { gu = guion(id), titulos = leerTitulos(), gan
   const nombre = NOMBRES[gu.serie ?? 'griegas'];
   const linea = primeraLinea({ gu, nombre, parte: 1, de: 1, curioso: ganchoParte(id, titulos), yaPublicadas: 0 });
   const codigo = codigoEpisodio(id, titulos) || (titulos[id]?.especial ? `${titulos[id].especial} Special` : '');
-  return `${linea.replace(/ 🏺$/, '')} 🏺${codigo ? ` ${codigo}.` : ''}${gancho ? ` ${gancho}` : ''} The whole series, in order, on our profile and on YouTube. ${T[gu.serie] ?? ''} ${gu.serie === 'biblia' ? '' : '#mythology '}#animation #mythsonclay #fyp`;
+  return `${linea.replace(/ 🏺$/, '')} 🏺${codigo ? ` ${codigo}.` : ''}${gancho ? ` ${gancho}` : ''} The whole series, in order, on our profile and on YouTube. ${T[gu.serie] ?? ''} ${['biblia', 'gnosticas'].includes(gu.serie) ? '' : '#mythology '}#animation #mythsonclay #fyp`;
 }
 const primera = (t) => t.split('\n')[0].split(' 🏺')[0];
 

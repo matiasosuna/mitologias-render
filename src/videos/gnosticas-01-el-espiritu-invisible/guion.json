@@ -1,0 +1,243 @@
+{
+  "id": "gnosticas-01-el-espiritu-invisible",
+  "tempo": 1,
+  "serie": "gnosticas",
+  "numero": "01",
+  "titulo": { "es": "El Espíritu Invisible", "en": "The Invisible Spirit" },
+  "tituloGriego": "THE SECRET BOOK OF JOHN · I",
+  "siguiente": { "es": "Barbelo y los cinco dones", "en": "Barbelo and the Five Gifts" },
+  "miniatura": { "heroe": "salvador_oficial", "rival": "juan_apostol_oficial" },
+  "reels": { "final": { "en": "What would you ask, if the heavens opened for you? Tell me in the comments." }, "tempos": { "final": 1.08 } },
+  "youtube": { "final": { "en": "What would you ask, if the heavens opened for you? Tell me in the comments." } },
+  "escenas": [
+    {
+      "id": "libro",
+      "fondo": "tierra",
+      "camara": { "de": 0, "a": 120, "zoom": [1, 1.04] },
+      "frases": [
+        { "en": "This is the secret book of John.", "es": "Este es el libro secreto de Juan." },
+        { "en": "It holds what the Savior taught in silence, hidden from the world.", "es": "Guarda lo que el Salvador enseñó en silencio, escondido del mundo." },
+        { "en": "He gave it to John, the brother of James, the sons of Zebedee.", "es": "Se lo dio a Juan, el hermano de Santiago, los hijos de Zebedeo." },
+        { "en": "And it begins on a sad day, after the cross.", "es": "Y empieza en un día triste, después de la cruz." }
+      ],
+      "elementos": [],
+      "actores": [
+        { "id": "juan", "como": "juan_apostol_oficial", "x": 760, "mira": "der", "capa": "medio", "pasos": [{ "en": 0, "hace": "aparece" }, { "en": 3, "hace": "lamenta" }] },
+        { "id": "santiago", "como": "hombre", "x": 1180, "mira": "izq", "capa": "medio", "rotulo": "James", "props": { "barba": true, "ropa": "larga", "capa": "#7a5c3a" }, "pasos": [{ "en": 2, "hace": "aparece" }] }
+      ],
+      "rotulos": [{ "en": 0.1, "texto": { "es": "EL LIBRO SECRETO DE JUAN", "en": "THE SECRET BOOK OF JOHN" }, "x": 960, "y": 300, "hasta": 1.5 }]
+    },
+    {
+      "id": "fariseo",
+      "fondo": "templo_jerusalen",
+      "camara": { "de": 0, "a": 160, "zoom": [1, 1.05] },
+      "frases": [
+        { "en": "One day John went up to the temple.", "es": "Un día Juan subió al templo." },
+        { "en": "A Pharisee named Arimanios came to him and asked: Where is your teacher, the one you followed?", "es": "Un fariseo llamado Arimanios se le acercó y le preguntó: ¿Dónde está tu maestro, al que seguías?" },
+        { "en": "John said: He has gone back to the place he came from.", "es": "Juan dijo: Volvió al lugar de donde vino." },
+        { "en": "The Pharisee said: That Nazarene deceived you. He filled your ears with lies.", "es": "El fariseo dijo: Ese nazareno los engañó. Les llenó los oídos de mentiras." },
+        { "en": "He closed your hearts, and turned you away from the traditions of your fathers.", "es": "Les cerró el corazón y los apartó de las tradiciones de sus padres." }
+      ],
+      "actores": [
+        { "id": "juan", "como": "juan_apostol_oficial", "x": 700, "mira": "der", "capa": "medio", "pasos": [{ "en": 0, "hace": "entra", "a": 700 }, { "en": 2, "hace": "habla" }, { "en": 3.5, "hace": "calla" }] },
+        { "id": "arimanios", "como": "hombre", "x": 1260, "mira": "izq", "capa": "medio", "rotulo": "Arimanios", "props": { "barba": true, "ropa": "larga", "tocado": "velo", "capa": "#3a3a5c" }, "pasos": [{ "en": 1, "hace": "entra", "a": 1260 }, { "en": 1.2, "hace": "habla" }, { "en": 3, "hace": "senala" }, { "en": 4, "hace": "habla" }] }
+      ]
+    },
+    {
+      "id": "dudas",
+      "fondo": "tierra",
+      "camara": { "de": 200, "a": 0, "zoom": [1.04, 1] },
+      "frases": [
+        { "en": "John turned away from the temple and went to a lonely place on the mountain.", "es": "Juan se alejó del templo y fue a un lugar solitario en la montaña." },
+        { "en": "And he grieved greatly in his heart.", "es": "Y se entristeció mucho en su corazón." },
+        { "en": "He asked: How was the Savior chosen? Why was he sent into the world by his Father?", "es": "Se preguntó: ¿Cómo fue elegido el Salvador? ¿Por qué lo mandó su Padre al mundo?" },
+        { "en": "Who is his Father, the one who sent him?", "es": "¿Quién es su Padre, el que lo mandó?" },
+        { "en": "And what is that other world like, the one where we will go?", "es": "¿Y cómo es ese otro mundo, al que vamos a ir?" }
+      ],
+      "elementos": [{ "tipo": "roca", "x": 1100 }, { "tipo": "monte", "x": 1500, "capa": "fondo" }],
+      "actores": [
+        { "id": "juan", "como": "juan_apostol_oficial", "x": 960, "mira": "izq", "capa": "medio", "pasos": [{ "en": 0, "hace": "camina", "a": 960 }, { "en": 1, "hace": "sienta" }, { "en": 1.2, "hace": "lamenta" }, { "en": 3.5, "hace": "levantarse" }] }
+      ],
+      "efectos": [{ "en": 1, "tipo": "oscurecer", "dur": 1.5, "intensidad": 0.4 }]
+    },
+    {
+      "id": "cielo_abierto",
+      "fondo": "tierra",
+      "sinAstros": true,
+      "camara": { "de": 0, "a": 0, "zoom": [1, 1.08] },
+      "frases": [
+        { "en": "While he was thinking these things, the heavens opened.", "es": "Mientras pensaba en esto, los cielos se abrieron." },
+        { "en": "All creation below heaven shone with light, and the whole world shook.", "es": "Toda la creación bajo el cielo brilló de luz, y el mundo entero tembló." },
+        { "en": "John was afraid, and he bowed down.", "es": "Juan tuvo miedo, y se inclinó." },
+        { "en": "And in the light he saw a child standing before him.", "es": "Y en la luz vio a un niño de pie delante de él." }
+      ],
+      "elementos": [{ "tipo": "luz_divina", "x": 1180, "y": 160, "en": 0.4, "props": { "intensidad": 1.1, "largo": 700 } }],
+      "actores": [
+        { "id": "juan", "como": "juan_apostol_oficial", "x": 700, "mira": "der", "capa": "medio", "pasos": [{ "en": 1, "hace": "tiembla" }, { "en": 2, "hace": "arrodilla" }] },
+        { "id": "salvador", "como": "salvador_oficial", "x": 1220, "mira": "izq", "capa": "medio", "rotulo": "", "props": { "forma": "nino" }, "pasos": [{ "en": 3, "hace": "aparece" }, { "en": 3.1, "hace": "brilla" }] }
+      ],
+      "efectos": [{ "en": 0.2, "tipo": "destello" }, { "en": 1.2, "tipo": "temblor", "dur": 1 }, { "en": 1, "tipo": "luz", "dur": 2 }]
+    },
+    {
+      "id": "tres_formas",
+      "fondo": "tierra",
+      "sinAstros": true,
+      "camara": { "de": 0, "a": 60, "zoom": [1.04, 1.1] },
+      "frases": [
+        { "en": "Then the child changed, and looked like an old man.", "es": "Entonces el niño cambió, y parecía un anciano." },
+        { "en": "Then he changed again, and looked like a servant.", "es": "Después cambió otra vez, y parecía un servidor." },
+        { "en": "There were not three of them. It was one figure, with many forms in the light.", "es": "No eran tres. Era una sola figura, con muchas formas en la luz." },
+        { "en": "Each form appeared through the others, like light through light.", "es": "Cada forma se veía a través de las otras, como luz a través de luz." }
+      ],
+      "elementos": [{ "tipo": "luz_divina", "x": 1180, "y": 160, "props": { "intensidad": 1, "largo": 700 } }],
+      "actores": [
+        { "id": "juan", "como": "juan_apostol_oficial", "x": 700, "mira": "der", "capa": "medio", "pasos": [{ "en": 0, "hace": "arrodilla" }] },
+        { "id": "salvador", "como": "salvador_oficial", "x": 1220, "mira": "izq", "capa": "medio", "rotulo": "", "props": { "forma": "nino" }, "pasos": [{ "en": 0, "hace": "transforma", "en_que": "salvador_anciano" }, { "en": 1, "hace": "transforma", "en_que": "salvador_servidor" }, { "en": 2, "hace": "brilla" }] }
+      ],
+      "efectos": [{ "en": 0.1, "tipo": "destello" }, { "en": 1.1, "tipo": "destello" }, { "en": 2.5, "tipo": "luz", "dur": 1.5 }]
+    },
+    {
+      "id": "no_temas",
+      "fondo": "tierra",
+      "sinAstros": true,
+      "camara": { "de": 60, "a": 160, "zoom": [1.05, 1.08] },
+      "frases": [
+        { "en": "He said: John, John, why do you doubt? Why are you afraid?", "es": "Le dijo: Juan, Juan, ¿por qué dudas? ¿Por qué tienes miedo?" },
+        { "en": "You know this form. Do not be afraid. I am the one who is with you always.", "es": "Conoces esta forma. No tengas miedo. Yo soy el que está contigo siempre." },
+        { "en": "I am the Father. I am the Mother. I am the Son.", "es": "Yo soy el Padre. Yo soy la Madre. Yo soy el Hijo." },
+        { "en": "I am the pure one, the one who cannot be stained.", "es": "Yo soy el puro, el que no puede ser manchado." }
+      ],
+      "elementos": [{ "tipo": "luz_divina", "x": 1180, "y": 160, "props": { "intensidad": 0.9, "largo": 700 } }],
+      "actores": [
+        { "id": "juan", "como": "juan_apostol_oficial", "x": 700, "mira": "der", "capa": "medio", "pasos": [{ "en": 0, "hace": "arrodilla" }, { "en": 1.5, "hace": "levantarse" }] },
+        { "id": "salvador", "como": "salvador_oficial", "x": 1220, "mira": "izq", "capa": "medio", "rotulo": "The Savior", "props": { "forma": "servidor" }, "pasos": [{ "en": 0, "hace": "habla" }, { "en": 1, "hace": "ofrece" }, { "en": 2, "hace": "brilla" }, { "en": 3, "hace": "habla" }] }
+      ],
+      "rotulos": [
+        { "en": 2, "texto": { "es": "EL PADRE", "en": "THE FATHER" }, "x": 980, "y": 260, "hasta": 2.33 },
+        { "en": 2.33, "texto": { "es": "LA MADRE", "en": "THE MOTHER" }, "x": 980, "y": 260, "hasta": 2.66 },
+        { "en": 2.66, "texto": { "es": "EL HIJO", "en": "THE SON" }, "x": 980, "y": 260, "hasta": 3 }
+      ]
+    },
+    {
+      "id": "mision",
+      "fondo": "tierra",
+      "sinAstros": true,
+      "camara": { "de": 160, "a": 80, "zoom": [1.08, 1.04] },
+      "frases": [
+        { "en": "I have come to teach you what is, what was, and what will come to be.", "es": "Vine a enseñarte lo que es, lo que fue y lo que va a ser." },
+        { "en": "So that you may know the things that are seen and the things that are not seen.", "es": "Para que conozcas las cosas que se ven y las que no se ven." },
+        { "en": "And I will teach you about the perfect Human.", "es": "Y te voy a enseñar sobre el Humano perfecto." },
+        { "en": "Lift up your face, John. Hear what I tell you today.", "es": "Levanta la cara, Juan. Escucha lo que te digo hoy." },
+        { "en": "Then tell it to those who share your spirit, the unshakable race of the perfect Human.", "es": "Después cuéntaselo a los que comparten tu espíritu, la raza inquebrantable del Humano perfecto." }
+      ],
+      "elementos": [{ "tipo": "luz_divina", "x": 1180, "y": 160, "props": { "intensidad": 0.9, "largo": 700 } }],
+      "actores": [
+        { "id": "juan", "como": "juan_apostol_oficial", "x": 720, "mira": "der", "capa": "medio", "pasos": [{ "en": 3, "hace": "levanta" }] },
+        { "id": "salvador", "como": "salvador_oficial", "x": 1220, "mira": "izq", "capa": "medio", "rotulo": "", "props": { "forma": "servidor" }, "pasos": [{ "en": 0, "hace": "habla" }, { "en": 2, "hace": "senala" }, { "en": 4, "hace": "habla" }] }
+      ]
+    },
+    {
+      "id": "monada",
+      "fondo": "pleroma",
+      "sinAstros": true,
+      "camara": { "de": 0, "a": 0, "zoom": [1, 1.06] },
+      "frases": [
+        { "en": "And he began: There is one, the Monad. Nothing rules over it.", "es": "Y empezó: Existe uno, la Mónada. Nada gobierna sobre ella." },
+        { "en": "It is the God and Father of everything, the invisible one above everything.", "es": "Es el Dios y Padre de todo, el invisible que está sobre todo." },
+        { "en": "It is pure light. No eye can look at it.", "es": "Es luz pura. Ningún ojo puede mirarla." },
+        { "en": "It is the Invisible Spirit.", "es": "Es el Espíritu Invisible." },
+        { "en": "It is not right to think of it as a god, or anything like a god. It is more than a god.", "es": "No está bien pensarlo como un dios, ni como algo parecido a un dios. Es más que un dios." }
+      ],
+      "elementos": [{ "tipo": "luz_divina", "x": 960, "y": 300, "en": 0.5, "props": { "intensidad": 1.4, "largo": 900 } }],
+      "actores": [],
+      "efectos": [{ "en": 0, "tipo": "oscurecer", "dur": 0.6, "intensidad": 1.2 }, { "en": 2, "tipo": "destello" }],
+      "rotulos": [{ "en": 3, "texto": { "es": "EL ESPÍRITU INVISIBLE", "en": "THE INVISIBLE SPIRIT" }, "x": 960, "y": 620 }]
+    },
+    {
+      "id": "sin_limite",
+      "fondo": "pleroma",
+      "sinAstros": true,
+      "camara": { "de": 0, "a": 0, "zoom": [1.06, 1.12] },
+      "frases": [
+        { "en": "Nothing is above it. Everything exists inside it.", "es": "Nada está sobre él. Todo existe dentro de él." },
+        { "en": "It has no limit, because nothing came before it to set a limit.", "es": "No tiene límite, porque nada vino antes que él para ponerle un límite." },
+        { "en": "It has no name, because nothing came before it to give it a name.", "es": "No tiene nombre, porque nada vino antes que él para darle un nombre." },
+        { "en": "It needs nothing. It lacks nothing. It is complete, whole, perfect light.", "es": "No necesita nada. No le falta nada. Es luz completa, entera, perfecta." },
+        { "en": "It cannot be measured, searched or seen. No one can speak it.", "es": "No se puede medir, ni buscar, ni ver. Nadie puede decirlo." }
+      ],
+      "elementos": [{ "tipo": "luz_divina", "x": 960, "y": 300, "props": { "intensidad": 1.3, "largo": 900 } }],
+      "actores": [],
+      "efectos": [{ "en": 3, "tipo": "luz", "dur": 2 }]
+    },
+    {
+      "id": "ni_esto",
+      "fondo": "pleroma",
+      "sinAstros": true,
+      "camara": { "de": 0, "a": 0, "zoom": [1.12, 1.06] },
+      "frases": [
+        { "en": "It is not a body, and it is not without a body.", "es": "No es un cuerpo, y no es algo sin cuerpo." },
+        { "en": "It is not large, and it is not small. It is not one of the things that exist. It is far above them.", "es": "No es grande, y no es chico. No es una de las cosas que existen. Está muy por encima de ellas." },
+        { "en": "It is not in time. Time and ages come from it.", "es": "No está en el tiempo. El tiempo y las eras vienen de él." },
+        { "en": "It gives life, light, knowledge, goodness, mercy and grace.", "es": "Da vida, luz, conocimiento, bondad, misericordia y gracia." },
+        { "en": "The Savior said: How can I speak of it? Its world is at rest, and in silence.", "es": "El Salvador dijo: ¿Cómo puedo hablar de él? Su mundo está en reposo, y en silencio." }
+      ],
+      "elementos": [{ "tipo": "luz_divina", "x": 960, "y": 300, "props": { "intensidad": 1.2, "largo": 900 } }],
+      "actores": [],
+      "rotulos": [
+        { "en": 3, "texto": { "es": "VIDA · LUZ · CONOCIMIENTO", "en": "LIFE · LIGHT · KNOWLEDGE" }, "x": 960, "y": 600, "hasta": 3.5 },
+        { "en": 3.5, "texto": { "es": "BONDAD · MISERICORDIA · GRACIA", "en": "GOODNESS · MERCY · GRACE" }, "x": 960, "y": 600, "hasta": 4 }
+      ]
+    },
+    {
+      "id": "agua_de_luz",
+      "fondo": "pleroma",
+      "sinAstros": true,
+      "camara": { "de": 0, "a": 0, "zoom": [1, 1.06] },
+      "frases": [
+        { "en": "Around the Spirit there is a spring of living water, made of light.", "es": "Alrededor del Espíritu hay un manantial de agua viva, hecha de luz." },
+        { "en": "The Spirit looked into that water of light, and saw its own image.", "es": "El Espíritu miró esa agua de luz, y vio su propia imagen." },
+        { "en": "And its thought came alive.", "es": "Y su pensamiento cobró vida." },
+        { "en": "She came out of its light, and stood before it, shining with its own shining.", "es": "Ella salió de su luz, y se paró delante de él, brillando con su mismo brillo." }
+      ],
+      "elementos": [{ "tipo": "luz_divina", "x": 960, "y": 260, "props": { "intensidad": 1.2, "largo": 700 } }, { "tipo": "agua_luz", "x": 960, "y": 760 }],
+      "actores": [
+        { "id": "barbelo", "como": "barbelo_oficial", "x": 960, "mira": "der", "capa": "medio", "rotulo": "", "pasos": [{ "en": 3, "hace": "aparece" }, { "en": 3.1, "hace": "brilla" }] }
+      ],
+      "efectos": [{ "en": 1.5, "tipo": "luz", "dur": 1.5 }, { "en": 3, "tipo": "destello" }]
+    },
+    {
+      "id": "barbelo",
+      "fondo": "pleroma",
+      "sinAstros": true,
+      "camara": { "de": 0, "a": 0, "zoom": [1.04, 1.1] },
+      "frases": [
+        { "en": "She is the first power, the Forethought of everything. Her name is Barbelo.", "es": "Ella es el primer poder, la Previsión de todo. Su nombre es Barbelo." },
+        { "en": "She is the perfect image of the Invisible Spirit.", "es": "Ella es la imagen perfecta del Espíritu Invisible." },
+        { "en": "She praised the Spirit, because through it she had come to be.", "es": "Ella alabó al Espíritu, porque gracias a él había llegado a ser." },
+        { "en": "She became the womb of everything, because she came before them all.", "es": "Se volvió el vientre de todo, porque vino antes que todos." },
+        { "en": "She is the Mother-Father, the first Human, the Holy Spirit, the first to come forth.", "es": "Ella es la Madre-Padre, el primer Humano, el Espíritu Santo, la primera en salir." }
+      ],
+      "elementos": [{ "tipo": "luz_divina", "x": 1300, "y": 200, "props": { "intensidad": 1, "largo": 700 } }],
+      "actores": [
+        { "id": "barbelo", "como": "barbelo_oficial", "x": 900, "mira": "der", "capa": "medio", "rotulo": "Barbelo", "pasos": [{ "en": 0, "hace": "brilla" }, { "en": 2, "hace": "reza" }, { "en": 3.5, "hace": "brilla" }] }
+      ],
+      "rotulos": [{ "en": 4, "texto": { "es": "LA MADRE-PADRE", "en": "THE MOTHER-FATHER" }, "x": 900, "y": 220 }]
+    },
+    {
+      "id": "cierre",
+      "fondo": "tierra",
+      "sinAstros": true,
+      "camara": { "de": 0, "a": 100, "zoom": [1, 1.04] },
+      "frases": [
+        { "en": "Then Barbelo asked the Spirit for gifts, and the Spirit said yes.", "es": "Después Barbelo le pidió dones al Espíritu, y el Espíritu dijo que sí." },
+        { "en": "Next time: Barbelo and the five gifts, and the birth of the Son of light.", "es": "La próxima vez: Barbelo y los cinco dones, y el nacimiento del Hijo de luz." },
+        { "en": "Thank you for listening to the secret book with me.", "es": "Gracias por escuchar el libro secreto conmigo." }
+      ],
+      "elementos": [{ "tipo": "luz_divina", "x": 1180, "y": 160, "props": { "intensidad": 0.7, "largo": 700 } }],
+      "actores": [
+        { "id": "juan", "como": "juan_apostol_oficial", "x": 800, "mira": "der", "capa": "medio", "pasos": [{ "en": 0, "hace": "sienta" }] }
+      ],
+      "rotulos": [{ "en": 1, "texto": { "es": "PRÓXIMO · BARBELO Y LOS CINCO DONES", "en": "NEXT · BARBELO AND THE FIVE GIFTS" }, "x": 1000, "y": 330 }]
+    }
+  ]
+}

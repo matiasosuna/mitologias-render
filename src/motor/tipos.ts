@@ -82,7 +82,8 @@ export type Escena = {
     | 'kahyangan' | 'segara' | 'dasar_segara' | 'gunung_agung' | 'danau_batur' | 'sawah' | 'pura' | 'pura_malam' | 'puri' | 'desa' | 'desa_malam' | 'setra' | 'alas' | 'pantai' | 'tanah_lot' | 'tirta_empul' | 'selat'
     | 'te_po' | 'te_ao_marama' | 'ngahere' | 'moana' | 'takutai' | 'kainga' | 'whare_dentro' | 'rarohenga' | 'rangi_tuhaha' | 'maunga' | 'roto' | 'ahi_mahuika' | 'po_whetu' | 'rua_ra' | 'hawaiki' | 'aotearoa'
     | 'oceano_cosmico' | 'oceano_leche' | 'svarga' | 'kailash' | 'bosque_pahari' | 'orilla_rio' | 'palacio_pahari' | 'palacio_noche' | 'crepusculo' | 'patala' | 'cielo_cosmico' | 'diluvio' | 'campo_pahari' | 'ashram'
-    | 'abismo' | 'aguas_luz' | 'firmamento_agua' | 'tierra_seca' | 'mar_tierra' | 'jardin' | 'cielo_noche' | 'amanecer' | 'mar_vida' | 'llanura' | 'colinas';
+    | 'abismo' | 'aguas_luz' | 'firmamento_agua' | 'tierra_seca' | 'mar_tierra' | 'jardin' | 'cielo_noche' | 'amanecer' | 'mar_vida' | 'llanura' | 'colinas'
+    | 'pleroma' | 'eones' | 'agua_luz' | 'nube_luz' | 'cielos' | 'materia' | 'paraiso_falso' | 'templo_jerusalen' | 'tierra' | 'monte_desierto';
   /** Sin el sol/luna propios del fondo (para animarlos con elementos, p. ej. cuando los tragan los lobos). */
   sinAstros?: boolean;
   /** Sin fundido de entrada (escena del gancho, lib/marco.mjs). */

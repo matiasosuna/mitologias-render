@@ -9,9 +9,9 @@ const id = process.argv[2], idioma = 'en';
 const g = JSON.parse(readFileSync(join('src/videos', id, 'guion.json'), 'utf8'));
 const tl0 = JSON.parse(readFileSync(join('src/videos', id, 'timeline.json'), 'utf8'));
 const tl = horizontalConMarco(g, tl0).timeline; // los tiempos del video que se sube (gancho al principio, etc.)
-const nordica = g.serie === 'nordicas', egipcia = g.serie === 'egipcias', hawaiana = g.serie === 'hawaianas', norteamericana = g.serie === 'norteamericanas', azteca = g.serie === 'aztecas', balinesa = g.serie === 'balinesas', maori = g.serie === 'maories', biblia = g.serie === 'biblia';
+const nordica = g.serie === 'nordicas', egipcia = g.serie === 'egipcias', hawaiana = g.serie === 'hawaianas', norteamericana = g.serie === 'norteamericanas', azteca = g.serie === 'aztecas', balinesa = g.serie === 'balinesas', maori = g.serie === 'maories', biblia = g.serie === 'biblia', gnosis = g.serie === 'gnosticas';
 const hindu = g.serie === 'hindues';
-const meta = JSON.parse(readFileSync(nordica ? 'src/videos/meta-youtube-nordicas.json' : egipcia ? 'src/videos/meta-youtube-egipcias.json' : hawaiana ? 'src/videos/meta-youtube-hawaianas.json' : norteamericana ? 'src/videos/meta-youtube-norteamericanas.json' : hindu ? 'src/videos/meta-youtube-hindues.json' : azteca ? 'src/videos/meta-youtube-aztecas.json' : balinesa ? 'src/videos/meta-youtube-balinesas.json' : maori ? 'src/videos/meta-youtube-maories.json' : biblia ? 'src/videos/meta-youtube-biblia.json' : 'src/videos/meta-youtube.json', 'utf8'));
+const meta = JSON.parse(readFileSync(nordica ? 'src/videos/meta-youtube-nordicas.json' : egipcia ? 'src/videos/meta-youtube-egipcias.json' : hawaiana ? 'src/videos/meta-youtube-hawaianas.json' : norteamericana ? 'src/videos/meta-youtube-norteamericanas.json' : hindu ? 'src/videos/meta-youtube-hindues.json' : azteca ? 'src/videos/meta-youtube-aztecas.json' : balinesa ? 'src/videos/meta-youtube-balinesas.json' : maori ? 'src/videos/meta-youtube-maories.json' : biblia ? 'src/videos/meta-youtube-biblia.json' : gnosis ? 'src/videos/meta-youtube-gnosticas.json' : 'src/videos/meta-youtube.json', 'utf8'));
 const ep = String(Number(g.numero));
 const mmss = (fr) => { const s = Math.floor(fr / tl.fps); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; };
 const propio = join('src/videos', id, 'youtube.json');

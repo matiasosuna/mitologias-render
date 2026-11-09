@@ -76,10 +76,10 @@ test('lista con los datos reales: empieza por la T1 griega y trae la T2 griega 1
 });
 
 // ── turnos
-test('turnos: 5 por día, uno de cada serie (04 Biblia, 08 griego, 12 nórdico, 16 egipcio, 20 hawaiano); 00 HST nada', () => {
+test('turnos: 6 por día, uno de cada serie (00 Gnosis, 04 Biblia, 08 griego, 12 nórdico, 16 egipcio, 20 hawaiano)', () => {
   assert.deepEqual(HORAS_UTC.map(horaHST), [16, 20, 0, 4, 8, 12]);
   assert.deepEqual(Object.fromEntries(HORAS_UTC.map((h) => [horaHST(h), clase(h)])),
-    { 4: 'serie:biblia', 8: 'serie:griegas', 12: 'serie:nordicas', 16: 'serie:egipcias', 20: 'serie:hawaianas', 0: 'nada' });
+    { 4: 'serie:biblia', 8: 'serie:griegas', 12: 'serie:nordicas', 16: 'serie:egipcias', 20: 'serie:hawaianas', 0: 'serie:gnosticas' });
 });
 
 test('turno de serie: el próximo de ESA serie que le falta a cada red, estricto en orden; especiales afuera', () => {

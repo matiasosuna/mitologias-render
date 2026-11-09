@@ -6,6 +6,7 @@ import { fondoHindu, elementoHindu, CIELO_HINDU } from './fondosHindu';
 import { fondoBalines, elementoBalines, CIELO_BALINES } from './fondosBalines';
 import { fondoMaori, elementoMaori, CIELO_MAORI } from './fondosMaori';
 import { fondoBiblia, elementoBiblia, CIELO_BIBLIA } from './fondosBiblia';
+import { fondoGnosis, elementoGnosis, CIELO_GNOSIS } from './fondosGnosis';
 import { C, Capa, SUELO, Suelo, Monte, Olivo, Templo, Olas, Nube, Luna, Sol, Estrellas, Fuego, suave, Inc, Borde, Personaje, azar, TEMA, TextoRunico, Entrelazado, Jeroglificos, Bloques, miembro, Chispas, type P } from '../comun/vasija';
 
 export type Cielo = 'barro' | 'noche' | 'mar' | 'inframundo';
@@ -23,6 +24,7 @@ Object.assign(CIELO, CIELO_HINDU); // hindúes (tema pahari): fondosHindu.tsx
 Object.assign(CIELO, CIELO_BALINES); // balinesas (tema kamasan): fondosBalines.tsx
 Object.assign(CIELO, CIELO_MAORI); // maoríes (tema kōwhaiwhai): fondosMaori.tsx
 Object.assign(CIELO, CIELO_BIBLIA); // Learn Bible 777 (tema natural): fondosBiblia.tsx
+Object.assign(CIELO, CIELO_GNOSIS); // Gnosis (tema gnosis): fondosGnosis.tsx
 
 const Mar: React.FC<{ f: number; y?: number; desde?: number }> = ({ f, y = SUELO - 30, desde = -800 }) => (
   <g>
@@ -41,6 +43,7 @@ export const Fondo: React.FC<{ tipo: string; f: number; astros?: boolean }> = ({
   if ((TEMA.nombre as string) === 'kamasan') { const n = fondoBalines(tipo, f, astros); if (n) return n; }
   if ((TEMA.nombre as string) === 'kowhaiwhai') { const n = fondoMaori(tipo, f, astros); if (n) return n; }
   if ((TEMA.nombre as string) === 'natural') { const n = fondoBiblia(tipo, f, astros); if (n) return n; }
+  if ((TEMA.nombre as string) === 'gnosis') { const n = fondoGnosis(tipo, f, astros); if (n) return n; }
   switch (tipo) {
     case 'olimpo':
       return (
@@ -310,6 +313,7 @@ export const ElementoSVG: React.FC<{ tipo: string; x: number; y?: number; s?: nu
   if ((TEMA.nombre as string) === 'kamasan') { const n = elementoBalines(tipo, x, y, s, f, props); if (n) return n; }
   if ((TEMA.nombre as string) === 'kowhaiwhai') { const n = elementoMaori(tipo, x, y, s, f, props); if (n) return n; }
   if ((TEMA.nombre as string) === 'natural') { const n = elementoBiblia(tipo, x, y, s, f, props); if (n) return n; }
+  if ((TEMA.nombre as string) === 'gnosis') { const n = elementoGnosis(tipo, x, y, s, f, props); if (n) return n; }
   if (kapa) {
     switch (tipo) {
       case 'palmera': case 'olivo': case 'arbol': return <Niu x={x} y={yy} s={s} f={f} inclina={(props.inclina as number) ?? 0.2} espejo={props.espejo === true} />;

@@ -51,6 +51,10 @@ lista('src/motor/fondosMaori.tsx', 'ELEMENTOS_MAORI').forEach((x) => ELEMS.add(x
 lista('src/motor/fondosBiblia.tsx', 'FONDOS_BIBLIA').forEach((x) => FONDOS.add(x));
 lista('src/motor/fondosBiblia.tsx', 'ELEMENTOS_BIBLIA').forEach((x) => ELEMS.add(x));
 [...readFileSync('src/motor/elencoBiblia.tsx', 'utf8').split('export const ELENCO_BIBLIA')[1].split('export const NOMBRE_EN_BIBLIA')[0].matchAll(/^\s{2}(\w+): /gm)].forEach((m) => elenco.add(m[1]));
+// Gnosis (tema gnosis): igual, de fondosGnosis.tsx y elencoGnosis.tsx.
+lista('src/motor/fondosGnosis.tsx', 'FONDOS_GNOSIS').forEach((x) => FONDOS.add(x));
+lista('src/motor/fondosGnosis.tsx', 'ELEMENTOS_GNOSIS').forEach((x) => ELEMS.add(x));
+[...readFileSync('src/motor/elencoGnosis.tsx', 'utf8').split('export const ELENCO_GNOSIS')[1].split('export const NOMBRE_EN_GNOSIS')[0].matchAll(/^\s{2}(\w+): /gm)].forEach((m) => elenco.add(m[1]));
 const P = { fondo: 0.45, medio: 0.75, frente: 1 };
 
 const avisos = [];
@@ -73,7 +77,7 @@ ESCENAS.forEach((esc, i) => {
   (esc.rotulos ?? []).forEach((r) => { if (r.y < 160 || r.y > 770) av(esc.id, `rótulo "${r.texto}" fuera de la ventana (y=${r.y})`); if (typeof r.texto === "string" && /[A-Za-z]/.test(r.texto)) av(esc.id, `rótulo "${r.texto}" sin traducir: usar {es,pt,en}`); });
   const cam = esc.camara ?? {}, de = cam.de ?? 0, a = cam.a ?? de;
   const camEn = (frase) => de + (a - de) * Math.min(1, Math.max(0, (frase + 0.5) / n));
-  if ((esc.actores ?? []).length === 0 && g.serie !== 'biblia') av(esc.id, 'escena sin actores'); // Biblia: Dios es solo luz; los días de la creación van sin figuras
+  if ((esc.actores ?? []).length === 0 && g.serie !== 'biblia' && g.serie !== 'gnosticas') av(esc.id, 'escena sin actores'); // Biblia y Gnosis: Dios / el Espíritu Invisible es solo luz; hay escenas sin figuras
   (esc.actores ?? []).forEach((ac) => {
     if (!elenco.has(ac.como ?? ac.id)) av(esc.id, `"${ac.como ?? ac.id}" no está en el elenco (se dibuja un hombre genérico)`);
     let x = ac.x, visible = 0;

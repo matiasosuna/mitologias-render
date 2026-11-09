@@ -36,8 +36,8 @@ export const EPISODIO_HST = 8;
 export const QUIEN_HST = [];
 export const BIBLIA_HST = [];
 // Matías 2026-10-24: 5 episodios por día, UNO DE CADA serie, cada uno en su turno, igual en las tres redes; cada episodio entero
-// (un solo video largo, sin gancho). 00 HST: nada. Cada red sigue cada serie en orden por su cuenta (sin "alcanzar").
-export const SERIE_HST = { 4: 'biblia', 8: 'griegas', 12: 'nordicas', 16: 'egipcias', 20: 'hawaianas' };
+// (un solo video largo, sin gancho). 00 HST: Gnosis (Matías 2026-11-08: sexto turno). Cada red sigue cada serie en orden por su cuenta (sin "alcanzar").
+export const SERIE_HST = { 0: 'gnosticas', 4: 'biblia', 8: 'griegas', 12: 'nordicas', 16: 'egipcias', 20: 'hawaianas' };
 export const serieDe = (id) => id.split('-')[0];
 export const esBiblia = (id) => id.startsWith('biblia-');
 export const horaHST = (horaUTC) => (horaUTC + 14) % 24;
@@ -61,7 +61,7 @@ export const STORIES_GRIEGAS = ['griegas-80-perseo-y-medusa', 'griegas-81-teseo-
   'griegas-84-dedalo-e-icaro', 'griegas-85-el-rey-midas', 'griegas-86-heracles-trabajos-2', 'griegas-87-aracne', 'griegas-88-jason-y-el-vellocino', 'griegas-89-eco-y-narciso'];
 /** Lo que sigue (no está en YouTube): foco griego primero, después el resto de las T1 como antes. */
 // Solo temporadas (Matías 2026-10-22: nada de la Odisea ni Greek Myth Stories; especiales nuevos solo con su OK).
-export const CONTINUACION = [['griegas', 2], ['nordicas', 2], ['egipcias', 2], ['hawaianas', 1], ['hawaianas', 2], ['griegas', 3], ['nordicas', 3], ['egipcias', 3], ...['norteamericanas', 'aztecas', 'hindues', 'maories', 'balinesas'].map((s) => [s, 1]), ['biblia', 1], ['biblia', 2]];
+export const CONTINUACION = [['griegas', 2], ['nordicas', 2], ['egipcias', 2], ['hawaianas', 1], ['hawaianas', 2], ['griegas', 3], ['nordicas', 3], ['egipcias', 3], ...['norteamericanas', 'aztecas', 'hindues', 'maories', 'balinesas'].map((s) => [s, 1]), ['biblia', 1], ['biblia', 2], ['gnosticas', 1], ['gnosticas', 2]];
 
 const grupoDe = (id, t) => (t?.especial ? 'especial' : `${id.split('-')[0]}-${t?.temporada}`);
 const porEpisodio = (titulos) => (a, b) => (titulos[a]?.episodio ?? 0) - (titulos[b]?.episodio ?? 0) || a.localeCompare(b);

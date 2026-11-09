@@ -11,6 +11,7 @@ import { EscenaVerticalNativa } from './EscenaVertical';
 import { FranjaCodice } from '../comun/codice';
 import { FranjaPahari, DEGRADE_PAHARI } from '../comun/pahari';
 import { FranjaKamasan } from '../comun/kamasan';
+import { FranjaGnosis, DEGRADE_GNOSIS } from '../comun/gnosis';
 import { FranjaMaori } from '../comun/kowhaiwhai';
 import { useFraseBiblia, NumeroVersiculo, TextoLeyenda, Karaoke, CREMA, DORADO } from './Leyenda';
 import { palabras, palabraEn } from '../../lib/karaoke.mjs';
@@ -18,14 +19,14 @@ import { KJV_LIBRO, capituloDe } from './kjv';
 import { TextoGancho, TextoGanchoSeq, ZoomLento, VeloGancho } from './Gancho';
 import type { GuionVisual, Timeline, TramoMarco } from './tipos';
 
-const NOMBRE: Record<string, string> = { vasija: 'GREEK MYTHOLOGY', runas: 'NORSE MYTHOLOGY', papiro: 'EGYPTIAN MYTHOLOGY', kapa: 'HAWAIIAN MYTHOLOGY', pintado: 'NATIVE AMERICAN MYTHOLOGY', codice: 'AZTEC MYTHOLOGY', pahari: 'HINDU MYTHOLOGY', kowhaiwhai: 'MĀORI MYTHOLOGY', kamasan: 'BALINESE MYTHOLOGY', natural: 'THE BIBLE' };
+const NOMBRE: Record<string, string> = { vasija: 'GREEK MYTHOLOGY', runas: 'NORSE MYTHOLOGY', papiro: 'EGYPTIAN MYTHOLOGY', kapa: 'HAWAIIAN MYTHOLOGY', pintado: 'NATIVE AMERICAN MYTHOLOGY', codice: 'AZTEC MYTHOLOGY', pahari: 'HINDU MYTHOLOGY', kowhaiwhai: 'MĀORI MYTHOLOGY', kamasan: 'BALINESE MYTHOLOGY', natural: 'THE BIBLE', gnosis: 'GNOSIS' };
 /** Guarda decorativa del tema (svg de 1080×80), animada con `f`. */
-export const franjaVertical = (t: string, f: number) => t === 'natural' ? <FranjaNatural y={10} alto={30} ancho={1080} /> : t === 'pahari' ? <FranjaPahari y={8} alto={44} desplaz={f} tipo="flores" ancho={1080} /> : t === 'kamasan' ? <FranjaKamasan y={6} alto={52} desplaz={f} tipo="awan" ancho={1080} /> : t === 'kowhaiwhai' ? <FranjaMaori y={6} alto={52} desplaz={f} tipo="koru" ancho={1080} /> : t === 'codice' ? <FranjaCodice y={8} alto={44} desplaz={f} tipo="xical" ancho={1080} /> : t === 'pintado' ? <FranjaCuentas y={10} alto={40} desplaz={f} tipo="escalones" /> : t === 'kapa' ? <FranjaKapa y={10} alto={36} desplaz={f} tipo="rombos" /> : t === 'papiro' ? <Bloques y={10} alto={30} desplaz={f} /> : t === 'runas' ? <Entrelazado y={6} alto={60} desplaz={f} paso={150} /> : <FrisoPalmetas y={6} desplaz={f} />;
+export const franjaVertical = (t: string, f: number) => t === 'natural' ? <FranjaNatural y={10} alto={30} ancho={1080} /> : t === 'gnosis' ? <><rect y={8} width={1080} height={4} fill={C.oro} /><FranjaGnosis y={12} alto={48} desplaz={f} tipo="trenza" ancho={1080} /><rect y={60} width={1080} height={4} fill={C.oro} /></> : t === 'pahari' ? <FranjaPahari y={8} alto={44} desplaz={f} tipo="flores" ancho={1080} /> : t === 'kamasan' ? <FranjaKamasan y={6} alto={52} desplaz={f} tipo="awan" ancho={1080} /> : t === 'kowhaiwhai' ? <FranjaMaori y={6} alto={52} desplaz={f} tipo="koru" ancho={1080} /> : t === 'codice' ? <FranjaCodice y={8} alto={44} desplaz={f} tipo="xical" ancho={1080} /> : t === 'pintado' ? <FranjaCuentas y={10} alto={40} desplaz={f} tipo="escalones" /> : t === 'kapa' ? <FranjaKapa y={10} alto={36} desplaz={f} tipo="rombos" /> : t === 'papiro' ? <Bloques y={10} alto={30} desplaz={f} /> : t === 'runas' ? <Entrelazado y={6} alto={60} desplaz={f} paso={150} /> : <FrisoPalmetas y={6} desplaz={f} />;
 export const CIERRE_VERTICAL = 3; // segundos del cierre (en lugar de los 12 s de pantalla final de YouTube)
 const SUBS = 1470;
 const GANCHO_TOP = 470; // texto del gancho: arriba del medio, debajo de la pastilla de parte
 /** Degradé de fondo del formato vertical según el tema. */
-export const fondoVertical = (t: string) => t === 'natural' ? DEGRADE_NATURAL : t === 'pahari' ? DEGRADE_PAHARI : t === 'kamasan' ? 'linear-gradient(#7A2418, #1E1612)' : t === 'kowhaiwhai' ? 'linear-gradient(#6E1610, #15100E)' : t === 'codice' ? 'linear-gradient(#6E2A1A, #1A1311)' : t === 'pintado' ? 'linear-gradient(#5A3820, #1C1612)' : t === 'kapa' ? 'linear-gradient(#4A2C16, #1A1410)' : t === 'papiro' ? 'linear-gradient(#3A2A1C, #1D1712)' : t === 'runas' ? `linear-gradient(#22384D, ${C.negro})` : `linear-gradient(${C.barro}, ${C.barroOscuro})`;
+export const fondoVertical = (t: string) => t === 'natural' ? DEGRADE_NATURAL : t === 'gnosis' ? DEGRADE_GNOSIS : t === 'pahari' ? DEGRADE_PAHARI : t === 'kamasan' ? 'linear-gradient(#7A2418, #1E1612)' : t === 'kowhaiwhai' ? 'linear-gradient(#6E1610, #15100E)' : t === 'codice' ? 'linear-gradient(#6E2A1A, #1A1311)' : t === 'pintado' ? 'linear-gradient(#5A3820, #1C1612)' : t === 'kapa' ? 'linear-gradient(#4A2C16, #1A1410)' : t === 'papiro' ? 'linear-gradient(#3A2A1C, #1D1712)' : t === 'runas' ? `linear-gradient(#22384D, ${C.negro})` : `linear-gradient(${C.barro}, ${C.barroOscuro})`;
 
 export const VideoVertical: React.FC<{ guion: GuionVisual; timeline: Timeline; portada?: string }> = ({ guion, timeline, portada }) => {
   aplicarTema(guion.serie);

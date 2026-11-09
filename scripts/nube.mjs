@@ -284,7 +284,7 @@ export const COLA = 'out/cola-unificada.json', SHORTS_ORDEN = 'out/shorts-orden.
 const IDS = 'src/videos/youtube-ids.json', API = 'out/subidas-api.json', IG = 'out/subidas-instagram.json', BUF = 'out/subidas-buffer.json';
 /** Listo para publicar: narrado (guion + timeline) y, si es episodio, con título en titulos.json. */
 /** Biblia: además, la marca VERIFICADO que deja su sesión cuando el capítulo está revisado (no sale nada a medio hacer). */
-const listoCon = (titulos) => (id) => ['guion.json', 'timeline.json'].every((f) => existsSync(join('src/videos', id, f))) && (!esBiblia(id) || verificadoVigente(id)) && (esShort(id) || Boolean(titulos[id]?.titulo));
+const listoCon = (titulos) => (id) => ['guion.json', 'timeline.json'].every((f) => existsSync(join('src/videos', id, f))) && (!(esBiblia(id) || id.startsWith('gnosticas-')) || verificadoVigente(id)) && (esShort(id) || Boolean(titulos[id]?.titulo));
 /** En la rotación de series: temporadas sí, especiales no (Odisea, Stories, Lords of the Dead). */
 export const rotaCon = (titulos) => (id) => !titulos[id]?.especial;
 /** VERIFICADO guarda la huella del guion+timeline revisados (scripts/verificado.mjs): si el guion cambió después, no vale. */

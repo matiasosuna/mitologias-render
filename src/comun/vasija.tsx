@@ -9,6 +9,7 @@ import { GuardasPahari, SueloPahari } from './pahari';
 import { GuardasKamasan, SueloKamasan } from './kamasan';
 import { GuardasMaori, SueloMaori } from './kowhaiwhai';
 import { GuardasNatural, SueloNatural } from './natural';
+import { GuardasGnosis, SueloGnosis } from './gnosis';
 
 export const { fontFamily: TEXTO } = cargarGaramond('normal', { weights: ['500'], subsets: ['latin'] });
 export const { fontFamily: TITULO } = cargarCinzel('normal', { weights: ['400', '700'], subsets: ['latin'] });
@@ -24,7 +25,7 @@ export const C = {
 // ---------- temas por mitología ----------
 // Cada mitología tiene la "piel" de su arte: griega = vasija de figuras negras; nórdica = piedra rúnica
 // helada (azules, nieve y rojo de runa). El motor es el mismo; cambian paleta, cielos, guardas y suelo.
-export type NombreTema = 'natural' | 'pahari' | 'vasija' | 'runas' | 'papiro' | 'kapa' | 'pintado' | 'codice' | 'kowhaiwhai' | 'kamasan';
+export type NombreTema = 'natural' | 'pahari' | 'vasija' | 'runas' | 'papiro' | 'kapa' | 'pintado' | 'codice' | 'kowhaiwhai' | 'kamasan' | 'gnosis';
 type Cielos = Record<'barro' | 'noche' | 'mar' | 'inframundo', [string, string, string]>;
 const TEMAS: Record<NombreTema, { C: typeof C; cielos: Cielos; musica: string; ropa?: string; pielH?: string; pielM?: string }> = {
   vasija: {
@@ -98,11 +99,20 @@ const TEMAS: Record<NombreTema, { C: typeof C; cielos: Cielos; musica: string; r
     musica: 'musica/biblia.wav',
     ropa: '#E9E0CC', pielH: '#B98A62', pielM: '#D2A57E',
   },
+  // Gnosis (serie `gnosticas`): los códices de Nag Hammadi — papiro crema, cuero marrón, tinta negra y roja — en marcos y
+  // portada; arriba el Pleroma (oro y blanco sobre índigo y negro), abajo el mundo de los gobernantes (verde oscuro,
+  // niebla y fuego). Guardas y suelo en ./gnosis.tsx; fondos en motor/fondosGnosis.tsx; elenco en motor/elencoGnosis.tsx.
+  gnosis: {
+    C: { barro: '#D6C08A', barroClaro: '#EFE3C2', barroOscuro: '#6B4226', negro: '#1B1410', crema: '#EFE3C2', purpura: '#A8321E', blanco: '#FFF8E6', oro: '#E8C25A', noche: '#0D1030', mar: '#2E4A5C' },
+    cielos: { barro: ['#F4EBD2', '#DCC9A0', '#A88A5C'], noche: ['#3A3C7A', '#1A1D4A', '#07081A'], mar: ['#A8BAB0', '#5E7A72', '#22343A'], inframundo: ['#34483A', '#16261C', '#060C08'] },
+    musica: 'musica/gnosis.wav',
+    ropa: '#EFE3C2', pielH: '#B98A62', pielM: '#D2A57E',
+  },
 };
 export const TEMA = { nombre: 'vasija' as NombreTema, cielos: TEMAS.vasija.cielos, musica: TEMAS.vasija.musica, ropa: undefined as string | undefined, pielH: undefined as string | undefined, pielM: undefined as string | undefined };
-export const temaDeSerie = (serie?: string): NombreTema => (serie === 'nordicas' ? 'runas' : serie === 'egipcias' ? 'papiro' : serie === 'hawaianas' ? 'kapa' : serie === 'norteamericanas' ? 'pintado' : serie === 'aztecas' ? 'codice' : serie === 'hindues' ? 'pahari' : serie === 'maories' ? 'kowhaiwhai' : serie === 'balinesas' ? 'kamasan' : serie === 'biblia' ? 'natural' : 'vasija');
+export const temaDeSerie = (serie?: string): NombreTema => (serie === 'nordicas' ? 'runas' : serie === 'egipcias' ? 'papiro' : serie === 'hawaianas' ? 'kapa' : serie === 'norteamericanas' ? 'pintado' : serie === 'aztecas' ? 'codice' : serie === 'hindues' ? 'pahari' : serie === 'maories' ? 'kowhaiwhai' : serie === 'balinesas' ? 'kamasan' : serie === 'biblia' ? 'natural' : serie === 'gnosticas' ? 'gnosis' : 'vasija');
 /** Nombre de la serie en pantalla (inglés) y en español, por tema. */
-export const NOMBRE_SERIE: Record<NombreTema, { en: string; es: string }> = { vasija: { en: 'Greek Mythology', es: 'Mitología griega' }, runas: { en: 'Norse Mythology', es: 'Mitología nórdica' }, papiro: { en: 'Egyptian Mythology', es: 'Mitología egipcia' }, kapa: { en: 'Hawaiian Mythology', es: 'Mitología hawaiana' }, pintado: { en: 'Native American Mythology', es: 'Mitología Norteamericana' }, codice: { en: 'Aztec Mythology', es: 'Mitología Azteca' }, pahari: { en: 'Hindu Mythology', es: 'Mitología Hindú' }, kamasan: { en: 'Balinese Mythology', es: 'Mitología Balinesa' },kowhaiwhai: { en: 'Māori Mythology', es: 'Mitología maorí' }, natural: { en: 'The Bible', es: 'La Biblia' } };
+export const NOMBRE_SERIE: Record<NombreTema, { en: string; es: string }> = { vasija: { en: 'Greek Mythology', es: 'Mitología griega' }, runas: { en: 'Norse Mythology', es: 'Mitología nórdica' }, papiro: { en: 'Egyptian Mythology', es: 'Mitología egipcia' }, kapa: { en: 'Hawaiian Mythology', es: 'Mitología hawaiana' }, pintado: { en: 'Native American Mythology', es: 'Mitología Norteamericana' }, codice: { en: 'Aztec Mythology', es: 'Mitología Azteca' }, pahari: { en: 'Hindu Mythology', es: 'Mitología Hindú' }, kamasan: { en: 'Balinese Mythology', es: 'Mitología Balinesa' },kowhaiwhai: { en: 'Māori Mythology', es: 'Mitología maorí' }, natural: { en: 'The Bible', es: 'La Biblia' }, gnosis: { en: 'Gnosis', es: 'Gnosis' } };
 /** Nombre del canal que sale en pantalla (pantalla final, verticales, portadas): Learn Bible 777 en la serie biblia. */
 export const marcaCanal = () => 'MYTHS ON CLAY'; // la Biblia es una serie más de Myths on Clay (2026-10-22)
 /** Cambia la paleta y la piel antes de dibujar (cada render corre en su propia pestaña). */
@@ -279,7 +289,7 @@ export const FrisoPalmetas: React.FC<{ y: number; desplaz: number }> = ({ y, des
 );
 
 /** Guardas fijas del marco: lengüetas + meandro arriba, palmetas abajo y franja negra de subtítulos. */
-export const Guardas: React.FC<{ desplaz: number }> = ({ desplaz }) => TEMA.nombre === 'natural' ? <GuardasNatural desplaz={desplaz} /> : TEMA.nombre === 'kamasan' ? <GuardasKamasan desplaz={desplaz} /> : TEMA.nombre ==='kowhaiwhai' ? <GuardasMaori desplaz={desplaz} /> : TEMA.nombre === 'pahari' ? <GuardasPahari desplaz={desplaz} /> : TEMA.nombre === 'codice' ? <GuardasCodice desplaz={desplaz} /> : TEMA.nombre === 'runas' ? <GuardasRunas desplaz={desplaz} /> : TEMA.nombre === 'papiro' ? <GuardasPapiro desplaz={desplaz} /> : TEMA.nombre === 'kapa' ? <GuardasKapa desplaz={desplaz} /> : TEMA.nombre === 'pintado' ? <GuardasPintado desplaz={desplaz} /> : (
+export const Guardas: React.FC<{ desplaz: number }> = ({ desplaz }) => TEMA.nombre === 'gnosis' ? <GuardasGnosis desplaz={desplaz} /> : TEMA.nombre === 'natural' ? <GuardasNatural desplaz={desplaz} /> : TEMA.nombre === 'kamasan' ? <GuardasKamasan desplaz={desplaz} /> : TEMA.nombre ==='kowhaiwhai' ? <GuardasMaori desplaz={desplaz} /> : TEMA.nombre === 'pahari' ? <GuardasPahari desplaz={desplaz} /> : TEMA.nombre === 'codice' ? <GuardasCodice desplaz={desplaz} /> : TEMA.nombre === 'runas' ? <GuardasRunas desplaz={desplaz} /> : TEMA.nombre === 'papiro' ? <GuardasPapiro desplaz={desplaz} /> : TEMA.nombre === 'kapa' ? <GuardasKapa desplaz={desplaz} /> : TEMA.nombre === 'pintado' ? <GuardasPintado desplaz={desplaz} /> : (
   <>
     <rect x={0} y={0} width={1920} height={ARRIBA} fill={C.barro} />
     <Lenguetas y={0} desplaz={desplaz} />
@@ -1118,7 +1128,7 @@ export const Relampago: React.FC<{ a: P; b: P; f: number; desde: number; dur?: n
 };
 
 /** Suelo de la escena: franja negra con puntitos y piedras (en el tema nórdico, con nieve encima). */
-export const Suelo: React.FC<{ desde?: number; hasta?: number; color?: string }> = ({ desde: x0 = -400, hasta = 5000, color = C.negro }) => TEMA.nombre === 'natural' ? <SueloNatural desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'kamasan' ? <SueloKamasan desde={x0} hasta={hasta} color={color} /> : TEMA.nombre ==='kowhaiwhai' ? <SueloMaori desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'pahari' ? <SueloPahari desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'codice' ? <SueloCodice desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'pintado' ? (
+export const Suelo: React.FC<{ desde?: number; hasta?: number; color?: string }> = ({ desde: x0 = -400, hasta = 5000, color = C.negro }) => TEMA.nombre === 'gnosis' ? <SueloGnosis desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'natural' ? <SueloNatural desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'kamasan' ? <SueloKamasan desde={x0} hasta={hasta} color={color} /> : TEMA.nombre ==='kowhaiwhai' ? <SueloMaori desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'pahari' ? <SueloPahari desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'codice' ? <SueloCodice desde={x0} hasta={hasta} color={color} /> : TEMA.nombre === 'pintado' ? (
   <g>
     <rect x={x0} y={SUELO} width={hasta - x0} height={200} fill="#8A5A34" />
     <rect x={x0} y={SUELO} width={hasta - x0} height={6} fill={C.negro} />
