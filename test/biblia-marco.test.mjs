@@ -55,8 +55,9 @@ test('horizontal: sin apertura; la pregunta final antes de la pantalla final', (
   assert.ok(norm(h.escenas.flatMap((e) => e.frases.map((f) => f.en)).join(' ')).includes(norm(kjv.map((v) => v.text).join(' '))));
 });
 
+// Gnosis (gnosticas) lleva la pregunta final como la Biblia (reels/youtube.final, sin gancho): queda afuera igual.
 test('sin campos de marco (Myths) nada cambia', () => {
-  for (const d of readdirSync('src/videos').filter((x) => !x.startsWith('biblia-') && existsSync(`src/videos/${x}/timeline.json`))) {
+  for (const d of readdirSync('src/videos').filter((x) => !/^(biblia|gnosticas)-/.test(x) && existsSync(`src/videos/${x}/timeline.json`))) {
     const gg = leer(`src/videos/${d}/guion.json`), tt = leer(`src/videos/${d}/timeline.json`);
     if (gg.reels?.ganchos || gg.youtube?.gancho) continue; // con el gancho de Myths (scripts/marco-myths.mjs)
     assert.equal(piezasMarco(gg).length, 0, d);
