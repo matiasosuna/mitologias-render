@@ -1,13 +1,13 @@
 # Myths on Clay — estado
-_Actualizado 2026-11-08 21:36 UTC_
+_Actualizado 2026-11-10 01:06 UTC_
 
 ## Resumen
 | Qué | Estado |
 | --- | --- |
 | publicar | activado |
-| Última corrida de publicar | success · 2026-11-08 21:07 UTC |
-| Último turno registrado | 2026-11-08T18Z |
-| Próximos de la cola | nordicas-10-muerte-baldr<br>nordicas-11-loki-atado<br>nordicas-12-ragnarok<br>nordicas-13-mundo-renace<br>egipcias-11-pesada-del-corazon |
+| Última corrida de publicar | success · 2026-11-10 00:07 UTC |
+| Último turno registrado | 2026-11-09T22Z |
+| Próximos de la cola | nordicas-12-ragnarok<br>nordicas-13-mundo-renace<br>griegas-99-reino-de-hades<br>nordicas-99-hel<br>egipcias-99-anubis-y-la-duat |
 | "Who is…?" listos | 20 (20 sin publicar en alguna red) |
 
 ## Temporadas
@@ -17,30 +17,31 @@ _Actualizado 2026-11-08 21:36 UTC_
 | Griegas | Especial Lords of the Dead | 1 | 0 | 0 |
 | Griegas | Especial The Odyssey | 2 | 0 | 0 |
 | Griegas | T1 | 7 | 7 | 7 |
-| Griegas | T2 | 10 | 2 | 7 |
+| Griegas | T2 | 10 | 2 | 8 |
 | Griegas | T3 | 6 | 0 | 0 |
 | Nórdicas | Especial Lords of the Dead | 1 | 0 | 0 |
-| Nórdicas | T1 | 13 | 12 | 13 |
-| Nórdicas | T2 | 8 | 0 | 1 |
+| Nórdicas | T1 | 13 | 13 | 13 |
+| Nórdicas | T2 | 8 | 1 | 3 |
 | Nórdicas | T3 | 9 | 0 | 0 |
 | Egipcias | Especial Lords of the Dead | 1 | 0 | 0 |
 | Egipcias | T1 | 11 | 11 | 11 |
-| Egipcias | T2 | 8 | 1 | 3 |
+| Egipcias | T2 | 8 | 2 | 4 |
 | Egipcias | T3 | 11 | 0 | 0 |
 | Hawaianas | Especial Lords of the Dead | 1 | 0 | 0 |
 | Hawaianas | T1 | 12 | 12 | 12 |
-| Hawaianas | T2 | 12 | 0 | 2 |
+| Hawaianas | T2 | 12 | 1 | 3 |
 | Norteamericanas | T1 | 12 | 0 | 0 |
 | Aztecas | T1 | 12 | 0 | 0 |
 | Hindúes | T1 | 12 | 0 | 0 |
 | Maoríes | T1 | 12 | 0 | 0 |
 | Biblia | T1 | 5 | 5 | 5 |
-| Biblia | T2 | 8 | 7 | 8 |
+| Biblia | T2 | 8 | 8 | 8 |
 | Balinesas | T1 | 12 | 0 | 0 |
+| Gnosis | T1 | 2 | 1 | 1 |
 
 ## Métricas
 | Red | Métricas |
 | --- | --- |
-| YouTube | 39 suscriptores · 1709 vistas · 63 videos |
-| Instagram | 82 seguidores · 656 likes · 25.407 vistas (28 días) |
+| YouTube | 40 suscriptores · 1826 vistas · 69 videos |
+| Instagram | 83 seguidores · 653 likes · 24.959 vistas (28 días) |
 | TikTok | sin API |
