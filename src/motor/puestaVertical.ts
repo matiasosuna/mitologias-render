@@ -118,7 +118,7 @@ export function encuadreEscena(pistas: Pista[], rango: [number, number] = [-100,
     return [{
       id: p.id, xmin: Math.min(...ms.map((m) => m.x)), xmax: Math.max(...ms.map((m) => m.x)),
       e0: Math.max(...ms.map((m) => ext(p, m).e0)), e1: Math.max(...ms.map((m) => ext(p, m).e1)),
-      alto: Math.max(...ms.map((m) => p.medida.alto * m.s + Math.max(0, SUELO_MUNDO - m.y))),
+      alto: Math.max(...p.muestras.filter((m) => m.vis).map((m) => p.medida.alto * m.s + Math.max(0, SUELO_MUNDO - m.y))), // todo lo visible (también fuera del rango): de cerca, un caballo que vuela al salir no puede pasar el techo
       parado: Math.max(...ms.map((m) => p.medida.alto * m.s)),
     }];
   });
