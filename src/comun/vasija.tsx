@@ -1092,7 +1092,9 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
   const cT4 = v4 ? desde(hT, bTh, BRAZO_V4[0]) : cT0;
   const brT = v4 ? { c: cT4, m: desde(cT4, bTh + bTc + 40, BRAZO_V4[1]), a: bTh + bTc + 40 } : { c: cT0, m: mT0, a: bTh + bTc + 40 };
   const cT = brT.c, mT = brT.m, angMT = brT.a;
-  const [bDh0, bDc0] = props.brazo ?? (v5anda ? [20 + (-12 - 16 * Math.cos(phi - 0.35)) * kM, 30 + (-4 - 8 * Math.cos(phi - 0.35)) * kM] : [accion === 'parado' ? 20 : 20 - balanceo, accion === 'parado' ? 30 : 40 - balanceo]);
+  // con algo en la mano de adelante (lanza, cetro, báculo) ese brazo casi no se balancea al andar: si no, el objeto le cruza la cara
+  const kB = kM * (objeto || props.adornos?.mano ? 0.35 : 1);
+  const [bDh0, bDc0] = props.brazo ?? (v5anda ? [20 + (-12 - 16 * Math.cos(phi - 0.35)) * kB, 30 + (-4 - 8 * Math.cos(phi - 0.35)) * kB] : [accion === 'parado' ? 20 : 20 - balanceo, accion === 'parado' ? 30 : 40 - balanceo]);
   const bDh = bDh0 + sigue(0.2) * 0.6, bDc = bDc0 + sigue(0.8);
   const cD0 = desde(hD, bDh, 66), mD0 = desde(cD0, bDh + bDc, 60);
   const rotCab = -6 - cabeza + cabeceo + (hd ? -peso * (v3 ? 1.8 : 1.5) : 0);

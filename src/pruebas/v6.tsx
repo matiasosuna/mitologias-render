@@ -1,5 +1,5 @@
 // Personajes v6 (traídos de hermes-videos, rama personajes-v6): ANTES ('actual') arriba y v6 abajo, mismos personajes.
-// Láminas en la nube: gh workflow run laminas.yml -R matiasosuna/mitologias-render -f ids='v6.tsx:v6-nordicos,v6.tsx:v6-griegos,v6.tsx:v6-egipcios,v6.tsx:v6-caras,v6.tsx:v6-andar'
+// Láminas en la nube: gh workflow run laminas.yml -R matiasosuna/mitologias-render -f ids='v6.tsx:v6-nordicos,v6.tsx:v6-griegos,v6.tsx:v6-egipcios,v6.tsx:v6-varios,v6.tsx:v6-poses,v6.tsx:v6-caras,v6.tsx:v6-andar'
 //   v6-nordicos / v6-griegos / v6-egipcios = seis oficiales (el último caminando) · v6-caras = caras de cerca · v6-andar = ciclo de paso de Odín
 import React from 'react';
 import { Composition, registerRoot, useCurrentFrame, AbsoluteFill } from 'remotion';
@@ -98,15 +98,45 @@ const Andar: React.FC = () => {
   );
 };
 
+/** Poses: sentados, arrodillado y un niño (ANTES arriba, v6 abajo). */
+const Poses: React.FC = () => {
+  aplicarTema('nordicas');
+  const f = useCurrentFrame();
+  const P: [string, Partial<Estado>][] = [['freya_oficial', { sentado: 1 }], ['sigurd_oficial', { sentado: 1 }], ['thor_oficial', { arrodillado: 1 }], ['helgi_nino_oficial', {}], ['frigg_oficial', { sentado: 0.5 }], ['loki_oficial', { inclinar: 18 }]];
+  const fila = (est: EstiloPersonaje, y: number) => (
+    <EstiloPJ.Provider value={est}>
+      {P.map(([id, ex], i) => ELENCO[id] ? <g key={id}><DibujarActor ficha={ELENCO[id]} e={estado(170 + i * 316, y, 0.98, ex)} f={f} /><text x={170 + i * 316} y={y + 34} textAnchor="middle" fontSize={24} fill="#FFF" stroke="#000" strokeWidth={4} style={{ paintOrder: 'stroke' }}>{id}</text></g> : <text key={id} x={170 + i * 316} y={y - 200} fontSize={30} fill="red">{`falta ${id}`}</text>)}
+    </EstiloPJ.Provider>
+  );
+  const [c0, c1, c2] = TEMA.cielos.barro;
+  return (
+    <AbsoluteFill>
+      <CalidadHD.Provider value={true}>
+        <svg viewBox="0 0 1920 1080" width="100%" height="100%">
+          <Defs />
+          <rect width={1920} height={540} fill={c1} /><rect y={540} width={1920} height={540} fill={c0} />
+          <rect y={496} width={1920} height={8} fill={c2} /><rect y={1036} width={1920} height={8} fill={c2} />
+          {fila('actual', 500)}{fila('v6', 1040)}
+          <Rotulo y={44} t="ANTES" /><Rotulo y={584} t="v6" />
+        </svg>
+      </CalidadHD.Provider>
+    </AbsoluteFill>
+  );
+};
+
 const NORDICOS = ['odin_oficial', 'thor_oficial', 'freya_oficial', 'tyr_oficial', 'baldr_oficial', 'odin_oficial'];
 const GRIEGOS = ['zeus_oficial', 'hera_oficial', 'atenea_oficial', 'apolo_oficial', 'hades_oficial', 'poseidon_oficial'];
 const EGIPCIOS = ['ra_oficial', 'isis_oficial', 'osiris_oficial', 'anubis_oficial', 'hathor_oficial', 'thoth_oficial'];
+/** Piezas detrás de la cabeza (melenas, nimbo, luna, halo, sol): tienen que seguir a la cabeza nueva. */
+const VARIOS = ['hel_oficial', 'sofia_oficial', 'hina_oficial', 'coyolxauhqui_oficial', 'kali_oficial', 'sol_oficial'];
 
 registerRoot(() => (
   <>
     <Composition id="v6-nordicos" component={() => <Comparacion serie="nordicas" ids={NORDICOS} />} durationInFrames={120} fps={24} width={1920} height={1080} />
     <Composition id="v6-griegos" component={() => <Comparacion serie="griegas" ids={GRIEGOS} />} durationInFrames={120} fps={24} width={1920} height={1080} />
     <Composition id="v6-egipcios" component={() => <Comparacion serie="egipcias" ids={EGIPCIOS} />} durationInFrames={120} fps={24} width={1920} height={1080} />
+    <Composition id="v6-varios" component={() => <Comparacion serie="nordicas" ids={VARIOS} />} durationInFrames={120} fps={24} width={1920} height={1080} />
+    <Composition id="v6-poses" component={Poses} durationInFrames={120} fps={24} width={1920} height={1080} />
     <Composition id="v6-caras" component={Caras} durationInFrames={120} fps={24} width={1920} height={1080} />
     <Composition id="v6-andar" component={Andar} durationInFrames={120} fps={24} width={1920} height={1080} />
   </>
