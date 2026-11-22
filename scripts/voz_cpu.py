@@ -13,7 +13,7 @@ parte, partes = int(os.environ.get("PARTE", "0")), int(os.environ.get("PARTES", 
 mias = [f for i, f in enumerate(frases) if i % partes == parte]
 salida = pathlib.Path(os.environ["VOZ_SALIDA"]); salida.mkdir(parents=True, exist_ok=True)
 m = ChatterboxTTS.from_pretrained(device="cpu")
-EXAGERACION, CFG = 0.65, 0.25  # igual que scripts/modal_voz.py
+EXAGERACION, CFG = 0.5, 0.4  # igual que scripts/modal_voz.py
 for f in mias:
     w = m.generate(f["texto"], audio_prompt_path=os.environ["VOZ_REF"], exaggeration=EXAGERACION, cfg_weight=CFG)
     ta.save(str(salida / f"{f['h']}.wav"), w.cpu(), m.sr)

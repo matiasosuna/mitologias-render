@@ -31,7 +31,7 @@ function borrarVacio(wav) {
   delete hechos[basename(wav)];
   writeFileSync(reg, JSON.stringify(hechos, null, 1));
 }
-const CB = ['chatterbox-e2', 1]; // 2026-10-29: voz nueva (Chatterbox normal, más emoción); antes 'chatterbox-turbo'
+const CB = ['chatterbox-e3', 1]; // 2026-11-21: menos emoción (0.5/0.4). // 2026-10-29: voz nueva (Chatterbox normal, más emoción); antes 'chatterbox-turbo'
 let caracteres = 0;
 const enOrden = async (lista, fn) => { const r = []; for (const [i, x] of lista.entries()) r.push(await fn(x, i)); return r; };
 async function eleven(texto, salida) {

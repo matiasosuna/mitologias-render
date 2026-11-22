@@ -21,7 +21,7 @@ RAIZ = pathlib.Path(__file__).resolve().parent.parent
 REF = RAIZ / "lib/voz-matias-ref.wav"
 image = (modal.Image.debian_slim(python_version="3.11").pip_install("chatterbox-tts")
          .run_commands("python -c \"from chatterbox.tts import ChatterboxTTS; ChatterboxTTS.from_pretrained(device='cpu')\""))
-EXAGERACION, CFG = 0.65, 0.25  # emoción y ritmo de la voz (más exageración = más emoción; menos cfg = más pausada)
+EXAGERACION, CFG = 0.5, 0.4  # Matías 2026-11-21: «demasiada emoción, expresiones raras» → normal de Chatterbox (antes 0.65/0.25). Más exageración = más emoción; menos cfg = más pausada
 if modal.is_local() and REF.exists():  # Mac: la muestra local; nube: la del Volume
     image = image.add_local_file(REF, "/w/ref.wav")
 NOMBRE = "moc-voz-" + hashlib.sha1(pathlib.Path(__file__).read_bytes()).hexdigest()[:8]
