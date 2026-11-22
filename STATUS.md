@@ -1,11 +1,11 @@
 # Myths on Clay — estado
-_Actualizado 2026-11-21 22:44 UTC_
+_Actualizado 2026-11-22 23:09 UTC_
 
 ## Resumen
 | Qué | Estado |
 | --- | --- |
-| publicar | activado |
-| Última corrida de publicar | success · 2026-11-21 22:07 UTC |
+| publicar | desactivado |
+| Última corrida de publicar | success · 2026-11-22 01:07 UTC |
 | Último turno registrado | 2026-11-21T22Z |
 | Próximos de la cola | griegas-99-reino-de-hades<br>nordicas-99-hel<br>egipcias-99-anubis-y-la-duat<br>hawaianas-99-milu<br>griegas-10-atenea-poseidon |
 | "Who is…?" listos | 20 (20 sin publicar en alguna red) |
@@ -42,6 +42,6 @@ _Actualizado 2026-11-21 22:44 UTC_
 ## Métricas
 | Red | Métricas |
 | --- | --- |
-| YouTube | 51 suscriptores · 3408 vistas · 114 videos |
-| Instagram | 85 seguidores · 59 likes · 1564 vistas (28 días) |
+| YouTube | 51 suscriptores · 3466 vistas · 0 videos |
+| Instagram | 85 seguidores · 35 likes · 1157 vistas (28 días) |
 | TikTok | sin API |
