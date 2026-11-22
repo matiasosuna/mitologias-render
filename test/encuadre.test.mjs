@@ -50,8 +50,10 @@ test('si tapa a otro actor se achica, pero no más que K_SOLAPE_MIN', () => {
 
 test('revisor: los guiones pendientes no dejan ningún animal grande fuera de cuadro', () => {
   const r = spawnSync('node', ['scripts/revisar-encuadre.mjs', '--json'], { encoding: 'utf8', maxBuffer: 64e6 });
+  const d = JSON.parse(r.stdout);
+  const malos = d.escenas.flatMap((e) => e.avisos.filter((a) => a.tipo === 'arriba' && a.ids.some((id) => Object.hasOwn(e.grandes, id))).map((a) => `${e.video}/${e.escena} ${a.formato} ${a.ids.join('+')} ${a.detalle}`));
+  assert.equal(d.graves, 0, malos.join('\n'));
   assert.equal(r.status, 0, r.stderr);
-  assert.equal(JSON.parse(r.stdout).graves, 0);
 });
 
 test('revisor --epicos: con los animales épicos en los guiones griegos, el motor los ajusta', () => {

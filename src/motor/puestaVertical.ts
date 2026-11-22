@@ -20,7 +20,7 @@ export const KB = (SUELO_V - 230) / (SUELO_MUNDO - ARRIBA_MUNDO);
 /** Cada cuántos cuadros se muestrea la escena para encuadrarla. */
 export const PASO = 3;
 /** Escala de los actores según cuántos hay en la escena (1 = mismo tamaño en px que en el horizontal). */
-export const ESCALA_GRUPO = [1.7, 1.7, 1.5, 1.3, 1.15, 1.0, 0.9]; // toma de cerca (Matías 2026-11-22: «son muy alejados, hay que hacerlos más fáciles de ver»: ocupaban 1/5 de la pantalla); antes 0.86 → +20% (pedido 2026-10-18: "un poquito más de zoom"; +30% era mucho); antes 0.72 = toma de lejos (2026-10-11)
+export const ESCALA_GRUPO = [1.7, 1.7, 1.5, 1.15, 1.0, 0.9, 0.85]; // toma de cerca (Matías 2026-11-22: «son muy alejados, hay que hacerlos más fáciles de ver»: ocupaban 1/5 de la pantalla); antes 0.86 → +20% (pedido 2026-10-18: "un poquito más de zoom"; +30% era mucho); antes 0.72 = toma de lejos (2026-10-11)
 /** Escala mínima y máxima de una escena. */
 export const K_MIN = 0.25, K_MAX = 1.8;
 
