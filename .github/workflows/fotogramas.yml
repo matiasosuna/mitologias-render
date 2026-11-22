@@ -1,0 +1,41 @@
+# Hojas de fotogramas de videos ya renderizados (del release media*), para revisar animaciones sin la Mac.
+# gh workflow run fotogramas.yml -R matiasosuna/mitologias-render -f ids='egipcias-25-…,nordicas-26-…' [-f cada=6] [-f clase=horizontal]
+# → release "revision": hoja-<id>.jpg (un cuadro cada `cada` segundos, en grilla de 6 columnas).
+name: fotogramas
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: 'ids separados por coma'
+        required: true
+      cada:
+        description: 'segundos entre cuadros'
+        default: '6'
+      clase:
+        description: 'horizontal | tiktok'
+        default: horizontal
+permissions:
+  contents: write
+jobs:
+  hojas:
+    if: github.repository == 'matiasosuna/mitologias-render'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+      - name: hojas
+        run: |
+          mkdir -p hojas
+          tags=$(gh api repos/${GITHUB_REPOSITORY}/releases --paginate -q '.[].tag_name' | grep -E '^media(-[0-9]+)?$')
+          for id in $(echo "${{ inputs.ids }}" | tr ',' ' '); do
+            f="$id.${{ inputs.clase }}.mp4"; ok=
+            for t in $tags; do gh release download "$t" -p "$f" -D vids --clobber -R "$GITHUB_REPOSITORY" 2>/dev/null && { ok=1; break; }; done
+            [ -n "$ok" ] || { echo "::warning::no está $f"; continue; }
+            ffmpeg -loglevel error -y -i "vids/$f" -vf "fps=1/${{ inputs.cada }},scale=400:-1,drawtext=text='%{pts\:hms}':x=8:y=8:fontsize=22:fontcolor=white:box=1:boxcolor=black@0.6,tile=6x8" -frames:v 1 -q:v 3 "hojas/hoja-$id.jpg"
+            echo "https://github.com/${GITHUB_REPOSITORY}/releases/download/revision/hoja-$id.jpg"
+          done
+      - run: |
+          gh release view revision >/dev/null 2>&1 || gh release create revision --title revision --notes "Láminas de revisión (se pisan)"
+          ls hojas/*.jpg && gh release upload revision hojas/*.jpg --clobber
