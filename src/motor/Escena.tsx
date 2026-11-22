@@ -340,9 +340,12 @@ export const ContenidoEscena: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Id
                 }
                 if (capa !== 'frente' && a.y === undefined && ficha.tipo !== 'ave') e.y += capa === 'fondo' ? -50 : -20;
                 const griego = a.rotulo ?? (idioma === 'en' ? NOMBRE_EN[como] ?? NOMBRE_EN[a.como ?? a.id] : undefined) ?? ficha.griego;
+                // mismo nombre en dos actores de la escena (dos FROST GIANT): el cartel va una sola vez, en el primero
+                const nombreDe = (b: typeof a) => b.rotulo ?? (idioma === 'en' ? NOMBRE_EN[estados[b.id].como] ?? NOMBRE_EN[b.como ?? b.id] : undefined) ?? estados[b.id].ficha.griego;
+                const repetido = !!griego && (esc.actores ?? []).slice(0, (esc.actores ?? []).indexOf(a)).some((b) => estados[b.id] && nombreDe(b) === griego);
                 const tVis = (a.pasos ?? []).find((p) => p.hace === 'aparece' || p.hace === 'entra');
                 const desde = tVis ? momento(tl, tVis.en) + 10 : 6;
-                const oR = griego ? interpolate(f, [desde, desde + 12, desde + 100, desde + 115], [0, 1, 1, 0], cl) * e.opacity : 0;
+                const oR = griego && !repetido ? interpolate(f, [desde, desde + 12, desde + 100, desde + 115], [0, 1, 1, 0], cl) * e.opacity : 0;
                 // Alto real del personaje: coronas altas, orejas de animal, gigantes y escala propia de la ficha.
                 const pp = ficha.tipo === 'persona' ? { ...ficha.p, ...(a.props ?? {}) } as Record<string, unknown> : {};
                 const CORONA_ALTA: Record<string, number> = { doble: 110, blanca: 110, atef: 120, trono: 90, plumas: 130, cuernosDisco: 110, disco: 90, pluma: 100, corona: 60, yelmoAlas: 70, casco: 70, roja: 80, gustoweh: 90, tocadoPlumas: 90, roach: 50, plumaAtras: 40, sombreroCesteria: 30 };

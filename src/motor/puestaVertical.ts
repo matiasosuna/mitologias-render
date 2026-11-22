@@ -140,8 +140,10 @@ export function encuadreEscena(pistas: Pista[], rango: [number, number] = [-100,
     const vis = pistas.map((p) => ({ p, m: p.muestras[t] })).filter(({ p, m }) => m && enRango(m) && quieto(p, t)).sort((a, b) => a.m.x - b.m.x);
     for (let k = 0; k + 1 < vis.length; k++) {
       const a = vis[k], b = vis[k + 1], d = b.m.x - a.m.x, nec = SEPARACION * (ext(a.p, a.m).e1 + ext(b.p, b.m).e0);
-      if (d < nec || d <= 1) continue; // ya se tocaban a propósito (abrazo, mano en la boca…)
-      const r = Math.min(1, nec / d);
+      if (d <= 0.3 * nec) continue; // encimados a propósito (abrazo, mano en la boca…)
+      // separados, o apenas rozándose en el horizontal: en el vertical no se aprietan más; si se rozaban, se abren
+      // hasta no encimarse (antes se comprimían a PEND_MIN y quedaban amontonados: Matías 2026-11-22)
+      const r = d < nec ? Math.min(2, nec / d) : Math.min(1, nec / d);
       xs.forEach((x, j) => { if (j < lens.length && x >= Math.round(a.m.x) && xs[j + 1] <= Math.round(b.m.x)) smin[j] = Math.max(smin[j], r); });
     }
   }
@@ -168,8 +170,8 @@ export function encuadreEscena(pistas: Pista[], rango: [number, number] = [-100,
   } else {
     // sobra lugar: se descomprime de a poco (hasta la distancia original) mientras entre
     let lo = 0, hi = 1;
-    for (let it = 0; it < 30; it++) { const la = (lo + hi) / 2; if (ancho(armar(smin.map((x) => x + la * (1 - x)))) * K <= W) lo = la; else hi = la; }
-    sl = smin.map((x) => x + lo * (1 - x));
+    for (let it = 0; it < 30; it++) { const la = (lo + hi) / 2; if (ancho(armar(smin.map((x) => x + la * Math.max(0, 1 - x)))) * K <= W) lo = la; else hi = la; }
+    sl = smin.map((x) => x + lo * Math.max(0, 1 - x));
   }
   const vs0 = armar(sl);
   const m0 = (x: number) => mapear({ xs, vs: vs0, pend: 1 }, x);

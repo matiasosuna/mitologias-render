@@ -170,3 +170,9 @@ test('rótulos: el nombre entero dentro del cuadro; carteles en renglones', () =
   assert.ok(l.length >= 2 && l.every((x) => x.length <= 22));
   assert.ok(Math.abs(fondoX(-3000)) <= 450 && fondoX(960) === 0);
 });
+
+test('fila de personajes que se rozaban en el horizontal (Odín, Vili y Ve a 200 px): en el vertical no se enciman', () => {
+  const dur = 90, pistas = [900, 1050, 1250, 1450].map((x, i) => pista(`p${i}`, x, dur));
+  const enc = encuadreEscena(pistas);
+  todosAdentro(enc, pistas); sinEncimarse(enc, pistas);
+});
