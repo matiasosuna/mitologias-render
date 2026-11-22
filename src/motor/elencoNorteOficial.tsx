@@ -8,7 +8,7 @@
 import { AguilaEpica, BuhoEpico, CanidoEpico, CiervoEpico, OsoEpico, SerpienteEpica, TortugaEpica } from './bestiasEpicas'; // animales épicos (mismo dibujo que los griegos)
 import React from 'react';
 import { useCurrentFrame } from 'remotion';
-import { suave, miembro, type P, type PersonajeProps } from '../comun/vasija';
+import { suave, miembro, TrasCabeza, type P, type PersonajeProps } from '../comun/vasija';
 import type { DibujoProps } from './elencoAzteca';
 import type { Ficha } from './elenco';
 
@@ -120,12 +120,12 @@ const ZigzagPecho: React.FC = () => <path d="M-26 -250 l 8 -8 l 8 8 l 8 -8 l 8 8
 const Resplandor: React.FC = () => {
   const f = useCurrentFrame(), b = 1 + Math.sin(f / 10) * 0.03;
   return (
-    <g transform={`translate(-6 -342) scale(${b})`}>
+    <TrasCabeza><g transform={`translate(-6 -342) scale(${b})`}>
       <circle r={96} fill="url(#halo)" opacity={0.7} />
       {Array.from({ length: 16 }, (_, i) => <path key={i} transform={`rotate(${i * 22.5})`} d="M0 -62 L 0 -82" stroke={i % 2 ? OCRE : AMARILLO} strokeWidth={6} strokeLinecap="round" />)}
       <circle r={58} fill="#F2C24A" stroke={N} strokeWidth={2.6} />
       <circle r={46} fill="none" stroke={AMARILLO} strokeWidth={6} />
-    </g>
+    </g></TrasCabeza>
   );
 };
 

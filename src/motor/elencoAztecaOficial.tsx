@@ -6,7 +6,7 @@
 // Coordenadas: cuerpo con origen en los pies (hombros y≈-300, cintura -210); cabeza de perfil con el ojo en (18,-6).
 import React from 'react';
 import { useCurrentFrame } from 'remotion';
-import { suave, type P, type PersonajeProps } from '../comun/vasija';
+import { suave, TrasCabeza, type P, type PersonajeProps } from '../comun/vasija';
 import { K } from '../comun/codice';
 import { Franjas, Orejera, Pluma, Penacho, Espejo, PeloMexica, Chimalli, Dardos, mece } from './elencoAzteca';
 import type { Ficha } from './elenco';
@@ -240,14 +240,14 @@ const Cascabel: React.FC<{ x: number; y: number; r?: number }> = ({ x, y, r = 6 
 const MediaLuna: React.FC = () => {
   const f = useCurrentFrame();
   return (
-    <g transform={`translate(-26 -352) rotate(${-24 + Math.sin(f / 30) * 2})`}>
+    <TrasCabeza><g transform={`translate(-26 -352) rotate(${-24 + Math.sin(f / 30) * 2})`}>
       <defs><mask id="lunaCoyol"><rect x={-80} y={-80} width={160} height={160} fill="#fff" /><circle cx={26} cy={-4} r={54} fill="#000" /></mask><clipPath id="lunaCoyolC"><circle r={62} /></clipPath></defs>
       <g mask="url(#lunaCoyol)">
         <circle r={62} fill="#F1ECDD" stroke={N} strokeWidth={3} />
         {[[-44, -10, 5], [-36, 26, 4], [-28, -38, 3.5]].map(([x, y, r], i) => <circle key={i} cx={x} cy={y} r={r} fill="#D8D0BA" />)}
       </g>
       <circle cx={26} cy={-4} r={54} fill="none" stroke={N} strokeWidth={3} clipPath="url(#lunaCoyolC)" />
-    </g>
+    </g></TrasCabeza>
   );
 };
 

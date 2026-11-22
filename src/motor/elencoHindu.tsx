@@ -8,7 +8,7 @@
 import { BovinoEpico, CisneEpico } from './bestiasEpicas'; // animales épicos (mismo dibujo que los griegos)
 import React, { useId } from 'react';
 import { useCurrentFrame } from 'remotion';
-import { suave, miembro, type P, type PersonajeProps } from '../comun/vasija';
+import { suave, miembro, TrasCabeza, type P, type PersonajeProps } from '../comun/vasija';
 import { PH, Florcita } from '../comun/pahari';
 import type { Ficha } from './elenco';
 import type { DibujoProps } from './elencoAzteca';
@@ -169,7 +169,7 @@ const CabezaGaruda: React.FC = () => (
 /** Halo dorado de las miniaturas detrás de la cabeza (va en `detras`). */
 const Halo: React.FC<{ r?: number; c?: string }> = ({ r = 66, c = PH.amarillo }) => {
   const f = useCurrentFrame();
-  return <g><circle cx={22} cy={-344} r={r + Math.sin(f / 24) * 1.5} fill={c} opacity={0.5} /><circle cx={22} cy={-344} r={r} fill="none" stroke={PH.oro} strokeWidth={3} /><circle cx={22} cy={-344} r={r - 6} fill="none" stroke={PH.rojo} strokeWidth={1.2} opacity={0.6} /></g>;
+  return <TrasCabeza><g><circle cx={22} cy={-344} r={r + Math.sin(f / 24) * 1.5} fill={c} opacity={0.5} /><circle cx={22} cy={-344} r={r} fill="none" stroke={PH.oro} strokeWidth={3} /><circle cx={22} cy={-344} r={r - 6} fill="none" stroke={PH.rojo} strokeWidth={1.2} opacity={0.6} /></g></TrasCabeza>;
 };
 /** Halo de rayos (Surya). */
 const HaloSol: React.FC = () => {

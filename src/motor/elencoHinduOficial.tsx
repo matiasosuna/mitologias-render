@@ -11,7 +11,7 @@
 // Brazos de más con forma suave y mano abierta (nunca tubos). Las entradas viejas de elencoHindu.tsx quedan intactas.
 import React from 'react';
 import { useCurrentFrame } from 'remotion';
-import { suave, miembro, desde, lerp, type P, type PersonajeProps } from '../comun/vasija';
+import { suave, miembro, desde, lerp, TrasCabeza, type P, type PersonajeProps } from '../comun/vasija';
 import { PH, Florcita } from '../comun/pahari';
 import {
   EnCara, Kohl, Tilak, Kundala, Mukuta, Halo, Vanamala, Collar, Cordon, Rudraksha, Patka, RayasTigre,
@@ -207,7 +207,7 @@ const AlasGaruda: React.FC = () => {
 /** Melena larga y suelta de Kali, que le cae por la espalda hasta la cintura. Va en `detras`. */
 const MelenaKali: React.FC = () => {
   const f = useCurrentFrame(), o = (k: number) => Math.sin(f / 16 + k) * 4;
-  return <path d={suave([[0, -372], [-30, -366], [-52, -330], [-64 + o(1), -280], [-74 + o(2), -230], [-66 + o(3), -196], [-76 + o(4), -168], [-52, -176], [-40 + o(2), -150], [-26, -200], [-16, -260], [-4, -310]], true, 0.8)} fill="#120C10" stroke={N} strokeWidth={1.6} />;
+  return <TrasCabeza><path d={suave([[0, -372], [-30, -366], [-52, -330], [-64 + o(1), -280], [-74 + o(2), -230], [-66 + o(3), -196], [-76 + o(4), -168], [-52, -176], [-40 + o(2), -150], [-26, -200], [-16, -260], [-4, -310]], true, 0.8)} fill="#120C10" stroke={N} strokeWidth={1.6} /></TrasCabeza>;
 };
 /** Moño de rastas de Shiva (jata) con la luna creciente y el Ganges que brota arriba. */
 const JataShiva: React.FC = () => {

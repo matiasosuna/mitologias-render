@@ -13,7 +13,7 @@
 // `transforma` (en_que).
 import React, { useId } from 'react';
 import { useCurrentFrame } from 'remotion';
-import { Personaje, suave, type P, type PersonajeProps } from '../comun/vasija';
+import { Personaje, suave, TrasCabeza, type P, type PersonajeProps } from '../comun/vasija';
 import { GN, Estrella8 } from '../comun/gnosis';
 import { LuzPleroma, TronoLuz } from './fondosGnosis';
 import { AguilaEpica, SerpienteEpica } from './bestiasEpicas';
@@ -34,7 +34,7 @@ const Nimbo: React.FC<{ c?: string; aro?: string; r?: number; rayos?: number; cx
   // puntas quietas y nunca hacia la cara (a la derecha, ángulo 0): si no, parecen una nariz negra larga.
   const angs = Array.from({ length: rayos }, (_, i) => (i / rayos) * Math.PI * 2 + Math.PI / rayos).filter((a) => Math.abs(Math.atan2(Math.sin(a), Math.cos(a))) > 0.75);
   return (
-    <g>
+    <TrasCabeza><g>
       {angs.map((a, i) => {
         const L0 = r * 0.9, L1 = r * (i % 2 ? 1.35 : 1.55), w = 0.09;
         return <path key={i} d={`M${r1(cx + Math.cos(a - w) * L0)} ${r1(cy + Math.sin(a - w) * L0)} L ${r1(cx + Math.cos(a) * L1)} ${r1(cy + Math.sin(a) * L1)} L ${r1(cx + Math.cos(a + w) * L0)} ${r1(cy + Math.sin(a + w) * L0)} Z`} fill={c} stroke={N} strokeWidth={1.6} strokeLinejoin="round" />;
@@ -42,7 +42,7 @@ const Nimbo: React.FC<{ c?: string; aro?: string; r?: number; rayos?: number; cx
       <circle cx={cx} cy={cy} r={r} fill={c} stroke={N} strokeWidth={2.4} />
       <circle cx={cx} cy={cy} r={r - 9} fill="none" stroke={aro} strokeWidth={3} />
       <circle cx={cx} cy={cy} r={r - 16} fill="none" stroke={GN.blanco} strokeWidth={1.6} strokeDasharray="2 6" />
-    </g>
+    </g></TrasCabeza>
   );
 };
 /** Mandorla: almendra de luz alrededor del cuerpo entero (el Salvador). */

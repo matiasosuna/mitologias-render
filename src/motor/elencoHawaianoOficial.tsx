@@ -5,7 +5,7 @@
 import { CanidoEpico, DelfinEpico } from './bestiasEpicas'; // animales épicos (mismo dibujo que los griegos)
 import React from 'react';
 import { useCurrentFrame } from 'remotion';
-import { suave, type P, type PersonajeProps } from '../comun/vasija';
+import { suave, TrasCabeza, type P, type PersonajeProps } from '../comun/vasija';
 import type { DibujoProps } from './elencoAzteca';
 import type { Ficha } from './elenco';
 import { N, r1, PeloLargo, PeloMedio, Mono, BarbaCorta, CoronaFlores, Lehua, Kihei, BandaFalda, CapaEspalda, Aura } from './piezasPolinesias';
@@ -86,10 +86,10 @@ const Capucha: React.FC = () => {
 };
 /** Luna creciente detrás de la cabeza (Hina). */
 const LunaDetras: React.FC = () => (
-  <g transform="translate(-30 -372)">
+  <TrasCabeza><g transform="translate(-30 -372)">
     <circle r={56} fill="url(#haloBlanco)" opacity={0.7} />
     <path d="M10 -40 A 42 42 0 1 0 10 40 A 32 32 0 1 1 10 -40 Z" fill="#F4EEDC" stroke={N} strokeWidth={2} />
-  </g>
+  </g></TrasCabeza>
 );
 /** Copos de nieve que caen alrededor (Poliʻahu). */
 const Copos: React.FC = () => {

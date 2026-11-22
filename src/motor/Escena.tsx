@@ -25,6 +25,12 @@ export const momento = (tl: EscenaTL, n: number): number => {
 const ESCALA_CAPA = { fondo: 0.7, medio: 0.92, frente: 1.12 } as const;
 const P_CAPA = { fondo: 0.45, medio: 0.75, frente: 1 } as const;
 
+/** Personajes v5: lo andado en este tramo (para que el pie de apoyo no patine) y la marcha (arranca y frena suave). */
+const pasoV5 = (f: number, t0: number, t1: number, andado: number) => {
+  const m = Math.max(0, Math.min(1, (f - t0) / 10, (t1 - f) / 10));
+  return { andado, d: f - t0, marcha: m * m * (3 - 2 * m) };
+};
+
 /** Calcula el estado de un actor en el frame f aplicando sus pasos en orden. */
 export function estadoActor(a: Actor, tl: EscenaTL, f: number, ficha: Ficha): { e: Estado; como: string } {
   const capa = a.capa ?? 'frente';
@@ -71,18 +77,20 @@ export function estadoActor(a: Actor, tl: EscenaTL, f: number, ficha: Ficha): { 
         const destino = typeof p.a === 'number' ? p.a : e.x;
         const desde = destino + (e.voltear ? 900 : -900);
         e.opacity = 1; e.voltear = destino < desde;
-        e.x = desde + (destino - desde) * k; if (mov) e.accion = 'caminar';
+        e.x = desde + (destino - desde) * k; if (mov) { e.accion = 'caminar'; e.paso = pasoV5(f, t0, t1, Math.abs(destino - desde) * k); }
         break;
       }
       case 'sale': {
         const destino = e.x + (e.voltear ? -1000 : 1000);
-        e.x = e.x + (destino - e.x) * k; if (mov) e.accion = 'caminar';
+        if (mov) { e.accion = 'caminar'; e.paso = pasoV5(f, t0, t1, Math.abs(destino - e.x) * k); }
+        e.x = e.x + (destino - e.x) * k;
         e.opacity *= 1 - interpolate(f, [t1 - 10, t1], [0, 1], cl);
         break;
       }
       case 'camina': case 'corre': case 'nada': {
         const destino = typeof p.a === 'number' ? p.a : e.x;
         e.voltear = dirA(destino);
+        if (mov && p.hace === 'camina') e.paso = pasoV5(f, t0, t1, Math.abs(destino - e.x) * k);
         e.x = e.x + (destino - e.x) * k;
         if (mov && p.hace !== 'nada') e.accion = p.hace === 'corre' ? 'correr' : 'caminar';
         break;

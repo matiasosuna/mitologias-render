@@ -10,7 +10,7 @@
 // Las entradas viejas de elencoBalines.tsx quedan intactas.
 import React, { useId } from 'react';
 import { useCurrentFrame } from 'remotion';
-import { suave, miembro, type P, type PersonajeProps } from '../comun/vasija';
+import { suave, miembro, TrasCabeza, type P, type PersonajeProps } from '../comun/vasija';
 import { KM } from '../comun/kamasan';
 import { Gelungan, Sumping, Flor, Udeng, Rodete, Badong, Faja, Poleng, Selendang, KrisEspalda, KrisMano, PanoMano, ojoSalton, pata, MonoSacerdote, MonoChino, GorroMajapahit, CabezaCerdo, LontarMano, GentaMano, JoyaMano, CanangMano, Naga, BedawangNala, BarongLandung, UlarPoleng, Celeng, Bojog, Manuk } from './elencoBalines';
 import type { Ficha } from './elenco';
@@ -43,7 +43,7 @@ const MelenaRaksasa: React.FC<{ c?: string }> = ({ c = N }) => {
 /** Pelo largo, blanco y suelto de la viuda (Calon Arang): de la coronilla hasta la cintura, con mechones. Va en `detras`. */
 const PeloLargo: React.FC<{ c?: string }> = ({ c = '#E8E2D4' }) => {
   const f = useCurrentFrame(), o = (k: number) => Math.sin(f / 16 + k) * 4;
-  return <g><path d={suave([[0, -372], [-26, -368], [-40, -340], [-46 + o(1), -296], [-56 + o(2), -250], [-62 + o(3), -206], [-48, -212], [-38 + o(2), -190], [-28, -236], [-18, -290], [-6, -330]], true, 0.8)} fill={c} stroke={N} strokeWidth={1.6} />{[0, 1, 2].map((i) => <path key={i} d={`M${-20 - i * 6} -350 C ${-30 - i * 6} -300, ${-36 - i * 6 + o(i)} -260, ${-42 - i * 5 + o(i + 1)} -220`} stroke="#B8B0A0" strokeWidth={1.6} fill="none" />)}</g>;
+  return <TrasCabeza><g><path d={suave([[0, -372], [-26, -368], [-40, -340], [-46 + o(1), -296], [-56 + o(2), -250], [-62 + o(3), -206], [-48, -212], [-38 + o(2), -190], [-28, -236], [-18, -290], [-6, -330]], true, 0.8)} fill={c} stroke={N} strokeWidth={1.6} />{[0, 1, 2].map((i) => <path key={i} d={`M${-20 - i * 6} -350 C ${-30 - i * 6} -300, ${-36 - i * 6 + o(i)} -260, ${-42 - i * 5 + o(i + 1)} -220`} stroke="#B8B0A0" strokeWidth={1.6} fill="none" />)}</g></TrasCabeza>;
 };
 /** Bigote balinés de hombre (Kebo Iwa). */
 const Bigote: React.FC<{ c?: string }> = ({ c = N }) => <path d="M22 14 C 28 10, 38 11, 42 17 C 38 16, 34 17, 31 19 C 28 17, 24 17, 22 18 Z" fill={c} />;

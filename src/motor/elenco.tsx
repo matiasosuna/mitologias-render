@@ -1,7 +1,7 @@
 // Elenco fijo: cada clave es un personaje o criatura listo para usar en el guion visual.
 // Si una clave no existe, el motor usa un humano genérico; con `props` se ajusta cualquier detalle.
 import React, { useContext } from 'react';
-import { C, Personaje, PersonajeProps, Borde, CalidadHD } from '../comun/vasija';
+import { C, Personaje, PersonajeProps, Borde, CalidadHD, ESTILO_PJ } from '../comun/vasija';
 import { Cuadrupedo, Serpiente, Ave, Pez, Escorpion, AvePie, Bichito, TipoCuadrupedo } from './bestias';
 import { AnimalNorte, EspecieNorte } from './norteExtra';
 import { ELENCO_AZTECA, NOMBRE_EN_AZTECA, type DibujoProps } from './elencoAzteca';
@@ -359,6 +359,8 @@ export type Estado = {
   arrodillado?: number; sentado?: number;
   expresion?: PersonajeProps['expresion']; inclinar?: number; cabeza?: number; cabezaGiro?: number; hablando?: boolean;
   aparicion?: { con: string; t0: number; sale: boolean };
+  /** Al caminar (personajes v5): lo andado en el tramo, cuadros desde que arrancó y marcha 0–1. */
+  paso?: { andado: number; d: number; marcha: number };
 };
 
 /** Dibuja la ficha del elenco con el estado actual del actor. */
@@ -371,7 +373,13 @@ export const DibujarActor: React.FC<{ ficha: Ficha; e: Estado; props?: Record<st
     const p = { ...ficha.p, ...props } as Partial<PersonajeProps> & { s?: number };
     const s = e.s * (p.s ?? 1);
     const pp: PersonajeProps = { ...p, ...base, s, accion: e.accion, boca: e.boca || p.boca, brazo: e.brazo ?? p.brazo, brazoAtras: e.brazoAtras ?? p.brazoAtras, objeto: (e.objeto === undefined ? p.objeto : e.objeto) as PersonajeProps['objeto'], arrodillado: e.arrodillado ?? p.arrodillado, sentado: e.sentado ?? p.sentado, expresion: e.expresion ?? p.expresion, inclinar: (e.inclinar || p.inclinar !== undefined) ? (p.inclinar ?? 0) + (e.inclinar ?? 0) : undefined, cabeza: (e.cabeza || p.cabeza !== undefined) ? (p.cabeza ?? 0) + (e.cabeza ?? 0) : undefined, cabezaGiro: e.cabezaGiro, ciclope: ficha.extra === 'ciclope' || p.ciclope };
-    const cab = { x: base.x + (e.voltear ? -1 : 1) * 20 * s * (p.gigante ? 1.35 : 1), y: base.y - 334 * s };
+    // v5: el paso sigue a lo andado (pie de apoyo quieto), con un tope de cadencia para que no corra las piernas
+    if (e.accion === 'caminar' && e.paso && pp.fase === undefined) {
+      const kk = s * (p.cuerpo === 'nino' ? 0.62 : 1);
+      pp.fase = Math.min(e.paso.andado / (12 * kk), e.paso.d * 0.45); pp.marcha = e.paso.marcha;
+    }
+    const v4 = (p.estilo ?? ESTILO_PJ) !== 'actual' && (p.estilo ?? ESTILO_PJ) !== 'v3' && (p.estilo ?? ESTILO_PJ) !== 'v3fuerte';
+    const cab = { x: base.x + (e.voltear ? -1 : 1) * 20 * s * (p.gigante ? 1.35 : 1), y: base.y - (v4 ? 344 : 334) * s };
     const k = (e.voltear ? -1 : 1) * s;
     cuerpo = (
       <g transform={e.rot ? `rotate(${e.rot} ${base.x} ${base.y})` : undefined}>

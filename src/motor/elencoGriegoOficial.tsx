@@ -14,7 +14,7 @@
 // mano/manoAtras con origen en la mano (sin girar: los atributos van derechos, como los del motor).
 import React from 'react';
 import { useCurrentFrame } from 'remotion';
-import { suave, lerp, desde, miembro, Fuego, type P, type PersonajeProps } from '../comun/vasija';
+import { suave, lerp, desde, miembro, Fuego, TrasCabeza, type P, type PersonajeProps } from '../comun/vasija';
 import type { Ficha } from './elenco';
 import type { DibujoProps } from './elencoAzteca';
 import { CaballoEpico, BovinoEpico, CiervoEpico, CanidoEpico, LeonEpico, OsoEpico, OvinoEpico, TortugaEpica, SerpienteEpica, AguilaEpica, CisneEpico, PavoEpico, BuhoEpico, DelfinEpico } from './bestiasEpicas';
@@ -1212,7 +1212,7 @@ const CoronaRayos: React.FC = () => (
   <g>{Array.from({ length: 9 }, (_, i) => { const a = ((200 - i * 20) * Math.PI) / 180, L = i % 2 ? 20 : 28; const p = (r: number, da = 0): string => `${r1(-2 + Math.cos(a + da) * r)} ${r1(-8 - Math.sin(a + da) * r)}`; return <path key={i} d={`M${p(32, -0.13)} L ${p(32 + L)} L ${p(32, 0.13)} Z`} fill={i % 2 ? '#F6D36A' : ORO} stroke={N} strokeWidth={1.8} strokeLinejoin="round" />; })}</g>
 );
 /** Resplandor de sol detrás de la cabeza (origen = pies). */
-const HaloSol: React.FC = () => { const f = useCurrentFrame(); return <circle cx={18} cy={-342} r={74} fill="url(#halo)" opacity={0.5 + Math.sin(f / 7) * 0.12} style={{ mixBlendMode: 'screen' }} />; };
+const HaloSol: React.FC = () => { const f = useCurrentFrame(); return <TrasCabeza><circle cx={18} cy={-342} r={74} fill="url(#halo)" opacity={0.5 + Math.sin(f / 7) * 0.12} style={{ mixBlendMode: 'screen' }} /></TrasCabeza>; };
 /** Cetro de rey: vara de oro con pomo. */
 const CetroRey: React.FC = () => <g><Asta y0={190} y1={-150} c={ORO} w={6} /><circle cx={0} cy={-156} r={8} fill={ORO} stroke={N} strokeWidth={2} /><circle cx={-2} cy={-158} r={2.4} fill="#FFF3B0" /></g>;
 /** Cuernitos de cabra (Egipán). */

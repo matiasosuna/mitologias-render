@@ -9,9 +9,9 @@
 //   *_oficial = versión aprobada: piel de color, ropa en capas y más detalle (mismo motor y mismas poses).
 // Después se sumaron Freya, Frigg, Týr, Baldr, Heimdall, Hel, Sif, Freyr y Njörd (*_oficial) con la misma receta.
 // Piezas en coordenadas del Personaje: cuerpo/detras con origen en los pies; cabeza con el ojo en (18,-6).
-import React from 'react';
+import React, { useContext } from 'react';
 import { useCurrentFrame } from 'remotion';
-import { suave, type P, type PersonajeProps } from '../comun/vasija';
+import { suave, CabezaPJ, type P, type PersonajeProps } from '../comun/vasija';
 import type { Ficha } from './elenco';
 
 const N = '#132233'; // contorno (el negro del tema runas)
@@ -195,7 +195,10 @@ export const Broche: React.FC<{ x: number; y: number; c?: string }> = ({ x, y, c
 
 // ---------- piezas de los demás dioses (oficiales) ----------
 /** Pone piezas en coordenadas de la cabeza desde `detras` (pelo largo que cae por la espalda, halos). */
-export const EnCabeza: React.FC<{ a?: number; children: React.ReactNode }> = ({ a = 1, children }) => <g transform={`translate(${r1(20 * a)} -334) rotate(-6)`}>{children}</g>;
+export const EnCabeza: React.FC<{ a?: number; children: React.ReactNode }> = ({ a = 1, children }) => {
+  const cab = useContext(CabezaPJ); // la cabeza de verdad del Personaje (v4+: más grande y más arriba; v5: gira desde el cuello)
+  return <g transform={cab ? cab.transform : `translate(${r1(20 * a)} -334) rotate(-6)`}>{children}</g>;
+};
 /** Melena larga por la espalda (va en `detras`, con EnCabeza). largo = hasta dónde baja (coords de cabeza). */
 export const MelenaLarga: React.FC<{ c: string; luz: string; largo?: number; ancho?: number }> = ({ c, luz, largo = 120, ancho = 1 }) => {
   const f = useCurrentFrame(), o = (k: number) => Math.sin(f / 18 + k) * (2 + k);

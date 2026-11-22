@@ -357,6 +357,8 @@ export type PersonajeProps = {
   gigante?: boolean; // proporciones más anchas
   /** Cara: enojo, tristeza, sorpresa, alegría (cejas, ojo y boca). */
   expresion?: 'neutral' | 'enojo' | 'tristeza' | 'sorpresa' | 'alegria';
+  /** v6: cuánto de la expresión (0 = cara neutral, 1 = entera; por defecto 1). Para que la cara cambie de a poco. */
+  intensidad?: number;
   /** Giro de la cabeza para decir que no (0–1, se achica de costado). */
   cabezaGiro?: number;
   /** Silueta: viejo (encorvado, canoso), niño (cabezón y chico), gordo, flaco. */
@@ -401,11 +403,30 @@ export type PersonajeProps = {
   cabezaPropia?: boolean;
   /** Oreja chica y simple (forma de C en color piel con contorno); por defecto sí desde 2026-10-15. false = el espiral viejo de la vasija. */
   orejaSimple?: boolean;
+  /** Estilo de dibujo (prueba, opt-in): 'actual' = el de siempre (por defecto); 'v3' = cara, manos, pliegues, volumen
+   * suave y respiración/parpadeo nuevos; 'v3fuerte' = lo mismo con sombreado y mejillas más marcados. Si no se da,
+   * se toma de <EstiloPJ.Provider>. 'v4' = el v3 con formas nuevas (cabeza un 10 % más grande con mentón redondo,
+   * nariz más chica y cuello; torso con hombros y cintura; brazos más cortos que se afinan, con codo; manos más chicas).
+   * 'v5' = el v4 con movimiento nuevo (paso con pies que no patinan, sentarse con los pies quietos, cabeza que sigue al
+   * cuerpo con retraso y gira desde la base del cuello). */
+  estilo?: EstiloPersonaje;
+  /** v5, al caminar: cuánto paso hay (0 = parado, 1 = marcha plena). Lo da caminarSuave para arrancar y frenar suave. */
+  marcha?: number;
 };
 export type Adornos = { detras?: React.ReactNode; cuerpo?: React.ReactNode; cabeza?: React.ReactNode; pie?: React.ReactNode; mano?: React.ReactNode; manoAtras?: React.ReactNode; pieAtras?: React.ReactNode }; // pieAtras = en el tobillo de atrás
 
 /** Activa la calidad mejorada para todos los personajes de adentro (salvo que un personaje diga hd={false}). */
 export const CalidadHD = createContext(false);
+/** Dónde está la cabeza del Personaje de arriba, en coordenadas del cuerpo (las de adornos.detras y adornos.cuerpo):
+ * transform = el de la cabeza (sus coordenadas propias: ojo en 18,-6), centro = su origen. Con el estilo v4+ la cabeza es
+ * un 10 % más grande, está 10 más arriba y en v5 gira desde el cuello: las piezas de atrás de la cabeza la siguen con esto. */
+export const CabezaPJ = createContext<{ transform: string; centro: P; corrida: P } | null>(null);
+/** Para piezas de los elencos dibujadas en coordenadas del cuerpo alrededor de la cabeza de siempre (20,-334): halos,
+ * lunas, melenas por la espalda. Las corre lo que se corrió la cabeza (v4+: más arriba; v5: gira desde el cuello). */
+export const TrasCabeza: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const c = useContext(CabezaPJ);
+  return c && (c.corrida[0] || c.corrida[1]) ? <g transform={`translate(${f1(c.corrida[0])} ${f1(c.corrida[1])})`}>{children}</g> : <>{children}</>;
+};
 
 /** Filtros de la calidad mejorada: volumen del cuerpo entero y de las partes que se superponen. */
 export const FiltrosHD: React.FC = () => (
@@ -455,6 +476,190 @@ export const FiltrosHD: React.FC = () => (
     <filter id="sombraPisoHD" x="-50%" y="-200%" width="200%" height="500%"><feGaussianBlur stdDeviation="6" /></filter>
   </defs>
 );
+
+/** Estilo de dibujo de los personajes (opt-in, a prueba desde 2026-11-03). 'actual' no cambia nada. */
+export type EstiloPersonaje = 'actual' | 'v3' | 'v3fuerte' | 'v4' | 'v5' | 'v6';
+/** v6 = los mismos personajes del v5 (formas, ropa, movimiento) + cara más viva (cejas que se mueven con la emoción y al
+ * hablar, que acompañan el parpadeo y la mirada) y ambiente nuevo en las escenas (cielo que sigue la historia, fondo en
+ * capas con paralaje y desenfoque, motas de luz, polvo) en hermes-videos; en Myths on Clay se trajo solo el personaje. */
+export const esV5 = (e: EstiloPersonaje) => e === 'v5' || e === 'v6';
+/** Estilo de personajes de todos los videos (lo que usa un Personaje sin `estilo` ni EstiloPJ.Provider encima, y
+ * también posMano/alcanzar). Para volver al estilo de antes: 'actual'. */
+export const ESTILO_PJ: EstiloPersonaje = 'v6'; // Myths on Clay: v6 por defecto desde 2026-11-22 (traído de hermes-videos, rama personajes-v6)
+export const EstiloPJ = createContext<EstiloPersonaje>(ESTILO_PJ);
+
+/** Degradés del estilo v3. Volumen con degradé de forma en cada pieza (luz del lado de adelante, sombra del de
+ * atrás), no con el filo en los bordes (eso se probó y se sacó el 2026-10-09): el contorno sigue siendo el de HD.
+ * También el iris, la mejilla y el recorte del ojo. Ids propios: no pisan los de HD. */
+export const FiltrosV3: React.FC<{ fuerte?: boolean }> = ({ fuerte }) => {
+  const k = fuerte ? 'F' : 'S', so = fuerte ? 0.36 : 0.24, lo = fuerte ? 0.26 : 0.18;
+  return (
+    <defs>
+      <linearGradient id={`formaV3${k}`} x1="0" y1="0.2" x2="1" y2="0">
+        <stop offset="0" stopColor="#2A1206" stopOpacity={so} /><stop offset="0.5" stopColor="#2A1206" stopOpacity={0} />
+        <stop offset="0.72" stopColor="#FFF6E2" stopOpacity={0} /><stop offset="1" stopColor="#FFF6E2" stopOpacity={lo} />
+      </linearGradient>
+      <linearGradient id={`caidaV3${k}`} x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stopColor="#2A1206" stopOpacity={so * 0.7} /><stop offset="0.25" stopColor="#2A1206" stopOpacity={0} />
+        <stop offset="0.8" stopColor="#2A1206" stopOpacity={0} /><stop offset="1" stopColor="#2A1206" stopOpacity={so * 0.4} />
+      </linearGradient>
+      <radialGradient id="irisV3" cx="45%" cy="40%" r="60%"><stop offset="0%" stopColor="#8A5A30" /><stop offset="70%" stopColor="#4A2A14" /><stop offset="100%" stopColor="#24130A" /></radialGradient>
+      <radialGradient id={`mejillaV3${k}`}><stop offset="0%" stopColor="#E0604F" stopOpacity={fuerte ? 0.5 : 0.34} /><stop offset="100%" stopColor="#E0604F" stopOpacity={0} /></radialGradient>
+      <clipPath id="ojoV3a"><path d="M8 -6 Q 18 -16 28 -6 Q 18 1 8 -6 Z" /></clipPath>
+      <clipPath id="ojoV3b"><path d="M8 -5 Q 18 -10 28 -5 Q 18 0 8 -5 Z" /></clipPath>
+    </defs>
+  );
+};
+
+/** Ceja v3: forma llena que se afina hacia atrás (gruesa del lado de la nariz), sobre la misma curva de cada expresión. */
+const CEJA_V3: Record<string, [P, P, P]> = {
+  neutral: [[8, -15], [18, -21], [28, -14]], enojo: [[7, -21], [18, -17], [29, -10]], tristeza: [[8, -12], [18, -14], [27, -22]],
+  sorpresa: [[8, -20], [18, -29], [28, -20]], alegria: [[8, -17], [18, -24], [28, -17]],
+};
+const cejaV3 = (e: string, k: number) => cejaForma(CEJA_V3[e] ?? CEJA_V3.neutral, k);
+/** v6: la ceja de la expresión con su intensidad (0 = neutral, 1 = la expresión entera), levantada `sube` y con la punta de
+ * adentro (la de la nariz) que baja `adentro` (enojo, grito) o sube (tristeza, con `adentro` negativo). */
+const cejaV6 = (e: string, k: number, int: number, sube: number, adentro: number) => {
+  const n = CEJA_V3.neutral, x = CEJA_V3[e] ?? n, w = [0, 0.4, 1];
+  return cejaForma(n.map((q, i) => [q[0] + (x[i][0] - q[0]) * int, q[1] + (x[i][1] - q[1]) * int - sube + adentro * w[i]] as P) as [P, P, P], k);
+};
+const cejaForma = ([a, c, b]: [P, P, P], k: number) => {
+  const n = 8, ida: P[] = [], vuelta: P[] = [];
+  for (let i = 0; i <= n; i++) {
+    const t = i / n, u = 1 - t;
+    const x = u * u * a[0] + 2 * u * t * c[0] + t * t * b[0], y = u * u * a[1] + 2 * u * t * c[1] + t * t * b[1];
+    const tx = 2 * u * (c[0] - a[0]) + 2 * t * (b[0] - c[0]), ty = 2 * u * (c[1] - a[1]) + 2 * t * (b[1] - c[1]), l = Math.hypot(tx, ty) || 1;
+    const w = (0.5 + 1.9 * Math.sin(Math.min(1, t * 1.15) * Math.PI * 0.5)) * k;
+    ida.push([x - (ty / l) * w, y + (tx / l) * w]); vuelta.push([x + (ty / l) * w, y - (tx / l) * w]);
+  }
+  return suave([...ida, ...vuelta.reverse()], true, 0.6);
+};
+
+/** v4: torso con hombros y cintura (trapecio que se angosta en la cintura y abre un poco en la cadera). La camisa
+ * del kit (Camisa) usa la misma forma con a = 1. */
+export const torsoV4 = (a: number): P[] => [[-18 * a, -302], [18 * a, -306], [34 * a, -296], [36 * a, -276], [29 * a, -250], [24 * a, -232], [27 * a, -213],
+  [-25 * a, -209], [-22 * a, -232], [-25 * a, -256], [-31 * a, -280], [-29 * a, -296]];
+/** v4: largo del brazo (hombro→codo, codo→muñeca), un ~9 % más corto que el de siempre (66 / 60). */
+const BRAZO_V4: [number, number] = [60, 54];
+/** v4: brazo de dos tramos que llega a la mano m desde el hombro h (el codo se dobla siempre hacia adelante, como un
+ * brazo de verdad). Si no llega, se estira hasta donde da en esa dirección. a = ángulo del antebrazo (0 = abajo).
+ * Solo se usa cuando la mano tiene que correrse de la cara; si no, el brazo v4 usa los mismos ángulos de la pose. */
+const brazoIK = (h: P, m: P): { c: P; m: P; a: number } => {
+  const [L1, L2] = BRAZO_V4, dx = m[0] - h[0], dy = m[1] - h[1];
+  const d = Math.max(L1 - L2 + 2, Math.min(Math.hypot(dx, dy), (L1 + L2) * 0.985));
+  const angT = (Math.atan2(dx, dy) * 180) / Math.PI;
+  const alfa = (Math.acos((L1 * L1 + d * d - L2 * L2) / (2 * L1 * d)) * 180) / Math.PI;
+  const c = desde(h, angT - alfa, L1), mm = desde(h, angT, d);
+  return { c, m: mm, a: (Math.atan2(mm[0] - c[0], mm[1] - c[1]) * 180) / Math.PI };
+};
+/** Distancia de un punto a un segmento. */
+const aSegmento = (p: P, a: P, b: P) => {
+  const vx = b[0] - a[0], vy = b[1] - a[1], l2 = vx * vx + vy * vy || 1;
+  const t = Math.max(0, Math.min(1, ((p[0] - a[0]) * vx + (p[1] - a[1]) * vy) / l2));
+  return Math.hypot(p[0] - a[0] - vx * t, p[1] - a[1] - vy * t);
+};
+
+/** v5: largo de un ciclo de paso (dos pasos) en unidades del cuerpo, y medio largo de un paso. Con caminar() la fase
+ * avanza 1 cada 12 unidades, así que el pie de apoyo queda quieto en el piso. */
+const PASO_V5 = 200, A_V5 = 60;
+/** v5: puntos de una curva suave (Catmull-Rom) que pasa por c (n muestras por tramo). */
+function curvaPts(c: P[], n = 8): P[] {
+  const out: P[] = [];
+  for (let i = 0; i < c.length - 1; i++) {
+    const p0 = c[Math.max(0, i - 1)], p1 = c[i], p2 = c[i + 1], p3 = c[Math.min(c.length - 1, i + 2)];
+    for (let j = 0; j < n; j++) {
+      const t = j / n, t2 = t * t, t3 = t2 * t;
+      const k = (a: number, b: number, c2: number, d: number) => 0.5 * (2 * b + (c2 - a) * t + (2 * a - 5 * b + 4 * c2 - d) * t2 + (3 * b - a - 3 * c2 + d) * t3);
+      out.push([k(p0[0], p1[0], p2[0], p3[0]), k(p0[1], p1[1], p2[1], p3[1])]);
+    }
+  }
+  out.push(c[c.length - 1]);
+  return out;
+}
+/** v5: punto de una polilínea según la fracción de su largo (0 → 1). */
+function porLargo(pts: P[]): (v: number) => P {
+  const acc = [0];
+  for (let i = 1; i < pts.length; i++) acc.push(acc[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
+  const L = acc[acc.length - 1] || 1;
+  return (v) => {
+    const d = Math.max(0, Math.min(1, v)) * L;
+    let i = 1;
+    while (i < acc.length - 1 && acc[i] < d) i++;
+    return lerp(pts[i - 1], pts[i], (d - acc[i - 1]) / (acc[i] - acc[i - 1] || 1));
+  };
+}
+/** Dónde queda la mano de adelante (mundo) con los estilos v4 y v5: la misma cuenta que el Personaje (brazo más
+ * corto, pecho que respira, y en v5 el paso y el sentarse nuevos). La usa posMano() para poner objetos en la mano.
+ * No incluye el corrimiento de la mano cuando pasa delante de la cara. */
+export function manoV4(p: { x: number; y: number; s: number; accion?: 'parado' | 'caminar' | 'correr'; brazo?: [number, number]; fase?: number; voltear?: boolean; cuerpo?: string; inclinar?: number; sentado?: number; arrodillado?: number; marcha?: number }, fr: number, v5: boolean): P {
+  const accion = p.accion ?? 'parado', parado = accion === 'parado';
+  const semilla = Math.abs(Math.round(p.x * 0.37 + p.y * 0.11)) % 97;
+  const fase = p.fase ?? fr * (accion === 'correr' ? 0.34 : accion === 'caminar' ? 0.2 : 0);
+  const arr = p.arrodillado ?? 0, sen = p.sentado ?? 0;
+  const v5anda = v5 && accion === 'caminar' && !arr && !sen, v5sit = v5 && sen > 0 && !arr;
+  const kM = v5anda ? Math.max(0, Math.min(1, p.marcha ?? 1)) : 0;
+  const phi = v5anda ? ((Math.abs(fase) * 12) / PASO_V5) * 2 * Math.PI : 0;
+  let bote = accion === 'correr' ? -Math.abs(Math.cos(fase)) * 10 : accion === 'caminar' ? -Math.abs(Math.cos(fase)) * 4 : 0;
+  if (v5anda) {
+    const a = pieMarcha(phi), b = pieMarcha(phi + Math.PI);
+    bote = (176 - Math.min(175, a.ah + Math.sqrt(175.5 ** 2 - a.x ** 2), b.ah + Math.sqrt(175.5 ** 2 - b.x ** 2))) * kM;
+  }
+  const brazoV5 = Math.cos(phi - 0.35) * kM;
+  const respV3 = parado ? (0.5 + 0.5 * Math.sin((fr + semilla * 7) / 19)) * 1.6 : 0;
+  const sigue = (lag: number) => (parado ? Math.sin((fr + semilla * 3) / 52 - lag) * 5 : v5anda ? 0 : Math.sin(fase + Math.PI - lag) * 9);
+  const balanceo = parado ? 0 : Math.sin(fase + Math.PI) * (accion === 'correr' ? 34 : 20);
+  const [h0, c0] = p.brazo ?? (v5anda ? [20 + (-12 - 16 * Math.cos(phi - 0.35)) * kM, 30 + (-4 - 8 * Math.cos(phi - 0.35)) * kM] : [parado ? 20 : 20 - balanceo, parado ? 30 : 40 - balanceo]);
+  const bDh = h0 + sigue(0.2) * 0.6, bDc = c0 + sigue(0.8);
+  const hD: P = v5anda ? [14 - 2.5 * brazoV5, -292] : [14, -292];
+  const cD = desde(hD, bDh, BRAZO_V4[0]), mD = desde(cD, bDh + bDc, BRAZO_V4[1]);
+  const pSen = v5sit ? Math.max(0, Math.min(1, sen)) : 0;
+  const extra = v5anda ? kM * (2 + Math.cos(2 * phi - 0.4)) : v5sit ? 9 * Math.sin(Math.PI * Math.pow(pSen, 1.6)) : 0;
+  const inclinar = p.inclinar ?? (accion === 'correr' ? 6 : p.cuerpo === 'viejo' ? 9 : 0);
+  const deg = inclinar + extra + (parado ? Math.sin((fr + semilla * 3) / 52) * 1.2 : v5anda ? 0 : Math.sin(fase * 2) * 1.4);
+  const sitX = v5sit ? (pSen < 0.4 ? 26 * sstep(pSen / 0.4) : 26 * Math.pow(1 - (pSen - 0.4) / 0.6, 2)) : 0;
+  const sitY = v5sit ? (pSen < 0.4 ? 28 * sstep(pSen / 0.4) : 28 + 60 * sstep((pSen - 0.4) / 0.6)) : 0;
+  const v5incl = v5 && !sen && !arr && (parado || accion === 'caminar') && inclinar !== 0, rI = v5incl ? (inclinar * Math.PI) / 180 : 0; // se dobla en la cadera
+  const baja = v5sit ? sitY : v5incl ? 40 * (1 - Math.cos(rI)) : 88 * Math.max(arr, sen), bajaX = v5sit ? sitX : v5incl ? -36 * Math.sin(rI) : 0;
+  const r = (deg * Math.PI) / 180, dx = mD[0], dy = mD[1] - respV3 + 176;
+  const rx = dx * Math.cos(r) - dy * Math.sin(r), ry = -176 + dx * Math.sin(r) + dy * Math.cos(r);
+  const k = p.cuerpo === 'nino' ? 0.62 : 1;
+  return [p.x + (p.voltear ? -1 : 1) * p.s * k * (rx + bajaX), p.y + bote * p.s + p.s * k * (ry + baja)];
+}
+/** v5: mientras un personaje de falda larga se sienta, lleva un punto de la falda parada (coordenadas del cuerpo) a
+ * donde queda sobre la falda que se apoya en el regazo. Lo usan las estampas de la falda (p. ej. las granadas de la
+ * Emperatriz) para moverse con la tela. null = la falda está como siempre. */
+export const FaldaV5 = createContext<((p: P) => P) | null>(null);
+const sstep = (t: number) => { const u = Math.max(0, Math.min(1, t)); return u * u * (3 - 2 * u); };
+/** v5: dónde va el tobillo de un pie en el ciclo de paso (fi en radianes): x respecto de la cadera, ah = alto sobre el
+ * piso, ang = ángulo del pie (90 = plano). 60 % apoyo (talón que baja, pie plano, talón que se levanta girando en la
+ * punta) y 40 % vuelo (rodilla que dobla, pie que pasa alto y llega con la punta arriba). */
+function pieMarcha(fi: number): { x: number; ah: number; ang: number } {
+  const u = (((fi / (2 * Math.PI)) % 1) + 1) % 1;
+  if (u < 0.6) {
+    const t = u / 0.6, xf = A_V5 - t * 2 * A_V5;
+    if (t < 0.12) return { x: xf, ah: 0, ang: 106 - 16 * sstep(t / 0.12) };
+    if (t > 0.8) { const th = 22 * Math.pow((t - 0.8) / 0.2, 1.5), r = (th * Math.PI) / 180; return { x: xf + 34 - 34 * Math.cos(r), ah: 34 * Math.sin(r), ang: 90 - th }; }
+    return { x: xf, ah: 0, ang: 90 };
+  }
+  const sw = (u - 0.6) / 0.4, r0 = (22 * Math.PI) / 180, x0 = -A_V5 + 34 - 34 * Math.cos(r0), h0 = 34 * Math.sin(r0);
+  return { x: x0 + (A_V5 - x0) * sstep(sw), ah: h0 * (1 - sw) * (1 - sw) + 15 * Math.sin(Math.PI * sw), ang: sw < 0.5 ? 68 + 44 * sw : 90 + 32 * (sw - 0.5) };
+}
+/** v5: rodilla de una pierna de dos tramos de LP (dobla hacia adelante). Si el tobillo no llega, lo acerca. */
+function rodillaIK(c: P, t: P): { k: P; tob: P } {
+  const dx = t[0] - c[0], dy = t[1] - c[1], d0 = Math.hypot(dx, dy) || 1, d = Math.max(20, Math.min(d0, 2 * LP - 0.4));
+  const vx = dx / d0, vy = dy / d0, h = Math.sqrt(Math.max(0, LP * LP - (d / 2) * (d / 2)));
+  const tob: P = [c[0] + vx * d, c[1] + vy * d];
+  return { k: [c[0] + vx * d / 2 + vy * h, c[1] + vy * d / 2 - vx * h], tob };
+}
+/** v5: pierna armada desde cadera, rodilla, tobillo y ángulo del pie (mismo dibujo que pierna()). */
+function piernaDe(cadera: P, k: P, tob: P, angPie: number, ancho: number) {
+  const punta = desde(tob, angPie, 34);
+  return {
+    k, tob,
+    path: miembro([cadera, lerp(cadera, k, 0.45), k, lerp(k, tob, 0.3), lerp(k, tob, 0.7), tob], [34 * ancho, 31 * ancho, 19 * ancho, 23 * ancho, 14 * ancho, 11 * ancho]),
+    pie: suave([[tob[0] - 6, tob[1] - 7], lerp(tob, punta, 0.5), punta, [punta[0] - 2, punta[1] + 6], [tob[0] - 4, tob[1] + 8]], true),
+  };
+}
 
 const LP = 88;
 /** pose: [cuánto (0–1), 'frente' = muslo al frente y canilla vertical, 'apoyada' = rodilla en el piso y canilla hacia atrás]. */
@@ -702,10 +907,31 @@ const AlaDiosa: React.FC<{ h: P; c: P; m: P; ang: number; f: number }> = ({ h, c
 /** Mano de muñequito, orientada según el antebrazo (ángulo del motor: 0 = abajo). 2026-10-13: la palma alargada con
  * pulgar se leía fálica (comentarios en IG) → mano abierta, más ancha que larga, con cuatro dedos cortos separados,
  * pulgar hacia afuera y puño de manga en la muñeca. Nunca volver a una forma de tubo con punta redondeada. */
-const Mano: React.FC<{ m: P; ang: number; piel: string; k: number; guante?: string }> = ({ m, ang, piel: pielM, k, guante }) => {
+const Mano: React.FC<{ m: P; ang: number; piel: string; k: number; guante?: string; v3?: boolean }> = ({ m, ang, piel: pielM, k, guante, v3 }) => {
   const piel = guante ?? pielM;
   const borde = piel === C.negro ? 'none' : C.negro;
   const dedos: [number, number][] = [[-6.2, -12], [-2.2, -4], [1.8, 4], [5.8, 12]]; // x de cada dedo y su abanico (grados)
+  if (v3) {
+    // v3: misma mano abierta (ancha, cuatro dedos cortos separados; nunca un tubo), con dedos de largo natural que se
+    // curvan un poco, nudillos, pliegue de la muñeca y sombra suave en la palma.
+    const largo = [10.5, 12.5, 12, 10], curva = [-14, -5, 5, 15];
+    const sombra = piel === C.negro ? C.crema : '#2A1206';
+    return (
+      <g transform={`translate(${f1(m[0])} ${f1(m[1])}) rotate(${f1(-ang)}) scale(${k})`}>
+        {dedos.map(([x], i) => (
+          <path key={x} d={`M${f1(x - 1.8)} 4 L ${f1(x - 1.5)} ${f1(4 + largo[i] - 1.6)} Q ${f1(x)} ${f1(4 + largo[i] + 1.2)} ${f1(x + 1.5)} ${f1(4 + largo[i] - 1.6)} L ${f1(x + 1.8)} 4 Z`}
+            fill={piel} stroke={borde} strokeWidth={1.3} strokeLinejoin="round" transform={`rotate(${curva[i]} ${x} 6)`} />
+        ))}
+        <path d="M7 1 C 11 1.5, 15 3, 15.5 5.2 C 16 7.4, 14 8.4, 12.5 7.8 L 7 6 Z" fill={piel} stroke={borde} strokeWidth={1.3} strokeLinejoin="round" />
+        <rect x={-8.5} y={-3} width={17} height={11} rx={4.5} fill={piel} stroke={borde} strokeWidth={1.6} />
+        <path d="M-8 4 Q 0 9.5 8 4 L 8 7 Q 0 10 -8 7 Z" fill={sombra} opacity={0.12} />
+        <path d="M-7 0.8 Q 0 2.2 7 0.8" stroke={sombra} strokeWidth={0.9} opacity={0.3} fill="none" />
+        <path d="M-6 -1 Q -2 -2 2 -1.4" stroke="#FFF4DC" strokeWidth={1.4} opacity={0.35} fill="none" strokeLinecap="round" />
+        <path d="M-8 -3 L 8 -3" stroke={borde === 'none' ? C.crema : borde} strokeWidth={2.4} strokeLinecap="round" />
+        {guante && <><rect x={-11} y={-17} width={22} height={15} rx={3} fill={guante} stroke={C.negro} strokeWidth={1.8} /><path d="M-11 -11 H 11" stroke={C.negro} strokeWidth={1.2} opacity={0.6} />{[-6, 0, 6].map((xx) => <circle key={xx} cx={xx} cy={-6} r={1.4} fill={C.negro} />)}</>}
+      </g>
+    );
+  }
   return (
     <g transform={`translate(${f1(m[0])} ${f1(m[1])}) rotate(${f1(-ang)}) scale(${k})`}>
       {dedos.map(([x, g]) => (
@@ -730,7 +956,10 @@ const Bota: React.FC<{ k: P; tob: P; c: string; ancho: number }> = ({ k, tob, c,
 );
 
 /** Brazo: tubo de 3 puntos (clásico) o curva suave con codo redondeado y músculos (brazoSuave). */
-const brazoD = (h: P, c: P, m: P, w: number, suaveB?: boolean) => suaveB
+const brazoD = (h: P, c: P, m: P, w: number, suaveB?: boolean, v4?: boolean) => v4
+  // v4: hombro redondo, bíceps que se afina, un toque de codo y antebrazo que se angosta hasta una muñeca fina.
+  ? miembro([h, lerp(h, c, 0.4), lerp(h, c, 0.86), c, lerp(c, m, 0.22), lerp(c, m, 0.62), m], [w * 1.04, w * 0.8, w * 0.58, w * 0.62, w * 0.58, w * 0.44, w * 0.31])
+  : suaveB
   ? miembro([h, lerp(h, c, 0.5), lerp(h, c, 0.9), lerp(c, m, 0.12), lerp(c, m, 0.6), m], [w, w * 0.8, w * 0.64, w * 0.62, w * 0.5, w * 0.36])
   : miembro([h, c, m], [w, w * 0.66, w * 0.46]);
 
@@ -751,11 +980,55 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
   const respira = accion === 'parado' ? Math.sin((fr + semilla * 7) / 22) * 1.6 : 0;
   const cabeceo = accion === 'parado' ? Math.sin((fr + semilla * 5) / 41) * 2.2 : 0;
   const cicloOjo = (fr + semilla * 13) % 96;
-  const parpadea = hd ? cicloOjo === 1 || cicloOjo === 2 : cicloOjo < 3;
-  const entornado = hd && (cicloOjo === 0 || cicloOjo === 3 || props.expresion === 'enojo' || props.expresion === 'tristeza'); // medio parpadeo, o enojo/tristeza
+  const parpadea0 = hd ? cicloOjo === 1 || cicloOjo === 2 : cicloOjo < 3;
+  const entornado0 = hd && (cicloOjo === 0 || cicloOjo === 3 || props.expresion === 'enojo' || props.expresion === 'tristeza'); // medio parpadeo, o enojo/tristeza
   // Movimiento secundario (hd): balanceo de peso, brazos que siguen con retraso, torso que acompaña el paso.
-  const peso = hd && accion === 'parado' ? Math.sin((fr + semilla * 3) / 34) : 0;
-  const sigue = (lag: number) => hd ? (accion === 'parado' ? Math.sin((fr + semilla * 3) / 34 - lag) * 5 : Math.sin(fase + Math.PI - lag) * 9) : 0;
+  const estiloCtx = useContext(EstiloPJ);
+  const estilo = props.estilo ?? estiloCtx, v3 = estilo !== 'actual', v6 = estilo === 'v6', v5 = estilo === 'v5' || v6, v4 = estilo === 'v4' || v5, fuerte = estilo === 'v3fuerte', kV = fuerte ? 'F' : 'S';
+  // v3: respira el pecho (sube torso, brazos y cabeza; los pies quedan en el piso), parpadeo de 4 cuadros a
+  // intervalos irregulares (a veces doble), la mirada cambia de punto cada tanto y el peso pasa de una pierna a la otra
+  // más lento, con la cabeza que compensa.
+  const respV3 = v3 && accion === 'parado' ? (0.5 + 0.5 * Math.sin((fr + semilla * 7) / 19)) * 1.6 : 0;
+  const vOjo = fr + semilla * 13, nOjo = Math.floor(vOjo / 110), oOjo = vOjo - nOjo * 110 - Math.floor(azar(nOjo + semilla) * 60), doble = azar(nOjo * 3 + 7) > 0.75;
+  const cierraV3 = oOjo === 1 || oOjo === 2 || (doble && oOjo === 7), mitadV3 = oOjo === 0 || oOjo === 3 || (doble && (oOjo === 6 || oOjo === 8));
+  const miraV3 = v3 ? (azar(Math.floor((fr + semilla * 11) / 52) + 3) - 0.45) * 2.4 : 0;
+  const pesoV3 = v3 && accion === 'parado' ? Math.sin((fr + semilla * 3) / 52) : 0;
+  const T = respV3 ? `translate(0 ${f1(-respV3)})` : undefined; // lo que sube con la respiración
+  const parpadea = v3 ? cierraV3 : parpadea0;
+  const intV6 = v6 ? Math.max(0, Math.min(1, props.intensidad ?? 1)) : 1;
+  const entornado = v3 ? (mitadV3 || ((props.expresion === 'enojo' || props.expresion === 'tristeza') && intV6 >= 0.5)) : entornado0;
+  // v6: cejas vivas. Bajan con el parpadeo, se levantan un instante cuando la mirada cambia de lugar (no siempre), y al
+  // hablar suben (o se aprietan hacia la nariz si está enojado); cada emoción tiene su propio movimiento chico.
+  const cejaVivaV6 = (() => {
+    if (!v6) return { sube: 0, adentro: 0 };
+    const e = props.expresion ?? 'neutral', k = intV6, ph = fr + semilla * 5;
+    let sube = cierraV3 ? -1.6 : mitadV3 ? -0.8 : 0, adentro = 0;
+    const vm = fr + semilla * 11, nm = Math.floor(vm / 52), om = vm - nm * 52; // mismo ciclo que el de la mirada
+    if (om < 12 && azar(nm * 5 + 1) > 0.45) sube += 2.4 * Math.sin((Math.PI * om) / 12) * (1 - 0.6 * k * (e === 'enojo' ? 1 : 0));
+    if (boca) { if (e === 'enojo') adentro += 1.6 * k; else sube += 2.2; }
+    if (e === 'enojo') adentro += k * (0.8 + 0.9 * Math.sin(ph / 4.5));
+    if (e === 'tristeza') adentro -= k * (1 + 0.8 * Math.sin(ph / 13));
+    if (e === 'sorpresa') sube += k * 1.6 * Math.sin(ph / 9) ** 2;
+    if (e === 'alegria') sube += k * 1.4 * Math.abs(Math.sin(ph / 7));
+    return { sube, adentro };
+  })();
+  const peso = hd && accion === 'parado' ? (v3 ? pesoV3 : Math.sin((fr + semilla * 3) / 34)) : 0;
+  // v5: andar (pasos con el pie de apoyo quieto) y sentarse (paso corto, cadera atrás y abajo, pies quietos).
+  const arr0 = props.arrodillado ?? 0, sen0 = props.sentado ?? 0;
+  const v5anda = v5 && accion === 'caminar' && !arr0 && !sen0, v5sit = v5 && sen0 > 0 && !arr0;
+  const kM = v5anda ? Math.max(0, Math.min(1, props.marcha ?? 1)) : 0; // cuánto paso hay (arranque y frenada)
+  const phi = v5anda ? ((Math.abs(fase) * 12) / PASO_V5) * 2 * Math.PI : 0;
+  const pmD = v5anda ? pieMarcha(phi) : null, pmT = v5anda ? pieMarcha(phi + Math.PI) : null;
+  // la cadera baja en el doble apoyo y sube en el medio del paso (lo que piden las piernas para llegar al piso)
+  const altoV5 = pmD && pmT ? Math.min(175, pmD.ah + Math.sqrt(175.5 ** 2 - pmD.x ** 2), pmT.ah + Math.sqrt(175.5 ** 2 - pmT.x ** 2)) : 176;
+  const brazoV5 = Math.cos(phi - 0.35) * kM; // brazos opuestos a las piernas, con un poco de retraso
+  const inclV5 = (fi: number) => kM * (2 + Math.cos(2 * fi - 0.4)); // el torso acompaña el paso
+  const pSen = v5sit ? Math.max(0, Math.min(1, sen0)) : 0; // las escenas ya lo suavizan (t01)
+  const incSen = (q: number) => 9 * Math.sin(Math.PI * Math.pow(Math.max(0, Math.min(1, q)), 1.6)); // se inclina al bajar y vuelve
+  const qSen = Math.max(0, pSen - 0.15 * (1 - pSen)); // la cabeza va un poco atrás del torso
+  const extraTorso = v5anda ? inclV5(phi) : v5sit ? incSen(pSen) : 0;
+  const extraCab = v5anda ? 0.3 * inclV5(phi - 0.5) - inclV5(phi) + kM * 1.2 * Math.sin(2 * phi - 1.2) : v5sit ? 0.5 * incSen(qSen) - incSen(pSen) : 0;
+  const sigue = (lag: number) => hd ? (accion === 'parado' ? Math.sin((fr + semilla * 3) / (v3 ? 52 : 34) - lag) * 5 : v5anda ? 0 : Math.sin(fase + Math.PI - lag) * 9) : 0;
   const piel = props.piel ?? ((egipcio || hawaiano || nativo) && TEMA.pielH ? (mujer ? TEMA.pielM! : TEMA.pielH!) : mujer ? C.blanco : C.negro); // egipcios y hawaianos: piel morena del tema
   const lin = piel === C.negro ? C.crema : C.negro; // color de las incisiones sobre la piel
   const ropaColor = props.ropaColor ?? TEMA.ropa ?? C.negro;
@@ -768,34 +1041,139 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
   const expr = props.expresion ?? 'neutral';
   const CEJA = { neutral: 'M8 -14 Q 18 -20 28 -13', enojo: 'M7 -20 Q 18 -16 29 -9', tristeza: 'M8 -11 Q 18 -13 27 -21', sorpresa: 'M8 -19 Q 18 -28 28 -19', alegria: 'M8 -16 Q 18 -23 28 -16' } as const;
   const BOCA = { neutral: '', enojo: '', tristeza: '', sorpresa: '', alegria: '' } as const; // sin bocas dibujadas (solo cejas y ojo)
-  const bote = accion === 'correr' ? -Math.abs(Math.cos(fase)) * 10 : accion === 'caminar' ? -Math.abs(Math.cos(fase)) * 4 : 0;
+  const bote = v5anda ? (176 - altoV5) * kM : accion === 'correr' ? -Math.abs(Math.cos(fase)) * 10 : accion === 'caminar' ? -Math.abs(Math.cos(fase)) * 4 : 0;
   const cadera: P = [0, -176];
   const arr = props.arrodillado ?? 0, sen = props.sentado ?? 0;
-  const baja = 88 * Math.max(arr, sen); // cuánto baja el cuerpo al arrodillarse o sentarse
-  const pD = pierna(cadera, fase, accion, ancho, sen ? [sen, 'frente'] : arr ? [arr, 'frente'] : undefined);
-  const pT = pierna([-4, -176], fase + Math.PI, accion, ancho, sen ? [sen, 'frente'] : arr ? [arr, 'apoyada'] : undefined);
-  const hT: P = [-4, -292], hD: P = [14, -292];
+  // v5 sentarse: primero un paso corto hacia adelante (los pies se levantan, no patinan) con la cadera que baja un
+  // poco; después los pies quedan quietos y la cadera va atrás y abajo hasta el asiento. Termina en la misma pose de siempre.
+  const sitX = v5sit ? (pSen < 0.4 ? 26 * sstep(pSen / 0.4) : 26 * Math.pow(1 - (pSen - 0.4) / 0.6, 2)) : 0;
+  const sitY = v5sit ? (pSen < 0.4 ? 28 * sstep(pSen / 0.4) : 28 + 60 * sstep((pSen - 0.4) / 0.6)) : 0;
+  // v5 inclinarse (parado o andando): se dobla en la cadera, no como una tabla desde los pies. El torso va adelante,
+  // la cadera atrás para compensar y un poco abajo (rodillas apenas dobladas), las piernas casi derechas (como mucho
+  // 3°) y, si la inclinación es grande, el talón de atrás se levanta un poco.
+  const v5incl = v5 && !sen0 && !arr0 && (accion === 'parado' || accion === 'caminar') && inclinar !== 0;
+  const thI = v5incl ? inclinar : 0, rI = (thI * Math.PI) / 180;
+  const leanX = -36 * Math.sin(rI), leanY = 40 * (1 - Math.cos(rI));
+  const giroPies = extraTorso + thI - Math.max(-3, Math.min(3, 0.12 * thI)); // lo que las piernas no giran con el torso
+  const baja = v5sit ? sitY : v5incl ? leanY : 88 * Math.max(arr, sen); // cuánto baja el cuerpo al arrodillarse o sentarse
+  const bajaX = v5sit ? sitX : v5incl ? leanX : 0;
+  // v5: los pies van al piso aunque el torso se incline al andar o al sentarse (se descuenta ese giro extra)
+  const giraP = (q: P, deg: number): P => { const r = (deg * Math.PI) / 180, dx = q[0], dy = q[1] + 176; return [dx * Math.cos(r) - dy * Math.sin(r), -176 + dx * Math.sin(r) + dy * Math.cos(r)]; };
+  const desRot = (q: P): P => (giroPies || leanX || leanY ? giraP([q[0] - leanX, q[1] - leanY], -giroPies) : q);
+  const piernaV5 = (cad: P, fi: number, pm: { x: number; ah: number; ang: number } | null, retraso: number, atras = false) => {
+    const parada = pierna(cad, fi, 'parado', ancho);
+    if (!pm && !v5sit) { // parado e inclinado: el pie queda donde estaba; el de atrás levanta el talón si se inclina mucho
+      const th = atras ? Math.max(0, Math.min(14, (Math.abs(thI) - 14) * 0.7)) : 0, r = (th * Math.PI) / 180;
+      const ik = rodillaIK(cad, desRot([parada.tob[0] + 34 - 34 * Math.cos(r), parada.tob[1] - 34 * Math.sin(r)]));
+      return piernaDe(cad, lerp(parada.k, ik.k, Math.min(1, Math.abs(thI) / 4)), ik.tob, 89.8 - th + giroPies, ancho);
+    }
+    if (pm) { // andar
+      const tobP: P = [parada.tob[0], parada.tob[1] - bote];
+      const t0 = desRot(lerp(tobP, [cad[0] + pm.x, -bote - pm.ah], kM)), ik = rodillaIK(cad, t0);
+      return piernaDe(cad, lerp(parada.k, ik.k, kM), ik.tob, 89.8 + (pm.ang - 89.8) * kM + giroPies, ancho);
+    }
+    // sentarse
+    const fin = pierna(cad, fi, accion, ancho, [1, 'frente']);
+    const a = Math.max(0, Math.min(1, (pSen - retraso) / 0.22)), e = sstep(a);
+    const mundo: P = [parada.tob[0] + (fin.tob[0] - parada.tob[0]) * e, parada.tob[1] + (fin.tob[1] + 88 - parada.tob[1]) * e - 14 * Math.sin(Math.PI * a)];
+    const ik = rodillaIK(cad, desRot([mundo[0] - sitX, mundo[1] - sitY]));
+    const kk = pSen < 0.1 ? lerp(parada.k, ik.k, pSen / 0.1) : pSen > 0.8 ? lerp(ik.k, fin.k, sstep((pSen - 0.8) / 0.2)) : ik.k;
+    return piernaDe(cad, kk, ik.tob, 90 + 12 * Math.sin(Math.PI * a), ancho);
+  };
+  const pD = v5anda ? piernaV5(cadera, fase, pmD, 0) : v5sit ? piernaV5(cadera, fase, null, 0.04) : v5incl ? piernaV5(cadera, fase, null, 0) : pierna(cadera, fase, accion, ancho, sen ? [sen, 'frente'] : arr ? [arr, 'frente'] : undefined);
+  const pT = v5anda ? piernaV5([-4, -176], fase + Math.PI, pmT, 0) : v5sit ? piernaV5([-4, -176], fase + Math.PI, null, 0.16) : v5incl ? piernaV5([-4, -176], fase + Math.PI, null, 0, true) : pierna([-4, -176], fase + Math.PI, accion, ancho, sen ? [sen, 'frente'] : arr ? [arr, 'apoyada'] : undefined);
+  // v5: al andar, los hombros giran apenas al revés que la cadera (el de adelante va atrás cuando su brazo va atrás).
+  const hT: P = v5anda ? [-4 + 2.5 * brazoV5, -292] : [-4, -292], hD: P = v5anda ? [14 - 2.5 * brazoV5, -292] : [14, -292];
   const balanceo = accion === 'parado' ? 0 : Math.sin(fase + Math.PI) * (accion === 'correr' ? 34 : 20);
-  const [bTh0, bTc0] = props.brazoAtras ?? [-20 + balanceo, -40 + balanceo];
+  const [bTh0, bTc0] = props.brazoAtras ?? (v5anda ? [-20 + (20 + 16 * Math.cos(phi - 0.35)) * kM, -40 + (22 + 8 * Math.cos(phi - 0.35)) * kM] : [-20 + balanceo, -40 + balanceo]);
   const bTh = bTh0 - sigue(0.3) * 0.6, bTc = bTc0 - sigue(0.9);
-  const cT = desde(hT, bTh, 66), mT = desde(cT, bTh + bTc + 40, 60);
-  const [bDh0, bDc0] = props.brazo ?? [accion === 'parado' ? 20 : 20 - balanceo, accion === 'parado' ? 30 : 40 - balanceo];
+  const cT0 = desde(hT, bTh, 66), mT0 = desde(cT0, bTh + bTc + 40, 60);
+  // v4: misma pose (mismos ángulos) con el brazo más corto; los objetos van en la mano como siempre.
+  const cT4 = v4 ? desde(hT, bTh, BRAZO_V4[0]) : cT0;
+  const brT = v4 ? { c: cT4, m: desde(cT4, bTh + bTc + 40, BRAZO_V4[1]), a: bTh + bTc + 40 } : { c: cT0, m: mT0, a: bTh + bTc + 40 };
+  const cT = brT.c, mT = brT.m, angMT = brT.a;
+  const [bDh0, bDc0] = props.brazo ?? (v5anda ? [20 + (-12 - 16 * Math.cos(phi - 0.35)) * kM, 30 + (-4 - 8 * Math.cos(phi - 0.35)) * kM] : [accion === 'parado' ? 20 : 20 - balanceo, accion === 'parado' ? 30 : 40 - balanceo]);
   const bDh = bDh0 + sigue(0.2) * 0.6, bDc = bDc0 + sigue(0.8);
-  const cD = desde(hD, bDh, 66), mD = desde(cD, bDh + bDc, 60);
+  const cD0 = desde(hD, bDh, 66), mD0 = desde(cD0, bDh + bDc, 60);
+  const rotCab = -6 - cabeza + cabeceo + (hd ? -peso * (v3 ? 1.8 : 1.5) : 0);
+  const escCab = v4 ? 1.1 : 1; // v4: cabeza un 10 % más grande
+  const yCab = v4 ? -344 : v3 ? -337 : -334; // v4: un poco más arriba, para que se vea el cuello
+  // v5: la cabeza gira desde la base del cuello (no desde el centro de la cara): el cuello no se despega ni se estira.
+  const sxC = (nino ? 1.4 : 1) * (1 - 0.3 * (props.cabezaGiro ?? 0)) * escCab, syC = (nino ? 1.4 : 1) * escCab;
+  // al inclinarse, la cabeza levanta un poco la mirada
+  const giroV5 = rotCab + 6 + extraCab - 0.25 * thI, pivV5: P = [-4 * sxC, 46 * syC];
+  const cabezaEn = (l: P): P => { // punto de la cabeza (coordenadas propias) en coordenadas del cuerpo, solo v5
+    const a = (giroV5 * Math.PI) / 180, b = (-6 * Math.PI) / 180, qx = l[0] * sxC - pivV5[0], qy = l[1] * syC - pivV5[1];
+    const rx = pivV5[0] + qx * Math.cos(a) - qy * Math.sin(a), ry = pivV5[1] + qx * Math.sin(a) + qy * Math.cos(a);
+    return [20 * ancho + rx * Math.cos(b) - ry * Math.sin(b), yCab + rx * Math.sin(b) + ry * Math.cos(b)];
+  };
+  const brD = (() => {
+    if (!v4) return { c: cD0, m: mD0, a: bDh + bDc };
+    // v4: la mano (o el antebrazo) no tapa la boca ni el mentón: si se acerca a la cara, la mano se corre hacia afuera.
+    const r = (rotCab * Math.PI) / 180, sx = (nino ? 1.4 : 1) * (1 - 0.3 * (props.cabezaGiro ?? 0)) * escCab, sy = (nino ? 1.4 : 1) * escCab;
+    const F: P = v5 ? cabezaEn([26, 20]) : [20 * ancho + 26 * sx * Math.cos(r) - 20 * sy * Math.sin(r), yCab + 26 * sx * Math.sin(r) + 20 * sy * Math.cos(r)];
+    const c4 = desde(hD, bDh, BRAZO_V4[0]), m4 = desde(c4, bDh + bDc, BRAZO_V4[1]);
+    let b = { c: c4, m: m4, a: bDh + bDc }, obj: P = m4;
+    if (Math.hypot(m4[0] - F[0], m4[1] - F[1]) >= 27 && aSegmento(F, c4, m4) >= 21) return b; // lejos de la cara: la pose tal cual
+    for (let i = 0; i < 10; i++) {
+      const d = Math.hypot(obj[0] - F[0], obj[1] - F[1]);
+      if (d < 27) obj = d < 0.1 ? [F[0] + 27, F[1]] : [F[0] + ((obj[0] - F[0]) / d) * 27, F[1] + ((obj[1] - F[1]) / d) * 27];
+      b = brazoIK(hD, obj);
+      if (aSegmento(F, b.c, b.m) >= 21) break;
+      obj = [obj[0] + 5, obj[1] + 1];
+    }
+    return b;
+  })();
+  const cD = brD.c, mD = brD.m, angMD = brD.a;
   const ondea = (i: number) => Math.sin(fr * 0.3 - i * 0.9) * (accion === 'parado' ? 2 + i : 6 + i * 5);
-  const vuelo = accion === 'parado' ? Math.sin(fr / 20) * 2 : Math.sin(fase * 2) * 6;
-  const torso: P[] = [[-20 * ancho, -300], [18 * ancho, -304], [34 * ancho, -282], [30 * ancho, -248], [22 * ancho, -212], [-22 * ancho, -208], [-30 * ancho, -250], [-30 * ancho, -284]];
+  const vuelo = accion === 'parado' ? Math.sin(fr / 20) * 2 : v5anda ? Math.sin(phi * 2 - 0.6) * 4 * kM : Math.sin(fase * 2) * 6;
+  const torso: P[] = v4 ? torsoV4(ancho) : [[-20 * ancho, -300], [18 * ancho, -304], [34 * ancho, -282], [30 * ancho, -248], [22 * ancho, -212], [-22 * ancho, -208], [-30 * ancho, -250], [-30 * ancho, -284]];
   const faldaCorta: P[] = [[-27, -214], [24, -216], [38, -184], [52 + vuelo, -148], [16, -142], [-26, -146 - vuelo], [-46 - vuelo, -158]];
   const faldaLarga: P[] = [[-27, -214], [24, -216], [36, -150], [50 + vuelo, -40], [58 + vuelo, -6], [-44, -6], [-46 - vuelo, -60], [-36, -150]];
   const faldaTunica: P[] = [[-27, -214], [24, -216], [30, -184], [34 + vuelo * 0.3, -128], [0, -125], [-32 - vuelo * 0.3, -127], [-33, -180]];
   const tunica = ropa === 'tunica';
   const larga = ropa === 'larga';
+  // v5 sentarse con falda larga: una sola falda que baja de la cintura por el muslo, redondea la rodilla y cae
+  // derecho hasta el piso (atrás cubre el asiento). Cada borde es una curva; la tela entre los dos se reparte con
+  // (u: de atrás 0 a adelante 1, v: de la cintura 0 al ruedo 1), así pliegues, ribetes y estampas siguen a la tela.
+  // v5 inclinado con falda larga: la falda no gira con el torso; las estampas de la falda la siguen
+  const mapaIncl = v5incl && larga ? (q: P): P => { const r = giraP([q[0], baja ? -214 + (q[1] + 214) * (1 - baja / 208) : q[1]], -giroPies); return [r[0], r[1] + respV3]; } : null;
+  const rotCuerpo = inclinar + extraTorso + (hd ? (accion === 'parado' ? peso * 1.2 : v5anda ? 0 : Math.sin(fase * 2) * 1.4) : 0);
+  const faldaV5 = v5sit && larga ? (() => {
+    const w = sstep((pSen - 0.12) / 0.58), hemY = -6 - baja, sq = 1 - baja / 208;
+    const aplasta = (q: P): P => [q[0], -214 + (q[1] + 214) * sq];
+    const Fp: P[] = [[24, -216], [36, -150], [50 + vuelo, -40], [58 + vuelo, -6]], Bp: P[] = [[-27, -214], [-36, -150], [-46 - vuelo, -60], [-44, -6]];
+    const K = pD.k, du = [K[0] - cadera[0], K[1] - cadera[1]], lu = Math.hypot(du[0], du[1]) || 1, u: P = [du[0] / lu, du[1] / lu], n: P = [u[1], -u[0]];
+    const en = (o: P, a: number, b: number): P => [o[0] + u[0] * a + n[0] * b, o[1] + u[1] * a + n[1] * b];
+    const rod: P = [K[0] + 24, K[1] + 6]; // frente de la rodilla, donde la tela empieza a caer
+    const Fs: P[] = [[24, -216], en(cadera, 44, 26), en(K, 4, 19), rod, [rod[0] + 3, rod[1] + (hemY - rod[1]) * 0.4], [rod[0] + 6 + vuelo, hemY]];
+    const Bs: P[] = [[-27, -214], [-48, -184], [-56, -184 + (hemY + 184) * 0.45], [-60 - vuelo, hemY]];
+    const fP = porLargo(curvaPts(Fp)), bP = porLargo(curvaPts(Bp)), fS = porLargo(curvaPts(Fs)), bS = porLargo(curvaPts(Bs));
+    // la parte de abajo no se inclina con el torso: el ruedo queda derecho sobre el piso
+    const plano = (q: P, v: number) => (rotCuerpo ? giraP(q, -rotCuerpo * sstep((v - 0.25) / 0.6)) : q);
+    const F = (v: number) => plano(lerp(aplasta(fP(v)), fS(v), w), v), B = (v: number) => plano(lerp(aplasta(bP(v)), bS(v), w), v);
+    const M = (uu: number, v: number) => lerp(B(v), F(v), uu);
+    const linea = (f: (t: number) => P, k = 8) => Array.from({ length: k + 1 }, (_, i) => f(i / k));
+    const N = 24, contorno = [...linea(F, N), ...linea((t) => B(1 - t), N)];
+    // de la falda parada (sin aplastar) a la tela de ahora; dy corrige lo poco que la curva no sigue a y
+    const mapa = (q: P): P => {
+      const v = (q[1] + 214) / 208, b0 = bP(v), f0 = fP(v), uu = Math.max(0, Math.min(1, (q[0] - b0[0]) / ((f0[0] - b0[0]) || 1)));
+      const r = M(uu, v), dy = q[1] - lerp(b0, f0, uu)[1];
+      return [r[0], r[1] + dy * sq * (1 - w) + respV3];
+    };
+    return { w, M, contorno, mapa };
+  })() : null;
   const pelo = props.pelo ?? (canas ? C.blanco : C.negro);
-  return (
-    <g transform={`translate(${x} ${y + (bote + respira) * s}) scale(${(voltear ? -s : s) * (nino ? 0.62 : 1)} ${s * (nino ? 0.62 : 1)})`} opacity={opacity}>
-      {hd && <FiltrosHD />}
-      {hd && <ellipse cx={4} cy={-(bote + respira) + 2} rx={(64 + bote * 1.2) * ancho} ry={13} fill="#120802" opacity={0.45 + bote * 0.01} filter="url(#sombraPisoHD)" />}
-      <g filter={contorno ? 'url(#contornoV)' : undefined}><g filter={hd ? (props.sinSombraBorde ? 'url(#contornoHD)' : 'url(#volumenHD)') : undefined}>
+  // dónde está la cabeza (la usan las piezas de los elencos que van detrás de la cabeza: melenas, nimbos, halos)
+  const cabezaT = v5 ? `${T ? T + ' ' : ''}translate(${f1(20 * ancho)} ${yCab}) rotate(-6) rotate(${f1(giroV5)} ${f1(pivV5[0])} ${f1(pivV5[1])}) scale(${sxC} ${syC})` : `${T ? T + ' ' : ''}translate(${20 * ancho} ${yCab}) rotate(${rotCab}) scale(${(nino ? 1.4 : 1) * (1 - 0.3 * (props.cabezaGiro ?? 0)) * escCab} ${(nino ? 1.4 : 1) * escCab})`;
+  const centroCab: P = v5 ? cabezaEn([0, 0]) : [20 * ancho, yCab];
+  const anclaCabeza = { transform: cabezaT, centro: [centroCab[0], centroCab[1] - respV3] as P, corrida: [centroCab[0] - 20 * ancho, centroCab[1] - respV3 + 334] as P };
+  const dibujo = (
+    <g transform={`translate(${x} ${y + (bote + (v3 ? 0 : respira)) * s}) scale(${(voltear ? -s : s) * (nino ? 0.62 : 1)} ${s * (nino ? 0.62 : 1)})`} opacity={opacity}>
+      {(hd || v3) && <FiltrosHD />}
+      {v3 && <FiltrosV3 fuerte={fuerte} />}
+      {hd && <ellipse cx={4} cy={-(bote + (v3 ? 0 : respira)) + 2} rx={(64 + bote * 1.2) * ancho} ry={13} fill="#120802" opacity={0.45 + bote * 0.01} filter="url(#sombraPisoHD)" />}
+      <g filter={contorno ? 'url(#contornoV)' : undefined}><g filter={v3 ? 'url(#contornoHD)' : hd ? (props.sinSombraBorde ? 'url(#contornoHD)' : 'url(#volumenHD)') : undefined}>
       <defs>
         <filter id="contornoV" x="-30%" y="-30%" width="160%" height="160%">
           <feMorphology in="SourceAlpha" operator="dilate" radius="3" result="d" />
@@ -804,7 +1182,7 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
           <feMerge><feMergeNode in="c" /><feMergeNode in="SourceGraphic" /></feMerge>
         </filter>
       </defs>
-      <g transform={`translate(0 ${baja}) rotate(${inclinar + (hd ? (accion === 'parado' ? peso * 1.2 : Math.sin(fase * 2) * 1.4) : 0)} 0 -176)`}>
+      <g transform={`translate(${bajaX} ${baja}) rotate(${rotCuerpo} 0 -176)`}><CabezaPJ.Provider value={anclaCabeza}>
         {props.adornos?.detras}
         {capa && (() => {
           const arriba: P[] = Array.from({ length: 7 }, (_, i) => [-6 - i * (accion === 'parado' ? 14 : 34), -300 + i * (accion === 'parado' ? 34 : 9) + ondea(i)] as P);
@@ -816,35 +1194,76 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
             </>
           );
         })()}
-        {egipcio && alas && <AlaDiosa h={hT} c={cT} m={mT} ang={bTh + bTc + 40} f={fr} />}
+        {egipcio && alas && <AlaDiosa h={hT} c={cT} m={mT} ang={angMT} f={fr} />}
         {/* brazo y escudo de atrás */}
-        <path d={brazoD(hT, cT, mT, 24 * ancho, props.brazoSuave)} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />
-        {props.brazoSuave ? <Mano m={mT} ang={bTh + bTc + 40} piel={piel} k={0.85} guante={props.guante} /> : <circle cx={mT[0]} cy={mT[1]} r={8} fill={props.guante ?? piel} />}
+        <g transform={T}>
+        <path d={brazoD(hT, cT, mT, (v4 ? 22 : 24) * ancho, props.brazoSuave, v4)} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />
+        {v3 && <path d={brazoD(hT, cT, mT, (v4 ? 22 : 24) * ancho, props.brazoSuave, v4)} fill={`url(#formaV3${kV})`} />}
+        {props.brazoSuave ? <Mano m={mT} ang={angMT} piel={piel} k={v4 ? 0.76 : 0.85} guante={props.guante} v3={v3} /> : <circle cx={mT[0]} cy={mT[1]} r={8} fill={props.guante ?? piel} />}
         {props.adornos?.manoAtras && <g transform={`translate(${f1(mT[0])} ${f1(mT[1])})`}>{props.adornos.manoAtras}</g>}
+        </g>
         {/* pierna de atrás */}
         {!larga && <path d={pT.path} fill={props.pantalon ?? piel} stroke={(props.pantalon ?? piel) === C.negro ? 'none' : C.negro} strokeWidth={2} />}
+        {!larga && v3 && <path d={pT.path} fill={`url(#formaV3${kV})`} />}
         {!larga && props.pantalon && !props.botas && <Vendas k={pT.k} tob={pT.tob} />}
         {!larga && props.botas && <Bota k={pT.k} tob={pT.tob} c={props.botas} ancho={ancho} />}
         <path d={pT.pie} fill={props.botas ?? piel} stroke={(props.botas ?? piel) === C.negro ? 'none' : C.negro} strokeWidth={2} />
         {props.adornos?.pieAtras && <g transform={`translate(${f1(pT.tob[0])} ${f1(pT.tob[1])})`}>{props.adornos.pieAtras}</g>}
         {alas && !egipcio && <path d={`M${pT.tob[0] - 6} ${pT.tob[1] - 10} l -26 -16 l 6 12 l -14 -4 l 12 12 Z`} fill={C.purpura} stroke={C.negro} strokeWidth={2} />}
         {/* falda / túnica */}
-        {ropa !== 'desnudo' && (
+        {ropa !== 'desnudo' && !faldaV5 && (<g transform={v5incl ? `rotate(${f1(-giroPies)} 0 -176)` : undefined}>
           <g transform={larga && baja ? `translate(0 -214) scale(1 ${f1(1 - baja / 208)}) translate(0 214)` : undefined}>
             <path d={suave(larga ? faldaLarga : tunica ? faldaTunica : faldaCorta, true, tunica ? 0.5 : 1)} fill={ropaColor} stroke={ropaColor === C.negro ? 'none' : C.negro} strokeWidth={2} opacity={egipcio && larga ? 0.92 : 1} />
+            {v3 && <><path d={suave(larga ? faldaLarga : tunica ? faldaTunica : faldaCorta, true, tunica ? 0.5 : 1)} fill={`url(#formaV3${kV})`} /><path d={suave(larga ? faldaLarga : tunica ? faldaTunica : faldaCorta, true, tunica ? 0.5 : 1)} fill={`url(#caidaV3${kV})`} /></>}
             {(larga
               ? [[-16, -206, -34, -14], [-2, -208, -8, -12], [12, -208, 18, -12], [24, -206, 44, -14]]
               : tunica ? [[-16, -206, -20, -134], [0, -208, 0, -130], [16, -208, 20, -132]]
               : [[-14, -206, -26, -150], [0, -208, 2, -144], [14, -208, 28, -146], [22, -206, 42, -156]]
-            ).filter(() => !props.lisa).map(([a, b, c, d], i) => <Inc key={i} d={suave([[a, b], [(a + c) / 2 + (i - 1.5) * 2, (b + d) / 2], [c + vuelo * 0.5, d]])} w={egipcio ? 1.2 : 1.8} c={linRopa} />)}
+            ).filter(() => !props.lisa).map(([a, b, c, d], i) => v3 ? (
+              // v3: cada pliegue con su sombra (ancha y suave) y su luz al costado.
+              <g key={i}>
+                <path d={suave([[a, b + 6], [(a + c) / 2 + (i - 1.5) * 2 - 2, (b + d) / 2], [c + vuelo * 0.5 - 3, d - 2]])} stroke="#2A1206" strokeOpacity={fuerte ? 0.26 : 0.17} strokeWidth={larga ? 9 : 6} fill="none" strokeLinecap="round" />
+                <path d={suave([[a + 3, b + 10], [(a + c) / 2 + (i - 1.5) * 2 + 4, (b + d) / 2], [c + vuelo * 0.5 + 5, d - 4]])} stroke="#FFF8EA" strokeOpacity={fuerte ? 0.22 : 0.15} strokeWidth={3} fill="none" strokeLinecap="round" />
+                <Inc d={suave([[a, b], [(a + c) / 2 + (i - 1.5) * 2, (b + d) / 2], [c + vuelo * 0.5, d]])} w={egipcio ? 1.1 : 1.5} c={linRopa} />
+              </g>
+            ) : <Inc key={i} d={suave([[a, b], [(a + c) / 2 + (i - 1.5) * 2, (b + d) / 2], [c + vuelo * 0.5, d]])} w={egipcio ? 1.2 : 1.8} c={linRopa} />)}
+            {v3 && !larga && <path d={tunica ? suave([[-30 - vuelo * 0.3, -142], [0, -140], [32 + vuelo * 0.3, -143]]) : suave([[-40 - vuelo, -170], [-24, -160 - vuelo], [16, -156], [46 + vuelo, -162]])} stroke="#2A1206" strokeOpacity={fuerte ? 0.2 : 0.13} strokeWidth={12} fill="none" strokeLinecap="round" />}
+            {v3 && !props.lisa && <path d="M-26 -206 L 22 -208" stroke="#2A1206" strokeOpacity={fuerte ? 0.24 : 0.16} strokeWidth={8} strokeLinecap="round" />}
             {!props.lisa && <Borde d={larga ? suave([[-44 - vuelo, -12], [0, -8], [56 + vuelo, -10]]) : tunica ? suave([[-31 - vuelo * 0.3, -131], [0, -129], [33 + vuelo * 0.3, -132]]) : suave([[-44 - vuelo, -160], [-26, -150 - vuelo], [16, -146], [50 + vuelo, -152]])} w={9} color={props.ribete} />}
             {larga && !props.lisa && <Borde d={suave([[-38, -120], [0, -118], [40, -122]])} w={6} />}
             {nativo && Array.from({ length: 9 }, (_, i) => { const t = i / 8, bx = larga ? -42 - vuelo + t * (98 + vuelo * 2) : -42 - vuelo + t * (90 + vuelo * 2), by = larga ? -10 : -152 + Math.sin(t * Math.PI) * 6; return <path key={`fl${i}`} d={`M${f1(bx)} ${f1(by)} l ${f1(Math.sin(fr / 9 + i) * 2)} 13`} stroke={linRopa === C.crema ? C.crema : C.barroOscuro} strokeWidth={2.4} strokeLinecap="round" />; })}
           </g>
-        )}
+        </g>)}
+        {/* v5: falda larga de una pieza mientras se sienta (ver faldaV5) */}
+        {faldaV5 && (() => {
+          const { M, contorno } = faldaV5, d = suave(contorno, true, 0.5);
+          const pliegue = (a: number, b: number, du = 0, v0 = 0.04, v1 = 0.96) => suave(Array.from({ length: 9 }, (_, i) => { const v = v0 + (v1 - v0) * (i / 8); return M(a + (b - a) * v + du, v); }));
+          const PL: [number, number][] = [[0.22, 0.1], [0.49, 0.35], [0.76, 0.61], [0.94, 0.84]];
+          const vMed = 0.45 + 0.2 * faldaV5.w;
+          // el ribete del medio da la vuelta a la tela a una misma altura (no cruza en diagonal)
+          const aAltura = (uu: number, yy: number): P => { let a = 0.3, b = 1; for (let i = 0; i < 14; i++) { const m = (a + b) / 2; if (M(uu, m)[1] < yy) a = m; else b = m; } return M(uu, (a + b) / 2); };
+          return (
+            <g>
+              <path d={d} fill={ropaColor} stroke={ropaColor === C.negro ? 'none' : C.negro} strokeWidth={2} opacity={egipcio ? 0.92 : 1} />
+              {v3 && <><path d={d} fill={`url(#formaV3${kV})`} /><path d={d} fill={`url(#caidaV3${kV})`} /></>}
+              {PL.filter(() => !props.lisa).map(([a, b], i) => v3 ? (
+                <g key={i}>
+                  <path d={pliegue(a, b, -0.03)} stroke="#2A1206" strokeOpacity={fuerte ? 0.26 : 0.17} strokeWidth={9} fill="none" strokeLinecap="round" />
+                  <path d={pliegue(a, b, 0.05, 0.06, 0.95)} stroke="#FFF8EA" strokeOpacity={fuerte ? 0.22 : 0.15} strokeWidth={3} fill="none" strokeLinecap="round" />
+                  <Inc d={pliegue(a, b)} w={egipcio ? 1.1 : 1.5} c={linRopa} />
+                </g>
+              ) : <Inc key={i} d={pliegue(a, b)} w={egipcio ? 1.2 : 1.8} c={linRopa} />)}
+              {v3 && !props.lisa && <path d="M-26 -206 L 22 -208" stroke="#2A1206" strokeOpacity={fuerte ? 0.24 : 0.16} strokeWidth={8} strokeLinecap="round" />}
+              {!props.lisa && <Borde d={suave([0, 0.5, 1].map((uu) => M(uu, 0.975)))} w={9} color={props.ribete} />}
+              {!props.lisa && <Borde d={suave([0.04, 0.27, 0.5, 0.73, 0.96].map((uu) => aAltura(uu, M(0.5, vMed)[1] + 5 * Math.sin(Math.PI * uu))))} w={6} />}
+              {nativo && Array.from({ length: 9 }, (_, i) => { const q = M(i / 8, 0.97); return <path key={`fl${i}`} d={`M${f1(q[0])} ${f1(q[1])} l ${f1(Math.sin(fr / 9 + i) * 2)} 13`} stroke={linRopa === C.crema ? C.crema : C.barroOscuro} strokeWidth={2.4} strokeLinecap="round" />; })}
+            </g>
+          );
+        })()}
         {/* cadera (cuando no hay túnica que la tape) */}
         {ropa === 'desnudo' && <path d={suave([[-27 * ancho, -216], [24 * ancho, -218], [30 * ancho, -180], [4, -160], [-30 * ancho, -172]], true)} fill={piel} />}
         {/* torso */}
+        <g transform={T}>
         <path d={suave(torso, true)} fill={ropa === 'desnudo' ? piel : ropa === 'armadura' ? C.negro : vestido ? ropaColor : piel} stroke={piel !== C.negro && ropa !== 'armadura' ? C.negro : 'none'} strokeWidth={2} />
         {vestido && <>{!props.lisa && <Borde d={suave([[-26, -286], [4, -270], [32, -280]])} w={7} />}<path d="M-28 -278 L -40 -262 M34 -276 L 44 -262" stroke={C.barroOscuro} strokeWidth={2} /></>}
         {cuerpoT === 'gordo' && <ellipse cx={22} cy={-236} rx={30} ry={34} fill={ropa === 'armadura' ? C.negro : piel} stroke={piel !== C.negro ? C.negro : 'none'} strokeWidth={2} />}
@@ -866,12 +1285,15 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
         {props.estrellado && Array.from({ length: 14 }, (_, i) => <path key={i} d={`M${-24 + (i * 37) % 50} ${-296 + (i * 53) % 280} l2 5 5 0 -4 3 2 5 -5 -3 -5 3 2 -5 -4 -3 5 0 Z`} fill={C.oro} />)}
         {hawaiano && (props.collar ?? true) && ropa !== 'armadura' && Array.from({ length: 9 }, (_, i) => { const t = i / 8, cx = -24 + t * 58, cy = -300 + Math.sin(t * Math.PI) * 22; return <g key={`lei${i}`}><circle cx={cx} cy={cy} r={6.5} fill={['#E8724B', C.oro, '#F7EEDB', '#C2185B'][i % 4]} stroke={C.negro} strokeWidth={1.5} /><circle cx={cx} cy={cy} r={2} fill={C.purpura} /></g>; })}
         {nativo && (props.collar ?? true) && ropa !== 'armadura' && Array.from({ length: 7 }, (_, i) => { const t = i / 6, cx = -18 + t * 44, cy = -298 + Math.sin(t * Math.PI) * 10; return <circle key={`cu${i}`} cx={cx} cy={cy} r={3.6} fill={['#2F5D8A', C.blanco, C.purpura, C.oro][i % 4]} stroke={C.negro} strokeWidth={1} />; })}
-        {props.adornos?.cuerpo}
+        {faldaV5 ? <FaldaV5.Provider value={faldaV5.mapa}>{props.adornos?.cuerpo}</FaldaV5.Provider> : mapaIncl ? <FaldaV5.Provider value={mapaIncl}>{props.adornos?.cuerpo}</FaldaV5.Provider> : props.adornos?.cuerpo}
         {(props.collar ?? egipcio) && !hawaiano && !nativo && ropa !== 'armadura' && [0, 1, 2].map((k) => <path key={k} d={`M${-24 + k * 2} ${-300 + k * 7} Q ${4} ${-276 + k * 9} ${34 - k * 2} ${-296 + k * 6}`} stroke={['#2E5FA8', '#2E8B6E', C.purpura][k]} strokeWidth={6} fill="none" strokeLinecap="round" />)}
+        {v3 && <path d={suave(torso, true)} fill={`url(#formaV3${kV})`} />}
+        </g>
         {/* pierna de adelante */}
         {!larga && (
           <>
             <path d={pD.path} fill={props.pantalon ?? piel} stroke={(props.pantalon ?? piel) === C.negro ? 'none' : C.negro} strokeWidth={2} />
+            {v3 && <path d={pD.path} fill={`url(#formaV3${kV})`} />}
             {props.pantalon && !props.botas && <Vendas k={pD.k} tob={pD.tob} />}
             {props.botas && <Bota k={pD.k} tob={pD.tob} c={props.botas} ancho={ancho} />}
             <Inc d={suave([lerp(cadera, pD.k, 0.4), lerp(cadera, pD.k, 0.85)])} w={1.6} c={lin} />
@@ -883,13 +1305,23 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
         {props.adornos?.pie && <g transform={`translate(${f1(pD.tob[0])} ${f1(pD.tob[1])})`}>{props.adornos.pie}</g>}
         {alas && !egipcio && <path d={`M${pD.tob[0] - 6} ${pD.tob[1] - 10} l -26 -16 l 6 12 l -14 -4 l 12 12 Z`} fill={C.purpura} stroke={C.negro} strokeWidth={2} />}
         {/* cabeza */}
-        <g transform={`translate(${20 * ancho} -334) rotate(${-6 - cabeza + cabeceo + (hd ? -peso * 1.5 : 0)}) scale(${(nino ? 1.4 : 1) * (1 - 0.3 * (props.cabezaGiro ?? 0))} ${nino ? 1.4 : 1})`} filter={hd ? (props.sinSombraBorde ? 'url(#contornoParteHD)' : 'url(#parteHD)') : undefined}>
+        <g transform={cabezaT} filter={v3 ? 'url(#contornoParteHD)' : hd ? (props.sinSombraBorde ? 'url(#contornoParteHD)' : 'url(#parteHD)') : undefined}>
           {props.cabezaPropia ? null : animal ? <CabezaAnimal tipo={animal} piel={piel} /> : <>
           {(mujer || !barba) && tocado !== 'casco' && !trenzas && !props.peloCorto && [0, 1, 2].map((i) => <path key={i} d={suave([[-22 + i * 6, 6], [-30 + i * 4, 30 + ondea(i) * 0.3], [-26 + i * 5, 54 + ondea(i + 1) * 0.4], [-32 + i * 6, mujer ? 90 : 70]])} stroke={pelo} strokeWidth={mujer ? 11 : 9} fill="none" strokeLinecap="round" />)}
           {!mujer && barba && tocado !== 'casco' && !props.peloCorto && [0, 1, 2].map((i) => <path key={i} d={suave([[-22 + i * 6, 6], [-30 + i * 4, 30 + ondea(i) * 0.3], [-26 + i * 5, 54], [-32 + i * 6, 66]])} stroke={pelo} strokeWidth={9} fill="none" strokeLinecap="round" />)}
-          <path d={suave([[-30, 2], [-22, -26], [0, -36], [20, -30], [28, -14], [30, -6], [mujer ? 37 : 41, 6], [32, 10], [34, 15], [boca ? 26 : 31, 20], [26, 26], [8, 32], [4, 46], [-16, 46], [-24, 22]], true, 0.9)} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />
+          <path d={v4
+            // v4: nariz más chica y redonda, mentón redondo, mandíbula que sube suave y cuello angosto (se ve entre la cabeza y el torso).
+            ? suave([[-30, 2], [-24, -24], [-2, -36], [18, -31], [27, -17], [30, -7], [mujer ? 33 : 34, -1], [mujer ? 36 : 38.6, 4.4], [mujer ? 35 : 37.2, 7.4], [33, 9], [33.4, 12.6], [boca ? 27 : 31.2, 16.4], [31.8, 19.4], [28, 24.6], [22.5, 28.6], [13, 31], [7, 34.5], [5.5, 52], [-13, 52], [-14, 36], [-23, 22]], true, 0.9)
+            : suave([[-30, 2], [-22, -26], [0, -36], [20, -30], [28, -14], [30, -6], [mujer ? 37 : 41, 6], [32, 10], [34, 15], [boca ? 26 : 31, 20], [26, 26], [8, 32], [4, 46], [-16, 46], [-24, 22]], true, 0.9)} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />
           {/* pelo sobre la cabeza */}
           <path d={suave([[-31, 4], [-26, -24], [-2, -38], [22, -32], [26, -20], [10, -22], [-8, -16], [-16, 0], [-22, 22]], true)} fill={pelo} />
+          {v3 && pelo !== 'none' && <path d={suave([[-24, -14], [-16, -28], [2, -33], [16, -29]])} stroke="#FFFFFF" strokeOpacity={fuerte ? 0.22 : 0.15} strokeWidth={4} fill="none" strokeLinecap="round" />}
+          {v3 && piel !== C.negro && <>
+            {/* v3: sombra del mentón sobre el cuello, mejilla rosada y fosa nasal */}
+            <path d={v4 ? 'M-13.5 36 Q -3 39.5 6.5 36.5 L 5.4 47 L -12.4 47 Z' : 'M-14 33 Q 0 36 8 31 L 5 45 L -15 45 Z'} fill="#2A1206" opacity={fuerte ? 0.26 : 0.18} />
+            <ellipse cx={19} cy={11} rx={10} ry={7} fill={`url(#mejillaV3${kV})`} />
+            <path d={v4 ? 'M31 8.2 q 3 1 1.8 3.6' : 'M31.5 9.5 q 3.5 1.2 2 4'} stroke={C.negro} strokeOpacity={0.45} strokeWidth={1.2} fill="none" strokeLinecap="round" />
+          </>}
           {barba && (
             <>
               <path d={suave([[4, 14], [26, 22], [36, 44], [30, 62], [12, 40], [0, 30]], true)} fill={pelo} />
@@ -902,8 +1334,25 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
             <ellipse cx={16} cy={-6} rx={11} ry={9} fill={(ojosCerrados || parpadea) ? piel : C.blanco} stroke={C.negro} strokeWidth={2} />
             {!(ojosCerrados || parpadea) && <><circle cx={19} cy={-6} r={5.5} fill="#3A2312" /><circle cx={19.5} cy={-6} r={3} fill={C.negro} /><circle cx={21} cy={-8} r={1.2} fill={C.blanco} /></>}
             {(ojosCerrados || parpadea) && <Inc d="M5 -6 Q 16 0 27 -6" c={lin} w={2.4} />}
-          </g>) : props.tuerto ? (<><ellipse cx={18} cy={-6} rx={9} ry={7} fill={C.negro} stroke={lin} strokeWidth={1.5} /><Inc d="M-26 -16 L 12 -12" c={lin} w={2} /></>) : expr === 'alegria' ? <Inc d="M9 -4 Q 18 -13 27 -4" c={lin} w={2.6} /> : (ojosCerrados || parpadea) ? <Inc d="M10 -6 Q 18 -2 26 -6" c={lin} w={2.2} /> : (
-            hd ? (
+          </g>) : props.tuerto ? (<><ellipse cx={18} cy={-6} rx={9} ry={7} fill={C.negro} stroke={lin} strokeWidth={1.5} /><Inc d="M-26 -16 L 12 -12" c={lin} w={2} /></>) : expr === 'alegria' && intV6 >= 0.5 ? <Inc d="M9 -4 Q 18 -13 27 -4" c={lin} w={2.6} /> : (ojosCerrados || parpadea) ? <Inc d="M10 -6 Q 18 -2 26 -6" c={lin} w={2.2} /> : (
+            v3 ? (
+              // v3: ojo almendrado un poco más grande, iris con degradé, pupila, dos brillos, párpado de arriba grueso
+              // (con pestañas en las mujeres), párpado de abajo y pliegue suaves. La pupila se mueve un poco (mirada).
+              <g transform={expr === 'sorpresa' ? `translate(18 -6) scale(${(1 + 0.3 * intV6).toFixed(2)}) translate(-18 6)` : undefined}>
+                <path d={entornado ? 'M8 -5 Q 18 -10 28 -5 Q 18 0 8 -5 Z' : 'M8 -6 Q 18 -16 28 -6 Q 18 1 8 -6 Z'} fill={piel === C.negro ? C.crema : '#FBF7EF'} />
+                <g clipPath={`url(#${entornado ? 'ojoV3b' : 'ojoV3a'})`}>
+                  <path d="M8 -12 Q 18 -16 28 -12 L 28 -6 Q 18 -9 8 -6 Z" fill="#2A1206" opacity={0.16} />
+                  <circle cx={20.5 + miraV3} cy={-6.2} r={4.6} fill="url(#irisV3)" />
+                  <circle cx={20.7 + miraV3} cy={-6.2} r={2.2} fill="#0E0805" />
+                  <circle cx={22.4 + miraV3} cy={-8.4} r={1.35} fill="#FFFFFF" />
+                  <circle cx={19 + miraV3} cy={-4.2} r={0.65} fill="#FFFFFF" opacity={0.85} />
+                </g>
+                <path d={entornado ? 'M7.5 -5 Q 18 -11 28.5 -5' : 'M7.5 -6 Q 18 -16.5 28.5 -6'} stroke={C.negro} strokeWidth={fuerte ? 3 : 2.7} fill="none" strokeLinecap="round" />
+                {mujer && !entornado && [[11, -10.5, 8, -13.5], [14, -12.4, 12, -16], [17, -13.4, 16.5, -17.2]].map(([a, b, c, d], i) => <path key={i} d={`M${a} ${b} L ${c} ${d}`} stroke={C.negro} strokeWidth={1.3} strokeLinecap="round" />)}
+                <path d={entornado ? 'M17 -2.4 Q 22 -2 26 -3.6' : 'M17 -1.6 Q 22 -1.2 26 -3.2'} stroke={C.negro} strokeOpacity={0.3} strokeWidth={0.9} fill="none" strokeLinecap="round" />
+                {!entornado && <path d="M11 -12.5 Q 18 -18 25.5 -11.8" stroke={lin} strokeOpacity={0.3} strokeWidth={1.1} fill="none" />}
+              </g>
+            ) : hd ? (
               <g transform={expr === 'sorpresa' ? 'translate(18 -6) scale(1.3) translate(-18 6)' : undefined}>
                 <path d={entornado ? 'M9 -5 Q 18 -9 27 -5 Q 18 -1 9 -5 Z' : 'M9 -6 Q 18 -14 27 -6 Q 18 0 9 -6 Z'} fill={piel === C.negro ? C.crema : C.blanco} stroke={C.negro} strokeWidth={1.6} />
                 <circle cx={20} cy={-6} r={entornado ? 2.6 : 3.6} fill="#3A2312" />
@@ -917,7 +1366,7 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
               <circle cx={19} cy={-6} r={2.6} fill={C.negro} />
             </>)
           )}
-          <Inc d={CEJA[expr]} w={expr === 'neutral' ? 2 : 2.8} c={lin} />
+          {v3 ? <path d={v6 ? cejaV6(expr, (expr === 'neutral' ? 0.85 : 0.8 + 0.05 * (1 - intV6)), intV6, cejaVivaV6.sube, cejaVivaV6.adentro) : cejaV3(expr, (expr === 'neutral' ? 0.85 : 0.8) * (fuerte ? 1.12 : 1))} fill={piel === C.negro ? lin : canas ? '#D6D1C6' : pelo !== 'none' ? pelo : lin} stroke={C.negro} strokeWidth={0.6} /> : <Inc d={CEJA[expr]} w={expr === 'neutral' ? 2 : 2.8} c={lin} />}
           {BOCA[expr] && !boca && <Inc d={BOCA[expr]} w={2.2} c={lin} />}
           {expr === 'sorpresa' && !boca && <ellipse cx={29} cy={21} rx={3} ry={4} fill={C.negro} stroke={lin} strokeWidth={1.2} />}
           {!mujer && !props.peloCorto && ((props.orejaSimple ?? true) ? <g><path d="M-3 -9 C -13 -11, -16 6, -6 9 C -2 8, -1 -6, -3 -9 Z" fill={piel} stroke={piel === C.negro ? lin : C.negro} strokeWidth={1.6} strokeLinejoin="round" /><path d="M-5 -4 C -10 -4, -11 3, -6 4" stroke={piel === C.negro ? lin : C.negro} strokeWidth={1.1} fill="none" opacity={0.55} /></g> : <Inc d="M-6 -4 C -14 -10, -14 8, -4 6 C 0 4, -2 -2, -6 0" w={1.8} />)}
@@ -967,17 +1416,19 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
             </g>
           )}
         </g>
-        {egipcio && alas && <AlaDiosa h={hD} c={cD} m={mD} ang={bDh + bDc} f={fr + 4} />}
+        {egipcio && alas && <AlaDiosa h={hD} c={cD} m={mD} ang={angMD} f={fr + 4} />}
         {/* brazo de adelante y objeto */}
-        <g filter={hd ? (props.sinSombraBorde ? 'url(#contornoParteHD)' : 'url(#parteHD)') : undefined}>
-        <path d={brazoD(hD, cD, mD, 26 * ancho, props.brazoSuave)} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />
+        <g transform={T}>
+        <g filter={v3 ? 'url(#contornoParteHD)' : hd ? (props.sinSombraBorde ? 'url(#contornoParteHD)' : 'url(#parteHD)') : undefined}>
+        <path d={brazoD(hD, cD, mD, (v4 ? 24 : 26) * ancho, props.brazoSuave, v4)} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />
+        {v3 && <path d={brazoD(hD, cD, mD, (v4 ? 24 : 26) * ancho, props.brazoSuave, v4)} fill={`url(#formaV3${kV})`} />}
         <Inc d={suave([lerp(hD, cD, 0.3), lerp(hD, cD, 0.8)])} w={1.6} c={lin} />
         </g>
         <g transform={`translate(${mD[0]} ${mD[1]})`}>
-          <ObjetoMano tipo={objeto} f={fr} ang={bDh + bDc} />
+          <ObjetoMano tipo={objeto} f={fr} ang={angMD} />
           {props.adornos?.mano}
         </g>
-        {props.manoCortada ? <g transform={`translate(${f1(mD[0])} ${f1(mD[1])}) rotate(${f1(-(bDh + bDc))})`}><path d="M-6.5 -8 L -6.5 -1 Q 0 6 6.5 -1 L 6.5 -8 Z" fill={piel} stroke={C.negro} strokeWidth={1.8} /><rect x={-8.5} y={-17} width={17} height={10} rx={3} fill="#6B4A2E" stroke={C.negro} strokeWidth={1.6} /></g> : props.brazoSuave ? <Mano m={mD} ang={bDh + bDc} piel={piel} k={1} guante={props.guante} /> : <circle cx={mD[0]} cy={mD[1]} r={10} fill={props.guante ?? piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />}
+        {props.manoCortada ? <g transform={`translate(${f1(mD[0])} ${f1(mD[1])}) rotate(${f1(-angMD)})`}><path d="M-6.5 -8 L -6.5 -1 Q 0 6 6.5 -1 L 6.5 -8 Z" fill={piel} stroke={C.negro} strokeWidth={1.8} /><rect x={-8.5} y={-17} width={17} height={10} rx={3} fill="#6B4A2E" stroke={C.negro} strokeWidth={1.6} /></g> : props.brazoSuave ? <Mano m={mD} ang={angMD} piel={piel} k={v4 ? 0.88 : 1} guante={props.guante} v3={v3} /> : <circle cx={mD[0]} cy={mD[1]} r={10} fill={props.guante ?? piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />}
         {escudo && (
           <g transform={`translate(${cT[0] - 10} ${cT[1] + 10})`}>
             <circle r={66} fill={C.negro} stroke={C.purpura} strokeWidth={8} />
@@ -985,10 +1436,13 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
             <path d={EMBLEMAS[emblema]} stroke={C.blanco} strokeWidth={4} fill="none" transform="scale(1.6)" />
           </g>
         )}
-      </g>
+        </g>
+      </CabezaPJ.Provider></g>
       </g></g>
     </g>
   );
+  // v4: las piezas de los elencos (p. ej. la camisa del kit) se enteran del estilo aunque venga por prop.
+  return v4 && estiloCtx !== estilo ? <EstiloPJ.Provider value={estilo}>{dibujo}</EstiloPJ.Provider> : dibujo;
 };
 
 // ---------- fuego, luz, naturaleza ----------
