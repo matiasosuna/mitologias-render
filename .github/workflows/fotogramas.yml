@@ -23,6 +23,7 @@ jobs:
     timeout-minutes: 30
     env:
       GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
     steps:
       - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
       - name: hojas
