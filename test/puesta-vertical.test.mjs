@@ -57,11 +57,11 @@ test('medidas: gigantes más grandes, serpientes largas cuentan solo la cabeza y
   assert.ok(LOBO.izq + LOBO.der > 400);
 });
 
-test('dos personajes en los extremos del horizontal: los dos juntos en cuadro, como toma de lejos (más chicos que en el horizontal)', () => {
+test('dos personajes en los extremos del horizontal: los dos juntos en cuadro, de cerca', () => {
   const dur = 300, pistas = [pista('a', 250, dur), pista('b', 1650, dur, { izq: true })];
   const enc = encuadreEscena(pistas);
   assert.deepEqual(enc.ids, ['a', 'b']);
-  assert.ok(enc.K >= 0.6 && enc.K <= K_MAX, `K=${enc.K}`);
+  assert.ok(enc.K >= 1.2 && enc.K <= K_MAX, `K=${enc.K}`);
   assert.ok(mapear(enc, 1650) - mapear(enc, 250) < 1400); // se acercaron
   todosAdentro(enc, pistas); sinEncimarse(enc, pistas);
   // mismo orden izquierda/derecha
@@ -109,7 +109,7 @@ test('la escala respeta la capa de profundidad (los de fondo siguen más chicos)
 test('muchos (6) o muy anchos: se achican hasta entrar, nunca por debajo del mínimo si no hace falta', () => {
   const dur = 90, pistas = [100, 400, 750, 1100, 1450, 1800].map((x, i) => pista(`p${i}`, x, dur, { izq: i % 2 === 1 }));
   const enc = encuadreEscena(pistas);
-  assert.ok(enc.K >= K_MIN && enc.K <= 0.72, `K=${enc.K}`);
+  assert.ok(enc.K >= K_MIN && enc.K <= 1, `K=${enc.K}`);
   todosAdentro(enc, pistas); sinEncimarse(enc, pistas);
 });
 
