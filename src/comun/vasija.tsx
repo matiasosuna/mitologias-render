@@ -476,9 +476,10 @@ export const FiltrosHD: React.FC = () => (
       <feMerge><feMergeNode in="borde" /><feMergeNode in="SourceGraphic" /></feMerge>
     </filter>
     <filter id="contornoLuzV7" x="-25%" y="-12%" width="150%" height="124%" colorInterpolationFilters="sRGB">
-      <feOffset in="SourceAlpha" dx="-5" dy="4" result="o" />
-      <feComposite in="SourceAlpha" in2="o" operator="out" result="b" />
-      <feFlood floodColor="#FFF3D6" floodOpacity="0.32" />
+      <feMorphology in="SourceAlpha" operator="erode" radius="3.2" result="e" />
+      <feOffset in="e" dx="-5" dy="4" result="o" />
+      <feComposite in="e" in2="o" operator="out" result="b" />
+      <feFlood floodColor="#FFF3D6" floodOpacity="0.3" />
       <feComposite in2="b" operator="in" result="luz" />
       <feMorphology in="SourceAlpha" operator="dilate" radius="2.4" result="dil" />
       <feFlood floodColor="#140A04" />
@@ -486,9 +487,10 @@ export const FiltrosHD: React.FC = () => (
       <feMerge><feMergeNode in="borde" /><feMergeNode in="SourceGraphic" /><feMergeNode in="luz" /></feMerge>
     </filter>
     <filter id="contornoLuzParteV7" x="-30%" y="-30%" width="160%" height="160%" colorInterpolationFilters="sRGB">
-      <feOffset in="SourceAlpha" dx="-3.5" dy="3" result="o" />
-      <feComposite in="SourceAlpha" in2="o" operator="out" result="b" />
-      <feFlood floodColor="#FFF3D6" floodOpacity="0.32" />
+      <feMorphology in="SourceAlpha" operator="erode" radius="2.4" result="e" />
+      <feOffset in="e" dx="-3.5" dy="3" result="o" />
+      <feComposite in="e" in2="o" operator="out" result="b" />
+      <feFlood floodColor="#FFF3D6" floodOpacity="0.3" />
       <feComposite in2="b" operator="in" result="luz" />
       <feMorphology in="SourceAlpha" operator="dilate" radius="1.6" result="dil" />
       <feFlood floodColor="#140A04" />

@@ -63,7 +63,7 @@ const Caras: React.FC = () => {
           {(['v6', 'v7'] as EstiloPersonaje[]).map((est, r) => ids.map((id, i) => (
             <svg key={est + id} x={i * w + 4} y={r * 540 + 4} width={w - 8} height={532} viewBox="-130 -470 260 340">
               <rect x={-130} y={-470} width={260} height={340} fill={r ? '#EFE6D2' : '#E3D6BC'} />
-              <EstiloPJ.Provider value={est}>{ELENCO[id] && <DibujarActor ficha={ELENCO[id]} e={estado(0, 0, 1, est === 'v7' && i % 2 ? { boca: true, bocaK: 0.7, hablando: true } : {})} f={f} />}</EstiloPJ.Provider>
+              <EstiloPJ.Provider value={est}>{ELENCO[id] && <DibujarActor ficha={ELENCO[id]} e={estado(0, 0, 1, est === 'v7' ? { boca: true, bocaK: 0.7, hablando: true } : {})} f={f} />}</EstiloPJ.Provider>
               <text x={-122} y={-446} fontSize={16} fill="#000">{`${est === 'v6' ? 'v6' : 'v7'} · ${id}`}</text>
             </svg>
           )))}
