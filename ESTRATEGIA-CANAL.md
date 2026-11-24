@@ -9,7 +9,7 @@ Regla general: los **Shorts traen gente**, los **episodios largos dan horas** y 
 - Con 2 Shorts es poco: revisar retención (aparece a las 48 h) y repetir la comparación con cada tanda.
 
 ## Fórmula de Short
-1. **Gancho con misterio en la primera línea** (texto arriba): "How did a baby beat a Titan?", "Thor dressed as a bride…", "Why is the sea salty?".
+1. ~~Gancho con misterio~~ (reemplazado por `CLARIDAD.md`, 2026-11-22: nada de misterio, que se entienda). Antes: **Gancho con misterio en la primera línea** (texto arriba): "How did a baby beat a Titan?", "Thor dressed as a bride…", "Why is the sea salty?".
 2. **Mini-historia completa en 20–35 s**: planteo → truco/giro → remate. Nada de cortar a la mitad.
 3. **Remate que invite a ver de nuevo o a buscar el episodio** ("…and that is why the sea has tides").
 4. Tonos que priorizamos: engaños, disfraces, apuestas, "por eso…", monstruos con giro. Evitar Shorts solo sombríos o descriptivos.

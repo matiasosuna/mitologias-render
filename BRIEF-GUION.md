@@ -2,6 +2,8 @@
 
 Proyecto: `~/Projects/mitologias`. Leé `MOTOR.md` (formato y vocabulario) y el ejemplo `src/videos/griegas-02-prometeo/guion.json`.
 
+**Primero leé `CLARIDAD.md`: manda sobre todo lo de abajo (que la historia se entienda, sin misterio, pocos nombres).**
+
 ## Tarea
 1. Crear `src/videos/<id>/guion.json` para el video indicado. Si existe un guion viejo en `src/griegas/<NN-slug>/guion.json`, usá su texto en español como base (revisalo: fiel a las fuentes, español neutro, frases ≤130 caracteres) y traducilo al inglés (`en`, inglés natural de narrador, no literal). Solo `es` y `en` por ahora.
 2. Contá la historia de forma natural, con enganche al episodio anterior; los "y por eso…" solo si salen solos de la fuente (ver MOTOR.md). 8–10 escenas, 3–6 frases cada una, 4–5 minutos aprox. (es orientativo: pasarse un poco está bien; NUNCA re-narrar solo para recortar duración). La primera frase engancha con el video anterior; la última escena `cierre` anuncia el siguiente según el plan de la serie (`PLAN-GRIEGAS.md` o `PLAN-NORDICAS.md`). Para nórdicas, el ejemplo es `src/videos/nordicas-01-fuego-y-hielo/guion.json` y la sección Nórdicas de MOTOR.md.

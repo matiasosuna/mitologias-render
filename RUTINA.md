@@ -41,7 +41,7 @@ Leé antes de escribir: `BRIEF-SHORTS.md` (todo Short), `BRIEF-QUIEN.md` (ítems
 Tipos de ítem: **Q** = "Who is…?" · **H** = Story (episodio suelto) · **R** y **S** = Shorts nativos · M/C/Y = series nuevas (pausadas) · **T** = episodios de temporada (como "Episodios", con la temporada del ítem).
 
 ## 3 · Producir
-**Reglas de la casa (todo):** inglés simple (frases ≤ 15 palabras en Shorts, ≤ 20 en episodios, una idea por frase, cada nombre raro explicado la primera vez); ganchos de curiosidad; **nada inventado presentado como hecho**: seguí las fuentes del PLAN de la serie y nombrá la versión/pueblo/fuente cuando corresponda ("in one Haudenosaunee telling…"); respetá la sección "Respeto y fidelidad" de cada PLAN (violencia y sacrificio dichos, nunca mostrados; sin contenido sexual). "That's why…" solo si sale de la fuente. Nada de otros proyectos ni datos personales en el contenido.
+**Reglas de la casa (todo):** inglés simple (frases ≤ 15 palabras en Shorts, ≤ 20 en episodios, una idea por frase, cada nombre raro explicado la primera vez); **`CLARIDAD.md` manda** (que se entienda: sin misterio ni ganchos, pocos nombres, causa y efecto, cierre que resume); **nada inventado presentado como hecho**: seguí las fuentes del PLAN de la serie y nombrá la versión/pueblo/fuente cuando corresponda ("in one Haudenosaunee telling…"); respetá la sección "Respeto y fidelidad" de cada PLAN (violencia y sacrificio dichos, nunca mostrados; sin contenido sexual). "That's why…" solo si sale de la fuente. Nada de otros proyectos ni datos personales en el contenido.
 
 ### "Who is…?" (ítems Q)
 Un Short por personaje del ítem, según `BRIEF-QUIEN.md`: id `short-<serie>-quien-<clave>` (clave del oficial sin `_oficial`), campo `quien`

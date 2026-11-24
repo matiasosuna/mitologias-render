@@ -26,7 +26,7 @@ Verde antes de producir: `npx tsc --noEmit -p . && node --test test/*.test.mjs`.
 - Hacé **1 episodio por corrida**, el siguiente de la lista del PLAN. Id: `gnosticas-NN-<slug en español>` (NN con 2 dígitos).
 
 ## 3 · Producir cada episodio
-Leé antes: `MOTOR.md` (formato y la sección **Gnosis**: fondos, elementos, elenco), `BRIEF-GUION.md` y **`src/videos/gnosticas-01-el-espiritu-invisible/guion.json` como modelo**.
+Leé antes: **`CLARIDAD.md` (manda)**, `MOTOR.md` (formato y la sección **Gnosis**: fondos, elementos, elenco), `BRIEF-GUION.md` y **`src/videos/gnosticas-01-el-espiritu-invisible/guion.json` como modelo**.
 - `guion.json` con la misma forma: `serie: "gnosticas"`, `tempo: 1`, `numero: "NN"`, `titulo` {es,en} (el del PLAN), `tituloGriego: "THE SECRET BOOK OF JOHN · <romano>"` (o el libro de la temporada), `siguiente`, `miniatura` (heroe/rival del elenco de Gnosis), `reels.final` + `reels.tempos.final: 1.08`, `youtube.final`.
 - 10–14 escenas de 4–6 frases (≤ 130 caracteres, ≤ 20 palabras, inglés simple; `es` = traducción para subtítulos). La primera frase retoma el episodio anterior; la escena `cierre` anuncia el siguiente + "Thank you for listening to the secret book with me." (o el libro de la temporada).
 - Puesta: solo fondos/elementos/elenco que existen (MOTOR.md). Si de verdad falta un personaje con nombre, sumalo al elenco de Gnosis siguiendo el estilo existente, con su test, y anotalo en MOTOR.md.
