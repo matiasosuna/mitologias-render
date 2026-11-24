@@ -249,10 +249,14 @@ function desdeArtefacto(id, clases) {
 /** Episodio largo en out/: release → artefacto de render-nube → render acá (si `render`). Lo nuevo se sube al release. */
 /** El horizontal anota la huella del guion con que se hizo (<id>.horizontal.json): si hay huella y no es la actual (p. ej. se
  *  le sacó el gancho, 2026-10-24) se tira y se renderiza de nuevo. Sin huella (horizontales de antes del gancho): sirve. */
+/** Estilo de personajes con que se renderiza (igual a ESTILO_PJ de src/comun/vasija.tsx; lo controla un test). Los episodios
+ *  con la marca de claridad (la tanda nueva desde el E1) se vuelven a renderizar si su horizontal es de otro estilo. */
+export const PJ = 'v7';
 export function horizontalVigente(id) {
   const meta = rutaLocal(id, 'horizontal-meta');
   if (!existsSync(meta)) bajar(nombreAsset(id, 'horizontal-meta'), meta);
-  const h = leerJSON(meta, {}).huella;
+  const m = leerJSON(meta, {}), h = m.huella;
+  if (claro(id) && m.pj !== PJ) return false;
   return h === undefined || h === huella(id);
 }
 /** Prerender: el asset del release sirve solo si es de este guion (horizontal y vertical de episodio miran su huella, como el turno). */
@@ -270,7 +274,7 @@ export function asegurarEpisodio(id, { render = true } = {}) {
     mkdirSync(join('out', id), { recursive: true });
     correr('scripts/motor-render.mjs', id, '--imagen=en', '--audio=en');
     if (!existsSync(rutaLocal(id, 'miniatura'))) correr('scripts/miniaturas.mjs', id);
-    writeFileSync(rutaLocal(id, 'horizontal-meta'), JSON.stringify({ huella: huella(id) }));
+    writeFileSync(rutaLocal(id, 'horizontal-meta'), JSON.stringify({ huella: huella(id), pj: PJ }));
     for (const c of [...EPISODIO, 'horizontal-meta']) if (existsSync(rutaLocal(id, c))) subirAsset(rutaLocal(id, c), nombreAsset(id, c));
     return existsSync(rutaLocal(id, 'horizontal'));
   }
@@ -282,7 +286,7 @@ export function asegurarEpisodio(id, { render = true } = {}) {
     console.log(`  render en la nube: ${id} (horizontal)`);
     if (!existsSync(rutaLocal(id, 'horizontal'))) correr('scripts/motor-render.mjs', id, '--imagen=en', '--audio=en');
     if (!existsSync(rutaLocal(id, 'miniatura'))) correr('scripts/miniaturas.mjs', id);
-    writeFileSync(rutaLocal(id, 'horizontal-meta'), JSON.stringify({ huella: huella(id) })); f.push('horizontal-meta');
+    writeFileSync(rutaLocal(id, 'horizontal-meta'), JSON.stringify({ huella: huella(id), pj: PJ })); f.push('horizontal-meta');
     subirNuevos(f); f = faltan();
   }
   return existsSync(rutaLocal(id, 'horizontal'));

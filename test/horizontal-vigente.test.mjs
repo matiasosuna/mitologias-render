@@ -3,7 +3,10 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
-import { horizontalVigente, huella, verificadoVigente } from '../scripts/nube.mjs';
+import { readFileSync } from 'node:fs';
+import { horizontalVigente, huella, verificadoVigente, PJ } from '../scripts/nube.mjs';
+
+const RAIZ = process.cwd();
 
 test('horizontal: con huella anotada sirve solo si es la del guion actual; sin huella (de antes del gancho), sirve', () => {
   const antes = process.cwd(), dir = mkdtempSync(join(tmpdir(), 'hv-'));
@@ -40,5 +43,24 @@ test('VERIFICADO de la Biblia vale solo con la huella del guion revisado', () =>
     assert.equal(verificadoVigente('biblia-genesis-09'), true);
     writeFileSync(join(d, 'guion.json'), '{"a":2}');
     assert.equal(verificadoVigente('biblia-genesis-09'), false, 'el guion cambió después de revisar');
+  } finally { process.chdir(antes); }
+});
+
+test('claridad: el horizontal tiene que ser del estilo de personajes actual (PJ = ESTILO_PJ de vasija.tsx)', () => {
+  const vasija = readFileSync(join(RAIZ, 'src/comun/vasija.tsx'), 'utf8');
+  assert.match(vasija, new RegExp(`export const ESTILO_PJ: EstiloPersonaje = '${PJ}'`));
+  const antes = process.cwd(), dir = mkdtempSync(join(tmpdir(), 'pj-'));
+  process.chdir(dir);
+  try {
+    const id = 'griegas-01-origen', d = join('src/videos', id); mkdirSync(d, { recursive: true });
+    writeFileSync(join(d, 'guion.json'), JSON.stringify({ claridad: true, titulo: 'x' }));
+    mkdirSync(join('out', id), { recursive: true });
+    const meta = (m) => writeFileSync(join('out', id, 'horizontal.json'), JSON.stringify(m));
+    meta({ huella: huella(id) });
+    assert.equal(horizontalVigente(id), false, 'sin estilo anotado: de antes, se renderiza de nuevo');
+    meta({ huella: huella(id), pj: 'v6' });
+    assert.equal(horizontalVigente(id), false);
+    meta({ huella: huella(id), pj: PJ });
+    assert.equal(horizontalVigente(id), true);
   } finally { process.chdir(antes); }
 });
