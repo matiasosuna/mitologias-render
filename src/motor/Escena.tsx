@@ -31,6 +31,15 @@ const pasoV5 = (f: number, t0: number, t1: number, andado: number) => {
   return { andado, d: f - t0, marcha: m * m * (3 - 2 * m) };
 };
 
+const REPOSO: [number, number] = [30, 30];
+const mezcla = (de: [number, number] | undefined, a: [number, number], g: number): [number, number] => { const o = de ?? REPOSO; return [o[0] + (a[0] - o[0]) * g, o[1] + (a[1] - o[1]) * g]; };
+/** Lleva el brazo (y el de atrás, si se pide) desde donde estaba hasta `meta`, con la curva de los gestos. */
+function gesto(e: Estado, f: number, t0: number, t1: number, meta: [number, number], metaAtras?: [number, number]) {
+  const g = gestoT(f, t0, t1);
+  e.brazo = mezcla(e.brazo, meta, g);
+  if (metaAtras) e.brazoAtras = mezcla(e.brazoAtras, metaAtras, g);
+}
+
 /** Calcula el estado de un actor en el frame f aplicando sus pasos en orden. */
 export function estadoActor(a: Actor, tl: EscenaTL, f: number, ficha: Ficha): { e: Estado; como: string } {
   const capa = a.capa ?? 'frente';
@@ -101,13 +110,14 @@ export function estadoActor(a: Actor, tl: EscenaTL, f: number, ficha: Ficha): { 
         e.x = e.x + (dx - e.x) * k; e.y = e.y + (dy - e.y) * k;
         break;
       }
-      case 'levanta': { const g = gestoT(f, t0, t1); e.brazo = [30 + 135 * g, 30 - 25 * g]; break; }
-      case 'baja': e.brazo = undefined; e.brazoAtras = undefined; break;
-      case 'senala': { const g = gestoT(f, t0, t1); e.brazo = [30 + 62 * g, 30 - 30 * g]; break; }
-      case 'ofrece': { const g = gestoT(f, t0, t1); e.brazo = [30 + 40 * g, 30 - 5 * g]; break; }
-      case 'abraza': e.brazo = [80, 95]; e.brazoAtras = [80, 95]; break;
-      case 'reza': e.brazo = [130, 30]; e.brazoAtras = [130, 30]; break;
-      case 'lamenta': e.brazo = [150, 125]; e.brazoAtras = [150, 125]; break;
+      // Gestos (v7, como el muñeco del tarot): salen de donde estaba el brazo y vuelven suave; nunca saltan de golpe.
+      case 'levanta': gesto(e, f, t0, t1, [165, 5]); break;
+      case 'baja': gesto(e, f, t0, t1, REPOSO, REPOSO); if (f >= t0 + 14) { e.brazo = undefined; e.brazoAtras = undefined; } break;
+      case 'senala': gesto(e, f, t0, t1, [92, 0]); break;
+      case 'ofrece': gesto(e, f, t0, t1, [70, 25]); break;
+      case 'abraza': gesto(e, f, t0, t1, [80, 95], [80, 95]); break;
+      case 'reza': gesto(e, f, t0, t1, [130, 30], [130, 30]); break;
+      case 'lamenta': gesto(e, f, t0, t1, [150, 125], [150, 125]); break;
       // Golpe y lanzamiento con anticipación: se echa para atrás, descarga hacia adelante y se acomoda.
       case 'golpea': {
         const ks = [t0, t0 + 9, t0 + 13, t0 + 24];
@@ -127,8 +137,14 @@ export function estadoActor(a: Actor, tl: EscenaTL, f: number, ficha: Ficha): { 
       case 'sienta': e.sentado = suaveT(f, t0, t0 + 14); break;
       case 'levantarse': { const q = 1 - suaveT(f, t0, t0 + 14); e.rot = e.rot * q; e.arrodillado = (e.arrodillado ?? 0) * q; e.sentado = (e.sentado ?? 0) * q; e.y = (a.y ?? SUELO); break; }
       case 'tiembla': e.temblor = mov ? 1 : 0; break;
-      case 'habla': e.boca = mov ? Math.floor(f / 5) % 2 === 0 : false; e.hablando = mov; break;
-      case 'calla': e.boca = false; break;
+      case 'habla': {
+        e.boca = mov ? Math.floor(f / 5) % 2 === 0 : false; e.hablando = mov;
+        // v7: la boca se abre y cierra suave (sílabas de distinto largo), y se cierra del todo al terminar.
+        const d = f - t0, fin = Math.min(1, (t1 - f) / 4, d / 3);
+        e.bocaK = mov ? Math.max(0, fin) * (0.15 + 0.85 * Math.abs(Math.sin(d * Math.PI / 7)) * (0.6 + 0.4 * Math.sin(d * 0.37 + 1))) : 0;
+        break;
+      }
+      case 'calla': e.boca = false; e.bocaK = 0; break;
       case 'gira': e.voltear = !e.voltear; break;
       case 'crece': case 'encoge': e.s = e.s + ((p.escala ?? (p.hace === 'crece' ? 1.6 : 0.5)) * ESCALA_CAPA[capa] - e.s) * k; break;
       case 'toma': e.objeto = p.objeto ?? null; break;

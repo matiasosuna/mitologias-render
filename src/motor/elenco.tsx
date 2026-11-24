@@ -355,7 +355,7 @@ export type Estado = {
   x: number; y: number; s: number; voltear: boolean; opacity: number;
   accion: 'parado' | 'caminar' | 'correr'; volando: boolean;
   brazo?: [number, number]; brazoAtras?: [number, number];
-  boca: boolean; rot: number; brillo: number; objeto?: string | null; temblor: number;
+  boca: boolean; /** v7: cuánto abre la boca al hablar (0–1, suave). */ bocaK?: number; rot: number; brillo: number; objeto?: string | null; temblor: number;
   arrodillado?: number; sentado?: number;
   expresion?: PersonajeProps['expresion']; inclinar?: number; cabeza?: number; cabezaGiro?: number; hablando?: boolean;
   aparicion?: { con: string; t0: number; sale: boolean };
@@ -372,7 +372,7 @@ export const DibujarActor: React.FC<{ ficha: Ficha; e: Estado; props?: Record<st
   if (ficha.tipo === 'persona') {
     const p = { ...ficha.p, ...props } as Partial<PersonajeProps> & { s?: number };
     const s = e.s * (p.s ?? 1);
-    const pp: PersonajeProps = { ...p, ...base, s, accion: e.accion, boca: e.boca || p.boca, brazo: e.brazo ?? p.brazo, brazoAtras: e.brazoAtras ?? p.brazoAtras, objeto: (e.objeto === undefined ? p.objeto : e.objeto) as PersonajeProps['objeto'], arrodillado: e.arrodillado ?? p.arrodillado, sentado: e.sentado ?? p.sentado, expresion: e.expresion ?? p.expresion, inclinar: (e.inclinar || p.inclinar !== undefined) ? (p.inclinar ?? 0) + (e.inclinar ?? 0) : undefined, cabeza: (e.cabeza || p.cabeza !== undefined) ? (p.cabeza ?? 0) + (e.cabeza ?? 0) : undefined, cabezaGiro: e.cabezaGiro, ciclope: ficha.extra === 'ciclope' || p.ciclope };
+    const pp: PersonajeProps = { ...p, ...base, s, accion: e.accion, boca: e.boca || p.boca, bocaAbre: Math.max(e.bocaK ?? 0, p.boca ? 0.8 : 0), brazo: e.brazo ?? p.brazo, brazoAtras: e.brazoAtras ?? p.brazoAtras, objeto: (e.objeto === undefined ? p.objeto : e.objeto) as PersonajeProps['objeto'], arrodillado: e.arrodillado ?? p.arrodillado, sentado: e.sentado ?? p.sentado, expresion: e.expresion ?? p.expresion, inclinar: (e.inclinar || p.inclinar !== undefined) ? (p.inclinar ?? 0) + (e.inclinar ?? 0) : undefined, cabeza: (e.cabeza || p.cabeza !== undefined) ? (p.cabeza ?? 0) + (e.cabeza ?? 0) : undefined, cabezaGiro: e.cabezaGiro, ciclope: ficha.extra === 'ciclope' || p.ciclope };
     // v5: el paso sigue a lo andado (pie de apoyo quieto), con un tope de cadencia para que no corra las piernas
     if (e.accion === 'caminar' && e.paso && pp.fase === undefined) {
       const kk = s * (p.cuerpo === 'nino' ? 0.62 : 1);

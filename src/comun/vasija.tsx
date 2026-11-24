@@ -348,6 +348,8 @@ export type PersonajeProps = {
   inclinar?: number; // inclinación del cuerpo en grados
   cabeza?: number; // giro de cabeza arriba/abajo
   boca?: boolean; // boca abierta (gritando, hablando)
+  /** v7: cuánto se abre la boca (0 cerrada … 1 abierta); si falta, `boca` la deja abierta 0.8. */
+  bocaAbre?: number;
   ojosCerrados?: boolean;
   /** Borde claro para fondos oscuros. */
   contorno?: boolean;
@@ -473,26 +475,49 @@ export const FiltrosHD: React.FC = () => (
       <feComposite in2="dil" operator="in" result="borde" />
       <feMerge><feMergeNode in="borde" /><feMergeNode in="SourceGraphic" /></feMerge>
     </filter>
+    <filter id="contornoLuzV7" x="-25%" y="-12%" width="150%" height="124%" colorInterpolationFilters="sRGB">
+      <feOffset in="SourceAlpha" dx="-5" dy="4" result="o" />
+      <feComposite in="SourceAlpha" in2="o" operator="out" result="b" />
+      <feFlood floodColor="#FFF3D6" floodOpacity="0.32" />
+      <feComposite in2="b" operator="in" result="luz" />
+      <feMorphology in="SourceAlpha" operator="dilate" radius="2.4" result="dil" />
+      <feFlood floodColor="#140A04" />
+      <feComposite in2="dil" operator="in" result="borde" />
+      <feMerge><feMergeNode in="borde" /><feMergeNode in="SourceGraphic" /><feMergeNode in="luz" /></feMerge>
+    </filter>
+    <filter id="contornoLuzParteV7" x="-30%" y="-30%" width="160%" height="160%" colorInterpolationFilters="sRGB">
+      <feOffset in="SourceAlpha" dx="-3.5" dy="3" result="o" />
+      <feComposite in="SourceAlpha" in2="o" operator="out" result="b" />
+      <feFlood floodColor="#FFF3D6" floodOpacity="0.32" />
+      <feComposite in2="b" operator="in" result="luz" />
+      <feMorphology in="SourceAlpha" operator="dilate" radius="1.6" result="dil" />
+      <feFlood floodColor="#140A04" />
+      <feComposite in2="dil" operator="in" result="borde" />
+      <feMerge><feMergeNode in="borde" /><feMergeNode in="SourceGraphic" /><feMergeNode in="luz" /></feMerge>
+    </filter>
     <filter id="sombraPisoHD" x="-50%" y="-200%" width="200%" height="500%"><feGaussianBlur stdDeviation="6" /></filter>
   </defs>
 );
 
 /** Estilo de dibujo de los personajes (opt-in, a prueba desde 2026-11-03). 'actual' no cambia nada. */
-export type EstiloPersonaje = 'actual' | 'v3' | 'v3fuerte' | 'v4' | 'v5' | 'v6';
+export type EstiloPersonaje = 'actual' | 'v3' | 'v3fuerte' | 'v4' | 'v5' | 'v6' | 'v7';
+/** v7 (2026-11-24) = v6 + lo del muñeco nuevo del tarot (hermes-videos src/munecos2, aprobado el 17/11): sin sombras pintadas
+ * (ni degradé de volumen ni sombra del mentón), solo contorno y una luz suave en el borde de adelante; boca redonda que se
+ * abre y cierra suave al hablar (nunca el triángulo); gestos que salen de la pose anterior y vuelven suave (motor). */
 /** v6 = los mismos personajes del v5 (formas, ropa, movimiento) + cara más viva (cejas que se mueven con la emoción y al
  * hablar, que acompañan el parpadeo y la mirada) y ambiente nuevo en las escenas (cielo que sigue la historia, fondo en
  * capas con paralaje y desenfoque, motas de luz, polvo) en hermes-videos; en Myths on Clay se trajo solo el personaje. */
-export const esV5 = (e: EstiloPersonaje) => e === 'v5' || e === 'v6';
+export const esV5 = (e: EstiloPersonaje) => e === 'v5' || e === 'v6' || e === 'v7';
 /** Estilo de personajes de todos los videos (lo que usa un Personaje sin `estilo` ni EstiloPJ.Provider encima, y
  * también posMano/alcanzar). Para volver al estilo de antes: 'actual'. */
-export const ESTILO_PJ: EstiloPersonaje = 'v6'; // Myths on Clay: v6 por defecto desde 2026-11-22 (traído de hermes-videos, rama personajes-v6)
+export const ESTILO_PJ: EstiloPersonaje = 'v7'; // Myths on Clay: v7 por defecto desde 2026-11-24 (v6 de hermes-videos + mejoras de munecos2)
 export const EstiloPJ = createContext<EstiloPersonaje>(ESTILO_PJ);
 
 /** Degradés del estilo v3. Volumen con degradé de forma en cada pieza (luz del lado de adelante, sombra del de
  * atrás), no con el filo en los bordes (eso se probó y se sacó el 2026-10-09): el contorno sigue siendo el de HD.
  * También el iris, la mejilla y el recorte del ojo. Ids propios: no pisan los de HD. */
-export const FiltrosV3: React.FC<{ fuerte?: boolean }> = ({ fuerte }) => {
-  const k = fuerte ? 'F' : 'S', so = fuerte ? 0.36 : 0.24, lo = fuerte ? 0.26 : 0.18;
+export const FiltrosV3: React.FC<{ fuerte?: boolean; sinPintar?: boolean }> = ({ fuerte, sinPintar }) => {
+  const k = fuerte ? 'F' : 'S', so = sinPintar ? 0 : fuerte ? 0.36 : 0.24, lo = sinPintar ? 0 : fuerte ? 0.26 : 0.18; // v7: sin sombras pintadas
   return (
     <defs>
       <linearGradient id={`formaV3${k}`} x1="0" y1="0.2" x2="1" y2="0">
@@ -984,7 +1009,7 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
   const entornado0 = hd && (cicloOjo === 0 || cicloOjo === 3 || props.expresion === 'enojo' || props.expresion === 'tristeza'); // medio parpadeo, o enojo/tristeza
   // Movimiento secundario (hd): balanceo de peso, brazos que siguen con retraso, torso que acompaña el paso.
   const estiloCtx = useContext(EstiloPJ);
-  const estilo = props.estilo ?? estiloCtx, v3 = estilo !== 'actual', v6 = estilo === 'v6', v5 = estilo === 'v5' || v6, v4 = estilo === 'v4' || v5, fuerte = estilo === 'v3fuerte', kV = fuerte ? 'F' : 'S';
+  const estilo = props.estilo ?? estiloCtx, v3 = estilo !== 'actual', v7 = estilo === 'v7', v6 = estilo === 'v6' || v7, v5 = estilo === 'v5' || v6, v4 = estilo === 'v4' || v5, fuerte = estilo === 'v3fuerte', kV = fuerte ? 'F' : 'S';
   // v3: respira el pecho (sube torso, brazos y cabeza; los pies quedan en el piso), parpadeo de 4 cuadros a
   // intervalos irregulares (a veces doble), la mirada cambia de punto cada tanto y el peso pasa de una pierna a la otra
   // más lento, con la cabeza que compensa.
@@ -1173,9 +1198,9 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
   const dibujo = (
     <g transform={`translate(${x} ${y + (bote + (v3 ? 0 : respira)) * s}) scale(${(voltear ? -s : s) * (nino ? 0.62 : 1)} ${s * (nino ? 0.62 : 1)})`} opacity={opacity}>
       {(hd || v3) && <FiltrosHD />}
-      {v3 && <FiltrosV3 fuerte={fuerte} />}
+      {v3 && <FiltrosV3 fuerte={fuerte} sinPintar={v7} />}
       {hd && <ellipse cx={4} cy={-(bote + (v3 ? 0 : respira)) + 2} rx={(64 + bote * 1.2) * ancho} ry={13} fill="#120802" opacity={0.45 + bote * 0.01} filter="url(#sombraPisoHD)" />}
-      <g filter={contorno ? 'url(#contornoV)' : undefined}><g filter={v3 ? 'url(#contornoHD)' : hd ? (props.sinSombraBorde ? 'url(#contornoHD)' : 'url(#volumenHD)') : undefined}>
+      <g filter={contorno ? 'url(#contornoV)' : undefined}><g filter={v7 ? 'url(#contornoLuzV7)' : v3 ? 'url(#contornoHD)' : hd ? (props.sinSombraBorde ? 'url(#contornoHD)' : 'url(#volumenHD)') : undefined}>
       <defs>
         <filter id="contornoV" x="-30%" y="-30%" width="160%" height="160%">
           <feMorphology in="SourceAlpha" operator="dilate" radius="3" result="d" />
@@ -1307,20 +1332,20 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
         {props.adornos?.pie && <g transform={`translate(${f1(pD.tob[0])} ${f1(pD.tob[1])})`}>{props.adornos.pie}</g>}
         {alas && !egipcio && <path d={`M${pD.tob[0] - 6} ${pD.tob[1] - 10} l -26 -16 l 6 12 l -14 -4 l 12 12 Z`} fill={C.purpura} stroke={C.negro} strokeWidth={2} />}
         {/* cabeza */}
-        <g transform={cabezaT} filter={v3 ? 'url(#contornoParteHD)' : hd ? (props.sinSombraBorde ? 'url(#contornoParteHD)' : 'url(#parteHD)') : undefined}>
+        <g transform={cabezaT} filter={v7 ? 'url(#contornoLuzParteV7)' : v3 ? 'url(#contornoParteHD)' : hd ? (props.sinSombraBorde ? 'url(#contornoParteHD)' : 'url(#parteHD)') : undefined}>
           {props.cabezaPropia ? null : animal ? <CabezaAnimal tipo={animal} piel={piel} /> : <>
           {(mujer || !barba) && tocado !== 'casco' && !trenzas && !props.peloCorto && [0, 1, 2].map((i) => <path key={i} d={suave([[-22 + i * 6, 6], [-30 + i * 4, 30 + ondea(i) * 0.3], [-26 + i * 5, 54 + ondea(i + 1) * 0.4], [-32 + i * 6, mujer ? 90 : 70]])} stroke={pelo} strokeWidth={mujer ? 11 : 9} fill="none" strokeLinecap="round" />)}
           {!mujer && barba && tocado !== 'casco' && !props.peloCorto && [0, 1, 2].map((i) => <path key={i} d={suave([[-22 + i * 6, 6], [-30 + i * 4, 30 + ondea(i) * 0.3], [-26 + i * 5, 54], [-32 + i * 6, 66]])} stroke={pelo} strokeWidth={9} fill="none" strokeLinecap="round" />)}
           <path d={v4
             // v4: nariz más chica y redonda, mentón redondo, mandíbula que sube suave y cuello angosto (se ve entre la cabeza y el torso).
-            ? suave([[-30, 2], [-24, -24], [-2, -36], [18, -31], [27, -17], [30, -7], [mujer ? 33 : 34, -1], [mujer ? 36 : 38.6, 4.4], [mujer ? 35 : 37.2, 7.4], [33, 9], [33.4, 12.6], [boca ? 27 : 31.2, 16.4], [31.8, 19.4], [28, 24.6], [22.5, 28.6], [13, 31], [7, 34.5], [5.5, 52], [-13, 52], [-14, 36], [-23, 22]], true, 0.9)
+            ? suave([[-30, 2], [-24, -24], [-2, -36], [18, -31], [27, -17], [30, -7], [mujer ? 33 : 34, -1], [mujer ? 36 : 38.6, 4.4], [mujer ? 35 : 37.2, 7.4], [33, 9], [33.4, 12.6], [boca && !v7 ? 27 : 31.2, 16.4], [31.8, 19.4], [28, 24.6], [22.5, 28.6], [13, 31], [7, 34.5], [5.5, 52], [-13, 52], [-14, 36], [-23, 22]], true, 0.9)
             : suave([[-30, 2], [-22, -26], [0, -36], [20, -30], [28, -14], [30, -6], [mujer ? 37 : 41, 6], [32, 10], [34, 15], [boca ? 26 : 31, 20], [26, 26], [8, 32], [4, 46], [-16, 46], [-24, 22]], true, 0.9)} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />
           {/* pelo sobre la cabeza */}
           <path d={suave([[-31, 4], [-26, -24], [-2, -38], [22, -32], [26, -20], [10, -22], [-8, -16], [-16, 0], [-22, 22]], true)} fill={pelo} />
           {v3 && pelo !== 'none' && <path d={suave([[-24, -14], [-16, -28], [2, -33], [16, -29]])} stroke="#FFFFFF" strokeOpacity={fuerte ? 0.22 : 0.15} strokeWidth={4} fill="none" strokeLinecap="round" />}
           {v3 && piel !== C.negro && <>
-            {/* v3: sombra del mentón sobre el cuello, mejilla rosada y fosa nasal */}
-            <path d={v4 ? 'M-13.5 36 Q -3 39.5 6.5 36.5 L 5.4 47 L -12.4 47 Z' : 'M-14 33 Q 0 36 8 31 L 5 45 L -15 45 Z'} fill="#2A1206" opacity={fuerte ? 0.26 : 0.18} />
+            {/* v3: sombra del mentón sobre el cuello (no en v7), mejilla rosada y fosa nasal */}
+            {!v7 && <path d={v4 ? 'M-13.5 36 Q -3 39.5 6.5 36.5 L 5.4 47 L -12.4 47 Z' : 'M-14 33 Q 0 36 8 31 L 5 45 L -15 45 Z'} fill="#2A1206" opacity={fuerte ? 0.26 : 0.18}/>}
             <ellipse cx={19} cy={11} rx={10} ry={7} fill={`url(#mejillaV3${kV})`} />
             <path d={v4 ? 'M31 8.2 q 3 1 1.8 3.6' : 'M31.5 9.5 q 3.5 1.2 2 4'} stroke={C.negro} strokeOpacity={0.45} strokeWidth={1.2} fill="none" strokeLinecap="round" />
           </>}
@@ -1330,7 +1355,8 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
               {[0, 1, 2, 3].map((i) => <Inc key={i} d={suave([[8 + i * 5, 24], [16 + i * 5, 40], [22 + i * 3, 54]])} w={1.5} c={canas ? C.negro : C.crema} />)}
             </>
           )}
-          {boca && <path d="M24 18 L 34 24 L 26 26 Z" fill={C.negro} />}
+          {v7 ? (() => { const kb = props.bocaAbre ?? (boca ? 0.8 : 0); return kb > 0.05 && <path d={`M${mujer ? 23 : 24} 15 Q ${mujer ? 28.5 : 29.5} ${f1(16 + 10 * kb)} ${mujer ? 33.8 : 35.4} 13.8 Q ${mujer ? 28.5 : 29.5} 17 ${mujer ? 23 : 24} 15 Z`} fill="#5A1E14" stroke={C.negro} strokeWidth={1.4} strokeLinejoin="round" />; })()
+            : boca && <path d="M24 18 L 34 24 L 26 26 Z" fill={C.negro} />}
           {/* ojo, ceja, oreja */}
           {props.ciclope ? (<g>
             <ellipse cx={16} cy={-6} rx={11} ry={9} fill={(ojosCerrados || parpadea) ? piel : C.blanco} stroke={C.negro} strokeWidth={2} />
@@ -1421,7 +1447,7 @@ export const Personaje: React.FC<PersonajeProps> = (props) => {
         {egipcio && alas && <AlaDiosa h={hD} c={cD} m={mD} ang={angMD} f={fr + 4} />}
         {/* brazo de adelante y objeto */}
         <g transform={T}>
-        <g filter={v3 ? 'url(#contornoParteHD)' : hd ? (props.sinSombraBorde ? 'url(#contornoParteHD)' : 'url(#parteHD)') : undefined}>
+        <g filter={v7 ? 'url(#contornoLuzParteV7)' : v3 ? 'url(#contornoParteHD)' : hd ? (props.sinSombraBorde ? 'url(#contornoParteHD)' : 'url(#parteHD)') : undefined}>
         <path d={brazoD(hD, cD, mD, (v4 ? 24 : 26) * ancho, props.brazoSuave, v4)} fill={piel} stroke={piel === C.negro ? 'none' : C.negro} strokeWidth={2} />
         {v3 && <path d={brazoD(hD, cD, mD, (v4 ? 24 : 26) * ancho, props.brazoSuave, v4)} fill={`url(#formaV3${kV})`} />}
         <Inc d={suave([lerp(hD, cD, 0.3), lerp(hD, cD, 0.8)])} w={1.6} c={lin} />
