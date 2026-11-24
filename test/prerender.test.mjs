@@ -61,12 +61,13 @@ test('slotsProximos: lo que publicaría cada red en los próximos turnos, sin re
   assert.equal(new Set(ig).size, ig.length);
   assert.ok(ig.includes('griegas-0b') && !ig.includes('griegas-0a'));
   assert.ok(sl.every((s) => s.en >= T0));
+  assert.ok(sl.every((s) => s.plataforma === 'instagram'), 'solo Instagram (2026-11-24): nada se prerenderiza para YouTube ni TikTok');
 });
 test('faltantesVentana: formato por red, lo urgente (< 6 h) y los filtros', () => {
   const slots = [{ id: 'griegas-0a', plataforma: 'instagram', en: T0 + 36e5 }, { id: 'griegas-0a', plataforma: 'tiktok', en: T0 + 20 * 36e5 }, { id: 'griegas-0b', plataforma: 'youtube', en: T0 + 8 * 36e5 }, { id: 'nordicas-0x', plataforma: 'youtube', en: T0 }];
   const omitidos = [];
   const r = faltantesVentana({ slots, ahora: T0, hayAsset: (id, c) => id === 'griegas-0b' && c === 'horizontal', permitir: (id) => id !== 'nordicas-0x', omitidos });
-  assert.deepEqual(r.map((x) => [x.id, x.tipo, x.urgente]), [['griegas-0a', 'vertical', true]]);
+  assert.deepEqual(r.map((x) => [x.id, x.tipo, x.urgente]), [['griegas-0a', 'horizontal', true], ['griegas-0a', 'vertical', false]]); // IG horizontal (2026-11-24); TikTok vertical
   const v = faltantesVentana({ slots, ahora: T0, hayAsset: () => false, legacy: (id) => (id === 'griegas-0a' ? ['zeus'] : []), omitidos });
   assert.deepEqual(omitidos.map((o) => o.id), ['griegas-0a']);
   assert.ok(v.every((x) => x.id !== 'griegas-0a'));

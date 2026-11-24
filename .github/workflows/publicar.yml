@@ -9,6 +9,9 @@
 # Estado (registros + cola): rama "estado" (scripts/estado-*.sh). Videos: release "media" (scripts/nube.mjs);
 # si falta alguno, se renderiza en la misma corrida. En el repo privado NO corre (sus minutos se pagan).
 # A mano: gh workflow run publicar -R matiasosuna/mitologias-render
+# Desde 2026-11-24 (Matías: solo Instagram, horizontal): publica SOLO Instagram, el episodio horizontal 16:9, uno de cada serie en
+# su turno (cola.mjs SERIE_HST) y solo si su guion tiene "claridad": true. Los pasos de YouTube y TikTok quedan con if: false.
+# Instagram desde cero (una vez): gh workflow run publicar -R matiasosuna/mitologias-render -f reiniciar_ig=true
 name: publicar
 on:
   schedule:
@@ -21,6 +24,10 @@ on:
       turno:
         description: 'Fecha ISO del turno a correr ya (p. ej. el de episodio, 18 UTC); vacío = el de ahora'
         required: false
+      reiniciar_ig:
+        description: 'Instagram desde cero: registro a [] (respaldo + borrados.json, scripts/instagram-reiniciar.mjs)'
+        type: boolean
+        default: false
 concurrency:
   group: publicar
   cancel-in-progress: false
@@ -57,14 +64,16 @@ jobs:
         run: |
           node -e '
             const fs = require("fs"), e = process.env;
-            const k = ["YT_CLIENT_ID", "YT_CLIENT_SECRET", "BUFFER_API_KEY"];
-            const faltan = k.filter((x) => !e[x]).concat(e.YT_TOKEN_JSON ? [] : ["YT_TOKEN_JSON"]);
+            const k = ["MOC_PAGE_TOKEN", "MOC_IG_USER_ID"]; // 2026-11-24: solo Instagram (API de Meta); YouTube y Buffer, opcionales
+            const faltan = k.filter((x) => !e[x]);
             if (faltan.length) { console.error("faltan secretos: " + faltan.join(", ")); process.exit(1); }
-            for (const x of ["MOC_PAGE_TOKEN", "MOC_IG_USER_ID", "GEMINI_API_KEY"]) if (e[x]) k.push(x); // opcionales (Instagram va por la API de Meta)
+            for (const x of ["YT_CLIENT_ID", "YT_CLIENT_SECRET", "BUFFER_API_KEY", "GEMINI_API_KEY"]) if (e[x]) k.push(x);
             fs.writeFileSync(".env", k.map((x) => x + "=" + e[x].trim()).join("\n") + "\n", { mode: 0o600 });
-            const t = JSON.parse(e.YT_TOKEN_JSON);
-            for (const v of [t.refresh_token, t.access_token]) if (v) console.log("::add-mask::" + v);
-            fs.writeFileSync(".yt-token.json", JSON.stringify({ ...t, vence: 0 }), { mode: 0o600 }); // se renueva en la corrida
+            if (e.YT_TOKEN_JSON) {
+              const t = JSON.parse(e.YT_TOKEN_JSON);
+              for (const v of [t.refresh_token, t.access_token]) if (v) console.log("::add-mask::" + v);
+              fs.writeFileSync(".yt-token.json", JSON.stringify({ ...t, vence: 0 }), { mode: 0o600 }); // se renueva en la corrida
+            }
           '
       - name: turno (hora de creación de la corrida, aunque haya esperado en la cola; o el pedido a mano)
         env:
@@ -80,16 +89,32 @@ jobs:
       - name: traer estado
         run: scripts/estado-traer.sh
 
+      # una sola vez, a mano (input reiniciar_ig): los Reels de antes salen del registro (respaldo como artefacto y en la
+      # historia de la rama estado); después la corrida sigue normal, con Instagram desde el E1 de cada serie
+      - name: Instagram desde cero
+        if: inputs.reiniciar_ig
+        run: node scripts/instagram-reiniciar.mjs && scripts/estado-subir.sh
+      - name: respaldo del registro de Instagram
+        if: inputs.reiniciar_ig
+        uses: actions/upload-artifact@v4
+        with:
+          name: subidas-instagram-respaldo
+          path: out/subidas-instagram-*-borrados.json
+          retention-days: 90
+
       - name: cola única (suma lo nuevo al final)
         run: node scripts/nube.mjs cola && node scripts/nube.mjs plan
 
       # cada paso con continue-on-error: si falla uno, los demás siguen; "resultado" pone el job en rojo
+      # YouTube y TikTok parados (Matías 2026-11-24: solo Instagram): sus pasos quedan, con if: false
       - name: YouTube
         id: yt
+        if: false
         continue-on-error: true
         run: node scripts/nube.mjs turno youtube
       - name: guardar estado
         id: e1
+        if: false
         continue-on-error: true
         run: scripts/estado-subir.sh
 
@@ -104,17 +129,20 @@ jobs:
 
       - name: TikTok (Buffer)
         id: tk
+        if: false
         continue-on-error: true
         run: node scripts/nube.mjs turno tiktok
       - name: guardar estado
         id: e3
+        if: false
         continue-on-error: true
         run: scripts/estado-subir.sh
 
-      - name: adelantar renders de los próximos turnos
+      - name: adelantar renders de los próximos turnos (horizontal de Instagram)
         continue-on-error: true
         run: node scripts/nube.mjs adelantar
 
+      # con YouTube y TikTok parados casi no borra: pide que las 3 redes lo tengan, así nunca saca un horizontal que IG necesita
       - name: borrar del release lo ya publicado en las 3 redes (hace 3+ días)
         continue-on-error: true
         run: node scripts/limpiar-media.mjs --borrar
@@ -124,5 +152,5 @@ jobs:
         run: |
           echo "youtube=${{ steps.yt.outcome }} instagram=${{ steps.ig.outcome }} tiktok=${{ steps.tk.outcome }} estado=${{ steps.e1.outcome }}/${{ steps.e2.outcome }}/${{ steps.e3.outcome }}"
           for o in "${{ steps.yt.outcome }}" "${{ steps.ig.outcome }}" "${{ steps.tk.outcome }}" "${{ steps.e1.outcome }}" "${{ steps.e2.outcome }}" "${{ steps.e3.outcome }}"; do
-            [ "$o" = success ] || exit 1
+            [ "$o" = success ] || [ "$o" = skipped ] || exit 1 # skipped = YouTube/TikTok parados (2026-11-24)
           done

@@ -52,7 +52,7 @@ test('lista: un "Who is…?" detrás de cada episodio que falta; mini historias 
 test('lista: sobran "Who is…?" → van al final; formato por plataforma', () => {
   const cola = construirCola({ titulos: { 'griegas-01-a': T['griegas-01-a'] }, ytIds: { 'griegas-01-a': 'v' }, quien: ['short-griegas-quien-a', 'short-griegas-quien-b'], stories: [] });
   assert.deepEqual(cola.map((e) => e.id), ['griegas-01-a', 'short-griegas-quien-a', 'short-griegas-quien-b']);
-  assert.deepEqual(cola[0].formato, { youtube: 'horizontal', instagram: 'vertical', tiktok: 'vertical' });
+  assert.deepEqual(cola[0].formato, { youtube: 'horizontal', instagram: 'horizontal', tiktok: 'vertical' }); // IG horizontal desde 2026-11-24
   assert.deepEqual(cola[1].formato, { youtube: 'short', instagram: 'short', tiktok: 'short' });
   assert.deepEqual(entrada('short-x-quien-y').formato, FORMATOS.short);
 });

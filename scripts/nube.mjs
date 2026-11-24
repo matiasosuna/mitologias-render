@@ -10,6 +10,8 @@
 //   node scripts/nube.mjs adelantar                    → deja en el release lo que van a usar los próximos turnos
 //   node scripts/nube.mjs sembrar [--max=4]            → (Mac) sube al release lo ya renderizado de lo próximo
 // Cada plataforma se hace una sola vez por turno (out/turnos.json en el estado): otra corrida del mismo turno no repite.
+// Desde 2026-11-24 (Matías: solo Instagram, horizontal): publica solo Instagram (ACTIVAS), con el episodio horizontal 16:9, y solo
+// episodios cuyo guion tenga "claridad": true (la marca Matías a mano después de revisar el render).
 import { readFileSync, writeFileSync, existsSync, mkdirSync, renameSync, rmSync, copyFileSync, mkdtempSync, readdirSync } from 'node:fs';
 import { execFileSync, spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
@@ -20,7 +22,7 @@ import { viejosDeArchivo } from './legacy.mjs';
 import {
   HORAS_UTC, clase, construirCola, actualizarCola, tieneYouTube, tieneInstagram, tieneTiktok,
   planTurno, estadoCola, limitar, usadas24h, esQuien, esShort, PLATAFORMAS, MAX_ALCANZAR, MAX_TIKTOK_FRENADO, TOPE_24H, TOPE_COLA_BUFFER,
-  horizontalTurno, claveHorizontal, esBiblia,
+  horizontalTurno, claveHorizontal, esBiblia, ACTIVAS, proximosSerie,
 } from './cola.mjs';
 import { tituloQuienHorizontal, listaQuien, mitologiaEn } from '../lib/quien.mjs';
 import * as yo from './nube.mjs'; // este mismo módulo, para pasárselo a buffer-tiktok (ver prepararTiktok)
@@ -89,10 +91,21 @@ const claseAsset = (c) => { if (!ASSETS[c]) throw new Error(`clase de asset desc
 export const nombreAsset = (id, c, n) => claseAsset(c)[0](id, n);
 export const rutaLocal = (id, c, n) => join('out', id, claseAsset(c)[1](id, n));
 
+/** La marca "claridad": true (2026-11-24, la pone Matías a mano al revisar el render) no cuenta para la huella: marcar no tira
+ *  el horizontal ya revisado ni el VERIFICADO. Se saca con su coma (vaya primera, en el medio o última), así queda el texto de antes. */
+export function sinClaridad(texto) {
+  const clave = /,\s*"claridad"\s*:\s*(?:true|false)/;
+  return clave.test(texto) ? texto.replace(clave, '') : texto.replace(/"claridad"\s*:\s*(?:true|false)\s*,\s*/, '');
+}
 /** Huella del guion + timeline: si cambia (p. ej. elenco oficial nuevo), los verticales viejos no se reusan. */
 export function huella(id) {
   const h = createHash('sha1');
-  for (const f of ['guion.json', 'timeline.json']) { const r = join('src/videos', id, f); if (existsSync(r)) h.update(readFileSync(r)); }
+  for (const f of ['guion.json', 'timeline.json']) {
+    const r = join('src/videos', id, f);
+    if (!existsSync(r)) continue;
+    const b = readFileSync(r);
+    h.update(f === 'guion.json' && b.includes('"claridad"') ? sinClaridad(b.toString('utf8')) : b);
+  }
   return h.digest('hex').slice(0, 12);
 }
 
@@ -287,6 +300,8 @@ const IDS = 'src/videos/youtube-ids.json', API = 'out/subidas-api.json', IG = 'o
 const listoCon = (titulos) => (id) => ['guion.json', 'timeline.json'].every((f) => existsSync(join('src/videos', id, f))) && (!(esBiblia(id) || id.startsWith('gnosticas-')) || verificadoVigente(id)) && (esShort(id) || Boolean(titulos[id]?.titulo));
 /** En la rotación de series: temporadas sí, especiales no (Odisea, Stories, Lords of the Dead). */
 export const rotaCon = (titulos) => (id) => !titulos[id]?.especial;
+/** Compuerta de calidad de Instagram (Matías 2026-11-24): el episodio sale solo si su guion tiene "claridad": true. */
+export const claro = (id) => { const f = join('src/videos', id, 'guion.json'); return existsSync(f) && JSON.parse(readFileSync(f, 'utf8')).claridad === true; };
 /** VERIFICADO guarda la huella del guion+timeline revisados (scripts/verificado.mjs): si el guion cambió después, no vale. */
 export const verificadoVigente = (id) => { const f = join('src/videos', id, 'VERIFICADO'); return existsSync(f) && readFileSync(f, 'utf8').trim() === huella(id); };
 /** "Who is…?" en orden: los del orden de Shorts de la rama estado, después las carpetas nuevas. */
@@ -310,11 +325,16 @@ export const tiktokFrenado = (ritmo, ahora = Date.now()) => Boolean(ritmo?.max &
 export const tiktokEnPausa = (ritmo, ahora = Date.now()) => Boolean(ritmo?.pausa && ritmo.desde && ahora - Date.parse(ritmo.desde) < 864e5);
 const envF = () => Object.fromEntries(readFileSync('.env', 'utf8').split('\n').filter((l) => l.includes('=')).map((l) => [l.slice(0, l.indexOf('=')), l.slice(l.indexOf('=') + 1).trim()]));
 
+/** Listo para publicar en `p`. Instagram (2026-11-24): además, la marca "claridad" en episodios (los Shorts no la llevan). Sin
+ *  ella el turno de la serie espera (planTurno › espera): no publica nada, no falla, no saltea al siguiente y no reintenta. */
+export const listoPara = (p, listo, esClaro = claro) => (p === 'instagram' ? (id) => listo(id) && (esShort(id) || esClaro(id)) : listo);
 /** Plan de una plataforma en este turno, ya recortado por sus topes (24 h y, en TikTok, la cola de Buffer). */
 function planDe(p, d, f = fechaTurno()) {
   const c = clase(turnoUTC(f)), ahora = Date.now();
   const max = p === 'tiktok' && tiktokFrenado(leerJSON(RITMO_TK, null), ahora) ? MAX_TIKTOK_FRENADO : MAX_ALCANZAR[p];
-  const plan = planTurno({ cola: d.cola, tiene: d.tiene, plataforma: p, clase: c, listo: d.listo, inicio: inicioTurno(f), max, rota: rotaCon(d.titulos) });
+  const listo = listoPara(p, d.listo);
+  const plan = planTurno({ cola: d.cola, tiene: d.tiene, plataforma: p, clase: c, listo, inicio: inicioTurno(f), max, rota: rotaCon(d.titulos) });
+  if (plan.espera) console.log(`${p}: ${p === 'instagram' && d.listo(plan.espera) ? 'esperando revisión' : 'esperando que esté listo (guion, timeline, título o VERIFICADO)'}: ${plan.espera}`);
   // YouTube: un "Who is…?" cuesta 2 (su Short + su horizontal, en el mismo turno)
   const [reg, costo] = { youtube: [d.api, (id) => (conHorizontal(id) ? 2 : 1)], instagram: [d.igH, () => 1], tiktok: [d.buf, () => 1] }[p];
   const ids = limitar(plan.ids, costo, usadas24h(reg, ahora), TOPE_24H[p]);
@@ -441,8 +461,9 @@ function itemIG(id) {
     try { correrIG(['scripts/instagram-shorts.mjs', lista], id); } finally { rmSync(lista, { force: true }); }
     return;
   }
-  // episodio (desde 2026-10-24): ENTERO en un solo Reel largo (antes iba en partes)
+  // episodio (desde 2026-10-24): ENTERO en un solo Reel largo (antes iba en partes); desde 2026-11-24 el horizontal 16:9
   if (tieneInstagram(leerJSON(IG, [])).has(id)) return console.log(`Instagram ${id}: ya estaba`);
+  if (!claro(id)) return console.log(`Instagram: esperando revisión: ${id}`); // el plan ya lo deja afuera; por si se llama directo
   correrIG(['scripts/instagram-reels.mjs', `--solo=${id}`, '--entero'], `${id}`);
   if (!tieneInstagram(leerJSON(IG, [])).has(id)) throw new Error(`Instagram ${id}: el Reel no quedó anotado`);
 }
@@ -459,6 +480,7 @@ function horizontalDe(d, plan) {
 // ── un turno de una plataforma
 async function turno(p, probar = false) {
   if (!PLATAFORMAS.includes(p)) throw new Error(`plataforma desconocida: ${p}`);
+  if (!ACTIVAS.includes(p)) return console.log(`${p}: parado (Matías 2026-11-24: solo Instagram); no se publica`);
   if (p === 'youtube' && !probar) {
     // borrar todo el canal (pedido de Matías 2026-10-27): mientras quede algo viejo, no se sube nada a YouTube
     const { pendiente, borrarCanal } = await import('./youtube-borrar-todo.mjs');
@@ -511,17 +533,17 @@ function proximos(d, p, n) {
   const q = d.cola.filter((e) => e.tipo === 'short' && d.listo(e.id) && !d.tiene[p].has(e.id)).slice(0, 2).map((e) => e.id);
   return [...q, ...eps.filter((e) => !d.tiene[p].has(e.id)).slice(0, n).map((e) => e.id)];
 }
-/** Deja en el release lo que van a usar los próximos turnos (Shorts, partes de IG, verticales de TikTok, horizontales). */
+/** Deja en el release lo que van a usar los próximos turnos. Desde 2026-11-24 (Matías: solo Instagram, horizontal): solo el
+ *  horizontal + miniatura de los 2 próximos episodios de cada serie en Instagram (también los que esperan "claridad": Matías
+ *  revisa ese render). Nada para YouTube ni TikTok (antes: verticales de TikTok, horizontales de YouTube, "Who is…?"). */
 async function adelantar(minutos = 150) {
   const d = datos(), hasta = Date.now() + minutos * 60e3;
-  const { prepararTiktok } = await import('./buffer-tiktok.mjs');
-  const tareas = [
-    ...proximos(d, 'instagram', 4).map((id) => () => (esShort(id) ? asegurar(id, 'short') : prepararTiktok(id, yo))), // IG usa el mismo vertical entero que TikTok
-    ...proximos(d, 'tiktok', 4).map((id) => () => prepararTiktok(id, yo)),
-    ...proximos(d, 'youtube', 2).map((id) => () => (esShort(id) ? asegurar(id, 'short') : asegurarEpisodio(id, { render: false }))),
-    // "Who is…?" horizontal (~1 min de video): se renderiza acá si no está, así el turno solo sube
-    ...proximos(d, 'youtube', 0).filter((id) => conHorizontal(id) && !d.ytIds[claveHorizontal(id)]).map((id) => () => asegurarEpisodio(id)),
-  ];
+  const ig = proximosSerie({ cola: d.cola, tiene: d.tiene.instagram, listo: d.listo, rota: rotaCon(d.titulos), n: 2 });
+  console.log(`adelantar (Instagram, horizontal): ${ig.join(' ') || 'nada'}`);
+  const tareas = ig.map((id) => () => {
+    if (assetVigente(id, 'horizontal') && hayAsset(nombreAsset(id, 'miniatura'))) return; // ya está en el release (sin bajar el video)
+    if (asegurarEpisodio(id)) asegurar(id, 'miniatura');
+  });
   for (const t of tareas) {
     if (Date.now() > hasta) { console.log('adelantar: se acabó el tiempo; sigue en la próxima corrida'); break; }
     try { await t(); } catch (e) { console.log(`adelantar: ${String(e.message).slice(0, 200)}`); }
@@ -555,7 +577,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const pos = a.filter((x) => !x.startsWith('--')), max = Number(a.find((x) => x.startsWith('--max='))?.split('=')[1] ?? 4);
   try {
     if (cmd === 'cola') actualizar();
-    else if (cmd === 'plan' || cmd === 'slot') { const d = datos(); for (const p of PLATAFORMAS) { const x = planDe(p, d); console.log(JSON.stringify({ plataforma: p, turno: x.clase, parejo: x.parejo, punteros: x.punteros, toca: x.ids })); } }
+    else if (cmd === 'plan' || cmd === 'slot') { const d = datos(); for (const p of ACTIVAS) { const x = planDe(p, d); console.log(JSON.stringify({ plataforma: p, turno: x.clase, parejo: x.parejo, punteros: x.punteros, toca: x.ids })); } }
+    else if (cmd === 'pendientes') { // rutina de claridad (RUTINA-CLARIDAD.md): los próximos 2 de cada serie en IG que todavía no tienen la marca
+      const d = datos(); console.log(proximosSerie({ cola: d.cola, tiene: d.tiene.instagram, rota: rotaCon(d.titulos), n: Number(a.find((x) => x.startsWith('--n='))?.split('=')[1] ?? 2) }).filter((id) => !claro(id)).join('\n')); }
     else if (cmd === 'turno') await turno(pos[0], a.includes('--probar'));
     else if (cmd === 'adelantar') await adelantar();
     else if (cmd === 'sembrar') sembrar(max);

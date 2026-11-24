@@ -49,3 +49,12 @@ test('si ya salió una parte con el formato nuevo, las siguientes repiten ese t�
   assert.equal(curiosoDe([{ tipo: 'reel-parte', id: 'x', parte: 1 }], 'The World Is Reborn'), 'The World Is Reborn');
   assert.equal(curiosoDe([], 'The World Is Reborn'), 'The World Is Reborn');
 });
+
+test('solo Instagram (2026-11-24): el texto no manda a YouTube ni al «link in bio»', () => {
+  for (const o of [{ ...base, parte: 1, yaPublicadas: 0 }, { ...base, de: 1, parte: 1, yaPublicadas: 0 }]) {
+    const t = textoReel(o);
+    assert.ok(!/youtube|link in bio/i.test(t), t);
+    assert.ok(t.includes('The whole season, in order, in our Reels.'));
+  }
+  assert.ok(!/Part|Parte/.test(textoReel({ ...base, de: 1, parte: 1, yaPublicadas: 0 })), 'episodio entero: sin partes');
+});

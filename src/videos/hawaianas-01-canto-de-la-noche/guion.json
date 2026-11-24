@@ -28,20 +28,24 @@
       },
       "frases": [
         {
-          "es": "Imagina un mundo sin sol, sin luna y sin tierra. Solo hay noche.",
-          "en": "Imagine a world with no sun, no moon, and no land. There is only night."
+          "es": "Este es el Kumulipo, un antiguo canto hawaiano sobre cómo empezó el mundo.",
+          "en": "This is the Kumulipo, an old Hawaiian chant about how the world began."
         },
         {
-          "es": "Pero no es una noche vacía. En la historia hawaiana, la noche está viva. Se llama Pō.",
-          "en": "But this is not an empty night. In the Hawaiian story, the night is alive. It is called Pō."
+          "es": "Un canto es un poema largo que se dice en voz alta, casi como una canción.",
+          "en": "A chant is a long poem that is said out loud, almost like a song."
         },
         {
-          "es": "Este es el primero de los mitos hawaianos, contados en el orden en que los cuentan los antiguos cantos.",
-          "en": "This is the first of the Hawaiian myths, told in the order the old chants tell them."
+          "es": "Empieza en un tiempo de oscuridad, antes de que hubiera vida.",
+          "en": "It begins in a time of darkness, before there was any life."
         },
         {
-          "es": "Y el gran canto de la creación empieza justo aquí, en la oscuridad.",
-          "en": "And the great chant of creation begins right here, in the dark."
+          "es": "Los hawaianos llaman Pō a esta oscuridad profunda. El canto dice que de ella nació la vida.",
+          "en": "Hawaiians call this deep darkness Pō. The chant says life was born from it."
+        },
+        {
+          "es": "Un cantor lo decía en voz alta, con una voz pareja y cada palabra bien clara.",
+          "en": "A chanter said it out loud, in one steady voice, with every word clear."
         }
       ],
       "elementos": [
@@ -75,17 +79,17 @@
           "rotulo": "THE CHANTER",
           "pasos": [
             {
-              "en": 2.7,
+              "en": 3.7,
               "hace": "aparece",
               "con": "sombra"
             },
             {
-              "en": 3,
+              "en": 4,
               "hace": "habla",
               "dur": 1
             },
             {
-              "en": 3.4,
+              "en": 4.4,
               "hace": "levanta",
               "dur": 0.6
             }
@@ -94,7 +98,7 @@
       ],
       "efectos": [
         {
-          "en": 3.2,
+          "en": 4.2,
           "tipo": "luz",
           "x": 1050,
           "y": 380,
@@ -104,14 +108,14 @@
       ],
       "rotulos": [
         {
-          "en": 1.3,
+          "en": 3,
           "texto": {
-            "es": "PŌ · LA NOCHE",
-            "en": "PŌ · THE NIGHT"
+            "es": "PŌ · LA OSCURIDAD PROFUNDA",
+            "en": "PŌ · THE DEEP DARKNESS"
           },
           "x": 1032,
           "y": 260,
-          "hasta": 2.2
+          "hasta": 4
         }
       ]
     },
@@ -129,23 +133,23 @@
       },
       "frases": [
         {
-          "es": "La tradición dice que el Kumulipo se hizo para el nacimiento de un gran jefe de la isla de Hawaiʻi.",
-          "en": "Tradition says the Kumulipo was made for the birth of a high chief of Hawaiʻi Island."
+          "es": "La tradición dice que el canto se hizo para el nacimiento de un gran jefe.",
+          "en": "Tradition says the chant was made for the birth of a high chief."
         },
         {
-          "es": "Es un canto larguísimo: 2102 versos en dieciséis partes. Cada parte se llama wā, una era.",
-          "en": "It is a very long chant: 2,102 lines, in sixteen parts. Each part is called a wā, an age."
+          "es": "Es larguísimo: más de dos mil versos, en dieciséis partes.",
+          "en": "It is very long: more than two thousand lines, divided into sixteen parts."
         },
         {
-          "es": "El cantor lo decía con una voz pareja, casi en una sola nota, y cada palabra bien clara.",
-          "en": "The chanter said it in one steady voice, almost on a single note, with every word clear."
+          "es": "Nombra la familia del jefe, desde el comienzo del mundo hasta él.",
+          "en": "It names the chief's family line, from the start of the world down to him."
         },
         {
-          "es": "Un error, o un respiro fuera de lugar, traía mala suerte para la familia.",
-          "en": "One mistake, or one breath in the wrong place, was bad luck for the family."
+          "es": "Se creía que un solo error al cantarlo traía mala suerte a la familia.",
+          "en": "One mistake while chanting was believed to bring bad luck to the family."
         },
         {
-          "es": "Por eso solo podían cantarlo los maestros del canto, que sabían de memoria cada verso.",
+          "es": "Por eso solo podían cantarlo los maestros del canto, que sabían cada verso de memoria.",
           "en": "So only trained masters of song, who knew every line by heart, could chant it."
         }
       ],
@@ -189,8 +193,9 @@
               "dur": 4.5
             },
             {
-              "en": 1.6,
-              "hace": "asiente"
+              "en": 2.2,
+              "hace": "senala",
+              "dur": 0.8
             },
             {
               "en": 3.3,
@@ -239,8 +244,8 @@
         {
           "en": 0,
           "texto": {
-            "es": "UN GRAN JEFE · KAʻĪʻIMAMAO",
-            "en": "A HIGH CHIEF · KAʻĪʻIMAMAO"
+            "es": "PARA UN JEFE RECIÉN NACIDO",
+            "en": "FOR A NEWBORN CHIEF"
           },
           "x": 972,
           "y": 240,
@@ -249,129 +254,12 @@
         {
           "en": 1,
           "texto": {
-            "es": "2102 VERSOS · 16 ERAS",
-            "en": "2,102 LINES · 16 AGES"
+            "es": "MÁS DE 2000 VERSOS · 16 PARTES",
+            "en": "OVER 2,000 LINES · 16 PARTS"
           },
           "x": 996,
           "y": 240,
           "hasta": 2
-        }
-      ]
-    },
-    {
-      "id": "palabras",
-      "fondo": "aldea",
-      "camara": {
-        "de": 0,
-        "a": 100,
-        "zoom": [
-          1,
-          1.05
-        ]
-      },
-      "frases": [
-        {
-          "es": "Durante mucho tiempo el Kumulipo vivió solo en la memoria. En 1889, el rey Kalākaua lo hizo imprimir.",
-          "en": "For a long time, the Kumulipo lived only in memory. In 1889, King Kalākaua had it printed."
-        },
-        {
-          "es": "Seis años después, la reina Liliʻuokalani estaba vigilada por guardias. Ocupó ese tiempo en traducirlo al inglés.",
-          "en": "Six years later, Queen Liliʻuokalani was being kept under guard. She spent that time translating it into English."
-        },
-        {
-          "es": "Gracias a su trabajo, gente de todo el mundo pudo leer el canto en inglés.",
-          "en": "Thanks to her work, people around the world could read the chant in English."
-        },
-        {
-          "es": "Hoy muchos hawaianos lo honran todavía como la historia de dónde empezó la vida.",
-          "en": "Today many Hawaiians still honor it as the story of where life began."
-        }
-      ],
-      "elementos": [
-        {
-          "tipo": "hale",
-          "x": 1500,
-          "s": 0.95,
-          "capa": "fondo"
-        },
-        {
-          "tipo": "kahili",
-          "x": 1050,
-          "s": 0.9,
-          "capa": "medio"
-        }
-      ],
-      "actores": [
-        {
-          "id": "rey",
-          "como": "alii_oficial",
-          "x": 560,
-          "props": {
-            "objeto": null
-          },
-          "rotulo": "KING KALĀKAUA",
-          "pasos": [
-            {
-              "en": 0,
-              "hace": "senala",
-              "dur": 1
-            },
-            {
-              "en": 0.4,
-              "hace": "habla",
-              "dur": 0.6
-            }
-          ]
-        },
-        {
-          "id": "reina",
-          "como": "hawaiana_b_oficial",
-          "x": 1280,
-          "mira": "izq",
-          "rotulo": "QUEEN LILIʻUOKALANI",
-          "pasos": [
-            {
-              "en": 0.9,
-              "hace": "aparece",
-              "con": "luz"
-            },
-            {
-              "en": 2.2,
-              "hace": "asiente"
-            }
-          ]
-        }
-      ],
-      "efectos": [
-        {
-          "en": 3,
-          "tipo": "luz",
-          "x": 1280,
-          "y": 400,
-          "intensidad": 0.6,
-          "dur": 1
-        }
-      ],
-      "rotulos": [
-        {
-          "en": 0.2,
-          "texto": {
-            "es": "1889 · EL KUMULIPO SE IMPRIME",
-            "en": "1889 · THE KUMULIPO IS PRINTED"
-          },
-          "x": 978,
-          "y": 240,
-          "hasta": 1
-        },
-        {
-          "en": 1.5,
-          "texto": {
-            "es": "1895 · LA REINA LO TRADUCE",
-            "en": "1895 · THE QUEEN TRANSLATES IT"
-          },
-          "x": 1010,
-          "y": 240,
-          "hasta": 2.3
         }
       ]
     },
@@ -388,24 +276,24 @@
       },
       "frases": [
         {
-          "es": "¿Cómo empieza? Con un tiempo en que la tierra se puso caliente y los cielos giraron.",
-          "en": "So how does it begin? With a time when the earth became hot, and the heavens turned about."
+          "es": "Así empieza el canto. La tierra se puso caliente y el cielo giró.",
+          "en": "Here is how the chant begins. The earth became hot, and the sky turned around."
         },
         {
-          "es": "La luz del sol se fue apagando, para que pudiera brotar una luz nueva.",
-          "en": "The light of the sun grew dim, so that a new light could break forth."
+          "es": "La luz del sol se fue apagando, para que pudiera brillar una luz nueva.",
+          "en": "The light of the sun grew dim, so that a new light could shine."
         },
         {
-          "es": "En esa noche subió un pequeño racimo de estrellas. Los hawaianos lo llaman Makaliʻi, las Pléyades.",
-          "en": "In that night, a small cluster of stars rose. Hawaiians call it Makaliʻi, the Pleiades."
+          "es": "Entonces subió al cielo de la noche un pequeño grupo de estrellas: las Pléyades.",
+          "en": "Then a small group of stars rose in the night sky: the Pleiades."
         },
         {
-          "es": "Y en la oscuridad había cieno, el primer barro blando. Era la fuente de la tierra.",
-          "en": "And in the dark there was slime, the soft first mud. It was the source of the earth."
+          "es": "Y había cieno, un primer barro blando.",
+          "en": "And there was slime, a soft first mud."
         },
         {
-          "es": "Las palabras antiguas son difíciles de traducir, y los estudiosos las leen de distintas maneras.",
-          "en": "The old words are hard to translate, and scholars read them in different ways."
+          "es": "El canto dice que ese cieno era el origen de la tierra.",
+          "en": "The chant says this slime was the source of the earth."
         }
       ],
       "elementos": [],
@@ -426,10 +314,6 @@
               "en": 2,
               "hace": "senala",
               "dur": 0.8
-            },
-            {
-              "en": 4,
-              "hace": "niega"
             }
           ]
         }
@@ -459,8 +343,8 @@
         {
           "en": 2.1,
           "texto": {
-            "es": "MAKALIʻI · LAS PLÉYADES",
-            "en": "MAKALIʻI · THE PLEIADES"
+            "es": "LAS PLÉYADES",
+            "en": "THE PLEIADES"
           },
           "x": 2000,
           "y": 340,
@@ -481,20 +365,16 @@
       },
       "frases": [
         {
-          "es": "Es la fuente de la oscuridad que hizo más oscuridad. La fuente de la noche que hizo más noche.",
-          "en": "It is the source of the darkness that made darkness. The source of the night that made night."
+          "es": "Después el canto dice que la oscuridad hizo más oscuridad, y la noche hizo más noche.",
+          "en": "Then the chant says the darkness made more darkness, and the night made more night."
         },
         {
-          "es": "Un negro hondo, muy hondo. Nada más que noche.",
-          "en": "A deep, deep black. Nothing but night."
+          "es": "Era un negro hondo, muy hondo. Hasta el sol estaba oscuro. Nada más que noche.",
+          "en": "It was a deep, deep black. Even the sun was dark. Nothing but night."
         },
         {
-          "es": "Pero aquí la oscuridad no está vacía. Es donde todo empieza. Pō es el mundo de los espíritus, antes de la gente.",
-          "en": "But here the dark is not empty. It is where everything begins. Pō is the world of spirits, before people."
-        },
-        {
-          "es": "Después viene Ao, el mundo luminoso de los vivos. Pero primero, dice el canto, la noche dio a luz.",
-          "en": "Later comes Ao, the bright world of the living. But first, the chant says, the night gave birth."
+          "es": "Esta oscuridad es Pō. Y entonces, dice el canto, la noche dio a luz.",
+          "en": "This darkness is Pō. And then, the chant says, the night gave birth."
         }
       ],
       "elementos": [
@@ -519,10 +399,10 @@
             {
               "en": 0,
               "hace": "habla",
-              "dur": 3.5
+              "dur": 3
             },
             {
-              "en": 3.2,
+              "en": 2.2,
               "hace": "asiente"
             }
           ]
@@ -530,33 +410,24 @@
       ],
       "efectos": [
         {
-          "en": 3,
+          "en": 2.3,
           "tipo": "luz",
           "x": 1700,
           "y": 420,
           "intensidad": 0.6,
-          "dur": 1
+          "dur": 0.7
         }
       ],
       "rotulos": [
         {
-          "en": 2,
+          "en": 1,
           "texto": {
-            "es": "PŌ · EL MUNDO DE LOS ESPÍRITUS",
-            "en": "PŌ · THE WORLD OF SPIRITS"
+            "es": "PŌ · LA OSCURIDAD PROFUNDA",
+            "en": "PŌ · THE DEEP DARKNESS"
           },
           "x": 1048,
           "y": 260,
-          "hasta": 3
-        },
-        {
-          "en": 3,
-          "texto": {
-            "es": "AO · EL MUNDO DE LOS VIVOS",
-            "en": "AO · THE WORLD OF THE LIVING"
-          },
-          "x": 1083,
-          "y": 260
+          "hasta": 2.3
         }
       ]
     },
@@ -573,24 +444,20 @@
       },
       "frases": [
         {
-          "es": "En la noche nació un varón. Se llamaba Kumulipo, algo así como «fuente de la oscuridad profunda».",
-          "en": "Born in the night was a boy. His name was Kumulipo, which means something like \"source of the deep dark.\""
+          "es": "Primero nació un varón en la noche. Se llamaba Kumulipo.",
+          "en": "First, a boy was born in the night. His name was Kumulipo."
         },
         {
-          "es": "En la noche nació una mujer. Se llamaba Pōʻele, que significa «noche oscura».",
-          "en": "Born in the night was a girl. Her name was Pōʻele, which means \"dark night.\""
+          "es": "Es el mismo nombre del canto. Significa «fuente de la oscuridad profunda».",
+          "en": "It is the same name as the chant. It means \"source of the deep dark.\""
         },
         {
-          "es": "Algunos estudiosos dicen que son el primer hombre y la primera mujer. Otros, que son la noche misma tomando forma.",
-          "en": "Some scholars say they are the first man and woman. Others say they are the night itself, taking shape."
+          "es": "Después nació una mujer en la noche. Se llamaba Pōʻele, «noche oscura».",
+          "en": "Then a girl was born in the night. Her name was Pōʻele, \"dark night.\""
         },
         {
-          "es": "Las eras siguientes traen nuevas parejas de padres oscuros, cada una un poco menos oscura.",
-          "en": "The next ages bring new pairs of dark parents, each pair a little less dark."
-        },
-        {
-          "es": "¿Te sorprende que un mundo pueda empezar en la oscuridad y no en la luz?",
-          "en": "Does it surprise you that a world can begin in the dark, and not in the light?"
+          "es": "Así, los dos primeros seres del canto nacieron de la noche.",
+          "en": "So the first two beings in the chant were both born from the night."
         }
       ],
       "elementos": [],
@@ -616,7 +483,7 @@
               "dur": 0.7
             },
             {
-              "en": 2.2,
+              "en": 3,
               "hace": "mira",
               "a": 1100
             }
@@ -634,49 +501,20 @@
           "rotulo": "PŌʻELE",
           "pasos": [
             {
-              "en": 1,
+              "en": 2,
               "hace": "aparece",
               "con": "sombra"
             },
             {
-              "en": 1.3,
+              "en": 2.3,
               "hace": "brilla",
               "dur": 0.7
-            }
-          ]
-        },
-        {
-          "id": "cantor",
-          "como": "cantor_oficial",
-          "x": 1580,
-          "mira": "izq",
-          "rotulo": "",
-          "pasos": [
-            {
-              "en": 3.2,
-              "hace": "aparece",
-              "con": "sombra"
-            },
-            {
-              "en": 4,
-              "hace": "sorprende"
             }
           ]
         }
       ],
       "efectos": [],
-      "rotulos": [
-        {
-          "en": 4,
-          "texto": {
-            "es": "¿TE SORPRENDE?",
-            "en": "DOES IT SURPRISE YOU?"
-          },
-          "x": 1050,
-          "y": 230,
-          "hasta": 5
-        }
-      ]
+      "rotulos": []
     },
     {
       "id": "polipo",
@@ -691,24 +529,24 @@
       },
       "frases": [
         {
-          "es": "Luego el canto se vuelve hacia el mar. En el agua oscura, algo se mueve.",
-          "en": "Then the chant turns to the sea. In the dark water, something stirs."
+          "es": "Después el canto pasa al mar, al agua oscura.",
+          "en": "Then the chant turns to the sea, to the dark water."
         },
         {
-          "es": "Lo primero vivo no es un dios, ni una persona, ni un monstruo. Es un pólipo de coral.",
-          "en": "The first living thing is not a god, or a person, or a monster. It is a coral polyp."
+          "es": "Lo primero vivo no es un dios. Es un pólipo de coral.",
+          "en": "The first living thing is not a god. It is a coral polyp."
         },
         {
-          "es": "Un pólipo es un animalito blando, más chico que una uña. El canto lo nombra con una palabra larga y musical.",
-          "en": "A polyp is a soft little animal, smaller than a fingernail. The chant names it with a long, musical word."
+          "es": "Un pólipo de coral es un animalito blando del mar, más chico que una uña.",
+          "en": "A coral polyp is a soft little sea animal, smaller than a fingernail."
         },
         {
-          "es": "Después viene el coral mismo. El pólipo lo construye alrededor de su cuerpo, grano a grano.",
-          "en": "Then comes the coral itself. The polyp builds it around its own body, grain by grain."
+          "es": "Después, dice el canto, nació el coral mismo.",
+          "en": "Next, the chant says, the coral itself was born."
         },
         {
-          "es": "Los arrecifes de verdad crecen así, construidos por animales diminutos. El antiguo poeta parece haberlo sabido.",
-          "en": "Reefs really do grow this way, built by tiny animals. The old poet seems to have known it."
+          "es": "El coral es el arrecife duro que construyen juntos muchos pólipos diminutos.",
+          "en": "Coral is the hard reef that many tiny polyps build together."
         }
       ],
       "elementos": [],
@@ -760,10 +598,10 @@
       ],
       "rotulos": [
         {
-          "en": 2,
+          "en": 1.5,
           "texto": {
-            "es": "ʻUKU-KOʻAKOʻA · PÓLIPO DE CORAL",
-            "en": "ʻUKU-KOʻAKOʻA · CORAL POLYP"
+            "es": "PÓLIPO DE CORAL",
+            "en": "CORAL POLYP"
           },
           "x": 1310,
           "y": 240,
@@ -772,12 +610,12 @@
         {
           "en": 3,
           "texto": {
-            "es": "ʻĀKOʻAKOʻA · CORAL",
-            "en": "ʻĀKOʻAKOʻA · CORAL"
+            "es": "CORAL",
+            "en": "CORAL"
           },
           "x": 1450,
           "y": 240,
-          "hasta": 4
+          "hasta": 4.5
         }
       ]
     },
@@ -795,20 +633,24 @@
       },
       "frases": [
         {
-          "es": "Por eso el Kumulipo es más que un cuento. Es un árbol genealógico.",
-          "en": "This is why the Kumulipo is more than a story. It is a family tree."
+          "es": "Después del coral, el canto sigue nombrando seres vivos, uno tras otro.",
+          "en": "After the coral, the chant goes on naming living things, one after another."
         },
         {
-          "es": "Dice que todo lo vivo es parentesco, desde el coral diminuto hasta la gente al final de la línea.",
-          "en": "It says that everything alive is related, from tiny coral up to the people at the end of the line."
+          "es": "Más tarde vienen los peces, las aves y los animales de tierra, cada uno a su turno.",
+          "en": "Later come fish, birds, and land animals, each one in its turn."
         },
         {
-          "es": "Cuando se cantaba para un jefe recién nacido, el bebé oía de dónde venía: de la oscuridad y del mar.",
-          "en": "When it was chanted for a newborn chief, the baby heard where he came from: the dark, and the sea."
+          "es": "Al final de la larga lista viene la gente, y después los jefes.",
+          "en": "At the end of the long line come people, and then chiefs."
         },
         {
-          "es": "Por ahora, el árbol tiene una sola rama diminuta. Pero está a punto de crecer.",
-          "en": "For now, the family tree has one tiny branch. But it is about to grow."
+          "es": "Así, el jefe recién nacido oía en el canto toda su familia.",
+          "en": "So the newborn chief heard his whole family line in the chant."
+        },
+        {
+          "es": "Su familia empezaba en la oscuridad y en el mar, con el diminuto coral.",
+          "en": "His family began in the darkness, and in the sea, with the tiny coral."
         }
       ],
       "elementos": [
@@ -842,7 +684,7 @@
             {
               "en": 0,
               "hace": "habla",
-              "dur": 4
+              "dur": 5
             },
             {
               "en": 1,
@@ -859,7 +701,7 @@
           "rotulo": "",
           "pasos": [
             {
-              "en": 2,
+              "en": 3.5,
               "hace": "asiente"
             }
           ]
@@ -875,7 +717,7 @@
           "rotulo": "",
           "pasos": [
             {
-              "en": 0.5,
+              "en": 3,
               "hace": "asiente"
             }
           ]
@@ -914,20 +756,24 @@
       },
       "frases": [
         {
-          "es": "La noche. Dos hijos de la noche. Y, en el mar, lo primero vivo.",
-          "en": "The night. Two children of the night. And, in the sea, the very first living thing."
+          "es": "Así, el Kumulipo, el canto para un jefe recién nacido, empieza en Pō, la oscuridad profunda.",
+          "en": "So the Kumulipo, the chant for a newborn chief, begins in Pō, the deep darkness."
         },
         {
-          "es": "¿Qué crees que nace después del coral? Cuéntame tu idea en los comentarios.",
-          "en": "What do you think is born after the coral? Tell me your guess in the comments."
+          "es": "La noche da a luz a dos seres: Kumulipo, un varón, y Pōʻele, una mujer.",
+          "en": "The night gives birth to two beings: Kumulipo, a boy, and Pōʻele, a girl."
         },
         {
-          "es": "El canto sigue, y el mar está lleno de sorpresas.",
-          "en": "The song goes on, and the sea is full of surprises."
+          "es": "Después, en el mar, llega lo primero vivo: el diminuto pólipo de coral.",
+          "en": "Then, in the sea, comes the first living thing: the tiny coral polyp."
         },
         {
-          "es": "En el próximo episodio: Nacidos del mar.",
-          "en": "Next time: Born in the Sea."
+          "es": "¿Esperabas que la vida empezara con un coral? Cuéntamelo en los comentarios.",
+          "en": "Did you expect life to begin with coral? Tell me in the comments."
+        },
+        {
+          "es": "En el próximo episodio: Nacidos del mar. Nacen más criaturas del mar, una por una.",
+          "en": "Next time: Born in the Sea. More sea creatures are born, one by one."
         }
       ],
       "elementos": [
@@ -970,10 +816,10 @@
             {
               "en": 0,
               "hace": "habla",
-              "dur": 4
+              "dur": 5
             },
             {
-              "en": 3,
+              "en": 4,
               "hace": "senala",
               "dur": 0.8
             }
@@ -982,27 +828,27 @@
       ],
       "efectos": [
         {
-          "en": 1.2,
+          "en": 2,
           "tipo": "luz",
           "x": 960,
           "y": 400,
           "intensidad": 0.5,
-          "dur": 1.5
+          "dur": 1
         }
       ],
       "rotulos": [
         {
-          "en": 1,
+          "en": 3,
           "texto": {
-            "es": "¿QUÉ NACE DESPUÉS DEL CORAL?",
-            "en": "WHAT IS BORN AFTER THE CORAL?"
+            "es": "¿ESPERABAS QUE EMPEZARA CON UN CORAL?",
+            "en": "DID YOU EXPECT IT TO BEGIN WITH CORAL?"
           },
           "x": 1035,
           "y": 230,
-          "hasta": 2
+          "hasta": 4
         },
         {
-          "en": 3,
+          "en": 4,
           "texto": {
             "es": "PRÓXIMO: NACIDOS DEL MAR",
             "en": "NEXT: BORN IN THE SEA"
@@ -1030,7 +876,7 @@
         "en": "One mistake in this song meant bad luck"
       },
       "escena": "canto",
-      "desde": 1,
+      "desde": 0,
       "hasta": 4,
       "foco": 1000
     },
@@ -1040,7 +886,7 @@
         "en": "The first living thing was smaller than a fingernail"
       },
       "escena": "polipo",
-      "desde": 1,
+      "desde": 0,
       "hasta": 4,
       "foco": 720
     }

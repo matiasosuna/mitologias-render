@@ -6,7 +6,7 @@
 import { readFileSync, existsSync, appendFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
-import { esShort, PLATAFORMAS, HORAS_UTC, clase, planTurno, tieneYouTube, tieneInstagram, tieneTiktok } from './cola.mjs';
+import { esShort, PLATAFORMAS, ACTIVAS, HORAS_UTC, clase, planTurno, tieneYouTube, tieneInstagram, tieneTiktok } from './cola.mjs';
 import { nombreAsset, hayAsset, assetVigente, subirAsset, rutaLocal, REPO } from './nube.mjs';
 import { viejosDeArchivo } from './legacy.mjs';
 import { clavesOficiales } from '../lib/personajes-oficiales.mjs';
@@ -57,7 +57,7 @@ export function lotes(items, motor, modalOk) {
 
 
 // ── ventana: lo que se va a publicar en los próximos turnos (2 días = 12 turnos), simulando el plan de cada turno
-const FORMATO = { youtube: ['horizontal', 'horizontal'], tiktok: ['vertical', 'tiktok'], instagram: ['vertical', 'tiktok'] };
+const FORMATO = { youtube: ['horizontal', 'horizontal'], tiktok: ['vertical', 'tiktok'], instagram: ['horizontal', 'horizontal'] }; // IG horizontal desde 2026-11-24
 /** Próximos `turnos` inicios de turno (ms UTC) desde `ahora`: los de HORAS_UTC (cada 4 h). */
 export function iniciosTurno(ahora, turnos) {
   const t = new Date(ahora); t.setUTCMinutes(0, 0, 0);
@@ -65,12 +65,13 @@ export function iniciosTurno(ahora, turnos) {
   while (!HORAS_UTC.includes(new Date(ms).getUTCHours())) ms += 36e5;
   return Array.from({ length: turnos }, (_, k) => ms + k * 4 * 36e5);
 }
-/** Qué publicaría cada plataforma en los próximos turnos (cada turno se planea con lo publicado antes de empezar). [{id, plataforma, en}] */
-export function slotsProximos({ cola, tiene, listo, rota, ahora = Date.now(), turnos = 12 }) {
+/** Qué publicaría cada plataforma en los próximos turnos (cada turno se planea con lo publicado antes de empezar). [{id, plataforma, en}]
+ *  Solo las que publican (ACTIVAS; Matías 2026-11-24: solo Instagram): nada se renderiza para YouTube ni TikTok. */
+export function slotsProximos({ cola, tiene, listo, rota, ahora = Date.now(), turnos = 12, plataformas = ACTIVAS }) {
   const sim = Object.fromEntries(PLATAFORMAS.map((p) => [p, new Map(tiene[p])])), out = [];
   for (const en of iniciosTurno(ahora, turnos)) {
     const c = clase(new Date(en).getUTCHours()), hechos = [];
-    for (const plataforma of PLATAFORMAS) for (const id of planTurno({ cola, tiene: sim, plataforma, clase: c, listo, rota }).ids) { out.push({ id, plataforma, en }); hechos.push([plataforma, id]); }
+    for (const plataforma of plataformas) for (const id of planTurno({ cola, tiene: sim, plataforma, clase: c, listo, rota }).ids) { out.push({ id, plataforma, en }); hechos.push([plataforma, id]); }
     for (const [p, id] of hechos) sim[p].set(id, 0);
   }
   return out;

@@ -12,6 +12,8 @@
 // del canal de Instagram en Buffer (incluye lo publicado antes por la Graph API).
 // Desde 2026-10-24 (--entero, lo usa la nube): el episodio ENTERO en un solo Reel largo, sin gancho ("un capítulo largo"):
 // el mismo vertical completo de TikTok (<id>.tiktok.mp4, scripts/buffer-tiktok.mjs) y la portada de Instagram como tapa.
+// Desde 2026-11-24 (Matías: solo Instagram, horizontal): --entero publica el episodio HORIZONTAL 16:9 (el mismo mp4 que iba a
+// YouTube: <id>.horizontal.mp4, nube.mjs › asegurarEpisodio) con su miniatura (miniatura.jpg) como tapa, y también al feed.
 // Uso: node scripts/instagram-reels.mjs [--probar] [--solo=<id>] [--entero]
 import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'node:fs';
 import { execFileSync, spawn } from 'node:child_process';
@@ -56,13 +58,12 @@ if (!id) { console.log('nada pendiente'); process.exit(0); }
 const entero = args.includes('--entero');
 let de, parte, archivoParte, nombreVideo, portadaEntero;
 if (entero) {
-  // un solo Reel: el vertical completo (el de TikTok, del release o renderizado en la nube) + la portada de Instagram
+  // un solo Reel: el horizontal 16:9 (del release, del artefacto de render-nube o renderizado en la nube) + su miniatura de tapa
   const rel = nube ?? await import('./nube.mjs');
-  const { prepararTiktok } = await import('./buffer-tiktok.mjs');
-  await prepararTiktok(id, rel);
-  de = 1; parte = 1; archivoParte = rel.rutaLocal(id, 'tiktok'); nombreVideo = rel.nombreAsset(id, 'tiktok');
-  portadaEntero = rel.asegurar(id, 'portada-ig');
-  if (!existsSync(archivoParte) || !portadaEntero) { console.log(`esperando render vertical de ${id}`); process.exit(0); }
+  rel.asegurarEpisodio(id);
+  de = 1; parte = 1; archivoParte = rel.rutaLocal(id, 'horizontal'); nombreVideo = rel.nombreAsset(id, 'horizontal');
+  portadaEntero = rel.asegurar(id, 'miniatura');
+  if (!existsSync(archivoParte) || !portadaEntero) { console.log(`esperando render horizontal de ${id}`); process.exit(0); }
 } else {
 if (nube) nube.asegurar(id, 'partes');
 // En orden estricto: si el próximo todavía no tiene su versión vertical, esperar (no saltear).
@@ -90,9 +91,11 @@ if (args.includes('--probar')) { console.log(id, '\n', texto); process.exit(0); 
 
 const porBuffer = await igPorBuffer(env);
 const gql = porBuffer ? cliente(env.BUFFER_API_KEY) : null;
+// lo anotado en out/borrados.json (Reels borrados o archivados de antes del reinicio, 2026-11-24) no cuenta como "ya estaba"
+const borrados = new Set(existsSync('out/borrados.json') ? JSON.parse(readFileSync('out/borrados.json', 'utf8')) : []);
 const yaEsta = porBuffer
   ? async () => { const p = buscarPorPrimeraLinea(await postsDelCanal(gql), (l) => esLaMisma(l, datos)); return p && { id: p.id, permalink: p.externalLink ?? null }; }
-  : async () => (await g('GET', `/${IG}/media`, { fields: 'id,caption,permalink,media_type', limit: '100' })).data.find((m) => m.media_type === 'VIDEO' && esLaMisma((m.caption ?? '').split('\n')[0], datos));
+  : async () => (await g('GET', `/${IG}/media`, { fields: 'id,caption,permalink,media_type', limit: '100' })).data.find((m) => m.media_type === 'VIDEO' && !borrados.has(m.id) && esLaMisma((m.caption ?? '').split('\n')[0], datos));
 const anotar = (m) => { const h = hist(); h.push({ id, tipo: entero ? 'reel-episodio' : 'reel-parte', parte, de, ...(primeraLinea(datos) === lineaVieja(datos) ? {} : { formato: FORMATO_CURIOSO, curioso }), media: m.id, permalink: m.permalink, ...(porBuffer ? { via: 'buffer' } : {}), fecha: new Date().toISOString() }); writeFileSync(reg, JSON.stringify(h, null, 1)); };
 const previo = await yaEsta();
 if (previo) { anotar(previo); console.log(id, 'ya estaba:', previo.permalink); process.exit(0); }
@@ -107,22 +110,25 @@ if (porBuffer) {
   process.exit(0);
 }
 
-// 1) armar el video 9:16 y la portada 9:16
+// 1) armar la tapa 9:16 (en --entero: la miniatura 16:9 entera en el centro, sobre ella misma desenfocada; un recorte
+//    16:9 del centro es justo la miniatura y en la grilla 3:4 se ve completa)
 const dir = 'out/.reels'; mkdirSync(dir, { recursive: true });
 // portada de ESTA parte ("n/m" debajo del título): las partes no se ven repetidas
 if (!nube && !entero) execFileSync('node', ['scripts/portadas-ig.mjs', id, `--parte=${parte}`, `--de=${de}`], { stdio: 'ignore' });
 const port = entero ? portadaEntero : join('out', id, `portada-ig-${parte}.jpg`);
 const video = join(dir, `${id}.mp4`), tapa = join(dir, `${id}-${parte}.jpg`);
-// El video ya es vertical de verdad (scripts/vertical-render.mjs); solo se copia para servirlo.
+// El video ya está hecho (vertical-partes.mjs o, con --entero, el horizontal de motor-render.mjs); solo se copia para servirlo.
 execFileSync('cp', [archivoParte, video]);
-execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', port, '-filter_complex', '[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=30:4,eq=brightness=-0.25[bg];[bg][0:v]overlay=0:285', '-frames:v', '1', '-q:v', '2', tapa]);
+const frente = entero ? '[0:v]scale=1080:-2[fg];[bg][fg]overlay=0:(H-h)/2' : '[bg][0:v]overlay=0:285';
+execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', port, '-filter_complex', `[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=30:4,eq=brightness=-0.25[bg];${frente}`, '-frames:v', '1', '-q:v', '2', tapa]);
 
 // 2) servir la carpeta con un túnel temporal (en la nube: URL del release)
 let videoUrl, coverUrl;
 if (nube) {
   videoUrl = nube.publicarUrl(archivoParte, entero ? nombreVideo : nube.nombreAsset(id, 'parte', parte));
-  coverUrl = nube.subirAsset(tapa, nube.nombreAsset(id, 'tapa-ig', parte));
-  for (let i = 0; i < 10 && !nube.hayAsset(nube.nombreAsset(id, 'tapa-ig', parte)); i++) await new Promise((r) => setTimeout(r, 3000));
+  const nTapa = entero ? undefined : parte; // --entero: <id>.tapa-ig.jpg (la de las partes lleva su número)
+  coverUrl = nube.subirAsset(tapa, nube.nombreAsset(id, 'tapa-ig', nTapa));
+  for (let i = 0; i < 10 && !nube.hayAsset(nube.nombreAsset(id, 'tapa-ig', nTapa)); i++) await new Promise((r) => setTimeout(r, 3000));
 } else {
 const puerto = 8790 + Math.floor(Math.random() * 100);
 hijos.push(spawn('python3', ['-m', 'http.server', String(puerto), '--bind', '127.0.0.1', '--directory', dir], { stdio: 'ignore' }));

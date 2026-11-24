@@ -18,12 +18,13 @@ export const primeraLinea = (o) => (o.yaPublicadas > 0 || !o.curioso ? lineaViej
 /** ¿Esta 1.ª línea de un post ya publicado es esta misma parte (en cualquiera de los dos formatos)? */
 export const esLaMisma = (linea, o) => linea === lineaVieja(o) || (Boolean(o.curioso) && linea === lineaNueva(o));
 
-/** Caption completo. o = { gu, nombre, tags, parte, de, curioso, codigo, gancho, yaPublicadas } */
+/** Caption completo. o = { gu, nombre, tags, parte, de, curioso, codigo, gancho, yaPublicadas }
+ *  Sin YouTube ni «link in bio» (Matías 2026-11-24: solo Instagram; en YouTube ya no hay videos públicos). */
 export function textoReel(o) {
   const { gu, tags, parte, de, codigo, gancho } = o;
   const titulo = primeraLinea(o);
   const serie = titulo !== lineaVieja(o) && codigo ? `\n${codigo}` : ''; // la línea vieja ya nombra la serie
   const intro = parte > 1 ? `Continued from Part ${parte - 1}: watch it first in our Reels.` : (gancho ?? '');
   const sigue = parte < de ? `\n\nFollow so you don't miss Part ${parte + 1} 👀` : '';
-  return `${titulo}${serie}\n\n${intro}${sigue}\n\n🇪🇸 ${gu.titulo.es}${de > 1 ? ` · Parte ${parte}/${de}` : ''}\n\nThe whole season, in order, in our Reels and on YouTube (link in bio).\n\n${tags} ${['biblia', 'gnosticas'].includes(gu.serie) ? '' : '#mythology '}#animation #mythsonclay`;
+  return `${titulo}${serie}\n\n${intro}${sigue}\n\n🇪🇸 ${gu.titulo.es}${de > 1 ? ` · Parte ${parte}/${de}` : ''}\n\nThe whole season, in order, in our Reels.\n\n${tags} ${['biblia', 'gnosticas'].includes(gu.serie) ? '' : '#mythology '}#animation #mythsonclay`;
 }

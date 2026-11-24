@@ -21,37 +21,35 @@
    },
    "frases": [
     {
-     "es": "Antes de los dioses, de los héroes y de los monstruos, no había nada: ni cielo, ni tierra, ni mar.",
-     "en": "Before the gods, before the heroes and the monsters, there was nothing: no sky, no earth, no sea."
+     "es": "Los griegos contaban cómo empezó el mundo y cómo Zeus llegó a ser el rey de los dioses.",
+     "en": "The Greeks told how the world began, and how Zeus became king of the gods."
     },
     {
-     "es": "Solo existía el Caos: un vacío enorme, oscuro y sin forma.",
-     "en": "There was only Chaos: a vast, dark and shapeless void."
+     "es": "Al principio no había nada, solo un espacio enorme, oscuro y vacío.",
+     "en": "At first there was nothing, only a huge, dark, empty space."
     },
     {
-     "es": "Y de ese vacío, poco a poco, empezó a nacer todo lo que existe.",
-     "en": "And out of that void, little by little, everything that exists began to be born."
+     "es": "Después apareció la Tierra. Era una diosa, y se llamaba Gea.",
+     "en": "Then the Earth appeared. She was a goddess, and her name was Gaia."
     }
    ],
    "actores": [
     {
-     "id": "nix",
+     "id": "gea",
+     "como": "gea_oficial",
      "x": 960,
-     "y": 560,
-     "escala": 1.2,
-     "rotulo": "",
      "pasos": [
       {
        "en": 2,
-       "hace": "aparece"
+       "hace": "aparece",
+       "con": "luz"
       },
       {
-       "en": 2.1,
+       "en": 2.2,
        "hace": "brilla",
-       "dur": 1
+       "dur": 0.8
       }
-     ],
-     "como": "nix_oficial"
+     ]
     }
    ],
    "efectos": [
@@ -62,23 +60,11 @@
      "dur": 2
     },
     {
-     "en": 2.2,
+     "en": 2.1,
      "tipo": "luz",
      "x": 960,
      "y": 460,
      "intensidad": 1.4
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 1,
-     "texto": {
-      "es": "CAOS",
-      "en": "CHAOS"
-     },
-     "x": 960,
-     "y": 300,
-     "hasta": 2
     }
    ]
   },
@@ -91,149 +77,108 @@
    },
    "frases": [
     {
-     "es": "Primero surgió Gea, la Tierra, firme y fértil, madre de todas las cosas.",
-     "en": "First came Gaia, the Earth, solid and fertile, mother of all things."
+     "es": "Gea dio a luz al Cielo, un dios llamado Urano.",
+     "en": "Gaia gave birth to the Sky, a god named Uranus."
     },
     {
-     "es": "Debajo de ella se abrió el Tártaro, el abismo más profundo.",
-     "en": "Beneath her opened Tartarus, the deepest abyss."
+     "es": "Urano era tan grande como Gea, y la cubría por todos lados.",
+     "en": "Uranus was as big as Gaia, and he covered her on every side."
     },
     {
-     "es": "Apareció Eros, la fuerza que une a los seres y hace que la vida se multiplique.",
-     "en": "Then Eros appeared, the force that brings beings together and makes life multiply."
-    },
-    {
-     "es": "Y del propio Caos nacieron Érebo, la oscuridad, y Nix, la noche.",
-     "en": "And from Chaos itself were born Erebus, the darkness, and Nyx, the night."
+     "es": "Juntos tuvieron doce hijos fuertes, llamados los Titanes.",
+     "en": "Together they had twelve strong children, called the Titans."
     }
    ],
    "elementos": [
     {
      "tipo": "olivo",
-     "x": 300,
-     "en": 0.5
+     "x": 250,
+     "en": 0.1
     },
     {
      "tipo": "olivo",
-     "x": 700,
-     "en": 0.7,
+     "x": 750,
+     "en": 0.2,
      "capa": "medio"
     }
    ],
    "actores": [
     {
      "id": "gea",
+     "como": "gea_oficial",
      "x": 500,
      "pasos": [
       {
-       "en": 0.1,
+       "en": 0.05,
        "hace": "aparece"
       },
       {
-       "en": 0.3,
+       "en": 0.2,
        "hace": "levanta"
-      },
-      {
-       "en": 0.4,
-       "hace": "brilla",
-       "dur": 0.8
       }
-     ],
-     "como": "gea_oficial"
+     ]
     },
     {
-     "id": "eros",
-     "x": 1300,
-     "y": 700,
+     "id": "urano",
+     "como": "urano_oficial",
+     "x": 1000,
+     "escala": 1.2,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.3,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 1.1,
+       "hace": "levanta"
+      }
+     ]
+    },
+    {
+     "id": "titan1",
+     "como": "titan_oficial",
+     "x": 1450,
+     "mira": "izq",
+     "rotulo": "TITANS",
      "pasos": [
       {
        "en": 2,
        "hace": "aparece"
-      },
-      {
-       "en": 2.1,
-       "hace": "vuela",
-       "a": [
-        1050,
-        660
-       ]
       }
-     ],
-     "como": "eros_oficial"
+     ]
     },
     {
-     "id": "nix",
-     "x": 1900,
+     "id": "titan2",
+     "como": "titan_oficial",
+     "x": 1650,
      "mira": "izq",
+     "rotulo": "",
      "pasos": [
       {
-       "en": 3,
-       "hace": "entra",
-       "a": 1700
-      }
-     ],
-     "como": "nix_oficial"
-    },
-    {
-     "id": "erebo",
-     "como": "hombre_griego_3_oficial",
-     "x": 2150,
-     "mira": "izq",
-     "rotulo": "EREBUS",
-     "props": {
-      "piel": "#17110E",
-      "contorno": true,
-      "capa": "#17110E"
-     },
-     "pasos": [
-      {
-       "en": 3.2,
-       "hace": "entra",
-       "a": 1950
+       "en": 2.15,
+       "hace": "aparece"
       }
      ]
     }
    ],
    "efectos": [
     {
-     "en": 1,
-     "tipo": "temblor",
-     "dur": 0.6
-    },
-    {
-     "en": 1,
-     "tipo": "humo",
-     "x": 900,
-     "y": 800,
-     "dur": 1
-    },
-    {
-     "en": 2,
+     "en": 0.3,
      "tipo": "chispas",
-     "x": 1100,
+     "x": 1000,
      "y": 500,
      "dur": 1
     },
     {
-     "en": 3,
+     "en": 1,
      "tipo": "oscurecer",
-     "intensidad": 0.7
+     "intensidad": 0.4
     },
     {
-     "en": 3,
+     "en": 1,
      "tipo": "estrellas"
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 1.1,
-     "texto": {
-      "es": "TÁRTARO",
-      "en": "TARTARUS"
-     },
-     "x": 900,
-     "y": 740,
-     "hasta": 2
     }
    ]
   },
@@ -250,57 +195,49 @@
    },
    "frases": [
     {
-     "es": "Gea, sola, dio a luz a Urano, el cielo estrellado, para que la cubriera por completo.",
-     "en": "Alone, Gaia gave birth to Uranus, the starry sky, so that he would cover her completely."
+     "es": "También tuvieron gigantes de un solo ojo y gigantes de cien brazos.",
+     "en": "They also had giants with only one eye, and giants with a hundred arms."
     },
     {
-     "es": "Juntos tuvieron hijos poderosos: doce Titanes, tres Cíclopes de un solo ojo, y tres gigantes de cien brazos, los Hecatónquiros.",
-     "en": "Together they had mighty children: twelve Titans, three one-eyed Cyclopes, and three giants with a hundred arms, the Hecatoncheires."
+     "es": "Pero Urano odiaba a sus hijos.",
+     "en": "But Uranus hated his children."
     },
     {
-     "es": "Pero Urano temía a sus propios hijos.",
-     "en": "But Uranus feared his own children."
+     "es": "Cada vez que nacía un hijo, Urano lo escondía en lo profundo de Gea.",
+     "en": "As each child was born, Uranus hid it deep inside Gaia."
     },
     {
-     "es": "Apenas nacían, los empujaba de vuelta a las profundidades de la Tierra, y no los dejaba salir.",
-     "en": "As soon as they were born, he pushed them back into the depths of the Earth, and would not let them out."
+     "es": "No los dejaba salir a la luz.",
+     "en": "He did not let them come out into the light."
     }
    ],
    "actores": [
     {
      "id": "gea",
+     "como": "gea_oficial",
      "x": 350,
      "pasos": [
       {
-       "en": 0.2,
-       "hace": "levanta"
-      },
-      {
-       "en": 3,
+       "en": 2.5,
        "hace": "lamenta"
       }
-     ],
-     "como": "gea_oficial"
+     ]
     },
     {
      "id": "urano",
+     "como": "urano_oficial",
      "x": 650,
      "escala": 1.2,
      "pasos": [
       {
-       "en": 0.4,
-       "hace": "aparece"
-      },
-      {
-       "en": 2,
+       "en": 1,
        "hace": "senala"
       },
       {
-       "en": 3,
+       "en": 2,
        "hace": "golpea"
       }
-     ],
-     "como": "urano_oficial"
+     ]
     },
     {
      "id": "titan1",
@@ -310,15 +247,11 @@
      "rotulo": "TITANS",
      "pasos": [
       {
-       "en": 1,
-       "hace": "aparece"
-      },
-      {
-       "en": 3.2,
+       "en": 2.2,
        "hace": "arrodilla"
       },
       {
-       "en": 3.5,
+       "en": 2.5,
        "hace": "desaparece"
       }
      ]
@@ -331,40 +264,38 @@
      "rotulo": "",
      "pasos": [
       {
-       "en": 1.1,
-       "hace": "aparece"
-      },
-      {
-       "en": 3.3,
+       "en": 2.3,
        "hace": "desaparece"
       }
      ]
     },
     {
      "id": "ciclope",
+     "como": "ciclope_oficial",
      "x": 1360,
      "mira": "izq",
+     "rotulo": "",
      "pasos": [
       {
-       "en": 1.4,
+       "en": 0.1,
        "hace": "aparece"
       },
       {
-       "en": 3.4,
+       "en": 2.4,
        "hace": "arrodilla"
       },
       {
-       "en": 3.6,
+       "en": 2.6,
        "hace": "desaparece"
       }
-     ],
-     "como": "ciclope_oficial"
+     ]
     },
     {
      "id": "hecatonquiro",
+     "como": "hecatonquiro_oficial",
      "x": 1600,
      "mira": "izq",
-     "rotulo": "HECATONCHEIRES",
+     "rotulo": "",
      "props": {
       "brazo": [
        150,
@@ -377,15 +308,14 @@
      },
      "pasos": [
       {
-       "en": 1.7,
+       "en": 0.4,
        "hace": "aparece"
       },
       {
-       "en": 3.5,
+       "en": 2.7,
        "hace": "desaparece"
       }
-     ],
-     "como": "hecatonquiro_oficial"
+     ]
     }
    ],
    "efectos": [
@@ -394,21 +324,27 @@
      "tipo": "estrellas"
     },
     {
-     "en": 2,
+     "en": 1,
      "tipo": "rayo",
      "x": 900
     },
     {
-     "en": 3,
+     "en": 2,
      "tipo": "temblor",
      "dur": 0.8
     },
     {
-     "en": 3.2,
+     "en": 2.2,
      "tipo": "polvo",
      "x": 1300,
      "y": 790,
      "dur": 0.8
+    },
+    {
+     "en": 3,
+     "tipo": "oscurecer",
+     "intensidad": 0.5,
+     "dur": 1
     }
    ]
   },
@@ -421,33 +357,34 @@
    },
    "frases": [
     {
-     "es": "Gea sufría con sus hijos atrapados dentro de ella, y decidió vengarse.",
-     "en": "Gaia suffered with her children trapped inside her, and she decided to take revenge."
+     "es": "Gea sufría, porque sus hijos estaban atrapados dentro de ella.",
+     "en": "Gaia suffered, because her children were trapped inside her."
     },
     {
-     "es": "Forjó una gran hoz de metal indestructible y pidió ayuda a los Titanes.",
-     "en": "She forged a great sickle of unbreakable metal and asked the Titans for help."
+     "es": "Entonces hizo una hoz, una cuchilla curva de un metal durísimo.",
+     "en": "So she made a sickle, a curved blade of very hard metal."
     },
     {
-     "es": "Solo uno se atrevió: Cronos, el más joven y el más ambicioso.",
-     "en": "Only one dared: Cronus, the youngest and the most ambitious."
+     "es": "Les pidió a sus hijos que castigaran a su padre cruel.",
+     "en": "She asked her children to punish their cruel father."
     },
     {
-     "es": "Esa noche, cuando Urano bajó a cubrir la Tierra, Cronos lo atacó con la hoz y lo separó de ella para siempre.",
-     "en": "That night, when Uranus came down to cover the Earth, Cronus struck him with the sickle and separated them forever."
+     "es": "Todos tuvieron miedo. Solo Cronos, el Titán más joven, dijo que sí.",
+     "en": "They were all afraid. Only Cronus, the youngest Titan, said yes."
     },
     {
-     "es": "Por eso, desde entonces, el cielo está arriba y la tierra abajo.",
-     "en": "That is why, ever since, the sky has been above and the earth below."
+     "es": "De noche, Urano llegó y se tendió otra vez sobre Gea.",
+     "en": "At night, Uranus came and lay down over Gaia again."
     },
     {
-     "es": "De la espuma del mar, donde cayó la sangre de Urano, nació la diosa más bella: Afrodita.",
-     "en": "From the sea foam, where the blood of Uranus fell, the most beautiful goddess was born: Aphrodite."
+     "es": "Gea había escondido a Cronos. Él saltó y cortó a Urano con la hoz.",
+     "en": "Gaia had hidden Cronus. He jumped out and cut Uranus with the sickle."
     }
    ],
    "actores": [
     {
      "id": "gea",
+     "como": "gea_oficial",
      "x": 500,
      "props": {
       "objeto": "hoz"
@@ -462,14 +399,19 @@
        "hace": "levanta"
       },
       {
-       "en": 2.2,
+       "en": 2,
+       "hace": "habla",
+       "dur": 1
+      },
+      {
+       "en": 3.4,
        "hace": "ofrece"
       }
-     ],
-     "como": "gea_oficial"
+     ]
     },
     {
      "id": "cronos",
+     "como": "cronos_oficial",
      "x": 950,
      "mira": "izq",
      "props": {
@@ -478,73 +420,51 @@
      },
      "pasos": [
       {
-       "en": 2,
+       "en": 3,
        "hace": "entra",
        "a": 800
       },
       {
-       "en": 2.5,
+       "en": 3.6,
        "hace": "toma",
        "objeto": "hoz"
       },
       {
-       "en": 3,
+       "en": 5,
        "hace": "corre",
        "a": 1650
       },
       {
-       "en": 3.5,
+       "en": 5.3,
        "hace": "golpea"
       }
-     ],
-     "como": "cronos_oficial"
+     ]
     },
     {
      "id": "urano",
+     "como": "urano_oficial",
      "x": 1900,
      "mira": "izq",
      "escala": 1.2,
      "pasos": [
       {
-       "en": 3,
+       "en": 4,
        "hace": "aparece"
       },
       {
-       "en": 3.6,
+       "en": 5.5,
        "hace": "vuela",
        "a": [
         1900,
         380
        ],
-       "dur": 1
+       "dur": 0.4
       },
       {
-       "en": 4.6,
+       "en": 5.95,
        "hace": "desaparece"
       }
-     ],
-     "como": "urano_oficial"
-    },
-    {
-     "id": "afrodita",
-     "x": 2300,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 5,
-       "hace": "aparece"
-      },
-      {
-       "en": 5.1,
-       "hace": "brilla",
-       "dur": 0.9
-      },
-      {
-       "en": 5.3,
-       "hace": "levanta"
-      }
-     ],
-     "como": "afrodita_oficial"
+     ]
     }
    ],
    "efectos": [
@@ -556,26 +476,14 @@
      "dur": 1
     },
     {
-     "en": 3,
+     "en": 4,
      "tipo": "oscurecer",
      "intensidad": 0.6,
      "dur": 1.6
     },
     {
-     "en": 3.6,
+     "en": 5.4,
      "tipo": "destello"
-    },
-    {
-     "en": 5,
-     "tipo": "olas-suben",
-     "dur": 0.4,
-     "intensidad": 0.15
-    },
-    {
-     "en": 5,
-     "tipo": "luz",
-     "x": 2300,
-     "y": 520
     }
    ]
   },
@@ -588,24 +496,24 @@
    },
    "frases": [
     {
-     "es": "Cronos se convirtió en el rey del universo y se casó con su hermana Rea.",
-     "en": "Cronus became king of the universe and married his sister Rhea."
+     "es": "Ahora Cronos era el rey, y se casó con su hermana Rea.",
+     "en": "Now Cronus was king, and he married his sister Rhea."
     },
     {
-     "es": "Pero Gea y Urano le habían advertido: uno de tus hijos te quitará el trono, como tú se lo quitaste a tu padre.",
-     "en": "But Gaia and Uranus had warned him: one of your children will take your throne, just as you took your father's."
+     "es": "Pero Gea y Urano le advirtieron que uno de sus hijos lo vencería.",
+     "en": "But Gaia and Uranus warned him: one of his sons would defeat him."
     },
     {
-     "es": "Aterrado, cada vez que Rea daba a luz, Cronos se tragaba al bebé entero.",
-     "en": "Terrified, every time Rhea gave birth, Cronus swallowed the baby whole."
+     "es": "Por eso, cada vez que Rea tenía un bebé, Cronos se lo tragaba.",
+     "en": "That is why, each time Rhea had a baby, Cronus swallowed it."
     },
     {
-     "es": "Así devoró a Hestia, a Deméter, a Hera, a Hades y a Poseidón.",
-     "en": "And so he devoured Hestia, Demeter, Hera, Hades and Poseidon."
+     "es": "Se tragó cinco bebés, uno tras otro.",
+     "en": "He swallowed five babies, one after another."
     },
     {
-     "es": "Rea lloraba, impotente, cada vez que perdía a uno de sus hijos.",
-     "en": "Rhea wept, powerless, each time she lost one of her children."
+     "es": "La pena de Rea no terminaba nunca, porque seguía perdiendo a sus hijos.",
+     "en": "Rhea's grief never ended, because she kept losing her children."
     }
    ],
    "elementos": [
@@ -617,6 +525,7 @@
    "actores": [
     {
      "id": "cronos",
+     "como": "cronos_oficial",
      "x": 620,
      "pasos": [
       {
@@ -624,28 +533,23 @@
        "hace": "levanta"
       },
       {
-       "en": 1,
+       "en": 1.6,
        "hace": "tiembla",
        "dur": 0.8
       },
       {
-       "en": 2,
-       "hace": "habla",
-       "dur": 2
-      },
-      {
-       "en": 2.2,
+       "en": 2.4,
        "hace": "golpea"
       },
       {
        "en": 3.2,
        "hace": "golpea"
       }
-     ],
-     "como": "cronos_oficial"
+     ]
     },
     {
      "id": "rea",
+     "como": "rea_oficial",
      "x": 1250,
      "mira": "izq",
      "pasos": [
@@ -655,18 +559,18 @@
        "a": 1100
       },
       {
-       "en": 2,
+       "en": 2.1,
        "hace": "ofrece"
       },
       {
        "en": 4,
        "hace": "lamenta"
       }
-     ],
-     "como": "rea_oficial"
+     ]
     },
     {
      "id": "gea",
+     "como": "gea_oficial",
      "x": 1700,
      "mira": "izq",
      "capa": "medio",
@@ -680,14 +584,14 @@
        "hace": "senala"
       },
       {
-       "en": 2,
+       "en": 1.9,
        "hace": "desaparece"
       }
-     ],
-     "como": "gea_oficial"
+     ]
     },
     {
      "id": "urano",
+     "como": "urano_oficial",
      "x": 1900,
      "mira": "izq",
      "capa": "medio",
@@ -697,11 +601,10 @@
        "hace": "aparece"
       },
       {
-       "en": 2,
+       "en": 1.9,
        "hace": "desaparece"
       }
-     ],
-     "como": "urano_oficial"
+     ]
     }
    ],
    "efectos": [
@@ -710,15 +613,6 @@
      "tipo": "oscurecer",
      "intensidad": 0.5,
      "dur": 1
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 3.1,
-     "texto": "HESTIA · DEMETER · HERA · HADES · POSEIDON",
-     "x": 1200,
-     "y": 220,
-     "hasta": 4
     }
    ]
   },
@@ -731,38 +625,47 @@
    },
    "frases": [
     {
-     "es": "Cuando Rea esperaba a su sexto hijo, decidió engañar a su esposo.",
-     "en": "When Rhea was expecting her sixth child, she decided to trick her husband."
+     "es": "Antes de que naciera su último bebé, Rea les pidió ayuda a Gea y a Urano.",
+     "en": "Before her last baby was born, Rhea asked Gaia and Uranus for help."
     },
     {
-     "es": "Dio a luz en secreto, en una cueva de la isla de Creta, y llamó al niño Zeus.",
-     "en": "She gave birth in secret, in a cave on the island of Crete, and named the child Zeus."
+     "es": "La mandaron a una isla. Allí, en una cueva, nació su hijo Zeus.",
+     "en": "They sent her to an island. There, in a cave, her son Zeus was born."
     },
     {
-     "es": "Después envolvió una piedra en pañales y se la entregó a Cronos, que se la tragó sin mirar.",
-     "en": "Then she wrapped a stone in a blanket and handed it to Cronus, who swallowed it without looking."
+     "es": "Después Rea envolvió una piedra en pañales y se la dio a Cronos.",
+     "en": "Then Rhea wrapped a stone in baby clothes and gave it to Cronus."
     },
     {
-     "es": "En la cueva, la cabra Amaltea alimentó a Zeus con su leche.",
-     "en": "In the cave, the goat Amalthea fed Zeus with her milk."
+     "es": "Cronos creyó que era el bebé, y se tragó la piedra.",
+     "en": "Cronus thought it was the baby, and he swallowed the stone."
     },
     {
-     "es": "Y los Curetes, guerreros de la isla, golpeaban sus escudos para que Cronos no oyera el llanto del bebé.",
-     "en": "And the Curetes, warriors of the island, beat their shields so that Cronus would not hear the baby cry."
+     "es": "En la cueva, una cabra alimentó al pequeño Zeus con su leche.",
+     "en": "In the cave, a goat fed baby Zeus with her milk."
+    },
+    {
+     "es": "Unos guerreros golpeaban los escudos con las lanzas, para que Cronos no lo oyera llorar.",
+     "en": "Warriors beat their spears on their shields, so Cronus would not hear him cry."
     }
    ],
    "actores": [
     {
      "id": "rea",
+     "como": "rea_oficial",
      "x": 450,
      "pasos": [
       {
-       "en": 0.2,
+       "en": 0.3,
+       "hace": "reza"
+      },
+      {
+       "en": 0.9,
        "hace": "camina",
        "a": 750
       },
       {
-       "en": 1.2,
+       "en": 1.5,
        "hace": "abraza"
       },
       {
@@ -773,9 +676,13 @@
       {
        "en": 2.4,
        "hace": "ofrece"
+      },
+      {
+       "en": 3.7,
+       "hace": "camina",
+       "a": 650
       }
-     ],
-     "como": "rea_oficial"
+     ]
     },
     {
      "id": "zeus_nino",
@@ -796,6 +703,7 @@
     },
     {
      "id": "cronos",
+     "como": "cronos_oficial",
      "x": 1600,
      "mira": "izq",
      "pasos": [
@@ -804,30 +712,28 @@
        "hace": "aparece"
       },
       {
-       "en": 2.5,
+       "en": 2.6,
        "hace": "levanta"
       },
       {
-       "en": 2.7,
-       "hace": "habla",
-       "dur": 0.3
+       "en": 3.2,
+       "hace": "golpea"
       },
       {
-       "en": 3,
+       "en": 3.6,
        "hace": "sale"
       }
-     ],
-     "como": "cronos_oficial"
+     ]
     },
     {
      "id": "amaltea",
      "como": "cabra_griega_oficial",
      "x": 1050,
      "mira": "izq",
-     "rotulo": "AMALTHEA",
+     "rotulo": "",
      "pasos": [
       {
-       "en": 3,
+       "en": 4,
        "hace": "entra",
        "a": 1050
       }
@@ -838,19 +744,19 @@
      "como": "guerrero_griego_2_oficial",
      "x": 1450,
      "mira": "izq",
-     "rotulo": "CURETES",
+     "rotulo": "",
      "pasos": [
       {
-       "en": 4,
+       "en": 5,
        "hace": "entra",
        "a": 1350
       },
       {
-       "en": 4.3,
+       "en": 5.3,
        "hace": "golpea"
       },
       {
-       "en": 4.6,
+       "en": 5.6,
        "hace": "golpea"
       }
      ]
@@ -863,16 +769,16 @@
      "rotulo": "",
      "pasos": [
       {
-       "en": 4.1,
+       "en": 5.1,
        "hace": "entra",
        "a": 1550
       },
       {
-       "en": 4.4,
+       "en": 5.4,
        "hace": "golpea"
       },
       {
-       "en": 4.7,
+       "en": 5.7,
        "hace": "golpea"
       }
      ]
@@ -890,22 +796,10 @@
      "dur": 1.5
     },
     {
-     "en": 4.3,
+     "en": 5.3,
      "tipo": "temblor",
      "intensidad": 0.4,
      "dur": 0.6
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 1,
-     "texto": {
-      "es": "CRETA",
-      "en": "CRETE"
-     },
-     "x": 900,
-     "y": 200,
-     "hasta": 2
     }
    ]
   },
@@ -918,25 +812,42 @@
    },
    "frases": [
     {
-     "es": "Zeus creció fuerte y decidido a cumplir la profecía.",
-     "en": "Zeus grew up strong and determined to fulfill the prophecy."
+     "es": "Zeus creció a escondidas y se hizo fuerte.",
+     "en": "Zeus grew up in secret, and he became strong."
     },
     {
-     "es": "Con la ayuda de la sabia Metis, le dio a Cronos una bebida que lo hizo vomitar.",
-     "en": "With the help of wise Metis, he gave Cronus a potion that made him throw up."
+     "es": "Entonces una diosa sabia lo ayudó.",
+     "en": "Then a wise goddess helped him."
     },
     {
-     "es": "Primero salió la piedra, que Zeus colocó en Delfos como centro del mundo.",
-     "en": "First came out the stone, which Zeus placed at Delphi as the center of the world."
+     "es": "Le dio a Cronos una bebida que lo hizo vomitar.",
+     "en": "She gave Cronus a drink that made him throw up."
     },
     {
-     "es": "Y después, uno por uno, salieron sus hermanos, ya adultos, listos para pelear a su lado.",
-     "en": "And then, one by one, out came his brothers and sisters, fully grown, ready to fight at his side."
+     "es": "Primero salió la piedra.",
+     "en": "First, the stone came out."
+    },
+    {
+     "es": "Después salieron, uno por uno, los cinco hijos que se había tragado.",
+     "en": "Then the five children he had swallowed came out, one by one."
+    },
+    {
+     "es": "Eran los hermanos de Zeus, y se unieron a él para pelear contra Cronos.",
+     "en": "They were Zeus's brothers and sisters, and they joined him to fight Cronus."
+    }
+   ],
+   "elementos": [
+    {
+     "tipo": "roca",
+     "x": 1250,
+     "s": 0.4,
+     "en": 3
     }
    ],
    "actores": [
     {
      "id": "zeus",
+     "como": "zeus_oficial",
      "x": 200,
      "props": {
       "objeto": null,
@@ -949,144 +860,114 @@
        "a": 600
       },
       {
-       "en": 1,
-       "hace": "ofrece"
-      },
-      {
-       "en": 2,
+       "en": 5,
        "hace": "senala"
       }
-     ],
-     "como": "zeus_oficial"
+     ]
     },
     {
      "id": "metis",
+     "como": "metis_oficial",
      "x": 380,
+     "rotulo": "",
      "pasos": [
       {
        "en": 1,
-       "hace": "aparece"
+       "hace": "aparece",
+       "con": "luz"
       },
       {
-       "en": 1.1,
+       "en": 2.1,
        "hace": "ofrece"
       }
-     ],
-     "como": "metis_oficial"
+     ]
     },
     {
      "id": "cronos",
+     "como": "cronos_oficial",
      "x": 1000,
      "mira": "izq",
      "pasos": [
       {
-       "en": 1.4,
+       "en": 2.5,
        "hace": "tiembla",
        "dur": 0.8
       },
       {
-       "en": 2,
+       "en": 3,
        "hace": "habla",
        "dur": 1.5
       }
-     ],
-     "como": "cronos_oficial"
+     ]
     },
     {
      "id": "hestia",
+     "como": "hestia_oficial",
      "x": 1250,
      "mira": "izq",
+     "rotulo": "",
      "pasos": [
       {
-       "en": 3,
+       "en": 4,
        "hace": "aparece"
-      },
-      {
-       "en": 3.05,
-       "hace": "camina",
-       "a": 1250
       }
-     ],
-     "como": "hestia_oficial"
+     ]
     },
     {
      "id": "demeter",
+     "como": "demeter_oficial",
      "x": 1420,
      "mira": "izq",
+     "rotulo": "",
      "pasos": [
       {
-       "en": 3.15,
+       "en": 4.15,
        "hace": "aparece"
       }
-     ],
-     "como": "demeter_oficial"
+     ]
     },
     {
      "id": "hera",
+     "como": "hera_oficial",
      "x": 1590,
      "mira": "izq",
+     "rotulo": "",
      "pasos": [
       {
-       "en": 3.3,
+       "en": 4.3,
        "hace": "aparece"
       }
-     ],
-     "como": "hera_oficial"
+     ]
     },
     {
      "id": "hades",
+     "como": "hades_oficial",
      "x": 1760,
      "mira": "izq",
+     "rotulo": "",
      "pasos": [
       {
-       "en": 3.45,
+       "en": 4.45,
        "hace": "aparece"
       }
-     ],
-     "como": "hades_oficial"
+     ]
     },
     {
      "id": "poseidon",
+     "como": "poseidon_oficial",
      "x": 1930,
      "mira": "izq",
+     "rotulo": "",
      "pasos": [
       {
-       "en": 3.6,
+       "en": 4.6,
        "hace": "aparece"
       },
       {
-       "en": 3.8,
+       "en": 5.2,
        "hace": "levanta"
       }
-     ],
-     "como": "poseidon_oficial"
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "roca",
-     "x": 1250,
-     "s": 0.4,
-     "en": 2
-    },
-    {
-     "tipo": "altar",
-     "x": 1250,
-     "s": 0.5,
-     "en": 2.3,
-     "capa": "medio"
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 2.2,
-     "texto": {
-      "es": "DELFOS",
-      "en": "DELPHI"
-     },
-     "x": 1250,
-     "y": 520,
-     "hasta": 3
+     ]
     }
    ]
   },
@@ -1099,28 +980,28 @@
    },
    "frases": [
     {
-     "es": "Así empezó la Titanomaquia, la guerra entre los dioses jóvenes y los Titanes.",
-     "en": "So began the Titanomachy, the war between the young gods and the Titans."
+     "es": "Así empezó una guerra: Zeus y sus hermanos contra Cronos y los Titanes.",
+     "en": "So a war began: Zeus and his brothers and sisters against Cronus and the Titans."
     },
     {
-     "es": "Los Titanes peleaban desde el monte Otris; los jóvenes dioses, desde el Olimpo.",
-     "en": "The Titans fought from Mount Othrys; the young gods, from Olympus."
+     "es": "La guerra duró diez años, y ningún lado podía ganar.",
+     "en": "The war lasted ten years, and neither side could win."
     },
     {
-     "es": "Durante diez años las montañas temblaron y el mar hirvió.",
-     "en": "For ten years the mountains shook and the sea boiled."
+     "es": "Gea, la Tierra, le dijo a Zeus: libera a los gigantes que siguen atrapados abajo y ganarás.",
+     "en": "Gaia, the Earth, told Zeus: free the giants still trapped below, and you will win."
     },
     {
-     "es": "Para ganar, Zeus bajó al Tártaro y liberó a los Cíclopes y a los gigantes de cien brazos.",
-     "en": "To win, Zeus went down to Tartarus and freed the Cyclopes and the hundred-armed giants."
+     "es": "Así que Zeus bajó a lo profundo de la tierra y liberó a los gigantes.",
+     "en": "So Zeus went deep under the earth and set the giants free."
     },
     {
-     "es": "En agradecimiento, los Cíclopes le forjaron el rayo a Zeus, el tridente a Poseidón y un casco de invisibilidad a Hades.",
-     "en": "In gratitude, the Cyclopes forged the thunderbolt for Zeus, the trident for Poseidon and a helmet of invisibility for Hades."
+     "es": "En agradecimiento, los gigantes de un solo ojo le dieron a Zeus el rayo, un arma de relámpagos.",
+     "en": "To thank him, the one-eyed giants gave Zeus the thunderbolt, a weapon of lightning."
     },
     {
-     "es": "Los gigantes de cien brazos lanzaron trescientas rocas a la vez, y los Titanes quedaron sepultados.",
-     "en": "The hundred-armed giants hurled three hundred rocks at once, and the Titans were buried."
+     "es": "Los gigantes de cien brazos lanzaron trescientas rocas, y los Titanes fueron vencidos.",
+     "en": "The hundred-armed giants threw three hundred rocks, and the Titans were beaten."
     }
    ],
    "actores": [
@@ -1136,7 +1017,7 @@
        "a": 600
       },
       {
-       "en": 2,
+       "en": 1.2,
        "hace": "golpea"
       },
       {
@@ -1149,6 +1030,7 @@
      "id": "atlas",
      "como": "titan_oficial",
      "x": 500,
+     "rotulo": "",
      "pasos": [
       {
        "en": 0.4,
@@ -1156,18 +1038,39 @@
        "a": 800
       },
       {
-       "en": 2.3,
+       "en": 1.5,
        "hace": "golpea"
       },
       {
        "en": 5.5,
        "hace": "cae"
       }
-     ],
-     "rotulo": ""
+     ]
+    },
+    {
+     "id": "gea",
+     "como": "gea_oficial",
+     "x": 1100,
+     "capa": "medio",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece",
+       "con": "luz"
+      },
+      {
+       "en": 2.2,
+       "hace": "senala"
+      },
+      {
+       "en": 2.9,
+       "hace": "desaparece"
+      }
+     ]
     },
     {
      "id": "zeus",
+     "como": "zeus_oficial",
      "x": 1500,
      "mira": "izq",
      "props": {
@@ -1197,13 +1100,14 @@
        "en": 5,
        "hace": "lanza"
       }
-     ],
-     "como": "zeus_oficial"
+     ]
     },
     {
      "id": "poseidon",
+     "como": "poseidon_oficial",
      "x": 1700,
      "mira": "izq",
+     "rotulo": "",
      "pasos": [
       {
        "en": 0.4,
@@ -1211,35 +1115,30 @@
        "a": 1500
       },
       {
-       "en": 4.4,
+       "en": 1.3,
        "hace": "levanta"
       }
-     ],
-     "como": "poseidon_oficial"
+     ]
     },
     {
      "id": "hades",
+     "como": "hades_oficial",
      "x": 1850,
      "mira": "izq",
-     "props": {
-      "tocado": "casco"
-     },
+     "rotulo": "",
      "pasos": [
       {
-       "en": 4.6,
+       "en": 0.5,
        "hace": "aparece"
-      },
-      {
-       "en": 4.8,
-       "hace": "desaparece"
       }
-     ],
-     "como": "hades_oficial"
+     ]
     },
     {
      "id": "ciclope",
+     "como": "ciclope_oficial",
      "x": 2100,
      "mira": "izq",
+     "rotulo": "",
      "pasos": [
       {
        "en": 3.3,
@@ -1247,16 +1146,16 @@
       },
       {
        "en": 4,
-       "hace": "golpea"
+       "hace": "ofrece"
       }
-     ],
-     "como": "ciclope_oficial"
+     ]
     },
     {
      "id": "hecatonquiro",
+     "como": "hecatonquiro_oficial",
      "x": 2350,
      "mira": "izq",
-     "rotulo": "HECATONCHEIRES",
+     "rotulo": "",
      "props": {
       "brazo": [
        160,
@@ -1276,26 +1175,31 @@
        "en": 5,
        "hace": "lanza"
       }
-     ],
-     "como": "hecatonquiro_oficial"
+     ]
     }
    ],
    "efectos": [
     {
-     "en": 1,
+     "en": 0.5,
      "tipo": "polvo",
      "x": 1000,
      "dur": 2
     },
     {
-     "en": 2,
+     "en": 1,
      "tipo": "temblor",
      "dur": 1
     },
     {
-     "en": 2,
+     "en": 1,
      "tipo": "rayo",
      "x": 1100
+    },
+    {
+     "en": 2,
+     "tipo": "luz",
+     "x": 1100,
+     "y": 500
     },
     {
      "en": 3,
@@ -1323,27 +1227,13 @@
    "rotulos": [
     {
      "en": 1,
-     "texto": "OTHRYS",
-     "x": 500,
-     "y": 300,
-     "hasta": 2
-    },
-    {
-     "en": 1.4,
-     "texto": "OLYMPUS",
-     "x": 1500,
-     "y": 300,
-     "hasta": 2.3
-    },
-    {
-     "en": 2,
      "texto": {
       "es": "10 AÑOS",
       "en": "10 YEARS"
      },
      "x": 1100,
      "y": 220,
-     "hasta": 3
+     "hasta": 2
     }
    ]
   },
@@ -1360,24 +1250,24 @@
    },
    "frases": [
     {
-     "es": "Los Titanes vencidos fueron encerrados en el Tártaro.",
-     "en": "The defeated Titans were locked away in Tartarus."
+     "es": "Los Titanes vencidos quedaron encadenados en lo profundo de la tierra, en un pozo oscuro.",
+     "en": "The beaten Titans were chained deep under the earth, in a dark pit."
     },
     {
-     "es": "Atlas, uno de sus líderes, recibió un castigo especial: sostener el cielo sobre sus hombros por toda la eternidad.",
-     "en": "Atlas, one of their leaders, received a special punishment: to hold up the sky on his shoulders for all eternity."
+     "es": "Después Zeus y sus dos hermanos se repartieron el mundo por sorteo.",
+     "en": "Then Zeus and his two brothers divided the world by drawing lots."
     },
     {
-     "es": "Los tres hermanos se repartieron el mundo por sorteo.",
-     "en": "The three brothers divided the world among themselves by drawing lots."
+     "es": "Zeus se quedó con el cielo. Un hermano, con el mar.",
+     "en": "Zeus got the sky. One brother got the sea."
     },
     {
-     "es": "Zeus recibió el cielo, Poseidón el mar y Hades el reino de los muertos.",
-     "en": "Zeus received the sky, Poseidon the sea and Hades the kingdom of the dead."
+     "es": "El otro hermano, con el mundo de los muertos, bajo la tierra.",
+     "en": "The other brother got the world of the dead, under the earth."
     },
     {
-     "es": "Y en la cima del monte Olimpo, los nuevos dioses construyeron su hogar.",
-     "en": "And on the summit of Mount Olympus, the new gods built their home."
+     "es": "Los nuevos dioses hicieron su hogar en la cima de una montaña altísima.",
+     "en": "The new gods made their home on top of a very high mountain."
     }
    ],
    "elementos": [
@@ -1385,7 +1275,7 @@
      "tipo": "anfora",
      "x": 1100,
      "s": 0.5,
-     "en": 2
+     "en": 1
     },
     {
      "tipo": "templo",
@@ -1413,91 +1303,79 @@
      ]
     },
     {
-     "id": "atlas",
-     "x": 500,
+     "id": "zeus",
+     "como": "zeus_oficial",
+     "x": 950,
      "pasos": [
       {
        "en": 1,
        "hace": "aparece"
       },
       {
-       "en": 1.5,
-       "hace": "tiembla",
-       "dur": 0.5
-      }
-     ],
-     "como": "atlas_oficial"
-    },
-    {
-     "id": "zeus",
-     "x": 950,
-     "pasos": [
-      {
        "en": 2,
-       "hace": "aparece"
-      },
-      {
-       "en": 3,
        "hace": "levanta"
       }
-     ],
-     "como": "zeus_oficial"
+     ]
     },
     {
      "id": "poseidon",
+     "como": "poseidon_oficial",
      "x": 1250,
      "mira": "izq",
+     "rotulo": "",
      "pasos": [
       {
-       "en": 2.1,
+       "en": 1.1,
        "hace": "aparece"
       },
       {
-       "en": 3.3,
+       "en": 2.5,
        "hace": "levanta"
       }
-     ],
-     "como": "poseidon_oficial"
+     ]
     },
     {
      "id": "hades",
+     "como": "hades_oficial",
      "x": 1430,
      "mira": "izq",
+     "rotulo": "",
      "pasos": [
       {
-       "en": 2.2,
+       "en": 1.2,
        "hace": "aparece"
       },
       {
-       "en": 3.6,
+       "en": 3.2,
        "hace": "senala"
       }
-     ],
-     "como": "hades_oficial"
+     ]
     },
     {
      "id": "hera",
+     "como": "hera_oficial",
      "x": 1900,
      "mira": "izq",
+     "rotulo": "",
      "pasos": [
       {
        "en": 4.2,
        "hace": "aparece"
       }
-     ],
-     "como": "hera_oficial"
+     ]
     },
     {
      "id": "demeter",
+     "como": "demeter_oficial",
      "x": 2050,
      "mira": "izq",
+     "rotulo": "",
      "pasos": [
       {
        "en": 4.3,
        "hace": "aparece"
       }
-     ],
-     "como": "demeter_oficial"
+     ]
     }
    ],
    "efectos": [
@@ -1509,12 +1387,7 @@
      "dur": 1
     },
     {
-     "en": 1,
-     "tipo": "estrellas",
-     "dur": 1
-    },
-    {
-     "en": 3,
+     "en": 2,
      "tipo": "rayo",
      "x": 950
     },
@@ -1535,39 +1408,66 @@
    },
    "frases": [
     {
-     "es": "Así terminó el tiempo de los Titanes y comenzó la era de los dioses olímpicos.",
-     "en": "So ended the age of the Titans, and the age of the Olympian gods began."
+     "es": "Así Cronos perdió el trono a manos de su hijo, como le habían advertido Gea y Urano.",
+     "en": "So Cronus lost his throne to his son, as Gaia and Uranus had warned."
     },
     {
-     "es": "Pero el mundo todavía no tenía seres humanos.",
-     "en": "But the world still had no human beings."
+     "es": "Terminó el tiempo de los Titanes, y Zeus se convirtió en el rey de los dioses.",
+     "en": "The time of the Titans ended, and Zeus became king of the gods."
     },
     {
-     "es": "Esa es la próxima historia: Prometeo y el fuego robado.",
-     "en": "That is the next story: Prometheus and the stolen fire."
+     "es": "¿Hizo bien Zeus en pelear contra su propio padre? Cuéntanos en los comentarios.",
+     "en": "Was Zeus right to fight his own father? Tell us in the comments."
+    },
+    {
+     "es": "La próxima historia es sobre Prometeo, un Titán que les robó el fuego a los dioses.",
+     "en": "The next story is about Prometheus, a Titan who stole fire from the gods."
     }
    ],
    "actores": [
     {
      "id": "zeus",
+     "como": "zeus_oficial",
      "x": 500,
      "capa": "medio",
      "pasos": [
       {
-       "en": 0.2,
+       "en": 1.2,
        "hace": "levanta"
       }
-     ],
-     "como": "zeus_oficial"
+     ]
     },
     {
      "id": "hera",
+     "como": "hera_oficial",
      "x": 700,
      "capa": "medio",
-     "como": "hera_oficial"
+     "rotulo": ""
+    },
+    {
+     "id": "cronos",
+     "como": "cronos_oficial",
+     "x": 1250,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 0.05,
+       "hace": "aparece"
+      },
+      {
+       "en": 0.4,
+       "hace": "lamenta"
+      },
+      {
+       "en": 0.9,
+       "hace": "desaparece",
+       "con": "humo"
+      }
+     ]
     },
     {
      "id": "prometeo",
+     "como": "prometeo_oficial",
      "x": 1900,
      "mira": "izq",
      "props": {
@@ -1575,26 +1475,25 @@
      },
      "pasos": [
       {
-       "en": 2,
+       "en": 3,
        "hace": "entra",
        "a": 1600
       },
       {
-       "en": 2.5,
+       "en": 3.5,
        "hace": "levanta"
       }
-     ],
-     "como": "prometeo_oficial"
+     ]
     }
    ],
    "efectos": [
     {
-     "en": 1,
+     "en": 2.5,
      "tipo": "oscurecer",
      "intensidad": 0.5
     },
     {
-     "en": 2.3,
+     "en": 3.3,
      "tipo": "luz",
      "x": 1600,
      "y": 450
@@ -1615,8 +1514,8 @@
   },
   {
    "gancho": {
-    "es": "El bebé que engañó a un titán",
-    "en": "The baby who tricked a Titan"
+    "es": "La madre que engañó a un titán",
+    "en": "The mother who tricked a Titan"
    },
    "escena": "piedra",
    "desde": 0,

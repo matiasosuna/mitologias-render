@@ -4,7 +4,8 @@
 // Lista: los episodios en el orden en que YouTube los publicó (T1 griega, nórdica, egipcia, especiales, T1 hawaiana,
 // T2 griega, T2 nórdica, T2 egipcia), después lo que falta (resto de T2 griega, Odisea, Stories griegas, resto de T1 en el
 // orden de series de siempre) con un "Who is…?" detrás de cada episodio. Las mini historias viejas NO entran.
-// Formato por plataforma: episodio → YouTube horizontal · Instagram en partes · TikTok vertical completo; Short → Short.
+// Formato por plataforma: episodio → YouTube horizontal · Instagram horizontal (2026-11-24) · TikTok vertical completo; Short → Short.
+// Desde 2026-11-24 (Matías: solo Instagram, horizontal) publica solo Instagram (ACTIVAS); YouTube y TikTok quedan parados.
 //
 // Turnos (cada 4 h; HST): 08 = episodio · 12, 16 y 20 = Biblia (Who-is en pausa desde 2026-10-22) · 00 y 04 = solo para alcanzar.
 //  - ALCANZAR (alguna plataforma tiene menos episodios de la lista que la que va adelante, hoy YouTube): la que va
@@ -16,10 +17,13 @@
 // su Short (horizontalTurno). Parejo en YouTube: por día 1 episodio + 2 "Who is…?" Shorts + 2 "Who is…?" horizontales.
 
 export const PLATAFORMAS = ['youtube', 'instagram', 'tiktok'];
+/** Las que publican (Matías 2026-11-24: solo Instagram, horizontal). YouTube y TikTok quedan con su código, pero no corren. */
+export const ACTIVAS = ['instagram'];
 /** Las que marcan el ritmo; TikTok las sigue sin frenarlas. */
 export const PRINCIPALES = ['youtube', 'instagram'];
 export const FORMATOS = {
-  episodio: { youtube: 'horizontal', instagram: 'vertical', tiktok: 'vertical' }, // IG: un solo Reel largo desde 2026-10-24 (antes 'partes')
+  // IG: un solo Reel largo desde 2026-10-24 (antes 'partes'); 2026-11-24 (Matías: solo Instagram, horizontal): el mismo 16:9 de YouTube
+  episodio: { youtube: 'horizontal', instagram: 'horizontal', tiktok: 'vertical' },
   short: { youtube: 'short', instagram: 'short', tiktok: 'short' },
 };
 /** Shorts que entran a la cola además de los "Who is…?". Vacío: el de todos los dioses juntos NO (2026-10-19: un capítulo por dios). */
@@ -167,7 +171,8 @@ export function planTurno({ cola, tiene, plataforma, clase: c, listo = () => tru
     const s = c.slice('serie:'.length);
     const e = cola.find((x) => x.tipo === 'episodio' && serieDe(x.id) === s && rota(x.id) && !antes(plataforma)(x.id));
     if (e && listo(e.id) && !ahora(e.id)) ids.push(e.id);
-    return { ids, parejo, punteros, lider };
+    // espera: el episodio al que le toca pero no está listo (nube.mjs dice por qué: p. ej. «esperando revisión»)
+    return { ids, parejo, punteros, lider, espera: e && !listo(e.id) ? e.id : null };
   }
   if (c === 'quien') {
     // el próximo "Who is…?" que le falta a alguna, a las tres juntas
@@ -188,6 +193,16 @@ export function planTurno({ cola, tiene, plataforma, clase: c, listo = () => tru
     if (punteros[plataforma] < liderG) ids.push(...eps.slice(0, liderG).filter((e) => !antes(plataforma)(e.id)).slice(0, max).map((e) => e.id).filter((id) => !ahora(id)));
   } else if (c === 'episodio' && liderG < eps.length && !ahora(eps[liderG].id)) ids.push(eps[liderG].id);
   return { ids, parejo, punteros, lider };
+}
+
+/** Los próximos `n` episodios de cada serie de la rotación (SERIE_HST) que le faltan a una red, en el mismo orden estricto
+ *  del turno de serie (sin especiales ni "Who is…?"): primero el próximo de cada serie, después el siguiente de cada una…
+ *  tiene: Map de esa red. Para adelantar renders (2026-11-24: el horizontal de Instagram, antes de que Matías lo revise). */
+export function proximosSerie({ cola, tiene, listo = () => true, rota = () => true, n = 1 }) {
+  const porSerie = Object.values(SERIE_HST).map((s) => cola.filter((x) => x.tipo === 'episodio' && serieDe(x.id) === s && rota(x.id) && !tiene.has(x.id)));
+  const out = [];
+  for (let k = 0; k < n; k++) for (const eps of porSerie) if (eps[k] && listo(eps[k].id)) out.push(eps[k].id);
+  return out;
 }
 
 /** Clave de la versión horizontal de un "Who is…?" en youtube-ids.json (el Short ocupa la del id). */
