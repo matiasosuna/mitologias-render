@@ -251,7 +251,7 @@ function desdeArtefacto(id, clases) {
  *  le sacó el gancho, 2026-10-24) se tira y se renderiza de nuevo. Sin huella (horizontales de antes del gancho): sirve. */
 /** Estilo de personajes con que se renderiza (igual a ESTILO_PJ de src/comun/vasija.tsx; lo controla un test). Los episodios
  *  con la marca de claridad (la tanda nueva desde el E1) se vuelven a renderizar si su horizontal es de otro estilo. */
-export const PJ = 'v7';
+export const PJ = 'v7+animales'; // estilo de personajes (ESTILO_PJ) + revisión; cambiarlo rehace los horizontales con claridad
 export function horizontalVigente(id) {
   const meta = rutaLocal(id, 'horizontal-meta');
   if (!existsSync(meta)) bajar(nombreAsset(id, 'horizontal-meta'), meta);

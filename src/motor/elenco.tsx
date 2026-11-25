@@ -1,7 +1,7 @@
 // Elenco fijo: cada clave es un personaje o criatura listo para usar en el guion visual.
 // Si una clave no existe, el motor usa un humano genérico; con `props` se ajusta cualquier detalle.
 import React, { useContext } from 'react';
-import { C, Personaje, PersonajeProps, Borde, CalidadHD, ESTILO_PJ } from '../comun/vasija';
+import { C, Personaje, PersonajeProps, Borde, CalidadHD, ESTILO_PJ, EstiloPJ } from '../comun/vasija';
 import { Cuadrupedo, Serpiente, Ave, Pez, Escorpion, AvePie, Bichito, TipoCuadrupedo } from './bestias';
 import { AnimalNorte, EspecieNorte } from './norteExtra';
 import { ELENCO_AZTECA, NOMBRE_EN_AZTECA, type DibujoProps } from './elencoAzteca';
@@ -365,7 +365,7 @@ export type Estado = {
 
 /** Dibuja la ficha del elenco con el estado actual del actor. */
 export const DibujarActor: React.FC<{ ficha: Ficha; e: Estado; props?: Record<string, unknown>; f: number }> = ({ ficha, e, props = {}, f }) => {
-  const hd = useContext(CalidadHD);
+  const hd = useContext(CalidadHD), estiloPJ = useContext(EstiloPJ);
   const tx = e.temblor ? Math.sin(f * 1.7) * e.temblor * 4 : 0;
   const base = { x: e.x + tx, y: e.y, voltear: e.voltear, opacity: e.opacity };
   let cuerpo: React.ReactNode;
@@ -457,7 +457,8 @@ export const DibujarActor: React.FC<{ ficha: Ficha; e: Estado; props?: Record<st
   return (
     <g>
       {e.brillo > 0 && <circle cx={e.x} cy={e.y - 180 * e.s} r={260 * e.s} fill="url(#haloBlanco)" opacity={e.brillo} />}
-      {hd && ['cuadrupedo', 'serpiente', 'ave', 'escorpion', 'avepie', 'bichito'].includes(ficha.tipo) ? <g filter="url(#volumenHD)">{cuerpo}</g> : cuerpo}
+      {hd && estiloPJ === 'v7' && ficha.tipo !== 'persona' && ficha.tipo !== 'ojo' ? <g filter="url(#contornoLuzV7)">{cuerpo}</g> // v7: animales y criaturas con el mismo contorno y luz de borde que las personas, sin sombra pintada
+        : hd && ['cuadrupedo', 'serpiente', 'ave', 'escorpion', 'avepie', 'bichito'].includes(ficha.tipo) ? <g filter="url(#volumenHD)">{cuerpo}</g> : cuerpo}
     </g>
   );
 };

@@ -48,7 +48,7 @@ test('VERIFICADO de la Biblia vale solo con la huella del guion revisado', () =>
 
 test('claridad: el horizontal tiene que ser del estilo de personajes actual (PJ = ESTILO_PJ de vasija.tsx)', () => {
   const vasija = readFileSync(join(RAIZ, 'src/comun/vasija.tsx'), 'utf8');
-  assert.match(vasija, new RegExp(`export const ESTILO_PJ: EstiloPersonaje = '${PJ}'`));
+  assert.match(vasija, new RegExp(`export const ESTILO_PJ: EstiloPersonaje = '${PJ.split('+')[0]}'`));
   const antes = process.cwd(), dir = mkdtempSync(join(tmpdir(), 'pj-'));
   process.chdir(dir);
   try {

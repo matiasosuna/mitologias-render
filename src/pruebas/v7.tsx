@@ -1,5 +1,5 @@
 // Personajes v7 (v6 + mejoras del muñeco del tarot, src/munecos2 de hermes-videos): v6 arriba y v7 abajo.
-// Láminas en la nube: gh workflow run laminas.yml -R matiasosuna/mitologias-render -f ids='v7.tsx:v7-nordicos,v7.tsx:v7-griegos,v7.tsx:v7-egipcios,v7.tsx:v7-varios,v7.tsx:v7-poses,v7.tsx:v7-caras,v7.tsx:v7-andar'
+// Láminas en la nube: gh workflow run laminas.yml -R matiasosuna/mitologias-render -f ids='v7.tsx:v7-nordicos,v7.tsx:v7-griegos,v7.tsx:v7-egipcios,v7.tsx:v7-varios,v7.tsx:v7-poses,v7.tsx:v7-caras,v7.tsx:v7-andar,v7.tsx:v7-animales,v7.tsx:v7-animales2'
 //   v7-nordicos / v7-griegos / v7-egipcios = seis oficiales (el último caminando) · v7-caras = caras de cerca · v7-andar = ciclo de paso de Odín
 import React from 'react';
 import { Composition, registerRoot, useCurrentFrame, AbsoluteFill } from 'remotion';
@@ -19,18 +19,18 @@ const Defs: React.FC = () => (
 );
 const Rotulo: React.FC<{ y: number; t: string }> = ({ y, t }) => <text x={24} y={y} fontFamily={TITULO} fontWeight={700} fontSize={34} fill="#FFF" stroke="#000" strokeWidth={5} style={{ paintOrder: 'stroke' }}>{t}</text>;
 
-const Fila: React.FC<{ estilo: EstiloPersonaje; ids: string[]; y: number; f: number; caminaUltimo?: boolean }> = ({ estilo, ids, y, f, caminaUltimo }) => (
+const Fila: React.FC<{ estilo: EstiloPersonaje; ids: string[]; y: number; f: number; caminaUltimo?: boolean; s?: number }> = ({ estilo, ids, y, f, caminaUltimo, s = 0.98 }) => (
   <EstiloPJ.Provider value={estilo}>
     {ids.map((id, i) => {
       const ficha = ELENCO[id];
       if (!ficha) return <text key={id} x={160 + i * 320} y={y - 200} fontSize={30} fill="red">{`falta ${id}`}</text>;
-      const e = estado(170 + i * 316, y, 0.98, caminaUltimo && i === ids.length - 1 ? anda(48 + f * 2) : {});
+      const e = estado(170 + i * 316, y, s, caminaUltimo && i === ids.length - 1 ? anda(48 + f * 2) : {});
       return <g key={id}><DibujarActor ficha={ficha} e={e} f={f} /><text x={170 + i * 316} y={y + 34} textAnchor="middle" fontSize={24} fill="#FFF" stroke="#000" strokeWidth={4} style={{ paintOrder: 'stroke' }}>{id}</text></g>;
     })}
   </EstiloPJ.Provider>
 );
 
-const Comparacion: React.FC<{ serie: string; ids: string[] }> = ({ serie, ids }) => {
+const Comparacion: React.FC<{ serie: string; ids: string[]; animales?: boolean }> = ({ serie, ids, animales }) => {
   aplicarTema(serie);
   const f = useCurrentFrame(), [c0, c1, c2] = TEMA.cielos.barro;
   return (
@@ -40,8 +40,8 @@ const Comparacion: React.FC<{ serie: string; ids: string[] }> = ({ serie, ids })
           <Defs />
           <rect width={1920} height={540} fill={c1} /><rect y={540} width={1920} height={540} fill={c0} />
           <rect y={496} width={1920} height={8} fill={c2} /><rect y={1036} width={1920} height={8} fill={c2} />
-          <Fila estilo="v6" ids={ids} y={500} f={f} caminaUltimo />
-          <Fila estilo="v7" ids={ids} y={1040} f={f} caminaUltimo />
+          <Fila estilo="v6" ids={ids} y={animales ? 460 : 500} f={f} caminaUltimo={!animales} s={animales ? 0.55 : 0.98} />
+          <Fila estilo="v7" ids={ids} y={animales ? 1000 : 1040} f={f} caminaUltimo={!animales} s={animales ? 0.55 : 0.98} />
           <Rotulo y={44} t="v6 (antes)" /><Rotulo y={584} t="v7" />
         </svg>
       </CalidadHD.Provider>
@@ -136,6 +136,8 @@ registerRoot(() => (
     <Composition id="v7-griegos" component={() => <Comparacion serie="griegas" ids={GRIEGOS} />} durationInFrames={120} fps={24} width={1920} height={1080} />
     <Composition id="v7-egipcios" component={() => <Comparacion serie="egipcias" ids={EGIPCIOS} />} durationInFrames={120} fps={24} width={1920} height={1080} />
     <Composition id="v7-varios" component={() => <Comparacion serie="nordicas" ids={VARIOS} />} durationInFrames={120} fps={24} width={1920} height={1080} />
+    <Composition id="v7-animales" component={() => <Comparacion serie="nordicas" ids={['fenrir_oficial', 'fafnir_oficial', 'grani_oficial', 'apofis_oficial', 'ammit_oficial', 'bennu_oficial']} animales />} durationInFrames={120} fps={24} width={1920} height={1080} />
+    <Composition id="v7-animales2" component={() => <Comparacion serie="hawaianas" ids={['puaa', 'alae', 'honu', 'panaewa_oficial', 'hidra_oficial', 'leon_biblia']} animales />} durationInFrames={120} fps={24} width={1920} height={1080} />
     <Composition id="v7-poses" component={Poses} durationInFrames={120} fps={24} width={1920} height={1080} />
     <Composition id="v7-caras" component={Caras} durationInFrames={120} fps={24} width={1920} height={1080} />
     <Composition id="v7-andar" component={Andar} durationInFrames={120} fps={24} width={1920} height={1080} />
