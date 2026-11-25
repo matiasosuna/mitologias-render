@@ -1,1560 +1,1561 @@
 {
- "id": "griegas-02-prometeo",
- "serie": "griegas",
- "numero": "02",
- "titulo": {
-  "es": "Prometeo y el fuego robado",
-  "pt": "Prometeu e o fogo roubado",
-  "en": "Prometheus and the Stolen Fire"
- },
- "tituloGriego": "ΠΡΟΜΗΘΕΥΣ",
- "escenas": [
-  {
-   "id": "hermanos",
-   "fondo": "olimpo",
-   "camara": {
-    "de": 0,
-    "a": 500,
-    "zoom": [
-     1,
-     1.06
-    ]
-   },
-   "frases": [
-    {
-     "es": "Zeus era el rey de los dioses. Había vencido a los antiguos dioses gigantes, los Titanes.",
-     "en": "Zeus was the king of the gods. He had beaten the old giant gods, the Titans."
-    },
-    {
-     "es": "Dos Titanes no habían luchado contra él: Prometeo y su hermano Epimeteo.",
-     "en": "Two Titans had not fought against him: Prometheus and his brother Epimetheus."
-    },
-    {
-     "es": "Prometeo era astuto y siempre pensaba antes.",
-     "en": "Prometheus was clever and always thought ahead."
-    },
-    {
-     "es": "Epimeteo actuaba primero y pensaba después.",
-     "en": "Epimetheus acted first and thought later."
-    },
-    {
-     "es": "Los dioses les dieron un trabajo: llenar la tierra de seres vivos.",
-     "en": "The gods gave them a job: to fill the earth with living creatures."
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "trono",
-     "x": 420
-    }
-   ],
-   "actores": [
-    {
-     "id": "zeus",
-     "x": 420,
-     "pasos": [
-      {
-       "en": 0.3,
-       "hace": "levanta"
-      },
-      {
-       "en": 1,
-       "hace": "baja"
-      },
-      {
-       "en": 4,
-       "hace": "senala"
-      },
-      {
-       "en": 4.1,
-       "hace": "habla",
-       "dur": 0.8
-      }
-     ],
-     "como": "zeus_oficial"
-    },
-    {
-     "id": "prometeo",
-     "x": 900,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 1,
-       "hace": "entra",
-       "a": 1050
-      },
-      {
-       "en": 2,
-       "hace": "brilla",
-       "dur": 0.9
-      }
-     ],
-     "como": "prometeo_oficial"
-    },
-    {
-     "id": "epimeteo",
-     "x": 1300,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 1.3,
-       "hace": "entra",
-       "a": 1350
-      },
-      {
-       "en": 3,
-       "hace": "camina",
-       "a": 1250
-      },
-      {
-       "en": 3.4,
-       "hace": "cae"
-      },
-      {
-       "en": 3.8,
-       "hace": "levantarse"
-      }
-     ],
-     "como": "epimeteo_oficial"
-    }
-   ],
-   "efectos": [
-    {
-     "en": 4,
-     "tipo": "luz",
-     "x": 1200,
-     "y": 300,
-     "dur": 1
-    }
-   ]
+  "id": "griegas-02-prometeo",
+  "serie": "griegas",
+  "numero": "02",
+  "titulo": {
+    "es": "Prometeo y el fuego robado",
+    "pt": "Prometeu e o fogo roubado",
+    "en": "Prometheus and the Stolen Fire"
   },
-  {
-   "id": "dones",
-   "fondo": "campo",
-   "camara": {
-    "de": 0,
-    "a": 900
-   },
-   "frases": [
+  "tituloGriego": "ΠΡΟΜΗΘΕΥΣ",
+  "escenas": [
     {
-     "es": "Epimeteo pidió repartir los regalos, y Prometeo aceptó.",
-     "en": "Epimetheus asked to hand out the gifts, and Prometheus agreed."
+      "id": "hermanos",
+      "fondo": "olimpo",
+      "camara": {
+        "de": 0,
+        "a": 500,
+        "zoom": [
+          1,
+          1.06
+        ]
+      },
+      "frases": [
+        {
+          "es": "Zeus era el rey de los dioses. Había vencido a los antiguos dioses gigantes, los Titanes.",
+          "en": "Zeus was the king of the gods. He had beaten the old giant gods, the Titans."
+        },
+        {
+          "es": "Dos Titanes no habían luchado contra él: Prometeo y su hermano Epimeteo.",
+          "en": "Two Titans had not fought against him: Prometheus and his brother Epimetheus."
+        },
+        {
+          "es": "Prometeo era astuto y siempre pensaba antes.",
+          "en": "Prometheus was clever and always thought ahead."
+        },
+        {
+          "es": "Epimeteo actuaba primero y pensaba después.",
+          "en": "Epimetheus acted first and thought later."
+        },
+        {
+          "es": "Los dioses les dieron un trabajo: llenar la tierra de seres vivos.",
+          "en": "The gods gave them a job: to fill the earth with living creatures."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "trono",
+          "x": 420
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "x": 420,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "baja"
+            },
+            {
+              "en": 4,
+              "hace": "senala"
+            },
+            {
+              "en": 4.1,
+              "hace": "habla",
+              "dur": 0.8
+            }
+          ],
+          "como": "zeus_oficial"
+        },
+        {
+          "id": "prometeo",
+          "x": 900,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "entra",
+              "a": 1050
+            },
+            {
+              "en": 2,
+              "hace": "brilla",
+              "dur": 0.9
+            }
+          ],
+          "como": "prometeo_oficial"
+        },
+        {
+          "id": "epimeteo",
+          "x": 1300,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.3,
+              "hace": "entra",
+              "a": 1350
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1250
+            },
+            {
+              "en": 3.4,
+              "hace": "cae"
+            },
+            {
+              "en": 3.8,
+              "hace": "levantarse"
+            }
+          ],
+          "como": "epimeteo_oficial"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 4,
+          "tipo": "luz",
+          "x": 1200,
+          "y": 300,
+          "dur": 1
+        }
+      ]
     },
     {
-     "es": "Al león le dio garras y fuerza. A la gacela, patas veloces para escapar.",
-     "en": "To the lion he gave claws and strength. To the gazelle, fast legs to escape."
+      "id": "dones",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 900
+      },
+      "frases": [
+        {
+          "es": "Epimeteo pidió repartir los regalos, y Prometeo aceptó.",
+          "en": "Epimetheus asked to hand out the gifts, and Prometheus agreed."
+        },
+        {
+          "es": "Al león le dio garras y fuerza. A la gacela, patas veloces para escapar.",
+          "en": "To the lion he gave claws and strength. To the gazelle, fast legs to escape."
+        },
+        {
+          "es": "A las aves les dio alas, y al oso un abrigo grueso para el invierno.",
+          "en": "To the birds he gave wings, and to the bear a thick coat for winter."
+        },
+        {
+          "es": "Dio y dio sin pensar, hasta que no le quedó nada.",
+          "en": "He gave and gave without thinking, until he had nothing left."
+        },
+        {
+          "es": "Entonces vio que faltaba una criatura: el ser humano. Y ya no tenía ningún regalo para él.",
+          "en": "Then he saw that one creature was missing: the human. And he had no gift left for it."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cofre",
+          "x": 560
+        }
+      ],
+      "actores": [
+        {
+          "id": "prometeo",
+          "x": 250,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "ofrece"
+            },
+            {
+              "en": 1,
+              "hace": "sale"
+            }
+          ],
+          "como": "prometeo_oficial"
+        },
+        {
+          "id": "epimeteo",
+          "x": 420,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2,
+              "hace": "camina",
+              "a": 1100
+            },
+            {
+              "en": 2.5,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1500
+            },
+            {
+              "en": 4,
+              "hace": "lamenta"
+            }
+          ],
+          "como": "epimeteo_oficial"
+        },
+        {
+          "id": "leon",
+          "x": 820,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.2,
+              "hace": "habla",
+              "dur": 0.4
+            }
+          ],
+          "como": "leon_griego_oficial"
+        },
+        {
+          "id": "gacela",
+          "como": "ciervo_griego_oficial",
+          "x": 1000,
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.7,
+              "hace": "corre",
+              "a": 2300,
+              "dur": 1.5
+            }
+          ]
+        },
+        {
+          "id": "aguila",
+          "x": 1150,
+          "y": 300,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.1,
+              "hace": "vuela",
+              "a": [
+                1700,
+                220
+              ]
+            }
+          ],
+          "como": "aguila_griega_oficial"
+        },
+        {
+          "id": "oso",
+          "x": 1320,
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "aparece"
+            }
+          ],
+          "como": "oso_griego_oficial"
+        },
+        {
+          "id": "humano",
+          "como": "joven_griego_oficial",
+          "x": 1850,
+          "mira": "izq",
+          "props": {
+            "ropa": "desnudo",
+            "tocado": null
+          },
+          "pasos": [
+            {
+              "en": 4.2,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.5,
+              "hace": "tiembla",
+              "dur": 0.5
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "chispas",
+          "x": 560,
+          "y": 640,
+          "dur": 2.5
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 4.3,
+          "texto": {
+            "es": "EL HUMANO",
+            "pt": "O HUMANO",
+            "en": "HUMANKIND"
+          },
+          "x": 1850,
+          "y": 330
+        }
+      ]
     },
     {
-     "es": "A las aves les dio alas, y al oso un abrigo grueso para el invierno.",
-     "en": "To the birds he gave wings, and to the bear a thick coat for winter."
+      "id": "barro",
+      "fondo": "costa",
+      "camara": {
+        "de": -100,
+        "a": 200,
+        "zoom": [
+          1,
+          1.08
+        ]
+      },
+      "frases": [
+        {
+          "es": "Prometeo decidió ayudar al ser humano, la criatura que habían olvidado.",
+          "en": "Prometheus decided to help the human, the creature they had forgotten."
+        },
+        {
+          "es": "Tomó barro de la orilla de un río, lo mezcló con agua y modeló figuras a imagen de los dioses.",
+          "en": "He took clay from a river bank, mixed it with water, and shaped figures like the gods."
+        },
+        {
+          "es": "Los animales miran al suelo, pero él hizo a los humanos erguidos, para mirar al cielo.",
+          "en": "Animals look down at the ground, but he made humans stand upright, to look at the sky."
+        },
+        {
+          "es": "Atenea, la diosa de la sabiduría, sopló sobre las figuras, y el barro abrió los ojos.",
+          "en": "Athena, the goddess of wisdom, breathed on the figures, and the clay opened its eyes."
+        },
+        {
+          "es": "Así nacieron los primeros humanos: sin garras ni alas, pero de pie.",
+          "en": "So the first humans were born: no claws and no wings, but standing tall."
+        }
+      ],
+      "actores": [
+        {
+          "id": "prometeo",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "camina",
+              "a": 520
+            },
+            {
+              "en": 1.2,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 1.3,
+              "hace": "ofrece"
+            },
+            {
+              "en": 2.6,
+              "hace": "levantarse"
+            },
+            {
+              "en": 2.7,
+              "hace": "levanta"
+            }
+          ],
+          "como": "prometeo_oficial"
+        },
+        {
+          "id": "barro1",
+          "como": "joven_griego_2_oficial",
+          "x": 700,
+          "props": {
+            "ropa": "desnudo",
+            "tocado": null,
+            "piel": "#8C3D18"
+          },
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.3,
+              "hace": "transforma",
+              "en_que": "joven_griego_oficial"
+            },
+            {
+              "en": 4,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "barro2",
+          "como": "mujer_griega_oficial",
+          "x": 860,
+          "props": {
+            "piel": "#8C3D18"
+          },
+          "pasos": [
+            {
+              "en": 1.7,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.5,
+              "hace": "transforma",
+              "en_que": "mujer_griega_2_oficial"
+            },
+            {
+              "en": 4.2,
+              "hace": "levanta"
+            }
+          ]
+        },
+        {
+          "id": "atenea",
+          "x": 1250,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3.1,
+              "hace": "habla",
+              "dur": 0.6
+            },
+            {
+              "en": 3.1,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ],
+          "como": "atenea_oficial"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 3.2,
+          "tipo": "luz",
+          "x": 900,
+          "y": 500,
+          "dur": 0.8
+        },
+        {
+          "en": 4,
+          "tipo": "estrellas"
+        },
+        {
+          "en": 4,
+          "tipo": "oscurecer",
+          "intensidad": 0.6
+        }
+      ]
     },
     {
-     "es": "Dio y dio sin pensar, hasta que no le quedó nada.",
-     "en": "He gave and gave without thinking, until he had nothing left."
+      "id": "mecone",
+      "fondo": "templo",
+      "camara": {
+        "de": 0,
+        "a": 300
+      },
+      "frases": [
+        {
+          "es": "Un día, dioses y humanos se reunieron para repartirse un sacrificio, un animal ofrecido a los dioses.",
+          "en": "One day, gods and humans met to share an animal sacrifice, an animal offered to the gods."
+        },
+        {
+          "es": "Prometeo mató un gran buey e hizo dos montones.",
+          "en": "Prometheus killed a great ox and made two piles."
+        },
+        {
+          "es": "En uno escondió la buena carne dentro del estómago del buey, que se veía feo.",
+          "en": "In one he hid the good meat inside the ox's stomach, which looked ugly."
+        },
+        {
+          "es": "En el otro puso los huesos pelados bajo una grasa blanca y brillante.",
+          "en": "In the other he put the bare bones under shiny white fat."
+        },
+        {
+          "es": "Zeus eligió la grasa. Debajo solo encontró huesos, y se enojó mucho.",
+          "en": "Zeus chose the fat. Under it he found only bones, and he was very angry."
+        },
+        {
+          "es": "Por eso los griegos quemaban los huesos para los dioses y se comían la carne ellos.",
+          "en": "That is why the Greeks burned the bones for the gods and ate the meat themselves."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "altar",
+          "x": 980
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "x": 420,
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "camina",
+              "a": 780
+            },
+            {
+              "en": 4.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.6,
+              "hace": "tiembla",
+              "dur": 0.4
+            }
+          ],
+          "como": "zeus_oficial"
+        },
+        {
+          "id": "hera",
+          "x": 230,
+          "como": "hera_oficial"
+        },
+        {
+          "id": "prometeo",
+          "x": 1200,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "golpea"
+            },
+            {
+              "en": 2,
+              "hace": "ofrece"
+            },
+            {
+              "en": 3,
+              "hace": "senala"
+            }
+          ],
+          "como": "prometeo_oficial"
+        },
+        {
+          "id": "buey",
+          "x": 1100,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "entra",
+              "a": 1000
+            },
+            {
+              "en": 1.2,
+              "hace": "desaparece"
+            }
+          ],
+          "como": "buey_griego_oficial"
+        },
+        {
+          "id": "hombre",
+          "x": 1500,
+          "mira": "izq",
+          "como": "hombre_griego_2_oficial"
+        },
+        {
+          "id": "mujer",
+          "x": 1650,
+          "mira": "izq",
+          "como": "mujer_griega_2_oficial"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1.2,
+          "tipo": "destello"
+        },
+        {
+          "en": 4.6,
+          "tipo": "rayo",
+          "x": 1300
+        },
+        {
+          "en": 5,
+          "tipo": "fuego",
+          "x": 980,
+          "y": 666
+        },
+        {
+          "en": 5,
+          "tipo": "humo",
+          "x": 980,
+          "y": 600
+        }
+      ]
     },
     {
-     "es": "Entonces vio que faltaba una criatura: el ser humano. Y ya no tenía ningún regalo para él.",
-     "en": "Then he saw that one creature was missing: the human. And he had no gift left for it."
+      "id": "sinfuego",
+      "fondo": "noche",
+      "camara": {
+        "de": 0,
+        "a": 400,
+        "zoom": [
+          1.05,
+          1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Zeus estaba furioso, así que castigó a los humanos.",
+          "en": "Zeus was furious, so he punished the humans."
+        },
+        {
+          "es": "Les quitó el fuego.",
+          "en": "He took away their fire."
+        },
+        {
+          "es": "Sin fuego, las noches eran heladas y oscuras, y tenían que comer la carne cruda.",
+          "en": "Without fire, the nights were icy and dark, and they had to eat raw meat."
+        },
+        {
+          "es": "Los humanos se escondían en cuevas, temblando de miedo.",
+          "en": "Humans hid in caves, shivering and afraid."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "cueva",
+          "x": 1250
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "x": 300,
+          "y": 560,
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "levanta"
+            },
+            {
+              "en": 1,
+              "hace": "golpea"
+            }
+          ],
+          "como": "zeus_oficial"
+        },
+        {
+          "id": "hombre",
+          "x": 800,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "tiembla",
+              "dur": 2
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 1180
+            }
+          ],
+          "como": "hombre_griego_2_oficial"
+        },
+        {
+          "id": "mujer",
+          "x": 950,
+          "pasos": [
+            {
+              "en": 2.2,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3.1,
+              "hace": "camina",
+              "a": 1300
+            }
+          ],
+          "como": "mujer_griega_2_oficial"
+        },
+        {
+          "id": "nino",
+          "x": 1080,
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "tiembla",
+              "dur": 1.6
+            }
+          ],
+          "como": "nino_griego_oficial"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "fogata",
+          "x": 900,
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "humo",
+          "x": 900,
+          "y": 700,
+          "dur": 1
+        },
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "intensidad": 0.8
+        },
+        {
+          "en": 2,
+          "tipo": "nieve"
+        }
+      ]
+    },
+    {
+      "id": "robo",
+      "fondo": "olimpo",
+      "camara": {
+        "de": 0,
+        "a": 1600,
+        "zoom": [
+          1,
+          1.05
+        ]
+      },
+      "frases": [
+        {
+          "es": "Prometeo no soportaba verlos sufrir, así que subió en secreto al Olimpo, donde viven los dioses.",
+          "en": "Prometheus could not bear to see them suffer, so he secretly climbed Olympus, where the gods live."
+        },
+        {
+          "es": "Allí tomó una chispa de fuego del carro de Helios, el dios del sol.",
+          "en": "There he took a spark of fire from the chariot of Helios, the sun god."
+        },
+        {
+          "es": "Otro libro antiguo lo cuenta distinto: lo tomó de Hefesto, el dios de la fragua.",
+          "en": "Another old book tells it differently: he took it from Hephaestus, the god of the forge."
+        },
+        {
+          "es": "Escondió la brasa dentro de una caña de hinojo, una planta hueca que arde despacio sin llama.",
+          "en": "He hid the glowing ember inside a fennel stalk, a hollow plant that burns slowly without a flame."
+        },
+        {
+          "es": "Bajó corriendo a la tierra con la caña, y Zeus no lo vio.",
+          "en": "He ran down to earth with the stalk, and Zeus did not see him."
+        },
+        {
+          "es": "Sopló la brasa delante de los humanos, y la primera llama iluminó la oscuridad.",
+          "en": "He blew on the ember in front of the humans, and the first flame lit up the dark."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 900
+        },
+        {
+          "tipo": "estatua",
+          "x": 2700,
+          "props": {
+            "objeto": "rayo",
+            "tocado": "corona"
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "prometeo",
+          "x": 200,
+          "pasos": [
+            {
+              "en": 0.2,
+              "hace": "camina",
+              "a": 700
+            },
+            {
+              "en": 1,
+              "hace": "senala"
+            },
+            {
+              "en": 3,
+              "hace": "camina",
+              "a": 850
+            },
+            {
+              "en": 3.4,
+              "hace": "toma",
+              "objeto": "cana"
+            },
+            {
+              "en": 4,
+              "hace": "corre",
+              "a": 2350
+            },
+            {
+              "en": 5,
+              "hace": "arrodilla"
+            },
+            {
+              "en": 5.1,
+              "hace": "ofrece"
+            }
+          ],
+          "como": "prometeo_oficial"
+        },
+        {
+          "id": "hombre",
+          "x": 2650,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4.5,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.5,
+              "hace": "levanta"
+            }
+          ],
+          "como": "hombre_griego_2_oficial"
+        },
+        {
+          "id": "mujer",
+          "x": 2800,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 4.6,
+              "hace": "aparece"
+            },
+            {
+              "en": 5.6,
+              "hace": "reza"
+            }
+          ],
+          "como": "mujer_griega_2_oficial"
+        },
+        {
+          "id": "helios",
+          "como": "helios_oficial",
+          "x": 1300,
+          "capa": "fondo",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1,
+              "hace": "brilla",
+              "dur": 1
+            },
+            {
+              "en": 1.95,
+              "hace": "desaparece"
+            }
+          ]
+        },
+        {
+          "id": "hefesto",
+          "como": "hefesto_oficial",
+          "x": 1150,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "aparece"
+            },
+            {
+              "en": 2.6,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.95,
+              "hace": "desaparece"
+            }
+          ]
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.6,
+          "tipo": "chispas",
+          "x": 1100,
+          "y": 640,
+          "dur": 0.8
+        },
+        {
+          "en": 4.5,
+          "tipo": "oscurecer",
+          "intensidad": 0.7,
+          "dur": 1
+        },
+        {
+          "en": 5.3,
+          "tipo": "fuego",
+          "x": 2500,
+          "y": 790
+        },
+        {
+          "en": 5.3,
+          "tipo": "chispas",
+          "x": 2500,
+          "y": 700
+        }
+      ]
+    },
+    {
+      "id": "oficios",
+      "fondo": "ciudad",
+      "camara": {
+        "de": 0,
+        "a": 1400
+      },
+      "frases": [
+        {
+          "es": "Con el fuego, todo cambió.",
+          "en": "With fire, everything changed."
+        },
+        {
+          "es": "Los humanos cocinaban su comida y se abrigaban en invierno.",
+          "en": "Humans cooked their food and stayed warm in winter."
+        },
+        {
+          "es": "Cocían el barro para hacer vasijas y fundían metal para hacer herramientas.",
+          "en": "They baked clay into pots and melted metal to make tools."
+        },
+        {
+          "es": "Prometeo también les enseñó a contar, a escribir y a curar a los enfermos.",
+          "en": "Prometheus also taught them to count, to write, and to heal the sick."
+        },
+        {
+          "es": "Por eso los griegos lo querían como el amigo de la humanidad.",
+          "en": "That is why the Greeks loved him as the friend of humankind."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 400
+        },
+        {
+          "tipo": "anfora",
+          "x": 950,
+          "s": 0.6
+        },
+        {
+          "tipo": "anfora",
+          "x": 1060,
+          "s": 0.45
+        },
+        {
+          "tipo": "altar",
+          "x": 1500,
+          "props": {
+            "fuego": true
+          }
+        }
+      ],
+      "actores": [
+        {
+          "id": "hombre",
+          "x": 250,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "ofrece"
+            }
+          ],
+          "como": "hombre_griego_2_oficial"
+        },
+        {
+          "id": "mujer",
+          "x": 560,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "abraza"
+            }
+          ],
+          "como": "mujer_griega_2_oficial"
+        },
+        {
+          "id": "alfarero",
+          "como": "anciano_griego_2_oficial",
+          "x": 830,
+          "pasos": [
+            {
+              "en": 2,
+              "hace": "ofrece"
+            }
+          ]
+        },
+        {
+          "id": "herrero",
+          "como": "hefesto_oficial",
+          "x": 1350,
+          "rotulo": "",
+          "pasos": [
+            {
+              "en": 2.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.7,
+              "hace": "golpea"
+            }
+          ]
+        },
+        {
+          "id": "prometeo",
+          "x": 1900,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "entra",
+              "a": 1850
+            },
+            {
+              "en": 3.2,
+              "hace": "senala"
+            },
+            {
+              "en": 4,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ],
+          "como": "prometeo_oficial"
+        },
+        {
+          "id": "joven",
+          "x": 1700,
+          "pasos": [
+            {
+              "en": 3.3,
+              "hace": "aparece"
+            },
+            {
+              "en": 4.2,
+              "hace": "levanta"
+            }
+          ],
+          "como": "joven_griego_oficial"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2.4,
+          "tipo": "chispas",
+          "x": 1500,
+          "y": 660,
+          "dur": 1
+        },
+        {
+          "en": 3.3,
+          "tipo": "estrellas"
+        }
+      ],
+      "rotulos": [
+        {
+          "en": 3.4,
+          "texto": "Α Β Γ Δ",
+          "x": 1750,
+          "y": 230,
+          "hasta": 4
+        },
+        {
+          "en": 4.1,
+          "texto": {
+            "es": "AMIGO DE LA HUMANIDAD",
+            "pt": "AMIGO DA HUMANIDADE",
+            "en": "FRIEND OF HUMANKIND"
+          },
+          "x": 1800,
+          "y": 220
+        }
+      ]
+    },
+    {
+      "id": "castigo",
+      "fondo": "monte",
+      "camara": {
+        "de": 0,
+        "a": 600,
+        "zoom": [
+          1,
+          1.1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Desde el Olimpo, Zeus vio fuegos brillando por toda la tierra, y supo quién los había dado.",
+          "en": "From Olympus, Zeus saw fires shining all over the earth, and he knew who had given them."
+        },
+        {
+          "es": "Ordenó a Hefesto, el dios de la fragua, que encadenara a Prometeo a una roca en lo alto del Cáucaso.",
+          "en": "He ordered Hephaestus, god of the forge, to chain Prometheus to a rock in the Caucasus mountains."
+        },
+        {
+          "es": "Hefesto obedeció con tristeza e hizo cadenas que nadie podía romper.",
+          "en": "Hephaestus obeyed sadly and made chains that no one could break."
+        },
+        {
+          "es": "Allí quedó Prometeo, bajo el viento, el sol y la nieve.",
+          "en": "There Prometheus stayed, in the wind, the sun and the snow."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1100,
+          "s": 2.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "zeus",
+          "x": 300,
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "senala"
+            },
+            {
+              "en": 1,
+              "hace": "habla",
+              "dur": 0.8
+            },
+            {
+              "en": 1.5,
+              "hace": "sale"
+            }
+          ],
+          "como": "zeus_oficial"
+        },
+        {
+          "id": "hefesto",
+          "x": 850,
+          "pasos": [
+            {
+              "en": 1.2,
+              "hace": "entra",
+              "a": 900
+            },
+            {
+              "en": 2,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.4,
+              "hace": "golpea"
+            },
+            {
+              "en": 2.8,
+              "hace": "lamenta"
+            },
+            {
+              "en": 3,
+              "hace": "sale"
+            }
+          ],
+          "como": "hefesto_oficial"
+        },
+        {
+          "id": "prometeo",
+          "x": 1120,
+          "y": 560,
+          "props": {
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 1.4,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.6,
+              "hace": "levanta"
+            },
+            {
+              "en": 3,
+              "hace": "tiembla",
+              "dur": 1
+            }
+          ],
+          "como": "prometeo_oficial"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 0,
+          "tipo": "estrellas",
+          "dur": 1
+        },
+        {
+          "en": 2,
+          "tipo": "chispas",
+          "x": 1050,
+          "y": 560,
+          "dur": 1
+        },
+        {
+          "en": 3,
+          "tipo": "nieve"
+        },
+        {
+          "en": 3,
+          "tipo": "niebla"
+        }
+      ]
+    },
+    {
+      "id": "aguila",
+      "fondo": "monte",
+      "camara": {
+        "de": 400,
+        "a": 700,
+        "zoom": [
+          1.05,
+          1
+        ]
+      },
+      "frases": [
+        {
+          "es": "Pero el castigo no terminó ahí.",
+          "en": "But the punishment did not end there."
+        },
+        {
+          "es": "Cada día, un águila enviada por Zeus bajaba a la roca y le comía el hígado.",
+          "en": "Every day, an eagle sent by Zeus came to the rock and ate his liver."
+        },
+        {
+          "es": "Prometeo no podía morir, así que el hígado le crecía de nuevo cada noche. Entonces volvía el águila.",
+          "en": "Prometheus could not die, so his liver grew back every night. Then the eagle came again."
+        },
+        {
+          "es": "Aun así, Prometeo nunca se arrepintió de ayudar a los humanos.",
+          "en": "Even so, Prometheus never regretted helping humans."
+        },
+        {
+          "es": "Sufrió muchos años, hasta que un héroe mató al águila de un flechazo y rompió sus cadenas.",
+          "en": "He suffered for many years, until a hero shot the eagle and broke his chains."
+        },
+        {
+          "es": "Ese héroe fue Heracles.",
+          "en": "That hero was Heracles."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "roca",
+          "x": 1100,
+          "s": 2.2
+        }
+      ],
+      "actores": [
+        {
+          "id": "prometeo",
+          "x": 1120,
+          "y": 560,
+          "props": {
+            "capa": null
+          },
+          "pasos": [
+            {
+              "en": 1.5,
+              "hace": "tiembla",
+              "dur": 0.6
+            },
+            {
+              "en": 3,
+              "hace": "levanta"
+            },
+            {
+              "en": 4.6,
+              "hace": "camina",
+              "a": 1300
+            },
+            {
+              "en": 5,
+              "hace": "abraza"
+            }
+          ],
+          "como": "prometeo_oficial"
+        },
+        {
+          "id": "aguila",
+          "x": 1700,
+          "y": 250,
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.1,
+              "hace": "vuela",
+              "a": [
+                1230,
+                430
+              ]
+            },
+            {
+              "en": 2,
+              "hace": "vuela",
+              "a": [
+                1800,
+                200
+              ]
+            },
+            {
+              "en": 2.6,
+              "hace": "vuela",
+              "a": [
+                1250,
+                430
+              ]
+            },
+            {
+              "en": 4.4,
+              "hace": "cae"
+            },
+            {
+              "en": 4.5,
+              "hace": "desaparece"
+            }
+          ],
+          "como": "aguila_griega_oficial"
+        },
+        {
+          "id": "heracles",
+          "x": 700,
+          "props": {
+            "objeto": "arco"
+          },
+          "pasos": [
+            {
+              "en": 4,
+              "hace": "entra",
+              "a": 800
+            },
+            {
+              "en": 4.3,
+              "hace": "senala"
+            },
+            {
+              "en": 4.6,
+              "hace": "camina",
+              "a": 1050
+            }
+          ],
+          "como": "heracles_oficial"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 2,
+          "tipo": "oscurecer",
+          "dur": 0.5
+        },
+        {
+          "en": 2,
+          "tipo": "estrellas",
+          "dur": 0.6
+        },
+        {
+          "en": 4.4,
+          "tipo": "destello"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "fondo": "campo",
+      "camara": {
+        "de": 0,
+        "a": 700
+      },
+      "frases": [
+        {
+          "es": "Así Prometeo engañó a Zeus y robó el fuego, y por eso los humanos tuvieron fuego y empezaron a construir ciudades.",
+          "en": "So Prometheus tricked Zeus and stole fire, and that is how humans got fire and began to build cities."
+        },
+        {
+          "es": "Por esto, Zeus lo encadenó a una roca.",
+          "en": "For this, Zeus chained him to a rock."
+        },
+        {
+          "es": "¿Hizo bien Prometeo en robar el fuego? Cuéntanos en los comentarios.",
+          "en": "Was Prometheus right to steal the fire? Tell us in the comments."
+        },
+        {
+          "es": "La próxima historia es sobre Pandora, un regalo de Zeus, y la caja que ella abrió.",
+          "en": "The next story is about Pandora, a gift from Zeus, and the box she opened."
+        }
+      ],
+      "elementos": [
+        {
+          "tipo": "fogata",
+          "x": 600
+        },
+        {
+          "tipo": "pithos",
+          "x": 1800,
+          "en": 2
+        }
+      ],
+      "actores": [
+        {
+          "id": "hombre",
+          "x": 400,
+          "pasos": [
+            {
+              "en": 0.3,
+              "hace": "levanta"
+            }
+          ],
+          "como": "hombre_griego_2_oficial"
+        },
+        {
+          "id": "mujer",
+          "x": 800,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 0.4,
+              "hace": "reza"
+            }
+          ],
+          "como": "mujer_griega_2_oficial"
+        },
+        {
+          "id": "nino",
+          "x": 680,
+          "pasos": [
+            {
+              "en": 0.6,
+              "hace": "levanta"
+            }
+          ],
+          "como": "nino_griego_oficial"
+        },
+        {
+          "id": "zeus",
+          "x": 1550,
+          "capa": "medio",
+          "pasos": [
+            {
+              "en": 1,
+              "hace": "aparece"
+            },
+            {
+              "en": 1.3,
+              "hace": "levanta"
+            },
+            {
+              "en": 2.2,
+              "hace": "senala"
+            }
+          ],
+          "como": "zeus_oficial"
+        },
+        {
+          "id": "pandora",
+          "x": 1950,
+          "mira": "izq",
+          "pasos": [
+            {
+              "en": 3,
+              "hace": "aparece"
+            },
+            {
+              "en": 3,
+              "hace": "brilla",
+              "dur": 1
+            }
+          ],
+          "como": "pandora_oficial"
+        }
+      ],
+      "efectos": [
+        {
+          "en": 1,
+          "tipo": "oscurecer",
+          "intensidad": 0.6
+        },
+        {
+          "en": 1.2,
+          "tipo": "rayo",
+          "x": 1450
+        },
+        {
+          "en": 2,
+          "tipo": "luz",
+          "x": 1800,
+          "y": 560
+        }
+      ]
     }
-   ],
-   "elementos": [
+  ],
+  "shorts": [
     {
-     "tipo": "cofre",
-     "x": 560
+      "gancho": {
+        "es": "El titán que le robó el fuego a los dioses",
+        "en": "The Titan who stole fire from the gods"
+      },
+      "escena": "robo",
+      "desde": 3,
+      "hasta": 5,
+      "foco": 900
+    },
+    {
+      "gancho": {
+        "es": "El engaño que enfureció a Zeus",
+        "en": "The trick that made Zeus furious"
+      },
+      "escena": "mecone",
+      "desde": 2,
+      "hasta": 4,
+      "foco": 1000
+    },
+    {
+      "gancho": {
+        "es": "Un castigo que duró siglos",
+        "en": "A punishment that lasted centuries"
+      },
+      "escena": "aguila",
+      "desde": 1,
+      "hasta": 3,
+      "foco": 620
     }
-   ],
-   "actores": [
-    {
-     "id": "prometeo",
-     "x": 250,
-     "pasos": [
-      {
-       "en": 0.4,
-       "hace": "ofrece"
-      },
-      {
-       "en": 1,
-       "hace": "sale"
-      }
-     ],
-     "como": "prometeo_oficial"
-    },
-    {
-     "id": "epimeteo",
-     "x": 420,
-     "pasos": [
-      {
-       "en": 0.6,
-       "hace": "levanta"
-      },
-      {
-       "en": 1,
-       "hace": "ofrece"
-      },
-      {
-       "en": 2,
-       "hace": "camina",
-       "a": 1100
-      },
-      {
-       "en": 2.5,
-       "hace": "ofrece"
-      },
-      {
-       "en": 3,
-       "hace": "camina",
-       "a": 1500
-      },
-      {
-       "en": 4,
-       "hace": "lamenta"
-      }
-     ],
-     "como": "epimeteo_oficial"
-    },
-    {
-     "id": "leon",
-     "x": 820,
-     "pasos": [
-      {
-       "en": 1,
-       "hace": "aparece"
-      },
-      {
-       "en": 1.2,
-       "hace": "habla",
-       "dur": 0.4
-      }
-     ],
-     "como": "leon_griego_oficial"
-    },
-    {
-     "id": "gacela",
-     "como": "ciervo_griego_oficial",
-     "x": 1000,
-     "pasos": [
-      {
-       "en": 1.5,
-       "hace": "aparece"
-      },
-      {
-       "en": 1.7,
-       "hace": "corre",
-       "a": 2300,
-       "dur": 1.5
-      }
-     ]
-    },
-    {
-     "id": "aguila",
-     "x": 1150,
-     "y": 300,
-     "pasos": [
-      {
-       "en": 2,
-       "hace": "aparece"
-      },
-      {
-       "en": 2.1,
-       "hace": "vuela",
-       "a": [
-        1700,
-        220
-       ]
-      }
-     ],
-     "como": "aguila_griega_oficial"
-    },
-    {
-     "id": "oso",
-     "x": 1320,
-     "pasos": [
-      {
-       "en": 2.4,
-       "hace": "aparece"
-      }
-     ],
-     "como": "oso_griego_oficial"
-    },
-    {
-     "id": "humano",
-     "como": "joven_griego_oficial",
-     "x": 1850,
-     "mira": "izq",
-     "props": {
-      "ropa": "desnudo",
-      "tocado": null
-     },
-     "pasos": [
-      {
-       "en": 4.2,
-       "hace": "aparece"
-      },
-      {
-       "en": 4.5,
-       "hace": "tiembla",
-       "dur": 0.5
-      }
-     ]
-    }
-   ],
-   "efectos": [
-    {
-     "en": 1,
-     "tipo": "chispas",
-     "x": 560,
-     "y": 640,
-     "dur": 2.5
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 4.3,
-     "texto": {
-      "es": "EL HUMANO",
-      "pt": "O HUMANO",
-      "en": "HUMANKIND"
-     },
-     "x": 1850,
-     "y": 330
-    }
-   ]
-  },
-  {
-   "id": "barro",
-   "fondo": "costa",
-   "camara": {
-    "de": -100,
-    "a": 200,
-    "zoom": [
-     1,
-     1.08
-    ]
-   },
-   "frases": [
-    {
-     "es": "Prometeo decidió ayudar al ser humano, la criatura que habían olvidado.",
-     "en": "Prometheus decided to help the human, the creature they had forgotten."
-    },
-    {
-     "es": "Tomó barro de la orilla de un río, lo mezcló con agua y modeló figuras a imagen de los dioses.",
-     "en": "He took clay from a river bank, mixed it with water, and shaped figures like the gods."
-    },
-    {
-     "es": "Los animales miran al suelo, pero él hizo a los humanos erguidos, para mirar al cielo.",
-     "en": "Animals look down at the ground, but he made humans stand upright, to look at the sky."
-    },
-    {
-     "es": "Atenea, la diosa de la sabiduría, sopló sobre las figuras, y el barro abrió los ojos.",
-     "en": "Athena, the goddess of wisdom, breathed on the figures, and the clay opened its eyes."
-    },
-    {
-     "es": "Así nacieron los primeros humanos: sin garras ni alas, pero de pie.",
-     "en": "So the first humans were born: no claws and no wings, but standing tall."
-    }
-   ],
-   "actores": [
-    {
-     "id": "prometeo",
-     "x": 300,
-     "pasos": [
-      {
-       "en": 0.3,
-       "hace": "camina",
-       "a": 520
-      },
-      {
-       "en": 1.2,
-       "hace": "arrodilla"
-      },
-      {
-       "en": 1.3,
-       "hace": "ofrece"
-      },
-      {
-       "en": 2.6,
-       "hace": "levantarse"
-      },
-      {
-       "en": 2.7,
-       "hace": "levanta"
-      }
-     ],
-     "como": "prometeo_oficial"
-    },
-    {
-     "id": "barro1",
-     "como": "joven_griego_2_oficial",
-     "x": 700,
-     "props": {
-      "ropa": "desnudo",
-      "tocado": null,
-      "piel": "#8C3D18"
-     },
-     "pasos": [
-      {
-       "en": 1.4,
-       "hace": "aparece"
-      },
-      {
-       "en": 3.3,
-       "hace": "transforma",
-       "en_que": "joven_griego_oficial"
-      },
-      {
-       "en": 4,
-       "hace": "levanta"
-      }
-     ]
-    },
-    {
-     "id": "barro2",
-     "como": "mujer_griega_oficial",
-     "x": 860,
-     "props": {
-      "piel": "#8C3D18"
-     },
-     "pasos": [
-      {
-       "en": 1.7,
-       "hace": "aparece"
-      },
-      {
-       "en": 3.5,
-       "hace": "transforma",
-       "en_que": "mujer_griega_2_oficial"
-      },
-      {
-       "en": 4.2,
-       "hace": "levanta"
-      }
-     ]
-    },
-    {
-     "id": "atenea",
-     "x": 1250,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 3,
-       "hace": "aparece"
-      },
-      {
-       "en": 3.1,
-       "hace": "habla",
-       "dur": 0.6
-      },
-      {
-       "en": 3.1,
-       "hace": "brilla",
-       "dur": 1
-      }
-     ],
-     "como": "atenea_oficial"
-    }
-   ],
-   "efectos": [
-    {
-     "en": 3.2,
-     "tipo": "luz",
-     "x": 900,
-     "y": 500,
-     "dur": 0.8
-    },
-    {
-     "en": 4,
-     "tipo": "estrellas"
-    },
-    {
-     "en": 4,
-     "tipo": "oscurecer",
-     "intensidad": 0.6
-    }
-   ]
-  },
-  {
-   "id": "mecone",
-   "fondo": "templo",
-   "camara": {
-    "de": 0,
-    "a": 300
-   },
-   "frases": [
-    {
-     "es": "Un día, dioses y humanos se reunieron para repartirse un sacrificio, un animal ofrecido a los dioses.",
-     "en": "One day, gods and humans met to share an animal sacrifice, an animal offered to the gods."
-    },
-    {
-     "es": "Prometeo mató un gran buey e hizo dos montones.",
-     "en": "Prometheus killed a great ox and made two piles."
-    },
-    {
-     "es": "En uno escondió la buena carne dentro del estómago del buey, que se veía feo.",
-     "en": "In one he hid the good meat inside the ox's stomach, which looked ugly."
-    },
-    {
-     "es": "En el otro puso los huesos pelados bajo una grasa blanca y brillante.",
-     "en": "In the other he put the bare bones under shiny white fat."
-    },
-    {
-     "es": "Zeus eligió la grasa. Debajo solo encontró huesos, y se enojó mucho.",
-     "en": "Zeus chose the fat. Under it he found only bones, and he was very angry."
-    },
-    {
-     "es": "Por eso los griegos quemaban los huesos para los dioses y se comían la carne ellos.",
-     "en": "That is why the Greeks burned the bones for the gods and ate the meat themselves."
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "altar",
-     "x": 980
-    }
-   ],
-   "actores": [
-    {
-     "id": "zeus",
-     "x": 420,
-     "pasos": [
-      {
-       "en": 4,
-       "hace": "camina",
-       "a": 780
-      },
-      {
-       "en": 4.3,
-       "hace": "levanta"
-      },
-      {
-       "en": 4.6,
-       "hace": "tiembla",
-       "dur": 0.4
-      }
-     ],
-     "como": "zeus_oficial"
-    },
-    {
-     "id": "hera",
-     "x": 230,
-     "como": "hera_oficial"
-    },
-    {
-     "id": "prometeo",
-     "x": 1200,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 1,
-       "hace": "golpea"
-      },
-      {
-       "en": 2,
-       "hace": "ofrece"
-      },
-      {
-       "en": 3,
-       "hace": "senala"
-      }
-     ],
-     "como": "prometeo_oficial"
-    },
-    {
-     "id": "buey",
-     "x": 1100,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 0.2,
-       "hace": "entra",
-       "a": 1000
-      },
-      {
-       "en": 1.2,
-       "hace": "desaparece"
-      }
-     ],
-     "como": "buey_griego_oficial"
-    },
-    {
-     "id": "hombre",
-     "x": 1500,
-     "mira": "izq",
-     "como": "hombre_griego_2_oficial"
-    },
-    {
-     "id": "mujer",
-     "x": 1650,
-     "mira": "izq",
-     "como": "mujer_griega_2_oficial"
-    }
-   ],
-   "efectos": [
-    {
-     "en": 1.2,
-     "tipo": "destello"
-    },
-    {
-     "en": 4.6,
-     "tipo": "rayo",
-     "x": 1300
-    },
-    {
-     "en": 5,
-     "tipo": "fuego",
-     "x": 980,
-     "y": 666
-    },
-    {
-     "en": 5,
-     "tipo": "humo",
-     "x": 980,
-     "y": 600
-    }
-   ]
-  },
-  {
-   "id": "sinfuego",
-   "fondo": "noche",
-   "camara": {
-    "de": 0,
-    "a": 400,
-    "zoom": [
-     1.05,
-     1
-    ]
-   },
-   "frases": [
-    {
-     "es": "Zeus estaba furioso, así que castigó a los humanos.",
-     "en": "Zeus was furious, so he punished the humans."
-    },
-    {
-     "es": "Les quitó el fuego.",
-     "en": "He took away their fire."
-    },
-    {
-     "es": "Sin fuego, las noches eran heladas y oscuras, y tenían que comer la carne cruda.",
-     "en": "Without fire, the nights were icy and dark, and they had to eat raw meat."
-    },
-    {
-     "es": "Los humanos se escondían en cuevas, temblando de miedo.",
-     "en": "Humans hid in caves, shivering and afraid."
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "cueva",
-     "x": 1250
-    }
-   ],
-   "actores": [
-    {
-     "id": "zeus",
-     "x": 300,
-     "y": 560,
-     "capa": "fondo",
-     "pasos": [
-      {
-       "en": 0.2,
-       "hace": "levanta"
-      },
-      {
-       "en": 1,
-       "hace": "golpea"
-      }
-     ],
-     "como": "zeus_oficial"
-    },
-    {
-     "id": "hombre",
-     "x": 800,
-     "pasos": [
-      {
-       "en": 2,
-       "hace": "tiembla",
-       "dur": 2
-      },
-      {
-       "en": 3,
-       "hace": "camina",
-       "a": 1180
-      }
-     ],
-     "como": "hombre_griego_2_oficial"
-    },
-    {
-     "id": "mujer",
-     "x": 950,
-     "pasos": [
-      {
-       "en": 2.2,
-       "hace": "lamenta"
-      },
-      {
-       "en": 3.1,
-       "hace": "camina",
-       "a": 1300
-      }
-     ],
-     "como": "mujer_griega_2_oficial"
-    },
-    {
-     "id": "nino",
-     "x": 1080,
-     "pasos": [
-      {
-       "en": 2.4,
-       "hace": "tiembla",
-       "dur": 1.6
-      }
-     ],
-     "como": "nino_griego_oficial"
-    }
-   ],
-   "efectos": [
-    {
-     "en": 0,
-     "tipo": "fogata",
-     "x": 900,
-     "dur": 1
-    },
-    {
-     "en": 1,
-     "tipo": "humo",
-     "x": 900,
-     "y": 700,
-     "dur": 1
-    },
-    {
-     "en": 1,
-     "tipo": "oscurecer",
-     "intensidad": 0.8
-    },
-    {
-     "en": 2,
-     "tipo": "nieve"
-    }
-   ]
-  },
-  {
-   "id": "robo",
-   "fondo": "olimpo",
-   "camara": {
-    "de": 0,
-    "a": 1600,
-    "zoom": [
-     1,
-     1.05
-    ]
-   },
-   "frases": [
-    {
-     "es": "Prometeo no soportaba verlos sufrir, así que subió en secreto al Olimpo, donde viven los dioses.",
-     "en": "Prometheus could not bear to see them suffer, so he secretly climbed Olympus, where the gods live."
-    },
-    {
-     "es": "Allí tomó una chispa de fuego del carro de Helios, el dios del sol.",
-     "en": "There he took a spark of fire from the chariot of Helios, the sun god."
-    },
-    {
-     "es": "Otro libro antiguo lo cuenta distinto: lo tomó de Hefesto, el dios de la fragua.",
-     "en": "Another old book tells it differently: he took it from Hephaestus, the god of the forge."
-    },
-    {
-     "es": "Escondió la brasa dentro de una caña de hinojo, una planta hueca que arde despacio sin llama.",
-     "en": "He hid the glowing ember inside a fennel stalk, a hollow plant that burns slowly without a flame."
-    },
-    {
-     "es": "Bajó corriendo a la tierra con la caña, y Zeus no lo vio.",
-     "en": "He ran down to earth with the stalk, and Zeus did not see him."
-    },
-    {
-     "es": "Sopló la brasa delante de los humanos, y la primera llama iluminó la oscuridad.",
-     "en": "He blew on the ember in front of the humans, and the first flame lit up the dark."
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "fogata",
-     "x": 900
-    },
-    {
-     "tipo": "estatua",
-     "x": 2700,
-     "props": {
-      "objeto": "rayo",
-      "tocado": "corona"
-     }
-    }
-   ],
-   "actores": [
-    {
-     "id": "prometeo",
-     "x": 200,
-     "pasos": [
-      {
-       "en": 0.2,
-       "hace": "camina",
-       "a": 700
-      },
-      {
-       "en": 1,
-       "hace": "senala"
-      },
-      {
-       "en": 3,
-       "hace": "camina",
-       "a": 850
-      },
-      {
-       "en": 3.4,
-       "hace": "toma",
-       "objeto": "cana"
-      },
-      {
-       "en": 4,
-       "hace": "corre",
-       "a": 2350
-      },
-      {
-       "en": 5,
-       "hace": "arrodilla"
-      },
-      {
-       "en": 5.1,
-       "hace": "ofrece"
-      }
-     ],
-     "como": "prometeo_oficial"
-    },
-    {
-     "id": "hombre",
-     "x": 2650,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 4.5,
-       "hace": "aparece"
-      },
-      {
-       "en": 5.5,
-       "hace": "levanta"
-      }
-     ],
-     "como": "hombre_griego_2_oficial"
-    },
-    {
-     "id": "mujer",
-     "x": 2800,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 4.6,
-       "hace": "aparece"
-      },
-      {
-       "en": 5.6,
-       "hace": "reza"
-      }
-     ],
-     "como": "mujer_griega_2_oficial"
-    },
-    {
-     "id": "helios",
-     "como": "helios_oficial",
-     "x": 1300,
-     "capa": "fondo",
-     "pasos": [
-      {
-       "en": 1,
-       "hace": "aparece"
-      },
-      {
-       "en": 1,
-       "hace": "brilla",
-       "dur": 1
-      },
-      {
-       "en": 1.95,
-       "hace": "desaparece"
-      }
-     ]
-    },
-    {
-     "id": "hefesto",
-     "como": "hefesto_oficial",
-     "x": 1150,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 2,
-       "hace": "aparece"
-      },
-      {
-       "en": 2.6,
-       "hace": "golpea"
-      },
-      {
-       "en": 2.95,
-       "hace": "desaparece"
-      }
-     ]
-    }
-   ],
-   "efectos": [
-    {
-     "en": 2.6,
-     "tipo": "chispas",
-     "x": 1100,
-     "y": 640,
-     "dur": 0.8
-    },
-    {
-     "en": 4.5,
-     "tipo": "oscurecer",
-     "intensidad": 0.7,
-     "dur": 1
-    },
-    {
-     "en": 5.3,
-     "tipo": "fuego",
-     "x": 2500,
-     "y": 790
-    },
-    {
-     "en": 5.3,
-     "tipo": "chispas",
-     "x": 2500,
-     "y": 700
-    }
-   ]
-  },
-  {
-   "id": "oficios",
-   "fondo": "ciudad",
-   "camara": {
-    "de": 0,
-    "a": 1400
-   },
-   "frases": [
-    {
-     "es": "Con el fuego, todo cambió.",
-     "en": "With fire, everything changed."
-    },
-    {
-     "es": "Los humanos cocinaban su comida y se abrigaban en invierno.",
-     "en": "Humans cooked their food and stayed warm in winter."
-    },
-    {
-     "es": "Cocían el barro para hacer vasijas y fundían metal para hacer herramientas.",
-     "en": "They baked clay into pots and melted metal to make tools."
-    },
-    {
-     "es": "Prometeo también les enseñó a contar, a escribir y a curar a los enfermos.",
-     "en": "Prometheus also taught them to count, to write, and to heal the sick."
-    },
-    {
-     "es": "Por eso los griegos lo querían como el amigo de la humanidad.",
-     "en": "That is why the Greeks loved him as the friend of humankind."
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "fogata",
-     "x": 400
-    },
-    {
-     "tipo": "anfora",
-     "x": 950,
-     "s": 0.6
-    },
-    {
-     "tipo": "anfora",
-     "x": 1060,
-     "s": 0.45
-    },
-    {
-     "tipo": "altar",
-     "x": 1500,
-     "props": {
-      "fuego": true
-     }
-    }
-   ],
-   "actores": [
-    {
-     "id": "hombre",
-     "x": 250,
-     "pasos": [
-      {
-       "en": 1,
-       "hace": "ofrece"
-      }
-     ],
-     "como": "hombre_griego_2_oficial"
-    },
-    {
-     "id": "mujer",
-     "x": 560,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 1.2,
-       "hace": "abraza"
-      }
-     ],
-     "como": "mujer_griega_2_oficial"
-    },
-    {
-     "id": "alfarero",
-     "como": "anciano_griego_2_oficial",
-     "x": 830,
-     "pasos": [
-      {
-       "en": 2,
-       "hace": "ofrece"
-      }
-     ]
-    },
-    {
-     "id": "herrero",
-     "como": "hefesto_oficial",
-     "x": 1350,
-     "rotulo": "",
-     "pasos": [
-      {
-       "en": 2.4,
-       "hace": "golpea"
-      },
-      {
-       "en": 2.7,
-       "hace": "golpea"
-      }
-     ]
-    },
-    {
-     "id": "prometeo",
-     "x": 1900,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 3,
-       "hace": "entra",
-       "a": 1850
-      },
-      {
-       "en": 3.2,
-       "hace": "senala"
-      },
-      {
-       "en": 4,
-       "hace": "brilla",
-       "dur": 1
-      }
-     ],
-     "como": "prometeo_oficial"
-    },
-    {
-     "id": "joven",
-     "x": 1700,
-     "pasos": [
-      {
-       "en": 3.3,
-       "hace": "aparece"
-      },
-      {
-       "en": 4.2,
-       "hace": "levanta"
-      }
-     ],
-     "como": "joven_griego_oficial"
-    }
-   ],
-   "efectos": [
-    {
-     "en": 2.4,
-     "tipo": "chispas",
-     "x": 1500,
-     "y": 660,
-     "dur": 1
-    },
-    {
-     "en": 3.3,
-     "tipo": "estrellas"
-    }
-   ],
-   "rotulos": [
-    {
-     "en": 3.4,
-     "texto": "Α Β Γ Δ",
-     "x": 1750,
-     "y": 230,
-     "hasta": 4
-    },
-    {
-     "en": 4.1,
-     "texto": {
-      "es": "AMIGO DE LA HUMANIDAD",
-      "pt": "AMIGO DA HUMANIDADE",
-      "en": "FRIEND OF HUMANKIND"
-     },
-     "x": 1800,
-     "y": 220
-    }
-   ]
-  },
-  {
-   "id": "castigo",
-   "fondo": "monte",
-   "camara": {
-    "de": 0,
-    "a": 600,
-    "zoom": [
-     1,
-     1.1
-    ]
-   },
-   "frases": [
-    {
-     "es": "Desde el Olimpo, Zeus vio fuegos brillando por toda la tierra, y supo quién los había dado.",
-     "en": "From Olympus, Zeus saw fires shining all over the earth, and he knew who had given them."
-    },
-    {
-     "es": "Ordenó a Hefesto, el dios de la fragua, que encadenara a Prometeo a una roca en lo alto del Cáucaso.",
-     "en": "He ordered Hephaestus, god of the forge, to chain Prometheus to a rock in the Caucasus mountains."
-    },
-    {
-     "es": "Hefesto obedeció con tristeza e hizo cadenas que nadie podía romper.",
-     "en": "Hephaestus obeyed sadly and made chains that no one could break."
-    },
-    {
-     "es": "Allí quedó Prometeo, bajo el viento, el sol y la nieve.",
-     "en": "There Prometheus stayed, in the wind, the sun and the snow."
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "roca",
-     "x": 1100,
-     "s": 2.2
-    }
-   ],
-   "actores": [
-    {
-     "id": "zeus",
-     "x": 300,
-     "pasos": [
-      {
-       "en": 0.4,
-       "hace": "senala"
-      },
-      {
-       "en": 1,
-       "hace": "habla",
-       "dur": 0.8
-      },
-      {
-       "en": 1.5,
-       "hace": "sale"
-      }
-     ],
-     "como": "zeus_oficial"
-    },
-    {
-     "id": "hefesto",
-     "x": 850,
-     "pasos": [
-      {
-       "en": 1.2,
-       "hace": "entra",
-       "a": 900
-      },
-      {
-       "en": 2,
-       "hace": "golpea"
-      },
-      {
-       "en": 2.4,
-       "hace": "golpea"
-      },
-      {
-       "en": 2.8,
-       "hace": "lamenta"
-      },
-      {
-       "en": 3,
-       "hace": "sale"
-      }
-     ],
-     "como": "hefesto_oficial"
-    },
-    {
-     "id": "prometeo",
-     "x": 1120,
-     "y": 560,
-     "props": {
-      "capa": null
-     },
-     "pasos": [
-      {
-       "en": 1.4,
-       "hace": "aparece"
-      },
-      {
-       "en": 1.6,
-       "hace": "levanta"
-      },
-      {
-       "en": 3,
-       "hace": "tiembla",
-       "dur": 1
-      }
-     ],
-     "como": "prometeo_oficial"
-    }
-   ],
-   "efectos": [
-    {
-     "en": 0,
-     "tipo": "estrellas",
-     "dur": 1
-    },
-    {
-     "en": 2,
-     "tipo": "chispas",
-     "x": 1050,
-     "y": 560,
-     "dur": 1
-    },
-    {
-     "en": 3,
-     "tipo": "nieve"
-    },
-    {
-     "en": 3,
-     "tipo": "niebla"
-    }
-   ]
-  },
-  {
-   "id": "aguila",
-   "fondo": "monte",
-   "camara": {
-    "de": 400,
-    "a": 700,
-    "zoom": [
-     1.05,
-     1
-    ]
-   },
-   "frases": [
-    {
-     "es": "Pero el castigo no terminó ahí.",
-     "en": "But the punishment did not end there."
-    },
-    {
-     "es": "Cada día, un águila enviada por Zeus bajaba a la roca y le comía el hígado.",
-     "en": "Every day, an eagle sent by Zeus came to the rock and ate his liver."
-    },
-    {
-     "es": "Prometeo no podía morir, así que el hígado le crecía de nuevo cada noche. Entonces volvía el águila.",
-     "en": "Prometheus could not die, so his liver grew back every night. Then the eagle came again."
-    },
-    {
-     "es": "Aun así, Prometeo nunca se arrepintió de ayudar a los humanos.",
-     "en": "Even so, Prometheus never regretted helping humans."
-    },
-    {
-     "es": "Sufrió muchos años, hasta que un héroe mató al águila de un flechazo y rompió sus cadenas.",
-     "en": "He suffered for many years, until a hero shot the eagle and broke his chains."
-    },
-    {
-     "es": "Ese héroe fue Heracles.",
-     "en": "That hero was Heracles."
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "roca",
-     "x": 1100,
-     "s": 2.2
-    }
-   ],
-   "actores": [
-    {
-     "id": "prometeo",
-     "x": 1120,
-     "y": 560,
-     "props": {
-      "capa": null
-     },
-     "pasos": [
-      {
-       "en": 1.5,
-       "hace": "tiembla",
-       "dur": 0.6
-      },
-      {
-       "en": 3,
-       "hace": "levanta"
-      },
-      {
-       "en": 4.6,
-       "hace": "camina",
-       "a": 1300
-      },
-      {
-       "en": 5,
-       "hace": "abraza"
-      }
-     ],
-     "como": "prometeo_oficial"
-    },
-    {
-     "id": "aguila",
-     "x": 1700,
-     "y": 250,
-     "pasos": [
-      {
-       "en": 1,
-       "hace": "aparece"
-      },
-      {
-       "en": 1.1,
-       "hace": "vuela",
-       "a": [
-        1230,
-        430
-       ]
-      },
-      {
-       "en": 2,
-       "hace": "vuela",
-       "a": [
-        1800,
-        200
-       ]
-      },
-      {
-       "en": 2.6,
-       "hace": "vuela",
-       "a": [
-        1250,
-        430
-       ]
-      },
-      {
-       "en": 4.4,
-       "hace": "cae"
-      },
-      {
-       "en": 4.5,
-       "hace": "desaparece"
-      }
-     ],
-     "como": "aguila_griega_oficial"
-    },
-    {
-     "id": "heracles",
-     "x": 700,
-     "props": {
-      "objeto": "arco"
-     },
-     "pasos": [
-      {
-       "en": 4,
-       "hace": "entra",
-       "a": 800
-      },
-      {
-       "en": 4.3,
-       "hace": "senala"
-      },
-      {
-       "en": 4.6,
-       "hace": "camina",
-       "a": 1050
-      }
-     ],
-     "como": "heracles_oficial"
-    }
-   ],
-   "efectos": [
-    {
-     "en": 2,
-     "tipo": "oscurecer",
-     "dur": 0.5
-    },
-    {
-     "en": 2,
-     "tipo": "estrellas",
-     "dur": 0.6
-    },
-    {
-     "en": 4.4,
-     "tipo": "destello"
-    }
-   ]
-  },
-  {
-   "id": "cierre",
-   "fondo": "campo",
-   "camara": {
-    "de": 0,
-    "a": 700
-   },
-   "frases": [
-    {
-     "es": "Así Prometeo engañó a Zeus y robó el fuego, y por eso los humanos tuvieron fuego y empezaron a construir ciudades.",
-     "en": "So Prometheus tricked Zeus and stole fire, and that is how humans got fire and began to build cities."
-    },
-    {
-     "es": "Por esto, Zeus lo encadenó a una roca.",
-     "en": "For this, Zeus chained him to a rock."
-    },
-    {
-     "es": "¿Hizo bien Prometeo en robar el fuego? Cuéntanos en los comentarios.",
-     "en": "Was Prometheus right to steal the fire? Tell us in the comments."
-    },
-    {
-     "es": "La próxima historia es sobre Pandora, un regalo de Zeus, y la caja que ella abrió.",
-     "en": "The next story is about Pandora, a gift from Zeus, and the box she opened."
-    }
-   ],
-   "elementos": [
-    {
-     "tipo": "fogata",
-     "x": 600
-    },
-    {
-     "tipo": "pithos",
-     "x": 1800,
-     "en": 2
-    }
-   ],
-   "actores": [
-    {
-     "id": "hombre",
-     "x": 400,
-     "pasos": [
-      {
-       "en": 0.3,
-       "hace": "levanta"
-      }
-     ],
-     "como": "hombre_griego_2_oficial"
-    },
-    {
-     "id": "mujer",
-     "x": 800,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 0.4,
-       "hace": "reza"
-      }
-     ],
-     "como": "mujer_griega_2_oficial"
-    },
-    {
-     "id": "nino",
-     "x": 680,
-     "pasos": [
-      {
-       "en": 0.6,
-       "hace": "levanta"
-      }
-     ],
-     "como": "nino_griego_oficial"
-    },
-    {
-     "id": "zeus",
-     "x": 1550,
-     "capa": "medio",
-     "pasos": [
-      {
-       "en": 1,
-       "hace": "aparece"
-      },
-      {
-       "en": 1.3,
-       "hace": "levanta"
-      },
-      {
-       "en": 2.2,
-       "hace": "senala"
-      }
-     ],
-     "como": "zeus_oficial"
-    },
-    {
-     "id": "pandora",
-     "x": 1950,
-     "mira": "izq",
-     "pasos": [
-      {
-       "en": 3,
-       "hace": "aparece"
-      },
-      {
-       "en": 3,
-       "hace": "brilla",
-       "dur": 1
-      }
-     ],
-     "como": "pandora_oficial"
-    }
-   ],
-   "efectos": [
-    {
-     "en": 1,
-     "tipo": "oscurecer",
-     "intensidad": 0.6
-    },
-    {
-     "en": 1.2,
-     "tipo": "rayo",
-     "x": 1450
-    },
-    {
-     "en": 2,
-     "tipo": "luz",
-     "x": 1800,
-     "y": 560
-    }
-   ]
-  }
- ],
- "shorts": [
-  {
-   "gancho": {
-    "es": "El titán que le robó el fuego a los dioses",
-    "en": "The Titan who stole fire from the gods"
-   },
-   "escena": "robo",
-   "desde": 3,
-   "hasta": 5,
-   "foco": 900
-  },
-  {
-   "gancho": {
-    "es": "El engaño que enfureció a Zeus",
-    "en": "The trick that made Zeus furious"
-   },
-   "escena": "mecone",
-   "desde": 2,
-   "hasta": 4,
-   "foco": 1000
-  },
-  {
-   "gancho": {
-    "es": "Un castigo que duró siglos",
-    "en": "A punishment that lasted centuries"
-   },
-   "escena": "aguila",
-   "desde": 1,
-   "hasta": 3,
-   "foco": 620
-  }
- ]
+  ],
+  "claridad": true
 }

@@ -1,0 +1,1 @@
+- 2026-11-25 · corrida de claridad no produjo nada: los tests ya fallaban antes de tocar nada (`test/shorts-rango.test.mjs`: "griegas-02-prometeo short 1" apunta a frases que no existen en el timeline). Hay 12 pendientes. Arreglar los rangos de `shorts` de `griegas-02-prometeo/guion.json` y volver a correr.
