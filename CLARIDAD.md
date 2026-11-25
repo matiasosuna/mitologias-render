@@ -26,7 +26,7 @@ Estas reglas mandan sobre cualquier otra guía de guion (BRIEF-GUION, RUTINA, ES
 6. **Nada de comentarios de estudiosos.** Ni «many scholars think», ni «some historians», ni la etimología, ni
    «his Egyptian name was…». Se cuenta la historia de la fuente, no lo que se dice sobre ella. Solo cuando dos fuentes
    cuentan cosas distintas y hace falta para entender, en una frase: «Another old book tells it differently: …».
-7. **Frases cortas.** ≤ 15 palabras, una idea por frase, palabras comunes. Nada de listas de nombres.
+7. **Frases cortas.** ≤ 15 palabras, una idea por frase, palabras comunes.
 8. **Cosas raras explicadas.** Un objeto o una idea que no es de todos los días se explica con palabras simples
    («mead, a sweet drink made from honey»). En Gnosis y la Biblia: cada término (aeon, archon, Pleroma, covenant…)
    se explica en la misma frase o en la siguiente, contado como verdad (ver PLAN de la serie).

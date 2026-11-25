@@ -1,5 +1,4 @@
 {
- "claridad": true,
  "id": "griegas-02-prometeo",
  "serie": "griegas",
  "numero": "02",
@@ -346,8 +345,8 @@
      "en": "Animals look down at the ground, but he made humans stand upright, to look at the sky."
     },
     {
-     "es": "Una diosa de la sabiduría sopló sobre las figuras, y el barro abrió los ojos.",
-     "en": "A goddess of wisdom breathed on the figures, and the clay opened its eyes."
+     "es": "Atenea, la diosa de la sabiduría, sopló sobre las figuras, y el barro abrió los ojos.",
+     "en": "Athena, the goddess of wisdom, breathed on the figures, and the clay opened its eyes."
     },
     {
      "es": "Así nacieron los primeros humanos: sin garras ni alas, pero de pie.",
@@ -451,8 +450,7 @@
        "dur": 1
       }
      ],
-     "como": "atenea_oficial",
-     "rotulo": ""
+     "como": "atenea_oficial"
     }
    ],
    "efectos": [
@@ -755,8 +753,12 @@
      "en": "Prometheus could not bear to see them suffer, so he secretly climbed Olympus, where the gods live."
     },
     {
-     "es": "Allí tomó una chispa de fuego de los dioses.",
-     "en": "There he took a spark of fire from the gods."
+     "es": "Allí tomó una chispa de fuego del carro de Helios, el dios del sol.",
+     "en": "There he took a spark of fire from the chariot of Helios, the sun god."
+    },
+    {
+     "es": "Otro libro antiguo lo cuenta distinto: lo tomó de Hefesto, el dios de la fragua.",
+     "en": "Another old book tells it differently: he took it from Hephaestus, the god of the forge."
     },
     {
      "es": "Escondió la brasa dentro de una caña de hinojo, una planta hueca que arde despacio sin llama.",
@@ -800,26 +802,26 @@
        "hace": "senala"
       },
       {
-       "en": 2,
+       "en": 3,
        "hace": "camina",
        "a": 850
       },
       {
-       "en": 2.4,
+       "en": 3.4,
        "hace": "toma",
        "objeto": "cana"
       },
       {
-       "en": 3,
+       "en": 4,
        "hace": "corre",
        "a": 2350
       },
       {
-       "en": 4,
+       "en": 5,
        "hace": "arrodilla"
       },
       {
-       "en": 4.1,
+       "en": 5.1,
        "hace": "ofrece"
       }
      ],
@@ -831,11 +833,11 @@
      "mira": "izq",
      "pasos": [
       {
-       "en": 3.5,
+       "en": 4.5,
        "hace": "aparece"
       },
       {
-       "en": 4.5,
+       "en": 5.5,
        "hace": "levanta"
       }
      ],
@@ -847,39 +849,80 @@
      "mira": "izq",
      "pasos": [
       {
-       "en": 3.6,
+       "en": 4.6,
        "hace": "aparece"
       },
       {
-       "en": 4.6,
+       "en": 5.6,
        "hace": "reza"
       }
      ],
      "como": "mujer_griega_2_oficial"
+    },
+    {
+     "id": "helios",
+     "como": "helios_oficial",
+     "x": 1300,
+     "capa": "fondo",
+     "pasos": [
+      {
+       "en": 1,
+       "hace": "aparece"
+      },
+      {
+       "en": 1,
+       "hace": "brilla",
+       "dur": 1
+      },
+      {
+       "en": 1.95,
+       "hace": "desaparece"
+      }
+     ]
+    },
+    {
+     "id": "hefesto",
+     "como": "hefesto_oficial",
+     "x": 1150,
+     "mira": "izq",
+     "pasos": [
+      {
+       "en": 2,
+       "hace": "aparece"
+      },
+      {
+       "en": 2.6,
+       "hace": "golpea"
+      },
+      {
+       "en": 2.95,
+       "hace": "desaparece"
+      }
+     ]
     }
    ],
    "efectos": [
     {
-     "en": 1.6,
+     "en": 2.6,
      "tipo": "chispas",
      "x": 1100,
      "y": 640,
      "dur": 0.8
     },
     {
-     "en": 3.5,
+     "en": 4.5,
      "tipo": "oscurecer",
      "intensidad": 0.7,
      "dur": 1
     },
     {
-     "en": 4.3,
+     "en": 5.3,
      "tipo": "fuego",
      "x": 2500,
      "y": 790
     },
     {
-     "en": 4.3,
+     "en": 5.3,
      "tipo": "chispas",
      "x": 2500,
      "y": 700
@@ -1077,12 +1120,12 @@
      "en": "From Olympus, Zeus saw fires shining all over the earth, and he knew who had given them."
     },
     {
-     "es": "Ordenó al dios de la fragua que encadenara a Prometeo a una roca en lo alto del Cáucaso.",
-     "en": "He ordered the god of the forge to chain Prometheus to a rock high in the Caucasus mountains."
+     "es": "Ordenó a Hefesto, el dios de la fragua, que encadenara a Prometeo a una roca en lo alto del Cáucaso.",
+     "en": "He ordered Hephaestus, god of the forge, to chain Prometheus to a rock in the Caucasus mountains."
     },
     {
-     "es": "El dios obedeció con tristeza e hizo cadenas que nadie podía romper.",
-     "en": "The god obeyed sadly and made chains that no one could break."
+     "es": "Hefesto obedeció con tristeza e hizo cadenas que nadie podía romper.",
+     "en": "Hephaestus obeyed sadly and made chains that no one could break."
     },
     {
      "es": "Allí quedó Prometeo, bajo el viento, el sol y la nieve.",
@@ -1143,8 +1186,7 @@
        "hace": "sale"
       }
      ],
-     "como": "hefesto_oficial",
-     "rotulo": ""
+     "como": "hefesto_oficial"
     },
     {
      "id": "prometeo",
@@ -1490,8 +1532,8 @@
     "en": "The Titan who stole fire from the gods"
    },
    "escena": "robo",
-   "desde": 2,
-   "hasta": 4,
+   "desde": 3,
+   "hasta": 5,
    "foco": 900
   },
   {
