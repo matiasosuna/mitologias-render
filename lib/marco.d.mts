@@ -8,3 +8,5 @@ export function horizontalConMarco<G, T>(g: G, tl: T): { guion: G; timeline: T }
 export const tieneGancho: (g: unknown) => boolean;
 export function verticalConGancho<G, T>(g: G, tl: T): { guion: G; timeline: T };
 export function conGanchoAlPrincipio<G, T>(g: G, tl: T, pieza: string): { guion: G; timeline: T };
+export const CIERRE_S: number;
+export function cierreCorto<T>(tl: T): T;

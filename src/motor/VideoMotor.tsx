@@ -88,6 +88,22 @@ export const Final: React.FC<{ dur: number; siguiente?: string; etiqueta?: strin
   );
 };
 
+/** Cierre del horizontal (Instagram): solo la marca del canal, sin «next episode» ni «subscribe» (Matías 2026-11-25). */
+export const FinalMarca: React.FC<{ dur: number }> = ({ dur }) => {
+  const f = useCurrentFrame();
+  const o = Math.min(ap(f, 0, 12), interpolate(f, [dur - 12, dur], [1, 0], cl));
+  return (
+    <AbsoluteFill style={{ backgroundColor: C.barro, opacity: o }}>
+      <svg viewBox="0 0 1920 1080" width="100%" height="100%">
+        <defs><radialGradient id="finMarca" cx="50%" cy="45%" r="75%"><stop offset="0%" stopColor={C.barroClaro} /><stop offset="100%" stopColor={C.barroOscuro} /></radialGradient></defs>
+        <rect width={1920} height={1080} fill="url(#finMarca)" />
+        <Guardas desplaz={f * 0.6} />
+      </svg>
+      <AbsoluteFill style={{ fontFamily: TITULO, color: C.crema, textShadow: `0 4px 0 ${C.negro}`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 96, fontWeight: 700, letterSpacing: 14 }}>{marcaCanal()}</AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
 export const VideoMotor: React.FC<{ guion: GuionVisual; timeline: Timeline; idioma?: Idioma | null; imagen?: Idioma }> = ({ guion, timeline, idioma = null, imagen = 'en' }) => {
   aplicarTema(guion.serie);
   const gancho = timeline.escenas[0]?.gancho ? timeline.escenas[0] : null;
@@ -110,7 +126,7 @@ export const VideoMotor: React.FC<{ guion: GuionVisual; timeline: Timeline; idio
       </Sequence>
     )}
     {TEMA.nombre === 'natural' && <LeyendaBiblia guion={guion} timeline={timeline} idioma={imagen} />}
-    <Sequence from={timeline.total - timeline.outroFrames}><Final dur={timeline.outroFrames} siguiente={guion.siguiente?.[imagen] ?? guion.siguiente?.es} /></Sequence>
+    <Sequence from={timeline.total - timeline.outroFrames}><FinalMarca dur={timeline.outroFrames} /></Sequence>
   </AbsoluteFill>
   </CalidadHD.Provider>
   );

@@ -27,8 +27,10 @@ Leé `CLARIDAD.md`, `MOTOR.md` (formato + sección de la serie) y el `PLAN-<SERI
 ejemplo de cómo quedó (ya reescrito). Reescribí las frases `en` y `es` del guion siguiendo CLARIDAD.md:
 - arranque que se sostiene solo (nada de «Last time…»), una historia en orden, causa y efecto, máximo 4–5 nombres,
   sin misterio ni ganchos, sin comentarios de estudiosos, frases ≤ 15 palabras, cosas raras explicadas, cierre que resume;
-- ajustá los `en` de los `pasos` si cambia el número de frases de una escena; si un personaje queda sin nombre en el texto,
-  `"rotulo": ""`; si sale del texto, sacalo de la escena; solo elenco/fondos que ya existen;
+- ajustá los `en` de los `pasos` si cambia el número de frases de una escena; todo personaje de la escena se nombra en
+  el texto (nunca `"rotulo": ""` para esconder un nombre); solo elenco/fondos que ya existen;
+- compará con la versión anterior del guion (`git log -- src/videos/<id>/guion.json`): ningún personaje ni nombre que
+  estaba se pierde;
 - hacé la lectura final de CLARIDAD.md («Antes de dar por terminado») con todas las frases `en` seguidas.
 
 ## 4 · Narrar, validar y marcar

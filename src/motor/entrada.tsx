@@ -7,7 +7,7 @@ import { ShortNativo } from './ShortNativo';
 import { ShortHorizontal, duracionHorizontal } from './ShortHorizontal';
 import { VideoVertical, CIERRE_VERTICAL, ParteVertical, duracionParte } from './VideoVertical';
 import { VIDEOS } from './indice';
-import { horizontalConMarco, verticalConGancho } from '../../lib/marco.mjs';
+import { horizontalConMarco, verticalConGancho, cierreCorto } from '../../lib/marco.mjs';
 import { DemoCalidad } from './DemoCalidad';
 import { DemoPersonajes2 } from './DemoPersonajes2';
 import { DemoBrazos } from './DemoBrazos';
@@ -45,7 +45,7 @@ registerRoot(() => (
         calculateMetadata={({ props }) => ({ durationInFrames: duracionParte((timeline as Timeline).fps, props as Parameters<typeof duracionParte>[1]) })} />
     ))}
     {/* Learn Bible 777: el horizontal lleva el marco (gancho + invitación, final): lib/marco.mjs */}
-    {VIDEOS.filter(({ guion }) => (guion as GuionVisual).formato !== 'short').map(({ guion: g0, timeline: t0 }) => horizontalConMarco(g0, t0)).map(({ guion, timeline }) => (
+    {VIDEOS.filter(({ guion }) => (guion as GuionVisual).formato !== 'short').map(({ guion: g0, timeline: t0 }) => horizontalConMarco(g0, t0)).map(({ guion, timeline }) => ({ guion, timeline: cierreCorto(timeline) })).map(({ guion, timeline }) => (
       <Composition
         key={(guion as GuionVisual).id}
         id={(guion as GuionVisual).id}

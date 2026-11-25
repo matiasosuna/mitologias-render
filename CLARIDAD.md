@@ -1,6 +1,7 @@
 # Claridad: que la historia se entienda (Matías 2026-11-22)
 
-Los videos son para que Matías **estudie**. Él dijo: «no se están entendiendo las historias». Tiene que poder seguir
+Los videos son para que Matías **estudie**. Él dijo solo: «no se están entendiendo las historias». Las reglas de abajo
+son nuestra lectura de eso, no palabras suyas (2026-11-25: «nunca te dije que sean 4-5 nombres, vos asumiste»). Tiene que poder seguir
 cada episodio solo escuchándolo una vez, sin saber nada del tema y sin haber visto los anteriores.
 **Sin alterar ni reinterpretar las fuentes:** se cuenta lo que dice el texto, en orden, con palabras simples. Sacar
 detalles que no hacen falta está bien. Agregar interpretación propia, no.
@@ -14,11 +15,11 @@ Estas reglas mandan sobre cualquier otra guía de guion (BRIEF-GUION, RUTINA, ES
 2. **Una historia, en orden.** Qué pasó primero, qué pasó después. Sin saltos en el tiempo y sin desvíos.
 3. **Causa y efecto dichos.** Cada acción dice quién la hace y por qué. Usá «because», «so», «that is why» cuando
    la fuente lo dice.
-4. **Pocos nombres.** Como máximo 4–5 nombres propios nuevos por episodio, solo los que hacen falta para seguir la
-   historia. Fuera los nombres secundarios: los de los objetos (las tres vasijas), los nombres falsos o alternativos,
-   los títulos («Lord of the Sacred Land»), los lugares que no vuelven. Si un personaje no importa, «a giant» o
-   «his brother» alcanza. Cada nombre se presenta la primera vez («Loki, the trickster god»). Si aparece de nuevo
-   después de un rato, se recuerda quién es.
+4. **Los nombres se dicen.** Todo personaje que hace algo en la historia se nombra, como en la fuente: nunca
+   «his brother», «one brother got the sea» o «five babies» si la fuente da los nombres (Hestia, Demeter, Hera,
+   Hades, Poseidon). No hay tope de nombres. Cada nombre se presenta la primera vez («Loki, the trickster god») y,
+   si vuelve después de un rato, se recuerda quién es. Solo se pueden sacar los nombres que no son de personajes:
+   nombres de objetos, nombres alternativos y títulos. Lo que se nombra en pantalla (rótulo) se nombra en la voz.
 5. **Nada de misterio ni ganchos.** Ni preguntas retóricas para intrigar, ni «This is the story of the greatest
    theft…», ni «But that was only the beginning», ni frases a medias para dejar con la duda. Se dice directo lo que
    pasa.
@@ -38,7 +39,7 @@ Estas reglas mandan sobre cualquier otra guía de guion (BRIEF-GUION, RUTINA, ES
 ## Antes de dar por terminado un guion
 Leé todas las frases `en` seguidas, como las va a escuchar Matías, y preguntate:
 - ¿Alguien que no sabe nada entiende quién es cada uno y qué pasó?
-- ¿Hay algún nombre que se puede sacar?
+- ¿Falta el nombre de algún personaje que la fuente nombra? (comparar con la versión anterior del guion)
 - ¿Hay alguna frase que intriga en vez de contar?
 - ¿Cada cosa que se cuenta está en la fuente?
 Si algo no cierra, se corrige antes de narrar.

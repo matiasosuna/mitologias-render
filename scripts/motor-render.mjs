@@ -10,7 +10,7 @@ import { createHash } from 'node:crypto';
 import { join, resolve, basename } from 'node:path';
 import os from 'node:os';
 import { srt } from '../lib/motor-tiempos.mjs';
-import { horizontalConMarco } from '../lib/marco.mjs';
+import { horizontalConMarco, cierreCorto } from '../lib/marco.mjs';
 
 const id = process.argv[2];
 const arg = (k, d) => (process.argv.find((a) => a.startsWith(`--${k}=`)) ?? `=${d}`).split('=')[1];
@@ -26,6 +26,7 @@ let tl = JSON.parse(readFileSync(join(dir, 'timeline.json'), 'utf8'));
 if (!g.siguiente && existsSync(join(dir, 'youtube.json'))) { const s = JSON.parse(readFileSync(join(dir, 'youtube.json'), 'utf8')).siguiente; if (s) g.siguiente = { es: s, en: s }; }
 // Learn Bible 777: gancho + invitación después de la portada y la invitación final antes de la pantalla final (lib/marco.mjs)
 ({ guion: g, timeline: tl } = horizontalConMarco(g, tl));
+tl = cierreCorto(tl); // Instagram: sin la pantalla final de YouTube, 3 s con la marca
 
 // Huella del código del motor: si cambia, se re-renderiza todo
 const fuentes = ['src/motor', 'src/comun'].flatMap((d) => readdirSync(d).filter((f) => /\.tsx?$/.test(f) && f !== 'indice.ts').map((f) => join(d, f)));
