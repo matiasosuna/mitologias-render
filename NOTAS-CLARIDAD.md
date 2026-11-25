@@ -1,0 +1,1 @@
+- 2026-11-25 · rutina de claridad: no se produjo nada. Los tests ya fallaban antes de empezar (biblia.test.mjs 50 y 51: biblia-genesis-01/cierre tiene 2 frases y ya no menciona 'chapter 2' tras 3f02faa «sin anunciar el próximo episodio»). Hace falta decidir si se ajusta el test o el cierre; ningún guion tiene aún "claridad": true (3f02faa los desmarcó).

@@ -40,12 +40,11 @@ test('frases en inglés de 130 caracteres como mucho, 3 a 10 por escena', () => 
   }
 });
 
-test('Génesis 1 cita la KJV textual, cierra con el capítulo 2 y explica qué quiere decir', () => {
+test('Génesis 1 cita la KJV textual y explica qué quiere decir (sin anunciar el capítulo 2: test/sin-anuncio.test.mjs)', () => {
   const texto = g1.escenas.flatMap((e) => e.frases.map((f) => f.en)).join(' ');
   for (const cita of ['In the beginning God created the heaven and the earth.', 'Let there be light: and there was light.', 'So God created man in his own image', 'behold, it was very good.']) assert.ok(texto.includes(cita), cita);
   assert.ok(g1.escenas.some((e) => e.id.startsWith('significado')), 'falta la parte "What does it mean?"');
   assert.match(g1.siguiente.en, /Chapter 2/);
-  assert.match(g1.escenas.at(-1).frases.map((f) => f.en).join(' '), /chapter 2/i);
 });
 
 test('Dios nunca es un personaje y no aparece "Myths on Clay"', () => {
