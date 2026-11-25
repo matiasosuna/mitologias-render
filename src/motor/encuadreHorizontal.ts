@@ -118,6 +118,8 @@ export function ajusteHorizontal(pistas: Pista[], cam: Camara = {}, dur = 0): Re
 export const Z_MIN = 0.7;
 /** Aire mínimo entre un actor y el borde del cuadro (px de pantalla). */
 export const MARGEN_CAM = 40;
+/** Aire extra que se deja, si sobra lugar, además del margen. */
+export const AIRE_CAM = 120;
 
 /**
  * Cámara del horizontal (Matías 2026-11-25: «la cámara va yendo a la izquierda y al terminar la escena están todos
@@ -137,7 +139,12 @@ export function camaraAuto(pistas: Pista[], cam: Camara = {}, dur = 0, aj: Recor
       if ((ant && Math.abs(ant.x - m.x) >= 2) || (sig && Math.abs(sig.x - m.x) >= 2)) return; // se mueve: puede cruzar el borde
       const s = m.s * ja.k, mx = m.x + (ja.dx ?? 0);
       const izq = (m.izq ? p.medida.der : p.medida.izq) * s, der = (m.izq ? p.medida.izq : p.medida.der) * s;
-      cajas.push({ x0: mx - izq, x1: mx + der, p: P_CAPA[p.capa] });
+      let x0 = mx - izq, x1 = mx + der;
+      if (m.rot && Math.abs(m.rot) > 20) { // tumbado (gira sobre los pies): el cuerpo se estira hacia el lado del giro
+        const ext = p.medida.alto * s * Math.sin(Math.min(90, Math.abs(m.rot)) * Math.PI / 180);
+        if (m.rot > 0) x1 = Math.max(x1, mx + ext); else x0 = Math.min(x0, mx - ext);
+      }
+      cajas.push({ x0, x1, p: P_CAPA[p.capa] });
     });
   }
   if (!cajas.length) return { de, a, zoom: [z0, z1] };
@@ -156,7 +163,9 @@ export function camaraAuto(pistas: Pista[], cam: Camara = {}, dur = 0, aj: Recor
     if (!entra(bajo)) z = Z_MIN;
     else { for (let i = 0; i < 24; i++) { const m = (bajo + alto) / 2; if (entra(m)) bajo = m; else alto = m; } z = bajo; }
   }
-  const k = z / zMax, [lo, hi] = rango(z);
+  const k = z / zMax, [lo0, hi0] = rango(z);
+  // si sobra lugar, aire extra a los costados (hasta AIRE_CAM) para que nadie quede pegado al borde
+  const aire = lo0 <= hi0 ? Math.min(AIRE_CAM, (hi0 - lo0) / 2) : 0, lo = lo0 + aire, hi = hi0 - aire;
   const fija = (x: number) => (lo > hi ? (lo + hi) / 2 : Math.min(hi, Math.max(lo, x)));
   return { de: fija(de), a: fija(a), zoom: [z0 * k, z1 * k] };
 }

@@ -272,7 +272,7 @@ export function pistasDeEscena(esc: EscenaT, tl: EscenaTL): Pista[] {
     const muestras = [];
     for (let f = 0; f < dur; f += PASO) {
       const { e } = estadoActor(a, tl, f, ficha);
-      muestras.push({ f, x: e.x, y: e.y + dy, s: e.s, vis: e.opacity > 0.3, izq: e.voltear });
+      muestras.push({ f, x: e.x, y: e.y + dy, s: e.s, vis: e.opacity > 0.3, izq: e.voltear, rot: e.rot || undefined });
     }
     return { id: a.id, capa, medida, muestras, ajustable: ficha.tipo === 'dibujo' && typeof ficha.p?.alto === 'number', oficial: ficha.tipo === 'persona' && (a.como ?? a.id).endsWith('_oficial') };
   });
