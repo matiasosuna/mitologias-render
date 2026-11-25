@@ -118,6 +118,8 @@ export function ajusteHorizontal(pistas: Pista[], cam: Camara = {}, dur = 0): Re
 export const Z_MIN = 0.7;
 /** Aire mínimo entre un actor y el borde del cuadro (px de pantalla). */
 export const MARGEN_CAM = 40;
+/** Aire entre la cabeza más alta y la guarda de arriba (px). */
+export const MARGEN_TECHO = 24;
 /** Aire extra que se deja, si sobra lugar, además del margen. */
 export const AIRE_CAM = 120;
 
@@ -131,6 +133,7 @@ export const AIRE_CAM = 120;
 export function camaraAuto(pistas: Pista[], cam: Camara = {}, dur = 0, aj: Record<string, Ajuste> = {}): Camara {
   const [z0, z1] = cam.zoom ?? [1, 1.05], de = cam.de ?? 0, a = cam.a ?? de;
   const cajas: { x0: number; x1: number; p: number }[] = [];
+  let zTecho = Infinity; // con zoom z la cabeza queda en SUELO - (SUELO - tope) * z: que no se meta en la guarda de arriba
   for (const p of pistas) {
     const ja = aj[p.id] ?? { k: 1, dy: 0 };
     p.muestras.forEach((m, i) => {
@@ -145,6 +148,8 @@ export function camaraAuto(pistas: Pista[], cam: Camara = {}, dur = 0, aj: Recor
         if (m.rot > 0) x1 = Math.max(x1, mx + ext); else x0 = Math.min(x0, mx - ext);
       }
       cajas.push({ x0, x1, p: P_CAPA[p.capa] });
+      const tope = m.y + ja.dy - p.medida.alto * s;
+      if (tope < SUELO - 1) zTecho = Math.min(zTecho, (SUELO - ARRIBA - MARGEN_TECHO) / (SUELO - tope));
     });
   }
   if (!cajas.length) return { de, a, zoom: [z0, z1] };
@@ -157,9 +162,9 @@ export function camaraAuto(pistas: Pista[], cam: Camara = {}, dur = 0, aj: Recor
   };
   const entra = (z: number) => { const [lo, hi] = rango(z); return lo <= hi; };
   const zMax = Math.max(z0, z1);
-  let z = zMax;
+  let z = Math.max(Z_MIN, Math.min(zMax, zTecho));
   if (!entra(z)) {
-    let bajo = Z_MIN, alto = zMax;
+    let bajo = Z_MIN, alto = z;
     if (!entra(bajo)) z = Z_MIN;
     else { for (let i = 0; i < 24; i++) { const m = (bajo + alto) / 2; if (entra(m)) bajo = m; else alto = m; } z = bajo; }
   }
@@ -167,7 +172,9 @@ export function camaraAuto(pistas: Pista[], cam: Camara = {}, dur = 0, aj: Recor
   // si sobra lugar, aire extra a los costados (hasta AIRE_CAM) para que nadie quede pegado al borde
   const aire = lo0 <= hi0 ? Math.min(AIRE_CAM, (hi0 - lo0) / 2) : 0, lo = lo0 + aire, hi = hi0 - aire;
   const fija = (x: number) => (lo > hi ? (lo + hi) / 2 : Math.min(hi, Math.max(lo, x)));
-  return { de: fija(de), a: fija(a), zoom: [z0 * k, z1 * k] };
+  // el grupo va al centro del cuadro (no pegado a un borde): el paneo del guion se mantiene, pero alrededor del centro
+  const centro = lo0 <= hi0 ? (lo0 + hi0) / 2 : (de + a) / 2, mitad = (a - de) / 2;
+  return { de: fija(centro - mitad), a: fija(centro + mitad), zoom: [z0 * k, z1 * k] };
 }
 
 /** Avisos del horizontal (después del ajuste): fuera de cuadro, encimados y actores que tapan rótulos. */

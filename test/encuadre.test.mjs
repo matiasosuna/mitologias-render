@@ -127,3 +127,15 @@ test('cámara: el paneo del guion se recorta y, si no entran todos los quietos, 
   const anda = { ...pista('e', 0), muestras: Array.from({ length: 20 }, (_, i) => ({ f: i * 3, x: -600 + i * 60, y: 790, s: 1.12, vis: true, izq: false })) };
   assert.deepEqual(camaraAuto([pista('a', 900), anda], { de: 0, a: 0, zoom: [1, 1] }, 60).zoom, [1, 1]);
 });
+
+test('cámara: el grupo queda al centro (no pegado al borde) y se aleja si una cabeza toca la guarda de arriba', async () => {
+  const { cajaPantalla: caja } = await import('../src/motor/encuadreHorizontal.ts');
+  // uno solo a la izquierda con paneo a la derecha: queda centrado, no en el borde
+  const solo = [pista('zeus', 300)], c = camaraAuto(solo, { de: 0, a: 300, zoom: [1, 1.05] }, 60);
+  const b = caja(solo[0], solo[0].muestras[10], { k: 1, dy: 0 }, c, 60), medio = (b[0] + b[2]) / 2;
+  assert.ok(Math.abs(medio - 960) < 200, `centro en ${medio}`);
+  // subido a una roca (y 560): la cámara se aleja para que la cabeza no quede cortada
+  const alto = [pista('prometeo', 900, { y: 560 })], c2 = camaraAuto(alto, { de: 0, a: 0, zoom: [1, 1.05] }, 60);
+  const top = Math.min(...alto[0].muestras.map((m) => caja(alto[0], m, { k: 1, dy: 0 }, c2, 60)[1]));
+  assert.ok(c2.zoom[1] < 1.05 && top >= 126 + 20, `zoom ${c2.zoom} top ${top}`);
+});
