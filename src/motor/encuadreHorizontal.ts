@@ -114,6 +114,53 @@ export function ajusteHorizontal(pistas: Pista[], cam: Camara = {}, dur = 0): Re
   return out;
 }
 
+/** Lo más que se aleja la cámara para que entren todos (más lejos los personajes quedan muy chicos). */
+export const Z_MIN = 0.7;
+/** Aire mínimo entre un actor y el borde del cuadro (px de pantalla). */
+export const MARGEN_CAM = 40;
+
+/**
+ * Cámara del horizontal (Matías 2026-11-25: «la cámara va yendo a la izquierda y al terminar la escena están todos
+ * fuera de la pantalla; si necesitás alejar la cámara, hacelo»): toma el paneo y el zoom del guion, pero
+ * 1) si los actores quietos y visibles no entran en el cuadro con ese zoom, aleja la cámara (hasta Z_MIN);
+ * 2) recorta el paneo (de → a) para que ninguno de ellos quede afuera en ningún momento de la escena.
+ * Los que caminan, entran o salen pueden cruzar el borde. Devuelve una Camara normal (la usan el render y el revisor).
+ */
+export function camaraAuto(pistas: Pista[], cam: Camara = {}, dur = 0, aj: Record<string, Ajuste> = {}): Camara {
+  const [z0, z1] = cam.zoom ?? [1, 1.05], de = cam.de ?? 0, a = cam.a ?? de;
+  const cajas: { x0: number; x1: number; p: number }[] = [];
+  for (const p of pistas) {
+    const ja = aj[p.id] ?? { k: 1, dy: 0 };
+    p.muestras.forEach((m, i) => {
+      if (!m.vis) return;
+      const ant = p.muestras[i - 1], sig = p.muestras[i + 1];
+      if ((ant && Math.abs(ant.x - m.x) >= 2) || (sig && Math.abs(sig.x - m.x) >= 2)) return; // se mueve: puede cruzar el borde
+      const s = m.s * ja.k, mx = m.x + (ja.dx ?? 0);
+      const izq = (m.izq ? p.medida.der : p.medida.izq) * s, der = (m.izq ? p.medida.izq : p.medida.der) * s;
+      cajas.push({ x0: mx - izq, x1: mx + der, p: P_CAPA[p.capa] });
+    });
+  }
+  if (!cajas.length) return { de, a, zoom: [z0, z1] };
+  // con zoom z, la cámara x tiene que quedar en [lo, hi] para que todas las cajas entren
+  const rango = (z: number): [number, number] => {
+    const W = (960 - MARGEN_CAM) / z;
+    let lo = -Infinity, hi = Infinity;
+    for (const c of cajas) { lo = Math.max(lo, (c.x1 - 960 - W) / c.p); hi = Math.min(hi, (c.x0 - 960 + W) / c.p); }
+    return [lo, hi];
+  };
+  const entra = (z: number) => { const [lo, hi] = rango(z); return lo <= hi; };
+  const zMax = Math.max(z0, z1);
+  let z = zMax;
+  if (!entra(z)) {
+    let bajo = Z_MIN, alto = zMax;
+    if (!entra(bajo)) z = Z_MIN;
+    else { for (let i = 0; i < 24; i++) { const m = (bajo + alto) / 2; if (entra(m)) bajo = m; else alto = m; } z = bajo; }
+  }
+  const k = z / zMax, [lo, hi] = rango(z);
+  const fija = (x: number) => (lo > hi ? (lo + hi) / 2 : Math.min(hi, Math.max(lo, x)));
+  return { de: fija(de), a: fija(a), zoom: [z0 * k, z1 * k] };
+}
+
 /** Avisos del horizontal (después del ajuste): fuera de cuadro, encimados y actores que tapan rótulos. */
 export function revisarHorizontal(pistas: Pista[], cam: Camara, dur: number, aj: Record<string, Ajuste>, rotulos: { f0: number; f1: number; texto: string; x: number; y: number }[] = []): Aviso[] {
   const av: Aviso[] = [];

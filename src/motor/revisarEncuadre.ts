@@ -1,5 +1,5 @@
 // Revisión de encuadre de una escena en los dos formatos (la usa scripts/revisar-encuadre.mjs, empaquetado con esbuild).
-import { pistasDeEscena, pistasAjustadas, ajustesEscena, momento } from './Escena';
+import { pistasDeEscena, pistasAjustadas, ajustesEscena, camaraEscena, momento } from './Escena';
 import { encuadreEscena } from './puestaVertical';
 import { revisarHorizontal, revisarVertical, type Aviso, type Ajuste } from './encuadreHorizontal';
 import type { Escena as EscenaT, EscenaTL } from './tipos';
@@ -10,7 +10,7 @@ export function revisarEscena(esc: EscenaT, tl: EscenaTL, idioma: 'en' | 'es' = 
     f0: momento(tl, r.en), f1: r.hasta !== undefined ? momento(tl, r.hasta) : dur, x: r.x, y: r.y,
     texto: typeof r.texto === 'string' ? r.texto : r.texto[idioma] ?? r.texto.es,
   }));
-  const h = revisarHorizontal(pistas, esc.camara ?? {}, dur, aj, rot);
+  const h = revisarHorizontal(pistas, camaraEscena(esc, tl), dur, aj, rot);
   const cam = esc.camara ?? {}, de = cam.de ?? 0, a = cam.a ?? de;
   const pa = pistasAjustadas(esc, tl);
   const v = revisarVertical(pa, encuadreEscena(pa, [Math.min(de, a) - 120, Math.max(de, a) + 1920 + 120]));

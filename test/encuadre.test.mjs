@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { ajusteHorizontal, revisarHorizontal, cajaPantalla, tapado, TECHO_H, K_AJ_MIN, K_SOLAPE_MIN } from '../src/motor/encuadreHorizontal.ts';
+import { ajusteHorizontal, revisarHorizontal, cajaPantalla, tapado, camaraAuto, Z_MIN, TECHO_H, K_AJ_MIN, K_SOLAPE_MIN } from '../src/motor/encuadreHorizontal.ts';
 import { medidaFicha } from '../src/motor/puestaVertical.ts';
 
 const pista = (id, x, o = {}) => {
@@ -109,4 +109,21 @@ test('animal de suelo que a K_AJ_MIN igual pasa el techo baja hasta entrar (piso
   const aj = ajusteHorizontal([{ id: 'g', capa: 'frente', ajustable: true, medida: { alto: 1150, izq: 200, der: 200 }, muestras: [m(900), m(900)] }], { zoom: [1, 1] });
   assert.ok(aj.g.k < K_AJ_MIN && aj.g.k >= K_AJ_DURO, `k ${aj.g.k}`);
   assert.ok(790 - 1150 * aj.g.k >= TECHO_H - 1);
+});
+
+test('cámara: el paneo del guion se recorta y, si no entran todos los quietos, se aleja (2026-11-25)', () => {
+  const dentro = (ps, cam) => ps.every((p) => p.muestras.every((m) => { const c = cajaPantalla(p, m, { k: 1, dy: 0 }, cam, 60); return c[0] >= 0 && c[2] <= 1920; }));
+  // cuatro quietos que entran en el cuadro: el paneo a 700 los sacaría por la izquierda → se recorta, sin alejar
+  const ps = [pista('a', 350), pista('b', 800), pista('c', 1200), pista('d', 1600)];
+  const c1 = camaraAuto(ps, { de: 0, a: 700, zoom: [1, 1.05] }, 60);
+  assert.ok(c1.a < 700 && c1.zoom[1] === 1.05, JSON.stringify(c1));
+  assert.ok(dentro(ps, c1) && !dentro(ps, { de: 0, a: 700, zoom: [1, 1.05] }));
+  // muy repartidos (300…2350): se aleja lo justo para que entren todos
+  const ps2 = [pista('a', 300), pista('b', 1000), pista('c', 1700), pista('d', 2350)];
+  const c2 = camaraAuto(ps2, { de: 0, a: 1200 }, 60);
+  assert.ok(c2.zoom[1] < 1 && c2.zoom[1] >= Z_MIN, JSON.stringify(c2));
+  assert.ok(dentro(ps2, c2));
+  // uno que camina puede cruzar el borde: no obliga a alejar
+  const anda = { ...pista('e', 0), muestras: Array.from({ length: 20 }, (_, i) => ({ f: i * 3, x: -600 + i * 60, y: 790, s: 1.12, vis: true, izq: false })) };
+  assert.deepEqual(camaraAuto([pista('a', 900), anda], { de: 0, a: 0, zoom: [1, 1] }, 60).zoom, [1, 1]);
 });

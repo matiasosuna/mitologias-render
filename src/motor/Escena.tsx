@@ -7,7 +7,7 @@ import { ELENCO, DibujarActor, Estado, Ficha, NOMBRE_EN } from './elenco';
 import { Fondo, ElementoSVG, CIELO } from './fondos';
 import type { Escena as EscenaT, EscenaTL, Actor, Efecto, Idioma } from './tipos';
 import { PASO, medidaFicha, type Pista, type Medida, type Capa as CapaT } from './puestaVertical';
-import { ajusteHorizontal, type Ajuste } from './encuadreHorizontal';
+import { ajusteHorizontal, camaraAuto, type Ajuste, type Camara } from './encuadreHorizontal';
 
 const cl = { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' } as const;
 const suaveT = (f: number, a: number, b: number) => interpolate(f, [a, Math.max(a + 1, b)], [0, 1], { ...cl, easing: Easing.inOut(Easing.cubic) });
@@ -288,6 +288,15 @@ export function ajustesEscena(esc: EscenaT, tl: EscenaTL): Record<string, Ajuste
   cacheAj.set(esc, { dur: tl.durationInFrames, aj });
   return aj;
 }
+const cacheCam = new WeakMap<EscenaT, { dur: number; cam: Camara }>();
+/** Cámara real del horizontal: la del guion, recortada/alejada para que entren todos (encuadreHorizontal.camaraAuto). */
+export function camaraEscena(esc: EscenaT, tl: EscenaTL): Camara {
+  const c = cacheCam.get(esc);
+  if (c && c.dur === tl.durationInFrames) return c.cam;
+  const cam = camaraAuto(pistasDeEscena(esc, tl), esc.camara ?? {}, tl.durationInFrames, ajustesEscena(esc, tl));
+  cacheCam.set(esc, { dur: tl.durationInFrames, cam });
+  return cam;
+}
 /** Pistas con el ajuste aplicado (las usa la puesta vertical, así el animal mide lo mismo en los dos formatos). */
 export function pistasAjustadas(esc: EscenaT, tl: EscenaTL): Pista[] {
   const aj = ajustesEscena(esc, tl);
@@ -300,7 +309,7 @@ const esGrande = (fi: Ficha) => fi.tipo === 'dibujo' && typeof fi.p?.alto === 'n
 /** Escena animada a partir del guion visual. */
 export const EscenaMotor: React.FC<{ esc: EscenaT; tl: EscenaTL; idioma?: Idioma }> = ({ esc, tl, idioma = 'en' }) => {
   const dur = tl.durationInFrames;
-  const cam = esc.camara ?? {};
+  const cam = camaraEscena(esc, tl);
   const z = cam.zoom ?? [1, 1.05];
   return (
     <Escenario dur={dur} entra={!esc.sinEntrada} cielo={CIELO[esc.fondo] ?? 'barro'} camara={[[0, cam.de ?? 0, z[0]], [dur, cam.a ?? cam.de ?? 0, z[1]]]}>
