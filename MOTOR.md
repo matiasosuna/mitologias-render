@@ -41,7 +41,7 @@ Cada video es **un solo archivo**: `src/videos/<id>/guion.json` (tipos en `src/m
 - **"Y por eso…" (solo si sale natural):** contá la historia como se cuenta, sin forzar. Si el mito mismo explica algo del mundo (lo dice la fuente), decilo dentro de la narración con naturalidad. No es obligatorio ni hay cuota; nunca inventar ni estirar una explicación. El cartel `estilo: "porque"` solo para la explicación más fuerte del episodio (0 o 1 por video).
 - Cada frase tiene que **verse**: algo entra, se mueve, cambia o aparece en sincronía con lo que se narra.
 - 2–5 actores por escena, separados ≥ 150 px; usar `capa: fondo/medio` para profundidad y la cámara para recorrer.
-- Primera frase del video conecta con el anterior; la última escena (`cierre`) anuncia el siguiente según `PLAN-GRIEGAS.md`.
+- Cada video se entiende solo (CLARIDAD.md); el `cierre` resume y pregunta, sin anunciar el siguiente.
 - Sin contenido sexual explícito; violencia sin morbo (destello en lugar de sangre).
 
 ## Miniatura / portada

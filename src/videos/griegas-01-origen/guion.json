@@ -1589,10 +1589,6 @@
     {
      "es": "¿Hizo bien Zeus en pelear contra su propio padre? Cuéntanos en los comentarios.",
      "en": "Was Zeus right to fight his own father? Tell us in the comments."
-    },
-    {
-     "es": "La próxima historia es sobre Prometeo, un Titán que les robó el fuego a los dioses.",
-     "en": "The next story is about Prometheus, a Titan who stole fire from the gods."
     }
    ],
    "actores": [
@@ -1613,7 +1609,8 @@
      "como": "hera_oficial",
      "x": 700,
      "capa": "medio",
-     "rotulo": ""
+     "rotulo": "",
+     "pasos": []
     },
     {
      "id": "cronos",
@@ -1635,26 +1632,6 @@
        "con": "humo"
       }
      ]
-    },
-    {
-     "id": "prometeo",
-     "como": "prometeo_oficial",
-     "x": 1900,
-     "mira": "izq",
-     "props": {
-      "objeto": "antorcha"
-     },
-     "pasos": [
-      {
-       "en": 3,
-       "hace": "entra",
-       "a": 1600
-      },
-      {
-       "en": 3.5,
-       "hace": "levanta"
-      }
-     ]
     }
    ],
    "efectos": [
@@ -1662,12 +1639,6 @@
      "en": 2.5,
      "tipo": "oscurecer",
      "intensidad": 0.5
-    },
-    {
-     "en": 3.3,
-     "tipo": "luz",
-     "x": 1600,
-     "y": 450
     }
    ]
   }

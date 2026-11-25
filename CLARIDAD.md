@@ -31,8 +31,9 @@ Estas reglas mandan sobre cualquier otra guía de guion (BRIEF-GUION, RUTINA, ES
    («mead, a sweet drink made from honey»). En Gnosis y la Biblia: cada término (aeon, archon, Pleroma, covenant…)
    se explica en la misma frase o en la siguiente, contado como verdad (ver PLAN de la serie).
 9. **Cierre que resume.** Antes de la pregunta final, 1–2 frases simples que dicen qué pasó y qué cambió («So Odin
-   stole the mead, and that is how poetry came to the gods.»). Después, la pregunta para comentar y el anuncio del
-   siguiente.
+   stole the mead, and that is how poetry came to the gods.»). Después, la pregunta para comentar y nada más: sin
+   anunciar el próximo episodio ni pedir que se suscriban (Instagram, Matías 2026-11-25; lo vigila
+   test/sin-anuncio.test.mjs).
 10. **Citas solo si se entienden.** Una cita del texto va seguida de lo que quiere decir, en palabras simples, si no
     es obvia.
 
