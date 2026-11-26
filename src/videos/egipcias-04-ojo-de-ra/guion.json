@@ -1,4 +1,5 @@
 {
+  "claridad": true,
   "id": "egipcias-04-ojo-de-ra",
   "serie": "egipcias",
   "numero": "04",
@@ -25,20 +26,20 @@
       },
       "frases": [
         {
-          "es": "Osiris reinaba en Egipto y enseñaba a su pueblo a sembrar el trigo, a hacer pan y a vivir en paz.",
-          "en": "Osiris ruled in Egypt, teaching his people to sow wheat, bake bread, and live in peace."
+          "es": "Hace mucho tiempo, Ra, el dios del sol, gobernaba Egipto como rey.",
+          "en": "Long ago, Ra, the sun god, ruled Egypt as its king."
         },
         {
-          "es": "Pero los egipcios contaban que los humanos estuvieron a punto de no llegar a probar ese pan.",
-          "en": "But the Egyptians told that humans came very close to never tasting that bread."
+          "es": "Los humanos habían nacido del Ojo de Ra, y vivían en la tierra.",
+          "en": "The humans had been born from Ra's Eye, and they lived on the earth."
         },
         {
-          "es": "Mucho antes, cuando Ra todavía gobernaba la tierra como rey, la humanidad casi desapareció.",
-          "en": "Long before, when Ra himself still ruled the earth as king, humankind almost vanished."
+          "es": "Esta es la historia de cómo la humanidad casi desapareció.",
+          "en": "This is the story of how humankind almost vanished."
         },
         {
-          "es": "Esa historia quedó grabada en las paredes de las tumbas de los faraones: el Libro de la Vaca Celeste.",
-          "en": "That story was carved on the walls of the pharaohs' tombs: the Book of the Heavenly Cow."
+          "es": "Está grabada en las paredes de las tumbas de los faraones, en el Libro de la Vaca Celeste.",
+          "en": "It is carved on the walls of the pharaohs' tombs, in the Book of the Heavenly Cow."
         }
       ],
       "elementos": [
@@ -58,8 +59,8 @@
       ],
       "actores": [
         {
-          "id": "osiris",
-          "como": "osiris_oficial",
+          "id": "ra",
+          "como": "ra_oficial",
           "x": 800,
           "pasos": [
             {
@@ -154,8 +155,8 @@
       },
       "frases": [
         {
-          "es": "En aquellos días Ra ya era viejo. Sus huesos eran de plata, su carne era de oro y su cabello, de lapislázuli puro.",
-          "en": "By then Ra had grown old. His bones were silver, his flesh was gold, and his hair was pure lapis lazuli."
+          "es": "En aquellos días Ra ya era viejo. Sus huesos eran de plata, su carne era de oro y su cabello, de lapislázuli puro, una piedra azul oscuro.",
+          "en": "By then Ra had grown old. His bones were silver, his flesh was gold, and his hair was pure lapis lazuli, a deep blue stone."
         },
         {
           "es": "Los humanos, que habían nacido de su Ojo, empezaron a murmurar a sus espaldas.",
@@ -166,8 +167,8 @@
           "en": "They said His Majesty was old and could no longer rule, and they plotted to rise against him."
         },
         {
-          "es": "Pero un dios que lo ve todo no tarda en enterarse.",
-          "en": "But a god who sees everything is not slow to find out."
+          "es": "Ra se enteró de la conspiración, porque un dios que lo ve todo no tarda en enterarse.",
+          "en": "Ra found out about the plot, because a god who sees everything is not slow to learn."
         }
       ],
       "elementos": [
@@ -324,16 +325,24 @@
       },
       "frases": [
         {
-          "es": "Ra reunió en secreto a los dioses más antiguos: Shu y Tefnut, Geb y Nut, y al Nun, el océano del que había salido.",
-          "en": "Ra secretly gathered the oldest gods: Shu and Tefnut, Geb and Nut, and Nun, the ocean he had come from."
+          "es": "Ra reunió en secreto a los dioses más antiguos.",
+          "en": "Ra secretly called together the oldest gods."
         },
         {
-          "es": "No quiso que los humanos se enteraran, para que no cundiera el miedo.",
-          "en": "He did not want the humans to know, so that fear would not spread."
+          "es": "Eran Shu y Tefnut, sus hijos, y Geb y Nut, los hijos de ellos.",
+          "en": "They were Shu and Tefnut, his children, and Geb and Nut, their children."
         },
         {
-          "es": "Preguntó qué hacer con ellos, y juró que no los castigaría hasta oír el consejo de todos.",
-          "en": "He asked what should be done about them, and swore he would not strike until he had heard their advice."
+          "es": "El Nun, el océano del que Ra había salido, también estaba allí.",
+          "en": "Nun, the ocean Ra came from, was there too."
+        },
+        {
+          "es": "Ra no quiso que los humanos se enteraran, para que no cundiera el miedo.",
+          "en": "Ra did not want the humans to know, so that fear would not spread."
+        },
+        {
+          "es": "Preguntó qué hacer con ellos, y juró que no los castigaría hasta oír su consejo.",
+          "en": "He asked what to do about them, and swore he would not strike until he heard their advice."
         },
         {
           "es": "El Nun, el más viejo de todos, respondió: «Hijo mío, manda a tu Ojo. Que caiga sobre los que conspiran».",
@@ -355,12 +364,12 @@
               "hace": "aparece"
             },
             {
-              "en": 2,
+              "en": 4,
               "hace": "habla",
               "dur": 1
             },
             {
-              "en": 3,
+              "en": 5,
               "hace": "senala"
             }
           ]
@@ -419,11 +428,11 @@
           "rotulo": "",
           "pasos": [
             {
-              "en": 4,
+              "en": 6,
               "hace": "aparece"
             },
             {
-              "en": 4.2,
+              "en": 6.2,
               "hace": "corre",
               "a": 2300,
               "dur": 1
@@ -445,14 +454,14 @@
       ],
       "rotulos": [
         {
-          "en": 3,
+          "en": 2,
+          "hasta": 4,
           "texto": {
             "es": "EL NUN",
             "en": "NUN"
           },
           "x": 960,
-          "y": 240,
-          "hasta": 4
+          "y": 240
         }
       ]
     },
@@ -469,8 +478,8 @@
       },
       "frases": [
         {
-          "es": "Entonces el Ojo de Ra descendió a la tierra con la forma de la diosa Hathor.",
-          "en": "Then the Eye of Ra descended to earth in the form of the goddess Hathor."
+          "es": "Así Ra mandó a su Ojo, y descendió a la tierra con la forma de la diosa Hathor.",
+          "en": "So Ra sent out his Eye, and it came down to earth as the goddess Hathor."
         },
         {
           "es": "Persiguió a los rebeldes por las montañas del desierto, y ninguno escapó de ella.",
@@ -481,8 +490,8 @@
           "en": "When she returned, Ra welcomed her. Hathor said: \"I have overpowered the humans, and it was sweet to my heart.\""
         },
         {
-          "es": "Pero la diosa ya no era la misma. En su furia se había convertido en Sekhmet, la Poderosa, la leona.",
-          "en": "But the goddess was no longer the same. In her fury she had become Sekhmet, the Powerful One, the lioness."
+          "es": "Pero la diosa ya no era la misma. En su furia se había convertido en Sekhmet, la Poderosa, una leona.",
+          "en": "But the goddess was no longer the same. In her fury she had become Sekhmet, the Powerful One, a lioness."
         }
       ],
       "actores": [
@@ -644,8 +653,8 @@
       },
       "frases": [
         {
-          "es": "Y Sekhmet no se detuvo. Noche tras noche recorrió el país, y la tierra quedó teñida de rojo.",
-          "en": "And Sekhmet did not stop. Night after night she walked the land, and the earth was stained red."
+          "es": "Sekhmet no se detuvo. Noche tras noche recorrió el país, y la tierra quedó teñida de rojo.",
+          "en": "Sekhmet did not stop. Night after night she walked the land, and the earth was stained red."
         },
         {
           "es": "Ra la observaba desde lejos, y su corazón se llenó de arrepentimiento.",
@@ -656,8 +665,8 @@
           "en": "\"Enough,\" he said. \"I want to save those who are left.\""
         },
         {
-          "es": "Pero Sekhmet ya no escuchaba. Su rabia le había hecho olvidar quién era, y quería terminar lo que había empezado.",
-          "en": "But Sekhmet no longer listened. Her rage had made her forget who she was, and she wanted to finish what she had started."
+          "es": "Pero Sekhmet ya no escuchaba. Su rabia le hizo olvidar quién era. Quería terminar lo que había empezado.",
+          "en": "But Sekhmet no longer listened. Her rage made her forget who she was. She wanted to finish what she had started."
         }
       ],
       "actores": [
@@ -761,16 +770,16 @@
       },
       "frases": [
         {
-          "es": "Ra llamó a sus mensajeros más veloces, los que corren como el viento.",
-          "en": "Ra summoned his fastest messengers, the ones who run like the wind."
+          "es": "Ra tenía un plan para detener a Sekhmet. Llamó a sus mensajeros más veloces, los que corren como el viento.",
+          "en": "Ra had a plan to stop Sekhmet. He summoned his fastest messengers, the ones who run like the wind."
         },
         {
-          "es": "«Vayan a Elefantina, en el extremo sur, y tráiganme ocre rojo, tanto como puedan cargar».",
-          "en": "\"Go to Elephantine, far to the south, and bring me red ochre, as much as you can carry.\""
+          "es": "«Vayan a Elefantina, en el extremo sur, y tráiganme ocre rojo, una tierra roja. Traigan tanto como puedan cargar».",
+          "en": "\"Go to Elephantine, far to the south, and bring me red ochre, a red earth. Bring as much as you can carry.\""
         },
         {
           "es": "En Heliópolis, el sumo sacerdote molió el ocre mientras las sirvientas trituraban cebada para hacer cerveza.",
-          "en": "In Heliopolis the high priest ground the ochre while the servant women crushed barley to brew beer."
+          "en": "In Heliopolis, the high priest ground the ochre while the servant women crushed barley to brew beer."
         },
         {
           "es": "Mezclaron el ocre con la cerveza hasta que quedó roja como la sangre humana.",
@@ -969,8 +978,8 @@
           "en": "She staggered, forgot her fury, and could no longer recognize a single human. Ra welcomed her: \"Welcome, gentle one.\""
         },
         {
-          "es": "Por eso, en la fiesta de Hathor, los egipcios bebían cerveza en cantidad, en recuerdo de aquel día.",
-          "en": "And so, at the festival of Hathor, the Egyptians drank beer in great quantity, in memory of that day."
+          "es": "Así se salvaron los humanos. Y en la fiesta de Hathor, los egipcios bebían cerveza en cantidad, en recuerdo de aquel día.",
+          "en": "So the humans were saved. And at the festival of Hathor, the Egyptians drank beer in great quantity, in memory of that day."
         }
       ],
       "elementos": [
@@ -1119,8 +1128,8 @@
           "en": "Ra was worn out. \"I am weary of being among them,\" he said. \"I will not stay on the earth any longer.\""
         },
         {
-          "es": "Entonces Nut tomó la forma de una enorme vaca celeste, y Ra subió a su lomo.",
-          "en": "So Nut took the shape of an enormous heavenly cow, and Ra climbed onto her back."
+          "es": "Entonces Nut, la diosa del cielo, tomó la forma de una enorme vaca celeste, y Ra subió a su lomo.",
+          "en": "So Nut, the sky goddess, took the shape of an enormous heavenly cow, and Ra climbed onto her back."
         },
         {
           "es": "Los humanos, arrepentidos, salieron a pedirle que no se fuera y se ofrecieron a luchar contra sus enemigos.",
@@ -1131,8 +1140,8 @@
           "en": "But Ra was already rising. The cow stood up, and the earth fell away below, farther and farther."
         },
         {
-          "es": "A Nut le dio vértigo y empezó a temblar. Entonces Shu se metió bajo su vientre y la sostuvo.",
-          "en": "Nut grew dizzy at that height and began to tremble. So Shu slipped under her belly and held her up."
+          "es": "A Nut le dio vértigo y empezó a temblar. Entonces Shu, el dios del aire, se metió bajo su vientre y la sostuvo.",
+          "en": "Nut grew dizzy at that height and began to tremble. So Shu, the god of air, slipped under her belly and held her up."
         },
         {
           "es": "Ocho dioses más sujetaron sus patas, y el vientre de la vaca se llenó de estrellas.",
@@ -1309,8 +1318,8 @@
           "en": "Ra also wanted someone to stand in his place and watch through the dark. He chose Thoth, the scribe god."
         },
         {
-          "es": "Y le encargó a Geb que vigilara a las serpientes de la tierra.",
-          "en": "And he charged Geb with watching over the snakes of the earth."
+          "es": "Y le encargó a Geb, el dios de la tierra, que vigilara a las serpientes de la tierra.",
+          "en": "And he charged Geb, the earth god, with watching over the snakes of the earth."
         }
       ],
       "elementos": [
@@ -1453,16 +1462,12 @@
           "en": "That is how Ra left his throne on earth and began to rule from the sky, on the back of Nut."
         },
         {
-          "es": "Desde esa altura seguía siendo el rey de los dioses, pero también seguía envejeciendo.",
-          "en": "From that height he was still king of the gods, but he was still growing old."
+          "es": "Así la humanidad se salvó con la cerveza roja, y Ra ya no vivía en la tierra.",
+          "en": "So humankind was saved by the red beer, and Ra no longer lived on the earth."
         },
         {
-          "es": "Y abajo, en la tierra, una diosa lo observaba con atención: Isis, más astuta que todos los demás.",
-          "en": "And down on the earth, one goddess was watching him closely: Isis, shrewder than all the others."
-        },
-        {
-          "es": "Isis quería algo que Ra guardaba mejor que su corona: su verdadero nombre. Esa es la historia del próximo episodio.",
-          "en": "Isis wanted something Ra guarded better than his crown: his true name. That is the story of the next episode."
+          "es": "¿Hizo bien Ra en perdonar a la humanidad? Cuéntanos en los comentarios.",
+          "en": "Was Ra right to forgive humankind? Tell us in the comments."
         }
       ],
       "elementos": [
@@ -1499,25 +1504,6 @@
               "hace": "lamenta"
             }
           ]
-        },
-        {
-          "id": "isis",
-          "como": "isis_oficial",
-          "x": 500,
-          "pasos": [
-            {
-              "en": 2,
-              "hace": "aparece"
-            },
-            {
-              "en": 2.4,
-              "hace": "senala"
-            },
-            {
-              "en": 3.2,
-              "hace": "levanta"
-            }
-          ]
         }
       ],
       "efectos": [
@@ -1526,24 +1512,14 @@
           "tipo": "estrellas"
         },
         {
-          "en": 3,
+          "en": 2,
           "tipo": "luz",
           "x": 500,
           "y": 380,
           "dur": 1
         }
       ],
-      "rotulos": [
-        {
-          "en": 3,
-          "texto": {
-            "es": "PRÓXIMO: EL NOMBRE SECRETO DE RA",
-            "en": "NEXT: THE SECRET NAME OF RA"
-          },
-          "x": 960,
-          "y": 250
-        }
-      ]
+      "rotulos": []
     }
   ],
   "shorts": [
