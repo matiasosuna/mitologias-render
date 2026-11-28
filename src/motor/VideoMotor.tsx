@@ -4,11 +4,11 @@ import React from 'react';
 import { LeyendaBiblia } from './Leyenda';
 import { TextoGanchoSeq, VeloGancho } from './Gancho';
 import { AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame, interpolate } from 'remotion';
-import { C, TITULO, TEXTO, ap, cl, Guardas, TEMA, aplicarTema, TextoRunico, Jeroglificos, CalidadHD, marcaCanal } from '../comun/vasija';
+import { C, TITULO, ap, cl, Guardas, TEMA, aplicarTema, TextoRunico, Jeroglificos, CalidadHD, marcaCanal } from '../comun/vasija';
 import { Fondo, ElementoSVG } from './fondos';
 import { EscenaMotor } from './Escena';
 import { Miniatura } from '../comun/miniatura';
-import type { GuionVisual, Timeline, Idioma, EscenaTL } from './tipos';
+import type { GuionVisual, Timeline, Idioma } from './tipos';
 
 const Portada: React.FC<{ g: GuionVisual; dur: number; idioma: Idioma }> = ({ g, dur, idioma }) => {
   const f = useCurrentFrame();
@@ -104,25 +104,6 @@ export const FinalMarca: React.FC<{ dur: number }> = ({ dur }) => {
   );
 };
 
-/** Subtítulos quemados abajo al centro (Matías 2026-11-28: «sin subtítulos se complica la historia»).
- *  Cada frase queda 8 cuadros más, salvo que ya arranque la siguiente (como el vertical). */
-export const subtituloEn = (e: EscenaTL, t: number) => {
-  const j = e.frases.findIndex((fr, k) => t >= fr.from && t < Math.min(fr.from + fr.dur + 8, e.frases[k + 1]?.from ?? Infinity));
-  return j < 0 ? null : { fr: e.frases[j], hasta: Math.min(e.frases[j].from + e.frases[j].dur + 8, e.frases[j + 1]?.from ?? Infinity) };
-};
-const Subtitulos: React.FC<{ e: EscenaTL; idioma: Idioma }> = ({ e, idioma }) => {
-  const t = useCurrentFrame();
-  const s = subtituloEn(e, t);
-  const texto = s && (s.fr.texto[idioma] ?? s.fr.texto.en ?? s.fr.texto.es);
-  if (!s || !texto) return null;
-  const o = Math.min(interpolate(t, [s.fr.from, s.fr.from + 4], [0, 1], cl), interpolate(t, [s.hasta - 4, s.hasta], [1, 0], cl));
-  return (
-    <AbsoluteFill style={{ pointerEvents: 'none', justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 56 }}>
-      <div style={{ maxWidth: 1560, textAlign: 'center', fontFamily: TEXTO, fontWeight: 500, fontSize: 54, lineHeight: 1.22, color: '#FFF8EA', opacity: o, textWrap: 'balance', textShadow: `0 3px 0 ${C.negro}, 0 0 4px ${C.negro}, 0 0 16px rgba(0,0,0,.7)` } as React.CSSProperties}>{texto}</div>
-    </AbsoluteFill>
-  );
-};
-
 export const VideoMotor: React.FC<{ guion: GuionVisual; timeline: Timeline; idioma?: Idioma | null; imagen?: Idioma }> = ({ guion, timeline, idioma = null, imagen = 'en' }) => {
   aplicarTema(guion.serie);
   const gancho = timeline.escenas[0]?.gancho ? timeline.escenas[0] : null;
@@ -135,7 +116,6 @@ export const VideoMotor: React.FC<{ guion: GuionVisual; timeline: Timeline; idio
     {timeline.escenas.map((tl, i) => (
       <Sequence key={tl.id} from={tl.from} durationInFrames={tl.durationInFrames}>
         <EscenaMotor esc={guion.escenas[i]} tl={tl} idioma={imagen} />
-        {!tl.gancho && TEMA.nombre !== 'natural' && <Subtitulos e={tl} idioma={idioma ?? imagen} />}
         {idioma && tl.frases.map((fr, j) => fr.audio[idioma] ? <Sequence key={j} from={fr.from} durationInFrames={fr.dur + 6}><Audio src={staticFile(fr.audio[idioma]!)} /></Sequence> : null)}
       </Sequence>
     ))}
