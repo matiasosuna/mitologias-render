@@ -86,7 +86,7 @@ test('turno de serie: el próximo de ESA serie que le falta a cada red, estricto
   const c = [ep('griegas-01'), ep('nordicas-01'), ep('griegas-02'), ep('griegas-03'), ep('nordicas-02'), sh('short-q1')];
   const tiene = { youtube: mapa(['griegas-01', 'nordicas-01']), instagram: mapa(['griegas-01']), tiktok: mapa([]) };
   const p = (pl, s, extra = {}) => planTurno({ cola: c, tiene, plataforma: pl, clase: `serie:${s}`, inicio: INICIO, ...extra }).ids;
-  assert.deepEqual(p('youtube', 'griegas'), ['griegas-02']);
+  assert.deepEqual(p('youtube', 'griegas'), ['griegas-02', 'griegas-03']); // YouTube de a 2 (POR_TURNO, 2026-11-28)
   assert.deepEqual(p('instagram', 'griegas'), ['griegas-02']);
   assert.deepEqual(p('tiktok', 'griegas'), ['griegas-01']); // cada red sigue su propio orden
   assert.deepEqual(p('instagram', 'nordicas'), ['nordicas-01']);

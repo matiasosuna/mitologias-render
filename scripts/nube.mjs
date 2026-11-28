@@ -547,8 +547,9 @@ function proximos(d, p, n) {
  *  revisa ese render). Nada para YouTube ni TikTok (antes: verticales de TikTok, horizontales de YouTube, "Who is…?"). */
 async function adelantar(minutos = 150) {
   const d = datos(), hasta = Date.now() + minutos * 60e3;
-  const ig = proximosSerie({ cola: d.cola, tiene: d.tiene.instagram, listo: d.listo, rota: rotaCon(d.titulos), n: 2 });
-  console.log(`adelantar (Instagram, horizontal): ${ig.join(' ') || 'nada'}`);
+  // el mismo horizontal sirve a Instagram y a YouTube (2026-11-27): lo próximo de las dos, sin repetir
+  const ig = [...new Set(['instagram', 'youtube'].flatMap((p) => proximosSerie({ cola: d.cola, tiene: d.tiene[p], listo: listoPara(p, d.listo), rota: rotaCon(d.titulos), n: 2 })))];
+  console.log(`adelantar (Instagram y YouTube, horizontal): ${ig.join(' ') || 'nada'}`);
   const tareas = ig.map((id) => () => {
     if (assetVigente(id, 'horizontal') && hayAsset(nombreAsset(id, 'miniatura'))) return; // ya está en el release (sin bajar el video)
     if (asegurarEpisodio(id)) asegurar(id, 'miniatura');

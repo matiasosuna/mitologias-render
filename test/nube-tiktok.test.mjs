@@ -28,11 +28,11 @@ test('prepararTiktok usa el módulo `rel` recibido (no importa nube.mjs) y devue
   assert.deepEqual(llamadas, [['bajar', 'short-griegas-quien-zeus.tiktok.mp4']]);
 });
 
-test('nube.mjs le pasa su propio módulo a buffer-tiktok en el turno; adelantar ya no prepara TikTok (2026-11-24: solo Instagram)', () => {
+test('nube.mjs le pasa su propio módulo a buffer-tiktok en el turno; adelantar no prepara TikTok (2026-11-24; desde 2026-11-27, el horizontal de Instagram y YouTube)', () => {
   const src = readFileSync(new URL('../scripts/nube.mjs', import.meta.url), 'utf8');
   assert.match(src, /publicarTiktok\(id, \{ env, rel: yo \}\)/);
   const adelantar = src.slice(src.indexOf('async function adelantar'), src.indexOf('function sembrar'));
-  assert.ok(adelantar.length > 0 && !/prepararTiktok|'youtube'|'tiktok'/.test(adelantar), 'adelantar: solo el horizontal de Instagram');
+  assert.ok(adelantar.length > 0 && !/prepararTiktok|'tiktok'/.test(adelantar), 'adelantar: solo el horizontal (Instagram y YouTube)');
 });
 
 test('TikTok desde cero: los posts viejos de Buffer no frenan la re-publicación', () => {

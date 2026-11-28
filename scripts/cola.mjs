@@ -58,6 +58,9 @@ export function clase(horaUTC) {
 // Tope por turno mientras alcanzan (episodios) y topes por 24 h (publicaciones; en Instagram cuenta cada parte).
 export const MAX_ALCANZAR = { youtube: 2, instagram: 4, tiktok: 1 }; // TikTok de a 1: con 4 por turno TikTok frenó la cuenta 24 h (2026-10-19)
 export const MAX_TIKTOK_FRENADO = 1; // si TikTok/Buffer rechaza o limita: 1 por turno
+/** Episodios de la misma serie por turno (estricto en orden). YouTube de a 2 (Matías 2026-11-28: «al máximo», 9 por día con
+ *  TOPE_24H) para ponerse al día; las demás de a 1. */
+export const POR_TURNO = { youtube: 2, instagram: 1, tiktok: 1 };
 export const TOPE_24H = { youtube: 9, instagram: 90, tiktok: 30 }; // IG: content_publishing_limit = 100
 export const TOPE_COLA_BUFFER = 10;
 
@@ -173,8 +176,9 @@ export function planTurno({ cola, tiene, plataforma, clase: c, listo = () => tru
     // el próximo episodio de ESA serie que le falta a esta red, ESTRICTO en orden (si no está listo, se espera; nunca se
     // saltea a uno posterior). rota(id): entra en la rotación (nube.mjs deja afuera los especiales).
     const s = c.slice('serie:'.length);
-    const e = cola.find((x) => x.tipo === 'episodio' && serieDe(x.id) === s && rota(x.id) && !antes(plataforma)(x.id));
-    if (e && listo(e.id) && !ahora(e.id)) ids.push(e.id);
+    const faltan = cola.filter((x) => x.tipo === 'episodio' && serieDe(x.id) === s && rota(x.id) && !antes(plataforma)(x.id));
+    const e = faltan[0];
+    for (const x of faltan.slice(0, POR_TURNO[plataforma] ?? 1)) { if (!listo(x.id)) break; if (!ahora(x.id)) ids.push(x.id); }
     // espera: el episodio al que le toca pero no está listo (nube.mjs dice por qué: p. ej. «esperando revisión»)
     return { ids, parejo, punteros, lider, espera: e && !listo(e.id) ? e.id : null };
   }

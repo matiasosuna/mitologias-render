@@ -124,3 +124,13 @@ test('YouTube desde cero (2026-11-27): lo subido antes de YT_DESDE no cuenta y e
   assert.equal(buscarTitulo(sinArchivados(listado, new Set(['viejo1'])), 'The Origin'), null);
   assert.equal(buscarTitulo(sinArchivados(listado, new Set(['viejo1'])), 'Fire and Ice'), 'nuevo1');
 });
+
+test('YouTube de a 2 por turno de serie (2026-11-28), estricto: si el 2.º no está listo, sale solo el 1.º', async () => {
+  const { POR_TURNO } = await import('../scripts/cola.mjs');
+  assert.equal(POR_TURNO.youtube, 2);
+  const cola = ['griegas-01', 'griegas-02', 'griegas-03'].map(entrada);
+  const p = (listo) => planTurno({ cola, tiene: vacio(), plataforma: 'youtube', clase: 'serie:griegas', listo }).ids;
+  assert.deepEqual(p(() => true), ['griegas-01', 'griegas-02']);
+  assert.deepEqual(p((id) => id !== 'griegas-02'), ['griegas-01']);
+  assert.deepEqual(planTurno({ cola, tiene: vacio(), plataforma: 'instagram', clase: 'serie:griegas', listo: () => true }).ids, ['griegas-01']);
+});
