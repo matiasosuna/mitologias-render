@@ -22,7 +22,7 @@ import { viejosDeArchivo } from './legacy.mjs';
 import {
   HORAS_UTC, clase, construirCola, actualizarCola, tieneYouTube, tieneInstagram, tieneTiktok,
   planTurno, estadoCola, limitar, usadas24h, esQuien, esShort, PLATAFORMAS, MAX_ALCANZAR, MAX_TIKTOK_FRENADO, TOPE_24H, TOPE_COLA_BUFFER,
-  horizontalTurno, claveHorizontal, esBiblia, ACTIVAS, proximosSerie,
+  horizontalTurno, claveHorizontal, esBiblia, ACTIVAS, proximosSerie, YT_DESDE,
 } from './cola.mjs';
 import { tituloQuienHorizontal, listaQuien, mitologiaEn } from '../lib/quien.mjs';
 import * as yo from './nube.mjs'; // este mismo módulo, para pasárselo a buffer-tiktok (ver prepararTiktok)
@@ -314,7 +314,7 @@ function datos() {
   const titulos = leerJSON('src/videos/titulos.json', {}), ytIds = leerJSON(IDS, {});
   const api = leerJSON(API, []), igH = leerJSON(IG, []), buf = leerJSON(BUF, []);
   const cola = leerJSON(COLA, null) ?? construirCola({ titulos, ytIds, quien: quienes() });
-  const tiene = { youtube: tieneYouTube(ytIds, api), instagram: tieneInstagram(igH), tiktok: tieneTiktok(buf) };
+  const tiene = { youtube: tieneYouTube(ytIds, api, Date.parse(YT_DESDE)), instagram: tieneInstagram(igH), tiktok: tieneTiktok(buf) };
   return { titulos, ytIds, api, igH, buf, cola, tiene, listo: listoCon(titulos) };
 }
 function actualizar() {
@@ -331,7 +331,7 @@ const envF = () => Object.fromEntries(readFileSync('.env', 'utf8').split('\n').f
 
 /** Listo para publicar en `p`. Instagram (2026-11-24): además, la marca "claridad" en episodios (los Shorts no la llevan). Sin
  *  ella el turno de la serie espera (planTurno › espera): no publica nada, no falla, no saltea al siguiente y no reintenta. */
-export const listoPara = (p, listo, esClaro = claro) => (p === 'instagram' ? (id) => listo(id) && (esShort(id) || esClaro(id)) : listo);
+export const listoPara = (p, listo, esClaro = claro) => (p === 'instagram' || p === 'youtube' ? (id) => listo(id) && (esShort(id) || esClaro(id)) : listo);
 /** Plan de una plataforma en este turno, ya recortado por sus topes (24 h y, en TikTok, la cola de Buffer). */
 function planDe(p, d, f = fechaTurno()) {
   const c = clase(turnoUTC(f)), ahora = Date.now();
@@ -350,8 +350,13 @@ function planDe(p, d, f = fechaTurno()) {
 const MINIS = 'out/miniaturas-youtube.json';
 /** Lo anotado en youtube-ids que haya quedado privado sin fecha (falló el paso a público después de subir) pasa a público.
  *  Cuesta 1 unidad cada 50 ids + 50 por arreglo. Si falla, no frena el turno. */
+/** Videos subidos desde YT_DESDE (los de antes están archivados en privado y así quedan). */
+const nuevosYT = () => new Set(leerJSON(API, []).filter((h) => h.video && (Date.parse(h.fecha) || 0) >= Date.parse(YT_DESDE)).map((h) => h.video));
+/** El listado del canal sin los videos archivados (privados de antes de YT_DESDE): así un título viejo no frena la subida nueva. */
+export function sinArchivados(listado, viejos) { return listado.split('\n').filter((l) => !viejos.has(l.split('\t')[0])).join('\n'); }
+const archivadosYT = () => { const n = nuevosYT(); return new Set([...leerJSON(API, []).map((h) => h.video), ...Object.values(leerJSON(IDS, {}))].filter((v) => v && !n.has(v))); };
 function publicarPrivados() {
-  const ids = [...new Set(Object.values(leerJSON(IDS, {})).filter(Boolean))];
+  const n = nuevosYT(), ids = [...new Set(Object.values(leerJSON(IDS, {})).filter((v) => v && n.has(v)))]; // nunca los archivados
   if (!ids.length) return;
   try { const s = execFileSync('node', ['scripts/youtube-api.mjs', 'publicos', ...ids], { encoding: 'utf8', maxBuffer: 1 << 24 }).trim(); if (s) console.log(`YouTube privados: ${s}`); }
   catch (e) { console.log(`YouTube privados: no se pudo revisar (${String(e.message).slice(0, 200)})`); }
@@ -390,7 +395,7 @@ function episodioYT(id, titulo, extra = []) {
     if (ids[id] !== video) { ids[id] = video; writeFileSync(IDS, JSON.stringify(ids, null, 2)); }
     if (!hist.some((h) => h.id === id && h.video === video)) { hist.push({ id, short: null, video, cuando: 'ya', fecha: new Date().toISOString(), ...(nota ? { nota } : {}) }); writeFileSync(API, JSON.stringify(hist, null, 1)); }
   };
-  const listado = execFileSync('node', ['scripts/youtube-api.mjs', 'videos'], { encoding: 'utf8', maxBuffer: 1 << 24 });
+  const listado = sinArchivados(execFileSync('node', ['scripts/youtube-api.mjs', 'videos'], { encoding: 'utf8', maxBuffer: 1 << 24 }), archivadosYT());
   const previo = buscarTitulo(listado, titulo);
   if (previo) { anotar(previo, 'ya estaba en el canal'); return console.log(`YouTube: ${id} ya estaba: https://youtu.be/${previo}`); }
   if (!asegurarEpisodio(id)) throw new Error(`no hay video de ${id}`);
@@ -484,7 +489,7 @@ function horizontalDe(d, plan) {
 // ── un turno de una plataforma
 async function turno(p, probar = false) {
   if (!PLATAFORMAS.includes(p)) throw new Error(`plataforma desconocida: ${p}`);
-  if (!ACTIVAS.includes(p)) return console.log(`${p}: parado (Matías 2026-11-24: solo Instagram); no se publica`);
+  if (!ACTIVAS.includes(p)) return console.log(`${p}: parado (Matías 2026-11-24: solo Instagram; 2026-11-27 vuelve YouTube); no se publica`);
   if (p === 'youtube' && !probar) {
     // borrar todo el canal (pedido de Matías 2026-10-27): mientras quede algo viejo, no se sube nada a YouTube
     const { pendiente, borrarCanal } = await import('./youtube-borrar-todo.mjs');
@@ -583,7 +588,10 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     if (cmd === 'cola') actualizar();
     else if (cmd === 'plan' || cmd === 'slot') { const d = datos(); for (const p of ACTIVAS) { const x = planDe(p, d); console.log(JSON.stringify({ plataforma: p, turno: x.clase, parejo: x.parejo, punteros: x.punteros, toca: x.ids })); } }
     else if (cmd === 'pendientes') { // rutina de claridad (RUTINA-CLARIDAD.md): los próximos 2 de cada serie en IG que todavía no tienen la marca
-      const d = datos(); console.log(proximosSerie({ cola: d.cola, tiene: d.tiene.instagram, rota: rotaCon(d.titulos), n: Number(a.find((x) => x.startsWith('--n='))?.split('=')[1] ?? 2) }).filter((id) => !claro(id)).join('\n')); }
+      // de Instagram y de YouTube (2026-11-27: YouTube arranca del E1, así los E1 que ya salieron en IG también se revisan)
+      const d = datos(), n = Number(a.find((x) => x.startsWith('--n='))?.split('=')[1] ?? 2);
+      const ids = ['youtube', 'instagram'].flatMap((p) => proximosSerie({ cola: d.cola, tiene: d.tiene[p], rota: rotaCon(d.titulos), n }));
+      console.log([...new Set(ids)].filter((id) => !claro(id)).join('\n')); }
     else if (cmd === 'turno') await turno(pos[0], a.includes('--probar'));
     else if (cmd === 'adelantar') await adelantar();
     else if (cmd === 'sembrar') sembrar(max);

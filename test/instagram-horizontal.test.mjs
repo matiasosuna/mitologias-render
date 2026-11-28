@@ -16,9 +16,9 @@ const J = (f) => JSON.parse(readFileSync(raiz + f, 'utf8'));
 const vacio = () => ({ youtube: new Map(), instagram: new Map(), tiktok: new Map() });
 const E1 = { gnosticas: 'gnosticas-01-el-espiritu-invisible', biblia: 'biblia-genesis-01', griegas: 'griegas-01-origen', nordicas: 'nordicas-01-fuego-y-hielo', egipcias: 'egipcias-01-primer-monticulo', hawaianas: 'hawaianas-01-canto-de-la-noche' };
 
-test('Instagram publica el episodio horizontal; es la única red activa', () => {
+test('Instagram y YouTube publican el episodio horizontal; TikTok sigue parado (2026-11-27)', () => {
   assert.equal(FORMATOS.episodio.instagram, 'horizontal');
-  assert.deepEqual(ACTIVAS, ['instagram']);
+  assert.deepEqual(ACTIVAS, ['instagram', 'youtube']);
   assert.deepEqual(entrada('griegas-01-origen').formato.instagram, 'horizontal');
 });
 
@@ -33,9 +33,10 @@ test('compuerta claridad: sin la marca el turno de la serie espera (no publica, 
   assert.equal(p('nordicas').espera, null);
   marcados.add('griegas-01');
   assert.deepEqual(p('griegas').ids, ['griegas-01']);
-  // los Shorts no llevan la marca; las otras redes no usan la compuerta
+  // los Shorts no llevan la marca; YouTube usa la misma compuerta (2026-11-27); TikTok no
   assert.equal(listoPara('instagram', () => true, () => false)('short-griegas-quien-zeus'), true);
-  assert.equal(listoPara('youtube', () => true, () => false)('griegas-01'), true);
+  assert.equal(listoPara('youtube', () => true, () => false)('griegas-01'), false);
+  assert.equal(listoPara('tiktok', () => true, () => false)('griegas-01'), true);
 });
 
 test('claro(): solo con "claridad": true en el guion', () => {
@@ -111,4 +112,15 @@ test('limpiar-media: con YouTube y TikTok parados no borra lo que Instagram toda
   const tiene = { youtube: new Map([['griegas-01-origen', viejo], ['griegas-02-prometeo', viejo]]), instagram: new Map([['griegas-02-prometeo', viejo]]), tiktok: new Map([['griegas-02-prometeo', viejo]]) };
   assert.deepEqual(borrables({ assets, tiene, ahora }).map((a) => a.id), [2], 'solo lo que ya tienen las 3 (Instagram incluida)');
   assert.deepEqual(borrables({ assets, tiene: { ...tiene, instagram: new Map() }, ahora }), [], 'registro de Instagram vacío: no se borra nada');
+});
+
+test('YouTube desde cero (2026-11-27): lo subido antes de YT_DESDE no cuenta y el canal archivado no frena por título', async () => {
+  const { tieneYouTube, YT_DESDE } = await import('../scripts/cola.mjs');
+  const { sinArchivados, buscarTitulo } = await import('../scripts/nube.mjs');
+  const api = [{ id: 'griegas-01-origen', video: 'viejo1', fecha: '2026-10-28T00:00:00Z' }, { id: 'nordicas-01-fuego-y-hielo', video: 'nuevo1', fecha: '2026-11-28T00:00:00Z' }];
+  const m = tieneYouTube({ 'griegas-01-origen': 'viejo1' }, api, Date.parse(YT_DESDE));
+  assert.deepEqual([...m.keys()], ['nordicas-01-fuego-y-hielo']);
+  const listado = 'viejo1\tprivate\tThe Origin\nnuevo1\tpublic\tFire and Ice';
+  assert.equal(buscarTitulo(sinArchivados(listado, new Set(['viejo1'])), 'The Origin'), null);
+  assert.equal(buscarTitulo(sinArchivados(listado, new Set(['viejo1'])), 'Fire and Ice'), 'nuevo1');
 });

@@ -9,8 +9,8 @@
 # Estado (registros + cola): rama "estado" (scripts/estado-*.sh). Videos: release "media" (scripts/nube.mjs);
 # si falta alguno, se renderiza en la misma corrida. En el repo privado NO corre (sus minutos se pagan).
 # A mano: gh workflow run publicar -R matiasosuna/mitologias-render
-# Desde 2026-11-24 (Matías: solo Instagram, horizontal): publica SOLO Instagram, el episodio horizontal 16:9, uno de cada serie en
-# su turno (cola.mjs SERIE_HST) y solo si su guion tiene "claridad": true. Los pasos de YouTube y TikTok quedan con if: false.
+# Desde 2026-11-27 también YouTube (el mismo horizontal, desde el E1; lo de antes quedó privado). Desde 2026-11-24 (Matías: solo Instagram, horizontal): publica Instagram, el episodio horizontal 16:9, uno de cada serie en
+# su turno (cola.mjs SERIE_HST) y solo si su guion tiene "claridad": true. El paso de TikTok queda con if: false.
 # Instagram desde cero (una vez): gh workflow run publicar -R matiasosuna/mitologias-render -f reiniciar_ig=true
 name: publicar
 on:
@@ -106,15 +106,13 @@ jobs:
         run: node scripts/nube.mjs cola && node scripts/nube.mjs plan
 
       # cada paso con continue-on-error: si falla uno, los demás siguen; "resultado" pone el job en rojo
-      # YouTube y TikTok parados (Matías 2026-11-24: solo Instagram): sus pasos quedan, con if: false
+      # YouTube vuelve (Matías 2026-11-27), desde el E1 de cada serie (cola.mjs YT_DESDE); TikTok sigue parado (if: false)
       - name: YouTube
         id: yt
-        if: false
         continue-on-error: true
         run: node scripts/nube.mjs turno youtube
       - name: guardar estado
         id: e1
-        if: false
         continue-on-error: true
         run: scripts/estado-subir.sh
 

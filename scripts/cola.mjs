@@ -18,7 +18,10 @@
 
 export const PLATAFORMAS = ['youtube', 'instagram', 'tiktok'];
 /** Las que publican (Matías 2026-11-24: solo Instagram, horizontal). YouTube y TikTok quedan con su código, pero no corren. */
-export const ACTIVAS = ['instagram'];
+export const ACTIVAS = ['instagram', 'youtube']; // 2026-11-27: vuelve YouTube (Matías: «prender YouTube»), desde el E1 (YT_DESDE)
+/** YouTube desde cero (Matías 2026-11-27: «tenés que empezar desde uno»): lo subido antes quedó privado (archivar-youtube,
+ *  2026-11-21) y no cuenta; YouTube publica de nuevo desde el E1 de cada serie, con la misma compuerta de claridad que Instagram. */
+export const YT_DESDE = '2026-11-27T00:00:00Z';
 /** Las que marcan el ritmo; TikTok las sigue sin frenarlas. */
 export const PRINCIPALES = ['youtube', 'instagram'];
 export const FORMATOS = {
@@ -110,7 +113,8 @@ const ms = (f) => (f ? Date.parse(f) || 0 : 0);
 const poner = (m, id, f) => { if (id && (!m.has(id) || m.get(id) < f)) m.set(id, f); };
 
 /** YouTube: youtube-ids (episodios y Shorts) + el registro de la API (fecha de subida). */
-export function tieneYouTube(ytIds, api = []) {
+export function tieneYouTube(ytIds, api = [], desde = 0) {
+  if (desde) { const m = new Map(); for (const h of api) if (h.video && ms(h.fecha) >= desde) poner(m, h.id, ms(h.fecha)); return m; } // desde cero
   const m = new Map(Object.keys(ytIds).map((id) => [id, 0]));
   for (const h of api) if (m.has(h.id) || h.video) poner(m, h.id, ms(h.fecha));
   return m;

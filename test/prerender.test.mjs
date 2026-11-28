@@ -61,7 +61,7 @@ test('slotsProximos: lo que publicaría cada red en los próximos turnos, sin re
   assert.equal(new Set(ig).size, ig.length);
   assert.ok(ig.includes('griegas-0b') && !ig.includes('griegas-0a'));
   assert.ok(sl.every((s) => s.en >= T0));
-  assert.ok(sl.every((s) => s.plataforma === 'instagram'), 'solo Instagram (2026-11-24): nada se prerenderiza para YouTube ni TikTok');
+  assert.ok(sl.every((s) => s.plataforma === 'instagram' || s.plataforma === 'youtube'), 'Instagram y YouTube (2026-11-27): nada se prerenderiza para TikTok');
 });
 test('faltantesVentana: formato por red, lo urgente (< 6 h) y los filtros', () => {
   const slots = [{ id: 'griegas-0a', plataforma: 'instagram', en: T0 + 36e5 }, { id: 'griegas-0a', plataforma: 'tiktok', en: T0 + 20 * 36e5 }, { id: 'griegas-0b', plataforma: 'youtube', en: T0 + 8 * 36e5 }, { id: 'nordicas-0x', plataforma: 'youtube', en: T0 }];
